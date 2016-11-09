@@ -1,0 +1,7 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: rd1498as9tagu00.cydgm36eaxsm.us-east-1.rds.amazonaws.com
+    database_port: 3306
+    database_name: rebuus
+    database_user: rebuusprod
+    database_password: s80xv43RE6lb4p4BskENhhX8oDAJaG4W

@@ -1,0 +1,11 @@
+services:
+    core.security.jwt_manager:
+        class: App\CoreBundle\Security\JWT\FirebaseJWTManager
+        arguments:
+            - '%secret%'
+
+    app_core.admin.form_data:
+        class: App\CoreBundle\Admin\FormDataAdmin
+        arguments: [~, App\CoreBundle\Entity\FormData, AppCoreBundle:FormDataAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: FormData }

@@ -1,0 +1,32 @@
+import DefaultPageController from "app/page/DefaultPageController";
+{{#viewModelPath}}
+import {{{viewModelName}}} from "{{{viewModelPath}}}";
+{{/viewModelPath}}
+import * as Gaia from "lib/gaia/api/Gaia";
+
+import ko = require("knockout");
+
+class {{controllerName}} extends DefaultPageController<{{{viewModelName}}}>
+{
+	/**
+	 *	Overrides AbstractPageController.init()
+	 *	@method init
+	 */
+	public init():void
+	{
+		super.init();
+	}
+
+	/**
+	 *	Overrides AbstractPageController.destruct()
+	 *	@method destruct
+	 */
+	public destruct():void
+	{
+
+		// always call this last
+		super.destruct();
+	}
+}
+
+export default {{controllerName}};

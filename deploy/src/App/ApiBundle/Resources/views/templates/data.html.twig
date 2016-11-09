@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+{% block content %}
+    <div class="container">
+        <h1>MediaMonks Export API</h1>
+        <h3>Available Methods:</h3>
+        <div class="panel panel-default">
+            <div class="panel-heading">Export all data</div>
+            <div class="panel-body">
+                <a href="exportAll" class="btn btn-primary" target="_blank">Export</a>
+            </div>
+        </div>
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Export by date</div>
+            <div class="panel-body">
+                <ul>
+                    {% for row in rowAmount %}
+                        <li>
+                            <a href="exportByDate/{{ row['created_at'] }}" target="_blank">
+                                {{ row['created_at'] }}
+                                Total rows:({{ row[1] }})
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Export only specific rows</div>
+            <div class="panel-body">
+                {{ form(formRows, {'method': 'POST', 'action': 'exportByRows'}) }}
+
+                {{ form_errors(formRows.row_start) }}
+                {{ form_widget(formRows.row_start, { 'type':'number' }) }}
+
+                {{ form_errors(formRows.row_end) }}
+                {{ form_widget(formRows.row_end, { 'type':'number' }) }}
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Export by selecting date</div>
+            <div class="panel-body">
+                {{ form(form, {'method': 'POST', 'action': 'exportByDate'}) }}
+
+
+
+                {{ form_errors(form.date) }}
+                {{ form_widget(form.date) }}
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}
+
+</body>
+</html>

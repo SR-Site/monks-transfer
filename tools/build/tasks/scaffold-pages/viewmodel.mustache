@@ -1,0 +1,21 @@
+import DefaultPageViewModel from "app/page/DefaultPageViewModel";
+{{#controllerPath}}
+import {{{controllerName}}} from "{{{controllerPath}}}";
+{{/controllerPath}}
+import ko = require('knockout');
+
+class {{viewModelName}} extends DefaultPageViewModel<{{{controllerName}}}>
+{
+	/**
+	 *	Overrides AbstractPageViewModel.destruct()
+	 *	@method destruct
+	 */
+	public destruct():void
+	{
+
+		// always call this last
+		super.destruct();
+	}
+}
+
+export default {{viewModelName}};

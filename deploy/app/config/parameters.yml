@@ -1,0 +1,18 @@
+parameters:
+    secret: PK0B03VUenQHmbfIIsz9+AwFjR7dil9+ArzKBczq
+
+    encryption_key: goP5VhYWYqqHQTS8MiOuzOaGoT86B8jquuy8wgDSinq2Z20BL5tYfW9qlr5x8QoR
+
+    locale: en
+
+    mailer_transport: gmail
+    mailer_host:
+    mailer_user: mediamonkstest@gmail.com
+    mailer_password: 99p9!Tedra#e
+
+    admin_directory: FkDf3rI8693dPKuf
+
+    asset_version: src #[deploytool]
+
+    prerender_url: http://service.prerender.io:3000/
+    prerender_io_token: TAUVb7fNj59XzVP6neuS
