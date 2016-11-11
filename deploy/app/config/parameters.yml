@@ -15,4 +15,4 @@ parameters:
     asset_version: src #[deploytool]
 
     prerender_url: http://service.prerender.io:3000/
-    prerender_io_token: TAUVb7fNj59XzVP6neuS
+    prerender_io_token: fdooT42jSO8pWtKXznjL
