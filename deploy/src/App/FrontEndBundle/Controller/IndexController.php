@@ -12,8 +12,6 @@ use Symfony\Component\HttpFoundation\Request;
 class IndexController extends Controller
 {
     /**
-     * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\Response
      * @throws Exception
      * @Sensio\Route(path="/", name="front_end_index")
      * @Sensio\Cache(smaxage=300, maxage=300)
@@ -21,5 +19,15 @@ class IndexController extends Controller
     public function indexAction()
     {
         return $this->render('AppFrontEndBundle:Home:index.html.twig');
+    }
+
+    /**
+     * @throws Exception
+     * @Sensio\Route(path="/test", name="front_end_test")
+     * @Sensio\Cache(smaxage=300, maxage=300)
+     */
+    public function testAction()
+    {
+        return $this->render('AppFrontEndBundle:Home:test.html.twig');
     }
 }

@@ -15,4 +15,7 @@ parameters:
     asset_version: src #[deploytool]
 
     prerender_url: http://service.prerender.io:3000/
-    prerender_io_token: fdooT42jSO8pWtKXznjL
+    prerender_io_token: 91WjSyCkbwa3ciIuIT0t
+
+
+    fos_elastica.finder.class: "App\CoreBundle\Elastica\Finder\TransformedFinder"

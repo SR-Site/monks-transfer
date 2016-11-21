@@ -1,3 +1,4 @@
-_front_end_annotations:
-    resource: "@AppFrontEndBundle/Controller"
-    type:     annotation
+front_end_home:
+    path:  /
+    defaults: {_controller: AppFrontEndBundle:Home:index}
+    methods:  [GET]

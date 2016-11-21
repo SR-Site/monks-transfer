@@ -1,0 +1,47 @@
+parameters:
+    fos_elastica_listener_draft:
+        insert: true
+        update: true
+        delete: true
+    fos_elastica_listener_published:
+        insert: false
+        update: false
+        delete: false
+    fos_elastica_elastica_to_model_transformer:
+        service: app.elastica.model.transformer
+        ignore_missing: true
+    fos_elastica_page_mappings:
+        id:
+            type: integer
+            index: not_analyzed
+        slug:
+            type: string
+            index: not_analyzed
+        url:
+            type: string
+            index: not_analyzed
+        content:
+            type: string
+            index: not_analyzed
+    fos_elastica_page_crawled_mappings:
+        id:
+            type: integer
+            index: not_analyzed
+        url:
+            type: string
+            index: not_analyzed
+        path:
+            type: string
+            index: not_analyzed
+        content_html:
+            type: string
+            index: no
+            ignore_above: 256
+
+    fos_elastica_tag_mappings:
+
+    fos_elastica_tab_page_mappings:
+        slug:
+            type: string
+            index: not_analyzed
+    fos_elastica_tab_page_tab_mappings:

@@ -1,0 +1,30 @@
+parameters:
+    sonata.page.admin.page.class: Application\Sonata\PageBundle\Admin\PageAdmin
+    sonata.page.admin.page.controller: ApplicationSonataPageBundle:PageAdmin
+    sonata.page.manager.page.class: Application\Sonata\PageBundle\Entity\PageManager
+    sonata.page.admin.block.class: Application\Sonata\PageBundle\Admin\BlockAdmin
+
+services:
+    sonata.page.notification.create_snapshot:
+        class: Application\Sonata\PageBundle\Consumer\CreateSnapshotConsumer
+        arguments:
+            - @sonata.page.manager.snapshot
+            - @sonata.page.manager.page
+            - @sonata.page.transformer
+        tags:
+            - { name: sonata.notification.consumer, type: sonata.page.create_snapshot }
+
+    sonata.page.response_listener:
+        class: Application\Sonata\PageBundle\Listener\ResponseListener
+
+    sonata.page.request_listener:
+        class: Application\Sonata\PageBundle\Listener\RequestListener
+
+    sonata.page.kernel.exception_listener:
+        class: Application\Sonata\PageBundle\Listener\ExceptionListener
+
+    sonata.page.site.selector.host:
+        class: Application\Sonata\PageBundle\Site\HostSiteSelector
+
+    sonata.page.twig.extension:
+        class: Application\Sonata\PageBundle\Twig\Extension\PageExtension

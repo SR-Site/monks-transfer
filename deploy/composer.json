@@ -46,7 +46,9 @@
         "firebase/php-jwt": "^3.0",
         "nelmio/cors-bundle": "^1.4",
         "liuggio/excelbundle": "^2.1",
-        "exercise/htmlpurifier-bundle": "^0.2.2"
+        "exercise/htmlpurifier-bundle": "^0.2.2",
+        "friendsofsymfony/jsrouting-bundle": "^1.5",
+        "friendsofsymfony/elastica-bundle": "dev-master"
 
     },
     "require-dev": {
