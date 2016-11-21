@@ -5,3 +5,13 @@ parameters:
     database_name: spectrumusuat
     database_user: spectrumusuat
     database_password: hzPIhMD2w2wwEhwSSDhULugW4zRfF624
+
+    aws_s3_key: AKIAJ66FBQNRZICSR4NQ
+    aws_s3_secret: 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
+    aws_s3_bucket: mediamonks-development
+    aws_s3_region: us-west-1
+
+    crawler_client: crawler_client_prerender_io
+
+    fos_elastica_servers:
+        - {host: localhost, port: 9200}
