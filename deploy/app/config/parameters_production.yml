@@ -13,5 +13,5 @@ parameters:
 
     crawler_client: crawler_client_prerender_io
 
-    fos_elastica_servers:
-        - {host: localhost, port: 9200}
+    #fos_elastica_servers:
+    #    - {host: localhost, port: 9200}
