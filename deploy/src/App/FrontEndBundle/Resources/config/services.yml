@@ -3,6 +3,6 @@ services:
         class: App\FrontEndBundle\Routing\SeoPageRouteProvider
         arguments:
             - @app.search.repository.page
-            - @fos_elastica.finder.published.page
+            #- @fos_elastica.finder.published.page
             - @app.search.repository.page_crawled
-            - @fos_elastica.finder.published.page_crawled
+            #- @fos_elastica.finder.published.page_crawled

@@ -10,12 +10,12 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: admin, label: FormData }
 
-    app.elastica.model.transformer:
-            class: App\CoreBundle\Elastica\ElasticaToModelTransformer
-            calls:
-                - [ setPropertyAccessor, ["@fos_elastica.property_accessor"] ]
-            tags:
-                - { name: fos_elastica.elastica_to_model_transformer.app.company }
+    #app.elastica.model.transformer:
+    #        class: App\CoreBundle\Elastica\ElasticaToModelTransformer
+    #        calls:
+    #            - [ setPropertyAccessor, ["@fos_elastica.property_accessor"] ]
+    #        tags:
+    #            - { name: fos_elastica.elastica_to_model_transformer.app.company }
 
     app.search.repository.base:
         class: MediaMonks\CoreBundle\Elastica\Repository\BaseRepository
