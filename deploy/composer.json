@@ -17,7 +17,8 @@
             "Installer\\": "installer/"
         },
         "classmap": [
-            "app/AppKernel.php"
+            "app/AppKernel.php",
+            "app/AppCache.php"
         ]
     },
     "prefer-stable": true,
