@@ -85,8 +85,8 @@ class PageParser extends AbstractPageParser
      */
     public function getContentHtml()
     {
-        if($this->crawler->filter('div.view-index main')->count() === 1) {
-            return $this->crawler->filter('div.view-index main')->html();
+        if($this->crawler->filter('body')->count() === 1) {
+            return $this->crawler->filter('body')->html();
         }
     }
 

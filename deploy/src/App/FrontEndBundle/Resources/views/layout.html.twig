@@ -37,17 +37,18 @@
 </head>
 <body data-gaia-container="main">
 
-{% block body %}
-    {% block content %}{% endblock %}
-{% endblock %}
-
-
 {% if env != constant('ENV_DEVELOPMENT') %}
     <script src="inc/script/app/bundle.js"></script>
 {% else %}
     <script src="inc/script/lib/require/require.js"></script>
     <script src="inc/script/app/Bootstrap.js"></script>
 {% endif %}
+
+
+{% block body %}
+    {% block content %}{% endblock %}
+{% endblock %}
+
 
 
 </body>

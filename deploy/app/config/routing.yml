@@ -1,8 +1,6 @@
 # App Bundles
 _front_end:
     resource: "@AppFrontEndBundle/Resources/config/routing.yml"
-    options:
-        expose: true
 
 _api:
     resource: "@AppApiBundle/Resources/config/routing.yml"

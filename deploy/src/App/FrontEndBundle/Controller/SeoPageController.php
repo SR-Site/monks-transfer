@@ -26,6 +26,7 @@ class SeoPageController extends Controller
         $page = $request->attributes->get('page');
         $pageCrawled = $request->attributes->get('pageCrawled');
 
+
         $title = '';
         $metaKeywords = [];
         $metaDescription = '';
@@ -33,10 +34,13 @@ class SeoPageController extends Controller
         $headers = [];
 
         if(!empty($page)) {
-            $title = $page->getPageTitle();
+
+
+
+            $title = $page->getTitle();
             $metaKeywords = $page->getMetaKeywords();
             $metaDescription = $page->getMetaDescription();
-            $headers = $page->getRawHeaders();
+            //$headers = $page->getRawHeaders();
         }
 
         if(!empty($pageCrawled)) {
@@ -52,7 +56,7 @@ class SeoPageController extends Controller
             $content = $pageCrawled->getContentHtml();
         }
 
-        $response = new Response($this->renderView('MediaMonksFrontEndBundle:SeoPage:index.html.twig', [
+        $response = new Response($this->renderView('AppFrontEndBundle:SeoPage:index.html.twig', [
             'title' => $title,
             'metaKeywords' => $metaKeywords,
             'metaDescription' => $metaDescription,

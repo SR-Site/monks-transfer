@@ -57,6 +57,15 @@ doctrine:
         types:
             json: Sonata\Doctrine\Types\JsonType
 
+cmf_routing:
+    chain:
+        routers_by_id:
+            router.default:             200
+            cmf_routing.dynamic_router: 100
+    dynamic:
+        route_provider_service_id: app.seo_route_provider
+
+
 exercise_html_purifier:
     crawler:
         HTML.AllowedElements: [h1, h2, h3, h4, h5, h6, p, br, strong, ul, ol, li, img, a]

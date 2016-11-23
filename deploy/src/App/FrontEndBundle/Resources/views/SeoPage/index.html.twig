@@ -1,0 +1,11 @@
+{% extends 'AppFrontEndBundle::layout.html.twig' %}
+
+{% block pageTitle %}{{ title }}{% endblock %}
+{% block metaKeywords %}{{ metaKeywords|join(', ') }}{% endblock %}
+{% block metaDescription %}{{ metaDescription }}{% endblock %}
+
+{% block content %}
+<div id="content">
+    {{ content|raw }}
+</div>
+{% endblock %}

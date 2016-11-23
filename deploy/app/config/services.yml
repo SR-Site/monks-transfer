@@ -74,9 +74,9 @@ services:
         class: App\CrawlerBundle\Client\PrenderIoClient
         arguments: [%prerender_io_token%]
 
-    #app.elastica.model.transformer:
-    #    class: App\CoreBundle\Elastica\ElasticaToModelTransformer
-    #    calls:
-    #        - [ setPropertyAccessor, ["@fos_elastica.property_accessor"] ]
-    #    tags:
-    #        - { name: fos_elastica.elastica_to_model_transformer.app.company }
+    app.elastica.model.transformer:
+        class: App\CoreBundle\Elastica\ElasticaToModelTransformer
+        calls:
+            - [ setPropertyAccessor, ["@fos_elastica.property_accessor"] ]
+        tags:
+            - { name: fos_elastica.elastica_to_model_transformer.app.company }

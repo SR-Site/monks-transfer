@@ -36,6 +36,8 @@ class SeoPageRouteProvider implements RouteProviderInterface
      */
     protected $pageCrawledFinder;
 
+    protected $em;
+
     /**
      * @var array
      */
@@ -54,12 +56,14 @@ class SeoPageRouteProvider implements RouteProviderInterface
         AbstractRepository $pageRepository,
         TransformedFinder $pageFinder,
         AbstractRepository $pageCrawledRepository,
-        TransformedFinder $pageCrawledFinder
+        TransformedFinder $pageCrawledFinder,
+        \Doctrine\ORM\EntityManager $em
     ) {
         $this->pageRepository        = $pageRepository;
         $this->pageFinder            = $pageFinder;
         $this->pageCrawledRepository = $pageCrawledRepository;
         $this->pageCrawledFinder     = $pageCrawledFinder;
+        $this->em                    = $em;
     }
 
     /**
@@ -113,10 +117,17 @@ class SeoPageRouteProvider implements RouteProviderInterface
     protected function getResult(AbstractRepository $repository, TransformedFinder $finder, $value, $term)
     {
         try {
-            $resultSet = $finder->find($repository->findOne($value, $term));
-            if($resultSet->getTotalHits() > 0) {
-                return $resultSet[0];
-            }
+            $entityName = "AppCoreBundle:PageCrawled";
+            $resultSet = $this->em
+                ->getRepository($entityName)
+                ->findBy(
+                    array('path' => $value)
+                );
+
+            $this->em->flush();
+
+            return $resultSet[0];
+
         } catch (\Exception $e) {
             // ignore errors from elasticsearch
         }
@@ -126,7 +137,7 @@ class SeoPageRouteProvider implements RouteProviderInterface
     /**
      * {@inheritDoc}
      */
-    public function getRouteByName($name)
+    public function getRouteByName($name, $parameters = array())
     {
         throw new RouteNotFoundException(sprintf('Route "%s" is not handled by this route provider', $name));
     }
@@ -134,7 +145,7 @@ class SeoPageRouteProvider implements RouteProviderInterface
     /**
      * {@inheritDoc}
      */
-    public function getRoutesByNames($names = null)
+    public function getRoutesByNames($names = null, $parameters = array())
     {
         return [];
     }
