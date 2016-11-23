@@ -3,7 +3,7 @@ parameters:
 
 services:
 
-  custom_validator_mapping_cache:
+    custom_validator_mapping_cache:
         class: Symfony\Component\Validator\Mapping\Cache\DoctrineCache
         arguments:
             - @custom_validator_mapping_cache_apcu
