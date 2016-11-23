@@ -70,6 +70,12 @@ class PageCrawled
     protected $contentHtml;
 
     /**
+     * @ORM\Column(type="json_array", nullable=true)
+     */
+    protected $styles;
+
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -279,6 +285,25 @@ class PageCrawled
     public function setContentHtml($contentHtml)
     {
         $this->contentHtml = $contentHtml;
+        return $this;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getStyles()
+    {
+        return $this->styles;
+    }
+
+    /**
+     * @param $styles
+     * @return CrawledPage
+     */
+    public function setStyles($styles)
+    {
+        $this->styles = $styles;
         return $this;
     }
 

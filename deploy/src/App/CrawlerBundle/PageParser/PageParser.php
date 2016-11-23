@@ -7,6 +7,23 @@ use Symfony\Component\DomCrawler\Crawler;
 class PageParser extends AbstractPageParser
 {
 
+    public function getStyles()
+    {
+
+        $metaTags = [];
+        foreach($this->crawler->filter('head > link') as $node) {
+            $data = [];
+            foreach ($node->attributes as $attr) {
+                $name = $attr->nodeName;
+                $value = $attr->nodeValue;
+                $data[$name] = $value;
+            }
+            $metaTags[] = $data;
+        }
+        return $metaTags;
+
+    }
+
     /**
      * @return string
      */

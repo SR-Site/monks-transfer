@@ -103,6 +103,8 @@ class CrawlUrlCommand extends ContainerAwareCommand
                 $page->setHeadings($parser->getHeadings(range(1, 3)));
                 $page->setMetaTags($parser->getMetaTags());
                 $page->setContent($parser->getContent());
+                $page->setStyles($parser->getStyles());
+
 
                 /*$html = preg_replace('/\s+/', ' ', $this->getContainer()
                     ->get('exercise_html_purifier.crawler')->purify($parser->getContentHtml())

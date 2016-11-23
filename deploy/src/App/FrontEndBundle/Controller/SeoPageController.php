@@ -35,11 +35,10 @@ class SeoPageController extends Controller
 
         if(!empty($page)) {
 
-
-
             $title = $page->getTitle();
             $metaKeywords = $page->getMetaKeywords();
             $metaDescription = $page->getMetaDescription();
+            $styles  = $page->getStyles();
             //$headers = $page->getRawHeaders();
         }
 
@@ -60,6 +59,7 @@ class SeoPageController extends Controller
             'title' => $title,
             'metaKeywords' => $metaKeywords,
             'metaDescription' => $metaDescription,
+            'styles' => $styles,
             'content' => $content,
         ]), Response::HTTP_OK, $headers);
 
