@@ -23,7 +23,8 @@
     },
     "prefer-stable": true,
     "require": {
-        "php": ">=5.4",
+        "php": "^5.5.9|^7.0",
+        "symfony/cache": "^3.1",
         "symfony/symfony": "^2.8",
         "doctrine/orm": "^2.4.8",
         "doctrine/doctrine-bundle": "~1.4",
