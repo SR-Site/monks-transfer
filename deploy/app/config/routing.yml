@@ -1,6 +1,8 @@
 # App Bundles
 _front_end:
     resource: "@AppFrontEndBundle/Resources/config/routing.yml"
+    options:
+        expose: true
 
 _api:
     resource: "@AppApiBundle/Resources/config/routing.yml"
@@ -42,8 +44,3 @@ _sonata_user_resetting:
 # Always keep default route as a last one
 # Default route for Front-end, prevents 404 Not found for Front-end routes.
 # Ignores admin and api directories
-default:
-    path:     /{path}
-    defaults: { _controller: AppFrontEndBundle:Index:index }
-    requirements:
-        path: "^(?!%admin_directory%|api).+"

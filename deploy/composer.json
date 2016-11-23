@@ -49,13 +49,13 @@
         "liuggio/excelbundle": "^2.1",
         "exercise/htmlpurifier-bundle": "^0.2.2",
         "friendsofsymfony/jsrouting-bundle": "^1.5",
-        "friendsofsymfony/elastica-bundle": "dev-master",
-        "sensio/generator-bundle": "~3.0",
-        "symfony/phpunit-bridge": "~2.7",
-        "doctrine/doctrine-fixtures-bundle": "^2.3"
+        "friendsofsymfony/elastica-bundle": "dev-master"
 
     },
     "require-dev": {
+        "sensio/generator-bundle": "~3.0",
+        "symfony/phpunit-bridge": "~2.7",
+        "doctrine/doctrine-fixtures-bundle": "^2.3",
         "phpunit/phpunit": "^4.8",
         "mockery/mockery": "^0.9.4",
         "behat/behat": "^3.1",

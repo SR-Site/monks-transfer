@@ -1,4 +1,6 @@
 front_end_home:
-    path:  /
-    defaults: {_controller: AppFrontEndBundle:Home:index}
-    methods:  [GET]
+    #path:  /
+    #defaults: {_controller: AppFrontEndBundle:Home:index}
+    #methods:  [GET]
+    resource: "@AppFrontEndBundle/Controller"
+    type:     annotation
