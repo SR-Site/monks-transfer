@@ -37,6 +37,6 @@ if (!defined('ENVIRONMENT')) {
         }
     }
 
-    #$environment = ENV_PRODUCTION;
+    $environment = ENV_DEVELOPMENT;
     define('ENVIRONMENT', $environment);
 }
