@@ -13,6 +13,9 @@ services:
         calls:
             - [setNamespace, [%validator.mapping.cache.prefix%]]
 
+    serializer.mapping.cache.apcu:
+        class: Doctrine\Common\Cache\ApcuCache
+
     session.handler.pdo:
         class:     Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler
         public:    false

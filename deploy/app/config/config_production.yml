@@ -6,7 +6,7 @@ framework:
     validation:
         cache: custom_validator_mapping_cache
     serializer:
-        cache: serializer.mapping.cache.apc
+        cache: serializer.mapping.cache.apcu
 
 doctrine:
     orm:
