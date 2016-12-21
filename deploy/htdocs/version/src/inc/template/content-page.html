@@ -1,0 +1,8 @@
+<!-- ko foreach: pageLayout -->
+	<!-- ko if: type == $root.BlockType.COMPONENT -->
+		<!-- ko component: {name: 'block/' + id, options: data, onComplete: $root.controller.callbackCounter.get($root.controller.handleComponentReady.bind($root.controller))} --><!-- /ko -->
+	<!-- /ko -->
+	<!-- ko if: type == $root.BlockType.PARTIAL -->
+		<!-- ko template: {name: id, options: data} --><!-- /ko -->
+	<!-- /ko -->
+<!-- /ko -->

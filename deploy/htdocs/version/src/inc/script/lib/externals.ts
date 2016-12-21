@@ -6,12 +6,14 @@ define([
 	'lib/knockout/knockout.gaia',
 	'xdomainrequest',
 	'TweenLite',
+	'TimelineMax',
 	'CSSPlugin',
 	'EasePack',
 	'vendor/history/history',
 //	'lib/createjs/preloadjs',
 //	'lib/createjs/soundjs',
-	'lib/knockout/knocktouch'
+	'lib/knockout/knocktouch',
+	'lib/knockout/knockout.image',
 ], ($, ko) =>
 {
 

@@ -1,7 +1,7 @@
 import configManagerInstance from "lib/temple/config/configManagerInstance";
 import * as Gaia from "lib/gaia/api/Gaia";
-import Branches from "app/data/enum/Branches";
-import Params from "app/data/enum/Params";
+import Branches from "../data/enum/gaia/Branches";
+import Params from "../data/enum/gaia/Params";
 import {PropertyNames} from "../data/enum/ConfigNames";
 
 /**
@@ -67,65 +67,15 @@ class Routes
 		// init the router, do stuff based on config
 		Gaia.router.init();
 
-
 		//
 		// ROUTE CONFIGURATION
 		//
 
+		// If you want a popup route, you should add it above the global deeplink route. Keep in mind that all routes are
+		// send to the backend so if you want a popup route it would be best to access it only from the root ('/') route.
+
 		// default page
-		Gaia.router.page('/', Branches.HOME);
-
-
-
-
-
-
-		//
-		// BELOW ARE EXAMPLES, REMOVE IN NEW PROJECT!
-		//
-
-		/*
-		// route redirection
-		//Gaia.router.redirect('/terms', '/info');
-
-		Gaia.router.page('/knockout', Page.KNOCKOUT);
-//			.redirectOnLanding('/info');
-
-		Gaia.router.page('/info', Page.INFO)
-			.redirectOnLanding((routeResult:any, cb:(route:string) => void) =>
-			{
-				setTimeout(() =>
-				{
-					cb('/contact');
-				}, 3000);
-			}); // do a different landing check for this page
-
-		Gaia.router.page('/contact', Page.INFO)
-			.redirectOnLanding(null); // disable the landing check for this page (overwrite the default)
-
-		Gaia.router.page('/about', Page.INFO);
-
-		// param route with popup
-		Gaia.router.page('/test1/:' + Param.ID + '/:' + Param.SLUG + '', Page.HOME + '/test1');
-		// param route
-		Gaia.router.page('/detail/:' + Param.ID + '/:' + Param.SLUG + '', Page.DETAIL);
-
-		// param route with custom assertions
-		Gaia.router.page('/video/:' + Param.ID + '/:' + Param.SLUG + '', Page.VIDEO)
-			.assert(Param.ID, UINT)
-			.assert(Param.SLUG, SLUG);
-
-		// popup
-		Gaia.router.page('/about', Page.HOME + '/' + Page.POPUP_ABOUT);
-		// popup
-		Gaia.router.page('/privacy', Page.HOME + '/' + Page.POPUP_PRIVACY);
-
-		Gaia.router.page('/canvas', Page.CANVAS);
-
-		// popup with deeplink
-		Gaia.router.page('/video/:' + Param.ID + '/:' + Param.SLUG + '/about/:' + Param.ID + '', Page.VIDEO + '/' + Page.POPUP_ABOUT);
-
-		*/
+		Gaia.router.page('/:deeplink*', Branches.CONTENT_PAGE);
 	}
 }
 

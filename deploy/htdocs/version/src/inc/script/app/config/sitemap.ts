@@ -2,15 +2,15 @@ import ISitemap from "lib/gaia/interface/ISitemap";
 import * as Gaia from "lib/gaia/api/Gaia";
 
 /**
-* Minimal config:
-*
-*      {
+ * Minimal config:
+ *
+ *      {
 *          id: 'page-id'
 *      }
-*
-* Maximal config:**
-*
-*      {
+ *
+ * Maximal config:**
+ *
+ *      {
 *          id: 'page-id',
 *          title: 'Page Title',
 *          landing: true, // don't navigate to the first sub-page automatically, but stay on this specific page
@@ -46,54 +46,60 @@ import * as Gaia from "lib/gaia/api/Gaia";
 *              ]
 *          }
 *      }
-*
-* @documentation ../../doc/app/config/sitemap.md
-* @module Gaia
-* @namespace app.config
-* @class sitemap
-*/
+ *
+ * @documentation ../../doc/app/config/sitemap.md
+ * @module Gaia
+ * @namespace app.config
+ * @class sitemap
+ */
 
 /**
-* The title attribute is used to set the page's title. The {page} variable is replaced by the 'title' attribute from the active page, so when you are
-* on the home-page title will say Gaia - Home.
-* @attribute title
-*/
+ * The title attribute is used to set the page's title. The {page} variable is replaced by the 'title' attribute from the active page, so when you are
+ * on the home-page title will say Gaia - Home.
+ * @attribute title
+ */
 
 /**
-* The config section is used for setting paths to the files that are loaded by Gaia. You normally won't touch these, but if you are doing some funky stuff you can change them here.
-* @attribute config
-*/
+ * The config section is used for setting paths to the files that are loaded by Gaia. You normally won't touch these, but if you are doing some funky stuff you can change them here.
+ * @attribute config
+ */
 
 /**
-*
-* When navigationg to pages you should use the path to the page you want to navigate to including all the parent pages, like Gaia.api.goto('/index/navigation/home');.
-* For more information about navigating see the reference for Gaia.api.goto
-*
-* @attribute pages
-*
-*/
+ *
+ * When navigationg to pages you should use the path to the page you want to navigate to including all the parent pages, like Gaia.api.goto('/index/navigation/home');.
+ * For more information about navigating see the reference for Gaia.api.goto
+ *
+ * @attribute pages
+ *
+ */
 
+var partials:Array<string> = [];
 
 var sitemap:ISitemap = {
 
-title: 'Skeleton1 - Gaia - {page}',
+	title: 'Skeleton1 - Gaia - {page}',
 
-config: {
-	controllerPath: 'app/page/',
-	viewModelPath: 'app/page/',
-	templatePath: 'app/../../template/'
-},
+	config: {
+		controllerPath: 'app/page/',
+		viewModelPath: 'app/page/',
+		templatePath: 'app/../../template/'
+	},
 
-pages: [
-	{
-		id: 'index',
-		pages: [
-			{
-				id: 'home',
-				title: 'Home'
-			}
-		]
-	}
+	pages: [
+		{
+			id: 'index',
+			partials: {
+				"app": partials,
+				"mobile": partials
+			},
+			pages: [
+				{
+					id: 'content-page',
+					title: 'Content page',
+					template: 'content-page.html'
+				}
+			]
+		}
 	]
 };
 

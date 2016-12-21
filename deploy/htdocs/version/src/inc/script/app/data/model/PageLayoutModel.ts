@@ -1,0 +1,77 @@
+import IPageLayout from "../interface/layout/IPageLayout";
+import AbstractDataModel from "./AbstractDataModel";
+import DataManager from "../DataManager";
+import Promise = require("bluebird");
+import BlockHelper from "../../util/BlockHelper";
+
+class PageLayoutModel extends AbstractDataModel<IPageLayout>
+{
+	/**
+	 * @property _unknownDeeplinks
+	 * @type {Array}
+	 * @description array used to store unknown deeplinks to avoid re-calling deeplinks that do not exist
+	 */
+	private _unknownDeeplinks:Array<string> = [];
+
+	/**
+	 * @public
+	 * @method getLayout
+	 * @description Method to retrieve a page layout based on the deeplink + branch
+	 * @param page
+	 * @returns {Promise}
+	 */
+	public getLayout(page:string):Promise<IPageLayout>
+	{
+		// First try to fetch the page from memory
+		const layout = this.getItemByID(page);
+
+		if(this._unknownDeeplinks.indexOf(page) > -1)
+		{
+			// Incorrect deeplink, reject right away
+			return Promise.reject(null)
+		}
+		else if(layout === void 0)
+		{
+			// If it's not loaded, fetch it from the backend
+			return DataManager.getInstance().serviceModel.contentService.getPageLayout(page)
+				.then((result)=>this.parsePageLayout(result.data, page))
+				.catch((result)=>
+				{
+					this._unknownDeeplinks.push(page);
+
+					return Promise.reject(null)
+				})
+		}
+		else
+		{
+			return Promise.resolve(layout)
+		}
+	}
+
+
+	/**
+	 * @private
+	 * @method parsePageLayout
+	 * @description After we fetch the page from the API we need to check all the blocks if they are compatible with the
+	 * with our block configuration.
+	 */
+	private parsePageLayout(pageLayout:IPageLayout, pageId:string):Promise<IPageLayout>
+	{
+		return new Promise((resolve:(result:IPageLayout)=>void, reject)=>
+		{
+			// Create the layout object
+			let layout = {id: pageId, pageTitle: pageLayout.pageTitle, blocks: []};
+
+			// Loop through all the blocks and check if they are valid
+			layout.blocks = BlockHelper.parseBlocks(layout.blocks, pageLayout.blocks);
+
+			// Save the layout
+			this.addItem(layout);
+
+			resolve(layout);
+		});
+	}
+
+}
+
+export default PageLayoutModel;

@@ -4,7 +4,10 @@ import IGateway from "app/net/gateway/IGateway";
 import Gateway from "app/net/gateway/Gateway";
 import RESTOutputHandler from "app/net/gateway/output/RESTOutputHandler";
 import RESTInputHandler from "app/net/gateway/input/RESTInputHandler";
-import {URLNames} from "./enum/ConfigNames";
+import {URLNames, PropertyNames} from "./enum/ConfigNames";
+import SettingsModel from "./model/SettingsModel";
+import ServiceModel from "./model/ServiceModel";
+import ContentService from "./service/ContentService";
 
 
 /**
@@ -20,6 +23,13 @@ class DataManager
 	 * @type Gateway
 	 */
 	public gateway:IGateway;
+	public mockGateway:IGateway;
+
+	/**
+	 * Models
+	 */
+	public settingsModel:SettingsModel = new SettingsModel();
+	public serviceModel:ServiceModel = new ServiceModel();
 
 	/**
 	 * Returns a instance of the datamanager
@@ -46,6 +56,17 @@ class DataManager
 	 */
 	public setupGateway():void
 	{
+		this.mockGateway = new Gateway({
+			// the base url
+			url: configManagerInstance.getURL(URLNames.MOCK_API),
+			headers: {
+				'X-Force-Status-Code-200': 1
+			},
+			// the default output handler (can be changed to PostOutputHandler or JSONOutputHandler for the 'old gateway', or to RESTOutputHandler for the 'new style'
+			outputHandler: new RESTOutputHandler(),
+			inputHandler: new RESTInputHandler()
+		}, true);
+
 		this.gateway = new Gateway({
 			// the base url
 			url: configManagerInstance.getURL(URLNames.API),
@@ -56,6 +77,10 @@ class DataManager
 			outputHandler: new RESTOutputHandler(),
 			inputHandler: new RESTInputHandler()
 		}, true);
+
+		const mockContent: boolean = configManagerInstance.getProperty(PropertyNames.MOCK_CONTENT);
+
+		this.serviceModel.contentService = new ContentService(mockContent ? this.mockGateway : this.gateway, false);
 	}
 
 	/**

@@ -16,6 +16,9 @@ interface IKnockoutComponentOptions {
 
 	// called when creation of the component is complete
 	onReady:(component:AbstractComponentController<any, any>) => void;
+
+	// called when creation of the component and all his sub-components are complete
+	onComplete:(component:AbstractComponentController<any, any>) => void;
 }
 
 export default IKnockoutComponentOptions;

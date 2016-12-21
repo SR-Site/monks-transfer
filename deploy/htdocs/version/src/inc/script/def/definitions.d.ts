@@ -50,6 +50,7 @@ declare var isMobile:boolean;
 declare var XRegExp:any;
 
 declare type Class = any;
+declare type Enum = any;
 declare type int = number;
 declare type uint = number;
 declare type float = number;

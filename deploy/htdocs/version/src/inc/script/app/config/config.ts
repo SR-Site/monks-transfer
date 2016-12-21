@@ -1,8 +1,7 @@
-
 /**
  * Global config file used by the {{#crossLink "app.config.ConfigManager"}}ConfigManager{{/crossLink}}
  *
- *	{
+ *    {
  *		"environments": {
  *			"live": {
  *				"variables": {
@@ -66,42 +65,29 @@ if(typeof window['RELEASE'] === 'undefined')
  * @todo define
  * @attribute config
  */
-var config:IConfig =
-{
-	environments:
-	{
-		[EnvironmentNames.PRODUCTION]:
-		{
-			variables:
-			{
-			},
-			urls:
-			{
-			},
-			properties:
-			{
-			}
+let config: IConfig = {
+	environments: {
+		[EnvironmentNames.PRODUCTION]: {
+			variables: {},
+			urls: {},
+			properties: {}
 		},
-		[EnvironmentNames.LOCAL]:
-		{
+		[EnvironmentNames.LOCAL]: {
 			extends: EnvironmentNames.PRODUCTION,
-			variables:
-			{
-			}
+			variables: {}
 		}
 	},
-	variables:
-	{
+	variables: {
 		[VariableNames.PROTOCOL]: document.location.protocol,
 		[VariableNames.BASE]: document.querySelector('meta[name=document-base]').getAttribute('content')
 	},
-	urls:
-	{
-		[URLNames.API]: { url: `{${VariableNames.BASE}}api` }
+	urls: {
+		[URLNames.MOCK_API]: {url: `{${VariableNames.BASE}}api/mock/`},
+		[URLNames.API]: {url: `{${VariableNames.BASE}}api/v1/`}
 	},
-	properties:
-	{
-		[PropertyNames.DEFAULT_LOCALE]: 'en_GB'
+	properties: {
+		[PropertyNames.DEFAULT_LOCALE]: 'en_GB',
+		[PropertyNames.MOCK_CONTENT]: true
 	}
 };
 
@@ -112,8 +98,8 @@ var config:IConfig =
  * @attribute environment
  * @type string
  */
-var environment:string = EnvironmentNames.PRODUCTION;
-var host:string = document.location.host;
+let environment: string = EnvironmentNames.PRODUCTION;
+let host: string = document.location.host;
 if(host.indexOf('mediamonks.local') != -1)
 {
 	host = 'localhost';
@@ -134,8 +120,7 @@ switch(host.split(':').shift())
 	}
 }
 
-
-var configMethod = {
+let configMethod = {
 	config: config,
 	environment: environment
 };

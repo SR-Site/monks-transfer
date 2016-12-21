@@ -13,6 +13,14 @@ import AbstractComponentViewModel from "./AbstractComponentViewModel";
 abstract class AbstractComponentController<TViewModel extends AbstractComponentViewModel<any, any>, TOptions> extends EventDispatcher
 {
 	/**
+	 * @description This string is used to bind the components controller on the knockout element so we can access the
+	 * controller based on the html element. This is used for dynamically fetching component timelines.
+	 * @type {string}
+	 * @property BINDING_NAME
+	 */
+	public static BINDING_NAME:string = 'knockoutComponent';
+
+	/**
 	 * The root element of the template of this component in the DOM.
 	 *
 	 * @property element

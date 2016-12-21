@@ -28,6 +28,17 @@ abstract class AbstractComponentViewModel<T extends AbstractComponentController<
 	}
 
 	/**
+	 * @public
+	 * @method data
+	 * @description shorthand method to get the component options, which contains the backend data
+	 * @returns {any}
+	 */
+	public get data():U
+	{
+		return this.controller.options;
+	}
+
+	/**
 	 * @inheritDoc
 	 */
 	public destruct():void

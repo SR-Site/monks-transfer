@@ -51,16 +51,16 @@ export default class ScrollTracker extends EventDispatcher
 	public updateSize():void
 	{
 		var isX = this._axis == Axis.X;
-		this.viewSize = isX ? $(this._targetElement).width() : $(this._targetElement).height();
+		this.viewSize = isX ? $(this._targetElement).width() :$(this._targetElement).height();
 
-		if (this._targetElement == window)
+		if(this._targetElement == window)
 		{
-			this.scrollSize = isX ? $(document).width() : $(document).height();
+			this.scrollSize = isX ? $(document).width() :$(document).height();
 		}
 		else
 		{
 			var target = <HTMLElement> this._targetElement;
-			this.scrollSize = isX ? target.scrollWidth : target.scrollHeight;
+			this.scrollSize = isX ? target.scrollWidth :target.scrollHeight;
 		}
 	}
 
@@ -75,9 +75,9 @@ export default class ScrollTracker extends EventDispatcher
 	 * @returns {ScrollTrackerPoint} A reference to a ScrollTrackerPoint instance that can be
 	 * used to bind events, remove or update the point added.
 	 */
-	public addPoint(position:number, side:Side = Side.START):ScrollTrackerPoint
+	public addPoint(position:number, height:number = 1, side:Side = Side.START):ScrollTrackerPoint
 	{
-		var point = new ScrollTrackerPoint(position, side, this);
+		var point = new ScrollTrackerPoint(position, height, side, this);
 		this.trackingPoints.push(point);
 		point.addEventListener(ScrollTrackerEvent.ENTER_VIEW, this._pointEventHandler);
 		point.addEventListener(ScrollTrackerEvent.LEAVE_VIEW, this._pointEventHandler);
@@ -94,7 +94,7 @@ export default class ScrollTracker extends EventDispatcher
 	public removePoint(point:ScrollTrackerPoint):boolean
 	{
 		var index = this.trackingPoints.indexOf(point);
-		if (index >= 0)
+		if(index >= 0)
 		{
 			this.trackingPoints[index].destruct();
 			this.trackingPoints.splice(index, 1);
@@ -110,7 +110,7 @@ export default class ScrollTracker extends EventDispatcher
 	 */
 	public removeAllPoints():void
 	{
-		for (var i = 0; i < this.trackingPoints.length; i++)
+		for(var i = 0; i < this.trackingPoints.length; i++)
 		{
 			this.trackingPoints[i].destruct();
 		}
@@ -137,13 +137,7 @@ export default class ScrollTracker extends EventDispatcher
 	 */
 	private initEvents():void
 	{
-		$(this._targetElement).on('scroll' + this.eventNamespace, ThrottleDebounce.throttle(
-			this._scrollHandler,
-			ScrollTracker._DEFAULT_THROTTLE_SCROLL
-		));
-		this._scrollHandler();
-
-		if (this._targetElement === window)
+		if(this._targetElement === window)
 		{
 			$(window).on('resize' + this.eventNamespace, ThrottleDebounce.throttle(
 				this._windowResizeHandler,
@@ -156,6 +150,13 @@ export default class ScrollTracker extends EventDispatcher
 		{
 			this.updateSize();
 		}
+
+		$(this._targetElement).on('scroll' + this.eventNamespace, ThrottleDebounce.throttle(
+			this._scrollHandler,
+			ScrollTracker._DEFAULT_THROTTLE_SCROLL
+		));
+
+		this._scrollHandler();
 	}
 
 	/**
@@ -175,21 +176,22 @@ export default class ScrollTracker extends EventDispatcher
 	private _scrollHandler = () =>
 	{
 		var isX = this._axis == Axis.X;
-		if (this._targetElement === window)
+		if(this._targetElement === window)
 		{
-			this.viewStart = isX ? window.pageXOffset : window.pageYOffset;
+			this.viewStart = isX ? window.pageXOffset :window.pageYOffset;
 		}
 		else
 		{
 			var target = <HTMLElement> this._targetElement;
-			this.viewStart = isX ? target.scrollLeft : target.scrollTop;
+			this.viewStart = isX ? target.scrollLeft :target.scrollTop;
 		}
 
 		this.viewEnd = this.viewStart + this.viewSize;
+
 		var scrollingBack = this.viewStart < this._lastScrollPosition;
 		this._lastScrollPosition = this.viewStart;
 
-		for (var i = 0; i < this.trackingPoints.length; i++)
+		for(var i = 0; i < this.trackingPoints.length; i++)
 		{
 			this.trackingPoints[i].checkInView(scrollingBack);
 		}
@@ -229,6 +231,7 @@ export class ScrollTrackerEvent extends AbstractEvent
 {
 	public static ENTER_VIEW:string = 'ScrollTrackerEvent.ENTER_VIEW';
 	public static LEAVE_VIEW:string = 'ScrollTrackerEvent.LEAVE_VIEW';
+	public static BOUNDS_CHANGED:string = 'ScrollTrackerEvent.BOUNDS_CHANGED';
 
 	constructor(type:string,
 	            public point:ScrollTrackerPoint,
@@ -262,6 +265,7 @@ export class ScrollTrackerPoint extends EventDispatcher
 	public isInBounds:boolean = false;
 
 	constructor(private _position:number,
+	            private _height: number,
 	            private _side:Side,
 	            private _tracker:ScrollTracker)
 	{
@@ -281,6 +285,29 @@ export class ScrollTrackerPoint extends EventDispatcher
 	{
 		this._position = position;
 		this.checkInView();
+	}
+
+	/**
+	 * Change the height of this point. Executes checkInView to check if the point has entered or
+	 * leaved view.
+	 * @param height The height of this points in pixels. This is the distance from the start
+	 * or end of the target element depending on the 'side' parameter, measured horizontally or
+	 * vertically depending on the axis of this ScrollTracker instance.
+	 */
+	public set height(height:number)
+	{
+		this._height = height;
+		this.checkInView();
+	}
+
+	/**
+	 * @returns {number} The current height of the point in pixels. This is the distance from the
+	 * start or end of the target element depending on the 'side' parameter, measured horizontally or
+	 * vertically depending on the axis of this ScrollTracker instance.
+	 */
+	public get height():number
+	{
+		return this._height;
 	}
 
 	/**
@@ -308,14 +335,15 @@ export class ScrollTrackerPoint extends EventDispatcher
 	 */
 	public checkInView(scrollingBack:boolean = false):boolean
 	{
-		var viewStart = this._tracker.viewStart;
-		var viewEnd = this._tracker.viewEnd;
-		var scrollSize = this._tracker.scrollSize;
-		var positionFromStart = this._side == Side.START ? this._position : scrollSize - this._position;
-		var isInView = viewStart <= positionFromStart && viewEnd >= positionFromStart;
-		this.isInBounds = positionFromStart >= 0 && positionFromStart <= viewEnd;
+		var viewStart = this._tracker.viewStart; // pageYOffset
+		var viewEnd = this._tracker.viewEnd; // pageYOffset + windowHeight
+		var scrollSize = this._tracker.scrollSize; // maxWindowSCroll
 
-		if (this.isInView != isInView)
+		// var positionFromStart = this._side == Side.START ? this._position : scrollSize - this._position;
+		var isInView = viewEnd >= this._position && viewEnd <= this._position + this._height + window.innerHeight;
+		this.isInBounds =  this._position >= 0 && this._position <= viewEnd;
+
+		if(this.isInView != isInView)
 		{
 			var eventType = isInView ?
 				ScrollTrackerEvent.ENTER_VIEW : ScrollTrackerEvent.LEAVE_VIEW;
@@ -323,8 +351,9 @@ export class ScrollTrackerPoint extends EventDispatcher
 			var event = new ScrollTrackerEvent(
 				eventType,
 				this,
-				(isInView ? scrollingBack : !scrollingBack) ? Side.START : Side.END
+				(isInView ? scrollingBack :!scrollingBack) ? Side.START :Side.END
 			);
+
 
 			this.dispatchEvent(event);
 			this.isInView = isInView;
@@ -336,6 +365,7 @@ export class ScrollTrackerPoint extends EventDispatcher
 	/**
 	 * Destructs the ScrollTrackerPoint instance.
 	 */
+	public destruct()
 	public destruct()
 	{
 		this._tracker = null;
