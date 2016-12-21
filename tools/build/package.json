@@ -16,11 +16,27 @@
   },
   "appversion": "1.0",
   "dependencies": {
+
+  },
+  "devDependencies": {
+    "@types/createjs": "0.0.29",
+    "@types/greensock": "^1.15.32",
+    "@types/jasmine": "^2.5.38",
+    "@types/knockout": "^3.4.38",
+    "@types/requirejs": "^2.1.28",
+    "@types/history": "^2.0.39",
+    "@types/jasmine-matchers": "^0.2.28",
+    "@types/jquery": "^2.0.34",
+    "@types/jquery.cookie": "^1.4.28",
+    "@types/modernizr": "^3.2.27",
+    "@types/preloadjs": "^0.6.31",
+    "@types/soundjs": "^0.6.27",
+    "@types/xregexp": "^3.0.28",
     "adm-zip": "",
     "amd-loader": "0.0.5",
     "autoprefixer-core": "",
     "createjs-def": "",
-	"directory-encoder": "^0.8.0",
+    "directory-encoder": "^0.8.0",
     "ejs": "^2.3.2",
     "express": "^4.13.0",
     "fs-extra": "",
@@ -45,8 +61,7 @@
     "grunt-scss-lint": "",
     "grunt-shell": "",
     "grunt-svgmin": "",
-    "grunt-ts": "",
-    "grunt-tsd": "^0.2.0-beta.1",
+    "grunt-ts": "^6.0.0-beta.3",
     "grunt-usemin": "",
     "jasmine-core": "^2.3.4",
     "jit-grunt": "",
@@ -67,10 +82,8 @@
     "request": "",
     "requirejs": "^2.1.22",
     "time-grunt": "",
-    "typescript": "~1.8.10",
+    "typescript": "^2.1.4",
+    "underscore.string": "^3.3.4",
     "walk": ""
-  },
-  "devDependencies": {
-    "underscore.string": "^3.3.4"
   }
 }

@@ -1,0 +1,35 @@
+html,
+body {
+	padding-top: 0;
+	height: 100%;
+}
+
+.view {
+	height: 100%;
+}
+
+.dev-bar {
+	@include offset(0, 0);
+	position: absolute;
+	opacity: .8;
+	width: 100%;
+	text-align: center;
+	line-height: 30px;
+	color: #333;
+	cursor: pointer;
+	background-color: #fff4c8;
+	border-bottom: 1px solid #e2d7ae;
+	// Special case, always on top of our last z-index variable
+	// scss-lint:disable VariableForProperty
+	z-index: length($layout) + 1;
+
+	.btn-close {
+		position: absolute;
+		margin-top: -15px;
+		right: 10px;
+		top: 50%;
+	}
+}
+
+@import 'header';
+@import 'footer';

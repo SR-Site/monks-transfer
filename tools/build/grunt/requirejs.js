@@ -20,20 +20,7 @@ module.exports = function(grunt, options)
 				"app/page/index/IndexPageController",
 
 				"lib/temple/component/AbstractComponentController",
-				"lib/temple/component/AbstractComponentViewModel",
-
-				"app/page/home/HomePageViewModel",
-				"app/page/home/HomePageController",
-
-				"app/page/video/VideoPageViewModel",
-				"app/page/video/VideoPageController",
-
-				"lib/temple/util/key/KeyCode",
-				"app/scroll/ScrollManager",
-				"app/scroll/ScrollManagerEvent",
-				"app/data/enum/Direction",
-				"app/util/DeeplinkHelper",
-				"app/util/AssetManager"
+				"lib/temple/component/AbstractComponentViewModel"
 			]
 		}
 	];

@@ -12,17 +12,6 @@ module.exports = function (grunt, options)
 			nonull: true,
 			src:  'asset/phonegap/index.html',
 			dest: '<%= buildDir %>index.html'
-		},
-		'dotfiles': {
-			files: [{
-				expand: true,
-				cwd: 'deploy/htdocs/',
-				src: [
-					'.*',
-					'favicon.ico',
-				],
-				dest: '<%= buildDir %>'
-			}]
 		}
 	};
 };

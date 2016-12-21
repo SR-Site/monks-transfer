@@ -13,7 +13,6 @@ svg:
   - 'encode-svg'
 
 test:
-  - 'tsd:install'
   - 'clean:default'
   - 'ts:default'
   - 'sass'
@@ -29,9 +28,9 @@ test:
   - 'notify:build'
 
 release:
-  - 'tsd:install'
   - 'clean:default'
   - 'ts:default'
+  - 'karma:unit'
   - 'sass'
   - 'postcss'
   - 'requirejs:release'
@@ -43,11 +42,6 @@ release:
   - 'copy:versioning'
   - 'usemin:html'
   - 'notify:build'
-
-release-versioning:
-  - 'release'
-  - 'copy:dotfiles'
-  - 'version:default'
 
 debug:
   - 'tsd:install'

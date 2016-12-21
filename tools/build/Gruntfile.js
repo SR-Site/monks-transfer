@@ -18,7 +18,6 @@ module.exports = function (grunt)
 	grunt.config('version', version);
 	grunt.config('sourceDir', sourceDir);
 	grunt.config('base', base);
-	
 
 	require('load-grunt-config')(grunt, {
 
