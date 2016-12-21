@@ -41,6 +41,12 @@ release:
   - 'clean-build:default'
   - 'copy:versioning'
   - 'usemin:html'
+
+release-version:
+  - 'release'
+  - 'copy:mock-api'
+  - 'copy:dotfiles'
+  - 'version:default'
   - 'notify:build'
 
 debug:

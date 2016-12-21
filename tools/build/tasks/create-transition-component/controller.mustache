@@ -1,0 +1,50 @@
+import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import {{{filenames.transition}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.transition}}}';
+import {{{filenames.options}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.options}}}';
+import {{{filenames.viewModel}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.viewModel}}}';
+{{#withEvents}}
+import {{{filenames.event}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.event}}}';
+{{/withEvents}}
+
+import Log from "lib/temple/util/Log";
+
+class {{{filename}}} extends DefaultComponentTransitionController<{{{filenames.viewModel}}}, {{{filenames.options}}}>
+{
+	/**
+	 *	Instance of Log debug utility for debug logging
+	 *	@property _debug
+	 *	@private
+	 */
+	private _debug:Log = new Log('app.component.{{capitalizedComponentId}}');
+
+	/**
+	 *	Overrides AbstractPageController.init()
+	 *	@method init
+	 */
+	public init():void
+	{
+		super.init();
+
+{{#withEvents}}
+		this.dispatchEvent(new {{{filenames.event}}}({{{filenames.event}}}.INIT, this));
+{{/withEvents}}
+		this._debug.log('Init');
+
+		this.transitionController = new {{{filenames.transition}}}(this.element, this);
+
+	}
+
+
+	/**
+	 *  Overrides AbstractComponentController.destruct()
+	 *  @method destruct
+	 */
+	public destruct():void
+	{
+
+		// always call this last
+		super.destruct();
+	}
+}
+
+export default {{{filename}}};

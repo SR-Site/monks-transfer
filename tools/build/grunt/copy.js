@@ -7,11 +7,23 @@ module.exports = function (grunt, options)
 			src:  'deploy/htdocs/index.php',
 			dest: '<%= buildDir %>'
 		},
-
-		'phonegap-index': {
-			nonull: true,
-			src:  'asset/phonegap/index.html',
-			dest: '<%= buildDir %>index.html'
+		'mock-api': {
+			src: ['deploy/htdocs/api/mock/**/*.*', 'deploy/htdocs/api/mock/*.*'],
+			dest: '<%= buildDir %>'
+		},
+		'dotfiles': {
+			files: [{
+				expand: true,
+				cwd: 'deploy/htdocs/',
+				src: [
+					'.*',
+					'favicon.ico',
+					'index.php',
+					'config.core.php',
+					'robots.txt'
+				],
+				dest: '<%= buildDir %>/deploy/htdocs/'
+			}]
 		}
 	};
 };

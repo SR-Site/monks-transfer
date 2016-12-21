@@ -5,8 +5,7 @@
 class Branches
 {
 	public static INDEX:string = 'index';
-	public static HOME:string = 'index/home';
-	
+	public static CONTENT_PAGE:string = 'index/content-page';
 }
 
 // use in templates

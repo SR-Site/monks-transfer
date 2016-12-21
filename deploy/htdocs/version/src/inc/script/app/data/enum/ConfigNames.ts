@@ -11,6 +11,7 @@ export class EnvironmentNames
 export class URLNames
 {
 	public static API:string = 'api';
+	public static MOCK_API:string = 'mockApi';
 }
 
 export class VariableNames
@@ -23,4 +24,5 @@ export class VariableNames
 export class PropertyNames
 {
 	public static DEFAULT_LOCALE:string = 'defaultLocale';
+	public static MOCK_CONTENT:string = 'mockContent';
 }
