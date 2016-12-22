@@ -3,4 +3,45 @@
 	@include size(100%, $sizeGrid * 2);
 	position: absolute;
 	z-index: zindex($layout, header);
+
+	.logo {
+		@include size(140px, 40px);
+		@include pos(50%, auto, auto, $sizeGrid * 2);
+		transform: translateY(-50%);
+		position: absolute;
+
+		.icon {
+			@include size(100%);
+		}
+
+		// Primary logo colors
+		&.primary {
+
+			.text-top,
+			.text-bottom {
+				color: $colorWhite;
+			}
+
+			.arrow {
+				color: $colorSecondary;
+			}
+		}
+
+		// Inverted logo for on light backgrounds
+		&.inverted {
+			.text-top {
+				color: $colorQuaternary;
+			}
+
+			.text-bottom {
+				color: $colorPrimary;
+			}
+
+			.arrow {
+				color: $colorSecondary;
+			}
+		}
+	}
+
+
 }

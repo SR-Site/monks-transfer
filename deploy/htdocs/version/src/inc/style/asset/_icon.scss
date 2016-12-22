@@ -1,3 +1,17 @@
+.icon {
+	vertical-align: middle;
+	display: inline-block;
+
+	svg {
+		@include size(100%);
+		display: block;
+
+		path {
+			fill: currentColor;
+		}
+	}
+}
+
 // Default Icon
 @mixin icn ($width: 16px, $height: 16px) {
 	display: inline-block;

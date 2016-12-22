@@ -113,6 +113,8 @@ class KnockoutIcon
 		{
 			if (KnockoutIcon._icons && KnockoutIcon._icons[iconName])
 			{
+				element.classList.add(KnockoutIcon._ICON_PREFIX.replace('.', '') + iconName);
+
 				KnockoutIcon.safeInjectSVG(element, KnockoutIcon._icons[iconName], baseHref, options);
 			}
 		});
@@ -257,6 +259,7 @@ class KnockoutIcon
 				++KnockoutIcon._injectCount;
 			}
 
+			wrapper.style.backgroundImage = 'none';
 			tmpImage = null;
 			wrapper = null;
 		}
