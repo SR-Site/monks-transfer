@@ -3,11 +3,14 @@
  * $mediaQueries. They can be used in SCSS files by using the respond-to mixin. For example:
  * @include respond-to(X_SMALL) { ... }
  */
-export var mediaQueries:{[breakpoint:string]:string;} = {
+export let mediaQueries:{[breakpoint:string]:string;} = {
 	X_SMALL : "(max-width: 479px)",
 	SMALL : "(min-width: 480px)",
 	MEDIUM : "(min-width: 768px)",
-	LARGE : "(min-width: 1024px)",
+	LARGE : "(min-width: 1280px)",
+	X_LARGE: "(min-width: 1440px)",
+	XX_LARGE: "(min-width: 1600px)",
+
 	MEDIUM_ISOLATE : "(min-width: 768px) and (max-width: 1023px)"
 };
 
@@ -34,5 +37,5 @@ export enum DeviceState {
  * breakpoint that matches. This is usually desired in mobile-first designs. Set this value to
  * true if the tracker should choose the first matching DeviceState instead.
  */
-export var reverseDeviceStateOrder:boolean = false;
+export let reverseDeviceStateOrder:boolean = false;
 

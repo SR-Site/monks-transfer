@@ -1,3 +1,7 @@
 .component-block-hero-main {
+	@include size(1600px, 950px);
 
+	img {
+		@include size(100%);
+	}
 }

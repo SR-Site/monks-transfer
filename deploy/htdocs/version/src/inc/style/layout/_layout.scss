@@ -31,5 +31,23 @@ body {
 	}
 }
 
-@import 'header';
-@import 'footer';
+/**
+ * Define the site frame sizes for the different media queries
+ *
+ */
+[data-gaia-container="index"] {
+	@include center-block();
+	width: 100%;
+
+	@include respond-to(LARGE) {
+		max-width: $smallSiteFrame;
+	}
+
+	@include respond-to(X_LARGE) {
+		max-width: $mediumSiteFrame;
+	}
+
+	@include respond-to(XX_LARGE) {
+		max-width: $largeSiteFrame;
+	}
+}
