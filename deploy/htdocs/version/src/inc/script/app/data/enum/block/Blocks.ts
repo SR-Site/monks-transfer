@@ -4,7 +4,7 @@
  */
 class Blocks
 {
-	public static DUMMY_COMPONENT:string = 'block-dummy-component';
+	public static HERO_MAIN:string = 'block-hero-main';
 }
 
 

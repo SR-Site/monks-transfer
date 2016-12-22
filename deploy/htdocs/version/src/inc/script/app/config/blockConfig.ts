@@ -14,8 +14,8 @@ import BlockType from "../data/enum/type/BlockType";
  * }
  */
 export const blockConfig:IBlockConfig = {
-	dummyComponent: {
-		id: Blocks.DUMMY_COMPONENT,
+	heroMain: {
+		id: Blocks.HERO_MAIN,
 		type: BlockType.COMPONENT
 	}
 };

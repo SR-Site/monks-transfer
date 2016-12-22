@@ -4,7 +4,7 @@
 		"pageTitle": "home",
 		"blocks": [
 			{
-				"id": "dummyComponent",
+				"id": "heroMain",
 				"data": {}
 			}
 		]
