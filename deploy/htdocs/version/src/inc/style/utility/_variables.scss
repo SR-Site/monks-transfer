@@ -11,15 +11,31 @@ $spriteDefault: 'sprite-default.png';
 
 // Fonts
 $fontArial: Arial, sans-serif;
+$fontOpenSans: 'Open Sans', sans-serif;
 
-// Sizes
+/**
+ * Base font size for REM sizing
+ */
+$baseFontSize: 10px;
+
+/**
+ * Grid sizes
+ */
+$sizeGrid: 4rem;
+
+/**
+ * Site frame sizes
+ */
 $largeSiteFrame: 1600px;
 $mediumSiteFrame: 1440px;
 $smallSiteFrame: 1280px;
 
-
 // Colors
-$colorMain: #000;
+$colorPrimary: #032d51;
+$colorSecondary: #0098d8;
+$colorTertiary: #0db39f;
+
+$colorWhite: #fff;
 
 // Z-indexes
-$layout: default;
+$layout: content, header;

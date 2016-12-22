@@ -3,5 +3,6 @@
  */
 
 .view.view-index {
-
+	position: relative;
+	z-index: zindex($layout, content);
 }

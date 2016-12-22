@@ -95,3 +95,13 @@
 		@return null;
 	}
 }
+
+/**
+ * Mobile size calculation
+ * Return rem sizes based on mobile base font-size from the PSD dimensions (= normal size * 2 because retina)
+ */
+@function mobile-size($size) {
+	$newSize: ($size * .5) / 0.7;
+	@return round($newSize * 1000) / 1000;
+}
+
