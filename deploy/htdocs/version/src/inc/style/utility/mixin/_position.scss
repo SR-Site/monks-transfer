@@ -46,7 +46,7 @@
  * @param {number} $width - Width of the element
  * @param {number} $height - Height of the element
  */
-@mixin abs-center($width, $height) {
+@mixin abs-center($width, $height: $width) {
 	@include pos(50%, auto, auto, 50%);
 	@include size($width, $height);
 	position: absolute;

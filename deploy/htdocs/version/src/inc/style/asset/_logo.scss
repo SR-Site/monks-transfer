@@ -14,6 +14,19 @@
 		}
 	}
 
+	// Primary logo colors
+	&.white {
+
+		.text-top,
+		.text-bottom {
+			color: $colorWhite;
+		}
+
+		.arrow {
+			color: $colorWhite;
+		}
+	}
+
 	// Inverted logo for on light backgrounds
 	&.inverted {
 		.text-top {

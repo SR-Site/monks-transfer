@@ -1,7 +1,8 @@
 .component-block-hero-main {
-	@include size(1600px, 950px);
+	@include aspect-ratio(1600px, 950px);
 
 	img {
+		@include coverer();
 		@include size(100%);
 	}
 }
