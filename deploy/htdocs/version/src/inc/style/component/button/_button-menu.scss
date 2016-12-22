@@ -1,0 +1,19 @@
+.component-button-menu {
+	@include size($sizeGrid * 4,  $sizeGrid * 2);
+	text-transform: uppercase;
+	background: $colorPrimary;
+	color: $colorWhite;
+
+	span {
+		vertical-align: middle;
+	}
+
+	.text {
+		font: 700 1.2rem / 1 $fontOpenSans;
+	}
+
+	.icon {
+		@include size($sizeGrid / 2);
+		margin-left: $sizeGridSecondary;
+	}
+}

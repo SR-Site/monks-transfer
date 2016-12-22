@@ -1,0 +1,31 @@
+.logo {
+	@include size(140px, 42px);
+
+	// Primary logo colors
+	&.primary {
+
+		.text-top,
+		.text-bottom {
+			color: $colorWhite;
+		}
+
+		.arrow {
+			color: $colorSecondary;
+		}
+	}
+
+	// Inverted logo for on light backgrounds
+	&.inverted {
+		.text-top {
+			color: $colorQuaternary;
+		}
+
+		.text-bottom {
+			color: $colorPrimary;
+		}
+
+		.arrow {
+			color: $colorSecondary;
+		}
+	}
+}

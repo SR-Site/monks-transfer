@@ -1,5 +1,37 @@
 <div class="component-header">
+
 	<h1 class="logo primary"> <!-- 'primary' or 'inverted' -->
 		<span class="icon" data-bind="icon: 'logo'"></span>
 	</h1>
+
+	<div class="call-to-actions">
+		<!-- ko component: {
+			name: 'button/button-call-to-reach',
+			onComplete: $root.controller.callbackCounter.get(),
+			options: {
+				action: {
+					label: '1-884-TO-REACH',
+					title: 'Call us!',
+					event: function(){console.log('call us')}
+				},
+				size: $root.ButtonSize.LARGE,
+				disabled: $root.callButtonDisabled
+			}
+		} --><!-- /ko -->
+
+		<!-- ko component: {
+			name: 'button/button-menu',
+			onComplete: $root.controller.callbackCounter.get(),
+			options: {
+				action: {
+					label: 'Menu',
+					title: 'Menu',
+					event: function(){console.log('click menu')}
+				},
+				size: $root.ButtonSize.LARGE,
+				disabled: $root.menuButtonDisabled
+			}
+		} --><!-- /ko -->
+	</div>
+
 </div>

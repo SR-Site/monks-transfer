@@ -1,3 +1,16 @@
 .button {
-  // define your buttons
+	@extend %reset-bmp;
+	position: relative;
+	display: inline-block;
+	background: transparent;
+	border: 0;
+	outline: 0;
+	text-decoration: none;
+	color: currentColor;
+	cursor: pointer;
+	text-align: center;
+
+	&.is-disabled {
+		cursor: default;
+	}
 }

@@ -1,5 +1,6 @@
 import Destructible from "lib/temple/core/Destructible";
 import AbstractComponentController from "./AbstractComponentController";
+import ButtonSize from "../../../app/data/enum/layout/ButtonSize";
 
 /**
  * Abstract viewModel class for components. All component ViewModels should extend this class.
@@ -10,19 +11,21 @@ import AbstractComponentController from "./AbstractComponentController";
  */
 abstract class AbstractComponentViewModel<T extends AbstractComponentController<any, any>, U> extends Destructible
 {
+	public ButtonSize: Enum = ButtonSize;
+
 	/**
 	 * Reference to the controller instance for this component.
 	 *
 	 * @property controller
 	 */
-	public controller:T & AbstractComponentController<this, U>;
+	public controller: T & AbstractComponentController<this, U>;
 
 	/**
 	 * Sets the reference to the controller instance for this component.
 	 * @param controller The controller instance
 	 * @method setController
 	 */
-	public setController(controller:T & AbstractComponentController<this, U>)
+	public setController(controller: T & AbstractComponentController<this, U>)
 	{
 		this.controller = controller;
 	}
@@ -33,7 +36,7 @@ abstract class AbstractComponentViewModel<T extends AbstractComponentController<
 	 * @description shorthand method to get the component options, which contains the backend data
 	 * @returns {any}
 	 */
-	public get data():U
+	public get data(): U
 	{
 		return this.controller.options;
 	}
@@ -41,8 +44,10 @@ abstract class AbstractComponentViewModel<T extends AbstractComponentController<
 	/**
 	 * @inheritDoc
 	 */
-	public destruct():void
+	public destruct(): void
 	{
+		this.ButtonSize = null;
+
 		this.controller = null;
 
 		super.destruct();
