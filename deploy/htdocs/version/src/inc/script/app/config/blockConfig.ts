@@ -25,5 +25,9 @@ export const blockConfig:IBlockConfig = {
 	smallInfo: {
 		id: Blocks.SMALL_INFO,
 		type: BlockType.COMPONENT
+	},
+	map: {
+		id: Blocks.MAP,
+		type: BlockType.COMPONENT
 	}
 };

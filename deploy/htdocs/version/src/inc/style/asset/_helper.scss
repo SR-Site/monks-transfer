@@ -1,0 +1,70 @@
+.abs-fill {
+	position: absolute;
+	@include offset(0, 0);
+	@include size(100%, 100%);
+}
+
+.abs-center {
+	position: absolute;
+	@include offset(50%, 50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.abs-fill-center {
+	position: absolute;
+	@include offset(50%, 50%);
+	@include size(100%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.bg-cover {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.bg-contain {
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.fit-cover {
+	object-fit: cover;
+	@include size(100%);
+}
+
+.fill-image {
+	display: block;
+	margin: 0;
+
+	img {
+		@include size(100%, 100%);
+		display: block;
+	}
+}
+
+
+// Positions
+.pos-top-left {
+	@include offset(0, 0);
+}
+.pos-center-left {
+	@include pos(50%, auto, auto, 0);
+	transform: translate(0, -50%);
+}
+.pos-bottom-left {
+	@include pos(auto, auto, 0, 0);
+}
+
+.pos-top-right {
+	@include pos(0, 0, auto, auto);
+}
+.pos-bottom-right {
+	@include pos(auto, 0, 0, auto);
+}
+.pos-center-right {
+	@include pos(50%, 0, auto, auto);
+	transform: translate(0, -50%);
+}
+

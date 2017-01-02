@@ -1,0 +1,36 @@
+.component-block-map {
+	background: #f8f8f8;
+
+	.map-container {
+		@include aspect-ratio(1440px, 840px);
+
+		img {
+			@include coverer();
+		}
+	}
+
+	.map-slider {
+		@include size($sizeGrid * 28, $sizeGrid * 3);
+		@include pos(auto, auto, $sizeGrid, 50%);
+		transform: translateX(-50%);
+		position: absolute;
+		background: red;
+	}
+
+	.slide-description{
+		@include size($sizeGrid * 5, auto);
+		@include pos(50%, auto, auto, $sizeGrid * 4);
+		transform: translateY(-50%);
+		position: absolute;
+
+		.pagination-number {
+			@include pos(0, auto, auto, 0);
+			transform: translate(-50%, -50%);
+			position: absolute;
+		}
+
+		.heading {
+			margin-bottom: $sizeGrid;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+.pagination-number {
+	font: 800 1.2rem / 1 $fontOpenSans;
+	position: relative;
+	color: $colorSecondary;
+	padding-bottom: $sizeGrid / 2;
+
+	&:after {
+		@include pos(auto, auto, $sizeGrid / 8, 0);
+		@include size(calc(100% + #{$sizeGrid / 8}), 0.1rem);
+		transform: rotate(-35deg);
+		position: absolute;
+		background: currentColor;
+		content: '';
+		transform-origin: bottom left;
+	}
+}
