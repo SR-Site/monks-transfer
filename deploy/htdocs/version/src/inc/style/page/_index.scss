@@ -5,4 +5,36 @@
 .view.view-index {
 	position: relative;
 	z-index: zindex($layout, content);
+
+
+	/**
+	 * Development grid
+	 */
+	.grid {
+		@include pos(0, auto, auto, 50%);
+		@include size(100%);
+		max-width: $largeSiteFrame;
+		transform: translateX(-50%);
+		pointer-events: none;
+		position: fixed;
+		font-size: 0;
+		display: none;
+
+		.row {
+			@include size($sizeGrid, 100%);
+			display: inline-block;
+
+			&:nth-child(odd) {
+				background: rgba(255, 0, 0, .1);
+			}
+
+			&:nth-child(even) {
+				background: rgba(0, 255, 0, .1);
+			}
+		}
+
+		&.is-active {
+			display: block;
+		}
+	}
 }

@@ -6,6 +6,69 @@
 			{
 				"id": "heroMain",
 				"data": {}
+			},
+			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 0,
+					"windowed": true,
+					"croppedImage": false,
+					"heading": "Plan",
+					"paragraph": "Welcome to a new era of television and digital advertising. Viewing habits are changing now that tv is more than one screen.",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "/home",
+						"type": 0
+					},
+					"background": {
+						"normal": "data/image-with-content/background.jpg",
+						"small": "data/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 1,
+					"windowed": true,
+					"croppedImage": true,
+					"heading": "Buy",
+					"paragraph": "Welcome to a new era of television and digital advertising. Viewing habits are changing now that tv is more than one screen.",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "/home",
+						"type": 0
+					},
+					"background": {
+						"normal": "data/image-with-content/background-2.jpg",
+						"small": "data/image-with-content/background-2.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 0,
+					"windowed": true,
+					"croppedImage": false,
+					"heading": "Measure",
+					"paragraph": "Welcome to a new era of television and digital advertising. Viewing habits are changing now that tv is more than one screen.",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "/home",
+						"type": 0
+					},
+					"background": {
+						"normal": "data/image-with-content/background-3.jpg",
+						"small": "data/image-with-content/background-3.jpg",
+						"alt": "Background image alt text"
+					}
+				}
 			}
 		]
 	}

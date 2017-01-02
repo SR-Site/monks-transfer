@@ -2,12 +2,5 @@ h1, h2, h3, h4, h5, p {
 	@extend %reset-bmp;
 }
 
-// Headings
-.heading-01 {
-	// add your headings
-}
-
-// Paragraphs
-.copy-01 {
-	// add your copy
-}
+@import 'heading';
+@import 'copy';

@@ -1,0 +1,26 @@
+.component-button-main {
+	@include size(auto, 5rem);
+	border: 1px solid  $colorBorder;
+	font: 800 1rem / 1 $fontOpenSans;
+	color: $colorPrimary;
+	text-transform: uppercase;
+	padding: 0 $sizeGrid / 2;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	margin-left: $sizeGridSecondary / 2;
+
+	&:before {
+		@include size($sizeGridSecondary, .4rem);
+		@include pos(50%, auto, auto, 0);
+		transform: translate(-50%, -50%);
+		content: '';
+		position: absolute;
+		background: $colorSecondary;
+	}
+
+	.label {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}

@@ -1,0 +1,39 @@
+<div class="component-block-image-with-content" data-bind="css: {
+		'windowed': data.windowed,
+		'cropped-image': data.croppedImage,
+		'left-aligned': data.alignment === $root.Alignment.LEFT,
+		'right-aligned': data.alignment === $root.Alignment.RIGHT
+	}">
+	<figure class="image">
+		<img data-bind="image: {
+			queries: [
+				[
+					$root.MediaQueries.X_SMALL, data.background.normal
+				],
+				[
+					$root.MediaQueries.SMALL, data.background.small
+				]
+			],
+			state: $root.deviceState()
+		},
+		" alt="background image">
+	</figure>
+	<aside class="content">
+		<h4 class="heading heading-06">
+			<span class="highlight">{{data.heading}}</span>
+		</h4>
+		<p class="copy copy-01">{{data.paragraph}}</p>
+
+		<!-- ko if: data.link -->
+			<!-- ko component: {
+				name: 'button/button-main',
+				onComplete: $root.controller.callbackCounter.get(),
+				options: {
+					action: data.link,
+					size: $root.ButtonSize.LARGE,
+					disabled: $root.findOutMoreDisabled
+				}
+			} --><!-- /ko -->
+		<!-- /ko -->
+	</aside>
+</div>

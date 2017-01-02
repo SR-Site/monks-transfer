@@ -24,6 +24,10 @@ $baseFontSize: 10px;
 $sizeGrid: 4rem;
 $sizeGridSecondary: 3rem;
 
+/**
+ * Global icon size
+ */
+$sizeIcon: 2.6rem;
 
 /**
  * Site frame sizes
@@ -33,12 +37,19 @@ $mediumSiteFrame: 1440px;
 $smallSiteFrame: 1280px;
 
 // Colors
-$colorPrimary: #032d51;
-$colorSecondary: #0098d8;
-$colorTertiary: #0db39f;
+$colorPrimary: #003057;
+$colorSecondary: #009bdb;
+$colorTertiary: #009e8c;
 $colorQuaternary: #818285;
+$colorQuinary: #0077bc;
+
+$colorAutomotive: #808285;
+$colorLocalMedia: #00629b;
+$colorSmallBusinesses: #faa41a;
+$colorEnterprise: #500778;
 
 $colorWhite: #fff;
+$colorBorder: #e0e0e0;
 
 // Z-indexes
 $layout: content, header;

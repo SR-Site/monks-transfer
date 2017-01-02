@@ -3,6 +3,8 @@ import AbstractComponentViewModel from "../../../lib/temple/component/AbstractCo
 import DefaultComponentController from "./DefaultComponentController";
 import BlockType from "../../data/enum/type/BlockType";
 import Routes from "../../config/Routes";
+import {mediaQueries, DeviceState} from "../../data/scss-shared/MediaQueries";
+import DataManager from "../../data/DataManager";
 
 /**
  * @class DefaultComponentViewModel
@@ -10,6 +12,8 @@ import Routes from "../../config/Routes";
  */
 class DefaultComponentViewModel<T, U extends IDefaultComponentOptions> extends AbstractComponentViewModel<DefaultComponentController<T, U>, U>
 {
+	public deviceState:KnockoutObservable<DeviceState> = DataManager.getInstance().deviceStateTracker.currentState;
+
 	/**
 	 * @property controller
 	 * @type {DefaultComponentController<T, U>
@@ -21,6 +25,8 @@ class DefaultComponentViewModel<T, U extends IDefaultComponentOptions> extends A
 	 * @type {BlockType}
 	 */
 	public BlockType:Class = BlockType;
+	public MediaQueries:Class = mediaQueries;
+
 
 	/**
 	 * @public
@@ -29,6 +35,7 @@ class DefaultComponentViewModel<T, U extends IDefaultComponentOptions> extends A
 	public destruct():void
 	{
 		this.BlockType = null;
+		this.deviceState = null;
 
 		super.destruct();
 	}

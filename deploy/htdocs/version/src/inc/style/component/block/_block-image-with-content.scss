@@ -1,0 +1,109 @@
+.component-block-image-with-content {
+	@include size(100%, auto);
+	position: relative;
+
+	.image {
+		@include size(100%, auto);
+
+		img {
+			@include size(100%, auto);
+		}
+	}
+
+	.content {
+		@include pos(auto, auto, 0, $sizeGrid * 2);
+		height: auto;
+		position: absolute;
+		background: #fff;
+		padding: $sizeGrid * 3 $sizeGrid * 3 $sizeGrid * 2 $sizeGrid * 3;
+
+		&:after {
+			@include size(0);
+			position: absolute;
+			border-style: solid;
+			bottom: 0;
+			content: '';
+		}
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid;
+	}
+
+	/**
+	 * Alignment changes
+	 */
+	&.left-aligned {
+		.content {
+			@include pos(auto, auto, 0, $sizeGrid * 2);
+			width: $sizeGrid * 18;
+
+			&:after {
+				border-width: $sizeGrid 0 0 $sizeGrid;
+				border-color: transparent transparent transparent $colorWhite;
+				right: -$sizeGrid;
+			}
+		}
+	}
+
+	&.right-aligned {
+		.content {
+			@include pos(auto, $sizeGrid * 2, 0, auto);
+			width: $sizeGrid * 18;
+
+			&:after {
+				border-width: 0 0 $sizeGrid $sizeGrid;
+				border-color: transparent transparent $colorWhite transparent;
+				left: -$sizeGrid;
+			}
+		}
+	}
+
+	/**
+	 * Windowed means white borders around the block
+	 */
+	&.windowed {
+		border-top: $sizeGrid solid $colorWhite;
+		border-right: $sizeGrid * 2 solid $colorWhite;
+		border-bottom: $sizeGrid solid $colorWhite;
+		border-left: $sizeGrid * 2 solid $colorWhite;
+
+		&.left-aligned,
+		&.right-aligned {
+			.content {
+				width: $sizeGrid * 16;
+			}
+		}
+
+		&.cropped-image {
+			.content {
+				width: $sizeGrid * 18;
+			}
+		}
+	}
+
+	/**
+	 * Do we want to mask out the image or not
+	 */
+	&.cropped-image {
+		.content {
+			width: $sizeGrid * 20;
+		}
+
+		&.left-aligned {
+			.content {
+				@include pos(0, auto, 0, 0);
+			}
+		}
+
+		&.right-aligned {
+			.content {
+				@include pos(0, 0, 0, auto);
+			}
+		}
+	}
+}

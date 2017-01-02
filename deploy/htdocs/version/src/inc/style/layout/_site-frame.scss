@@ -17,4 +17,8 @@
 	@include respond-to(XX_LARGE) {
 		max-width: $largeSiteFrame;
 	}
+
+	&.windowed {
+		padding: 0 $sizeGrid * 2 ;
+	}
 }
