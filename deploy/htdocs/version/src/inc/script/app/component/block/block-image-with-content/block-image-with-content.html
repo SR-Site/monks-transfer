@@ -18,10 +18,8 @@
 		}" alt="background image">
 	</figure>
 	<aside class="content">
-		<h4 class="heading heading-06">
-			<span class="highlight">{{data.heading}}</span>
-		</h4>
-		<p class="copy copy-01">{{data.paragraph}}</p>
+		<h4 class="heading heading-06" data-bind="html: data.heading"></h4>
+		<p class="copy copy-01" data-bind="html: data.paragraph"></p>
 
 		<!-- ko if: data.link -->
 			<!-- ko component: {

@@ -1,0 +1,21 @@
+<div class="component-block-small-info" data-bind="css: {'windowed': data.windowed}">
+
+	<div class="introduction">
+		<h4 class="heading heading-06" data-bind="html: data.heading"></h4>
+	</div>
+	<div class="description">
+		<p class="copy copy-01" data-bind="html: data.paragraph"></p>
+
+		<!-- ko if: data.link -->
+			<!-- ko component: {
+				name: 'button/button-main',
+				onComplete: $root.controller.callbackCounter.get(),
+				options: {
+					action: data.link,
+					size: $root.ButtonSize.LARGE,
+					disabled: $root.findOutMoreDisabled
+				}
+			} --><!-- /ko -->
+		<!-- /ko -->
+	</div>
+</div>

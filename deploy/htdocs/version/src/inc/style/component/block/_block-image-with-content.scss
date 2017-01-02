@@ -67,11 +67,6 @@
 	 * Windowed means white borders around the block
 	 */
 	&.windowed {
-		border-top: $sizeGrid solid $colorWhite;
-		border-right: $sizeGrid * 2 solid $colorWhite;
-		border-bottom: $sizeGrid solid $colorWhite;
-		border-left: $sizeGrid * 2 solid $colorWhite;
-
 		&.left-aligned,
 		&.right-aligned {
 			.content {

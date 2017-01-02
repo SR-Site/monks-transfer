@@ -1,5 +1,15 @@
-// import all your components here!
+[class^="component-block"] {
+	position: relative;
 
+	&.windowed {
+		border-top: $sizeGrid solid $colorWhite;
+		border-right: $sizeGrid * 2 solid $colorWhite;
+		border-bottom: $sizeGrid solid $colorWhite;
+		border-left: $sizeGrid * 2 solid $colorWhite;
+	}
+}
+
+// import all your components here!
 @import "block/block-hero-main";
 @import "header";
 @import "footer";
@@ -8,3 +18,4 @@
 @import "button/button-start-advertising";
 @import "block/block-image-with-content";
 @import "button/button-main";
+@import "block/block-small-info";

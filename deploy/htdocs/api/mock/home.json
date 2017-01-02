@@ -69,6 +69,20 @@
 						"alt": "Background image alt text"
 					}
 				}
+			},
+			{
+				"id": "smallInfo",
+				"data": {
+					"windowed": true,
+					"heading": "Find the Right Way to Reach <br/>your <span class='highlight'>Customers</span>",
+					"paragraph": "We've created a great line-up of advertising opportunities that make it easy for you to talk to best customers",
+					"link": {
+						"label": "Find your market",
+						"title": "Find your market",
+						"target": "/home",
+						"type": 0
+					}
+				}
 			}
 		]
 	}

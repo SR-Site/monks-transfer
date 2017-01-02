@@ -21,5 +21,9 @@ export const blockConfig:IBlockConfig = {
 	imageWithContent: {
 		id: Blocks.IMAGE_WITH_CONTENT,
 		type: BlockType.COMPONENT
+	},
+	smallInfo: {
+		id: Blocks.SMALL_INFO,
+		type: BlockType.COMPONENT
 	}
 };
