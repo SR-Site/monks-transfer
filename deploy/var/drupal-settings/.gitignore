@@ -1,0 +1,4 @@
+# Ignore local settings information from this folder.
+environment.local.php
+settings.local.php
+services.local.yml

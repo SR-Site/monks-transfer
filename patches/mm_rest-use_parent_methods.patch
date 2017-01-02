@@ -1,0 +1,158 @@
+diff --git a/src/Plugin/ResourceBase.php b/src/Plugin/ResourceBase.php
+index c0b41cd..85c330c 100644
+--- a/src/Plugin/ResourceBase.php
++++ b/src/Plugin/ResourceBase.php
+@@ -100,53 +100,6 @@ abstract class ResourceBase extends RestResourceBase implements ContainerFactory
+     );
+   }
+ 
+-  public function routes() {
+-    $collection = new RouteCollection();
+-
+-    $definition = $this->getPluginDefinition();
+-    $canonical_path = isset($definition['uri_paths']['canonical']) ? $definition['uri_paths']['canonical'] : '/' . strtr($this->pluginId, ':', '/') . '/{id}';
+-
+-    $route_name = strtr($this->pluginId, ':', '.');
+-
+-    $methods = $this->availableMethods();
+-    foreach ($methods as $method) {
+-      $route = $this->getBaseRoute($canonical_path, $method);
+-
+-      switch ($method) {
+-        case 'POST':
+-        case 'PATCH':
+-          // Restrict the incoming HTTP Content-type header to the known
+-          // serialization formats.
+-          $route->addRequirements(array('_content_type_format' => implode('|', $this->serializerFormats)));
+-          $collection->add("$route_name.$method", $route);
+-          break;
+-
+-        case 'GET':
+-        case 'HEAD':
+-          // Restrict GET and HEAD requests to the media type specified in the
+-          // HTTP Accept headers.
+-          if (!empty($definition['format']['_format_key'])) {
+-            foreach ($this->serializerFormats as $format_name) {
+-              // Expose one route per available format.
+-              $format_route = clone $route;
+-              $format_route->addRequirements(array('_format' => $format_name));
+-              $collection->add("$route_name.$method.$format_name", $format_route);
+-            }
+-          }
+-          else {
+-            $collection->add("$route_name.$method", $route);
+-          }
+-          break;
+-
+-        default:
+-          $collection->add("$route_name.$method", $route);
+-          break;
+-      }
+-    }
+-
+-    return $collection;
+-  }
+-
+   /**
+    * Setups the base route for all HTTP methods.
+    *
+diff --git a/src/RequestHandler.php b/src/RequestHandler.php
+index 73bc2c4..0e36f7c 100644
+--- a/src/RequestHandler.php
++++ b/src/RequestHandler.php
+@@ -5,6 +5,7 @@ namespace Drupal\mm_rest;
+ use Drupal\Core\Render\RenderContext;
+ use Drupal\Core\Routing\RouteMatchInterface;
+ use Drupal\rest\ResourceResponse;
++use Drupal\rest\RequestHandler as CoreRequestHandler;
+ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+ use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+ use Symfony\Component\HttpFoundation\Request;
+@@ -16,83 +17,20 @@ use Symfony\Component\Serializer\Exception\UnexpectedValueException;
+ /**
+  * Acts as intermediate request forwarder for resource plugins.
+  */
+-class RequestHandler implements ContainerAwareInterface {
+-
+-  use ContainerAwareTrait;
++class RequestHandler extends CoreRequestHandler {
+ 
+   /**
+-   * Handles a web API request.
+-   *
+-   * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
+-   *   The route match.
+-   * @param \Symfony\Component\HttpFoundation\Request $request
+-   *   The HTTP request object.
+-   *
+-   * @return \Symfony\Component\HttpFoundation\Response|array|object
+-   *   The response object.
++   * @inheritdoc
+    */
+   public function handle(RouteMatchInterface $route_match, Request $request) {
+-
+-    $plugin = $route_match->getRouteObject()->getDefault('_plugin');
+-    $method = strtolower($request->getMethod());
+-
+-    $resource = $this->container
+-      ->get('plugin.manager.rest')
+-      ->getInstance(array('id' => $plugin));
+-
+-    // Deserialize incoming data if available.
+-    $serializer = $this->container->get('serializer');
+-    $received = $request->getContent();
+-    $unserialized = NULL;
+-    // @todo Move de-serialization to an Event Subscriber
+-    if (!empty($received)) {
+-      $format = $request->getContentType();
+-
+-      // Only allow serialization formats that are explicitly configured. If no
+-      // formats are configured allow all and hope that the serializer knows the
+-      // format. If the serializer cannot handle it an exception will be thrown
+-      // that bubbles up to the client.
+-      $config = $this->container->get('config.factory')->get('rest.settings')->get('resources');
+-      $method_settings = $config[$plugin][$request->getMethod()];
+-      if (empty($method_settings['supported_formats']) || in_array($format, $method_settings['supported_formats'])) {
+-        $definition = $resource->getPluginDefinition();
+-        $class = $definition['serialization_class'];
+-        try {
+-          $unserialized = $serializer->deserialize($received, $class, $format, array('request_method' => $method));
+-        }
+-        catch (UnexpectedValueException $e) {
+-          // @todo Throw exception
+-          $error['error']['code'] = $e->getCode();
+-          $error['error']['message'] = $e->getMessage();
+-          $content = $serializer->serialize($error, $format);
+-          return new Response($content, 400, array('Content-Type' => $request->getMimeType($format)));
+-        }
+-      }
+-      else {
+-        throw new UnsupportedMediaTypeHttpException();
+-      }
+-    }
+-
+-    // Determine the request parameters that should be passed to the resource
+-    // plugin.
+-    $route_parameters = $route_match->getParameters();
+-    $parameters = array();
+-    // Filter out all internal parameters starting with "_".
+-    foreach ($route_parameters as $key => $parameter) {
+-      if ($key{0} !== '_') {
+-        $parameters[] = $parameter;
+-      }
+-    }
+-
+-   // Invoke the operation on the resource plugin.
+-    $result = call_user_func_array(array($resource, $method), array_merge($parameters, array($unserialized, $request)));
++    $response = parent::handle($route_match, $request);
+ 
+     // Add rest settings config's cache tags.
+     // @todo Add mm_rest config cache tag.
+     // @todo Use DI
+     \Drupal::service('mm_rest.cacheable_metadata_collector')->addCacheableDependency($this->container->get('config.factory')->get('rest.settings'));
+ 
+-    return $result;
++    return $response;
+   }
+ 
+ }

@@ -1,0 +1,32 @@
+#Ignore PhpStorm project dir
+.idea
+
+# osx metadata
+.DS_Store
+
+# build cache
+.tscache
+.sass-cache
+
+# sourcemaps
+*.css.map
+*.js.map
+
+#Drupal public file path
+deploy/htdocs/assets
+
+#Binaire files are generated with composer
+deploy/bin
+
+#Bundles are generated with composer
+deploy/vendor
+
+#Ignore core and contrib files, use composer
+deploy/htdocs/core
+deploy/htdocs/modules/contrib
+deploy/htdocs/modules/mediamonks
+deploy/htdocs/themes/contrib
+deploy/htdocs/themes/mediamonks
+deploy/htdocs/library/contrib
+deploy/htdocs/profiles/contrib
+drush/contrib
