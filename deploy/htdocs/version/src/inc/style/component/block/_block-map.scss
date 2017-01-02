@@ -1,5 +1,5 @@
 .component-block-map {
-	background: #f8f8f8;
+	background: $colorMapBackground;
 
 	.map-container {
 		@include aspect-ratio(1440px, 840px);
@@ -9,12 +9,11 @@
 		}
 	}
 
-	.map-slider {
-		@include size($sizeGrid * 28, $sizeGrid * 3);
+	.component-map-slider {
+		@include size($sizeGrid * 28, $sizeGrid * 2);
 		@include pos(auto, auto, $sizeGrid, 50%);
 		transform: translateX(-50%);
 		position: absolute;
-		background: red;
 	}
 
 	.slide-description{

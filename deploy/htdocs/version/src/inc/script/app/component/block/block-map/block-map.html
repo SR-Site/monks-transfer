@@ -2,7 +2,11 @@
 	<div class="map-container">
 		<img class="abs-fill" src="data/map/map-background.png" alt="">
 	</div>
-	<div class="map-slider"></div>
+	<!-- ko component: {
+		name: 'map-slider',
+		onComplete: $root.controller.callbackCounter.get(),
+		options: {}
+	} --><!-- /ko -->
 	<div class="slide-description">
 		<span class="pagination-number">02</span>
 		<h3 class="heading heading-01">81%</h3>
