@@ -1,0 +1,22 @@
+uuid: bad556d8-3170-4760-8ecd-e129397ac938
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - mm_gaia
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: mm_gaia_help
+theme: mm_gaia
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

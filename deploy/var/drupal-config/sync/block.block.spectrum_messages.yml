@@ -1,0 +1,22 @@
+uuid: 3003b30e-e006-4be4-ad98-3e8cde808553
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - spectrum
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: spectrum_messages
+theme: spectrum
+region: '-1'
+weight: 5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

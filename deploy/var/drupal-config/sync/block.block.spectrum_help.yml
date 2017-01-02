@@ -1,0 +1,22 @@
+uuid: 6badd635-3c1f-4406-84a7-dab0cba9a6a0
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - spectrum
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: spectrum_help
+theme: spectrum
+region: '-1'
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

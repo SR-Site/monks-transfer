@@ -1,0 +1,22 @@
+uuid: e30c7c88-3010-4acf-8a50-b286053a1232
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mm_gaia
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: mm_gaia_content
+theme: mm_gaia
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

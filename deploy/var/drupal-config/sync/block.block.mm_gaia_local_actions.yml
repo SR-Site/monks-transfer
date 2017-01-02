@@ -1,0 +1,20 @@
+uuid: c27835ba-16bd-48f9-aee7-0137598f4b5f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mm_gaia
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: mm_gaia_local_actions
+theme: mm_gaia
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
