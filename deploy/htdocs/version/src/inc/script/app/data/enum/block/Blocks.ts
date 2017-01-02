@@ -8,6 +8,7 @@ class Blocks
 	public static IMAGE_WITH_CONTENT:string = 'block-image-with-content';
 	public static SMALL_INFO:string = 'block-small-info';
 	public static MAP:string = 'block-map';
+	public static IMAGE_CALL_TO_ACTIONS:string = 'block-image-call-to-actions';
 }
 
 

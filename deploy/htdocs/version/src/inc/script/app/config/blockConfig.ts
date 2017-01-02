@@ -29,5 +29,9 @@ export const blockConfig:IBlockConfig = {
 	map: {
 		id: Blocks.MAP,
 		type: BlockType.COMPONENT
+	},
+	imageCallToActions: {
+		id: Blocks.IMAGE_CALL_TO_ACTIONS,
+		type: BlockType.COMPONENT
 	}
 };

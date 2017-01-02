@@ -5,17 +5,17 @@
 		'right-aligned': data.alignment === $root.Alignment.RIGHT
 	}">
 	<figure class="image">
-		<img data-bind="image: {
-			queries: [
-				[
-					$root.MediaQueries.X_SMALL, data.background.normal
+		<img data-bind="
+			attr: {
+				alt: data.background.alt
+			},
+			image: {
+				queries: [
+					[$root.MediaQueries.X_SMALL, data.background.normal ],
+					[$root.MediaQueries.SMALL, data.background.small]
 				],
-				[
-					$root.MediaQueries.SMALL, data.background.small
-				]
-			],
-			state: $root.deviceState()
-		}" alt="background image">
+				state: $root.deviceState()
+			}" />
 	</figure>
 	<aside class="content">
 		<h4 class="heading heading-06" data-bind="html: data.heading"></h4>

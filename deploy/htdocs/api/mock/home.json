@@ -89,6 +89,56 @@
 				"data": {
 					"windowed": true
 				}
+			},
+			{
+				"id": "imageCallToActions",
+				"data": {
+					"windowed": false,
+					"callToActions": [
+						{
+							"heading": "Television",
+							"paragraph": "Lorem ipsum dolor sit amet",
+							"background": {
+								"normal": "data/image-call-to-actions/image-tv.jpg",
+								"small": "data/image-call-to-actions/image-tv.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Television",
+							"paragraph": "Lorem ipsum dolor sit amet",
+							"background": {
+								"normal": "data/image-call-to-actions/image-tv.jpg",
+								"small": "data/image-call-to-actions/image-tv.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Television",
+							"paragraph": "Lorem ipsum dolor sit amet",
+							"background": {
+								"normal": "data/image-call-to-actions/image-tv.jpg",
+								"small": "data/image-call-to-actions/image-tv.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
+				}
 			}
 		]
 	}
