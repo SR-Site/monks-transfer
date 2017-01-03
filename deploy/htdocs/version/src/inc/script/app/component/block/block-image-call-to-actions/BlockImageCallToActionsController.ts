@@ -9,6 +9,8 @@ import ThrottleDebounce from "../../../../lib/temple/util/ThrottleDebounce";
 
 class BlockImageCallToActionsController extends DefaultComponentController<BlockImageCallToActionsViewModel, IBlockImageCallToActionsOptions>
 {
+	private static HOVER_SCALE: number = 1.1;
+
 	/**
 	 *    Instance of Log debug utility for debug logging
 	 *    @property _debug
@@ -17,7 +19,8 @@ class BlockImageCallToActionsController extends DefaultComponentController<Block
 	private _debug: Log = new Log('app.component.BlockImageCallToActions');
 
 	private _callToActionsImages: Array<HTMLElement>;
-	private _activeIndex: number;
+
+	private _hoverSizes: Array<Array<number>> = [];
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -33,7 +36,10 @@ class BlockImageCallToActionsController extends DefaultComponentController<Block
 
 		this.destructibles.add(new NativeEventListener(window, 'resize', ThrottleDebounce.debounce(this.handleResize, 100, this)));
 
+		this.calculateSizes();
 		this.clipImages()
+
+		console.log(this._hoverSizes);
 	}
 
 	/**
@@ -48,21 +54,55 @@ class BlockImageCallToActionsController extends DefaultComponentController<Block
 	}
 
 	/**
-	 * @private
+	 * @public
 	 * @method clipImages
 	 */
-	private clipImages(): void
+	public clipImages(duration:number = 0): void
 	{
-		let elementWidth: number = this.element.offsetWidth / this.options.callToActions.length;
 		let elementHeight: number = this.element.offsetHeight;
+		let left: number = 0;
 
 		this._callToActionsImages.forEach((element: HTMLElement, index: number) =>
 		{
-			let right: number = this.element.offsetWidth - (((this.options.callToActions.length - 1) - index) * elementWidth);
-			let left: number = index * elementWidth;
+			// Default size
+			let elementWidth: number = this.element.offsetWidth / this.options.callToActions.length;
 
-			TweenLite.set(element, {
-				clip: 'rect(0px, ' + right + 'px, ' + elementHeight + 'px, ' + left + 'px)'
+			if(this.viewModel.activeImageIndex() !== null)
+			{
+				elementWidth = this.element.offsetWidth * this._hoverSizes[this.viewModel.activeImageIndex()][index];
+			}
+
+			let right: number = left + elementWidth;
+
+			TweenLite.to(element, duration, {
+				clip: 'rect(0px, ' + right + 'px, ' + elementHeight + 'px, ' + left + 'px)',
+				ease: Expo.easeOut
+			});
+
+			left += elementWidth;
+		})
+	}
+
+	/**
+	 * @private
+	 * @method calculateSizes
+	 */
+	private calculateSizes(): void
+	{
+		// Base size
+		let size = 1 / this.options.callToActions.length;
+
+		let growSize = size * BlockImageCallToActionsController.HOVER_SCALE;
+		let otherSize = (1 - growSize) / (this.options.callToActions.length - 1);
+
+		// Dynamically calculate the sizes based on the amount of options
+		this.options.callToActions.forEach((callToAction, rowIndex: number) =>
+		{
+			this._hoverSizes[rowIndex] = [];
+
+			this.options.callToActions.forEach((callToAction, index: number) =>
+			{
+				this._hoverSizes[rowIndex].push(index === rowIndex ? growSize : otherSize);
 			})
 		})
 	}
@@ -82,6 +122,7 @@ class BlockImageCallToActionsController extends DefaultComponentController<Block
 	 */
 	public destruct(): void
 	{
+		this._callToActionsImages = null;
 
 		// always call this last
 		super.destruct();

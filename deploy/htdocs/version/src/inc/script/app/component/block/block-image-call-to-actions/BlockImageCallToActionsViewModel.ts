@@ -17,7 +17,8 @@ class BlockImageCallToActionsViewModel extends DefaultComponentViewModel<BlockIm
 	*/
 	public handleMouseEnter(data):void
 	{
-		this.activeImageIndex(this.data.callToActions.indexOf(data))
+		this.activeImageIndex(this.data.callToActions.indexOf(data));
+		this.controller.clipImages(1);
 	}
 
 	/**
@@ -27,6 +28,7 @@ class BlockImageCallToActionsViewModel extends DefaultComponentViewModel<BlockIm
 	public handleMouseLeave():void
 	{
 		this.activeImageIndex(null);
+		this.controller.clipImages(1);
 	}
 
 	/**
