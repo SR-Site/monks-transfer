@@ -1,0 +1,166 @@
+swagger: '2.0'
+info:
+  title: Spectrum Reach Corperate website
+  description: The re-creation of the Spectrum Reach website
+  version: "1.0.0"
+host: tbd.spectrumreach.com
+schemes:
+  - https
+  - http
+basePath: /api/v1/
+produces:
+  - application/json
+paths:
+  /init:
+    get:
+      summary: Get all the information to bootstrap the application
+      description: "Get all the information to bootstrap the application. Example: Menu, main items etc.."
+      responses:      
+        200:
+          description: History information for the given user
+          schema:
+            $ref: "#/definitions/Init"
+  /page:
+    get:
+      summary: Get page by slug
+      description: Get the content pages with the blocks based on the slug
+      responses:
+        200:
+          description: History information for the given user
+          schema:
+            $ref: "#/definitions/Page"
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+            
+definitions:
+  # +--------------------------------------------------------------------------------+
+  # | API Calls                                                                      |
+  # +--------------------------------------------------------------------------------+
+  Page:
+    type: object
+    properties:
+      title:
+        type: string
+        default: ""
+        description: The main title for the page
+      statusCode:
+        type: integer
+        default: 200
+        description: The http status for the call
+      blocks:
+        description: The container for all the blocks
+        type: array
+        items:
+          $ref: "#/definitions/Block"
+  Init:
+    type: object
+    properties:
+      statusCode:
+        type: integer
+        default: 200
+        description: The http status for the call
+        
+  # +--------------------------------------------------------------------------------+
+  # | Partials; Small block object definitions                                       |
+  # +--------------------------------------------------------------------------------+
+  
+  Link: 
+    type: object
+    description: "Default link object"
+    properties:
+      label: 
+        type: string
+        description: The Label text content
+      title: 
+        type: string
+        description: The link title element
+      target:
+        type: string
+        description: the Target element.
+        enum: ["_self", "_blank", "_top"]
+      type:
+        type: integer
+        description: "@todo for Lars braam"
+        enum: [1, 2, 3, 4, 5]
+  Background: 
+    type: object
+    description: "Default background object"
+    properties:
+      normal: 
+        type: string
+        description: The desktop version of the background
+      small: 
+        type: string
+        description: The mobile version of the background
+      alt:
+        type: string
+        description: The alt text for the background image
+  Error:
+    type: object
+    description: "Default error object"
+    properties:
+      statusCode:
+        type: integer
+        default: 500
+      data:
+        type: object
+        properties:
+          code:
+            type: integer
+            format: int32
+          message:
+            type: string
+          fields:
+            type: string      
+        
+  # +--------------------------------------------------------------------------------+
+  # | Interfaces                                                                     |
+  # +--------------------------------------------------------------------------------+
+  
+  Block:
+    type: object
+    title: defaultBlock
+    description: Default block definition
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+      data:
+        type: object
+        description: "The container that holds all the data for the content block"
+
+  # +--------------------------------------------------------------------------------+
+  # | Content blocks                                                                 |
+  # +--------------------------------------------------------------------------------+
+  
+  heroMain:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["heroMain"]
+      data:
+        type: object
+        properties:
+          alignment:
+            type: integer
+            default: 0
+            enum: [0, 1, 2]
+          windowed:
+            type: boolean
+            default: true
+          croppedImage: 
+            type: boolean
+            default: false
+          heading:
+            type: string
+          paragraph:
+            type: string
+          link: 
+            $ref: "#/definitions/Link"
+          background: 
+            $ref: "#/definitions/Background"        
+          
