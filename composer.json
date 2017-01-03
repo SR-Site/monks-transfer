@@ -99,6 +99,9 @@
     },
     "extra": {
         "patches": {
+            "drupal/core": {
+                "Allow text field to enforce a specific text format": "https://www.drupal.org/files/issues/allow_text_field_to-784672-111.patch"
+            },
             "drupal/menu_admin_per_menu": {
                 "Menu edit form is not visible on the node edit page": "https://www.drupal.org/files/issues/2796537-6.patch"
             },

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "17ae3ec9f2a46b802e2852876be18fd5",
-    "content-hash": "f994820fe2cef9d094f9c8b281078b58",
+    "hash": "8ca4dcba194c68beb003ee663c617ca6",
+    "content-hash": "fd9e2dd3bac66fb3f3b3f3b867dd7274",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1210,6 +1210,11 @@
                 "symfony/css-selector": "~2.8"
             },
             "type": "drupal-core",
+            "extra": {
+                "patches_applied": {
+                    "Allow text field to enforce a specific text format": "https://www.drupal.org/files/issues/allow_text_field_to-784672-111.patch"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Drupal\\Core\\": "lib/Drupal/Core",
