@@ -3,4 +3,4 @@ langcode: en
 status: true
 dependencies: {  }
 id: blockheromain
-label: 'Hero main'
+label: 'Block Hero main'
