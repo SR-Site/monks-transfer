@@ -1,0 +1,7 @@
+# Theme to boostrap Spectrum Gaia frontend.
+name: Spectrum
+type: theme
+description: 'A theme to boostrap the Spectrum frontend framework.'
+base theme: mm_gaia
+core: 8.x
+version: 8.x-1.0
