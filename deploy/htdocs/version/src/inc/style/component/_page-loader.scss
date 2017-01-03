@@ -1,0 +1,12 @@
+.component-page-loader {
+	@include size(100%);
+	@include pos(0,0,0,0);
+	background: $colorWhite;
+	z-index: zindex($layout, pageLoader);
+	position: fixed;
+
+	.spinnner {
+		@include size(32px);
+	}
+}
+

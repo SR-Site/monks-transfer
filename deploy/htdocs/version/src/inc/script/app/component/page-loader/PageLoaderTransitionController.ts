@@ -1,6 +1,6 @@
 import DefaultTransitionController from "app/util/component-transition/DefaultTransitionController";
 
-class FooterTransitionController extends DefaultTransitionController
+class PageLoaderTransitionController extends DefaultTransitionController
 {
 	/**
 	 * @public
@@ -16,4 +16,4 @@ class FooterTransitionController extends DefaultTransitionController
 	}
 }
 
-export default FooterTransitionController;
+export default PageLoaderTransitionController;

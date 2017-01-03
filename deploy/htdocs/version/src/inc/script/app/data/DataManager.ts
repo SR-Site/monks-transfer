@@ -9,6 +9,7 @@ import SettingsModel from "./model/SettingsModel";
 import ServiceModel from "./model/ServiceModel";
 import ContentService from "./service/ContentService";
 import DeviceStateTracker from "../../lib/temple/util/DeviceStateTracker";
+import PageLoaderController from "../component/page-loader/PageLoaderController";
 
 
 /**
@@ -19,8 +20,8 @@ class DataManager
 {
 	private static _instance:DataManager;
 
-
 	public deviceStateTracker:DeviceStateTracker = new DeviceStateTracker();
+	public pageLoader:PageLoaderController;
 
 	/**
 	 * @property gateway

@@ -97,7 +97,6 @@
 					"callToActions": [
 						{
 							"heading": "Television",
-							"paragraph": "Lorem ipsum dolor sit amet",
 							"background": {
 								"normal": "data/image-call-to-actions/image-tv.jpg",
 								"small": "data/image-call-to-actions/image-tv.jpg",
@@ -110,30 +109,28 @@
 							}
 						},
 						{
-							"heading": "Television",
-							"paragraph": "Lorem ipsum dolor sit amet",
+							"heading": "Digital",
 							"background": {
-								"normal": "data/image-call-to-actions/image-tv.jpg",
-								"small": "data/image-call-to-actions/image-tv.jpg",
+								"normal": "data/image-call-to-actions/image-digital.jpg",
+								"small": "data/image-call-to-actions/image-digital.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
-								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"normal": "data/image-call-to-actions/image-digital-blurred.jpg",
+								"small": "data/image-call-to-actions/image-digital-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						},
 						{
-							"heading": "Television",
-							"paragraph": "Lorem ipsum dolor sit amet",
+							"heading": "Creative <br/>services",
 							"background": {
-								"normal": "data/image-call-to-actions/image-tv.jpg",
-								"small": "data/image-call-to-actions/image-tv.jpg",
+								"normal": "data/image-call-to-actions/image-creative.jpg",
+								"small": "data/image-call-to-actions/image-creative.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
-								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"normal": "data/image-call-to-actions/image-creative-blurred.jpg",
+								"small": "data/image-call-to-actions/image-creative-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						}

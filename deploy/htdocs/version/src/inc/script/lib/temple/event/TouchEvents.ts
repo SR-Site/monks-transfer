@@ -52,6 +52,13 @@ class TouchEvents
 	 * @static
 	 */
 	public static CANCEL:string = 'cancel';
+
+	/**
+	 * @property TAP
+	 * @type {string}
+	 * @static
+	 */
+	public static TAP:string = 'tap';
 }
 
 export default TouchEvents;

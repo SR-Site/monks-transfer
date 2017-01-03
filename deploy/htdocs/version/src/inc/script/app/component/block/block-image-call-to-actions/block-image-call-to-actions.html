@@ -1,33 +1,44 @@
 <div class="component-block-image-call-to-actions" data-bind="css: {'windowed': data.windowed}">
-	<ul class="call-to-actions abs-fill" data-bind="foreach: data.callToActions">
-		<li class="call-to-action abs-fill">
-			<a>
-				<figure>
-					<img class="default-image abs-fill" data-bind="
-						attr: { alt: $data.background.alt },
-						image: {
-							queries: [
-								[ $root.MediaQueries.X_SMALL, $data.background.normal ],
-								[ $root.MediaQueries.SMALL, $data.background.small ]
-							],
-							state: $root.deviceState()
-						}"/>
-					<img class="blurred-image abs-fill" data-bind="
-						attr: { alt: $data.backgroundBlurred.alt },
-						image: {
-							queries: [
-								[ $root.MediaQueries.X_SMALL, $data.backgroundBlurred.normal ],
-								[ $root.MediaQueries.SMALL, $data.backgroundBlurred.small ]
-							],
-							state: $root.deviceState()
-						}"/>
-				</figure>
-				<aside>
-					<span class="pagination-number">01</span>
-					<h3 class="heading heading-04">Television</h3>
-				</aside>
-			</a>
+	<div class="abs-fill">
+		<div class="call-to-actions-images abs-fill" data-bind="foreach: data.callToActions">
+			<div class="call-to-action-image abs-fill" data-bind="css: {
+					'is-active': $index() === $root.activeImageIndex()
+				}">
+				<img class="default-image abs-fill" data-bind="
+					attr: { alt: $data.background.alt },
+					image: {
+						queries: [
+							[ $root.MediaQueries.X_SMALL, $data.background.normal ],
+							[ $root.MediaQueries.SMALL, $data.background.small ]
+						],
+						state: $root.deviceState()
+					}"/>
 
-		</li>
-	</ul>
+				<img class="blurred-image abs-fill" data-bind="
+					attr: { alt: $data.backgroundBlurred.alt },
+					image: {
+						queries: [
+							[ $root.MediaQueries.X_SMALL, $data.backgroundBlurred.normal ],
+							[ $root.MediaQueries.SMALL, $data.backgroundBlurred.small ]
+						],
+						state: $root.deviceState()
+					}"/>
+			</div>
+		</div>
+		<div class="call-to-actions-content abs-fill" data-bind="foreach: data.callToActions">
+			<a href="#" data-bind="
+				style: {
+					width: (100 / $parent.data.callToActions.length) + '%'
+				},
+				event: {
+					'mouseenter': $root.handleMouseEnter.bind($root),
+					'mouseleave': $root.handleMouseLeave.bind($root)
+				}">
+				<span class="text-wrapper">
+					<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
+					<h3 class="heading heading-03" data-bind="html: heading"></h3>
+				</span>
+			</a>
+		</div>
+	</div>
 </div>

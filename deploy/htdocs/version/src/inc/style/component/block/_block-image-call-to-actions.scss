@@ -1,29 +1,39 @@
 .component-block-image-call-to-actions {
+	@include aspect-ratio(1600px, 640px);
 	position: relative;
 
-	.call-to-actions {
-		@include aspect-ratio(1600px, 640px);
-		@extend %reset-list;
+	.call-to-actions-content {
 		font-size: 0;
-	}
-
-	.call-to-action {
-		display: inline-block;
-		overflow: hidden;
-		vertical-align: top;
-
-		.blurred-image {
-			opacity: 0;
-		}
 
 		a {
-			@include size(100%);
-			display: block;
+			text-decoration: none;
 			position: relative;
+			color: $colorPrimary;
+			height: 100%;
+			display: inline-block;
 		}
 
-		figure {
-			@include aspect-ratio(1600px, 640px);
+		.heading {
+			margin: $sizeGrid / 2 auto auto $sizeGrid / 2;
+		}
+	}
+
+	.text-wrapper {
+		@include pos($sizeGrid * 3, 0, auto, 0);
+		padding: 0 $sizeGrid * 2;
+		position: absolute;
+	}
+
+	.blurred-image {
+		opacity: 0;
+		transition: opacity .2s ease(easeInOut);
+	}
+
+	.call-to-action-image {
+		&.is-active {
+			.blurred-image {
+				opacity: 1;
+			}
 		}
 	}
 }

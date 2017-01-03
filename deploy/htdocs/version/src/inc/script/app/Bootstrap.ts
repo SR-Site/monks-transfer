@@ -17,6 +17,7 @@ requirejs.config({
 		xdomainrequest: 'vendor/jquery-xdomainrequest/jquery.xdomainrequest',
 		jquerymobile:   'vendor/jquery-mobile/jquery.mobile.custom',
 		knockout:       'vendor/knockout/knockout',
+		bowser:         'vendor/bowser/bowser',
 		text:           'vendor/require-text/text',
 		json:           'vendor/require-json/json',
 		TweenMax:       'vendor/gsap/TweenMax',

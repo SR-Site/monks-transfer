@@ -5,7 +5,6 @@ export interface IBlockImageCallToActionsOptions extends IDefaultComponentOption
 {
 	callToActions:Array<{
 		heading: string;
-		paragraph:string;
 		background:IImage
 		backgroundBlurred:IImage;
 	}>

@@ -11,6 +11,7 @@
 /// <reference path="greensock/greensock.draggable.d.ts" />
 /// <reference path="greensock/greensock.throwprops.d.ts" />
 /// <reference path="greensock/greensock.splittext.d.ts" />
+/// <reference path="bowser/bowser.d.ts" />
 
 // export files as typescript module in which a javascript define() is used instead of a typescript export.
 // this way they can be imported as "import externals from "lib/externals";" in a typescript file.

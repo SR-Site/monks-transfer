@@ -73,10 +73,10 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 	 */
 	private _debouncedResizeHandler: ()=>void = ThrottleDebounce.debounce(this.handleResize, 500, this);
 	/**
-	 * @property _loader
-	 * @type {Loader}
+	 * @property _dataManager
+	 * @type {DataManager}
 	 */
-	private _loader: Loader;
+	private _dataManager: DataManager = DataManager.getInstance();
 	/**
 	 * @property _handleScrollSectionInViewListener
 	 * @type {()=>void}
@@ -95,8 +95,6 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 	public init(): void
 	{
 		super.init();
-
-		this._loader = new Loader(document.body);
 
 		this._currentDeeplink = Gaia.api.getDeeplink();
 
@@ -133,10 +131,11 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 	{
 		super.onDeeplink(event);
 
+
 		if(!Gaia.api.getPage(event.routeResult[0].branch).isPopup() &&
 			JSON.stringify(this._currentDeeplink) != JSON.stringify(event.routeResult[0].deeplink))
 		{
-			this._loader.show()
+			this._dataManager.pageLoader.transitionIn()
 				.then(() =>
 				{
 					this._currentDeeplink = event.routeResult[0].deeplink;
@@ -217,7 +216,7 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 				return this._allComponentsLoaded;
 			})
 			.then(() => this.setScrollSections())
-			.then(() => this._loader.hide())
+			.then(() => this._dataManager.pageLoader.transitionOut())
 			.catch((result) =>
 			{
 				throw result;
@@ -399,12 +398,7 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 			this._scrollTracker = null;
 		}
 
-		if(this._loader)
-		{
-			this._loader.destruct();
-			this._loader = null;
-		}
-
+		this._dataManager = null;
 		this._beforeTransitionIn = null;
 		this._allComponentsLoaded = null;
 		this._components = null;
