@@ -24,7 +24,7 @@
 		padding-left: $sizeGrid * 3;
 
 		.heading {
-			 margin-bottom: $sizeGrid;
+			margin-bottom: $sizeGrid;
 		}
 
 		.copy {
@@ -42,6 +42,21 @@
 
 	.persona-option {
 		display: inline-block;
+
+		// TODO: remove this
+		&:first-child {
+			.persona-button {
+				color: $colorSmallBusinesses;
+
+				.pagination-number {
+					color: $colorPrimary;
+
+					&:after {
+						opacity: 0;
+					}
+				}
+			}
+		}
 	}
 
 	.persona-button {
@@ -101,9 +116,8 @@
 			}
 		}
 
+		// Enum value classes for different colors
 		@include hover() {
-
-			// Enum value classes for different colors
 			&.small_business {
 				color: $colorSmallBusinesses;
 			}
