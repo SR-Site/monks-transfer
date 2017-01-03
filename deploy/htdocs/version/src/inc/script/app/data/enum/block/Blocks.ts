@@ -9,6 +9,7 @@ class Blocks
 	public static SMALL_INFO:string = 'block-small-info';
 	public static MAP:string = 'block-map';
 	public static IMAGE_CALL_TO_ACTIONS:string = 'block-image-call-to-actions';
+	public static LATEST:string = 'block-latest';
 }
 
 

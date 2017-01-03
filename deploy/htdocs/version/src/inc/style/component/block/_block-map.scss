@@ -1,5 +1,5 @@
 .component-block-map {
-	background: $colorMapBackground;
+	background: $colorLightGrey;
 
 	.map-container {
 		@include aspect-ratio(1440px, 840px);

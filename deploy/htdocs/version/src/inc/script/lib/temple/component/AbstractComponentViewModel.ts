@@ -1,6 +1,8 @@
 import Destructible from "lib/temple/core/Destructible";
 import AbstractComponentController from "./AbstractComponentController";
 import ButtonSize from "../../../app/data/enum/layout/ButtonSize";
+import {mediaQueries, DeviceState} from "../../../app/data/scss-shared/MediaQueries";
+import DataManager from "../../../app/data/DataManager";
 
 /**
  * Abstract viewModel class for components. All component ViewModels should extend this class.
@@ -11,7 +13,10 @@ import ButtonSize from "../../../app/data/enum/layout/ButtonSize";
  */
 abstract class AbstractComponentViewModel<T extends AbstractComponentController<any, any>, U> extends Destructible
 {
+	public MediaQueries:Class = mediaQueries;
 	public ButtonSize: Enum = ButtonSize;
+
+	public deviceState:KnockoutObservable<DeviceState> = DataManager.getInstance().deviceStateTracker.currentState;
 
 	/**
 	 * Reference to the controller instance for this component.
@@ -47,6 +52,8 @@ abstract class AbstractComponentViewModel<T extends AbstractComponentController<
 	public destruct(): void
 	{
 		this.ButtonSize = null;
+		this.deviceState = null;
+		this.MediaQueries = null;
 
 		this.controller = null;
 

@@ -136,6 +136,113 @@
 						}
 					]
 				}
+			},
+			{
+				"id": "latest",
+				"data": {
+					"windowed": false,
+					"heading": "The latest from Spectrum Reach",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "/home",
+						"type": 0
+					},
+					"articles": [
+						{
+							"heading": "Go Beyond High Profile Sport Events",
+							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"image": {
+								"normal": "data/latest/latest-article-image-1.jpg",
+								"small": "data/latest/latest-article-image-1.jpg",
+								"alt": "Background image alt text"
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "/home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "/home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"heading": "Go Beyond High Profile Sport Events",
+							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"image": {
+								"normal": "data/latest/latest-article-image-2.jpg",
+								"small": "data/latest/latest-article-image-2.jpg",
+								"alt": "Background image alt text"
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "/home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "/home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"heading": "Go Beyond High Profile Sport Events",
+							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"image": {
+								"normal": "data/latest/latest-article-image-2.jpg",
+								"small": "data/latest/latest-article-image-2.jpg",
+								"alt": "Background image alt text"
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "/home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "/home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"heading": "Go Beyond High Profile Sport Events",
+							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"image": {
+								"normal": "data/latest/latest-article-image-1.jpg",
+								"small": "data/latest/latest-article-image-1.jpg",
+								"alt": "Background image alt text"
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "/home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "/home",
+									"type": 0
+								}
+							]
+						}
+					]
+				}
 			}
 		]
 	}

@@ -1,0 +1,27 @@
+.component-block-latest {
+	background: $colorLightGrey;
+	padding: $sizeGrid * 3 $sizeGrid * 3 $sizeGrid * 1;
+
+	.header {
+		.heading {
+			margin-bottom: $sizeGrid;
+		}
+
+		.component-button-main {
+			margin-bottom: $sizeGrid;
+		}
+	}
+
+	.latest-articles {
+		@include size(100%, auto);
+		font-size: 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		.component-latest-article-teaser {
+			display: inline-block;
+			margin-bottom: $sizeGrid * 2;
+		}
+	}
+}

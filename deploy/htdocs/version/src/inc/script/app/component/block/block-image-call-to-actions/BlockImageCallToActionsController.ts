@@ -67,8 +67,7 @@ class BlockImageCallToActionsController extends DefaultComponentController<Block
 			// Default size
 			let elementWidth: number = this.element.offsetWidth / this.options.callToActions.length;
 
-			if(this.viewModel.activeImageIndex() !== null)
-			{
+			if(this.viewModel.activeImageIndex() !== null) {
 				elementWidth = this.element.offsetWidth * this._hoverSizes[this.viewModel.activeImageIndex()][index];
 			}
 

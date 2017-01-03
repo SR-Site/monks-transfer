@@ -1,7 +1,7 @@
 .component-button-main {
 	@include size(auto, 5rem);
 	border: 1px solid  $colorBorder;
-	font: 800 1rem / 1 $fontOpenSans;
+	font: 800 1rem / calc(5rem - 2px) $fontOpenSans;
 	color: $colorPrimary;
 	text-transform: uppercase;
 	padding: 0 $sizeGrid / 2;
@@ -21,6 +21,6 @@
 
 	.label {
 		display: inline-block;
-		vertical-align: middle;
+		vertical-align: top;
 	}
 }

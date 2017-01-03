@@ -1,0 +1,17 @@
+.component-button-tag {
+	@include size(auto, 2rem);
+	background: $colorTertiary;
+	border-radius: 2rem;
+	font: 600 1.2rem / 2rem $fontOpenSans;
+	color: $colorWhite;
+	text-transform: uppercase;
+	padding: 0 $sizeGrid / 4;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+
+	.label {
+		display: inline-block;
+		vertical-align: top;
+	}
+}

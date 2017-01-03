@@ -33,5 +33,9 @@ export const blockConfig:IBlockConfig = {
 	imageCallToActions: {
 		id: Blocks.IMAGE_CALL_TO_ACTIONS,
 		type: BlockType.COMPONENT
+	},
+	latest: {
+		id: Blocks.LATEST,
+		type: BlockType.COMPONENT
 	}
 };
