@@ -14,6 +14,8 @@ export let mediaQueries:{[breakpoint:string]:string;} = {
 	MEDIUM_ISOLATE : "(min-width: 768px) and (max-width: 1023px)"
 };
 
+export let angle:number = 45;
+
 /**
  * This enum is used by the DeviceStateTracker class to determine which of the media queries in
  * the mediaQueries object above are considered 'device states'. Names of this enum have to

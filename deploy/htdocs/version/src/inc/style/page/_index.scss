@@ -6,35 +6,64 @@
 	position: relative;
 	z-index: zindex($layout, content);
 
-
 	/**
 	 * Development grid
 	 */
 	.grid {
-		@include pos(0, auto, auto, 50%);
-		@include size(100%);
-		max-width: $largeSiteFrame;
-		transform: translateX(-50%);
+		@include pos(50%, auto, auto, 50%);
+		@include size($largeSiteFrame);
+		transform: translate(-50%, -50%);
 		pointer-events: none;
 		position: fixed;
 		font-size: 0;
 		display: none;
+		backface-visibility: hidden;
+
+		.base-grid {
+			@include size(100%);
+			@include coverer();
+		}
+
+		.regular-grid {
+			.row {
+
+				&:nth-child(odd) {
+					background: rgba(255, 0, 0, .1);
+				}
+
+				&:nth-child(even) {
+					background: rgba(0, 255, 0, .1);
+				}
+			}
+		}
+
+		.angle-grid {
+			@include size(100vw);
+			transform: rotate(#{$angle}deg);
+
+
+			.row {
+				border-left: 1px solid rgba(0, 0, 0, .2);
+				border-right: 1px solid rgba(0, 0, 0, .2);
+
+				&:first-child {
+					border-left-width: 2px;
+				}
+
+				&:last-child {
+					border-right-width: 2px;
+				}
+			}
+		}
 
 		.row {
 			@include size($sizeGrid, 100%);
 			display: inline-block;
-
-			&:nth-child(odd) {
-				background: rgba(255, 0, 0, .1);
-			}
-
-			&:nth-child(even) {
-				background: rgba(0, 255, 0, .1);
-			}
 		}
 
 		&.is-active {
 			display: block;
 		}
+
 	}
 }

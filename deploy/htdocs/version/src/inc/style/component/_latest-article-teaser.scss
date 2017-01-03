@@ -44,14 +44,11 @@
 		}
 
 		&:after {
-			@include size(0);
+			@include triangle(left, bottom, $colorWhite, $sizeGrid);
 			@include pos(auto, $sizeGrid * 7, 0, auto);
 			position: absolute;
-			border-style: solid;
 			content: '';
-			border-width: $sizeGrid 0 0 $sizeGrid;
-			border-color: transparent transparent transparent $colorWhite;
-			transition: transform .2s ease(easeOut);
+			transition: transform .2s ease(easeOut), opacity .2s ease(easeOut);
 		}
 	}
 
@@ -61,6 +58,7 @@
 
 			&:after {
 				transform: translateX(-$sizeGrid * 9);
+				opacity: 0;
 			}
 
 			img {

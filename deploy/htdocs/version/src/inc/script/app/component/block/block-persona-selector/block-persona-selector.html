@@ -1,0 +1,37 @@
+<div class="component-block-persona-selector">
+	<div class="background-image abs-fill">
+		<img src="data/persona-selector/persona-background-image-1.jpg" alt="background image 1" class="abs-fill">
+	</div>
+	<div class="persona-content-wrapper abs-fill">
+		<div class="persona-content">
+			<h2 class="heading heading-04">Small Business</h2>
+			<p class="copy copy-01">Want to expand out from advertising on Facebook and Google?</p>
+			<!-- ko component: {
+					name: 'button/button-main',
+					onComplete: $root.controller.callbackCounter.get(),
+					options: {
+						action: {
+							label: "Grow your business",
+							title: "Grow your business",
+							target: "home",
+							type: 0
+						},
+						size: $root.ButtonSize.LARGE,
+						disabled: $root.findOutMoreDisabled
+					}
+				} --><!-- /ko -->
+		</div>
+	</div>
+	<ul class="persona-options" data-bind="foreach: data.personas">
+		<li class="persona-option">
+			<button class="persona-button button" data-bind="css: $root.PersonaType[personaType].toLowerCase()">
+				<span class="label-wrapper">
+					<span class="label">
+						<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
+						<span class="copy copy-02" data-bind="html:$data.heading"></span>
+					</span>
+				</span>
+			</button>
+		</li>
+	</ul>
+</div>

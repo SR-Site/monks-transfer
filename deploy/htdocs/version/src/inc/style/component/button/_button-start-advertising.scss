@@ -1,19 +1,16 @@
 .component-button-start-advertising {
-	$width: $sizeGrid * 5.25;
-	$height: $sizeGrid * 7.5;
-	@include pos(25%, 0, auto, auto);
-	@include size($width, $height);
+	$size: $sizeGrid * 10;
+
+	@include pos($sizeGrid * 25, 0, auto, auto);
+	@include size($size / 2, $size);
 	position: absolute;
 	transform: translateY(-50%);
 	color: #fff;
 	text-align: right;
 
 	.background {
-		@include size(0);
+		@include arrow(left, $colorPrimary, $size);
 		@include pos(0, 0, auto, auto);
-		border-style: solid;
-		border-width: $height / 2 $width $height / 2 0;
-		border-color: transparent $colorPrimary transparent transparent;
 		content: '';
 		position: absolute;
 		z-index: -1;

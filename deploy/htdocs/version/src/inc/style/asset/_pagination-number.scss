@@ -6,8 +6,8 @@
 
 	&:after {
 		@include pos(auto, auto, $sizeGrid / 8, 0);
-		@include size(calc(100% + #{$sizeGrid / 8}), 0.1rem);
-		transform: rotate(-35deg);
+		@include size(100%, 0.1rem);
+		transform: rotate(-#{$angle}deg);
 		position: absolute;
 		background: currentColor;
 		content: '';

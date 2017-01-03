@@ -1,0 +1,132 @@
+.component-block-persona-selector {
+	@include aspect-ratio(1600px, 880px);
+	position: relative;
+
+	.persona-content-wrapper {
+		overflow: hidden;
+
+		&:after {
+			@include arrow(right, $colorWhite, $sizeGrid * 40);
+			@include pos(calc(50% + #{$sizeGrid * 2}), auto, auto, -$sizeGrid * 3);
+			content: '';
+			transform: translateY(-50%);
+			position: absolute;
+		}
+	}
+
+	.persona-content {
+		@include size($sizeGrid * 11, auto);
+		@include pos(50%, auto, auto, 0);
+		transform: translateY(-50%);
+		overflow: hidden;
+		position: absolute;
+		z-index: 1;
+		padding-left: $sizeGrid * 3;
+
+		.heading {
+			 margin-bottom: $sizeGrid;
+		}
+
+		.copy {
+			margin-bottom: $sizeGrid;
+		}
+	}
+
+	.persona-options {
+		@extend %reset-list;
+		@include size(auto, $sizeGrid * 4);
+		@include pos(auto, $sizeGrid * 2, $sizeGrid * 2, $sizeGrid * 2);
+		font-size: 0;
+		position: absolute;
+	}
+
+	.persona-option {
+		display: inline-block;
+	}
+
+	.persona-button {
+		$buttonWidth: $sizeGrid * 8;
+		$buttonHeight: $sizeGrid * 4;
+		$animationDuration: .3s;
+		$ease: ease(easeInOut);
+		@include size($buttonWidth, $buttonHeight);
+		color: $colorWhite;
+		transition: background #{$animationDuration} #{$ease};
+		text-align: left;
+		margin-right: $sizeGrid;
+
+		&:after {
+			@include size($sizeGrid, $buttonHeight - $sizeGrid);
+			@include pos(0, -$sizeGrid, auto, auto);
+			position: absolute;
+			content: '';
+			background: currentColor;
+			transition: all #{$animationDuration} #{$ease};
+		}
+
+		&:before {
+			@include triangle(left, top, currentColor, $sizeGrid);
+			@include pos(auto, -$sizeGrid, 0, auto);
+			transition: all #{$animationDuration} #{$ease};
+			position: absolute;
+			content: '';
+		}
+
+		.label-wrapper {
+			@include size(100%);
+			line-height: $buttonHeight;
+			background: currentColor;
+			transition: all #{$animationDuration} #{$ease};
+			display: block;
+			position: relative;
+			padding-left: $sizeGrid;
+		}
+
+		.label {
+			display: inline-block;
+			vertical-align: middle;
+			color: $colorPrimary;
+			line-height: 1rem;
+			position: relative;
+		}
+
+		.pagination-number {
+			@include pos(0, auto, auto, 0);
+			transform: translateY(-125%);
+			position: absolute;
+			transition: color #{$animationDuration} #{$ease};
+
+			&:after {
+				transition: opacity #{$animationDuration} #{$ease};
+			}
+		}
+
+		@include hover() {
+
+			// Enum value classes for different colors
+			&.small_business {
+				color: $colorSmallBusinesses;
+			}
+
+			&.automotive {
+				color: $colorAutomotive;
+			}
+
+			&.enterprise {
+				color: $colorEnterprise;
+			}
+
+			&.local_media_buying {
+				color: $colorLocalMedia;
+			}
+
+			.pagination-number {
+				color: $colorPrimary;
+
+				&:after {
+					opacity: 0;
+				}
+			}
+		}
+	}
+}

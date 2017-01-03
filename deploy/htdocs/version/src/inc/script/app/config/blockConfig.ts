@@ -3,7 +3,7 @@ import Blocks from "../data/enum/block/Blocks";
 import BlockType from "../data/enum/type/BlockType";
 
 /**
- * @description this onfiguration file is used to map the backend block name to the client block name,
+ * @description this configuration file is used to map the backend block name to the client block name,
  * it also defines the type of the block to be a component or a partial
  *
  * Example usage:
@@ -36,6 +36,10 @@ export const blockConfig:IBlockConfig = {
 	},
 	latest: {
 		id: Blocks.LATEST,
+		type: BlockType.COMPONENT
+	},
+	personaSelector: {
+		id: Blocks.PERSONA_SELECTOR,
 		type: BlockType.COMPONENT
 	}
 };

@@ -8,6 +8,77 @@
 				"data": {}
 			},
 			{
+				"id": "personaSelector",
+				"data": {
+					"personas": [
+						{
+							"heading": "Small businesses",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 0,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Automotive",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 1,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Enterprise",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 2,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Local media buying",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 3,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
+				}
+ 			},
+			{
 				"id": "imageWithContent",
 				"data": {
 					"alignment": 0,
@@ -18,7 +89,7 @@
 					"link": {
 						"label": "Find out more",
 						"title": "Find out more",
-						"target": "/home",
+						"target": "home",
 						"type": 0
 					},
 					"background": {
@@ -39,7 +110,7 @@
 					"link": {
 						"label": "Find out more",
 						"title": "Find out more",
-						"target": "/home",
+						"target": "home",
 						"type": 0
 					},
 					"background": {
@@ -60,7 +131,7 @@
 					"link": {
 						"label": "Find out more",
 						"title": "Find out more",
-						"target": "/home",
+						"target": "home",
 						"type": 0
 					},
 					"background": {
@@ -79,7 +150,7 @@
 					"link": {
 						"label": "Find your market",
 						"title": "Find your market",
-						"target": "/home",
+						"target": "home",
 						"type": 0
 					}
 				}
@@ -145,7 +216,7 @@
 					"link": {
 						"label": "Find out more",
 						"title": "Find out more",
-						"target": "/home",
+						"target": "home",
 						"type": 0
 					},
 					"articles": [
@@ -161,13 +232,13 @@
 								{
 									"label": "Sport",
 									"title": "Sport",
-									"target": "/home",
+									"target": "home",
 									"type": 0
 								},
 								{
 									"label": "PDF",
 									"title": "PDF",
-									"target": "/home",
+									"target": "home",
 									"type": 0
 								}
 							]
@@ -184,13 +255,13 @@
 								{
 									"label": "Sport",
 									"title": "Sport",
-									"target": "/home",
+									"target": "home",
 									"type": 0
 								},
 								{
 									"label": "PDF",
 									"title": "PDF",
-									"target": "/home",
+									"target": "home",
 									"type": 0
 								}
 							]
@@ -207,13 +278,13 @@
 								{
 									"label": "Sport",
 									"title": "Sport",
-									"target": "/home",
+									"target": "home",
 									"type": 0
 								},
 								{
 									"label": "PDF",
 									"title": "PDF",
-									"target": "/home",
+									"target": "home",
 									"type": 0
 								}
 							]
@@ -230,13 +301,13 @@
 								{
 									"label": "Sport",
 									"title": "Sport",
-									"target": "/home",
+									"target": "home",
 									"type": 0
 								},
 								{
 									"label": "PDF",
 									"title": "PDF",
-									"target": "/home",
+									"target": "home",
 									"type": 0
 								}
 							]
