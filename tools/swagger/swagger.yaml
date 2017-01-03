@@ -1,0 +1,82 @@
+swagger: '2.0'
+info:
+  title: Spectrum Reach Corperate website
+  description: The re-creation of the Spectrum Reach website
+  version: "1.0.0"
+host: tbd.spectrumreach.com
+schemes:
+  - https
+  - http
+basePath: /api/v1/
+produces:
+  - application/json
+paths:
+  /init:
+    get:
+      summary: Get all the information to bootstrap the application
+      description: "Get all the information to bootstrap the application. Example: Menu, main items etc.."
+      responses:      
+        200:
+          description: History information for the given user
+          schema:
+            $ref: "#/definitions/Init"
+  /page:
+    get:
+      summary: Get page by slug
+      description: Get the content pages with the blocks based on the slug
+      responses:
+        200:
+          description: History information for the given user
+          schema:
+            $ref: "#/definitions/Page"
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+            
+definitions:
+  Block:
+    type: object
+    description: Default block definition
+  Page:
+    type: object
+    properties:
+      title:
+        type: string
+        default: ""
+        description: The main title for the page
+      statusCode:
+        type: integer
+        default: 200
+        description: The http status for the call
+      blocks:
+        description: The container for all the blocks
+        type: array
+        items:
+          $ref: "#/definitions/Block"
+  Init:
+    type: object
+    properties:
+      statusCode:
+        type: integer
+        default: 200
+        description: The http status for the call
+      blocks:
+        description: The container for all the blocks
+        type: array
+        items:
+          $ref: "#/definitions/Block"
+  Error:
+    type: object
+    properties:
+      statusCode:
+        type: integer
+        default: 500
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string      
+    
