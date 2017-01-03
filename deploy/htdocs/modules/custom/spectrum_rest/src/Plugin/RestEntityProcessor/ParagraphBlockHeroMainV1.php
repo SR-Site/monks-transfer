@@ -26,7 +26,7 @@ class ParagraphBlockHeroMainV1 extends RestEntityProcessorBase {
     $slides = $this->fieldProcessor->getFieldData($entity->field_slides);
 
     // slides needs to be always an array.
-    if (count($entity->field_media_multiple) == 1) {
+    if (count($entity->field_slides) == 1) {
       $slides = [$slides];
     }
 

@@ -1,0 +1,6 @@
+uuid: 69c57bf4-eced-4a58-a948-ed41cf65b11f
+langcode: en
+status: true
+dependencies: {  }
+id: blockplanbuymeasure
+label: 'Block Plan Buy Measure'

@@ -1,0 +1,25 @@
+uuid: bf0e7bea-9f96-45af-a7bf-f84b08fb6810
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockplanbuymeasure.field_contents
+    - paragraphs.paragraphs_type.blockplanbuymeasure
+  module:
+    - entity_reference_revisions
+id: paragraph.blockplanbuymeasure.default
+targetEntityType: paragraph
+bundle: blockplanbuymeasure
+mode: default
+content:
+  field_contents:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true
