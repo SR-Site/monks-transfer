@@ -1,0 +1,5 @@
+whitelist:
+  - '@/api/.*@'
+blacklist: null
+_core:
+  default_config_hash: 85-YD2TKUvkVq2mwhiXf9OaFkVkzIZ3oWodcR1V963Q

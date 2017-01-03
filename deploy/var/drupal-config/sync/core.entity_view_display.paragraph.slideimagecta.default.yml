@@ -1,0 +1,54 @@
+uuid: 16355259-5020-4b45-8454-c4206a357d86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideimagecta.field_description
+    - field.field.paragraph.slideimagecta.field_image
+    - field.field.paragraph.slideimagecta.field_link
+    - field.field.paragraph.slideimagecta.field_title
+    - paragraphs.paragraphs_type.slideimagecta
+  module:
+    - image
+    - link
+    - text
+id: paragraph.slideimagecta.default
+targetEntityType: paragraph
+bundle: slideimagecta
+mode: default
+content:
+  field_description:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_link:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  uid: true

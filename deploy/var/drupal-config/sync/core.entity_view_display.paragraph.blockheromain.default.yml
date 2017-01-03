@@ -1,0 +1,25 @@
+uuid: 015649fa-c124-484c-a5f9-217debfc51bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockheromain.field_slides
+    - paragraphs.paragraphs_type.blockheromain
+  module:
+    - entity_reference_revisions
+id: paragraph.blockheromain.default
+targetEntityType: paragraph
+bundle: blockheromain
+mode: default
+content:
+  field_slides:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

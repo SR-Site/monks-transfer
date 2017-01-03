@@ -1,0 +1,28 @@
+uuid: 2f34d86c-649d-4520-8b6f-13c8f618e5c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockheromain.field_slides
+    - paragraphs.paragraphs_type.blockheromain
+  module:
+    - paragraphs
+id: paragraph.blockheromain.default
+targetEntityType: paragraph
+bundle: blockheromain
+mode: default
+content:
+  field_slides:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

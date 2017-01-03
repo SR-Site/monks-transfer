@@ -1,0 +1,6 @@
+uuid: d8c4a200-cca7-43b2-81d1-13c3ce76d00b
+langcode: en
+status: true
+dependencies: {  }
+id: blockheromain
+label: 'Hero main'

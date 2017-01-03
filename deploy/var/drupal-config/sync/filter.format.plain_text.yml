@@ -1,7 +1,9 @@
 uuid: f5d171be-0368-43b4-8e08-f46ca05239d8
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - spectrum_rest
 _core:
   default_config_hash: NIKBt6kw_uPhNI0qtR2DnRf7mSOgAQdx7Q94SKMjXbQ
 name: 'Plain text'
@@ -21,9 +23,9 @@ filters:
     weight: 0
     settings:
       filter_url_length: 72
-  filter_autop:
-    id: filter_autop
-    provider: filter
+  filter_nl2br:
+    id: filter_nl2br
+    provider: spectrum_rest
     status: true
     weight: 0
     settings: {  }
