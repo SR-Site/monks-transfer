@@ -35,9 +35,9 @@ paths:
             $ref: '#/definitions/Error'
             
 definitions:
-  Block:
-    type: object
-    description: Default block definition
+  # +--------------------------------------------------------------------------------+
+  # | API Calls                                                                      |
+  # +--------------------------------------------------------------------------------+
   Page:
     type: object
     properties:
@@ -61,22 +61,106 @@ definitions:
         type: integer
         default: 200
         description: The http status for the call
-      blocks:
-        description: The container for all the blocks
-        type: array
-        items:
-          $ref: "#/definitions/Block"
+        
+  # +--------------------------------------------------------------------------------+
+  # | Partials; Small block object definitions                                       |
+  # +--------------------------------------------------------------------------------+
+  
+  Link: 
+    type: object
+    description: "Default link object"
+    properties:
+      label: 
+        type: string
+        description: The Label text content
+      title: 
+        type: string
+        description: The link title element
+      target:
+        type: string
+        description: the Target element.
+        enum: ["_self", "_blank", "_top"]
+      type:
+        type: integer
+        description: "@todo for Lars braam"
+        enum: [1, 2, 3, 4, 5]
+  Background: 
+    type: object
+    description: "Default background object"
+    properties:
+      normal: 
+        type: string
+        description: The desktop version of the background
+      small: 
+        type: string
+        description: The mobile version of the background
+      alt:
+        type: string
+        description: The alt text for the background image
   Error:
     type: object
+    description: "Default error object"
     properties:
       statusCode:
         type: integer
         default: 500
-      code:
-        type: integer
-        format: int32
-      message:
+      data:
+        type: object
+        properties:
+          code:
+            type: integer
+            format: int32
+          message:
+            type: string
+          fields:
+            type: string      
+        
+  # +--------------------------------------------------------------------------------+
+  # | Interfaces                                                                     |
+  # +--------------------------------------------------------------------------------+
+  
+  Block:
+    type: object
+    title: defaultBlock
+    description: Default block definition
+    properties:
+      id:
         type: string
-      fields:
-        type: string      
-    
+        description: The ID for the object to be reconized by the frontend framework.
+      data:
+        type: object
+        description: "The container that holds all the data for the content block"
+
+  # +--------------------------------------------------------------------------------+
+  # | Content blocks                                                                 |
+  # +--------------------------------------------------------------------------------+
+  
+  heroMain:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["heroMain"]
+      data:
+        type: object
+        properties:
+          alignment:
+            type: integer
+            default: 0
+            enum: [0, 1, 2]
+          windowed:
+            type: boolean
+            default: true
+          croppedImage: 
+            type: boolean
+            default: false
+          heading:
+            type: string
+          paragraph:
+            type: string
+          link: 
+            $ref: "#/definitions/Link"
+          background: 
+            $ref: "#/definitions/Background"        
+          
