@@ -8,6 +8,7 @@ import {URLNames, PropertyNames} from "./enum/ConfigNames";
 import SettingsModel from "./model/SettingsModel";
 import ServiceModel from "./model/ServiceModel";
 import ContentService from "./service/ContentService";
+import DeviceStateTracker from "../../lib/temple/util/DeviceStateTracker";
 
 
 /**
@@ -17,6 +18,9 @@ import ContentService from "./service/ContentService";
 class DataManager
 {
 	private static _instance:DataManager;
+
+
+	public deviceStateTracker:DeviceStateTracker = new DeviceStateTracker();
 
 	/**
 	 * @property gateway

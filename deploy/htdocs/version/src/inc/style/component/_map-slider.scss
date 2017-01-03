@@ -1,0 +1,57 @@
+.component-map-slider {
+
+	.track {
+		@include size(100%, 1px);
+		@include pos(50%, auto, auto, 0);
+		transform: translateY(-50%);
+		position: absolute;
+		background: $colorBorder;
+		z-index: 1;
+
+		.progress {
+			@include size($sizeGrid, 3px);
+			@include pos(50%, auto, auto, 0);
+			transform: translateY(-50%);
+			position: absolute;
+			background: $colorSecondary;
+		}
+	}
+
+	.steps {
+		@extend %reset-list;
+		@include size(100%);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 2;
+		position: relative;
+		padding: 0 $sizeGrid;
+
+		li {
+			@include size($sizeGrid * 2);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			background: $colorMapBackground;
+
+			.label {
+				font: 400 1.4rem / 1 $fontOpenSans;
+
+				&.is-active {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+	.knob {
+		@include pos(50%, auto, auto, $sizeGrid);
+		@include size($sizeGrid * 2);
+		transform: translateY(-50%);
+		border: 1px solid $colorBorder;
+		position: absolute;
+		border-radius: 100%;
+		z-index: 3;
+	}
+}

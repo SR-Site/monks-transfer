@@ -2,6 +2,10 @@
 	vertical-align: middle;
 	display: inline-block;
 
+	.semi-transparent {
+		opacity: .3
+	}
+
 	svg {
 		@include size(100%);
 		display: block;

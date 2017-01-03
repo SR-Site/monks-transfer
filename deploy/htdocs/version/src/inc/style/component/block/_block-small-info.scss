@@ -1,0 +1,19 @@
+.component-block-small-info {
+	padding: $sizeGrid * 3 $sizeGrid * 5;
+	font-size: 0;
+
+	.description,
+	.introduction {
+		@include size(50%, auto);
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.copy {
+		margin-top: $sizeGrid;
+	}
+
+	.component-button-main {
+		margin-top: $sizeGrid;
+	}
+}

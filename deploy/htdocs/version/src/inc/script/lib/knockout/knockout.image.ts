@@ -11,6 +11,7 @@ class KnockoutImage
 	static update(element, valueAccessor: () => any): any
 	{
 		let data: any = Object.assign(valueAccessor());
+
 		delete data['state'];
 
 		let imageUrl: string;

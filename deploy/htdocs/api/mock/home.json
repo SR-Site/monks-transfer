@@ -6,6 +6,139 @@
 			{
 				"id": "heroMain",
 				"data": {}
+			},
+			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 0,
+					"windowed": true,
+					"croppedImage": false,
+					"heading": "<span class='highlight'>Plan</span>",
+					"paragraph": "Welcome to a new era of television and digital advertising. Viewing habits are changing now that tv is more than one screen.",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "/home",
+						"type": 0
+					},
+					"background": {
+						"normal": "data/image-with-content/background.jpg",
+						"small": "data/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 1,
+					"windowed": true,
+					"croppedImage": true,
+					"heading": "<span class='highlight'>Buy</span>",
+					"paragraph": "Welcome to a new era of television and digital advertising. Viewing habits are changing now that tv is more than one screen.",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "/home",
+						"type": 0
+					},
+					"background": {
+						"normal": "data/image-with-content/background-2.jpg",
+						"small": "data/image-with-content/background-2.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 0,
+					"windowed": true,
+					"croppedImage": false,
+					"heading": "<span class='highlight'>Measure</span>",
+					"paragraph": "Welcome to a new era of television and digital advertising. Viewing habits are changing now that tv is more than one screen.",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "/home",
+						"type": 0
+					},
+					"background": {
+						"normal": "data/image-with-content/background-3.jpg",
+						"small": "data/image-with-content/background-3.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "smallInfo",
+				"data": {
+					"windowed": true,
+					"heading": "Find the Right Way to Reach <br/>your <span class='highlight'>Customers</span>",
+					"paragraph": "We've created a great line-up of advertising opportunities that make it easy for you to talk to best customers",
+					"link": {
+						"label": "Find your market",
+						"title": "Find your market",
+						"target": "/home",
+						"type": 0
+					}
+				}
+			},
+			{
+				"id": "map",
+				"data": {
+					"windowed": true
+				}
+			},
+			{
+				"id": "imageCallToActions",
+				"data": {
+					"windowed": false,
+					"callToActions": [
+						{
+							"heading": "Television",
+							"paragraph": "Lorem ipsum dolor sit amet",
+							"background": {
+								"normal": "data/image-call-to-actions/image-tv.jpg",
+								"small": "data/image-call-to-actions/image-tv.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Television",
+							"paragraph": "Lorem ipsum dolor sit amet",
+							"background": {
+								"normal": "data/image-call-to-actions/image-tv.jpg",
+								"small": "data/image-call-to-actions/image-tv.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Television",
+							"paragraph": "Lorem ipsum dolor sit amet",
+							"background": {
+								"normal": "data/image-call-to-actions/image-tv.jpg",
+								"small": "data/image-call-to-actions/image-tv.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
+				}
 			}
 		]
 	}

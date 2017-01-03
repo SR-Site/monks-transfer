@@ -1,0 +1,35 @@
+.component-button-start-advertising {
+	$width: $sizeGrid * 5.25;
+	$height: $sizeGrid * 7.5;
+	@include pos(25%, 0, auto, auto);
+	@include size($width, $height);
+	position: absolute;
+	transform: translateY(-50%);
+	color: #fff;
+	text-align: right;
+
+	.background {
+		@include size(0);
+		@include pos(0, 0, auto, auto);
+		border-style: solid;
+		border-width: $height / 2 $width $height / 2 0;
+		border-color: transparent $colorPrimary transparent transparent;
+		content: '';
+		position: absolute;
+		z-index: -1;
+	}
+
+	.icon {
+		@include size($sizeIcon);
+	}
+
+	.label {
+		@include size($sizeGrid * 2, auto);
+		font: 800 1.2rem / 1.2 $fontOpenSans;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: left;
+		margin-left: 1rem;
+		margin-right: $sizeGrid;
+	}
+}

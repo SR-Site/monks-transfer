@@ -74,18 +74,18 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 	public init(): void
 	{
 		// Add the block id to the block
-		// var blockId = document.createElement('div');
-		// blockId.innerHTML = this.options.id;
-		// blockId.style.position = 'absolute';
-		// blockId.style.left = '0';
-		// blockId.style.top = '0';
-		// blockId.style.padding = (this.options.blocks ? '15px' : '5px');
-		// blockId.style.fontSize = '15px';
-		// blockId.style.color = '#fff';
-		// blockId.style.zIndex = '1';
-		// blockId.style.backgroundColor = (this.options.blocks ? '#f18e00' : '#f00');
-		//
-		// this.element.appendChild(blockId);
+		let blockId = document.createElement('div');
+			blockId.innerHTML = this.options.id;
+			blockId.style.position = 'absolute';
+			blockId.style.left = '0';
+			blockId.style.top = '0';
+			blockId.style.padding = (this.options.blocks ? '15px' : '5px');
+			blockId.style.fontSize = '15px';
+			blockId.style.color = '#fff';
+			blockId.style.zIndex = '1';
+			blockId.style.backgroundColor = (this.options.blocks ? '#f18e00' : '#f00');
+
+		this.element.appendChild(blockId);
 
 		const allComponentsLoaded: Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
 

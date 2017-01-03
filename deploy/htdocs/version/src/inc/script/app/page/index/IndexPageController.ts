@@ -4,6 +4,7 @@ import CallbackCounter from "../../util/CallbackCounter";
 import * as Gaia from "lib/gaia/api/Gaia";
 import Promise = require("bluebird");
 import ko = require("knockout");
+import KeyCode from "../../../lib/temple/util/key/KeyCode";
 
 class IndexPageController extends DefaultPageController<IndexPageViewModel>
 {
@@ -12,7 +13,7 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	 * @property callbackCounter
 	 * @type {CallbackCounter}
 	 */
-	public callbackCounter:CallbackCounter = new CallbackCounter();
+	public callbackCounter: CallbackCounter = new CallbackCounter();
 	/**
 	 * @private
 	 * @property _beforeGoto
@@ -25,14 +26,32 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	private _beforeTransitionIn: (removeHijack?: boolean)=>void;
 
 	/**
-	 *	Overrides AbstractPageController.init()
-	 *	@method init
+	 *    Overrides AbstractPageController.init()
+	 *    @method init
 	 */
-	public init():void
+	public init(): void
 	{
 		super.init();
 
 		this._beforeTransitionIn = Gaia.api.beforeTransitionIn(this.handleBeforeTransitionIn.bind(this), true);
+
+		// TODO: remove this!
+		let gridElement = (<HTMLElement>this.element.querySelector('.grid'));
+
+		document.addEventListener('keyup', (event: KeyboardEvent) =>
+		{
+			if(event.keyCode === KeyCode.NUM_1)
+			{
+				if(gridElement.classList.contains('is-active'))
+				{
+					gridElement.classList.remove('is-active');
+				}
+				else
+				{
+					gridElement.classList.add('is-active');
+				}
+			}
+		})
 	}
 
 	/**
@@ -48,10 +67,10 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	}
 
 	/**
-	 *	Overrides AbstractPageController.destruct()
+	 *    Overrides AbstractPageController.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 		if(this.callbackCounter)
 		{

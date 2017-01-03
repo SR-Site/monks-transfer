@@ -14,6 +14,12 @@ interface IDefaultComponentOptions extends IIndexable
 	 * nesting block components inside of other block components and you want to have control over the transition in
 	 */
 	disableTransitionIn?: boolean;
+
+	/**
+	 * @property
+	 * @description Windowed means the block will be surrounded by a white border of 2 * gridSize
+	 */
+	windowed: boolean;
 }
 
 export default IDefaultComponentOptions;

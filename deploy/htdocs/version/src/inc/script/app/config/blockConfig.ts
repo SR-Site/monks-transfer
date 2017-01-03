@@ -17,5 +17,21 @@ export const blockConfig:IBlockConfig = {
 	heroMain: {
 		id: Blocks.HERO_MAIN,
 		type: BlockType.COMPONENT
+	},
+	imageWithContent: {
+		id: Blocks.IMAGE_WITH_CONTENT,
+		type: BlockType.COMPONENT
+	},
+	smallInfo: {
+		id: Blocks.SMALL_INFO,
+		type: BlockType.COMPONENT
+	},
+	map: {
+		id: Blocks.MAP,
+		type: BlockType.COMPONENT
+	},
+	imageCallToActions: {
+		id: Blocks.IMAGE_CALL_TO_ACTIONS,
+		type: BlockType.COMPONENT
 	}
 };

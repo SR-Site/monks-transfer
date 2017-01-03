@@ -1,0 +1,29 @@
+.component-block-image-call-to-actions {
+	position: relative;
+
+	.call-to-actions {
+		@include aspect-ratio(1600px, 640px);
+		@extend %reset-list;
+		font-size: 0;
+	}
+
+	.call-to-action {
+		display: inline-block;
+		overflow: hidden;
+		vertical-align: top;
+
+		.blurred-image {
+			opacity: 0;
+		}
+
+		a {
+			@include size(100%);
+			display: block;
+			position: relative;
+		}
+
+		figure {
+			@include aspect-ratio(1600px, 640px);
+		}
+	}
+}
