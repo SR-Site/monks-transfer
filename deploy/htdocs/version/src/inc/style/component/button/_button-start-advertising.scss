@@ -1,7 +1,7 @@
 .component-button-start-advertising {
 	$size: $sizeGrid * 10;
 
-	@include pos($sizeGrid * 25, 0, auto, auto);
+	@include pos($sizeGrid * 20, 0, auto, auto);
 	@include size($size / 2, $size);
 	position: absolute;
 	transform: translateY(-50%);

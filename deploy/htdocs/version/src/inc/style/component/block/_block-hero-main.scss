@@ -1,5 +1,17 @@
 .component-block-hero-main {
 	@include aspect-ratio(1600px, 950px);
+	z-index: 1; // TODO: needs logic
+
+	.slide-content {
+		overflow: visible;
+
+		.background-triangle {
+			@include arrow(right, rgba($colorPrimary, .9), $sizeGrid * 40);
+			@include pos(50%, auto, auto, 0);
+			transform: translateY(-50%);
+			position: absolute;
+		}
+	}
 
 	img {
 		@include coverer();

@@ -5,10 +5,9 @@
 	.persona-content-wrapper {
 		overflow: hidden;
 
-		&:after {
+		.background-triangle {
 			@include arrow(right, $colorWhite, $sizeGrid * 40);
 			@include pos(calc(50% + #{$sizeGrid * 2}), auto, auto, -$sizeGrid * 3);
-			content: '';
 			transform: translateY(-50%);
 			position: absolute;
 		}

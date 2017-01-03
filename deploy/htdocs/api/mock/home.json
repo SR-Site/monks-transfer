@@ -8,77 +8,6 @@
 				"data": {}
 			},
 			{
-				"id": "personaSelector",
-				"data": {
-					"personas": [
-						{
-							"heading": "Small businesses",
-							"paragraph": "Want to expand out from advertising on Facebook and Google",
-							"personaType": 0,
-							"link": {
-								"label": "Grow your buisiness",
-								"title": "Grow your buisiness",
-								"target": "home",
-								"type": 0
-							},
-							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
-								"alt": "Background image alt text"
-							}
-						},
-						{
-							"heading": "Automotive",
-							"paragraph": "Want to expand out from advertising on Facebook and Google",
-							"personaType": 1,
-							"link": {
-								"label": "Grow your buisiness",
-								"title": "Grow your buisiness",
-								"target": "home",
-								"type": 0
-							},
-							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
-								"alt": "Background image alt text"
-							}
-						},
-						{
-							"heading": "Enterprise",
-							"paragraph": "Want to expand out from advertising on Facebook and Google",
-							"personaType": 2,
-							"link": {
-								"label": "Grow your buisiness",
-								"title": "Grow your buisiness",
-								"target": "home",
-								"type": 0
-							},
-							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
-								"alt": "Background image alt text"
-							}
-						},
-						{
-							"heading": "Local media buying",
-							"paragraph": "Want to expand out from advertising on Facebook and Google",
-							"personaType": 3,
-							"link": {
-								"label": "Grow your buisiness",
-								"title": "Grow your buisiness",
-								"target": "home",
-								"type": 0
-							},
-							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
-								"alt": "Background image alt text"
-							}
-						}
-					]
-				}
- 			},
-			{
 				"id": "imageWithContent",
 				"data": {
 					"alignment": 0,
@@ -311,6 +240,77 @@
 									"type": 0
 								}
 							]
+						}
+					]
+				}
+			},
+			{
+				"id": "personaSelector",
+				"data": {
+					"personas": [
+						{
+							"heading": "Small businesses",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 0,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Automotive",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 1,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Enterprise",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 2,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Local media buying",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 3,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
 						}
 					]
 				}

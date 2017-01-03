@@ -6,6 +6,11 @@
 	position: relative;
 	z-index: zindex($layout, content);
 
+	[data-gaia-container="index"] {
+		z-index: 0;
+		position: relative;
+	}
+
 	/**
 	 * Development grid
 	 */
