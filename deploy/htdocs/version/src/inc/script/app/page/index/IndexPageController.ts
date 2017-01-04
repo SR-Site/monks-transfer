@@ -120,7 +120,7 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	 */
 	private handleBeforeTransitionIn(): void
 	{
-		const allComponentsLoaded = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
+		const allComponentsLoaded:Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
 
 		// Wait  for all components to be loaded
 		allComponentsLoaded.then(() => this._beforeTransitionIn(true))

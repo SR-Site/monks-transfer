@@ -7,18 +7,65 @@
 
 	.menu-items {
 		@extend %reset-list;
-		padding: $sizeGrid * 2;
+		padding: $sizeGrid * 1.5;
 	}
 
 	.menu-item {
 		display: block;
 		margin-bottom: $sizeGrid;
+		max-height: $sizeGrid;
+		overflow: hidden;
+		transition: max-height .2s ease(easeInOut);
+
+		@include hover() {
+			max-height: $sizeGrid * 3;
+
+			.subtitle {
+				opacity: 1;
+				visibility: visible;
+				transition: opacity .2s ease(easeInOut);
+			}
+
+			.main-link {
+				transform: translateX($sizeGrid * 1.5);
+
+				&:before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.subtitle {
+		color: $colorSecondary;
+		font: 400 1.4rem / 2.3rem $fontOpenSans;
+		margin-left: $sizeGrid * 1.5;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .2s ease(easeInOut), visibility .2s ease(easeInOut);
 
 		a {
-			font: 400 2.4rem / 1 $fontOpenSans;
-			text-decoration: none;
-			color: $colorWhite;
-			display: block;
+			color: $colorSecondary;
+		}
+	}
+
+	.main-link {
+		font: 400 2.4rem / 1 $fontOpenSans;
+		text-decoration: none;
+		color: $colorWhite;
+		display: block;
+		position: relative;
+		transition: transform .2s ease(easeInOut);
+
+		&:before {
+			@include size($sizeGrid, .4rem);
+			@include pos(50%, auto, auto, 0);
+			transform: translate(calc(-100% - #{$sizeGrid * 0.5}), -50%);
+			background: $colorSecondary;
+			position: absolute;
+			content: '';
+			opacity: 0;
+			transition: opacity .2s ease(easeInOut);
 		}
 	}
 }
