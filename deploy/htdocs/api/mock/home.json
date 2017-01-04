@@ -111,6 +111,7 @@
 					"callToActions": [
 						{
 							"heading": "Television",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
 								"normal": "data/image-call-to-actions/image-tv.jpg",
 								"small": "data/image-call-to-actions/image-tv.jpg",
@@ -124,6 +125,7 @@
 						},
 						{
 							"heading": "Digital",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
 								"normal": "data/image-call-to-actions/image-digital.jpg",
 								"small": "data/image-call-to-actions/image-digital.jpg",
@@ -137,6 +139,7 @@
 						},
 						{
 							"heading": "Creative <br/>services",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
 								"normal": "data/image-call-to-actions/image-creative.jpg",
 								"small": "data/image-call-to-actions/image-creative.jpg",

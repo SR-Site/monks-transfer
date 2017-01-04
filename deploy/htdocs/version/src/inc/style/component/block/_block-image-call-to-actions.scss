@@ -11,10 +11,24 @@
 			color: $colorPrimary;
 			height: 100%;
 			display: inline-block;
+
+			@include hover() {
+				.copy {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
 		}
 
 		.heading {
-			margin: $sizeGrid / 2 auto auto $sizeGrid / 2;
+			margin: $sizeGrid / 2 auto $sizeGrid / 2 $sizeGrid / 2;
+		}
+
+		.copy {
+			margin-left: $sizeGrid / 2;
+			transform: translateY(100%);
+			opacity: 0;
+			transition: transform .2s ease(easeOut), opacity .2s ease(easeOut);
 		}
 	}
 
