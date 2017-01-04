@@ -13,11 +13,6 @@ class ButtonStartAdvertisingTransitionController extends DefaultTransitionContro
 			autoAlpha: 0,
 			ease: Power3.easeInOut
 		});
-
-		this.transitionInTimeline.add(()=>{
-			console.log('position element');
-			this.parentController.positionElement();
-		});
 	}
 }
 
