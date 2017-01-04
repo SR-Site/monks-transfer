@@ -1,15 +1,49 @@
 .component-block-hero-main {
-	@include aspect-ratio(1600px, 950px);
+	@include aspect-ratio(40*$sizeGrid, $sizeGrid * 24);
+	min-height: $sizeGrid * 24;
 	z-index: 1; // TODO: needs logic
 
-	.slide-content {
+
+	.slide-content-wrapper {
 		overflow: visible;
 
 		.background-triangle {
-			@include arrow(right, rgba($colorPrimary, .9), $sizeGrid * 40);
+			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 40);
 			@include pos(50%, auto, auto, 0);
 			transform: translateY(-50%);
 			position: absolute;
+		}
+
+		.secondary-background-triangle {
+			@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 12);
+			@include pos(50%, auto, auto, $sizeGrid * 14);
+			position: absolute;
+		}
+
+		.tertiary-background-triangle {
+			@include arrow(right, rgba($colorWhite, .95), $sizeGrid * 6);
+			@include pos(75%, auto, auto, $sizeGrid * 20);
+			position: absolute;
+		}
+
+	}
+
+	.slide-content {
+		@include size($sizeGrid * 13, auto);
+		@include pos(50%, auto, auto, 0);
+		transform: translateY(-50%);
+		overflow: hidden;
+		position: absolute;
+		z-index: 1;
+		padding-left: $sizeGrid * 3;
+		color: $colorWhite;
+
+		.heading {
+			margin-bottom: $sizeGrid;
+		}
+
+		.copy {
+			margin-bottom: $sizeGrid * 2;
 		}
 	}
 

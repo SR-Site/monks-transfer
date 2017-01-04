@@ -1,6 +1,21 @@
 <div class="component-block-hero-main">
 	<img src="data/hero-main/slide-1.jpg" alt="">
-	<div class="slide-content abs-fill">
+	<div class="slide-content-wrapper abs-fill">
 		<div class="background-triangle"></div>
+		<div class="secondary-background-triangle"></div>
+		<div class="tertiary-background-triangle"></div>
+		<div class="slide-content">
+			<h2 class="heading heading-01" data-bind="html: data.heading"></h2>
+			<p class="copy copy-01" data-bind="html: data.paragraph"></p>
+			<!-- ko component: {
+				name: 'button/button-circle-arrow',
+				onComplete: $root.controller.callbackCounter.get(),
+				options: {
+					action: data.link,
+					arrowDirection: $root.Direction.DOWN,
+					size: $root.ButtonSize.LARGE
+				}
+			} --><!-- /ko -->
+		</div>
 	</div>
 </div>

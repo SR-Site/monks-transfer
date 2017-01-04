@@ -5,7 +5,21 @@
 		"blocks": [
 			{
 				"id": "heroMain",
-				"data": {}
+				"data": {
+					"heading": "Never stop reaching",
+					"paragraph": "The right time and place to advertise your business",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "home",
+						"type": 0
+					},
+					"background": {
+						"normal": "data/image-with-content/background.jpg",
+						"small": "data/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
 			},
 			{
 				"id": "imageWithContent",
