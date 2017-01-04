@@ -1,9 +1,9 @@
 import DefaultComponentTransitionViewModel from "app/util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
-import HeaderController from 'app/component/header/HeaderController';
-import IHeaderOptions from 'app/component/header/IHeaderOptions';
+import HeaderController from "app/component/header/HeaderController";
+import IHeaderOptions from "app/component/header/IHeaderOptions";
+import MenuEvent from "../../event/MenuEvent";
 
 import ko = require('knockout');
-import MenuEvent from "../../event/MenuEvent";
 
 class HeaderViewModel extends DefaultComponentTransitionViewModel<HeaderController, IHeaderOptions>
 {

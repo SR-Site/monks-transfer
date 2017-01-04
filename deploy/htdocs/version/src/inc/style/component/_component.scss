@@ -2,10 +2,14 @@
 	position: relative;
 
 	&.windowed {
-		border-top: $sizeGrid solid $colorWhite;
 		border-right: $sizeGrid * 2 solid $colorWhite;
-		border-bottom: $sizeGrid solid $colorWhite;
 		border-left: $sizeGrid * 2 solid $colorWhite;
+	}
+
+	@for $i from 0 through 5 {
+		&.margin-top-#{$i} {
+			margin-top: $sizeGrid * $i;
+		}
 	}
 }
 

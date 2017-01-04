@@ -1,8 +1,7 @@
 import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
-import HeaderTransitionController from 'app/component/header/HeaderTransitionController';
-import IHeaderOptions from 'app/component/header/IHeaderOptions';
-import HeaderViewModel from 'app/component/header/HeaderViewModel';
-
+import HeaderTransitionController from "app/component/header/HeaderTransitionController";
+import IHeaderOptions from "app/component/header/IHeaderOptions";
+import HeaderViewModel from "app/component/header/HeaderViewModel";
 import Log from "lib/temple/util/Log";
 import NativeEventListener from "../../../lib/temple/event/NativeEventListener";
 import ScrollUtils from "../../util/ScrollUtils";
@@ -27,7 +26,27 @@ class HeaderController extends DefaultComponentTransitionController<HeaderViewMo
 		this._debug.log('Init');
 
 		this.transitionController = new HeaderTransitionController(this.element, this);
-		this.destructibles.add(new NativeEventListener(document, 'scroll', this.handleScroll.bind(this)))
+		this.destructibles.add(new NativeEventListener(document, 'scroll', this.handleScroll.bind(this)));
+	}
+
+	/**
+	 * @public
+	 * @method get menuIsActive
+	 * @returns {any}
+	 */
+	public get menuIsActive():boolean
+	{
+		return this.viewModel.menuButtonActive();
+	}
+
+	/**
+	 * @public
+	 * @method get menuIsActive
+	 * @returns {any}
+	 */
+	public set menuIsActive(isActive:boolean)
+	{
+		this.viewModel.menuButtonActive(isActive);
 	}
 
 	/**

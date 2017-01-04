@@ -26,6 +26,7 @@
 				"data": {
 					"alignment": 0,
 					"windowed": true,
+					"marginTop": 2,
 					"croppedImage": false,
 					"heading": "<span class='highlight'>Plan</span>",
 					"paragraph": "Welcome to a new era of television and digital advertising. Viewing habits are changing now that tv is more than one screen.",
@@ -47,6 +48,7 @@
 				"data": {
 					"alignment": 1,
 					"windowed": true,
+					"marginTop": 2,
 					"croppedImage": true,
 					"heading": "<span class='highlight'>Buy</span>",
 					"paragraph": "Welcome to a new era of television and digital advertising. Viewing habits are changing now that tv is more than one screen.",
@@ -68,6 +70,7 @@
 				"data": {
 					"alignment": 0,
 					"windowed": true,
+					"marginTop": 2,
 					"croppedImage": false,
 					"heading": "<span class='highlight'>Measure</span>",
 					"paragraph": "Welcome to a new era of television and digital advertising. Viewing habits are changing now that tv is more than one screen.",
@@ -88,6 +91,7 @@
 				"id": "smallInfo",
 				"data": {
 					"windowed": true,
+					"marginTop": 2,
 					"heading": "Find the Right Way to Reach <br/>your <span class='highlight'>Customers</span>",
 					"paragraph": "We've created a great line-up of advertising opportunities that make it easy for you to talk to best customers",
 					"link": {
@@ -101,13 +105,15 @@
 			{
 				"id": "map",
 				"data": {
-					"windowed": true
+					"windowed": true,
+					"marginTop": 2
 				}
 			},
 			{
 				"id": "imageCallToActions",
 				"data": {
 					"windowed": false,
+					"marginTop": 2,
 					"callToActions": [
 						{
 							"heading": "Television",

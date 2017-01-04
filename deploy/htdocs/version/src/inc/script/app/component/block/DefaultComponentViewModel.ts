@@ -22,12 +22,20 @@ class DefaultComponentViewModel<T, U extends IDefaultComponentOptions> extends A
 	public BlockType:Class = BlockType;
 
 	/**
+	 * @property elementClassNames
+	 * @description Array containing all the that will be applied to the this.controller.element
+	 * @type {Array}
+	 */
+	protected elementClassNames:Array<string> = [];
+
+	/**
 	 * @public
 	 * @method destruct
 	 */
 	public destruct():void
 	{
 		this.BlockType = null;
+		this.elementClassNames = null;
 
 		super.destruct();
 	}

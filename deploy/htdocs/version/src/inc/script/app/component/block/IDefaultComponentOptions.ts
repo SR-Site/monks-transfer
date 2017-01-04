@@ -17,6 +17,12 @@ interface IDefaultComponentOptions extends IIndexable
 
 	/**
 	 * @property
+	 * @description the amount of margin to be applied to the top (marginTop * gridSize)
+	 */
+	marginTop:number;
+
+	/**
+	 * @property
 	 * @description Windowed means the block will be surrounded by a white border of 2 * gridSize
 	 */
 	windowed: boolean;

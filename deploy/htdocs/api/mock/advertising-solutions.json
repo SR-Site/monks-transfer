@@ -1,0 +1,35 @@
+{
+	"statusCode": 200,
+	"data": {
+		"pageTitle": "advertising solutions",
+		"blocks": [
+			{
+				"id": "heroMain",
+				"data": {
+					"heading": "We'll Help you Find Your Format",
+					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "/advertising-solutions",
+						"type": 2
+					},
+					"background": {
+						"normal": "data/image-with-content/background.jpg",
+						"small": "data/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "smallInfo",
+				"data": {
+					"windowed": true,
+					"marginTop": 2,
+					"heading": "Understanding  your <br/>Customer’s <span class='highlight'>Path to Purchase</span>",
+					"paragraph": "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum."
+				}
+			}
+		]
+	}
+}

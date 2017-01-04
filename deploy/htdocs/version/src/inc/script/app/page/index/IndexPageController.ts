@@ -47,6 +47,7 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 		super.init();
 
 		this._beforeTransitionIn = Gaia.api.beforeTransitionIn(this.handleBeforeTransitionIn.bind(this), true);
+		this._beforeGoto = Gaia.api.beforeGoto(this.handleBeforeGoto.bind(this), true, false);
 
 		// TODO: remove this!
 		let gridElement = (<HTMLElement>this.element.querySelector('.grid'));
@@ -74,8 +75,8 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	private handleHeaderReady(controller: HeaderController): void
 	{
 		this._headerController = controller;
-		this._headerController.addEventListener(MenuEvent.OPEN, ()=> this._menuController.transitionIn());
-		this._headerController.addEventListener(MenuEvent.CLOSE, ()=> this._menuController.transitionOut());
+		this._headerController.addEventListener(MenuEvent.OPEN, () => this._menuController.transitionIn());
+		this._headerController.addEventListener(MenuEvent.CLOSE, () => this._menuController.transitionOut());
 	}
 
 	/**
@@ -116,11 +117,32 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 
 	/**
 	 * @private
+	 * @method handleBeforeGoto
+	 */
+	private handleBeforeGoto(): void
+	{
+		if(this._headerController.menuIsActive)
+		{
+			this._menuController.transitionOut()
+				.then(() =>
+				{
+					this._headerController.menuIsActive = false;
+				})
+				.then(() => this._beforeGoto())
+		}
+		else
+		{
+			this._beforeGoto()
+		}
+	}
+
+	/**
+	 * @private
 	 * @method handleBeforeTransitionIn
 	 */
 	private handleBeforeTransitionIn(): void
 	{
-		const allComponentsLoaded:Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
+		const allComponentsLoaded: Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
 
 		// Wait  for all components to be loaded
 		allComponentsLoaded.then(() => this._beforeTransitionIn(true))

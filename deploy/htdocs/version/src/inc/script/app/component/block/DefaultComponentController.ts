@@ -16,12 +16,12 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 	 * @property transitionComplete
 	 * @type {boolean}
 	 */
-	public transitionComplete:boolean = false;
+	public transitionComplete: boolean = false;
 	/**
 	 * @property transitionInStarted
 	 * @type {boolean}
 	 */
-	public transitionInStarted:boolean = false;
+	public transitionInStarted: boolean = false;
 	/**
 	 * @property
 	 * @type {number}
@@ -36,19 +36,19 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 	 * @property isInView
 	 * @type {boolean}
 	 */
-	public isInView:boolean = false;
+	public isInView: boolean = false;
 	/**
 	 * @property animationsStarted
 	 * @type {boolean}
 	 */
-	public animationsStarted:boolean = false;
+	public animationsStarted: boolean = false;
 	/**
 	 * @property disableTransitionIn
 	 * @description If you want to disable the default transition in for the component, for example when you start
 	 * nesting block components inside of other block components and you want to have control over the transition in
 	 * @type {boolean}
 	 */
-	public disableTransitionIn:boolean = false;
+	public disableTransitionIn: boolean = false;
 	/**
 	 * @property viewModel
 	 * @type {DefaultComponentViewModel}
@@ -75,24 +75,37 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 	{
 		// Add the block id to the block
 		let blockId = document.createElement('div');
-			blockId.innerHTML = this.options.id;
-			blockId.style.position = 'absolute';
-			blockId.style.left = '0';
-			blockId.style.top = '0';
-			blockId.style.padding = (this.options.blocks ? '15px' : '5px');
-			blockId.style.fontSize = '15px';
-			blockId.style.color = '#fff';
-			blockId.style.zIndex = '1';
-			blockId.style.backgroundColor = (this.options.blocks ? '#f18e00' : '#f00');
+		blockId.innerHTML = this.options.id;
+		blockId.style.position = 'absolute';
+		blockId.style.left = '0';
+		blockId.style.top = '0';
+		blockId.style.padding = (this.options.blocks ? '15px' : '5px');
+		blockId.style.fontSize = '15px';
+		blockId.style.color = '#fff';
+		blockId.style.zIndex = '1';
+		blockId.style.backgroundColor = (this.options.blocks ? '#f18e00' : '#f00');
 
 		this.element.appendChild(blockId);
 
 		const allComponentsLoaded: Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
 
-		allComponentsLoaded.then(()=>this.allComponentsLoaded());
+		allComponentsLoaded.then(() => this.allComponentsLoaded());
 
 		// Will be overwritten in parent class
 		this.transitionController = new DefaultTransitionController(this.element, this);
+
+		// Set the default classes for block components
+		if(this.options.windowed)
+		{
+			this.viewModel.elementClassNames.push('windowed');
+		}
+		if(this.options.marginTop)
+		{
+			this.viewModel.elementClassNames.push('margin-top-' + this.options.marginTop);
+		}
+
+		// Add the class names to the element
+		this.viewModel.elementClassNames.forEach((className) => this.element.classList.add(className))
 	}
 
 	/**
@@ -122,7 +135,7 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 		this.transitionInStarted = true;
 
 		return this.transitionController.transitionIn()
-			.then(()=>
+			.then(() =>
 			{
 				this.transitionComplete = true;
 			})
@@ -142,7 +155,7 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 	 * @public
 	 * @method startAnimations
 	 */
-	public startAnimations():void
+	public startAnimations(): void
 	{
 		this.animationsStarted = true;
 	}
@@ -152,7 +165,7 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 	 * @public
 	 * @method stopAnimations
 	 */
-	public stopAnimations():void
+	public stopAnimations(): void
 	{
 		this.animationsStarted = false;
 	}
@@ -173,7 +186,9 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 	 * @method allComponentsLoaded
 	 * @description All components have been loaded
 	 */
-	protected allComponentsLoaded(): void {}
+	protected allComponentsLoaded(): void
+	{
+	}
 
 	/**
 	 * @public

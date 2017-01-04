@@ -1,6 +1,11 @@
 <header class="component-header" data-bind="css: {'enable-solid-background': $root.enableSolidBackground}">
 
-	<h1 class="logo" data-bind="css: { 'primary': !$root.enableSolidBackground(), 'inverted': $root.enableSolidBackground() }"> <!-- 'primary' or 'inverted' -->
+	<h1 class="logo" data-bind="
+		gaiaGoto: [Branches.CONTENT_PAGE, 'home'],
+		css: {
+			'primary': !$root.enableSolidBackground(),
+			'inverted': $root.enableSolidBackground()
+		}"> <!-- 'primary' or 'inverted' -->
 		<span class="icon" data-bind="icon: 'logo'"></span>
 	</h1>
 
