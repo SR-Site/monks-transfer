@@ -1,6 +1,5 @@
 .component-button-main {
 	@include size(auto, 5rem);
-	border: 1px solid  $colorBorder;
 	font: 800 1rem / calc(5rem - 2px) $fontOpenSans;
 	color: $colorPrimary;
 	text-transform: uppercase;
@@ -9,18 +8,45 @@
 	position: relative;
 	vertical-align: middle;
 	margin-left: $sizeGridSecondary / 2;
+	z-index: 0;
 
-	&:before {
+	svg {
+		overflow: visible;
+	}
+
+	rect {
+		@include size(100%);
+		fill: transparent;
+		stroke: $colorBorder;
+		stroke-width: 1px;
+		transition: stroke .2s ease(easeInOut), stroke-width .2s ease(easeInOut);
+	}
+
+
+	&:after {
 		@include size($sizeGridSecondary, .4rem);
-		@include pos(50%, auto, auto, 0);
-		transform: translate(-50%, -50%);
+		@include pos(calc(50% - .2rem), auto, auto, -$sizeGridSecondary / 2);
+		transform: scale(1);
 		content: '';
 		position: absolute;
 		background: $colorSecondary;
+		transition: all .2s ease(easeInOut);
 	}
 
 	.label {
 		display: inline-block;
 		vertical-align: top;
+	}
+
+	@include hover() {
+
+		&:after {
+			transform: scaleX(0);
+		}
+
+		rect {
+			stroke-width: 0.5rem;
+			stroke: $colorSecondary;
+		}
 	}
 }
