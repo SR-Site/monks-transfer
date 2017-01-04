@@ -9,9 +9,13 @@ define([
 	'TimelineMax',
 	'CSSPlugin',
 	'EasePack',
+	'vendor/gsap/utils/Draggable',
+	'vendor/gsap/plugins/ThrowPropsPlugin',
+	'vendor/gsap/plugins/ScrollToPlugin',
 	'vendor/history/history',
 //	'lib/createjs/preloadjs',
 //	'lib/createjs/soundjs',
+	'lib/knockout/knockout.scrollbar',
 	'lib/knockout/knocktouch',
 	'lib/knockout/knockout.image',
 ], ($, ko) =>

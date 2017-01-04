@@ -1,6 +1,13 @@
 .logo {
 	@include size(140px, 42px);
 
+	.text-top,
+	.text-bottom,
+	.arrow {
+		transition: color .2s ease(easeInOut);
+	}
+
+
 	// Primary logo colors
 	&.primary {
 

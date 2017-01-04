@@ -63,11 +63,10 @@
 		position: relative;
 		display: block;
 		height: 100px;
-		background: #aaa;
-		border-radius: 3px;
+		background: $colorSecondary;
 
 		.rgba & {
-			background: rgba(166, 159, 147, .75);
+			background: rgba($colorSecondary, .75);
 		}
 	}
 }

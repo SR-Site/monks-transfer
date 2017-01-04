@@ -1,0 +1,24 @@
+.component-menu {
+	@include size($sizeGrid * 14, calc(100vh - #{$sizeGrid * 2}));
+	@include pos($sizeGrid * 2, calc((100% - #{$largeSiteFrame}) / 2), 0, auto);
+	background: $colorPrimary;
+	position: fixed;
+	z-index: zindex($layout, menu);
+
+	.menu-items {
+		@extend %reset-list;
+		padding: $sizeGrid * 2;
+	}
+
+	.menu-item {
+		display: block;
+		margin-bottom: $sizeGrid;
+
+		a {
+			font: 400 2.4rem / 1 $fontOpenSans;
+			text-decoration: none;
+			color: $colorWhite;
+			display: block;
+		}
+	}
+}

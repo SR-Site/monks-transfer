@@ -10,6 +10,9 @@ import DataManager from "../../data/DataManager";
 import FooterController from "../../component/footer/FooterController";
 import HeaderController from "../../component/header/HeaderController";
 import ButtonStartAdvertisingController from "../../component/button/button-start-advertising/ButtonStartAdvertisingController";
+import MenuController from "../../component/menu/MenuController";
+import CommonEvent from "../../../lib/temple/event/CommonEvent";
+import MenuEvent from "../../event/MenuEvent";
 
 class IndexPageController extends DefaultPageController<IndexPageViewModel>
 {
@@ -32,6 +35,7 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 
 	private _headerController: HeaderController;
 	private _footerController: FooterController;
+	private _menuController: MenuController;
 	private _startAdvertising: ButtonStartAdvertisingController;
 
 	/**
@@ -70,6 +74,8 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	private handleHeaderReady(controller: HeaderController): void
 	{
 		this._headerController = controller;
+		this._headerController.addEventListener(MenuEvent.OPEN, ()=> this._menuController.transitionIn());
+		this._headerController.addEventListener(MenuEvent.CLOSE, ()=> this._menuController.transitionOut());
 	}
 
 	/**
@@ -79,6 +85,15 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	public handleFooterReady(controller: FooterController): void
 	{
 		this._footerController = controller;
+	}
+
+	/**
+	 * @public
+	 * @method handleFooterReady
+	 */
+	public handleMenuReady(controller: MenuController): void
+	{
+		this._menuController = controller;
 	}
 
 	/**

@@ -1,6 +1,6 @@
-<header class="component-header">
+<header class="component-header" data-bind="css: {'enable-solid-background': $root.enableSolidBackground}">
 
-	<h1 class="logo primary"> <!-- 'primary' or 'inverted' -->
+	<h1 class="logo" data-bind="css: { 'primary': !$root.enableSolidBackground(), 'inverted': $root.enableSolidBackground() }"> <!-- 'primary' or 'inverted' -->
 		<span class="icon" data-bind="icon: 'logo'"></span>
 	</h1>
 
@@ -27,7 +27,7 @@
 				action: {
 					label: 'Menu',
 					title: 'Menu',
-					event: function(){console.log('click menu')}
+					event: $root.handleMenuButtonClick.bind($root)
 				},
 				size: $root.ButtonSize.LARGE,
 				disabled: $root.menuButtonDisabled
