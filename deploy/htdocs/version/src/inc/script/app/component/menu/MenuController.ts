@@ -4,6 +4,8 @@ import IMenuOptions from 'app/component/menu/IMenuOptions';
 import MenuViewModel from 'app/component/menu/MenuViewModel';
 
 import Log from "lib/temple/util/Log";
+import DefaultTransitionController from "../../util/component-transition/DefaultTransitionController";
+import Scrollbar from "../../../lib/temple/component/Scrollbar";
 
 class MenuController extends DefaultComponentTransitionController<MenuViewModel, IMenuOptions>
 {
@@ -25,9 +27,22 @@ class MenuController extends DefaultComponentTransitionController<MenuViewModel,
 		this._debug.log('Init');
 
 		this.transitionController = new MenuTransitionController(this.element, this);
-
+		this.transitionController.addEventListener(DefaultTransitionController.TRANSITION_IN_COMPLETE, this.handleTransitionInComplete.bind(this));
 	}
 
+	/**
+	 * @private
+	 * @method handleTransitionInComplete
+	 */
+	private handleTransitionInComplete(): void
+	{
+		const scrollBarElements: Array<HTMLElement> = Array.prototype.slice.call(this.element.querySelectorAll('.js-scroll-wrapper'));
+
+		scrollBarElements.forEach((element)=>
+		{
+			ko.utils.domData.get(element, Scrollbar.BINDING_NAME).update();
+		})
+	}
 
 	/**
 	 *  Overrides AbstractComponentController.destruct()

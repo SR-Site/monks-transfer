@@ -8,7 +8,7 @@ import Scrollbar from 'lib/temple/component/Scrollbar';
  * ### Requirements
  * - Scrollbar
  * - Draggable
- * 
+ *
  * ### Getting started
  * To get started using the scrollbar binding create a html structure like this:
  * ```html
@@ -25,23 +25,23 @@ import Scrollbar from 'lib/temple/component/Scrollbar';
  *     </div>
  * </div>
  * ```
- * 
+ *
  * Inside the {} you can put the options you want to pass through to the Scrollbar instance
- * 
+ *
  * ### Updating scroll bar
  * The scroll bar class is saved in the ko.domData of the scroll-wrapper element.
  * You can use the class like this:
- * 
+ *
  * ```typescript
  * var scrollWrapper = <HTMLElement>document.querySelector('.scroll-wrapper');
- * 
+ *
  * // Select the class
  * var controller:Scrollbar = ko.utils.domData.get(scrollWrapper, 'scrollbar');
- * 
+ *
  * // Update the scroll bar
  * ko.utils.domData.get(scrollWrapper, 'scrollbar').update();
  * ```
- * 
+ *
  * @class KnockoutScrollbar
  */
 
@@ -58,7 +58,7 @@ class KnockoutScrollbar
 
         var scrollbar = new Scrollbar(element, value);
 
-        ko.utils.domData.set(element, 'scrollbar', scrollbar);
+        ko.utils.domData.set(element, Scrollbar.BINDING_NAME, scrollbar);
 
         // Cleaning up the Scrollbar instance
         var disposeCallback = () =>
@@ -66,7 +66,7 @@ class KnockoutScrollbar
             ko.utils.domNodeDisposal.removeDisposeCallback(element, disposeCallback);
             scrollbar.destruct();
             scrollbar = null;
-            ko.utils.domData.set(element, 'scrollbar', null);
+            ko.utils.domData.set(element, Scrollbar.BINDING_NAME, null);
         };
         ko.utils.domNodeDisposal.addDisposeCallback(element, disposeCallback);
 
@@ -76,5 +76,4 @@ class KnockoutScrollbar
 
 ko.bindingHandlers['scrollbar'] = KnockoutScrollbar;
 ko.virtualElements.allowedBindings['scrollbar'] = true;
-
 

@@ -71,6 +71,8 @@ interface ScrollbarOptions {
 
 class Scrollbar extends EventDispatcher
 {
+	public static BINDING_NAME: string = 'scrollbar';
+
 	private _options:ScrollbarOptions = {
 		inside: false,
 		hidebar: false,
