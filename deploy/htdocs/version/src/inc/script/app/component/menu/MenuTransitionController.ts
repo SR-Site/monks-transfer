@@ -10,7 +10,6 @@ class MenuTransitionController extends DefaultTransitionController
 	protected setupTransitionInTimeline(): void
 	{
 		this.transitionInTimeline.from(this.element, 0.8, {
-			autoAlpha: 0,
 			xPercent:100,
 			ease: Power4.easeInOut
 		});

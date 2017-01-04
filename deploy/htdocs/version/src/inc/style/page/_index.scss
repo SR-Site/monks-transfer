@@ -3,9 +3,29 @@
  */
 
 .view.view-index {
+	$barSize: calc((100% - #{$largeSiteFrame}) / 2);
+	width: 100%;
 	height: auto;
 	position: relative;
 	z-index: zindex($layout, content);
+
+	&:before,
+	&:after {
+		@include size($barSize, 100%);
+		top: 0;
+		content: '';
+		position: absolute;
+		background: white;
+		z-index: length($layout) + 1;
+	}
+
+	&:after {
+		right :0;
+	}
+
+	&:before {
+		left: 0;
+	}
 
 	[data-gaia-container="index"] {
 		z-index: 0;
