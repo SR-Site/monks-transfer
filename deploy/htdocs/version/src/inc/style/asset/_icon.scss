@@ -9,6 +9,7 @@
 	svg {
 		@include size(100%);
 		display: block;
+		overflow: visible;
 
 		path {
 			fill: currentColor;

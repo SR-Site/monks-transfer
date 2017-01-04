@@ -11,8 +11,8 @@
 					"link": {
 						"label": "Find out more",
 						"title": "Find out more",
-						"target": "home",
-						"type": 0
+						"target": "/home",
+						"type": 2
 					},
 					"background": {
 						"normal": "data/image-with-content/background.jpg",

@@ -32,7 +32,6 @@
 		@include size($sizeGrid * 13, auto);
 		@include pos(50%, auto, auto, 0);
 		transform: translateY(-50%);
-		overflow: hidden;
 		position: absolute;
 		z-index: 1;
 		padding-left: $sizeGrid * 3;

@@ -5,4 +5,26 @@
 		color: $colorWhite;
 		margin-left: $sizeGrid / 2;
 	}
+
+	svg {
+		backface-visibility: hidden;
+
+		circle {
+			fill: transparent;
+			stroke: $colorWhite;
+			stroke-width: 1px;
+			transition: stroke .2s ease(easeInOut), stroke-width .2s ease(easeInOut), opacity .2s ease(easeInOut);
+		}
+	}
+
+	@include hover() {
+		svg {
+			circle {
+				stroke-width: 0.5rem;
+				stroke: $colorSecondary;
+				opacity: 1;
+			}
+		}
+
+	}
 }

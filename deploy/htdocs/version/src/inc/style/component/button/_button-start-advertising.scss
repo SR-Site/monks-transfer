@@ -17,6 +17,13 @@
 
 	.icon {
 		@include size($sizeIcon);
+
+		circle {
+			fill: transparent;
+			stroke: $colorWhite;
+			stroke-width: 1px;
+			transition: stroke .2s ease(easeInOut), stroke-width .2s ease(easeInOut), opacity .2s ease(easeInOut);
+		}
 	}
 
 	.label {
@@ -33,9 +40,10 @@
 		.icon {
 			color: $colorWhite;
 
-			svg {
-				background: $colorSecondary;
-				border-radius: 100%;
+			circle {
+				fill: $colorSecondary;
+				stroke: $colorSecondary;
+				opacity: 1;
 			}
 		}
 	}

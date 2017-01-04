@@ -12,6 +12,7 @@
 	&:before,
 	&:after {
 		@include size($barSize, 100%);
+		min-height: 100vh;
 		top: 0;
 		content: '';
 		position: absolute;
