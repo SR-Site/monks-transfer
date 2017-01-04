@@ -1,15 +1,33 @@
 .component-map-slider {
 
 	.track {
-		@include size(100%, 1px);
-		@include pos(50%, auto, auto, 0);
+		@include size(auto, 1px);
+		@include pos(50%, $sizeGrid, auto, $sizeGrid);
 		transform: translateY(-50%);
 		position: absolute;
 		background: $colorBorder;
 		z-index: 1;
 
+		&:before,
+		&:after {
+			@include size($sizeGrid, 1px);
+			top: 50%;
+			transform: translateY(-50%);
+			position: absolute;
+			content: '';
+			background: $colorBorder;
+		}
+
+		&:before {
+			left: -$sizeGrid
+		}
+
+		&:after {
+			right: -$sizeGrid;
+		}
+
 		.progress {
-			@include size($sizeGrid, 3px);
+			@include size(0px, 3px);
 			@include pos(50%, auto, auto, 0);
 			transform: translateY(-50%);
 			position: absolute;
@@ -45,13 +63,40 @@
 		}
 	}
 
+	.knob-wrapper {
+		@include size(calc(100% - #{$sizeGrid * 2}), $sizeGrid * 2);
+		@include pos(0, auto, auto, 50%);
+		position: absolute;
+		transform: translateX(-50%);
+		z-index: 3;
+	}
+
 	.knob {
-		@include pos(50%, auto, auto, $sizeGrid);
+		@include pos(50%, auto, auto, 0);
 		@include size($sizeGrid * 2);
 		transform: translateY(-50%);
 		border: 1px solid $colorBorder;
 		position: absolute;
 		border-radius: 100%;
-		z-index: 3;
+		background: transparent;
+		transition: background .2s ease(easeInOut);
+
+		&:before {
+			@include abs-center($sizeGrid / 4);
+			border-radius: 100%;
+			background: $colorWhite;
+			content: '';
+			opacity: 0;
+			transition: opacity .2s ease(easeInOut);
+		}
+
+		@include hover() {
+			background: $colorSecondary;
+
+			&:before{
+				opacity: 1;
+			}
+
+		}
 	}
 }

@@ -11,6 +11,7 @@
 		@include pos(50%, auto, auto, $sizeGrid * 2);
 		transform: translateY(-50%);
 		position: absolute;
+		cursor: pointer;
 	}
 
 	.call-to-actions {

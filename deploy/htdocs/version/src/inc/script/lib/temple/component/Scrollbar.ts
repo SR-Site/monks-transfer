@@ -181,7 +181,7 @@ class Scrollbar extends EventDispatcher
 			{
 				bounds: this._bar,
 				type: this._options.horizontal ? 'x' : 'y',
-				zindexBoost: false,
+				zIndexBoost: false,
 				cursor: 'default',
 				onDragStart: () =>
 				{

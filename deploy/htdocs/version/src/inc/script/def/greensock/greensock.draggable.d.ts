@@ -270,7 +270,7 @@ interface DraggableVars
 	 * pressed/touched so that the stacking order looks correct (newly pressed objects rise to the top), but if you
 	 * prefer to skip this behavior setzIndexBoost:false.
 	 */
-	zindexBoost?:number|boolean;
+	zIndexBoost?:number|boolean;
 
 	/**
 	 *  by default (except for type:"rotation"), the cursor css property of the element is set to "move" so that when
@@ -382,7 +382,7 @@ interface DraggableVars
 	 * drag, but you can change that threshold using minimumMovement. So minimumMovement:6 would require that the
 	 * mouse/touch moves more than 6 pixels to be interpreted as a drag.
 	 */
-	miniumMovement?:number;
+	minimumMovement?:number;
 
 	/**
 	 * by default, 3D transforms are used (when the browser supports them) in order to force the element onto its own

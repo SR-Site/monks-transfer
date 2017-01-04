@@ -1,22 +1,26 @@
 <div class="component-map-slider">
 	<span class="track">
-		<span class="progress"></span>
+		<span class="progress" data-bind="style: {'width': progress() * 100 + '%'}"></span>
 	</span>
 
-	<span class="knob"></span>
+	<div class="knob-wrapper">
 
+		<span class="knob"></span>
+	</div>
+
+	<!-- todo: swap with dynamic values -->
 	<ul class="steps">
 		<li>
-			<p class="label is-active">200m</p>
+			<p class="label" data-bind="css: {'is-active': activeIndex() === 0}">200m</p>
 		</li>
 		<li>
-			<p class="label">81%</p>
+			<p class="label" data-bind="css: {'is-active': activeIndex() === 1}">81%</p>
 		</li>
 		<li>
-			<p class="label">15years</p>
+			<p class="label" data-bind="css: {'is-active': activeIndex() === 2}">15years</p>
 		</li>
 		<li>
-			<p class="label">110+</p>
+			<p class="label" data-bind="css: {'is-active': activeIndex() === 3}">110+</p>
 		</li>
 	</ul>
 </div>
