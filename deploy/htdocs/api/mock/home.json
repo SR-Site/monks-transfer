@@ -6,6 +6,7 @@
 			{
 				"id": "heroMain",
 				"data": {
+					"overlap": true,
 					"heading": "Never stop reaching",
 					"paragraph": "The right time and place to advertise your business",
 					"link": {
@@ -91,7 +92,6 @@
 				"id": "smallInfo",
 				"data": {
 					"windowed": true,
-					"marginTop": 2,
 					"heading": "Find the Right Way to Reach <br/>your <span class='highlight'>Customers</span>",
 					"paragraph": "We've created a great line-up of advertising opportunities that make it easy for you to talk to best customers",
 					"link": {
@@ -105,8 +105,7 @@
 			{
 				"id": "map",
 				"data": {
-					"windowed": true,
-					"marginTop": 2
+					"windowed": true
 				}
 			},
 			{

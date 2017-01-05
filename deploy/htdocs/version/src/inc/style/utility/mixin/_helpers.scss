@@ -60,6 +60,7 @@
 	}
 
 	@if ($leftOrRight == left) {
+
 		@if ($topOrBottom == top) {
 			border-top: $size solid #{$color};
 			border-right: $size solid transparent;
@@ -71,7 +72,9 @@
 			border-bottom: 0;
 			border-left: $size solid #{$color};
 		}
+
 	}@else if($leftOrRight == right){
+
 		@if ($topOrBottom == top) {
 			border-top: 0;
 			border-right: $size solid #{$color};
@@ -84,7 +87,6 @@
 			border-left: $size solid transparent;
 		}
 	}
-
 }
 
 /**

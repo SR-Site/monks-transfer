@@ -2,6 +2,7 @@
 	font: 800 1.2rem / 1 $fontOpenSans;
 	position: relative;
 	color: $colorSecondary;
+	display: inline-block;
 	padding-bottom: $sizeGrid / 2;
 
 	&:after {

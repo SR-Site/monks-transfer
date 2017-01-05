@@ -6,6 +6,7 @@
 			{
 				"id": "heroSecondary",
 				"data": {
+					"overlap": true,
 					"heading": "We'll help you find your format",
 					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
 					"link": {
@@ -41,9 +42,60 @@
 				"id": "smallInfo",
 				"data": {
 					"windowed": true,
-					"marginTop": 2,
 					"heading": "Understanding  your <br/>Customer’s <span class='highlight'>Path to Purchase</span>",
 					"paragraph": "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum."
+				}
+			},
+			{
+				"id": "pathToPurchase",
+				"data": {
+					"steps": [
+						{
+							"heading": "Dream",
+							"paragraph": "They are open to possibility",
+							"background": {
+								"normal": "data/path-to-purchase/background-1.jpg",
+								"small": "data/path-to-purchase/background-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Search",
+							"paragraph": "They make a descision to",
+							"background": {
+								"normal": "data/path-to-purchase/background-1.jpg",
+								"small": "data/path-to-purchase/background-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Purchase",
+							"paragraph": "They begin shopping",
+							"background": {
+								"normal": "data/path-to-purchase/background-1.jpg",
+								"small": "data/path-to-purchase/background-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Ownership",
+							"paragraph": "They evaluate their options",
+							"background": {
+								"normal": "data/path-to-purchase/background-1.jpg",
+								"small": "data/path-to-purchase/background-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Support",
+							"paragraph": "They are making the purchase",
+							"background": {
+								"normal": "data/path-to-purchase/background-1.jpg",
+								"small": "data/path-to-purchase/background-1.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
 				}
 			}
 		]

@@ -19,13 +19,19 @@ interface IDefaultComponentOptions extends IIndexable
 	 * @property
 	 * @description the amount of margin to be applied to the top (marginTop * gridSize)
 	 */
-	marginTop:number;
+	marginTop?:number;
 
 	/**
 	 * @property
 	 * @description Windowed means the block will be surrounded by a white border of 2 * gridSize
 	 */
-	windowed: boolean;
+	windowed?: boolean;
+
+	/**
+	 * @property
+	 * @description Overlap mean the z-index will be 1 instead of 0 so you can overlap elements
+	 */
+	overlap?:boolean;
 }
 
 export default IDefaultComponentOptions;

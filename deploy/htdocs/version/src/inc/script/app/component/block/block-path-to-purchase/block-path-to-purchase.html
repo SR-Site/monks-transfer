@@ -1,0 +1,26 @@
+<div class="component-block-path-to-purchase">
+	<div class="abs-fill">
+		<img class="background-image" data-bind="
+			attr: {
+				alt: data.steps[0].background.alt
+			},
+			image: {
+				queries: [
+					[$root.MediaQueries.X_SMALL, data.steps[0].background.normal ],
+					[$root.MediaQueries.SMALL, data.steps[0].background.small]
+				],
+				state: $root.deviceState()
+			}" />
+
+		<ul class="steps" data-bind="foreach: data.steps">
+			<li class="step">
+				<div class="step-content">
+					<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
+					<h2 class="copy copy-02" data-bind="html: heading"></h2>
+					<p class="copy copy-01" data-bind="html: paragraph"></p>
+				</div>
+				<div class="step-edge"></div>
+			</li>
+		</ul>
+	</div>
+</div>

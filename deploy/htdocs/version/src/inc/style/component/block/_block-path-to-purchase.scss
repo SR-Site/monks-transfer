@@ -1,0 +1,171 @@
+.component-block-path-to-purchase {
+	$stepHeight: 7 * $sizeGrid;
+	$stepWidth: 7 * $sizeGrid;
+	@include aspect-ratio(36 * $sizeGrid, 15 *$sizeGrid);
+
+	.background-image {
+		@include size(100%);
+	}
+
+	.steps {
+		@extend %reset-list;
+		@include pos(auto, $sizeGrid, $sizeGrid * 2, $sizeGrid);
+		@include size(auto, $stepHeight);
+		position: absolute;
+		display: flex;
+		justify-content: center;
+	}
+
+	.step {
+		@include size($stepWidth, $stepHeight);
+		vertical-align: top;
+		font-size: 0;
+		display: flex;
+		position: relative;
+
+		&:after {
+			@include size(1px, $stepHeight - $sizeGrid);
+			position: absolute;
+			right: 0;
+			background: $colorBorder;
+			content: '';
+		}
+
+		.step-content {
+			@include size($stepWidth - $sizeGrid, 100%);
+			background: $colorWhite;
+			display: inline-block;
+			padding-top: $sizeGrid;
+			padding-bottom: $sizeGrid;
+			vertical-align: top;
+			text-align: left;
+
+			.copy {
+				margin-left: $sizeGrid / 2;
+			}
+
+			.copy-02 {
+				margin-bottom: $sizeGrid / 2;
+			}
+		}
+
+		.step-edge {
+			@include size($sizeGrid, $stepHeight - $sizeGrid);
+			background: $colorWhite;
+			display: inline-block;
+			position: relative;
+			vertical-align: top;
+
+			&:after {
+				@include triangle(left, top, $colorWhite, $sizeGrid);
+				@include pos(auto, 0, -$sizeGrid, auto);
+				position: absolute;
+				content: '';
+			}
+		}
+
+		/**
+		 * Every 1st block
+		 */
+		&:nth-child(1n + 0) {
+
+			&:after {
+				top: 0
+			}
+
+			.step-content {
+				order: 1;
+				padding-right: 0;
+				padding-left: $sizeGrid;
+			}
+
+			.step-edge {
+				order: 2;
+
+				&:after {
+					@include triangle(left, top, $colorWhite, $sizeGrid);
+					@include pos(auto, 0, -$sizeGrid, auto);
+				}
+			}
+		}
+
+		/**
+		 * Every 2nd block
+		 */
+		&:nth-child(2n + 0) {
+			transform: translateY(-$sizeGrid);
+
+			&:after {
+				top: $sizeGrid;
+			}
+
+			.step-content {
+				order: 2;
+				padding-left: 0;
+				padding-right: $sizeGrid;
+			}
+
+			.step-edge {
+				order: 1;
+				margin-top: $sizeGrid;
+
+				&:after {
+					@include triangle(right, bottom, $colorWhite, $sizeGrid);
+					@include pos(-$sizeGrid, 0, auto, auto);
+				}
+			}
+		}
+
+		/**
+		 * Every 3rd block
+		 */
+		&:nth-child(3n + 0) {
+
+			&:after {
+				top: 0;
+			}
+
+			.step-content {
+				order: 1;
+				padding-right: 0;
+				padding-left: $sizeGrid;
+			}
+
+			.step-edge {
+				order: 2;
+			}
+
+		}
+
+		/**
+		 * Every 4th block
+		 */
+		&:nth-child(4n + 0) {
+			transform: translateY(-$sizeGrid);
+
+			&:after {
+				top: $sizeGrid;
+			}
+
+			.step-content {
+				order: 1;
+				padding-left: $sizeGrid;
+			}
+
+			.step-edge {
+				order: 2;
+
+				&:after {
+					@include triangle(left, bottom, $colorWhite, $sizeGrid);
+					@include pos(-$sizeGrid, 0, auto, auto);
+				}
+			}
+		}
+
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+	}
+}

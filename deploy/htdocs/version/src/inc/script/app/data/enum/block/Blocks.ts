@@ -15,6 +15,7 @@ class Blocks
 	public static IMAGE_CALL_TO_ACTIONS:string = 'block-image-call-to-actions';
 	public static LATEST:string = 'block-latest';
 	public static PERSONA_SELECTOR:string = 'block-persona-selector';
+	public static PATH_TO_PURCHASE:string = 'block-path-to-purchase';
 }
 
 

@@ -1,8 +1,6 @@
 .component-block-hero-main {
 	@include aspect-ratio(40*$sizeGrid, $sizeGrid * 24);
 	min-height: $sizeGrid * 24;
-	z-index: 1; // TODO: needs logic
-
 
 	.slide-content-wrapper {
 		overflow: visible;

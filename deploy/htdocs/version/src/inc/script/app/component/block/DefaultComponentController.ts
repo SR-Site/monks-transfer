@@ -99,6 +99,12 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 		{
 			this.viewModel.elementClassNames.push('windowed');
 		}
+
+		if(this.options.overlap)
+		{
+			this.viewModel.elementClassNames.push('overlap');
+		}
+
 		if(this.options.marginTop)
 		{
 			this.viewModel.elementClassNames.push('margin-top-' + this.options.marginTop);

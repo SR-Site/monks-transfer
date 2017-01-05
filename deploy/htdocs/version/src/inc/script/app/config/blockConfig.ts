@@ -57,5 +57,9 @@ export const blockConfig:IBlockConfig = {
 	personaSelector: {
 		id: Blocks.PERSONA_SELECTOR,
 		type: BlockType.COMPONENT
+	},
+	pathToPurchase: {
+		id: Blocks.PATH_TO_PURCHASE,
+		type: BlockType.COMPONENT
 	}
 };
