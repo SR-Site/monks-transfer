@@ -18,11 +18,14 @@ class HeaderViewModel extends DefaultComponentTransitionViewModel<HeaderControll
 	 */
 	public handleMenuButtonClick(): void
 	{
-		// Notify about the menu opening/closing
-		this.controller.dispatch(this.menuButtonActive() ? MenuEvent.CLOSE : MenuEvent.OPEN);
-
-		// Update the UI
-		this.menuButtonActive(!this.menuButtonActive())
+		if(this.menuButtonActive())
+		{
+			this.controller.closeMenu();
+		}
+		else
+		{
+			this.controller.openMenu();
+		}
 	}
 
 	/**

@@ -5,6 +5,8 @@ import HeaderViewModel from "app/component/header/HeaderViewModel";
 import Log from "lib/temple/util/Log";
 import NativeEventListener from "../../../lib/temple/event/NativeEventListener";
 import ScrollUtils from "../../util/ScrollUtils";
+import KeyCode from "../../../lib/temple/util/key/KeyCode";
+import MenuEvent from "../../event/MenuEvent";
 
 class HeaderController extends DefaultComponentTransitionController<HeaderViewModel, IHeaderOptions>
 {
@@ -26,7 +28,47 @@ class HeaderController extends DefaultComponentTransitionController<HeaderViewMo
 		this._debug.log('Init');
 
 		this.transitionController = new HeaderTransitionController(this.element, this);
+
 		this.destructibles.add(new NativeEventListener(document, 'scroll', this.handleScroll.bind(this)));
+		this.destructibles.add(new NativeEventListener(document, 'keyup', this.handleKeyUp.bind(this)));
+	}
+
+	/**
+	 * @public
+	 * @method closeMenu
+	 */
+	public closeMenu(): void
+	{
+		// Notify about the menu opening/closing
+		this.dispatch(MenuEvent.CLOSE);
+
+		// update the UI
+		this.viewModel.menuButtonActive(false);
+	}
+
+	/**
+	 * @public
+	 * @method closeMenu
+	 */
+	public openMenu(): void
+	{
+		// Notify about the menu opening/closing
+		this.dispatch(MenuEvent.OPEN);
+
+		// update the UI
+		this.viewModel.menuButtonActive(true);
+	}
+
+	/**
+	 * @private
+	 * @method handleKeyUp
+	 */
+	private handleKeyUp(event: KeyboardEvent): void
+	{
+		if(event.keyCode === KeyCode.ESCAPE && this.viewModel.menuButtonActive())
+		{
+			this.closeMenu();
+		}
 	}
 
 	/**
@@ -34,7 +76,7 @@ class HeaderController extends DefaultComponentTransitionController<HeaderViewMo
 	 * @method get menuIsActive
 	 * @returns {any}
 	 */
-	public get menuIsActive():boolean
+	public get menuIsActive(): boolean
 	{
 		return this.viewModel.menuButtonActive();
 	}
@@ -44,7 +86,7 @@ class HeaderController extends DefaultComponentTransitionController<HeaderViewMo
 	 * @method get menuIsActive
 	 * @returns {any}
 	 */
-	public set menuIsActive(isActive:boolean)
+	public set menuIsActive(isActive: boolean)
 	{
 		this.viewModel.menuButtonActive(isActive);
 	}
@@ -56,6 +98,12 @@ class HeaderController extends DefaultComponentTransitionController<HeaderViewMo
 	private handleScroll(): void
 	{
 		this.viewModel.enableSolidBackground(ScrollUtils.scrollTop > this.element.offsetHeight);
+
+		// Close the menu on scrolling
+		if(this.viewModel.menuButtonActive())
+		{
+			this.closeMenu();
+		}
 	}
 
 	/**
