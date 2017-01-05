@@ -1,0 +1,40 @@
+.component-block-hero-secondary {
+	@include aspect-ratio(40*$sizeGrid, $sizeGrid * 16);
+	min-height: $sizeGrid * 16;
+	z-index: 1; // TODO: needs logic
+
+	.slide-content-wrapper {
+		overflow: visible;
+
+		.background-triangle {
+			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 34);
+			@include pos(calc(50% - #{$sizeGrid * 2}), auto, auto, 0);
+			transform: translateY(-50%);
+			position: absolute;
+		}
+
+		.secondary-background-triangle {
+			@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 10);
+			@include pos(calc(50% - #{$sizeGrid * 2}), auto, auto, $sizeGrid * 12);
+			position: absolute;
+		}
+	}
+
+	.slide-content {
+		@include size($sizeGrid * 13, auto);
+		@include pos(50%, auto, auto, 0);
+		transform: translateY(-50%);
+		position: absolute;
+		z-index: 1;
+		padding-left: $sizeGrid * 3;
+		color: $colorWhite;
+
+		.heading {
+			margin-bottom: $sizeGrid;
+		}
+
+		.copy {
+			margin-bottom: $sizeGrid * 2;
+		}
+	}
+}

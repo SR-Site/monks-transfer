@@ -22,6 +22,10 @@ export const blockConfig:IBlockConfig = {
 		id: Blocks.HERO_MAIN,
 		type: BlockType.COMPONENT
 	},
+	heroSecondary: {
+		id: Blocks.HERO_SECONDARY,
+		type: BlockType.COMPONENT
+	},
 	imageWithContent: {
 		id: Blocks.IMAGE_WITH_CONTENT,
 		type: BlockType.COMPONENT

@@ -4,9 +4,9 @@
 		"pageTitle": "Television",
 		"blocks": [
 			{
-				"id": "heroMain",
+				"id": "Television",
 				"data": {
-					"heading": "Television",
+					"heading": "We'll Help you Find Your Format",
 					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
 					"link": {
 						"label": "Find out more",
@@ -15,8 +15,8 @@
 						"type": 2
 					},
 					"background": {
-						"normal": "data/image-with-content/background.jpg",
-						"small": "data/image-with-content/background.jpg",
+						"normal": "data/hero-secondary/background.jpg",
+						"small": "data/hero-secondary/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}
