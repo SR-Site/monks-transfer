@@ -4,6 +4,7 @@
  */
 class Blocks
 {
+	public static PAGE_NOT_FOUND:string = 'block-page-not-found';
 	public static HERO_MAIN:string = 'block-hero-main';
 	public static IMAGE_WITH_CONTENT:string = 'block-image-with-content';
 	public static SMALL_INFO:string = 'block-small-info';

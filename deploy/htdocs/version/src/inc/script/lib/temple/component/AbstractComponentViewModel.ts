@@ -3,6 +3,7 @@ import AbstractComponentController from "./AbstractComponentController";
 import ButtonSize from "../../../app/data/enum/layout/ButtonSize";
 import {mediaQueries, DeviceState} from "../../../app/data/scss-shared/MediaQueries";
 import DataManager from "../../../app/data/DataManager";
+import Theme from "../../../app/data/enum/style/Theme";
 
 /**
  * Abstract viewModel class for components. All component ViewModels should extend this class.
@@ -15,6 +16,7 @@ abstract class AbstractComponentViewModel<T extends AbstractComponentController<
 {
 	public MediaQueries:Class = mediaQueries;
 	public ButtonSize: Enum = ButtonSize;
+	public Theme: Enum = Theme;
 
 	public deviceState:KnockoutObservable<DeviceState> = DataManager.getInstance().deviceStateTracker.currentState;
 
@@ -52,6 +54,7 @@ abstract class AbstractComponentViewModel<T extends AbstractComponentController<
 	public destruct(): void
 	{
 		this.ButtonSize = null;
+		this.Theme = null;
 		this.deviceState = null;
 		this.MediaQueries = null;
 

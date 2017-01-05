@@ -1,0 +1,27 @@
+{
+	"statusCode": 200,
+	"data": {
+		"pageTitle": "404 - Page not found",
+		"blocks": [
+			{
+				"id": "pageNotFound",
+				"data": {
+					"errorCode": 404,
+					"heading": "page not found",
+					"paragraph": "The page you were looking for doesn't exist.",
+					"background": {
+						"normal": "data/page-not-found/background.jpg",
+						"small": "data/page-not-found/background.jpg",
+						"alt": "Background image alt text"
+					},
+					"link": {
+						"label": "Go Back Home",
+						"target": "home",
+						"type": 0,
+						"title": "Go back Home"
+					}
+				}
+			}
+		]
+	}
+}

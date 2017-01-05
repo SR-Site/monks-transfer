@@ -22,7 +22,22 @@ class DefaultButtonController<T, U extends IDefaultButtonOptions> extends Defaul
 			this.applyThreeWayBinding(this.options.disabled, this.viewModel.disabled);
 		}
 
+		this.addClassNames();
 		this.checkAndSetHref();
+	}
+
+	/**
+	 * @protected
+	 * @method addClassNames
+	 * @description some buttons require some extra classnames add them in this method
+	 */
+	protected addClassNames():void
+	{
+		// Add the size class name
+		if(this.options.size !== void 0)
+		{
+			this.element.classList.add(this.viewModel.size);
+		}
 	}
 
 	/**

@@ -3,6 +3,9 @@ import AbstractDataModel from "./AbstractDataModel";
 import DataManager from "../DataManager";
 import Promise = require("bluebird");
 import BlockHelper from "../../util/BlockHelper";
+import Routes from "../../config/Routes";
+import {PropertyNames} from "../enum/ConfigNames";
+import configManagerInstance from "../../../lib/temple/config/configManagerInstance";
 
 class PageLayoutModel extends AbstractDataModel<IPageLayout>
 {
@@ -37,9 +40,16 @@ class PageLayoutModel extends AbstractDataModel<IPageLayout>
 				.then((result)=>this.parsePageLayout(result.data, page))
 				.catch((result)=>
 				{
-					this._unknownDeeplinks.push(page);
+					if(configManagerInstance.getProperty(PropertyNames.MOCK_CONTENT))
+					{
+						return this.getLayout(Routes.PAGE_NOT_FOUND);
+					}
+					else
+					{
+						this._unknownDeeplinks.push(page);
 
-					return Promise.reject(null)
+						return Promise.reject(null)
+					}
 				})
 		}
 		else

@@ -14,6 +14,10 @@ import BlockType from "../data/enum/type/BlockType";
  * }
  */
 export const blockConfig:IBlockConfig = {
+	pageNotFound:{
+		id: Blocks.PAGE_NOT_FOUND,
+		type: BlockType.COMPONENT
+	},
 	heroMain: {
 		id: Blocks.HERO_MAIN,
 		type: BlockType.COMPONENT

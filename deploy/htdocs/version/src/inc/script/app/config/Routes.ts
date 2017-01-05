@@ -14,6 +14,8 @@ import {PropertyNames} from "../data/enum/ConfigNames";
  */
 class Routes
 {
+	public static HOME:string = '';
+	public static PAGE_NOT_FOUND:string = 'page-not-found';
 
 	/**
 	 * Set up the global config and all individual route configuration here

@@ -1,0 +1,30 @@
+.component-block-page-not-found {
+	@include aspect-ratio(16px, 8px);
+	background: #000;
+
+	.background {
+		opacity: .5;
+		z-index: 0;
+	}
+
+	.error-code {
+		@include pos(0, 0, 0, 0);
+		font: 800 80rem/1 $fontOpenSans;
+		position: absolute;
+		color: rgba($colorWhite, .05);
+		text-align: center;
+		z-index: 1;
+		user-select: none;
+	}
+
+	.message {
+		color: $colorWhite;
+		text-transform: uppercase;
+		text-align: center;
+		z-index: 2;
+
+		.component-button-main {
+			margin-top: $sizeGrid;
+		}
+	}
+}
