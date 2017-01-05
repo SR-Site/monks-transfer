@@ -49,7 +49,6 @@
 				"data": {
 					"alignment": 1,
 					"windowed": true,
-					"marginTop": 2,
 					"croppedImage": false,
 					"heading": "Let us tell your story. <span class='highlight'>Contact Kernel</span> to get started.",
 					"paragraph": "Creativity comes at all price points. Start with a great idea and then we scale to fit your budget",
@@ -59,6 +58,38 @@
 						"target": "home",
 						"type": 0
 					},
+					"background": {
+						"normal": "data/image-with-content/background.jpg",
+						"small": "data/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 0,
+					"marginTop": 2,
+					"windowed": true,
+					"croppedImage": false,
+					"heading": "Use <span class='highlight'>Data</span> and <span class='highlight'>Targeting</span> to Spend Smart.",
+					"paragraph": "We know more about your customers than anyone else. Use the power of data to get your message in front of the right people, at the right time.",
+					"background": {
+						"normal": "data/image-with-content/background.jpg",
+						"small": "data/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 1,
+					"marginTop": 2,
+					"windowed": true,
+					"croppedImage": false,
+					"heading": "Let us tell your story. <span class='highlight'>Contact Kernel</span> to get started.",
+					"paragraph": "Creativity comes at all price points. Start with a great idea and then we scale to fit your budget",
 					"background": {
 						"normal": "data/image-with-content/background.jpg",
 						"small": "data/image-with-content/background.jpg",
