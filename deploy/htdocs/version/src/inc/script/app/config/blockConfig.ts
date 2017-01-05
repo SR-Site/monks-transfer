@@ -26,6 +26,10 @@ export const blockConfig:IBlockConfig = {
 		id: Blocks.HERO_SECONDARY,
 		type: BlockType.COMPONENT
 	},
+	heroTertiary: {
+		id: Blocks.HERO_TERTIARY,
+		type: BlockType.COMPONENT
+	},
 	imageWithContent: {
 		id: Blocks.IMAGE_WITH_CONTENT,
 		type: BlockType.COMPONENT
@@ -36,6 +40,10 @@ export const blockConfig:IBlockConfig = {
 	},
 	map: {
 		id: Blocks.MAP,
+		type: BlockType.COMPONENT
+	},
+	mapSecondary: {
+		id: Blocks.MAP_SECONDARY,
 		type: BlockType.COMPONENT
 	},
 	imageCallToActions: {

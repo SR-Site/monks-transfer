@@ -4,19 +4,11 @@
 		"pageTitle": "Dummy article",
 		"blocks": [
 			{
-				"id": "heroSecondary",
+				"id": "heroTertiary",
 				"data": {
-					"heading": "Dummy article title",
-					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
-					"link": {
-						"label": "Find out more",
-						"title": "Find out more",
-						"target": "/advertising-solutions",
-						"type": 2
-					},
 					"background": {
-						"normal": "data/hero-secondary/background.jpg",
-						"small": "data/hero-secondary/background.jpg",
+						"normal": "data/hero-tertiary/background.jpg",
+						"small": "data/hero-tertiary/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}

@@ -21,11 +21,10 @@
 	rect {
 		@include size(100%);
 		fill: transparent;
-		stroke: $colorBorder;
+		stroke: rgba(0, 0, 0, .3);
 		stroke-width: 1px;
 		transition: stroke .2s ease(easeInOut), stroke-width .2s ease(easeInOut);
 	}
-
 
 	&:after {
 		@include size($sizeGridSecondary, .4rem);

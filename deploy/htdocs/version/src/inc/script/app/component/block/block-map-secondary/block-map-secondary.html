@@ -1,0 +1,26 @@
+<div class="component-block-map-secondary">
+	<div class="aspect-ratio-wrapper">
+		<div class="aspect-ratio-inner abs-fill">
+			<div class="map-content">
+				<h2 class="main-title heading heading-06" data-bind="html: data.heading"></h2>
+				<h3 class="sub-title copy copy-02" data-bind="html: data.subHeading"></h3>
+				<div class="description copy copy-01" data-bind="html: data.paragraph"></div>
+			</div>
+			<div class="map-image">
+				<img class="abs-fill" src="data/map-secondary/map-background.png" alt="">
+			</div>
+
+			<!-- ko if: data.link -->
+				<!-- ko component: {
+					name: 'button/button-main',
+					onComplete: $root.controller.callbackCounter.get(),
+					options: {
+						action: data.link,
+						size: $root.ButtonSize.LARGE,
+						disabled: $root.findOutMoreDisabled
+					}
+				} --><!-- /ko -->
+			<!-- /ko -->
+		</div>
+	</div>
+</div>

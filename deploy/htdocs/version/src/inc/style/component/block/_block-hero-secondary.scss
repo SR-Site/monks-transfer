@@ -11,12 +11,14 @@
 			@include pos(calc(50% - #{$sizeGrid * 2}), auto, auto, 0);
 			transform: translateY(-50%);
 			position: absolute;
+			pointer-events: none;
 		}
 
 		.secondary-background-triangle {
 			@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 10);
 			@include pos(calc(50% - #{$sizeGrid * 2}), auto, auto, $sizeGrid * 12);
 			position: absolute;
+			pointer-events: none;
 		}
 	}
 

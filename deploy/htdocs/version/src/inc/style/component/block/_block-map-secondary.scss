@@ -1,0 +1,51 @@
+.component-block-map-secondary {
+	user-select: none;
+	background: $colorLightGrey;
+
+	.aspect-ratio-wrapper {
+		@include aspect-ratio($sizeGrid * 32, $sizeGrid * 19);
+	}
+
+	.aspect-ratio-inner {
+		padding: $sizeGrid * 2;
+		font-size: 0;
+	}
+
+	.map-content {
+		@include size($sizeGrid * 9);
+		padding-right: $sizeGrid * 2;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.main-title {
+		margin-bottom: $sizeGrid;
+	}
+
+	.sub-title {
+		margin-bottom: $sizeGrid  / 2;
+	}
+
+	.description {
+		p {
+			margin-bottom: $sizeGrid / 2;
+		}
+	}
+
+	.map-image {
+		@include size($sizeGrid * 23, 100%);
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+
+		img {
+			@include coverer();
+			@include size(100%);
+		}
+	}
+
+	.component-button-main {
+		@include pos(auto, auto, $sizeGrid * 2 , $sizeGrid * 2);
+		position: absolute;
+	}
+}

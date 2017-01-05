@@ -6,18 +6,34 @@
 			{
 				"id": "heroSecondary",
 				"data": {
-					"heading": "We'll Help you Find Your Format",
+					"heading": "We'll help you find your format",
 					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
 					"link": {
 						"label": "Find out more",
 						"title": "Find out more",
-						"target": "/advertising-solutions",
+						"target": "advertising-solutions",
 						"type": 2
 					},
 					"background": {
 						"normal": "data/hero-secondary/background.jpg",
 						"small": "data/hero-secondary/background.jpg",
 						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "mapSecondary",
+				"data": {
+					"windowed": true,
+					"marginTop": 2,
+					"heading": "Use Data and Highly <span class='highlight'>Targeted</span> Geographic <span class='highlight'>Zones</span>",
+					"subHeading": "We're champions of data.",
+					"paragraph": "<p>Knowing your customer demographic and then using geographic targeting is a powerful way to reach the right people.</p><p> Learn about our scale of reach across the country.</p>",
+					"link": {
+						"label": "Explore the market",
+						"title": "Explore the market",
+						"target": "map",
+						"type": 2
 					}
 				}
 			},
