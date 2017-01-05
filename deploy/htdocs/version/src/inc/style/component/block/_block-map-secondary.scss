@@ -44,6 +44,21 @@
 		}
 	}
 
+	.progress-bar {
+		@include size(100%, 1px);
+		@include pos(auto, 0, calc(#{$sizeGrid / 2} + 0.5rem), 0);
+		background: $colorBorder;
+		position: absolute;
+
+		.progress {
+			@include size(0, 0.4rem);
+			@include pos(50%, auto, auto, 0);
+			transform: translateY(-50%);
+			background: $colorSecondary;
+			position: absolute;
+		}
+	}
+
 	.component-button-main {
 		@include pos(auto, auto, $sizeGrid * 2 , $sizeGrid * 2);
 		position: absolute;
