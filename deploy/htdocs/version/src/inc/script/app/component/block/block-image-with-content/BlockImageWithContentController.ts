@@ -23,7 +23,8 @@ class BlockImageWithContentController extends DefaultComponentController<BlockIm
 	{
 		// Add the extra classes to the component
 		if(this.options.alignment === Alignment.LEFT) this.viewModel.elementClassNames.push('left-aligned');
-		if(this.options.alignment === Alignment.RIGHT) this.viewModel.elementClassNames.push('left-aligned');
+		if(this.options.alignment === Alignment.RIGHT) this.viewModel.elementClassNames.push('right-aligned');
+
 		if(this.options.croppedImage) this.viewModel.elementClassNames.push('cropped-image');
 
 		this._debug.log('Init');

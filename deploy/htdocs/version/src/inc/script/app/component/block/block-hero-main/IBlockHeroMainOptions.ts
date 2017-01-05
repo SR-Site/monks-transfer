@@ -5,9 +5,9 @@ import ILink from "../../../data/interface/action/ILink";
 export interface IBlockHeroMainOptions extends IDefaultComponentOptions
 {
 	heading: string;
-	paragraph: string;
+	paragraph?: string;
 	background: IImage;
-	link: ILink;
+	link?: ILink;
 }
 
 export default IBlockHeroMainOptions;

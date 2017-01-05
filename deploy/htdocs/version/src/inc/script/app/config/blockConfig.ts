@@ -65,5 +65,9 @@ export const blockConfig:IBlockConfig = {
 	smallHeading: {
 		id: Blocks.SMALL_HEADING,
 		type: BlockType.COMPONENT
+	},
+	quote: {
+		id: Blocks.QUOTE,
+		type: BlockType.COMPONENT
 	}
 };

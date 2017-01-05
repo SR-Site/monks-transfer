@@ -17,16 +17,22 @@
 		<div class="secondary-background-triangle"></div>
 		<div class="slide-content">
 			<h2 class="heading heading-02" data-bind="html: data.heading"></h2>
-			<p class="copy copy-01" data-bind="html: data.paragraph"></p>
-			<!-- ko component: {
-				name: 'button/button-circle-arrow',
-				onComplete: $root.controller.callbackCounter.get(),
-				options: {
-					action: data.link,
-					arrowDirection: $root.Direction.DOWN,
-					size: $root.ButtonSize.LARGE
-				}
-			} --><!-- /ko -->
+
+			<!-- ko if: data.paragraph -->
+				<p class="copy copy-01" data-bind="html: data.paragraph"></p>
+			<!-- /ko -->
+
+			<!-- ko if: data.link -->
+				<!-- ko component: {
+					name: 'button/button-circle-arrow',
+					onComplete: $root.controller.callbackCounter.get(),
+					options: {
+						action: data.link,
+						arrowDirection: $root.Direction.DOWN,
+						size: $root.ButtonSize.LARGE
+					}
+				} --><!-- /ko -->
+			<!-- /ko -->
 		</div>
 	</div>
 </div>

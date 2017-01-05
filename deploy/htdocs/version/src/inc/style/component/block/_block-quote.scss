@@ -1,0 +1,33 @@
+.component-block-quote {
+
+	.quote-wrapper {
+		padding: $sizeGrid * 2;
+		background: $colorLightGrey;
+		font-size: 0;
+	}
+
+	figure {
+		@include size($sizeGrid * 5);
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+
+		&:after {
+			@include triangle(right, bottom, $colorLightGrey, $sizeGrid);
+			@include pos(auto, 0, 0, auto);
+			content: '';
+			position: absolute;
+		}
+	}
+
+	aside {
+		@include size(calc(100% - #{$sizeGrid * 5}), auto);
+		vertical-align: top;
+		display: inline-block;
+		padding: $sizeGrid $sizeGrid * 2;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid;
+	}
+}

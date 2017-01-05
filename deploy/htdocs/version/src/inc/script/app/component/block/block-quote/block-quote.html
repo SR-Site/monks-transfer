@@ -1,0 +1,26 @@
+<div class="component-block-quote">
+	<div class="overrule-overlap">
+		<div class="quote-wrapper">
+			<figure>
+				<img data-bind="
+				attr: {
+					alt: data.image.alt
+				},
+				image: {
+					queries: [
+						[$root.MediaQueries.X_SMALL, data.image.normal ],
+						[$root.MediaQueries.SMALL, data.image.small]
+					],
+					state: $root.deviceState()
+				}" />
+			</figure>
+			<aside>
+				<h2 class="heading heading-06" data-bind="html: data.quote"></h2>
+				<p class="copy copy-01">
+					<strong data-bind="html: data.name"></strong> |
+					<span data-bind="html: data.description"></span>
+				</p>
+			</aside>
+		</div>
+	</div>
+</div>
