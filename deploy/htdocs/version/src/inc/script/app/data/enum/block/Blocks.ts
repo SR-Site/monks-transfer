@@ -16,6 +16,7 @@ class Blocks
 	public static LATEST:string = 'block-latest';
 	public static PERSONA_SELECTOR:string = 'block-persona-selector';
 	public static PATH_TO_PURCHASE:string = 'block-path-to-purchase';
+	public static SMALL_HEADING:string = 'block-small-heading';
 }
 
 

@@ -97,6 +97,137 @@
 						}
 					]
 				}
+			},
+			{
+				"id": "smallHeading",
+				"data": {
+					"marginTop": 2,
+					"windowed": true,
+					"heading": "Get more from your<br/><span class='highlight'>Marketing</span>"
+				}
+			},
+			{
+				"id": "imageCallToActions",
+				"data": {
+					"windowed": false,
+					"marginTop": 2,
+					"callToActions": [
+						{
+							"heading": "Television",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"background": {
+								"normal": "data/image-call-to-actions/image-tv.jpg",
+								"small": "data/image-call-to-actions/image-tv.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Digital",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"background": {
+								"normal": "data/image-call-to-actions/image-digital.jpg",
+								"small": "data/image-call-to-actions/image-digital.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-digital-blurred.jpg",
+								"small": "data/image-call-to-actions/image-digital-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Creative <br/>services",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"background": {
+								"normal": "data/image-call-to-actions/image-creative.jpg",
+								"small": "data/image-call-to-actions/image-creative.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-creative-blurred.jpg",
+								"small": "data/image-call-to-actions/image-creative-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
+				}
+			},
+			{
+				"id": "personaSelector",
+				"data": {
+					"marginTop": 2,
+					"personas": [
+						{
+							"heading": "Small businesses",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 0,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Automotive",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 1,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Enterprise",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 2,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Local media buying",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 3,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
+				}
 			}
 		]
 	}

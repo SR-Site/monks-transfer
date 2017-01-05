@@ -61,5 +61,9 @@ export const blockConfig:IBlockConfig = {
 	pathToPurchase: {
 		id: Blocks.PATH_TO_PURCHASE,
 		type: BlockType.COMPONENT
+	},
+	smallHeading: {
+		id: Blocks.SMALL_HEADING,
+		type: BlockType.COMPONENT
 	}
 };
