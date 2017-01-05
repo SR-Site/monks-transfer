@@ -1,12 +1,12 @@
 {
 	"statusCode": 200,
 	"data": {
-		"pageTitle": "Advertising Solutions",
+		"pageTitle": "Creative Services",
 		"blocks": [
 			{
 				"id": "heroMain",
 				"data": {
-					"heading": "We'll Help you Find Your Format",
+					"heading": "Creative Services",
 					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
 					"link": {
 						"label": "Find out more",
