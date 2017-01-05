@@ -1,6 +1,5 @@
 .component-block-map-secondary {
 	user-select: none;
-	background: $colorLightGrey;
 
 	.aspect-ratio-wrapper {
 		@include aspect-ratio($sizeGrid * 32, $sizeGrid * 19);
@@ -8,6 +7,7 @@
 
 	.aspect-ratio-inner {
 		padding: $sizeGrid * 2;
+		background: $colorLightGrey;
 		font-size: 0;
 	}
 

@@ -1,15 +1,20 @@
 <div class="component-block-map" data-bind="css: {'windowed': data.windowed}">
-	<div class="map-container">
-		<img class="abs-fill" src="data/map/map-background.png" alt="">
-	</div>
-	<!-- ko component: {
-		name: 'map-slider',
-		onComplete: $root.controller.callbackCounter.get(),
-		options: {}
-	} --><!-- /ko -->
-	<div class="slide-description">
-		<span class="pagination-number">02</span>
-		<h3 class="heading heading-01">81%</h3>
-		<p class="copy copy-01">Of smartphone owners purchased a product with their phone while watching TV</p>
+	<div class="aspect-ratio-wrapper overrule-overlap">
+		<div class="aspect-ratio-inner abs-fill">
+			<div class="map-image abs-fill">
+				<img class="abs-fill" src="data/map/map-background.png" alt="">
+			</div>
+			<div class="map-content">
+				<span class="pagination-number">02</span>
+				<h3 class="heading heading-01">81%</h3>
+				<p class="copy copy-01">Of smartphone owners purchased a product with their phone while watching TV</p>
+			</div>
+
+			<!-- ko component: {
+				name: 'map-slider',
+				onComplete: $root.controller.callbackCounter.get(),
+				options: {}
+			} --><!-- /ko -->
+		</div>
 	</div>
 </div>

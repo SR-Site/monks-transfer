@@ -82,7 +82,7 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 		blockId.style.padding = (this.options.blocks ? '15px' : '5px');
 		blockId.style.fontSize = '15px';
 		blockId.style.color = '#fff';
-		blockId.style.zIndex = '1';
+		blockId.style.zIndex = '9999';
 		blockId.style.backgroundColor = (this.options.blocks ? '#f18e00' : '#f00');
 
 		this.element.appendChild(blockId);

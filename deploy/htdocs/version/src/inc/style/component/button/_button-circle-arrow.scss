@@ -6,6 +6,10 @@
 		margin-left: $sizeGrid / 2;
 	}
 
+	.icon {
+		@include size($sizeGrid);
+	}
+
 	svg {
 		backface-visibility: hidden;
 

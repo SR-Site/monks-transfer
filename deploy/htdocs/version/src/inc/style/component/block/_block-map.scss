@@ -1,23 +1,20 @@
 .component-block-map {
 	user-select: none;
-	background: $colorLightGrey;
 
-	.map-container {
-		@include aspect-ratio(1440px, 840px);
-
-		img {
-			@include coverer();
-		}
+	.aspect-ratio-wrapper {
+		@include aspect-ratio($sizeGrid * 32, $sizeGrid * 21);
 	}
 
-	.component-map-slider {
-		@include size($sizeGrid * 28, $sizeGrid * 2);
-		@include pos(auto, auto, $sizeGrid, 50%);
-		transform: translateX(-50%);
-		position: absolute;
+	.aspect-ratio-inner {
+		padding: $sizeGrid * 2;
+		background: $colorLightGrey;
 	}
 
-	.slide-description{
+	.map-image {
+
+	}
+
+	.map-content {
 		@include size($sizeGrid * 5, auto);
 		@include pos(50%, auto, auto, $sizeGrid * 4);
 		transform: translateY(-50%);
@@ -32,5 +29,13 @@
 		.heading {
 			margin-bottom: $sizeGrid;
 		}
+	}
+
+
+	.component-map-slider {
+		@include size($sizeGrid * 28, $sizeGrid * 2);
+		@include pos(auto, auto, $sizeGrid, 50%);
+		transform: translateX(-50%);
+		position: absolute;
 	}
 }
