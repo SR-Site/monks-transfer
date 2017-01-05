@@ -69,5 +69,9 @@ export const blockConfig:IBlockConfig = {
 	quote: {
 		id: Blocks.QUOTE,
 		type: BlockType.COMPONENT
+	},
+	howToAdvertise: {
+		id: Blocks.HOW_TO_ADVERTISE,
+		type: BlockType.COMPONENT
 	}
 };

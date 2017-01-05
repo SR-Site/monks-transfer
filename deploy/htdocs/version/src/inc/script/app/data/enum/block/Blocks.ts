@@ -18,6 +18,7 @@ class Blocks
 	public static PATH_TO_PURCHASE:string = 'block-path-to-purchase';
 	public static SMALL_HEADING:string = 'block-small-heading';
 	public static QUOTE:string = 'block-quote';
+	public static HOW_TO_ADVERTISE:string = 'block-how-to-advertise';
 }
 
 

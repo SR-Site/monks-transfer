@@ -66,6 +66,20 @@
 				}
 			},
 			{
+				"id": "howToAdvertise",
+				"data": {
+					"marginTop": 2,
+					"windowed": true,
+					"heading": "How to <span class='highlight'>Advertise</span> on Television",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "home",
+						"type": 0
+					}
+				}
+			},
+			{
 				"id": "imageWithContent",
 				"data": {
 					"alignment": 0,
