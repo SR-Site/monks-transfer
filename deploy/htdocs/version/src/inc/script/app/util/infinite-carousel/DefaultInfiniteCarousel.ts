@@ -283,8 +283,6 @@ abstract class DefaultInfiniteCarousel extends EventDispatcher
 	 */
 	private handleDragEnd(): void
 	{
-		this._isDragging = false;
-
 		const elementWidth = this._sliderWrapper.offsetWidth;
 		const currentX = this._currentPage() * elementWidth;
 
@@ -304,6 +302,8 @@ abstract class DefaultInfiniteCarousel extends EventDispatcher
 		{
 			this._currentPage(this._currentPage() - 1);
 		}
+
+		this._isDragging = false;
 	}
 
 	/**
@@ -365,12 +365,17 @@ abstract class DefaultInfiniteCarousel extends EventDispatcher
 	 */
 	private setSliderPosition(): void
 	{
+		let updateOnDrag = this._isDragging;
+
 		TweenLite.to(
 			this._sliderWrapper,
 			1,
 			{
 				x: ((this._currentPage() * 100) * -1) + '%',
-				onUpdate: ()=> this.setCurrentPageOnDrag(),
+				onUpdate: () =>
+				{
+					if(updateOnDrag) this.setCurrentPageOnDrag();
+				},
 				ease: Expo.easeOut
 			}
 		);

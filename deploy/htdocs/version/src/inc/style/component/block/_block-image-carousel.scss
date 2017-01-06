@@ -81,6 +81,13 @@
 		li {
 			@include size($sizeGrid * 2);
 			display: inline-block;
+			position: relative;
+
+		}
+
+		.pagination-button {
+			@include size($sizeGrid * 2);
+			display: inline-block;
 			border: 1px solid $colorBorder;
 			text-align: center;
 			border-radius: 100%;

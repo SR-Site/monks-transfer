@@ -35,6 +35,16 @@ class BlockImageCarouselController extends DefaultComponentController<BlockImage
 	}
 
 	/**
+	 * @public
+	 * @method openIndex
+	 * @param index
+	 */
+	public openIndex(index:number):void
+	{
+		this._infiniteImageCarousel.open(index);
+	}
+
+	/**
 	* @protected
 	* @method allComponentsLoaded
 	*/

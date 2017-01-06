@@ -72,22 +72,6 @@
 								"small": "data/image-carousel/image-1.jpg",
 								"alt": "Background image alt text"
 							}
-						},
-						{
-							"heading": "Farmer boys - 'Fresh Fish'",
-							"image": {
-								"normal": "data/image-carousel/image-2.jpg",
-								"small": "data/image-carousel/image-2.jpg",
-								"alt": "Background image alt text"
-							}
-						},
-						{
-							"heading": "Farmer boys - 'Fresh Fish'",
-							"image": {
-								"normal": "data/image-carousel/image-1.jpg",
-								"small": "data/image-carousel/image-1.jpg",
-								"alt": "Background image alt text"
-							}
 						}
 					]
 				}

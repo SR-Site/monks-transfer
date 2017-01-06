@@ -30,7 +30,12 @@
 				<div class="progress" data-bind="style: {'width': (($root.currentPage() / (data.slides.length - 1)) * 100) + '%'}"></div>
 			</div>
 			<ul data-bind="foreach: data.slides">
-				<li data-bind="html: $index() + 1, css: {'is-active': $index() === $root.currentPage()}"></li>
+				<li>
+					<button class="button pagination-button" data-bind="
+						html: $index() + 1,
+						css: {'is-active': $index() === $root.currentPage()},
+						tap: $root.handleOpenIndexClick.bind($root, $index())"></button>
+				</li>
 			</ul>
 		</div>
 	</div>

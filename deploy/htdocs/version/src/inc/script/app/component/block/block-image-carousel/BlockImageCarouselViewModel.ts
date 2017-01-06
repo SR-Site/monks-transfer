@@ -9,6 +9,16 @@ class BlockImageCarouselViewModel extends DefaultComponentViewModel<BlockImageCa
 	public currentPage:KnockoutObservable<number> = ko.observable(0);
 
 	/**
+	 * @public
+	 * @method handleOpenIndexClick
+	 * @param index
+	 */
+	public handleOpenIndexClick(index:number):void
+	{
+		this.controller.openIndex(index)
+	}
+
+	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct
 	 */
