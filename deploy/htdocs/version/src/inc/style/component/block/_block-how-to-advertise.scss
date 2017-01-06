@@ -14,7 +14,25 @@
 
 	.advertisement-steps {
 		@include size(100%, $sizeGrid * 8);
-		background: $colorLightGrey;
 		display: block;
+	}
+
+	.steps {
+		@extend %reset-list;
+		white-space: nowrap;
+	}
+
+	.step {
+		@include size($sizeGrid * 7);
+		display: inline-block;
+
+		figure {
+			@include size($sizeGrid * 7);
+			position: relative;
+		}
+
+		.icon {
+			@include size($sizeGrid * 5);
+		}
 	}
 }

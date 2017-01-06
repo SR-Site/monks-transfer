@@ -18,6 +18,10 @@
 	.icon {
 		@include size($sizeIcon);
 
+		path {
+			fill: currentColor;
+		}
+
 		circle {
 			fill: transparent;
 			stroke: $colorWhite;

@@ -109,7 +109,34 @@
 						"title": "Find out more",
 						"target": "home",
 						"type": 0
-					}
+					},
+					"steps": [
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-1"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-2"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-3"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-4"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-5"
+						}
+					]
 				}
 			},
 			{

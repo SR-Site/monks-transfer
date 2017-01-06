@@ -13,6 +13,10 @@
 	svg {
 		backface-visibility: hidden;
 
+		path {
+			fill: currentColor;
+		}
+
 		circle {
 			fill: transparent;
 			stroke: $colorWhite;

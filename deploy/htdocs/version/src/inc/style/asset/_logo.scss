@@ -5,6 +5,7 @@
 	.text-bottom,
 	.arrow {
 		transition: color .2s ease(easeInOut);
+		fill: currentColor;
 	}
 
 
