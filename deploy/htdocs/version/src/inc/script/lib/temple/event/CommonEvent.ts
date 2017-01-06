@@ -15,6 +15,7 @@ class CommonEvent extends AbstractEvent
 	public static OPEN:string = 'open';
 	public static CLOSE:string = 'close';
 	public static RESIZE:string = 'resize';
+	public static LOADED:string = 'loaded';
 
 	/**
 	 * Duplicates an instance of an Event subclass.

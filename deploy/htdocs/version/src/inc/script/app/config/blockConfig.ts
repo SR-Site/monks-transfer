@@ -73,5 +73,9 @@ export const blockConfig:IBlockConfig = {
 	howToAdvertise: {
 		id: Blocks.HOW_TO_ADVERTISE,
 		type: BlockType.COMPONENT
+	},
+	imageCarousel: {
+		id: Blocks.IMAGE_CAROUSEL,
+		type: BlockType.COMPONENT
 	}
 };

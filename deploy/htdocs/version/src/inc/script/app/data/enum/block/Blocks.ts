@@ -19,6 +19,7 @@ class Blocks
 	public static SMALL_HEADING:string = 'block-small-heading';
 	public static QUOTE:string = 'block-quote';
 	public static HOW_TO_ADVERTISE:string = 'block-how-to-advertise';
+	public static IMAGE_CAROUSEL:string = 'block-image-carousel';
 }
 
 

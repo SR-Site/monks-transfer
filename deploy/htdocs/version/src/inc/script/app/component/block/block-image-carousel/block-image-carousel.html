@@ -1,0 +1,37 @@
+<div class="component-block-image-carousel">
+	<div class="overrule-overlap">
+		<div class="slider-viewport infinite-carousel js-image-carousel">
+			<ul class="slides" data-bind="foreach: data.slides">
+				<li class="slide">
+					<figure class="abs-fill">
+						<img data-bind="
+								attr: {
+									alt: image.alt
+								},
+								image: {
+									queries: [
+										[$root.MediaQueries.X_SMALL, image.small ],
+										[$root.MediaQueries.SMALL, image.normal]
+									],
+									state: $root.deviceState()
+								}"/>
+						<!-- ko if: heading -->
+							<figcaption>
+								<p class="copy copy-01" data-bind="html: heading"></p>
+							</figcaption>
+						<!-- /ko -->
+					</figure>
+				</li>
+			</ul>
+		</div>
+
+		<div class="pagination">
+			<div class="track">
+				<div class="progress" data-bind="style: {'width': (($root.currentPage() / (data.slides.length - 1)) * 100) + '%'}"></div>
+			</div>
+			<ul data-bind="foreach: data.slides">
+				<li data-bind="html: $index() + 1, css: {'is-active': $index() === $root.currentPage()}"></li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -45,10 +45,59 @@
 				}
 			},
 			{
+				"id": "imageCarousel",
+				"data": {
+					"windowed": false,
+					"slides": [
+						{
+							"heading": "Farmer boys - 'Fresh Fish'",
+							"image": {
+								"normal": "data/image-carousel/image-1.jpg",
+								"small": "data/image-carousel/image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Farmer boys - 'Fresh Fish'",
+							"image": {
+								"normal": "data/image-carousel/image-2.jpg",
+								"small": "data/image-carousel/image-2.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Farmer boys - 'Fresh Fish'",
+							"image": {
+								"normal": "data/image-carousel/image-1.jpg",
+								"small": "data/image-carousel/image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Farmer boys - 'Fresh Fish'",
+							"image": {
+								"normal": "data/image-carousel/image-2.jpg",
+								"small": "data/image-carousel/image-2.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Farmer boys - 'Fresh Fish'",
+							"image": {
+								"normal": "data/image-carousel/image-1.jpg",
+								"small": "data/image-carousel/image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
+				}
+			},
+			{
 				"id": "imageWithContent",
 				"data": {
 					"alignment": 1,
 					"windowed": true,
+					"marginTop": 2,
 					"croppedImage": false,
 					"heading": "Let us tell your story. <span class='highlight'>Contact Kernel</span> to get started.",
 					"paragraph": "Creativity comes at all price points. Start with a great idea and then we scale to fit your budget",

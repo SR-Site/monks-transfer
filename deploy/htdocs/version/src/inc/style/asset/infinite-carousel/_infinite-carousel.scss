@@ -1,0 +1,16 @@
+.infinite-carousel {
+	position: relative;
+	overflow: hidden;
+
+	.slides {
+		@include pos(0, auto, auto, 0);
+		@include size(100%);
+		position: absolute;
+	}
+
+	.slide {
+		@include pos(0, auto, auto, 0);
+		@include size(100%);
+		position: absolute;
+	}
+}
