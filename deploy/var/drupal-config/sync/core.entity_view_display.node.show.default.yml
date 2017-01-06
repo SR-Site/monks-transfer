@@ -1,0 +1,65 @@
+uuid: 8424a4ec-ff40-412b-b22f-d33711d97ae5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.show.field_broadcast_schedule
+    - field.field.node.show.field_image
+    - field.field.node.show.field_show_metric
+    - field.field.node.show.field_tags
+    - field.field.node.show.field_video_external
+    - node.type.show
+  module:
+    - entity_reference_revisions
+    - image
+    - user
+    - video_embed_field
+id: node.show.default
+targetEntityType: node
+bundle: show
+mode: default
+content:
+  field_broadcast_schedule:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_image:
+    weight: 103
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_show_metric:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_tags:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_video_external:
+    weight: 105
+    label: above
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: true
+    third_party_settings: {  }
+    type: video_embed_field_video
+  links:
+    weight: 100
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: ef8a6eaa-f150-4e0b-8b0d-e093352881fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date_day
+    - paragraphs.paragraphs_type.broadcastschedule
+id: paragraph.broadcastschedule.field_date_day
+field_name: field_date_day
+entity_type: paragraph
+bundle: broadcastschedule
+label: Date/day
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

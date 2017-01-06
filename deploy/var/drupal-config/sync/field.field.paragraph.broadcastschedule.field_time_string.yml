@@ -1,0 +1,19 @@
+uuid: 517c7c18-32f7-412e-8724-3899969b36f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_time_string
+    - paragraphs.paragraphs_type.broadcastschedule
+id: paragraph.broadcastschedule.field_time_string
+field_name: field_time_string
+entity_type: paragraph
+bundle: broadcastschedule
+label: Time
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

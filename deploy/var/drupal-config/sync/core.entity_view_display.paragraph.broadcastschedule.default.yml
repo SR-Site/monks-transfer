@@ -1,0 +1,30 @@
+uuid: 94546c35-c1cc-4b93-83f9-dc943d1f0c36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.broadcastschedule.field_date_day
+    - field.field.paragraph.broadcastschedule.field_time_string
+    - paragraphs.paragraphs_type.broadcastschedule
+id: paragraph.broadcastschedule.default
+targetEntityType: paragraph
+bundle: broadcastschedule
+mode: default
+content:
+  field_date_day:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_time_string:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  uid: true

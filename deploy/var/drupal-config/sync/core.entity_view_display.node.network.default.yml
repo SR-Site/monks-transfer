@@ -1,0 +1,35 @@
+uuid: 97942029-cc39-4fc1-a3d7-5735c1edf207
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.network.field_image
+    - field.field.node.network.field_image2
+    - node.type.network
+  module:
+    - image
+    - user
+id: node.network.default
+targetEntityType: node
+bundle: network
+mode: default
+content:
+  field_image:
+    weight: 101
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_image2:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 100
+hidden: {  }
