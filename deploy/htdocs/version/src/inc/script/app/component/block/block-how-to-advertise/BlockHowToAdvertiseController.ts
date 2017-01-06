@@ -4,6 +4,7 @@ import IBlockHowToAdvertiseOptions from 'app/component/block/block-how-to-advert
 import BlockHowToAdvertiseViewModel from 'app/component/block/block-how-to-advertise/BlockHowToAdvertiseViewModel';
 
 import Log from "lib/temple/util/Log";
+import DraggableInstance from "../../../util/DraggableInstance";
 
 class BlockHowToAdvertiseController extends DefaultComponentController<BlockHowToAdvertiseViewModel, IBlockHowToAdvertiseOptions>
 {
@@ -14,6 +15,8 @@ class BlockHowToAdvertiseController extends DefaultComponentController<BlockHowT
 	 */
 	private _debug:Log = new Log('app.component.BlockHowToAdvertise');
 
+	private _draggableInstance:DraggableInstance;
+
 	/**
 	 *	Overrides AbstractPageController.init()
 	 *	@method init
@@ -23,6 +26,11 @@ class BlockHowToAdvertiseController extends DefaultComponentController<BlockHowT
 		super.init();
 
 		this._debug.log('Init');
+
+		this._draggableInstance = new DraggableInstance(<HTMLElement>this.element.querySelector('.js-draggable-container'), {
+			invert: true,
+			enableTrackPad: true
+		});
 	}
 
 	/**

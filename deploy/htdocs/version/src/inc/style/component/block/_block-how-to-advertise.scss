@@ -20,19 +20,43 @@
 	.steps {
 		@extend %reset-list;
 		white-space: nowrap;
+		display: inline-block;
 	}
 
 	.step {
-		@include size($sizeGrid * 7);
+		@include size($sizeGrid * 15, $sizeGrid * 7);
 		display: inline-block;
+		max-width: $sizeGrid * 7;
+		white-space: nowrap;
+		line-height: $sizeGrid * 7;
+		overflow: hidden;
 
 		figure {
 			@include size($sizeGrid * 7);
 			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			border-radius: 100%;
 		}
 
 		.icon {
 			@include size($sizeGrid * 5);
+		}
+
+		aside {
+			@include size($sizeGrid * 8, auto);
+			display: inline-block;
+			padding: $sizeGrid;
+			vertical-align: middle;
+			white-space: normal;
+		}
+
+		&.is-active {
+			max-width: $sizeGrid * 15;
+
+			figure {
+				background: $colorLightGrey;
+			}
 		}
 	}
 }

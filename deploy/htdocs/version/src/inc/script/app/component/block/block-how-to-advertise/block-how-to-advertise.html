@@ -13,17 +13,19 @@
 			} --><!-- /ko -->
 		</header>
 		<div class="advertisement-steps">
-			<ul class="steps" data-bind="foreach: data.steps">
-				<li class="step">
-					<figure>
-						<div class="icon abs-center" data-bind="icon: icon"></div>
-					</figure>
-					<aside>
-						<p class="copy copy-02" data-bind="html: heading"></p>
-						<p class="copy copy-01" data-bind="html: paragraph"></p>
-					</aside>
-				</li>
-			</ul>
+			<div class="js-draggable-container">
+				<ul class="steps js-draggable-element" data-bind="foreach: data.steps">
+					<li class="step" data-bind="css: {'is-active': $index() === 0}">
+						<figure>
+							<div class="icon abs-center" data-bind="icon: icon"></div>
+						</figure>
+						<aside>
+							<p class="copy copy-02" data-bind="html: heading"></p>
+							<p class="copy copy-01" data-bind="html: paragraph"></p>
+						</aside>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

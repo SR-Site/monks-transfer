@@ -13,5 +13,9 @@
 	.icon {
 		@include size($sizeIcon);
 		margin-right: $sizeGrid / 2;
+
+		path {
+			fill: currentColor;
+		}
 	}
 }
