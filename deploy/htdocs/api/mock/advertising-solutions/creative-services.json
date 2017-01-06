@@ -143,6 +143,43 @@
 						"alt": "Background image alt text"
 					}
 				}
+			},
+			{
+				"id": "imageCallToActions",
+				"data": {
+					"windowed": false,
+					"marginTop": 2,
+					"callToActions": [
+						{
+							"heading": "Compliment television <br/>spend with Digital",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"background": {
+								"normal": "data/image-call-to-actions/image-tv.jpg",
+								"small": "data/image-call-to-actions/image-tv.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "A new era <br/>for Television",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"background": {
+								"normal": "data/image-call-to-actions/image-digital.jpg",
+								"small": "data/image-call-to-actions/image-digital.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-digital-blurred.jpg",
+								"small": "data/image-call-to-actions/image-digital-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
+				}
 			}
 		]
 	}
