@@ -9,7 +9,7 @@ use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
  *
  * @RestEntityProcessor(
  *   id = "spectrum_rest_node_article_teaser_v1",
- *   label = @Translation("Node: Article"),
+ *   label = @Translation("Node: Article - Teaser"),
  *   version = "v1",
  *   entity_type = "node",
  *   bundle = "article",
