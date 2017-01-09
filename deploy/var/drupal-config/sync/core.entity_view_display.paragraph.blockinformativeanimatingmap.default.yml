@@ -1,0 +1,25 @@
+uuid: 86ed8500-9ab8-4c48-981d-bb3dd25ddb18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockinformativeanimatingmap.field_paragraphs
+    - paragraphs.paragraphs_type.blockinformativeanimatingmap
+  module:
+    - entity_reference_revisions
+id: paragraph.blockinformativeanimatingmap.default
+targetEntityType: paragraph
+bundle: blockinformativeanimatingmap
+mode: default
+content:
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,33 @@
+uuid: 8115eaf1-b2d9-407d-ace1-bdb92bd9452d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slidesimple.field_description
+    - field.field.paragraph.slidesimple.field_title
+    - paragraphs.paragraphs_type.slidesimple
+  module:
+    - text
+id: paragraph.slidesimple.default
+targetEntityType: paragraph
+bundle: slidesimple
+mode: default
+content:
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true

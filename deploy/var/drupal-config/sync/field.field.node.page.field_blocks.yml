@@ -7,6 +7,7 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.blockdetailpagenews
     - paragraphs.paragraphs_type.blockheromain
+    - paragraphs.paragraphs_type.blockinformativeanimatingmap
     - paragraphs.paragraphs_type.blocklatestnews
     - paragraphs.paragraphs_type.blockmainproducts
     - paragraphs.paragraphs_type.blockplanbuymeasure
@@ -28,8 +29,9 @@ settings:
     target_bundles:
       blockheromain: blockheromain
       blockplanbuymeasure: blockplanbuymeasure
-      blocklatestnews: blocklatestnews
       blockdetailpagenews: blockdetailpagenews
+      blocklatestnews: blocklatestnews
+      blockinformativeanimatingmap: blockinformativeanimatingmap
       blockmainproducts: blockmainproducts
     target_bundles_drag_drop:
       blockheromain:
@@ -44,15 +46,18 @@ settings:
       content:
         weight: 7
         enabled: false
-      blocklatestnews:
+      blockdetailpagenews:
         enabled: true
         weight: 9
-      blockdetailpagenews:
+      blocklatestnews:
         enabled: true
         weight: 9
       broadcastschedule:
         weight: 11
         enabled: false
+      blockinformativeanimatingmap:
+        enabled: true
+        weight: 13
       showmetric:
         weight: 13
         enabled: false
@@ -61,5 +66,8 @@ settings:
         weight: 14
       tile:
         weight: 20
+        enabled: false
+      slidesimple:
+        weight: 23
         enabled: false
 field_type: entity_reference_revisions

@@ -1,0 +1,31 @@
+uuid: 440fc6b3-a422-45b8-9df9-5215e4af87d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slidesimple.field_description
+    - field.field.paragraph.slidesimple.field_title
+    - paragraphs.paragraphs_type.slidesimple
+  module:
+    - text
+id: paragraph.slidesimple.default
+targetEntityType: paragraph
+bundle: slidesimple
+mode: default
+content:
+  field_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,6 @@
+uuid: 9513ab4f-6375-4a2c-99eb-513ad0aaacdd
+langcode: en
+status: true
+dependencies: {  }
+id: slidesimple
+label: 'Slide simple'
