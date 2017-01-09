@@ -20,6 +20,8 @@ class Blocks
 	public static QUOTE:string = 'block-quote';
 	public static HOW_TO_ADVERTISE:string = 'block-how-to-advertise';
 	public static IMAGE_CAROUSEL:string = 'block-image-carousel';
+	public static BLOG_POST:string = 'block-blog-post';
+
 }
 
 

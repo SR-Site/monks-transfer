@@ -77,5 +77,9 @@ export const blockConfig:IBlockConfig = {
 	imageCarousel: {
 		id: Blocks.IMAGE_CAROUSEL,
 		type: BlockType.COMPONENT
+	},
+	blogPost: {
+		id: Blocks.BLOG_POST,
+		type: BlockType.COMPONENT
 	}
 };

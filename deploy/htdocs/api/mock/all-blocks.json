@@ -1,0 +1,515 @@
+{
+	"statusCode": 200,
+	"data": {
+		"pageTitle": "home",
+		"blocks": [
+			{
+				"id": "heroMain",
+				"data": {
+					"overlap": true,
+					"heading": "Never stop reaching",
+					"paragraph": "The right time and place to advertise your business",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "/home",
+						"type": 2
+					},
+					"background": {
+						"normal": "data/image-with-content/background.jpg",
+						"small": "data/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "heroSecondary",
+				"data": {
+					"heading": "We'll Help you Find Your Format",
+					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "/advertising-solutions",
+						"type": 2
+					},
+					"background": {
+						"normal": "data/hero-secondary/background.jpg",
+						"small": "data/hero-secondary/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "heroTertiary",
+				"data": {
+					"background": {
+						"normal": "data/hero-tertiary/background.jpg",
+						"small": "data/hero-tertiary/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "howToAdvertise",
+				"data": {
+					"marginTop": 2,
+					"windowed": true,
+					"heading": "How to <span class='highlight'>Advertise</span> on Television",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "home",
+						"type": 0
+					},
+					"steps": [
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-1"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-2"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-3"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-4"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-5"
+						}
+					]
+				}
+			},
+			{
+				"id": "imageCallToActions",
+				"data": {
+					"windowed": false,
+					"marginTop": 2,
+					"callToActions": [
+						{
+							"heading": "Television",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"background": {
+								"normal": "data/image-call-to-actions/image-tv.jpg",
+								"small": "data/image-call-to-actions/image-tv.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Digital",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"background": {
+								"normal": "data/image-call-to-actions/image-digital.jpg",
+								"small": "data/image-call-to-actions/image-digital.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-digital-blurred.jpg",
+								"small": "data/image-call-to-actions/image-digital-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Creative <br/>services",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"background": {
+								"normal": "data/image-call-to-actions/image-creative.jpg",
+								"small": "data/image-call-to-actions/image-creative.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image-call-to-actions/image-creative-blurred.jpg",
+								"small": "data/image-call-to-actions/image-creative-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
+				}
+			},
+			{
+				"id": "imageCarousel",
+				"data": {
+					"windowed": false,
+					"slides": [
+						{
+							"heading": "Farmer boys - 'Fresh Fish'",
+							"image": {
+								"normal": "data/image-carousel/image-1.jpg",
+								"small": "data/image-carousel/image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Farmer boys - 'Fresh Fish'",
+							"image": {
+								"normal": "data/image-carousel/image-2.jpg",
+								"small": "data/image-carousel/image-2.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Farmer boys - 'Fresh Fish'",
+							"image": {
+								"normal": "data/image-carousel/image-1.jpg",
+								"small": "data/image-carousel/image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
+				}
+			},
+			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 0,
+					"windowed": true,
+					"marginTop": 2,
+					"croppedImage": false,
+					"heading": "<span class='highlight'>Plan</span>",
+					"paragraph": "Welcome to a new era of television and digital advertising. Viewing habits are changing now that tv is more than one screen.",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "home",
+						"type": 0
+					},
+					"background": {
+						"normal": "data/image-with-content/background.jpg",
+						"small": "data/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "latest",
+				"data": {
+					"windowed": false,
+					"heading": "The latest from Spectrum Reach",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "home",
+						"type": 0
+					},
+					"articles": [
+						{
+							"heading": "Go Beyond High Profile Sport Events",
+							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"image": {
+								"normal": "data/latest/latest-article-image-1.jpg",
+								"small": "data/latest/latest-article-image-1.jpg",
+								"alt": "Background image alt text"
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"heading": "Go Beyond High Profile Sport Events",
+							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"image": {
+								"normal": "data/latest/latest-article-image-2.jpg",
+								"small": "data/latest/latest-article-image-2.jpg",
+								"alt": "Background image alt text"
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"heading": "Go Beyond High Profile Sport Events",
+							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"image": {
+								"normal": "data/latest/latest-article-image-2.jpg",
+								"small": "data/latest/latest-article-image-2.jpg",
+								"alt": "Background image alt text"
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"heading": "Go Beyond High Profile Sport Events",
+							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"image": {
+								"normal": "data/latest/latest-article-image-1.jpg",
+								"small": "data/latest/latest-article-image-1.jpg",
+								"alt": "Background image alt text"
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "map",
+				"data": {
+					"windowed": true
+				}
+			},
+			{
+				"id": "mapSecondary",
+				"data": {
+					"windowed": true,
+					"marginTop": 2,
+					"heading": "Use Data and Highly <span class='highlight'>Targeted</span> Geographic <span class='highlight'>Zones</span>",
+					"subHeading": "We're champions of data.",
+					"paragraph": "<p>Knowing your customer demographic and then using geographic targeting is a powerful way to reach the right people.</p><p> Learn about our scale of reach across the country.</p>",
+					"link": {
+						"label": "Explore the market",
+						"title": "Explore the market",
+						"target": "map",
+						"type": 2
+					}
+				}
+			},
+			{
+				"id": "pathToPurchase",
+				"data": {
+					"steps": [
+						{
+							"heading": "Dream",
+							"paragraph": "They are open to possibility",
+							"background": {
+								"normal": "data/path-to-purchase/background-1.jpg",
+								"small": "data/path-to-purchase/background-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Search",
+							"paragraph": "They make a descision to",
+							"background": {
+								"normal": "data/path-to-purchase/background-1.jpg",
+								"small": "data/path-to-purchase/background-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Purchase",
+							"paragraph": "They begin shopping",
+							"background": {
+								"normal": "data/path-to-purchase/background-1.jpg",
+								"small": "data/path-to-purchase/background-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Ownership",
+							"paragraph": "They evaluate their options",
+							"background": {
+								"normal": "data/path-to-purchase/background-1.jpg",
+								"small": "data/path-to-purchase/background-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Support",
+							"paragraph": "They are making the purchase",
+							"background": {
+								"normal": "data/path-to-purchase/background-1.jpg",
+								"small": "data/path-to-purchase/background-1.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
+				}
+			},
+			{
+				"id": "personaSelector",
+				"data": {
+					"personas": [
+						{
+							"heading": "Small businesses",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 0,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Automotive",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 1,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Enterprise",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 2,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Local media buying",
+							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"personaType": 3,
+							"link": {
+								"label": "Grow your buisiness",
+								"title": "Grow your buisiness",
+								"target": "home",
+								"type": 0
+							},
+							"image": {
+								"normal": "data/persona-selector/persona-background-image-1.jpg",
+								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
+				}
+			},
+			{
+				"id": "quote",
+				"data": {
+					"windowed": true,
+					"marginTop": 2,
+					"quote": "“Because of your skill, work and excellence so many doors have opend to us and we are poised to expand in some really huge ways.”",
+					"name": "John Doe",
+					"description": "Foo bar",
+					"image": {
+						"normal": "data/quote/person.jpg",
+						"small": "data/quote/person.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "smallHeading",
+				"data": {
+					"marginTop": 2,
+					"windowed": true,
+					"heading": "Get more from your<br/><span class='highlight'>Marketing</span>"
+				}
+			},
+			{
+				"id": "smallInfo",
+				"data": {
+					"windowed": true,
+					"heading": "Award winning <span class='highlight'>Creative skills</span>",
+					"paragraph": "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum."
+				}
+			},
+			{
+				"id": "blogPost",
+				"data": {
+					"window": true,
+					"date": "January 23, 2017",
+					"heading": "Go Beyond High Profile<br/>Sports Events to Reach<br><span class='highlight'>Sports Fans</span>",
+					"tags": [
+						{
+							"label": "Sport",
+							"title": "Sport",
+							"target": "home",
+							"type": 0
+						},
+						{
+							"label": "PDF",
+							"title": "PDF",
+							"target": "home",
+							"type": 0
+						}
+					],
+					"author": {
+						"name": "Peter Johnson",
+						"role": "Sales Manager",
+						"image": {
+							"normal": "data/",
+							"small": "",
+							"alt": ""
+						}
+					}
+				}
+			}
+		]
+	}
+}
