@@ -1,0 +1,21 @@
+uuid: a52df3a8-f2dd-47b8-82c9-9a0af84bcb9e
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+id: paragraph.field_news_item
+field_name: field_news_item
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: node
+module: entity_reference_revisions
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,6 @@
+uuid: d1036c89-f886-45d8-9f3c-7e8a1a9b3f7b
+langcode: en
+status: true
+dependencies: {  }
+id: blockdetailpagenews
+label: 'Block Detail page news'

@@ -1,0 +1,30 @@
+uuid: fb92e0ee-2f4e-4525-be42-c53fff910d4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_news_item
+    - node.type.article
+    - paragraphs.paragraphs_type.blockdetailpagenews
+  module:
+    - entity_reference_revisions
+id: paragraph.blockdetailpagenews.field_news_item
+field_name: field_news_item
+entity_type: paragraph
+bundle: blockdetailpagenews
+label: 'New item'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference_revisions

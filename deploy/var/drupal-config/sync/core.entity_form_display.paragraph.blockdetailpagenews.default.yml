@@ -1,0 +1,26 @@
+uuid: dd4576fb-0941-4593-b24c-4c7a842360e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockdetailpagenews.field_news_item
+    - paragraphs.paragraphs_type.blockdetailpagenews
+  module:
+    - entity_reference_revisions
+id: paragraph.blockdetailpagenews.default
+targetEntityType: paragraph
+bundle: blockdetailpagenews
+mode: default
+content:
+  field_news_item:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+hidden:
+  created: true
+  status: true
+  uid: true
