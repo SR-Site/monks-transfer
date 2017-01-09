@@ -1,0 +1,57 @@
+uuid: d09c83e3-f0ad-40f9-b63f-1c92db9c951b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tiles
+    - paragraphs.paragraphs_type.blockmainproducts
+    - paragraphs.paragraphs_type.tile
+  module:
+    - entity_reference_revisions
+id: paragraph.blockmainproducts.field_tiles
+field_name: field_tiles
+entity_type: paragraph
+bundle: blockmainproducts
+label: Tiles
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tile: tile
+    target_bundles_drag_drop:
+      blockdetailpagenews:
+        weight: 11
+        enabled: false
+      blockheromain:
+        weight: 12
+        enabled: false
+      blocklatestnews:
+        weight: 13
+        enabled: false
+      blockmainproducts:
+        weight: 14
+        enabled: false
+      blockplanbuymeasure:
+        weight: 15
+        enabled: false
+      broadcastschedule:
+        weight: 16
+        enabled: false
+      content:
+        weight: 17
+        enabled: false
+      showmetric:
+        weight: 18
+        enabled: false
+      slideimagecta:
+        weight: 19
+        enabled: false
+      tile:
+        enabled: true
+        weight: 20
+field_type: entity_reference_revisions

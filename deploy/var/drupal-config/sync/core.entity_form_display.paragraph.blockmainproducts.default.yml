@@ -1,0 +1,28 @@
+uuid: 5e4fdcd3-f89f-43e9-b366-f3f9ce62cc7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockmainproducts.field_tiles
+    - paragraphs.paragraphs_type.blockmainproducts
+  module:
+    - paragraphs
+id: paragraph.blockmainproducts.default
+targetEntityType: paragraph
+bundle: blockmainproducts
+mode: default
+content:
+  field_tiles:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

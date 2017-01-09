@@ -1,0 +1,25 @@
+uuid: 7cadbe81-9c66-4dff-93bb-6afe16bfbe8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockmainproducts.field_tiles
+    - paragraphs.paragraphs_type.blockmainproducts
+  module:
+    - entity_reference_revisions
+id: paragraph.blockmainproducts.default
+targetEntityType: paragraph
+bundle: blockmainproducts
+mode: default
+content:
+  field_tiles:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

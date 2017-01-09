@@ -1,0 +1,26 @@
+uuid: 0aa40c35-28d1-4319-b4f9-3e7849463abb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.tile
+  module:
+    - text
+id: paragraph.tile.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: tile
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    plain_text: plain_text
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+field_type: text_long
