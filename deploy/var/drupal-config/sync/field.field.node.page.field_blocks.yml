@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_blocks
     - node.type.page
     - paragraphs.paragraphs_type.blockheromain
+    - paragraphs.paragraphs_type.blocklatestnews
     - paragraphs.paragraphs_type.blockplanbuymeasure
   module:
     - entity_reference_revisions
@@ -25,6 +26,7 @@ settings:
     target_bundles:
       blockheromain: blockheromain
       blockplanbuymeasure: blockplanbuymeasure
+      blocklatestnews: blocklatestnews
     target_bundles_drag_drop:
       blockheromain:
         enabled: true
@@ -37,5 +39,14 @@ settings:
         weight: 6
       content:
         weight: 7
+        enabled: false
+      blocklatestnews:
+        enabled: true
+        weight: 9
+      broadcastschedule:
+        weight: 11
+        enabled: false
+      showmetric:
+        weight: 13
         enabled: false
 field_type: entity_reference_revisions
