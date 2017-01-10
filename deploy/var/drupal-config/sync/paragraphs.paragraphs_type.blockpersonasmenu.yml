@@ -1,0 +1,6 @@
+uuid: 69f7e089-79b3-4f92-af12-19f0017de8d5
+langcode: en
+status: true
+dependencies: {  }
+id: blockpersonasmenu
+label: 'Block Personas menu'

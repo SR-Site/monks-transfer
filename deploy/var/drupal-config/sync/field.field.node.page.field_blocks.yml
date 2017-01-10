@@ -15,6 +15,7 @@ dependencies:
     - paragraphs.paragraphs_type.blocklatestnews
     - paragraphs.paragraphs_type.blockmainproducts
     - paragraphs.paragraphs_type.blockpathpurchase
+    - paragraphs.paragraphs_type.blockpersonasmenu
     - paragraphs.paragraphs_type.blockplanbuymeasure
   module:
     - entity_reference_revisions
@@ -34,32 +35,33 @@ settings:
     target_bundles:
       blockheromain: blockheromain
       blockplanbuymeasure: blockplanbuymeasure
-      blocklatestnews: blocklatestnews
       blockdetailpagenews: blockdetailpagenews
+      blocklatestnews: blocklatestnews
       blockinformativeanimatingmap: blockinformativeanimatingmap
-      blockmainproducts: blockmainproducts
       blockheroheader: blockheroheader
+      blockmainproducts: blockmainproducts
       blockanimatedmapcontent: blockanimatedmapcontent
       blockpathpurchase: blockpathpurchase
       blocklandingpagesmodules: blocklandingpagesmodules
+      blockpersonasmenu: blockpersonasmenu
       blocklandingpagesmodulesb: blocklandingpagesmodulesb
     target_bundles_drag_drop:
       blockheromain:
         enabled: true
         weight: 5
-      slideimagecta:
-        weight: 6
-        enabled: false
       blockplanbuymeasure:
         enabled: true
         weight: 6
+      slideimagecta:
+        weight: 6
+        enabled: false
       content:
         weight: 7
         enabled: false
-      blocklatestnews:
+      blockdetailpagenews:
         enabled: true
         weight: 9
-      blockdetailpagenews:
+      blocklatestnews:
         enabled: true
         weight: 9
       broadcastschedule:
@@ -71,10 +73,10 @@ settings:
       showmetric:
         weight: 13
         enabled: false
-      blockmainproducts:
+      blockheroheader:
         enabled: true
         weight: 14
-      blockheroheader:
+      blockmainproducts:
         enabled: true
         weight: 14
       storyblock:
@@ -95,6 +97,9 @@ settings:
       blocklandingpagesmodules:
         enabled: true
         weight: 21
+      blockpersonasmenu:
+        enabled: true
+        weight: 22
       slidesimple:
         weight: 23
         enabled: false
