@@ -6,8 +6,10 @@ dependencies:
     - field.storage.node.field_blocks
     - node.type.page
     - paragraphs.paragraphs_type.blockdetailpagenews
+    - paragraphs.paragraphs_type.blockheroheader
     - paragraphs.paragraphs_type.blockheromain
     - paragraphs.paragraphs_type.blockinformativeanimatingmap
+    - paragraphs.paragraphs_type.blocklandingpagesmodules
     - paragraphs.paragraphs_type.blocklatestnews
     - paragraphs.paragraphs_type.blockmainproducts
     - paragraphs.paragraphs_type.blockplanbuymeasure
@@ -29,10 +31,12 @@ settings:
     target_bundles:
       blockheromain: blockheromain
       blockplanbuymeasure: blockplanbuymeasure
-      blockdetailpagenews: blockdetailpagenews
       blocklatestnews: blocklatestnews
+      blockdetailpagenews: blockdetailpagenews
       blockinformativeanimatingmap: blockinformativeanimatingmap
       blockmainproducts: blockmainproducts
+      blockheroheader: blockheroheader
+      blocklandingpagesmodules: blocklandingpagesmodules
     target_bundles_drag_drop:
       blockheromain:
         enabled: true
@@ -46,10 +50,10 @@ settings:
       content:
         weight: 7
         enabled: false
-      blockdetailpagenews:
+      blocklatestnews:
         enabled: true
         weight: 9
-      blocklatestnews:
+      blockdetailpagenews:
         enabled: true
         weight: 9
       broadcastschedule:
@@ -64,9 +68,18 @@ settings:
       blockmainproducts:
         enabled: true
         weight: 14
+      blockheroheader:
+        enabled: true
+        weight: 14
+      storyblock:
+        weight: 16
+        enabled: false
       tile:
         weight: 20
         enabled: false
+      blocklandingpagesmodules:
+        enabled: true
+        weight: 21
       slidesimple:
         weight: 23
         enabled: false

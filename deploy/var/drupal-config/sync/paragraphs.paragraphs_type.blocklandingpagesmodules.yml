@@ -1,0 +1,6 @@
+uuid: d85f3ad7-0588-4ae6-a535-e3c770e374f3
+langcode: en
+status: true
+dependencies: {  }
+id: blocklandingpagesmodules
+label: 'Block Landing pages modules'
