@@ -1,0 +1,6 @@
+uuid: 056f4906-7f03-4314-892a-699e1e4e63c8
+langcode: en
+status: true
+dependencies: {  }
+id: storyblockb
+label: 'Story block'

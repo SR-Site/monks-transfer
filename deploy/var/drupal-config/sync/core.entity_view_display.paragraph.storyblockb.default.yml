@@ -1,0 +1,36 @@
+uuid: d52e9526-3fa1-4ded-9a98-bd55d3eb1dfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.storyblockb.field_description
+    - field.field.paragraph.storyblockb.field_link
+    - paragraphs.paragraphs_type.storyblockb
+  module:
+    - link
+    - text
+id: paragraph.storyblockb.default
+targetEntityType: paragraph
+bundle: storyblockb
+mode: default
+content:
+  field_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,23 @@
+uuid: 35c5c370-5645-40fc-ba51-cf4858e225a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.storyblockb
+  module:
+    - link
+id: paragraph.storyblockb.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: storyblockb
+label: 'Link out'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 2
+field_type: link

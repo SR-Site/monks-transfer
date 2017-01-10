@@ -1,0 +1,26 @@
+uuid: f202bfc0-1de0-4980-a047-5ca6dc9b917e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.storyblockb
+  module:
+    - text
+id: paragraph.storyblockb.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: storyblockb
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    plain_text: plain_text
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+field_type: text_long
