@@ -1,0 +1,23 @@
+.link-main {
+	position: relative;
+	font: 700 1rem / 1.3rem $fontOpenSans;
+	text-transform: uppercase;
+	display: inline-block;
+	color: currentColor;
+
+	&:before {
+		position: absolute;
+		@include pos(auto, 0, -1px, 0%);
+		@include size(0%, 1px);
+		content: "";
+		background-color: currentColor;
+		transition: width 150ms ease(easeInOutExpo);
+	}
+
+	// Hover State
+	@include hover() {
+		&:before {
+			width: 100%;
+		}
+	}
+}

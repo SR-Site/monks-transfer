@@ -1,5 +1,58 @@
 <div class="component-block-blog-post" data-bind="with: data">
-	<p class="date copy"></p>
+
+	<p class="date copy" data-bind="html: date"></p>
 
 	<h2 class="heading-02 heading" data-bind="html: heading"></h2>
+
+	<div class="blog-post-bar">
+
+		<div class="profile-info">
+			<div class="profile-image bg-cover" data-bind="image: {
+			queries: [
+				[$root.MediaQueries.X_SMALL, author.image.normal ],
+				[$root.MediaQueries.SMALL, author.image.small]
+			],
+			state: $root.deviceState()
+		}"></div>
+
+			<p class="author copy-03 copy">
+				<strong data-bind="html: author.name"></strong>
+				|
+				<span data-bind="html: author.role"></span>
+			</p>
+		</div>
+
+		<ul class="blog-details">
+			<li>
+				<span class="icon" data-bind="icon: 'time'"></span>
+				<!-- ko text: time --><!-- /ko -->
+			</li>
+			<li>
+				<span class="icon" data-bind="icon: 'views'"></span>
+				<!-- ko text: views --><!-- /ko -->
+			</li>
+
+			<!-- ko foreach: social -->
+				<li>
+					<!-- ko template: {name: 'link-main', data: $data} --><!-- /ko -->
+				</li>
+			<!-- /ko -->
+		</ul>
+	</div>
+
+	<div class="tags" data-bind="foreach: tags">
+		<!-- ko component: {
+			name: 'button/button-tag',
+			onComplete: $root.controller.callbackCounter.get(),
+			options: {
+				action: $data,
+				size: $root.ButtonSize.LARGE
+			}
+		} --><!-- /ko -->
+	</div>
+
+	<div class="description">
+		<h3 class="heading-07 heading" data-bind="html: subHeading"></h3>
+		<p class="copy-01 copy" data-bind="html: paragraph"></p>
+	</div>
 </div>

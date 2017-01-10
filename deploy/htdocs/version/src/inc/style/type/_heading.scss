@@ -1,3 +1,11 @@
+// Default Heading Styles.
+.heading {
+
+	.highlight{
+		color: $colorSecondary;
+	}
+}
+
 // Open sans extra bold
 .heading-01 {
 	font: 800 6.5rem / 7rem $fontOpenSans;
@@ -16,28 +24,16 @@
 // Open sans semi-bold
 .heading-04 {
 	font: 600 3.6rem / 4.5rem $fontOpenSans;
-
-	.highlight{
-		color: $colorSecondary;
-	}
 }
 
 // Open sans regular
 .heading-05 {
 	font: 400 3.6rem / 4.5rem $fontOpenSans;
-
-	.highlight{
-		color: $colorSecondary;
-	}
 }
 
 // Open sans regular
 .heading-06 {
 	font: 400 2.6rem / 3.2rem $fontOpenSans;
-
-	.highlight{
-		color: $colorSecondary;
-	}
 }
 
 // Open sans semi-bold

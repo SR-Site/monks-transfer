@@ -73,7 +73,9 @@ import * as Gaia from "lib/gaia/api/Gaia";
  *
  */
 
-var partials:Array<string> = [];
+const partials: Array<string> = [
+	'partial/asset/link/link-main.html'
+];
 
 var sitemap:ISitemap = {
 

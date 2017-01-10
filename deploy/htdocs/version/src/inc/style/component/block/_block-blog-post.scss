@@ -1,6 +1,67 @@
 .component-block-blog-post {
+	padding-left: $sizeGrid * 7;
+	padding-right: $sizeGrid * 7;
 
 	.date {
-		font: 600 1rem / 1.3rem $fontOpenSans;
+		font: 700 1rem / 1.3rem $fontOpenSans;
+		margin-bottom: $sizeGrid/2;
+		text-transform: uppercase;
+	}
+
+	.blog-post-bar {
+		@include size(100%, $sizeGrid*2);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid rgba($colorPrimary, 0.1);
+		margin-top: $sizeGrid/2;
+	}
+
+	.profile-image {
+		@include size($sizeGrid);
+		border-radius: 100%;
+		margin-right: $sizeGrid/2;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.author {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.blog-details {
+		@extend %reset-list;
+
+		li {
+			font: 700 1rem / 1.3rem $fontOpenSans;
+			text-transform: uppercase;
+			display: inline-block;
+			vertical-align: middle;
+
+			&:not(:first-child) {
+				margin-left: $sizeGrid/2;
+			}
+		}
+	}
+
+	.tags {
+		margin-top: $sizeGrid/2;
+		font-size: 0;
+
+		.component-button-tag {
+
+			&:not(:first-child) {
+				margin-left: 5px;
+			}
+		}
+	}
+
+	.description {
+		padding-top: $sizeGrid;
+
+		.heading {
+			padding-bottom: $sizeGrid/2;
+		}
 	}
 }
