@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_blocks
     - node.type.page
+    - paragraphs.paragraphs_type.blockanimatedmapcontent
     - paragraphs.paragraphs_type.blockdetailpagenews
     - paragraphs.paragraphs_type.blockheroheader
     - paragraphs.paragraphs_type.blockheromain
@@ -37,6 +38,7 @@ settings:
       blockinformativeanimatingmap: blockinformativeanimatingmap
       blockmainproducts: blockmainproducts
       blockheroheader: blockheroheader
+      blockanimatedmapcontent: blockanimatedmapcontent
       blocklandingpagesmodules: blocklandingpagesmodules
       blocklandingpagesmodulesb: blocklandingpagesmodulesb
     target_bundles_drag_drop:
@@ -79,6 +81,9 @@ settings:
       storyblockb:
         weight: 18
         enabled: false
+      blockanimatedmapcontent:
+        enabled: true
+        weight: 19
       tile:
         weight: 20
         enabled: false

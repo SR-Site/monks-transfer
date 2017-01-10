@@ -1,0 +1,42 @@
+uuid: 7d2ca871-cf25-4080-872e-c54a29fee70e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockanimatedmapcontent.field_description
+    - field.field.paragraph.blockanimatedmapcontent.field_link
+    - field.field.paragraph.blockanimatedmapcontent.field_title
+    - paragraphs.paragraphs_type.blockanimatedmapcontent
+  module:
+    - link
+    - text
+id: paragraph.blockanimatedmapcontent.default
+targetEntityType: paragraph
+bundle: blockanimatedmapcontent
+mode: default
+content:
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true

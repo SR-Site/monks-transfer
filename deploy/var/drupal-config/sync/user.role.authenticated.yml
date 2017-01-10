@@ -18,3 +18,4 @@ permissions:
   - 'access shortcuts'
   - 'search content'
   - 'use text format restricted_html'
+  - 'use text format bold_html'

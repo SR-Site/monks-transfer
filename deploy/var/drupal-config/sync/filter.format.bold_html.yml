@@ -1,0 +1,32 @@
+uuid: 57dbb94f-5ba4-4eb7-b6c2-9387424411be
+langcode: en
+status: true
+dependencies:
+  module:
+    - spectrum_rest
+name: 'Bold HTML'
+format: bold_html
+weight: 0
+filters:
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p> <strong> <em>'
+      filter_html_help: false
+      filter_html_nofollow: false
+  filter_nl2br:
+    id: filter_nl2br
+    provider: spectrum_rest
+    status: true
+    weight: 0
+    settings: {  }

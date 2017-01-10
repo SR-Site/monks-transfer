@@ -1,0 +1,32 @@
+uuid: 95275e5c-c640-48f8-8401-6a2acfb6d7d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.bold_html
+  module:
+    - ckeditor
+format: bold_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - '-'
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: ''
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null
