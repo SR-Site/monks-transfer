@@ -14,6 +14,7 @@ dependencies:
     - paragraphs.paragraphs_type.blocklandingpagesmodulesb
     - paragraphs.paragraphs_type.blocklatestnews
     - paragraphs.paragraphs_type.blockmainproducts
+    - paragraphs.paragraphs_type.blockpathpurchase
     - paragraphs.paragraphs_type.blockplanbuymeasure
   module:
     - entity_reference_revisions
@@ -39,18 +40,19 @@ settings:
       blockmainproducts: blockmainproducts
       blockheroheader: blockheroheader
       blockanimatedmapcontent: blockanimatedmapcontent
+      blockpathpurchase: blockpathpurchase
       blocklandingpagesmodules: blocklandingpagesmodules
       blocklandingpagesmodulesb: blocklandingpagesmodulesb
     target_bundles_drag_drop:
       blockheromain:
         enabled: true
         weight: 5
-      blockplanbuymeasure:
-        enabled: true
-        weight: 6
       slideimagecta:
         weight: 6
         enabled: false
+      blockplanbuymeasure:
+        enabled: true
+        weight: 6
       content:
         weight: 7
         enabled: false
@@ -87,6 +89,9 @@ settings:
       tile:
         weight: 20
         enabled: false
+      blockpathpurchase:
+        enabled: true
+        weight: 21
       blocklandingpagesmodules:
         enabled: true
         weight: 21
@@ -96,4 +101,7 @@ settings:
       blocklandingpagesmodulesb:
         enabled: true
         weight: 24
+      pathblock:
+        weight: 34
+        enabled: false
 field_type: entity_reference_revisions

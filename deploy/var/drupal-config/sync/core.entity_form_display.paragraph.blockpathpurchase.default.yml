@@ -1,0 +1,55 @@
+uuid: 281b356e-c829-4aa7-ba7b-4ec78ee25fdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockpathpurchase.field_description
+    - field.field.paragraph.blockpathpurchase.field_image
+    - field.field.paragraph.blockpathpurchase.field_path_blocks
+    - field.field.paragraph.blockpathpurchase.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.blockpathpurchase
+  module:
+    - image
+    - paragraphs
+    - text
+id: paragraph.blockpathpurchase.default
+targetEntityType: paragraph
+bundle: blockpathpurchase
+mode: default
+content:
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_path_blocks:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true

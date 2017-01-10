@@ -1,0 +1,6 @@
+uuid: a43615f6-806e-4290-b4ba-fc84f2988bff
+langcode: en
+status: true
+dependencies: {  }
+id: blockpathpurchase
+label: 'Block Path to purchase'

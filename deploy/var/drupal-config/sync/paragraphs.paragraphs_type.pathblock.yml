@@ -1,0 +1,6 @@
+uuid: 5d022fd3-a728-47bf-90e0-90f01453b9fa
+langcode: en
+status: true
+dependencies: {  }
+id: pathblock
+label: 'Path Block'

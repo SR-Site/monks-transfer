@@ -1,0 +1,33 @@
+uuid: e2f9c094-8bb7-421e-9efa-62932b4e28c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pathblock.field_description
+    - field.field.paragraph.pathblock.field_title
+    - paragraphs.paragraphs_type.pathblock
+  module:
+    - text
+id: paragraph.pathblock.default
+targetEntityType: paragraph
+bundle: pathblock
+mode: default
+content:
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true
