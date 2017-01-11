@@ -1,0 +1,35 @@
+uuid: e720f2a6-8997-44f5-94bb-a1760dd5dc89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockshowoverview.field_image
+    - field.field.paragraph.blockshowoverview.field_shows
+    - paragraphs.paragraphs_type.blockshowoverview
+  module:
+    - entity_reference_revisions
+    - image
+id: paragraph.blockshowoverview.default
+targetEntityType: paragraph
+bundle: blockshowoverview
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_shows:
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,31 @@
+uuid: 837b3cdc-a4f3-422c-836f-bffa601d9c75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_shows
+    - node.type.show
+    - paragraphs.paragraphs_type.blockshowoverview
+  module:
+    - entity_reference_revisions
+id: paragraph.blockshowoverview.field_shows
+field_name: field_shows
+entity_type: paragraph
+bundle: blockshowoverview
+label: Shows
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      show: show
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference_revisions

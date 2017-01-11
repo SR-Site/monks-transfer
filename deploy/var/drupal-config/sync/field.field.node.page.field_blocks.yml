@@ -18,6 +18,7 @@ dependencies:
     - paragraphs.paragraphs_type.blockpathpurchase
     - paragraphs.paragraphs_type.blockpersonasmenu
     - paragraphs.paragraphs_type.blockplanbuymeasure
+    - paragraphs.paragraphs_type.blockshowoverview
   module:
     - entity_reference_revisions
 id: node.page.field_blocks
@@ -36,8 +37,8 @@ settings:
     target_bundles:
       blockheromain: blockheromain
       blockplanbuymeasure: blockplanbuymeasure
-      blockdetailpagenews: blockdetailpagenews
       blocklatestnews: blocklatestnews
+      blockdetailpagenews: blockdetailpagenews
       blockinformativeanimatingmap: blockinformativeanimatingmap
       blockheroheader: blockheroheader
       blockmainproducts: blockmainproducts
@@ -47,6 +48,7 @@ settings:
       blockpersonasmenu: blockpersonasmenu
       blocklandingpageinfographic: blocklandingpageinfographic
       blocklandingpagesmodulesb: blocklandingpagesmodulesb
+      blockshowoverview: blockshowoverview
     target_bundles_drag_drop:
       blockheromain:
         enabled: true
@@ -60,10 +62,10 @@ settings:
       content:
         weight: 7
         enabled: false
-      blockdetailpagenews:
+      blocklatestnews:
         enabled: true
         weight: 9
-      blocklatestnews:
+      blockdetailpagenews:
         enabled: true
         weight: 9
       broadcastschedule:
@@ -109,6 +111,9 @@ settings:
         weight: 23
         enabled: false
       blocklandingpagesmodulesb:
+        enabled: true
+        weight: 24
+      blockshowoverview:
         enabled: true
         weight: 24
       pathblock:

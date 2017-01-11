@@ -1,0 +1,36 @@
+uuid: 59efc147-8dd0-40be-9735-692b0fdaab55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockshowoverview.field_image
+    - field.field.paragraph.blockshowoverview.field_shows
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.blockshowoverview
+  module:
+    - entity_reference_revisions
+    - image
+id: paragraph.blockshowoverview.default
+targetEntityType: paragraph
+bundle: blockshowoverview
+mode: default
+content:
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_shows:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+hidden:
+  created: true
+  status: true
+  uid: true
