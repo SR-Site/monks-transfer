@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.blockheroheader
     - paragraphs.paragraphs_type.blockheromain
     - paragraphs.paragraphs_type.blockinformativeanimatingmap
+    - paragraphs.paragraphs_type.blocklandingpageinfographic
     - paragraphs.paragraphs_type.blocklandingpagesmodules
     - paragraphs.paragraphs_type.blocklandingpagesmodulesb
     - paragraphs.paragraphs_type.blocklatestnews
@@ -44,6 +45,7 @@ settings:
       blockpathpurchase: blockpathpurchase
       blocklandingpagesmodules: blocklandingpagesmodules
       blockpersonasmenu: blockpersonasmenu
+      blocklandingpageinfographic: blocklandingpageinfographic
       blocklandingpagesmodulesb: blocklandingpagesmodulesb
     target_bundles_drag_drop:
       blockheromain:
@@ -100,6 +102,9 @@ settings:
       blockpersonasmenu:
         enabled: true
         weight: 22
+      blocklandingpageinfographic:
+        enabled: true
+        weight: 23
       slidesimple:
         weight: 23
         enabled: false
