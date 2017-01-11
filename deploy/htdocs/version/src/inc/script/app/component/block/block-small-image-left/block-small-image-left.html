@@ -1,0 +1,9 @@
+<div class="component-block-small-image-left" data-bind="with: data">
+	<img src="" data-bind="image: {
+		queries: [
+			[$root.MediaQueries.X_SMALL, image.small ],
+			[$root.MediaQueries.SMALL, image.normal]
+		],
+		state: $root.deviceState()
+	}"/>
+</div>

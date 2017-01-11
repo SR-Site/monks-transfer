@@ -21,7 +21,9 @@ class Blocks
 	public static HOW_TO_ADVERTISE:string = 'block-how-to-advertise';
 	public static IMAGE_CAROUSEL:string = 'block-image-carousel';
 	public static BLOG_POST:string = 'block-blog-post';
-
+	public static QUOTE_SECONDARY:string = 'block-quote-secondary';
+	public static TEXT:string = 'block-text';
+	public static SMALL_IMAGE_LEFT:string = 'block-small-image-left';
 }
 
 

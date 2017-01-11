@@ -81,5 +81,17 @@ export const blockConfig:IBlockConfig = {
 	blogPost: {
 		id: Blocks.BLOG_POST,
 		type: BlockType.COMPONENT
+	},
+	quoteSecondary: {
+		id: Blocks.QUOTE_SECONDARY,
+		type: BlockType.COMPONENT
+	},
+	text: {
+		id: Blocks.TEXT,
+		type: BlockType.COMPONENT
+	},
+	smallImageLeft: {
+		id: Blocks.SMALL_IMAGE_LEFT,
+		type: BlockType.COMPONENT
 	}
 };
