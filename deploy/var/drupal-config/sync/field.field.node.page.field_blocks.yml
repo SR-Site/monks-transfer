@@ -19,6 +19,7 @@ dependencies:
     - paragraphs.paragraphs_type.blockpersonasmenu
     - paragraphs.paragraphs_type.blockplanbuymeasure
     - paragraphs.paragraphs_type.blockshowoverview
+    - paragraphs.paragraphs_type.blockshowoverviewdetail
   module:
     - entity_reference_revisions
 id: node.page.field_blocks
@@ -49,6 +50,7 @@ settings:
       blocklandingpageinfographic: blocklandingpageinfographic
       blocklandingpagesmodulesb: blocklandingpagesmodulesb
       blockshowoverview: blockshowoverview
+      blockshowoverviewdetail: blockshowoverviewdetail
     target_bundles_drag_drop:
       blockheromain:
         enabled: true
@@ -104,18 +106,21 @@ settings:
       blockpersonasmenu:
         enabled: true
         weight: 22
-      blocklandingpageinfographic:
-        enabled: true
-        weight: 23
       slidesimple:
         weight: 23
         enabled: false
+      blocklandingpageinfographic:
+        enabled: true
+        weight: 23
       blocklandingpagesmodulesb:
         enabled: true
         weight: 24
       blockshowoverview:
         enabled: true
         weight: 24
+      blockshowoverviewdetail:
+        enabled: true
+        weight: 25
       pathblock:
         weight: 34
         enabled: false
