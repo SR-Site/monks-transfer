@@ -1,0 +1,24 @@
+<div class="component-block-filter-content" data-bind="with: data">
+
+	<!-- ko component: {
+		name: 'filter-menu',
+		onComplete: $root.controller.callbackCounter.get(),
+		options: {
+			filters: filters,
+			label: filterLabel
+		}
+	} --><!-- /ko -->
+
+	<div class="content-items" data-bind="foreach: $root.items()">
+		<!-- ko if: type == $root.BlockType.COMPONENT -->
+			<!-- ko component: {name: 'block/' + id, options: data, onComplete: $root.controller.callbackCounter.get($root.controller.handleDynamicComponentLoaded.bind($root.controller))} --><!-- /ko -->
+		<!-- /ko -->
+
+		<!-- ko if: type == $root.BlockType.PARTIAL -->
+			<!-- ko template: {name: id, options: data} --><!-- /ko -->
+		<!-- /ko -->
+	</div>
+
+	<!-- todo load more/pagination -->
+
+</div>

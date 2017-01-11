@@ -1,0 +1,68 @@
+.component-filter-menu {
+	position: relative;
+
+	// Menu
+	.menu {
+		@include size(100%, $sizeGrid*2);
+		display: flex;
+
+	}
+
+	// Filter Label
+	.filter-label {
+		background-color: $colorTertiary;
+		padding-left: $sizeGrid;
+		color: white;
+		height: 100%;
+		text-transform: uppercase;
+		font: 700 1.2rem / 1 $fontOpenSans;
+
+		.icon {
+			position: absolute;
+			@include offset(0 ,50%);
+			transform: translate(0, -50%);
+			right: $sizeGrid/1.333;
+		}
+	}
+
+	// Filters
+	.filters {
+		@extend %reset-list;
+		display: flex;
+		height: 100%;
+	}
+
+
+	// Filter Item
+	.filter-item {
+		height: 100%;
+		align-items: center;
+		display: flex;
+
+		.label {
+		}
+
+	}
+
+	// Button Tag
+	.component-button-tag {
+		text-transform: none;
+	}
+
+	// Select Anchor
+	.select-anchor {
+		@include size($sizeGrid/2);
+
+		svg {
+			fill: transparent;
+		}
+
+		circle {
+			stroke: $colorTertiary;
+		}
+
+		path {
+			fill: $colorTertiary;
+		}
+	}
+}

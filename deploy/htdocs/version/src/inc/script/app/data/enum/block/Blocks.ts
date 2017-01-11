@@ -24,6 +24,7 @@ class Blocks
 	public static QUOTE_SECONDARY:string = 'block-quote-secondary';
 	public static TEXT:string = 'block-text';
 	public static SMALL_IMAGE_LEFT:string = 'block-small-image-left';
+	public static FILTER_CONTENT:string = 'block-filter-content';
 }
 
 

@@ -554,6 +554,71 @@
 						"alt": "Image"
 					}
 				}
+			},
+			{
+				"id": "filterContent",
+				"data": {
+					"endpoint": "api/content",
+					"filterLabel": "Filters",
+					"filters": [
+						{
+							"type": 0,
+							"label": "Category",
+							"options": [
+								{
+									"value": "sport",
+									"label": "sport"
+								},
+								{
+									"value": "test",
+									"label": "test"
+								}
+							]
+						},
+						{
+							"type": 1,
+							"label": "Document Type",
+							"options": [
+								{
+									"value": "sport",
+									"label": "sport"
+								},
+								{
+									"value": "test",
+									"label": "test"
+								}
+							]
+						},
+						{
+							"type": 2,
+							"label": "Platform",
+							"options": [
+								{
+									"value": "sport",
+									"label": "sport"
+								},
+								{
+									"value": "test",
+									"label": "test"
+								}
+							]
+						},
+						{
+							"type": 3,
+							"label": "Market",
+							"options": [
+								{
+									"value": "sport",
+									"label": "sport"
+								},
+								{
+									"value": "test",
+									"label": "test"
+								}
+							]
+						}
+					]
+				}
 			}
 		]
 	}

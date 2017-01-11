@@ -93,5 +93,9 @@ export const blockConfig:IBlockConfig = {
 	smallImageLeft: {
 		id: Blocks.SMALL_IMAGE_LEFT,
 		type: BlockType.COMPONENT
+	},
+	filterContent: {
+		id: Blocks.FILTER_CONTENT,
+		type: BlockType.COMPONENT
 	}
 };
