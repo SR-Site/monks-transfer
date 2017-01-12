@@ -15,7 +15,7 @@ paths:
     get:
       summary: Get all the information to bootstrap the application
       description: "Get all the information to bootstrap the application. Example: Menu, main items etc.."
-      responses:      
+      responses:
         200:
           description: History information for the given user
           schema:
@@ -33,7 +33,7 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-            
+
 definitions:
   # +--------------------------------------------------------------------------------+
   # | API Calls                                                                      |
@@ -41,19 +41,22 @@ definitions:
   Page:
     type: object
     properties:
-      title:
-        type: string
-        default: ""
-        description: The main title for the page
       statusCode:
         type: integer
         default: 200
         description: The http status for the call
-      blocks:
-        description: The container for all the blocks
-        type: array
-        items:
-          $ref: "#/definitions/Block"
+      data:
+        type: object
+        properties:
+          pageTitle:
+            type: string
+            default: ""
+            description: The main title for the page
+          blocks:
+            description: The container for all the blocks
+            type: array
+            items:
+              $ref: "#/definitions/Block"
   Init:
     type: object
     properties:
@@ -61,42 +64,54 @@ definitions:
         type: integer
         default: 200
         description: The http status for the call
-        
+
   # +--------------------------------------------------------------------------------+
   # | Partials; Small block object definitions                                       |
   # +--------------------------------------------------------------------------------+
-  
-  Link: 
+
+  Link:
     type: object
     description: "Default link object"
     properties:
-      label: 
+      label:
         type: string
         description: The Label text content
-      title: 
+      title:
         type: string
         description: The link title element
       target:
         type: string
-        description: the Target element.
-        enum: ["_self", "_blank", "_top"]
+        description: the route/url.
       type:
         type: integer
-        description: "@todo for Lars braam"
-        enum: [1, 2, 3, 4, 5]
-  Background: 
+        description: 0 = INTERNAL, 1 = EXTERNAL, 2 = SCROLL_TO_NEXT_SECTION
+        enum: [0, 1, 2]
+  Background:
     type: object
     description: "Default background object"
     properties:
-      normal: 
+      normal:
         type: string
         description: The desktop version of the background
-      small: 
+      small:
         type: string
         description: The mobile version of the background
       alt:
         type: string
         description: The alt text for the background image
+  marginTop:
+    type: integer
+    description: The offset/spacing of a component
+    enum: [1,2,3,4]
+  alignment:
+    type: integer
+    default: 0
+    description: 0 = LEFT, 1 = RIGHT
+    enum: [0, 1]
+  personaType:
+    type: integer
+    description: 0 = SMALL_BUSINESS, 1 = AUTOMOTIVE, 2 = ENTERPRISE, 3 = LOCAL_MEDIA_BUYING
+    enum: [0,1,2,3]
   Error:
     type: object
     description: "Default error object"
@@ -113,12 +128,12 @@ definitions:
           message:
             type: string
           fields:
-            type: string      
-        
+            type: string
+
   # +--------------------------------------------------------------------------------+
   # | Interfaces                                                                     |
   # +--------------------------------------------------------------------------------+
-  
+
   Block:
     type: object
     title: defaultBlock
@@ -134,7 +149,9 @@ definitions:
   # +--------------------------------------------------------------------------------+
   # | Content blocks                                                                 |
   # +--------------------------------------------------------------------------------+
-  
+
+
+  ## HeroMain
   heroMain:
     type: object
     properties:
@@ -145,22 +162,451 @@ definitions:
       data:
         type: object
         properties:
+          overlap:
+            type: boolean
+            default: true
           alignment:
-            type: integer
-            default: 0
-            enum: [0, 1, 2]
+            $ref: "#/definitions/alignment"
           windowed:
             type: boolean
             default: true
-          croppedImage: 
+          croppedImage:
             type: boolean
             default: false
           heading:
             type: string
           paragraph:
             type: string
-          link: 
+          link:
             $ref: "#/definitions/Link"
-          background: 
-            $ref: "#/definitions/Background"        
-          
+          background:
+            $ref: "#/definitions/Background"
+
+  ##heroSecondary
+  heroSecondary:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["heroSecondary"]
+      data:
+        type: object
+        properties:
+          heading:
+            type: string
+          paragraph:
+            type: string
+          link:
+            $ref: "#/definitions/Link"
+          background:
+            $ref: "#/definitions/Background"
+
+  ##heroTertiary
+  heroTertiary:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["heroTertiary"]
+      data:
+        type: object
+        properties:
+          heading:
+            type: string
+          paragraph:
+            type: string
+          link:
+            $ref: "#/definitions/Link"
+          background:
+            $ref: "#/definitions/Background"
+
+
+  ##howToAdvertise
+  howToAdvertise:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["howToAdvertise"]
+      data:
+        type: object
+        properties:
+          windowed:
+            type: boolean
+            default: true
+          heading:
+            type: string
+          link:
+            $ref: "#/definitions/Link"
+          steps:
+            type: array
+            items:
+              properties:
+                heading:
+                  type: string
+                paragraph:
+                  type: string
+                icon:
+                  type: string
+                  description: the name of the icon
+
+  ##imageCallToActions
+  imageCallToActions:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["imageCallToActions"]
+      data:
+        type: object
+        properties:
+          windowed:
+            type: boolean
+            default: false
+          marginTop:
+            $ref: "#/definitions/marginTop"
+          callToActions:
+            type: array
+            items:
+              properties:
+                heading:
+                  type: string
+                paragraph:
+                  type: string
+                background:
+                  $ref: "#/definitions/Background"
+                backgroundBlurred:
+                  $ref: "#/definitions/Background"
+
+  ##imageCarousel
+  imageCarousel:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["imageCarousel"]
+      data:
+        type: object
+        properties:
+          windowed:
+            type: boolean
+            default: false
+          slides:
+            type: array
+            items:
+              properties:
+                heading:
+                  type: string
+                image:
+                  $ref: "#/definitions/Background"
+
+
+
+  ## imageWithContent
+  imageWithContent:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["imageWithContent"]
+      data:
+        type: object
+        properties:
+          alignment:
+            $ref: "#/definitions/alignment"
+          windowed:
+            type: boolean
+            default: false
+          croppedImage:
+            type: boolean
+            default: false
+          marginTop:
+            $ref: "#/definitions/marginTop"
+          heading:
+            type: string
+          paragraph:
+            type: string
+          link:
+            $ref: "#/definitions/Link"
+          background:
+            $ref: "#/definitions/Background"
+
+  ##latest
+  latest:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["latest"]
+      data:
+        type: object
+        properties:
+          windowed:
+            type: boolean
+            default: false
+          heading:
+            type: string
+          link:
+            $ref: "#/definitions/Link"
+          articles:
+            type: array
+            items:
+              properties:
+                heading:
+                  type: string
+                paragraph:
+                  type: string
+                image:
+                  $ref: "#/definitions/Background"
+          tags:
+            type: array
+            items:
+              $ref: "#/definitions/Link"
+
+  ## mapSecondary
+  mapSecondary:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["imageWithContent"]
+      data:
+        type: object
+        properties:
+          windowed:
+            type: boolean
+            default: true
+          marginTop:
+            $ref: "#/definitions/marginTop"
+          heading:
+            type: string
+          subHeading:
+            type: string
+          paragraph:
+            type: string
+          link:
+            $ref: "#/definitions/Link"
+
+  ##pathToPurchase
+  pathToPurchase:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["pathToPurchase"]
+      data:
+        type: object
+        properties:
+          steps:
+            type: array
+            items:
+              properties:
+                heading:
+                  type: string
+                paragraph:
+                  type: string
+                background:
+                  $ref: "#/definitions/Background"
+
+  ##personaSelector
+  personaSelector:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["personaSelector"]
+      data:
+        type: object
+        properties:
+          personas:
+            type: array
+            items:
+              properties:
+                heading:
+                  type: string
+                paragraph:
+                  type: string
+                image:
+                  $ref: "#/definitions/Background"
+                personaType:
+                  $ref: "#/definitions/personaType"
+                link:
+                  $ref: "#/definitions/Link"
+
+   ##blogPost
+  blogPost:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["blogPost"]
+      data:
+        type: object
+        properties:
+          window:
+            type: boolean
+            default: true
+          marginTop:
+            $ref: "#/definitions/marginTop"
+          date:
+            type: string
+            description: "January 23, 2017"
+          time:
+            type: string
+            description: "0:08"
+          views:
+            type: string
+            description: "302"
+          heading:
+            type: string
+          subHeading:
+            type: string
+          paragraph:
+            type: string
+          tags:
+            type: array
+            items:
+              $ref: "#/definitions/Link"
+          author:
+            type: object
+            properties:
+              name:
+                type: string
+              role:
+                type: string
+              image:
+                $ref: "#/definitions/Background"
+          social:
+            type: array
+            items:
+              $ref: "#/definitions/Link"
+
+   ##quoteSecondary
+  quoteSecondary:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["quoteSecondary"]
+      data:
+        type: object
+        properties:
+          marginTop:
+            $ref: "#/definitions/marginTop"
+          quote:
+            type: string
+          author:
+            type: string
+
+   ##smallImageLeft
+  smallImageLeft:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["smallImageLeft"]
+      data:
+        type: object
+        properties:
+          marginTop:
+            $ref: "#/definitions/marginTop"
+          image:
+                $ref: "#/definitions/Background"
+
+  ##quote
+  quote:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["quote"]
+      data:
+        type: object
+        properties:
+          windowed:
+            type: boolean
+            default: true
+          marginTop:
+            $ref: "#/definitions/marginTop"
+          quote:
+            type: string
+          name:
+            type: string
+          description:
+            type: string
+          image:
+            $ref: "#/definitions/Background"
+
+  ## smallHeading
+  smallHeading:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["smallHeading"]
+      data:
+        type: object
+        properties:
+          windowed:
+            type: boolean
+            default: true
+          marginTop:
+            $ref: "#/definitions/marginTop"
+          heading:
+            type: string
+            description: The heading of this block
+
+  ## smallInfo
+  smallInfo:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["smallInfo"]
+      data:
+        type: object
+        properties:
+          windowed:
+            type: boolean
+            default: true
+          heading:
+            type: string
+            description: The heading of this block
+          paragraph:
+            type: string
+            description: The paragraph of this block
+          link:
+            $ref: "#/definitions/Link"
+
+  ##map (TODO)
+  map:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The ID for the object to be reconized by the frontend framework.
+        enum: ["map"]
+      data:
+        type: object
+        properties:
+          windowed:
+            type: boolean
+            default: true
+
+

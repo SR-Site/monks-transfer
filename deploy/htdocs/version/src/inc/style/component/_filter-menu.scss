@@ -5,17 +5,20 @@
 	.menu {
 		@include size(100%, $sizeGrid*2);
 		display: flex;
-
 	}
 
 	// Filter Label
 	.filter-label {
 		background-color: $colorTertiary;
 		padding-left: $sizeGrid;
+		width: $sizeGrid*5;
 		color: white;
 		height: 100%;
 		text-transform: uppercase;
-		font: 700 1.2rem / 1 $fontOpenSans;
+		font-weight: 700;
+		font-size: 1.2rem;
+		line-height: $sizeGrid*2;
+		font-family: $fontOpenSans;
 
 		.icon {
 			position: absolute;
@@ -29,6 +32,7 @@
 	.filters {
 		@extend %reset-list;
 		display: flex;
+		flex-grow: 1;
 		height: 100%;
 	}
 
@@ -38,8 +42,12 @@
 		height: 100%;
 		align-items: center;
 		display: flex;
+		flex-grow: 1;
+		flex-basis: 0;
+		padding-left: $sizeGrid;
 
 		.label {
+
 		}
 
 	}
