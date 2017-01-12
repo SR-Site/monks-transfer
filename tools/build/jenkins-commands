@@ -1,0 +1,184 @@
+#!/bin/bash
+
+function copyFile() {
+	echo "Copying file ${1} -> ${2}"
+	cp -f "${1}" "${2}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Copy failed! - ${1} -> ${2}"
+    	exit 1
+ 	fi 
+}
+
+function deleteFile(){
+	echo "Remove file ${1}"
+	rm -f "${1}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Delete failed! - ${1}"
+    	exit 1
+ 	fi 	
+}
+
+function deleteCopyFile(){
+	deleteFile "${2}"
+	copyFile "${1}" "${2}"
+}
+
+function copyFileIfNotExists() {
+	echo "Copying file ${1} -> ${2}"	
+	if [ ! -e ${2} ]; then
+		cp -f "${1}" "${2}"
+		 if [ "$?" -ne 0 ]; then
+		 	echo "Copy failed! - ${1} -> ${2}"
+	    	exit 1
+	 	fi 
+	else
+		echo "File ${2} exists skipping..."		
+	fi
+}
+
+function createDir(){
+	echo "Creating directory ${1}"
+	mkdir -p "${1}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Create dir failed! - ${1}"
+    	exit 1
+ 	fi 	
+}
+
+function copyDir(){
+	echo "Copying directory ${1} -> ${2}"
+	cp -rf "${1}" "${2}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Copy failed! - '${1}' -> '${2}'"
+    	exit 1
+ 	fi 
+}
+
+function moveDir(){
+	echo "Moving directory ${1} -> ${2}"
+	mv  "${1}" "${2}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Move failed! - '${1}' -> '${2}'"
+    	exit 1
+ 	fi 
+}
+
+function changeDir(){
+	echo "Changing to directory ${1}"
+	cd  "${1}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Changing to directory '${1}' failed"
+    	exit 1
+ 	fi 
+}
+
+function deleteDir(){
+	echo "Deleting directory ${1}"
+	cd  "${1}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Deleting directory '${1}' failed"
+    	exit 1
+ 	fi 
+}
+
+
+function runComposer(){
+	echo "Running composer install"
+	cd "${ROOTDIR}${COMPOSER_DIR}"
+	${COMPOSER_BIN} $@
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Composer install failed args: $@"
+    	exit 1
+ 	fi 	
+}
+
+function createSymlink(){
+	echo "Creating symlink '${1}' -> '${2}'"
+	ln -s "${1}" "${2}" 
+	if [ "$?" -ne 0 ]; then
+	 	echo "Symlink failed! - '${1}' -> '${2}'"
+    	exit 1
+ 	fi 	
+}
+
+function chmodFille(){
+	echo "chmod file '${2}' -> '${1}'"
+	chmod ${1} ${2}
+	if [ "$?" -ne 0 ]; then
+	 	echo "chmod file failed '${2}' -> '${1}'"
+    	exit 1
+ 	fi 	
+}
+
+function npmCommand(){
+	echo "Running NPM command with args: $@"
+	CURRENT_PWD=`pwd`
+	cd "${ROOTDIR}${NPM_DIR}"
+	${NPM_BIN} $@
+	if [ "$?" -ne 0 ]; then
+	 	echo "NPM Failed"
+    	exit 1
+ 	fi
+ 	cd  ${CURRENT_PWD}		
+}
+
+
+function dushCommand(){
+	echo "Running drush command with args: $@"
+	CURRENT_PWD=`pwd`
+	cd "${ROOTDIR}${DRUSH_DIR}"
+	${DRUSH_BIN} -y $@
+	if [ "$?" -ne 0 ]; then
+	 	echo "Drush Failed"
+    	exit 1
+ 	fi
+ 	cd  ${CURRENT_PWD}		
+}
+
+function tsdCommand(){
+	echo "Running tsd command with args: $@"
+	CURRENT_PWD=`pwd`
+	cd "${ROOTDIR}${TSD_DIR}"	
+	${TSD_BIN} $@
+	if [ "$?" -ne 0 ]; then
+	 	echo "tsd Failed"
+    	exit 1
+ 	fi
+ 	cd  ${CURRENT_PWD}		
+}
+
+function gruntCommand(){
+	echo "Running grunt command with args: $@"
+	CURRENT_PWD=`pwd`
+	cd "${ROOTDIR}/${GRUNT_DIR}"
+	${GRUNT_BIN} $@
+	if [ "$?" -ne 0 ]; then
+	 	echo "Grunt Failed"
+    	exit 1
+ 	fi
+ 	cd  ${CURRENT_PWD}		
+}
+
+function gitCommand(){
+	${GIT_BIN} $@
+	if [ "$?" -ne 0 ]; then
+	 	echo "Git command failed: $@"
+    	exit 1
+ 	fi
+
+}
+
+function syncDirectoryCommand(){
+	echo "Syncing ${1} -> ${2}"
+	${RSYNC_BIN} --delete \
+				 --force \
+				 --recursive \
+				 --times \
+				 --verbose \
+				 --exclude=".git" "${1}" "${1}"
+
+	if [ "$?" -ne 0 ]; then
+	 	echo "Syncing Filed: ${1} -> ${2}"
+    	exit 1
+ 	fi				 
+}

@@ -1,0 +1,86 @@
+#!/bin/bash
+ROOTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}")/../../" && pwd )"
+DRUSH_BIN="/usr/bin/drush"
+DRUSH_DIR="/docroot"
+GRUNT_BIN="grunt"
+GRUNT_DIR="/tools/build"
+COMPOSER_BIN="/usr/bin/composer"
+COMPOSER_DIR="/"
+NPM_BIN="/usr/bin/npm"
+NPM_DIR="/tools/build"
+TSD_BIN="/usr/bin/tsd"
+TSD_DIR="/tools/build"
+RSYNC_BIN="/usr/bin/rsync"
+GIT_BIN="/usr/bin/git"
+
+source $( dirname "${BASH_SOURCE[0]}")/jenkins-commands
+
+function build_backend(){
+	echo ""
+	echo "+-------------------------------------------------------------+"
+	echo "| Build backend none                                          |"
+	echo "+-------------------------------------------------------------+"
+	runComposer install
+}
+
+function build_frontend(){
+	echo ""	
+	echo "+-------------------------------------------------------------+"
+	echo "| Build frontend                                              |"
+	echo "+-------------------------------------------------------------+"
+	npmCommand install
+	gruntCommand clean
+	tsdCommand install
+  	gruntCommand ts
+ 	gruntCommand sass
+ 	gruntCommand postcss
+ 	gruntCommand requirejs:release
+ 	if [ "${GIT_BRANCH}" == "origin/staging" ]; then
+	 	gruntCommand uglify:release
+	 	gruntCommand cssmin
+	 	gruntCommand imagemin
+	 	gruntCommand pngmin 		
+ 	fi
+ 	gruntCommand clean-build
+ 	gruntCommand usemin:html
+}
+
+function deploy_application(){
+	echo ""	
+	echo "+-------------------------------------------------------------+"
+	echo "| Deploy application                                          |"
+	echo "+-------------------------------------------------------------+"
+
+	case "${GIT_BRANCH}" in
+		"origin/staging")	
+			echo "Deploy Remote"
+			BUILDDIR="/tmp/acquia-build-$(date +%s)"
+			gitCommand clone weberstephen@svn-15460.prod.hosting.acquia.com:weberstephen.git ${BUILDDIR}
+			changeDir ${BUILDDIR}
+			gitCommand checkout "deploy-test"
+			syncDirectoryCommand "${ROOTDIR}" "${BUILDDIR}"
+			gitCommand add -A
+			gitCommand commit -m "Jenkins autobuild - $(date)"
+			gitCommand push						
+			;;
+		"origin/develop")
+			echo "Deploy local"
+			deleteCopyFile "${ROOTDIR}/var/drupal-settings/settings.jenkins.php" "${ROOTDIR}/var/drupal-settings/settings.local.php"
+			chmodFille "-R 777" "${ROOTDIR}/docroot/sites/default/files"
+			drushCommand sset system.maintenance_mode TRUE
+			dushCommand cr
+			dushCommand updb
+			dushCommand cim
+			dushCommand entity-updates
+			dushCommand cr			
+			drushCommand sset system.maintenance_mode FALSE			
+			;;
+		*)
+			echo "No Deploy target for '${GIT_BRANCH}'. skipping..."			
+	esac
+
+}
+
+build_backend;
+build_frontend;
+deploy_application;
