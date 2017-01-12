@@ -1,5 +1,7 @@
 .component-filter-menu {
 	position: relative;
+	background-color: white;
+	box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.05);
 
 	// Menu
 	.menu {
@@ -7,8 +9,14 @@
 		display: flex;
 	}
 
+	// Component Button Tag
+	.component-button-tag {
+		text-transform: none;
+	}
+
 	// Filter Label
 	.filter-label {
+		position: relative;
 		background-color: $colorTertiary;
 		padding-left: $sizeGrid;
 		width: $sizeGrid*5;
@@ -22,55 +30,129 @@
 
 		.icon {
 			position: absolute;
-			@include offset(0 ,50%);
 			transform: translate(0, -50%);
+			top: 50%;
 			right: $sizeGrid/1.333;
+			@include size(14px, 16px);
 		}
 	}
 
 	// Filters
 	.filters {
-		@extend %reset-list;
+		position: relative;
 		display: flex;
 		flex-grow: 1;
 		height: 100%;
+		@extend %reset-list;
 	}
-
 
 	// Filter Item
 	.filter-item {
 		height: 100%;
-		align-items: center;
-		display: flex;
 		flex-grow: 1;
 		flex-basis: 0;
-		padding-left: $sizeGrid;
+		cursor: pointer;
 
 		.label {
-
+			font: 600 1.2rem / 2rem $fontOpenSans;
 		}
 
+		// Hover State
+		@include hover() {
+			.filter-dropdown {
+				max-height: $sizeGrid*2;
+			}
+
+			.filter-button::before {
+				width: 100%;
+			}
+
+			.select-anchor {
+				background-color: $colorTertiary;
+
+				.icon {
+					color: white;
+				}
+			}
+		}
 	}
 
-	// Button Tag
-	.component-button-tag {
-		text-transform: none;
+	// Filter Dropdown
+	.filter-dropdown {
+		position: absolute;
+		background-color: $colorLightGrey;
+		@include offset(0, 100%);
+		@include size(100%, $sizeGrid*2);
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 250ms ease(easeOutExpo);
+		font-size: 0;
+
+		.inner-content {
+			padding: (($sizeGrid*2)-$sizeGrid/2)/2 $sizeGrid;
+		}
+
+		.component-button-tag {
+			&:not(:first-child) {
+				margin-left: 5px;
+			}
+		}
+
+		.component-button-circle-close {
+			position: absolute;
+			@include pos(50%, $sizeGrid, auto, auto);
+			transform: translate(0, -50%);
+		}
+	}
+
+	// Filter Button
+	.filter-button {
+		position: relative;
+		padding-left: $sizeGrid;
+		padding-right: $sizeGrid/2;
+		align-items: center;
+		display: flex;
+		height: 100%;
+
+		.component-button-tag {
+			position: absolute;
+			@include pos(50%, $sizeGrid + $sizeGrid/4, auto, auto);
+			transform: translate(0, -50%);
+		}
+
+		&:before {
+			position: absolute;
+			content: "";
+			@include pos(auto, 0, 0, 0);
+			background-color: $colorTertiary;
+			@include size(0, 1px);
+			transition: width 250ms ease(easeOutExpo);
+		}
+
+		&:after {
+			position: absolute;
+			content: "";
+			@include size(1px, $sizeGrid);
+			@include pos(50%, 0, auto, auto);
+			transform: translate(0, -50%);
+			background-color: rgba(#dcdcdc, 0.6);
+		}
 	}
 
 	// Select Anchor
 	.select-anchor {
+		position: absolute;
+		@include pos(50%, $sizeGrid/2, auto, auto);
+		transform: translate(0, -50%);
 		@include size($sizeGrid/2);
+		border-radius: 100%;
+		border: 1px solid $colorTertiary;
+		transition: background-color 250ms ease(linear);
 
-		svg {
-			fill: transparent;
-		}
-
-		circle {
-			stroke: $colorTertiary;
-		}
-
-		path {
-			fill: $colorTertiary;
+		.icon {
+			color: $colorTertiary;
+			transition: color 250ms ease(linear);
+			@include size(7px, 4px);
 		}
 	}
 }

@@ -556,9 +556,28 @@
 				}
 			},
 			{
+				"id": "heroSecondary",
+				"data": {
+					"overlap": true,
+					"heading": "We'll Help you Find Your Format",
+					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "/advertising-solutions",
+						"type": 2
+					},
+					"background": {
+						"normal": "data/hero-secondary/background.jpg",
+						"small": "data/hero-secondary/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
 				"id": "filterContent",
 				"data": {
-					"endpoint": "api/content",
+					"endpoint": "api/content/knowledge-center",
 					"filterLabel": "Filters",
 					"filters": [
 						{
@@ -580,12 +599,28 @@
 							"label": "Document Type",
 							"options": [
 								{
-									"value": "sport",
-									"label": "sport"
+									"value": "sport 1",
+									"label": "sport 1"
 								},
 								{
-									"value": "test",
-									"label": "test"
+									"value": "test 1",
+									"label": "test 1"
+								},
+								{
+									"value": "sport 1",
+									"label": "sport 1"
+								},
+								{
+									"value": "test 1",
+									"label": "test 1"
+								},
+								{
+									"value": "sport 1",
+									"label": "sport 1"
+								},
+								{
+									"value": "test 1",
+									"label": "test 1"
 								}
 							]
 						},
@@ -594,12 +629,20 @@
 							"label": "Platform",
 							"options": [
 								{
-									"value": "sport",
-									"label": "sport"
+									"value": "sport 2",
+									"label": "sport 2"
 								},
 								{
-									"value": "test",
-									"label": "test"
+									"value": "test 3",
+									"label": "test 3"
+								},
+								{
+									"value": "sport 1",
+									"label": "sport 1"
+								},
+								{
+									"value": "test 1",
+									"label": "test 1"
 								}
 							]
 						},
@@ -614,6 +657,100 @@
 								{
 									"value": "test",
 									"label": "test"
+								}
+							]
+						}
+					],
+					"articles": [
+						{
+							"heading": "Go Beyond High Profile Sport Events",
+							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"image": {
+								"normal": "data/latest/latest-article-image-1.jpg",
+								"small": "data/latest/latest-article-image-1.jpg",
+								"alt": "Background image alt text"
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"heading": "Go Beyond High Profile Sport Events",
+							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"image": {
+								"normal": "data/latest/latest-article-image-2.jpg",
+								"small": "data/latest/latest-article-image-2.jpg",
+								"alt": "Background image alt text"
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"heading": "Go Beyond High Profile Sport Events",
+							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"image": {
+								"normal": "data/latest/latest-article-image-2.jpg",
+								"small": "data/latest/latest-article-image-2.jpg",
+								"alt": "Background image alt text"
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"heading": "Go Beyond High Profile Sport Events",
+							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"image": {
+								"normal": "data/latest/latest-article-image-1.jpg",
+								"small": "data/latest/latest-article-image-1.jpg",
+								"alt": "Background image alt text"
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
 								}
 							]
 						}

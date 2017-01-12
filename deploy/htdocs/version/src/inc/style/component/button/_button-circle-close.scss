@@ -1,0 +1,21 @@
+.component-button-circle-close {
+	@include size($sizeGrid/2);
+	border-radius: 100%;
+	border: 1px solid $colorPrimary;
+	transition: background-color 250ms ease(linear);
+
+	.icon {
+		@include size(8px);
+		color: currentColor;
+		transition: color 250ms ease(linear);
+	}
+
+	// Hover State
+	@include hover() {
+		background-color: $colorPrimary;
+
+		.icon {
+			color: white;
+		}
+	}
+}

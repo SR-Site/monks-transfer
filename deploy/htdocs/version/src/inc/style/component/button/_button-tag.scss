@@ -14,4 +14,13 @@
 		display: inline-block;
 		vertical-align: top;
 	}
+
+	&.is-inactive {
+		@extend %button-tag-inactive;
+	}
+}
+
+%button-tag-inactive {
+	background-color: $colorLightGrey;
+	color: $colorQuaternary;
 }

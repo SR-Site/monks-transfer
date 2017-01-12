@@ -1,28 +1,61 @@
-<div class="component-filter-menu" data-bind="with: data">
+<div class="component-filter-menu overrule-overlap" data-bind="with: data">
 
 	<div class="menu">
 		<div class="filter-label">
-			test label
+			<!-- ko text: label --><!-- /ko -->
 			<span class="icon" data-bind="icon: 'filter'"></span>
 		</div>
 
 		<ul class="filters" data-bind="foreach: filters">
+
 			<li class="filter-item">
-				<span class="label" data-bind="html: label"></span>
 
-				<!-- ko component: {
-					name: 'button/button-tag',
-					onComplete: $root.controller.callbackCounter.get(),
-					options: {
-						action: {
-							label: 'myLabel',
-							event: (function(){console.log('click')})
-						},
-						size: $root.ButtonSize.LARGE
-					}
-				} --><!-- /ko -->
+				<div class="filter-button">
+					<span class="label" data-bind="html: label"></span>
 
-				<span class="icon select-anchor" data-bind="icon: 'circle-arrow-down'"></span>
+					<!-- ko component: {
+						name: 'button/button-tag',
+						onComplete: $root.controller.callbackCounter.get(),
+						options: {
+							action: {
+								label: 'myLabel',
+								event: (function(){console.log('click')})
+							},
+							size: $root.ButtonSize.LARGE
+						}
+					} --><!-- /ko -->
+
+					<span class="select-anchor">
+						<span class="icon abs-center" data-bind="icon: 'arrow-down'"></span>
+					</span>
+				</div>
+
+				<div class="filter-dropdown">
+					<div class="inner-content" data-bind="foreach: options">
+						<!-- ko component: {
+							name: 'button/button-tag',
+							onComplete: $root.controller.callbackCounter.get(),
+							options: {
+								action: {
+									label: label,
+									event: (function(){console.log('clicked', value)})
+								},
+								size: $root.ButtonSize.LARGE
+							}
+						} --><!-- /ko -->
+					</div>
+
+					<!-- ko component: {
+						name: 'button/button-circle-close',
+						onComplete: $root.controller.callbackCounter.get(),
+						options: {
+							action: {
+								event: (function(){console.log('click close')})
+							},
+							size: $root.ButtonSize.SMALL
+						}
+					} --><!-- /ko -->
+				</div>
 			</li>
 		</ul>
 	</div>

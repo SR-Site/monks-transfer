@@ -1,3 +1,16 @@
 .component-block-filter-content {
+	padding: 0 $sizeGrid*3 $sizeGrid*2; // temp
+	background: $colorLightGrey;
 
+	.content-items {
+		margin-top: $sizeGrid*2;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		.component-latest-article-teaser {
+			display: inline-block;
+			margin-bottom: $sizeGrid * 2;
+		}
+	}
 }

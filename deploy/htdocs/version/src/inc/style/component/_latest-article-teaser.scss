@@ -41,6 +41,7 @@
 		img {
 			transform: translateX(10%);
 			transition: transform .2s ease(easeOut);
+			width: 100%;
 		}
 
 		&:after {
