@@ -1,0 +1,47 @@
+.component-block-info {
+	position: relative;
+	width: 100%;
+	color: white;
+
+	&.windowed {
+		border-color: transparent;
+		border-left-width: $sizeGrid*4;
+		border-right-width: $sizeGrid*4;
+	}
+
+	.inner-content {
+		padding: $sizeGrid*2 $sizeGrid $sizeGrid*2 $sizeGrid*2;
+		width: calc( 100% - #{$sizeGrid});
+		background-color: $colorSecondary;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+
+		&:before {
+			@include triangle(left, top, $colorSecondary, $sizeGrid);
+			@include pos(auto, 0, 0, auto);
+			position: absolute;
+			content: '';
+		}
+
+		&:after {
+			@include pos(0, 0, $sizeGrid, auto);
+			position: absolute;
+			content: "";
+			width: $sizeGrid;
+			background-color: $colorSecondary
+		}
+	}
+
+	.description {
+		width: calc( 100% - #{$sizeGrid*11});
+	}
+
+	.copy {
+		margin-top: $sizeGrid;
+	}
+
+	.component-button-main {
+		align-self: flex-end;
+	}
+}

@@ -97,5 +97,9 @@ export const blockConfig:IBlockConfig = {
 	filterContent: {
 		id: Blocks.FILTER_CONTENT,
 		type: BlockType.COMPONENT
+	},
+	info: {
+		id: Blocks.INFO,
+		type: BlockType.COMPONENT
 	}
 };

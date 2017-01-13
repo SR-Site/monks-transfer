@@ -10,14 +10,6 @@
 	margin-left: $sizeGridSecondary / 2;
 	z-index: 0;
 
-	&.light {
-		color: $colorWhite;
-
-		rect {
-			stroke: rgba(255,255,255,.3);
-		}
-	}
-
 	svg {
 		overflow: visible;
 	}
@@ -45,6 +37,27 @@
 		vertical-align: top;
 	}
 
+	// Light Theme
+	&.light {
+		color: $colorWhite;
+
+		rect {
+			stroke: rgba(255,255,255,.3);
+		}
+
+		&:after {
+			background-color: $colorPrimary;
+		}
+
+		// Hover State
+		@include hover() {
+			rect {
+				stroke: $colorWhite;
+			}
+		}
+	}
+
+	// Hover State
 	@include hover() {
 
 		&:after {

@@ -25,6 +25,7 @@ class Blocks
 	public static TEXT:string = 'block-text';
 	public static SMALL_IMAGE_LEFT:string = 'block-small-image-left';
 	public static FILTER_CONTENT:string = 'block-filter-content';
+	public static INFO:string = 'block-info';
 }
 
 
