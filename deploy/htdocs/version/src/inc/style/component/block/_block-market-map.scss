@@ -1,7 +1,7 @@
 .component-block-market-map {
 	$zIndex: map, ui;
 	@include aspect-ratio($sizeGrid*36, $sizeGrid*22);
-	max-height: 100vh;
+	max-height: calc(100vh - #{$sizeHeader});
 
 	.map-box { // todo init map
 		z-index: zindex($zIndex, map);
@@ -67,9 +67,10 @@
 		background-color: $colorLightGrey;
 		display: flex;
 		align-items: center;
-		//flex-direction: row;
 		flex-wrap: nowrap;
 		padding: 0 $sizeGrid*1.5 0 $sizeGrid;
+		text-decoration: none;
+		color: $colorPrimary;
 
 		.profile-image {
 			@include size($sizeGrid*1.5);
@@ -101,6 +102,23 @@
 		position: absolute;
 		@include pos(auto, $sizeGrid*9, $sizeGrid*2, $sizeGrid*2);
 		z-index: zindex($zIndex, ui);
+		height: $sizeGrid*2;
+		background-color: white;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+
+		.input-text {
+			margin: 0 $sizeGrid;
+		}
+
+		.button-search {
+			background-color: $colorSecondary;
+			text-transform: uppercase;
+			font: 700 1rem / #{$sizeGrid*2} $fontOpenSans;
+			color: white;
+			@include size($sizeGrid*5, 100%);
+		}
 	}
 }
 

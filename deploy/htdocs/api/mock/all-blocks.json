@@ -782,8 +782,15 @@
 							"normal": "data/market-map/profile-image.jpg",
 							"small": "data/market-map/profile-image.jpg",
 							"alt": "Samantha Smith"
+						},
+						"link": {
+							"label": "Read the FAQS",
+							"title": "Read the FAQS",
+							"target": "faq",
+							"type": 0
 						}
-					}
+					},
+					"searchLabel": "Search"
 				}
 			}
 		]

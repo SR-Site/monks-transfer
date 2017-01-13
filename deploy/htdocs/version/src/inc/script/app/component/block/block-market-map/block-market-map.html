@@ -32,7 +32,7 @@
 			</div>
 		</div>
 
-		<div class="service-info">
+		<a class="service-info" data-bind="gaiaOpenLink: service.link">
 			<div class="profile-image bg-cover" data-bind="image: {
 			queries: [
 				[$root.MediaQueries.X_SMALL, service.image.normal ],
@@ -52,10 +52,15 @@
 					direction: $root.Direction.RIGHT
 				}
 			} --><!-- /ko -->
-		</div>
+		</a>
 	</div>
 
 	<form class="search-bar">
-
+		<div class="input-text-main input-text large">
+			<input required type="text" name="search" id="search" value="" />
+			<span class="placeholder-label">Which region do you want to advertise in?</span>
+			<span class="focus-border"></span>
+		</div>
+		<button class="button-search button" data-bind="html: searchLabel"></button>
 	</form>
 </div>
