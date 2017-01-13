@@ -1,0 +1,17 @@
+.button-select-anchor {
+	@include size($sizeGrid/2);
+	border-radius: 100%;
+	border: 1px solid $colorTertiary;
+	transition: background-color 250ms ease(linear);
+
+	.icon {
+		color: $colorTertiary;
+		transition: color 250ms ease(linear);
+		@include size(7px, 4px);
+
+		&.icon-arrow-right,
+		&.icon-arrow-left {
+			@include size(4px, 7px);
+		}
+	}
+}

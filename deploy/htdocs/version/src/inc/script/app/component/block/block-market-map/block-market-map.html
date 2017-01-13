@@ -1,0 +1,61 @@
+<div class="component-block-market-map" data-bind="with: data">
+
+	<div class="map-box abs-fill">
+		<img class="abs-fill fit-cover" src="data/market-map/map.jpg " />
+	</div>
+
+	<div class="side-panel">
+
+		<div class="scroll-wrapper js-scroll-wrapper" data-bind="scrollbar:{
+			setContentSize:false
+		}">
+			<div class="scroll-content" data-scroll-content>
+				<div class="scroll-content-inner" data-content-inner>
+					<ul class="filter-list">
+						<li class="filter-list-item copy-03 is-active">New York City, NY</li>
+						<li class="filter-list-item copy-03">Binghamton, NY</li>
+						<li class="filter-list-item copy-03">Buffalo, NY</li>
+						<li class="filter-list-item copy-03">Elmira, NY</li>
+						<li class="filter-list-item copy-03">Watertown, NY</li>
+						<li class="filter-list-item copy-03">Rochester, NY</li>
+						<li class="filter-list-item copy-03">Syracuse, NY</li>
+						<li class="filter-list-item copy-03">Utica, NY</li>
+						<li class="filter-list-item copy-03">Elmira, NY</li>
+						<li class="filter-list-item copy-03">Watertown, NY</li>
+						<li class="filter-list-item copy-03">Rochester, NY</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="scroll-bar" data-scroll-bar>
+				<div class="knob" data-scroll-knob></div>
+			</div>
+		</div>
+
+		<div class="service-info">
+			<div class="profile-image bg-cover" data-bind="image: {
+			queries: [
+				[$root.MediaQueries.X_SMALL, service.image.normal ],
+				[$root.MediaQueries.SMALL, service.image.small]
+			],
+			state: $root.deviceState()
+			}"></div>
+
+			<div class="profile-info">
+				<p class="name copy-02 copy" data-bind="html: service.name"></p>
+				<p class="role copy" data-bind="html: service.role"></p>
+			</div>
+
+			<!-- ko template: {
+				name: 'button-select-anchor',
+				data: {
+					direction: $root.Direction.RIGHT
+				}
+			} --><!-- /ko -->
+		</div>
+	</div>
+
+	<form class="search-bar">
+
+	</form>
+</div>

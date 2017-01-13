@@ -101,5 +101,9 @@ export const blockConfig:IBlockConfig = {
 	info: {
 		id: Blocks.INFO,
 		type: BlockType.COMPONENT
+	},
+	marketMap: {
+		id: Blocks.MARKET_MAP,
+		type: BlockType.COMPONENT
 	}
 };

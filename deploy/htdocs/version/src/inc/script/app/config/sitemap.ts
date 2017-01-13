@@ -74,7 +74,8 @@ import * as Gaia from "lib/gaia/api/Gaia";
  */
 
 const partials: Array<string> = [
-	'partial/asset/link/link-main.html'
+	'partial/asset/link/link-main.html',
+	'partial/asset/button/button-select-anchor.html'
 ];
 
 var sitemap:ISitemap = {

@@ -1,0 +1,107 @@
+.component-block-market-map {
+	$zIndex: map, ui;
+	@include aspect-ratio($sizeGrid*36, $sizeGrid*22);
+	max-height: 100vh;
+
+	.map-box { // todo init map
+		z-index: zindex($zIndex, map);
+	}
+
+	// Side Panel
+	.side-panel {
+		position: absolute;
+		@include size($sizeGrid*7, 100%);
+		@include pos(0, 0, 0, auto);
+		background-color: white;
+		z-index: zindex($zIndex, ui);
+
+		.scroll-wrapper {
+			height: calc(100% - #{$sizeGrid*4});
+		}
+
+		.scroll-content {}
+		.scroll-content-inner {}
+
+		.scroll-bar {
+			width: $sizeGrid/2;
+
+			.knob {
+				width: 5px;
+			}
+		}
+	}
+
+	// Filter List
+	.filter-list {
+		@extend %reset-list;
+	}
+
+	.filter-list-item {
+		position: relative;
+		padding: 3rem $sizeGrid;
+		cursor: pointer;
+
+		&:after {
+			position: absolute;
+			@include pos(auto, $sizeGrid, 0, $sizeGrid*0.7);
+			background-color: rgba(#dadada, 0.6);
+			content: "";
+			height: 1px;
+		}
+
+		// Active State
+		&.is-active {
+			background-color: $colorSecondary;
+			color: white;
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	// Service Info
+	.service-info {
+		@include size(100%, $sizeGrid*4);
+		position: relative;
+		background-color: $colorLightGrey;
+		display: flex;
+		align-items: center;
+		//flex-direction: row;
+		flex-wrap: nowrap;
+		padding: 0 $sizeGrid*1.5 0 $sizeGrid;
+
+		.profile-image {
+			@include size($sizeGrid*1.5);
+			border-radius: 100%;
+			overflow: hidden;
+			margin-right: $sizeGrid/2;
+			flex-shrink: 0;
+		}
+
+		.profile-info {
+			.name { }
+
+			.role {
+				font: 400 1.2rem / 1 $fontOpenSans;
+				margin-top: $sizeGrid/4;
+			}
+		}
+
+		// Button Select Anchor
+		.button-select-anchor {
+			position: absolute;
+			@include pos(50%, $sizeGrid/2, auto, auto);
+			transform: translate(0, -50%);
+		}
+	}
+
+	// Search Bar
+	.search-bar {
+		position: absolute;
+		@include pos(auto, $sizeGrid*9, $sizeGrid*2, $sizeGrid*2);
+		z-index: zindex($zIndex, ui);
+	}
+}
+
+

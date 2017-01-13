@@ -67,7 +67,7 @@
 				width: 100%;
 			}
 
-			.select-anchor {
+			.button-select-anchor {
 				background-color: $colorTertiary;
 
 				.icon {
@@ -140,7 +140,7 @@
 	}
 
 	// Select Anchor
-	.select-anchor {
+	.button-select-anchor {
 		position: absolute;
 		@include pos(50%, $sizeGrid/2, auto, auto);
 		transform: translate(0, -50%);

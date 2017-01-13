@@ -771,6 +771,20 @@
 						"type": 0
 					}
 				}
+			},
+			{
+				"id": "marketMap",
+				"data": {
+					"service": {
+						"name": "Samantha Smith",
+						"role": "Customer Service",
+						"image": {
+							"normal": "data/market-map/profile-image.jpg",
+							"small": "data/market-map/profile-image.jpg",
+							"alt": "Samantha Smith"
+						}
+					}
+				}
 			}
 		]
 	}

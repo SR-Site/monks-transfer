@@ -6,4 +6,5 @@ enum Direction
 	LEFT = 3
 }
 
+
 export default Direction;
