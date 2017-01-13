@@ -68,6 +68,18 @@
 			</div>
 		</div>
 
+		<!-- ko component: {
+			name: 'button/button-main',
+			onComplete: $root.controller.callbackCounter.get(),
+			options: {
+				action: {
+					event: $root.onSubmit.bind($root),
+					label: submitLabel,
+					title: submitLabel
+				},
+				size: $root.ButtonSize.LARGE
+			}
+		} --><!-- /ko -->
 
 	</fieldset>
 </form>

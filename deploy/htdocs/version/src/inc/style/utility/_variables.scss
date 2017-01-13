@@ -53,5 +53,8 @@ $colorWhite: #fff;
 $colorLightGrey: #f8f8f8;
 $colorBorder: #e0e0e0;
 
+$colorValidationError: red;
+$colorValidationSuccess: $colorTertiary;
+
 // Z-indexes
 $layout: content, menu, header, siteFrame, panelOverlay, panel, pageLoader;
