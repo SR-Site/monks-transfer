@@ -17,7 +17,7 @@ class ContentService extends AbstractService
 	 */
 	public getInit():Promise<IGatewayResult<any>>
 	{
-		return this.gateway.get(Endpoints.INIT);
+		return this.gateway.get(Endpoints.getEndpoint(Endpoints.INIT));
 	}
 
 	/**

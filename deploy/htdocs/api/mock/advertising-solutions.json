@@ -16,8 +16,8 @@
 						"type": 2
 					},
 					"background": {
-						"normal": "data/hero-secondary/background.jpg",
-						"small": "data/hero-secondary/background.jpg",
+						"normal": "data/image/hero-secondary/background.jpg",
+						"small": "data/image/hero-secondary/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -54,8 +54,8 @@
 							"heading": "Dream",
 							"paragraph": "They are open to possibility",
 							"background": {
-								"normal": "data/path-to-purchase/background-1.jpg",
-								"small": "data/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-1.jpg",
+								"small": "data/image/path-to-purchase/background-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -63,8 +63,8 @@
 							"heading": "Search",
 							"paragraph": "They make a descision to",
 							"background": {
-								"normal": "data/path-to-purchase/background-1.jpg",
-								"small": "data/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-1.jpg",
+								"small": "data/image/path-to-purchase/background-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -72,8 +72,8 @@
 							"heading": "Purchase",
 							"paragraph": "They begin shopping",
 							"background": {
-								"normal": "data/path-to-purchase/background-1.jpg",
-								"small": "data/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-1.jpg",
+								"small": "data/image/path-to-purchase/background-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -81,8 +81,8 @@
 							"heading": "Ownership",
 							"paragraph": "They evaluate their options",
 							"background": {
-								"normal": "data/path-to-purchase/background-1.jpg",
-								"small": "data/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-1.jpg",
+								"small": "data/image/path-to-purchase/background-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -90,8 +90,8 @@
 							"heading": "Support",
 							"paragraph": "They are making the purchase",
 							"background": {
-								"normal": "data/path-to-purchase/background-1.jpg",
-								"small": "data/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-1.jpg",
+								"small": "data/image/path-to-purchase/background-1.jpg",
 								"alt": "Background image alt text"
 							}
 						}
@@ -116,13 +116,13 @@
 							"heading": "Television",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
-								"normal": "data/image-call-to-actions/image-tv.jpg",
-								"small": "data/image-call-to-actions/image-tv.jpg",
+								"normal": "data/image/image-call-to-actions/image-tv.jpg",
+								"small": "data/image/image-call-to-actions/image-tv.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
-								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -130,13 +130,13 @@
 							"heading": "Digital",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
-								"normal": "data/image-call-to-actions/image-digital.jpg",
-								"small": "data/image-call-to-actions/image-digital.jpg",
+								"normal": "data/image/image-call-to-actions/image-digital.jpg",
+								"small": "data/image/image-call-to-actions/image-digital.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image-call-to-actions/image-digital-blurred.jpg",
-								"small": "data/image-call-to-actions/image-digital-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/image-digital-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-digital-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -144,13 +144,13 @@
 							"heading": "Creative <br/>services",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
-								"normal": "data/image-call-to-actions/image-creative.jpg",
-								"small": "data/image-call-to-actions/image-creative.jpg",
+								"normal": "data/image/image-call-to-actions/image-creative.jpg",
+								"small": "data/image/image-call-to-actions/image-creative.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image-call-to-actions/image-creative-blurred.jpg",
-								"small": "data/image-call-to-actions/image-creative-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/image-creative-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-creative-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						}
@@ -173,8 +173,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-1.jpg",
+								"small": "data/image/persona-selector/persona-background-image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -189,8 +189,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-1.jpg",
+								"small": "data/image/persona-selector/persona-background-image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -205,8 +205,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-1.jpg",
+								"small": "data/image/persona-selector/persona-background-image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -221,8 +221,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-1.jpg",
+								"small": "data/image/persona-selector/persona-background-image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						}

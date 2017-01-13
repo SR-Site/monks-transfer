@@ -1,8 +1,9 @@
-
+import refdef from "def/ReferenceDefinitions";
 import ko = require('knockout');
 import ValidatorFieldAccessor from "./ValidatorFieldAccessor";
 import Destructible from "lib/temple/core/Destructible";
 import Log from "../Log";
+import ValidationRules from "./ValidationRules";
 
 let _log:Log = new Log('lib.temple.utils.knockoutvalidator.KnockoutValidator');
 
@@ -274,12 +275,15 @@ class KnockoutValidator extends Destructible
 	// Unlike isValidating, this boolean will also be true if validating synchronously
 	private _isValidating:boolean = false;
 	private _globalRules:GlobalRule[] = [];
+	public rules:ValidationRules;
 
 	constructor()
 	{
 		super();
 
 		KnockoutValidator.init();
+
+		this.rules = ValidationRules;
 
 		this.isValid = ko.observable(null);
 		this._fields = ko.observableArray(<ValidatorField[]> []);
@@ -291,10 +295,10 @@ class KnockoutValidator extends Destructible
 
 			for(var i = 0; i < fields.length; i++)
 			{
-                if(fields[i].isValidating())
-                {
-                    validating = true;
-                }
+				if(fields[i].isValidating())
+				{
+					validating = true;
+				}
 			}
 
 			return validating;
@@ -330,10 +334,10 @@ class KnockoutValidator extends Destructible
 		if(!(this instanceof KnockoutValidator))
 		{
 			_log.warn("validate() called from the wrong scope.");
-            if(typeof this['_fields'] == 'undefined')
-            {
-                return;
-            }
+			if(typeof this._fields == 'undefined')
+			{
+				return;
+			}
 		}
 
 		if(this._isValidating)
@@ -377,10 +381,10 @@ class KnockoutValidator extends Destructible
 			// Re-enable auto validation
 			fields[i].preventAutoValidation = false;
 			// Make sure that we return false if one of the fields is invalid
-            if(fields[i].isValid.peek() === false)
-            {
-                valid = false;
-            }
+			if(fields[i].isValid.peek() === false)
+			{
+				valid = false;
+			}
 		}
 
 		if(promises.length)
@@ -400,10 +404,10 @@ class KnockoutValidator extends Destructible
 			// Wait for all promises to complete
 			PromiseUtils.all(promises).then(() =>
 			{
-                if(asyncTimeoutId !== null)
-                {
-                    clearTimeout(asyncTimeoutId);
-                }
+				if(asyncTimeoutId !== null)
+				{
+					clearTimeout(asyncTimeoutId);
+				}
 				this._isValidating = false;
 				this._updateValidState();
 			});
@@ -577,24 +581,24 @@ class KnockoutValidator extends Destructible
 			if(parse)
 			{
 				num = parseFloat(value);
-                if(isNaN(num))
-                {
-                    return false;
-                }
+				if(isNaN(num))
+				{
+					return false;
+				}
 			}
 			else
 			{
 				num = value.length;
 			}
 
-            if(from !== null && num < from)
-            {
-                return false;
-            }
-            if(to !== null && num > to)
-            {
-                return false;
-            }
+			if(from !== null && num < from)
+			{
+				return false;
+			}
+			if(to !== null && num > to)
+			{
+				return false;
+			}
 			return true;
 		};
 	}
@@ -608,10 +612,10 @@ class KnockoutValidator extends Destructible
 	 */
 	public not(rule:SingleValidationRule):InverseRule
 	{
-        if((<any> rule) instanceof Array)
-        {
-            throw "The not() rule does not accept multiple rules!";
-        }
+		if((<any> rule) instanceof Array)
+		{
+			throw "The not() rule does not accept multiple rules!";
+		}
 		return new InverseRule(ko.unwrap(rule));
 	}
 
@@ -683,10 +687,10 @@ class KnockoutValidator extends Destructible
 		var fields = this._fields();
 		for(var i = 0; i < fields.length; i++)
 		{
-            if(fields[i].name == name)
-            {
-                return fields[i];
-            }
+			if(fields[i].name == name)
+			{
+				return fields[i];
+			}
 		}
 
 		return null;
@@ -856,14 +860,14 @@ class KnockoutValidator extends Destructible
 	{
 		if(previousValidator != field.validator)
 		{
-            if(previousValidator !== null)
-            {
-                previousValidator._detach(field);
-            }
-            if(field.validator !== null)
-            {
-                field.validator._attach(field);
-            }
+			if(previousValidator !== null)
+			{
+				previousValidator._detach(field);
+			}
+			if(field.validator !== null)
+			{
+				field.validator._attach(field);
+			}
 		}
 	}
 
@@ -881,10 +885,10 @@ class KnockoutValidator extends Destructible
 			value;
 
 		// Ignore elements with validateWith binding, they get processed separately.
-        if(allBindings.has('validateWith'))
-        {
-            return;
-        }
+		if(allBindings.has('validateWith'))
+		{
+			return;
+		}
 
 		// If the field doesn't exist, initialize it.
 		if(!field)
@@ -907,7 +911,7 @@ class KnockoutValidator extends Destructible
 					{
 						throw 'Cannot use validation bindings on radio buttons. Please use ' +
 						'the "validateRadio" binding to validate radio buttons.';
-						
+
 					}
 					else if(inputType == 'checkbox')
 					{
@@ -1028,10 +1032,10 @@ class KnockoutValidator extends Destructible
 
 				if(field)
 				{
-                    if(field.validator)
-                    {
-                        field.validator._detach(field);
-                    }
+					if(field.validator)
+					{
+						field.validator._detach(field);
+					}
 					KnockoutValidator._validatorFieldMap[id] = null;
 					field.destruct();
 				}
@@ -1113,15 +1117,15 @@ class KnockoutValidator extends Destructible
 				field = KnockoutValidator._validatorFieldMap[id] || null;
 
 			// Ignore elements with validateWith binding, they get processed separately.
-            if(allBindings.has('validateWith'))
-            {
-                return;
-            }
+			if(allBindings.has('validateWith'))
+			{
+				return;
+			}
 			// Make sure we have a ValidatorField to work with.
-            if(!field)
-            {
-                throw 'KnockoutValidator binding update method called on element that has no field attached to it.';
-            }
+			if(!field)
+			{
+				throw 'KnockoutValidator binding update method called on element that has no field attached to it.';
+			}
 
 			var currentValidator = field.validator || null,
 				clearResults = false,
@@ -1134,10 +1138,10 @@ class KnockoutValidator extends Destructible
 			}
 			field[binding.propertyName] = bindingValue;
 
-            if(clearResults)
-            {
-                field.clearValidationResults();
-            }
+			if(clearResults)
+			{
+				field.clearValidationResults();
+			}
 			KnockoutValidator._bindFieldToValidator(field, currentValidator);
 		}
 	}
@@ -1277,10 +1281,10 @@ class ValidatorField extends Destructible
 			if(typeof result == 'string')
 			{
 				// String. Push the new error message
-                if(!inverse && result != '')
-                {
-                    errors.push(<string> result);
-                }
+				if(!inverse && result != '')
+				{
+					errors.push(<string> result);
+				}
 			}
 			else
 			{
@@ -1321,10 +1325,10 @@ class ValidatorField extends Destructible
 			// Indicate that we are validating
 			this.isValidating(true);
 			// If valid state is already null, clearing results won't trigger _applyValidationClasses, so we do that ourselves
-            if(this.isValid.peek() === null)
-            {
-                this._applyValidationClasses();
-            }
+			if(this.isValid.peek() === null)
+			{
+				this._applyValidationClasses();
+			}
 			// Clear validation results.
 			this.clearValidationResults();
 			// Return a promise that resolves when the validation is done, but save validation first.
@@ -1355,10 +1359,10 @@ class ValidatorField extends Destructible
 		this._subscriptions.push(value.subscribe(function(newValue)
 		{
 			this[property] = newValue;
-            if(clearResults)
-            {
-                this.clearValidationResults();
-            }
+			if(clearResults)
+			{
+				this.clearValidationResults();
+			}
 		}, this));
 		value.notifySubscribers(value.peek());
 	}
@@ -1448,10 +1452,10 @@ class ValidatorField extends Destructible
 		if(this.validator.applyClassesToParent)
 		{
 			element = element.parentElement;
-            if(!element)
-            {
-                return;
-            }
+			if(!element)
+			{
+				return;
+			}
 		}
 
 		for(var i = 0; i < classes.length; i++)
@@ -1473,10 +1477,10 @@ class ValidatorField extends Destructible
 		{
 			this._validatedValue(newValue);
 			// If the field is valid, remove any error messages
-            if(newValue)
-            {
-                this.errors([]);
-            }
+			if(newValue)
+			{
+				this.errors([]);
+			}
 		}
 		this._applyValidationClasses();
 	}
@@ -1504,11 +1508,11 @@ class ValidatorField extends Destructible
 		this._subscriptions = [];
 	}
 
-	private static _validateWithSingleRule(value:string|boolean, name:string, rule:ValidationRule|boolean):SingleRuleResult
+	private static _validateWithSingleRule(value:string, name:string, rule:ValidationRule):SingleRuleResult
 	{
 		if(typeof rule == 'boolean')
 		{
-			return value == rule; 
+			return value == rule;
 		}
 
 		if(typeof rule == 'string')
@@ -1595,15 +1599,15 @@ class PromiseUtils
 class ValidatorFieldBinding
 {
 	constructor(// corresponding property to update on a ValidatorField
-	            public propertyName:string,
-	            // name of the variable in the Knockout binding context that is used when the data-bind is not present
-	            public inheritFromContext:string = null,
-	            // boolean indicating if we should unwrap the value in the data-bind before saving it on the field
-	            public clearResults:boolean = true,
-	            // boolean indicating if we should update the field when the data-bind value updates
-	            public updatable:boolean = true,
-	            // name of the HTML attribue that is used when the data-bind is not present
-	            public inheritFromAttribute:string = null)
+		public propertyName:string,
+		// name of the variable in the Knockout binding context that is used when the data-bind is not present
+		public inheritFromContext:string = null,
+		// boolean indicating if we should unwrap the value in the data-bind before saving it on the field
+		public clearResults:boolean = true,
+		// boolean indicating if we should update the field when the data-bind value updates
+		public updatable:boolean = true,
+		// name of the HTML attribue that is used when the data-bind is not present
+		public inheritFromAttribute:string = null)
 	{
 	}
 }

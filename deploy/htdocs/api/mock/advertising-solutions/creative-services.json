@@ -15,8 +15,8 @@
 						"type": 2
 					},
 					"background": {
-						"normal": "data/hero-secondary/background.jpg",
-						"small": "data/hero-secondary/background.jpg",
+						"normal": "data/image/hero-secondary/background.jpg",
+						"small": "data/image/hero-secondary/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -30,8 +30,8 @@
 					"name": "John Doe",
 					"description": "Foo bar",
 					"image": {
-						"normal": "data/quote/person.jpg",
-						"small": "data/quote/person.jpg",
+						"normal": "data/image/quote/person.jpg",
+						"small": "data/image/quote/person.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -52,24 +52,24 @@
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
 							"image": {
-								"normal": "data/image-carousel/image-1.jpg",
-								"small": "data/image-carousel/image-1.jpg",
+								"normal": "data/image/image-carousel/image-1.jpg",
+								"small": "data/image/image-carousel/image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
 							"image": {
-								"normal": "data/image-carousel/image-2.jpg",
-								"small": "data/image-carousel/image-2.jpg",
+								"normal": "data/image/image-carousel/image-2.jpg",
+								"small": "data/image/image-carousel/image-2.jpg",
 								"alt": "Background image alt text"
 							}
 						},
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
 							"image": {
-								"normal": "data/image-carousel/image-1.jpg",
-								"small": "data/image-carousel/image-1.jpg",
+								"normal": "data/image/image-carousel/image-1.jpg",
+								"small": "data/image/image-carousel/image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						}
@@ -92,8 +92,8 @@
 						"type": 0
 					},
 					"background": {
-						"normal": "data/image-with-content/background.jpg",
-						"small": "data/image-with-content/background.jpg",
+						"normal": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -149,8 +149,8 @@
 					"heading": "Use <span class='highlight'>Data</span> and <span class='highlight'>Targeting</span> to Spend Smart.",
 					"paragraph": "We know more about your customers than anyone else. Use the power of data to get your message in front of the right people, at the right time.",
 					"background": {
-						"normal": "data/image-with-content/background.jpg",
-						"small": "data/image-with-content/background.jpg",
+						"normal": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -165,8 +165,8 @@
 					"heading": "Let us tell your story. <span class='highlight'>Contact Kernel</span> to get started.",
 					"paragraph": "Creativity comes at all price points. Start with a great idea and then we scale to fit your budget",
 					"background": {
-						"normal": "data/image-with-content/background.jpg",
-						"small": "data/image-with-content/background.jpg",
+						"normal": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -181,13 +181,13 @@
 							"heading": "Compliment television <br/>spend with Digital",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
-								"normal": "data/image-call-to-actions/image-tv.jpg",
-								"small": "data/image-call-to-actions/image-tv.jpg",
+								"normal": "data/image/image-call-to-actions/image-tv.jpg",
+								"small": "data/image/image-call-to-actions/image-tv.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
-								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -195,13 +195,13 @@
 							"heading": "A new era <br/>for Television",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
-								"normal": "data/image-call-to-actions/image-digital.jpg",
-								"small": "data/image-call-to-actions/image-digital.jpg",
+								"normal": "data/image/image-call-to-actions/image-digital.jpg",
+								"small": "data/image/image-call-to-actions/image-digital.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image-call-to-actions/image-digital-blurred.jpg",
-								"small": "data/image-call-to-actions/image-digital-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/image-digital-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-digital-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						}

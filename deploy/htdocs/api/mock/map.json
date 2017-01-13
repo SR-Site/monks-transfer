@@ -15,8 +15,8 @@
 						"type": 2
 					},
 					"background": {
-						"normal": "data/hero-secondary/background.jpg",
-						"small": "data/hero-secondary/background.jpg",
+						"normal": "data/image/hero-secondary/background.jpg",
+						"small": "data/image/hero-secondary/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}

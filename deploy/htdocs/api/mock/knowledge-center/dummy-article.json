@@ -7,8 +7,8 @@
 				"id": "heroTertiary",
 				"data": {
 					"background": {
-						"normal": "data/hero-tertiary/background.jpg",
-						"small": "data/hero-tertiary/background.jpg",
+						"normal": "data/image/hero-tertiary/background.jpg",
+						"small": "data/image/hero-tertiary/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}

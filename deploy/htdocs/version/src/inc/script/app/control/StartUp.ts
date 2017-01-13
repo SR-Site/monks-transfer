@@ -10,6 +10,8 @@ import ITask from "lib/temple/control/sequence/task/ITask";
 import DevBarTask from "app/control/DevBarTask";
 import Log from 'lib/temple/util/Log';
 import {EnvironmentNames} from "../data/enum/ConfigNames";
+import LoadInitTask from "./LoadInitTask";
+import InitLocaleTask from "./InitLocaleTask";
 
 // localization
 //import InitLocaleTask from "app/control/InitLocaleTask";
@@ -53,8 +55,11 @@ class StartUp
 			sequence.add(new DevBarTask());
 		}
 
+		sequence.add(new LoadInitTask());
+
+
 		// add your own tasks
-		//sequence.add(new InitLocaleTask());
+		sequence.add(new InitLocaleTask());
 
 		// do this last
 		sequence.add(new MethodTask(callback));

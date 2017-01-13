@@ -1,0 +1,28 @@
+{
+	"data": {
+		"layout": {
+			"navigation": [
+				{}
+			],
+			"footer": {
+
+			},
+			"slideOutPanel": {
+				"contact": {
+					"subHeading": "Get Started Today.",
+					"heading": "Lets Talk! Tell Us How We Can Help You Advertise",
+					"submitLabel": "Send"
+				}
+			}
+		},
+		"language": {
+			"translations": [
+				{
+					"country": "us",
+					"language": "en"
+				}
+			]
+		}
+	},
+	"statusCode": 200
+}

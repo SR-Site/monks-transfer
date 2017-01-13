@@ -2,8 +2,6 @@ import DefaultPageController from "app/page/DefaultPageController";
 import IndexPageViewModel from "app/page/index/IndexPageViewModel";
 import CallbackCounter from "../../util/CallbackCounter";
 import * as Gaia from "lib/gaia/api/Gaia";
-import Promise = require("bluebird");
-import ko = require("knockout");
 import KeyCode from "../../../lib/temple/util/key/KeyCode";
 import PageLoaderController from "../../component/page-loader/PageLoaderController";
 import DataManager from "../../data/DataManager";
@@ -11,8 +9,10 @@ import FooterController from "../../component/footer/FooterController";
 import HeaderController from "../../component/header/HeaderController";
 import ButtonStartAdvertisingController from "../../component/button/button-start-advertising/ButtonStartAdvertisingController";
 import MenuController from "../../component/menu/MenuController";
-import CommonEvent from "../../../lib/temple/event/CommonEvent";
 import MenuEvent from "../../event/MenuEvent";
+import GlobalSlideoutPanelController from "../../component/slideout-panel/global-slideout-panel/GlobalSlideoutPanelController";
+import Promise = require("bluebird");
+import ko = require("knockout");
 
 class IndexPageController extends DefaultPageController<IndexPageViewModel>
 {
@@ -22,6 +22,9 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	 * @type {CallbackCounter}
 	 */
 	public callbackCounter: CallbackCounter = new CallbackCounter();
+
+	private _dataManager: DataManager = DataManager.getInstance();
+
 	/**
 	 * @private
 	 * @property _beforeGoto
@@ -117,12 +120,39 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 
 	/**
 	 * @private
+	 * @method handlePanelReady
+	 */
+	private handlePanelReady(controller: GlobalSlideoutPanelController): void
+	{
+		this._dataManager.panelController = controller;
+	}
+
+	/**
+	 * @public
+	 * @method closePane;
+	 */
+	public closePanel(): Promise<any>
+	{
+		if(this._dataManager.panelController.isOpen())
+		{
+			return this._dataManager.panelController.transitionOut();
+		}
+		else
+		{
+			return Promise.resolve();
+		}
+	}
+
+	/**
+	 * @private
 	 * @method handleBeforeGoto
 	 */
 	private handleBeforeGoto(): void
 	{
 		if(this._headerController.menuIsActive)
 		{
+			this.closePanel();
+
 			this._menuController.transitionOut()
 				.then(() =>
 				{
@@ -132,7 +162,7 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 		}
 		else
 		{
-			this._beforeGoto()
+			this.closePanel().then(() =>this._beforeGoto());
 		}
 	}
 

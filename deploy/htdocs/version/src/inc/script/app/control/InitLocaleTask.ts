@@ -6,14 +6,14 @@ import LocaleManager from "lib/temple/locale/LocaleManager";
 import LocaleKnockoutBinding from "lib/temple/locale/LocaleKnockoutBinding";
 import LocaleGaiaHistoryHook from "lib/gaia/router/locale/LocaleGaiaHistoryHook";
 import Log from 'lib/temple/util/Log';
-import JSONLocaleProvider from "../../lib/temple/locale/provider/JSONLocaleProvider";
+// import JSONLocaleProvider from "../../lib/temple/locale/provider/JSONLocaleProvider";
 import CommonEvent from "../../lib/temple/event/CommonEvent";
 import {VariableNames} from "../data/enum/ConfigNames";
 
 /*
  * Choose your provider
  */
-//import JSONLocaleProvider from "lib/temple/locale/provider/JSONLocaleProvider";
+import JSONLocaleProvider from "lib/temple/locale/provider/JSONLocaleProvider";
 //import JSONPLocaleProvider from "lib/temple/locale/provider/JSONPLocaleProvider";
 //import XMLLocaleProvider from "lib/temple/locale/provider/XMLLocaleProvider";
 //import XMLPLocaleProvider from "lib/temple/locale/provider/XMLPLocaleProvider";
@@ -52,8 +52,8 @@ class InitLocaleTask extends AbstractTask
 		new LocaleKnockoutBinding();
 		LocaleManager.getInstance().setFallbackLocale(this._fallbackLocale);
 
-		// optional, add aliases for mapping http://yourwebsite/nl to http://yourwebsite/nl_NL
-		LocaleManager.getInstance().addAlias('nl', 'nl_NL');
+		var jsonProvider= new JSONLocaleProvider(LocaleManager.getInstance());
+		jsonProvider.addLocaleFile('en_US', 'data/locale/en_US.json', true);
 
 
 		// choose your poison!

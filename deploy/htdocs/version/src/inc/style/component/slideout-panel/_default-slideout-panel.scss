@@ -1,0 +1,46 @@
+.default-slideout-panel {
+	position: fixed;
+	@include size(100%, 100%);
+	background-color: white;
+	max-width: $sizeGrid*15;
+	@include pos(0, 0, auto, auto);
+	z-index: zindex($layout, panel);
+	transform: translate(100%, 0);
+
+	.component-button-circle-close {
+		position: absolute;
+		@include pos($sizeGrid, $sizeGrid, auto, auto);
+		z-index: 1;
+	}
+
+	// Panel body
+	.panel-body {
+		height: 100%;
+
+		.scroll-wrapper {
+			&.has-scroll { }
+		}
+
+		> * {
+			height: 100%;
+		}
+
+		.panel-inner-content {
+			padding: $sizeGrid*3 $sizeGrid * 3 $sizeGrid;
+		}
+	}
+
+	// Open State
+	&.is-open {
+		transform: translate(0, 0);
+	}
+}
+
+
+.slideout-panel-mask {
+	position: fixed;
+	background-color: rgba(#000, 0.3);
+	opacity: 0;
+	display: none;
+	z-index: zindex($layout, panelOverlay);
+}

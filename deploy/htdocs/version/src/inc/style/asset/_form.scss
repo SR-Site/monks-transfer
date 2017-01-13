@@ -51,10 +51,9 @@
 				font-size: 1.3rem;
 			}
 
-			~ .focus-border { // todo grow on text-input-width
+			~ .focus-border { // todo grow on text-input-width?
 				width: 50%;
 			}
-
 		}
 	}
 
@@ -68,6 +67,14 @@
 
 	// Invalid State
 	&.invalid { }
+}
+
+// Input Text Holder
+.text-input-holder {
+
+	&:not(:first-child) {
+		margin-top: $sizeGrid/2;
+	}
 }
 
 form {

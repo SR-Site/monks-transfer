@@ -10,8 +10,8 @@
 					"heading": "page not found",
 					"paragraph": "The page you were looking for doesn't exist.",
 					"background": {
-						"normal": "data/page-not-found/background.jpg",
-						"small": "data/page-not-found/background.jpg",
+						"normal": "data/image/page-not-found/background.jpg",
+						"small": "data/image/page-not-found/background.jpg",
 						"alt": "Background image alt text"
 					},
 					"link": {

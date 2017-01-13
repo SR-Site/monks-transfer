@@ -19,6 +19,11 @@
 	} --><!-- /ko -->
 
 	<!-- ko component: {
+		name: 'slideout-panel/global-slideout-panel',
+		onComplete: $root.controller.callbackCounter.get($root.controller.handlePanelReady.bind($root.controller))
+	} --><!-- /ko -->
+
+	<!-- ko component: {
 		name: 'page-loader',
 		onComplete: $root.controller.callbackCounter.get($root.controller.handlePageLoaderReady.bind($root.controller))
 	} --><!-- /ko -->
@@ -37,6 +42,21 @@
 		}
 	} --><!-- /ko -->
 
+	<button class="button-test" style="
+		position:fixed;
+		padding: 1rem;
+		border: 0;
+		top:50%;
+		right:0;
+		transform: translate(0, -50%);
+		-webkit-transform: translate(0, -50%);
+		z-index: 99;
+		text-transform: uppercase;
+		background-color: #0077bc;
+		color: white;
+	" data-bind="tap: (function(){dataManager.panelController.transitionIn($root.PanelBlocks.CONTACT)})">
+		OPEN CONTACT PANEL
+	</button>
 
 	<div class="grid">
 		<div class="base-grid regular-grid" data-bind="foreach: new Array(40)">

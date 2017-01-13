@@ -17,7 +17,7 @@
 		content: '';
 		position: absolute;
 		background: white;
-		z-index: length($layout) + 1;
+		z-index: zindex($layout, siteFrame);
 	}
 
 	&:after {

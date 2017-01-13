@@ -16,8 +16,8 @@
 						"type": 2
 					},
 					"background": {
-						"normal": "data/image-with-content/background.jpg",
-						"small": "data/image-with-content/background.jpg",
+						"normal": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -34,8 +34,8 @@
 						"type": 2
 					},
 					"background": {
-						"normal": "data/hero-secondary/background.jpg",
-						"small": "data/hero-secondary/background.jpg",
+						"normal": "data/image/hero-secondary/background.jpg",
+						"small": "data/image/hero-secondary/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -44,8 +44,8 @@
 				"id": "heroTertiary",
 				"data": {
 					"background": {
-						"normal": "data/hero-tertiary/background.jpg",
-						"small": "data/hero-tertiary/background.jpg",
+						"normal": "data/image/hero-tertiary/background.jpg",
+						"small": "data/image/hero-tertiary/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -101,13 +101,13 @@
 							"heading": "Television",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
-								"normal": "data/image-call-to-actions/image-tv.jpg",
-								"small": "data/image-call-to-actions/image-tv.jpg",
+								"normal": "data/image/image-call-to-actions/image-tv.jpg",
+								"small": "data/image/image-call-to-actions/image-tv.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
-								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -115,13 +115,13 @@
 							"heading": "Digital",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
-								"normal": "data/image-call-to-actions/image-digital.jpg",
-								"small": "data/image-call-to-actions/image-digital.jpg",
+								"normal": "data/image/image-call-to-actions/image-digital.jpg",
+								"small": "data/image/image-call-to-actions/image-digital.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image-call-to-actions/image-digital-blurred.jpg",
-								"small": "data/image-call-to-actions/image-digital-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/image-digital-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-digital-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -129,13 +129,13 @@
 							"heading": "Creative <br/>services",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
-								"normal": "data/image-call-to-actions/image-creative.jpg",
-								"small": "data/image-call-to-actions/image-creative.jpg",
+								"normal": "data/image/image-call-to-actions/image-creative.jpg",
+								"small": "data/image/image-call-to-actions/image-creative.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image-call-to-actions/image-creative-blurred.jpg",
-								"small": "data/image-call-to-actions/image-creative-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/image-creative-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-creative-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						}
@@ -150,24 +150,24 @@
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
 							"image": {
-								"normal": "data/image-carousel/image-1.jpg",
-								"small": "data/image-carousel/image-1.jpg",
+								"normal": "data/image/image-carousel/image-1.jpg",
+								"small": "data/image/image-carousel/image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
 							"image": {
-								"normal": "data/image-carousel/image-2.jpg",
-								"small": "data/image-carousel/image-2.jpg",
+								"normal": "data/image/image-carousel/image-2.jpg",
+								"small": "data/image/image-carousel/image-2.jpg",
 								"alt": "Background image alt text"
 							}
 						},
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
 							"image": {
-								"normal": "data/image-carousel/image-1.jpg",
-								"small": "data/image-carousel/image-1.jpg",
+								"normal": "data/image/image-carousel/image-1.jpg",
+								"small": "data/image/image-carousel/image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						}
@@ -190,8 +190,8 @@
 						"type": 0
 					},
 					"background": {
-						"normal": "data/image-with-content/background.jpg",
-						"small": "data/image-with-content/background.jpg",
+						"normal": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -212,8 +212,8 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"image": {
-								"normal": "data/latest/latest-article-image-1.jpg",
-								"small": "data/latest/latest-article-image-1.jpg",
+								"normal": "data/image/latest/latest-article-image-1.jpg",
+								"small": "data/image/latest/latest-article-image-1.jpg",
 								"alt": "Background image alt text"
 							},
 							"tags": [
@@ -235,8 +235,8 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"image": {
-								"normal": "data/latest/latest-article-image-2.jpg",
-								"small": "data/latest/latest-article-image-2.jpg",
+								"normal": "data/image/latest/latest-article-image-2.jpg",
+								"small": "data/image/latest/latest-article-image-2.jpg",
 								"alt": "Background image alt text"
 							},
 							"tags": [
@@ -258,8 +258,8 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"image": {
-								"normal": "data/latest/latest-article-image-2.jpg",
-								"small": "data/latest/latest-article-image-2.jpg",
+								"normal": "data/image/latest/latest-article-image-2.jpg",
+								"small": "data/image/latest/latest-article-image-2.jpg",
 								"alt": "Background image alt text"
 							},
 							"tags": [
@@ -281,8 +281,8 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"image": {
-								"normal": "data/latest/latest-article-image-1.jpg",
-								"small": "data/latest/latest-article-image-1.jpg",
+								"normal": "data/image/latest/latest-article-image-1.jpg",
+								"small": "data/image/latest/latest-article-image-1.jpg",
 								"alt": "Background image alt text"
 							},
 							"tags": [
@@ -333,8 +333,8 @@
 							"heading": "Dream",
 							"paragraph": "They are open to possibility",
 							"background": {
-								"normal": "data/path-to-purchase/background-1.jpg",
-								"small": "data/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-1.jpg",
+								"small": "data/image/path-to-purchase/background-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -342,8 +342,8 @@
 							"heading": "Search",
 							"paragraph": "They make a descision to",
 							"background": {
-								"normal": "data/path-to-purchase/background-1.jpg",
-								"small": "data/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-1.jpg",
+								"small": "data/image/path-to-purchase/background-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -351,8 +351,8 @@
 							"heading": "Purchase",
 							"paragraph": "They begin shopping",
 							"background": {
-								"normal": "data/path-to-purchase/background-1.jpg",
-								"small": "data/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-1.jpg",
+								"small": "data/image/path-to-purchase/background-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -360,8 +360,8 @@
 							"heading": "Ownership",
 							"paragraph": "They evaluate their options",
 							"background": {
-								"normal": "data/path-to-purchase/background-1.jpg",
-								"small": "data/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-1.jpg",
+								"small": "data/image/path-to-purchase/background-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -369,8 +369,8 @@
 							"heading": "Support",
 							"paragraph": "They are making the purchase",
 							"background": {
-								"normal": "data/path-to-purchase/background-1.jpg",
-								"small": "data/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-1.jpg",
+								"small": "data/image/path-to-purchase/background-1.jpg",
 								"alt": "Background image alt text"
 							}
 						}
@@ -392,8 +392,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-1.jpg",
+								"small": "data/image/persona-selector/persona-background-image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -408,8 +408,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-1.jpg",
+								"small": "data/image/persona-selector/persona-background-image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -424,8 +424,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-1.jpg",
+								"small": "data/image/persona-selector/persona-background-image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -440,8 +440,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-1.jpg",
+								"small": "data/image/persona-selector/persona-background-image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						}
@@ -457,8 +457,8 @@
 					"name": "John Doe",
 					"description": "Foo bar",
 					"image": {
-						"normal": "data/quote/person.jpg",
-						"small": "data/quote/person.jpg",
+						"normal": "data/image/quote/person.jpg",
+						"small": "data/image/quote/person.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -508,8 +508,8 @@
 						"name": "Peter Johnson",
 						"role": "Sales Manager",
 						"image": {
-							"normal": "data/blog-post/blog-post-profile-image.jpg",
-							"small": "data/blog-post/blog-post-profile-image.jpg",
+							"normal": "data/image/blog-post/blog-post-profile-image.jpg",
+							"small": "data/image/blog-post/blog-post-profile-image.jpg",
 							"alt": "Peter Johnson"
 						}
 					},
@@ -549,8 +549,8 @@
 				"data": {
 					"marginTop": 2,
 					"image": {
-						"small": "data/small-image-left/image.jpg",
-						"normal": "data/small-image-left/image.jpg",
+						"small": "data/image/small-image-left/image.jpg",
+						"normal": "data/image/small-image-left/image.jpg",
 						"alt": "Image"
 					}
 				}
@@ -568,8 +568,8 @@
 						"type": 2
 					},
 					"background": {
-						"normal": "data/hero-secondary/background.jpg",
-						"small": "data/hero-secondary/background.jpg",
+						"normal": "data/image/hero-secondary/background.jpg",
+						"small": "data/image/hero-secondary/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -666,8 +666,8 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"image": {
-								"normal": "data/latest/latest-article-image-1.jpg",
-								"small": "data/latest/latest-article-image-1.jpg",
+								"normal": "data/image/latest/latest-article-image-1.jpg",
+								"small": "data/image/latest/latest-article-image-1.jpg",
 								"alt": "Background image alt text"
 							},
 							"tags": [
@@ -689,8 +689,8 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"image": {
-								"normal": "data/latest/latest-article-image-2.jpg",
-								"small": "data/latest/latest-article-image-2.jpg",
+								"normal": "data/image/latest/latest-article-image-2.jpg",
+								"small": "data/image/latest/latest-article-image-2.jpg",
 								"alt": "Background image alt text"
 							},
 							"tags": [
@@ -712,8 +712,8 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"image": {
-								"normal": "data/latest/latest-article-image-2.jpg",
-								"small": "data/latest/latest-article-image-2.jpg",
+								"normal": "data/image/latest/latest-article-image-2.jpg",
+								"small": "data/image/latest/latest-article-image-2.jpg",
 								"alt": "Background image alt text"
 							},
 							"tags": [
@@ -735,8 +735,8 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"image": {
-								"normal": "data/latest/latest-article-image-1.jpg",
-								"small": "data/latest/latest-article-image-1.jpg",
+								"normal": "data/image/latest/latest-article-image-1.jpg",
+								"small": "data/image/latest/latest-article-image-1.jpg",
 								"alt": "Background image alt text"
 							},
 							"tags": [
@@ -779,15 +779,9 @@
 						"name": "Samantha Smith",
 						"role": "Customer Service",
 						"image": {
-							"normal": "data/market-map/profile-image.jpg",
-							"small": "data/market-map/profile-image.jpg",
+							"normal": "data/image/market-map/profile-image.jpg",
+							"small": "data/image/market-map/profile-image.jpg",
 							"alt": "Samantha Smith"
-						},
-						"link": {
-							"label": "Read the FAQS",
-							"title": "Read the FAQS",
-							"target": "faq",
-							"type": 0
 						}
 					},
 					"searchLabel": "Search"

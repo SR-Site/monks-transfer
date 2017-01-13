@@ -10,6 +10,14 @@
 		transition: color 250ms ease(linear);
 	}
 
+	&.large {
+		@include size($sizeGrid);
+
+		.icon {
+			@include size(12px);
+		}
+	}
+
 	// Hover State
 	@include hover() {
 		background-color: $colorPrimary;

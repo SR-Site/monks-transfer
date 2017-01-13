@@ -86,7 +86,7 @@ let config: IConfig = {
 		[URLNames.API]: {url: `{${VariableNames.BASE}}api/v1/`}
 	},
 	properties: {
-		[PropertyNames.DEFAULT_LOCALE]: 'en_GB',
+		[PropertyNames.DEFAULT_LOCALE]: 'en_US',
 		[PropertyNames.MOCK_CONTENT]: true
 	}
 };

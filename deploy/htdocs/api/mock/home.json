@@ -16,8 +16,8 @@
 						"type": 2
 					},
 					"background": {
-						"normal": "data/image-with-content/background.jpg",
-						"small": "data/image-with-content/background.jpg",
+						"normal": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -38,8 +38,8 @@
 						"type": 0
 					},
 					"background": {
-						"normal": "data/image-with-content/background.jpg",
-						"small": "data/image-with-content/background.jpg",
+						"normal": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -60,8 +60,8 @@
 						"type": 0
 					},
 					"background": {
-						"normal": "data/image-with-content/background-2.jpg",
-						"small": "data/image-with-content/background-2.jpg",
+						"normal": "data/image/image-with-content/background-2.jpg",
+						"small": "data/image/image-with-content/background-2.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -82,8 +82,8 @@
 						"type": 0
 					},
 					"background": {
-						"normal": "data/image-with-content/background-3.jpg",
-						"small": "data/image-with-content/background-3.jpg",
+						"normal": "data/image/image-with-content/background-3.jpg",
+						"small": "data/image/image-with-content/background-3.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -118,13 +118,13 @@
 							"heading": "Television",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
-								"normal": "data/image-call-to-actions/image-tv.jpg",
-								"small": "data/image-call-to-actions/image-tv.jpg",
+								"normal": "data/image/image-call-to-actions/image-tv.jpg",
+								"small": "data/image/image-call-to-actions/image-tv.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image-call-to-actions/image-tv-blurred.jpg",
-								"small": "data/image-call-to-actions/image-tv-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -132,13 +132,13 @@
 							"heading": "Digital",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
-								"normal": "data/image-call-to-actions/image-digital.jpg",
-								"small": "data/image-call-to-actions/image-digital.jpg",
+								"normal": "data/image/image-call-to-actions/image-digital.jpg",
+								"small": "data/image/image-call-to-actions/image-digital.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image-call-to-actions/image-digital-blurred.jpg",
-								"small": "data/image-call-to-actions/image-digital-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/image-digital-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-digital-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -146,13 +146,13 @@
 							"heading": "Creative <br/>services",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
-								"normal": "data/image-call-to-actions/image-creative.jpg",
-								"small": "data/image-call-to-actions/image-creative.jpg",
+								"normal": "data/image/image-call-to-actions/image-creative.jpg",
+								"small": "data/image/image-call-to-actions/image-creative.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image-call-to-actions/image-creative-blurred.jpg",
-								"small": "data/image-call-to-actions/image-creative-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/image-creative-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-creative-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						}
@@ -175,8 +175,8 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"image": {
-								"normal": "data/latest/latest-article-image-1.jpg",
-								"small": "data/latest/latest-article-image-1.jpg",
+								"normal": "data/image/latest/latest-article-image-1.jpg",
+								"small": "data/image/latest/latest-article-image-1.jpg",
 								"alt": "Background image alt text"
 							},
 							"tags": [
@@ -198,8 +198,8 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"image": {
-								"normal": "data/latest/latest-article-image-2.jpg",
-								"small": "data/latest/latest-article-image-2.jpg",
+								"normal": "data/image/latest/latest-article-image-2.jpg",
+								"small": "data/image/latest/latest-article-image-2.jpg",
 								"alt": "Background image alt text"
 							},
 							"tags": [
@@ -221,8 +221,8 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"image": {
-								"normal": "data/latest/latest-article-image-2.jpg",
-								"small": "data/latest/latest-article-image-2.jpg",
+								"normal": "data/image/latest/latest-article-image-2.jpg",
+								"small": "data/image/latest/latest-article-image-2.jpg",
 								"alt": "Background image alt text"
 							},
 							"tags": [
@@ -244,8 +244,8 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"image": {
-								"normal": "data/latest/latest-article-image-1.jpg",
-								"small": "data/latest/latest-article-image-1.jpg",
+								"normal": "data/image/latest/latest-article-image-1.jpg",
+								"small": "data/image/latest/latest-article-image-1.jpg",
 								"alt": "Background image alt text"
 							},
 							"tags": [
@@ -281,8 +281,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-1.jpg",
+								"small": "data/image/persona-selector/persona-background-image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -297,8 +297,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-1.jpg",
+								"small": "data/image/persona-selector/persona-background-image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -313,8 +313,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-1.jpg",
+								"small": "data/image/persona-selector/persona-background-image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -329,8 +329,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/persona-selector/persona-background-image-1.jpg",
-								"small": "data/persona-selector/persona-background-image-1.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-1.jpg",
+								"small": "data/image/persona-selector/persona-background-image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						}

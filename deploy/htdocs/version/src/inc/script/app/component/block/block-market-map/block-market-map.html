@@ -1,7 +1,7 @@
 <div class="component-block-market-map" data-bind="with: data">
 
 	<div class="map-box abs-fill">
-		<img class="abs-fill fit-cover" src="data/market-map/map.jpg " />
+		<img class="abs-fill fit-cover" src="data/image/market-map/map.jpg " />
 	</div>
 
 	<div class="side-panel">
@@ -32,7 +32,7 @@
 			</div>
 		</div>
 
-		<a class="service-info" data-bind="gaiaOpenLink: service.link">
+		<button class="service-info button" data-bind="tap: $root.handleServiceClick.bind($root)">
 			<div class="profile-image bg-cover" data-bind="image: {
 			queries: [
 				[$root.MediaQueries.X_SMALL, service.image.normal ],
@@ -52,7 +52,7 @@
 					direction: $root.Direction.RIGHT
 				}
 			} --><!-- /ko -->
-		</a>
+		</button>
 	</div>
 
 	<form class="search-bar">

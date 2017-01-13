@@ -1,0 +1,33 @@
+{
+	"global": {
+		"cta": {
+
+		},
+		"form": {
+			"placeholder": {
+				"email": "Email Address",
+				"name": "Your Name",
+				"phone_number": "Phone Number",
+				"state": "State",
+				"city": "City",
+				"zipcode": "ZIP Code you want to advertise in",
+				"comments": "Comments",
+				"company": "Company Name"
+			},
+			"label": {
+
+			}
+		}
+	},
+	"notification": {
+		"alert": {
+
+		},
+		"confirmation": {
+
+		}
+	},
+	"block": {
+
+	}
+}

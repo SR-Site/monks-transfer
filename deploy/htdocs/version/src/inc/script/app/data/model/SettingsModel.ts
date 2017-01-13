@@ -1,4 +1,5 @@
 import PageLayoutModel from "./PageLayoutModel";
+import InitDataModel from "./InitDataModel";
 
 /**
  * @class SettingsModel
@@ -7,6 +8,7 @@ import PageLayoutModel from "./PageLayoutModel";
 class SettingsModel
 {
 	public pageLayoutModel:PageLayoutModel = new PageLayoutModel();
+	public initDataModel:InitDataModel = new InitDataModel();
 }
 
 export default SettingsModel;

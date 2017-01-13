@@ -10,6 +10,7 @@ import ServiceModel from "./model/ServiceModel";
 import ContentService from "./service/ContentService";
 import DeviceStateTracker from "../../lib/temple/util/DeviceStateTracker";
 import PageLoaderController from "../component/page-loader/PageLoaderController";
+import GlobalSlideoutPanelController from "../component/slideout-panel/global-slideout-panel/GlobalSlideoutPanelController";
 
 
 /**
@@ -22,6 +23,7 @@ class DataManager
 
 	public deviceStateTracker:DeviceStateTracker = new DeviceStateTracker();
 	public pageLoader:PageLoaderController;
+	public panelController: GlobalSlideoutPanelController;
 
 	/**
 	 * @property gateway

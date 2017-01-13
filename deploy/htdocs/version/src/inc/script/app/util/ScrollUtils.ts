@@ -1,6 +1,6 @@
 import BrowserName from "../data/enum/BrowserName";
-import Browser from "lib/temple/util/Browser";
 import Promise = require("bluebird");
+import bowser = require('bowser');
 
 /**
  * @class ScrollUtils
@@ -10,10 +10,12 @@ import Promise = require("bluebird");
  */
 class ScrollUtils
 {
+	private static EVENT_NAMESPACE:string = '.ScrollUtils';
+
 	/**
 	 * @public static
 	 * @method set scrollTop
-	 * @param {number} y
+	 * @param y
 	 */
 	public static set scrollTop(y:number)
 	{
@@ -54,6 +56,31 @@ class ScrollUtils
 
 
 	/**
+	 * @private
+	 * @method disableScroll
+	 */
+	public static disableScroll(): void
+	{
+		// Save current pageY offset when panel is opened so we can force to stay at this position.
+		const pageY: number = window.pageYOffset;
+
+		$(window).on('scroll' + ScrollUtils.EVENT_NAMESPACE, (event: JQueryMouseEventObject) =>
+		{
+			event.preventDefault();
+			window.scrollTo(0, pageY);
+		});
+	}
+
+	/**
+	 * @private
+	 * @method enableScroll
+	 */
+	public static enableScroll(): void
+	{
+		$(window).off('scroll' + ScrollUtils.EVENT_NAMESPACE);
+	}
+
+	/**
 	 * Method used to get the scrollElement, for all browsers it's the document.body. Firefox and IE are the exception that uses
 	 * the html element for setting the scrollTop position.
 	 *
@@ -63,7 +90,7 @@ class ScrollUtils
 	 */
 	private static get scrollElement():Element
 	{
-		return Browser.name == BrowserName.FIREFOX || Browser.name == BrowserName.INTERNET_EXPLORER ? document.documentElement : document.body;
+		return bowser.name == BrowserName.FIREFOX || bowser.name == BrowserName.INTERNET_EXPLORER ? document.documentElement : document.body;
 	}
 }
 

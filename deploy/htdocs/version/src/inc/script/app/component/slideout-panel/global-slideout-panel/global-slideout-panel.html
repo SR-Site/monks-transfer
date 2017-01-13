@@ -1,0 +1,32 @@
+<div class="default-slideout-panel component-global-slideout-panel">
+	<!-- ko component: {
+		name: 'button/button-circle-close',
+		onComplete: $root.controller.callbackCounter.get(),
+		options: {
+			action: {
+				event: $root.handleCloseClick.bind($root)
+			},
+			size: $root.ButtonSize.LARGE
+		}
+	} --><!-- /ko -->
+
+	<div class="panel-body">
+		<div class="scroll-wrapper js-scroll-wrapper" data-bind="scrollbar:{
+		setContentSize:false
+	}">
+			<div class="scroll-content" data-scroll-content>
+				<div class="panel-inner-content" data-content-inner>
+					<!-- ko component: {
+						name: 'slideout-panel/global-slideout-panel/contact',
+						options: dataManager.settingsModel.initDataModel.layoutModel.getSlideOutPanel($root.PanelBlocks.CONTACT),
+						onComplete: $root.controller.callbackCounter.get($root.controller.handleComponentReady.bind($root.controller))
+					} --><!-- /ko -->
+				</div>
+			</div>
+
+			<div class="scroll-bar" data-scroll-bar><div class="knob" data-scroll-knob></div></div>
+		</div>
+	</div>
+</div>
+<div class="slideout-panel-mask abs-fill"></div>
+
