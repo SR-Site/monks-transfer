@@ -1,0 +1,98 @@
+{
+	"statusCode": 200,
+	"data": {
+		"blocks": [
+			{
+				"id": "articleTeaser",
+				"data": {
+					"heading": "Go Beyond High Profile Sport Events",
+					"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+					"image": {
+						"normal": "data/image/latest/latest-article-image-1.jpg",
+						"small": "data/image/latest/latest-article-image-1.jpg",
+						"alt": "Background image alt text"
+					},
+					"tags": [
+						{
+							"label": "Sport",
+							"title": "Sport",
+							"target": "home",
+							"type": 0
+						},
+						{
+							"label": "PDF",
+							"title": "PDF",
+							"target": "home",
+							"type": 0
+						}
+					]
+				}
+			},
+			{
+				"id": "articleTeaser",
+				"data": {
+					"heading": "Go Beyond High Profile Sport Events",
+					"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+					"image": {
+						"normal": "data/image/latest/latest-article-image-1.jpg",
+						"small": "data/image/latest/latest-article-image-1.jpg",
+						"alt": "Background image alt text"
+					},
+					"tags": [
+						{
+							"label": "Sport",
+							"title": "Sport",
+							"target": "home",
+							"type": 0
+						},
+						{
+							"label": "PDF",
+							"title": "PDF",
+							"target": "home",
+							"type": 0
+						}
+					]
+				}
+			},
+			{
+				"id": "info",
+				"data": {
+					"heading": "Don't know the difference between your break positions and  your cut-ins?",
+					"paragraph": "Want to learn the industry lingo? ",
+					"link": {
+						"label": "Read the FAQS",
+						"title": "Read the FAQS",
+						"target": "faq",
+						"type": 0
+					}
+				}
+			},
+			{
+				"id": "articleTeaser",
+				"data": {
+					"heading": "Go Beyond High Profile Sport Events",
+					"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+					"image": {
+						"normal": "data/image/latest/latest-article-image-1.jpg",
+						"small": "data/image/latest/latest-article-image-1.jpg",
+						"alt": "Background image alt text"
+					},
+					"tags": [
+						{
+							"label": "Sport",
+							"title": "Sport",
+							"target": "home",
+							"type": 0
+						},
+						{
+							"label": "PDF",
+							"title": "PDF",
+							"target": "home",
+							"type": 0
+						}
+					]
+				}
+			}
+		]
+	}
+}

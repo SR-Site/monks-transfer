@@ -1,12 +1,12 @@
 import IDefaultComponentOptions from "../IDefaultComponentOptions";
 import ILink from "../../../data/interface/action/ILink";
-import {ILatestArticleTeaserOptions} from "../../latest-article-teaser/ILatestArticleTeaserOptions";
+import {IBlockArticleTeaserOptions} from "../block-article-teaser/IBlockArticleTeaserOptions";
 
 export interface IBlockLatestOptions extends IDefaultComponentOptions
 {
-	heading:string;
-	link:ILink;
-	articles:Array<ILatestArticleTeaserOptions>
+	heading: string;
+	link: ILink;
+	articles: Array<IBlockArticleTeaserOptions>
 }
 
 export default IBlockLatestOptions;

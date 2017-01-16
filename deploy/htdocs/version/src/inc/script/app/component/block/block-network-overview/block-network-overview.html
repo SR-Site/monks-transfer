@@ -1,33 +1,41 @@
 <div class="component-block-network-overview" data-bind="with: data">
+	<div class="overrule-overlap network-list-wrapper">
+		<div class="js-draggable-container">
+			<div class="network-list js-draggable-element" data-bind="">
 
-	<div class="network-list" data-bind="">
+				<div class="network-row" data-bind="foreach: items">
+					<!-- ko if: $index() % 2 == 0 -->
+						<a class="network-list-item bg-contain" href="" data-bind="gaiaOpenLink: $data.link">
+							<span class="network-logo abs-fill bg-contain" data-bind="image: {
+							queries: [
+								[$root.MediaQueries.X_SMALL, image.normal ],
+								[$root.MediaQueries.SMALL, image.small]
+							],
+							state: $root.deviceState()
+						}"></span>
+						</a>
+					<!-- /ko -->
+				</div>
 
-		<div class="network-row" data-bind="foreach: items">
-			<!-- ko if: $index() % 2 == 0 -->
-				<a class="network-list-item bg-contain" href="" data-bind="gaiaOpenLink: $data.link, image: {
-				queries: [
-					[$root.MediaQueries.X_SMALL, image.normal ],
-					[$root.MediaQueries.SMALL, image.small]
-				],
-				state: $root.deviceState()
-				}">
-				</a>
-			<!-- /ko -->
+				<div class="network-row" data-bind="foreach: items">
+					<!-- ko ifnot: $index() % 2 == 0 -->
+						<a class="network-list-item bg-contain" href="" data-bind="gaiaOpenLink: $data.link">
+								<span class="network-logo abs-fill bg-contain" data-bind="image: {
+								queries: [
+									[$root.MediaQueries.X_SMALL, image.normal ],
+									[$root.MediaQueries.SMALL, image.small]
+								],
+								state: $root.deviceState()
+							}"></span>
+						</a>
+					<!-- /ko -->
+				</div>
+
+			</div>
 		</div>
-
-		<div class="network-row" data-bind="foreach: items">
-			<!-- ko ifnot: $index() % 2 == 0 -->
-			<a class="network-list-item bg-contain" href="" data-bind="gaiaOpenLink: $data.link, image: {
-				queries: [
-					[$root.MediaQueries.X_SMALL, image.normal ],
-					[$root.MediaQueries.SMALL, image.small]
-				],
-				state: $root.deviceState()
-				}">
-			</a>
-			<!-- /ko -->
-		</div>
-
+		<!-- ko component: {
+			name: 'scroll-bar',
+			onComplete: $root.controller.callbackCounter.get($root.controller.handleScrollBarReady.bind($root.controller))
+		} --><!-- /ko -->
 	</div>
-
 </div>

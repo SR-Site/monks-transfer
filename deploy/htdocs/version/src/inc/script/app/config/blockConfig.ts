@@ -109,5 +109,9 @@ export const blockConfig:IBlockConfig = {
 	networkOverview: {
 		id: Blocks.NETWORK_OVERVIEW,
 		type: BlockType.COMPONENT
+	},
+	articleTeaser: {
+		id: Blocks.ARTICLE_TEASER,
+		type: BlockType.COMPONENT
 	}
 };

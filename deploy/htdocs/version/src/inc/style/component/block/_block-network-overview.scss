@@ -1,7 +1,11 @@
 .component-block-network-overview {
 
-	.network-list {
+	.network-list-wrapper {
+		padding-bottom: $sizeGrid;
+	}
 
+	.network-list {
+		display: inline-block;
 	}
 
 	.network-row {
@@ -15,14 +19,30 @@
 		}
 	}
 
+	.network-logo {
+		opacity: .2;
+		transition: opacity .2s ease(easeInOut);
+	}
+
+	.component-scroll-bar {
+		left: $sizeGrid * 4;
+		right: $sizeGrid * 4;
+	}
+
 	.network-list-item {
+		@include size($sizeGrid*6);
 		display: inline-block;
 		filter: grayscale(100%);
-		@include size($sizeGrid*6);
 		border-left: 1px solid rgba(#323232, 0.2);
+		position: relative;
+		transition: filter .2s ease(easeInOut);
 
 		@include hover() {
 			filter: grayscale(0%);
+
+			.network-logo {
+				opacity: 1;
+			}
 		}
 	}
 }

@@ -9,15 +9,13 @@
 		}
 	} --><!-- /ko -->
 
-	<div class="content-items" data-bind="foreach: articles"> <!-- todo get articles from: api/filter-content/knowledge-center.json -->
-
-		<!-- todo: maybe you want blockComponents here, so they can be different -->
-
-		<!-- ko component: {
-			name: 'latest-article-teaser',
-			onComplete: $root.controller.callbackCounter.get(),
-			options: $data
-		} --><!-- /ko -->
+	<div class="content-items" data-bind="foreach: $root.items">
+		<!-- ko if: type == $root.BlockType.COMPONENT -->
+			<!-- ko component: {name: 'block/' + id, options: data, onComplete: $root.controller.callbackCounter.get($root.controller.handleDynamicComponentLoaded.bind($root.controller))} --><!-- /ko -->
+		<!-- /ko -->
+		<!-- ko if: type == $root.BlockType.PARTIAL -->
+			<!-- ko template: {name: id, options: data} --><!-- /ko -->
+		<!-- /ko -->
 	</div>
 
 	<!-- todo need design: load more/pagination -->

@@ -1,9 +1,9 @@
 define([
     "require",
     "exports",
-    'app/component/latest-article-teaser/LatestArticleTeaserController',
-    'app/component/latest-article-teaser/LatestArticleTeaserViewModel',
-    'text!app/component/latest-article-teaser/latest-article-teaser.html'
+    'app/component/block/block-article-teaser/BlockArticleTeaserController',
+    'app/component/block/block-article-teaser/BlockArticleTeaserViewModel',
+    'text!app/component/block/block-article-teaser/block-article-teaser.html'
 ], function (
     require,
     exports,

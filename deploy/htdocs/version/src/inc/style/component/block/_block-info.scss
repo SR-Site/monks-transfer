@@ -11,7 +11,7 @@
 
 	.inner-content {
 		padding: $sizeGrid*2 $sizeGrid $sizeGrid*2 $sizeGrid*2;
-		width: calc( 100% - #{$sizeGrid});
+		width: calc(100% - #{$sizeGrid});
 		background-color: $colorSecondary;
 		display: flex;
 		justify-content: space-between;
@@ -34,7 +34,7 @@
 	}
 
 	.description {
-		width: calc( 100% - #{$sizeGrid*11});
+		width: calc(100% - #{$sizeGrid*11});
 	}
 
 	.copy {
@@ -43,5 +43,20 @@
 
 	.component-button-main {
 		align-self: flex-end;
+	}
+
+	// Reduce the size if it's part of the load more block
+	.component-block-filter-content & {
+		@include size(16 * $sizeGrid, 8 * $sizeGrid);
+
+		.inner-content {
+			padding: $sizeGrid;
+			height: 100%;
+		}
+
+		.description {
+			width: calc(100% - #{$sizeGrid*3.5});
+		}
+
 	}
 }

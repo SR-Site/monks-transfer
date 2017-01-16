@@ -6,6 +6,8 @@ import StringUtils from "../../../lib/temple/util/type/StringUtils";
 import Promise = require("bluebird");
 import IPageLayout from "../interface/layout/IPageLayout";
 import IBlock from "../interface/block/IBlock";
+import {PropertyNames} from "../enum/ConfigNames";
+import configManagerInstance from "../../../lib/temple/config/configManagerInstance";
 
 class ContentService extends AbstractService
 {
@@ -15,7 +17,7 @@ class ContentService extends AbstractService
 	 * @method getInit
 	 * @returns {Promise<IGatewayResult<any>>}
 	 */
-	public getInit():Promise<IGatewayResult<any>>
+	public getInit(): Promise<IGatewayResult<any>>
 	{
 		return this.gateway.get(Endpoints.getEndpoint(Endpoints.INIT));
 	}
@@ -27,12 +29,13 @@ class ContentService extends AbstractService
 	 * @param {Object} slug The slug that's used for fetching detail pages
 	 * @returns {Promise<IGatewayResult<any>>}
 	 */
-	public getPageLayout(page:string):Promise<IGatewayResult<IPageLayout>>
+	public getPageLayout(page: string): Promise<IGatewayResult<IPageLayout>>
 	{
-		if(page.indexOf('?') > -1) {
+		if(page.indexOf('?') > -1)
+		{
 			page = page.substr(0, page.indexOf('?'));
 		}
-		
+
 		return this.gateway.get(
 			StringUtils.replaceVars(Endpoints.getEndpoint(Endpoints.PAGE_LAYOUT), {page: page})
 		)
@@ -49,7 +52,7 @@ class ContentService extends AbstractService
 	 * @param filter
 	 * @returns {Promise<IGatewayResult<any>>}
 	 */
-	public loadMore(endpoint:string, offset:number, limit:number, filter:number):Promise<IGatewayResult<Array<IBlock>>>
+	public loadMore(endpoint: string, offset: number, limit: number, filter: string): Promise<IGatewayResult<{blocks: Array<IBlock>}>>
 	{
 		return this.gateway.get(
 			StringUtils.replaceVars(endpoint, {

@@ -91,8 +91,16 @@ class BlockHowToAdvertiseController extends DefaultComponentController<BlockHowT
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
+
 	public destruct(): void
 	{
+		this._scrollBarController = null;
+
+		if(this._draggableInstance)
+		{
+			this._draggableInstance.destruct();
+			this._draggableInstance = null;
+		}
 
 		// always call this last
 		super.destruct();

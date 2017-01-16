@@ -577,7 +577,7 @@
 			{
 				"id": "filterContent",
 				"data": {
-					"endpoint": "api/content/knowledge-center",
+					"endpoint": "filter-content/knowledge-center.json",
 					"filterLabel": "Filters",
 					"filters": [
 						{
@@ -660,100 +660,6 @@
 								}
 							]
 						}
-					],
-					"articles": [
-						{
-							"heading": "Go Beyond High Profile Sport Events",
-							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
-							"image": {
-								"normal": "data/image/latest/latest-article-image-1.jpg",
-								"small": "data/image/latest/latest-article-image-1.jpg",
-								"alt": "Background image alt text"
-							},
-							"tags": [
-								{
-									"label": "Sport",
-									"title": "Sport",
-									"target": "home",
-									"type": 0
-								},
-								{
-									"label": "PDF",
-									"title": "PDF",
-									"target": "home",
-									"type": 0
-								}
-							]
-						},
-						{
-							"heading": "Go Beyond High Profile Sport Events",
-							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
-							"image": {
-								"normal": "data/image/latest/latest-article-image-2.jpg",
-								"small": "data/image/latest/latest-article-image-2.jpg",
-								"alt": "Background image alt text"
-							},
-							"tags": [
-								{
-									"label": "Sport",
-									"title": "Sport",
-									"target": "home",
-									"type": 0
-								},
-								{
-									"label": "PDF",
-									"title": "PDF",
-									"target": "home",
-									"type": 0
-								}
-							]
-						},
-						{
-							"heading": "Go Beyond High Profile Sport Events",
-							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
-							"image": {
-								"normal": "data/image/latest/latest-article-image-2.jpg",
-								"small": "data/image/latest/latest-article-image-2.jpg",
-								"alt": "Background image alt text"
-							},
-							"tags": [
-								{
-									"label": "Sport",
-									"title": "Sport",
-									"target": "home",
-									"type": 0
-								},
-								{
-									"label": "PDF",
-									"title": "PDF",
-									"target": "home",
-									"type": 0
-								}
-							]
-						},
-						{
-							"heading": "Go Beyond High Profile Sport Events",
-							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
-							"image": {
-								"normal": "data/image/latest/latest-article-image-1.jpg",
-								"small": "data/image/latest/latest-article-image-1.jpg",
-								"alt": "Background image alt text"
-							},
-							"tags": [
-								{
-									"label": "Sport",
-									"title": "Sport",
-									"target": "home",
-									"type": 0
-								},
-								{
-									"label": "PDF",
-									"title": "PDF",
-									"target": "home",
-									"type": 0
-								}
-							]
-						}
 					]
 				}
 			},
@@ -797,10 +703,194 @@
 				}
 			},
 			{
+				"id": "quote",
+				"data": {
+					"windowed": true,
+					"marginTop": 2,
+					"quote": "“Because of your skill, work and excellence so many doors have opend to us and we are poised to expand in some really huge ways.”",
+					"name": "John Doe",
+					"description": "Foo bar",
+					"image": {
+						"normal": "data/image/quote/person.jpg",
+						"small": "data/image/quote/person.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
 				"id": "networkOverview",
 				"data": {
 					"marginTop": 2,
 					"items": [
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
 						{
 							"image": {
 								"small": "data/image/network-overview/cnn.png",

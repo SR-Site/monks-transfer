@@ -28,6 +28,7 @@ class Blocks
 	public static INFO:string = 'block-info';
 	public static MARKET_MAP:string = 'block-market-map';
 	public static NETWORK_OVERVIEW:string = 'block-network-overview';
+	public static ARTICLE_TEASER:string = 'block-article-teaser';
 }
 
 
