@@ -1,0 +1,26 @@
+.component-scroll-bar {
+	@include size(auto, 8px);
+	@include pos(auto, 0, 0, 0);
+	background: #e4e5e5;
+	position: absolute;
+
+	.knob {
+		@include size(20%, 8px);
+		background: $colorSecondary;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: background-color 150ms ease-in, height 100ms ease-in, margin-top 100ms ease-in;
+		text-align: center;
+
+		&:hover {
+			background-color: $colorPrimary;
+		}
+	}
+
+	.theme-dark &
+	{
+		background-color: #000;
+	}
+}

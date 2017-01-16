@@ -6,12 +6,25 @@ import ko = require('knockout');
 
 class BlockHowToAdvertiseViewModel extends DefaultComponentViewModel<BlockHowToAdvertiseController, IBlockHowToAdvertiseOptions>
 {
+	public activeIndex:KnockoutObservable<number> = ko.observable(0);
+
+	/**
+	 * @public
+	 * @method handleStepClick
+	 * @param index
+	 */
+	public handleStepClick(index:number):void
+	{
+		this.activeIndex(index);
+	}
+
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct
 	 */
 	public destruct():void
 	{
+		this.activeIndex = null;
 
 		// always call this last
 		super.destruct();

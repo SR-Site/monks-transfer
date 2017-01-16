@@ -1,4 +1,3 @@
-import refdef from "def/ReferenceDefinitions";
 import ko = require('knockout');
 import ValidatorFieldAccessor from "./ValidatorFieldAccessor";
 import Destructible from "lib/temple/core/Destructible";
@@ -334,7 +333,9 @@ class KnockoutValidator extends Destructible
 		if(!(this instanceof KnockoutValidator))
 		{
 			_log.warn("validate() called from the wrong scope.");
-			if(typeof this._fields == 'undefined')
+
+
+			if(typeof (<any>this)._fields == 'undefined')
 			{
 				return;
 			}
@@ -1512,7 +1513,7 @@ class ValidatorField extends Destructible
 	{
 		if(typeof rule == 'boolean')
 		{
-			return value == rule;
+			return value == rule.toString();
 		}
 
 		if(typeof rule == 'string')

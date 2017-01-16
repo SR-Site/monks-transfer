@@ -15,7 +15,7 @@
 		<div class="advertisement-steps">
 			<div class="js-draggable-container">
 				<ul class="steps js-draggable-element" data-bind="foreach: data.steps">
-					<li class="step" data-bind="css: {'is-active': $index() === 0}">
+					<li class="step" data-bind="css: {'is-active': $index() === $root.activeIndex()}, tap: $root.handleStepClick.bind($root, $index())">
 						<figure>
 							<div class="icon abs-center" data-bind="icon: icon"></div>
 						</figure>
@@ -26,6 +26,10 @@
 					</li>
 				</ul>
 			</div>
+			<!-- ko component: {
+				name: 'scroll-bar',
+				onComplete: $root.controller.callbackCounter.get($root.controller.handleScrollBarReady.bind($root.controller))
+			} --><!-- /ko -->
 		</div>
 	</div>
 </div>

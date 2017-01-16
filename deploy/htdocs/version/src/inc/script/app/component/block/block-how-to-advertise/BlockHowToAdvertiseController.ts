@@ -5,23 +5,28 @@ import BlockHowToAdvertiseViewModel from 'app/component/block/block-how-to-adver
 
 import Log from "lib/temple/util/Log";
 import DraggableInstance from "../../../util/DraggableInstance";
+import ScrollBarController from "../../scroll-bar/ScrollBarController";
+import CommonEvent from "../../../../lib/temple/event/CommonEvent";
+import {IDraggableEventData} from "../../../util/DraggableInstance";
+import DataEvent from "../../../../lib/temple/event/DataEvent";
 
 class BlockHowToAdvertiseController extends DefaultComponentController<BlockHowToAdvertiseViewModel, IBlockHowToAdvertiseOptions>
 {
 	/**
-	 *	Instance of Log debug utility for debug logging
-	 *	@property _debug
-	 *	@private
+	 *    Instance of Log debug utility for debug logging
+	 *    @property _debug
+	 *    @private
 	 */
-	private _debug:Log = new Log('app.component.BlockHowToAdvertise');
+	private _debug: Log = new Log('app.component.BlockHowToAdvertise');
 
-	private _draggableInstance:DraggableInstance;
+	private _draggableInstance: DraggableInstance;
+	private _scrollBarController: ScrollBarController;
 
 	/**
-	 *	Overrides AbstractPageController.init()
-	 *	@method init
+	 *    Overrides AbstractPageController.init()
+	 *    @method init
 	 */
-	public init():void
+	public init(): void
 	{
 		super.init();
 
@@ -31,13 +36,15 @@ class BlockHowToAdvertiseController extends DefaultComponentController<BlockHowT
 			invert: true,
 			enableTrackPad: true
 		});
+
+		this._draggableInstance.addEventListener(CommonEvent.UPDATE, this.handleDraggableInstanceUpdate.bind(this));
 	}
 
 	/**
-	* @protected
-	* @method allComponentsLoaded
-	*/
-	protected allComponentsLoaded():void
+	 * @protected
+	 * @method allComponentsLoaded
+	 */
+	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new BlockHowToAdvertiseTransitionController(this.element, this);
 
@@ -45,10 +52,46 @@ class BlockHowToAdvertiseController extends DefaultComponentController<BlockHowT
 	}
 
 	/**
+	 * @public
+	 * @method handleScrollBarReady
+	 */
+	public handleScrollBarReady(controller: ScrollBarController): void
+	{
+		this._scrollBarController = controller;
+		this._scrollBarController.addEventListener(CommonEvent.UPDATE, this.handleScrollBarUpdate.bind(this));
+	}
+
+	/**
+	 * @private
+	 * @method handleScrollBarUpdate
+	 * @param event
+	 */
+	private handleScrollBarUpdate(event: DataEvent<IDraggableEventData>): void
+	{
+		if(this._draggableInstance)
+		{
+			this._draggableInstance.progress = event.data.progress;
+		}
+	}
+
+	/**
+	 * @private
+	 * @method handleDraggableInstanceUpdate
+	 * @param event
+	 */
+	private handleDraggableInstanceUpdate(event: DataEvent<IDraggableEventData>): void
+	{
+		if(this._scrollBarController)
+		{
+			this._scrollBarController.progress = event.data.progress;
+		}
+	}
+
+	/**
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 
 		// always call this last

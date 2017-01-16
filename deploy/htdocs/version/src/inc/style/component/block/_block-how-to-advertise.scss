@@ -15,6 +15,7 @@
 	.advertisement-steps {
 		@include size(100%, $sizeGrid * 8);
 		display: block;
+		padding-bottom: $sizeGrid;
 	}
 
 	.steps {
@@ -30,6 +31,8 @@
 		white-space: nowrap;
 		line-height: $sizeGrid * 7;
 		overflow: hidden;
+		transition: max-width .2s ease(easeInOut);
+		cursor: pointer;
 
 		figure {
 			@include size($sizeGrid * 7);
@@ -37,6 +40,8 @@
 			display: inline-block;
 			vertical-align: top;
 			border-radius: 100%;
+			background: transparent;
+			transition: background .2s ease(easeInOut);
 		}
 
 		.icon {
@@ -49,6 +54,12 @@
 			padding: $sizeGrid;
 			vertical-align: middle;
 			white-space: normal;
+		}
+
+		@include hover() {
+			figure {
+				background: $colorLightGrey;
+			}
 		}
 
 		&.is-active {
