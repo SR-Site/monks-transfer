@@ -84,8 +84,7 @@ definitions:
         description: the route/url.
       type:
         type: integer
-        description: 0 = INTERNAL, 1 = EXTERNAL, 2 = SCROLL_TO_NEXT_SECTION
-        enum: [0, 1, 2]
+        enum: [INTERNAL,EXTERNAL,SCROLL_TO_NEXT_SECTION]
   Background:
     type: object
     description: "Default background object"
@@ -102,16 +101,12 @@ definitions:
   marginTop:
     type: integer
     description: The offset/spacing of a component
-    enum: [1,2,3,4]
   alignment:
     type: integer
-    default: 0
-    description: 0 = LEFT, 1 = RIGHT
-    enum: [0, 1]
+    enum: [LEFT, RIGHT]
   personaType:
     type: integer
-    description: 0 = SMALL_BUSINESS, 1 = AUTOMOTIVE, 2 = ENTERPRISE, 3 = LOCAL_MEDIA_BUYING
-    enum: [0,1,2,3]
+    enum: [SMALL_BUSINESS,AUTOMOTIVE,ENTERPRISE,LOCAL_MEDIA_BUYING]
   Error:
     type: object
     description: "Default error object"

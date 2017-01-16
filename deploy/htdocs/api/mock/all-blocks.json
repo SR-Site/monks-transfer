@@ -786,6 +786,218 @@
 					},
 					"searchLabel": "Search"
 				}
+			},
+			{
+				"id": "smallInfo",
+				"data": {
+					"marginTop": 4,
+					"windowed": true,
+					"heading": "We got <span class='highlight'>Networks</span> for Days",
+					"paragraph": "With over 50 networks to choose from, in blandit lorem ipsum dolor sit"
+				}
+			},
+			{
+				"id": "networkOverview",
+				"data": {
+					"marginTop": 2,
+					"items": [
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						}
+					]
+				}
 			}
 		]
 	}
