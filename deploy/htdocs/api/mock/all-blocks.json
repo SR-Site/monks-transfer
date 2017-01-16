@@ -6,7 +6,7 @@
 			{
 				"id": "heroMain",
 				"data": {
-					"overlap": true,
+					"overlap": false,
 					"heading": "Never stop reaching",
 					"paragraph": "The right time and place to advertise your business",
 					"link": {
@@ -25,6 +25,7 @@
 			{
 				"id": "heroSecondary",
 				"data": {
+					"overlap": true,
 					"heading": "We'll Help you Find Your Format",
 					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
 					"link": {
@@ -38,6 +39,95 @@
 						"small": "data/image/hero-secondary/background.jpg",
 						"alt": "Background image alt text"
 					}
+				}
+			},
+			{
+				"id": "filterContent",
+				"data": {
+					"endpoint": "filter-content/knowledge-center.json",
+					"filterLabel": "Filters",
+					"filters": [
+						{
+							"type": 0,
+							"label": "Category",
+							"options": [
+								{
+									"value": "sport",
+									"label": "sport"
+								},
+								{
+									"value": "test",
+									"label": "test"
+								}
+							]
+						},
+						{
+							"type": 1,
+							"label": "Document Type",
+							"options": [
+								{
+									"value": "sport 1",
+									"label": "sport 1"
+								},
+								{
+									"value": "test 1",
+									"label": "test 1"
+								},
+								{
+									"value": "sport 1",
+									"label": "sport 1"
+								},
+								{
+									"value": "test 1",
+									"label": "test 1"
+								},
+								{
+									"value": "sport 1",
+									"label": "sport 1"
+								},
+								{
+									"value": "test 1",
+									"label": "test 1"
+								}
+							]
+						},
+						{
+							"type": 2,
+							"label": "Platform",
+							"options": [
+								{
+									"value": "sport 2",
+									"label": "sport 2"
+								},
+								{
+									"value": "test 3",
+									"label": "test 3"
+								},
+								{
+									"value": "sport 1",
+									"label": "sport 1"
+								},
+								{
+									"value": "test 1",
+									"label": "test 1"
+								}
+							]
+						},
+						{
+							"type": 3,
+							"label": "Market",
+							"options": [
+								{
+									"value": "sport",
+									"label": "sport"
+								},
+								{
+									"value": "test",
+									"label": "test"
+								}
+							]
+						}
+					]
 				}
 			},
 			{
@@ -545,122 +635,15 @@
 				}
 			},
 			{
-				"id": "smallImageLeft",
+				"id": "smallImage",
 				"data": {
 					"marginTop": 2,
+					"alignment": 0,
 					"image": {
 						"small": "data/image/small-image-left/image.jpg",
 						"normal": "data/image/small-image-left/image.jpg",
 						"alt": "Image"
 					}
-				}
-			},
-			{
-				"id": "heroSecondary",
-				"data": {
-					"overlap": true,
-					"heading": "We'll Help you Find Your Format",
-					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
-					"link": {
-						"label": "Find out more",
-						"title": "Find out more",
-						"target": "/advertising-solutions",
-						"type": 2
-					},
-					"background": {
-						"normal": "data/image/hero-secondary/background.jpg",
-						"small": "data/image/hero-secondary/background.jpg",
-						"alt": "Background image alt text"
-					}
-				}
-			},
-			{
-				"id": "filterContent",
-				"data": {
-					"endpoint": "filter-content/knowledge-center.json",
-					"filterLabel": "Filters",
-					"filters": [
-						{
-							"type": 0,
-							"label": "Category",
-							"options": [
-								{
-									"value": "sport",
-									"label": "sport"
-								},
-								{
-									"value": "test",
-									"label": "test"
-								}
-							]
-						},
-						{
-							"type": 1,
-							"label": "Document Type",
-							"options": [
-								{
-									"value": "sport 1",
-									"label": "sport 1"
-								},
-								{
-									"value": "test 1",
-									"label": "test 1"
-								},
-								{
-									"value": "sport 1",
-									"label": "sport 1"
-								},
-								{
-									"value": "test 1",
-									"label": "test 1"
-								},
-								{
-									"value": "sport 1",
-									"label": "sport 1"
-								},
-								{
-									"value": "test 1",
-									"label": "test 1"
-								}
-							]
-						},
-						{
-							"type": 2,
-							"label": "Platform",
-							"options": [
-								{
-									"value": "sport 2",
-									"label": "sport 2"
-								},
-								{
-									"value": "test 3",
-									"label": "test 3"
-								},
-								{
-									"value": "sport 1",
-									"label": "sport 1"
-								},
-								{
-									"value": "test 1",
-									"label": "test 1"
-								}
-							]
-						},
-						{
-							"type": 3,
-							"label": "Market",
-							"options": [
-								{
-									"value": "sport",
-									"label": "sport"
-								},
-								{
-									"value": "test",
-									"label": "test"
-								}
-							]
-						}
-					]
 				}
 			},
 			{

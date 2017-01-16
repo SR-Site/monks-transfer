@@ -1,0 +1,17 @@
+.component-block-small-image {
+	margin-left: $sizeGrid * 7;
+	margin-right: $sizeGrid * 7;
+
+	img {
+		display: inline-block;
+		max-width: $sizeGrid * 11;
+	}
+
+	&.align-left {
+		text-align: left;
+	}
+
+	&.align-right {
+		text-align: right;
+	}
+}

@@ -90,8 +90,8 @@ export const blockConfig:IBlockConfig = {
 		id: Blocks.TEXT,
 		type: BlockType.COMPONENT
 	},
-	smallImageLeft: {
-		id: Blocks.SMALL_IMAGE_LEFT,
+	smallImage: {
+		id: Blocks.SMALL_IMAGE,
 		type: BlockType.COMPONENT
 	},
 	filterContent: {
@@ -112,6 +112,14 @@ export const blockConfig:IBlockConfig = {
 	},
 	articleTeaser: {
 		id: Blocks.ARTICLE_TEASER,
+		type: BlockType.COMPONENT
+	},
+	storyInfoImages: {
+		id: Blocks.STORY_INFO_IMAGES,
+		type: BlockType.COMPONENT
+	},
+	programModule: {
+		id: Blocks.PROGRAM_MODULE,
 		type: BlockType.COMPONENT
 	}
 };

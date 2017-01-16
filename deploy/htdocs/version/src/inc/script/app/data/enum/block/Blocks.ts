@@ -23,12 +23,14 @@ class Blocks
 	public static BLOG_POST:string = 'block-blog-post';
 	public static QUOTE_SECONDARY:string = 'block-quote-secondary';
 	public static TEXT:string = 'block-text';
-	public static SMALL_IMAGE_LEFT:string = 'block-small-image-left';
+	public static SMALL_IMAGE:string = 'block-small-image';
 	public static FILTER_CONTENT:string = 'block-filter-content';
 	public static INFO:string = 'block-info';
 	public static MARKET_MAP:string = 'block-market-map';
 	public static NETWORK_OVERVIEW:string = 'block-network-overview';
 	public static ARTICLE_TEASER:string = 'block-article-teaser';
+	public static STORY_INFO_IMAGES:string = 'block-story-info-images';
+	public static PROGRAM_MODULE:string = 'block-program-module';
 }
 
 

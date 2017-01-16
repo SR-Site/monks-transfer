@@ -1,9 +1,9 @@
 define([
     "require",
     "exports",
-    'app/component/block/block-small-image-left/BlockSmallImageLeftController',
-    'app/component/block/block-small-image-left/BlockSmallImageLeftViewModel',
-    'text!app/component/block/block-small-image-left/block-small-image-left.html'
+    'app/component/block/block-story-info-images/BlockStoryInfoImagesController',
+    'app/component/block/block-story-info-images/BlockStoryInfoImagesViewModel',
+    'text!app/component/block/block-story-info-images/block-story-info-images.html'
 ], function (
     require,
     exports,
