@@ -2,6 +2,7 @@
 	"statusCode": 200,
 	"data": {
 		"pageTitle": "Choose your stage",
+		"headerTheme": 0,
 		"blocks": [
 			{
 				"id": "heroSecondary",

@@ -10,6 +10,7 @@
 
 
 	// Primary logo colors
+	.theme-light &,
 	&.primary {
 
 		.text-top,
@@ -36,6 +37,7 @@
 	}
 
 	// Inverted logo for on light backgrounds
+	.theme-dark &,
 	&.inverted {
 		.text-top {
 			color: $colorQuaternary;

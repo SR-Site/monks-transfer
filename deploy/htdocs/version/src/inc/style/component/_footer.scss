@@ -2,7 +2,6 @@
 	@include size(100%, auto);
 	padding: 0 $sizeGrid * 3;
 	background: $colorPrimary;
-	margin-top: $sizeGrid*2;
 
 	.top-section {
 		@include size(100%, auto);

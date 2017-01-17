@@ -4,7 +4,6 @@ import DataManager from "../data/DataManager";
 import * as Gaia from "lib/gaia/api/Gaia";
 import DefaultContentPageViewModel from "./DefaultContentPageViewModel";
 import CallbackCounter from "../util/CallbackCounter";
-import GaiaEvent from "../../lib/gaia/event/GaiaEvent";
 import ScrollTracker, {ScrollTrackerEvent, ScrollTrackerPoint} from "../../lib/temple/util/ScrollTracker";
 import DefaultComponentController from "../component/block/DefaultComponentController";
 import DefaultComponentViewModel from "../component/block/DefaultComponentViewModel";
@@ -12,15 +11,9 @@ import ThrottleDebounce from "../../lib/temple/util/ThrottleDebounce";
 import NativeEventListener from "../../lib/temple/event/NativeEventListener";
 import GaiaHistoryEvent from "../../lib/gaia/event/GaiaHistoryEvent";
 import StringUtils from "../../lib/temple/util/type/StringUtils";
-import Blocks from "../data/enum/block/Blocks";
 import CommonEvent from "../../lib/temple/event/CommonEvent";
-import Loader from "../util/Loader";
-import Promise = require("bluebird");
-import ScrollUtils from "../util/ScrollUtils";
-import IBlock from "../data/interface/block/IBlock";
-import PageAsset from "../../lib/gaia/asset/PageAsset";
 import PageType from "../../lib/gaia/interface/PageType";
-import URLUtils from "../../lib/temple/util/URLUtils";
+import Promise = require("bluebird");
 
 /**
  * @abstract class DefaultContentPageController
@@ -370,6 +363,11 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 		).then((result: IPageLayout) =>
 		{
 			this.viewModel.pageLayout(result.blocks);
+
+			console.log(result);
+
+			// Set the header theme if available
+			this._dataManager.headerTheme(result.headerTheme);
 
 			// Set the page title
 			document.title = result.pageTitle;

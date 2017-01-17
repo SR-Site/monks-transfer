@@ -338,7 +338,7 @@ paths:
                       $ref: "#/definitions/Link"
   /block/block-map:
     get:
-      description: TODO
+      description: TODO - Add data structure
       responses:
         200:
           description: Block structure
@@ -349,6 +349,28 @@ paths:
                 type: string
                 description: The ID for the object to be reconized by the frontend framework.
                 format: map
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+  /block/block-market-map:
+    get:
+      description: TODO - Add data structure
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: marketMap
               data:
                 type: object
                 properties:
@@ -752,6 +774,10 @@ definitions:
       data:
         type: object
         properties:
+          headerTheme:
+            type: integer
+            description: Sometimes you want a header image that is light, that would mean we would have to invert the header bar to make it visible
+            enum: [LIGHT, DARK]
           pageTitle:
             type: string
             default: ""

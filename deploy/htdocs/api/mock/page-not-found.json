@@ -1,6 +1,7 @@
 {
 	"statusCode": 200,
 	"data": {
+		"headerTheme": 0,
 		"pageTitle": "404 - Page not found",
 		"blocks": [
 			{

@@ -70,7 +70,7 @@ class PageLayoutModel extends AbstractDataModel<IPageLayout>
 		return new Promise((resolve:(result:IPageLayout)=>void, reject)=>
 		{
 			// Create the layout object
-			let layout = {id: pageId, pageTitle: pageLayout.pageTitle, blocks: []};
+			let layout = {id: pageId, headerTheme: pageLayout.headerTheme, pageTitle: pageLayout.pageTitle, blocks: []};
 
 			// Loop through all the blocks and check if they are valid
 			layout.blocks = BlockHelper.parseBlocks(layout.blocks, pageLayout.blocks);

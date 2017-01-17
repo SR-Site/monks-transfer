@@ -12,6 +12,7 @@ import DeviceStateTracker from "../../lib/temple/util/DeviceStateTracker";
 import PageLoaderController from "../component/page-loader/PageLoaderController";
 import GlobalSlideoutPanelController from "../component/slideout-panel/global-slideout-panel/GlobalSlideoutPanelController";
 import VideoOverlayController from "../component/video-overlay/VideoOverlayController";
+import Theme from "./enum/style/Theme";
 
 
 /**
@@ -32,6 +33,11 @@ class DataManager
 	 */
 	public gateway:IGateway;
 	public mockGateway:IGateway;
+
+	/**
+	 * Global observables
+	 */
+	public headerTheme:KnockoutObservable<Theme> = ko.observable(Theme.LIGHT);
 
 	/**
 	 * Models

@@ -1,4 +1,8 @@
-<header class="component-header" data-bind="css: {'enable-solid-background': $root.enableSolidBackground}">
+<header class="component-header" data-bind="css: {
+	'enable-solid-background': $root.enableSolidBackground,
+	'theme-light': dataManager.headerTheme() === $root.Theme.LIGHT,
+	'theme-dark': dataManager.headerTheme() === $root.Theme.DARK
+}">
 
 	<h1 class="logo" data-bind="
 		gaiaGoto: [Branches.CONTENT_PAGE, 'home'],

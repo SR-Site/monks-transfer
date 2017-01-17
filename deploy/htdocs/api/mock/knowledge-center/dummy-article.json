@@ -2,6 +2,7 @@
 	"statusCode": 200,
 	"data": {
 		"pageTitle": "Dummy article",
+		"headerTheme": 0,
 		"blocks": [
 			{
 				"id": "heroTertiary",
