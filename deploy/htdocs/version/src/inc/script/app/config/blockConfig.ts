@@ -54,6 +54,10 @@ export const blockConfig:IBlockConfig = {
 		id: Blocks.LATEST,
 		type: BlockType.COMPONENT
 	},
+	more: {
+		id: Blocks.MORE,
+		type: BlockType.COMPONENT
+	},
 	personaSelector: {
 		id: Blocks.PERSONA_SELECTOR,
 		type: BlockType.COMPONENT

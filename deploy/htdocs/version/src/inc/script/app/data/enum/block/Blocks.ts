@@ -14,6 +14,7 @@ class Blocks
 	public static MAP_SECONDARY:string = 'block-map-secondary';
 	public static IMAGE_CALL_TO_ACTIONS:string = 'block-image-call-to-actions';
 	public static LATEST:string = 'block-latest';
+	public static MORE:string = 'block-more';
 	public static PERSONA_SELECTOR:string = 'block-persona-selector';
 	public static PATH_TO_PURCHASE:string = 'block-path-to-purchase';
 	public static SMALL_HEADING:string = 'block-small-heading';

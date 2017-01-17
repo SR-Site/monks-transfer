@@ -326,16 +326,57 @@ paths:
                     type: array
                     items:
                       properties:
+                        target:
+                          type: string
                         heading:
                           type: string
                         paragraph:
                           type: string
                         image:
                           $ref: "#/definitions/Image"
+                        tags:
+                          type: array
+                          items:
+                            $ref: "#/definitions/Link"
+  /block/block-more:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: more
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  heading:
+                    type: string
                   tags:
                     type: array
                     items:
                       $ref: "#/definitions/Link"
+                  articles:
+                    type: array
+                    items:
+                      properties:
+                        target:
+                          type: string
+                        heading:
+                          type: string
+                        paragraph:
+                          type: string
+                        image:
+                          $ref: "#/definitions/Image"
   /block/block-map:
     get:
       description: TODO - Add data structure

@@ -6,6 +6,7 @@ export interface IBlockArticleTeaserOptions extends IDefaultComponentOptions
 {
 	heading: string;
 	paragraph: string;
+	target:string;
 	image: IImage;
 	tags: Array<ITag>;
 }

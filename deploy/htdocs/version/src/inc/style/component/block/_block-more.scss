@@ -1,0 +1,35 @@
+.component-block-more {
+	background: $colorLightGrey;
+	padding: $sizeGrid * 3 $sizeGrid * 3 $sizeGrid * 1;
+
+	.header {
+		margin-bottom: $sizeGrid;
+
+		.heading {
+			display: inline-block;
+			text-transform: uppercase;
+		}
+
+		.tags {
+			display: inline-block;
+			margin-left: $sizeGrid / 2;
+		}
+
+		.component-button-tag {
+			display: inline-block;
+		}
+	}
+
+	.latest-articles {
+		@include size(100%, auto);
+		font-size: 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		.component-block-article-teaser {
+			display: inline-block;
+			margin-bottom: $sizeGrid * 2;
+		}
+	}
+}

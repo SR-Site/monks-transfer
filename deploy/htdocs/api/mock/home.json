@@ -175,6 +175,7 @@
 						{
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"target": "knowledge-center/dummy-article",
 							"image": {
 								"normal": "data/image/latest/latest-article-image-1.jpg",
 								"small": "data/image/latest/latest-article-image-1.jpg",
@@ -198,6 +199,7 @@
 						{
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"target": "knowledge-center/dummy-article",
 							"image": {
 								"normal": "data/image/latest/latest-article-image-2.jpg",
 								"small": "data/image/latest/latest-article-image-2.jpg",
@@ -221,6 +223,7 @@
 						{
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"target": "knowledge-center/dummy-article",
 							"image": {
 								"normal": "data/image/latest/latest-article-image-2.jpg",
 								"small": "data/image/latest/latest-article-image-2.jpg",
@@ -244,6 +247,7 @@
 						{
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+							"target": "knowledge-center/dummy-article",
 							"image": {
 								"normal": "data/image/latest/latest-article-image-1.jpg",
 								"small": "data/image/latest/latest-article-image-1.jpg",
