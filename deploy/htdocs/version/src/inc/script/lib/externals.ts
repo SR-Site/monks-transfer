@@ -8,6 +8,7 @@ define([
 	'xdomainrequest',
 	'TweenLite',
 	'TimelineMax',
+	'SplitText',
 	'CSSPlugin',
 	'EasePack',
 	'vendor/gsap/utils/Draggable',

@@ -105,17 +105,24 @@ class DefaultTransitionController extends EventDispatcher
 	private _transitionInStarted: boolean = false;
 
 
-	constructor(public element: HTMLElement, protected parentController: any)
+	constructor(public element: HTMLElement, protected parentController: any, waitForParent: boolean = true)
 	{
 		super();
 
 		this.element = element;
 		this.parentController = parentController;
 
-		this.getRootComponent().callbackCounter.promise.then(() =>
+		if(waitForParent)
+		{
+			this.getRootComponent().callbackCounter.promise.then(() =>
+			{
+				this.setupTransitionTimeline();
+			});
+		}
+		else
 		{
 			this.setupTransitionTimeline();
-		});
+		}
 	}
 
 	/**
@@ -195,7 +202,8 @@ class DefaultTransitionController extends EventDispatcher
 			{
 				this.transitionOutTimeline.restart();
 			}
-			else {
+			else
+			{
 				this.transitionInTimeline.reverse();
 			}
 		});
@@ -205,7 +213,7 @@ class DefaultTransitionController extends EventDispatcher
 	 * @public
 	 * @method getController
 	 */
-	public getTransitionController(element: Element|string):DefaultTransitionController
+	public getTransitionController(element: Element|string): DefaultTransitionController
 	{
 		const componentElement: Element = typeof element == 'string' ? this.element.querySelector(<string>element) : <Element>element;
 
@@ -229,13 +237,13 @@ class DefaultTransitionController extends EventDispatcher
 	 * @param {string} type
 	 * @returns {TimelineLite|null}
 	 */
-	public getSubTimeline(element: Element|string, type:string = DefaultTransitionController.IN): TimelineLite|TimelineMax
+	public getSubTimeline(element: Element|string, type: string = DefaultTransitionController.IN): TimelineLite|TimelineMax
 	{
 		const transitionController = this.getTransitionController(element);
 
 		if(transitionController)
 		{
-			var timeline:any;
+			var timeline: any;
 
 			switch(type)
 			{
@@ -253,7 +261,7 @@ class DefaultTransitionController extends EventDispatcher
 			return timeline;
 		}
 
-		throw new Error('[DefaultTransitionController] This element does not own a transition ['+ type +'] timeline , so unable to add it to the transition');
+		throw new Error('[DefaultTransitionController] This element does not own a transition [' + type + '] timeline , so unable to add it to the transition');
 	}
 
 	/**
@@ -261,35 +269,43 @@ class DefaultTransitionController extends EventDispatcher
 	 * @method setupTransitionOutTimeline
 	 * @description overwrite this method in the parent class
 	 */
-	protected setupTransitionOutTimeline(): void  {}
+	protected setupTransitionOutTimeline(): void
+	{
+	}
 
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
 	 * @description overwrite this method in the parent class
 	 * */
-	protected setupTransitionInTimeline(): void  {}
+	protected setupTransitionInTimeline(): void
+	{
+	}
 
 	/**
 	 * @public
 	 * @method setupLoopingAnimationTimeline
 	 * @description overwrite this method in the parent class
 	 * */
-	protected setupLoopingAnimationTimeline(): void  {}
+	protected setupLoopingAnimationTimeline(): void
+	{
+	}
 
 	/**
 	 * @protected
 	 * @method handleAnimationStart
 	 */
-	protected handleAnimationStart(type:string, direction:string):void
+	protected handleAnimationStart(type: string, direction: string): void
 	{
-		var transitionEvent:string;
+		var transitionEvent: string;
 
-		switch(type){
+		switch(type)
+		{
 			case DefaultTransitionController.IN:
 				transitionEvent = DefaultTransitionController.TRANSITION_IN_START;
 
-				switch(direction){
+				switch(direction)
+				{
 					case DefaultTransitionController.FORWARD:
 						this._transitionInStarted = true;
 						break;
@@ -309,16 +325,17 @@ class DefaultTransitionController extends EventDispatcher
 	 * @protected
 	 * @method handleAnimationComplete
 	 */
-	protected handleAnimationComplete(direction: string, type:string): void
+	protected handleAnimationComplete(direction: string, type: string): void
 	{
-		var transitionEvent:string;
+		var transitionEvent: string;
 
 		switch(type)
 		{
 			case DefaultTransitionController.IN:
 				transitionEvent = DefaultTransitionController.TRANSITION_IN_COMPLETE;
 
-				switch(direction){
+				switch(direction)
+				{
 					case DefaultTransitionController.FORWARD:
 						this._transitionInComplete = true;
 						break;

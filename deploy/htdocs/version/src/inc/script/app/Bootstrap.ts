@@ -25,6 +25,7 @@ requirejs.config({
 		CSSPlugin:      'vendor/gsap/plugins/CSSPlugin',
 		TimelineLite:   'vendor/gsap/TimelineLite',
 		TimelineMax:    'vendor/gsap/TimelineMax',
+		SplitText:      'vendor/gsap/utils/SplitText',
 		EasePack:       'vendor/gsap/easing/EasePack',
 		moment:         'vendor/moment/moment',
 		bluebird:       'vendor/bluebird/bluebird'
