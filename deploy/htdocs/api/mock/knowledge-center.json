@@ -6,6 +6,9 @@
 			{
 				"id": "heroSecondary",
 				"data": {
+					"overlap": true,
+					"marginTop": 0,
+					"windowed": false,
 					"heading": "Knowledge center",
 					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
 					"link": {
@@ -22,12 +25,107 @@
 				}
 			},
 			{
-				"id": "smallInfo",
+				"id": "filterContent",
+				"data": {
+					"endpoint": "filter-content/knowledge-center.json",
+					"filterLabel": "Filters",
+					"filters": [
+						{
+							"type": 0,
+							"label": "Category",
+							"options": [
+								{
+									"value": "sport",
+									"label": "sport"
+								},
+								{
+									"value": "test",
+									"label": "test"
+								}
+							]
+						},
+						{
+							"type": 1,
+							"label": "Document Type",
+							"options": [
+								{
+									"value": "sport 1",
+									"label": "sport 1"
+								},
+								{
+									"value": "test 1",
+									"label": "test 1"
+								},
+								{
+									"value": "sport 1",
+									"label": "sport 1"
+								},
+								{
+									"value": "test 1",
+									"label": "test 1"
+								},
+								{
+									"value": "sport 1",
+									"label": "sport 1"
+								},
+								{
+									"value": "test 1",
+									"label": "test 1"
+								}
+							]
+						},
+						{
+							"type": 2,
+							"label": "Platform",
+							"options": [
+								{
+									"value": "sport 2",
+									"label": "sport 2"
+								},
+								{
+									"value": "test 3",
+									"label": "test 3"
+								},
+								{
+									"value": "sport 1",
+									"label": "sport 1"
+								},
+								{
+									"value": "test 1",
+									"label": "test 1"
+								}
+							]
+						},
+						{
+							"type": 3,
+							"label": "Market",
+							"options": [
+								{
+									"value": "sport",
+									"label": "sport"
+								},
+								{
+									"value": "test",
+									"label": "test"
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "info",
 				"data": {
 					"windowed": true,
 					"marginTop": 2,
-					"heading": "Understanding  your <br/>Customer’s <span class='highlight'>Path to Purchase</span>",
-					"paragraph": "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum."
+					"heading": "Don't know the difference between your break positions and  your cut-ins?",
+					"paragraph": "Want to learn the industry lingo? ",
+					"link": {
+						"label": "Read the FAQS",
+						"title": "Read the FAQS",
+						"target": "faq",
+						"type": 0
+					}
 				}
 			}
 		]

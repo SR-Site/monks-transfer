@@ -33,8 +33,17 @@
 	@for $i from 0 through 5 {
 		&.margin-top-#{$i} {
 			margin-top: $sizeGrid * $i;
+
+			&:last-child {
+
+				// Add all the blocks that need extra margin when they are the last block on the page
+				&.component-block-info {
+					margin-bottom: $sizeGrid * $i;
+				}
+			}
 		}
 	}
+
 }
 
 // import all your components here!
