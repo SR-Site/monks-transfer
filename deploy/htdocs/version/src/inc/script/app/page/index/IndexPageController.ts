@@ -99,6 +99,7 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	public handleMenuReady(controller: MenuController): void
 	{
 		this._menuController = controller;
+		this._menuController.addEventListener(MenuEvent.CLOSE, () => this.closeMenu());
 	}
 
 	/**
@@ -156,20 +157,29 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 
 	/**
 	 * @private
+	 * @method closeMenu
+	 */
+	private closeMenu():Promise<any>
+	{
+		return this._menuController.transitionOut()
+			.then(()=>
+			{
+				this._headerController.menuIsActive = false;
+			})
+	}
+
+	/**
+	 * @private
 	 * @method handleBeforeGoto
 	 */
 	private handleBeforeGoto(): void
 	{
 		if(this._headerController.menuIsActive)
 		{
-			this.closePanel();
-
-			this._menuController.transitionOut()
-				.then(() =>
-				{
-					this._headerController.menuIsActive = false;
-				})
-				.then(() => this._beforeGoto())
+			Promise.all([
+				this.closePanel(),
+				this.closeMenu()
+			]).then(()=> this._beforeGoto());
 		}
 		else
 		{

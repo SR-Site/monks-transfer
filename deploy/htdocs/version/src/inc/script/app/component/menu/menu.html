@@ -21,7 +21,7 @@
 						<a class="main-link" data-bind="gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: 'knowledge-center'}]">Knowledge Center</a>
 					</li>
 					<li class="menu-item">
-						<a class="main-link" href="#">Contact us</a>
+						<button class="button main-link" data-bind="tap: $root.handleClickContact.bind($root)">Contact us</button>
 					</li>
 				</ul>
 			</div>
