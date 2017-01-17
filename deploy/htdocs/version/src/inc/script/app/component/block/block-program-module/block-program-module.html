@@ -1,3 +1,7 @@
-<div class="component-block-program-module">
-	<p>Component block-program-module creation succesful! Enjoy!</p>
+<div class="component-block-program-module" data-bind="foreach: data.items">
+	<!-- ko component: {
+		name: 'program-module-item',
+		onComplete: $root.controller.callbackCounter.get(),
+		options: $data
+	} --><!-- /ko -->
 </div>

@@ -42,6 +42,11 @@
 		}
 	} --><!-- /ko -->
 
+	<!-- ko component: {
+		name: 'video-overlay',
+		onComplete: $root.controller.callbackCounter.get($root.controller.handleVideoOverlayReady.bind($root.controller))
+	} --><!-- /ko -->
+
 	<button class="button-test" style="
 		position:fixed;
 		padding: 1rem;

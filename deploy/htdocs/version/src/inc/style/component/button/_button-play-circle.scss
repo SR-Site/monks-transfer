@@ -1,0 +1,31 @@
+.component-button-play-circle {
+
+	.icon {
+		@include size($sizeGrid*2.5);
+	}
+
+	svg {
+		backface-visibility: hidden;
+
+		path {
+			fill: currentColor;
+		}
+
+		circle {
+			fill: transparent;
+			stroke: $colorWhite;
+			stroke-width: 1px;
+			transition: stroke .2s ease(easeInOut), stroke-width .2s ease(easeInOut), opacity .2s ease(easeInOut);
+		}
+	}
+
+	@include hover() {
+		svg {
+			circle {
+				stroke-width: 0.5rem;
+				stroke: $colorSecondary;
+				opacity: 1;
+			}
+		}
+	}
+}

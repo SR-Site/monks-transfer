@@ -1,0 +1,28 @@
+<div class="component-video-overlay">
+
+	<div class="mask" data-bind="tap: $root.handleCloseClick.bind($root)"></div>
+
+	<!-- ko component: {
+		name: 'video-player',
+		onComplete: $root.controller.callbackCounter.get($root.controller.handleVideoPlayerReady.bind($root.controller)),
+		options: {
+			video: null,
+			poster: null,
+			loop: false,
+			controls: $root.Bowser.mobile || $root.Bowser.tablet
+		}
+	} --><!-- /ko -->
+
+
+	<!-- ko component: {
+		name: 'button/button-circle-close',
+		onComplete: $root.controller.callbackCounter.get(),
+		options: {
+			action: {
+				event: $root.handleCloseClick.bind($root)
+			},
+			size: $root.ButtonSize.LARGE
+		}
+	} --><!-- /ko -->
+
+</div>

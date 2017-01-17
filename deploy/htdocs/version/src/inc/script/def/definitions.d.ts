@@ -13,6 +13,7 @@
 /// <reference path="greensock/greensock.splittext.d.ts" />
 /// <reference path="bowser/bowser.d.ts" />
 /// <reference path="moment/moment.d.ts" />
+/// <reference path="vimeo/vimeo.player.d.ts" />
 
 
 // export files as typescript module in which a javascript define() is used instead of a typescript export.

@@ -11,6 +11,7 @@ import ContentService from "./service/ContentService";
 import DeviceStateTracker from "../../lib/temple/util/DeviceStateTracker";
 import PageLoaderController from "../component/page-loader/PageLoaderController";
 import GlobalSlideoutPanelController from "../component/slideout-panel/global-slideout-panel/GlobalSlideoutPanelController";
+import VideoOverlayController from "../component/video-overlay/VideoOverlayController";
 
 
 /**
@@ -37,6 +38,9 @@ class DataManager
 	 */
 	public settingsModel:SettingsModel = new SettingsModel();
 	public serviceModel:ServiceModel = new ServiceModel();
+
+	public videoOverlay: VideoOverlayController<any, any>;
+
 
 	/**
 	 * Returns a instance of the datamanager

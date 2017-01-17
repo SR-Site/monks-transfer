@@ -1,3 +1,58 @@
-<div class="component-program-module-item">
-	<p>Component program-module-item creation succesful! Enjoy!</p>
+<div class="component-program-module-item" data-bind="with: data">
+
+	<div class="placeholder">
+		<div class="hover-container">
+			<div class="image abs-fill bg-cover" data-bind="image: {
+				queries: [
+					[$root.MediaQueries.X_SMALL, image.normal ],
+					[$root.MediaQueries.SMALL, image.small]
+				],
+				state: $root.deviceState()
+			}"></div>
+		</div>
+
+		<!-- ko if: $data.video -->
+			<!-- ko component: {
+				name: 'button/button-play-circle',
+				onComplete: $root.controller.callbackCounter.get(),
+				options: {
+					action: {
+						event: dataManager.videoOverlay.show.bind(dataManager.videoOverlay, {
+							video: video,
+							poster: image,
+							loop: false,
+							controls: $root.Bowser.mobile || $root.Bowser.tablet
+						})
+					}
+				}
+			} --><!-- /ko -->
+		<!-- /ko -->
+	</div>
+
+	<div class="description">
+		<div class="hover-container">
+			<h3 class="title copy-05 copy" data-bind="html: heading"></h3>
+
+			<!-- ko with: stats -->
+			<ul class="stats">
+				<!-- ko with: demographic -->
+				<li class="copy-01">
+					<span class="icon"></span>
+					<!-- ko text: $data --><!-- /ko -->
+				</li>
+				<!-- /ko -->
+
+				<!-- ko with: ageRange -->
+				<li class="copy-01">
+					<span class="icon"></span>
+					<!-- ko text: $data --><!-- /ko -->
+				</li>
+				<!-- /ko -->
+
+			</ul>
+			<!-- /ko -->
+
+			<p class="paragraph copy-01 copy" data-bind="html: paragraph"></p>
+		</div>
+	</div>
 </div>

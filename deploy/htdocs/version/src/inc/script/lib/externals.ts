@@ -1,6 +1,7 @@
 define([
 	'jquery',
 	'knockout',
+	'vendor/vimeo/player.min',
 	'jquerymobile',
 	'vendor/knockout-punches/knockout.punches',
 	'lib/knockout/knockout.gaia',
@@ -18,7 +19,7 @@ define([
 	'lib/knockout/knockout.scrollbar',
 	'lib/knockout/knocktouch',
 	'lib/knockout/knockout.image',
-], ($, ko) =>
+], ($, ko, vimeo) =>
 {
 
 	ko.punches.interpolationMarkup.enable();
