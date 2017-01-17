@@ -1090,7 +1090,7 @@
 								"demographic": "33% Parents"
 							},
 							"video": {
-								"url": "https://player.vimeo.com/external/197117903.hd.mp4?s=b445b298c32605125a44c1aff0d8884b7968d86c&profile_id=119",
+								"url": "data/video/video.mp4",
 								"type": 0
 							},
 							"tags": [
@@ -1121,7 +1121,7 @@
 								"demographic": "33% Parents"
 							},
 							"video": {
-								"url": "https://player.vimeo.com/external/197117903.hd.mp4?s=b445b298c32605125a44c1aff0d8884b7968d86c&profile_id=119",
+								"url": "data/video/video.mp4",
 								"type": 0
 							},
 							"tags": [
@@ -1152,7 +1152,7 @@
 								"demographic": "33% Parents"
 							},
 							"video": {
-								"url": "https://player.vimeo.com/external/197117903.hd.mp4?s=b445b298c32605125a44c1aff0d8884b7968d86c&profile_id=119",
+								"url": "data/video/video.mp4",
 								"type": 0
 							},
 							"tags": [
@@ -1183,7 +1183,7 @@
 								"demographic": "33% Parents"
 							},
 							"video": {
-								"url": "https://player.vimeo.com/external/197117903.hd.mp4?s=b445b298c32605125a44c1aff0d8884b7968d86c&profile_id=119",
+								"url": "data/video/video.mp4",
 								"type": 0
 							},
 							"tags": [
