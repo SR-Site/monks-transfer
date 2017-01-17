@@ -20,7 +20,6 @@ define([
 	'lib/knockout/knocktouch',
 	'lib/knockout/knockout.image',
 	'lib/knockout/knockout.events',
-], ($, ko) =>
 ], ($, ko, vimeo) =>
 {
 
