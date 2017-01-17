@@ -18,6 +18,7 @@ define([
 	'lib/knockout/knockout.scrollbar',
 	'lib/knockout/knocktouch',
 	'lib/knockout/knockout.image',
+	'lib/knockout/knockout.events',
 ], ($, ko) =>
 {
 

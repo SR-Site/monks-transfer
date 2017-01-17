@@ -6,6 +6,7 @@
 			{
 				"id": "heroSecondary",
 				"data": {
+					"overlap": true,
 					"heading": "Digital",
 					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
 					"link": {
@@ -22,12 +23,204 @@
 				}
 			},
 			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 0,
+					"windowed": true,
+					"marginTop": 2,
+					"croppedImage": true,
+					"heading": "Media Habits are <span class='highlight'>Changing</span>",
+					"paragraph": "Has your business got an edge on the competition? <br/><br/>We’ve got multiple products that build awareness, drive sales and can guarantee that customers will find your business quickly.",
+					"background": {
+						"normal": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 1,
+					"windowed": true,
+					"marginTop": 2,
+					"croppedImage": false,
+					"heading": "Extend your <span class='highlight'>Message Online</span>",
+					"paragraph": "Spectrum Reach offers custom solutions for the modern digital landscape. We reach customers no one else can across every screen.",
+					"background": {
+						"normal": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 0,
+					"windowed": true,
+					"marginTop": 2,
+					"croppedImage": false,
+					"heading": "Digital Offers you <span class='highlight'>Trackability</span>",
+					"paragraph": "Reach the same people as before, but with Digital you can accurately track which of your campaigns are a sucess.",
+					"background": {
+						"normal": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
 				"id": "smallInfo",
 				"data": {
 					"windowed": true,
+					"marginTop": 0,
+					"heading": "Customized <br/><span class='highlight'>Digital Solutions</span>"
+				}
+			},
+			{
+				"id": "storyInfoImages",
+				"data": {
+					"windowed": true,
+					"marginTop": 0,
+					"stories": [
+						{
+							"heading": "Online Display and Video",
+							"paragraph": "Quisque congue nunc in viverra sodales. Lorem ipsum non aliquam nunc ipsum sid.",
+							"background": {
+								"normal": "data/image/story-info-images/story-1-background.jpg",
+								"small": "data/image/story-info-images/story-1-background.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image/story-info-images/story-1-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-1-background-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Social Media",
+							"paragraph": "Quisque congue nunc in viverra sodales. Lorem ipsum non aliquam nunc ipsum sid.",
+							"background": {
+								"normal": "data/image/story-info-images/story-2-background.jpg",
+								"small": "data/image/story-info-images/story-2-background.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image/story-info-images/story-2-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-2-background-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Search",
+							"paragraph": "Quisque congue nunc in viverra sodales. Lorem ipsum non aliquam nunc ipsum sid.",
+							"background": {
+								"normal": "data/image/story-info-images/story-1-background.jpg",
+								"small": "data/image/story-info-images/story-1-background.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image/story-info-images/story-1-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-1-background-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
+				}
+			},
+			{
+				"id": "mapSecondary",
+				"data": {
+					"windowed": true,
 					"marginTop": 2,
-					"heading": "Understanding  your <br/>Customer’s <span class='highlight'>Path to Purchase</span>",
-					"paragraph": "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum."
+					"heading": "Use Data and Highly <span class='highlight'>Targeted</span> Geographic <span class='highlight'>Zones</span>",
+					"subHeading": "We're champions of data.",
+					"paragraph": "<p>Knowing your customer demographic and then using geographic targeting is a powerful way to reach the right people.</p><p> Learn about our scale of reach across the country.</p>",
+					"link": {
+						"label": "Explore the market",
+						"title": "Explore the market",
+						"target": "map",
+						"type": 2
+					}
+				}
+			},
+			{
+				"id": "howToAdvertise",
+				"data": {
+					"marginTop": 2,
+					"windowed": true,
+					"heading": "How to <span class='highlight'>Advertise</span> on Television",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "home",
+						"type": 0
+					},
+					"steps": [
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-1"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-2"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-3"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-4"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-5"
+						}
+					]
+				}
+			},
+			{
+				"id": "imageCallToActions",
+				"data": {
+					"windowed": false,
+					"marginTop": 2,
+					"callToActions": [
+						{
+							"heading": "A new era for <br/><span class='highlight'>Television</span>",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"background": {
+								"normal": "data/image/image-call-to-actions/image-tv.jpg",
+								"small": "data/image/image-call-to-actions/image-tv.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Meet <span class='highlight'>kernel,</span> <br/>Tell us what you need.",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"background": {
+								"normal": "data/image/image-call-to-actions/image-digital.jpg",
+								"small": "data/image/image-call-to-actions/image-digital.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image/image-call-to-actions/image-digital-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-digital-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
 				}
 			}
 		]
