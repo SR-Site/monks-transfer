@@ -24,7 +24,6 @@
 				"id": "smallInfo",
 				"data": {
 					"windowed": true,
-					"marginTop": 2,
 					"heading": "Understanding  your <br/>Customer’s <span class='highlight'>Path to Purchase</span>",
 					"paragraph": "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum."
 				}

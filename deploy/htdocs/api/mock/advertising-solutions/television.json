@@ -5,14 +5,14 @@
 		"pageTitle": "Television",
 		"blocks": [
 			{
-				"id": "Television",
+				"id": "heroSecondary",
 				"data": {
-					"heading": "We'll Help you Find Your Format",
-					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
+					"overlap": true,
+					"heading": "We're in a Golden Age of Television",
 					"link": {
 						"label": "Find out more",
 						"title": "Find out more",
-						"target": "/advertising-solutions",
+						"target": "/television",
 						"type": 2
 					},
 					"background": {
@@ -23,12 +23,351 @@
 				}
 			},
 			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 0,
+					"windowed": true,
+					"marginTop": 2,
+					"croppedImage": true,
+					"heading": "The <span class='highlight'>Power</span> of <span class='highlight'>Television</span> is Underestimated",
+					"paragraph": "<strong>TV is still the best way to build your brand.</strong><br/><br/> With television your business gets noticed and stands out from the competition. Your advertising message is in the spotlight during the television shows everyone is talking about.",
+					"background": {
+						"normal": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 1,
+					"windowed": true,
+					"marginTop": 2,
+					"croppedImage": false,
+					"heading": "<span class='highlight'>Multiscreen</span> is here: <br/>TV is on every screen.",
+					"paragraph": "We’ll place your business next to the shows your target audience watches, and you’ll watch your revenue grow.",
+					"background": {
+						"normal": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "imageWithContent",
+				"data": {
+					"alignment": 0,
+					"windowed": true,
+					"marginTop": 2,
+					"croppedImage": false,
+					"heading": "Use <span class='highlight'>Data</span> and <span class='highlight'>Targeting</span> to Spend Smart",
+					"paragraph": "We know more about your customers than anyone else. Use the power of data to get your message in front of the right people, at the right time.",
+					"background": {
+						"normal": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
 				"id": "smallInfo",
 				"data": {
 					"windowed": true,
+					"marginTop": 0,
+					"heading": "Customised <br/><span class='highlight'>Digital Solutions</span>"
+				}
+			},
+			{
+				"id": "storyInfoImages",
+				"data": {
+					"windowed": true,
+					"marginTop": 0,
+					"stories": [
+						{
+							"heading": "Online Display and Video",
+							"paragraph": "Quisque congue nunc in viverra sodales. Lorem ipsum non aliquam nunc ipsum sid.",
+							"background": {
+								"normal": "data/image/story-info-images/story-1-background.jpg",
+								"small": "data/image/story-info-images/story-1-background.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image/story-info-images/story-1-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-1-background-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Social Media",
+							"paragraph": "Quisque congue nunc in viverra sodales. Lorem ipsum non aliquam nunc ipsum sid.",
+							"background": {
+								"normal": "data/image/story-info-images/story-2-background.jpg",
+								"small": "data/image/story-info-images/story-2-background.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image/story-info-images/story-2-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-2-background-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Search",
+							"paragraph": "Quisque congue nunc in viverra sodales. Lorem ipsum non aliquam nunc ipsum sid.",
+							"background": {
+								"normal": "data/image/story-info-images/story-1-background.jpg",
+								"small": "data/image/story-info-images/story-1-background.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image/story-info-images/story-1-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-1-background-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
+				}
+			},
+			{
+				"id": "smallInfo",
+				"data": {
+					"windowed": true,
+					"marginTop": 0,
+					"heading": "Top programming. <br/>Engaged audiences",
+					"paragraph": "Get your message in front of the right people, at the right time. We’ll place your business next to the shows.",
+					"link": {
+						"label": "See all shows",
+						"title": "See all shows",
+						"target": "/knowledge-center",
+						"type": 0
+					}
+				}
+			},
+			{
+				"id": "programModule",
+				"data": {
+					"marginTop": 1,
+					"items": [
+						{
+							"image": {
+								"small": "data/image/program-module/image.jpg",
+								"normal": "data/image/program-module/image.jpg",
+								"alt": "imageName"
+							},
+							"heading": "Keeping Up with the kardashians",
+							"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+							"stats": {
+								"ageRange": "Men 25 -35",
+								"demographic": "33% Parents"
+							},
+							"video": {
+								"url": "data/video/video.mp4",
+								"type": 0
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"image": {
+								"small": "data/image/program-module/image.jpg",
+								"normal": "data/image/program-module/image.jpg",
+								"alt": "imageName"
+							},
+							"heading": "Keeping Up with the kardashians",
+							"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+							"stats": {
+								"ageRange": "Men 25 -35",
+								"demographic": "33% Parents"
+							},
+							"video": {
+								"url": "data/video/video.mp4",
+								"type": 0
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"image": {
+								"small": "data/image/program-module/image.jpg",
+								"normal": "data/image/program-module/image.jpg",
+								"alt": "imageName"
+							},
+							"heading": "Keeping Up with the kardashians",
+							"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+							"stats": {
+								"ageRange": "Men 25 -35",
+								"demographic": "33% Parents"
+							},
+							"video": {
+								"url": "data/video/video.mp4",
+								"type": 0
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"image": {
+								"small": "data/image/program-module/image.jpg",
+								"normal": "data/image/program-module/image.jpg",
+								"alt": "imageName"
+							},
+							"heading": "Keeping Up with the kardashians",
+							"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+							"stats": {
+								"ageRange": "Men 25 -35",
+								"demographic": "33% Parents"
+							},
+							"video": {
+								"url": "data/video/video.mp4",
+								"type": 0
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "mapSecondary",
+				"data": {
+					"windowed": true,
 					"marginTop": 2,
-					"heading": "Understanding  your <br/>Customer’s <span class='highlight'>Path to Purchase</span>",
-					"paragraph": "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum."
+					"heading": "Use Data and Highly <span class='highlight'>Targeted</span> Geographic <span class='highlight'>Zones</span>",
+					"subHeading": "We're champions of data.",
+					"paragraph": "<p>Knowing your customer demographic and then using geographic targeting is a powerful way to reach the right people.</p><p> Learn about our scale of reach across the country.</p>",
+					"link": {
+						"label": "Explore the market",
+						"title": "Explore the market",
+						"target": "map",
+						"type": 2
+					}
+				}
+			},
+			{
+				"id": "howToAdvertise",
+				"data": {
+					"marginTop": 2,
+					"windowed": true,
+					"heading": "How to <span class='highlight'>Advertise</span> on Television",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "home",
+						"type": 0
+					},
+					"steps": [
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-1"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-2"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-3"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-4"
+						},
+						{
+							"heading": "Create your message",
+							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+							"icon": "triangle-advertise-icon-5"
+						}
+					]
+				}
+			},
+			{
+				"id": "imageCallToActions",
+				"data": {
+					"windowed": false,
+					"marginTop": 2,
+					"callToActions": [
+						{
+							"heading": "Compliment television <br/>spend with Digital",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"background": {
+								"normal": "data/image/image-call-to-actions/image-tv.jpg",
+								"small": "data/image/image-call-to-actions/image-tv.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "A new era <br/>for Television",
+							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"background": {
+								"normal": "data/image/image-call-to-actions/image-digital.jpg",
+								"small": "data/image/image-call-to-actions/image-digital.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image/image-call-to-actions/image-digital-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-digital-blurred.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
 				}
 			}
 		]
