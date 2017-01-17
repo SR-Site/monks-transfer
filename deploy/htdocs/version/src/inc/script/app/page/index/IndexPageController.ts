@@ -13,6 +13,7 @@ import MenuEvent from "../../event/MenuEvent";
 import GlobalSlideoutPanelController from "../../component/slideout-panel/global-slideout-panel/GlobalSlideoutPanelController";
 import Promise = require("bluebird");
 import ko = require("knockout");
+import VideoOverlayController from "../../component/video-overlay/VideoOverlayController";
 
 class IndexPageController extends DefaultPageController<IndexPageViewModel>
 {
@@ -126,6 +127,16 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	{
 		this._dataManager.panelController = controller;
 	}
+
+	/**
+	 * @public
+	 * @method handleVideoOverlayReady
+	 */
+	public handleVideoOverlayReady(controller:VideoOverlayController<any, any>):void
+	{
+		this._dataManager.videoOverlay = controller;
+	}
+
 
 	/**
 	 * @public

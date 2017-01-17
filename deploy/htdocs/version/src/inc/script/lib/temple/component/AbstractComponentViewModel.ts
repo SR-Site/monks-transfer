@@ -5,6 +5,7 @@ import {mediaQueries, DeviceState} from "../../../app/data/scss-shared/MediaQuer
 import DataManager from "../../../app/data/DataManager";
 import Theme from "../../../app/data/enum/style/Theme";
 import Direction from "../../../app/data/enum/layout/Direction";
+import bowser = require('bowser');
 
 /**
  * Abstract viewModel class for components. All component ViewModels should extend this class.
@@ -19,6 +20,7 @@ abstract class AbstractComponentViewModel<T extends AbstractComponentController<
 	public ButtonSize: Enum = ButtonSize;
 	public Theme: Enum = Theme;
 	public Direction:Enum = Direction;
+	public Bowser:Class = bowser;
 
 	public deviceState:KnockoutObservable<DeviceState> = DataManager.getInstance().deviceStateTracker.currentState;
 

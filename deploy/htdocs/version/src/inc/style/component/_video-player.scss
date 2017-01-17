@@ -1,0 +1,12 @@
+.component-video-player {
+	background: #000;
+	@include size(100%, 100%);
+
+	iframe,
+	video {
+		@include coverer();
+		@include size(100%);
+		position: absolute;
+		object-fit: cover;
+	}
+}

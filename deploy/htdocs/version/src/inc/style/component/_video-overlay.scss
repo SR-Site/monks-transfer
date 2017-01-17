@@ -1,0 +1,32 @@
+.component-video-overlay {
+
+	@include size(100%, 100%);
+	@include pos(0, 0, auto, 0);
+	position: fixed	;
+	visibility: hidden;
+	z-index: zindex($layout, popup);
+
+	.component-video-player {
+		@include size(80%, auto);
+		@include pos(50%, auto, auto, 50%);
+		max-width: $sizeGridSecondary * 27;
+		transform: translate(-50%, -50%);
+		position: absolute;
+		overflow: hidden;
+		@include aspect-ratio(16px, 9px);
+	}
+
+	.mask {
+		@include coverer();
+		@include size(100%);
+		position: absolute;
+		background: rgba(#000, .6);
+	}
+
+	.component-button-circle-close {
+		@include pos($sizeGrid, $sizeGrid, auto, auto);
+		position: absolute;
+		background-color: $colorPrimary;
+		color: white;
+	}
+}

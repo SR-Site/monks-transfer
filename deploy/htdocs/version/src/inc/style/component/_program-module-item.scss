@@ -1,3 +1,103 @@
 .component-program-module-item {
+	position: relative;
+	@include size($sizeGrid*9, auto);
+	width: 25%;
+	display: inline-block;
 
+	.placeholder {
+		@include size(100%, $sizeGrid*8);
+		position: relative;
+
+		.image { }
+	}
+
+	// Description
+	.description {
+		position: relative;
+		height: $sizeGrid*11;
+
+		.hover-container {
+			padding: $sizeGrid*2;
+		}
+	}
+
+	// Stats
+	.stats {
+		@extend %reset-list;
+		margin-top: $sizeGrid;
+
+		.icon {
+			margin-left: $sizeGrid/2;
+		}
+
+		li {
+
+			&:not(:first-child) {
+				margin-top: $sizeGrid/2;
+			}
+		}
+	}
+
+	.title {
+
+	}
+
+	.paragraph {
+		margin-top: $sizeGrid;
+		max-height: $sizeGrid*2;
+		overflow: hidden;
+	}
+
+	.tags {
+		margin-top: $sizeGrid;
+	}
+
+	.component-button-play-circle {
+		position: absolute;
+		@include offset(50%, 50%);
+		transform: translate(-50%, -50%);
+		color: white;
+	}
+
+	.hover-container {
+		@include size(100%);
+		@include offset(50%, 0);
+		background-color: white;
+		transform: translate(-50%, 0);
+		overflow: hidden;
+		position: absolute;
+		border: 1px solid #e7e7e7;
+		transition: width 250ms ease(easeExpoOut);
+	}
+
+	&:first-child {
+		.hover-container {
+			transform: none;
+			left: 0;
+		}
+	}
+
+	&:last-child {
+		.hover-container {
+			left: auto;
+			right: 0;
+			transform: none;
+		}
+	}
+
+	@include hover() {
+		z-index: 1;
+
+		.hover-container {
+			width: 200%;
+		}
+	}
+
+	&.is-hover {
+		z-index: 1;
+
+		.hover-container {
+			width: 200%;
+		}
+	}
 }
