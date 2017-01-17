@@ -2,7 +2,6 @@ import AbstractComponentController from "../../../../lib/temple/component/Abstra
 import DefaultSubTransitionViewModel from "./DefaultComponentTransitionViewModel";
 import IDefaultComponentTransitionOptions from "./IDefaultComponentTransitionOptions";
 import CallbackCounter from "../../CallbackCounter";
-import autobind from "../../../../lib/temple/util/decorator/autobind";
 import DefaultTransitionController from "../DefaultTransitionController";
 import Promise = require("bluebird");
 

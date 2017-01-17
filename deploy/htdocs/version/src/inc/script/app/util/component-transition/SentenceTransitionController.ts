@@ -7,7 +7,7 @@ class SentenceTransitionController extends DefaultTransitionController
 
 	constructor(public element: HTMLElement, protected parentController: any )
 	{
-		super(element, parentController, false)
+		super(element, parentController, false);
 
 		this.addEventListener(DefaultTransitionController.TRANSITION_IN_COMPLETE, () =>{
 			this._splitText.revert();

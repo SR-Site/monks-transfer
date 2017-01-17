@@ -67,7 +67,7 @@
 		overflow: hidden;
 		position: absolute;
 		border: 1px solid #e7e7e7;
-		transition: width 250ms ease(easeExpoOut);
+		transition: width 250ms ease(easeOutExpo);
 	}
 
 	&:first-child {

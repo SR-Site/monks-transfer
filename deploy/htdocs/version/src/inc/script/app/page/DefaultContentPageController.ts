@@ -124,7 +124,6 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 	{
 		super.onDeeplink(event);
 
-
 		if(!Gaia.api.getPage(event.routeResult[0].branch).isPopup() &&
 			JSON.stringify(this._currentDeeplink) != JSON.stringify(event.routeResult[0].deeplink))
 		{

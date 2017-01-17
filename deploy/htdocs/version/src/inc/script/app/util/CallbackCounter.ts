@@ -152,7 +152,8 @@ class CallbackCounter extends Destructible
 			throw new Error('[CallbackCounter] The instance was created with a callback method, so the promise is not available.');
 		}
 
-		return this._promise;
+		// Sometimes a callback counter has no components to wait for so we want to return a resolved promise
+		return this._count > 0 ? this._promise : Promise.resolve();
 	}
 
 	/**

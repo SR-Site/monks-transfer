@@ -87,9 +87,7 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 
 		this.element.appendChild(blockId);
 
-		const allComponentsLoaded: Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
-
-		allComponentsLoaded.then(() => this.allComponentsLoaded());
+		this.callbackCounter.promise.then(() => this.allComponentsLoaded());
 
 		// Will be overwritten in parent class
 		this.transitionController = new DefaultTransitionController(this.element, this);
