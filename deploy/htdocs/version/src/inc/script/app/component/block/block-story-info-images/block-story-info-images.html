@@ -1,3 +1,43 @@
 <div class="component-block-story-info-images">
-	<p>Component block-story-info-images creation succesful! Enjoy!</p>
+	<div class="abs-fill">
+		<div class="story-images" data-bind="foreach: data.stories">
+			<div class="image-wrapper abs-fill" data-bind="css: {'is-active': $index() === $root.activeStory()}">
+				<div class="default-image">
+					<img data-bind="
+							attr: { alt: $data.background.alt },
+							image: {
+								queries: [
+									[ $root.MediaQueries.X_SMALL, $data.background.small ],
+									[ $root.MediaQueries.SMALL, $data.background.normal ]
+								],
+								state: $root.deviceState()
+							}"/>
+				</div>
+				<div class="blurred-image">
+					<img data-bind="
+							attr: { alt: $data.backgroundBlurred.alt },
+							image: {
+								queries: [
+									[ $root.MediaQueries.X_SMALL, $data.backgroundBlurred.small ],
+									[ $root.MediaQueries.SMALL, $data.backgroundBlurred.normal ]
+								],
+								state: $root.deviceState()
+							}"/>
+				</div>
+			</div>
+		</div>
+		<div class="story-content" data-bind="foreach: data.stories">
+			<article class="story" data-bind="
+			css: {
+				'is-active': $index() === $root.activeStory()
+			},
+			events: [
+				[$root.MouseEventHelper.MOUSEENTER, $root.handleMouseEnter.bind($root, $index())]
+			]">
+				<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
+				<h2 class="heading heading-06" data-bind="html: heading"></h2>
+				<p class="copy copy-01" data-bind="html: paragraph"></p>
+			</article>
+		</div>
+	</div>
 </div>

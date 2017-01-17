@@ -7,7 +7,7 @@ host: tbd.spectrumreach.com
 schemes:
   - https
   - http
-basePath: /api/v1/
+basePath: /api/v1
 produces:
   - application/json
 paths:
@@ -15,11 +15,48 @@ paths:
     get:
       summary: Get all the information to bootstrap the application
       description: "Get all the information to bootstrap the application. Example: Menu, main items etc.."
+      produces:
+          - application/json
       responses:
         200:
           description: History information for the given user
           schema:
-            $ref: "#/definitions/Init"
+            type: object
+            properties:
+              data:
+                type: object
+                properties:
+                  layout:
+                    type: object
+                    properties:
+                      navigation:
+                        type: object
+                      footer:
+                        type: object
+                      slideOutPanel:
+                        type: object
+                        properties:
+                          contact:
+                            type: object
+                            properties:
+                              subHeading:
+                                type: string
+                              heading:
+                                type: string
+                              submitLabel:
+                                type: string
+                  language:
+                    type: object
+                    properties:
+                      translations:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            country:
+                              type: string
+                            language:
+                              type: string
   /page:
     get:
       summary: Get page by slug
@@ -33,7 +70,674 @@ paths:
           description: Unexpected error
           schema:
             $ref: '#/definitions/Error'
-
+  # +--------------------------------------------------------------------------------+
+  # | Content blocks                                                                 |
+  # +--------------------------------------------------------------------------------+
+  /block/block-hero-main:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: heroMain
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  alignment:
+                    $ref: "#/definitions/Alignment"
+                  croppedImage:
+                    type: boolean
+                    default: false
+                  heading:
+                    type: string
+                  paragraph:
+                    type: string
+                  link:
+                    $ref: "#/definitions/Link"
+                  background:
+                    $ref: "#/definitions/Image"
+  /block/block-hero-secondary:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: heroSecondary
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  heading:
+                    type: string
+                  paragraph:
+                    type: string
+                  link:
+                    $ref: "#/definitions/Link"
+                  background:
+                    $ref: "#/definitions/Image"
+  /block/block-hero-tertiary:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: The ID for the object to be reconized by the frontend framework.
+                  format: heroTertiary
+                data:
+                  type: object
+                  properties:
+                    overlap:
+                       $ref: "#/definitions/Overlap"
+                    windowed:
+                      $ref: "#/definitions/Windowed"
+                    marginTop:
+                      $ref: "#/definitions/MarginTop"
+                    heading:
+                      type: string
+                    paragraph:
+                      type: string
+                    link:
+                      $ref: "#/definitions/Link"
+                    background:
+                      $ref: "#/definitions/Image"
+  /block/block-how-to-advertise:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: howToAdvertise
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  heading:
+                    type: string
+                  link:
+                    $ref: "#/definitions/Link"
+                  steps:
+                    type: array
+                    items:
+                      properties:
+                        heading:
+                          type: string
+                        paragraph:
+                          type: string
+                        icon:
+                          type: string
+                          description: the name of the icon
+  /block/block-image-call-to-actions:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: imageCallToActions
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  callToActions:
+                    type: array
+                    items:
+                      properties:
+                        heading:
+                          type: string
+                        paragraph:
+                          type: string
+                        background:
+                          $ref: "#/definitions/Image"
+                        backgroundBlurred:
+                          $ref: "#/definitions/Image"
+  /block/block-image-carousel:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: imageCarousel
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  slides:
+                    type: array
+                    items:
+                      properties:
+                        heading:
+                          type: string
+                        image:
+                          $ref: "#/definitions/Image"
+  /block/block-image-with-content:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: imageWithContent
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  alignment:
+                    $ref: "#/definitions/Alignment"
+                  croppedImage:
+                    type: boolean
+                    default: false
+                  heading:
+                    type: string
+                  paragraph:
+                    type: string
+                  link:
+                    $ref: "#/definitions/Link"
+                  background:
+                    $ref: "#/definitions/Image"
+  /block/block-latest:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: latest
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  heading:
+                    type: string
+                  link:
+                    $ref: "#/definitions/Link"
+                  articles:
+                    type: array
+                    items:
+                      properties:
+                        heading:
+                          type: string
+                        paragraph:
+                          type: string
+                        image:
+                          $ref: "#/definitions/Image"
+                  tags:
+                    type: array
+                    items:
+                      $ref: "#/definitions/Link"
+  /block/block-map:
+    get:
+      description: TODO
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: map
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+  /block/block-map-secondary:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: mapSecondary
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  heading:
+                    type: string
+                  subHeading:
+                    type: string
+                  paragraph:
+                    type: string
+                  link:
+                    $ref: "#/definitions/Link"
+  /block/block-path-to-purchase:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: pathToPurchase
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  steps:
+                    type: array
+                    items:
+                      properties:
+                        heading:
+                          type: string
+                        paragraph:
+                          type: string
+                        background:
+                          $ref: "#/definitions/Image"
+  /block/block-persona-selector:
+   get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: personaSelector
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  personas:
+                    type: array
+                    items:
+                      properties:
+                        heading:
+                          type: string
+                        paragraph:
+                          type: string
+                        image:
+                          $ref: "#/definitions/Image"
+                        personaType:
+                          $ref: "#/definitions/PersonaType"
+                        link:
+                          $ref: "#/definitions/Link"
+  /block/block-blog-post:
+   get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: blogPost
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  date:
+                    type: string
+                    description: "January 23, 2017"
+                  time:
+                    type: string
+                    description: "0:08"
+                  views:
+                    type: string
+                    description: "302"
+                  heading:
+                    type: string
+                  subHeading:
+                    type: string
+                  paragraph:
+                    type: string
+                  tags:
+                    type: array
+                    items:
+                      $ref: "#/definitions/Link"
+                  author:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                      role:
+                        type: string
+                      image:
+                        $ref: "#/definitions/Image"
+                  social:
+                    type: array
+                    items:
+                      $ref: "#/definitions/Link"
+  /block/block-quote:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: quote
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  quote:
+                    type: string
+                  name:
+                    type: string
+                  description:
+                    type: string
+                  image:
+                    $ref: "#/definitions/Image"
+  /block/block-quote-secondary:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: quoteSecondary
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  quote:
+                    type: string
+                  author:
+                    type: string
+  /block/text:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: text
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  html:
+                    type: string
+                    description: The html that will be injected in the block
+  /block/block-small-image:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: smallImage
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  alignment:
+                    $ref: "#/definitions/Alignment"
+                  image:
+                    $ref: "#/definitions/Image"
+  /block/small-heading:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: latest
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  heading:
+                    type: string
+                    description: The heading of this block
+  /block/block-small-info:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: smallInfo
+              data:
+                type: object
+                properties:
+                  overlap:
+                     $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  link:
+                    $ref: "#/definitions/Link"
+                  heading:
+                    type: string
+                    description: The heading of this block
+                  paragraph:
+                    type: string
+                    description: The paragraph of this block
+  /block/block-program-module:
+    get:
+      description: TODO - Add data structure
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: programModule
+              data:
+                type: object
+                properties:
+                  overlap:
+                    $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        image:
+                           $ref: "#/definitions/Image"
+                        heading:
+                          type: string
+                        paragraph:
+                          type: string
+                        stats:
+                          type: object
+                          properties:
+                            ageRange:
+                              type: string
+                            demographic:
+                              type: string
+                        video:
+                          $ref: "#/definitions/Video"
+  /block/block-story-info-images:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: storyInfoImages
+              data:
+                type: object
+                properties:
+                  overlap:
+                    $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  stories:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        heading:
+                          type: string
+                        paragraph:
+                          type: string
+                        background:
+                          $ref: "#/definitions/Image"
+                        backgroundBlurred:
+                          $ref: "#/definitions/Image"
 definitions:
   # +--------------------------------------------------------------------------------+
   # | API Calls                                                                      |
@@ -57,21 +761,13 @@ definitions:
             type: array
             items:
               $ref: "#/definitions/Block"
-  Init:
-    type: object
-    properties:
-      statusCode:
-        type: integer
-        default: 200
-        description: The http status for the call
 
   # +--------------------------------------------------------------------------------+
   # | Partials; Small block object definitions                                       |
   # +--------------------------------------------------------------------------------+
-
   Link:
     type: object
-    description: "Default link object"
+    description: Default link object
     properties:
       label:
         type: string
@@ -85,28 +781,48 @@ definitions:
       type:
         type: integer
         enum: [INTERNAL,EXTERNAL,SCROLL_TO_NEXT_SECTION]
-  Background:
+  Image:
     type: object
-    description: "Default background object"
+    description: Default image object
     properties:
       normal:
         type: string
-        description: The desktop version of the background
+        description: The desktop version of the mage
       small:
         type: string
-        description: The mobile version of the background
+        description: The mobile version of the mage
       alt:
         type: string
-        description: The alt text for the background image
-  marginTop:
+        description: The alt text for the mage image
+  Video:
+    type: object
+    description: Default video object
+    properties:
+      url:
+        type: string
+        description: The url to the video, if the video is internal it should be the full path to the *.mp4 file otherwise just the ID of the external source.
+      type:
+        type: integer
+        description: The type of the video
+        enum: [INTERNAL,VIMEO]
+  MarginTop:
     type: integer
     description: The offset/spacing of a component
-  alignment:
+    enum: [0,1,2,3,4]
+  Alignment:
     type: integer
     enum: [LEFT, RIGHT]
-  personaType:
+  PersonaType:
     type: integer
     enum: [SMALL_BUSINESS,AUTOMOTIVE,ENTERPRISE,LOCAL_MEDIA_BUYING]
+  Windowed:
+    type: boolean
+    default: false
+    description: If the block will have a extra padding on the left and right instead of being full-bleed
+  Overlap:
+    type: boolean
+    default: false
+    description: If the block will overlap with the next block in the DOM
   Error:
     type: object
     description: "Default error object"
@@ -128,7 +844,6 @@ definitions:
   # +--------------------------------------------------------------------------------+
   # | Interfaces                                                                     |
   # +--------------------------------------------------------------------------------+
-
   Block:
     type: object
     title: defaultBlock
@@ -140,468 +855,3 @@ definitions:
       data:
         type: object
         description: "The container that holds all the data for the content block"
-
-  # +--------------------------------------------------------------------------------+
-  # | Content blocks                                                                 |
-  # +--------------------------------------------------------------------------------+
-
-
-  ## HeroMain
-  heroMain:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["heroMain"]
-      data:
-        type: object
-        properties:
-          overlap:
-            type: boolean
-            default: true
-          alignment:
-            $ref: "#/definitions/alignment"
-          windowed:
-            type: boolean
-            default: true
-          croppedImage:
-            type: boolean
-            default: false
-          heading:
-            type: string
-          paragraph:
-            type: string
-          link:
-            $ref: "#/definitions/Link"
-          background:
-            $ref: "#/definitions/Background"
-
-  ##heroSecondary
-  heroSecondary:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["heroSecondary"]
-      data:
-        type: object
-        properties:
-          heading:
-            type: string
-          paragraph:
-            type: string
-          link:
-            $ref: "#/definitions/Link"
-          background:
-            $ref: "#/definitions/Background"
-
-  ##heroTertiary
-  heroTertiary:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["heroTertiary"]
-      data:
-        type: object
-        properties:
-          heading:
-            type: string
-          paragraph:
-            type: string
-          link:
-            $ref: "#/definitions/Link"
-          background:
-            $ref: "#/definitions/Background"
-
-
-  ##howToAdvertise
-  howToAdvertise:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["howToAdvertise"]
-      data:
-        type: object
-        properties:
-          windowed:
-            type: boolean
-            default: true
-          heading:
-            type: string
-          link:
-            $ref: "#/definitions/Link"
-          steps:
-            type: array
-            items:
-              properties:
-                heading:
-                  type: string
-                paragraph:
-                  type: string
-                icon:
-                  type: string
-                  description: the name of the icon
-
-  ##imageCallToActions
-  imageCallToActions:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["imageCallToActions"]
-      data:
-        type: object
-        properties:
-          windowed:
-            type: boolean
-            default: false
-          marginTop:
-            $ref: "#/definitions/marginTop"
-          callToActions:
-            type: array
-            items:
-              properties:
-                heading:
-                  type: string
-                paragraph:
-                  type: string
-                background:
-                  $ref: "#/definitions/Background"
-                backgroundBlurred:
-                  $ref: "#/definitions/Background"
-
-  ##imageCarousel
-  imageCarousel:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["imageCarousel"]
-      data:
-        type: object
-        properties:
-          windowed:
-            type: boolean
-            default: false
-          slides:
-            type: array
-            items:
-              properties:
-                heading:
-                  type: string
-                image:
-                  $ref: "#/definitions/Background"
-
-
-
-  ## imageWithContent
-  imageWithContent:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["imageWithContent"]
-      data:
-        type: object
-        properties:
-          alignment:
-            $ref: "#/definitions/alignment"
-          windowed:
-            type: boolean
-            default: false
-          croppedImage:
-            type: boolean
-            default: false
-          marginTop:
-            $ref: "#/definitions/marginTop"
-          heading:
-            type: string
-          paragraph:
-            type: string
-          link:
-            $ref: "#/definitions/Link"
-          background:
-            $ref: "#/definitions/Background"
-
-  ##latest
-  latest:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["latest"]
-      data:
-        type: object
-        properties:
-          windowed:
-            type: boolean
-            default: false
-          heading:
-            type: string
-          link:
-            $ref: "#/definitions/Link"
-          articles:
-            type: array
-            items:
-              properties:
-                heading:
-                  type: string
-                paragraph:
-                  type: string
-                image:
-                  $ref: "#/definitions/Background"
-          tags:
-            type: array
-            items:
-              $ref: "#/definitions/Link"
-
-  ## mapSecondary
-  mapSecondary:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["imageWithContent"]
-      data:
-        type: object
-        properties:
-          windowed:
-            type: boolean
-            default: true
-          marginTop:
-            $ref: "#/definitions/marginTop"
-          heading:
-            type: string
-          subHeading:
-            type: string
-          paragraph:
-            type: string
-          link:
-            $ref: "#/definitions/Link"
-
-  ##pathToPurchase
-  pathToPurchase:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["pathToPurchase"]
-      data:
-        type: object
-        properties:
-          steps:
-            type: array
-            items:
-              properties:
-                heading:
-                  type: string
-                paragraph:
-                  type: string
-                background:
-                  $ref: "#/definitions/Background"
-
-  ##personaSelector
-  personaSelector:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["personaSelector"]
-      data:
-        type: object
-        properties:
-          personas:
-            type: array
-            items:
-              properties:
-                heading:
-                  type: string
-                paragraph:
-                  type: string
-                image:
-                  $ref: "#/definitions/Background"
-                personaType:
-                  $ref: "#/definitions/personaType"
-                link:
-                  $ref: "#/definitions/Link"
-
-   ##blogPost
-  blogPost:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["blogPost"]
-      data:
-        type: object
-        properties:
-          window:
-            type: boolean
-            default: true
-          marginTop:
-            $ref: "#/definitions/marginTop"
-          date:
-            type: string
-            description: "January 23, 2017"
-          time:
-            type: string
-            description: "0:08"
-          views:
-            type: string
-            description: "302"
-          heading:
-            type: string
-          subHeading:
-            type: string
-          paragraph:
-            type: string
-          tags:
-            type: array
-            items:
-              $ref: "#/definitions/Link"
-          author:
-            type: object
-            properties:
-              name:
-                type: string
-              role:
-                type: string
-              image:
-                $ref: "#/definitions/Background"
-          social:
-            type: array
-            items:
-              $ref: "#/definitions/Link"
-
-   ##quoteSecondary
-  quoteSecondary:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["quoteSecondary"]
-      data:
-        type: object
-        properties:
-          marginTop:
-            $ref: "#/definitions/marginTop"
-          quote:
-            type: string
-          author:
-            type: string
-
-   ##smallImageLeft
-  smallImageLeft:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["smallImageLeft"]
-      data:
-        type: object
-        properties:
-          marginTop:
-            $ref: "#/definitions/marginTop"
-          image:
-                $ref: "#/definitions/Background"
-
-  ##quote
-  quote:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["quote"]
-      data:
-        type: object
-        properties:
-          windowed:
-            type: boolean
-            default: true
-          marginTop:
-            $ref: "#/definitions/marginTop"
-          quote:
-            type: string
-          name:
-            type: string
-          description:
-            type: string
-          image:
-            $ref: "#/definitions/Background"
-
-  ## smallHeading
-  smallHeading:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["smallHeading"]
-      data:
-        type: object
-        properties:
-          windowed:
-            type: boolean
-            default: true
-          marginTop:
-            $ref: "#/definitions/marginTop"
-          heading:
-            type: string
-            description: The heading of this block
-
-  ## smallInfo
-  smallInfo:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["smallInfo"]
-      data:
-        type: object
-        properties:
-          windowed:
-            type: boolean
-            default: true
-          heading:
-            type: string
-            description: The heading of this block
-          paragraph:
-            type: string
-            description: The paragraph of this block
-          link:
-            $ref: "#/definitions/Link"
-
-  ##map (TODO)
-  map:
-    type: object
-    properties:
-      id:
-        type: string
-        description: The ID for the object to be reconized by the frontend framework.
-        enum: ["map"]
-      data:
-        type: object
-        properties:
-          windowed:
-            type: boolean
-            default: true
-
-
