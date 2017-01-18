@@ -37,13 +37,13 @@
 			&:last-child {
 
 				// Add all the blocks that need extra margin when they are the last block on the page
+				&.component-block-map,
 				&.component-block-info {
 					margin-bottom: $sizeGrid * $i;
 				}
 			}
 		}
 	}
-
 }
 
 // import all your components here!
@@ -100,3 +100,4 @@
 @import "block/block-more";
 @import "block/block-audio-fragment";
 @import "audio-player";
+@import "block/block-button";

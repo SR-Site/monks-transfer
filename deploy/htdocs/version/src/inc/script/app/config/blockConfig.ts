@@ -129,5 +129,9 @@ export const blockConfig:IBlockConfig = {
 	audioFragment: {
 		id: Blocks.AUDIO_FRAGMENT,
 		type: BlockType.COMPONENT
+	},
+	button: {
+		id: Blocks.BUTTON,
+		type: BlockType.COMPONENT
 	}
 };

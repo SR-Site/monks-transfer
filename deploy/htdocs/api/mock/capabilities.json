@@ -1,0 +1,570 @@
+{
+	"statusCode": 200,
+	"data": {
+		"pageTitle": "Capabilities",
+		"headerTheme": 0,
+		"blocks": [
+			{
+				"id": "heroMain",
+				"data": {
+					"overlap": true,
+					"heading": "Choose your stage",
+					"paragraph": "Advertise during: Sunday NFL Countdown ESPN",
+					"link": {
+						"label": "Play showreel",
+						"title": "Play showreel",
+						"target": "/capabilities",
+						"type": 2
+					},
+					"background": {
+						"normal": "data/image/hero-secondary/background.jpg",
+						"small": "data/image/hero-secondary/background.jpg",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "text",
+				"data": {
+					"marginTop": 2,
+					"windowed": true,
+					"html": "<p>Get your message in front of the right people at the right time. We'll place your business next to the show your target audience. Get your message in front of the right people at the right time. Lorem ipsum dolor sit</p>"
+				}
+			},
+			{
+				"id": "button",
+				"data": {
+					"marginTop": 1,
+					"windowed": true,
+					"alignment": 0,
+					"link": {
+						"label": "See all shows",
+						"title": "See all shows",
+						"target": "knowledge-center",
+						"type": 0
+					}
+				}
+			},
+			{
+				"id": "programModule",
+				"data": {
+					"marginTop": 2,
+					"items": [
+						{
+							"image": {
+								"small": "data/image/program-module/image.jpg",
+								"normal": "data/image/program-module/image.jpg",
+								"alt": "imageName"
+							},
+							"heading": "Keeping Up with the kardashians",
+							"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+							"stats": {
+								"ageRange": "Men 25 -35",
+								"demographic": "33% Parents"
+							},
+							"video": {
+								"url": "data/video/video.mp4",
+								"type": 0
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"image": {
+								"small": "data/image/program-module/image.jpg",
+								"normal": "data/image/program-module/image.jpg",
+								"alt": "imageName"
+							},
+							"heading": "Keeping Up with the kardashians",
+							"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+							"stats": {
+								"ageRange": "Men 25 -35",
+								"demographic": "33% Parents"
+							},
+							"video": {
+								"url": "data/video/video.mp4",
+								"type": 0
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"image": {
+								"small": "data/image/program-module/image.jpg",
+								"normal": "data/image/program-module/image.jpg",
+								"alt": "imageName"
+							},
+							"heading": "Keeping Up with the kardashians",
+							"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+							"stats": {
+								"ageRange": "Men 25 -35",
+								"demographic": "33% Parents"
+							},
+							"video": {
+								"url": "data/video/video.mp4",
+								"type": 0
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"image": {
+								"small": "data/image/program-module/image.jpg",
+								"normal": "data/image/program-module/image.jpg",
+								"alt": "imageName"
+							},
+							"heading": "Keeping Up with the kardashians",
+							"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+							"stats": {
+								"ageRange": "Men 25 -35",
+								"demographic": "33% Parents"
+							},
+							"video": {
+								"url": "data/video/video.mp4",
+								"type": 0
+							},
+							"tags": [
+								{
+									"label": "Sport",
+									"title": "Sport",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"id": "smallInfo",
+				"data": {
+					"windowed": true,
+					"marginTop": 2,
+					"heading": "We got <span class='highlight'>Network</span> for Days",
+					"paragraph": "With over 50 networks to choose from, in blandit lorem ipsum dolor sit"
+				}
+			},
+			{
+				"id": "networkOverview",
+				"data": {
+					"marginTop": 2,
+					"items": [
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						},
+						{
+							"image": {
+								"small": "data/image/network-overview/cnn.png",
+								"normal": "data/image/network-overview/cnn.png",
+								"alt": "CNN"
+							},
+							"link": {
+								"label": "Read the FAQS",
+								"title": "Read the FAQS",
+								"target": "http://www.google.com",
+								"type": 1
+							}
+						}
+					]
+				}
+			},
+			{
+				"id": "map",
+				"data": {
+					"windowed": true,
+					"marginTop": 2
+				}
+			}
+		]
+	}
+}

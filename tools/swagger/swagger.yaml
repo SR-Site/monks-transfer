@@ -812,7 +812,7 @@ paths:
               id:
                 type: string
                 description: The ID for the object to be reconized by the frontend framework.
-                format: storyInfoImages
+                format: audioFragment
               data:
                 type: object
                 properties:
@@ -831,6 +831,31 @@ paths:
                   file:
                     type: string
                     description: The path to the *.mp3 file
+  /block/block-button:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: button
+              data:
+                type: object
+                properties:
+                  overlap:
+                    $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  link:
+                    $ref: "#/definitions/Link"
+                  alignment:
+                    $ref: "#/definitions/Alignment"
 definitions:
   # +--------------------------------------------------------------------------------+
   # | API Calls                                                                      |

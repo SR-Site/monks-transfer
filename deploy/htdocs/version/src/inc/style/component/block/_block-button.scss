@@ -1,0 +1,11 @@
+.component-block-button {
+	padding: .5rem $sizeGrid * 7;
+
+	&.align-left {
+		text-align: left;
+	}
+
+	&.align-right {
+		text-align: right;
+	}
+}

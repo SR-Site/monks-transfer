@@ -33,6 +33,7 @@ class Blocks
 	public static STORY_INFO_IMAGES:string = 'block-story-info-images';
 	public static PROGRAM_MODULE:string = 'block-program-module';
 	public static AUDIO_FRAGMENT:string = 'block-audio-fragment';
+	public static BUTTON:string = 'block-button';
 }
 
 
