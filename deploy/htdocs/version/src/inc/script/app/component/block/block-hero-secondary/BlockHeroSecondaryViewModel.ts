@@ -4,10 +4,12 @@ import IBlockHeroSecondaryOptions from 'app/component/block/block-hero-secondary
 
 import ko = require('knockout');
 import Direction from "../../../data/enum/layout/Direction";
+import Alignment from "../../../data/enum/layout/Alignment";
 
 class BlockHeroSecondaryViewModel extends DefaultComponentViewModel<BlockHeroSecondaryController, IBlockHeroSecondaryOptions>
 {
 	public Direction:Enum = Direction;
+	public Alignment:Enum = Alignment;
 
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
@@ -15,7 +17,8 @@ class BlockHeroSecondaryViewModel extends DefaultComponentViewModel<BlockHeroSec
 	 */
 	public destruct():void
 	{
-		this.Direction = null
+		this.Direction = null;
+		this.Alignment = null;
 
 		// always call this last
 		super.destruct();

@@ -87,9 +87,10 @@ paths:
                 format: heroMain
               data:
                 type: object
+                required: [overlap, windowed, marginTop, heading, background]
                 properties:
                   overlap:
-                     $ref: "#/definitions/Overlap"
+                    $ref: "#/definitions/Overlap"
                   windowed:
                     $ref: "#/definitions/Windowed"
                   marginTop:
@@ -105,8 +106,27 @@ paths:
                     type: string
                   link:
                     $ref: "#/definitions/Link"
+                  secondarylink:
+                    $ref: "#/definitions/Link"
                   background:
                     $ref: "#/definitions/Image"
+                  statistics:
+                    type: object
+                    properties:
+                      heading:
+                        type: string
+                      stats:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            heading:
+                              type: string
+                            description:
+                              type: string
+                            value:
+                              type: string
+
   /block/block-hero-secondary:
     get:
       responses:
@@ -121,6 +141,7 @@ paths:
                 format: heroSecondary
               data:
                 type: object
+                required: [overlap, windowed, marginTop, heading, background]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -150,6 +171,7 @@ paths:
                   format: heroTertiary
                 data:
                   type: object
+                  required: [overlap, windowed, marginTop, heading, background]
                   properties:
                     overlap:
                        $ref: "#/definitions/Overlap"
@@ -179,6 +201,7 @@ paths:
                 format: howToAdvertise
               data:
                 type: object
+                required: [overlap, windowed, marginTop, heading, link, steps]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -215,6 +238,7 @@ paths:
                 format: imageCallToActions
               data:
                 type: object
+                required: [overlap, windowed, marginTop, callToActions]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -248,6 +272,7 @@ paths:
                 format: imageCarousel
               data:
                 type: object
+                required: [overlap, windowed, marginTop, slides]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -277,6 +302,7 @@ paths:
                 format: imageWithContent
               data:
                 type: object
+                required: [overlap, windowed, marginTop, heading, background]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -311,6 +337,7 @@ paths:
                 format: latest
               data:
                 type: object
+                required: [overlap, windowed, marginTop, heading, articles]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -352,6 +379,7 @@ paths:
                 format: more
               data:
                 type: object
+                required: [overlap, windowed, marginTop, heading, articles]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -392,6 +420,7 @@ paths:
                 format: map
               data:
                 type: object
+                required: [overlap, windowed, marginTop]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -414,6 +443,7 @@ paths:
                 format: marketMap
               data:
                 type: object
+                required: [overlap, windowed, marginTop]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -435,6 +465,7 @@ paths:
                 format: mapSecondary
               data:
                 type: object
+                required: [overlap, windowed, marginTop, heading, subHeading, paragraph]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -464,6 +495,7 @@ paths:
                 format: pathToPurchase
               data:
                 type: object
+                required: [overlap, windowed, marginTop, steps]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -495,6 +527,7 @@ paths:
                 format: personaSelector
               data:
                 type: object
+                required: [overlap, windowed, marginTop, personas]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -530,6 +563,7 @@ paths:
                 format: blogPost
               data:
                 type: object
+                required: [overlap, windowed, marginTop, time, views, heading, subHeading, paragraph, tags, author, social]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -583,6 +617,7 @@ paths:
                 format: quote
               data:
                 type: object
+                required: [overlap, windowed, marginTop, quote, name, description, image]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -612,6 +647,7 @@ paths:
                 format: quoteSecondary
               data:
                 type: object
+                required: [overlap, windowed, marginTop, quote, author]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -637,6 +673,7 @@ paths:
                 format: text
               data:
                 type: object
+                required: [overlap, windowed, marginTop, html]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -661,6 +698,7 @@ paths:
                 format: smallImage
               data:
                 type: object
+                required: [overlap, windowed, marginTop, alignment, image]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -686,6 +724,7 @@ paths:
                 format: latest
               data:
                 type: object
+                required: [overlap, windowed, marginTop, heading]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -710,6 +749,7 @@ paths:
                 format: smallInfo
               data:
                 type: object
+                required: [overlap, windowed, marginTop, heading, paragraph]
                 properties:
                   overlap:
                      $ref: "#/definitions/Overlap"
@@ -740,6 +780,7 @@ paths:
                 format: programModule
               data:
                 type: object
+                required: [overlap, windowed, marginTop, items]
                 properties:
                   overlap:
                     $ref: "#/definitions/Overlap"
@@ -781,6 +822,7 @@ paths:
                 format: storyInfoImages
               data:
                 type: object
+                required: [overlap, windowed, marginTop, stories]
                 properties:
                   overlap:
                     $ref: "#/definitions/Overlap"
@@ -815,6 +857,7 @@ paths:
                 format: audioFragment
               data:
                 type: object
+                required: [overlap, windowed, marginTop, name, description, image, file]
                 properties:
                   overlap:
                     $ref: "#/definitions/Overlap"
@@ -845,6 +888,7 @@ paths:
                 format: button
               data:
                 type: object
+                required: [overlap, windowed, marginTop, link, alignment]
                 properties:
                   overlap:
                     $ref: "#/definitions/Overlap"
@@ -890,6 +934,7 @@ definitions:
   Link:
     type: object
     description: Default link object
+    required: [label, title, target, type]
     properties:
       label:
         type: string
@@ -906,6 +951,7 @@ definitions:
   Image:
     type: object
     description: Default image object
+    required: [normal, small, alt]
     properties:
       normal:
         type: string
@@ -919,6 +965,7 @@ definitions:
   Video:
     type: object
     description: Default video object
+    required: [url, type]
     properties:
       url:
         type: string
@@ -948,6 +995,7 @@ definitions:
   Error:
     type: object
     description: "Default error object"
+    required: [statusCode, data]
     properties:
       statusCode:
         type: integer

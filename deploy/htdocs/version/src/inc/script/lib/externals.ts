@@ -15,6 +15,7 @@ define([
 	'vendor/gsap/utils/Draggable',
 	'vendor/gsap/plugins/ThrowPropsPlugin',
 	'vendor/gsap/plugins/ScrollToPlugin',
+	'vendor/gsap/plugins/DrawSVGPlugin',
 	'vendor/history/history',
 //	'lib/createjs/preloadjs',
 //	'lib/createjs/soundjs',

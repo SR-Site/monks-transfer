@@ -51,4 +51,31 @@
 		@include coverer();
 		@include size(100%);
 	}
+
+	.statistics-wrapper {
+		@include pos(auto, auto, $sizeGrid * 2, calc(50% + #{$sizeGrid}));
+		position: absolute;
+		color: $colorWhite;
+		vertical-align: top;
+		font-size: 0;
+
+		.heading {
+			margin-bottom: $sizeGrid / 2;
+		}
+	}
+
+	.statistic {
+		display: inline-block;
+		margin-left: $sizeGrid;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	.secondary-link {
+		@include pos(auto, $sizeGrid, $sizeGrid * 2, auto);
+		position: absolute;
+		color: $colorWhite;
+	}
 }

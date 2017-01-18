@@ -44,5 +44,15 @@
 
 // Open sans extra-bold
 .heading-08 {
+	font: 400 1.4rem / 1.7rem $fontOpenSans;
+
+	strong {
+		font-weight: 800;
+	}
+}
+
+// Open sans extra-bold
+.heading-09 {
 	font: 800 1.2rem / 2.1rem $fontOpenSans;
 }
+

@@ -8,6 +8,15 @@ export interface IBlockHeroMainOptions extends IDefaultComponentOptions
 	paragraph?: string;
 	background: IImage;
 	link?: ILink;
+	secondaryLink?: ILink;
+	statistics?: {
+		heading: string;
+		stats: Array<{
+			heading: string;
+			description: string;
+			value: number|string;
+		}>
+	}
 }
 
 export default IBlockHeroMainOptions;

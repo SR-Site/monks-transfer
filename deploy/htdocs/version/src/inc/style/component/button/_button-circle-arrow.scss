@@ -10,6 +10,28 @@
 		@include size($sizeGrid);
 	}
 
+	.order-container {
+		display: flex;
+		align-items: center;
+
+		&.align-left {
+			.label {
+				order: 1;
+				margin-left: $sizeGrid / 2;
+			}
+			.icon{ order: 0; }
+		}
+
+		&.align-right {
+			.label {
+				order: 0;
+				margin-right: $sizeGrid / 2;
+			}
+			.icon{ order: 1; }
+		}
+
+	}
+
 	svg {
 		backface-visibility: hidden;
 
