@@ -2,10 +2,57 @@
 	"data": {
 		"layout": {
 			"navigation": [
-				{}
+				{
+					"link": {
+						"label": "Home",
+						"title": "Home",
+						"target": "home",
+						"type": 0
+					}
+				},
+				{
+					"link": {
+						"label": "Advertising solutions",
+						"title": "Advertising solutions",
+						"target": "advertising-solutions",
+						"type": 0
+					},
+					"subtitle": "We offer advertising solutions for <a data-gaia-goto-route href='advertising-solutions/television'>Television</a>, <a data-gaia-goto-route href='advertising-solutions/digital'>Digital</a> and <a data-gaia-goto-route href='advertising-solutions/creative-services'>Creative services</a>"
+				},
+				{
+					"link": {
+						"label": "Capabilities",
+						"title": "Capabilities",
+						"target": "capabilities",
+						"type": 0
+					}
+				},
+				{
+					"link": {
+						"label": "Markets map",
+						"title": "Markets map",
+						"target": "market-map",
+						"type": 0
+					}
+				},
+				{
+					"link": {
+						"label": "Resources",
+						"title": "Resources",
+						"target": "knowledge-center",
+						"type": 0
+					}
+				},
+				{
+					"link": {
+						"label": "Contact us",
+						"title": "Contact us",
+						"target": "contact-us",
+						"type": 0
+					}
+				}
 			],
 			"footer": {
-
 			},
 			"slideOutPanel": {
 				"contact": {

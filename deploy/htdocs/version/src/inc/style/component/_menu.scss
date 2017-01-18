@@ -13,7 +13,7 @@
 	.menu-item {
 		display: block;
 		margin-bottom: $sizeGrid;
-		max-height: $sizeGrid;
+		max-height: 3rem;
 		overflow: hidden;
 		transition: max-height .2s ease(easeInOut);
 
@@ -50,7 +50,7 @@
 	}
 
 	.main-link {
-		font: 400 2.4rem / 1 $fontOpenSans;
+		font: 400 2.4rem / 3rem $fontOpenSans;
 		text-decoration: none;
 		color: $colorWhite;
 		display: block;

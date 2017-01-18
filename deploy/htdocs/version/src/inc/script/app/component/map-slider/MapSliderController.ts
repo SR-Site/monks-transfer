@@ -2,6 +2,7 @@ import DefaultComponentTransitionController from "app/util/component-transition/
 import MapSliderTransitionController from 'app/component/map-slider/MapSliderTransitionController';
 import IMapSliderOptions from 'app/component/map-slider/IMapSliderOptions';
 import MapSliderViewModel from 'app/component/map-slider/MapSliderViewModel';
+import bowser = require('bowser');
 
 import Log from "lib/temple/util/Log";
 
@@ -56,6 +57,7 @@ class MapSliderController extends DefaultComponentTransitionController<MapSlider
 			onDragEnd: this.handleDrag.bind(this),
 			onThrowUpdate: this.handleDrag.bind(this),
 			onThrowComplete: this.handleDrag.bind(this),
+			allowNativeTouchScrolling: bowser.mobile && bowser.tablet,
 			snap: {
 				x: (endPos: number) =>
 				{

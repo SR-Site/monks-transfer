@@ -79,18 +79,18 @@ export default class GaiaMain
 //				Gaia.api.goto(value);
 //			}
 //		})
-//		.on('click', '[data-gaia-goto-route]', (event:JQueryEventObject) =>
-//		{
-//			event.preventDefault();
-//
-//			var target = $(event.currentTarget);
-//			var value:string = target.attr('data-gaia-route') || target.attr('href');
-//
-//			if (value.length > 0)
-//			{
-//				Gaia.api.gotoRoute(value);
-//			}
-//		})
+		.on('click', '[data-gaia-goto-route]', (event:JQueryEventObject) =>
+		{
+			event.preventDefault();
+
+			var target = $(event.currentTarget);
+			var value:string = target.attr('data-gaia-route') || target.attr('href');
+
+			if (value.length > 0)
+			{
+				Gaia.api.gotoRoute(value);
+			}
+		})
 //		.on('click', '[data-gaia-popup]', (event:JQueryEventObject) =>
 //		{
 //			event.preventDefault();

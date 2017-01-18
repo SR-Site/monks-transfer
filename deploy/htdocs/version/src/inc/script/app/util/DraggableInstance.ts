@@ -290,7 +290,7 @@ class DraggableInstance extends EventDispatcher
 				onDragEnd: this.handleDragEnd.bind(this),
 				onThrowUpdate: this.handleDrag.bind(this),
 				onDragStart: this.handleDragStart.bind(this),
-				allowNativeTouchScrolling: false, // Set to true on mobile
+				allowNativeTouchScrolling: bowser.mobile && bowser.tablet,
 				onThrowComplete: () =>
 				{
 					this.handleThrowComplete();
@@ -446,10 +446,10 @@ export interface IDraggableInstanceOptions
 {
 	invert?: boolean;
 	maxDuration?: number;
-	enableTrackPad?:boolean;
+	enableTrackPad?: boolean;
 	minDuration?: number;
 	throwResistance?: number;
-	dragClickables?:boolean;
+	dragClickables?: boolean;
 	dragResistance?: number;
 	snap?: {x?: number;element?: HTMLElement;};
 }

@@ -2,26 +2,22 @@
 	<div class="scroll-wrapper" data-bind="scrollbar: {}">
 		<div class="scroll-content" data-scroll-content>
 			<div class="scroll-inner" data-content-inner>
-				<ul class="menu-items">
+				<ul class="menu-items" data-bind="foreach: dataManager.settingsModel.initDataModel.navigationModel.getAllItems()">
+
 					<li class="menu-item">
-						<a class="main-link" data-bind="gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: 'home'}]">Home</a>
-					</li>
-					<li class="menu-item">
-						<a class="main-link" data-bind="gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: 'advertising-solutions'}]">Advertising Solutions</a>
-						<div class="subtitle">We offer advertising sollutions for <a data-bind="gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: 'advertising-solutions/television'}]">Television</a>, <a
-							data-bind="gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: 'advertising-solutions/digital'}]">Digital</a> and <a data-bind="gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: 'advertising-solutions/creative-services'}]">Creative services</a></div>
-					</li>
-					<li class="menu-item">
-						<a class="main-link" href="#">Capabilities</a>
-					</li>
-					<li class="menu-item">
-						<a class="main-link" data-bind="gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: 'map'}]">Markets Map</a>
-					</li>
-					<li class="menu-item">
-						<a class="main-link" data-bind="gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: 'knowledge-center'}]">Knowledge Center</a>
-					</li>
-					<li class="menu-item">
-						<button class="button main-link" data-bind="tap: $root.handleClickContact.bind($root)">Contact us</button>
+						<!-- ko if: $data.link.target !== $root.Routes.CONTACT_US -->
+							<!-- ko with: $data.link -->
+								<a class="main-link" data-bind="gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: $data.target}], html: $data.label"></a>
+							<!-- /ko -->
+						<!-- /ko -->
+
+						<!-- ko if: $data.link.target == $root.Routes.CONTACT_US -->
+							<button class="button main-link" data-bind="tap: $root.handleClickContact.bind($root), html: $data.link.label"></button>
+						<!-- /ko -->
+
+						<!-- ko if: $data.subtitle -->
+							<div class="subtitle" data-bind="html: $data.subtitle"></div>
+						<!-- /ko -->
 					</li>
 				</ul>
 			</div>

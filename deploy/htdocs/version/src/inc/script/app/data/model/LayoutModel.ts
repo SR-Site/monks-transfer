@@ -13,9 +13,7 @@ class LayoutModel
 	 * @public
 	 * @method addSlideOutPanel
 	 */
-	public addSlideOutPanel(data:{
-		contact:any;
-	}):void
+	public addSlideOutPanel(data: {contact: any;}): void
 	{
 		this._slideOutPanel[PanelBlocks.CONTACT] = data.contact;
 	}
@@ -24,7 +22,7 @@ class LayoutModel
 	 * @public
 	 * @method getSlideOutPanel
 	 */
-	public getSlideOutPanel(panel:string):any
+	public getSlideOutPanel(panel: string): any
 	{
 		return this._slideOutPanel[panel];
 	}
