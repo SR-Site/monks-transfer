@@ -20,8 +20,8 @@
 			options: {
 				icon: 'contact',
 				action: {
-					label: '1-884-TO-REACH',
-					title: 'Call us!',
+					label: localeManager.getString('global.cta.to_reach'),
+					title: localeManager.getString('global.cta.to_reach'),
 					event: function(){console.log('call us')}
 				},
 				size: $root.ButtonSize.LARGE,
@@ -34,8 +34,8 @@
 			onComplete: $root.controller.callbackCounter.get(),
 			options: {
 				action: {
-					label: 'Menu',
-					title: 'Menu',
+					label: localeManager.getString('global.cta.menu'),
+					title: localeManager.getString('global.cta.menu'),
 					event: $root.handleMenuButtonClick.bind($root)
 				},
 				menuButtonActive: menuButtonActive,

@@ -181,7 +181,7 @@
 				"id": "smallInfo",
 				"data": {
 					"windowed": true,
-					"marginTop": 2,
+					"marginTop": 0,
 					"heading": "We got <span class='highlight'>Network</span> for Days",
 					"paragraph": "With over 50 networks to choose from, in blandit lorem ipsum dolor sit"
 				}
@@ -189,7 +189,7 @@
 			{
 				"id": "networkOverview",
 				"data": {
-					"marginTop": 2,
+					"marginTop": 0,
 					"items": [
 						{
 							"image": {

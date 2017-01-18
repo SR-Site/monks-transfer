@@ -38,6 +38,7 @@
 		text-align: left;
 		margin-left: 1rem;
 		margin-right: $sizeGrid;
+		text-transform: uppercase;
 	}
 
 	@include hover() {

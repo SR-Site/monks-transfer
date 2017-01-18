@@ -1,7 +1,9 @@
 {
 	"global": {
 		"cta": {
-
+			"start_advertising_today": "Start advertising today",
+			"menu": "Menu",
+			"to_reach": "1-884-to-reach"
 		},
 		"form": {
 			"placeholder": {

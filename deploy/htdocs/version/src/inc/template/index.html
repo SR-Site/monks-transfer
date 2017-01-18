@@ -33,9 +33,9 @@
 		onComplete: $root.controller.callbackCounter.get($root.controller.handleStartAdvertisingReady.bind($root.controller)),
 		options: {
 			action: {
-				label: 'START ADVERTISING TODAY',
-				title: 'Start advertising today!',
-				event: function(){console.log('start advertising')}
+				label: localeManager.getString('global.cta.start_advertising_today'),
+				title: localeManager.getString('global.cta.start_advertising_today'),
+				event: $root.handleStartAdvertisingClick.bind($root)
 			},
 			size: $root.ButtonSize.LARGE,
 			disabled: $root.startAdvertisingDisabled
