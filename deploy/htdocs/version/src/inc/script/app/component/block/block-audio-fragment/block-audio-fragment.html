@@ -1,0 +1,29 @@
+<div class="component-block-audio-fragment">
+	<h2 class="heading heading-05" data-bind="html: data.heading"></h2>
+	<div class="details">
+		<figure class="profile-image">
+			<img data-bind="
+				attr: {
+					alt: data.image.alt
+				},
+				image: {
+					queries: [
+						[$root.MediaQueries.X_SMALL, data.image.small ],
+						[$root.MediaQueries.SMALL, data.image.normal]
+					],
+					state: $root.deviceState()
+				}" />
+		</figure>
+		<p class="copy copy-01">
+			<strong data-bind="html: data.name"></strong> |
+			<span data-bind="html: data.description"></span>
+		</p>
+	</div>
+	<!-- ko component: {
+		name: 'audio-player',
+		onComplete: $root.controller.callbackCounter.get(),
+		options: {
+			file: data.file
+		}
+	} --><!-- /ko -->
+</div>

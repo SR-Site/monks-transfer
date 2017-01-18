@@ -15,6 +15,22 @@
 				}
 			},
 			{
+				"id": "audioFragment",
+				"data": {
+					"windowed": true,
+					"marginTop": 2,
+					"heading": "Best way to <span class='highlight'>Advertise</span> on <span class='highlight'>TV</span>",
+					"name": "John Doe",
+					"description": "Foo bar",
+					"image": {
+						"normal": "data/image/quote/person.jpg",
+						"small": "data/image/quote/person.jpg",
+						"alt": "Background image alt text"
+					},
+					"file": "data/audio/audio.mp3"
+				}
+			},
+			{
 				"id": "blogPost",
 				"data": {
 					"windowed": true,

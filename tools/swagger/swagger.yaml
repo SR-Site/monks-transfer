@@ -801,6 +801,36 @@ paths:
                           $ref: "#/definitions/Image"
                         backgroundBlurred:
                           $ref: "#/definitions/Image"
+  /block/block-audio-fragment:
+    get:
+      responses:
+        200:
+          description: Block structure
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+                description: The ID for the object to be reconized by the frontend framework.
+                format: storyInfoImages
+              data:
+                type: object
+                properties:
+                  overlap:
+                    $ref: "#/definitions/Overlap"
+                  windowed:
+                    $ref: "#/definitions/Windowed"
+                  marginTop:
+                    $ref: "#/definitions/MarginTop"
+                  name:
+                    type: string
+                  description:
+                    type: string
+                  image:
+                    $ref: "#/definitions/Image"
+                  file:
+                    type: string
+                    description: The path to the *.mp3 file
 definitions:
   # +--------------------------------------------------------------------------------+
   # | API Calls                                                                      |

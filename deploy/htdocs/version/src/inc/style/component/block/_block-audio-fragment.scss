@@ -1,0 +1,31 @@
+.component-block-audio-fragment {
+
+	.details {
+		margin-top: $sizeGrid / 2;
+		vertical-align: middle;
+
+		.profile-image,
+		.copy {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.profile-image {
+			@include size($sizeGrid);
+			border-radius: 100%;
+			overflow: hidden;
+
+			img {
+				@include size(100%);
+			}
+		}
+
+		.copy {
+			margin-left: $sizeGrid / 2;
+		}
+	}
+
+	.component-audio-player {
+		margin-top: $sizeGrid * 2;
+	}
+}

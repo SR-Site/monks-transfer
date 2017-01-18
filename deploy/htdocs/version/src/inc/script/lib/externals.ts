@@ -2,6 +2,7 @@ define([
 	'jquery',
 	'knockout',
 	'vendor/vimeo/player.min',
+	'vendor/wavesurfer/wavesurfer',
 	'jquerymobile',
 	'vendor/knockout-punches/knockout.punches',
 	'lib/knockout/knockout.gaia',
@@ -20,7 +21,7 @@ define([
 	'lib/knockout/knockout.scrollbar',
 	'lib/knockout/knocktouch',
 	'lib/knockout/knockout.image',
-	'lib/knockout/knockout.events',
+	'lib/knockout/knockout.events'
 ], ($, ko, vimeo) =>
 {
 

@@ -125,5 +125,9 @@ export const blockConfig:IBlockConfig = {
 	programModule: {
 		id: Blocks.PROGRAM_MODULE,
 		type: BlockType.COMPONENT
+	},
+	audioFragment: {
+		id: Blocks.AUDIO_FRAGMENT,
+		type: BlockType.COMPONENT
 	}
 };
