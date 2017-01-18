@@ -1,10 +1,10 @@
 import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
-import MapSliderTransitionController from 'app/component/map-slider/MapSliderTransitionController';
-import IMapSliderOptions from 'app/component/map-slider/IMapSliderOptions';
-import MapSliderViewModel from 'app/component/map-slider/MapSliderViewModel';
-import bowser = require('bowser');
-
+import MapSliderTransitionController from "app/component/map-slider/MapSliderTransitionController";
+import IMapSliderOptions from "app/component/map-slider/IMapSliderOptions";
+import MapSliderViewModel from "app/component/map-slider/MapSliderViewModel";
 import Log from "lib/temple/util/Log";
+import CommonEvent from "../../../lib/temple/event/CommonEvent";
+import bowser = require('bowser');
 
 class MapSliderController extends DefaultComponentTransitionController<MapSliderViewModel, IMapSliderOptions>
 {
@@ -18,8 +18,8 @@ class MapSliderController extends DefaultComponentTransitionController<MapSlider
 	private _draggableInstance: Draggable;
 
 	private _knob: HTMLElement;
-	private _bounds:HTMLElement;
-	private _stepCount:number;
+	private _bounds: HTMLElement;
+	private _stepCount: number;
 	private _gridSize: number;
 
 	/**
@@ -38,6 +38,40 @@ class MapSliderController extends DefaultComponentTransitionController<MapSlider
 		this._bounds = <HTMLElement>this.element.querySelector('.knob-wrapper');
 	}
 
+	/**
+	 * @public
+	 * @method getactiveIndex
+	 */
+	public get activeIndex():KnockoutObservable<number>
+	{
+		return this.viewModel.activeIndex;
+	}
+
+	/**
+	 * @public
+	 * @method openIndex
+	 */
+	public openIndex(index: number): void
+	{
+		const progress = index / this._stepCount;
+
+		TweenLite.to(
+			this._knob, 1, {
+				x: this._gridSize * (this._stepCount * progress),
+				onUpdate: () =>
+				{
+					this._draggableInstance.update();
+
+					this.handleDrag();
+				}
+			}
+		)
+	}
+
+	/**
+	 * @protected
+	 * @method allComponentsLoaded
+	 */
 	protected allComponentsLoaded(): void
 	{
 		super.allComponentsLoaded();
@@ -57,7 +91,7 @@ class MapSliderController extends DefaultComponentTransitionController<MapSlider
 			onDragEnd: this.handleDrag.bind(this),
 			onThrowUpdate: this.handleDrag.bind(this),
 			onThrowComplete: this.handleDrag.bind(this),
-			allowNativeTouchScrolling: bowser.mobile && bowser.tablet,
+			allowNativeTouchScrolling: bowser.mobile || bowser.tablet,
 			snap: {
 				x: (endPos: number) =>
 				{
@@ -77,6 +111,10 @@ class MapSliderController extends DefaultComponentTransitionController<MapSlider
 
 		this.viewModel.progress(progress);
 		this.viewModel.activeIndex(Math.round(progress * this._stepCount));
+
+		this.dispatch(CommonEvent.UPDATE, {
+			progress: progress
+		})
 	}
 
 	/**

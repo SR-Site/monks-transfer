@@ -106,7 +106,38 @@
 			{
 				"id": "map",
 				"data": {
-					"windowed": true
+					"windowed": true,
+					"steps": [
+						{
+							"label": "200m",
+							"heading": "200m",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						},
+						{
+							"label": "81%",
+							"heading": "81%",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						},
+						{
+							"label": "15 years",
+							"heading": "15 years",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						},
+						{
+							"label": "110+",
+							"heading": "110+",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						}
+					],
+					"imageSequence": {
+						"image": {
+							"normal": "data/sequence/trailer/trailer_",
+							"small": "data/sequence/trailer/trailer_",
+							"alt": "Alt text"
+						},
+						"extension": ".jpg",
+						"total": 301
+					}
 				}
 			},
 			{

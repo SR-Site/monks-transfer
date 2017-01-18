@@ -2,18 +2,27 @@
 	<div class="aspect-ratio-wrapper overrule-overlap">
 		<div class="aspect-ratio-inner abs-fill">
 			<div class="map-image abs-fill">
+				<!-- ko component: {
+					name: 'image-sequence',
+					onComplete: $root.controller.callbackCounter.get($root.controller.handleImageSequenceReady.bind($root.controller)),
+					options: {
+						imageSequence: data.imageSequence
+					}
+				} --><!-- /ko -->
 				<img class="abs-fill" src="data/image/map/map-background.png" alt="">
 			</div>
-			<div class="map-content">
-				<span class="pagination-number">02</span>
-				<h3 class="heading heading-01">81%</h3>
-				<p class="copy copy-01">Of smartphone owners purchased a product with their phone while watching TV</p>
+			<div class="map-content" data-bind="with: data.steps[$root.activeIndex()]">
+				<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($root.activeIndex() + 1).toString(), 2, '0')"></span>
+				<h3 class="heading heading-01" data-bind="html: heading"></h3>
+				<p class="copy copy-01" data-bind="html: paragraph"></p>
 			</div>
 
 			<!-- ko component: {
 				name: 'map-slider',
-				onComplete: $root.controller.callbackCounter.get(),
-				options: {}
+				onComplete: $root.controller.callbackCounter.get($root.controller.handleMapSliderReady.bind($root.controller)),
+				options: {
+					steps: data.steps
+				}
 			} --><!-- /ko -->
 		</div>
 	</div>

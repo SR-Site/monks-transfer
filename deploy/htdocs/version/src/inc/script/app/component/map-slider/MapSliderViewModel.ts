@@ -10,6 +10,15 @@ class MapSliderViewModel extends DefaultComponentTransitionViewModel<MapSliderCo
 	public activeIndex:KnockoutObservable<number> = ko.observable(0);
 
 	/**
+	 * @public
+	 * @method handleStepClick
+	 */
+	public handleStepClick(index:number):void
+	{
+		this.controller.openIndex(index);
+	}
+
+	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct
 	 */

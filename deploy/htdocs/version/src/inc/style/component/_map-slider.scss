@@ -52,6 +52,8 @@
 			align-items: center;
 			text-align: center;
 			background: $colorLightGrey;
+			cursor: pointer;
+			border-radius: 100%;
 
 			.label {
 				font: 400 1.4rem / 1 $fontOpenSans;
@@ -69,6 +71,7 @@
 		position: absolute;
 		transform: translateX(-50%);
 		z-index: 3;
+		pointer-events: none;
 	}
 
 	.knob {
@@ -80,6 +83,7 @@
 		border-radius: 100%;
 		background: transparent;
 		transition: background .2s ease(easeInOut);
+		pointer-events: all;
 
 		&:before {
 			@include abs-center($sizeGrid / 4);

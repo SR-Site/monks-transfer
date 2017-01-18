@@ -14,7 +14,7 @@ export interface IBlockHeroMainOptions extends IDefaultComponentOptions
 		stats: Array<{
 			heading: string;
 			description: string;
-			value: number|string;
+			value: number;
 		}>
 	}
 }

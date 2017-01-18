@@ -8,19 +8,9 @@
 		<span class="knob"></span>
 	</div>
 
-	<!-- todo: swap with dynamic values -->
-	<ul class="steps">
-		<li>
-			<p class="label" data-bind="css: {'is-active': activeIndex() === 0}">200m</p>
-		</li>
-		<li>
-			<p class="label" data-bind="css: {'is-active': activeIndex() === 1}">81%</p>
-		</li>
-		<li>
-			<p class="label" data-bind="css: {'is-active': activeIndex() === 2}">15years</p>
-		</li>
-		<li>
-			<p class="label" data-bind="css: {'is-active': activeIndex() === 3}">110+</p>
+	<ul class="steps" data-bind="foreach: data.steps">
+		<li data-bind="tap: $root.handleStepClick.bind($root, $index())">
+			<p class="label" data-bind="css: {'is-active': $root.activeIndex() === $index()}, html: label"></p>
 		</li>
 	</ul>
 </div>

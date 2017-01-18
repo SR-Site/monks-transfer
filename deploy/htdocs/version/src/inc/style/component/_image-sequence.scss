@@ -1,0 +1,8 @@
+.component-image-sequence {
+	@include size(100%);
+
+	.image-sequence {
+		@include size(100%);
+		display: block;
+	}
+}

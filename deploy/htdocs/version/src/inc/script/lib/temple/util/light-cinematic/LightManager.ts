@@ -1,6 +1,7 @@
 import IStage = require('./IStage');
 import LightCinematic = require('./LightCinematic');
 import ICinematic = require('./ICinematic');
+import Destructible from "../../core/Destructible";
 
 /**
  * @module Temple
@@ -10,25 +11,25 @@ import ICinematic = require('./ICinematic');
  * @author Victor Garrido <v.garrido@mediamonks.com>
  * @version 0.1
  */
-class LightManager
+class LightManager extends Destructible
 {
-	private _properties:any;
-	private _isStopped:boolean = false;
-	private _ctx:CanvasRenderingContext2D;
+	private _properties: any;
+	private _isStopped: boolean = false;
+	private _ctx: CanvasRenderingContext2D;
 
 	//Timer properties
-	private _fpsInterval:number;
-	private _then:number = 0;
-	private _update:(timestamp:number)=>void;
+	private _fpsInterval: number;
+	private _then: number = 0;
+	private _update: (timestamp: number) => void;
 
-	private _children:Array<LightCinematic>;
+	private _children: Array<LightCinematic> = [];
 
-	set fps(value:number)
+	set fps(value: number)
 	{
 		this._fpsInterval = 1000 / value;
 	}
 
-	set stop(value:boolean)
+	set stop(value: boolean)
 	{
 		this._isStopped = value;
 	}
@@ -40,25 +41,39 @@ class LightManager
 	 * @param {IStage} properties.
 	 * @constructor
 	 */
-	constructor(properties:IStage)
+	constructor(properties: IStage)
 	{
+		super();
 
 		this._update = this.update.bind(this);
 		this._properties = properties;
 		this._fpsInterval = 1000 / this._properties.fps;
 
-		this._properties.canvas.width = this._properties.width;
-		this._properties.canvas.height = this._properties.height;
 		this._ctx = this._properties.canvas.getContext('2d');
 
-		this._children = [];
+		this.setCanvasSize();
+	}
+
+	/**
+	 * @public
+	 * @method setCanvasSize
+	 * @param width
+	 * @param height
+	 */
+	public setCanvasSize(width: number = this._properties.width, height: number = this._properties.height): void
+	{
+		this._properties.width = width;
+		this._properties.height = height;
+
+		this._properties.canvas.width = width;
+		this._properties.canvas.height = height;
 	}
 
 	/**
 	 * Append a cinematic
 	 * @param child
 	 */
-	public appendChild(child:LightCinematic):void
+	public appendChild(child: LightCinematic): void
 	{
 		child.setContext(this._ctx);
 		this._children.push(child);
@@ -68,7 +83,7 @@ class LightManager
 	 * Remove a cinematic
 	 * @param child
 	 */
-	public removeChild(child:LightCinematic):void
+	public removeChild(child: LightCinematic): void
 	{
 		var index = this._children.indexOf(child);
 		if(index !== -1)
@@ -82,9 +97,9 @@ class LightManager
 	 * @param properties
 	 * @returns {LightCinematic}
 	 */
-	public reuseChild(properties:ICinematic):LightCinematic
+	public reuseChild(properties: ICinematic): LightCinematic
 	{
-		for(var i = 0 ; i < this._children.length; i++)
+		for(var i = 0; i < this._children.length; i++)
 		{
 			if(this._children[i].free)
 			{
@@ -100,7 +115,7 @@ class LightManager
 	/**
 	 * Start manager, executes RAF
 	 */
-	public start():void
+	public start(): void
 	{
 		this._isStopped = false;
 		requestAnimationFrame(this._update);
@@ -110,16 +125,19 @@ class LightManager
 	 * Method in charge of drawing the stage
 	 * @param timestamp
 	 */
-	private update(timestamp:number):void
+	private update(timestamp: number): void
 	{
-		if(this._isStopped) return;
+		if(this._isStopped)
+		{
+			return;
+		}
 		// calc elapsed time since last loop
 		var elapsed = timestamp - this._then;
 
 		// if enough time has elapsed, draw the next frame
-		if( elapsed > this._fpsInterval )
+		if(elapsed > this._fpsInterval)
 		{
-			this._ctx.clearRect(0, 0, this._properties.canvas.width, this._properties.canvas.height );
+			this._ctx.clearRect(0, 0, this._properties.canvas.width, this._properties.canvas.height);
 
 			var length = this._children.length;
 			while(length--)
@@ -132,15 +150,25 @@ class LightManager
 
 			this._then = timestamp - (elapsed % this._fpsInterval);
 		}
-		requestAnimationFrame( this._update );
+		requestAnimationFrame(this._update);
 	}
 
-	destruct():void
+	/**
+	 * @public
+	 * @method destruct
+	 */
+	public destruct(): void
 	{
 		this.stop = true;
 
-		while(this._children.length) this._children.pop().destruct();
+		while(this._children.length)
+		{
+			this._children.pop().destruct();
+		}
+
 		this._children = null;
+
+		super.destruct();
 	}
 }
 

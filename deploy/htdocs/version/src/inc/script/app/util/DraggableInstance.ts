@@ -290,7 +290,7 @@ class DraggableInstance extends EventDispatcher
 				onDragEnd: this.handleDragEnd.bind(this),
 				onThrowUpdate: this.handleDrag.bind(this),
 				onDragStart: this.handleDragStart.bind(this),
-				allowNativeTouchScrolling: bowser.mobile && bowser.tablet,
+				allowNativeTouchScrolling: bowser.mobile || bowser.tablet,
 				onThrowComplete: () =>
 				{
 					this.handleThrowComplete();

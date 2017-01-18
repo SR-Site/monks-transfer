@@ -1,4 +1,9 @@
 .component-block-persona-selector {
+	$buttonWidth: $sizeGrid * 8;
+	$buttonHeight: $sizeGrid * 4;
+	$animationDuration: .3s;
+	$ease: ease(easeInOut);
+
 	@include aspect-ratio(1600px, 880px);
 	position: relative;
 
@@ -39,6 +44,7 @@
 	}
 
 	.persona-option {
+		@include size(25%, $buttonHeight);
 		display: inline-block;
 
 		// TODO: remove this
@@ -58,11 +64,7 @@
 	}
 
 	.persona-button {
-		$buttonWidth: $sizeGrid * 8;
-		$buttonHeight: $sizeGrid * 4;
-		$animationDuration: .3s;
-		$ease: ease(easeInOut);
-		@include size($buttonWidth, $buttonHeight);
+		@include size(calc(100% - #{$sizeGrid}), $buttonHeight);
 		color: $colorWhite;
 		transition: background #{$animationDuration} #{$ease};
 		text-align: left;

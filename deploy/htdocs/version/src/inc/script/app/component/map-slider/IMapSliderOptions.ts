@@ -2,7 +2,7 @@ import IDefaultComponentTransitionOptions from "app/util/component-transition/de
 
 export interface IMapSliderOptions extends IDefaultComponentTransitionOptions
 {
-
+	steps: Array<{label: string}>;
 }
 
 export default IMapSliderOptions;

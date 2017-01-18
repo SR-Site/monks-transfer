@@ -1,17 +1,15 @@
 import DefaultComponentViewModel from "../DefaultComponentViewModel";
-import BlockHeroMainController from 'app/component/block/block-hero-main/BlockHeroMainController';
-import IBlockHeroMainOptions from 'app/component/block/block-hero-main/IBlockHeroMainOptions';
+import BlockHeroMainController from "app/component/block/block-hero-main/BlockHeroMainController";
+import IBlockHeroMainOptions from "app/component/block/block-hero-main/IBlockHeroMainOptions";
+import Direction from "../../../data/enum/layout/Direction";
+import Alignment from "../../../data/enum/layout/Alignment";
 
 import ko = require('knockout');
-import Direction from "../../../data/enum/layout/Direction";
-import Type from "../../../../lib/temple/util/Type";
-import Alignment from "../../../data/enum/layout/Alignment";
 
 class BlockHeroMainViewModel extends DefaultComponentViewModel<BlockHeroMainController, IBlockHeroMainOptions>
 {
 	public Direction: Enum = Direction;
 	public Alignment: Enum = Alignment;
-	public Type: Class = Type;
 
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
@@ -19,7 +17,6 @@ class BlockHeroMainViewModel extends DefaultComponentViewModel<BlockHeroMainCont
 	 */
 	public destruct(): void
 	{
-		this.Type = null;
 		this.Direction = null;
 		this.Alignment = null;
 

@@ -11,7 +11,13 @@
 	}
 
 	.map-image {
+		@include aspect-ratio(16px, 9px);
+		position: relative;
 
+		.component-image-sequence {
+			@include coverer();
+			@include size(100%);
+		}
 	}
 
 	.map-content {
