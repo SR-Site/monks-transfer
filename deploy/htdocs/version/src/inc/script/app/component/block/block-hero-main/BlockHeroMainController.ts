@@ -5,6 +5,7 @@ import BlockHeroMainViewModel from 'app/component/block/block-hero-main/BlockHer
 
 import Log from "lib/temple/util/Log";
 import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
+import KeyCode from "../../../../lib/temple/util/key/KeyCode";
 
 class BlockHeroMainController extends DefaultComponentController<BlockHeroMainViewModel, IBlockHeroMainOptions>
 {
@@ -47,13 +48,22 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 	{
 		this._imageCrossfader = controller;
 
+		let activeImage = 0;
+		let images = [
+			'data/image/hero-main/slide-1.jpg',
+			'data/image/hero-main/slide-2.jpg'
+		];
 
-		this._imageCrossfader.open();
-
-		setTimeout(() =>
+		document.addEventListener('keyup', (event: KeyboardEvent) =>
 		{
-			this._imageCrossfader.open('data/image/hero-main/slide-2.jpg');
-		}, 3000);
+			if(event.keyCode === KeyCode.S)
+			{
+				this._imageCrossfader.open(images[activeImage]).then(() =>
+				{
+					activeImage = activeImage === 0 ? 1 : 0
+				});
+			}
+		});
 	}
 
 	/**
