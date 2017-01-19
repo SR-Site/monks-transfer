@@ -4,21 +4,24 @@ import IBlockHeroMainOptions from 'app/component/block/block-hero-main/IBlockHer
 import BlockHeroMainViewModel from 'app/component/block/block-hero-main/BlockHeroMainViewModel';
 
 import Log from "lib/temple/util/Log";
+import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
 
 class BlockHeroMainController extends DefaultComponentController<BlockHeroMainViewModel, IBlockHeroMainOptions>
 {
 	/**
-	 *	Instance of Log debug utility for debug logging
-	 *	@property _debug
-	 *	@private
+	 *    Instance of Log debug utility for debug logging
+	 *    @property _debug
+	 *    @private
 	 */
-	private _debug:Log = new Log('app.component.BlockHeroMain');
+	private _debug: Log = new Log('app.component.BlockHeroMain');
+
+	private _imageCrossfader: ImageCrossfaderController;
 
 	/**
-	 *	Overrides AbstractPageController.init()
-	 *	@method init
+	 *    Overrides AbstractPageController.init()
+	 *    @method init
 	 */
-	public init():void
+	public init(): void
 	{
 		super.init();
 
@@ -26,10 +29,10 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 	}
 
 	/**
-	* @protected
-	* @method allComponentsLoaded
-	*/
-	protected allComponentsLoaded():void
+	 * @protected
+	 * @method allComponentsLoaded
+	 */
+	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new BlockHeroMainTransitionController(this.element, this);
 
@@ -37,10 +40,27 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 	}
 
 	/**
+	 * @public
+	 * @method handleImageCrossfaderReady
+	 */
+	public handleImageCrossfaderReady(controller: ImageCrossfaderController): void
+	{
+		this._imageCrossfader = controller;
+
+
+		this._imageCrossfader.open();
+
+		setTimeout(() =>
+		{
+			this._imageCrossfader.open('data/image/hero-main/slide-2.jpg');
+		}, 3000);
+	}
+
+	/**
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 
 		// always call this last
