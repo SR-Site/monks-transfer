@@ -1,6 +1,0 @@
-uuid: 56ea1dd1-5453-4792-b1c7-c954343e204c
-langcode: en
-status: true
-dependencies: {  }
-id: blockanimatedmapcontent
-label: 'Block Animated map content'
