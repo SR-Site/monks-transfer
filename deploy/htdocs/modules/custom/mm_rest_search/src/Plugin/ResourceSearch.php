@@ -158,7 +158,7 @@ abstract class ResourceSearch extends MMResourceBase {
    * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
    * @param \Drupal\mm_rest\CacheableMetaDataCollectorInterface $cacheable_metadata_collector
    * @param \Drupal\facets\FacetManager\DefaultFacetManager $facet_manager
-  */
+   */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, Request $request, RestEntityProcessorManager $entity_processor, ConfigFactoryInterface $configFactory, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, DefaultFacetManager $facet_manager) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger, $request, $entity_processor, $configFactory, $cacheable_metadata_collector);
     $this->facetsManager= $facet_manager;
@@ -166,6 +166,7 @@ abstract class ResourceSearch extends MMResourceBase {
 
   /**
    * {@inheritdoc}
+   * @TODO: check facets dependency.
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static(
