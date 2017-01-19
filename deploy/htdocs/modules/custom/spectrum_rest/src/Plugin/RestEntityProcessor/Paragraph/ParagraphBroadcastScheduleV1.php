@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor;
+namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\Paragraph;
 
 use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
 

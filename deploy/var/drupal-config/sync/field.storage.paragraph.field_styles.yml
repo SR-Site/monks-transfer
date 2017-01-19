@@ -1,12 +1,12 @@
-uuid: 6f5d984e-da25-46b9-b8ea-c665791bf27f
+uuid: f2079104-702d-4aae-8bac-c44a3d3a7802
 langcode: en
 status: true
 dependencies:
   module:
     - entity_reference_revisions
     - paragraphs
-id: paragraph.field_link
-field_name: field_link
+id: paragraph.field_styles
+field_name: field_styles
 entity_type: paragraph
 type: entity_reference_revisions
 settings:

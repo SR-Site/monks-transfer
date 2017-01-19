@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor;
+namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\Node;
 
 use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Path\AliasManagerInterface;

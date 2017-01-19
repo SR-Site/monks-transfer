@@ -1,20 +1,20 @@
-uuid: b2f89466-2ec1-4b49-b32b-5fdb261a8b6d
+uuid: 70c55a2f-1fa7-4ebb-8e22-6adb1a2400f6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_blocks
-    - node.type.page
+    - field.storage.paragraph.field_styles
     - paragraphs.paragraphs_type.blockhowtoadvertise
+    - paragraphs.paragraphs_type.styles
   module:
     - entity_reference_revisions
-id: node.page.field_blocks
-field_name: field_blocks
-entity_type: node
-bundle: page
-label: Blocks
+id: paragraph.blockhowtoadvertise.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: blockhowtoadvertise
+label: Styles
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -22,11 +22,11 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      blockhowtoadvertise: blockhowtoadvertise
+      styles: styles
     target_bundles_drag_drop:
       blockhowtoadvertise:
-        enabled: true
         weight: 5
+        enabled: false
       broadcastschedule:
         weight: 6
         enabled: false
@@ -34,6 +34,6 @@ settings:
         weight: 7
         enabled: false
       styles:
+        enabled: true
         weight: 8
-        enabled: false
 field_type: entity_reference_revisions

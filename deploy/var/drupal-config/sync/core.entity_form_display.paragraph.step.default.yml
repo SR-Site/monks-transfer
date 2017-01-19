@@ -1,0 +1,41 @@
+uuid: a42fe346-4100-403c-b2ab-707517a414ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.step.field_heading
+    - field.field.paragraph.step.field_key
+    - field.field.paragraph.step.field_paragraph
+    - paragraphs.paragraphs_type.step
+  module:
+    - text
+id: paragraph.step.default
+targetEntityType: paragraph
+bundle: step
+mode: default
+content:
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_key:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_paragraph:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+hidden:
+  created: true
+  status: true
+  uid: true

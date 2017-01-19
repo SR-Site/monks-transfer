@@ -1,0 +1,23 @@
+uuid: 039365de-f311-4f4e-ae05-d1c030188a38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_margin_top
+    - paragraphs.paragraphs_type.styles
+  module:
+    - options
+id: paragraph.styles.field_margin_top
+field_name: field_margin_top
+entity_type: paragraph
+bundle: styles
+label: 'Margin top'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

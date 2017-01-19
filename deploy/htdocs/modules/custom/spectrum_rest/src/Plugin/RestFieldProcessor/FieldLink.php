@@ -68,7 +68,6 @@ class FieldLink extends RestFieldProcessorBase {
     }
 
     $data = [
-      'label' => $field->title,
       'target' => $url,
       'type' => $external ? 2 : 1,
     ];

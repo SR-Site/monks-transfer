@@ -1,0 +1,6 @@
+uuid: c6841479-979f-4bfb-b6c5-a979eb1e32e7
+langcode: en
+status: true
+dependencies: {  }
+id: blockhowtoadvertise
+label: 'Block how to advertise'

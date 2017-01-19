@@ -1,18 +1,18 @@
-uuid: b2f89466-2ec1-4b49-b32b-5fdb261a8b6d
+uuid: ac3d43f6-35c2-4df5-8b21-e243e15be58b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_blocks
-    - node.type.page
+    - field.storage.paragraph.field_steps
     - paragraphs.paragraphs_type.blockhowtoadvertise
+    - paragraphs.paragraphs_type.step
   module:
     - entity_reference_revisions
-id: node.page.field_blocks
-field_name: field_blocks
-entity_type: node
-bundle: page
-label: Blocks
+id: paragraph.blockhowtoadvertise.field_steps
+field_name: field_steps
+entity_type: paragraph
+bundle: blockhowtoadvertise
+label: Steps
 description: ''
 required: false
 translatable: false
@@ -22,18 +22,24 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      blockhowtoadvertise: blockhowtoadvertise
+      step: step
     target_bundles_drag_drop:
-      blockhowtoadvertise:
+      step:
         enabled: true
-        weight: 5
+        weight: 7
+      blockhowtoadvertise:
+        weight: 8
+        enabled: false
       broadcastschedule:
-        weight: 6
+        weight: 9
+        enabled: false
+      link:
+        weight: 10
         enabled: false
       showmetric:
-        weight: 7
+        weight: 11
         enabled: false
       styles:
-        weight: 8
+        weight: 12
         enabled: false
 field_type: entity_reference_revisions
