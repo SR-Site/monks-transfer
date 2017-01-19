@@ -11,33 +11,39 @@ import LightManager = require("../../../lib/temple/util/light-cinematic/LightMan
 import LightCinematic = require("../../../lib/temple/util/light-cinematic/LightCinematic");
 import NativeEventListener from "../../../lib/temple/event/NativeEventListener";
 import ThrottleDebounce from "../../../lib/temple/util/ThrottleDebounce";
+import CommonEvent from "../../../lib/temple/event/CommonEvent";
 
 class ImageSequenceController extends AbstractComponentController<ImageSequenceViewModel, IImageSequenceOptions>
 {
-	public static READY: string = 'ImageSequenceController.READY';
-	public static FRAME_CHANGED: string = 'ImageSequenceController.FRAME_CHANGED';
+	public static FPS: number = 24;
 
 	private _dataManager: DataManager = DataManager.getInstance();
 	private _debug: Log = new Log('app.component.ImageSequence');
 
+	/**
+	 * The original sources
+	 * @type {{}}
+	 * @private
+	 */
 	private _sources: {[devicestate: number]: Array<string>} = {
 		[DeviceState.SMALL]: [],
 		[DeviceState.MEDIUM]: []
 	};
 
+	/**
+	 * The loaded images
+	 * @type {{}}
+	 * @private
+	 */
 	private _images: {[devicestate: number]: Array<HTMLImageElement>} = {
 		[DeviceState.SMALL]: [],
 		[DeviceState.MEDIUM]: []
 	};
 
-	private _lightCinematic: {[devicestate: number]: LightCinematic} = {
-		[DeviceState.SMALL]: null,
-		[DeviceState.MEDIUM]: null
-	};
-
-	// shorter nested object with preloaded images element for active deviceState.
-	private _lightManager: LightManager;
-	private _previousDeviceState: DeviceState;
+	private _currentFrame: number = 0;
+	private _canvas: HTMLCanvasElement;
+	private _ctx: CanvasRenderingContext2D;
+	private _playAnimation: TweenLite;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -47,14 +53,8 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	{
 		this._debug.log('Init');
 
-		this._lightManager = new LightManager({
-			fps: 24,
-			width: this.element.offsetWidth,
-			height: this.element.offsetHeight,
-			canvas: this.element.querySelector('canvas')
-		});
-
-		this._lightManager.start();
+		this._canvas = this.element.querySelector('canvas');
+		this._ctx = this._canvas.getContext('2d');
 
 		// Prepare all the sources for the image sequence
 		for(let i = 0; i < this.options.imageSequence.total; i++)
@@ -63,11 +63,34 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 			this._sources[DeviceState.MEDIUM].push(this.options.imageSequence.image.normal + NumberUtils.format(i, '', '', 0, 4) + this.options.imageSequence.extension);
 		}
 
-		this._previousDeviceState = this.currentDeviceState;
-
 		this.destructibles.add(new NativeEventListener(window, 'resize', ThrottleDebounce.debounce(this.handleResize, 200, this)));
 
 		this.setup();
+	}
+
+	/**
+	 * @public
+	 * @method play
+	 */
+	public play(): void
+	{
+		// Animate the frame count
+		let frameCounter = {frame: 0};
+		let totalDuration = this.options.imageSequence.total / ImageSequenceController.FPS;
+
+		if(this._playAnimation)
+		{
+			this._playAnimation.kill();
+		}
+
+		this._playAnimation = TweenLite.to(frameCounter, totalDuration, {
+			ease: Linear.easeNone,
+			frame: this.options.imageSequence.total - 1,
+			onUpdate: () =>
+			{
+				this.seek(Math.round(frameCounter.frame));
+			}
+		})
 	}
 
 	/**
@@ -76,11 +99,27 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	 */
 	public seek(frame: number): void
 	{
-		this._lightManager.start();
-		this._lightCinematic[this.currentDeviceState].goto(frame);
-		this._lightManager.stop = true;
+		this.drawFrame(frame);
 	}
 
+	/**
+	 * @private
+	 * @method drawFrame
+	 */
+	private drawFrame(frame: number = this._currentFrame): void
+	{
+		this._ctx.clearRect(0, 0, this.element.offsetWidth, this.element.offsetHeight);
+		this._ctx.drawImage(
+			this._images[this.currentDeviceState][frame], 0, 0, this.element.offsetWidth, this.element.offsetHeight
+		);
+
+		this._currentFrame = frame;
+
+		this.dispatch(CommonEvent.UPDATE, {
+			progress: frame / this.options.imageSequence.total
+		})
+
+	}
 
 	/**
 	 * @private
@@ -88,17 +127,21 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	 */
 	private setup(): void
 	{
+		// Trigger one manually
+		this.handleResize();
+
+		// Load the default images
 		this.loadAllCurrentDeviceStateImages()
 			.then(() =>
 			{
-				// Enable the correct lightCinematic
-				this._lightManager.appendChild(this._lightCinematic[this.currentDeviceState]);
-
 				// Let the parent class know we are ready for interaction
-				this.dispatch(ImageSequenceController.READY);
+				this.dispatch(CommonEvent.LOADED);
 
 				// Add subscription for when device state changes.
 				this.destructibles.addKOSubscription(this._dataManager.deviceStateTracker.currentState.subscribe(this.handleDeviceStateChange.bind(this)));
+
+				// Draw the first frame
+				this.drawFrame()
 			});
 	}
 
@@ -108,7 +151,8 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	 */
 	private handleResize(): void
 	{
-		this._lightManager.setCanvasSize(this.element.offsetWidth, this.element.offsetHeight);
+		this._canvas.width = this.element.offsetWidth;
+		this._canvas.height = this.element.offsetHeight;
 	}
 
 	/**
@@ -129,15 +173,7 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	private handleDeviceStateChange(currentState: number): void
 	{
 		this.loadAllCurrentDeviceStateImages()
-			.then(() =>
-			{
-				// Enable the new cinematic
-				this._lightManager.removeChild(this._lightCinematic[this._previousDeviceState]);
-				this._lightManager.appendChild(this._lightCinematic[this.currentDeviceState]);
-
-				// Save it
-				this._previousDeviceState = this.currentDeviceState;
-			});
+			.then(() => this.drawFrame());
 	}
 
 	/**
@@ -158,7 +194,7 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 				{
 					this._images[currentValidDeviceState][index] = asset.image;
 				});
-			}).then(() => this.createLightCinematic(currentValidDeviceState));
+			})
 		}
 		else
 		{
@@ -166,25 +202,6 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 		}
 	}
 
-	/**
-	 * @private
-	 * @method createLightCinematic
-	 */
-	private createLightCinematic(currentValidDeviceState: DeviceState): void
-	{
-		this._lightCinematic[currentValidDeviceState] = new LightCinematic({
-			frames: {
-				count: this.options.imageSequence.total,
-				width: this._images[currentValidDeviceState][0].width,
-				height: this._images[currentValidDeviceState][0].height,
-				src: this._images[currentValidDeviceState]
-			},
-			stop: true,
-			loop: false,
-			x: 0,
-			y: 0
-		})
-	}
 
 	/**
 	 *  Overrides AbstractComponentController.destruct()
@@ -192,11 +209,18 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	 */
 	public destruct(): void
 	{
-		if(this._lightManager)
+		this._dataManager = null;
+		this._canvas = null;
+		this._currentFrame = null;
+		this._images = null;
+		this._ctx = null;
+
+		if(this._playAnimation)
 		{
-			this._lightManager.destruct();
-			this._lightManager = null;
+			this._playAnimation.kill();
+			this._playAnimation = null;
 		}
+
 
 		// always call this last
 		super.destruct();

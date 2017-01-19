@@ -6,12 +6,15 @@ import ko = require('knockout');
 
 class BlockMapSecondaryViewModel extends DefaultComponentViewModel<BlockMapSecondaryController, IBlockMapSecondaryOptions>
 {
+	public sequenceProgress:KnockoutObservable<number> = ko.observable(0);
+
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct
 	 */
 	public destruct():void
 	{
+		this.sequenceProgress = null;
 
 		// always call this last
 		super.destruct();

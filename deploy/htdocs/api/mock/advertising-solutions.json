@@ -36,6 +36,15 @@
 						"title": "Explore the market",
 						"target": "map",
 						"type": 2
+					},
+					"imageSequence": {
+						"image": {
+							"normal": "data/sequence/trailer/trailer_",
+							"small": "data/sequence/trailer/trailer_",
+							"alt": "Alt text"
+						},
+						"extension": ".jpg",
+						"total": 301
 					}
 				}
 			},

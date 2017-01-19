@@ -42,11 +42,16 @@
 			@include coverer();
 			@include size(100%);
 		}
+
+		.component-image-sequence {
+			@include coverer();
+			@include size(100%);
+		}
 	}
 
 	.progress-bar {
-		@include size(100%, 1px);
-		@include pos(auto, 0, calc(#{$sizeGrid / 2} + 0.5rem), 0);
+		@include size($sizeGrid * 23, 1px);
+		@include pos(auto, $sizeGrid * 2, calc(#{$sizeGrid / 2} + 0.5rem), auto);
 		background: $colorBorder;
 		position: absolute;
 
