@@ -10,6 +10,7 @@ class BlockHeroMainViewModel extends DefaultComponentViewModel<BlockHeroMainCont
 {
 	public Direction: Enum = Direction;
 	public Alignment: Enum = Alignment;
+	public activeIndex: KnockoutObservable<number> = ko.observable(0);
 
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
@@ -19,6 +20,7 @@ class BlockHeroMainViewModel extends DefaultComponentViewModel<BlockHeroMainCont
 	{
 		this.Direction = null;
 		this.Alignment = null;
+		this.activeIndex = null;
 
 		// always call this last
 		super.destruct();

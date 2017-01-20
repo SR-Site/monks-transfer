@@ -8,19 +8,38 @@
 				"id": "heroMain",
 				"data": {
 					"overlap": true,
-					"heading": "Never stop reaching",
-					"paragraph": "The right time and place to advertise your business",
-					"link": {
-						"label": "Find out more",
-						"title": "Find out more",
-						"target": "/home",
-						"type": 2
-					},
-					"background": {
-						"normal": "data/image/image-with-content/background.jpg",
-						"small": "data/image/image-with-content/background.jpg",
-						"alt": "Background image alt text"
-					}
+					"slides": [
+						{
+							"heading": "Never stop reaching",
+							"paragraph": "The right time and place to advertise your business",
+							"link": {
+								"label": "Find out more",
+								"title": "Find out more",
+								"target": "/home",
+								"type": 2
+							},
+							"background": {
+								"normal": "data/image/hero-main/slide-1.jpg",
+								"small": "data/image/hero-main/slide-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Never stop reaching",
+							"paragraph": "The right time and place to advertise your business",
+							"link": {
+								"label": "Find out more",
+								"title": "Find out more",
+								"target": "/home",
+								"type": 2
+							},
+							"background": {
+								"normal": "data/image/hero-main/slide-2.jpg",
+								"small": "data/image/hero-main/slide-2.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
 				}
 			},
 			{

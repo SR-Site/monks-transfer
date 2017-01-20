@@ -6,6 +6,8 @@ import BlockHeroMainViewModel from 'app/component/block/block-hero-main/BlockHer
 import Log from "lib/temple/util/Log";
 import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
 import KeyCode from "../../../../lib/temple/util/key/KeyCode";
+import Promise = require("bluebird");
+import DefaultTransitionController from "../../../util/component-transition/DefaultTransitionController";
 
 class BlockHeroMainController extends DefaultComponentController<BlockHeroMainViewModel, IBlockHeroMainOptions>
 {
@@ -36,8 +38,25 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new BlockHeroMainTransitionController(this.element, this);
+		this.transitionController.addEventListener(DefaultTransitionController.TRANSITION_IN_START, () =>
+		{
+			// Open the first image
+			this.updateBackgroundImage(0)
+				.then(() => this.updateBackgroundImage(1));
+		});
 
 		super.allComponentsLoaded();
+	}
+
+
+	/**
+	 * @public
+	 * @method updateBackgroundImage
+	 * @param index
+	 */
+	public updateBackgroundImage(index: number): Promise<any>
+	{
+		return this._imageCrossfader.open(this.options.slides[index].background.normal);
 	}
 
 	/**
@@ -47,23 +66,6 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 	public handleImageCrossfaderReady(controller: ImageCrossfaderController): void
 	{
 		this._imageCrossfader = controller;
-
-		let activeImage = 0;
-		let images = [
-			'data/image/hero-main/slide-1.jpg',
-			'data/image/hero-main/slide-2.jpg'
-		];
-
-		document.addEventListener('keyup', (event: KeyboardEvent) =>
-		{
-			if(event.keyCode === KeyCode.S)
-			{
-				this._imageCrossfader.open(images[activeImage]).then(() =>
-				{
-					activeImage = activeImage === 0 ? 1 : 0
-				});
-			}
-		});
 	}
 
 	/**

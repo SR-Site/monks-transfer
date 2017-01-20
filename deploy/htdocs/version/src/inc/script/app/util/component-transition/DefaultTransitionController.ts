@@ -181,10 +181,20 @@ class DefaultTransitionController extends EventDispatcher
 	 */
 	public transitionIn(): Promise<any>
 	{
-		return new Promise((resolve: Function)=>
+		return new Promise((resolve: Function) =>
 		{
-			this.transitionResolveMethod = resolve;
-			this.transitionInTimeline.restart();
+			console.log(this.transitionInTimeline.duration());
+
+
+			if(this.transitionInTimeline.duration() === 0)
+			{
+				resolve();
+			}
+			else
+			{
+				this.transitionResolveMethod = resolve;
+				this.transitionInTimeline.restart();
+			}
 		})
 	}
 
@@ -194,7 +204,7 @@ class DefaultTransitionController extends EventDispatcher
 	 */
 	public transitionOut(): Promise<any>
 	{
-		return new Promise((resolve: Function)=>
+		return new Promise((resolve: Function) =>
 		{
 			this.transitionResolveMethod = resolve;
 

@@ -44,11 +44,27 @@ class TrianglePattern extends Destructible
 		this._centerY = this._canvas.height / 2;
 	}
 
+	/**
+	 * @private
+	 * @method yPos
+	 * @param y
+	 * @param inverted
+	 * @description This method inverts the y value so we can flip the entire pattern
+	 * @returns {number}
+	 */
 	private yPos(y: number, inverted: boolean = false): number
 	{
 		return inverted ? this._centerY + (this._centerY - y) : y;
 	}
 
+	/**
+	 * @private
+	 * @method xPos
+	 * @param x
+	 * @param inverted
+	 * @description This method inverts the x value so we can flip the entire pattern
+	 * @returns {number}
+	 */
 	private xPos(x: number, inverted: boolean = false): number
 	{
 		return inverted ? this._centerX + (this._centerX - x) : x;
@@ -81,8 +97,6 @@ class TrianglePattern extends Destructible
 	private drawPattern(progress: number = 1, inverted: boolean): void
 	{
 		// Main triangle
-		this._ctx.fillStyle = '#f00';
-		this._ctx.strokeStyle = '#f00';
 		this._ctx.beginPath();
 		this._ctx.moveTo(this.xPos(0, inverted), this.yPos(0, inverted));
 		this._ctx.lineTo(this.xPos(this._triangleSize, inverted), this.yPos(this._triangleSize, inverted));
@@ -100,19 +114,16 @@ class TrianglePattern extends Destructible
 		// Change the operation
 		this._ctx.globalCompositeOperation = 'destination-out';
 
-		// Draw the mask
-		this._ctx.beginPath();
-
-		// animate the offset for the mask
+		// Calculate the y translate for the reveal animation
 		let yTranslate = progress * (this._triangleSize * 2);
 
+		// Draw the mask
+		this._ctx.beginPath();
 		this._ctx.moveTo(this.xPos(0, inverted), this.yPos(0 - yTranslate, inverted));
 		this._ctx.lineTo(this.xPos(0, inverted), this.yPos((this._triangleSize * 2) - yTranslate, inverted));
 		this._ctx.lineTo(this.xPos(this._triangleSize, inverted), this.yPos(this._triangleSize - yTranslate, inverted));
 		this._ctx.lineTo(this.xPos(this._triangleSize, inverted), this.yPos(0 - yTranslate, inverted));
 		this._ctx.lineTo(this.xPos(0, inverted), this.yPos(0 - yTranslate, inverted));
-
-		this._ctx.fillStyle = '#0f0';
 
 		// Fill the mask
 		this._ctx.fill();
@@ -136,8 +147,24 @@ class TrianglePattern extends Destructible
 			this._triangleSize
 		);
 
+		// Paste the correct parts on the new positions to complete the pattern
 		this._ctx.putImageData(top, inverted ? 0 : this._triangleSize, inverted ? 0 : this._triangleSize);
 		this._ctx.putImageData(bottom, inverted ? 0 : this._triangleSize, inverted ? this._triangleSize : 0);
+	}
+
+	/**
+	 * @public
+	 * @method destruct
+	 */
+	public destruct(): void
+	{
+		this._ctx = null;
+		this._canvas = null;
+		this._centerY = null;
+		this._centerX = null;
+		this._triangleSize = null;
+
+		super.destruct();
 	}
 }
 

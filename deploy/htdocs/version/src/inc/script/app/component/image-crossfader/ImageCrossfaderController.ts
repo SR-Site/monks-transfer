@@ -59,6 +59,8 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 	private _trianglePattern: TrianglePattern;
 	private _triangleProgress: number = 0;
 
+	private _promise: Promise<any>;
+
 	/**
 	 *    Overrides AbstractPageController.init()
 	 *    @method init
@@ -81,7 +83,7 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 		this._maskCanvas = document.createElement('canvas');
 		this._maskCtx = this._maskCanvas.getContext('2d');
 
-		// Creat the triangle pattern
+		// Create the triangle pattern
 		this._trianglePattern = new TrianglePattern();
 
 		// Trigger resize manually
@@ -94,36 +96,42 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 	 */
 	public open(path: string = 'data/image/hero-main/slide-1.jpg'): Promise<any>
 	{
-		return new Promise((resolve: () => void) =>
+		if(!this._promise)
 		{
-			AssetLoader.loadImage(path)
-				.then((image: HTMLImageElement) =>
-				{
-					this._newImage = image;
-				})
-				.then(() => this.handleResize())
-				.then(() =>
-				{
-					TweenLite.fromTo(this, ImageCrossfaderController.DURATION,
-						{
-							_triangleProgress: 0
-						},
-						{
-							_triangleProgress: 1,
-							ease: Power3.easeInOut,
-							onUpdate: () =>
+			this._promise = new Promise((resolve: () => void) =>
+			{
+				AssetLoader.loadImage(path)
+					.then((image: HTMLImageElement) =>
+					{
+						this._newImage = image;
+					})
+					.then(() => this.handleResize())
+					.then(() =>
+					{
+						TweenLite.fromTo(this, ImageCrossfaderController.DURATION,
 							{
-								this.draw();
+								_triangleProgress: 0
 							},
-							onComplete: () =>
 							{
-								this._activeImage = this._newImage;
+								_triangleProgress: 1,
+								ease: Power3.easeInOut,
+								onUpdate: () =>
+								{
+									this.draw();
+								},
+								onComplete: () =>
+								{
+									this._activeImage = this._newImage;
+									this._promise = null;
 
-								resolve();
-							}
-						});
-				});
-		});
+									resolve();
+								}
+							});
+					});
+			});
+		}
+
+		return this._promise;
 	}
 
 
@@ -150,7 +158,6 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 		{
 			this._trianglePattern.draw(leftProgress, true);
 		}
-
 
 		// Draw the mask on top of the new image
 		this.updateMaskCanvas();
@@ -266,6 +273,23 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 	 */
 	public destruct(): void
 	{
+		this._canvas = null;
+		this._ctx = null;
+
+		this._maskCanvas = null;
+		this._maskCtx = null;
+		this._activeImage = null;
+		this._newImage = null;
+		this._activeImageOffset = null;
+		this._newImageOffset = null;
+		this._triangleProgress = null;
+
+		if(this._trianglePattern)
+		{
+			this._trianglePattern.destruct();
+			this._trianglePattern = null;
+		}
+
 
 		// always call this last
 		super.destruct();

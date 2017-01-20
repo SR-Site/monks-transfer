@@ -4,19 +4,21 @@ import ILink from "../../../data/interface/action/ILink";
 
 export interface IBlockHeroMainOptions extends IDefaultComponentOptions
 {
-	heading: string;
-	paragraph?: string;
-	background: IImage;
-	link?: ILink;
-	secondaryLink?: ILink;
-	statistics?: {
+	slides: Array<{
 		heading: string;
-		stats: Array<{
+		paragraph?: string;
+		background: IImage;
+		link?: ILink;
+		secondaryLink?: ILink;
+		statistics?: {
 			heading: string;
-			description: string;
-			value: number;
-		}>
-	}
+			stats: Array<{
+				heading: string;
+				description: string;
+				value: number;
+			}>
+		}
+	}>
 }
 
 export default IBlockHeroMainOptions;
