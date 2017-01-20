@@ -24,6 +24,23 @@ abstract class RestBaseParagraphBlock extends RestEntityProcessorBase {
   }
 
   /**
+   * Make sure that it is always an array.
+   *
+   * @param \Drupal\Core\Field\FieldItemListInterface $field
+   * @return array|string
+   */
+  public function getItems(FieldItemListInterface $field) {
+    // It have to be always an array.
+    $items = $this->fieldProcessor->getFieldData($field);
+
+    if (count($field) == 1) {
+      $items = [$items];
+    }
+
+    return $items;
+  }
+
+  /**
    * Returns an image formatted.
    *
    * @param \Drupal\Core\Field\FieldItemListInterface $field

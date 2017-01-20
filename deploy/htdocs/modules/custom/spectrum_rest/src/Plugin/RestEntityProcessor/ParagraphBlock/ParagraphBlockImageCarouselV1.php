@@ -25,16 +25,10 @@ class ParagraphBlockImageCarouselV1 extends RestBaseParagraphBlock {
 
     $data = parent::getCommonData($entity);
 
-    // It have to be always an array.
-    $items = $this->fieldProcessor->getFieldData($entity->get('field_slides'));
-    if (count($entity->get('field_slides')) == 1) {
-      $items = [$items];
-    }
-
     $data = [
       "id" => 'imageCarousel',
       "data" => $data + [
-        "slides" => $items,
+        "slides" => $this->getItems($entity->get('field_slides')),
       ],
     ];
 

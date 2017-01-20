@@ -25,16 +25,10 @@ class ParagraphBlockImageCallToActionsV1 extends RestBaseParagraphBlock {
 
     $data = parent::getCommonData($entity);
 
-    // It have to be always an array.
-    $items = $this->fieldProcessor->getFieldData($entity->get('field_calltoactions'));
-    if (count($entity->get('field_calltoactions')) == 1) {
-      $items = [$items];
-    }
-
     $data = [
       "id" => 'imageCallToActions',
       "data" => $data + [
-        "callToActions" => $items,
+        "callToActions" => $this->getItems($entity->get('field_calltoactions')),
       ],
     ];
 

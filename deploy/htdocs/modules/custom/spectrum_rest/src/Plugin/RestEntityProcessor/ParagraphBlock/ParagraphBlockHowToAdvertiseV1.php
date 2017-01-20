@@ -25,18 +25,12 @@ class ParagraphBlockHowToAdvertiseV1 extends RestBaseParagraphBlock {
 
     $data = parent::getCommonData($entity);
 
-    // It have to be always an array.
-    $steps = $this->fieldProcessor->getFieldData($entity->get('field_steps'));
-    if (count($entity->get('field_steps')) == 1) {
-      $steps = [$steps];
-    }
-
     $data = [
       "id" => 'howToAdvertise',
       "data" => $data + [
         "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
         "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),
-        "steps" => $steps,
+        "steps" => $this->getItems($entity->get('field_steps')),
       ],
     ];
 
