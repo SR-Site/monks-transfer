@@ -30,7 +30,7 @@ abstract class RestBaseParagraphBlock extends RestEntityProcessorBase {
    * @param array $options
    * @return array
    */
-  public function image(FieldItemListInterface $field, array $options) {
+  public function image(FieldItemListInterface $field, array $options = []) {
     $image = $field->getValue();
 
     if (empty($image)) {
