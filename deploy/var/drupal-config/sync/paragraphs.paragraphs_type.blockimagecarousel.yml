@@ -1,0 +1,7 @@
+uuid: c4324fb4-8411-49ea-8bfd-1043e7219008
+langcode: en
+status: true
+dependencies: {  }
+id: blockimagecarousel
+label: 'Block image carousel'
+behavior_plugins: {  }

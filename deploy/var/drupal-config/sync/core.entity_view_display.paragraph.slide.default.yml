@@ -1,0 +1,31 @@
+uuid: 24338ee4-ee87-4b73-9168-caae254f154d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slide.field_heading
+    - field.field.paragraph.slide.field_image
+    - paragraphs.paragraphs_type.slide
+  module:
+    - image
+id: paragraph.slide.default
+targetEntityType: paragraph
+bundle: slide
+mode: default
+content:
+  field_heading:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden: {  }

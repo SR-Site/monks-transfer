@@ -1,0 +1,56 @@
+uuid: 995b8b15-51f5-4939-8d4e-52a44afb580c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockimagecarousel.field_slides
+    - field.field.paragraph.blockimagecarousel.field_styles
+    - paragraphs.paragraphs_type.blockimagecarousel
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+id: paragraph.blockimagecarousel.default
+targetEntityType: paragraph
+bundle: blockimagecarousel
+mode: default
+content:
+  field_slides:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_styles:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,7 @@
+uuid: 6d7086c9-a2f8-4ba0-9e73-1f8235f36632
+langcode: en
+status: true
+dependencies: {  }
+id: slide
+label: Slide
+behavior_plugins: {  }
