@@ -32,7 +32,7 @@ class ParagraphBlockHowToAdvertiseV1 extends RestBaseParagraphBlock {
     }
 
     $data = [
-      "id" => 'BlockHowToAdvertise',
+      "id" => 'howToAdvertise',
       "data" => $data + [
         "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
         "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),

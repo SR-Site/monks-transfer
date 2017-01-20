@@ -32,7 +32,7 @@ class ParagraphBlockImageCallToActionsV1 extends RestBaseParagraphBlock {
     }
 
     $data = [
-      "id" => 'BlockHowToAdvertise',
+      "id" => 'imageCallToActions',
       "data" => $data + [
         "callToActions" => $items,
       ],
