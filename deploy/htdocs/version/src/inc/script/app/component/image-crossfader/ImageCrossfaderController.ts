@@ -94,7 +94,7 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 	 * @public
 	 * @method play
 	 */
-	public open(path: string = 'data/image/hero-main/slide-1.jpg'): Promise<any>
+	public open(path: string): Promise<any>
 	{
 		if(!this._promise)
 		{
