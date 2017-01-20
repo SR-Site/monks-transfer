@@ -1,0 +1,51 @@
+uuid: a1d170fd-4a98-4a4b-948b-1f0a030cbb4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.calltoaction.field_heading
+    - field.field.paragraph.calltoaction.field_image
+    - field.field.paragraph.calltoaction.field_image2
+    - field.field.paragraph.calltoaction.field_paragraph
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.calltoaction
+  module:
+    - image
+    - text
+id: paragraph.calltoaction.default
+targetEntityType: paragraph
+bundle: calltoaction
+mode: default
+content:
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_image2:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_paragraph:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+hidden:
+  created: true
+  status: true
+  uid: true

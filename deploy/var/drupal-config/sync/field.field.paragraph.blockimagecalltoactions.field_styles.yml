@@ -1,0 +1,51 @@
+uuid: 5f8874bc-3bc4-4426-bef8-ea7345e04b18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_styles
+    - paragraphs.paragraphs_type.blockimagecalltoactions
+    - paragraphs.paragraphs_type.styles
+  module:
+    - entity_reference_revisions
+id: paragraph.blockimagecalltoactions.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: blockimagecalltoactions
+label: Styles
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styles: styles
+    target_bundles_drag_drop:
+      blockimagecalltoactions:
+        weight: 8
+        enabled: false
+      blockhowtoadvertise:
+        weight: 9
+        enabled: false
+      broadcastschedule:
+        weight: 10
+        enabled: false
+      link:
+        weight: 11
+        enabled: false
+      showmetric:
+        weight: 12
+        enabled: false
+      step:
+        weight: 13
+        enabled: false
+      styles:
+        enabled: true
+        weight: 14
+      calltoaction:
+        enabled: false
+        weight: 9
+field_type: entity_reference_revisions

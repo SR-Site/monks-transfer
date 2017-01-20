@@ -1,0 +1,51 @@
+uuid: 9fa8d5f0-8d45-4264-91df-67c8bd074ddf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_calltoactions
+    - paragraphs.paragraphs_type.blockimagecalltoactions
+    - paragraphs.paragraphs_type.calltoaction
+  module:
+    - entity_reference_revisions
+id: paragraph.blockimagecalltoactions.field_calltoactions
+field_name: field_calltoactions
+entity_type: paragraph
+bundle: blockimagecalltoactions
+label: 'Call to actions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      calltoaction: calltoaction
+    target_bundles_drag_drop:
+      calltoaction:
+        enabled: true
+        weight: 9
+      blockhowtoadvertise:
+        weight: 10
+        enabled: false
+      blockimagecalltoactions:
+        weight: 11
+        enabled: false
+      broadcastschedule:
+        weight: 12
+        enabled: false
+      link:
+        weight: 13
+        enabled: false
+      showmetric:
+        weight: 14
+        enabled: false
+      step:
+        weight: 15
+        enabled: false
+      styles:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

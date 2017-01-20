@@ -1,0 +1,56 @@
+uuid: 5af68d74-0495-4440-aa8c-4f36aed067bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockimagecalltoactions.field_calltoactions
+    - field.field.paragraph.blockimagecalltoactions.field_styles
+    - paragraphs.paragraphs_type.blockimagecalltoactions
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+id: paragraph.blockimagecalltoactions.default
+targetEntityType: paragraph
+bundle: blockimagecalltoactions
+mode: default
+content:
+  field_calltoactions:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_styles:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: styles
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

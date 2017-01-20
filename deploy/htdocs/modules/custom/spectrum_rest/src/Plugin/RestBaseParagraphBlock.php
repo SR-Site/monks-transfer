@@ -4,6 +4,7 @@ namespace Drupal\spectrum_rest\Plugin;
 
 use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
 use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Field\FieldItemListInterface;
 
 /**
  * Common class for Paragraph blocks.
@@ -20,6 +21,29 @@ abstract class RestBaseParagraphBlock extends RestEntityProcessorBase {
    */
   public function getCommonData(ContentEntityInterface $entity) {
     return $this->fieldProcessor->getFieldData($entity->get('field_styles'));
+  }
+
+  /**
+   * Returns an image formatted.
+   *
+   * @param \Drupal\Core\Field\FieldItemListInterface $field
+   * @param array $options
+   * @return array
+   */
+  public function image(FieldItemListInterface $field, array $options) {
+    $image = $field->getValue();
+
+    if (empty($image)) {
+      return NULL;
+    }
+
+    $data =  [
+      'normal' => $this->fieldProcessor->getFieldData($field, $options),
+      'small' => $this->fieldProcessor->getFieldData($field, $options),
+      'alt' => isset($image[0]['alt']) ? $image[0]['alt'] : "",
+    ];
+
+    return $data;
   }
 
 }
