@@ -8,7 +8,6 @@ import ElementResizer, {ScaleMode} from "../../../lib/temple/util/ui/ElementResi
 import NativeEventListener from "../../../lib/temple/event/NativeEventListener";
 import ThrottleDebounce from "../../../lib/temple/util/ThrottleDebounce";
 import IRectangle from "../../../lib/temple/geom/IRectangle";
-import Orientation from "./enum/Orientation";
 import TrianglePattern from "./util/TrianglePattern";
 import Promise = require("bluebird");
 
