@@ -8,45 +8,90 @@
 				"id": "heroMain",
 				"data": {
 					"overlap": true,
-					"heading": "Choose your stage",
-					"paragraph": "Advertise during: Sunday NFL Countdown ESPN",
-					"link": {
-						"label": "Play showreel",
-						"title": "Play showreel",
-						"target": "/capabilities",
-						"type": 2
-					},
-					"secondaryLink": {
-						"label": "Next",
-						"title": "Next",
-						"target": "/home",
-						"type": 1
-					},
-					"background": {
-						"normal": "data/image/hero-secondary/background.jpg",
-						"small": "data/image/hero-secondary/background.jpg",
-						"alt": "Background image alt text"
-					},
-					"statistics": {
-						"heading": "Who's watching?",
-						"stats": [
-							{
-								"heading": "Etnicity",
-								"description": "Hispanic",
-								"value": 44
+					"slides": [
+						{
+							"heading": "Choose your stage",
+							"paragraph": "Advertise during: Sunday NFL Countdown ESPN",
+							"link": {
+								"label": "Play showreel",
+								"title": "Play showreel",
+								"target": "/capabilities",
+								"type": 2
 							},
-							{
-								"heading": "Demographics",
-								"description": "Man 18-32",
-								"value": 30
+							"secondaryLink": {
+								"label": "Next",
+								"title": "Next",
+								"target": "/home",
+								"type": 1
 							},
-							{
-								"heading": "Income",
-								"description": "$55k or more",
-								"value": 77
+							"background": {
+								"normal": "data/image/hero-main/slide-1.jpg",
+								"small": "data/image/hero-main/slide-1.jpg",
+								"alt": "Background image alt text"
+							},
+							"statistics": {
+								"heading": "Who's watching?",
+								"stats": [
+									{
+										"heading": "Etnicity",
+										"description": "Hispanic",
+										"value": 44
+									},
+									{
+										"heading": "Demographics",
+										"description": "Man 18-32",
+										"value": 30
+									},
+									{
+										"heading": "Income",
+										"description": "$55k or more",
+										"value": 77
+									}
+								]
 							}
-						]
-					}
+						},
+						{
+							"heading": "Choose your stage",
+							"paragraph": "Advertise during: Sunday NFL Countdown ESPN",
+							"link": {
+								"label": "Play showreel",
+								"title": "Play showreel",
+								"target": "/capabilities",
+								"type": 2
+							},
+							"secondaryLink": {
+								"label": "Next",
+								"title": "Next",
+								"target": "/home",
+								"type": 1
+							},
+							"background": {
+								"normal": "data/image/hero-main/slide-2.jpg",
+								"small": "data/image/hero-main/slide-2.jpg",
+								"alt": "Background image alt text"
+							},
+							"statistics": {
+								"heading": "Who's watching?",
+								"stats": [
+									{
+										"heading": "Etnicity",
+										"description": "Hispanic",
+										"value": 44
+									},
+									{
+										"heading": "Demographics",
+										"description": "Man 18-32",
+										"value": 30
+									},
+									{
+										"heading": "Income",
+										"description": "$55k or more",
+										"value": 77
+									}
+								]
+							}
+						}
+					]
 				}
 			},
 			{
@@ -588,7 +633,37 @@
 				"id": "map",
 				"data": {
 					"windowed": true,
-					"marginTop": 2
+					"steps": [
+						{
+							"label": "200m",
+							"heading": "200m",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						},
+						{
+							"label": "81%",
+							"heading": "81%",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						},
+						{
+							"label": "15 years",
+							"heading": "15 years",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						},
+						{
+							"label": "110+",
+							"heading": "110+",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						}
+					],
+					"imageSequence": {
+						"image": {
+							"normal": "data/sequence/trailer/trailer_",
+							"small": "data/sequence/trailer/trailer_",
+							"alt": "Alt text"
+						},
+						"extension": ".jpg",
+						"total": 301
+					}
 				}
 			}
 		]
