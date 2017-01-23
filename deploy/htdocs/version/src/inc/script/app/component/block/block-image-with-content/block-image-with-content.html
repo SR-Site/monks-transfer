@@ -1,16 +1,14 @@
 <div class="component-block-image-with-content">
 	<div class="site-frame">
 		<div class="overrule-overlap">
-			<figure class="image">
-				<img data-bind="
-					attr: {
-						alt: data.background.alt
-					},
-					image: {
-						image: data.background,
-						state: $root.deviceState()
-					}" />
-			</figure>
+
+			<div class="image bg-cover" data-bind="
+				image: {
+					image: data.background,
+					state: $root.deviceState()
+				}">
+			</div>
+
 			<aside class="content">
 				<h4 class="heading heading-06" data-bind="html: data.heading"></h4>
 				<p class="copy copy-01" data-bind="html: data.paragraph"></p>

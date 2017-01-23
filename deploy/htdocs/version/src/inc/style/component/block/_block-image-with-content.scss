@@ -1,13 +1,17 @@
 .component-block-image-with-content {
-	@include size(100%, auto);
+	@include size(100%, $sizeGrid*12);
 	position: relative;
 
-	.image {
-		@include size(100%, auto);
+	.site-frame {
+		height: 100%;
+	}
 
-		img {
-			@include size(100%, auto);
-		}
+	.overrule-overlap {
+		height: 100%;
+	}
+
+	.image {
+		@include size(100%);
 	}
 
 	.content {
@@ -98,5 +102,9 @@
 				@include pos(0, 0, 0, auto);
 			}
 		}
+	}
+
+	@include respond-to(SMALL) {
+
 	}
 }

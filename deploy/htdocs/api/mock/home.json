@@ -59,7 +59,7 @@
 					},
 					"background": {
 						"normal": "data/image/image-with-content/background.jpg",
-						"small": "data/image/image-with-content/background.jpg",
+						"small": "data/image/image-with-content/background-small.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -81,7 +81,7 @@
 					},
 					"background": {
 						"normal": "data/image/image-with-content/background-2.jpg",
-						"small": "data/image/image-with-content/background-2.jpg",
+						"small": "data/image/image-with-content/background-small.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -103,7 +103,7 @@
 					},
 					"background": {
 						"normal": "data/image/image-with-content/background-3.jpg",
-						"small": "data/image/image-with-content/background-3.jpg",
+						"small": "data/image/image-with-content/background-small.jpg",
 						"alt": "Background image alt text"
 					}
 				}
