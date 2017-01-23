@@ -1,6 +1,9 @@
 <div class="component-block-persona-selector">
 	<div class="background-image abs-fill">
-		<img src="data/image/persona-selector/persona-background-image-1.jpg" alt="background image 1" class="abs-fill">
+		<!-- ko component: {
+			name: 'image-crossfader',
+			onComplete: $root.controller.callbackCounter.get($root.controller.handleImageCrossfaderReady.bind($root.controller))
+		} --><!-- /ko -->
 	</div>
 	<div class="persona-content-wrapper abs-fill">
 		<div class="background-triangle"></div>
@@ -24,7 +27,10 @@
 		</div>
 	</div>
 	<ul class="persona-options" data-bind="foreach: data.personas">
-		<li class="persona-option">
+		<li class="persona-option" data-bind="css: {'is-active': $root.activeIndex() === $index()}, events: [
+			[$root.MouseEventHelper.MOUSEENTER, $root.handleMouseEnter.bind($root, $index())],
+			[$root.MouseEventHelper.MOUSELEAVE, $root.handleMouseLeave.bind($root, $index())],
+		]">
 			<button class="persona-button button" data-bind="css: $root.PersonaType[personaType].toLowerCase()">
 				<span class="label-wrapper">
 					<span class="label">

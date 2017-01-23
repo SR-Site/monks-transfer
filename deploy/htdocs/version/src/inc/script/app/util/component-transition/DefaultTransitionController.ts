@@ -183,9 +183,6 @@ class DefaultTransitionController extends EventDispatcher
 	{
 		return new Promise((resolve: Function) =>
 		{
-			console.log(this.transitionInTimeline.duration());
-
-
 			if(this.transitionInTimeline.duration() === 0)
 			{
 				resolve();

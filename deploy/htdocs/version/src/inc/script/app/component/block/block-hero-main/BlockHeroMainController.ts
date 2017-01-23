@@ -8,6 +8,7 @@ import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderCon
 import KeyCode from "../../../../lib/temple/util/key/KeyCode";
 import Promise = require("bluebird");
 import DefaultTransitionController from "../../../util/component-transition/DefaultTransitionController";
+import ImageHelper from "../../../util/ImageHelper";
 
 class BlockHeroMainController extends DefaultComponentController<BlockHeroMainViewModel, IBlockHeroMainOptions>
 {
@@ -42,7 +43,11 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 		{
 			// Open the first image
 			this.updateBackgroundImage(0)
-				.then(() => this.updateBackgroundImage(1));
+
+			setTimeout(() =>
+			{
+				this.updateBackgroundImage(1)
+			}, 3000);
 		});
 
 		super.allComponentsLoaded();
@@ -54,9 +59,9 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 	 * @method updateBackgroundImage
 	 * @param index
 	 */
-	public updateBackgroundImage(index: number): Promise<any>
+	public updateBackgroundImage(index: number): void
 	{
-		return this._imageCrossfader.open(this.options.slides[index].background.normal);
+		this._imageCrossfader.open(ImageHelper.getImageForMediaQuery(this.options.slides[index].background));
 	}
 
 	/**

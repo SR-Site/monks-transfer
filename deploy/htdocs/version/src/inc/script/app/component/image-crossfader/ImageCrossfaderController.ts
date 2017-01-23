@@ -24,7 +24,7 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 	 * The duration of the entire cross animation in seconds
 	 * @type {number}
 	 */
-	private static DURATION: number = 2;
+	private static DURATION: number = 1;
 
 	/**
 	 * The background color for when there is no previous image available
@@ -59,7 +59,8 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 	private _trianglePattern: TrianglePattern;
 	private _triangleProgress: number = 0;
 
-	private _promise: Promise<any>;
+	private _images: {[index: string]: HTMLImageElement;} = {};
+	private _animation: TweenLite;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -92,46 +93,69 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 
 	/**
 	 * @public
-	 * @method play
+	 * @method open
 	 */
-	public open(path: string): Promise<any>
+	public open(path: string): void
 	{
-		if(!this._promise)
+		if(this._animation)
 		{
-			this._promise = new Promise((resolve: () => void) =>
-			{
-				AssetLoader.loadImage(path)
-					.then((image: HTMLImageElement) =>
-					{
-						this._newImage = image;
-					})
-					.then(() => this.handleResize())
-					.then(() =>
-					{
-						TweenLite.fromTo(this, ImageCrossfaderController.DURATION,
-							{
-								_triangleProgress: 0
-							},
-							{
-								_triangleProgress: 1,
-								ease: Power3.easeInOut,
-								onUpdate: () =>
-								{
-									this.draw();
-								},
-								onComplete: () =>
-								{
-									this._activeImage = this._newImage;
-									this._promise = null;
-
-									resolve();
-								}
-							});
-					});
-			});
+			this._animation.kill();
+			this._animation = null;
 		}
 
-		return this._promise;
+		this.getImage(path)
+			.then((image: HTMLImageElement) =>
+			{
+				this._newImage = image;
+			})
+			.then(() => this.handleResize())
+			.then(() =>
+			{
+				this._animation = TweenLite.fromTo(this, ImageCrossfaderController.DURATION,
+					{
+						_triangleProgress: 0
+					},
+					{
+						_triangleProgress: 1,
+						ease: Power3.easeInOut,
+						onUpdate: () =>
+						{
+							this.draw();
+						},
+						onComplete: () =>
+						{
+							this._activeImage = this._newImage;
+							this._animation = null;
+						}
+					});
+			});
+
+	}
+
+	/**
+	 * @private
+	 * @method getImage
+	 */
+	private getImage(path: string): Promise<any>
+	{
+		return new Promise((resolve: (image: HTMLImageElement) => void) =>
+		{
+			if(this._images[path])
+			{
+				resolve(this._images[path])
+			}
+			else
+			{
+				AssetLoader.loadImage(path)
+					.then((image) =>
+					{
+						// Store for later usage
+						this._images[path] = image;
+
+						resolve(image);
+					})
+			}
+		});
 	}
 
 
@@ -273,6 +297,7 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 	 */
 	public destruct(): void
 	{
+		this._images = null;
 		this._canvas = null;
 		this._ctx = null;
 

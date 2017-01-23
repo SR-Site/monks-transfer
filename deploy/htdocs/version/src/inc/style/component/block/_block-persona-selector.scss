@@ -3,7 +3,6 @@
 	$buttonHeight: $sizeGrid * 4;
 	$animationDuration: .3s;
 	$ease: ease(easeInOut);
-
 	@include aspect-ratio(1600px, 880px);
 	position: relative;
 
@@ -47,18 +46,37 @@
 		@include size(25%, $buttonHeight);
 		display: inline-block;
 
-		// TODO: remove this
-		&:first-child {
+		&.is-active {
 			.persona-button {
 				color: $colorSmallBusinesses;
 
+				.label {
+					color: $colorWhite;
+				}
+
 				.pagination-number {
-					color: $colorPrimary;
+					color: $colorWhite;
 
 					&:after {
 						opacity: 0;
 					}
 				}
+			}
+
+			.small_business {
+				color: $colorSmallBusinesses;
+			}
+
+			.automotive {
+				color: $colorAutomotive;
+			}
+
+			.enterprise {
+				color: $colorEnterprise;
+			}
+
+			.local_media_buying {
+				color: $colorLocalMedia;
 			}
 		}
 	}
@@ -103,43 +121,17 @@
 			color: $colorPrimary;
 			line-height: 1rem;
 			position: relative;
+			padding-left: $sizeGrid / 2;
 		}
 
 		.pagination-number {
 			@include pos(0, auto, auto, 0);
-			transform: translateY(-125%);
+			transform: translateY(-50%);
 			position: absolute;
 			transition: color #{$animationDuration} #{$ease};
 
 			&:after {
 				transition: opacity #{$animationDuration} #{$ease};
-			}
-		}
-
-		// Enum value classes for different colors
-		@include hover() {
-			&.small_business {
-				color: $colorSmallBusinesses;
-			}
-
-			&.automotive {
-				color: $colorAutomotive;
-			}
-
-			&.enterprise {
-				color: $colorEnterprise;
-			}
-
-			&.local_media_buying {
-				color: $colorLocalMedia;
-			}
-
-			.pagination-number {
-				color: $colorPrimary;
-
-				&:after {
-					opacity: 0;
-				}
 			}
 		}
 	}
