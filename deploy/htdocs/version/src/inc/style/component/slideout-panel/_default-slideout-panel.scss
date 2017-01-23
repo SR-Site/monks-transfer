@@ -1,9 +1,9 @@
 .default-slideout-panel {
-	position: fixed;
 	@include size(100%, 100%);
+	@include pos(0, 0, auto, auto);
+	position: fixed;
 	background-color: white;
 	max-width: $sizeGrid*15;
-	@include pos(0, 0, auto, auto);
 	z-index: zindex($layout, panel);
 	transform: translate(100%, 0);
 
@@ -35,7 +35,6 @@
 		transform: translate(0, 0);
 	}
 }
-
 
 .slideout-panel-mask {
 	position: fixed;

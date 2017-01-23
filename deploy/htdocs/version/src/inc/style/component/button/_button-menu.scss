@@ -26,8 +26,14 @@
 		margin-left: $sizeGridSecondary;
 	}
 
-	@include respond-to(SMALL){
-		@include size($sizeGrid * 2);
+	@include respond-to(SMALL) {
+		@include size($sizeGrid * 4);
+		text-align: center;
+
+		.icon {
+			@include size($sizeGrid);
+			margin: 0;
+		}
 
 		.seperator,
 		.text {

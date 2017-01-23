@@ -16,7 +16,7 @@
 	}
 
 	.icon {
-		@include size($sizeIcon);
+		@include size($sizeGrid);
 
 		path {
 			fill: currentColor;

@@ -51,4 +51,22 @@
 			color: $colorSecondary;
 		}
 	}
+
+	@include respond-to(SMALL){
+		@include size(70px, 21px);
+
+		&.primary {
+			.text-top {
+				color: $colorQuaternary;
+			}
+
+			.text-bottom {
+				color: $colorPrimary;
+			}
+
+			.arrow {
+				color: $colorSecondary;
+			}
+		}
+	}
 }

@@ -36,11 +36,8 @@
 
 	@include respond-to(SMALL) {
 		@include pos(0, 0, auto, 0);
+		@include size(100%, $sizeGrid * 4);
 		background: $colorWhite;
 		transform: none;
-
-		.logo {
-			display: none;
-		}
 	}
 }
