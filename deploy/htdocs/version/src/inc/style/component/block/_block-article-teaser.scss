@@ -74,4 +74,31 @@
 			}
 		}
 	}
+
+	@include respond-to(SMALL) {
+		@include size(100%, auto);
+		text-decoration: none;
+
+		figure {
+			@include aspect-ratio(576px, 390px);
+			height: auto;
+
+			img {
+				position: absolute;
+				@include offset(0, 0);
+				@include size(100%);
+				transform: none;
+			}
+		}
+
+		aside {
+			position: relative;
+			width: 100%;
+			padding: $sizeGrid*2;
+
+			.copy {
+				margin-bottom: $sizeGrid*2;
+			}
+		}
+	}
 }

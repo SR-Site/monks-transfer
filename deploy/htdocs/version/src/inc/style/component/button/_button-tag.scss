@@ -18,6 +18,13 @@
 	&.is-inactive {
 		@extend %button-tag-inactive;
 	}
+
+	@include respond-to(SMALL) {
+		font-size: mobile-size(1.8rem);
+		height: $sizeGrid;
+		line-height: $sizeGrid;
+		padding: 0 $sizeGrid/2;
+	}
 }
 
 %button-tag-inactive {

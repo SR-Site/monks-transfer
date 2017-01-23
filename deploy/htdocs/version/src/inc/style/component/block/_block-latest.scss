@@ -24,4 +24,24 @@
 			margin-bottom: $sizeGrid * 2;
 		}
 	}
+
+	@include respond-to(SMALL) {
+		.latest-articles {
+			padding-left: $sizeGrid;
+			padding-right: $sizeGrid;
+		}
+
+		.header {
+			padding-left: $sizeGrid*2;
+			padding-right: $sizeGrid*2;
+
+			.heading {
+				margin-bottom: $sizeGrid*2;
+			}
+
+			.component-button-main {
+				margin-bottom: $sizeGrid*2;
+			}
+		}
+	}
 }
