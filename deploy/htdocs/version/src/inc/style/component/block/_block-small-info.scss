@@ -19,4 +19,21 @@
 	.component-button-main {
 		margin-top: $sizeGrid;
 	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+		.site-frame {
+			padding-left: $sizeGrid*2;
+			padding-right: $sizeGrid*2;
+		}
+
+		.description,
+		.introduction {
+			width: 100%;
+		}
+
+		.component-button-main {
+			margin-top: $sizeGrid*3;
+		}
+	}
 }
