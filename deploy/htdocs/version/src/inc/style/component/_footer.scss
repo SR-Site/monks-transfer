@@ -36,11 +36,11 @@
 
 	.contact-option {
 		color: #fff;
-		font: 400 1.6rem/1 $fontOpenSans;
+		font: 400 1.6rem / 1 $fontOpenSans;
 		display: inline-block;
 		vertical-align: middle;
 
-		&:not(:first-child){
+		&:not(:first-child) {
 			margin-left: $sizeGrid * 2;
 		}
 	}
@@ -50,25 +50,41 @@
 		color: $colorSecondary;
 	}
 
+	ul {
+		@extend %reset-list;
+		display: inline-block;
+		vertical-align: top;
+
+		&.full-list {
+			width: 100%;
+		}
+
+		&.half-list {
+			width: 50%;
+		}
+	}
+
+	.social {
+		li {
+			@include size($sizeGrid);
+			display: inline-block;
+			position: relative;
+		}
+
+		a {
+			color: $colorSecondary;
+		}
+
+		.icon {
+			@include abs-center($sizeGrid / 2);
+		}
+	}
+
 	.call-to-actions {
 		display: inline-block;
 		vertical-align: top;
 		font-size: 0;
 		color: #fff;
-
-		ul {
-			@extend %reset-list;
-			display: inline-block;
-			vertical-align: top;
-
-			&.full-list {
-				width: 100%;
-			}
-
-			&.half-list {
-				width: 50%;
-			}
-		}
 
 		a {
 			text-decoration: none;
@@ -88,7 +104,7 @@
 			}
 		}
 
-		&.middle{
+		&.middle {
 			@include size(calc(60% - #{$sizeGrid * 3}), auto);
 
 			li {
@@ -102,49 +118,93 @@
 			}
 		}
 
-		&.right{
+		&.right {
 			@include size($sizeGrid * 3, auto);
-
-			li {
-				@include size($sizeGrid);
-				display: inline-block;
-				position: relative;
-			}
-
-			a {
-				color: $colorSecondary;
-			}
-
-			.icon {
-				@include abs-center($sizeGrid / 2);
-			}
 		}
 	}
 
-	@include respond-to(SMALL){
-		padding: 0 $sizeGrid;
+	@include respond-to(SMALL) {
+		padding: 0 $sizeGrid * 2;
 
 		.top-section {
 			flex-direction: column;
 		}
 
 		.contact-options {
+			height: auto;
 			white-space: normal;
+			margin: $sizeGrid * 2 0;
 		}
 
 		.contact-option {
+			font-size: mobile-size(2.4rem);
 			width: 100%;
 
-			&:not(:first-child){
+			&:not(:first-child) {
 				margin: 0;
 			}
 		}
 
-		.middle-section {
-			.call-to-actions {
-				width: 100%;
+		.top-section,
+		.middle-section,
+		.bottom-section {
+			padding: $sizeGrid * 2 0 0;
+		}
+
+		.bottom-section {
+			padding-bottom: $sizeGrid * 2;
+		}
+
+		.call-to-actions {
+			width: 100%;
+
+			&:not(:last-child) {
 				margin-bottom: $sizeGrid;
 			}
+
+			&.left {
+				width: 100%;
+
+				a {
+					font-size: mobile-size(2.8rem);
+				}
+			}
+
+			&.middle {
+				width: 100%;
+
+				a {
+					font-size: mobile-size(2.2rem);
+				}
+			}
+
+			&.right {
+				width: 100%;
+			}
+		}
+
+		ul {
+			&.half-list {
+				width: 100%;
+			}
+		}
+
+		.social {
+			text-align: center;
+
+			li {
+				@include size($sizeGrid * 2);
+				margin: 0 $sizeGrid;
+			}
+
+			.icon {
+				@include abs-center($sizeGrid);
+			}
+		}
+
+		.copyright {
+			font-size: mobile-size(1.8rem);
+			text-align: center;
 		}
 	}
 }
