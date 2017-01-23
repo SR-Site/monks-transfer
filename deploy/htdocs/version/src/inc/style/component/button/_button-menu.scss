@@ -25,4 +25,13 @@
 		@include size($sizeGrid / 2);
 		margin-left: $sizeGridSecondary;
 	}
+
+	@include respond-to(SMALL){
+		@include size($sizeGrid * 2);
+
+		.seperator,
+		.text {
+			display: none;
+		}
+	}
 }

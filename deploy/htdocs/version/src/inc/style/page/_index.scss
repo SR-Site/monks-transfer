@@ -21,7 +21,7 @@
 	}
 
 	&:after {
-		right :0;
+		right: 0;
 	}
 
 	&:before {
@@ -33,16 +33,11 @@
 		position: relative;
 	}
 
-	/**
-	 * Device state name
-	 */
-	//.device-state{
-	//	@include pos(auto, auto, 0, 0);
-	//	background: orange;
-	//	color: #fff;
-	//	position: fixed;
-	//	padding: 10px;
-	//}
+	@include respond-to(SMALL) {
+		.component-button-start-advertising {
+			display: none;
+		}
+	}
 
 	/**
 	 * Development grid
@@ -78,7 +73,6 @@
 		.angle-grid {
 			@include size(100vw);
 			transform: rotate(#{$angle}deg);
-
 
 			.row {
 				border-left: 1px solid rgba(0, 0, 0, .2);
