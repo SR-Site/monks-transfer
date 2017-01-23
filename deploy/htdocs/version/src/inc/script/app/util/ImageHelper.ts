@@ -7,12 +7,11 @@ class ImageHelper
 	/**
 	 * @public
 	 * @method getImageForMediaQuery
+	 * @param currentState
 	 * @param image
 	 */
-	public static getImageForMediaQuery(image: IImage): string
+	public static getImageForMediaQuery(image: IImage, currentState:DeviceState = DataManager.getInstance().deviceStateTracker.currentState()): string
 	{
-		const currentState = DataManager.getInstance().deviceStateTracker.currentState();
-
 		if(currentState > DeviceState.SMALL)
 		{
 			return image.normal;

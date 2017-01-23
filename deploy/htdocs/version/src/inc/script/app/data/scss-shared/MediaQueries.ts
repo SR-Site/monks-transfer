@@ -20,8 +20,6 @@ export let mediaQueries:{[breakpoint:string]:string;} = {
 	// Extra large desktop
 	XXX_LARGE: "(min-width: 1600px)",
 
-	// Media query for rendering the correct images
-	SMALL_MIN: "(min-width: 768px)",
 
 	MEDIUM_ISOLATE : "(min-width: 768px) and (max-width: 1023px)"
 };
@@ -46,8 +44,7 @@ export enum DeviceState {
 	LARGE,
 	X_LARGE,
 	XX_LARGE,
-	XXX_LARGE,
-	SMALL_MIN
+	XXX_LARGE
 }
 
 /**

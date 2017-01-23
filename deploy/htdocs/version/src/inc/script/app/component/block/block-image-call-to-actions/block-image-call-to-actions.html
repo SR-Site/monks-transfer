@@ -5,22 +5,14 @@
 					'is-active': $index() === $root.activeImageIndex()
 				}">
 				<img class="default-image abs-fill" data-bind="
-					attr: { alt: $data.background.alt },
 					image: {
-						queries: [
-							[ $root.MediaQueries.SMALL, $data.background.small ],
-							[ $root.MediaQueries.SMALL_MIN, $data.background.normal ]
-						],
+						image: $data.background,
 						state: $root.deviceState()
 					}"/>
 
 				<img class="blurred-image abs-fill" data-bind="
-					attr: { alt: $data.backgroundBlurred.alt },
 					image: {
-						queries: [
-							[ $root.MediaQueries.SMALL, $data.backgroundBlurred.small ],
-							[ $root.MediaQueries.SMALL_MIN, $data.backgroundBlurred.normal ]
-						],
+						image: $data.backgroundBlurred,
 						state: $root.deviceState()
 					}"/>
 			</div>

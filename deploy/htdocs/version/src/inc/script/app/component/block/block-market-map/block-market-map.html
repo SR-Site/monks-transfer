@@ -34,11 +34,8 @@
 
 		<button class="service-info button" data-bind="tap: $root.handleServiceClick.bind($root)">
 			<div class="profile-image bg-cover" data-bind="image: {
-			queries: [
-				[$root.MediaQueries.X_SMALL, service.image.normal ],
-				[$root.MediaQueries.SMALL, service.image.small]
-			],
-			state: $root.deviceState()
+				image: service.image,
+				state: $root.deviceState()
 			}"></div>
 
 			<div class="profile-info">

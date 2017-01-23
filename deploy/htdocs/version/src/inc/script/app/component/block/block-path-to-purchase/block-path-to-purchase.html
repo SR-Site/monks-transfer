@@ -1,14 +1,8 @@
 <div class="component-block-path-to-purchase">
 	<div class="abs-fill">
 		<img class="background-image" data-bind="
-			attr: {
-				alt: data.steps[0].background.alt
-			},
 			image: {
-				queries: [
-					[$root.MediaQueries.SMALL, data.steps[0].background.normal ],
-					[$root.MediaQueries.SMALL_MIN, data.steps[0].background.small]
-				],
+				image: data.steps[0].background,
 				state: $root.deviceState()
 			}" />
 

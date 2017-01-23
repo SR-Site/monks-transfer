@@ -4,10 +4,12 @@ import ko = require('knockout');
 import ButtonSize from "../../data/enum/layout/ButtonSize";
 import PanelBlocks from "../../data/enum/block/PanelBlocks";
 import DataManager from "../../data/DataManager";
+import {DeviceState} from "../../data/scss-shared/MediaQueries";
 
 class IndexPageViewModel extends DefaultPageViewModel<IndexPageController>
 {
 	public ButtonSize:Class = ButtonSize;
+	public DeviceState:Enum = DeviceState;
 	public startAdvertisingDisabled:KnockoutObservable<boolean> = ko.observable(false);
 
 	/**

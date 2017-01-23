@@ -34,8 +34,11 @@
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
 	}
 
-	@include respond-to(SMALL){
+	@include respond-to(SMALL) {
+		@include pos(0, 0, auto, 0);
 		background: $colorWhite;
+		transform: none;
+		position: absolute;
 
 		.logo {
 			display: none;

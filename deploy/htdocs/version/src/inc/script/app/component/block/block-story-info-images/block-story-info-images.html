@@ -4,25 +4,17 @@
 			<div class="image-wrapper abs-fill" data-bind="css: {'is-active': $index() === $root.activeStory()}">
 				<div class="default-image">
 					<img data-bind="
-							attr: { alt: $data.background.alt },
-							image: {
-								queries: [
-									[ $root.MediaQueries.X_SMALL, $data.background.small ],
-									[ $root.MediaQueries.SMALL, $data.background.normal ]
-								],
-								state: $root.deviceState()
-							}"/>
+						image: {
+							image: $data.background,
+							state: $root.deviceState()
+						}"/>
 				</div>
 				<div class="blurred-image">
 					<img data-bind="
-							attr: { alt: $data.backgroundBlurred.alt },
-							image: {
-								queries: [
-									[ $root.MediaQueries.X_SMALL, $data.backgroundBlurred.small ],
-									[ $root.MediaQueries.SMALL, $data.backgroundBlurred.normal ]
-								],
-								state: $root.deviceState()
-							}"/>
+						image: {
+							image: $data.backgroundBlurred,
+							state: $root.deviceState()
+						}"/>
 				</div>
 			</div>
 		</div>

@@ -7,12 +7,9 @@
 					<!-- ko if: $index() % 2 == 0 -->
 						<a class="network-list-item bg-contain" href="" data-bind="gaiaOpenLink: $data.link">
 							<span class="network-logo abs-fill bg-contain" data-bind="image: {
-							queries: [
-								[$root.MediaQueries.X_SMALL, image.normal ],
-								[$root.MediaQueries.SMALL, image.small]
-							],
-							state: $root.deviceState()
-						}"></span>
+								image: data.image,
+								state: $root.deviceState()
+							}"></span>
 						</a>
 					<!-- /ko -->
 				</div>
@@ -21,12 +18,9 @@
 					<!-- ko ifnot: $index() % 2 == 0 -->
 						<a class="network-list-item bg-contain" href="" data-bind="gaiaOpenLink: $data.link">
 								<span class="network-logo abs-fill bg-contain" data-bind="image: {
-								queries: [
-									[$root.MediaQueries.X_SMALL, image.normal ],
-									[$root.MediaQueries.SMALL, image.small]
-								],
-								state: $root.deviceState()
-							}"></span>
+									image: data.image,
+									state: $root.deviceState()
+								}"></span>
 						</a>
 					<!-- /ko -->
 				</div>

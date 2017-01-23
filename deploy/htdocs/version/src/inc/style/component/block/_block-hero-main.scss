@@ -81,4 +81,19 @@
 	}
 
 
+	@include respond-to(SMALL){
+		.background-triangle {
+			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 13);
+		}
+
+		.secondary-background-triangle {
+			@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 12);
+			display: none;
+		}
+
+		.tertiary-background-triangle {
+			display: none;
+		}
+	}
+
 }

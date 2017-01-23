@@ -5,16 +5,10 @@
 				<li class="slide">
 					<figure class="abs-fill">
 						<img data-bind="
-								attr: {
-									alt: image.alt
-								},
 								image: {
-									queries: [
-										[$root.MediaQueries.X_SMALL, image.small ],
-										[$root.MediaQueries.SMALL, image.normal]
-									],
-									state: $root.deviceState()
-								}"/>
+							image: data.image,
+							state: $root.deviceState()
+						}"/>
 						<!-- ko if: heading -->
 							<figcaption>
 								<p class="copy copy-01" data-bind="html: heading"></p>

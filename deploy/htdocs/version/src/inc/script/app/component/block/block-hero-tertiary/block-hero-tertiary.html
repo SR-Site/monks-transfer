@@ -1,13 +1,7 @@
 <div class="component-block-hero-tertiary">
 	<img data-bind="
-			attr: {
-				alt: data.background.alt
-			},
 			image: {
-				queries: [
-					[$root.MediaQueries.SMALL, data.background.small ],
-					[$root.MediaQueries.SMALL_MIN, data.background.normal]
-				],
+				image: data.background,
 				state: $root.deviceState()
 			}" />
 </div>

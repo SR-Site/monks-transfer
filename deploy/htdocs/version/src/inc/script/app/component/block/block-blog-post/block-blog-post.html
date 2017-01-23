@@ -9,10 +9,7 @@
 
 			<div class="profile-info">
 				<div class="profile-image bg-cover" data-bind="image: {
-				queries: [
-					[$root.MediaQueries.X_SMALL, author.image.normal ],
-					[$root.MediaQueries.SMALL, author.image.small]
-				],
+				image: author.image,
 				state: $root.deviceState()
 			}"></div>
 

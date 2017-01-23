@@ -6,7 +6,9 @@ body {
 }
 
 body {
+	width: 100%;
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 :root {
@@ -48,6 +50,12 @@ body {
 @include respond-to(XX_LARGE) {
 	:root {
 		font-size: $baseFontSize * 0.7;
+	}
+}
+
+@include respond-to(XX_LARGE) {
+	:root {
+		font-size: $baseFontSize * 0.75;
 	}
 }
 

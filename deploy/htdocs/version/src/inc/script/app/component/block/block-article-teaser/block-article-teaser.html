@@ -1,14 +1,8 @@
 <a class="component-block-article-teaser" data-bind="gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: data.target}]">
 	<figure class="abs-fill">
 		<img data-bind="
-			attr: {
-				alt: data.image.alt
-			},
 			image: {
-				queries: [
-					[$root.MediaQueries.SMALL, data.image.normal ],
-					[$root.MediaQueries.SMALL_MIN, data.image.small]
-				],
+				image: data.image,
 				state: $root.deviceState()
 			}" />
 	</figure>

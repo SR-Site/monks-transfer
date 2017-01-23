@@ -1,11 +1,8 @@
 <div class="component-block-page-not-found">
 	<div class="background abs-fill bg-cover" data-bind="image: {
-		queries: [
-			[$root.MediaQueries.X_SMALL, data.background.normal ],
-			[$root.MediaQueries.SMALL, data.background.small]
-		],
-		state: $root.deviceState()
-	}"></div>
+				image: data.background,
+				state: $root.deviceState()
+			}"></div>
 	<div class="message abs-center">
 		<h2 class="heading heading-01" data-bind="html: data.heading"></h2>
 		<p class="copy copy-01" data-bind="html: data.paragraph"></p>

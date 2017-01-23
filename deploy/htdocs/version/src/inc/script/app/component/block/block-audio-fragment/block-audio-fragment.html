@@ -3,14 +3,8 @@
 	<div class="details">
 		<figure class="profile-image">
 			<img data-bind="
-				attr: {
-					alt: data.image.alt
-				},
 				image: {
-					queries: [
-						[$root.MediaQueries.X_SMALL, data.image.small ],
-						[$root.MediaQueries.SMALL, data.image.normal]
-					],
+					image: data.image,
 					state: $root.deviceState()
 				}" />
 		</figure>
