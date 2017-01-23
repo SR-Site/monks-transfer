@@ -106,9 +106,10 @@
 
 	@include respond-to(SMALL) {
 		height: auto;
+		margin-left: 0 !important;
 
 		.image {
-			@include size(640px, 580px);
+			@include aspect-ratio(640px, 580px);
 		}
 
 		.content {
@@ -116,14 +117,23 @@
 			margin-top: -$sizeGrid*8;
 			@include pos(auto, auto !important, auto !important, auto !important);
 			width: calc(100% - #{$sizeGrid}) !important;
+
+			&:after {
+				bottom: auto;
+				top: $sizeGrid*7;
+			}
 		}
 
-		&.left-aligned {
-
+		.copy {
+			margin-bottom: $sizeGrid*3;
 		}
+
+		&.left-aligned {}
 
 		&.right-aligned {
-			margin-left: $sizeGrid;
+			.content {
+				margin-left: $sizeGrid;
+			}
 		}
 	}
 }

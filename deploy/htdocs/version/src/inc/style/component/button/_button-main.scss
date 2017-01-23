@@ -69,4 +69,18 @@
 			stroke: $colorSecondary;
 		}
 	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+		@include size(auto, mobile-size(10rem));
+		font-size: mobile-size(1.8rem);
+		line-height: mobile-size(10rem);
+		padding: 0 $sizeGrid * 2;
+		margin-left: $sizeGrid;
+
+		&:after {
+			@include size($sizeGrid*2, 1rem);
+			left: -$sizeGrid;
+		}
+	}
 }
