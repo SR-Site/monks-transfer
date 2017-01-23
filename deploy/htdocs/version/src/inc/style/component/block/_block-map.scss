@@ -44,4 +44,37 @@
 		transform: translateX(-50%);
 		position: absolute;
 	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+		.aspect-ratio-wrapper {
+			&:before {
+				display: none;
+			}
+		}
+
+		.aspect-ratio-inner {
+			padding: 0;
+			position: relative;
+			height: auto;
+		}
+
+		.map-content {
+			@include offset(0,0);
+			margin: $sizeGrid 0 $sizeGrid*2 $sizeGrid*4;
+			width: calc(100% - #{$sizeGrid*6});
+			position: relative;
+			transform: none;
+		}
+
+		.map-image {
+			@include aspect-ratio($sizeGrid * 32, $sizeGrid * 21);
+		}
+
+		.component-map-slider {
+			position: relative;
+			bottom: auto;
+			width: 100%;
+		}
+	}
 }
