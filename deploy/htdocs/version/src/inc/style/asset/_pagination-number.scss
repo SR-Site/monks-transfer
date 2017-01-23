@@ -7,11 +7,15 @@
 
 	&:after {
 		@include pos(auto, auto, $sizeGrid / 8, 0);
-		@include size(100%, 0.1rem);
+		@include size(100%, 1px);
 		transform: rotate(-#{$angle}deg);
 		position: absolute;
 		background: currentColor;
 		content: '';
 		transform-origin: bottom left;
+	}
+
+	@include respond-to(SMALL) {
+		font-size: mobile-size(2.2rem);
 	}
 }
