@@ -3,7 +3,6 @@
 	min-height: $sizeGrid * 24;
 	max-height: 100vh;
 
-
 	.background-triangle {
 		@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 40);
 		@include pos(50%, auto, auto, 0);
@@ -82,13 +81,17 @@
 
 
 	@include respond-to(SMALL){
+		@include aspect-ratio($sizeGrid * 11, $sizeGrid * 24);
+		min-height: 0;
+		max-height: calc(100vh - #{$sizeGrid * 2});
+
 		.background-triangle {
 			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 24);
 		}
 
 		.secondary-background-triangle {
 			@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 10);
-			display: none;
+			left: $sizeGrid * 7;
 		}
 
 		.tertiary-background-triangle {
