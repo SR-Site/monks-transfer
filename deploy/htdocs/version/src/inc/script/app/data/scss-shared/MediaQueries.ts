@@ -4,12 +4,24 @@
  * @include respond-to(X_SMALL) { ... }
  */
 export let mediaQueries:{[breakpoint:string]:string;} = {
-	X_SMALL : "(max-width: 479px)",
-	SMALL : "(min-width: 480px)",
-	MEDIUM : "(min-width: 768px)",
-	LARGE : "(min-width: 1280px)",
-	X_LARGE: "(min-width: 1440px)",
-	XX_LARGE: "(min-width: 1600px)",
+
+	// Really small mobile devices
+	X_SMALL : "(max-width: 480px)",
+	// mobile devices
+	SMALL : "(max-width: 767px)",
+	// Tablets portrait
+	MEDIUM : "(max-width: 1023px)",
+	// Tablets landscape
+	LARGE : "(max-width: 1024px)",
+	// Normal desktop
+	X_LARGE: "(max-width: 1280px)",
+	// Large desktop
+	XX_LARGE: "(max-width: 1440px)",
+	// Extra large desktop
+	XXX_LARGE: "(min-width: 1600px)",
+
+	// Media query for rendering the correct images
+	SMALL_MIN: "(min-width: 768px)",
 
 	MEDIUM_ISOLATE : "(min-width: 768px) and (max-width: 1023px)"
 };
@@ -31,7 +43,11 @@ export enum DeviceState {
 	X_SMALL,
 	SMALL,
 	MEDIUM,
-	LARGE
+	LARGE,
+	X_LARGE,
+	XX_LARGE,
+	XXX_LARGE,
+	SMALL_MIN
 }
 
 /**

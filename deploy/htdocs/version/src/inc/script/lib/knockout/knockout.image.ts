@@ -16,6 +16,7 @@ class KnockoutImage
 
 		let imageUrl: string;
 
+
 		if(data.queries && data.queries.length)
 		{
 			for(let i = 0; i < data.queries.length; i++)

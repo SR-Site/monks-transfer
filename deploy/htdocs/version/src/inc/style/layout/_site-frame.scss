@@ -3,6 +3,7 @@
 	@include size(100%, auto);
 	position: relative;
 	overflow: hidden;
+	max-width: $largeSiteFrame;
 
 	/**
 	 * Define the site frame sizes for the different media queries
@@ -15,9 +16,6 @@
 	//	max-width: $mediumSiteFrame;
 	//}
 
-	@include respond-to(XX_LARGE) {
-		max-width: $largeSiteFrame;
-	}
 
 	&.windowed {
 		padding: 0 $sizeGrid * 2 ;

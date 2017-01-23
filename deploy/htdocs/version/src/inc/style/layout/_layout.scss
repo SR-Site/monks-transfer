@@ -36,18 +36,19 @@ body {
 	}
 }
 
+
 /**
  * Define the root font size for the different media queries
  */
-@include respond-to(SMALL) {
+@include respond-to(XXX_LARGE) {
 	:root {
-		font-size: $baseFontSize * .7;
+		font-size: $baseFontSize;
 	}
 }
 
-@include respond-to(LARGE) {
+@include respond-to(XX_LARGE) {
 	:root {
-		font-size: $baseFontSize;
+		font-size: $baseFontSize * 0.7;
 	}
 }
 
