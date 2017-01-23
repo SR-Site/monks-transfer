@@ -63,7 +63,8 @@ class BlockPersonaSelectorController extends DefaultComponentController<BlockPer
 		this._imageCrossfader.open(
 			ImageHelper.getImageForMediaQuery(
 				this.options.personas[index].image
-			)
+			),
+			0.5
 		);
 	}
 

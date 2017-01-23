@@ -24,7 +24,7 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 	 * The duration of the entire cross animation in seconds
 	 * @type {number}
 	 */
-	private static DURATION: number = 1;
+	private static DURATION: number = 2;
 
 	/**
 	 * The background color for when there is no previous image available
@@ -95,7 +95,7 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 	 * @public
 	 * @method open
 	 */
-	public open(path: string): void
+	public open(path: string, duration:number = ImageCrossfaderController.DURATION): void
 	{
 		if(this._animation)
 		{
@@ -111,7 +111,7 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 			.then(() => this.handleResize())
 			.then(() =>
 			{
-				this._animation = TweenLite.fromTo(this, ImageCrossfaderController.DURATION,
+				this._animation = TweenLite.fromTo(this, duration,
 					{
 						_triangleProgress: 0
 					},

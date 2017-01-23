@@ -13,7 +13,6 @@ class BlockPersonaSelectorViewModel extends DefaultComponentViewModel<BlockPerso
 	public PersonaType: Enum = PersonaType;
 	public MouseEventHelper:Class = MouseEventHelper;
 
-
 	public activeIndex:KnockoutObservable<number> = ko.observable(0);
 
 	/**
