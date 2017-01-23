@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Block documentation</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+	      type="text/css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
+	<style>
+		body {
+			padding-top: 90px;
+		}
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Project block documentation</a>
+		</div>
+	</div>
+</nav>
+
+<div class="container viewmodel">
+
+	<div class="starter-template">
+		<div class="blocks" data-bind="foreach: blocks">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title" data-bind="html: $data.blockId"></h3>
+				</div>
+				<div class="panel-body">
+					<table class="table">
+						<thead>
+						<tr data-bind="foreach: Object.keys($data.properties[0])">
+							<th data-bind="html: $data"></th>
+						</tr>
+						</thead>
+						<tbody data-bind="foreach: $data.properties">
+						<tr data-bind="foreach: Object.keys($data)">
+							<td data-bind="html: $parent[$data]"></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div><!-- /.container -->
+<script>
+
+	// Check fetch support
+	if( self.fetch )
+	{
+		// Create a simple viewmodel
+		var ViewModel = function( data )
+		{
+			this.blocks = ko.observableArray( data.blocks );
+		};
+
+		// Create the request
+		var request = new Request( 'data.json', {
+			method: 'GET',
+			headers: new Headers( {
+				'Content-Type': 'text/plain'
+			} )
+		} );
+
+		// Fetch the json file
+		fetch( request )
+			.then( function( response )
+			{
+				return response.json();
+			} )
+			.then( function( response )
+			{
+				// Apply knockout binding for rendering of the html
+				ko.applyBindings( new ViewModel( response ), document.body );
+			} )
+	}
+	else
+	{
+		alert( 'Fetch not supported!' );
+	}
+</script>
+</body>
+</html>

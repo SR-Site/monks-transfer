@@ -21,6 +21,7 @@ module.exports = function( grunt )
 
 		// verify that the component directory does not exist yet
 		var componentDir = path.join(getConfigDir('component'), name);
+
 		if( grunt.file.exists( componentDir ) && grunt.option( 'force' ) != true )
 		{
 			grunt.log.error( 'Component exists! Choose a different name or use --force to overwrite' );

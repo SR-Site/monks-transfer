@@ -10,8 +10,7 @@ interface IDefaultComponentOptions extends IIndexable
 	blocks?: Array<IBlock>;
 	/**
 	 * @property
-	 * @description If you want to disable the default transition in for the component, for example when you start
-	 * nesting block components inside of other block components and you want to have control over the transition in
+	 * @description If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in
 	 */
 	disableTransitionIn?: boolean;
 

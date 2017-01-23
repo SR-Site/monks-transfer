@@ -1,0 +1,1511 @@
+{
+    "blocks": [
+        {
+            "blockId": "BlockArticleTeaser",
+            "properties": [
+                {
+                    "name": "heading",
+                    "type": "string",
+                    "required": false,
+                    "description": "The main heading displayed"
+                },
+                {
+                    "name": "paragraph",
+                    "type": "string",
+                    "required": false,
+                    "description": "The main paragraph displayed"
+                },
+                {
+                    "name": "target",
+                    "type": "string",
+                    "required": false,
+                    "description": "The target that the teaser should link to"
+                },
+                {
+                    "name": "image",
+                    "type": "IImage",
+                    "required": false,
+                    "description": "The image that will be displayed in the article teaser"
+                },
+                {
+                    "name": "tags",
+                    "type": "Array",
+                    "required": false,
+                    "description": "The tags linked to this article"
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockAudioFragment",
+            "properties": [
+                {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": "The name displayed above the audio fragment"
+                },
+                {
+                    "name": "description",
+                    "type": "string",
+                    "required": false,
+                    "description": "The description about the name"
+                },
+                {
+                    "name": "image",
+                    "type": "IImage",
+                    "required": false,
+                    "description": "The image linked to the audio fragment"
+                },
+                {
+                    "name": "file",
+                    "type": "string",
+                    "required": false,
+                    "description": "The *.mp3 file that will be played"
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockBlogPost",
+            "properties": [
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockButton",
+            "properties": [
+                {
+                    "name": "link",
+                    "type": "ILink",
+                    "required": false,
+                    "description": "The link that will be linked to the button"
+                },
+                {
+                    "name": "alignment",
+                    "type": "Alignment",
+                    "required": false,
+                    "description": "The alignment of the button inside the block"
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockDummyComponent",
+            "properties": [
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockFilterContent",
+            "properties": [
+                {
+                    "name": "endpoint",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "filterLabel",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "filters",
+                    "type": "Array",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockHeroMain",
+            "properties": [
+                {
+                    "name": "slides",
+                    "type": "Array",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockHeroSecondary",
+            "properties": [
+                {
+                    "name": "heading",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "paragraph",
+                    "type": "string",
+                    "required": true,
+                    "description": ""
+                },
+                {
+                    "name": "link",
+                    "type": "ILink",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockHeroTertiary",
+            "properties": [
+                {
+                    "name": "background",
+                    "type": "IImage",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockHowToAdvertise",
+            "properties": [
+                {
+                    "name": "heading",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "link",
+                    "type": "ILink",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "steps",
+                    "type": "Array",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockImageCallToActions",
+            "properties": [
+                {
+                    "name": "callToActions",
+                    "type": "Array",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockImageCarousel",
+            "properties": [
+                {
+                    "name": "slides",
+                    "type": "Array",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockImageWithContent",
+            "properties": [
+                {
+                    "name": "alignment",
+                    "type": "Alignment",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "croppedImage",
+                    "type": "boolean",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "heading",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "paragraph",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "background",
+                    "type": "IImage",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "link",
+                    "type": "ILink",
+                    "required": true,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockInfo",
+            "properties": [
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockMap",
+            "properties": [
+                {
+                    "name": "imageSequence",
+                    "type": "IImageSequence",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "steps",
+                    "type": "Array",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockMapSecondary",
+            "properties": [
+                {
+                    "name": "heading",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "subHeading",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "paragraph",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockMarketMap",
+            "properties": [
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockNetworkOverview",
+            "properties": [
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockPageNotFound",
+            "properties": [
+                {
+                    "name": "errorCode",
+                    "type": "number",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "heading",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "paragraph",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "image",
+                    "type": "IImage",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "link",
+                    "type": "ILink",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockPathToPurchase",
+            "properties": [
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockPersonaSelector",
+            "properties": [
+                {
+                    "name": "personas",
+                    "type": "Array",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockProgramModule",
+            "properties": [
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockQuote",
+            "properties": [
+                {
+                    "name": "image",
+                    "type": "IImage",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "quote",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "description",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockQuoteSecondary",
+            "properties": [
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockSmallHeading",
+            "properties": [
+                {
+                    "name": "heading",
+                    "type": "string",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockSmallImage",
+            "properties": [
+                {
+                    "name": "alignment",
+                    "type": "Alignment",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "image",
+                    "type": "IImage",
+                    "required": false,
+                    "description": ""
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockSmallInfo",
+            "properties": [
+                {
+                    "name": "heading",
+                    "type": "string",
+                    "required": false,
+                    "description": "The main heading displayed in this block"
+                },
+                {
+                    "name": "paragraph",
+                    "type": "string",
+                    "required": false,
+                    "description": "The main paragraph displayed in this block"
+                },
+                {
+                    "name": "link",
+                    "type": "ILink",
+                    "required": true,
+                    "description": "The link that is added to this block"
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockStoryInfoImages",
+            "properties": [
+                {
+                    "name": "stories",
+                    "type": "Array",
+                    "required": false,
+                    "description": "The array containing the stories displayed in this block, todo: add support for nested types"
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        },
+        {
+            "blockId": "BlockText",
+            "properties": [
+                {
+                    "name": "html",
+                    "type": "string",
+                    "required": false,
+                    "description": "The html that will be rendered in the block"
+                },
+                {
+                    "name": "blocks",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The blocks inside this block"
+                },
+                {
+                    "name": "disableTransitionIn",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": true,
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                },
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": true,
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                },
+                {
+                    "name": "id",
+                    "type": "string",
+                    "required": true,
+                    "description": "the unique id of the object"
+                }
+            ]
+        }
+    ]
+}
