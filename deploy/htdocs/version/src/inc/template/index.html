@@ -1,58 +1,55 @@
-<div class="site-frame">
+<!-- ko component: {
+	name: 'header',
+	onComplete: $root.controller.callbackCounter.get($root.controller.handleHeaderReady.bind($root.controller))
+} --><!-- /ko -->
 
-	<!-- ko component: {
-		name: 'header',
-		onComplete: $root.controller.callbackCounter.get($root.controller.handleHeaderReady.bind($root.controller))
-	} --><!-- /ko -->
+<div data-gaia-container="index"></div>
 
+<!-- ko component: {
+	name: 'footer',
+	onComplete: $root.controller.callbackCounter.get($root.controller.handleFooterReady.bind($root.controller))
+} --><!-- /ko -->
 
-	<div data-gaia-container="index"></div>
+<!-- ko component: {
+	name: 'menu',
+	onComplete: $root.controller.callbackCounter.get($root.controller.handleMenuReady.bind($root.controller))
+} --><!-- /ko -->
 
-	<!-- ko component: {
-		name: 'footer',
-		onComplete: $root.controller.callbackCounter.get($root.controller.handleFooterReady.bind($root.controller))
-	} --><!-- /ko -->
+<!-- ko component: {
+	name: 'slideout-panel/global-slideout-panel',
+	onComplete: $root.controller.callbackCounter.get($root.controller.handlePanelReady.bind($root.controller))
+} --><!-- /ko -->
 
-	<!-- ko component: {
-		name: 'menu',
-		onComplete: $root.controller.callbackCounter.get($root.controller.handleMenuReady.bind($root.controller))
-	} --><!-- /ko -->
+<!-- ko component: {
+	name: 'page-loader',
+	onComplete: $root.controller.callbackCounter.get($root.controller.handlePageLoaderReady.bind($root.controller))
+} --><!-- /ko -->
 
-	<!-- ko component: {
-		name: 'slideout-panel/global-slideout-panel',
-		onComplete: $root.controller.callbackCounter.get($root.controller.handlePanelReady.bind($root.controller))
-	} --><!-- /ko -->
+<!-- ko component: {
+	name: 'button/button-start-advertising',
+	onComplete: $root.controller.callbackCounter.get($root.controller.handleStartAdvertisingReady.bind($root.controller)),
+	options: {
+		action: {
+			label: localeManager.getString('global.cta.start_advertising_today'),
+			title: localeManager.getString('global.cta.start_advertising_today'),
+			event: $root.handleStartAdvertisingClick.bind($root)
+		},
+		size: $root.ButtonSize.LARGE,
+		disabled: $root.startAdvertisingDisabled
+	}
+} --><!-- /ko -->
 
-	<!-- ko component: {
-		name: 'page-loader',
-		onComplete: $root.controller.callbackCounter.get($root.controller.handlePageLoaderReady.bind($root.controller))
-	} --><!-- /ko -->
+<!-- ko component: {
+	name: 'video-overlay',
+	onComplete: $root.controller.callbackCounter.get($root.controller.handleVideoOverlayReady.bind($root.controller))
+} --><!-- /ko -->
 
-	<!-- ko component: {
-		name: 'button/button-start-advertising',
-		onComplete: $root.controller.callbackCounter.get($root.controller.handleStartAdvertisingReady.bind($root.controller)),
-		options: {
-			action: {
-				label: localeManager.getString('global.cta.start_advertising_today'),
-				title: localeManager.getString('global.cta.start_advertising_today'),
-				event: $root.handleStartAdvertisingClick.bind($root)
-			},
-			size: $root.ButtonSize.LARGE,
-			disabled: $root.startAdvertisingDisabled
-		}
-	} --><!-- /ko -->
-
-	<!-- ko component: {
-		name: 'video-overlay',
-		onComplete: $root.controller.callbackCounter.get($root.controller.handleVideoOverlayReady.bind($root.controller))
-	} --><!-- /ko -->
-
-	<div class="grid">
-		<div class="base-grid regular-grid" data-bind="foreach: new Array(40)">
-			<div class="row"></div>
-		</div>
-		<div class="base-grid angle-grid" data-bind="foreach: new Array(40)">
-			<div class="row"></div>
-		</div>
+<div class="grid">
+	<div class="base-grid regular-grid" data-bind="foreach: new Array(40)">
+		<div class="row"></div>
+	</div>
+	<div class="base-grid angle-grid" data-bind="foreach: new Array(40)">
+		<div class="row"></div>
 	</div>
 </div>
+

@@ -9,25 +9,6 @@
 	position: relative;
 	z-index: zindex($layout, content);
 
-	&:before,
-	&:after {
-		@include size($barSize, 100%);
-		min-height: 100vh;
-		top: 0;
-		content: '';
-		position: absolute;
-		background: white;
-		z-index: zindex($layout, siteFrame);
-	}
-
-	&:after {
-		right :0;
-	}
-
-	&:before {
-		left: 0;
-	}
-
 	[data-gaia-container="index"] {
 		z-index: 0;
 		position: relative;

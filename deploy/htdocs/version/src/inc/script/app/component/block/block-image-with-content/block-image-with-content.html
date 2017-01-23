@@ -1,33 +1,35 @@
 <div class="component-block-image-with-content">
-	<div class="overrule-overlap">
-		<figure class="image">
-			<img data-bind="
-				attr: {
-					alt: data.background.alt
-				},
-				image: {
-					queries: [
-						[$root.MediaQueries.SMALL, data.background.small ],
-						[$root.MediaQueries.SMALL_MIN, data.background.normal]
-					],
-					state: $root.deviceState()
-				}" />
-		</figure>
-		<aside class="content">
-			<h4 class="heading heading-06" data-bind="html: data.heading"></h4>
-			<p class="copy copy-01" data-bind="html: data.paragraph"></p>
+	<div class="site-frame">
+		<div class="overrule-overlap">
+			<figure class="image">
+				<img data-bind="
+					attr: {
+						alt: data.background.alt
+					},
+					image: {
+						queries: [
+							[$root.MediaQueries.SMALL, data.background.small ],
+							[$root.MediaQueries.SMALL_MIN, data.background.normal]
+						],
+						state: $root.deviceState()
+					}" />
+			</figure>
+			<aside class="content">
+				<h4 class="heading heading-06" data-bind="html: data.heading"></h4>
+				<p class="copy copy-01" data-bind="html: data.paragraph"></p>
 
-			<!-- ko if: data.link -->
-				<!-- ko component: {
-					name: 'button/button-main',
-					onComplete: $root.controller.callbackCounter.get(),
-					options: {
-						action: data.link,
-						size: $root.ButtonSize.LARGE,
-						disabled: $root.findOutMoreDisabled
-					}
-				} --><!-- /ko -->
-			<!-- /ko -->
-		</aside>
+				<!-- ko if: data.link -->
+					<!-- ko component: {
+						name: 'button/button-main',
+						onComplete: $root.controller.callbackCounter.get(),
+						options: {
+							action: data.link,
+							size: $root.ButtonSize.LARGE,
+							disabled: $root.findOutMoreDisabled
+						}
+					} --><!-- /ko -->
+				<!-- /ko -->
+			</aside>
+		</div>
 	</div>
 </div>

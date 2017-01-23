@@ -1,6 +1,9 @@
 .component-block-small-info {
-	padding: $sizeGrid * 2 $sizeGrid * 5;
 	font-size: 0;
+
+	.site-frame {
+		padding: $sizeGrid * 2 $sizeGrid * 5;
+	}
 
 	.description,
 	.introduction {

@@ -1,17 +1,22 @@
 <div class="component-block-how-to-advertise">
+
 	<div class="overrule-overlap">
-		<header class="header">
-			<h2 class="heading heading-04" data-bind="html: data.heading"></h2>
-			<!-- ko component: {
-				name: 'button/button-main',
-				onComplete: $root.controller.callbackCounter.get(),
-				options: {
-					action: data.link,
-					size: $root.ButtonSize.LARGE,
-					disabled: $root.findOutMoreDisabled
-				}
-			} --><!-- /ko -->
-		</header>
+
+		<div class="site-frame">
+			<header class="header">
+				<h2 class="heading heading-04" data-bind="html: data.heading"></h2>
+				<!-- ko component: {
+					name: 'button/button-main',
+					onComplete: $root.controller.callbackCounter.get(),
+					options: {
+						action: data.link,
+						size: $root.ButtonSize.LARGE,
+						disabled: $root.findOutMoreDisabled
+					}
+				} --><!-- /ko -->
+			</header>
+		</div>
+
 		<div class="advertisement-steps">
 			<div class="js-draggable-container">
 				<ul class="steps js-draggable-element" data-bind="foreach: data.steps">

@@ -1,4 +1,7 @@
 .component-block-small-heading {
-	padding-left: $sizeGrid * 4;
-	padding-right: $sizeGrid * 4;
+
+	.site-frame {
+		padding-left: $sizeGrid * 4;
+		padding-right: $sizeGrid * 4;
+	}
 }

@@ -33,9 +33,8 @@ $sizeIcon: 2.6rem;
 /**
  * Site frame sizes
  */
-$largeSiteFrame: 1600px;
-$mediumSiteFrame: 1440px;
-$smallSiteFrame: 1280px;
+$largeSiteFrame: $sizeGrid * 34;
+
 
 // Colors
 $colorPrimary: #003057;

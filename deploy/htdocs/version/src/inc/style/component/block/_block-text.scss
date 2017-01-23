@@ -1,6 +1,9 @@
 .component-block-text {
-	padding-left: $sizeGrid * 7;
-	padding-right: $sizeGrid * 7;
+
+	.site-frame	{
+		padding-left: $sizeGrid * 7;
+		padding-right: $sizeGrid * 7;
+	}
 
 	h1,h2,h3,h4 {
 		@extend %heading-07;

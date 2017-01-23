@@ -1,6 +1,6 @@
 .component-menu {
 	@include size($sizeGrid * 14, calc(100vh - #{$sizeGrid * 2}));
-	@include pos($sizeGrid * 2, calc((100% - #{$largeSiteFrame}) / 2), 0, auto);
+	@include pos($sizeGrid * 2, 0, 0, auto);
 	background: $colorPrimary;
 	position: fixed;
 	z-index: zindex($layout, menu);

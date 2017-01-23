@@ -1,6 +1,9 @@
 .component-block-blog-post {
-	padding-left: $sizeGrid * 7;
-	padding-right: $sizeGrid * 7;
+
+	.site-frame {
+		padding-left: $sizeGrid * 7;
+		padding-right: $sizeGrid * 7;
+	}
 
 	.date {
 		font: 700 1rem / 1.3rem $fontOpenSans;

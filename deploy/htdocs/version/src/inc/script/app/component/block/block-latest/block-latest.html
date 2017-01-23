@@ -1,23 +1,25 @@
 <div class="component-block-latest">
-	<div class="overrule-overlap">
-		<header class="header">
-			<h2 class="heading heading-03" data-bind="html: data.heading"></h2>
-			<!-- ko component: {
-				name: 'button/button-main',
-				onComplete: $root.controller.callbackCounter.get(),
-				options: {
-					action: data.link,
-					size: $root.ButtonSize.LARGE,
-					disabled: $root.findOutMoreDisabled
-				}
-			} --><!-- /ko -->
-		</header>
-		<div class="latest-articles" data-bind="foreach: data.articles">
-			<!-- ko component: {
-				name: 'block/block-article-teaser',
-				onComplete: $root.controller.callbackCounter.get(),
-				options: $data
-			} --><!-- /ko -->
+	<div class="site-frame">
+		<div class="overrule-overlap">
+			<header class="header">
+				<h2 class="heading heading-03" data-bind="html: data.heading"></h2>
+				<!-- ko component: {
+					name: 'button/button-main',
+					onComplete: $root.controller.callbackCounter.get(),
+					options: {
+						action: data.link,
+						size: $root.ButtonSize.LARGE,
+						disabled: $root.findOutMoreDisabled
+					}
+				} --><!-- /ko -->
+			</header>
+			<div class="latest-articles" data-bind="foreach: data.articles">
+				<!-- ko component: {
+					name: 'block/block-article-teaser',
+					onComplete: $root.controller.callbackCounter.get(),
+					options: $data
+				} --><!-- /ko -->
+			</div>
 		</div>
 	</div>
 </div>

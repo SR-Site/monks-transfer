@@ -7,20 +7,39 @@
 			{
 				"id": "heroMain",
 				"data": {
-					"overlap": false,
-					"heading": "Never stop reaching",
-					"paragraph": "The right time and place to advertise your business",
-					"link": {
-						"label": "Find out more",
-						"title": "Find out more",
-						"target": "/home",
-						"type": 2
-					},
-					"background": {
-						"normal": "data/image/image-with-content/background.jpg",
-						"small": "data/image/image-with-content/background.jpg",
-						"alt": "Background image alt text"
-					}
+					"overlap": true,
+					"slides": [
+						{
+							"heading": "Never stop reaching",
+							"paragraph": "The right time and place to advertise your business",
+							"link": {
+								"label": "Find out more",
+								"title": "Find out more",
+								"target": "/home",
+								"type": 2
+							},
+							"background": {
+								"normal": "data/image/hero-main/slide-1.jpg",
+								"small": "data/image/hero-main/slide-1.jpg",
+								"alt": "Background image alt text"
+							}
+						},
+						{
+							"heading": "Never stop reaching",
+							"paragraph": "The right time and place to advertise your business",
+							"link": {
+								"label": "Find out more",
+								"title": "Find out more",
+								"target": "/home",
+								"type": 2
+							},
+							"background": {
+								"normal": "data/image/hero-main/slide-2.jpg",
+								"small": "data/image/hero-main/slide-2.jpg",
+								"alt": "Background image alt text"
+							}
+						}
+					]
 				}
 			},
 			{
@@ -397,7 +416,39 @@
 			{
 				"id": "map",
 				"data": {
-					"windowed": true
+					"windowed": true,
+					"marginTop": 2,
+					"steps": [
+						{
+							"label": "200m",
+							"heading": "200m",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						},
+						{
+							"label": "81%",
+							"heading": "81%",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						},
+						{
+							"label": "15 years",
+							"heading": "15 years",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						},
+						{
+							"label": "110+",
+							"heading": "110+",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						}
+					],
+					"imageSequence": {
+						"image": {
+							"normal": "data/sequence/trailer/trailer_",
+							"small": "data/sequence/trailer/trailer_",
+							"alt": "Alt text"
+						},
+						"extension": ".jpg",
+						"total": 301
+					}
 				}
 			},
 			{
@@ -413,6 +464,15 @@
 						"title": "Explore the market",
 						"target": "map",
 						"type": 2
+					},
+					"imageSequence": {
+						"image": {
+							"normal": "data/sequence/trailer/trailer_",
+							"small": "data/sequence/trailer/trailer_",
+							"alt": "Alt text"
+						},
+						"extension": ".jpg",
+						"total": 301
 					}
 				}
 			},

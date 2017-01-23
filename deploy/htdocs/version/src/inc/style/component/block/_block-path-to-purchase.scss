@@ -9,11 +9,13 @@
 
 	.steps {
 		@extend %reset-list;
-		@include pos(auto, $sizeGrid, $sizeGrid * 2, $sizeGrid);
+		@include pos(auto, auto, $sizeGrid * 2, 50%);
 		@include size(auto, $stepHeight);
 		position: absolute;
 		display: flex;
 		justify-content: center;
+		overflow: visible;
+		transform: translateX(-50%);
 	}
 
 	.step {

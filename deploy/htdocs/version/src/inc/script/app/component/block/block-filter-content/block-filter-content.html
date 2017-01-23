@@ -1,22 +1,23 @@
 <div class="component-block-filter-content" data-bind="with: data">
+	<div class="site-frame">
+		<!-- ko component: {
+			name: 'filter-menu',
+			onComplete: $root.controller.callbackCounter.get(),
+			options: {
+				filters: filters,
+				label: filterLabel
+			}
+		} --><!-- /ko -->
 
-	<!-- ko component: {
-		name: 'filter-menu',
-		onComplete: $root.controller.callbackCounter.get(),
-		options: {
-			filters: filters,
-			label: filterLabel
-		}
-	} --><!-- /ko -->
+		<div class="content-items" data-bind="foreach: $root.items">
+			<!-- ko if: type == $root.BlockType.COMPONENT -->
+				<!-- ko component: {name: 'block/' + id, options: data, onComplete: $root.controller.callbackCounter.get($root.controller.handleDynamicComponentLoaded.bind($root.controller))} --><!-- /ko -->
+			<!-- /ko -->
+			<!-- ko if: type == $root.BlockType.PARTIAL -->
+				<!-- ko template: {name: id, options: data} --><!-- /ko -->
+			<!-- /ko -->
+		</div>
 
-	<div class="content-items" data-bind="foreach: $root.items">
-		<!-- ko if: type == $root.BlockType.COMPONENT -->
-			<!-- ko component: {name: 'block/' + id, options: data, onComplete: $root.controller.callbackCounter.get($root.controller.handleDynamicComponentLoaded.bind($root.controller))} --><!-- /ko -->
-		<!-- /ko -->
-		<!-- ko if: type == $root.BlockType.PARTIAL -->
-			<!-- ko template: {name: id, options: data} --><!-- /ko -->
-		<!-- /ko -->
+		<!-- todo need design: load more/pagination -->
 	</div>
-
-	<!-- todo need design: load more/pagination -->
 </div>

@@ -12,7 +12,7 @@
 				state: $root.deviceState()
 			}" />
 
-		<ul class="steps" data-bind="foreach: data.steps">
+		<ul class="steps site-frame" data-bind="foreach: data.steps">
 			<li class="step">
 				<div class="step-content">
 					<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
