@@ -50,4 +50,44 @@
 			}
 		}
 	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+		&:before {
+			padding-top: 0;
+		}
+
+		.text-wrapper {
+			top: 5rem;
+		}
+
+		.call-to-actions-wrapper {
+			position: relative;
+			height: auto;
+		}
+
+		.call-to-actions-content {
+			position: relative;
+			height: auto;
+
+			.copy {
+				display: none;
+			}
+
+			.heading {
+				font-size: mobile-size(5rem);
+				margin-left: $sizeGrid;
+			}
+
+			a {
+				width: 100% !important;
+				@include aspect-ratio(640px, 370px);
+			}
+		}
+
+		.call-to-action-image {
+			@include aspect-ratio(640px, 370px);
+			height: auto;
+		}
+	}
 }
