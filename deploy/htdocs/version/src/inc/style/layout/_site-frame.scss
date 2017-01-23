@@ -19,4 +19,8 @@
 	&.windowed {
 		padding: 0 $sizeGrid * 2 ;
 	}
+
+	@include respond-to(SMALL) {
+		max-width: 100%;
+	}
 }
