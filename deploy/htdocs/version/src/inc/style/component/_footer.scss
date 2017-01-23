@@ -120,4 +120,31 @@
 			}
 		}
 	}
+
+	@include respond-to(SMALL){
+		padding: 0 $sizeGrid;
+
+		.top-section {
+			flex-direction: column;
+		}
+
+		.contact-options {
+			white-space: normal;
+		}
+
+		.contact-option {
+			width: 100%;
+
+			&:not(:first-child){
+				margin: 0;
+			}
+		}
+
+		.middle-section {
+			.call-to-actions {
+				width: 100%;
+				margin-bottom: $sizeGrid;
+			}
+		}
+	}
 }

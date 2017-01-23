@@ -4,7 +4,6 @@
  * @include respond-to(X_SMALL) { ... }
  */
 export let mediaQueries:{[breakpoint:string]:string;} = {
-
 	// Really small mobile devices
 	X_SMALL : "(max-width: 480px)",
 	// mobile devices
@@ -19,7 +18,6 @@ export let mediaQueries:{[breakpoint:string]:string;} = {
 	XX_LARGE: "(max-width: 1440px)",
 	// Extra large desktop
 	XXX_LARGE: "(min-width: 1600px)",
-
 
 	MEDIUM_ISOLATE : "(min-width: 768px) and (max-width: 1023px)"
 };
@@ -52,5 +50,5 @@ export enum DeviceState {
  * breakpoint that matches. This is usually desired in mobile-first designs. Set this value to
  * true if the tracker should choose the first matching DeviceState instead.
  */
-export let reverseDeviceStateOrder:boolean = false;
+export let reverseDeviceStateOrder:boolean = true;
 

@@ -8,7 +8,6 @@ body {
 body {
 	width: 100%;
 	overflow-y: scroll;
-	overflow-x: hidden;
 }
 
 :root {
@@ -46,16 +45,15 @@ body {
 /**
  * Define the root font size for the different media queries
  */
-
 @include respond-to(XX_LARGE) {
 	:root {
 		font-size: $baseFontSize * 0.7;
 	}
 }
 
-@include respond-to(XX_LARGE) {
+@include respond-to(SMALL) {
 	:root {
-		font-size: $baseFontSize * 0.75;
+		font-size: $baseFontSize * 0.8125;
 	}
 }
 

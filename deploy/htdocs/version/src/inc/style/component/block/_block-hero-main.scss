@@ -3,31 +3,31 @@
 	min-height: $sizeGrid * 24;
 	max-height: 100vh;
 
+
+	.background-triangle {
+		@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 40);
+		@include pos(50%, auto, auto, 0);
+		transform: translateY(-50%);
+		position: absolute;
+		pointer-events: none;
+	}
+
+	.secondary-background-triangle {
+		@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 12);
+		@include pos(50%, auto, auto, $sizeGrid * 14);
+		position: absolute;
+		pointer-events: none;
+	}
+
+	.tertiary-background-triangle {
+		@include arrow(right, rgba($colorWhite, .95), $sizeGrid * 6);
+		@include pos(75%, auto, auto, $sizeGrid * 20);
+		position: absolute;
+		pointer-events: none;
+	}
+
 	.slide-content-wrapper {
 		overflow: visible;
-
-		.background-triangle {
-			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 40);
-			@include pos(50%, auto, auto, 0);
-			transform: translateY(-50%);
-			position: absolute;
-			pointer-events: none;
-		}
-
-		.secondary-background-triangle {
-			@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 12);
-			@include pos(50%, auto, auto, $sizeGrid * 14);
-			position: absolute;
-			pointer-events: none;
-		}
-
-		.tertiary-background-triangle {
-			@include arrow(right, rgba($colorWhite, .95), $sizeGrid * 6);
-			@include pos(75%, auto, auto, $sizeGrid * 20);
-			position: absolute;
-			pointer-events: none;
-		}
-
 	}
 
 	.slide-content {
@@ -83,16 +83,21 @@
 
 	@include respond-to(SMALL){
 		.background-triangle {
-			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 13);
+			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 24);
 		}
 
 		.secondary-background-triangle {
-			@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 12);
+			@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 10);
 			display: none;
 		}
 
 		.tertiary-background-triangle {
 			display: none;
+		}
+
+		.slide-content {
+			@include size($sizeGrid * 9, auto);
+			padding-left: $sizeGrid * 1;
 		}
 	}
 

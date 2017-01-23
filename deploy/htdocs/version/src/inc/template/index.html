@@ -45,10 +45,10 @@
 } --><!-- /ko -->
 
 <div class="grid">
-	<div class="base-grid regular-grid" data-bind="foreach: new Array(dataManager.deviceStateTracker.currentState() < $root.DeviceState.SMALL ? 40 : 20)">
+	<div class="base-grid regular-grid" data-bind="foreach: new Array(dataManager.deviceStateTracker.currentState() > $root.DeviceState.SMALL ? 34 : 12)">
 		<div class="row"></div>
 	</div>
-	<div class="base-grid angle-grid" data-bind="foreach: new Array(40)">
+	<div class="base-grid angle-grid" data-bind="foreach: new Array(dataManager.deviceStateTracker.currentState() > $root.DeviceState.SMALL ? 34 : 12)">
 		<div class="row"></div>
 	</div>
 </div>
