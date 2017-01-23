@@ -105,6 +105,25 @@
 	}
 
 	@include respond-to(SMALL) {
+		height: auto;
 
+		.image {
+			@include size(640px, 580px);
+		}
+
+		.content {
+			position: relative;
+			margin-top: -$sizeGrid*8;
+			@include pos(auto, auto !important, auto !important, auto !important);
+			width: calc(100% - #{$sizeGrid}) !important;
+		}
+
+		&.left-aligned {
+
+		}
+
+		&.right-aligned {
+			margin-left: $sizeGrid;
+		}
 	}
 }

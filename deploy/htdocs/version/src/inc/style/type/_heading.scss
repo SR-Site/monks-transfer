@@ -8,43 +8,43 @@
 
 // Open sans extra bold
 .heading-01 {
-	font: 800 6.5rem / 7rem $fontOpenSans;
+	font: 800 6.5rem / 1.07 $fontOpenSans;
 }
 
 // Open sans extra bold
 .heading-02 {
-	font: 800 4.5rem / 5rem $fontOpenSans;
+	font: 800 4.5rem / 1.11 $fontOpenSans;
 }
 
 // Open sans bold
 .heading-03 {
-	font: 700 3.6rem / 4.5rem $fontOpenSans;
+	font: 700 3.6rem / 1.25 $fontOpenSans;
 }
 
 // Open sans semi-bold
 .heading-04 {
-	font: 600 3.6rem / 4.5rem $fontOpenSans;
+	font: 600 3.6rem / 1.25 $fontOpenSans;
 }
 
 // Open sans regular
 .heading-05 {
-	font: 400 3.6rem / 4.5rem $fontOpenSans;
+	font: 400 3.6rem / 1.25 $fontOpenSans;
 }
 
 // Open sans regular
 .heading-06 {
-	font: 400 2.6rem / 3.2rem $fontOpenSans;
+	font: 400 2.6rem / 1.23 $fontOpenSans;
 }
 
 // Open sans semi-bold
 %heading-07,
 .heading-07 {
-	font: 600 1.8rem / 2.1rem $fontOpenSans;
+	font: 600 1.8rem / 1.16 $fontOpenSans;
 }
 
 // Open sans extra-bold
 .heading-08 {
-	font: 400 1.4rem / 1.7rem $fontOpenSans;
+	font: 400 1.4rem / 1.21 $fontOpenSans;
 
 	strong {
 		font-weight: 800;
@@ -53,6 +53,16 @@
 
 // Open sans extra-bold
 .heading-09 {
-	font: 800 1.2rem / 2.1rem $fontOpenSans;
+	font: 800 1.2rem / 1.75 $fontOpenSans;
 }
 
+
+// Breakpoints
+@include respond-to(SMALL) {
+	.heading-01 {
+		font-size: mobile-size(8rem);
+	}
+	.heading-06 {
+		font-size: mobile-size(5rem);
+	}
+}

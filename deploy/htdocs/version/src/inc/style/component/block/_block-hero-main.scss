@@ -86,12 +86,12 @@
 		max-height: calc(100vh - #{$sizeGrid * 2});
 
 		.background-triangle {
-			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 24);
+			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 48);
 		}
 
 		.secondary-background-triangle {
-			@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 10);
-			left: $sizeGrid * 7;
+			@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 20);
+			left: $sizeGrid * 14;
 		}
 
 		.tertiary-background-triangle {
@@ -99,8 +99,8 @@
 		}
 
 		.slide-content {
-			@include size($sizeGrid * 9, auto);
-			padding-left: $sizeGrid * 1;
+			@include size($sizeGrid * 18, auto);
+			padding-left: $sizeGrid * 2;
 		}
 	}
 

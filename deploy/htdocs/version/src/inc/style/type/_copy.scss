@@ -1,20 +1,28 @@
 %copy-01,
 .copy-01 {
-	font: 400 1.6rem / 2.6rem $fontOpenSans;
+	font: 400 1.6rem / 1.625 $fontOpenSans;
 }
 
 .copy-02 {
-	font: 600 1.6rem / 2.4rem $fontOpenSans;
+	font: 600 1.6rem / 1.5 $fontOpenSans;
 }
 
 .copy-03 {
-	font: 400 1.5rem / 2.4rem $fontOpenSans;
+	font: 400 1.5rem / 1.6 $fontOpenSans;
 }
 
 .copy-04 {
-	font: 600 2.6rem / 3.6rem $fontOpenSans;
+	font: 600 2.6rem / 1.38 $fontOpenSans;
 }
 
 .copy-05 {
-	font: 600 2rem / 3rem $fontOpenSans;
+	font: 600 2rem / 1.5 $fontOpenSans;
+}
+
+
+// Breakpoints
+@include respond-to(SMALL) {
+	.copy-01 {
+		font-size: mobile-size(2.8rem);
+	}
 }

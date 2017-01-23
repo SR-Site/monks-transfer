@@ -3,7 +3,6 @@
 		font: 800 1.1rem / 1 $fontOpenSans;
 		text-transform: uppercase;
 		color: $colorWhite;
-		margin-left: $sizeGrid / 2;
 	}
 
 	.icon {
@@ -56,5 +55,31 @@
 			}
 		}
 
+	}
+
+	@include respond-to(SMALL) {
+		.icon {
+			@include size($sizeGrid*3);
+		}
+
+		.label {
+			font-size: mobile-size(2.2rem);
+		}
+
+		.order-container {
+
+			&.align-left {
+				.label {
+					margin-left: $sizeGrid;
+				}
+
+			}
+
+			&.align-right {
+				.label {
+					margin-right: $sizeGrid;
+				}
+			}
+		}
 	}
 }

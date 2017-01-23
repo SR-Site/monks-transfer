@@ -53,7 +53,7 @@ body {
 
 @include respond-to(SMALL) {
 	:root {
-		font-size: $baseFontSize * 0.8125;
+		font-size: $baseFontSize * 0.4;
 	}
 }
 

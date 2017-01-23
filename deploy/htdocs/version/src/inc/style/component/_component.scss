@@ -44,6 +44,13 @@
 			}
 		}
 	}
+
+	@include respond-to(SMALL) {
+		&.windowed {
+			border-left: none;
+			border-right: none;
+		}
+	}
 }
 
 // import all your components here!
