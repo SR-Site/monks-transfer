@@ -14,6 +14,7 @@ interface ILink extends IAction
 	 */
 	type:LinkType;
 	/**
+	 * @ignore
 	 * @property
 	 * @description The deeplink data of the link
 	 */

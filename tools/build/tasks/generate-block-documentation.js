@@ -23,19 +23,22 @@ module.exports = function( grunt )
 			// Loop through all the blocks
 			blocks.forEach( function( block, index )
 			{
-				console.log( 'Parse block data for:', block );
+				// if( block === 'block-article-teaser' )
+				// {
+					console.log( 'Parse block data for:', block );
 
-				var blockId = upperCamelCase( block );
-				var properties = parseBlock( block ).reverse();
+					var blockId = upperCamelCase( block );
+					var properties = parseBlock( block ).reverse();
 
-				output.blocks.push( {
-					blockId: blockId,
-					properties: properties,
-					example: JSON.stringify( {
-						id: camelCase( blockId ),
-						data: generateExampleJSON( properties, {} )
-					}, null, 4 )
-				} );
+					output.blocks.push( {
+						blockId: blockId,
+						properties: properties,
+						example: JSON.stringify( {
+							id: camelCase( blockId ),
+							data: generateExampleJSON( properties, {} )
+						}, null, 4 )
+					} );
+				// }
 			} );
 
 			console.log( 'Writing data.json file' );
@@ -82,6 +85,11 @@ module.exports = function( grunt )
 				// Choose random enum value
 				base[property.name] = reference.properties[randomValue].value;
 			}
+			else if( property.type === 'Array' )
+			{
+				base[property.name] = [];
+				base[property.name].push( generateExampleJSON( property.properties, {} ) );
+			}
 			else
 			{
 				base[property.name] = 'TODO: ' + property.type;
@@ -119,7 +127,8 @@ module.exports = function( grunt )
 	 */
 	function parseProperties( properties )
 	{
-		if( !properties ) { properties = [] }
+		if( !properties )
+		{ properties = [] }
 
 		// Keep track of the parsed properties
 		var parsedProperties = [];
@@ -146,9 +155,13 @@ module.exports = function( grunt )
 	{
 		var childProperties = null;
 
-		if( property.type.rawName === 'Array')
+		if( property.type.rawName === 'Array' )
 		{
 			childProperties = property.type.type.properties;
+		}
+		else if( property.type.rawName === '' ) // If the rawName == '' the interface was an object, it's super werid!
+		{
+			childProperties = property.type.properties;
 		}
 
 		return {
@@ -198,32 +211,16 @@ module.exports = function( grunt )
 		{
 			parseEnumReference( PrimitiveType.rawName, PrimitiveType.members );
 		}
-		// else if( PrimitiveType.rawName === 'Array' )
-		// {
-		//
-		// }
-		//
-		// if( )
-		// {
-		// 	if( Array.isArray( PrimitiveType.type.properties ) )
-		// 	{
-		// 		var object = {};
-		//
-		// 		PrimitiveType.type.properties.forEach( function( property )
-		// 		{
-		// 			object[property.rawName] = getType( property.type );
-		// 		} )
-		//
-		// 		return PrimitiveType.rawName + '<' + JSON.stringify( object ) + '>'
-		// 	}
-		// 	else
-		// 	{
-		// 		return PrimitiveType.rawName;
-		// 	}
-		// }
 
-		return PrimitiveType.rawName;
-
+		// No name means it's a custom Object
+		if( PrimitiveType.rawName === '' )
+		{
+			return 'Object';
+		}
+		else
+		{
+			return PrimitiveType.rawName;
+		}
 	}
 
 	/**

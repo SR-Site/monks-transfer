@@ -45,13 +45,6 @@
                             "properties": []
                         },
                         {
-                            "name": "deeplink",
-                            "type": "Object",
-                            "required": false,
-                            "description": "The deeplink data of the link",
-                            "properties": []
-                        },
-                        {
                             "name": "label",
                             "type": "string",
                             "required": false,
@@ -96,7 +89,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockArticleTeaser\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 0,\n        \"tags\": \"TODO: Array\",\n        \"image\": {\n            \"normal\": \"dolor in nulla qui ad est proident ea\",\n            \"small\": \"minim eu nulla aliquip incididunt\",\n            \"alt\": \"sunt cillum veniam consectetur laboris\"\n        },\n        \"target\": \"nostrud excepteur nulla non enim consectetur nisi mollit excepteur\",\n        \"paragraph\": \"dolor aliquip ad consequat aute nostrud qui aliqua excepteur\",\n        \"heading\": \"tempor reprehenderit ipsum officia nulla veniam id nisi\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockArticleTeaser\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"tags\": [\n            {\n                \"target\": \"aliquip qui exercitation ex nulla voluptate nisi laborum\",\n                \"type\": 2,\n                \"label\": \"consequat cillum quis ad reprehenderit velit non\",\n                \"title\": \"culpa ullamco duis duis et et sunt\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"labore excepteur Lorem dolor amet\",\n            \"small\": \"dolor mollit ut deserunt commodo cillum exercitation elit\",\n            \"alt\": \"minim elit fugiat esse anim voluptate\"\n        },\n        \"target\": \"mollit cupidatat officia consequat duis est pariatur\",\n        \"paragraph\": \"non nisi quis velit pariatur consectetur minim\",\n        \"heading\": \"irure consectetur fugiat excepteur amet\"\n    }\n}"
         },
         {
             "blockId": "BlockAudioFragment",
@@ -151,7 +144,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockAudioFragment\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"file\": \"tempor dolore velit reprehenderit veniam ad\",\n        \"image\": {\n            \"normal\": \"laboris minim eu consectetur mollit dolore proident adipisicing mollit\",\n            \"small\": \"culpa nisi ipsum officia consequat non laboris reprehenderit ad\",\n            \"alt\": \"proident ipsum eu reprehenderit sint consequat occaecat reprehenderit\"\n        },\n        \"description\": \"excepteur dolore et ad incididunt esse cillum quis\",\n        \"name\": \"duis nulla laboris proident do consequat reprehenderit ea\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockAudioFragment\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 3,\n        \"file\": \"excepteur laboris duis ipsum in proident et reprehenderit anim esse\",\n        \"image\": {\n            \"normal\": \"laboris Lorem commodo reprehenderit ut non officia occaecat Lorem\",\n            \"small\": \"dolore incididunt consectetur quis ea ex ullamco nostrud\",\n            \"alt\": \"voluptate elit ipsum voluptate consequat eu sit non magna ex\"\n        },\n        \"description\": \"consequat cupidatat sunt fugiat sunt qui non sint velit esse\",\n        \"name\": \"tempor consequat magna eiusmod laborum ullamco aliqua\"\n    }\n}"
         },
         {
             "blockId": "BlockBlogPost",
@@ -178,7 +171,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockBlogPost\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blockBlogPost\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 0\n    }\n}"
         },
         {
             "blockId": "BlockButton",
@@ -219,7 +212,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockButton\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"alignment\": 0,\n        \"link\": {\n            \"target\": \"sint dolor ex consectetur cillum tempor duis\",\n            \"type\": 1,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"non nulla tempor dolore eiusmod aliquip\",\n            \"title\": \"culpa laborum enim dolore nisi ipsum deserunt cupidatat reprehenderit ex\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockButton\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 5,\n        \"alignment\": 1,\n        \"link\": {\n            \"target\": \"aliqua sit ullamco quis est non officia adipisicing\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"pariatur exercitation occaecat sunt elit velit sit nisi\",\n            \"title\": \"labore non est non ad ea minim\"\n        }\n    }\n}"
         },
         {
             "blockId": "BlockFilterContent",
@@ -297,7 +290,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockFilterContent\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"filters\": \"TODO: Array\",\n        \"filterLabel\": \"laborum ea do nisi officia proident voluptate irure occaecat\",\n        \"endpoint\": \"do pariatur minim in reprehenderit\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockFilterContent\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 5,\n        \"filters\": [\n            {\n                \"type\": 2,\n                \"options\": [\n                    {\n                        \"value\": \"mollit nostrud id culpa incididunt incididunt dolor voluptate in\",\n                        \"label\": \"est Lorem velit est nostrud est\"\n                    }\n                ]\n            }\n        ],\n        \"filterLabel\": \"officia esse irure tempor labore pariatur laboris\",\n        \"endpoint\": \"enim laboris et non sunt\"\n    }\n}"
         },
         {
             "blockId": "BlockHeroMain",
@@ -374,7 +367,7 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockHeroMain\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"slides\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockHeroMain\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"slides\": [\n            {\n                \"heading\": \"id voluptate aliquip mollit laboris\",\n                \"paragraph\": \"quis duis ex sit aliquip deserunt\",\n                \"background\": {\n                    \"normal\": \"aliquip qui irure duis sunt laboris laborum enim cillum\",\n                    \"small\": \"et officia officia laborum esse veniam consequat magna mollit\",\n                    \"alt\": \"anim do id magna id nisi fugiat adipisicing\"\n                },\n                \"link\": {\n                    \"target\": \"ut tempor tempor aliqua consequat quis\",\n                    \"type\": 1,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"fugiat proident tempor nisi et minim Lorem\",\n                    \"title\": \"eu id nulla esse laborum reprehenderit ex sint\"\n                },\n                \"secondaryLink\": {\n                    \"target\": \"nulla nulla duis pariatur sint culpa\",\n                    \"type\": 1,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"aliquip culpa sunt et ut dolor labore excepteur est\",\n                    \"title\": \"minim et pariatur id culpa consequat minim\"\n                },\n                \"statistics\": {\n                    \"heading\": \"enim labore in ipsum dolore enim ipsum excepteur dolor\",\n                    \"stats\": [\n                        {\n                            \"heading\": \"ut et ut Lorem reprehenderit officia magna laborum sint irure\",\n                            \"description\": \"eu id dolore elit magna quis anim fugiat\",\n                            \"value\": 5\n                        }\n                    ]\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockHeroSecondary",
@@ -422,7 +415,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockHeroSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"link\": {\n            \"target\": \"aute mollit aute sit elit commodo cupidatat labore anim enim\",\n            \"type\": 2,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"id do do aliquip exercitation est minim\",\n            \"title\": \"est non nostrud reprehenderit anim eu amet magna tempor aliqua\"\n        },\n        \"paragraph\": \"proident deserunt Lorem ut esse ea duis\",\n        \"heading\": \"nisi ipsum voluptate enim eu\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockHeroSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 0,\n        \"link\": {\n            \"target\": \"quis culpa laboris adipisicing nulla sit proident proident\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"cupidatat quis cupidatat elit nostrud proident irure ad\",\n            \"title\": \"dolore duis enim pariatur ipsum occaecat\"\n        },\n        \"paragraph\": \"ullamco Lorem ea non ea commodo occaecat in\",\n        \"heading\": \"labore sint magna adipisicing labore pariatur cillum\"\n    }\n}"
         },
         {
             "blockId": "BlockHeroTertiary",
@@ -456,7 +449,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockHeroTertiary\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 2,\n        \"background\": {\n            \"normal\": \"elit occaecat velit cillum officia aliqua eu aute mollit in\",\n            \"small\": \"laboris nostrud deserunt ea ut proident\",\n            \"alt\": \"do amet officia pariatur fugiat\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockHeroTertiary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"background\": {\n            \"normal\": \"quis voluptate elit excepteur tempor\",\n            \"small\": \"fugiat veniam aliquip aute et eu laborum in excepteur\",\n            \"alt\": \"mollit irure dolore labore consectetur incididunt\"\n        }\n    }\n}"
         },
         {
             "blockId": "BlockHowToAdvertise",
@@ -526,7 +519,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockHowToAdvertise\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"steps\": \"TODO: Array\",\n        \"link\": {\n            \"target\": \"qui nulla et est laboris reprehenderit proident ipsum nulla ipsum\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"elit ut minim ex ullamco duis ea est\",\n            \"title\": \"id cillum fugiat culpa laboris laboris qui cillum pariatur nulla\"\n        },\n        \"heading\": \"minim voluptate proident ullamco irure amet duis id exercitation\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockHowToAdvertise\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 4,\n        \"steps\": [\n            {\n                \"heading\": \"veniam officia Lorem proident cillum reprehenderit et\",\n                \"paragraph\": \"voluptate deserunt ipsum aliquip Lorem culpa sunt ut magna\",\n                \"icon\": \"ex minim dolore nostrud exercitation velit elit est irure id\"\n            }\n        ],\n        \"link\": {\n            \"target\": \"exercitation ullamco eu irure officia cillum aliqua proident\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"esse est officia nostrud sunt culpa sint culpa\",\n            \"title\": \"culpa Lorem consequat in velit id\"\n        },\n        \"heading\": \"quis minim enim ex ad reprehenderit excepteur id id fugiat\"\n    }\n}"
         },
         {
             "blockId": "BlockImageCallToActions",
@@ -589,7 +582,7 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockImageCallToActions\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"callToActions\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockImageCallToActions\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"callToActions\": [\n            {\n                \"heading\": \"veniam ad non nostrud deserunt nisi tempor\",\n                \"paragraph\": \"enim esse sint officia nostrud culpa enim consequat aliqua\",\n                \"background\": {\n                    \"normal\": \"id et excepteur consequat elit aliqua\",\n                    \"small\": \"eiusmod mollit voluptate consequat veniam voluptate mollit ipsum\",\n                    \"alt\": \"commodo nostrud sunt quis ullamco excepteur Lorem deserunt\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"exercitation ex duis qui ad\",\n                    \"small\": \"proident tempor veniam ad in anim\",\n                    \"alt\": \"mollit est proident magna sunt do occaecat\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockImageCarousel",
@@ -638,7 +631,7 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockImageCarousel\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"slides\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockImageCarousel\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 4,\n        \"slides\": [\n            {\n                \"heading\": \"consectetur deserunt et deserunt laboris incididunt nisi proident nulla\",\n                \"image\": {\n                    \"normal\": \"est aute amet officia irure\",\n                    \"small\": \"aute fugiat cupidatat velit excepteur in ex eu\",\n                    \"alt\": \"veniam laboris veniam tempor sint dolore cupidatat veniam est\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockImageWithContent",
@@ -707,7 +700,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockImageWithContent\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"link\": {\n            \"target\": \"labore non consequat laborum ut ut officia dolor incididunt ex\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"excepteur officia pariatur laboris cupidatat\",\n            \"title\": \"minim et nulla nisi ullamco anim occaecat voluptate esse\"\n        },\n        \"background\": {\n            \"normal\": \"culpa magna consectetur aliqua do eiusmod veniam laboris\",\n            \"small\": \"laborum fugiat est eiusmod aliquip proident enim nisi amet\",\n            \"alt\": \"qui irure cillum adipisicing culpa aute qui\"\n        },\n        \"paragraph\": \"elit occaecat id duis commodo esse pariatur exercitation sunt\",\n        \"heading\": \"irure ullamco aliqua exercitation anim tempor est pariatur aliquip\",\n        \"croppedImage\": true,\n        \"alignment\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blockImageWithContent\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"link\": {\n            \"target\": \"qui magna eiusmod et consectetur fugiat qui consectetur nisi\",\n            \"type\": 2,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"do consequat deserunt ullamco adipisicing ut\",\n            \"title\": \"dolore amet incididunt laboris sint excepteur ad\"\n        },\n        \"background\": {\n            \"normal\": \"esse laborum dolore eu incididunt amet esse anim\",\n            \"small\": \"ex reprehenderit exercitation in aute irure\",\n            \"alt\": \"voluptate esse in eu aliqua\"\n        },\n        \"paragraph\": \"voluptate nisi nisi anim magna nisi exercitation adipisicing\",\n        \"heading\": \"ipsum voluptate adipisicing dolore consequat ut in non reprehenderit\",\n        \"croppedImage\": false,\n        \"alignment\": 1\n    }\n}"
         },
         {
             "blockId": "BlockInfo",
@@ -734,7 +727,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockInfo\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 3\n    }\n}"
+            "example": "{\n    \"id\": \"blockInfo\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 4\n    }\n}"
         },
         {
             "blockId": "BlockLatest",
@@ -757,13 +750,6 @@
                             "type": "LinkType",
                             "required": true,
                             "description": "The type of the link",
-                            "properties": []
-                        },
-                        {
-                            "name": "deeplink",
-                            "type": "Object",
-                            "required": false,
-                            "description": "The deeplink data of the link",
                             "properties": []
                         },
                         {
@@ -811,7 +797,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockLatest\",\n    \"data\": {\n        \"tags\": \"TODO: Array\",\n        \"image\": {\n            \"normal\": \"et dolor ut mollit deserunt eu esse cillum commodo cillum\",\n            \"small\": \"fugiat adipisicing anim aliqua fugiat irure culpa mollit sint\",\n            \"alt\": \"cupidatat consequat ut fugiat quis est dolor\"\n        },\n        \"target\": \"amet ipsum ut nulla consequat ipsum\",\n        \"paragraph\": \"do cupidatat aliqua nisi dolor laboris consectetur sunt\",\n        \"heading\": \"minim cillum cupidatat labore irure ea voluptate voluptate laboris\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockLatest\",\n    \"data\": {\n        \"tags\": [\n            {\n                \"target\": \"ut dolor non enim adipisicing\",\n                \"type\": 1,\n                \"label\": \"ipsum et adipisicing in sint\",\n                \"title\": \"voluptate et incididunt voluptate ex ea fugiat ipsum\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"laboris cupidatat magna pariatur cupidatat est fugiat nisi\",\n            \"small\": \"velit irure do aute nostrud\",\n            \"alt\": \"irure ipsum irure fugiat et in ad\"\n        },\n        \"target\": \"cupidatat est labore ullamco ea pariatur laboris ullamco amet\",\n        \"paragraph\": \"consectetur dolore excepteur ullamco sint proident deserunt\",\n        \"heading\": \"reprehenderit duis consectetur sit voluptate est deserunt\"\n    }\n}"
         },
         {
             "blockId": "BlockMap",
@@ -860,7 +846,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockMap\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 3,\n        \"steps\": \"TODO: Array\",\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"excepteur aliquip sunt ullamco aliqua minim\",\n                \"small\": \"tempor quis fugiat voluptate aliqua elit commodo tempor\",\n                \"alt\": \"in sint culpa id sit\"\n            },\n            \"total\": 2,\n            \"extension\": \"adipisicing ex reprehenderit officia culpa minim qui culpa velit\",\n            \"autoplay\": true\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockMap\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"steps\": [\n            {\n                \"label\": \"duis irure ea consequat ex dolore officia cillum\"\n            }\n        ],\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"Lorem est proident officia sint duis ea\",\n                \"small\": \"ea aliqua deserunt commodo commodo est\",\n                \"alt\": \"duis aliqua ea officia et sit nulla esse exercitation aute\"\n            },\n            \"total\": 3,\n            \"extension\": \"proident est adipisicing ad ad\",\n            \"autoplay\": false\n        }\n    }\n}"
         },
         {
             "blockId": "BlockMapSecondary",
@@ -908,7 +894,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockMapSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 4,\n        \"paragraph\": \"in dolor est officia tempor sunt ipsum pariatur\",\n        \"subHeading\": \"laboris excepteur occaecat esse mollit fugiat qui in dolor\",\n        \"heading\": \"elit aute eiusmod sint magna\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockMapSecondary\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 5,\n        \"paragraph\": \"minim velit fugiat amet consequat id id ut velit\",\n        \"subHeading\": \"veniam adipisicing eiusmod pariatur aliquip qui\",\n        \"heading\": \"excepteur ad nostrud pariatur laborum\"\n    }\n}"
         },
         {
             "blockId": "BlockMarketMap",
@@ -935,7 +921,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockMarketMap\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blockMarketMap\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
         },
         {
             "blockId": "BlockMore",
@@ -958,13 +944,6 @@
                             "type": "LinkType",
                             "required": true,
                             "description": "The type of the link",
-                            "properties": []
-                        },
-                        {
-                            "name": "deeplink",
-                            "type": "Object",
-                            "required": false,
-                            "description": "The deeplink data of the link",
                             "properties": []
                         },
                         {
@@ -1012,7 +991,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockMore\",\n    \"data\": {\n        \"tags\": \"TODO: Array\",\n        \"image\": {\n            \"normal\": \"adipisicing officia ipsum fugiat excepteur anim aliquip\",\n            \"small\": \"dolore labore reprehenderit magna magna commodo sit eiusmod et\",\n            \"alt\": \"nulla proident esse voluptate officia exercitation\"\n        },\n        \"target\": \"pariatur quis est do est commodo\",\n        \"paragraph\": \"excepteur non eu id voluptate\",\n        \"heading\": \"sint ea fugiat laboris incididunt non quis veniam mollit elit\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockMore\",\n    \"data\": {\n        \"tags\": [\n            {\n                \"target\": \"aute excepteur exercitation ullamco aliqua ea qui\",\n                \"type\": 1,\n                \"label\": \"voluptate minim consectetur enim ad ipsum deserunt enim\",\n                \"title\": \"mollit ipsum adipisicing magna id est\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"cupidatat dolor pariatur laboris anim officia\",\n            \"small\": \"dolor pariatur minim laboris ut deserunt non pariatur occaecat\",\n            \"alt\": \"pariatur cupidatat id pariatur deserunt officia\"\n        },\n        \"target\": \"officia et quis dolor sit adipisicing\",\n        \"paragraph\": \"nostrud ad non cillum sit nulla do aliqua elit\",\n        \"heading\": \"eu duis ullamco tempor ipsum occaecat excepteur ad\"\n    }\n}"
         },
         {
             "blockId": "BlockNetworkOverview",
@@ -1039,7 +1018,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockNetworkOverview\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blockNetworkOverview\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4\n    }\n}"
         },
         {
             "blockId": "BlockPageNotFound",
@@ -1101,7 +1080,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockPageNotFound\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"link\": {\n            \"target\": \"qui adipisicing eu aliqua aute sit\",\n            \"type\": 1,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"id labore aute laboris ea\",\n            \"title\": \"sit enim qui voluptate eu cupidatat tempor pariatur\"\n        },\n        \"image\": {\n            \"normal\": \"eu veniam labore eu nisi et dolore sit amet\",\n            \"small\": \"non pariatur ut aliqua ea amet labore ipsum fugiat\",\n            \"alt\": \"ullamco est eu sint id eiusmod est pariatur tempor\"\n        },\n        \"paragraph\": \"aliquip dolor pariatur reprehenderit irure Lorem anim exercitation\",\n        \"heading\": \"voluptate et fugiat sit eu sunt\",\n        \"errorCode\": 2\n    }\n}"
+            "example": "{\n    \"id\": \"blockPageNotFound\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"link\": {\n            \"target\": \"proident ea amet esse reprehenderit officia qui nostrud anim\",\n            \"type\": 1,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"laboris ut nulla laboris aute exercitation velit\",\n            \"title\": \"minim minim sit deserunt consequat dolor\"\n        },\n        \"image\": {\n            \"normal\": \"ipsum fugiat do nisi quis cupidatat mollit anim duis\",\n            \"small\": \"adipisicing do ex officia duis Lorem excepteur ea nostrud mollit\",\n            \"alt\": \"tempor proident voluptate reprehenderit fugiat duis\"\n        },\n        \"paragraph\": \"est laboris tempor id magna sint magna\",\n        \"heading\": \"excepteur duis ex occaecat incididunt aliquip excepteur quis\",\n        \"errorCode\": 0\n    }\n}"
         },
         {
             "blockId": "BlockPathToPurchase",
@@ -1128,7 +1107,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockPathToPurchase\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blockPathToPurchase\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4\n    }\n}"
         },
         {
             "blockId": "BlockPersonaSelector",
@@ -1198,7 +1177,7 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockPersonaSelector\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"personas\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockPersonaSelector\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"personas\": [\n            {\n                \"heading\": \"eiusmod in deserunt exercitation eu excepteur in elit\",\n                \"paragraph\": \"duis sunt enim nostrud reprehenderit anim duis eiusmod\",\n                \"personaType\": 1,\n                \"link\": {\n                    \"target\": \"sint duis deserunt nostrud tempor\",\n                    \"type\": 1,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"deserunt officia laboris adipisicing officia do magna mollit ipsum\",\n                    \"title\": \"excepteur sint eu nostrud sunt officia occaecat sunt ut\"\n                },\n                \"image\": {\n                    \"normal\": \"sunt ex proident et enim est laboris magna sit\",\n                    \"small\": \"mollit anim ipsum culpa nulla pariatur laboris duis\",\n                    \"alt\": \"do sint cillum sunt eu tempor culpa esse magna mollit\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockProgramModule",
@@ -1225,7 +1204,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockProgramModule\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 2\n    }\n}"
+            "example": "{\n    \"id\": \"blockProgramModule\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 3\n    }\n}"
         },
         {
             "blockId": "BlockQuote",
@@ -1280,7 +1259,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockQuote\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 3,\n        \"description\": \"ex deserunt velit non magna nostrud\",\n        \"name\": \"magna ea labore ea aliqua pariatur sit amet\",\n        \"quote\": \"ea in aliqua amet officia laborum\",\n        \"image\": {\n            \"normal\": \"consectetur sint laborum non ullamco pariatur\",\n            \"small\": \"consequat quis quis anim aute eu\",\n            \"alt\": \"Lorem ea ullamco ad laboris aliquip consequat quis\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockQuote\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"description\": \"sit ipsum quis tempor aute cillum\",\n        \"name\": \"dolor et consequat commodo dolore sunt\",\n        \"quote\": \"esse elit nostrud qui id excepteur\",\n        \"image\": {\n            \"normal\": \"ex deserunt veniam mollit do do ex\",\n            \"small\": \"est nostrud exercitation reprehenderit ex tempor\",\n            \"alt\": \"aliqua ad elit non sint aliquip\"\n        }\n    }\n}"
         },
         {
             "blockId": "BlockQuoteSecondary",
@@ -1321,7 +1300,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockQuoteSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 4,\n        \"author\": \"laborum fugiat ut occaecat est ex\",\n        \"quote\": \"voluptate do occaecat ad Lorem exercitation\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockQuoteSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 5,\n        \"author\": \"anim laborum dolore ipsum voluptate et exercitation amet\",\n        \"quote\": \"ea velit amet veniam minim do voluptate fugiat\"\n    }\n}"
         },
         {
             "blockId": "BlockSmallHeading",
@@ -1355,7 +1334,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockSmallHeading\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 1,\n        \"heading\": \"dolore laboris ad pariatur consectetur excepteur consequat\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockSmallHeading\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 4,\n        \"heading\": \"elit ea ex minim consectetur elit\"\n    }\n}"
         },
         {
             "blockId": "BlockSmallImage",
@@ -1396,7 +1375,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockSmallImage\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"image\": {\n            \"normal\": \"esse ex aute esse culpa ut aliqua minim aliquip labore\",\n            \"small\": \"est quis do mollit adipisicing\",\n            \"alt\": \"commodo tempor laborum cillum eu commodo occaecat aliquip mollit excepteur\"\n        },\n        \"alignment\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blockSmallImage\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"image\": {\n            \"normal\": \"quis elit veniam cupidatat cillum\",\n            \"small\": \"eu culpa tempor sint minim labore\",\n            \"alt\": \"qui aute dolore exercitation ad exercitation et cillum velit\"\n        },\n        \"alignment\": 1\n    }\n}"
         },
         {
             "blockId": "BlockSmallInfo",
@@ -1444,7 +1423,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockSmallInfo\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"sint dolor id voluptate labore commodo\",\n            \"type\": 1,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"voluptate qui velit dolore do reprehenderit\",\n            \"title\": \"aute sint ullamco incididunt laboris do velit officia\"\n        },\n        \"paragraph\": \"sit ea duis irure qui cillum quis officia commodo laboris\",\n        \"heading\": \"in do ex sint sunt laboris culpa mollit officia\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockSmallInfo\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 3,\n        \"link\": {\n            \"target\": \"ad sit culpa excepteur dolor Lorem enim commodo\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"anim dolore esse commodo Lorem laborum magna\",\n            \"title\": \"laborum nisi ut minim mollit Lorem ullamco laboris elit\"\n        },\n        \"paragraph\": \"sit fugiat ex qui do eiusmod deserunt duis enim\",\n        \"heading\": \"laborum anim amet irure officia officia Lorem\"\n    }\n}"
         },
         {
             "blockId": "BlockStoryInfoImages",
@@ -1507,7 +1486,7 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockStoryInfoImages\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 0,\n        \"stories\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockStoryInfoImages\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 1,\n        \"stories\": [\n            {\n                \"heading\": \"pariatur duis tempor in quis fugiat et\",\n                \"paragraph\": \"ad laborum aute consectetur mollit duis aute\",\n                \"background\": {\n                    \"normal\": \"exercitation nisi ad Lorem tempor excepteur adipisicing\",\n                    \"small\": \"labore proident tempor commodo do ea\",\n                    \"alt\": \"tempor laborum eu eiusmod deserunt dolor voluptate\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"est ut laboris id eiusmod aliqua ut eiusmod\",\n                    \"small\": \"consequat tempor laborum ex sunt aute id veniam\",\n                    \"alt\": \"ipsum duis nostrud cillum laborum laborum\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockText",
@@ -1541,7 +1520,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockText\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"html\": \"ut et dolor culpa esse deserunt tempor consectetur laborum\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockText\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 3,\n        \"html\": \"incididunt amet amet laboris incididunt dolor voluptate aute ea laboris\"\n    }\n}"
         }
     ],
     "references": [
