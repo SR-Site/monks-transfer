@@ -49,16 +49,15 @@ module.exports = function( grunt )
 
 	/**
 	 * @method generateExampleJSON
+	 * @description This method recursively generated mock data for the types
 	 */
 	function generateExampleJSON( properties, base )
 	{
 		properties.forEach( function( property )
 		{
-			var value;
-
 			if( property.type === 'string' )
 			{
-				base[property.name] = loremIpsum( {count: Math.round( randomInRange( 10, 15 ) ), units: 'words'} );
+				base[property.name] = loremIpsum( {count: Math.round( randomInRange( 5, 10 ) ), units: 'words'} );
 			}
 			else if( property.type === 'boolean' )
 			{
@@ -73,14 +72,15 @@ module.exports = function( grunt )
 				var reference = hasReference( property.type, output.references );
 
 				base[property.name] = {};
-				base[property.name] = generateExampleJSON( reference.properties, base[property.name]  );
+				base[property.name] = generateExampleJSON( reference.properties, base[property.name] );
 			}
 			else if( hasReference( property.type, output.enums ) )
 			{
 				var reference = hasReference( property.type, output.enums );
+				var randomValue = Math.round( randomInRange( 0, reference.properties.length - 1 ) );
 
 				// Choose random enum value
-				base[property.name] = reference.properties[Math.round(randomInRange(0, reference.properties.length))].value;
+				base[property.name] = reference.properties[randomValue].value;
 			}
 			else
 			{
@@ -109,13 +109,29 @@ module.exports = function( grunt )
 		const typhenResult = typhen.parse( blockOptionsPath ).types[0];
 		const properties = typhenResult.properties || typhenResult.type.properties;
 
+		return parseProperties( properties );
+	}
+
+	/**
+	 * @METHOD parseProperties
+	 * @param properties
+	 * @returns {Array}
+	 */
+	function parseProperties( properties )
+	{
+		if( !properties ) { properties = [] }
+
 		// Keep track of the parsed properties
 		var parsedProperties = [];
 
 		// Parse all the properties
-		properties.forEach( function( property )
+		properties.forEach( function( property, index )
 		{
-			parsedProperties.push( parseProperties( property ) );
+			// If the @ignore comment was added we will skip the property
+			if( !getDocComment( property.docComment || [], '@ignore' ) )
+			{
+				parsedProperties.push( parseProperty( property ) );
+			}
 		} );
 
 		// Return the parsed properties
@@ -126,16 +142,23 @@ module.exports = function( grunt )
 	 * @property
 	 * @description Parse the properties and return the new parsed object
 	 */
-	function parseProperties( property )
+	function parseProperty( property )
 	{
+		var childProperties = null;
+
+		if( property.type.rawName === 'Array')
+		{
+			childProperties = property.type.type.properties;
+		}
+
 		return {
 			name: property.rawName,
 			type: getType( property.type ),
 			required: !property.isOptional,
-			description: getDocComment( property.docComment, '@description' )
+			description: getDocComment( property.docComment, '@description' ),
+			properties: parseProperties( childProperties )
 		}
 	}
-
 
 	/**
 	 * @method getDocComment
@@ -175,8 +198,32 @@ module.exports = function( grunt )
 		{
 			parseEnumReference( PrimitiveType.rawName, PrimitiveType.members );
 		}
+		// else if( PrimitiveType.rawName === 'Array' )
+		// {
+		//
+		// }
+		//
+		// if( )
+		// {
+		// 	if( Array.isArray( PrimitiveType.type.properties ) )
+		// 	{
+		// 		var object = {};
+		//
+		// 		PrimitiveType.type.properties.forEach( function( property )
+		// 		{
+		// 			object[property.rawName] = getType( property.type );
+		// 		} )
+		//
+		// 		return PrimitiveType.rawName + '<' + JSON.stringify( object ) + '>'
+		// 	}
+		// 	else
+		// 	{
+		// 		return PrimitiveType.rawName;
+		// 	}
+		// }
 
 		return PrimitiveType.rawName;
+
 	}
 
 	/**
@@ -206,7 +253,7 @@ module.exports = function( grunt )
 			// Parse all the properties
 			properties.forEach( function( property )
 			{
-				parsedProperties.push( parseProperties( property ) );
+				parsedProperties.push( parseProperty( property ) );
 			} );
 
 			output.references.push( {

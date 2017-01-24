@@ -14,6 +14,12 @@
 		body {
 			padding-top: 90px;
 		}
+
+		td .table {
+			margin-left: 50px;
+			width: calc(100% - 50px);
+			margin-bottom: 0;
+		}
 	</style>
 </head>
 <body>
@@ -42,36 +48,9 @@
 					<h3 class="panel-title" data-bind="html: $data.blockId"></h3>
 				</div>
 				<div class="panel-body table-responsive">
-					<table class="table table-striped">
-						<thead>
-						<tr data-bind="foreach: Object.keys($data.properties[0])">
-							<th data-bind="html: $data"></th>
-						</tr>
-						</thead>
-						<tbody data-bind="foreach: $data.properties">
-						<tr data-bind="foreach: Object.keys($data)">
-							<td>
-								<!-- ko if: $data === 'type' -->
-								<!-- ko if: types.indexOf($parent[$data]) > -1 -->
-								<code data-bind="html: $parent[$data]"></code>
-								<!-- /ko -->
-								<!-- ko if: types.indexOf($parent[$data]) === -1 -->
-								<a data-bind="html: $parent[$data], attr: {'href': '#' + $parent[$data]}"></a>
-								<!-- /ko -->
-								<!-- /ko -->
-								<!-- ko if: $data === 'required' -->
-								<span class="btn btn-default btn-sm disabled"
-								      data-bind="html: $parent[$data], css: {'btn-danger':  $parent[$data]}"></span>
-								<!-- /ko -->
-								<!-- ko if: $data !== 'type' && $data !== 'required' -->
-								<span data-bind="html: $parent[$data]"></span>
-								<!-- /ko -->
-							</td>
-						</tr>
-						</tbody>
-					</table>
+					<!-- ko template: {name: 'table', data: $data.properties} --><!--/ko -->
 				</div>
-				<div class="panel-body table-responsive">
+				<div class="panel-body panel-responsive">
 					<h5>Example JSON</h5>
 					<pre><code class="json-example" data-bind="html: $data.example"></code></pre>
 				</div>
@@ -85,29 +64,7 @@
 					<h3 class="panel-title" data-bind="html: $data.name"></h3>
 				</div>
 				<div class="panel-body table-responsive">
-					<table class="table table-striped">
-						<thead>
-						<tr data-bind="foreach: Object.keys($data.properties[0])">
-							<th data-bind="html: $data"></th>
-						</tr>
-						</thead>
-						<tbody data-bind="foreach: $data.properties">
-						<tr data-bind="foreach: Object.keys($data)">
-							<td>
-								<!-- ko if: $data === 'type' -->
-								<code data-bind="html: $parent[$data]"></code>
-								<!-- /ko -->
-								<!-- ko if: $data === 'required' -->
-								<span class="btn btn-default btn-sm disabled"
-								      data-bind="html: $parent[$data], css: {'btn-danger':  $parent[$data]}"></span>
-								<!-- /ko -->
-								<!-- ko if: $data !== 'type' && $data !== 'required' -->
-								<span data-bind="html: $parent[$data]"></span>
-								<!-- /ko -->
-							</td>
-						</tr>
-						</tbody>
-					</table>
+					<!-- ko template: {name: 'table', data: $data.properties} --><!--/ko -->
 				</div>
 			</div>
 		</div>
@@ -119,29 +76,66 @@
 					<h3 class="panel-title" data-bind="html: $data.name"></h3>
 				</div>
 				<div class="panel-body table-responsive">
-					<table class="table table-striped">
-						<thead>
-						<tr data-bind="foreach: Object.keys($data.properties[0])">
-							<th data-bind="html: $data"></th>
-						</tr>
-						</thead>
-						<tbody data-bind="foreach: $data.properties">
-						<tr data-bind="foreach: Object.keys($data)">
-							<td>
-								<!-- ko if: $data === 'value' -->
-								<code data-bind="html: $parent[$data]"></code>
-								<!-- /ko -->
-								<!-- ko if: $data !== 'value'-->
-								<span data-bind="html: $parent[$data]"></span>
-								<!-- /ko -->
-							</td>
-						</tr>
-						</tbody>
-					</table>
+					<!-- ko template: {name: 'table', data: $data.properties} --><!--/ko -->
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<script type="text/html" id="table">
+		<table class="table">
+			<thead>
+				<tr data-bind="foreach: Object.keys($data[0])">
+					<!-- ko if: $data !== 'properties' -->
+						<th data-bind="html: $data"></th>
+					<!-- /ko -->
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: $data">
+
+				<tr data-bind="foreach: Object.keys($data)">
+
+					<!-- ko if: $data !== 'properties' -->
+
+						<td>
+							<!-- ko if: $data === 'value' -->
+								<code data-bind="html: $parent[$data]"></code>
+							<!-- /ko -->
+
+							<!-- ko if: $data === 'type' -->
+
+								<!-- ko if: types.indexOf($parent[$data]) > -1 -->
+									<code data-bind="text: $parent[$data]"></code>
+								<!-- /ko -->
+
+								<!-- ko if: types.indexOf($parent[$data]) === -1 -->
+									<a data-bind="text: $parent[$data], attr: {'href': '#' + $parent[$data]}"></a>
+								<!-- /ko -->
+
+							<!-- /ko -->
+
+							<!-- ko if: $data === 'required' -->
+								<span class="btn btn-default btn-sm disabled" data-bind="text: $parent[$data], css: {'btn-danger':  $parent[$data]}"></span>
+							<!-- /ko -->
+
+							<!-- ko if: $data !== 'value' && $data !== 'type' && $data !== 'required' -->
+								<span data-bind="html: $parent[$data]"></span>
+							<!-- /ko -->
+						</td>
+					<!-- /ko -->
+				</tr>
+
+				<!-- ko if: $data.properties && $data.properties.length -->
+					<tr>
+						<td colspan="4">
+							<!-- ko template: {name: 'table', data: $data.properties} --><!--/ko -->
+						</td>
+					</tr>
+				<!-- /ko -->
+
+			</tbody>
+		</table>
+</script>
 
 </div><!-- /.container -->
 <script>
