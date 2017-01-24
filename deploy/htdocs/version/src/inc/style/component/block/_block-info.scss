@@ -64,6 +64,7 @@
 
 	// Breakpoints
 	@include respond-to(SMALL) {
+		@include size(100% !important, auto !important);
 		padding-left: $sizeGrid;
 		padding-right: $sizeGrid;
 
@@ -74,7 +75,7 @@
 		.inner-content {
 			position: relative;
 			display: block;
-			padding: $sizeGrid*3;
+			padding: $sizeGrid*3 !important;
 
 			&:before,
 			&:after {
@@ -83,7 +84,7 @@
 		}
 
 		.description {
-			width: 100%;
+			width: 100% !important;
 		}
 
 		.component-button-main {
