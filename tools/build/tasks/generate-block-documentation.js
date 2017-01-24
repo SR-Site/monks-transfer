@@ -7,111 +7,162 @@ module.exports = function( grunt )
 	const inspect = require( 'object-inspect' );
 	const jsonfile = require( 'jsonfile' );
 
+	var blockDir = grunt.config( 'generate-block-documentation.options.input' );
+	var output = {blocks: [], references: []};
+
 	grunt.registerMultiTask(
 		'generate-block-documentation',
 		'Generate documentation for the blocks in the Blocks.ts file',
 		function()
 		{
 			const done = this.async();
-			const blockDir = grunt.config( 'generate-block-documentation.options.input' );
 			const blocks = getDirectories( blockDir );
 
-			var output = {blocks: []};
-
+			// Loop through all the blocks
 			blocks.forEach( function( block, index )
 			{
-				var blockId = upperCamelCase( block );
-				var blockOptionsPath = blockDir + '/' + block + '/I' + blockId + 'Options.ts';
-				var parsedResult = typhen.parse( blockOptionsPath );
-				var properties = parsedResult.types[0].properties;
-				var propertyResult = [];
-
-				if( !Array.isArray( properties ) )
-				{
-					return;
-				}
-
-				console.log( 'Parse block data for:', blockId );
-
-				properties.forEach( function( property )
-				{
-
-					propertyResult.push( {
-						name: property.rawName,
-						type: getType( property.type ),
-						required: property.isOptional,
-						description: getDescription( property.docComment )
-					} );
-				} );
+				console.log( 'Parse block data for:', block );
 
 				output.blocks.push( {
-					blockId: blockId,
-					properties: propertyResult
+					blockId: upperCamelCase( block ),
+					properties: parseBlock( block )
 				} );
 			} );
 
 
 			console.log( 'Writing data.json file' );
 
-			jsonfile.writeFileSync( grunt.config( 'generate-block-documentation.options.output' ) + 'data.json', output, {spaces: 4} )
+			// All done, write the json file
+			jsonfile.writeFileSync( grunt.config( 'generate-block-documentation.options.output' ) + 'data.json', output, {spaces: 4} );
 
 			done();
-
-
-			// // Loop through files
-			// this.files.forEach( function( f )
-			// {
-			// 	var filePath = f.src[0];
-			// 	var fileName = getFileName( filePath );
-			//
-			// 	// Read original data
-			// 	var fileContent = grunt.file.read( filePath );
-			//
-			// 	// Create new file content
-			// 	fileContent = fileName + '("' + encodeURIComponent( fileContent ) + '");';
-			//
-			// 	// Log progress
-			// 	grunt.log.writeln( 'Generating "' + f.dest + '"' );
-			//
-			// 	// Create new *.XMLP file
-			// 	grunt.file.write( f.dest, fileContent );
-			// } );
 		}
 	);
 
 	/**
-	 * @method getDescription
-	 * @description Fetch the description from the docCommeent array
-	 * @param docComment
+	 * @method parseBlock
+	 * @param block
+	 * @returns parsedBlock
 	 */
-	function getDescription( docComment )
+	function parseBlock( block )
 	{
-		const descriptionPrefix = '@description ';
-		var description = '';
+		// parse the folder name to pascal case
+		const blockId = upperCamelCase( block );
 
+		// Build the path to the options
+		const blockOptionsPath = blockDir + '/' + block + '/I' + blockId + 'Options.ts';
+
+		// Parse the options file with typhen to get all the properties
+		const typhenResult = typhen.parse( blockOptionsPath ).types[0];
+		const properties = typhenResult.properties || typhenResult.type.properties;
+
+		// Keep track of the parsed properties
+		var parsedProperties = [];
+
+		// Parse all the properties
+		properties.forEach( function( property )
+		{
+			parsedProperties.push( parseProperties( property ) );
+		} );
+
+		// Return the parsed properties
+		return parsedProperties;
+	}
+
+	/**
+	 * @property
+	 * @description Parse the properties and return the new parsed object
+	 */
+	function parseProperties( property )
+	{
+		return {
+			name: property.rawName,
+			type: getType( property.type ),
+			required: !property.isOptional,
+			description: getDocComment( property.docComment, '@description' )
+		}
+	}
+
+
+	/**
+	 * @method getDocComment
+	 * @description Fetch a desired doc comment based on the @property
+	 * @param docComment
+	 * @param property
+	 */
+	function getDocComment( docComment, property )
+	{
 		if( Array.isArray( docComment ) )
 		{
-			docComment.forEach( function( comment )
+			for( var i = 0; i < docComment.length; i++ )
 			{
-				if( comment.indexOf( descriptionPrefix ) > -1 )
+				if( docComment[i].indexOf( property ) > -1 )
 				{
-
-					description = comment.replace( descriptionPrefix, '' );
+					return docComment[i].replace( property + ' ', '' );
 				}
-			} )
+
+			}
 		}
 
-		return description;
+		// No match was found
+		return '';
 	}
 
 	/**
 	 * @method getType
-	 * @param type
+	 * @param PrimitiveType
 	 * @description Get type from the type object
 	 */
 	function getType( PrimitiveType )
 	{
+		if( PrimitiveType.properties && PrimitiveType.rawName.indexOf( 'I' ) === 0 )
+		{
+			parseReference( PrimitiveType.rawName, PrimitiveType.properties );
+		}
+
 		return PrimitiveType.rawName;
+	}
+
+	/**
+	 * @method hasReference
+	 * @param name
+	 * @returns {boolean}
+	 */
+	function hasReference( name )
+	{
+		for( var i = 0; i < output.references.length; i++ )
+		{
+			if( output.references[i].name === name )
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * @method parseReference
+	 * @param properties
+	 */
+	function parseReference( name, properties )
+	{
+		if( !hasReference( name ) && Array.isArray( properties ) )
+		{
+			// Keep track of the parsed properties
+			var parsedProperties = [];
+
+			// Parse all the properties
+			properties.forEach( function( property )
+			{
+				parsedProperties.push( parseProperties( property ) );
+			} );
+
+			output.references.push( {
+				name: name,
+				properties: parsedProperties.reverse()
+			} );
+		}
 	}
 
 	/**
@@ -126,9 +177,4 @@ module.exports = function( grunt )
 			return fs.statSync( path.join( srcpath, file ) ).isDirectory();
 		} );
 	}
-
-	// function getFileName( path )
-	// {
-	// 	return path.split( '/' ).pop().split( '.' )[0];
-	// }
 };

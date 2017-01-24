@@ -16,7 +16,14 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Project block documentation</a>
+			<a class="navbar-brand" href="#">Block documentation</a>
+		</div>
+		<div id="navbar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav" data-bind="foreach: Object.keys($data)">
+				<li>
+					<a data-bind="html: $data, attr: {'href': '#'  + $data}"></a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </nav>
@@ -24,13 +31,14 @@
 <div class="container viewmodel">
 
 	<div class="starter-template">
+		<h2 id="blocks">Application blocks</h2>
 		<div class="blocks" data-bind="foreach: blocks">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title" data-bind="html: $data.blockId"></h3>
 				</div>
-				<div class="panel-body">
-					<table class="table">
+				<div class="panel-body table-responsive">
+					<table class="table table-striped">
 						<thead>
 						<tr data-bind="foreach: Object.keys($data.properties[0])">
 							<th data-bind="html: $data"></th>
@@ -38,8 +46,57 @@
 						</thead>
 						<tbody data-bind="foreach: $data.properties">
 						<tr data-bind="foreach: Object.keys($data)">
-							<td data-bind="html: $parent[$data]"></td>
+							<td>
+								<!-- ko if: $data === 'type' -->
+									<!-- ko if: types.indexOf($parent[$data]) > -1 -->
+										<code data-bind="html: $parent[$data]"></code>
+									<!-- /ko -->
+									<!-- ko if: types.indexOf($parent[$data]) === -1 -->
+										<a data-bind="html: $parent[$data], attr: {'href': '#' + $parent[$data]}"></a>
+									<!-- /ko -->
+								<!-- /ko -->
+								<!-- ko if: $data === 'required' -->
+								<span class="btn btn-default btn-sm disabled" data-bind="html: $parent[$data], css: {'btn-danger':  $parent[$data]}"></span>
+								<!-- /ko -->
+								<!-- ko if: $data !== 'type' && $data !== 'required' -->
+								<span data-bind="html: $parent[$data]"></span>
+								<!-- /ko -->
+							</td>
 						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<h2 id="references">References</h2>
+		<div class="blocks" data-bind="foreach: references">
+			<div class="panel panel-default" data-bind="attr: {'id': $data.name}">
+				<div class="panel-heading">
+					<h3 class="panel-title" data-bind="html: $data.name"></h3>
+				</div>
+				<div class="panel-body table-responsive">
+					<table class="table table-striped">
+						<thead>
+						<tr data-bind="foreach: Object.keys($data.properties[0])">
+							<th data-bind="html: $data"></th>
+						</tr>
+						</thead>
+						<tbody data-bind="foreach: $data.properties">
+							<tr data-bind="foreach: Object.keys($data)">
+								<td>
+									<!-- ko if: $data === 'type' -->
+									<code data-bind="html: $parent[$data]"></code>
+									<!-- /ko -->
+									<!-- ko if: $data === 'required' -->
+									<span class="btn btn-default btn-sm disabled"
+									      data-bind="html: $parent[$data], css: {'btn-danger':  $parent[$data]}"></span>
+									<!-- /ko -->
+									<!-- ko if: $data !== 'type' && $data !== 'required' -->
+									<span data-bind="html: $parent[$data]"></span>
+									<!-- /ko -->
+								</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -49,6 +106,7 @@
 
 </div><!-- /.container -->
 <script>
+	var types = ['string', 'boolean', 'Array', 'number'];
 
 	// Check fetch support
 	if( self.fetch )
@@ -57,6 +115,7 @@
 		var ViewModel = function( data )
 		{
 			this.blocks = ko.observableArray( data.blocks );
+			this.references = ko.observable( data.references );
 		};
 
 		// Create the request
