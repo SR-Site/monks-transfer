@@ -3,9 +3,11 @@ module.exports = function( grunt )
 	const fs = require( 'fs' );
 	const path = require( 'path' );
 	const upperCamelCase = require( 'uppercamelcase' );
+	const camelCase = require( 'camelcase' );
 	const typhen = require( 'typhen' );
 	const inspect = require( 'object-inspect' );
 	const jsonfile = require( 'jsonfile' );
+	const loremIpsum = require( 'lorem-ipsum' )
 
 	var blockDir = grunt.config( 'generate-block-documentation.options.input' );
 	var output = {blocks: [], references: [], enums: []};
@@ -23,12 +25,18 @@ module.exports = function( grunt )
 			{
 				console.log( 'Parse block data for:', block );
 
+				var blockId = upperCamelCase( block );
+				var properties = parseBlock( block ).reverse();
+
 				output.blocks.push( {
-					blockId: upperCamelCase( block ),
-					properties: parseBlock( block ).reverse()
+					blockId: blockId,
+					properties: properties,
+					example: JSON.stringify( {
+						id: camelCase( blockId ),
+						data: generateExampleJSON( properties, {} )
+					}, null, 4 )
 				} );
 			} );
-
 
 			console.log( 'Writing data.json file' );
 
@@ -38,6 +46,51 @@ module.exports = function( grunt )
 			done();
 		}
 	);
+
+	/**
+	 * @method generateExampleJSON
+	 */
+	function generateExampleJSON( properties, base )
+	{
+		properties.forEach( function( property )
+		{
+			var value;
+
+			if( property.type === 'string' )
+			{
+				base[property.name] = loremIpsum( {count: Math.round( randomInRange( 10, 15 ) ), units: 'words'} );
+			}
+			else if( property.type === 'boolean' )
+			{
+				base[property.name] = Math.random() > 0.5;
+			}
+			else if( property.type === 'number' )
+			{
+				base[property.name] = Math.round( randomInRange( 0, 5 ) );
+			}
+			else if( hasReference( property.type, output.references ) )
+			{
+				var reference = hasReference( property.type, output.references );
+
+				base[property.name] = {};
+				base[property.name] = generateExampleJSON( reference.properties, base[property.name]  );
+			}
+			else if( hasReference( property.type, output.enums ) )
+			{
+				var reference = hasReference( property.type, output.enums );
+
+				// Choose random enum value
+				base[property.name] = reference.properties[Math.round(randomInRange(0, reference.properties.length))].value;
+			}
+			else
+			{
+				base[property.name] = 'TODO: ' + property.type;
+			}
+		} );
+
+
+		return base;
+	}
 
 	/**
 	 * @method parseBlock
@@ -166,6 +219,8 @@ module.exports = function( grunt )
 	/**
 	 * @method parseEnum
 	 * @description Parse an enum reference
+	 * @param {string} name
+	 * @param {Array} members
 	 */
 	function parseEnumReference( name, members )
 	{
@@ -193,13 +248,33 @@ module.exports = function( grunt )
 	/**
 	 * @method getDirectories
 	 * @description Get all the folders within a desired folder
-	 * @param srcpath
+	 * @param {string} src
 	 */
-	function getDirectories( srcpath )
+	function getDirectories( src )
 	{
-		return fs.readdirSync( srcpath ).filter( function( file )
+		return fs.readdirSync( src ).filter( function( file )
 		{
-			return fs.statSync( path.join( srcpath, file ) ).isDirectory();
+			return fs.statSync( path.join( src, file ) ).isDirectory();
 		} );
+	}
+
+	/**
+	 * Finds the relative position of a number in a range between min and max, and returns its normalized value between 0 and 1.
+	 *
+	 * @method normalizedValue
+	 * @param {number} value The value to normalize.
+	 * @param {number} min Lowest range value.
+	 * @param {number} max Highest range value.
+	 * @return {number} The normalized value between 0 and 1.
+	 * @example
+	 * ```
+	 * NumberUtils.normalizedValue(25, 0, 100); // 0.25
+	 * NumberUtils.normalizedValue(0, -1, 1); // 0.5
+	 * ```
+	 */
+	function randomInRange( start, end )
+	{
+		var d = end - start;
+		return start + (d - Math.random() * d);
 	}
 };
