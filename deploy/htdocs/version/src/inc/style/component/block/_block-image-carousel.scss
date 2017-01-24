@@ -104,6 +104,8 @@
 	}
 
 	@include respond-to(SMALL) {
-		padding: 0 $sizeGrid 0 0;
+		.slider-viewport {
+			padding: 0 $sizeGrid 0 0;
+		}
 	}
 }

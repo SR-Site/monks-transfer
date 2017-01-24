@@ -170,4 +170,74 @@
 			}
 		}
 	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+
+		&:before {
+			display: none;
+		}
+
+		.inner-wrapper {
+			position: relative;
+			height: auto;
+		}
+
+		.background-image {
+			display: none;
+		}
+
+		.steps {
+			display: block;
+			white-space: nowrap;
+			position: relative;
+			height: auto;
+			left: $sizeGrid;
+			bottom: 0;
+			transform: none;
+			font-size: 0;
+			width: calc(100vw - #{$sizeGrid*2});
+			overflow: hidden;
+		}
+
+		.step {
+			@include size(100%, $sizeGrid*12);
+			display: inline-block;
+			transform: none !important;
+
+			.step-content {
+				padding: $sizeGrid*2 !important;
+				width: calc(100% - #{$sizeGrid});
+				border-top: 1px solid $colorBorder;
+				border-left: 1px solid $colorBorder;
+				border-bottom: 1px solid $colorBorder;
+
+				.copy-02 {
+					font-size: mobile-size(3.5rem);
+					margin-top: $sizeGrid/2;
+				}
+			}
+
+			.step-edge {
+				height: calc(100% - #{$sizeGrid});
+				border-top: 1px solid $colorBorder;
+				border-right: 1px solid $colorBorder;
+
+				&:after {
+					border: none !important;
+					width: 1px !important;
+					height: $sizeGrid*1.5 !important;
+					transform: rotate(#{$angle}deg) !important;
+					background-color: $colorBorder;
+					@include pos(auto !important, 0 !important, -$sizeGrid*1.5 !important, auto !important);
+					transform-origin: right top;
+				}
+			}
+
+			&:after {
+				display: none;
+			}
+		}
+
+	}
 }
