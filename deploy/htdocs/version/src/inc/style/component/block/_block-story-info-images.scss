@@ -76,4 +76,47 @@
 			left: 0;
 		}
 	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+
+		&:before {
+			display: none;
+		}
+
+		.story-wrapper {
+			position: relative;
+			height: auto;
+		}
+
+		.story-images {
+			display: none;
+		}
+
+		.story-content {
+			@include size(100%, auto);
+			position: relative;
+
+			.story {
+				padding: $sizeGrid*2 $sizeGrid*3 $sizeGrid*4;
+				border-top: 1px solid $colorBorder;
+
+				.copy,
+				.heading {
+					margin-left: $sizeGrid;
+				}
+
+				.copy {
+					margin-top: $sizeGrid/2;
+				}
+
+				&.is-active {
+
+					.copy {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
 }
