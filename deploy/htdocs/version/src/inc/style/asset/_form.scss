@@ -73,6 +73,26 @@
 			background-color: $colorValidationError;
 		}
 	}
+
+	// Breakpoint
+	@include respond-to(SMALL) {
+		height: $sizeGrid*2;
+
+		input,
+		.placeholder-label {
+			font-size: mobile-size(2.4rem);
+		}
+
+		input {
+			// Focus State
+			&:valid,
+			&:focus {
+				+ .placeholder-label {
+					font-size: mobile-size(2rem);
+				}
+			}
+		}
+	}
 }
 
 // Input Text Holder

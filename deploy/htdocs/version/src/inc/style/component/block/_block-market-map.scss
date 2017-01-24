@@ -31,6 +31,11 @@
 		}
 	}
 
+	// Selected Value
+	.selected-value {
+		display: none;
+	}
+
 	// Filter List
 	.filter-list {
 		@extend %reset-list;
@@ -118,6 +123,125 @@
 			font: 700 1rem / #{$sizeGrid*2} $fontOpenSans;
 			color: white;
 			@include size($sizeGrid*5, 100%);
+		}
+	}
+
+	// Breakpoint
+	@include respond-to(SMALL) {
+		max-height: none;
+		margin-top: 0 !important;
+
+		&:before {
+			display: none;
+		}
+
+		// Map Box
+		.map-box {
+			position: relative;
+			height: calc(100vh - #{$sizeGrid*12});
+		}
+
+		// Selected Value
+		.selected-value {
+			position: absolute;
+			@include offset($sizeGrid/2, $sizeGrid/2);
+			@include size(calc(100% - #{$sizeGrid}), $sizeGrid*4);
+			display: block;
+			background-color: white;
+			z-index: zindex($zIndex, ui);
+			line-height: $sizeGrid*4;
+			padding: 0 $sizeGrid;
+			border-bottom: 1px solid  rgba(#dadada, 0.6);
+
+			&.has-value {
+				background-color: $colorSecondary;
+				color: white;
+
+				//&:after {
+				//	border-color: white;
+				//}
+			}
+
+			&:after {
+				@include pos(50%, $sizeGrid*2, auto, auto);
+				@include arrow(up, $colorSecondary, 2rem);
+				content: "";
+				position: absolute;
+			}
+
+			&.is-open {
+				&:after {
+					@include arrow(down, $colorSecondary, $sizeGrid/2);
+				}
+			}
+		}
+
+		// Search Bar
+		.search-bar {
+			position: relative;
+			height: $sizeGrid*8;
+			@include pos(auto, auto, auto, auto);
+			flex-wrap: wrap;
+
+			.input-text-main {
+				margin: $sizeGrid 0;
+				padding: 0 $sizeGrid;
+
+				.placeholder-label {
+					margin-left: $sizeGrid;
+				}
+			}
+
+			.button-search {
+				@include size(100%, $sizeGrid*4);
+				font-size: mobile-size(2.8rem);
+			}
+		}
+
+		// Side Panel
+		.side-panel {
+			height: 0;
+			width: calc(100% - #{$sizeGrid});
+			@include offset($sizeGrid/2, ($sizeGrid/2) + $sizeGrid*4);
+			transition: height 250ms ease(easeOutExpo);
+
+			.scroll-wrapper {
+				height: 100%;
+			}
+
+			.scroll-bar {
+				width: $sizeGrid*2;
+				background-color: white;
+
+				&:after {
+					@include size(1px, 100%);
+					@include offset(2px, 0);
+					content: "";
+					background-color: rgba(#dadada, 0.6);
+					position: absolute;
+				}
+			}
+
+			.service-info {
+				display: none;
+			}
+
+
+			// Open State
+			&.is-open {
+				height: calc(100vh - #{$sizeGrid*17});
+			}
+		}
+
+
+		// Filters
+		.filter-list-item {
+			padding: $sizeGrid;
+
+			&:after {
+				right: $sizeGrid*4;
+				left: 0;
+			}
 		}
 	}
 }
