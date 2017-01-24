@@ -111,7 +111,7 @@
 		}
 
 		figure {
-			@include size($sizeGrid * 8);
+			@include size($sizeGrid * 8 !important);
 		}
 	}
 }
