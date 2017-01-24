@@ -3,9 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Block documentation</title>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
-	      type="text/css"/>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
 	<style>
 		body {
 			padding-top: 90px;
@@ -48,15 +52,16 @@
 						<tr data-bind="foreach: Object.keys($data)">
 							<td>
 								<!-- ko if: $data === 'type' -->
-									<!-- ko if: types.indexOf($parent[$data]) > -1 -->
-										<code data-bind="html: $parent[$data]"></code>
-									<!-- /ko -->
-									<!-- ko if: types.indexOf($parent[$data]) === -1 -->
-										<a data-bind="html: $parent[$data], attr: {'href': '#' + $parent[$data]}"></a>
-									<!-- /ko -->
+								<!-- ko if: types.indexOf($parent[$data]) > -1 -->
+								<code data-bind="html: $parent[$data]"></code>
+								<!-- /ko -->
+								<!-- ko if: types.indexOf($parent[$data]) === -1 -->
+								<a data-bind="html: $parent[$data], attr: {'href': '#' + $parent[$data]}"></a>
+								<!-- /ko -->
 								<!-- /ko -->
 								<!-- ko if: $data === 'required' -->
-								<span class="btn btn-default btn-sm disabled" data-bind="html: $parent[$data], css: {'btn-danger':  $parent[$data]}"></span>
+								<span class="btn btn-default btn-sm disabled"
+								      data-bind="html: $parent[$data], css: {'btn-danger':  $parent[$data]}"></span>
 								<!-- /ko -->
 								<!-- ko if: $data !== 'type' && $data !== 'required' -->
 								<span data-bind="html: $parent[$data]"></span>
@@ -65,6 +70,10 @@
 						</tr>
 						</tbody>
 					</table>
+				</div>
+				<div class="panel-body table-responsive">
+					<h5>Example JSON</h5>
+					<pre><code class="json-example" data-bind="html: $data.example"></code></pre>
 				</div>
 			</div>
 		</div>
@@ -83,20 +92,20 @@
 						</tr>
 						</thead>
 						<tbody data-bind="foreach: $data.properties">
-							<tr data-bind="foreach: Object.keys($data)">
-								<td>
-									<!-- ko if: $data === 'type' -->
-									<code data-bind="html: $parent[$data]"></code>
-									<!-- /ko -->
-									<!-- ko if: $data === 'required' -->
-									<span class="btn btn-default btn-sm disabled"
-									      data-bind="html: $parent[$data], css: {'btn-danger':  $parent[$data]}"></span>
-									<!-- /ko -->
-									<!-- ko if: $data !== 'type' && $data !== 'required' -->
-									<span data-bind="html: $parent[$data]"></span>
-									<!-- /ko -->
-								</td>
-							</tr>
+						<tr data-bind="foreach: Object.keys($data)">
+							<td>
+								<!-- ko if: $data === 'type' -->
+								<code data-bind="html: $parent[$data]"></code>
+								<!-- /ko -->
+								<!-- ko if: $data === 'required' -->
+								<span class="btn btn-default btn-sm disabled"
+								      data-bind="html: $parent[$data], css: {'btn-danger':  $parent[$data]}"></span>
+								<!-- /ko -->
+								<!-- ko if: $data !== 'type' && $data !== 'required' -->
+								<span data-bind="html: $parent[$data]"></span>
+								<!-- /ko -->
+							</td>
+						</tr>
 						</tbody>
 					</table>
 				</div>
@@ -167,6 +176,11 @@
 			{
 				// Apply knockout binding for rendering of the html
 				ko.applyBindings( new ViewModel( response ), document.body );
+
+				document.body.querySelectorAll( '.json-example' ).forEach( function( block )
+				{
+					hljs.highlightBlock( block );
+				} )
 			} )
 	}
 	else
