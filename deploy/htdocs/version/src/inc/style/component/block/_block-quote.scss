@@ -6,11 +6,19 @@
 		font-size: 0;
 	}
 
-	figure {
+	.image-placeholder {
 		@include size($sizeGrid * 5);
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
+
+		img {
+			@include size(100%);
+		}
+
+		.copy {
+			display: none;
+		}
 
 		&:after {
 			@include triangle(right, bottom, $colorLightGrey, $sizeGrid);
@@ -29,5 +37,40 @@
 
 	.heading {
 		margin-bottom: $sizeGrid;
+	}
+
+	@include respond-to(SMALL) {
+		padding-left: $sizeGrid;
+		padding-right: $sizeGrid;
+
+		.image-placeholder {
+			@include size(100%, auto);
+
+			img {
+				@include size($sizeGrid * 4);
+				vertical-align: middle;
+				display: inline-block;
+				margin-right: $sizeGrid;
+			}
+
+			.copy {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+		.heading {
+			font-size: mobile-size(2.4rem);
+			margin-bottom: 0;
+		}
+
+		aside {
+			width: 100%;
+			padding: $sizeGrid 0 0 0;
+
+			.copy {
+				display: none;
+			}
+		}
 	}
 }

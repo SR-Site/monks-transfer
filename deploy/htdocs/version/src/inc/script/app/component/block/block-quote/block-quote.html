@@ -1,13 +1,18 @@
 <div class="component-block-quote">
 	<div class="overrule-overlap">
 		<div class="quote-wrapper">
-			<figure>
+			<div class="image-placeholder">
 				<img data-bind="
 				image: {
 					image: data.image,
 					state: $root.deviceState()
 				}" />
-			</figure>
+
+				<p class="copy copy-01">
+					<strong data-bind="html: data.name"></strong> |
+					<span data-bind="html: data.description"></span>
+				</p>
+			</div>
 			<aside>
 				<h2 class="heading heading-06" data-bind="html: data.quote"></h2>
 				<p class="copy copy-01">

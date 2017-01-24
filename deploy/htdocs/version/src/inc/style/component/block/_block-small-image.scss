@@ -14,4 +14,15 @@
 	&.align-right {
 		text-align: right;
 	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+		margin-left: 0;
+		margin-right: 0;
+
+		img {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
 }

@@ -60,6 +60,35 @@
 		.description {
 			width: calc(100% - #{$sizeGrid*3.5});
 		}
+	}
 
+	// Breakpoints
+	@include respond-to(SMALL) {
+		@include size(100% !important, auto !important);
+		padding-left: $sizeGrid;
+		padding-right: $sizeGrid;
+
+		&.windowed {
+			border: none;
+		}
+
+		.inner-content {
+			position: relative;
+			display: block;
+			padding: $sizeGrid*3 !important;
+
+			&:before,
+			&:after {
+				right: -$sizeGrid;
+			}
+		}
+
+		.description {
+			width: 100% !important;
+		}
+
+		.component-button-main {
+			margin-top: $sizeGrid*2;
+		}
 	}
 }
