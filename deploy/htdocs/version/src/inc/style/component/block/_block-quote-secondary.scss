@@ -17,4 +17,23 @@
 	.copy {
 		font-weight: 600;
 	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+		.site-frame {
+			padding-left: $sizeGrid;
+			padding-right: $sizeGrid;
+		}
+
+		.quote-content {
+			border-left-width: 3px;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		.heading {
+			font-size: mobile-size(3.4rem);
+		}
+	}
 }
