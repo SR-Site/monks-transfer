@@ -8,7 +8,7 @@ module.exports = function( grunt )
 	const jsonfile = require( 'jsonfile' );
 
 	var blockDir = grunt.config( 'generate-block-documentation.options.input' );
-	var output = {blocks: [], references: []};
+	var output = {blocks: [], references: [], enums: []};
 
 	grunt.registerMultiTask(
 		'generate-block-documentation',
@@ -25,7 +25,7 @@ module.exports = function( grunt )
 
 				output.blocks.push( {
 					blockId: upperCamelCase( block ),
-					properties: parseBlock( block )
+					properties: parseBlock( block ).reverse()
 				} );
 			} );
 
@@ -100,7 +100,6 @@ module.exports = function( grunt )
 				{
 					return docComment[i].replace( property + ' ', '' );
 				}
-
 			}
 		}
 
@@ -117,7 +116,11 @@ module.exports = function( grunt )
 	{
 		if( PrimitiveType.properties && PrimitiveType.rawName.indexOf( 'I' ) === 0 )
 		{
-			parseReference( PrimitiveType.rawName, PrimitiveType.properties );
+			parseObjectReference( PrimitiveType.rawName, PrimitiveType.properties );
+		}
+		else if( PrimitiveType.members )
+		{
+			parseEnumReference( PrimitiveType.rawName, PrimitiveType.members );
 		}
 
 		return PrimitiveType.rawName;
@@ -128,26 +131,21 @@ module.exports = function( grunt )
 	 * @param name
 	 * @returns {boolean}
 	 */
-	function hasReference( name )
+	function hasReference( name, array )
 	{
-		for( var i = 0; i < output.references.length; i++ )
+		return array.find( function( item )
 		{
-			if( output.references[i].name === name )
-			{
-				return true;
-			}
-		}
-
-		return false;
+			return item.name === name
+		} );
 	}
 
 	/**
 	 * @method parseReference
 	 * @param properties
 	 */
-	function parseReference( name, properties )
+	function parseObjectReference( name, properties )
 	{
-		if( !hasReference( name ) && Array.isArray( properties ) )
+		if( !hasReference( name, output.references ) && Array.isArray( properties ) )
 		{
 			// Keep track of the parsed properties
 			var parsedProperties = [];
@@ -160,7 +158,34 @@ module.exports = function( grunt )
 
 			output.references.push( {
 				name: name,
-				properties: parsedProperties.reverse()
+				properties: parsedProperties
+			} );
+		}
+	}
+
+	/**
+	 * @method parseEnum
+	 * @description Parse an enum reference
+	 */
+	function parseEnumReference( name, members )
+	{
+		if( !hasReference( name, output.enums ) && Array.isArray( members ) )
+		{
+			// Keep track of the parsed properties
+			var parsedProperties = [];
+
+			// Parse all the properties
+			members.forEach( function( member )
+			{
+				parsedProperties.push( {
+					name: member.rawName,
+					value: member.value
+				} );
+			} );
+
+			output.enums.push( {
+				name: name,
+				properties: parsedProperties
 			} );
 		}
 	}
