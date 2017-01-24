@@ -64,6 +64,7 @@
 		display: block;
 		height: 100px;
 		background: $colorSecondary;
+		z-index: 1;
 
 		.rgba & {
 			background: rgba($colorSecondary, .75);

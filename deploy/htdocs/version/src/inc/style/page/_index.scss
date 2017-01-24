@@ -16,12 +16,6 @@
 		overflow: hidden;
 	}
 
-	@include respond-to(SMALL) {
-		.component-button-start-advertising {
-			display: none;
-		}
-	}
-
 	/**
 	 * Development grid
 	 */
@@ -81,9 +75,16 @@
 		&.is-active {
 			display: block;
 		}
+	}
 
+	@include respond-to(SMALL) {
+		padding-top: $sizeGrid*4;
 
-		@include respond-to(SMALL) {
+		.component-button-start-advertising {
+			display: none;
+		}
+
+		.grid {
 			@include size(100vw, 100vh);
 			@include pos(0, 0, 0, 0);
 			overflow: hidden;
