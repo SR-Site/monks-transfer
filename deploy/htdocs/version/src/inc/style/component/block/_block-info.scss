@@ -67,6 +67,7 @@
 		@include size(100% !important, auto !important);
 		padding-left: $sizeGrid;
 		padding-right: $sizeGrid;
+		max-width: 100%;
 
 		&.windowed {
 			border: none;

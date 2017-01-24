@@ -89,6 +89,11 @@
 				@include size(100%);
 				transform: none;
 			}
+
+			&:after {
+				right: auto;
+				left: 0;
+			}
 		}
 
 		aside {

@@ -9,10 +9,12 @@
 		padding: $sizeGrid * 2;
 		background: $colorLightGrey;
 		font-size: 0;
+		display: flex;
+		flex-wrap: nowrap;
 	}
 
 	.map-content {
-		@include size($sizeGrid * 9);
+		@include size($sizeGrid * 9, 100%);
 		padding-right: $sizeGrid * 2;
 		display: inline-block;
 		vertical-align: top;
@@ -33,7 +35,7 @@
 	}
 
 	.map-image {
-		@include size($sizeGrid * 23, 100%);
+		@include size(100%, 100%);
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
@@ -50,8 +52,8 @@
 	}
 
 	.progress-bar {
-		@include size($sizeGrid * 23, 1px);
-		@include pos(auto, $sizeGrid * 2, calc(#{$sizeGrid / 2} + 0.5rem), auto);
+		@include size(67%, 1px);
+		@include pos(auto, $sizeGrid * 2, calc(#{$sizeGrid * 2.5} + 0.5rem), auto);
 		background: $colorBorder;
 		position: absolute;
 
@@ -67,5 +69,57 @@
 	.component-button-main {
 		@include pos(auto, auto, $sizeGrid * 2 , $sizeGrid * 2);
 		position: absolute;
+	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+
+		.aspect-ratio-wrapper {
+			&:before {
+				display: none;
+			}
+		}
+
+		.aspect-ratio-inner {
+			position: relative;
+			height: auto;
+			flex-wrap: wrap;
+			padding: $sizeGrid*2;
+		}
+
+		.progress-bar {
+			@include pos(auto, auto, auto, auto);
+			position: relative;
+			transform: none;
+			width: 100%;
+			order: 1;
+			margin: $sizeGrid*2 auto $sizeGrid*2;
+		}
+
+		.map-content {
+			@include size(100%, auto);
+			padding-right: 0;
+			order: 2;
+		}
+
+		.map-image {
+			@include aspect-ratio($sizeGrid * 32, $sizeGrid * 19);
+			order: 0;
+		}
+
+		.main-title {
+			margin-bottom: $sizeGrid*2;
+		}
+
+		.sub-title {
+			margin-bottom: $sizeGrid;
+			font-size: mobile-size(2.8rem);
+		}
+
+		.component-button-main {
+			position: relative;
+			@include pos(auto, auto, auto);
+			margin-top: $sizeGrid*3;
+		}
 	}
 }
