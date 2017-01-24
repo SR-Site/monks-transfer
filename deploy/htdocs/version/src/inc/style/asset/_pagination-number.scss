@@ -17,5 +17,10 @@
 
 	@include respond-to(SMALL) {
 		font-size: mobile-size(2.2rem);
+
+		&:after {
+			bottom: -1rem;
+			left: 1rem;
+		}
 	}
 }

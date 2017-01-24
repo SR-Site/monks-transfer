@@ -8,7 +8,7 @@
 				"id": "heroSecondary",
 				"data": {
 					"overlap": true,
-					"heading": "Digital",
+					"heading": "We'll Help you Find Your Format",
 					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
 					"link": {
 						"label": "Find out more",
@@ -143,6 +143,15 @@
 						"title": "Explore the market",
 						"target": "map",
 						"type": 2
+					},
+					"imageSequence": {
+						"image": {
+							"normal": "data/sequence/trailer/trailer_",
+							"small": "data/sequence/trailer/trailer_",
+							"alt": "Alt text"
+						},
+						"extension": ".jpg",
+						"total": 301
 					}
 				}
 			},
