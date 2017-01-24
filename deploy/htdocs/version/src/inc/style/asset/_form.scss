@@ -81,6 +81,7 @@
 		input,
 		.placeholder-label {
 			font-size: mobile-size(2.4rem);
+			line-height: $sizeGrid*2;
 		}
 
 		input {

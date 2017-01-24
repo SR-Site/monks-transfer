@@ -16,7 +16,7 @@
 		<!-- /ko -->
 
 		<!-- ko ifnot: $root.selectedState() -->
-			Select a state
+			{{lt:global.form.select.state}}
 		<!-- /ko -->
 	</div>
 
@@ -65,4 +65,23 @@
 		</div>
 		<button class="button-search button" data-bind="html: searchLabel"></button>
 	</form>
+
+	<button class="service-info button" data-bind="tap: $root.handleServiceClick.bind($root)">
+		<div class="profile-image bg-cover" data-bind="image: {
+				image: service.image,
+				state: $root.deviceState()
+			}"></div>
+
+		<div class="profile-info">
+			<p class="name copy-02 copy" data-bind="html: service.name"></p>
+			<p class="role copy" data-bind="html: service.role"></p>
+		</div>
+
+		<!-- ko template: {
+			name: 'button-select-anchor',
+			data: {
+				direction: $root.Direction.RIGHT
+			}
+		} --><!-- /ko -->
+	</button>
 </div>

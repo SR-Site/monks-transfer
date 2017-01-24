@@ -31,6 +31,10 @@
 		}
 	}
 
+	> .service-info {
+		display: none;
+	}
+
 	// Selected Value
 	.selected-value {
 		display: none;
@@ -153,25 +157,33 @@
 			padding: 0 $sizeGrid;
 			border-bottom: 1px solid  rgba(#dadada, 0.6);
 
-			&.has-value {
-				background-color: $colorSecondary;
-				color: white;
-
-				//&:after {
-				//	border-color: white;
-				//}
-			}
-
 			&:after {
 				@include pos(50%, $sizeGrid*2, auto, auto);
-				@include arrow(up, $colorSecondary, 2rem);
+				@include arrow(down, $colorSecondary, 2rem);
 				content: "";
 				position: absolute;
 			}
 
+			// Has Value State
+			&.has-value {
+				background-color: $colorSecondary;
+				color: white;
+
+				&:after {
+					border-top-color: white;
+				}
+			}
+
+			// Open State
 			&.is-open {
 				&:after {
-					@include arrow(down, $colorSecondary, $sizeGrid/2);
+					@include arrow(up, $colorSecondary, $sizeGrid/2);
+				}
+
+				&.has-value {
+					&:after {
+						border-bottom-color: white;
+					}
 				}
 			}
 		}
@@ -226,13 +238,38 @@
 				display: none;
 			}
 
-
 			// Open State
 			&.is-open {
 				height: calc(100vh - #{$sizeGrid*17});
 			}
 		}
 
+		// Service Info
+		> .service-info {
+			display: flex;
+			height: $sizeGrid*8;
+			padding: 0 $sizeGrid*2 0 $sizeGrid*3;
+
+			.profile-image {
+				@include size($sizeGrid*3);
+				margin-right: $sizeGrid;
+			}
+
+			.profile-info {
+				text-align: left;
+
+				.name {
+					font-size: mobile-size(4rem);
+				}
+				.role {
+					font-size: mobile-size(2.2rem);
+				}
+			}
+
+			.button-select-anchor {
+				right: $sizeGrid;
+			}
+		}
 
 		// Filters
 		.filter-list-item {

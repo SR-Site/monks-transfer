@@ -18,6 +18,9 @@
 			},
 			"label": {
 
+			},
+			"select": {
+				"state": "Select a State"
 			}
 		}
 	},

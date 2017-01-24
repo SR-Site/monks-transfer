@@ -14,4 +14,9 @@
 			@include size(4px, 7px);
 		}
 	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+		@include size($sizeGrid);
+	}
 }
