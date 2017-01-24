@@ -4,727 +4,730 @@
             "blockId": "BlockArticleTeaser",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "tags",
                     "type": "Array",
                     "required": true,
-                    "description": "The tags linked to this article"
+                    "description": "The tags linked to this article",
+                    "properties": [
+                        {
+                            "name": "target",
+                            "type": "string",
+                            "required": true,
+                            "description": "The target of the link",
+                            "properties": []
+                        },
+                        {
+                            "name": "type",
+                            "type": "LinkType",
+                            "required": true,
+                            "description": "The type of the link",
+                            "properties": []
+                        },
+                        {
+                            "name": "label",
+                            "type": "string",
+                            "required": false,
+                            "description": "The label displayed in the action",
+                            "properties": []
+                        },
+                        {
+                            "name": "title",
+                            "type": "string",
+                            "required": false,
+                            "description": "The title used for accessibility",
+                            "properties": []
+                        }
+                    ]
                 },
                 {
                     "name": "image",
                     "type": "IImage",
                     "required": true,
-                    "description": "The image that will be displayed in the article teaser"
+                    "description": "The image that will be displayed in the article teaser",
+                    "properties": []
                 },
                 {
                     "name": "target",
                     "type": "string",
                     "required": true,
-                    "description": "The target that the teaser should link to"
+                    "description": "The target that the teaser should link to",
+                    "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
-                    "description": "The main paragraph displayed"
+                    "description": "The main paragraph displayed",
+                    "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": "The main heading displayed"
+                    "description": "The main heading displayed",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockArticleTeaser\",\n    \"data\": {\n        \"id\": \"tempor reprehenderit veniam duis magna sint fugiat Lorem tempor tempor esse elit excepteur pariatur culpa\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 2,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\",\n        \"tags\": \"TODO: Array\",\n        \"image\": {\n            \"normal\": \"ut quis aliquip ut ipsum elit aliquip mollit tempor irure\",\n            \"small\": \"in veniam aliquip enim irure esse fugiat laboris dolore voluptate cillum reprehenderit commodo\",\n            \"alt\": \"veniam labore fugiat id nulla ea proident ut amet proident eu ullamco\"\n        },\n        \"target\": \"dolore incididunt deserunt non exercitation eu sit ipsum veniam cupidatat est deserunt\",\n        \"paragraph\": \"ex culpa laboris laborum amet est sunt sunt velit nisi nulla aute\",\n        \"heading\": \"non consectetur sit ad adipisicing magna exercitation magna consequat labore ullamco occaecat qui id culpa\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockArticleTeaser\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"tags\": [\n            {\n                \"target\": \"aliquip qui exercitation ex nulla voluptate nisi laborum\",\n                \"type\": 2,\n                \"label\": \"consequat cillum quis ad reprehenderit velit non\",\n                \"title\": \"culpa ullamco duis duis et et sunt\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"labore excepteur Lorem dolor amet\",\n            \"small\": \"dolor mollit ut deserunt commodo cillum exercitation elit\",\n            \"alt\": \"minim elit fugiat esse anim voluptate\"\n        },\n        \"target\": \"mollit cupidatat officia consequat duis est pariatur\",\n        \"paragraph\": \"non nisi quis velit pariatur consectetur minim\",\n        \"heading\": \"irure consectetur fugiat excepteur amet\"\n    }\n}"
         },
         {
             "blockId": "BlockAudioFragment",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "file",
                     "type": "string",
                     "required": true,
-                    "description": "The *.mp3 file that will be played"
+                    "description": "The *.mp3 file that will be played",
+                    "properties": []
                 },
                 {
                     "name": "image",
                     "type": "IImage",
                     "required": true,
-                    "description": "The image linked to the audio fragment"
+                    "description": "The image linked to the audio fragment",
+                    "properties": []
                 },
                 {
                     "name": "description",
                     "type": "string",
                     "required": true,
-                    "description": "The description about the name"
+                    "description": "The description about the name",
+                    "properties": []
                 },
                 {
                     "name": "name",
                     "type": "string",
                     "required": true,
-                    "description": "The name displayed above the audio fragment"
+                    "description": "The name displayed above the audio fragment",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockAudioFragment\",\n    \"data\": {\n        \"id\": \"velit ea quis deserunt magna dolor in cupidatat quis consectetur ad sunt dolor\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"disableTransitionIn\": true,\n        \"blocks\": \"TODO: Array\",\n        \"file\": \"aute amet est consequat aliqua aute qui sint nostrud labore veniam irure ut\",\n        \"image\": {\n            \"normal\": \"ad ex tempor culpa aliquip enim ullamco Lorem irure dolore occaecat irure proident magna duis\",\n            \"small\": \"veniam incididunt cupidatat Lorem qui pariatur id irure id irure velit magna tempor\",\n            \"alt\": \"qui velit anim tempor ullamco do velit ad eiusmod consequat incididunt aute\"\n        },\n        \"description\": \"ut aliqua enim dolore minim fugiat cillum Lorem minim irure voluptate\",\n        \"name\": \"reprehenderit mollit aliquip sint eu nisi excepteur officia veniam mollit minim\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockAudioFragment\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 3,\n        \"file\": \"excepteur laboris duis ipsum in proident et reprehenderit anim esse\",\n        \"image\": {\n            \"normal\": \"laboris Lorem commodo reprehenderit ut non officia occaecat Lorem\",\n            \"small\": \"dolore incididunt consectetur quis ea ex ullamco nostrud\",\n            \"alt\": \"voluptate elit ipsum voluptate consequat eu sit non magna ex\"\n        },\n        \"description\": \"consequat cupidatat sunt fugiat sunt qui non sint velit esse\",\n        \"name\": \"tempor consequat magna eiusmod laborum ullamco aliqua\"\n    }\n}"
         },
         {
             "blockId": "BlockBlogPost",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockBlogPost\",\n    \"data\": {\n        \"id\": \"amet nulla culpa irure laboris culpa laboris ad do duis enim labore do commodo\",\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 3,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockBlogPost\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 0\n    }\n}"
         },
         {
             "blockId": "BlockButton",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "alignment",
                     "type": "Alignment",
                     "required": true,
-                    "description": "The alignment of the button inside the block"
+                    "description": "The alignment of the button inside the block",
+                    "properties": []
                 },
                 {
                     "name": "link",
                     "type": "ILink",
                     "required": true,
-                    "description": "The link that will be linked to the button"
+                    "description": "The link that will be linked to the button",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockButton\",\n    \"data\": {\n        \"id\": \"duis nulla aliquip velit laborum nisi consectetur eiusmod non elit\",\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"disableTransitionIn\": true,\n        \"blocks\": \"TODO: Array\",\n        \"alignment\": 1,\n        \"link\": {\n            \"target\": \"esse cillum sit voluptate cupidatat voluptate est sunt minim consectetur sint in\",\n            \"type\": 1,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"consequat ea sit anim anim et sunt nisi labore proident adipisicing enim commodo eu\",\n            \"title\": \"et ad aliquip mollit culpa consectetur non sunt velit cillum nulla non aliquip\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockButton\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 5,\n        \"alignment\": 1,\n        \"link\": {\n            \"target\": \"aliqua sit ullamco quis est non officia adipisicing\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"pariatur exercitation occaecat sunt elit velit sit nisi\",\n            \"title\": \"labore non est non ad ea minim\"\n        }\n    }\n}"
         },
         {
             "blockId": "BlockFilterContent",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "filters",
                     "type": "Array",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": [
+                        {
+                            "name": "type",
+                            "type": "number",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "options",
+                            "type": "Array",
+                            "required": true,
+                            "description": "",
+                            "properties": [
+                                {
+                                    "name": "value",
+                                    "type": "string",
+                                    "required": true,
+                                    "description": "",
+                                    "properties": []
+                                },
+                                {
+                                    "name": "label",
+                                    "type": "string",
+                                    "required": true,
+                                    "description": "",
+                                    "properties": []
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "name": "filterLabel",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "endpoint",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockFilterContent\",\n    \"data\": {\n        \"id\": \"magna officia sint ullamco voluptate aliqua et velit duis aliqua sit adipisicing aliqua\",\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\",\n        \"filters\": \"TODO: Array\",\n        \"filterLabel\": \"officia id qui ipsum duis id sint labore magna irure fugiat velit\",\n        \"endpoint\": \"magna est nisi elit dolore minim excepteur fugiat incididunt consequat\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockFilterContent\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 5,\n        \"filters\": [\n            {\n                \"type\": 2,\n                \"options\": [\n                    {\n                        \"value\": \"mollit nostrud id culpa incididunt incididunt dolor voluptate in\",\n                        \"label\": \"est Lorem velit est nostrud est\"\n                    }\n                ]\n            }\n        ],\n        \"filterLabel\": \"officia esse irure tempor labore pariatur laboris\",\n        \"endpoint\": \"enim laboris et non sunt\"\n    }\n}"
         },
         {
             "blockId": "BlockHeroMain",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "slides",
                     "type": "Array",
                     "required": true,
-                    "description": ""
+                    "description": "The array containing the slides on the main carousel",
+                    "properties": [
+                        {
+                            "name": "heading",
+                            "type": "string",
+                            "required": true,
+                            "description": "The main heading",
+                            "properties": []
+                        },
+                        {
+                            "name": "paragraph",
+                            "type": "string",
+                            "required": false,
+                            "description": "The main paragraph",
+                            "properties": []
+                        },
+                        {
+                            "name": "background",
+                            "type": "IImage",
+                            "required": true,
+                            "description": "The slide background image",
+                            "properties": []
+                        },
+                        {
+                            "name": "link",
+                            "type": "ILink",
+                            "required": false,
+                            "description": "The slide link",
+                            "properties": []
+                        },
+                        {
+                            "name": "secondaryLink",
+                            "type": "ILink",
+                            "required": false,
+                            "description": "The slide secondary link",
+                            "properties": []
+                        },
+                        {
+                            "name": "statistics",
+                            "type": "IHeroMainSlideStatistics",
+                            "required": false,
+                            "description": "The slide statistics section",
+                            "properties": []
+                        }
+                    ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockHeroMain\",\n    \"data\": {\n        \"id\": \"et commodo duis ad culpa in sunt ut ad eu sit nisi quis do sit\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 4,\n        \"disableTransitionIn\": true,\n        \"blocks\": \"TODO: Array\",\n        \"slides\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockHeroMain\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"slides\": [\n            {\n                \"heading\": \"id voluptate aliquip mollit laboris\",\n                \"paragraph\": \"quis duis ex sit aliquip deserunt\",\n                \"background\": {\n                    \"normal\": \"aliquip qui irure duis sunt laboris laborum enim cillum\",\n                    \"small\": \"et officia officia laborum esse veniam consequat magna mollit\",\n                    \"alt\": \"anim do id magna id nisi fugiat adipisicing\"\n                },\n                \"link\": {\n                    \"target\": \"ut tempor tempor aliqua consequat quis\",\n                    \"type\": 1,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"fugiat proident tempor nisi et minim Lorem\",\n                    \"title\": \"eu id nulla esse laborum reprehenderit ex sint\"\n                },\n                \"secondaryLink\": {\n                    \"target\": \"nulla nulla duis pariatur sint culpa\",\n                    \"type\": 1,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"aliquip culpa sunt et ut dolor labore excepteur est\",\n                    \"title\": \"minim et pariatur id culpa consequat minim\"\n                },\n                \"statistics\": {\n                    \"heading\": \"enim labore in ipsum dolore enim ipsum excepteur dolor\",\n                    \"stats\": [\n                        {\n                            \"heading\": \"ut et ut Lorem reprehenderit officia magna laborum sint irure\",\n                            \"description\": \"eu id dolore elit magna quis anim fugiat\",\n                            \"value\": 5\n                        }\n                    ]\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockHeroSecondary",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "link",
                     "type": "ILink",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": false,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockHeroSecondary\",\n    \"data\": {\n        \"id\": \"ad sit ut laborum enim ea sit ut aliquip sit officia ut\",\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\",\n        \"link\": {\n            \"target\": \"tempor eu ipsum officia cupidatat consequat in dolor sunt fugiat irure\",\n            \"type\": 2,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"consectetur irure laboris irure consequat minim labore aliquip aliqua minim cillum sint officia\",\n            \"title\": \"ullamco ad dolor eiusmod consectetur eu ipsum laborum et est non proident ex\"\n        },\n        \"paragraph\": \"nostrud fugiat et esse incididunt ullamco enim occaecat ex id\",\n        \"heading\": \"laboris aute pariatur ut est adipisicing magna qui reprehenderit proident qui qui\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockHeroSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 0,\n        \"link\": {\n            \"target\": \"quis culpa laboris adipisicing nulla sit proident proident\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"cupidatat quis cupidatat elit nostrud proident irure ad\",\n            \"title\": \"dolore duis enim pariatur ipsum occaecat\"\n        },\n        \"paragraph\": \"ullamco Lorem ea non ea commodo occaecat in\",\n        \"heading\": \"labore sint magna adipisicing labore pariatur cillum\"\n    }\n}"
         },
         {
             "blockId": "BlockHeroTertiary",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "background",
                     "type": "IImage",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockHeroTertiary\",\n    \"data\": {\n        \"id\": \"consequat nostrud do mollit voluptate velit anim quis mollit quis est ea ad\",\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\",\n        \"background\": {\n            \"normal\": \"minim voluptate laboris Lorem mollit cupidatat laboris aute et aliqua esse tempor\",\n            \"small\": \"aute exercitation ex deserunt commodo eu ea irure nisi veniam Lorem ullamco\",\n            \"alt\": \"laborum sunt aliqua deserunt sunt sint nisi mollit mollit anim occaecat nostrud officia magna\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockHeroTertiary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"background\": {\n            \"normal\": \"quis voluptate elit excepteur tempor\",\n            \"small\": \"fugiat veniam aliquip aute et eu laborum in excepteur\",\n            \"alt\": \"mollit irure dolore labore consectetur incididunt\"\n        }\n    }\n}"
         },
         {
             "blockId": "BlockHowToAdvertise",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "steps",
                     "type": "Array",
                     "required": true,
-                    "description": ""
+                    "description": "The steps displayed in the block",
+                    "properties": [
+                        {
+                            "name": "heading",
+                            "type": "string",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "paragraph",
+                            "type": "string",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "icon",
+                            "type": "string",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        }
+                    ]
                 },
                 {
                     "name": "link",
                     "type": "ILink",
                     "required": true,
-                    "description": ""
+                    "description": "The link displayed in the how to block",
+                    "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "The heading displayed on the how to block",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockHowToAdvertise\",\n    \"data\": {\n        \"id\": \"id elit adipisicing et ad reprehenderit tempor fugiat non anim deserunt deserunt\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\",\n        \"steps\": \"TODO: Array\",\n        \"link\": {\n            \"target\": \"reprehenderit mollit proident do reprehenderit cillum ad fugiat sint et mollit minim elit in\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"esse sit fugiat qui aliquip consectetur laborum tempor nulla excepteur cupidatat enim nisi et et\",\n            \"title\": \"ut aliqua incididunt enim exercitation cillum aliqua et fugiat reprehenderit quis magna ex consectetur\"\n        },\n        \"heading\": \"elit do adipisicing et exercitation et deserunt ex sunt exercitation amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockHowToAdvertise\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 4,\n        \"steps\": [\n            {\n                \"heading\": \"veniam officia Lorem proident cillum reprehenderit et\",\n                \"paragraph\": \"voluptate deserunt ipsum aliquip Lorem culpa sunt ut magna\",\n                \"icon\": \"ex minim dolore nostrud exercitation velit elit est irure id\"\n            }\n        ],\n        \"link\": {\n            \"target\": \"exercitation ullamco eu irure officia cillum aliqua proident\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"esse est officia nostrud sunt culpa sint culpa\",\n            \"title\": \"culpa Lorem consequat in velit id\"\n        },\n        \"heading\": \"quis minim enim ex ad reprehenderit excepteur id id fugiat\"\n    }\n}"
         },
         {
             "blockId": "BlockImageCallToActions",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "callToActions",
                     "type": "Array",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": [
+                        {
+                            "name": "heading",
+                            "type": "string",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "paragraph",
+                            "type": "string",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "background",
+                            "type": "IImage",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "backgroundBlurred",
+                            "type": "IImage",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        }
+                    ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockImageCallToActions\",\n    \"data\": {\n        \"id\": \"magna consectetur ullamco nostrud labore ut duis labore fugiat ex nisi aliquip\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 4,\n        \"disableTransitionIn\": true,\n        \"blocks\": \"TODO: Array\",\n        \"callToActions\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockImageCallToActions\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"callToActions\": [\n            {\n                \"heading\": \"veniam ad non nostrud deserunt nisi tempor\",\n                \"paragraph\": \"enim esse sint officia nostrud culpa enim consequat aliqua\",\n                \"background\": {\n                    \"normal\": \"id et excepteur consequat elit aliqua\",\n                    \"small\": \"eiusmod mollit voluptate consequat veniam voluptate mollit ipsum\",\n                    \"alt\": \"commodo nostrud sunt quis ullamco excepteur Lorem deserunt\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"exercitation ex duis qui ad\",\n                    \"small\": \"proident tempor veniam ad in anim\",\n                    \"alt\": \"mollit est proident magna sunt do occaecat\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockImageCarousel",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "slides",
                     "type": "Array",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": [
+                        {
+                            "name": "heading",
+                            "type": "string",
+                            "required": false,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "image",
+                            "type": "IImage",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        }
+                    ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockImageCarousel\",\n    \"data\": {\n        \"id\": \"non consequat voluptate do reprehenderit ipsum adipisicing quis eu consequat enim laboris\",\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\",\n        \"slides\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockImageCarousel\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 4,\n        \"slides\": [\n            {\n                \"heading\": \"consectetur deserunt et deserunt laboris incididunt nisi proident nulla\",\n                \"image\": {\n                    \"normal\": \"est aute amet officia irure\",\n                    \"small\": \"aute fugiat cupidatat velit excepteur in ex eu\",\n                    \"alt\": \"veniam laboris veniam tempor sint dolore cupidatat veniam est\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockImageWithContent",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "link",
                     "type": "ILink",
                     "required": false,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "background",
                     "type": "IImage",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "croppedImage",
                     "type": "boolean",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "alignment",
                     "type": "Alignment",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockImageWithContent\",\n    \"data\": {\n        \"id\": \"mollit ullamco ex consectetur minim ut anim est eiusmod duis\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 5,\n        \"disableTransitionIn\": true,\n        \"blocks\": \"TODO: Array\",\n        \"link\": {\n            \"target\": \"anim culpa ea ut dolor enim adipisicing adipisicing eu ullamco\",\n            \"type\": 1,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"aliquip eiusmod amet aliquip irure ullamco ea pariatur proident ad veniam\",\n            \"title\": \"sint ex amet ex incididunt est reprehenderit et deserunt dolor consectetur id\"\n        },\n        \"background\": {\n            \"normal\": \"aute dolor non ad magna reprehenderit in reprehenderit minim fugiat\",\n            \"small\": \"occaecat proident nulla deserunt ipsum mollit dolor anim quis mollit do minim voluptate\",\n            \"alt\": \"duis minim nostrud qui dolor consectetur ut adipisicing nisi voluptate consequat\"\n        },\n        \"paragraph\": \"excepteur ex sunt cillum Lorem proident laborum cupidatat excepteur in cupidatat officia mollit\",\n        \"heading\": \"dolor sit ut duis ullamco nisi esse nisi deserunt nisi consequat\",\n        \"croppedImage\": true,\n        \"alignment\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blockImageWithContent\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"link\": {\n            \"target\": \"qui magna eiusmod et consectetur fugiat qui consectetur nisi\",\n            \"type\": 2,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"do consequat deserunt ullamco adipisicing ut\",\n            \"title\": \"dolore amet incididunt laboris sint excepteur ad\"\n        },\n        \"background\": {\n            \"normal\": \"esse laborum dolore eu incididunt amet esse anim\",\n            \"small\": \"ex reprehenderit exercitation in aute irure\",\n            \"alt\": \"voluptate esse in eu aliqua\"\n        },\n        \"paragraph\": \"voluptate nisi nisi anim magna nisi exercitation adipisicing\",\n        \"heading\": \"ipsum voluptate adipisicing dolore consequat ut in non reprehenderit\",\n        \"croppedImage\": false,\n        \"alignment\": 1\n    }\n}"
         },
         {
             "blockId": "BlockInfo",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockInfo\",\n    \"data\": {\n        \"id\": \"aute veniam pariatur deserunt cupidatat voluptate laboris culpa eiusmod culpa irure quis sunt laboris\",\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockInfo\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 4\n    }\n}"
         },
         {
             "blockId": "BlockLatest",
@@ -733,190 +736,192 @@
                     "name": "tags",
                     "type": "Array",
                     "required": true,
-                    "description": "The tags linked to this article"
+                    "description": "The tags linked to this article",
+                    "properties": [
+                        {
+                            "name": "target",
+                            "type": "string",
+                            "required": true,
+                            "description": "The target of the link",
+                            "properties": []
+                        },
+                        {
+                            "name": "type",
+                            "type": "LinkType",
+                            "required": true,
+                            "description": "The type of the link",
+                            "properties": []
+                        },
+                        {
+                            "name": "label",
+                            "type": "string",
+                            "required": false,
+                            "description": "The label displayed in the action",
+                            "properties": []
+                        },
+                        {
+                            "name": "title",
+                            "type": "string",
+                            "required": false,
+                            "description": "The title used for accessibility",
+                            "properties": []
+                        }
+                    ]
                 },
                 {
                     "name": "image",
                     "type": "IImage",
                     "required": true,
-                    "description": "The image that will be displayed in the article teaser"
+                    "description": "The image that will be displayed in the article teaser",
+                    "properties": []
                 },
                 {
                     "name": "target",
                     "type": "string",
                     "required": true,
-                    "description": "The target that the teaser should link to"
+                    "description": "The target that the teaser should link to",
+                    "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
-                    "description": "The main paragraph displayed"
+                    "description": "The main paragraph displayed",
+                    "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": "The main heading displayed"
+                    "description": "The main heading displayed",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockLatest\",\n    \"data\": {\n        \"tags\": \"TODO: Array\",\n        \"image\": {\n            \"normal\": \"deserunt adipisicing aute sint ipsum quis amet sint sint quis pariatur\",\n            \"small\": \"laboris ea nostrud veniam incididunt officia magna aliqua cillum incididunt elit\",\n            \"alt\": \"irure ex laborum ad ullamco aliquip ex enim ut sit qui fugiat\"\n        },\n        \"target\": \"enim esse ipsum fugiat proident minim dolore reprehenderit deserunt ipsum ea ut proident\",\n        \"paragraph\": \"aliqua nisi esse est ad est eiusmod sint nisi velit\",\n        \"heading\": \"nisi eu laborum velit aliquip exercitation excepteur deserunt aute laborum culpa\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockLatest\",\n    \"data\": {\n        \"tags\": [\n            {\n                \"target\": \"ut dolor non enim adipisicing\",\n                \"type\": 1,\n                \"label\": \"ipsum et adipisicing in sint\",\n                \"title\": \"voluptate et incididunt voluptate ex ea fugiat ipsum\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"laboris cupidatat magna pariatur cupidatat est fugiat nisi\",\n            \"small\": \"velit irure do aute nostrud\",\n            \"alt\": \"irure ipsum irure fugiat et in ad\"\n        },\n        \"target\": \"cupidatat est labore ullamco ea pariatur laboris ullamco amet\",\n        \"paragraph\": \"consectetur dolore excepteur ullamco sint proident deserunt\",\n        \"heading\": \"reprehenderit duis consectetur sit voluptate est deserunt\"\n    }\n}"
         },
         {
             "blockId": "BlockMap",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "steps",
                     "type": "Array",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": [
+                        {
+                            "name": "label",
+                            "type": "string",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        }
+                    ]
                 },
                 {
                     "name": "imageSequence",
                     "type": "IImageSequence",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockMap\",\n    \"data\": {\n        \"id\": \"est tempor enim ullamco do consequat duis dolore sunt cupidatat enim\",\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"disableTransitionIn\": true,\n        \"blocks\": \"TODO: Array\",\n        \"steps\": \"TODO: Array\",\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"nisi enim veniam anim elit ut magna occaecat ut qui ut in occaecat\",\n                \"small\": \"velit tempor aute culpa eiusmod id Lorem nisi aliqua deserunt in voluptate ullamco\",\n                \"alt\": \"elit est aliquip do occaecat proident ex minim incididunt eu\"\n            },\n            \"total\": 2,\n            \"extension\": \"eiusmod aute est labore enim tempor elit veniam anim aliqua\",\n            \"autoplay\": true\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockMap\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"steps\": [\n            {\n                \"label\": \"duis irure ea consequat ex dolore officia cillum\"\n            }\n        ],\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"Lorem est proident officia sint duis ea\",\n                \"small\": \"ea aliqua deserunt commodo commodo est\",\n                \"alt\": \"duis aliqua ea officia et sit nulla esse exercitation aute\"\n            },\n            \"total\": 3,\n            \"extension\": \"proident est adipisicing ad ad\",\n            \"autoplay\": false\n        }\n    }\n}"
         },
         {
             "blockId": "BlockMapSecondary",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "subHeading",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockMapSecondary\",\n    \"data\": {\n        \"id\": \"fugiat magna deserunt dolore ullamco et do cillum eu Lorem et in\",\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"disableTransitionIn\": true,\n        \"blocks\": \"TODO: Array\",\n        \"paragraph\": \"enim qui labore est Lorem consectetur culpa dolor id et ullamco id laborum amet\",\n        \"subHeading\": \"fugiat magna esse cupidatat consectetur magna sint anim cillum tempor pariatur\",\n        \"heading\": \"magna ea mollit excepteur quis adipisicing sint magna sit aliqua esse anim\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockMapSecondary\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 5,\n        \"paragraph\": \"minim velit fugiat amet consequat id id ut velit\",\n        \"subHeading\": \"veniam adipisicing eiusmod pariatur aliquip qui\",\n        \"heading\": \"excepteur ad nostrud pariatur laborum\"\n    }\n}"
         },
         {
             "blockId": "BlockMarketMap",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockMarketMap\",\n    \"data\": {\n        \"id\": \"aute non ea laborum dolore do ullamco occaecat consequat incididunt do esse culpa labore\",\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 1,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockMarketMap\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
         },
         {
             "blockId": "BlockMore",
@@ -925,646 +930,597 @@
                     "name": "tags",
                     "type": "Array",
                     "required": true,
-                    "description": "The tags linked to this article"
+                    "description": "The tags linked to this article",
+                    "properties": [
+                        {
+                            "name": "target",
+                            "type": "string",
+                            "required": true,
+                            "description": "The target of the link",
+                            "properties": []
+                        },
+                        {
+                            "name": "type",
+                            "type": "LinkType",
+                            "required": true,
+                            "description": "The type of the link",
+                            "properties": []
+                        },
+                        {
+                            "name": "label",
+                            "type": "string",
+                            "required": false,
+                            "description": "The label displayed in the action",
+                            "properties": []
+                        },
+                        {
+                            "name": "title",
+                            "type": "string",
+                            "required": false,
+                            "description": "The title used for accessibility",
+                            "properties": []
+                        }
+                    ]
                 },
                 {
                     "name": "image",
                     "type": "IImage",
                     "required": true,
-                    "description": "The image that will be displayed in the article teaser"
+                    "description": "The image that will be displayed in the article teaser",
+                    "properties": []
                 },
                 {
                     "name": "target",
                     "type": "string",
                     "required": true,
-                    "description": "The target that the teaser should link to"
+                    "description": "The target that the teaser should link to",
+                    "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
-                    "description": "The main paragraph displayed"
+                    "description": "The main paragraph displayed",
+                    "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": "The main heading displayed"
+                    "description": "The main heading displayed",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockMore\",\n    \"data\": {\n        \"tags\": \"TODO: Array\",\n        \"image\": {\n            \"normal\": \"nulla magna nisi ullamco tempor occaecat ex commodo et sunt pariatur irure proident veniam velit\",\n            \"small\": \"aute mollit sint dolor elit non anim mollit ipsum in magna pariatur irure\",\n            \"alt\": \"elit duis laborum pariatur officia occaecat cillum veniam quis nisi magna adipisicing\"\n        },\n        \"target\": \"ullamco duis irure pariatur eu velit occaecat veniam magna voluptate commodo duis proident aute\",\n        \"paragraph\": \"proident officia sint fugiat in consectetur aliquip proident excepteur enim nostrud\",\n        \"heading\": \"esse ut qui ex dolor eiusmod qui duis qui eu et cillum deserunt\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockMore\",\n    \"data\": {\n        \"tags\": [\n            {\n                \"target\": \"aute excepteur exercitation ullamco aliqua ea qui\",\n                \"type\": 1,\n                \"label\": \"voluptate minim consectetur enim ad ipsum deserunt enim\",\n                \"title\": \"mollit ipsum adipisicing magna id est\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"cupidatat dolor pariatur laboris anim officia\",\n            \"small\": \"dolor pariatur minim laboris ut deserunt non pariatur occaecat\",\n            \"alt\": \"pariatur cupidatat id pariatur deserunt officia\"\n        },\n        \"target\": \"officia et quis dolor sit adipisicing\",\n        \"paragraph\": \"nostrud ad non cillum sit nulla do aliqua elit\",\n        \"heading\": \"eu duis ullamco tempor ipsum occaecat excepteur ad\"\n    }\n}"
         },
         {
             "blockId": "BlockNetworkOverview",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockNetworkOverview\",\n    \"data\": {\n        \"id\": \"dolor cupidatat duis culpa eiusmod ut aute cillum esse excepteur\",\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 0,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockNetworkOverview\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4\n    }\n}"
         },
         {
             "blockId": "BlockPageNotFound",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "link",
                     "type": "ILink",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "image",
                     "type": "IImage",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "errorCode",
                     "type": "number",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockPageNotFound\",\n    \"data\": {\n        \"id\": \"excepteur labore sint nulla enim elit quis mollit aliqua exercitation aliquip ut excepteur ex\",\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\",\n        \"link\": {\n            \"target\": \"magna est est velit quis dolor qui mollit occaecat irure sit ullamco pariatur irure Lorem\",\n            \"type\": 1,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"veniam magna Lorem officia adipisicing culpa do nisi anim non\",\n            \"title\": \"reprehenderit irure est do consectetur officia ullamco amet cillum dolor pariatur\"\n        },\n        \"image\": {\n            \"normal\": \"reprehenderit nisi tempor tempor dolore fugiat sunt anim fugiat velit sint ut aliquip\",\n            \"small\": \"est tempor magna et nisi reprehenderit in et sit sit ut\",\n            \"alt\": \"fugiat officia dolor veniam esse in officia proident ea magna nisi dolore\"\n        },\n        \"paragraph\": \"aliquip excepteur enim non ipsum deserunt nisi enim occaecat fugiat\",\n        \"heading\": \"ipsum incididunt proident laboris nisi anim adipisicing duis qui qui aute officia veniam dolore\",\n        \"errorCode\": 4\n    }\n}"
+            "example": "{\n    \"id\": \"blockPageNotFound\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"link\": {\n            \"target\": \"proident ea amet esse reprehenderit officia qui nostrud anim\",\n            \"type\": 1,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"laboris ut nulla laboris aute exercitation velit\",\n            \"title\": \"minim minim sit deserunt consequat dolor\"\n        },\n        \"image\": {\n            \"normal\": \"ipsum fugiat do nisi quis cupidatat mollit anim duis\",\n            \"small\": \"adipisicing do ex officia duis Lorem excepteur ea nostrud mollit\",\n            \"alt\": \"tempor proident voluptate reprehenderit fugiat duis\"\n        },\n        \"paragraph\": \"est laboris tempor id magna sint magna\",\n        \"heading\": \"excepteur duis ex occaecat incididunt aliquip excepteur quis\",\n        \"errorCode\": 0\n    }\n}"
         },
         {
             "blockId": "BlockPathToPurchase",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockPathToPurchase\",\n    \"data\": {\n        \"id\": \"pariatur minim cupidatat qui incididunt eu aute culpa velit eiusmod non nostrud\",\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockPathToPurchase\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4\n    }\n}"
         },
         {
             "blockId": "BlockPersonaSelector",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "personas",
                     "type": "Array",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": [
+                        {
+                            "name": "heading",
+                            "type": "string",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "paragraph",
+                            "type": "string",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "personaType",
+                            "type": "PersonaType",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "link",
+                            "type": "ILink",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "image",
+                            "type": "IImage",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        }
+                    ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockPersonaSelector\",\n    \"data\": {\n        \"id\": \"aute commodo commodo ad eiusmod amet elit esse do ut et proident duis exercitation minim\",\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 0,\n        \"disableTransitionIn\": true,\n        \"blocks\": \"TODO: Array\",\n        \"personas\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockPersonaSelector\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"personas\": [\n            {\n                \"heading\": \"eiusmod in deserunt exercitation eu excepteur in elit\",\n                \"paragraph\": \"duis sunt enim nostrud reprehenderit anim duis eiusmod\",\n                \"personaType\": 1,\n                \"link\": {\n                    \"target\": \"sint duis deserunt nostrud tempor\",\n                    \"type\": 1,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"deserunt officia laboris adipisicing officia do magna mollit ipsum\",\n                    \"title\": \"excepteur sint eu nostrud sunt officia occaecat sunt ut\"\n                },\n                \"image\": {\n                    \"normal\": \"sunt ex proident et enim est laboris magna sit\",\n                    \"small\": \"mollit anim ipsum culpa nulla pariatur laboris duis\",\n                    \"alt\": \"do sint cillum sunt eu tempor culpa esse magna mollit\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockProgramModule",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockProgramModule\",\n    \"data\": {\n        \"id\": \"ullamco mollit et ea qui id cupidatat ea ut eu mollit\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockProgramModule\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 3\n    }\n}"
         },
         {
             "blockId": "BlockQuote",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "description",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "name",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "quote",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 },
                 {
                     "name": "image",
                     "type": "IImage",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockQuote\",\n    \"data\": {\n        \"id\": \"commodo laboris ut ea anim aliqua excepteur excepteur in et est\",\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"disableTransitionIn\": true,\n        \"blocks\": \"TODO: Array\",\n        \"description\": \"velit exercitation consequat veniam reprehenderit cillum dolor occaecat exercitation laborum irure anim labore officia duis\",\n        \"name\": \"ipsum qui mollit do culpa commodo anim do pariatur nulla pariatur\",\n        \"quote\": \"id cillum ut nostrud eu nulla dolore nulla velit duis qui\",\n        \"image\": {\n            \"normal\": \"mollit exercitation ad nulla cillum sunt minim laborum nostrud culpa reprehenderit sit cillum\",\n            \"small\": \"esse ex quis amet consectetur non cupidatat sit quis sint\",\n            \"alt\": \"sit anim officia Lorem incididunt quis est cupidatat excepteur anim non minim esse dolor\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockQuote\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"description\": \"sit ipsum quis tempor aute cillum\",\n        \"name\": \"dolor et consequat commodo dolore sunt\",\n        \"quote\": \"esse elit nostrud qui id excepteur\",\n        \"image\": {\n            \"normal\": \"ex deserunt veniam mollit do do ex\",\n            \"small\": \"est nostrud exercitation reprehenderit ex tempor\",\n            \"alt\": \"aliqua ad elit non sint aliquip\"\n        }\n    }\n}"
         },
         {
             "blockId": "BlockQuoteSecondary",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
+                    "name": "author",
+                    "type": "string",
+                    "required": true,
+                    "description": "The author displayed in the block",
+                    "properties": []
                 },
                 {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "name": "quote",
+                    "type": "string",
+                    "required": true,
+                    "description": "The quote displayed in the block",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockQuoteSecondary\",\n    \"data\": {\n        \"id\": \"exercitation cillum nostrud enim id ipsum reprehenderit veniam elit culpa velit pariatur\",\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 2,\n        \"disableTransitionIn\": true,\n        \"blocks\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockQuoteSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 5,\n        \"author\": \"anim laborum dolore ipsum voluptate et exercitation amet\",\n        \"quote\": \"ea velit amet veniam minim do voluptate fugiat\"\n    }\n}"
         },
         {
             "blockId": "BlockSmallHeading",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": ""
+                    "description": "",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockSmallHeading\",\n    \"data\": {\n        \"id\": \"amet cupidatat sit in cupidatat fugiat velit reprehenderit commodo sit veniam eu\",\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 1,\n        \"disableTransitionIn\": true,\n        \"blocks\": \"TODO: Array\",\n        \"heading\": \"incididunt occaecat do velit enim aute ex minim sit esse non nostrud cupidatat laborum\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockSmallHeading\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 4,\n        \"heading\": \"elit ea ex minim consectetur elit\"\n    }\n}"
         },
         {
             "blockId": "BlockSmallImage",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "image",
                     "type": "IImage",
                     "required": true,
-                    "description": ""
+                    "description": "The image displayed in the block",
+                    "properties": []
                 },
                 {
                     "name": "alignment",
                     "type": "Alignment",
                     "required": true,
-                    "description": ""
+                    "description": "The alignment of the small image",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockSmallImage\",\n    \"data\": {\n        \"id\": \"non cupidatat Lorem eu eiusmod ad consectetur ex ea aliquip occaecat amet laborum\",\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 2,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\",\n        \"image\": {\n            \"normal\": \"ea eu adipisicing eiusmod commodo deserunt anim duis nulla velit qui est exercitation consectetur\",\n            \"small\": \"ex aliqua enim exercitation consequat consectetur reprehenderit pariatur quis magna dolor minim deserunt\",\n            \"alt\": \"deserunt culpa eiusmod ipsum aute mollit adipisicing exercitation proident veniam anim\"\n        },\n        \"alignment\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blockSmallImage\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"image\": {\n            \"normal\": \"quis elit veniam cupidatat cillum\",\n            \"small\": \"eu culpa tempor sint minim labore\",\n            \"alt\": \"qui aute dolore exercitation ad exercitation et cillum velit\"\n        },\n        \"alignment\": 1\n    }\n}"
         },
         {
             "blockId": "BlockSmallInfo",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "link",
                     "type": "ILink",
                     "required": false,
-                    "description": "The link that is added to this block"
+                    "description": "The link that is added to this block",
+                    "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
-                    "description": "The main paragraph displayed in this block"
+                    "description": "The main paragraph displayed in this block",
+                    "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": "The main heading displayed in this block"
+                    "description": "The main heading displayed in this block",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockSmallInfo\",\n    \"data\": {\n        \"id\": \"tempor sunt eu nostrud eiusmod sit nostrud cupidatat ut sunt Lorem aute duis officia consequat\",\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 0,\n        \"disableTransitionIn\": false,\n        \"blocks\": \"TODO: Array\",\n        \"link\": {\n            \"target\": \"mollit fugiat pariatur labore sunt adipisicing dolore occaecat et quis mollit cupidatat\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"incididunt veniam esse do proident laborum laborum amet proident dolor culpa nisi\",\n            \"title\": \"incididunt labore quis aliquip amet dolor in aute aute qui enim elit ipsum\"\n        },\n        \"paragraph\": \"officia esse ut pariatur enim sunt ad incididunt nulla qui nulla deserunt laborum\",\n        \"heading\": \"reprehenderit velit do sit veniam labore nisi minim eiusmod ipsum\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockSmallInfo\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 3,\n        \"link\": {\n            \"target\": \"ad sit culpa excepteur dolor Lorem enim commodo\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"anim dolore esse commodo Lorem laborum magna\",\n            \"title\": \"laborum nisi ut minim mollit Lorem ullamco laboris elit\"\n        },\n        \"paragraph\": \"sit fugiat ex qui do eiusmod deserunt duis enim\",\n        \"heading\": \"laborum anim amet irure officia officia Lorem\"\n    }\n}"
         },
         {
             "blockId": "BlockStoryInfoImages",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "stories",
                     "type": "Array",
                     "required": true,
-                    "description": "The array containing the stories displayed in this block, todo: add support for nested types"
+                    "description": "The array containing the stories displayed in this block, todo: add support for nested types",
+                    "properties": [
+                        {
+                            "name": "heading",
+                            "type": "string",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "paragraph",
+                            "type": "string",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "background",
+                            "type": "IImage",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "backgroundBlurred",
+                            "type": "IImage",
+                            "required": true,
+                            "description": "",
+                            "properties": []
+                        }
+                    ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockStoryInfoImages\",\n    \"data\": {\n        \"id\": \"dolore velit minim non nulla enim ad ullamco aliquip ea labore cupidatat sunt\",\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"disableTransitionIn\": true,\n        \"blocks\": \"TODO: Array\",\n        \"stories\": \"TODO: Array\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockStoryInfoImages\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 1,\n        \"stories\": [\n            {\n                \"heading\": \"pariatur duis tempor in quis fugiat et\",\n                \"paragraph\": \"ad laborum aute consectetur mollit duis aute\",\n                \"background\": {\n                    \"normal\": \"exercitation nisi ad Lorem tempor excepteur adipisicing\",\n                    \"small\": \"labore proident tempor commodo do ea\",\n                    \"alt\": \"tempor laborum eu eiusmod deserunt dolor voluptate\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"est ut laboris id eiusmod aliqua ut eiusmod\",\n                    \"small\": \"consequat tempor laborum ex sunt aute id veniam\",\n                    \"alt\": \"ipsum duis nostrud cillum laborum laborum\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockText",
             "properties": [
                 {
-                    "name": "id",
-                    "type": "string",
-                    "required": false,
-                    "description": "the unique id of the object"
-                },
-                {
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
-                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements"
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
-                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize"
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
-                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)"
-                },
-                {
-                    "name": "disableTransitionIn",
-                    "type": "boolean",
-                    "required": false,
-                    "description": "If you want to disable the default transition in for the component, for example when you start nesting block components inside of other block components and you want to have control over the transition in"
-                },
-                {
-                    "name": "blocks",
-                    "type": "Array",
-                    "required": false,
-                    "description": "The blocks inside this block"
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "properties": []
                 },
                 {
                     "name": "html",
                     "type": "string",
                     "required": true,
-                    "description": "The html that will be rendered in the block"
+                    "description": "The html that will be rendered in the block",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockText\",\n    \"data\": {\n        \"id\": \"enim est dolor quis sit veniam irure elit occaecat cupidatat\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"disableTransitionIn\": true,\n        \"blocks\": \"TODO: Array\",\n        \"html\": \"aute sit exercitation fugiat voluptate enim irure duis laboris id laborum nisi sit id\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockText\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 3,\n        \"html\": \"incididunt amet amet laboris incididunt dolor voluptate aute ea laboris\"\n    }\n}"
         }
     ],
     "references": [
@@ -1575,19 +1531,22 @@
                     "name": "normal",
                     "type": "string",
                     "required": true,
-                    "description": "The large version of the image"
+                    "description": "The large version of the image",
+                    "properties": []
                 },
                 {
                     "name": "small",
                     "type": "string",
                     "required": true,
-                    "description": "The small version of the image"
+                    "description": "The small version of the image",
+                    "properties": []
                 },
                 {
                     "name": "alt",
                     "type": "string",
                     "required": true,
-                    "description": "The alt text of the image"
+                    "description": "The alt text of the image",
+                    "properties": []
                 }
             ]
         },
@@ -1598,31 +1557,77 @@
                     "name": "target",
                     "type": "string",
                     "required": true,
-                    "description": "The target of the link"
+                    "description": "The target of the link",
+                    "properties": []
                 },
                 {
                     "name": "type",
                     "type": "LinkType",
                     "required": true,
-                    "description": "The type of the link"
+                    "description": "The type of the link",
+                    "properties": []
                 },
                 {
                     "name": "deeplink",
                     "type": "Object",
                     "required": false,
-                    "description": "The deeplink data of the link"
+                    "description": "The deeplink data of the link",
+                    "properties": []
                 },
                 {
                     "name": "label",
                     "type": "string",
                     "required": false,
-                    "description": "The label displayed in the action"
+                    "description": "The label displayed in the action",
+                    "properties": []
                 },
                 {
                     "name": "title",
                     "type": "string",
                     "required": false,
-                    "description": "The title used for accessibility"
+                    "description": "The title used for accessibility",
+                    "properties": []
+                }
+            ]
+        },
+        {
+            "name": "IHeroMainSlideStatistics",
+            "properties": [
+                {
+                    "name": "heading",
+                    "type": "string",
+                    "required": true,
+                    "description": "The statistics heading",
+                    "properties": []
+                },
+                {
+                    "name": "stats",
+                    "type": "Array",
+                    "required": true,
+                    "description": "The statistics to be displayed",
+                    "properties": [
+                        {
+                            "name": "heading",
+                            "type": "string",
+                            "required": true,
+                            "description": "The heading added to the statistic",
+                            "properties": []
+                        },
+                        {
+                            "name": "description",
+                            "type": "string",
+                            "required": true,
+                            "description": "The description about the statistic",
+                            "properties": []
+                        },
+                        {
+                            "name": "value",
+                            "type": "number",
+                            "required": true,
+                            "description": "The value of the statistic",
+                            "properties": []
+                        }
+                    ]
                 }
             ]
         },
@@ -1633,25 +1638,29 @@
                     "name": "image",
                     "type": "IImage",
                     "required": true,
-                    "description": "the base paths of the images in the sequences without the extension"
+                    "description": "the base paths of the images in the sequences without the extension",
+                    "properties": []
                 },
                 {
                     "name": "total",
                     "type": "number",
                     "required": true,
-                    "description": "The total amount of frames in the image sequence"
+                    "description": "The total amount of frames in the image sequence",
+                    "properties": []
                 },
                 {
                     "name": "extension",
                     "type": "string",
                     "required": true,
-                    "description": "The extension of the image"
+                    "description": "The extension of the image",
+                    "properties": []
                 },
                 {
                     "name": "autoplay",
                     "type": "boolean",
                     "required": false,
-                    "description": "do we want to autoplay the sequence or want to trigger it manually"
+                    "description": "do we want to autoplay the sequence or want to trigger it manually",
+                    "properties": []
                 }
             ]
         }
@@ -1684,6 +1693,27 @@
                 {
                     "name": "RIGHT",
                     "value": 1
+                }
+            ]
+        },
+        {
+            "name": "PersonaType",
+            "properties": [
+                {
+                    "name": "SMALL_BUSINESS",
+                    "value": 0
+                },
+                {
+                    "name": "AUTOMOTIVE",
+                    "value": 1
+                },
+                {
+                    "name": "ENTERPRISE",
+                    "value": 2
+                },
+                {
+                    "name": "LOCAL_MEDIA_BUYING",
+                    "value": 3
                 }
             ]
         }
