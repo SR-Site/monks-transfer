@@ -139,6 +139,11 @@
 		}
 	}
 
+	// Filter Overlay
+	.filter-overlay {
+		display: none;
+	}
+
 	// Select Anchor
 	.button-select-anchor {
 		position: absolute;
@@ -153,6 +158,79 @@
 			color: $colorTertiary;
 			transition: color 250ms ease(linear);
 			@include size(7px, 4px);
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.menu {
+			display: none;
+		}
+
+		// Filter Overlay
+		.filter-overlay {
+			position: fixed;
+			display: block;
+			background-color: white;
+			left: 0;
+			bottom: 0;
+			@include size(100%, $sizeGrid*4);
+			transition: height 250ms ease(easeOutExpo);
+			overflow: hidden;
+
+			.panel-inner-content {
+				padding: $sizeGrid*2;
+			}
+
+			.filter-label {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: mobile-size(2.8rem);
+				height: $sizeGrid*4;
+			}
+
+			// Open State
+			&.is-open {
+				height: calc(100% - #{$sizeHeaderMobile});
+			}
+
+			.component-button-circle-close {
+				position: absolute;
+				top: $sizeGrid;
+				right: $sizeGrid;
+				z-index: 1;
+			}
+		}
+
+		// Filter Overlay Content
+		.filter-overlay-content {
+			position: relative;
+			height: calc( 100% - #{$sizeGrid*4});
+			overflow: hidden;
+		}
+
+		// Filter Overlay Group
+		.filter-overlay-group {
+
+			&:not(:first-child) {
+				margin-top: $sizeGrid*2;
+			}
+
+			.label {
+				margin-bottom: $sizeGrid/2;
+				font-size: mobile-size(2.4rem);
+				font-weight: 600;
+				font-family: $fontOpenSans;
+			}
+		}
+
+		// Filter Overlay Tags
+		.filter-overlay-tags {
+
+			.component-button-tag {
+				margin-top: $sizeGrid/2;
+			}
 		}
 	}
 }

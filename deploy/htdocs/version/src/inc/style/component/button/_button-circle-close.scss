@@ -26,4 +26,15 @@
 			color: white;
 		}
 	}
+
+	@include respond-to(SMALL) {
+
+		&.large {
+			@include size($sizeGrid*1.5);
+
+			.icon {
+				@include size(6px);
+			}
+		}
+	}
 }

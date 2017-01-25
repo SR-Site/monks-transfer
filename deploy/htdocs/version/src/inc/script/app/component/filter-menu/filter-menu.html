@@ -63,4 +63,57 @@
 		</ul>
 	</div>
 
+	<div class="filter-overlay" data-bind="css: {'is-open': $root.filterOverlayIsOpen()}">
+
+		<div class="filter-overlay-content">
+
+			<!-- ko component: {
+				name: 'button/button-circle-close',
+				onComplete: $root.controller.callbackCounter.get(),
+				options: {
+					action: {
+						event: $root.toggleFilterOverlay.bind($root)
+					},
+					size: $root.ButtonSize.LARGE
+				}
+			} --><!-- /ko -->
+
+			<div class="scroll-wrapper js-scroll-wrapper" data-bind="scrollbar:{
+				setContentSize:false
+				}">
+				<div class="scroll-content" data-scroll-content>
+					<div class="panel-inner-content" data-content-inner>
+
+						<!-- ko foreach: filters -->
+						<div class="filter-overlay-group">
+							<span class="label" data-bind="html: label"></span>
+
+							<div class="filter-overlay-tags" data-bind="foreach: options">
+								<!-- ko component: {
+									name: 'button/button-tag',
+									onComplete: $root.controller.callbackCounter.get(),
+									options: {
+										action: {
+											label: 'myLabel',
+											event: (function(){console.log('click')})
+										},
+										size: $root.ButtonSize.LARGE
+									}
+								} --><!-- /ko -->
+							</div>
+						</div>
+						<!-- /ko -->
+					</div>
+				</div>
+
+				<div class="scroll-bar" data-scroll-bar><div class="knob" data-scroll-knob></div></div>
+			</div>
+		</div>
+
+		<button class="filter-label button" data-bind="tap: $root.handleFilterOverlayLabelClick.bind($root)">
+			<!-- ko text: label --><!-- /ko -->
+			<span class="icon" data-bind="icon: 'filter'"></span>
+		</button>
+
+	</div>
 </div>
