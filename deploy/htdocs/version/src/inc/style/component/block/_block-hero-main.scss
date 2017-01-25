@@ -81,9 +81,12 @@
 
 
 	@include respond-to(SMALL){
-		@include aspect-ratio($sizeGrid * 11, $sizeGrid * 24);
 		min-height: 0;
-		max-height: calc(100vh - #{$sizeGrid * 2});
+		height: calc(100vh - #{$sizeGrid * 2});
+
+		&:before {
+			display: none;
+		}
 
 		.background-triangle {
 			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 48);

@@ -38,8 +38,8 @@ abstract class DefaultInfiniteCarousel extends EventDispatcher
 		super();
 
 		this._sliderViewPort = sliderViewPort;
-		this._sliderWrapper = <HTMLElement>this._sliderViewPort.querySelector('.slides');
-		this._slides = Array.prototype.slice.call(this._sliderWrapper.querySelectorAll('.slide'));
+		this._sliderWrapper = <HTMLElement>this._sliderViewPort.querySelector('.js-slides');
+		this._slides = Array.prototype.slice.call(this._sliderWrapper.querySelectorAll('.js-slide'));
 
 		// Listen to the current page change
 		this._destructibles.addKOSubscription(this._currentPage.subscribe(this.handlePageChange.bind(this)));
@@ -431,6 +431,14 @@ abstract class DefaultInfiniteCarousel extends EventDispatcher
 		{
 			this._destructibles.destruct();
 			this._destructibles = null;
+		}
+
+		if(this._sliderWrapper) {
+			TweenLite.set(this._sliderWrapper, {clearProps: 'height, x'});
+		}
+
+		if(this._slides) {
+			TweenLite.set(this._slides, {clearProps: 'height, x'});
 		}
 
 		this._realCurrentPage = null;

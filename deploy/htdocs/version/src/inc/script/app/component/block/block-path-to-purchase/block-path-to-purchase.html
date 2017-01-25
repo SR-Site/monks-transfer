@@ -6,15 +6,17 @@
 				state: $root.deviceState()
 			}" />
 
-		<ul class="steps site-frame" data-bind="foreach: data.steps">
-			<li class="step">
-				<div class="step-content">
-					<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
-					<h2 class="copy copy-02" data-bind="html: heading"></h2>
-					<p class="copy copy-01" data-bind="html: paragraph"></p>
-				</div>
-				<div class="step-edge"></div>
-			</li>
-		</ul>
+		<div class="slider-viewport infinite-carousel js-image-carousel">
+			<ul class="steps site-frame js-slides" data-bind="foreach: data.steps">
+				<li class="step js-slide">
+					<div class="step-content">
+						<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
+						<h2 class="copy copy-02" data-bind="html: heading"></h2>
+						<p class="copy copy-01" data-bind="html: paragraph"></p>
+					</div>
+					<div class="step-edge"></div>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>

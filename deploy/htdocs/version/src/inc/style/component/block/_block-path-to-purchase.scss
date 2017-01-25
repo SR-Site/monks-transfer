@@ -9,11 +9,15 @@
 
 	.steps {
 		@extend %reset-list;
+		display: flex;
+		justify-content: center;
+		overflow: visible;
+	}
+
+	.slider-viewport {
 		@include pos(auto, auto, $sizeGrid * 2, 50%);
 		@include size(auto, $stepHeight);
 		position: absolute;
-		display: flex;
-		justify-content: center;
 		overflow: visible;
 		transform: translateX(-50%);
 	}
@@ -188,22 +192,29 @@
 		}
 
 		.steps {
-			display: block;
-			white-space: nowrap;
+			height: 100%;
+		}
+
+		.slider-viewport {
+			overflow: hidden;
+			transform: none;
 			position: relative;
-			height: auto;
 			left: $sizeGrid;
 			bottom: 0;
-			transform: none;
-			font-size: 0;
-			width: calc(100vw - #{$sizeGrid*2});
-			overflow: hidden;
+			@include size(calc(100vw - #{$sizeGrid*2}), $sizeGrid*12);
 		}
 
 		.step {
-			@include size(100%, $sizeGrid*12);
-			display: inline-block;
-			transform: none !important;
+			@include coverer();
+			@include size(100%);
+
+			&:nth-child(2n + 0) {
+				transform: none;
+			}
+
+			&:nth-child(4n + 0) {
+				transform: none;
+			}
 
 			.step-content {
 				padding: $sizeGrid*2 !important;

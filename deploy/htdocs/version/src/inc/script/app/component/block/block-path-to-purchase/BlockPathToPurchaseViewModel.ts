@@ -7,6 +7,7 @@ import StringUtils from "../../../../lib/temple/util/type/StringUtils";
 
 class BlockPathToPurchaseViewModel extends DefaultComponentViewModel<BlockPathToPurchaseController, IBlockPathToPurchaseOptions>
 {
+	public currentPage:KnockoutObservable<number> = ko.observable(0);
 	public StringUtils: Class = StringUtils;
 
 	/**
