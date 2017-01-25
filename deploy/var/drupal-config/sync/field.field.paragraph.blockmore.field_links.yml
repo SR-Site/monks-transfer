@@ -1,0 +1,66 @@
+uuid: 9560e081-4f72-49c4-a0cf-e8e375a71656
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_links
+    - paragraphs.paragraphs_type.blockmore
+    - paragraphs.paragraphs_type.link
+  module:
+    - entity_reference_revisions
+id: paragraph.blockmore.field_links
+field_name: field_links
+entity_type: paragraph
+bundle: blockmore
+label: Tags
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      link: link
+    target_bundles_drag_drop:
+      blockhowtoadvertise:
+        weight: 14
+        enabled: false
+      blockimagecalltoactions:
+        weight: 15
+        enabled: false
+      blockimagecarousel:
+        weight: 16
+        enabled: false
+      blockimagewithcontent:
+        weight: 17
+        enabled: false
+      blocklatest:
+        weight: 18
+        enabled: false
+      blockmore:
+        weight: 19
+        enabled: false
+      broadcastschedule:
+        weight: 20
+        enabled: false
+      calltoaction:
+        weight: 21
+        enabled: false
+      link:
+        enabled: true
+        weight: 22
+      showmetric:
+        weight: 23
+        enabled: false
+      slide:
+        weight: 24
+        enabled: false
+      step:
+        weight: 25
+        enabled: false
+      styles:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

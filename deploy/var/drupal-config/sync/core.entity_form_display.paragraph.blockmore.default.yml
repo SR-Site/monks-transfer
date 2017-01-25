@@ -1,0 +1,87 @@
+uuid: c9a74071-c884-43b5-9040-c795750d70bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockmore.field_articles
+    - field.field.paragraph.blockmore.field_heading
+    - field.field.paragraph.blockmore.field_links
+    - field.field.paragraph.blockmore.field_styles
+    - paragraphs.paragraphs_type.blockmore
+  module:
+    - entity_reference_revisions
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+    group_links:
+      children:
+        - field_links
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        label: Links
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Links
+id: paragraph.blockmore.default
+targetEntityType: paragraph
+bundle: blockmore
+mode: default
+content:
+  field_articles:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+  field_heading:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_links:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: link
+    third_party_settings: {  }
+  field_styles:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: styles
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

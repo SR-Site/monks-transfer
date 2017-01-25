@@ -1,0 +1,19 @@
+uuid: d149f7c6-df81-4ebe-8740-f2bcaeeb9e28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.blockmore
+id: paragraph.blockmore.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: blockmore
+label: Heading
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

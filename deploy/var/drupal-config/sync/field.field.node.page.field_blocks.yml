@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.blockimagecarousel
     - paragraphs.paragraphs_type.blockimagewithcontent
     - paragraphs.paragraphs_type.blocklatest
+    - paragraphs.paragraphs_type.blockmore
   module:
     - entity_reference_revisions
 id: node.page.field_blocks
@@ -31,6 +32,7 @@ settings:
       blockimagewithcontent: blockimagewithcontent
       blocklatest: blocklatest
       blockimagecarousel: blockimagecarousel
+      blockmore: blockmore
     target_bundles_drag_drop:
       blockhowtoadvertise:
         enabled: true
@@ -53,12 +55,12 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
-      link:
-        weight: 13
-        enabled: false
       blocklatest:
         enabled: true
         weight: 13
+      link:
+        weight: 13
+        enabled: false
       blockimagecarousel:
         enabled: true
         weight: 13
@@ -68,4 +70,7 @@ settings:
       slide:
         weight: 18
         enabled: false
+      blockmore:
+        enabled: true
+        weight: 19
 field_type: entity_reference_revisions
