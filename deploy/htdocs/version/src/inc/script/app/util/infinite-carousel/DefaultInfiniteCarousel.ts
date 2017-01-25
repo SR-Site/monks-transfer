@@ -188,6 +188,8 @@ abstract class DefaultInfiniteCarousel extends EventDispatcher
 	 */
 	protected handleResize(): void
 	{
+		if(this.isDestructed()) return;
+
 		var height: number = 0;
 
 		if(!this._isFixedHeight)

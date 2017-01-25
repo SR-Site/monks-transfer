@@ -29,6 +29,12 @@
 		.latest-articles {
 			padding-left: $sizeGrid;
 			padding-right: $sizeGrid;
+
+
+			.component-block-article-teaser:not(:first-child) {
+				display: none;
+			}
+
 		}
 
 		.header {
@@ -44,4 +50,5 @@
 			}
 		}
 	}
+
 }
