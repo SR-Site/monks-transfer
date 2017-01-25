@@ -18,8 +18,20 @@ export interface IBlockHowToAdvertiseOptions extends IDefaultComponentOptions
 	 * @description The steps displayed in the block
 	 */
 	steps: Array<{
+		/**
+		 * @property
+		 * @description The heading displayed on the step
+		 */
 		heading: string;
+		/**
+		 * @property
+		 * @description The paragraph displayed on the step
+		 */
 		paragraph: string;
+		/**
+		 * @property
+		 * @description the icon displayed on the step, ask front-end for the available icons
+		 */
 		icon: string;
 	}>
 }
