@@ -1,5 +1,14 @@
 .component-block-hero-tertiary {
+	@include aspect-ratio(1440px, 360px);
+
 	img {
-		@include size(100%, auto);
+		@include size(100%);
+		top: 0;
+		position: absolute;
+		object-fit: cover;
+	}
+
+	@include respond-to(SMALL){
+		@include aspect-ratio(640px, 360px);
 	}
 }

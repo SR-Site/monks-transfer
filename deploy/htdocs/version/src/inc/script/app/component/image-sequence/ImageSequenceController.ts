@@ -78,10 +78,7 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 		let frameCounter = {frame: 0};
 		let totalDuration = this.options.imageSequence.total / ImageSequenceController.FPS;
 
-		if(this._playAnimation)
-		{
-			this._playAnimation.kill();
-		}
+		this.stop();
 
 		this._playAnimation = TweenLite.to(frameCounter, totalDuration, {
 			ease: Linear.easeNone,
@@ -91,6 +88,19 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 				this.seek(Math.round(frameCounter.frame));
 			}
 		})
+	}
+
+	/**
+	 * @public
+	 * @method stop
+	 */
+	public stop(): void
+	{
+		if(this._playAnimation)
+		{
+			this._playAnimation.kill();
+			this._playAnimation = null;
+		}
 	}
 
 	/**
@@ -172,6 +182,7 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	 */
 	private handleDeviceStateChange(currentState: number): void
 	{
+		this.stop();
 		this.loadAllCurrentDeviceStateImages()
 			.then(() => this.drawFrame());
 	}

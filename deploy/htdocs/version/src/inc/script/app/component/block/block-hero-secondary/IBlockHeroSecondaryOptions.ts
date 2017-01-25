@@ -5,6 +5,11 @@ export interface IBlockHeroSecondaryOptions extends IDefaultComponentOptions
 {
 	/**
 	 * @property
+	 * @description The main triangle background color, rgba or hexa code
+	 */
+	backgroundColor?: string;
+	/**
+	 * @property
 	 * @description The main heading displayed on the hero secondary
 	 */
 	heading: string;

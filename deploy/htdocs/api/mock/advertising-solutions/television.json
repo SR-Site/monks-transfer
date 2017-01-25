@@ -277,18 +277,39 @@
 				}
 			},
 			{
-				"id": "mapSecondary",
+				"id": "map",
 				"data": {
 					"windowed": true,
-					"marginTop": 2,
-					"heading": "Use Data and Highly <span class='highlight'>Targeted</span> Geographic <span class='highlight'>Zones</span>",
-					"subHeading": "We're champions of data.",
-					"paragraph": "<p>Knowing your customer demographic and then using geographic targeting is a powerful way to reach the right people.</p><p> Learn about our scale of reach across the country.</p>",
-					"link": {
-						"label": "Explore the market",
-						"title": "Explore the market",
-						"target": "map",
-						"type": 2
+					"steps": [
+						{
+							"label": "200m",
+							"heading": "200m",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						},
+						{
+							"label": "81%",
+							"heading": "81%",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						},
+						{
+							"label": "15 years",
+							"heading": "15 years",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						},
+						{
+							"label": "110+",
+							"heading": "110+",
+							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+						}
+					],
+					"imageSequence": {
+						"image": {
+							"normal": "data/sequence/trailer/trailer_",
+							"small": "data/sequence/trailer/trailer_",
+							"alt": "Alt text"
+						},
+						"extension": ".jpg",
+						"total": 301
 					}
 				}
 			},

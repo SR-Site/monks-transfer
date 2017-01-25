@@ -8,6 +8,7 @@
 				"id": "heroSecondary",
 				"data": {
 					"overlap": true,
+					"backgroundColor": "rgba(245, 161, 27, 0.95)",
 					"heading": "Kernel, a Full Service Creative Agency.",
 					"link": {
 						"label": "Find out more",
