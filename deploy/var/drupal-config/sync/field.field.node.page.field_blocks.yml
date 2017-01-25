@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.blockimagecalltoactions
     - paragraphs.paragraphs_type.blockimagecarousel
     - paragraphs.paragraphs_type.blockimagewithcontent
+    - paragraphs.paragraphs_type.blocklatest
   module:
     - entity_reference_revisions
 id: node.page.field_blocks
@@ -28,6 +29,7 @@ settings:
       blockhowtoadvertise: blockhowtoadvertise
       blockimagecalltoactions: blockimagecalltoactions
       blockimagewithcontent: blockimagewithcontent
+      blocklatest: blocklatest
       blockimagecarousel: blockimagecarousel
     target_bundles_drag_drop:
       blockhowtoadvertise:
@@ -51,12 +53,15 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
-      blockimagecarousel:
-        enabled: true
-        weight: 13
       link:
         weight: 13
         enabled: false
+      blocklatest:
+        enabled: true
+        weight: 13
+      blockimagecarousel:
+        enabled: true
+        weight: 13
       step:
         weight: 15
         enabled: false

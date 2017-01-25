@@ -2,7 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\Node;
 
-use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
+use Drupal\spectrum_rest\Plugin\RestBaseParagraphBlock;
 
 /**
  * Returns the structured data of an entity.
@@ -16,7 +16,7 @@ use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
  *   view_mode = "teaser"
  * )
  */
-class NodeArticleTeaserV1 extends RestEntityProcessorBase {
+class NodeArticleTeaserV1 extends RestBaseParagraphBlock {
 
   /**
    * {@inheritdoc}
@@ -24,10 +24,11 @@ class NodeArticleTeaserV1 extends RestEntityProcessorBase {
   protected function getItemData($entity) {
 
     $data = [
-      "title" => $entity->label(),
-      "excerpt" => $this->fieldProcessor->getFieldData($entity->field_excerpt),
-      "image" => $this->fieldProcessor->getFieldData($entity->field_image),
-      "tags" => $this->fieldProcessor->getFieldData($entity->field_tags),
+      "target" => $this->aliasManager->getAliasByPath('/' . $entity->toUrl()->getInternalPath()),
+      "heading" => $entity->label(),
+      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_content')),
+      "image" => $this->image($entity->get('field_image')),
+      "tags" => $this->fieldProcessor->getFieldData($entity->get('field_tags')),
     ];
 
     return $data;

@@ -1,0 +1,7 @@
+uuid: 647d154f-291c-416c-b25f-6cb2dc7d1f27
+langcode: en
+status: true
+dependencies: {  }
+id: blocklatest
+label: 'Block latest'
+behavior_plugins: {  }

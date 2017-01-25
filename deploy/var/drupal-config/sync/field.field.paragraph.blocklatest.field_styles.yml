@@ -1,0 +1,63 @@
+uuid: f8dfcb9e-c330-4973-a0dc-0b0a57516313
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_styles
+    - paragraphs.paragraphs_type.blocklatest
+    - paragraphs.paragraphs_type.styles
+  module:
+    - entity_reference_revisions
+id: paragraph.blocklatest.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: blocklatest
+label: Styles
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styles: styles
+    target_bundles_drag_drop:
+      blocklatest:
+        weight: 13
+        enabled: false
+      blockhowtoadvertise:
+        weight: 14
+        enabled: false
+      blockimagecalltoactions:
+        weight: 15
+        enabled: false
+      blockimagecarousel:
+        weight: 16
+        enabled: false
+      blockimagewithcontent:
+        weight: 17
+        enabled: false
+      broadcastschedule:
+        weight: 18
+        enabled: false
+      calltoaction:
+        weight: 19
+        enabled: false
+      link:
+        weight: 20
+        enabled: false
+      showmetric:
+        weight: 21
+        enabled: false
+      slide:
+        weight: 22
+        enabled: false
+      step:
+        weight: 23
+        enabled: false
+      styles:
+        enabled: true
+        weight: 24
+field_type: entity_reference_revisions
