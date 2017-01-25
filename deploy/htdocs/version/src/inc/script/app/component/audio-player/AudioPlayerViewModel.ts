@@ -6,7 +6,7 @@ import ko = require('knockout');
 
 class AudioPlayerViewModel extends DefaultComponentTransitionViewModel<AudioPlayerController, IAudioPlayerOptions>
 {
-	// public isPlaying:knockoutObservable
+	public isPlaying:KnockoutObservable<boolean> = ko.observable(false);
 
 	/**
 	 * @public

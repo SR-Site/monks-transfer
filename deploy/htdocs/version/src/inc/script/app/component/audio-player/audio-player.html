@@ -1,7 +1,7 @@
 <div class="component-audio-player">
 	<!-- ko component: {
 		name: 'button/button-play-circle',
-		onComplete: $root.controller.callbackCounter.get(),
+		onComplete: $root.controller.callbackCounter.get($root.controller.handleButtonPlayCircleReady.bind($root.controller)),
 		options: {
 			action: {
 				event: $root.handlePlayClick.bind($root)

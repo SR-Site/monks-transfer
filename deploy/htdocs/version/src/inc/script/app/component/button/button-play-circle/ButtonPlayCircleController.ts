@@ -8,17 +8,17 @@ import Log from "lib/temple/util/Log";
 class ButtonPlayCircleController extends DefaultButtonController<ButtonPlayCircleViewModel, IButtonPlayCircleOptions>
 {
 	/**
-	 *	Instance of Log debug utility for debug logging
-	 *	@property _debug
-	 *	@private
+	 *    Instance of Log debug utility for debug logging
+	 *    @property _debug
+	 *    @private
 	 */
-	private _debug:Log = new Log('app.component.ButtonPlayCircle');
+	private _debug: Log = new Log('app.component.ButtonPlayCircle');
 
 	/**
-	 *	Overrides AbstractPageController.init()
-	 *	@method init
+	 *    Overrides AbstractPageController.init()
+	 *    @method init
 	 */
-	public init():void
+	public init(): void
 	{
 		super.init();
 
@@ -26,10 +26,20 @@ class ButtonPlayCircleController extends DefaultButtonController<ButtonPlayCircl
 	}
 
 	/**
-	* @protected
-	* @method allComponentsLoaded
-	*/
-	protected allComponentsLoaded():void
+	 * @public
+	 * @method get isPlaying
+	 * @returns {KnockoutObservable<boolean>|(()=>boolean)}
+	 */
+	public get isPlaying(): KnockoutObservable<boolean>
+	{
+		return this.viewModel.isPlaying;
+	}
+
+	/**
+	 * @protected
+	 * @method allComponentsLoaded
+	 */
+	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new ButtonPlayCircleTransitionController(this.element, this);
 
@@ -40,7 +50,7 @@ class ButtonPlayCircleController extends DefaultButtonController<ButtonPlayCircl
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 
 		// always call this last

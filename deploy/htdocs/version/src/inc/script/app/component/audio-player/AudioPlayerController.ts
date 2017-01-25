@@ -4,6 +4,7 @@ import IAudioPlayerOptions from 'app/component/audio-player/IAudioPlayerOptions'
 import AudioPlayerViewModel from 'app/component/audio-player/AudioPlayerViewModel';
 
 import Log from "lib/temple/util/Log";
+import ButtonPlayCircleController from "../button/button-play-circle/ButtonPlayCircleController";
 
 class AudioPlayerController extends DefaultComponentTransitionController<AudioPlayerViewModel, IAudioPlayerOptions>
 {
@@ -27,6 +28,15 @@ class AudioPlayerController extends DefaultComponentTransitionController<AudioPl
 		this._debug.log('Init');
 
 		this.transitionController = new AudioPlayerTransitionController(this.element, this);
+	}
+
+	/**
+	 * @public
+	 * @method handleButtonPlayCircleReady
+	 */
+	public handleButtonPlayCircleReady(controller: ButtonPlayCircleController): void
+	{
+		this.applyThreeWayBinding(controller.isPlaying, this.viewModel.isPlaying);
 	}
 
 	/**
