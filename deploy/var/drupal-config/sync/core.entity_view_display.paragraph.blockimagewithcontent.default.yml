@@ -1,0 +1,68 @@
+uuid: e1d4318f-6fe2-4595-9b8f-ec0c9c6c0d38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockimagewithcontent.field_cropped_image
+    - field.field.paragraph.blockimagewithcontent.field_heading
+    - field.field.paragraph.blockimagewithcontent.field_image
+    - field.field.paragraph.blockimagewithcontent.field_link
+    - field.field.paragraph.blockimagewithcontent.field_paragraph
+    - field.field.paragraph.blockimagewithcontent.field_styles
+    - paragraphs.paragraphs_type.blockimagewithcontent
+  module:
+    - entity_reference_revisions
+    - image
+    - text
+id: paragraph.blockimagewithcontent.default
+targetEntityType: paragraph
+bundle: blockimagewithcontent
+mode: default
+content:
+  field_cropped_image:
+    weight: 0
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+  field_heading:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_image:
+    weight: 4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_link:
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+  field_paragraph:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_styles:
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden: {  }

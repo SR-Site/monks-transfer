@@ -1,0 +1,103 @@
+uuid: 344899b8-51ea-4afb-821f-245ad52e47c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockimagewithcontent.field_cropped_image
+    - field.field.paragraph.blockimagewithcontent.field_heading
+    - field.field.paragraph.blockimagewithcontent.field_image
+    - field.field.paragraph.blockimagewithcontent.field_link
+    - field.field.paragraph.blockimagewithcontent.field_paragraph
+    - field.field.paragraph.blockimagewithcontent.field_styles
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.blockimagewithcontent
+  module:
+    - field_group
+    - image
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+    group_link:
+      children:
+        - field_link
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        label: Link
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Link
+id: paragraph.blockimagewithcontent.default
+targetEntityType: paragraph
+bundle: blockimagewithcontent
+mode: default
+content:
+  field_cropped_image:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_heading:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_image:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_link:
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+  field_paragraph:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_styles:
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: styles
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true
