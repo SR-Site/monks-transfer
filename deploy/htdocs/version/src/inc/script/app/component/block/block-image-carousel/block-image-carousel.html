@@ -32,5 +32,15 @@
 				</li>
 			</ul>
 		</div>
+
+		<!-- ko component: {
+			name: 'paginator-dashed',
+			onComplete: $root.controller.callbackCounter.get($root.controller.handlePaginatorReady.bind($root.controller)),
+			options: {
+				items: data.slides,
+				currentPage: $root.currentPage,
+				orientation: $root.Orientation.HORIZONTAL
+			}
+		} --><!-- /ko -->
 	</div>
 </div>
