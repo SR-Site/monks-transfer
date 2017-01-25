@@ -70,4 +70,48 @@
 			}
 		}
 	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+		padding: 0 $sizeGrid*2;
+
+		.header {
+			padding: 0 0 $sizeGrid*4;
+
+			.heading {
+				margin-bottom: $sizeGrid*2;
+			}
+
+			.component-button-main {
+				margin-bottom: 0;
+			}
+		}
+
+		.advertisement-steps {
+			height: auto;
+		}
+
+		.steps {
+			text-align: center;
+		}
+
+		.step {
+			width: calc(100vw - 16rem);
+			max-width: calc(100vw - 16rem) !important;
+			height: auto;
+			white-space: normal;
+
+			aside {
+				width: 100%;
+			}
+
+			.copy-02 {
+				margin-bottom: $sizeGrid/2;
+			}
+		}
+
+		figure {
+			@include size($sizeGrid * 8 !important);
+		}
+	}
 }

@@ -479,6 +479,7 @@
 			{
 				"id": "pathToPurchase",
 				"data": {
+					"marginTop": 2,
 					"steps": [
 						{
 							"heading": "Dream",
@@ -531,6 +532,7 @@
 			{
 				"id": "personaSelector",
 				"data": {
+					"marginTop": 2,
 					"personas": [
 						{
 							"heading": "Small businesses",
