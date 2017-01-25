@@ -297,24 +297,4 @@ module.exports = function( grunt )
 			return fs.statSync( path.join( src, file ) ).isDirectory();
 		} );
 	}
-
-	/**
-	 * Finds the relative position of a number in a range between min and max, and returns its normalized value between 0 and 1.
-	 *
-	 * @method normalizedValue
-	 * @param {number} value The value to normalize.
-	 * @param {number} min Lowest range value.
-	 * @param {number} max Highest range value.
-	 * @return {number} The normalized value between 0 and 1.
-	 * @example
-	 * ```
-	 * NumberUtils.normalizedValue(25, 0, 100); // 0.25
-	 * NumberUtils.normalizedValue(0, -1, 1); // 0.5
-	 * ```
-	 */
-	function randomInRange( start, end )
-	{
-		var d = end - start;
-		return start + (d - Math.random() * d);
-	}
 };
