@@ -42,7 +42,7 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 		this.transitionController.addEventListener(DefaultTransitionController.TRANSITION_IN_START, () =>
 		{
 			// Open the first image
-			this.updateBackgroundImage(0)
+			this.updateBackgroundImage(0);
 
 			setTimeout(() =>
 			{

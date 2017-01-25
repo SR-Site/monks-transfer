@@ -1,5 +1,6 @@
 import IDefaultComponentOptions from "../IDefaultComponentOptions";
 import ILink from "../../../data/interface/action/ILink";
+import IImage from "../../../data/interface/media/IImage";
 
 export interface IBlockHeroSecondaryOptions extends IDefaultComponentOptions
 {
@@ -23,6 +24,12 @@ export interface IBlockHeroSecondaryOptions extends IDefaultComponentOptions
 	 * @description Think added to the hero main
 	 */
 	link: ILink;
+	/**
+	 * @property
+	 * @description The background image
+	 */
+	background: IImage;
+
 }
 
 export default IBlockHeroSecondaryOptions;
