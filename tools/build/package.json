@@ -18,10 +18,7 @@
   "dependencies": {
     "camelcase": "^4.0.0",
     "jsonfile": "^2.4.0",
-    "lorem-ipsum": "^1.0.3",
-    "object-inspect": "^1.2.1",
     "typhen": "^1.0.1",
-    "typson": "^0.6.0",
     "uppercamelcase": "^1.1.0"
   },
   "devDependencies": {

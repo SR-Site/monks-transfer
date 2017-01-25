@@ -5,9 +5,7 @@ module.exports = function( grunt )
 	const upperCamelCase = require( 'uppercamelcase' );
 	const camelCase = require( 'camelcase' );
 	const typhen = require( 'typhen' );
-	const inspect = require( 'object-inspect' );
 	const jsonfile = require( 'jsonfile' );
-	const loremIpsum = require( 'lorem-ipsum' )
 
 	var blockDir = grunt.config( 'generate-block-documentation.options.input' );
 	var output = {blocks: [], references: [], enums: []};
