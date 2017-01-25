@@ -5,9 +5,7 @@ module.exports = function( grunt )
 	const upperCamelCase = require( 'uppercamelcase' );
 	const camelCase = require( 'camelcase' );
 	const typhen = require( 'typhen' );
-	const inspect = require( 'object-inspect' );
 	const jsonfile = require( 'jsonfile' );
-	const loremIpsum = require( 'lorem-ipsum' )
 
 	var blockDir = grunt.config( 'generate-block-documentation.options.input' );
 	var output = {blocks: [], references: [], enums: []};
@@ -23,22 +21,19 @@ module.exports = function( grunt )
 			// Loop through all the blocks
 			blocks.forEach( function( block, index )
 			{
-				// if( block === 'block-article-teaser' )
-				// {
-					console.log( 'Parse block data for:', block );
+				console.log( 'Parse block data for:', block );
 
-					var blockId = upperCamelCase( block );
-					var properties = parseBlock( block ).reverse();
+				var blockId = upperCamelCase( block );
+				var properties = parseBlock( block ).reverse();
 
-					output.blocks.push( {
-						blockId: blockId,
-						properties: properties,
-						example: JSON.stringify( {
-							id: camelCase( blockId ),
-							data: generateExampleJSON( properties, {} )
-						}, null, 4 )
-					} );
-				// }
+				output.blocks.push( {
+					blockId: blockId,
+					properties: properties,
+					example: JSON.stringify( {
+						id: camelCase( blockId ),
+						data: generateExampleJSON( properties, {} )
+					}, null, 4 )
+				} );
 			} );
 
 			console.log( 'Writing data.json file' );
@@ -60,15 +55,15 @@ module.exports = function( grunt )
 		{
 			if( property.type === 'string' )
 			{
-				base[property.name] = loremIpsum( {count: Math.round( randomInRange( 5, 10 ) ), units: 'words'} );
+				base[property.name] = property.placeholder || 'Lorem ipsum dolor sit amet';
 			}
 			else if( property.type === 'boolean' )
 			{
-				base[property.name] = Math.random() > 0.5;
+				base[property.name] = true;
 			}
 			else if( property.type === 'number' )
 			{
-				base[property.name] = Math.round( randomInRange( 0, 5 ) );
+				base[property.name] = 1;
 			}
 			else if( hasReference( property.type, output.references ) )
 			{
@@ -80,10 +75,9 @@ module.exports = function( grunt )
 			else if( hasReference( property.type, output.enums ) )
 			{
 				var reference = hasReference( property.type, output.enums );
-				var randomValue = Math.round( randomInRange( 0, reference.properties.length - 1 ) );
 
-				// Choose random enum value
-				base[property.name] = reference.properties[randomValue].value;
+				// As default value always choose the first option
+				base[property.name] = reference.properties[0].value;
 			}
 			else if( property.type === 'Array' )
 			{
@@ -103,7 +97,7 @@ module.exports = function( grunt )
 	/**
 	 * @method parseBlock
 	 * @param block
-	 * @returns parsedBlock
+	 * @returns Array
 	 */
 	function parseBlock( block )
 	{
@@ -168,7 +162,9 @@ module.exports = function( grunt )
 			name: property.rawName,
 			type: getType( property.type ),
 			required: !property.isOptional,
+			defaultValue: getDocComment( property.docComment, '@defaultValue' ) || 'null',
 			description: getDocComment( property.docComment, '@description' ),
+			placeholder: getDocComment( property.docComment, '@placeholder' ),
 			properties: parseProperties( childProperties )
 		}
 	}
@@ -187,7 +183,7 @@ module.exports = function( grunt )
 			{
 				if( docComment[i].indexOf( property ) > -1 )
 				{
-					return docComment[i].replace( property + ' ', '' );
+					return docComment[i].replace( property + ' ', '' ).toString();
 				}
 			}
 		}
@@ -300,25 +296,5 @@ module.exports = function( grunt )
 		{
 			return fs.statSync( path.join( src, file ) ).isDirectory();
 		} );
-	}
-
-	/**
-	 * Finds the relative position of a number in a range between min and max, and returns its normalized value between 0 and 1.
-	 *
-	 * @method normalizedValue
-	 * @param {number} value The value to normalize.
-	 * @param {number} min Lowest range value.
-	 * @param {number} max Highest range value.
-	 * @return {number} The normalized value between 0 and 1.
-	 * @example
-	 * ```
-	 * NumberUtils.normalizedValue(25, 0, 100); // 0.25
-	 * NumberUtils.normalizedValue(0, -1, 1); // 0.5
-	 * ```
-	 */
-	function randomInRange( start, end )
-	{
-		var d = end - start;
-		return start + (d - Math.random() * d);
 	}
 };

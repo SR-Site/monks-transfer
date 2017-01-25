@@ -6,6 +6,7 @@ interface ILink extends IAction
 	/**
 	 * @property
 	 * @description The target of the link
+	 * @placeholder path/to/page
 	 */
 	target:string;
 	/**

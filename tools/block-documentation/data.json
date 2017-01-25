@@ -7,55 +7,71 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "tags",
                     "type": "Array",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The tags linked to this article",
+                    "placeholder": "",
                     "properties": [
                         {
                             "name": "target",
                             "type": "string",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "The target of the link",
+                            "placeholder": "path/to/page",
                             "properties": []
                         },
                         {
                             "name": "type",
                             "type": "LinkType",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "The type of the link",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "label",
                             "type": "string",
                             "required": false,
+                            "defaultValue": "null",
                             "description": "The label displayed in the action",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "title",
                             "type": "string",
                             "required": false,
+                            "defaultValue": "null",
                             "description": "The title used for accessibility",
+                            "placeholder": "",
                             "properties": []
                         }
                     ]
@@ -64,32 +80,40 @@
                     "name": "image",
                     "type": "IImage",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The image that will be displayed in the article teaser",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "target",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The target that the teaser should link to",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The main paragraph displayed",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The main heading displayed",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockArticleTeaser\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"tags\": [\n            {\n                \"target\": \"aliquip qui exercitation ex nulla voluptate nisi laborum\",\n                \"type\": 2,\n                \"label\": \"consequat cillum quis ad reprehenderit velit non\",\n                \"title\": \"culpa ullamco duis duis et et sunt\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"labore excepteur Lorem dolor amet\",\n            \"small\": \"dolor mollit ut deserunt commodo cillum exercitation elit\",\n            \"alt\": \"minim elit fugiat esse anim voluptate\"\n        },\n        \"target\": \"mollit cupidatat officia consequat duis est pariatur\",\n        \"paragraph\": \"non nisi quis velit pariatur consectetur minim\",\n        \"heading\": \"irure consectetur fugiat excepteur amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockArticleTeaser\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"target\": \"Lorem ipsum dolor sit amet\",\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockAudioFragment",
@@ -98,53 +122,67 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "file",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The *.mp3 file that will be played",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "image",
                     "type": "IImage",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The image linked to the audio fragment",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "description",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The description about the name",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "name",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The name displayed above the audio fragment",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockAudioFragment\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 3,\n        \"file\": \"excepteur laboris duis ipsum in proident et reprehenderit anim esse\",\n        \"image\": {\n            \"normal\": \"laboris Lorem commodo reprehenderit ut non officia occaecat Lorem\",\n            \"small\": \"dolore incididunt consectetur quis ea ex ullamco nostrud\",\n            \"alt\": \"voluptate elit ipsum voluptate consequat eu sit non magna ex\"\n        },\n        \"description\": \"consequat cupidatat sunt fugiat sunt qui non sint velit esse\",\n        \"name\": \"tempor consequat magna eiusmod laborum ullamco aliqua\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockAudioFragment\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"file\": \"Lorem ipsum dolor sit amet\",\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"name\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockBlogPost",
@@ -153,25 +191,31 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockBlogPost\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 0\n    }\n}"
+            "example": "{\n    \"id\": \"blockBlogPost\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
         },
         {
             "blockId": "BlockButton",
@@ -180,39 +224,49 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "alignment",
                     "type": "Alignment",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The alignment of the button inside the block",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "link",
                     "type": "ILink",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The link that will be linked to the button",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockButton\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 5,\n        \"alignment\": 1,\n        \"link\": {\n            \"target\": \"aliqua sit ullamco quis est non officia adipisicing\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"pariatur exercitation occaecat sunt elit velit sit nisi\",\n            \"title\": \"labore non est non ad ea minim\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockButton\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"alignment\": 0,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
         },
         {
             "blockId": "BlockFilterContent",
@@ -221,54 +275,70 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "filters",
                     "type": "Array",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The array containing the available filters",
+                    "placeholder": "",
                     "properties": [
                         {
                             "name": "type",
                             "type": "number",
                             "required": true,
-                            "description": "",
+                            "defaultValue": "null",
+                            "description": "The type of the filter",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "options",
                             "type": "Array",
                             "required": true,
-                            "description": "",
+                            "defaultValue": "[]",
+                            "description": "The options available after selecting a filter",
+                            "placeholder": "",
                             "properties": [
                                 {
                                     "name": "value",
                                     "type": "string",
                                     "required": true,
-                                    "description": "",
+                                    "defaultValue": "null",
+                                    "description": "Internal value of the available option",
+                                    "placeholder": "",
                                     "properties": []
                                 },
                                 {
                                     "name": "label",
                                     "type": "string",
                                     "required": true,
-                                    "description": "",
+                                    "defaultValue": "null",
+                                    "description": "The displayed value of the available option",
+                                    "placeholder": "",
                                     "properties": []
                                 }
                             ]
@@ -279,18 +349,22 @@
                     "name": "filterLabel",
                     "type": "string",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The main label that indicates the filters",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "endpoint",
                     "type": "string",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The endpoint used for loading more filter content",
+                    "placeholder": "api/v1/path/to/endpoint",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockFilterContent\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 5,\n        \"filters\": [\n            {\n                \"type\": 2,\n                \"options\": [\n                    {\n                        \"value\": \"mollit nostrud id culpa incididunt incididunt dolor voluptate in\",\n                        \"label\": \"est Lorem velit est nostrud est\"\n                    }\n                ]\n            }\n        ],\n        \"filterLabel\": \"officia esse irure tempor labore pariatur laboris\",\n        \"endpoint\": \"enim laboris et non sunt\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockFilterContent\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"filters\": [\n            {\n                \"type\": 1,\n                \"options\": [\n                    {\n                        \"value\": \"Lorem ipsum dolor sit amet\",\n                        \"label\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ]\n            }\n        ],\n        \"filterLabel\": \"Lorem ipsum dolor sit amet\",\n        \"endpoint\": \"api/v1/path/to/endpoint\"\n    }\n}"
         },
         {
             "blockId": "BlockHeroMain",
@@ -299,75 +373,142 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "slides",
                     "type": "Array",
                     "required": true,
+                    "defaultValue": "[]",
                     "description": "The array containing the slides on the main carousel",
+                    "placeholder": "",
                     "properties": [
                         {
                             "name": "heading",
                             "type": "string",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "The main heading",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "paragraph",
                             "type": "string",
                             "required": false,
+                            "defaultValue": "null",
                             "description": "The main paragraph",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "background",
                             "type": "IImage",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "The slide background image",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "link",
                             "type": "ILink",
                             "required": false,
+                            "defaultValue": "null",
                             "description": "The slide link",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "secondaryLink",
                             "type": "ILink",
                             "required": false,
+                            "defaultValue": "null",
                             "description": "The slide secondary link",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "statistics",
-                            "type": "IHeroMainSlideStatistics",
+                            "type": "Object",
                             "required": false,
+                            "defaultValue": "null",
                             "description": "The slide statistics section",
-                            "properties": []
+                            "placeholder": "",
+                            "properties": [
+                                {
+                                    "name": "heading",
+                                    "type": "string",
+                                    "required": true,
+                                    "defaultValue": "null",
+                                    "description": "The statistics heading",
+                                    "placeholder": "",
+                                    "properties": []
+                                },
+                                {
+                                    "name": "stats",
+                                    "type": "Array",
+                                    "required": true,
+                                    "defaultValue": "null",
+                                    "description": "The statistics to be displayed",
+                                    "placeholder": "",
+                                    "properties": [
+                                        {
+                                            "name": "heading",
+                                            "type": "string",
+                                            "required": true,
+                                            "defaultValue": "null",
+                                            "description": "The heading added to the statistic",
+                                            "placeholder": "",
+                                            "properties": []
+                                        },
+                                        {
+                                            "name": "description",
+                                            "type": "string",
+                                            "required": true,
+                                            "defaultValue": "null",
+                                            "description": "The description about the statistic",
+                                            "placeholder": "",
+                                            "properties": []
+                                        },
+                                        {
+                                            "name": "value",
+                                            "type": "number",
+                                            "required": true,
+                                            "defaultValue": "null",
+                                            "description": "The value of the statistic",
+                                            "placeholder": "",
+                                            "properties": []
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockHeroMain\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"slides\": [\n            {\n                \"heading\": \"id voluptate aliquip mollit laboris\",\n                \"paragraph\": \"quis duis ex sit aliquip deserunt\",\n                \"background\": {\n                    \"normal\": \"aliquip qui irure duis sunt laboris laborum enim cillum\",\n                    \"small\": \"et officia officia laborum esse veniam consequat magna mollit\",\n                    \"alt\": \"anim do id magna id nisi fugiat adipisicing\"\n                },\n                \"link\": {\n                    \"target\": \"ut tempor tempor aliqua consequat quis\",\n                    \"type\": 1,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"fugiat proident tempor nisi et minim Lorem\",\n                    \"title\": \"eu id nulla esse laborum reprehenderit ex sint\"\n                },\n                \"secondaryLink\": {\n                    \"target\": \"nulla nulla duis pariatur sint culpa\",\n                    \"type\": 1,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"aliquip culpa sunt et ut dolor labore excepteur est\",\n                    \"title\": \"minim et pariatur id culpa consequat minim\"\n                },\n                \"statistics\": {\n                    \"heading\": \"enim labore in ipsum dolore enim ipsum excepteur dolor\",\n                    \"stats\": [\n                        {\n                            \"heading\": \"ut et ut Lorem reprehenderit officia magna laborum sint irure\",\n                            \"description\": \"eu id dolore elit magna quis anim fugiat\",\n                            \"value\": 5\n                        }\n                    ]\n                }\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"blockHeroMain\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"secondaryLink\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"statistics\": \"TODO: Object\"\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockHeroSecondary",
@@ -376,46 +517,58 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "link",
                     "type": "ILink",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "Think added to the hero main",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": false,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The main paragraph displayed on the hero secondary",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The main heading displayed on the hero secondary",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockHeroSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 0,\n        \"link\": {\n            \"target\": \"quis culpa laboris adipisicing nulla sit proident proident\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"cupidatat quis cupidatat elit nostrud proident irure ad\",\n            \"title\": \"dolore duis enim pariatur ipsum occaecat\"\n        },\n        \"paragraph\": \"ullamco Lorem ea non ea commodo occaecat in\",\n        \"heading\": \"labore sint magna adipisicing labore pariatur cillum\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockHeroSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockHeroTertiary",
@@ -424,32 +577,40 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "background",
                     "type": "IImage",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The background image displayed on the hero tertiary",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockHeroTertiary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"background\": {\n            \"normal\": \"quis voluptate elit excepteur tempor\",\n            \"small\": \"fugiat veniam aliquip aute et eu laborum in excepteur\",\n            \"alt\": \"mollit irure dolore labore consectetur incididunt\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockHeroTertiary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
         },
         {
             "blockId": "BlockHowToAdvertise",
@@ -458,48 +619,62 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "steps",
                     "type": "Array",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The steps displayed in the block",
+                    "placeholder": "",
                     "properties": [
                         {
                             "name": "heading",
                             "type": "string",
                             "required": true,
-                            "description": "",
+                            "defaultValue": "null",
+                            "description": "The heading displayed on the step",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "paragraph",
                             "type": "string",
                             "required": true,
-                            "description": "",
+                            "defaultValue": "null",
+                            "description": "The paragraph displayed on the step",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "icon",
                             "type": "string",
                             "required": true,
-                            "description": "",
+                            "defaultValue": "null",
+                            "description": "the icon displayed on the step, ask front-end for the available icons",
+                            "placeholder": "",
                             "properties": []
                         }
                     ]
@@ -508,18 +683,22 @@
                     "name": "link",
                     "type": "ILink",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The link displayed in the how to block",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The heading displayed on the how to block",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockHowToAdvertise\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 4,\n        \"steps\": [\n            {\n                \"heading\": \"veniam officia Lorem proident cillum reprehenderit et\",\n                \"paragraph\": \"voluptate deserunt ipsum aliquip Lorem culpa sunt ut magna\",\n                \"icon\": \"ex minim dolore nostrud exercitation velit elit est irure id\"\n            }\n        ],\n        \"link\": {\n            \"target\": \"exercitation ullamco eu irure officia cillum aliqua proident\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"esse est officia nostrud sunt culpa sint culpa\",\n            \"title\": \"culpa Lorem consequat in velit id\"\n        },\n        \"heading\": \"quis minim enim ex ad reprehenderit excepteur id id fugiat\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockHowToAdvertise\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"icon\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockImageCallToActions",
@@ -528,61 +707,77 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "callToActions",
                     "type": "Array",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "[]",
+                    "description": "The array containing all the call to actions",
+                    "placeholder": "",
                     "properties": [
                         {
                             "name": "heading",
                             "type": "string",
                             "required": true,
-                            "description": "",
+                            "defaultValue": "null",
+                            "description": "The heading displayed on the call to action",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "paragraph",
                             "type": "string",
                             "required": true,
-                            "description": "",
+                            "defaultValue": "null",
+                            "description": "The paragraph displayed on the paragraph",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "background",
                             "type": "IImage",
                             "required": true,
-                            "description": "",
+                            "defaultValue": "null",
+                            "description": "The default background image displayed on the call to action",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "backgroundBlurred",
                             "type": "IImage",
                             "required": true,
-                            "description": "",
+                            "defaultValue": "null",
+                            "description": "The blurred version of the background image displayed on the call to action",
+                            "placeholder": "",
                             "properties": []
                         }
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockImageCallToActions\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"callToActions\": [\n            {\n                \"heading\": \"veniam ad non nostrud deserunt nisi tempor\",\n                \"paragraph\": \"enim esse sint officia nostrud culpa enim consequat aliqua\",\n                \"background\": {\n                    \"normal\": \"id et excepteur consequat elit aliqua\",\n                    \"small\": \"eiusmod mollit voluptate consequat veniam voluptate mollit ipsum\",\n                    \"alt\": \"commodo nostrud sunt quis ullamco excepteur Lorem deserunt\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"exercitation ex duis qui ad\",\n                    \"small\": \"proident tempor veniam ad in anim\",\n                    \"alt\": \"mollit est proident magna sunt do occaecat\"\n                }\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"blockImageCallToActions\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"callToActions\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockImageCarousel",
@@ -591,47 +786,59 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "slides",
                     "type": "Array",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "[]",
+                    "description": "The array containing the slides",
+                    "placeholder": "",
                     "properties": [
                         {
                             "name": "heading",
                             "type": "string",
                             "required": false,
-                            "description": "",
+                            "defaultValue": "null",
+                            "description": "The heading displayed on the slide",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "image",
                             "type": "IImage",
                             "required": true,
-                            "description": "",
+                            "defaultValue": "null",
+                            "description": "The image displayed on the slide",
+                            "placeholder": "",
                             "properties": []
                         }
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockImageCarousel\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 4,\n        \"slides\": [\n            {\n                \"heading\": \"consectetur deserunt et deserunt laboris incididunt nisi proident nulla\",\n                \"image\": {\n                    \"normal\": \"est aute amet officia irure\",\n                    \"small\": \"aute fugiat cupidatat velit excepteur in ex eu\",\n                    \"alt\": \"veniam laboris veniam tempor sint dolore cupidatat veniam est\"\n                }\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"blockImageCarousel\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockImageWithContent",
@@ -640,67 +847,85 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "link",
                     "type": "ILink",
                     "required": false,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The link to another page",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "background",
                     "type": "IImage",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The background image added to the block",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The paragraph displayed in the block",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The heading displayed in the block",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "croppedImage",
                     "type": "boolean",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "If this flag is set to true the client will crop out a part of the image",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "alignment",
                     "type": "Alignment",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The alignment of the image with content block",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockImageWithContent\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4,\n        \"link\": {\n            \"target\": \"qui magna eiusmod et consectetur fugiat qui consectetur nisi\",\n            \"type\": 2,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"do consequat deserunt ullamco adipisicing ut\",\n            \"title\": \"dolore amet incididunt laboris sint excepteur ad\"\n        },\n        \"background\": {\n            \"normal\": \"esse laborum dolore eu incididunt amet esse anim\",\n            \"small\": \"ex reprehenderit exercitation in aute irure\",\n            \"alt\": \"voluptate esse in eu aliqua\"\n        },\n        \"paragraph\": \"voluptate nisi nisi anim magna nisi exercitation adipisicing\",\n        \"heading\": \"ipsum voluptate adipisicing dolore consequat ut in non reprehenderit\",\n        \"croppedImage\": false,\n        \"alignment\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blockImageWithContent\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"croppedImage\": true,\n        \"alignment\": 0\n    }\n}"
         },
         {
             "blockId": "BlockInfo",
@@ -709,25 +934,31 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockInfo\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 4\n    }\n}"
+            "example": "{\n    \"id\": \"blockInfo\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
         },
         {
             "blockId": "BlockLatest",
@@ -736,34 +967,44 @@
                     "name": "tags",
                     "type": "Array",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The tags linked to this article",
+                    "placeholder": "",
                     "properties": [
                         {
                             "name": "target",
                             "type": "string",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "The target of the link",
+                            "placeholder": "path/to/page",
                             "properties": []
                         },
                         {
                             "name": "type",
                             "type": "LinkType",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "The type of the link",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "label",
                             "type": "string",
                             "required": false,
+                            "defaultValue": "null",
                             "description": "The label displayed in the action",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "title",
                             "type": "string",
                             "required": false,
+                            "defaultValue": "null",
                             "description": "The title used for accessibility",
+                            "placeholder": "",
                             "properties": []
                         }
                     ]
@@ -772,32 +1013,40 @@
                     "name": "image",
                     "type": "IImage",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The image that will be displayed in the article teaser",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "target",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The target that the teaser should link to",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The main paragraph displayed",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The main heading displayed",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockLatest\",\n    \"data\": {\n        \"tags\": [\n            {\n                \"target\": \"ut dolor non enim adipisicing\",\n                \"type\": 1,\n                \"label\": \"ipsum et adipisicing in sint\",\n                \"title\": \"voluptate et incididunt voluptate ex ea fugiat ipsum\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"laboris cupidatat magna pariatur cupidatat est fugiat nisi\",\n            \"small\": \"velit irure do aute nostrud\",\n            \"alt\": \"irure ipsum irure fugiat et in ad\"\n        },\n        \"target\": \"cupidatat est labore ullamco ea pariatur laboris ullamco amet\",\n        \"paragraph\": \"consectetur dolore excepteur ullamco sint proident deserunt\",\n        \"heading\": \"reprehenderit duis consectetur sit voluptate est deserunt\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockLatest\",\n    \"data\": {\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"target\": \"Lorem ipsum dolor sit amet\",\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockMap",
@@ -806,34 +1055,44 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "steps",
                     "type": "Array",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The steps used to break the image sequence up",
+                    "placeholder": "",
                     "properties": [
                         {
                             "name": "label",
                             "type": "string",
                             "required": true,
-                            "description": "",
+                            "defaultValue": "null",
+                            "description": "The label displayed on the step",
+                            "placeholder": "",
                             "properties": []
                         }
                     ]
@@ -842,11 +1101,13 @@
                     "name": "imageSequence",
                     "type": "IImageSequence",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The image sequence displayed in the map",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockMap\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"steps\": [\n            {\n                \"label\": \"duis irure ea consequat ex dolore officia cillum\"\n            }\n        ],\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"Lorem est proident officia sint duis ea\",\n                \"small\": \"ea aliqua deserunt commodo commodo est\",\n                \"alt\": \"duis aliqua ea officia et sit nulla esse exercitation aute\"\n            },\n            \"total\": 3,\n            \"extension\": \"proident est adipisicing ad ad\",\n            \"autoplay\": false\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockMap\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"label\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"path/to/image.jpg\",\n                \"small\": \"path/to/image.jpg\",\n                \"alt\": \"Lorem ipsum dolor sit amet\"\n            },\n            \"total\": 1,\n            \"extension\": \"Lorem ipsum dolor sit amet\",\n            \"autoplay\": true\n        }\n    }\n}"
         },
         {
             "blockId": "BlockMapSecondary",
@@ -855,46 +1116,58 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The paragraph displayed on the secondary map",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "subHeading",
                     "type": "string",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The sub heading displayed on the secondary map",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The heading displayed on the secondary map",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockMapSecondary\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 5,\n        \"paragraph\": \"minim velit fugiat amet consequat id id ut velit\",\n        \"subHeading\": \"veniam adipisicing eiusmod pariatur aliquip qui\",\n        \"heading\": \"excepteur ad nostrud pariatur laborum\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockMapSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"subHeading\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockMarketMap",
@@ -903,21 +1176,27 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 }
             ],
@@ -930,34 +1209,44 @@
                     "name": "tags",
                     "type": "Array",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The tags linked to this article",
+                    "placeholder": "",
                     "properties": [
                         {
                             "name": "target",
                             "type": "string",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "The target of the link",
+                            "placeholder": "path/to/page",
                             "properties": []
                         },
                         {
                             "name": "type",
                             "type": "LinkType",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "The type of the link",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "label",
                             "type": "string",
                             "required": false,
+                            "defaultValue": "null",
                             "description": "The label displayed in the action",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "title",
                             "type": "string",
                             "required": false,
+                            "defaultValue": "null",
                             "description": "The title used for accessibility",
+                            "placeholder": "",
                             "properties": []
                         }
                     ]
@@ -966,32 +1255,40 @@
                     "name": "image",
                     "type": "IImage",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The image that will be displayed in the article teaser",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "target",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The target that the teaser should link to",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The main paragraph displayed",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The main heading displayed",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockMore\",\n    \"data\": {\n        \"tags\": [\n            {\n                \"target\": \"aute excepteur exercitation ullamco aliqua ea qui\",\n                \"type\": 1,\n                \"label\": \"voluptate minim consectetur enim ad ipsum deserunt enim\",\n                \"title\": \"mollit ipsum adipisicing magna id est\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"cupidatat dolor pariatur laboris anim officia\",\n            \"small\": \"dolor pariatur minim laboris ut deserunt non pariatur occaecat\",\n            \"alt\": \"pariatur cupidatat id pariatur deserunt officia\"\n        },\n        \"target\": \"officia et quis dolor sit adipisicing\",\n        \"paragraph\": \"nostrud ad non cillum sit nulla do aliqua elit\",\n        \"heading\": \"eu duis ullamco tempor ipsum occaecat excepteur ad\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockMore\",\n    \"data\": {\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"target\": \"Lorem ipsum dolor sit amet\",\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockNetworkOverview",
@@ -1000,25 +1297,31 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockNetworkOverview\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4\n    }\n}"
+            "example": "{\n    \"id\": \"blockNetworkOverview\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
         },
         {
             "blockId": "BlockPageNotFound",
@@ -1027,60 +1330,76 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "link",
                     "type": "ILink",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The link added to the block",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "image",
                     "type": "IImage",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The image displayed on the background of the error block",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The paragraph displayed on the error block",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The main heading displayed on the error block",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "errorCode",
                     "type": "number",
                     "required": true,
-                    "description": "",
+                    "defaultValue": "null",
+                    "description": "The error code causing the issue",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockPageNotFound\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"link\": {\n            \"target\": \"proident ea amet esse reprehenderit officia qui nostrud anim\",\n            \"type\": 1,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"laboris ut nulla laboris aute exercitation velit\",\n            \"title\": \"minim minim sit deserunt consequat dolor\"\n        },\n        \"image\": {\n            \"normal\": \"ipsum fugiat do nisi quis cupidatat mollit anim duis\",\n            \"small\": \"adipisicing do ex officia duis Lorem excepteur ea nostrud mollit\",\n            \"alt\": \"tempor proident voluptate reprehenderit fugiat duis\"\n        },\n        \"paragraph\": \"est laboris tempor id magna sint magna\",\n        \"heading\": \"excepteur duis ex occaecat incididunt aliquip excepteur quis\",\n        \"errorCode\": 0\n    }\n}"
+            "example": "{\n    \"id\": \"blockPageNotFound\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"errorCode\": 1\n    }\n}"
         },
         {
             "blockId": "BlockPathToPurchase",
@@ -1089,25 +1408,31 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockPathToPurchase\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 4\n    }\n}"
+            "example": "{\n    \"id\": \"blockPathToPurchase\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
         },
         {
             "blockId": "BlockPersonaSelector",
@@ -1116,68 +1441,86 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "personas",
                     "type": "Array",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "",
+                    "placeholder": "",
                     "properties": [
                         {
                             "name": "heading",
                             "type": "string",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "paragraph",
                             "type": "string",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "personaType",
                             "type": "PersonaType",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "link",
                             "type": "ILink",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "image",
                             "type": "IImage",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "",
+                            "placeholder": "",
                             "properties": []
                         }
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockPersonaSelector\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 3,\n        \"personas\": [\n            {\n                \"heading\": \"eiusmod in deserunt exercitation eu excepteur in elit\",\n                \"paragraph\": \"duis sunt enim nostrud reprehenderit anim duis eiusmod\",\n                \"personaType\": 1,\n                \"link\": {\n                    \"target\": \"sint duis deserunt nostrud tempor\",\n                    \"type\": 1,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"deserunt officia laboris adipisicing officia do magna mollit ipsum\",\n                    \"title\": \"excepteur sint eu nostrud sunt officia occaecat sunt ut\"\n                },\n                \"image\": {\n                    \"normal\": \"sunt ex proident et enim est laboris magna sit\",\n                    \"small\": \"mollit anim ipsum culpa nulla pariatur laboris duis\",\n                    \"alt\": \"do sint cillum sunt eu tempor culpa esse magna mollit\"\n                }\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"blockPersonaSelector\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"personas\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"personaType\": 0,\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockProgramModule",
@@ -1186,25 +1529,31 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockProgramModule\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": false,\n        \"marginTop\": 3\n    }\n}"
+            "example": "{\n    \"id\": \"blockProgramModule\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
         },
         {
             "blockId": "BlockQuote",
@@ -1213,53 +1562,67 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "description",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "name",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "quote",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "image",
                     "type": "IImage",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockQuote\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"description\": \"sit ipsum quis tempor aute cillum\",\n        \"name\": \"dolor et consequat commodo dolore sunt\",\n        \"quote\": \"esse elit nostrud qui id excepteur\",\n        \"image\": {\n            \"normal\": \"ex deserunt veniam mollit do do ex\",\n            \"small\": \"est nostrud exercitation reprehenderit ex tempor\",\n            \"alt\": \"aliqua ad elit non sint aliquip\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockQuote\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"name\": \"Lorem ipsum dolor sit amet\",\n        \"quote\": \"Lorem ipsum dolor sit amet\",\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
         },
         {
             "blockId": "BlockQuoteSecondary",
@@ -1268,39 +1631,49 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "author",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The author displayed in the block",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "quote",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The quote displayed in the block",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockQuoteSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 5,\n        \"author\": \"anim laborum dolore ipsum voluptate et exercitation amet\",\n        \"quote\": \"ea velit amet veniam minim do voluptate fugiat\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockQuoteSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"author\": \"Lorem ipsum dolor sit amet\",\n        \"quote\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockSmallHeading",
@@ -1309,32 +1682,40 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockSmallHeading\",\n    \"data\": {\n        \"overlap\": false,\n        \"windowed\": true,\n        \"marginTop\": 4,\n        \"heading\": \"elit ea ex minim consectetur elit\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockSmallHeading\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockSmallImage",
@@ -1343,39 +1724,49 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "image",
                     "type": "IImage",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The image displayed in the block",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "alignment",
                     "type": "Alignment",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The alignment of the small image",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockSmallImage\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 2,\n        \"image\": {\n            \"normal\": \"quis elit veniam cupidatat cillum\",\n            \"small\": \"eu culpa tempor sint minim labore\",\n            \"alt\": \"qui aute dolore exercitation ad exercitation et cillum velit\"\n        },\n        \"alignment\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blockSmallImage\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"alignment\": 0\n    }\n}"
         },
         {
             "blockId": "BlockSmallInfo",
@@ -1384,46 +1775,58 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "link",
                     "type": "ILink",
                     "required": false,
+                    "defaultValue": "null",
                     "description": "The link that is added to this block",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The main paragraph displayed in this block",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "heading",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The main heading displayed in this block",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockSmallInfo\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 3,\n        \"link\": {\n            \"target\": \"ad sit culpa excepteur dolor Lorem enim commodo\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"anim dolore esse commodo Lorem laborum magna\",\n            \"title\": \"laborum nisi ut minim mollit Lorem ullamco laboris elit\"\n        },\n        \"paragraph\": \"sit fugiat ex qui do eiusmod deserunt duis enim\",\n        \"heading\": \"laborum anim amet irure officia officia Lorem\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockSmallInfo\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockStoryInfoImages",
@@ -1432,61 +1835,77 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "stories",
                     "type": "Array",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The array containing the stories displayed in this block, todo: add support for nested types",
+                    "placeholder": "",
                     "properties": [
                         {
                             "name": "heading",
                             "type": "string",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "paragraph",
                             "type": "string",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "background",
                             "type": "IImage",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "",
+                            "placeholder": "",
                             "properties": []
                         },
                         {
                             "name": "backgroundBlurred",
                             "type": "IImage",
                             "required": true,
+                            "defaultValue": "null",
                             "description": "",
+                            "placeholder": "",
                             "properties": []
                         }
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockStoryInfoImages\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 1,\n        \"stories\": [\n            {\n                \"heading\": \"pariatur duis tempor in quis fugiat et\",\n                \"paragraph\": \"ad laborum aute consectetur mollit duis aute\",\n                \"background\": {\n                    \"normal\": \"exercitation nisi ad Lorem tempor excepteur adipisicing\",\n                    \"small\": \"labore proident tempor commodo do ea\",\n                    \"alt\": \"tempor laborum eu eiusmod deserunt dolor voluptate\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"est ut laboris id eiusmod aliqua ut eiusmod\",\n                    \"small\": \"consequat tempor laborum ex sunt aute id veniam\",\n                    \"alt\": \"ipsum duis nostrud cillum laborum laborum\"\n                }\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"blockStoryInfoImages\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"stories\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockText",
@@ -1495,32 +1914,40 @@
                     "name": "overlap",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "windowed",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "false",
                     "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
                     "properties": []
                 },
                 {
                     "name": "marginTop",
                     "type": "number",
                     "required": false,
+                    "defaultValue": "0",
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
                     "name": "html",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The html that will be rendered in the block",
+                    "placeholder": "",
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockText\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": false,\n        \"marginTop\": 3,\n        \"html\": \"incididunt amet amet laboris incididunt dolor voluptate aute ea laboris\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockText\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"html\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         }
     ],
     "references": [
@@ -1531,21 +1958,27 @@
                     "name": "normal",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The large version of the image",
+                    "placeholder": "path/to/image.jpg",
                     "properties": []
                 },
                 {
                     "name": "small",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The small version of the image",
+                    "placeholder": "path/to/image.jpg",
                     "properties": []
                 },
                 {
                     "name": "alt",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The alt text of the image",
+                    "placeholder": "",
                     "properties": []
                 }
             ]
@@ -1557,77 +1990,46 @@
                     "name": "target",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The target of the link",
+                    "placeholder": "path/to/page",
                     "properties": []
                 },
                 {
                     "name": "type",
                     "type": "LinkType",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The type of the link",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "deeplink",
                     "type": "Object",
                     "required": false,
+                    "defaultValue": "null",
                     "description": "The deeplink data of the link",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "label",
                     "type": "string",
                     "required": false,
+                    "defaultValue": "null",
                     "description": "The label displayed in the action",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "title",
                     "type": "string",
                     "required": false,
+                    "defaultValue": "null",
                     "description": "The title used for accessibility",
+                    "placeholder": "",
                     "properties": []
-                }
-            ]
-        },
-        {
-            "name": "IHeroMainSlideStatistics",
-            "properties": [
-                {
-                    "name": "heading",
-                    "type": "string",
-                    "required": true,
-                    "description": "The statistics heading",
-                    "properties": []
-                },
-                {
-                    "name": "stats",
-                    "type": "Array",
-                    "required": true,
-                    "description": "The statistics to be displayed",
-                    "properties": [
-                        {
-                            "name": "heading",
-                            "type": "string",
-                            "required": true,
-                            "description": "The heading added to the statistic",
-                            "properties": []
-                        },
-                        {
-                            "name": "description",
-                            "type": "string",
-                            "required": true,
-                            "description": "The description about the statistic",
-                            "properties": []
-                        },
-                        {
-                            "name": "value",
-                            "type": "number",
-                            "required": true,
-                            "description": "The value of the statistic",
-                            "properties": []
-                        }
-                    ]
                 }
             ]
         },
@@ -1638,28 +2040,36 @@
                     "name": "image",
                     "type": "IImage",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "the base paths of the images in the sequences without the extension",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "total",
                     "type": "number",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The total amount of frames in the image sequence",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "extension",
                     "type": "string",
                     "required": true,
+                    "defaultValue": "null",
                     "description": "The extension of the image",
+                    "placeholder": "",
                     "properties": []
                 },
                 {
                     "name": "autoplay",
                     "type": "boolean",
                     "required": false,
+                    "defaultValue": "null",
                     "description": "do we want to autoplay the sequence or want to trigger it manually",
+                    "placeholder": "",
                     "properties": []
                 }
             ]
