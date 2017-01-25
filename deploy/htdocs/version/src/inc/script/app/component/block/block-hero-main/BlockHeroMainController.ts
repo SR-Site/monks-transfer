@@ -30,6 +30,8 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 		super.init();
 
 		this._debug.log('Init');
+
+		this.viewModel.hasStatistics(this.options.slides.map((slide)=> slide.statistics !== void 0).indexOf(true) > -1);
 	}
 
 	/**

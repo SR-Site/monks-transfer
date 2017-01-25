@@ -12,12 +12,15 @@ class BlockHeroMainViewModel extends DefaultComponentViewModel<BlockHeroMainCont
 	public Alignment: Enum = Alignment;
 	public activeIndex: KnockoutObservable<number> = ko.observable(0);
 
+	public hasStatistics:KnockoutObservable<boolean> = ko.observable(false);
+
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct
 	 */
 	public destruct(): void
 	{
+		this.hasStatistics = null;
 		this.Direction = null;
 		this.Alignment = null;
 		this.activeIndex = null;

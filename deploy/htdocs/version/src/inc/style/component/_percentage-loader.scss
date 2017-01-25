@@ -1,5 +1,6 @@
 .component-percentage-loader {
 	text-align: center;
+	display: inline-block;
 
 	.svg-holder {
 		@include size($sizeGrid * 2);
@@ -26,5 +27,23 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+	}
+
+	@include respond-to(SMALL) {
+		.svg-holder {
+			@include size($sizeGrid * 4);
+		}
+
+		.animated-line-track {
+			stroke-width: 4px;
+		}
+
+		.animated-line {
+			stroke-width: 20px;
+		}
+
+		.amount-info {
+			font-size: mobile-size(3.5rem);
+		}
 	}
 }
