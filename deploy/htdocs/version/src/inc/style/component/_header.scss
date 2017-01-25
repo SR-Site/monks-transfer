@@ -39,5 +39,9 @@
 		@include size(100%, $sizeGrid * 4);
 		background: $colorWhite;
 		transform: none;
+
+		.logo {
+			left: $sizeGrid * 2;
+		}
 	}
 }

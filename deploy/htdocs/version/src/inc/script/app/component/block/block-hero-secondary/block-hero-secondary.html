@@ -1,11 +1,8 @@
 <div class="component-block-hero-secondary">
-	<figure class="abs-fill">
-		<img class="abs-fill-center" data-bind="
-			image: {
-				image: data.background,
-				state: $root.deviceState()
-			}" />
-	</figure>
+	<!-- ko component: {
+		name: 'image-crossfader',
+		onComplete: $root.controller.callbackCounter.get($root.controller.handleImageCrossfaderReady.bind($root.controller))
+	} --><!-- /ko -->
 	<div class="slide-content-wrapper abs-fill">
 		<div class="background-triangle" data-bind="style: {borderLeftColor: data.backgroundColor ? data.backgroundColor : 'rgba(0, 48, 87, 0.95)'}"></div>
 		<div class="secondary-background-triangle"></div>

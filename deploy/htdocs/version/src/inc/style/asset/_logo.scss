@@ -53,7 +53,7 @@
 	}
 
 	@include respond-to(SMALL){
-		@include size(70px, 21px);
+		@include size(60px, 19px);
 
 		&.primary {
 			.text-top {

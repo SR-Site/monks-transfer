@@ -29,6 +29,8 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 		super.init();
 
 		this._debug.log('Init');
+
+		this.viewModel.hasStatistics(this.options.slides.map((slide)=> slide.statistics !== void 0).indexOf(true) > -1);
 	}
 
 	/**
@@ -41,7 +43,7 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 		this.transitionController.addEventListener(DefaultTransitionController.TRANSITION_IN_START, () =>
 		{
 			// Open the first image
-			this.updateBackgroundImage(0)
+			this.updateBackgroundImage(0);
 
 			setTimeout(() =>
 			{

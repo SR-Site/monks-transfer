@@ -3,6 +3,20 @@
 	min-height: $sizeGrid * 24;
 	max-height: 100vh;
 
+	&.has-statistics {
+
+		// Always apply a dark blue layer on top of the crossfader
+		.component-image-crossfader {
+			&:after {
+				@include coverer();
+				@include size(100%);
+				position: absolute;
+				content: '';
+				background: rgba($colorPrimary, .5);
+			}
+		}
+	}
+
 	.background-triangle {
 		@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 40);
 		@include pos(50%, auto, auto, 0);
@@ -86,7 +100,7 @@
 		z-index: 2;
 	}
 
-	@include respond-to(SMALL){
+	@include respond-to(SMALL) {
 		min-height: 0;
 		height: calc(100vh - #{$sizeGrid * 2});
 
@@ -110,6 +124,57 @@
 		.slide-content {
 			@include size($sizeGrid * 18, auto);
 			padding-left: $sizeGrid * 2;
+		}
+
+		.statistics-wrapper {
+			@include pos(auto, 0, $sizeGrid * 6, 0);
+			padding: 0 $sizeGrid * 2;
+
+			.heading {
+				text-align: center;
+				margin-bottom: $sizeGrid;
+			}
+		}
+
+		.statistics {
+			text-align: left;
+		}
+
+		.statistic {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			margin: $sizeGrid 0 0;
+
+			.heading {
+				font-size: mobile-size(3.5rem);
+				text-align: left;
+				margin-bottom: 0;
+				order: 2;
+				margin-left: $sizeGrid * 2;
+			}
+
+			.component-percentage-loader {
+				order: 1;
+			}
+		}
+
+		&.has-statistics {
+			$statisticsHeight: $sizeGrid  * 30;
+			height: calc(100vh - #{$sizeGrid * 4} + #{$statisticsHeight});
+			max-height: none;
+
+			.background-triangle {
+				top: calc(50% - #{$statisticsHeight / 2});
+			}
+
+			.secondary-background-triangle {
+				top: calc(50% - #{$statisticsHeight / 2});
+			}
+
+			.slide-content {
+				top: calc(50% - #{$statisticsHeight / 2});
+			}
 		}
 	}
 

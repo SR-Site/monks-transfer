@@ -95,7 +95,7 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 	 * @public
 	 * @method open
 	 */
-	public open(path: string, duration:number = ImageCrossfaderController.DURATION): void
+	public open(path: string, duration: number = ImageCrossfaderController.DURATION): void
 	{
 		if(this._animation)
 		{
@@ -165,13 +165,16 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 	 */
 	private draw(): void
 	{
-		this._ctx.drawImage(
-			this._newImage,
-			this._newImageOffset.x,
-			this._newImageOffset.y,
-			this._newImageOffset.width,
-			this._newImageOffset.height
-		);
+		if(this._newImage)
+		{
+			this._ctx.drawImage(
+				this._newImage,
+				this._newImageOffset.x,
+				this._newImageOffset.y,
+				this._newImageOffset.width,
+				this._newImageOffset.height
+			);
+		}
 
 		let rightProgress = Math.min(0.5, this._triangleProgress) / 0.5;
 		let leftProgress = Math.max(0, (this._triangleProgress - 0.5) / 0.5);
@@ -206,6 +209,7 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 		// Measure the REM size to calculate the triangle grid
 		this._gridSize = (<HTMLElement><HTMLElement>this.element.querySelector('.grid-size')).offsetWidth;
 
+		// Update the canvas size
 		this.setCanvasSize();
 
 		if(this._activeImage)
@@ -216,6 +220,12 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 		if(this._newImage)
 		{
 			this._newImageOffset = this.getImageOffset(this._newImage);
+		}
+
+		// Re-draw the last frame
+		if(this._activeImage)
+		{
+			this.draw();
 		}
 	}
 

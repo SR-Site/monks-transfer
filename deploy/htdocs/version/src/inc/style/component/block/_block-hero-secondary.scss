@@ -5,21 +5,21 @@
 
 	.slide-content-wrapper {
 		overflow: visible;
+	}
 
-		.background-triangle {
-			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 34);
-			@include pos(calc(50% - #{$sizeGrid * 2}), auto, auto, 0);
-			transform: translateY(-50%);
-			position: absolute;
-			pointer-events: none;
-		}
+	.background-triangle {
+		@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 34);
+		@include pos(calc(50% - #{$sizeGrid * 2}), auto, auto, 0);
+		transform: translateY(-50%);
+		position: absolute;
+		pointer-events: none;
+	}
 
-		.secondary-background-triangle {
-			@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 10);
-			@include pos(calc(50% - #{$sizeGrid * 2}), auto, auto, $sizeGrid * 12);
-			position: absolute;
-			pointer-events: none;
-		}
+	.secondary-background-triangle {
+		@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 10);
+		@include pos(calc(50% - #{$sizeGrid * 2}), auto, auto, $sizeGrid * 12);
+		position: absolute;
+		pointer-events: none;
 	}
 
 	.slide-content {
@@ -39,4 +39,31 @@
 			margin-bottom: $sizeGrid * 2;
 		}
 	}
+
+	@include respond-to(SMALL){
+		min-height: 0;
+		height: calc(100vh - #{$sizeGrid * 2});
+
+		&:before {
+			display: none;
+		}
+
+		.background-triangle {
+			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 48);
+		}
+
+		.secondary-background-triangle {
+			display: none;
+		}
+
+		.slide-content {
+			@include size($sizeGrid * 18, auto);
+			padding-left: $sizeGrid * 2;
+		}
+
+		img {
+			object-fit: cover;
+		}
+	}
+
 }
