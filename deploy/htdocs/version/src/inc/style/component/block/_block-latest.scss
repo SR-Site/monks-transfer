@@ -26,6 +26,7 @@
 	}
 
 	@include respond-to(SMALL) {
+
 		.latest-articles {
 			padding-left: $sizeGrid;
 			padding-right: $sizeGrid;

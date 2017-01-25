@@ -1,6 +1,6 @@
 .component-block-more {
 	background: $colorLightGrey;
-	padding: $sizeGrid * 3 $sizeGrid * 3 $sizeGrid * 1;
+	padding: $sizeGrid * 3 0 $sizeGrid * 1;
 
 	.header {
 		margin-bottom: $sizeGrid;
@@ -34,10 +34,10 @@
 	}
 
 	@include respond-to(SMALL) {
+
 		.latest-articles {
 			padding-left: $sizeGrid;
 			padding-right: $sizeGrid;
-
 
 			.component-block-article-teaser:not(:first-child) {
 				display: none;
