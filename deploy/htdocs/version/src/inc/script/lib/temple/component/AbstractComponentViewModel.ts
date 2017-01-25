@@ -6,6 +6,7 @@ import DataManager from "../../../app/data/DataManager";
 import Theme from "../../../app/data/enum/style/Theme";
 import Direction from "../../../app/data/enum/layout/Direction";
 import bowser = require('bowser');
+import Orientation from "../../../app/data/enum/layout/Orientation";
 
 /**
  * Abstract viewModel class for components. All component ViewModels should extend this class.
@@ -21,6 +22,7 @@ abstract class AbstractComponentViewModel<T extends AbstractComponentController<
 	public Theme: Enum = Theme;
 	public Direction:Enum = Direction;
 	public Bowser:Class = bowser;
+	public Orientation:Enum = Orientation;
 
 	public deviceState:KnockoutObservable<DeviceState> = DataManager.getInstance().deviceStateTracker.currentState;
 

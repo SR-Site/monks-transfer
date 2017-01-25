@@ -5,10 +5,14 @@ import BlockImageCarouselViewModel from 'app/component/block/block-image-carouse
 
 import Log from "lib/temple/util/Log";
 import InfiniteImageCarousel from "../../../util/infinite-carousel/InfiniteImageCarousel";
+import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedController";
+import DataEvent from "../../../../lib/temple/event/DataEvent";
+import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
 
 class BlockImageCarouselController extends DefaultComponentController<BlockImageCarouselViewModel, IBlockImageCarouselOptions>
 {
 	private _infiniteImageCarousel:InfiniteImageCarousel;
+	private _paginatorDashedController:PaginatorDashedController;
 
 	/**
 	 *	Instance of Log debug utility for debug logging
@@ -42,6 +46,16 @@ class BlockImageCarouselController extends DefaultComponentController<BlockImage
 	public openIndex(index:number):void
 	{
 		this._infiniteImageCarousel.open(index);
+	}
+
+	/**
+	 * @public
+	 * @method handlePaginatorReady
+	 */
+	public handlePaginatorReady(controller:PaginatorDashedController):void
+	{
+		this._paginatorDashedController = controller;
+		controller.addEventListener(CarouselEvent.OPEN, (event:DataEvent<{index:number}>)=> this.openIndex(event.data.index));
 	}
 
 	/**

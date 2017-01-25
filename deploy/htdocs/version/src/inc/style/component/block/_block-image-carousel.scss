@@ -45,6 +45,10 @@
 		}
 	}
 
+	.component-paginator-dashed {
+		display: none;
+	}
+
 	.pagination {
 		@include size(100%, $sizeGrid * 2);
 		padding: 0 $sizeGrid * 3 0 $sizeGrid * 4;
@@ -106,6 +110,15 @@
 	@include respond-to(SMALL) {
 		.slider-viewport {
 			padding: 0 $sizeGrid 0 0;
+		}
+
+		.pagination {
+			display: none;
+		}
+
+		.component-paginator-dashed {
+			display: block;
+			margin-top: $sizeGrid*2;
 		}
 	}
 }

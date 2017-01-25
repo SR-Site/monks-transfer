@@ -93,6 +93,13 @@
 		color: $colorWhite;
 	}
 
+	.component-paginator-dashed {
+		position: absolute;
+		@include pos(50%, $sizeGrid, auto, auto);
+		transform: translateY(-50%);
+		z-index: 2;
+	}
+
 	@include respond-to(SMALL) {
 		min-height: 0;
 		height: calc(100vh - #{$sizeGrid * 2});

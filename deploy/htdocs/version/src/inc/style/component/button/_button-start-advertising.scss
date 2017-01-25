@@ -6,6 +6,7 @@
 	transform: translateY(0);
 	color: #fff;
 	text-align: right;
+	display: none; // temp
 
 	.background {
 		@include arrow(left, $colorPrimary, $size);

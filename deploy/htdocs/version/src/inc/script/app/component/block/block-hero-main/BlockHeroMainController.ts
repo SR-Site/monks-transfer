@@ -5,7 +5,6 @@ import BlockHeroMainViewModel from 'app/component/block/block-hero-main/BlockHer
 
 import Log from "lib/temple/util/Log";
 import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
-import KeyCode from "../../../../lib/temple/util/key/KeyCode";
 import Promise = require("bluebird");
 import DefaultTransitionController from "../../../util/component-transition/DefaultTransitionController";
 import ImageHelper from "../../../util/ImageHelper";
