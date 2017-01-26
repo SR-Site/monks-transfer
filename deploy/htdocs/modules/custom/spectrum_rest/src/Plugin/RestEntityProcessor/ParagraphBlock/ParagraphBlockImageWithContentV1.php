@@ -33,6 +33,7 @@ class ParagraphBlockImageWithContentV1 extends RestBaseParagraphBlock {
         "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
         "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),
         "background" => $this->image($entity->get('field_image')),
+        "alignment" => (int) $entity->get('field_alignment'),
       ],
     ];
 

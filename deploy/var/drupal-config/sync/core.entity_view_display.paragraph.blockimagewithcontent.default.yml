@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockimagewithcontent.field_alignment
     - field.field.paragraph.blockimagewithcontent.field_cropped_image
     - field.field.paragraph.blockimagewithcontent.field_heading
     - field.field.paragraph.blockimagewithcontent.field_image
@@ -13,12 +14,19 @@ dependencies:
   module:
     - entity_reference_revisions
     - image
+    - options
     - text
 id: paragraph.blockimagewithcontent.default
 targetEntityType: paragraph
 bundle: blockimagewithcontent
 mode: default
 content:
+  field_alignment:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_cropped_image:
     weight: 0
     label: above
