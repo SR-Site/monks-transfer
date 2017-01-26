@@ -26,7 +26,7 @@ class ParagraphBlockHowToAdvertiseV1 extends RestBaseParagraphBlock {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'howToAdvertise',
+      "id" => 'blockHowToAdvertise',
       "data" => $data + [
         "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
         "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),

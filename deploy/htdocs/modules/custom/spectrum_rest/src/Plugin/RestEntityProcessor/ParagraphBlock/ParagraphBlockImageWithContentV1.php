@@ -26,7 +26,7 @@ class ParagraphBlockImageWithContentV1 extends RestBaseParagraphBlock {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'imageWithContent',
+      "id" => 'blockImageWithContent',
       "data" => $data + [
         "croppedImage" => $this->fieldProcessor->getFieldData($entity->get('field_cropped_image')),
         "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),

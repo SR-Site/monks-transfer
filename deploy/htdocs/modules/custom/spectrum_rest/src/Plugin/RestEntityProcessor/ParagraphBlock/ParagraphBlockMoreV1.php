@@ -26,7 +26,7 @@ class ParagraphBlockMoreV1 extends RestBaseParagraphBlock {
     $styles = $this->fieldProcessor->getFieldData($entity->get('field_styles'));
 
     $data = [
-      "id" => 'more',
+      "id" => 'blockMore',
       "data" => $styles + [
         "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
         "tags" => $this->fieldProcessor->getFieldData($entity->get('field_links')),

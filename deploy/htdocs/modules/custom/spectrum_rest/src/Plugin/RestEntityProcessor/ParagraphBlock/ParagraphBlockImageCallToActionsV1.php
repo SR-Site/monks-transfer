@@ -26,7 +26,7 @@ class ParagraphBlockImageCallToActionsV1 extends RestBaseParagraphBlock {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'imageCallToActions',
+      "id" => 'blockImageCallToActions',
       "data" => $data + [
         "callToActions" => $this->getItems($entity->get('field_calltoactions')),
       ],

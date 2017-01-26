@@ -26,7 +26,7 @@ class ParagraphBlockImageCarouselV1 extends RestBaseParagraphBlock {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'imageCarousel',
+      "id" => 'blockImageCarousel',
       "data" => $data + [
         "slides" => $this->getItems($entity->get('field_slides')),
       ],
