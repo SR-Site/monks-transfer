@@ -94,8 +94,11 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 	/**
 	 * @public
 	 * @method open
+	 * @param path
+	 * @param duration
+	 * @param ease
 	 */
-	public open(path: string, duration: number = ImageCrossfaderController.DURATION): void
+	public open(path: string, duration: number = ImageCrossfaderController.DURATION, ease:Ease = Expo.easeInOut): void
 	{
 		if(this._animation)
 		{
@@ -117,7 +120,7 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 					},
 					{
 						_triangleProgress: 1,
-						ease: Power3.easeInOut,
+						ease: ease,
 						onUpdate: () =>
 						{
 							this.draw();

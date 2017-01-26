@@ -34,6 +34,10 @@
 		}
 	}
 
+	.persona {
+
+	}
+
 	.persona-options {
 		@extend %reset-list;
 		@include size(auto, $sizeGrid * 4);
@@ -45,6 +49,40 @@
 	.persona-option {
 		@include size(25%, $buttonHeight);
 		display: inline-block;
+
+		@include hover() {
+			.persona-button {
+				color: $colorSmallBusinesses;
+
+				.label {
+					color: $colorWhite;
+				}
+
+				.pagination-number {
+					color: $colorWhite;
+
+					&:after {
+						opacity: 0;
+					}
+				}
+			}
+
+			.small_business {
+				color: $colorSmallBusinesses;
+			}
+
+			.automotive {
+				color: $colorAutomotive;
+			}
+
+			.enterprise {
+				color: $colorEnterprise;
+			}
+
+			.local_media_buying {
+				color: $colorLocalMedia;
+			}
+		}
 
 		&.is-active {
 			.persona-button {
