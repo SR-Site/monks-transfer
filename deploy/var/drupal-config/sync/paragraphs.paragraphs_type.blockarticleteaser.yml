@@ -1,0 +1,7 @@
+uuid: 41ee3be7-dc6b-4d2f-9a37-af188ae41ba7
+langcode: en
+status: true
+dependencies: {  }
+id: blockarticleteaser
+label: 'Block article teaser'
+behavior_plugins: {  }

@@ -24,11 +24,11 @@ class NodeArticleTeaserV1 extends RestBaseParagraphBlock {
   protected function getItemData($entity) {
 
     $data = [
-      "target" => $this->aliasManager->getAliasByPath('/' . $entity->toUrl()->getInternalPath()),
-      "heading" => $entity->label(),
-      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_content')),
-      "image" => $this->image($entity->get('field_image')),
       "tags" => $this->fieldProcessor->getFieldData($entity->get('field_tags')),
+      "image" => $this->image($entity->get('field_image')),
+      "target" => $this->aliasManager->getAliasByPath('/' . $entity->toUrl()->getInternalPath()),
+      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_content')),
+      "heading" => $entity->label(),
     ];
 
     return $data;

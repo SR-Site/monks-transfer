@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_blocks
     - node.type.page
+    - paragraphs.paragraphs_type.blockarticleteaser
     - paragraphs.paragraphs_type.blockhowtoadvertise
     - paragraphs.paragraphs_type.blockimagecalltoactions
     - paragraphs.paragraphs_type.blockimagecarousel
@@ -32,6 +33,7 @@ settings:
       blockimagewithcontent: blockimagewithcontent
       blocklatest: blocklatest
       blockimagecarousel: blockimagecarousel
+      blockarticleteaser: blockarticleteaser
       blockmore: blockmore
     target_bundles_drag_drop:
       blockhowtoadvertise:
@@ -55,18 +57,21 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
-      blocklatest:
-        enabled: true
-        weight: 13
       link:
         weight: 13
         enabled: false
+      blocklatest:
+        enabled: true
+        weight: 13
       blockimagecarousel:
         enabled: true
         weight: 13
       step:
         weight: 15
         enabled: false
+      blockarticleteaser:
+        enabled: true
+        weight: 15
       slide:
         weight: 18
         enabled: false
