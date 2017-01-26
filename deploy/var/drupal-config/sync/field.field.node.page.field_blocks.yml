@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_blocks
     - node.type.page
     - paragraphs.paragraphs_type.blockarticleteaser
+    - paragraphs.paragraphs_type.blockaudiofragment
     - paragraphs.paragraphs_type.blockhowtoadvertise
     - paragraphs.paragraphs_type.blockimagecalltoactions
     - paragraphs.paragraphs_type.blockimagecarousel
@@ -34,6 +35,7 @@ settings:
       blocklatest: blocklatest
       blockimagecarousel: blockimagecarousel
       blockarticleteaser: blockarticleteaser
+      blockaudiofragment: blockaudiofragment
       blockmore: blockmore
     target_bundles_drag_drop:
       blockhowtoadvertise:
@@ -72,6 +74,9 @@ settings:
       blockarticleteaser:
         enabled: true
         weight: 15
+      blockaudiofragment:
+        enabled: true
+        weight: 16
       slide:
         weight: 18
         enabled: false
