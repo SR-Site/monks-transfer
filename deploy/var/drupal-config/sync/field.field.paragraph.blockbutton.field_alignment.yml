@@ -1,0 +1,21 @@
+uuid: 2c19c795-64ab-42f8-8e59-0d4d8ea3ae8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_alignment
+    - paragraphs.paragraphs_type.blockbutton
+  module:
+    - options
+id: paragraph.blockbutton.field_alignment
+field_name: field_alignment
+entity_type: paragraph
+bundle: blockbutton
+label: Alignment
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

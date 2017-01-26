@@ -1,0 +1,7 @@
+uuid: d4f11285-6891-4d51-8175-7f283ef7fc9e
+langcode: en
+status: true
+dependencies: {  }
+id: blockbutton
+label: 'Block button'
+behavior_plugins: {  }
