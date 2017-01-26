@@ -1,0 +1,32 @@
+uuid: c38b97d7-da5d-4bbf-a666-2f68d01f6be9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockheromain.field_slides
+    - field.field.paragraph.blockheromain.field_styles
+    - paragraphs.paragraphs_type.blockheromain
+  module:
+    - entity_reference_revisions
+id: paragraph.blockheromain.default
+targetEntityType: paragraph
+bundle: blockheromain
+mode: default
+content:
+  field_slides:
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden: {  }

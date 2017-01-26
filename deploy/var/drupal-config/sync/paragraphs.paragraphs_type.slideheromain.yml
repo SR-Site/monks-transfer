@@ -1,0 +1,7 @@
+uuid: 8b8d0fb9-0a86-4367-978a-5be7a95b92e6
+langcode: en
+status: true
+dependencies: {  }
+id: slideheromain
+label: 'Slide Hero main'
+behavior_plugins: {  }

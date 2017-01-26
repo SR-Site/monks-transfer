@@ -1,0 +1,87 @@
+uuid: 117d5ff0-f36b-4061-9b91-80f5f9d74504
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_statistics
+    - paragraphs.paragraphs_type.slideheromain
+    - paragraphs.paragraphs_type.statistic
+  module:
+    - entity_reference_revisions
+id: paragraph.slideheromain.field_statistics
+field_name: field_statistics
+entity_type: paragraph
+bundle: slideheromain
+label: Statistics
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      statistic: statistic
+    target_bundles_drag_drop:
+      slideheromain:
+        weight: 21
+        enabled: false
+      blockarticleteaser:
+        weight: 22
+        enabled: false
+      blockaudiofragment:
+        weight: 23
+        enabled: false
+      blockblogpost:
+        weight: 24
+        enabled: false
+      blockbutton:
+        weight: 25
+        enabled: false
+      blockhowtoadvertise:
+        weight: 26
+        enabled: false
+      blockimagecalltoactions:
+        weight: 27
+        enabled: false
+      blockimagecarousel:
+        weight: 28
+        enabled: false
+      blockimagewithcontent:
+        weight: 29
+        enabled: false
+      blocklatest:
+        weight: 30
+        enabled: false
+      blockmore:
+        weight: 31
+        enabled: false
+      broadcastschedule:
+        weight: 32
+        enabled: false
+      calltoaction:
+        weight: 33
+        enabled: false
+      link:
+        weight: 34
+        enabled: false
+      showmetric:
+        weight: 35
+        enabled: false
+      slide:
+        weight: 36
+        enabled: false
+      stat:
+        weight: 37
+        enabled: false
+      statistic:
+        enabled: true
+        weight: 38
+      step:
+        weight: 39
+        enabled: false
+      styles:
+        weight: 40
+        enabled: false
+field_type: entity_reference_revisions

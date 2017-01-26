@@ -1,0 +1,56 @@
+uuid: 5ec41515-5eb5-4c14-afc3-85ec4c5f4b23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockheromain.field_slides
+    - field.field.paragraph.blockheromain.field_styles
+    - paragraphs.paragraphs_type.blockheromain
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+id: paragraph.blockheromain.default
+targetEntityType: paragraph
+bundle: blockheromain
+mode: default
+content:
+  field_slides:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+  field_styles:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

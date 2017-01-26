@@ -1,0 +1,7 @@
+uuid: e25a60c3-ef94-40df-998d-6a41444733ca
+langcode: en
+status: true
+dependencies: {  }
+id: statistic
+label: Statistic
+behavior_plugins: {  }

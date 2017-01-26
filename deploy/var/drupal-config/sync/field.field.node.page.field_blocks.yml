@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.blockaudiofragment
     - paragraphs.paragraphs_type.blockblogpost
     - paragraphs.paragraphs_type.blockbutton
+    - paragraphs.paragraphs_type.blockheromain
     - paragraphs.paragraphs_type.blockhowtoadvertise
     - paragraphs.paragraphs_type.blockimagecalltoactions
     - paragraphs.paragraphs_type.blockimagecarousel
@@ -39,8 +40,9 @@ settings:
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
-      blockblogpost: blockblogpost
       blockmore: blockmore
+      blockblogpost: blockblogpost
+      blockheromain: blockheromain
     target_bundles_drag_drop:
       blockhowtoadvertise:
         enabled: true
@@ -72,25 +74,37 @@ settings:
       blockimagecarousel:
         enabled: true
         weight: 13
-      step:
-        weight: 15
-        enabled: false
       blockarticleteaser:
         enabled: true
         weight: 15
+      step:
+        weight: 15
+        enabled: false
       blockaudiofragment:
         enabled: true
         weight: 16
-      slide:
-        weight: 18
-        enabled: false
       blockbutton:
         enabled: true
         weight: 18
-      blockblogpost:
-        enabled: true
-        weight: 19
+      slide:
+        weight: 18
+        enabled: false
       blockmore:
         enabled: true
         weight: 19
+      blockblogpost:
+        enabled: true
+        weight: 19
+      blockheromain:
+        enabled: true
+        weight: 26
+      slideheromain:
+        weight: 38
+        enabled: false
+      stat:
+        weight: 39
+        enabled: false
+      statistic:
+        weight: 40
+        enabled: false
 field_type: entity_reference_revisions
