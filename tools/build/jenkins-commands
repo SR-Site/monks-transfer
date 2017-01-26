@@ -139,14 +139,11 @@ function tsdCommand(){
 
 function gruntCommand(){
 	echo "Running grunt command with args: $@"
-	CURRENT_PWD=`pwd`
-	cd "${ROOTDIR}/${GRUNT_DIR}"
 	${GRUNT_BIN} $@
 	if [ "$?" -ne 0 ]; then
 	 	echo "Grunt Failed"
     	exit 1
  	fi
- 	cd  ${CURRENT_PWD}
 }
 
 function gitCommand(){
@@ -182,6 +179,6 @@ function selfUpdate(){
 
 function blockDocumentation(){
 	if [ -e "${BLOCKDOCS}" ]; then
-		copyDir ${1} "${BLOCKDOCS}/${JOB_NAME}"
+		copyDir ${1} "${BLOCKDOCS}/${JOB_NAME}/"
 	fi
 }

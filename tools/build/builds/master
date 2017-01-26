@@ -12,6 +12,7 @@ function build_frontend(){
     gruntCommand requirejs
     gruntCommand clean-build
     gruntCommand generate-block-documentation
+    blockDocumentation ../block-documentation/
 }
 
 function build_backend(){

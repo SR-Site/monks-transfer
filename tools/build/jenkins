@@ -20,6 +20,7 @@ ASSETDIR="${ROOTDIR}docroot/sites/default/files"
 FRONTEND_BUILDROOT="${ROOTDIR}/tools/build"
 BACKEND_BUILDROOT=""
 BLOCKDOCS="/var/www/block-docs/"
+JOB_NAME="Spectrum-Reach"
 
 #bootrap scripts
 
