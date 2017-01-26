@@ -7,6 +7,7 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.blockarticleteaser
     - paragraphs.paragraphs_type.blockaudiofragment
+    - paragraphs.paragraphs_type.blockblogpost
     - paragraphs.paragraphs_type.blockhowtoadvertise
     - paragraphs.paragraphs_type.blockimagecalltoactions
     - paragraphs.paragraphs_type.blockimagecarousel
@@ -36,6 +37,7 @@ settings:
       blockimagecarousel: blockimagecarousel
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
+      blockblogpost: blockblogpost
       blockmore: blockmore
     target_bundles_drag_drop:
       blockhowtoadvertise:
@@ -68,18 +70,21 @@ settings:
       blockimagecarousel:
         enabled: true
         weight: 13
-      step:
-        weight: 15
-        enabled: false
       blockarticleteaser:
         enabled: true
         weight: 15
+      step:
+        weight: 15
+        enabled: false
       blockaudiofragment:
         enabled: true
         weight: 16
       slide:
         weight: 18
         enabled: false
+      blockblogpost:
+        enabled: true
+        weight: 19
       blockmore:
         enabled: true
         weight: 19
