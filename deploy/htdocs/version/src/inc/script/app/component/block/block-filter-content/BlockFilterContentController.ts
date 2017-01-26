@@ -12,6 +12,7 @@ import IBlock from "../../../data/interface/block/IBlock";
 import CallbackCounter from "../../../util/CallbackCounter";
 import FilterMenuController from "../../filter-menu/FilterMenuController";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
+import Loader from "../../../util/Loader";
 
 class BlockFilterContentController extends DefaultComponentController<BlockFilterContentViewModel, IBlockFilterContentOptions>
 {
@@ -28,6 +29,7 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	private _components: {[id: string]: DefaultComponentController<DefaultComponentViewModel<any, any>, any>} = {};
 	private _filterMenu: FilterMenuController;
 	private _filters:{[filterType:string]:string};
+	private _loader: Loader;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -36,6 +38,8 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	public init(): void
 	{
 		super.init();
+
+		this._loader = new Loader(this.element);
 
 		this._debug.log('Init');
 	}
@@ -66,9 +70,20 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 */
 	private handleFilterChange(event:DataEvent<{[filterType:string]:string}>):void
 	{
-		this._filters = event.data;
 		console.log('handleFilterChange: ', event.data);
 
+		// Save Selected Filters
+		this._filters = event.data;
+
+		// Remove components from scrollTrackerPoint in DefaultContentPageController
+		this.parentPage.removeComponentsFromScrollTracker(this._components);
+
+		// Empty offset && items
+		this._offset = 0;
+		this._components = {};
+		this.viewModel.items([]);
+
+		// Fetch New Content
 		this.loadMore();
 	}
 
@@ -116,12 +131,15 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 */
 	private fetchContent(): void
 	{
+		this._loader.show();
+
 		DataManager.getInstance().serviceModel.contentService.loadMore(
 			this.options.endpoint,
 			this._offset,
 			this._limit,
 			this._filters
-		).then((result) => this.handleContentLoad(result.data));
+		).then((result) => this._loader.hide()
+			.then(() =>this.handleContentLoad(result.data)));
 	}
 
 	/**
@@ -152,6 +170,8 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 		this._offset = null;
 		this._components = null;
 		this._filterMenu = null;
+		this._loader = null;
+
 
 		// always call this last
 		super.destruct();
