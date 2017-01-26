@@ -7,8 +7,21 @@ import CommonEvent from "../../../lib/temple/event/CommonEvent";
 
 class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenuController, IFilterMenuOptions>
 {
+	public activeDropdownIndex:KnockoutObservable<number> = ko.observable(null);
 	public filterOverlayIsOpen:KnockoutObservable<boolean> = ko.observable(false);
+
 	public filters: KnockoutObservable<{[type: string]: Array<{label:string;value:string;checked:KnockoutObservable<boolean>}>}> = ko.observable(null);
+	public selectedFiltersOptionCount:KnockoutComputed<Array<number>> = ko.computed(() =>{
+		var countArray = [];
+
+		if(this.filters()) {
+			Object.keys(this.filters()).forEach((key, index) =>{
+				countArray.push(this.filters()[index].filter((option) => option.checked()).length)
+			});
+		}
+
+		return countArray;
+	});
 
 
 	/**
@@ -35,6 +48,43 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 		});
 
 		return filterData;
+	}
+
+	/**
+	 * @public
+	 * @method handleDropdownClick
+	 */
+	public handleDropdownClick(index: number): void
+	{
+		const oldIndex = this.activeDropdownIndex();
+
+		// Close if clicked twice
+		if(index === this.activeDropdownIndex()) {
+			this.handleCloseDropdownClick(index);
+			return;
+		};
+
+		// Update the active dropDownIndex
+		this.activeDropdownIndex(index);
+
+		if(typeof oldIndex === 'number') {
+			this.controller.transitionController.hideDropDown(oldIndex)
+				.then(() => this.controller.transitionController.showDropDown(index))
+		}
+		else
+		{
+			this.controller.transitionController.showDropDown(index);
+		}
+	}
+
+	/**
+	 * @public
+	 * @method handleCloseDropdownClick
+	 */
+	public handleCloseDropdownClick(index: number):void
+	{
+		this.controller.transitionController.hideDropDown(index);
+		this.activeDropdownIndex(null);
 	}
 
 	/**

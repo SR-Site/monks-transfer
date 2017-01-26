@@ -51,18 +51,13 @@
 		height: 100%;
 		flex-grow: 1;
 		flex-basis: 0;
-		cursor: pointer;
 
 		.label {
 			font: 600 1.2rem / 2rem $fontOpenSans;
 		}
 
 		// Hover State
-		@include hover() {
-			.filter-dropdown {
-				max-height: $sizeGrid*2;
-			}
-
+		&.is-hover {
 			.filter-button::before {
 				width: 100%;
 			}
@@ -85,14 +80,14 @@
 		@include size(100%, $sizeGrid*2);
 		max-height: 0;
 		overflow: hidden;
-		transition: max-height 250ms ease(easeOutExpo);
+		//transition: max-height 250ms ease(easeOutExpo);
 		font-size: 0;
 
 		.inner-content {
 			padding: (($sizeGrid*2)-$sizeGrid/2)/2 $sizeGrid;
 		}
 
-		.component-button-tag {
+		.tag-checkbox {
 			&:not(:first-child) {
 				margin-left: 5px;
 			}
@@ -103,6 +98,10 @@
 			@include pos(50%, $sizeGrid, auto, auto);
 			transform: translate(0, -50%);
 		}
+
+		&.is-open {
+			max-height: $sizeGrid*2;
+		}
 	}
 
 	// Filter Button
@@ -112,12 +111,17 @@
 		padding-right: $sizeGrid/2;
 		align-items: center;
 		display: flex;
-		height: 100%;
+		@include size(100%);
 
-		.component-button-tag {
+		.selected-tags-indicator {
 			position: absolute;
 			@include pos(50%, $sizeGrid + $sizeGrid/4, auto, auto);
 			transform: translate(0, -50%);
+			@include size($sizeGrid/2);
+			border-radius: 100%;
+			background-color: $colorTertiary;
+			color: white;
+			font: 600 1.2rem / 2rem $fontOpenSans;
 		}
 
 		&:before {
@@ -228,7 +232,7 @@
 		// Filter Overlay Tags
 		.filter-overlay-tags {
 
-			.component-button-tag {
+			.tag-checkbox {
 				margin-top: $sizeGrid/2;
 			}
 		}
