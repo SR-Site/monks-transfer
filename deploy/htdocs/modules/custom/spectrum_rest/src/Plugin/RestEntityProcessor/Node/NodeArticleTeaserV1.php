@@ -2,7 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\Node;
 
-use Drupal\spectrum_rest\Plugin\RestBaseParagraphBlock;
+use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 
 /**
  * Returns the structured data of an entity.
@@ -16,7 +16,7 @@ use Drupal\spectrum_rest\Plugin\RestBaseParagraphBlock;
  *   view_mode = "teaser"
  * )
  */
-class NodeArticleTeaserV1 extends RestBaseParagraphBlock {
+class NodeArticleTeaserV1 extends SpectrumRestEntityProcessorBase {
 
   /**
    * {@inheritdoc}

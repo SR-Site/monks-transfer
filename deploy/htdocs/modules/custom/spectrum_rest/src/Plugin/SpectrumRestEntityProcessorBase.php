@@ -17,7 +17,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *
  * @package Drupal\spectrum_rest\Plugin
  */
-abstract class RestBaseParagraphBlock extends RestEntityProcessorBase {
+abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
 
   /**
    * The Alias Manager service.
