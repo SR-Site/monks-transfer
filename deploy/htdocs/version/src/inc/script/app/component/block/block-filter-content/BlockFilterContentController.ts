@@ -10,6 +10,8 @@ import CommonEvent from "../../../../lib/temple/event/CommonEvent";
 import DefaultComponentViewModel from "../DefaultComponentViewModel";
 import IBlock from "../../../data/interface/block/IBlock";
 import CallbackCounter from "../../../util/CallbackCounter";
+import FilterMenuController from "../../filter-menu/FilterMenuController";
+import DataEvent from "../../../../lib/temple/event/DataEvent";
 
 class BlockFilterContentController extends DefaultComponentController<BlockFilterContentViewModel, IBlockFilterContentOptions>
 {
@@ -24,6 +26,8 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	private _offset: number = 0;
 
 	private _components: {[id: string]: DefaultComponentController<DefaultComponentViewModel<any, any>, any>} = {};
+	private _filterMenu: FilterMenuController;
+	private _filters:{[filterType:string]:string};
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -44,6 +48,28 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	{
 		this._components[controller.options.id + controller.eventNamespace] = controller;
 		this.handleComponentReady(controller);
+	}
+
+	/**
+	 * @public
+	 * @method handleFilterMenuReady
+	 */
+	public handleFilterMenuReady(controller: FilterMenuController):void
+	{
+		this._filterMenu = controller;
+		this._filterMenu.addEventListener(CommonEvent.CHANGE, this.handleFilterChange.bind(this));
+	}
+
+	/**
+	 * @private
+	 * @method handleFilterChange
+	 */
+	private handleFilterChange(event:DataEvent<{[filterType:string]:string}>):void
+	{
+		this._filters = event.data;
+		console.log('handleFilterChange: ', event.data);
+
+		this.loadMore();
 	}
 
 	/**
@@ -94,7 +120,7 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 			this.options.endpoint,
 			this._offset,
 			this._limit,
-			'' // TODO: add dynamic filters
+			this._filters
 		).then((result) => this.handleContentLoad(result.data));
 	}
 
@@ -125,6 +151,7 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 		this._limit = null;
 		this._offset = null;
 		this._components = null;
+		this._filterMenu = null;
 
 		// always call this last
 		super.destruct();

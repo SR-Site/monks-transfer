@@ -1,5 +1,6 @@
 <div class="component-filter-menu overrule-overlap" data-bind="with: data">
 
+	<!-- ko if: $root.filters() -->
 	<div class="menu">
 		<div class="filter-label">
 			<!-- ko text: label --><!-- /ko -->
@@ -13,18 +14,6 @@
 				<div class="filter-button">
 					<span class="label" data-bind="html: label"></span>
 
-					<!-- ko component: {
-						name: 'button/button-tag',
-						onComplete: $root.controller.callbackCounter.get(),
-						options: {
-							action: {
-								label: 'myLabel',
-								event: (function(){console.log('click')})
-							},
-							size: $root.ButtonSize.LARGE
-						}
-					} --><!-- /ko -->
-
 					<!-- ko template: {
 						name: 'button-select-anchor',
 						data: {
@@ -34,18 +23,11 @@
 				</div>
 
 				<div class="filter-dropdown">
-					<div class="inner-content" data-bind="foreach: options">
-						<!-- ko component: {
-							name: 'button/button-tag',
-							onComplete: $root.controller.callbackCounter.get(),
-							options: {
-								action: {
-									label: label,
-									event: (function(){console.log('clicked', value)})
-								},
-								size: $root.ButtonSize.LARGE
-							}
-						} --><!-- /ko -->
+					<div class="inner-content" data-bind="foreach: $root.filters()[$index()]">
+						<label class="tag-checkbox custom-checkbox" data-bind="attr: {'for': value}">
+							<input class="abs-fill" type="checkbox" name="{{value}}" id="{{value}}" value="" data-bind="checked: checked"/>
+							<div class="element">{{label}}</div>
+						</label>
 					</div>
 
 					<!-- ko component: {
@@ -88,19 +70,14 @@
 						<div class="filter-overlay-group">
 							<span class="label" data-bind="html: label"></span>
 
-							<div class="filter-overlay-tags" data-bind="foreach: options">
-								<!-- ko component: {
-									name: 'button/button-tag',
-									onComplete: $root.controller.callbackCounter.get(),
-									options: {
-										action: {
-											label: 'myLabel',
-											event: (function(){console.log('click')})
-										},
-										size: $root.ButtonSize.LARGE
-									}
-								} --><!-- /ko -->
+							<div class="filter-overlay-tags" data-bind="foreach: $root.filters()[$index()]">
+
+								<label class="tag-checkbox custom-checkbox" data-bind="attr: {'for': value + '_mobile'}">
+									<input class="abs-fill" type="checkbox" name="{{value + '_mobile'}}" id="{{value + '_mobile'}}" value="" data-bind="checked: checked"/>
+									<div class="element">{{label}}</div>
+								</label>
 							</div>
+
 						</div>
 						<!-- /ko -->
 					</div>
@@ -116,4 +93,5 @@
 		</button>
 
 	</div>
+	<!-- /ko -->
 </div>

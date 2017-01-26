@@ -35,12 +35,12 @@
 							"label": "Category",
 							"options": [
 								{
-									"value": "sport",
+									"value": "sport_0",
 									"label": "sport"
 								},
 								{
-									"value": "test",
-									"label": "test"
+									"value": "test_0",
+									"label": "test 0"
 								}
 							]
 						},
@@ -49,28 +49,28 @@
 							"label": "Document Type",
 							"options": [
 								{
-									"value": "sport 1",
-									"label": "sport 1"
-								},
-								{
-									"value": "test 1",
+									"value": "test_1",
 									"label": "test 1"
 								},
 								{
-									"value": "sport 1",
-									"label": "sport 1"
+									"value": "test_2",
+									"label": "test 2"
 								},
 								{
-									"value": "test 1",
-									"label": "test 1"
+									"value": "test_3",
+									"label": "test 3"
 								},
 								{
-									"value": "sport 1",
-									"label": "sport 1"
+									"value": "test_4",
+									"label": "test 4"
 								},
 								{
-									"value": "test 1",
-									"label": "test 1"
+									"value": "test_5",
+									"label": "test 5"
+								},
+								{
+									"value": "test_6",
+									"label": "test 6"
 								}
 							]
 						},
@@ -79,20 +79,20 @@
 							"label": "Platform",
 							"options": [
 								{
-									"value": "sport 2",
-									"label": "sport 2"
+									"value": "test_7",
+									"label": "test 7"
 								},
 								{
-									"value": "test 3",
-									"label": "test 3"
+									"value": "test_8",
+									"label": "test 8"
 								},
 								{
-									"value": "sport 1",
-									"label": "sport 1"
+									"value": "test_9",
+									"label": "test 9"
 								},
 								{
-									"value": "test 1",
-									"label": "test 1"
+									"value": "test_10",
+									"label": "test 10"
 								}
 							]
 						},
@@ -101,12 +101,12 @@
 							"label": "Market",
 							"options": [
 								{
-									"value": "sport",
-									"label": "sport"
+									"value": "test_11",
+									"label": "test 11"
 								},
 								{
-									"value": "test",
-									"label": "test"
+									"value": "test_12",
+									"label": "test 12"
 								}
 							]
 						}
