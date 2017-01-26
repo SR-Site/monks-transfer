@@ -10,6 +10,8 @@ import Promise = require("bluebird");
 
 class BlockPersonaSelectorController extends DefaultComponentController<BlockPersonaSelectorViewModel, IBlockPersonaSelectorOptions>
 {
+	protected transitionController:BlockPersonaSelectorTransitionController;
+
 	/**
 	 *    Instance of Log debug utility for debug logging
 	 *    @property _debug
@@ -28,6 +30,16 @@ class BlockPersonaSelectorController extends DefaultComponentController<BlockPer
 		super.init();
 
 		this._debug.log('Init');
+	}
+
+	/**
+	 * @public
+	 * @method get activeIndex
+	 * @returns {any|any<number>}
+	 */
+	public get activeIndex():number
+	{
+		return this.viewModel.activeIndex();
 	}
 
 	/**
