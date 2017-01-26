@@ -65,6 +65,10 @@ class BlockPersonaSelectorTransitionController extends DefaultTransitionControll
 			autoAlpha: 0
 		});
 
+		this.transitionInTimeline.from(this.element.querySelector('.component-paginator-dashed'), 0.5, {
+			autoAlpha: 0
+		});
+
 		this.transitionInTimeline.add(
 			() => this.parentController.changeBackgroundImage(this.parentController.activeIndex)
 		);
