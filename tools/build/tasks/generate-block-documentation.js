@@ -246,7 +246,11 @@ module.exports = function( grunt )
 			// Parse all the properties
 			properties.forEach( function( property )
 			{
-				parsedProperties.push( parseProperty( property ) );
+				// If the @ignore comment was added we will skip the property
+				if( !getDocComment( property.docComment || [], '@ignore' ) )
+				{
+					parsedProperties.push( parseProperty( property ) );
+				}
 			} );
 
 			output.references.push( {
@@ -272,10 +276,14 @@ module.exports = function( grunt )
 			// Parse all the properties
 			members.forEach( function( member )
 			{
-				parsedProperties.push( {
-					name: member.rawName,
-					value: member.value
-				} );
+				// If the @ignore comment was added we will skip the property
+				if( !getDocComment( member.docComment || [], '@ignore' ) )
+				{
+					parsedProperties.push( {
+						name: member.rawName,
+						value: member.value
+					} );
+				}
 			} );
 
 			output.enums.push( {

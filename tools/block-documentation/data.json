@@ -266,7 +266,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockButton\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"alignment\": 0,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockButton\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"alignment\": 0,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
         },
         {
             "blockId": "BlockFilterContent",
@@ -508,7 +508,7 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockHeroMain\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"secondaryLink\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"statistics\": \"TODO: Object\"\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"blockHeroMain\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"secondaryLink\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"statistics\": \"TODO: Object\"\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockHeroSecondary",
@@ -541,6 +541,15 @@
                     "properties": []
                 },
                 {
+                    "name": "background",
+                    "type": "IImage",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The background image",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
                     "name": "link",
                     "type": "ILink",
                     "required": true,
@@ -566,9 +575,18 @@
                     "description": "The main heading displayed on the hero secondary",
                     "placeholder": "",
                     "properties": []
+                },
+                {
+                    "name": "backgroundColor",
+                    "type": "string",
+                    "required": false,
+                    "defaultValue": "null",
+                    "description": "The main triangle background color, rgba or hexa code",
+                    "placeholder": "",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockHeroSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockHeroSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"backgroundColor\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockHeroTertiary",
@@ -698,7 +716,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockHowToAdvertise\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"icon\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockHowToAdvertise\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"icon\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockImageCallToActions",
@@ -925,7 +943,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockImageWithContent\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"croppedImage\": true,\n        \"alignment\": 0\n    }\n}"
+            "example": "{\n    \"id\": \"blockImageWithContent\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"croppedImage\": true,\n        \"alignment\": 0\n    }\n}"
         },
         {
             "blockId": "BlockInfo",
@@ -1399,7 +1417,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockPageNotFound\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"errorCode\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blockPageNotFound\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"errorCode\": 1\n    }\n}"
         },
         {
             "blockId": "BlockPathToPurchase",
@@ -1520,7 +1538,7 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockPersonaSelector\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"personas\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"personaType\": 0,\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"deeplink\": \"TODO: Object\",\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"blockPersonaSelector\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"personas\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"personaType\": 0,\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockProgramModule",
@@ -1826,7 +1844,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockSmallInfo\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"deeplink\": \"TODO: Object\",\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockSmallInfo\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockStoryInfoImages",
@@ -2001,15 +2019,6 @@
                     "required": true,
                     "defaultValue": "null",
                     "description": "The type of the link",
-                    "placeholder": "",
-                    "properties": []
-                },
-                {
-                    "name": "deeplink",
-                    "type": "Object",
-                    "required": false,
-                    "defaultValue": "null",
-                    "description": "The deeplink data of the link",
                     "placeholder": "",
                     "properties": []
                 },
