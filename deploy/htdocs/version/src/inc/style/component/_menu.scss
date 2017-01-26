@@ -25,8 +25,13 @@
 				visibility: visible;
 				transition: opacity .2s ease(easeInOut);
 			}
+		}
+	}
 
-			.main-link {
+	.main-link {
+		@include hover() {
+
+			.label {
 				transform: translateX($sizeGrid * 1.5);
 
 				&:before {
@@ -55,18 +60,24 @@
 		color: $colorWhite;
 		display: block;
 		position: relative;
-		transition: transform .2s ease(easeInOut);
 
-		&:before {
-			@include size($sizeGrid, .4rem);
-			@include pos(50%, auto, auto, 0);
-			transform: translate(calc(-100% - #{$sizeGrid * 0.5}), -50%);
-			background: $colorSecondary;
-			position: absolute;
-			content: '';
-			opacity: 0;
-			transition: opacity .2s ease(easeInOut);
+		.label {
+			display: block;
+			position: relative;
+			transition: transform .2s ease(easeInOut);
+
+			&:before {
+				@include size($sizeGrid, .4rem);
+				@include pos(50%, auto, auto, 0);
+				transform: translate(calc(-100% - #{$sizeGrid * 0.5}), -50%);
+				background: $colorSecondary;
+				position: absolute;
+				content: '';
+				opacity: 0;
+				transition: opacity .2s ease(easeInOut);
+			}
 		}
+
 	}
 
 	@include respond-to(SMALL) {
