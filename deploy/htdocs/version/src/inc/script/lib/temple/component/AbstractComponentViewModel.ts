@@ -17,14 +17,15 @@ import Orientation from "../../../app/data/enum/layout/Orientation";
  */
 abstract class AbstractComponentViewModel<T extends AbstractComponentController<any, any>, U> extends Destructible
 {
-	public MediaQueries:Class = mediaQueries;
+	public MediaQueries: Class = mediaQueries;
 	public ButtonSize: Enum = ButtonSize;
 	public Theme: Enum = Theme;
-	public Direction:Enum = Direction;
-	public Bowser:Class = bowser;
-	public Orientation:Enum = Orientation;
+	public Direction: Enum = Direction;
+	public Bowser: Class = bowser;
+	public Orientation: Enum = Orientation;
+	public DeviceState: Enum = DeviceState;
 
-	public deviceState:KnockoutObservable<DeviceState> = DataManager.getInstance().deviceStateTracker.currentState;
+	public deviceState: KnockoutObservable<DeviceState> = DataManager.getInstance().deviceStateTracker.currentState;
 
 	/**
 	 * Reference to the controller instance for this component.

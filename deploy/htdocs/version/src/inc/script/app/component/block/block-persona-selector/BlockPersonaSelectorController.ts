@@ -7,10 +7,14 @@ import Log from "lib/temple/util/Log";
 import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
 import ImageHelper from "../../../util/ImageHelper";
 import Promise = require("bluebird");
+import InfiniteImageCarousel from "../../../util/infinite-carousel/InfiniteImageCarousel";
+import DataEvent from "../../../../lib/temple/event/DataEvent";
+import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
+import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedController";
 
 class BlockPersonaSelectorController extends DefaultComponentController<BlockPersonaSelectorViewModel, IBlockPersonaSelectorOptions>
 {
-	protected transitionController:BlockPersonaSelectorTransitionController;
+	protected transitionController: BlockPersonaSelectorTransitionController;
 
 	/**
 	 *    Instance of Log debug utility for debug logging
@@ -20,6 +24,8 @@ class BlockPersonaSelectorController extends DefaultComponentController<BlockPer
 	private _debug: Log = new Log('app.component.BlockPersonaSelector');
 
 	private _imageCrossfader: ImageCrossfaderController;
+	private _infiniteImageCarousel: InfiniteImageCarousel;
+	private _paginatorDashedController: PaginatorDashedController;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -30,6 +36,35 @@ class BlockPersonaSelectorController extends DefaultComponentController<BlockPer
 		super.init();
 
 		this._debug.log('Init');
+
+		this._infiniteImageCarousel = new InfiniteImageCarousel(
+			<HTMLElement>this.element.querySelector('.js-image-carousel')
+		);
+
+		this.applyThreeWayBinding(this._infiniteImageCarousel.realCurrentPage, this.viewModel.activeIndex);
+
+		this._infiniteImageCarousel.addEventListener(CarouselEvent.CHANGE, this.handleImageCarouselChange.bind(this))
+	}
+
+	/**
+	 * @public
+	 * @method openIndex
+	 * @param index
+	 */
+	public openIndex(index: number): void
+	{
+		this._infiniteImageCarousel.open(index);
+	}
+
+	/**
+	 * @public
+	 * @method handlePaginatorReady
+	 */
+	public handlePaginatorReady(controller: PaginatorDashedController): void
+	{
+		this._paginatorDashedController = controller;
+
+		controller.addEventListener(CarouselEvent.OPEN, (event: DataEvent<{index: number}>) => this.openIndex(event.data.index));
 	}
 
 	/**
@@ -37,20 +72,9 @@ class BlockPersonaSelectorController extends DefaultComponentController<BlockPer
 	 * @method get activeIndex
 	 * @returns {any|any<number>}
 	 */
-	public get activeIndex():number
+	public get activeIndex(): number
 	{
 		return this.viewModel.activeIndex();
-	}
-
-	/**
-	 * @protected
-	 * @method allComponentsLoaded
-	 */
-	protected allComponentsLoaded(): void
-	{
-		this.transitionController = new BlockPersonaSelectorTransitionController(this.element, this);
-
-		super.allComponentsLoaded();
 	}
 
 	/**
@@ -72,11 +96,50 @@ class BlockPersonaSelectorController extends DefaultComponentController<BlockPer
 	 */
 	public changeBackgroundImage(index: number): void
 	{
-		this._imageCrossfader.open(
-			ImageHelper.getImageForMediaQuery(
-				this.options.personas[index].image
-			)
-		);
+		if(this._imageCrossfader)
+		{
+			this._imageCrossfader.open(
+				ImageHelper.getImageForMediaQuery(
+					this.options.personas[index].image
+				)
+			);
+		}
+	}
+
+	/**
+	 * @public
+	 * @method transitionInSlideContent
+	 */
+	public transitionInSlideContent(index: number): Promise<any>
+	{
+		const oldIndex = this.viewModel.activeIndex();
+
+		// Do some transitioning
+		return this.transitionController.transitionOutStep(oldIndex)
+			.then(() => this.transitionController.transitionInStep(index))
+	}
+
+	/**
+	 * @protected
+	 * @method allComponentsLoaded
+	 */
+	protected allComponentsLoaded(): void
+	{
+		this.transitionController = new BlockPersonaSelectorTransitionController(this.element, this);
+
+		super.allComponentsLoaded();
+	}
+
+	/**
+	 * @private
+	 * @method handleImageCarouselChange
+	 */
+	private handleImageCarouselChange(event: DataEvent<{index: number}>): void
+	{
+		this._infiniteImageCarousel.disableInteraction();
+
+		this.transitionInSlideContent(event.data.index)
+			.then(() => this._infiniteImageCarousel.enableInteraction());
 	}
 
 	/**
@@ -86,6 +149,13 @@ class BlockPersonaSelectorController extends DefaultComponentController<BlockPer
 	public destruct(): void
 	{
 		this._imageCrossfader = null;
+		this._paginatorDashedController = null;
+
+		if(this._infiniteImageCarousel)
+		{
+			this._infiniteImageCarousel.destruct();
+			this._infiniteImageCarousel = null;
+		}
 
 		// always call this last
 		super.destruct();

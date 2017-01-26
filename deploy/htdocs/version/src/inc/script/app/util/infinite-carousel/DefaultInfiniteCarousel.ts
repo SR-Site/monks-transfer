@@ -132,6 +132,30 @@ abstract class DefaultInfiniteCarousel extends EventDispatcher
 
 	/**
 	 * @public
+	 * @method disableInteraction
+	 */
+	public disableInteraction(): void
+	{
+		if(this._draggableInstance)
+		{
+			this._draggableInstance.enabled(false);
+		}
+	}
+
+	/**
+	 * @public
+	 * @method enableInteraction
+	 */
+	public enableInteraction(): void
+	{
+		if(this._draggableInstance)
+		{
+			this._draggableInstance.enabled(true);
+		}
+	}
+
+	/**
+	 * @public
 	 * @method activate
 	 */
 	public activate(): void
@@ -141,12 +165,7 @@ abstract class DefaultInfiniteCarousel extends EventDispatcher
 			this._activated = true;
 
 			this.setSlidesOnInit();
-
-			if(this._draggableInstance)
-			{
-				this._draggableInstance.enabled(true);
-			}
-
+			this.enableInteraction();
 			this.handleResize();
 		}
 
@@ -163,10 +182,7 @@ abstract class DefaultInfiniteCarousel extends EventDispatcher
 		{
 			this._activated = false;
 
-			if(this._draggableInstance)
-			{
-				this._draggableInstance.enabled(false);
-			}
+			this.disableInteraction();
 
 			this._positions = [];
 			this._currentPage(null);
@@ -188,7 +204,10 @@ abstract class DefaultInfiniteCarousel extends EventDispatcher
 	 */
 	protected handleResize(): void
 	{
-		if(this.isDestructed()) return;
+		if(this.isDestructed())
+		{
+			return;
+		}
 
 		var height: number = 0;
 
@@ -376,7 +395,10 @@ abstract class DefaultInfiniteCarousel extends EventDispatcher
 				x: ((this._currentPage() * 100) * -1) + '%',
 				onUpdate: () =>
 				{
-					if(updateOnDrag) this.setCurrentPageOnDrag();
+					if(updateOnDrag)
+					{
+						this.setCurrentPageOnDrag();
+					}
 				},
 				ease: Expo.easeOut
 			}
@@ -435,11 +457,13 @@ abstract class DefaultInfiniteCarousel extends EventDispatcher
 			this._destructibles = null;
 		}
 
-		if(this._sliderWrapper) {
+		if(this._sliderWrapper)
+		{
 			TweenLite.set(this._sliderWrapper, {clearProps: 'height, x'});
 		}
 
-		if(this._slides) {
+		if(this._slides)
+		{
 			TweenLite.set(this._slides, {clearProps: 'height, x'});
 		}
 

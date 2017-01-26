@@ -28,19 +28,19 @@ class BlockPersonaSelectorTransitionController extends DefaultTransitionControll
 			});
 
 			timeline.from(element.querySelector('.heading'), 0.8, {
-				y: 100,
+				x: -100,
 				autoAlpha: 0,
 				ease: Expo.easeOut
 			});
 
 			timeline.from(element.querySelector('.copy'), 0.8, {
-				y: 100,
+				x: -100,
 				autoAlpha: 0,
 				ease: Expo.easeOut
 			}, '=-0.7');
 
 			timeline.from(element.querySelector('.component-button-main'), 0.8, {
-				y: 100,
+				x: -100,
 				autoAlpha: 0,
 				ease: Expo.easeOut
 			}, '=-0.7');

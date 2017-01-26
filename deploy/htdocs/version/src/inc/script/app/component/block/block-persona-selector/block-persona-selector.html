@@ -1,9 +1,25 @@
 <div class="component-block-persona-selector">
-	<div class="background-image abs-fill">
-		<!-- ko component: {
-			name: 'image-crossfader',
-			onComplete: $root.controller.callbackCounter.get($root.controller.handleImageCrossfaderReady.bind($root.controller))
-		} --><!-- /ko -->
+	<!-- ko if: dataManager.deviceStateTracker.currentState() > $root.DeviceState.SMALL -->
+		<div class="background-image abs-fill">
+			<!-- ko component: {
+				name: 'image-crossfader',
+				onComplete: $root.controller.callbackCounter.get($root.controller.handleImageCrossfaderReady.bind($root.controller))
+			} --><!-- /ko -->
+		</div>
+	<!-- /ko -->
+	<div class="slider">
+		<div class="abs-fill slider-viewport infinite-carousel js-image-carousel">
+			<ul class="slides js-slides" data-bind="foreach: data.personas">
+				<li class="slide js-slide">
+					<figure class="abs-fill">
+						<img data-bind=" image: {
+						image: $data.image,
+						state: $root.deviceState()
+					}"/>
+					</figure>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<div class="persona-content-wrapper abs-fill">
 		<div class="background-triangle"></div>
@@ -36,4 +52,14 @@
 			</button>
 		</li>
 	</ul>
+
+	<!-- ko component: {
+			name: 'paginator-dashed',
+			onComplete: $root.controller.callbackCounter.get($root.controller.handlePaginatorReady.bind($root.controller)),
+			options: {
+				items: data.personas,
+				currentPage: $root.activeIndex,
+				orientation: $root.Orientation.HORIZONTAL
+			}
+		} --><!-- /ko -->
 </div>
