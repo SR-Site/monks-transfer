@@ -18,6 +18,7 @@ class BlockFilterContentViewModel extends DefaultComponentViewModel<BlockFilterC
 	 */
 	public destruct():void
 	{
+
 		this.BlockType = null;
 		this.items = null;
 

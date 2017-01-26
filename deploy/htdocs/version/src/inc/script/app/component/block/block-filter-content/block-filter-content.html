@@ -2,7 +2,7 @@
 	<div class="site-frame">
 		<!-- ko component: {
 			name: 'filter-menu',
-			onComplete: $root.controller.callbackCounter.get(),
+			onComplete: $root.controller.callbackCounter.get($root.controller.handleFilterMenuReady.bind($root.controller)),
 			options: {
 				filters: filters,
 				label: filterLabel
@@ -20,4 +20,6 @@
 
 		<!-- todo need design: load more/pagination -->
 	</div>
+
+	<div class="form-loader js-loader"><div class="loader abs-center"></div></div>
 </div>

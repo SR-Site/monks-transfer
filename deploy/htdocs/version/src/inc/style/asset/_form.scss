@@ -104,6 +104,74 @@
 	}
 }
 
+.custom-checkbox { // todo: to be styled if needed.
+	position: relative;
+	font-size: 0;
+	cursor: pointer;
+
+	.element {
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+		cursor: pointer;
+
+		&:after { }
+	}
+
+	input {
+		opacity: 0;
+		margin: 0;
+		padding: 0;
+		border: none;
+		outline: none;
+
+		&:checked {
+			~ .element:after {
+
+			}
+		}
+	}
+
+	.text {
+		display: inline-block;
+		vertical-align: middle;
+
+	}
+
+	&.is-active {
+		.element:after {
+
+		}
+	}
+}
+
+// Tag CheckBox
+.tag-checkbox {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+
+	.element {
+		@include size(auto, 2rem);
+		border-radius: 2rem;
+		font: 600 1.2rem / 2rem $fontOpenSans;
+		text-transform: uppercase;
+		padding: 0 $sizeGrid / 4;
+		color: $colorLightGrey;
+		background-color: $colorQuaternary;
+	}
+
+	input {
+		&:checked {
+			~ .element {
+				background: $colorTertiary;
+				color: $colorWhite;
+			}
+		}
+	}
+}
+
+
 form {
 	padding: 0;
 	margin: 0;

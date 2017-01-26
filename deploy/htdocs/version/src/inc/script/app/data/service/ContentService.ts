@@ -8,6 +8,7 @@ import IPageLayout from "../interface/layout/IPageLayout";
 import IBlock from "../interface/block/IBlock";
 import {PropertyNames} from "../enum/ConfigNames";
 import configManagerInstance from "../../../lib/temple/config/configManagerInstance";
+import URLUtils from "../../../lib/temple/util/URLUtils";
 
 class ContentService extends AbstractService
 {
@@ -52,14 +53,14 @@ class ContentService extends AbstractService
 	 * @param filter
 	 * @returns {Promise<IGatewayResult<any>>}
 	 */
-	public loadMore(endpoint: string, offset: number, limit: number, filter: string): Promise<IGatewayResult<{blocks: Array<IBlock>}>>
+	public loadMore(endpoint: string, offset: number, limit: number, filter: {[filterType:string]:string}): Promise<IGatewayResult<{blocks: Array<IBlock>}>>
 	{
 		return this.gateway.get(
-			StringUtils.replaceVars(endpoint, {
-				offset: offset,
+			endpoint,
+			Object.assign({
 				limit: limit,
-				filter: filter
-			})
+				offset: offset
+			}, filter)
 		);
 	}
 }

@@ -22,12 +22,34 @@ class FilterMenuController extends DefaultComponentTransitionController<FilterMe
 	{
 		super.init();
 
+		this.setupFilters();
+
 		this._debug.log('Init');
 
 		this.transitionController = new FilterMenuTransitionController(this.element, this);
-
 	}
 
+	/**
+	 * @private
+	 * @method setupFilters
+	 */
+	private setupFilters():void
+	{
+		var filters = {};
+		this.viewModel.data.filters.forEach((filter:{type:number;options:Array<{value:string;label:string;}>}) =>{
+			filters[filter.type] = [];
+
+			filter.options.forEach((option:{value:string;label:string;}) =>{
+				filters[filter.type].push({
+					label: option.label,
+					value: option.value,
+					checked: ko.observable(false)
+				});
+			});
+		});
+
+		this.viewModel.filters(filters);
+	}
 
 	/**
 	 *  Overrides AbstractComponentController.destruct()

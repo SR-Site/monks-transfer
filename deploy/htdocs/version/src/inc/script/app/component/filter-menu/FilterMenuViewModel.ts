@@ -3,10 +3,90 @@ import FilterMenuController from 'app/component/filter-menu/FilterMenuController
 import IFilterMenuOptions from 'app/component/filter-menu/IFilterMenuOptions';
 
 import ko = require('knockout');
+import CommonEvent from "../../../lib/temple/event/CommonEvent";
 
 class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenuController, IFilterMenuOptions>
 {
+	public activeDropdownIndex:KnockoutObservable<number> = ko.observable(null);
 	public filterOverlayIsOpen:KnockoutObservable<boolean> = ko.observable(false);
+
+	public filters: KnockoutObservable<{[type: string]: Array<{label:string;value:string;checked:KnockoutObservable<boolean>}>}> = ko.observable(null);
+	public selectedFiltersOptionCount:KnockoutComputed<Array<number>> = ko.computed(() =>{
+		var countArray = [];
+
+		if(this.filters()) {
+			Object.keys(this.filters()).forEach((key, index) =>{
+				countArray.push(this.filters()[index].filter((option) => option.checked()).length)
+			});
+		}
+
+		return countArray;
+	});
+
+
+	/**
+	 * @public
+	 * @method getFilterData
+	 */
+	public getFilterData():{[filterType:string]:string}
+	{
+		var filterData = {};
+
+		// Loop through all filterTypes
+		Object.keys(this.filters()).forEach((key, index) =>{
+
+			// Find CHECKED options per filter type
+			var chosenOptions = this.filters()[index].filter((option) => option.checked());
+
+			// Create object[key] only if this filterType has chosen options.
+			if(chosenOptions && chosenOptions.length > 0) {
+				filterData[key] = [];
+
+				chosenOptions.forEach((option) =>  filterData[key].push(option.value));
+				filterData[key] = filterData[key].join(',');
+			}
+		});
+
+		return filterData;
+	}
+
+	/**
+	 * @public
+	 * @method handleDropdownClick
+	 */
+	public handleDropdownClick(index: number): void
+	{
+		const oldIndex = this.activeDropdownIndex();
+
+		// Close if clicked twice
+		if(index === this.activeDropdownIndex()) {
+			this.handleCloseDropdownClick(index);
+			return;
+		};
+
+		// Update the active dropDownIndex
+		this.activeDropdownIndex(index);
+
+		if(typeof oldIndex === 'number') {
+			this.controller.transitionController.hideDropDown(oldIndex)
+				.then(() => this.controller.transitionController.showDropDown(index))
+		}
+		else
+		{
+			this.controller.transitionController.showDropDown(index);
+		}
+	}
+
+	/**
+	 * @public
+	 * @method handleCloseDropdownClick
+	 */
+	public handleCloseDropdownClick(index: number):void
+	{
+		this.controller.transitionController.hideDropDown(index);
+		this.activeDropdownIndex(null);
+	}
+
 	/**
 	 * @public
 	 * @method handleFilterOverlayLabelClick
@@ -15,7 +95,7 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 	{
 		if(this.filterOverlayIsOpen())
 		{
-			console.log('fireEvent apply Filter!');
+			this.controller.dispatch(CommonEvent.CHANGE, this.getFilterData());
 		}
 
 		this.toggleFilterOverlay();
