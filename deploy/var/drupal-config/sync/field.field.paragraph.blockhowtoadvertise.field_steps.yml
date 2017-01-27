@@ -14,7 +14,7 @@ entity_type: paragraph
 bundle: blockhowtoadvertise
 label: Steps
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -41,5 +41,56 @@ settings:
         enabled: false
       styles:
         weight: 12
+        enabled: false
+      blockarticleteaser:
+        weight: 24
+        enabled: false
+      blockaudiofragment:
+        weight: 25
+        enabled: false
+      blockblogpost:
+        weight: 26
+        enabled: false
+      blockbutton:
+        weight: 27
+        enabled: false
+      blockheromain:
+        weight: 28
+        enabled: false
+      blockherosecondary:
+        weight: 29
+        enabled: false
+      blockherotertiary:
+        weight: 30
+        enabled: false
+      blockimagecalltoactions:
+        weight: 32
+        enabled: false
+      blockimagecarousel:
+        weight: 33
+        enabled: false
+      blockimagewithcontent:
+        weight: 34
+        enabled: false
+      blocklatest:
+        weight: 35
+        enabled: false
+      blockmore:
+        weight: 36
+        enabled: false
+      calltoaction:
+        weight: 38
+        enabled: false
+      slide:
+        weight: 41
+        enabled: false
+      slideheromain:
+        weight: 42
+        enabled: false
+      stat:
+        weight: 43
+        enabled: false
+      statistic:
+        weight: 44
         enabled: false
 field_type: entity_reference_revisions

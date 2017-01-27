@@ -28,9 +28,9 @@ class ParagraphBlockHowToAdvertiseV1 extends SpectrumRestEntityProcessorBase {
     $data = [
       "id" => 'blockHowToAdvertise',
       "data" => $data + [
-        "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
-        "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),
         "steps" => $this->getItems($entity->get('field_steps')),
+        "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),
+        "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
       ],
     ];
 
