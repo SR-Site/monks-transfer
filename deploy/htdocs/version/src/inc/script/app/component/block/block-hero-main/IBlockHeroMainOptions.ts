@@ -32,11 +32,6 @@ export interface IBlockHeroMainOptions extends IDefaultComponentOptions
 		link?: ILink;
 		/**
 		 * @property
-		 * @description The slide secondary link
-		 */
-		secondaryLink?: ILink;
-		/**
-		 * @property
 		 * @description The slide statistics section
 		 *
 		 */

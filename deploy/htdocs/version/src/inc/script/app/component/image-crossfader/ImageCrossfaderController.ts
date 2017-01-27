@@ -98,41 +98,38 @@ class ImageCrossfaderController extends DefaultComponentTransitionController<Ima
 	 * @param duration
 	 * @param ease
 	 */
-	public open(path: string, duration: number = ImageCrossfaderController.DURATION, ease:Ease = Expo.easeInOut): void
+	public open(path: string, duration: number = ImageCrossfaderController.DURATION, ease: Ease = Expo.easeInOut): Promise<any>
 	{
-		if(this._animation)
+		return new Promise((resolve: Function) =>
 		{
-			this._animation.kill();
-			this._animation = null;
-		}
-
-		this.getImage(path)
-			.then((image: HTMLImageElement) =>
-			{
-				this._newImage = image;
-			})
-			.then(() => this.handleResize())
-			.then(() =>
-			{
-				this._animation = TweenLite.fromTo(this, duration,
-					{
-						_triangleProgress: 0
-					},
-					{
-						_triangleProgress: 1,
-						ease: ease,
-						onUpdate: () =>
+			this.getImage(path)
+				.then((image: HTMLImageElement) =>
+				{
+					this._newImage = image;
+				})
+				.then(() => this.handleResize())
+				.then(() =>
+				{
+					this._animation = TweenLite.fromTo(this, duration,
 						{
-							this.draw();
+							_triangleProgress: 0
 						},
-						onComplete: () =>
 						{
-							this._activeImage = this._newImage;
-							this._animation = null;
-						}
-					});
-			});
+							_triangleProgress: 1,
+							ease: ease,
+							onUpdate: () =>
+							{
+								this.draw();
+							},
+							onComplete: () =>
+							{
+								this._activeImage = this._newImage;
 
+								resolve();
+							}
+						});
+				});
+		})
 	}
 
 	/**

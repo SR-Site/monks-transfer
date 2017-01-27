@@ -11,8 +11,27 @@ class BlockHeroMainViewModel extends DefaultComponentViewModel<BlockHeroMainCont
 	public Direction: Enum = Direction;
 	public Alignment: Enum = Alignment;
 	public activeIndex: KnockoutObservable<number> = ko.observable(0);
+	public hasStatistics: KnockoutObservable<boolean> = ko.observable(false);
 
-	public hasStatistics:KnockoutObservable<boolean> = ko.observable(false);
+	private _switchComplete: boolean = true;
+
+	/**
+	 * @public
+	 * @method handleNextClick
+	 */
+	public handleNextClick(): void
+	{
+		if(this._switchComplete)
+		{
+			this._switchComplete = false;
+
+			let newIndex = this.activeIndex() + 1 < this.data.slides.length ? this.activeIndex() + 1 : 0;
+
+			this.controller.transitionController.transitionInNextSlide(newIndex)
+				.then(()=> this.activeIndex(newIndex))
+				.then(() => this._switchComplete = true);
+		}
+	}
 
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()

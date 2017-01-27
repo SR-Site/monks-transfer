@@ -49,20 +49,24 @@
 				</div>
 			</div>
 		<!-- /ko -->
-
-		<!-- ko if: $data.secondaryLink -->
-			<div class="secondary-link">
-				<!-- ko component: {
-					name: 'button/button-circle-arrow',
-					onComplete: $root.controller.callbackCounter.get(),
-					options: {
-						action: $data.secondaryLink,
-						arrowDirection: $root.Direction.RIGHT,
-						arrowPosition: $root.Alignment.RIGHT,
-						size: $root.ButtonSize.LARGE
-					}
-				} --><!-- /ko -->
-			</div>
-		<!-- /ko -->
 	</div>
+
+	<!-- ko if: data.slides.length > 1 -->
+		<div class="secondary-link">
+			<!-- ko component: {
+				name: 'button/button-circle-arrow',
+				onComplete: $root.controller.callbackCounter.get(),
+				options: {
+					action: {
+						title: localeManager.getString('global.cta.next'),
+						label: localeManager.getString('global.cta.next'),
+						event: $root.handleNextClick.bind($root)
+					},
+					arrowDirection: $root.Direction.RIGHT,
+					arrowPosition: $root.Alignment.RIGHT,
+					size: $root.ButtonSize.LARGE
+				}
+			} --><!-- /ko -->
+		</div>
+	<!-- /ko -->
 </div>

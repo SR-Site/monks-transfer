@@ -30,7 +30,7 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 
 		this._debug.log('Init');
 
-		this.viewModel.hasStatistics(this.options.slides.map((slide)=> slide.statistics !== void 0).indexOf(true) > -1);
+		this.viewModel.hasStatistics(this.options.slides.map((slide) => slide.statistics !== void 0).indexOf(true) > -1);
 	}
 
 	/**
@@ -40,29 +40,29 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new BlockHeroMainTransitionController(this.element, this);
-		this.transitionController.addEventListener(DefaultTransitionController.TRANSITION_IN_START, () =>
-		{
-			// Open the first image
-			this.updateBackgroundImage(0);
-
-			setTimeout(() =>
-			{
-				this.updateBackgroundImage(1)
-			}, 3000);
-		});
 
 		super.allComponentsLoaded();
 	}
 
-
 	/**
 	 * @public
-	 * @method updateBackgroundImage
+	 * @method changeBackgroundImage
 	 * @param index
 	 */
-	public updateBackgroundImage(index: number): void
+	public changeBackgroundImage(index: number): Promise<any>
 	{
-		this._imageCrossfader.open(ImageHelper.getImageForMediaQuery(this.options.slides[index].background));
+		if(this._imageCrossfader)
+		{
+			return this._imageCrossfader.open(
+				ImageHelper.getImageForMediaQuery(
+					this.options.slides[index].background
+				)
+			);
+		}
+		else
+		{
+			return Promise.resolve();
+		}
 	}
 
 	/**
@@ -72,6 +72,16 @@ class BlockHeroMainController extends DefaultComponentController<BlockHeroMainVi
 	public handleImageCrossfaderReady(controller: ImageCrossfaderController): void
 	{
 		this._imageCrossfader = controller;
+	}
+
+	/**
+	 * @public
+	 * @method get activeIndex
+	 * @returns {any|any<number>}
+	 */
+	public get activeIndex(): number
+	{
+		return this.viewModel.activeIndex();
 	}
 
 	/**
