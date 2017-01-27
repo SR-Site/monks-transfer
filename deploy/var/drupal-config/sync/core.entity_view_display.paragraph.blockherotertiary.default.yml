@@ -1,0 +1,33 @@
+uuid: 35964cb0-f093-4e33-aeda-5a9e94b8a6da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockherotertiary.field_image
+    - field.field.paragraph.blockherotertiary.field_styles
+    - paragraphs.paragraphs_type.blockherotertiary
+  module:
+    - entity_reference_revisions
+    - image
+id: paragraph.blockherotertiary.default
+targetEntityType: paragraph
+bundle: blockherotertiary
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_styles:
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden: {  }

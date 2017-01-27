@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.blockbutton
     - paragraphs.paragraphs_type.blockheromain
     - paragraphs.paragraphs_type.blockherosecondary
+    - paragraphs.paragraphs_type.blockherotertiary
     - paragraphs.paragraphs_type.blockhowtoadvertise
     - paragraphs.paragraphs_type.blockimagecalltoactions
     - paragraphs.paragraphs_type.blockimagecarousel
@@ -36,15 +37,16 @@ settings:
       blockhowtoadvertise: blockhowtoadvertise
       blockimagecalltoactions: blockimagecalltoactions
       blockimagewithcontent: blockimagewithcontent
-      blocklatest: blocklatest
       blockimagecarousel: blockimagecarousel
+      blocklatest: blocklatest
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
-      blockmore: blockmore
       blockblogpost: blockblogpost
+      blockmore: blockmore
       blockherosecondary: blockherosecondary
       blockheromain: blockheromain
+      blockherotertiary: blockherotertiary
     target_bundles_drag_drop:
       blockhowtoadvertise:
         enabled: true
@@ -67,34 +69,34 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
+      blockimagecarousel:
+        enabled: true
+        weight: 13
       link:
         weight: 13
         enabled: false
       blocklatest:
         enabled: true
         weight: 13
-      blockimagecarousel:
-        enabled: true
-        weight: 13
-      step:
-        weight: 15
-        enabled: false
       blockarticleteaser:
         enabled: true
         weight: 15
+      step:
+        weight: 15
+        enabled: false
       blockaudiofragment:
         enabled: true
         weight: 16
-      blockbutton:
-        enabled: true
-        weight: 18
       slide:
         weight: 18
         enabled: false
-      blockmore:
+      blockbutton:
+        enabled: true
+        weight: 18
+      blockblogpost:
         enabled: true
         weight: 19
-      blockblogpost:
+      blockmore:
         enabled: true
         weight: 19
       blockherosecondary:
@@ -103,6 +105,9 @@ settings:
       blockheromain:
         enabled: true
         weight: 26
+      blockherotertiary:
+        enabled: true
+        weight: 30
       slideheromain:
         weight: 38
         enabled: false
