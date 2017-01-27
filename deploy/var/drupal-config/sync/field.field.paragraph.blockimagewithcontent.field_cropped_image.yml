@@ -11,7 +11,7 @@ entity_type: paragraph
 bundle: blockimagewithcontent
 label: 'Cropped image'
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -

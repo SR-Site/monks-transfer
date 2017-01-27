@@ -28,11 +28,11 @@ class ParagraphBlockImageWithContentV1 extends SpectrumRestEntityProcessorBase {
     $data = [
       "id" => 'blockImageWithContent',
       "data" => $data + [
-        "croppedImage" => $this->fieldProcessor->getFieldData($entity->get('field_cropped_image')),
-        "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
-        "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
         "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),
         "background" => $this->image($entity->get('field_image')),
+        "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
+        "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
+        "croppedImage" => $this->fieldProcessor->getFieldData($entity->get('field_cropped_image')),
         "alignment" => (int) $entity->get('field_alignment')->value,
       ],
     ];
