@@ -115,6 +115,20 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 
 	/**
 	 * @public
+	 * @method resetFilter
+	 */
+	public resetFilter():void
+	{
+		// Only apply reset if any filter is set.
+		if(Object.keys(this.getFilterData()).length > 0) {
+			Object.keys(this.filters()).forEach((key, index) =>{
+				this.filters()[index].map((option) => option.checked(false));
+			});
+		}
+	}
+
+	/**
+	 * @public
 	 * @method toggleFilterOverlay
 	 */
 	public toggleFilterOverlay():void

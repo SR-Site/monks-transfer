@@ -14,6 +14,15 @@
 		text-transform: none;
 	}
 
+	.button-reset {
+		@include size($sizeGrid*2);
+		color: $colorTertiary;
+
+		.icon {
+
+		}
+	}
+
 	// Filter Label
 	.filter-label {
 		position: relative;
@@ -29,7 +38,7 @@
 		text-align: center;
 		transition: background-color 250ms ease(easeOutExpo), color 250ms ease(easeOutExpo);;
 
-		.icon {
+		> .icon {
 			position: absolute;
 			transform: translate(0, -50%);
 			top: 50%;
@@ -198,16 +207,35 @@
 				height: $sizeGrid*4;
 			}
 
+			.button-reset,
+			.button-close {
+				@include size($sizeGrid*4);
+
+				.icon {
+					@include size(10px);
+				}
+			}
+
+			.button-close {
+				border-right: 1px solid rgba(white, 0.6);
+			}
+
+			.button-reset {
+				border-left: 1px solid rgba(white, 0.6);
+			}
+
+			.button-apply {
+				height: 100%;
+				flex-grow: 1;
+				font-size: inherit;
+				text-transform: inherit;
+				font-family: inherit;
+				font-weight: inherit;
+			}
+
 			// Open State
 			&.is-open {
 				height: calc(100% - #{$sizeHeaderMobile});
-			}
-
-			.component-button-circle-close {
-				position: absolute;
-				top: $sizeGrid;
-				right: $sizeGrid;
-				z-index: 1;
 			}
 		}
 
