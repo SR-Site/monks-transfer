@@ -1,0 +1,69 @@
+uuid: 6706dbac-0188-4c1a-a783-86c0aebbcc2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockmapsecondary.field_heading
+    - field.field.paragraph.blockmapsecondary.field_paragraph
+    - field.field.paragraph.blockmapsecondary.field_styles
+    - field.field.paragraph.blockmapsecondary.field_subheading
+    - paragraphs.paragraphs_type.blockmapsecondary
+  module:
+    - field_group
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+id: paragraph.blockmapsecondary.default
+targetEntityType: paragraph
+bundle: blockmapsecondary
+mode: default
+content:
+  field_heading:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_paragraph:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_styles:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+  field_subheading:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true

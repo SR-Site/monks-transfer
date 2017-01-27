@@ -1,0 +1,47 @@
+uuid: e91133c8-7a05-42f1-ab6a-c19a6bee349c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockmapsecondary.field_heading
+    - field.field.paragraph.blockmapsecondary.field_paragraph
+    - field.field.paragraph.blockmapsecondary.field_styles
+    - field.field.paragraph.blockmapsecondary.field_subheading
+    - paragraphs.paragraphs_type.blockmapsecondary
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.blockmapsecondary.default
+targetEntityType: paragraph
+bundle: blockmapsecondary
+mode: default
+content:
+  field_heading:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_paragraph:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+  field_subheading:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden: {  }
