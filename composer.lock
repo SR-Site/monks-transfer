@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "83dcf87be8a83a4fa3e2616eaf0729ef",
-    "content-hash": "b5ce4df60295c710aecec6dafeda7350",
+    "hash": "3e342f2cf1ee621674bcd467cee8f2c9",
+    "content-hash": "80fa38ceae9a3d3d38175e4b56d3e7d8",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -283,16 +283,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "2.2.2",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "1f1d92807f72901e049e9df048b412c3bc3652c9"
+                "reference": "3074e408160e1b81bda5483f6d2342abc872ea1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/1f1d92807f72901e049e9df048b412c3bc3652c9",
-                "reference": "1f1d92807f72901e049e9df048b412c3bc3652c9",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/3074e408160e1b81bda5483f6d2342abc872ea1b",
+                "reference": "3074e408160e1b81bda5483f6d2342abc872ea1b",
                 "shasum": ""
             },
             "require": {
@@ -331,20 +331,20 @@
                 }
             ],
             "description": "Initialize Symfony Console commands from annotated command class methods.",
-            "time": "2016-12-16 01:23:33"
+            "time": "2017-01-27 01:59:21"
         },
         {
             "name": "consolidation/output-formatters",
-            "version": "3.1.6",
+            "version": "3.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/output-formatters.git",
-                "reference": "c8ea5734985cea4acd6343a2465a2f71cf011c82"
+                "reference": "da39a0f14d5aaaee06732bb7cef2aea1de056b40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/c8ea5734985cea4acd6343a2465a2f71cf011c82",
-                "reference": "c8ea5734985cea4acd6343a2465a2f71cf011c82",
+                "url": "https://api.github.com/repos/consolidation/output-formatters/zipball/da39a0f14d5aaaee06732bb7cef2aea1de056b40",
+                "reference": "da39a0f14d5aaaee06732bb7cef2aea1de056b40",
                 "shasum": ""
             },
             "require": {
@@ -380,7 +380,7 @@
                 }
             ],
             "description": "Format text by applying transformations provided by plug-in formatters.",
-            "time": "2017-01-08 20:32:20"
+            "time": "2017-01-21 06:26:40"
         },
         {
             "name": "cweagans/composer-patches",
@@ -599,28 +599,29 @@
         },
         {
             "name": "doctrine/collections",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a"
+                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
-                "reference": "6c1e4eef75f310ea1b3e30945e9f06e652128b8a",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/1a4fb7e902202c33cce8c55989b945612943c2ba",
+                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "doctrine/coding-standard": "~0.1@dev",
+                "phpunit/phpunit": "^5.7"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
@@ -661,7 +662,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2015-04-14 22:21:58"
+            "time": "2017-01-03 10:49:41"
         },
         {
             "name": "doctrine/common",
@@ -1240,17 +1241,17 @@
         },
         {
             "name": "drupal/entity_reference_revisions",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/entity_reference_revisions",
-                "reference": "8.x-1.0"
+                "reference": "8.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "85d5c182208beb4358fe3943a624182f590d1e0d"
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.1.zip",
+                "reference": null,
+                "shasum": "3767fd2245ab2731aaf0c992c586b5ddc6f7efe8"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1264,8 +1265,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1469725576"
+                    "version": "8.x-1.1",
+                    "datestamp": "1485526384"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1428,6 +1429,53 @@
             }
         },
         {
+            "name": "drupal/jquery_colorpicker",
+            "version": "1.0.0-rc2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/jquery_colorpicker",
+                "reference": "8.x-1.0-rc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/jquery_colorpicker-8.x-1.0-rc2.zip",
+                "reference": null,
+                "shasum": "5046d61bc21aa0c6846c323cf09ef695dbde469a"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-rc2",
+                    "datestamp": "1484483583"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jaypan",
+                    "homepage": "https://www.drupal.org/user/324696"
+                },
+                {
+                    "name": "plopesc",
+                    "homepage": "https://www.drupal.org/user/282415"
+                }
+            ],
+            "description": "Creates a jQuery colorpicker field and form element",
+            "homepage": "https://www.drupal.org/project/jquery_colorpicker",
+            "support": {
+                "source": "http://cgit.drupalcode.org/jquery_colorpicker"
+            }
+        },
+        {
             "name": "drupal/menu_admin_per_menu",
             "version": "1.0.0-rc1",
             "source": {
@@ -1553,8 +1601,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0+50-dev",
-                    "datestamp": "1484774284"
+                    "version": "8.x-1.0+55-dev",
+                    "datestamp": "1485253082"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5978,16 +6026,16 @@
         },
         {
             "name": "zendframework/zend-diactoros",
-            "version": "1.3.9",
+            "version": "1.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "d5d74ca5548753e0e427fcffca89b134943bac89"
+                "reference": "83e8d98b9915de76c659ce27d683c02a0f99fa90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/d5d74ca5548753e0e427fcffca89b134943bac89",
-                "reference": "d5d74ca5548753e0e427fcffca89b134943bac89",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/83e8d98b9915de76c659ce27d683c02a0f99fa90",
+                "reference": "83e8d98b9915de76c659ce27d683c02a0f99fa90",
                 "shasum": ""
             },
             "require": {
@@ -6024,7 +6072,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2017-01-17 16:18:33"
+            "time": "2017-01-23 04:53:24"
         },
         {
             "name": "zendframework/zend-escaper",
