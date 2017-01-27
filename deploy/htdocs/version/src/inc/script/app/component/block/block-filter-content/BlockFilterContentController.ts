@@ -92,6 +92,9 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 		this.viewModel.offset = 0;
 		this.viewModel.items([]);
 
+		// Reset pages
+		this.viewModel.pages([]);
+
 		// Reset ActivePageIndex
 		this.viewModel.activePageIndex(0);
 
