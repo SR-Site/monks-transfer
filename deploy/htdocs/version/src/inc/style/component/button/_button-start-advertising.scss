@@ -5,6 +5,7 @@
 	position: absolute;
 	color: #fff;
 	text-align: right;
+	pointer-events: none;
 
 	.background {
 		@include arrow(left, $colorPrimary, $size);
@@ -12,6 +13,13 @@
 		content: '';
 		position: absolute;
 		z-index: -1;
+	}
+
+	.start-advertising {
+		@include pos(50%, 0, auto, auto);
+		transform: translate(0, -50%);
+		pointer-events: all;
+		position: absolute;
 	}
 
 	.icon {
