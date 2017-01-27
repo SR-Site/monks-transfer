@@ -16,6 +16,7 @@ dependencies:
     - paragraphs.paragraphs_type.blockimagecalltoactions
     - paragraphs.paragraphs_type.blockimagecarousel
     - paragraphs.paragraphs_type.blockimagewithcontent
+    - paragraphs.paragraphs_type.blockinfo
     - paragraphs.paragraphs_type.blocklatest
     - paragraphs.paragraphs_type.blockmore
   module:
@@ -37,16 +38,17 @@ settings:
       blockhowtoadvertise: blockhowtoadvertise
       blockimagecalltoactions: blockimagecalltoactions
       blockimagewithcontent: blockimagewithcontent
-      blockimagecarousel: blockimagecarousel
       blocklatest: blocklatest
+      blockimagecarousel: blockimagecarousel
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
-      blockblogpost: blockblogpost
       blockmore: blockmore
+      blockblogpost: blockblogpost
       blockherosecondary: blockherosecondary
       blockheromain: blockheromain
       blockherotertiary: blockherotertiary
+      blockinfo: blockinfo
     target_bundles_drag_drop:
       blockhowtoadvertise:
         enabled: true
@@ -69,13 +71,13 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
-      blockimagecarousel:
+      blocklatest:
         enabled: true
         weight: 13
       link:
         weight: 13
         enabled: false
-      blocklatest:
+      blockimagecarousel:
         enabled: true
         weight: 13
       blockarticleteaser:
@@ -93,10 +95,10 @@ settings:
       blockbutton:
         enabled: true
         weight: 18
-      blockblogpost:
+      blockmore:
         enabled: true
         weight: 19
-      blockmore:
+      blockblogpost:
         enabled: true
         weight: 19
       blockherosecondary:
@@ -108,6 +110,9 @@ settings:
       blockherotertiary:
         enabled: true
         weight: 30
+      blockinfo:
+        enabled: true
+        weight: 36
       slideheromain:
         weight: 38
         enabled: false

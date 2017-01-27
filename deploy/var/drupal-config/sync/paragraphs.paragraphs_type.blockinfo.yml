@@ -1,0 +1,7 @@
+uuid: e1e85568-fc4e-4be1-a0de-ee3a8d9bf503
+langcode: en
+status: true
+dependencies: {  }
+id: blockinfo
+label: 'Block info'
+behavior_plugins: {  }
