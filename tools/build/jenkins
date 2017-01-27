@@ -1,86 +1,87 @@
 #!/bin/bash
+
+# executables
+DRUSH_BIN="$(which drush)"
+GRUNT_BIN="$(which grunt)"
+NPM_BIN="$(which npm)"
+RSYNC_BIN="$(which rsync)"
+TSD_BIN="$(which tsd)"
+GIT_BIN="$(which git)"
+COMPOSER_BIN="$(which composer)"
+
+#config
 ROOTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}")/../../" && pwd )"
-DRUSH_BIN="/usr/bin/drush"
-DRUSH_DIR="/docroot"
-GRUNT_BIN="grunt"
-GRUNT_DIR="/tools/build"
-COMPOSER_BIN="/usr/bin/composer"
-COMPOSER_DIR="/"
-NPM_BIN="/usr/bin/npm"
-NPM_DIR="/tools/build"
-TSD_BIN="/usr/bin/tsd"
-TSD_DIR="/tools/build"
-RSYNC_BIN="/usr/bin/rsync"
-GIT_BIN="/usr/bin/git"
+DRUSH_DIR="${ROOTDIR}/docroot"
+GRUNT_DIR="${ROOTDIR}/tools/build"
+COMPOSER_DIR="${ROOTDIR}/"
+NPM_DIR="${ROOTDIR}/tools/build"
+TSD_DIR="${ROOTDIR}/tools/build"
+ASSETDIR="${ROOTDIR}docroot/sites/default/files"
+FRONTEND_BUILDROOT="${ROOTDIR}/tools/build"
+BACKEND_BUILDROOT=""
+BLOCKDOCS="/var/www/block-docs/"
+JOB_NAME="Spectrum-Reach"
 
-source $( dirname "${BASH_SOURCE[0]}")/jenkins-commands
+#bootrap scripts
 
-function build_backend(){
-	echo ""
-	echo "+-------------------------------------------------------------+"
-	echo "| Build backend none                                          |"
-	echo "+-------------------------------------------------------------+"
-	runComposer install
-}
+GIT_BRANCH_CURRENT=""
 
-function build_frontend(){
-	echo ""	
-	echo "+-------------------------------------------------------------+"
-	echo "| Build frontend                                              |"
-	echo "+-------------------------------------------------------------+"
-	npmCommand install
-	gruntCommand clean
-	tsdCommand install
-  	gruntCommand ts
- 	gruntCommand sass
- 	gruntCommand postcss
- 	gruntCommand requirejs:release
- 	if [ "${GIT_BRANCH}" == "origin/staging" ]; then
-	 	gruntCommand uglify:release
-	 	gruntCommand cssmin
-	 	gruntCommand imagemin
-	 	gruntCommand pngmin 		
- 	fi
- 	gruntCommand clean-build
- 	gruntCommand usemin:html
-}
+SCRIPTROOT=$( cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
-function deploy_application(){
-	echo ""	
-	echo "+-------------------------------------------------------------+"
-	echo "| Deploy application                                          |"
-	echo "+-------------------------------------------------------------+"
+source "${SCRIPTROOT}/jenkins-commands"
 
-	case "${GIT_BRANCH}" in
-		"origin/staging")	
-			echo "Deploy Remote"
-			BUILDDIR="/tmp/acquia-build-$(date +%s)"
-			gitCommand clone weberstephen@svn-15460.prod.hosting.acquia.com:weberstephen.git ${BUILDDIR}
-			changeDir ${BUILDDIR}
-			gitCommand checkout "deploy-test"
-			syncDirectoryCommand "${ROOTDIR}" "${BUILDDIR}"
-			gitCommand add -A
-			gitCommand commit -m "Jenkins autobuild - $(date)"
-			gitCommand push						
-			;;
-		"origin/develop")
-			echo "Deploy local"
-			deleteCopyFile "${ROOTDIR}/var/drupal-settings/settings.jenkins.php" "${ROOTDIR}/var/drupal-settings/settings.local.php"
-			chmodFille "-R 777" "${ROOTDIR}/docroot/sites/default/files"
-			drushCommand sset system.maintenance_mode TRUE
-			dushCommand cr
-			dushCommand updb
-			dushCommand cim
-			dushCommand entity-updates
-			dushCommand cr			
-			drushCommand sset system.maintenance_mode FALSE			
-			;;
-		*)
-			echo "No Deploy target for '${GIT_BRANCH}'. skipping..."			
-	esac
+if [ "${1}" == "self-update" ]; then
+	selfUpdate
+	exit 0
+fi
 
-}
+if [ "${GIT_BRANCH_CURRENT}" == "" ]; then
+	GIT_BRANCH_CURRENT=${GIT_BRANCH}
+fi
 
-build_backend;
-build_frontend;
-deploy_application;
+if [ "${1}" != "" ]; then
+	GIT_BRANCH_CURRENT=${1}
+fi
+
+BUILDFILE="${GIT_BRANCH_CURRENT//origin\//}"
+BUILDFILE="${BUILDFILE//\//_}"
+
+if [ ! -e "${SCRIPTROOT}/builds/${BUILDFILE}" ]; then
+	echo "No Build found for: ${GIT_BRANCH_CURRENT} - ${SCRIPTROOT}/builds/${BUILDFILE}"
+	exit 1
+fi
+
+source ${SCRIPTROOT}/builds/${BUILDFILE}
+
+changeDir "${ROOTDIR}"
+echo ""	
+echo "+--------------------------------------------------------------------------------------------------------------------------+"
+echo "| Build frontend                                                                                                           |"
+echo "+--------------------------------------------------------------------------------------------------------------------------+"
+echo ""	
+build_frontend
+echo ""	
+echo "+--------------------------------------------------------------------------------------------------------------------------+"
+echo ""	
+
+changeDir "${ROOTDIR}"
+echo ""	
+echo "+--------------------------------------------------------------------------------------------------------------------------+"
+echo "| Build backend                                                                                                            |"
+echo "+--------------------------------------------------------------------------------------------------------------------------+"
+echo ""	
+build_backend
+echo ""	
+echo "+--------------------------------------------------------------------------------------------------------------------------+"
+echo ""	
+
+changeDir "${ROOTDIR}"
+echo ""	
+echo "+--------------------------------------------------------------------------------------------------------------------------+"
+echo "| Run deploy                                                                                                               |"
+echo "+--------------------------------------------------------------------------------------------------------------------------+"
+echo ""	
+build_deploy
+echo ""	
+echo "+--------------------------------------------------------------------------------------------------------------------------+"
+echo ""	

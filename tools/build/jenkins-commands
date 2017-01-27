@@ -84,7 +84,6 @@ function deleteDir(){
 
 function runComposer(){
 	echo "Running composer install"
-	cd "${ROOTDIR}${COMPOSER_DIR}"
 	${COMPOSER_BIN} $@
 	 if [ "$?" -ne 0 ]; then
 	 	echo "Composer install failed args: $@"
@@ -112,51 +111,39 @@ function chmodFille(){
 
 function npmCommand(){
 	echo "Running NPM command with args: $@"
-	CURRENT_PWD=`pwd`
-	cd "${ROOTDIR}${NPM_DIR}"
 	${NPM_BIN} $@
 	if [ "$?" -ne 0 ]; then
 	 	echo "NPM Failed"
     	exit 1
  	fi
- 	cd  ${CURRENT_PWD}		
 }
 
 
-function dushCommand(){
+function drushCommand(){
 	echo "Running drush command with args: $@"
-	CURRENT_PWD=`pwd`
-	cd "${ROOTDIR}${DRUSH_DIR}"
 	${DRUSH_BIN} -y $@
 	if [ "$?" -ne 0 ]; then
 	 	echo "Drush Failed"
     	exit 1
  	fi
- 	cd  ${CURRENT_PWD}		
 }
 
 function tsdCommand(){
 	echo "Running tsd command with args: $@"
-	CURRENT_PWD=`pwd`
-	cd "${ROOTDIR}${TSD_DIR}"	
 	${TSD_BIN} $@
 	if [ "$?" -ne 0 ]; then
 	 	echo "tsd Failed"
     	exit 1
  	fi
- 	cd  ${CURRENT_PWD}		
 }
 
 function gruntCommand(){
 	echo "Running grunt command with args: $@"
-	CURRENT_PWD=`pwd`
-	cd "${ROOTDIR}/${GRUNT_DIR}"
 	${GRUNT_BIN} $@
 	if [ "$?" -ne 0 ]; then
 	 	echo "Grunt Failed"
     	exit 1
  	fi
- 	cd  ${CURRENT_PWD}		
 }
 
 function gitCommand(){
@@ -170,15 +157,28 @@ function gitCommand(){
 
 function syncDirectoryCommand(){
 	echo "Syncing ${1} -> ${2}"
-	${RSYNC_BIN} --delete \
-				 --force \
-				 --recursive \
-				 --times \
-				 --verbose \
-				 --exclude=".git" "${1}" "${1}"
+	${RSYNC_BIN} --delete --force --recursive --times --verbose --exclude=".git" ${@:3} "${1}" "${2}"
 
 	if [ "$?" -ne 0 ]; then
-	 	echo "Syncing Filed: ${1} -> ${2}"
+	 	echo "Syncing Filed: --delete --force --recursive --times --verbose --exclude=\".git\" ${@:3} \"${1}\" -> \"${2}\""
     	exit 1
  	fi				 
+}
+
+function selfUpdate(){
+	ROOTSCRIPTDIR=$(cd "$( dirname "${BASH_SOURCE[0]}")" && pwd)
+	if [ ! -w "${ROOTSCRIPTDIR}" ]; then
+		echo "Cannot update: Could not write to ${ROOTSCRIPTDIR}"
+		exit 1
+	fi
+	if [ ! -w "${ROOTSCRIPTDIR}/jenkins-commands" ]; then
+		echo "Cannot update: Could not write to ${ROOTSCRIPTDIR}/jenkins-commands"
+		exit 1
+	fi
+}
+
+function blockDocumentation(){
+	if [ -e "${BLOCKDOCS}" ]; then
+		copyDir ${1} "${BLOCKDOCS}/${JOB_NAME}/"
+	fi
 }
