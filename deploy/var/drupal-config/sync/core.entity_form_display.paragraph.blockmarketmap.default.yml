@@ -1,0 +1,29 @@
+uuid: 52f2704a-402a-42a9-a79c-b24d1adce7f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockmarketmap.field_styles
+    - paragraphs.paragraphs_type.blockmarketmap
+  module:
+    - paragraphs
+id: paragraph.blockmarketmap.default
+targetEntityType: paragraph
+bundle: blockmarketmap
+mode: default
+content:
+  field_styles:
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: styles
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

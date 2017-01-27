@@ -1,0 +1,7 @@
+uuid: 610b69e9-5e70-470f-a822-7391aa19402b
+langcode: en
+status: true
+dependencies: {  }
+id: blockmarketmap
+label: 'Block market map'
+behavior_plugins: {  }

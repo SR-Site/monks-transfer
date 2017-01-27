@@ -20,6 +20,7 @@ dependencies:
     - paragraphs.paragraphs_type.blocklatest
     - paragraphs.paragraphs_type.blockmap
     - paragraphs.paragraphs_type.blockmapsecondary
+    - paragraphs.paragraphs_type.blockmarketmap
     - paragraphs.paragraphs_type.blockmore
   module:
     - entity_reference_revisions
@@ -40,8 +41,8 @@ settings:
       blockhowtoadvertise: blockhowtoadvertise
       blockimagecalltoactions: blockimagecalltoactions
       blockimagewithcontent: blockimagewithcontent
-      blocklatest: blocklatest
       blockimagecarousel: blockimagecarousel
+      blocklatest: blocklatest
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
@@ -51,6 +52,7 @@ settings:
       blockmap: blockmap
       blockheromain: blockheromain
       blockmapsecondary: blockmapsecondary
+      blockmarketmap: blockmarketmap
       blockherotertiary: blockherotertiary
       blockinfo: blockinfo
     target_bundles_drag_drop:
@@ -78,10 +80,10 @@ settings:
       link:
         weight: 13
         enabled: false
-      blocklatest:
+      blockimagecarousel:
         enabled: true
         weight: 13
-      blockimagecarousel:
+      blocklatest:
         enabled: true
         weight: 13
       step:
@@ -117,6 +119,9 @@ settings:
       blockmapsecondary:
         enabled: true
         weight: 27
+      blockmarketmap:
+        enabled: true
+        weight: 28
       blockherotertiary:
         enabled: true
         weight: 30
