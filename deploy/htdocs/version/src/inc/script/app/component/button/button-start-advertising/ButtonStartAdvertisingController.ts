@@ -10,6 +10,8 @@ import ScrollUtils from "../../../util/ScrollUtils";
 
 class ButtonStartAdvertisingController extends DefaultButtonController<ButtonStartAdvertisingViewModel, IButtonStartAdvertisingOptions>
 {
+	private static CENTER_PERCENTAGE:number = 0.75;
+
 	/**
 	 *    Instance of Log debug utility for debug logging
 	 *    @property _debug
@@ -59,7 +61,7 @@ class ButtonStartAdvertisingController extends DefaultButtonController<ButtonSta
 	private positionElement(): void
 	{
 		const elementHeight = this.element.offsetHeight;
-		const screenCenter = window.innerHeight / 2;
+		const screenCenter = window.innerHeight * ButtonStartAdvertisingController.CENTER_PERCENTAGE;
 		const footerHeight = (<HTMLElement>document.body.querySelector('.component-footer')).offsetHeight;
 		const maxScrollTop = document.body.offsetHeight - footerHeight - elementHeight;
 

@@ -3,10 +3,8 @@
 	@include pos(0, 0, auto, auto);
 	@include size($size / 2, $size);
 	position: absolute;
-	transform: translate(calc(100% - #{$sizeGrid * 2}), 0);
 	color: #fff;
 	text-align: right;
-	display: none; // temp
 
 	.background {
 		@include arrow(left, $colorPrimary, $size);
