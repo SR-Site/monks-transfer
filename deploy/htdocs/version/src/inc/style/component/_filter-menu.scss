@@ -14,11 +14,19 @@
 		text-transform: none;
 	}
 
+	.button-reset {
+		@include size($sizeGrid*2);
+		color: $colorTertiary;
+
+		.icon {
+
+		}
+	}
+
 	// Filter Label
 	.filter-label {
 		position: relative;
 		background-color: $colorTertiary;
-		padding-left: $sizeGrid;
 		width: $sizeGrid*5;
 		color: white;
 		height: 100%;
@@ -27,13 +35,20 @@
 		font-size: 1.2rem;
 		line-height: $sizeGrid*2;
 		font-family: $fontOpenSans;
+		text-align: center;
+		transition: background-color 250ms ease(easeOutExpo), color 250ms ease(easeOutExpo);;
 
-		.icon {
+		> .icon {
 			position: absolute;
 			transform: translate(0, -50%);
 			top: 50%;
 			right: $sizeGrid/1.333;
 			@include size(14px, 16px);
+		}
+
+		@include hover() {
+			background-color: white;
+			color: $colorTertiary;
 		}
 	}
 
@@ -114,14 +129,12 @@
 		@include size(100%);
 
 		.selected-tags-indicator {
-			position: absolute;
-			@include pos(50%, $sizeGrid + $sizeGrid/4, auto, auto);
-			transform: translate(0, -50%);
 			@include size($sizeGrid/2);
 			border-radius: 100%;
 			background-color: $colorTertiary;
 			color: white;
 			font: 600 1.2rem / 2rem $fontOpenSans;
+			margin-left: $sizeGrid/4;
 		}
 
 		&:before {
@@ -194,16 +207,35 @@
 				height: $sizeGrid*4;
 			}
 
+			.button-reset,
+			.button-close {
+				@include size($sizeGrid*4);
+
+				.icon {
+					@include size(10px);
+				}
+			}
+
+			.button-close {
+				border-right: 1px solid rgba(white, 0.6);
+			}
+
+			.button-reset {
+				border-left: 1px solid rgba(white, 0.6);
+			}
+
+			.button-apply {
+				height: 100%;
+				flex-grow: 1;
+				font-size: inherit;
+				text-transform: inherit;
+				font-family: inherit;
+				font-weight: inherit;
+			}
+
 			// Open State
 			&.is-open {
 				height: calc(100% - #{$sizeHeaderMobile});
-			}
-
-			.component-button-circle-close {
-				position: absolute;
-				top: $sizeGrid;
-				right: $sizeGrid;
-				z-index: 1;
 			}
 		}
 

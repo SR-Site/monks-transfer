@@ -2,13 +2,24 @@
 
 	<!-- ko if: $root.filters() -->
 	<div class="menu">
-		<div class="filter-label">
-			<!-- ko text: label --><!-- /ko -->
-			<span class="icon" data-bind="icon: 'filter'"></span>
-		</div>
 
-		<ul class="filters" data-bind="foreach: filters">
+		<button class="filter-label button" data-bind="css: {'is-disabled': !$root.filterChanged()}, tap: ($root.filterChanged() ? $root.applyFilter.bind($root) : null)">
 
+			<!-- ko ifnot: $root.filterChanged() -->
+				<!-- ko text: label --><!-- /ko -->
+				<span class="icon" data-bind="icon: 'filter'"></span>
+
+			<!-- /ko -->
+
+
+			<!-- ko if: $root.filterChanged() -->
+				<!-- ko text: applyLabel --><!-- /ko -->
+			<!-- /ko -->
+		</button>
+
+		<ul class="filters" data-bind="">
+
+			<!-- ko foreach: filters -->
 			<li class="filter-item">
 
 				<button class="filter-button button" data-bind="tap: $root.handleDropdownClick.bind($root, $index())">
@@ -47,23 +58,17 @@
 					} --><!-- /ko -->
 				</div>
 			</li>
+			<!-- /ko -->
+
+			<li class="button-reset button" data-bind="tap: $root.resetFilter.bind($root)">
+				<span class="icon abs-center" data-bind="icon: 'reset'"></span>
+			</li>
 		</ul>
 	</div>
 
 	<div class="filter-overlay" data-bind="css: {'is-open': $root.filterOverlayIsOpen()}">
 
 		<div class="filter-overlay-content">
-
-			<!-- ko component: {
-				name: 'button/button-circle-close',
-				onComplete: $root.controller.callbackCounter.get(),
-				options: {
-					action: {
-						event: $root.toggleFilterOverlay.bind($root)
-					},
-					size: $root.ButtonSize.LARGE
-				}
-			} --><!-- /ko -->
 
 			<div class="scroll-wrapper js-scroll-wrapper" data-bind="scrollbar:{
 				setContentSize:false
@@ -92,10 +97,29 @@
 			</div>
 		</div>
 
-		<button class="filter-label button" data-bind="tap: $root.handleFilterOverlayLabelClick.bind($root)">
-			<!-- ko text: label --><!-- /ko -->
-			<span class="icon" data-bind="icon: 'filter'"></span>
-		</button>
+
+		<!-- ko if: $root.filterOverlayIsOpen() -->
+		<div class="filter-label">
+			<button class="button-close button" data-bind="tap: $root.toggleFilterOverlay.bind($root)">
+				<span class="icon abs-center" data-bind="icon: 'cross'"></span>
+			</button>
+
+			<button class="button-apply button" data-bind="tap: $root.handleFilterOverlayLabelClick.bind($root)">
+				<!-- ko text: label --><!-- /ko -->
+			</button>
+
+			<button class="button-reset button" data-bind="tap: $root.resetFilter.bind($root)">
+				<span class="icon abs-center" data-bind="icon: 'reset'"></span>
+			</button>
+		</div>
+		<!-- /ko -->
+
+		<!-- ko ifnot: $root.filterOverlayIsOpen() -->
+			<button class="filter-label button" data-bind="tap: $root.toggleFilterOverlay.bind($root)">
+				<!-- ko text: label --><!-- /ko -->
+				<span class="icon" data-bind="icon: 'filter'"></span>
+			</button>
+		<!-- /ko -->
 
 	</div>
 	<!-- /ko -->

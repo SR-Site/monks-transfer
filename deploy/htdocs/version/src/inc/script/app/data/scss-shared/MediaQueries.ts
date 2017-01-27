@@ -17,7 +17,7 @@ export let mediaQueries:{[breakpoint:string]:string;} = {
 	// Large desktop
 	XX_LARGE: "(max-width: 1440px)",
 	// Extra large desktop
-	XXX_LARGE: "(min-width: 1600px)",
+	XXX_LARGE: "(min-width: 1441px)",
 
 	MEDIUM_ISOLATE : "(min-width: 768px) and (max-width: 1023px)"
 };

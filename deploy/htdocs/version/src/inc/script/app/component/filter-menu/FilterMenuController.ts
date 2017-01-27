@@ -24,9 +24,20 @@ class FilterMenuController extends DefaultComponentTransitionController<FilterMe
 
 		this.setupFilters();
 
+		this.destructibles.addKOSubscription(this.viewModel.selectedFiltersOptionCount.subscribe(() => this.handleFilterChange()));
+
 		this._debug.log('Init');
 
 		this.transitionController = new FilterMenuTransitionController(this.element, this);
+	}
+
+	/**
+	 * @private
+	 * @method handleFilterChange
+	 */
+	private handleFilterChange():void
+	{
+		this.viewModel.filterChanged(true);
 	}
 
 	/**
