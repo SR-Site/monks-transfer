@@ -150,7 +150,9 @@
  * @param $extraSelector:string (optional) = an extra selector that can have the same styles as a hover (for mobile/active state)
  */
 @mixin hover($extraSelector: null) {
-	&:hover#{', '$extraSelector} {
-		@content;
+	.is-desktop & {
+		&:hover:not(.is-disabled) {
+			@content;
+		}
 	}
 }

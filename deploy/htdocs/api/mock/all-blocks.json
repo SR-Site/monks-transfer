@@ -120,6 +120,7 @@
 					"endpoint": "filter-content/knowledge-center.json",
 					"filterLabel": "Filters",
 					"loadMoreLabel": "load more",
+					"applyLabel": "Apply",
 					"filters": [
 						{
 							"type": 0,

@@ -2,10 +2,20 @@
 
 	<!-- ko if: $root.filters() -->
 	<div class="menu">
-		<div class="filter-label">
-			<!-- ko text: label --><!-- /ko -->
-			<span class="icon" data-bind="icon: 'filter'"></span>
-		</div>
+
+		<button class="filter-label button" data-bind="css: {'is-disabled': !$root.filterChanged()}, tap: ($root.filterChanged() ? $root.applyFilter.bind($root) : null)">
+
+			<!-- ko ifnot: $root.filterChanged() -->
+				<!-- ko text: label --><!-- /ko -->
+				<span class="icon" data-bind="icon: 'filter'"></span>
+
+			<!-- /ko -->
+
+
+			<!-- ko if: $root.filterChanged() -->
+				<!-- ko text: applyLabel --><!-- /ko -->
+			<!-- /ko -->
+		</button>
 
 		<ul class="filters" data-bind="foreach: filters">
 

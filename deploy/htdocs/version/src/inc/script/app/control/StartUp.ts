@@ -12,6 +12,7 @@ import Log from 'lib/temple/util/Log';
 import {EnvironmentNames} from "../data/enum/ConfigNames";
 import LoadInitTask from "./LoadInitTask";
 import InitLocaleTask from "./InitLocaleTask";
+import bowser = require('bowser');
 
 // localization
 //import InitLocaleTask from "app/control/InitLocaleTask";
@@ -38,6 +39,10 @@ class StartUp
 	public execute(callback: () => void):void
 	{
 		this._log.log('Execute');
+
+		if(!bowser.tablet && !bowser.mobile) {
+			document.getElementsByTagName('html')[0].className += ' is-desktop';
+		}
 
 		configManagerInstance.init(config.config, config.environment);
 

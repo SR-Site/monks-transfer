@@ -10,6 +10,8 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 	public activeDropdownIndex:KnockoutObservable<number> = ko.observable(null);
 	public filterOverlayIsOpen:KnockoutObservable<boolean> = ko.observable(false);
 
+	public filterChanged:KnockoutObservable<boolean> = ko.observable(false);
+
 	public filters: KnockoutObservable<{[type: string]: Array<{label:string;value:string;checked:KnockoutObservable<boolean>}>}> = ko.observable(null);
 	public selectedFiltersOptionCount:KnockoutComputed<Array<number>> = ko.computed(() =>{
 		var countArray = [];
@@ -95,10 +97,20 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 	{
 		if(this.filterOverlayIsOpen())
 		{
-			this.controller.dispatch(CommonEvent.CHANGE, this.getFilterData());
+			this.applyFilter();
 		}
 
 		this.toggleFilterOverlay();
+	}
+
+	/**
+	 * @public
+	 * @method applyFilter
+	 */
+	public applyFilter():void
+	{
+		this.controller.dispatch(CommonEvent.CHANGE, this.getFilterData());
+		this.filterChanged(false);
 	}
 
 	/**
