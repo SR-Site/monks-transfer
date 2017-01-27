@@ -18,6 +18,7 @@ dependencies:
     - paragraphs.paragraphs_type.blockimagewithcontent
     - paragraphs.paragraphs_type.blockinfo
     - paragraphs.paragraphs_type.blocklatest
+    - paragraphs.paragraphs_type.blockmap
     - paragraphs.paragraphs_type.blockmore
   module:
     - entity_reference_revisions
@@ -47,6 +48,7 @@ settings:
       blockblogpost: blockblogpost
       blockherosecondary: blockherosecondary
       blockheromain: blockheromain
+      blockmap: blockmap
       blockherotertiary: blockherotertiary
       blockinfo: blockinfo
     target_bundles_drag_drop:
@@ -71,12 +73,12 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
-      blocklatest:
-        enabled: true
-        weight: 13
       link:
         weight: 13
         enabled: false
+      blocklatest:
+        enabled: true
+        weight: 13
       blockimagecarousel:
         enabled: true
         weight: 13
@@ -89,12 +91,12 @@ settings:
       blockaudiofragment:
         enabled: true
         weight: 16
-      slide:
-        weight: 18
-        enabled: false
       blockbutton:
         enabled: true
         weight: 18
+      slide:
+        weight: 18
+        enabled: false
       blockmore:
         enabled: true
         weight: 19
@@ -105,6 +107,9 @@ settings:
         enabled: true
         weight: 23
       blockheromain:
+        enabled: true
+        weight: 26
+      blockmap:
         enabled: true
         weight: 26
       blockherotertiary:

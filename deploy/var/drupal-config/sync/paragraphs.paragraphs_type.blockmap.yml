@@ -1,0 +1,7 @@
+uuid: 38a6f996-5b32-4279-852a-645057bd1e2a
+langcode: en
+status: true
+dependencies: {  }
+id: blockmap
+label: 'Block map'
+behavior_plugins: {  }
