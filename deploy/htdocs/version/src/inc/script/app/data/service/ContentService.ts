@@ -55,6 +55,7 @@ class ContentService extends AbstractService
 	 */
 	public loadMore(endpoint: string, offset: number, limit: number, filter: {[filterType:string]:string}): Promise<IGatewayResult<{blocks: Array<IBlock>}>>
 	{
+
 		return this.gateway.get(
 			endpoint,
 			Object.assign({

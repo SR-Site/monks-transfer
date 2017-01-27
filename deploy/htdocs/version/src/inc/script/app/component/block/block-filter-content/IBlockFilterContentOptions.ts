@@ -41,6 +41,13 @@ export interface IBlockFilterContentOptions extends IDefaultComponentOptions
 			label: string;
 		}>
 	}>;
+
+	/**
+	 * @property
+	 * @description The load more button label
+	 */
+	loadMoreLabel: string;
+
 }
 
 export default IBlockFilterContentOptions;

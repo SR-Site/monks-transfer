@@ -15,6 +15,21 @@
 
 		.component-block-info {
 			margin-left: 0;
+			margin-bottom: $sizeGrid * 2;
+		}
+	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+		.load-more-button-wrapper {
+			padding-left: $sizeGrid;
+			padding-right: $sizeGrid;
+			margin-bottom: 2px;
+
+			.button {
+				display: block;
+				margin-left: 0;
+			}
 		}
 	}
 }

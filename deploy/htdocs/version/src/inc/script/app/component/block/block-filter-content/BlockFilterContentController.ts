@@ -13,6 +13,9 @@ import CallbackCounter from "../../../util/CallbackCounter";
 import FilterMenuController from "../../filter-menu/FilterMenuController";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 import Loader from "../../../util/Loader";
+import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedController";
+import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
+import IGatewayResult from "../../../net/gateway/result/IGatewayResult";
 
 class BlockFilterContentController extends DefaultComponentController<BlockFilterContentViewModel, IBlockFilterContentOptions>
 {
@@ -23,13 +26,12 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 */
 	private _debug: Log = new Log('app.component.BlockFilterContent');
 
-	private _limit: number = 4;
-	private _offset: number = 0;
-
 	private _components: {[id: string]: DefaultComponentController<DefaultComponentViewModel<any, any>, any>} = {};
 	private _filterMenu: FilterMenuController;
 	private _filters:{[filterType:string]:string};
 	private _loader: Loader;
+	private _paginator:PaginatorDashedController;
+
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -40,8 +42,6 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 		super.init();
 
 		this._loader = new Loader(this.element);
-
-		this._debug.log('Init');
 	}
 
 	/**
@@ -65,6 +65,16 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	}
 
 	/**
+	 * @public
+	 * @method handlePaginatorReady
+	 */
+	public handlePaginatorReady(controller: PaginatorDashedController):void
+	{
+		this._paginator = controller;
+		this._paginator.addEventListener(CarouselEvent.OPEN, (event:DataEvent<{index:number}>)=> this.loadPage(event.data.index));
+	}
+
+	/**
 	 * @private
 	 * @method handleFilterChange
 	 */
@@ -76,15 +86,28 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 		this._filters = event.data;
 
 		// Remove components from scrollTrackerPoint in DefaultContentPageController
-		this.parentPage.removeComponentsFromScrollTracker(this._components);
+		this.removeComponents();
 
 		// Empty offset && items
-		this._offset = 0;
-		this._components = {};
+		this.viewModel.offset = 0;
 		this.viewModel.items([]);
+
+		// Reset ActivePageIndex
+		this.viewModel.activePageIndex(0);
 
 		// Fetch New Content
 		this.loadMore();
+	}
+
+	/**
+	 * @private
+	 * @method removeComponents
+	 */
+	private removeComponents():void
+	{
+		// Remove components from scrollTrackerPoint in DefaultContentPageController
+		this.parentPage.removeComponentsFromScrollTracker(this._components);
+		this._components = {};
 	}
 
 	/**
@@ -93,11 +116,64 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 */
 	public allDynamicComponentsLoaded(): void
 	{
+		this.afterContentRender();
+
 		// Add components to scrollTrackerPoint in DefaultContentPageController
 		this.parentPage.addComponentsToScrollTracker(this._components);
 
 		// Dispatch Resize event for Parent Page.
 		this.dispatch(CommonEvent.RESIZE);
+	}
+
+
+	/**
+	 * @public
+	 * @method loadPage
+	 */
+	public loadPage(index:number = this.viewModel.activePageIndex()):void
+	{
+		this.viewModel.offset = index * this.viewModel.limit;
+
+		this.beforeContentLoad();
+
+		// Remove component from pagePage/scrollTracker if we do render/show all loaded items in the DOM.
+		if(this.viewModel.showInPages()) {
+			this.removeComponents();
+		}
+
+		// If we already have this page in Storage, load from storage, if not fetch new content.
+		this.fetchPageFromStorage().catch(() => this.fetchContent());
+	}
+
+	/**
+	 * @private
+	 * @method canFetchPageFromStorage
+	 */
+	private fetchPageFromStorage():Promise<any>
+	{
+		return new Promise((resolve:Function, reject:Function) =>{
+
+			const pageFound = this.viewModel.pages().find((page) => page.pageIndex === this.getPageIndexByOffset());
+
+			if(pageFound) {
+
+				// Destruct and recreate new CallbackCounter to be used for the new blocks that are loaded.
+				this.recreateCallbackCounter();
+
+				// Save activePageIndex
+				this.setActivePageIndex(this.getPageIndexByOffset(this.viewModel.offset));
+
+				// Once all loaded blocks are ready, register them in the DefaultContentPageController.
+				this.addCallbackCounterCompleteListener();
+
+				this._loader.hide();
+
+				resolve();
+			}
+			else {
+				reject();
+			}
+		});
 	}
 
 	/**
@@ -106,7 +182,9 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 */
 	public loadMore(): void
 	{
-		this._offset = this._offset + this._limit;
+		this.viewModel.offset = this.viewModel.offset + this.viewModel.limit;
+
+		this.beforeContentLoad();
 
 		this.fetchContent();
 	}
@@ -127,37 +205,112 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 
 	/**
 	 * @private
+	 * @method getPageIndexByOffset
+	 */
+	private getPageIndexByOffset(offset:number = this.viewModel.offset):number
+	{
+		return offset / this.viewModel.limit
+	}
+
+	/**
+	 * @private
 	 * @method fetchContent
 	 */
 	private fetchContent(): void
 	{
-		this._loader.show();
-
 		DataManager.getInstance().serviceModel.contentService.loadMore(
 			this.options.endpoint,
-			this._offset,
-			this._limit,
+			this.viewModel.offset,
+			this.viewModel.limit,
 			this._filters
 		).then((result) => this._loader.hide()
-			.then(() =>this.handleContentLoad(result.data)));
+			.then(() =>this.handleContentLoad(result)));
 	}
+
 
 	/**
 	 * @private
 	 * @method handleContentLoad
 	 */
-	private handleContentLoad(result: {blocks: Array<IBlock>}): void
+	private handleContentLoad(result: IGatewayResult<{blocks: Array<IBlock>}>): void
 	{
-		this.callbackCounter.destruct();
-		this.callbackCounter = new CallbackCounter();
+		// Save Amount of totalPages in a Array for the PaginatorController.
+		this.viewModel.totalPages(new Array(Math.ceil(result.pagination.total / this.viewModel.limit)));
 
-		BlockHelper.parseBlocks([], result.blocks).forEach((item) =>
+		// Destruct and recreate new CallbackCounter to be used for the new blocks that are loaded.
+		this.recreateCallbackCounter();
+
+		// Save activePageIndex
+		this.setActivePageIndex(this.getPageIndexByOffset(this.viewModel.offset));
+
+		let newPageItems = [];
+
+		// Check if it's a valid blockComponent and format as needed for a blockComponent
+		BlockHelper.parseBlocks([], result.data.blocks).forEach((item) =>
 		{
 			this.viewModel.items.push(item);
+			newPageItems.push(item);
 		});
 
+		// Sore new fetched items in pages.
+		this.viewModel.pages.push({
+			items: newPageItems,
+			pageIndex: this.viewModel.activePageIndex()
+		});
+
+		// Once all loaded blocks are ready, register them in the DefaultContentPageController.
+		this.addCallbackCounterCompleteListener();
+	}
+
+	/**
+	 * @private
+	 * @method recreateCallbackCounter
+	 */
+	private recreateCallbackCounter():void
+	{
+		// Destruct and recreate new CallbackCounter to be used for the new blocks that are loaded.
+		this.callbackCounter.destruct();
+		this.callbackCounter = new CallbackCounter();
+	}
+
+	/**
+	 * @private
+	 * @method addCallbackCounterComplete
+	 */
+	private addCallbackCounterCompleteListener():void
+	{
+		// Once all loaded blocks are ready, register them in the DefaultContentPageController.
 		const allComponentsLoaded: Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
 		allComponentsLoaded.then(() => this.allDynamicComponentsLoaded());
+	}
+
+	/**
+	 * @private
+	 * @method setActivePageIndex
+	 */
+	private setActivePageIndex(index:number):void
+	{
+		this.viewModel.activePageIndex(index);
+	}
+
+	/**
+	 * @private
+	 * @method beforeContentLoad
+	 */
+	private beforeContentLoad():Promise<any>
+	{
+		TweenLite.set(this.element, {height: this.element.offsetHeight});
+
+		return this._loader.show();
+	}
+
+	/**
+	 * @private
+	 * @method afterContentRender
+	 */
+	private afterContentRender():void
+	{
+		TweenLite.set(this.element, {clearProps: 'height'});
 	}
 
 	/**
@@ -166,8 +319,6 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 */
 	public destruct(): void
 	{
-		this._limit = null;
-		this._offset = null;
 		this._components = null;
 		this._filterMenu = null;
 		this._loader = null;

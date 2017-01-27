@@ -9,7 +9,7 @@
 			}
 		} --><!-- /ko -->
 
-		<div class="content-items" data-bind="foreach: $root.items">
+		<div class="content-items" data-bind="foreach: $root.visibleItems">
 			<!-- ko if: type == $root.BlockType.COMPONENT -->
 				<!-- ko component: {name: 'block/' + id, options: data, onComplete: $root.controller.callbackCounter.get($root.controller.handleDynamicComponentLoaded.bind($root.controller))} --><!-- /ko -->
 			<!-- /ko -->
@@ -18,7 +18,35 @@
 			<!-- /ko -->
 		</div>
 
-		<!-- todo need design: load more/pagination -->
+		<div class="pagiantor-wrapper" data-bind="visible: dataManager.deviceStateTracker.currentState() > $root.DeviceState.SMALL">
+			<!-- ko component: {
+				name: 'paginator-dashed',
+				onComplete: $root.controller.callbackCounter.get($root.controller.handlePaginatorReady.bind($root.controller)),
+				options: {
+					items: $root.totalPages,
+					currentPage: $root.activePageIndex,
+					orientation: $root.Orientation.HORIZONTAL
+				}
+			} --><!-- /ko -->
+		</div>
+
+		<div class="load-more-button-wrapper" data-bind="visible:
+				dataManager.deviceStateTracker.currentState() < $root.DeviceState.MEDIUM &&
+				$root.activePageIndex() < $root.totalPages().length
+		">
+			<!-- ko component: {
+				name: 'button/button-main',
+				onComplete: $root.controller.callbackCounter.get(),
+				options: {
+					action: {
+						event: $root.controller.loadMore.bind($root.controller),
+						label: loadMoreLabel
+					},
+					size: $root.ButtonSize.LARGE
+				}
+			} --><!-- /ko -->
+		</div>
+
 	</div>
 
 	<div class="form-loader js-loader"><div class="loader abs-center"></div></div>

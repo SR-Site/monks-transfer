@@ -1,5 +1,10 @@
 {
 	"statusCode": 200,
+	"pagination": {
+		"total": 56,
+		"offset": 0, 
+		"limit": 4
+	},
 	"data": {
 		"pageTitle":  "Knowledge center",
 		"headerTheme": 0,

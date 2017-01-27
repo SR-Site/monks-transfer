@@ -119,6 +119,7 @@
 				"data": {
 					"endpoint": "filter-content/knowledge-center.json",
 					"filterLabel": "Filters",
+					"loadMoreLabel": "load more",
 					"filters": [
 						{
 							"type": 0,

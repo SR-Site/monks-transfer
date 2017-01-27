@@ -97,6 +97,25 @@ class Loader extends EventDispatcher
 
 	/**
 	 * @public
+	 * @method setHeight
+	 */
+	public setHeight(height:number):void
+	{
+		TweenLite.set(this._element, {height: height});
+	}
+
+	/**
+	 * @public
+	 * @method resetHeight
+	 */
+	public resetHeight():void
+	{
+		TweenLite.set(this._element, {clearProps: 'height'});
+	}
+
+
+	/**
+	 * @public
 	 * @method destruct
 	 */
 	public destruct():void
