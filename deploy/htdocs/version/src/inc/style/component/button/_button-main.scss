@@ -19,17 +19,24 @@
 		fill: transparent;
 		stroke: rgba(0, 0, 0, .3);
 		stroke-width: 1px;
-		transition: stroke .2s ease(easeInOut), stroke-width .2s ease(easeInOut);
+
+		&.background {
+			stroke: rgba(0, 0, 0, .3);
+		}
+
+		&.hover-stroke {
+
+			stroke: $colorSecondary;
+		}
 	}
 
-	&:after {
+	.stripe {
 		@include size($sizeGridSecondary, .4rem);
 		@include pos(calc(50% - .2rem), auto, auto, -$sizeGridSecondary / 2);
 		transform: scale(1);
-		content: '';
 		position: absolute;
 		background: $colorSecondary;
-		transition: all .2s ease(easeInOut);
+		transition: all .2s ease(easeInOut) .5s;
 	}
 
 	.label {
@@ -59,14 +66,9 @@
 
 	// Hover State
 	@include hover() {
-
-		&:after {
+		.stripe {
 			transform: scaleX(0);
-		}
-
-		rect {
-			stroke-width: 0.5rem;
-			stroke: $colorSecondary;
+			transition-delay: 0s;
 		}
 	}
 
@@ -78,7 +80,7 @@
 		padding: 0 $sizeGrid * 2;
 		margin-left: $sizeGrid;
 
-		&:after {
+		.stripe {
 			@include size($sizeGrid*2, 1rem);
 			left: -$sizeGrid;
 		}

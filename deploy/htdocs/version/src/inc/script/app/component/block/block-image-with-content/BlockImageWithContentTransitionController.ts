@@ -4,8 +4,8 @@ import SentenceTransitionController from "../../../util/component-transition/Sen
 class BlockImageWithContentTransitionController extends DefaultTransitionController
 {
 
-	private _headingAnimation:SentenceTransitionController;
-	private _copyAnimation:SentenceTransitionController;
+	private _headingAnimation: SentenceTransitionController;
+	private _copyAnimation: SentenceTransitionController;
 
 	constructor(element: HTMLElement, parentController: any)
 	{
@@ -29,8 +29,15 @@ class BlockImageWithContentTransitionController extends DefaultTransitionControl
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
+		const button = this.element.querySelector('.component-button-main');
+
 		this.transitionInTimeline.add(this._headingAnimation.getTimeline());
 		this.transitionInTimeline.add(this._copyAnimation.getTimeline());
+
+		if(button)
+		{
+			this.transitionInTimeline.add(this.getSubTimeline(button));
+		}
 	}
 }
 

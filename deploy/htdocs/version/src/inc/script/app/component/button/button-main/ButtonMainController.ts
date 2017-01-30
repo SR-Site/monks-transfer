@@ -5,27 +5,50 @@ import ButtonMainViewModel from 'app/component/button/button-main/ButtonMainView
 
 import Log from "lib/temple/util/Log";
 import Theme from "../../../data/enum/style/Theme";
+import NativeEventListener from "../../../../lib/temple/event/NativeEventListener";
+import ThrottleDebounce from "../../../../lib/temple/util/ThrottleDebounce";
 
 class ButtonMainController extends DefaultButtonController<ButtonMainViewModel, IButtonMainOptions>
 {
-	/**
-	 *	Instance of Log debug utility for debug logging
-	 *	@property _debug
-	 *	@private
-	 */
-	private _debug:Log = new Log('app.component.ButtonMain');
+	public static BORDER_WIDTH: number = 5;
+
+	private _hoverStroke: HTMLElement;
+
+	private _width: number = 0;
+	private _height: number = 0;
+
+	private _debug: Log = new Log('app.component.ButtonMain');
 
 	/**
-	 *	Overrides AbstractPageController.init()
-	 *	@method init
+	 *    Overrides AbstractPageController.init()
+	 *    @method init
 	 */
-	public init():void
+	public init(): void
 	{
 		super.init();
 
-
-
 		this._debug.log('Init');
+
+		this._hoverStroke = <HTMLElement>this.element.querySelector('.hover-stroke');
+
+		this.destructibles.add(new NativeEventListener(window, 'resize', ThrottleDebounce.debounce(this.handleResize, 100, this)));
+
+		this.handleResize();
+	}
+
+	/**
+	 * @public
+	 * @method fullPath
+	 * @returns {number}
+	 */
+	public get fullPath(): number
+	{
+		return (this._width * 2) + (this._height * 2);
+	}
+
+	public get height():number
+	{
+		return this._height;
 	}
 
 	/**
@@ -33,7 +56,7 @@ class ButtonMainController extends DefaultButtonController<ButtonMainViewModel, 
 	 * @method addClassNames
 	 * @description some buttons require some extra classnames add them in this method
 	 */
-	protected addClassNames():void
+	protected addClassNames(): void
 	{
 		// Default is the dark theme
 		this.options.theme = this.options.theme === void 0 ? Theme.DARK : this.options.theme;
@@ -45,10 +68,10 @@ class ButtonMainController extends DefaultButtonController<ButtonMainViewModel, 
 	}
 
 	/**
-	* @protected
-	* @method allComponentsLoaded
-	*/
-	protected allComponentsLoaded():void
+	 * @protected
+	 * @method allComponentsLoaded
+	 */
+	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new ButtonMainTransitionController(this.element, this);
 
@@ -56,10 +79,42 @@ class ButtonMainController extends DefaultButtonController<ButtonMainViewModel, 
 	}
 
 	/**
+	 * @private
+	 * @method setSize
+	 */
+	private setSize(): void
+	{
+		if(this.element.offsetWidth > 0 && this.element.offsetHeight > 0)
+		{
+			this._hoverStroke.style.strokeWidth = ButtonMainController.BORDER_WIDTH + 'px';
+
+			this._hoverStroke.setAttribute('width', this.element.offsetWidth - (ButtonMainController.BORDER_WIDTH * 2) + 'px');
+			this._hoverStroke.setAttribute('height', this.element.offsetHeight - (ButtonMainController.BORDER_WIDTH * 2) + 'px');
+
+			this._width = this.element.offsetWidth;
+			this._height = this.element.offsetHeight;
+
+			// Calculate the dash array value's
+			this._hoverStroke.style.strokeDasharray = '0px ' + this.fullPath + 'px';
+			this._hoverStroke.style.strokeDashoffset = this._height / 2 + 'px';
+		}
+	}
+
+
+	/**
+	 * @private
+	 * @method handleResize
+	 */
+	private handleResize(): void
+	{
+		this.setSize();
+	}
+
+	/**
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 
 		// always call this last
