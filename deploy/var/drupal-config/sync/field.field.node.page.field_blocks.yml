@@ -22,6 +22,7 @@ dependencies:
     - paragraphs.paragraphs_type.blockmapsecondary
     - paragraphs.paragraphs_type.blockmarketmap
     - paragraphs.paragraphs_type.blockmore
+    - paragraphs.paragraphs_type.blocknetworkoverview
   module:
     - entity_reference_revisions
 id: node.page.field_blocks
@@ -46,13 +47,14 @@ settings:
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
-      blockblogpost: blockblogpost
       blockmore: blockmore
+      blockblogpost: blockblogpost
       blockherosecondary: blockherosecondary
-      blockmap: blockmap
       blockheromain: blockheromain
+      blockmap: blockmap
       blockmapsecondary: blockmapsecondary
       blockmarketmap: blockmarketmap
+      blocknetworkoverview: blocknetworkoverview
       blockherotertiary: blockherotertiary
       blockinfo: blockinfo
     target_bundles_drag_drop:
@@ -86,12 +88,12 @@ settings:
       blocklatest:
         enabled: true
         weight: 13
-      step:
-        weight: 15
-        enabled: false
       blockarticleteaser:
         enabled: true
         weight: 15
+      step:
+        weight: 15
+        enabled: false
       blockaudiofragment:
         enabled: true
         weight: 16
@@ -101,19 +103,19 @@ settings:
       blockbutton:
         enabled: true
         weight: 18
-      blockblogpost:
+      blockmore:
         enabled: true
         weight: 19
-      blockmore:
+      blockblogpost:
         enabled: true
         weight: 19
       blockherosecondary:
         enabled: true
         weight: 23
-      blockmap:
+      blockheromain:
         enabled: true
         weight: 26
-      blockheromain:
+      blockmap:
         enabled: true
         weight: 26
       blockmapsecondary:
@@ -122,6 +124,9 @@ settings:
       blockmarketmap:
         enabled: true
         weight: 28
+      blocknetworkoverview:
+        enabled: true
+        weight: 29
       blockherotertiary:
         enabled: true
         weight: 30

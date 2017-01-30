@@ -1,0 +1,111 @@
+uuid: 0b352624-8be3-48c6-a3d6-dc8138d5de3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_styles
+    - paragraphs.paragraphs_type.blocknetworkoverview
+    - paragraphs.paragraphs_type.styles
+  module:
+    - entity_reference_revisions
+id: paragraph.blocknetworkoverview.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: blocknetworkoverview
+label: Styles
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styles: styles
+    target_bundles_drag_drop:
+      blocknetworkoverview:
+        weight: 29
+        enabled: false
+      blockarticleteaser:
+        weight: 30
+        enabled: false
+      blockaudiofragment:
+        weight: 31
+        enabled: false
+      blockblogpost:
+        weight: 32
+        enabled: false
+      blockbutton:
+        weight: 33
+        enabled: false
+      blockheromain:
+        weight: 34
+        enabled: false
+      blockherosecondary:
+        weight: 35
+        enabled: false
+      blockherotertiary:
+        weight: 36
+        enabled: false
+      blockhowtoadvertise:
+        weight: 37
+        enabled: false
+      blockimagecalltoactions:
+        weight: 38
+        enabled: false
+      blockimagecarousel:
+        weight: 39
+        enabled: false
+      blockimagewithcontent:
+        weight: 40
+        enabled: false
+      blockinfo:
+        weight: 41
+        enabled: false
+      blocklatest:
+        weight: 42
+        enabled: false
+      blockmap:
+        weight: 43
+        enabled: false
+      blockmapsecondary:
+        weight: 44
+        enabled: false
+      blockmarketmap:
+        weight: 45
+        enabled: false
+      blockmore:
+        weight: 46
+        enabled: false
+      broadcastschedule:
+        weight: 47
+        enabled: false
+      calltoaction:
+        weight: 48
+        enabled: false
+      link:
+        weight: 49
+        enabled: false
+      showmetric:
+        weight: 50
+        enabled: false
+      slide:
+        weight: 51
+        enabled: false
+      slideheromain:
+        weight: 52
+        enabled: false
+      stat:
+        weight: 53
+        enabled: false
+      statistic:
+        weight: 54
+        enabled: false
+      step:
+        weight: 55
+        enabled: false
+      styles:
+        enabled: true
+        weight: 56
+field_type: entity_reference_revisions

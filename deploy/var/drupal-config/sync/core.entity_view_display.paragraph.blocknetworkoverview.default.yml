@@ -1,0 +1,23 @@
+uuid: 960bb46a-82d5-4cfe-9679-76133f4e6a75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blocknetworkoverview.field_styles
+    - paragraphs.paragraphs_type.blocknetworkoverview
+  module:
+    - entity_reference_revisions
+id: paragraph.blocknetworkoverview.default
+targetEntityType: paragraph
+bundle: blocknetworkoverview
+mode: default
+content:
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden: {  }
