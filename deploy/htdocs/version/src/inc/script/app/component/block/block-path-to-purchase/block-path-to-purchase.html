@@ -1,9 +1,11 @@
 <div class="component-block-path-to-purchase">
 	<div class="inner-wrapper abs-fill">
-		<!-- ko component: {
-			name: 'image-crossfader',
-			onComplete: $root.controller.callbackCounter.get($root.controller.handleImageCrossfaderReady.bind($root.controller))
-		} --><!-- /ko -->
+		<!-- ko if: dataManager.deviceStateTracker.currentState() > $root.DeviceState.SMALL -->
+			<!-- ko component: {
+				name: 'image-crossfader',
+				onComplete: $root.controller.callbackCounter.get($root.controller.handleImageCrossfaderReady.bind($root.controller))
+			} --><!-- /ko -->
+		<!-- /ko -->
 		<div class="slider-viewport infinite-carousel js-image-carousel">
 			<ul class="steps site-frame js-slides" data-bind="foreach: data.steps">
 				<li class="step js-slide" data-bind="css: {'is-active': $root.activeIndex() === $index()}, events: [

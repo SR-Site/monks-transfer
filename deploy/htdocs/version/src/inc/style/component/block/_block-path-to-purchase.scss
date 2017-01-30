@@ -241,12 +241,32 @@
 				transform: none;
 			}
 
+
+			@include hover() {
+				color: $colorWhite;
+			}
+
+			&.is-active {
+				color: $colorWhite;
+
+				.step-content {
+					.copy {
+						color: $colorPrimary;
+					}
+				}
+
+				@include hover() {
+					color: $colorPrimary;
+				}
+			}
+
 			.step-content {
 				padding: $sizeGrid*2 !important;
 				width: calc(100% - #{$sizeGrid});
 				border-top: 1px solid $colorBorder;
 				border-left: 1px solid $colorBorder;
 				border-bottom: 1px solid $colorBorder;
+				order: 0!important;;
 
 				.copy-02 {
 					font-size: mobile-size(3.5rem);
@@ -258,6 +278,8 @@
 				height: calc(100% - #{$sizeGrid});
 				border-top: 1px solid $colorBorder;
 				border-right: 1px solid $colorBorder;
+				margin-top: 0!important;
+				order: 1!important;
 
 				&:after {
 					border: none !important;

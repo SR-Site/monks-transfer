@@ -12,6 +12,7 @@ class BlockPathToPurchaseViewModel extends DefaultComponentViewModel<BlockPathTo
 	public StringUtils: Class = StringUtils;
 	public MouseEventHelper:Class = MouseEventHelper;
 
+
 	private _switchComplete = true;
 
 	/**
