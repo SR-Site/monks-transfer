@@ -1,0 +1,21 @@
+uuid: 3f219478-0a4a-4ebd-9806-45ec79ddf541
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_persona_type
+    - paragraphs.paragraphs_type.personas
+  module:
+    - options
+id: paragraph.personas.field_persona_type
+field_name: field_persona_type
+entity_type: paragraph
+bundle: personas
+label: 'Persona type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

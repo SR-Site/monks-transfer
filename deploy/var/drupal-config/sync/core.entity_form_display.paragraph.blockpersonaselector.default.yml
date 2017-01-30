@@ -1,0 +1,56 @@
+uuid: 3d548fa5-0bf5-4ce3-b41f-1ab3cc82a1c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockpersonaselector.field_personas
+    - field.field.paragraph.blockpersonaselector.field_styles
+    - paragraphs.paragraphs_type.blockpersonaselector
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+id: paragraph.blockpersonaselector.default
+targetEntityType: paragraph
+bundle: blockpersonaselector
+mode: default
+content:
+  field_personas:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_styles:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: styles
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

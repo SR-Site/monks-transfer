@@ -1,0 +1,123 @@
+uuid: 84b8a54f-2080-4f42-a293-de397fa73365
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_personas
+    - paragraphs.paragraphs_type.blockpersonaselector
+    - paragraphs.paragraphs_type.personas
+  module:
+    - entity_reference_revisions
+id: paragraph.blockpersonaselector.field_personas
+field_name: field_personas
+entity_type: paragraph
+bundle: blockpersonaselector
+label: Personas
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      personas: personas
+    target_bundles_drag_drop:
+      personas:
+        enabled: true
+        weight: 33
+      blockarticleteaser:
+        weight: 34
+        enabled: false
+      blockaudiofragment:
+        weight: 35
+        enabled: false
+      blockblogpost:
+        weight: 36
+        enabled: false
+      blockbutton:
+        weight: 37
+        enabled: false
+      blockheromain:
+        weight: 38
+        enabled: false
+      blockherosecondary:
+        weight: 39
+        enabled: false
+      blockherotertiary:
+        weight: 40
+        enabled: false
+      blockhowtoadvertise:
+        weight: 41
+        enabled: false
+      blockimagecalltoactions:
+        weight: 42
+        enabled: false
+      blockimagecarousel:
+        weight: 43
+        enabled: false
+      blockimagewithcontent:
+        weight: 44
+        enabled: false
+      blockinfo:
+        weight: 45
+        enabled: false
+      blocklatest:
+        weight: 46
+        enabled: false
+      blockmap:
+        weight: 47
+        enabled: false
+      blockmapsecondary:
+        weight: 48
+        enabled: false
+      blockmarketmap:
+        weight: 49
+        enabled: false
+      blockmore:
+        weight: 50
+        enabled: false
+      blocknetworkoverview:
+        weight: 51
+        enabled: false
+      blockpagenotfound:
+        weight: 52
+        enabled: false
+      blockpathtopurchase:
+        weight: 53
+        enabled: false
+      blockpersonaselector:
+        weight: 54
+        enabled: false
+      broadcastschedule:
+        weight: 55
+        enabled: false
+      calltoaction:
+        weight: 56
+        enabled: false
+      link:
+        weight: 57
+        enabled: false
+      showmetric:
+        weight: 58
+        enabled: false
+      slide:
+        weight: 59
+        enabled: false
+      slideheromain:
+        weight: 60
+        enabled: false
+      stat:
+        weight: 61
+        enabled: false
+      statistic:
+        weight: 62
+        enabled: false
+      step:
+        weight: 63
+        enabled: false
+      styles:
+        weight: 64
+        enabled: false
+field_type: entity_reference_revisions

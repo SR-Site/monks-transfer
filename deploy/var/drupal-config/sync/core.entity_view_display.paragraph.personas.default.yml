@@ -1,0 +1,57 @@
+uuid: ff542120-2ccb-4964-b15c-ea210d94b120
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.personas.field_heading
+    - field.field.paragraph.personas.field_image
+    - field.field.paragraph.personas.field_link
+    - field.field.paragraph.personas.field_paragraph
+    - field.field.paragraph.personas.field_persona_type
+    - paragraphs.paragraphs_type.personas
+  module:
+    - entity_reference_revisions
+    - image
+    - options
+    - text
+id: paragraph.personas.default
+targetEntityType: paragraph
+bundle: personas
+mode: default
+content:
+  field_heading:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_image:
+    weight: 4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_link:
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+  field_paragraph:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_persona_type:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+hidden: {  }

@@ -1,0 +1,32 @@
+uuid: cdb9533c-860f-4b5d-8c7f-1095b9883adb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockpersonaselector.field_personas
+    - field.field.paragraph.blockpersonaselector.field_styles
+    - paragraphs.paragraphs_type.blockpersonaselector
+  module:
+    - entity_reference_revisions
+id: paragraph.blockpersonaselector.default
+targetEntityType: paragraph
+bundle: blockpersonaselector
+mode: default
+content:
+  field_personas:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden: {  }

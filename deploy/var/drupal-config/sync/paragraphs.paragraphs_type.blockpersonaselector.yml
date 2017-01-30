@@ -1,0 +1,7 @@
+uuid: 2283ee94-3375-446b-9662-53178edf7346
+langcode: en
+status: true
+dependencies: {  }
+id: blockpersonaselector
+label: 'Block persona selector'
+behavior_plugins: {  }
