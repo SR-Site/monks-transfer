@@ -28,6 +28,21 @@
 		font-size: 0;
 		display: flex;
 		position: relative;
+		cursor: pointer;
+		color: $colorWhite;
+		transition: color .2s ease(easeInOut);
+
+		@include hover() {
+			color: $colorLightGrey;
+
+			//.step-content {
+			//	background: $colorLightGrey;
+			//}
+			//
+			//.step-edge {
+			//	color: $colorLightGrey;
+			//}
+		}
 
 		&:after {
 			@include size(1px, $stepHeight - $sizeGrid);
@@ -39,15 +54,17 @@
 
 		.step-content {
 			@include size($stepWidth - $sizeGrid, 100%);
-			background: $colorWhite;
+			background: currentColor;
 			display: inline-block;
 			padding-top: $sizeGrid;
 			padding-bottom: $sizeGrid;
 			vertical-align: top;
 			text-align: left;
+			transition: background .2s ease(easeInOut);
 
 			.copy {
 				margin-left: $sizeGrid / 2;
+				color: $colorPrimary;
 			}
 
 			.copy-02 {
@@ -57,16 +74,18 @@
 
 		.step-edge {
 			@include size($sizeGrid, $stepHeight - $sizeGrid);
-			background: $colorWhite;
+			background: currentColor;
 			display: inline-block;
 			position: relative;
 			vertical-align: top;
+			transition: background .2s ease(easeInOut);
 
 			&:after {
-				@include triangle(left, top, $colorWhite, $sizeGrid);
+				@include triangle(left, top, currentColor, $sizeGrid);
 				@include pos(auto, 0, -$sizeGrid, auto);
 				position: absolute;
 				content: '';
+				transition: border-color .2s ease(easeInOut);
 			}
 		}
 
@@ -89,7 +108,7 @@
 				order: 2;
 
 				&:after {
-					@include triangle(left, top, $colorWhite, $sizeGrid);
+					@include triangle(left, top, currentColor, $sizeGrid);
 					@include pos(auto, 0, -$sizeGrid, auto);
 				}
 			}
@@ -116,7 +135,7 @@
 				margin-top: $sizeGrid;
 
 				&:after {
-					@include triangle(right, bottom, $colorWhite, $sizeGrid);
+					@include triangle(right, bottom, currentColor, $sizeGrid);
 					@include pos(-$sizeGrid, 0, auto, auto);
 				}
 			}
@@ -162,7 +181,7 @@
 				order: 2;
 
 				&:after {
-					@include triangle(left, bottom, $colorWhite, $sizeGrid);
+					@include triangle(left, bottom, currentColor, $sizeGrid);
 					@include pos(-$sizeGrid, 0, auto, auto);
 				}
 			}

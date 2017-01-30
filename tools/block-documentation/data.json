@@ -299,6 +299,15 @@
                     "properties": []
                 },
                 {
+                    "name": "loadMoreLabel",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The load more button label",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
                     "name": "filters",
                     "type": "Array",
                     "required": true,
@@ -346,6 +355,15 @@
                     ]
                 },
                 {
+                    "name": "applyLabel",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The label for apply the filter",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
                     "name": "filterLabel",
                     "type": "string",
                     "required": true,
@@ -364,7 +382,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockFilterContent\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"filters\": [\n            {\n                \"type\": 1,\n                \"options\": [\n                    {\n                        \"value\": \"Lorem ipsum dolor sit amet\",\n                        \"label\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ]\n            }\n        ],\n        \"filterLabel\": \"Lorem ipsum dolor sit amet\",\n        \"endpoint\": \"api/v1/path/to/endpoint\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockFilterContent\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"loadMoreLabel\": \"Lorem ipsum dolor sit amet\",\n        \"filters\": [\n            {\n                \"type\": 1,\n                \"options\": [\n                    {\n                        \"value\": \"Lorem ipsum dolor sit amet\",\n                        \"label\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ]\n            }\n        ],\n        \"applyLabel\": \"Lorem ipsum dolor sit amet\",\n        \"filterLabel\": \"Lorem ipsum dolor sit amet\",\n        \"endpoint\": \"api/v1/path/to/endpoint\"\n    }\n}"
         },
         {
             "blockId": "BlockHeroMain",
@@ -441,15 +459,6 @@
                             "properties": []
                         },
                         {
-                            "name": "secondaryLink",
-                            "type": "ILink",
-                            "required": false,
-                            "defaultValue": "null",
-                            "description": "The slide secondary link",
-                            "placeholder": "",
-                            "properties": []
-                        },
-                        {
                             "name": "statistics",
                             "type": "Object",
                             "required": false,
@@ -508,7 +517,7 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockHeroMain\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"secondaryLink\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"statistics\": \"TODO: Object\"\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"blockHeroMain\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"statistics\": \"TODO: Object\"\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockHeroSecondary",
@@ -1448,9 +1457,46 @@
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
                     "placeholder": "0",
                     "properties": []
+                },
+                {
+                    "name": "steps",
+                    "type": "Array",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The array containing all the steps",
+                    "placeholder": "",
+                    "properties": [
+                        {
+                            "name": "heading",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "THe heading displayed in the step",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "paragraph",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The paragraph displayed in the step",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "background",
+                            "type": "IImage",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The background image per step",
+                            "placeholder": "",
+                            "properties": []
+                        }
+                    ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockPathToPurchase\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blockPathToPurchase\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockPersonaSelector",

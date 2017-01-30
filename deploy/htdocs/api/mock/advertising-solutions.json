@@ -73,8 +73,8 @@
 							"heading": "Search",
 							"paragraph": "They make a descision to",
 							"background": {
-								"normal": "data/image/path-to-purchase/background-1.jpg",
-								"small": "data/image/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-2.jpg",
+								"small": "data/image/path-to-purchase/background-2.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -82,8 +82,8 @@
 							"heading": "Purchase",
 							"paragraph": "They begin shopping",
 							"background": {
-								"normal": "data/image/path-to-purchase/background-1.jpg",
-								"small": "data/image/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-3.jpg",
+								"small": "data/image/path-to-purchase/background-3.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -91,8 +91,8 @@
 							"heading": "Ownership",
 							"paragraph": "They evaluate their options",
 							"background": {
-								"normal": "data/image/path-to-purchase/background-1.jpg",
-								"small": "data/image/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-4.jpg",
+								"small": "data/image/path-to-purchase/background-4.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -100,8 +100,8 @@
 							"heading": "Support",
 							"paragraph": "They are making the purchase",
 							"background": {
-								"normal": "data/image/path-to-purchase/background-1.jpg",
-								"small": "data/image/path-to-purchase/background-1.jpg",
+								"normal": "data/image/path-to-purchase/background-5.jpg",
+								"small": "data/image/path-to-purchase/background-5.jpg",
 								"alt": "Background image alt text"
 							}
 						}

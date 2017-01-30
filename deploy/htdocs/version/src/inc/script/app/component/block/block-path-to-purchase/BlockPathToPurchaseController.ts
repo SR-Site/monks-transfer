@@ -7,38 +7,73 @@ import Log from "lib/temple/util/Log";
 import InfiniteImageCarousel from "../../../util/infinite-carousel/InfiniteImageCarousel";
 import DataManager from "../../../data/DataManager";
 import {DeviceState} from "../../../data/scss-shared/MediaQueries";
+import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
+import ImageHelper from "../../../util/ImageHelper";
+import Promise = require("bluebird");
 
 class BlockPathToPurchaseController extends DefaultComponentController<BlockPathToPurchaseViewModel, IBlockPathToPurchaseOptions>
 {
-	private _infiniteImageCarousel:InfiniteImageCarousel;
+	private _infiniteImageCarousel: InfiniteImageCarousel;
+	private _imageCrossfader: ImageCrossfaderController;
 
 
 	/**
-	 *	Instance of Log debug utility for debug logging
-	 *	@property _debug
-	 *	@private
+	 *    Instance of Log debug utility for debug logging
+	 *    @property _debug
+	 *    @private
 	 */
-	private _debug:Log = new Log('app.component.BlockPathToPurchase');
+	private _debug: Log = new Log('app.component.BlockPathToPurchase');
 
 	/**
-	 *	Overrides AbstractPageController.init()
-	 *	@method init
+	 *    Overrides AbstractPageController.init()
+	 *    @method init
 	 */
-	public init():void
+	public init(): void
 	{
 		super.init();
 
 		this.destructibles.addKOSubscription(DataManager.getInstance().deviceStateTracker.currentState.subscribe(this.handleDeviceStateChange.bind(this)));
+
 		this.handleDeviceStateChange(DataManager.getInstance().deviceStateTracker.currentState());
 
 		this._debug.log('Init');
 	}
 
 	/**
+	 * @public
+	 * @method handleImageCrossfaderReady
+	 */
+	public handleImageCrossfaderReady(controller: ImageCrossfaderController): void
+	{
+		this._imageCrossfader = controller;
+
+		this.changeBackgroundImage(0);
+	}
+
+	/**
+	 * @public
+	 * @method changeBackgroundImage
+	 * @param index
+	 */
+	public changeBackgroundImage(index: number): Promise<any>
+	{
+		if(this._imageCrossfader)
+		{
+			return this._imageCrossfader.open(
+				ImageHelper.getImageForMediaQuery(
+					this.options.steps[index].background
+				)
+			);
+		}else {
+			return Promise.resolve();
+		}
+	}
+
+	/**
 	 * @private
 	 * @method handleDeviceStateChange
 	 */
-	private handleDeviceStateChange(state:DeviceState):void
+	private handleDeviceStateChange(state: DeviceState): void
 	{
 		if(state < DeviceState.MEDIUM)
 		{
@@ -54,7 +89,7 @@ class BlockPathToPurchaseController extends DefaultComponentController<BlockPath
 	 * @private
 	 * @method destructCarousel
 	 */
-	private destructCarousel():void
+	private destructCarousel(): void
 	{
 		if(this._infiniteImageCarousel)
 		{
@@ -67,22 +102,25 @@ class BlockPathToPurchaseController extends DefaultComponentController<BlockPath
 	 * @private
 	 * @method initCarousel
 	 */
-	private initCarousel():void
+	private initCarousel(): void
 	{
-		if(this._infiniteImageCarousel) return;
+		if(this._infiniteImageCarousel)
+		{
+			return;
+		}
 
 		this._infiniteImageCarousel = new InfiniteImageCarousel(
 			<HTMLElement>this.element.querySelector('.js-image-carousel')
 		);
 
-		this.applyThreeWayBinding(this._infiniteImageCarousel.realCurrentPage, this.viewModel.currentPage);
+		this.applyThreeWayBinding(this._infiniteImageCarousel.realCurrentPage, this.viewModel.activeIndex);
 	}
 
 	/**
-	* @protected
-	* @method allComponentsLoaded
-	*/
-	protected allComponentsLoaded():void
+	 * @protected
+	 * @method allComponentsLoaded
+	 */
+	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new BlockPathToPurchaseTransitionController(this.element, this);
 
@@ -93,7 +131,7 @@ class BlockPathToPurchaseController extends DefaultComponentController<BlockPath
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 
 		// always call this last

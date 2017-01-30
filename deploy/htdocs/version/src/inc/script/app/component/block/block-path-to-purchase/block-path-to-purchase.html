@@ -1,14 +1,14 @@
 <div class="component-block-path-to-purchase">
 	<div class="inner-wrapper abs-fill">
-		<img class="background-image" data-bind="
-			image: {
-				image: data.steps[0].background,
-				state: $root.deviceState()
-			}" />
-
+		<!-- ko component: {
+			name: 'image-crossfader',
+			onComplete: $root.controller.callbackCounter.get($root.controller.handleImageCrossfaderReady.bind($root.controller))
+		} --><!-- /ko -->
 		<div class="slider-viewport infinite-carousel js-image-carousel">
 			<ul class="steps site-frame js-slides" data-bind="foreach: data.steps">
-				<li class="step js-slide">
+				<li class="step js-slide" data-bind="css: {'is-active': $root.activeIndex() === $index()}, events: [
+						[$root.MouseEventHelper.CLICK, $root.handleClick.bind($root, $index())]
+				]">
 					<div class="step-content">
 						<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
 						<h2 class="copy copy-02" data-bind="html: heading"></h2>

@@ -4,11 +4,31 @@ import IBlockPathToPurchaseOptions from 'app/component/block/block-path-to-purch
 
 import ko = require('knockout');
 import StringUtils from "../../../../lib/temple/util/type/StringUtils";
+import MouseEventHelper from "../../../util/MouseEventHelper";
 
 class BlockPathToPurchaseViewModel extends DefaultComponentViewModel<BlockPathToPurchaseController, IBlockPathToPurchaseOptions>
 {
-	public currentPage:KnockoutObservable<number> = ko.observable(0);
+	public activeIndex: KnockoutObservable<number> = ko.observable(0);
 	public StringUtils: Class = StringUtils;
+	public MouseEventHelper:Class = MouseEventHelper;
+
+	private _switchComplete = true;
+
+	/**
+	 * @private
+	 * @method handleClick
+	 */
+	private handleClick(index: number): void
+	{
+		if(this._switchComplete)
+		{
+			this._switchComplete = false;
+
+			this.controller.changeBackgroundImage(index)
+				.then(() => this.activeIndex(index))
+				.then(() => this._switchComplete = true);
+		}
+	}
 
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
@@ -17,6 +37,8 @@ class BlockPathToPurchaseViewModel extends DefaultComponentViewModel<BlockPathTo
 	public destruct(): void
 	{
 		this.StringUtils = null;
+		this.activeIndex = null;
+		this.MouseEventHelper = null;
 
 		// always call this last
 		super.destruct();
