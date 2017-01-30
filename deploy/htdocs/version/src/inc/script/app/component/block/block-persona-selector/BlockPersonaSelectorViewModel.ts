@@ -26,8 +26,6 @@ class BlockPersonaSelectorViewModel extends DefaultComponentViewModel<BlockPerso
 		{
 			this._switchComplete = false;
 
-			this.controller.changeBackgroundImage(index);
-
 			// Do some transitioning
 			this.controller.transitionController.transitionOutStep(this.activeIndex())
 				.then(() => this.activeIndex(index))

@@ -94,15 +94,19 @@ class BlockPersonaSelectorController extends DefaultComponentController<BlockPer
 	 * @method changeBackgroundImage
 	 * @param index
 	 */
-	public changeBackgroundImage(index: number): void
+	public changeBackgroundImage(index: number): Promise<any>
 	{
 		if(this._imageCrossfader)
 		{
-			this._imageCrossfader.open(
+			return this._imageCrossfader.open(
 				ImageHelper.getImageForMediaQuery(
 					this.options.personas[index].image
 				)
 			);
+		}
+		else
+		{
+			return Promise.resolve();
 		}
 	}
 

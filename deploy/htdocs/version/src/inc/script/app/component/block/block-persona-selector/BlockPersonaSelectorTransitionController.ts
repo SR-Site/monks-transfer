@@ -17,7 +17,7 @@ class BlockPersonaSelectorTransitionController extends DefaultTransitionControll
 		this._mainTriangleAnimation = new TriangleTransitionController(
 			<HTMLElement>this.element.querySelector('.background-triangle'),
 			this.parentController,
-			0.5
+			1
 		);
 	}
 
@@ -129,7 +129,7 @@ class BlockPersonaSelectorTransitionController extends DefaultTransitionControll
 		{
 			this._slideTransitions[index].completeMethod = resolve;
 			this._slideTransitions[index].timeline.reverse()
-		}).then(() => this._mainTriangleAnimation.transitionOut())
+		})
 	}
 
 	/**
@@ -141,13 +141,18 @@ class BlockPersonaSelectorTransitionController extends DefaultTransitionControll
 	{
 		return new Promise((resolve, reject) =>
 		{
-			this._mainTriangleAnimation.transitionIn()
+			// Switch the background
+			this.parentController.changeBackgroundImage(index);
+
+			// Slide out the main triangle
+			this._mainTriangleAnimation.transitionOut()
+				.then(() => this._mainTriangleAnimation.transitionIn())
 				.then(() =>
 				{
 					this._slideTransitions[index].completeMethod = resolve;
 					this._slideTransitions[index].timeline.restart();
 				})
-		})
+		});
 	}
 
 	/**
