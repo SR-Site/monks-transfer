@@ -183,8 +183,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/image/persona-selector/persona-background-image-2.jpg",
-								"small": "data/image/persona-selector/persona-background-image-2.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-1.jpg",
+								"small": "data/image/persona-selector/persona-background-image-1.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -199,8 +199,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/image/persona-selector/persona-background-image-3.jpg",
-								"small": "data/image/persona-selector/persona-background-image-3.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-2.jpg",
+								"small": "data/image/persona-selector/persona-background-image-2.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -215,8 +215,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/image/persona-selector/persona-background-image-4.jpg",
-								"small": "data/image/persona-selector/persona-background-image-4.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-3.jpg",
+								"small": "data/image/persona-selector/persona-background-image-3.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -231,8 +231,8 @@
 								"type": 0
 							},
 							"image": {
-								"normal": "data/image/persona-selector/persona-background-image-5.jpg",
-								"small": "data/image/persona-selector/persona-background-image-5.jpg",
+								"normal": "data/image/persona-selector/persona-background-image-4.jpg",
+								"small": "data/image/persona-selector/persona-background-image-4.jpg",
 								"alt": "Background image alt text"
 							}
 						}
