@@ -34,14 +34,20 @@
 
 		@include hover() {
 			color: $colorLightGrey;
+		}
 
-			//.step-content {
-			//	background: $colorLightGrey;
-			//}
-			//
-			//.step-edge {
-			//	color: $colorLightGrey;
-			//}
+		&.is-active {
+			color: $colorPrimary;
+
+			.step-content {
+				.copy {
+					color: $colorWhite;
+				}
+			}
+
+			@include hover() {
+				color: $colorPrimary;
+			}
 		}
 
 		&:after {

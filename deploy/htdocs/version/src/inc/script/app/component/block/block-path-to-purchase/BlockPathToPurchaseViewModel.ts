@@ -24,8 +24,9 @@ class BlockPathToPurchaseViewModel extends DefaultComponentViewModel<BlockPathTo
 		{
 			this._switchComplete = false;
 
+			this.activeIndex(index);
+
 			this.controller.changeBackgroundImage(index)
-				.then(() => this.activeIndex(index))
 				.then(() => this._switchComplete = true);
 		}
 	}
