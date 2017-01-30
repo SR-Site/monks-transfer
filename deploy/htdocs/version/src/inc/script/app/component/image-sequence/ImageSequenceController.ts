@@ -118,17 +118,19 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	 */
 	private drawFrame(frame: number = this._currentFrame): void
 	{
-		this._ctx.clearRect(0, 0, this.element.offsetWidth, this.element.offsetHeight);
-		this._ctx.drawImage(
-			this._images[this.currentDeviceState][frame], 0, 0, this.element.offsetWidth, this.element.offsetHeight
-		);
+		let image = this._images[this.currentDeviceState][frame];
 
-		this._currentFrame = frame;
+		if(image)
+		{
+			this._ctx.clearRect(0, 0, this.element.offsetWidth, this.element.offsetHeight);
+			this._ctx.drawImage( image, 0, 0, this.element.offsetWidth, this.element.offsetHeight );
 
-		this.dispatch(CommonEvent.UPDATE, {
-			progress: frame / this.options.imageSequence.total
-		})
+			this._currentFrame = frame;
 
+			this.dispatch(CommonEvent.UPDATE, {
+				progress: frame / this.options.imageSequence.total
+			})
+		}
 	}
 
 	/**

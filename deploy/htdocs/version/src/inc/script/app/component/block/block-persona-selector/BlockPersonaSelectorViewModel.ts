@@ -30,7 +30,7 @@ class BlockPersonaSelectorViewModel extends DefaultComponentViewModel<BlockPerso
 
 			// Do some transitioning
 			this.controller.transitionController.transitionOutStep(this.activeIndex())
-				.then(()=> this.activeIndex(index))
+				.then(() => this.activeIndex(index))
 				.then(() => this.controller.transitionController.transitionInStep(index))
 				.then(() => this._switchComplete = true)
 		}
