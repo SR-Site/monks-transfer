@@ -23,6 +23,7 @@ dependencies:
     - paragraphs.paragraphs_type.blockmarketmap
     - paragraphs.paragraphs_type.blockmore
     - paragraphs.paragraphs_type.blocknetworkoverview
+    - paragraphs.paragraphs_type.blockpagenotfound
   module:
     - entity_reference_revisions
 id: node.page.field_blocks
@@ -42,19 +43,20 @@ settings:
       blockhowtoadvertise: blockhowtoadvertise
       blockimagecalltoactions: blockimagecalltoactions
       blockimagewithcontent: blockimagewithcontent
-      blockimagecarousel: blockimagecarousel
       blocklatest: blocklatest
+      blockimagecarousel: blockimagecarousel
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
-      blockmore: blockmore
       blockblogpost: blockblogpost
+      blockmore: blockmore
       blockherosecondary: blockherosecondary
-      blockheromain: blockheromain
       blockmap: blockmap
+      blockheromain: blockheromain
       blockmapsecondary: blockmapsecondary
       blockmarketmap: blockmarketmap
       blocknetworkoverview: blocknetworkoverview
+      blockpagenotfound: blockpagenotfound
       blockherotertiary: blockherotertiary
       blockinfo: blockinfo
     target_bundles_drag_drop:
@@ -79,21 +81,21 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
+      blocklatest:
+        enabled: true
+        weight: 13
       link:
         weight: 13
         enabled: false
       blockimagecarousel:
         enabled: true
         weight: 13
-      blocklatest:
-        enabled: true
-        weight: 13
-      blockarticleteaser:
-        enabled: true
-        weight: 15
       step:
         weight: 15
         enabled: false
+      blockarticleteaser:
+        enabled: true
+        weight: 15
       blockaudiofragment:
         enabled: true
         weight: 16
@@ -103,19 +105,19 @@ settings:
       blockbutton:
         enabled: true
         weight: 18
-      blockmore:
+      blockblogpost:
         enabled: true
         weight: 19
-      blockblogpost:
+      blockmore:
         enabled: true
         weight: 19
       blockherosecondary:
         enabled: true
         weight: 23
-      blockheromain:
+      blockmap:
         enabled: true
         weight: 26
-      blockmap:
+      blockheromain:
         enabled: true
         weight: 26
       blockmapsecondary:
@@ -127,6 +129,9 @@ settings:
       blocknetworkoverview:
         enabled: true
         weight: 29
+      blockpagenotfound:
+        enabled: true
+        weight: 30
       blockherotertiary:
         enabled: true
         weight: 30

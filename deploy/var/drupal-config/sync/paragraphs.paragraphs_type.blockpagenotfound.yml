@@ -1,0 +1,7 @@
+uuid: 5190e49e-7d2a-4db6-ad08-7d8117e58467
+langcode: en
+status: true
+dependencies: {  }
+id: blockpagenotfound
+label: 'Block page not found'
+behavior_plugins: {  }

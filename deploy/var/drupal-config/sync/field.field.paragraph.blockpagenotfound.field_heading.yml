@@ -1,0 +1,19 @@
+uuid: 296dbfc7-e249-4169-933a-5689eaa4b0d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.blockpagenotfound
+id: paragraph.blockpagenotfound.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: blockpagenotfound
+label: Heading
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
