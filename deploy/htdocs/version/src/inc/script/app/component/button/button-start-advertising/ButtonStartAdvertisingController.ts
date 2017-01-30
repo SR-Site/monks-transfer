@@ -10,7 +10,7 @@ import ScrollUtils from "../../../util/ScrollUtils";
 
 class ButtonStartAdvertisingController extends DefaultButtonController<ButtonStartAdvertisingViewModel, IButtonStartAdvertisingOptions>
 {
-	private static CENTER_PERCENTAGE:number = 0.75;
+	private static CENTER_PERCENTAGE:number = 0.6;
 
 	/**
 	 *    Instance of Log debug utility for debug logging

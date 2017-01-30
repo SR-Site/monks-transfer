@@ -1,12 +1,25 @@
 import DefaultTransitionController from "app/util/component-transition/DefaultTransitionController";
 import Promise = require("bluebird");
+import TriangleTransitionController from "../../../util/component-transition/TriangleTransitionController";
 
 class BlockPersonaSelectorTransitionController extends DefaultTransitionController
 {
-	public slideTransitions: Array<{
+	private _mainTriangleAnimation: TriangleTransitionController;
+	private _slideTransitions: Array<{
 		timeline: TimelineLite,
 		completeMethod: Function
 	}> = [];
+
+	constructor(element: HTMLElement, parentController: any)
+	{
+		super(element, parentController);
+
+		this._mainTriangleAnimation = new TriangleTransitionController(
+			<HTMLElement>this.element.querySelector('.background-triangle'),
+			this.parentController,
+			0.5
+		);
+	}
 
 	/**
 	 * @public
@@ -14,6 +27,17 @@ class BlockPersonaSelectorTransitionController extends DefaultTransitionControll
 	 * @description This method will be used for setting up the timeline for the component
 	 */
 	public setupTransitionTimeline(): void
+	{
+		this.setupSlideTransition();
+
+		super.setupTransitionTimeline();
+	}
+
+	/**
+	 * @private
+	 * @method setupSlideTransition
+	 */
+	private setupSlideTransition(): void
 	{
 		const personaContent = Array.prototype.slice.call(this.element.querySelectorAll('.persona'));
 
@@ -28,30 +52,28 @@ class BlockPersonaSelectorTransitionController extends DefaultTransitionControll
 			});
 
 			timeline.from(element.querySelector('.heading'), 0.8, {
-				x: -100,
+				y: 50,
 				autoAlpha: 0,
 				ease: Expo.easeOut
 			});
 
 			timeline.from(element.querySelector('.copy'), 0.8, {
-				x: -100,
+				y: 50,
 				autoAlpha: 0,
 				ease: Expo.easeOut
 			}, '=-0.7');
 
 			timeline.from(element.querySelector('.component-button-main'), 0.8, {
-				x: -100,
+				y: 50,
 				autoAlpha: 0,
 				ease: Expo.easeOut
 			}, '=-0.7');
 
-			this.slideTransitions.push({
+			this._slideTransitions.push({
 				timeline: timeline,
 				completeMethod: null
 			});
 		});
-
-		super.setupTransitionTimeline();
 	}
 
 	/**
@@ -74,7 +96,7 @@ class BlockPersonaSelectorTransitionController extends DefaultTransitionControll
 		);
 
 		this.transitionInTimeline.add(
-			() => this.slideTransitions[this.parentController.activeIndex].timeline.restart()
+			() => this._slideTransitions[this.parentController.activeIndex].timeline.restart()
 		)
 	}
 
@@ -85,14 +107,14 @@ class BlockPersonaSelectorTransitionController extends DefaultTransitionControll
 	 */
 	private handleSlideTransitionComplete(index: number): void
 	{
-		let transitionObject = this.slideTransitions[index];
+		let transitionObject = this._slideTransitions[index];
 
 		if(transitionObject && transitionObject.completeMethod)
 		{
 			transitionObject.completeMethod();
 
 			// Reset the complete method
-			this.slideTransitions[index].completeMethod = null;
+			this._slideTransitions[index].completeMethod = null;
 		}
 	}
 
@@ -105,9 +127,9 @@ class BlockPersonaSelectorTransitionController extends DefaultTransitionControll
 	{
 		return new Promise((resolve, reject) =>
 		{
-			this.slideTransitions[index].completeMethod = resolve;
-			this.slideTransitions[index].timeline.reverse()
-		})
+			this._slideTransitions[index].completeMethod = resolve;
+			this._slideTransitions[index].timeline.reverse()
+		}).then(() => this._mainTriangleAnimation.transitionOut())
 	}
 
 	/**
@@ -119,9 +141,25 @@ class BlockPersonaSelectorTransitionController extends DefaultTransitionControll
 	{
 		return new Promise((resolve, reject) =>
 		{
-			this.slideTransitions[index].completeMethod = resolve;
-			this.slideTransitions[index].timeline.restart();
+			this._mainTriangleAnimation.transitionIn()
+				.then(() =>
+				{
+					this._slideTransitions[index].completeMethod = resolve;
+					this._slideTransitions[index].timeline.restart();
+				})
 		})
+	}
+
+	/**
+	 * @public
+	 * @method destruct
+	 */
+	public destruct(): void
+	{
+		this._mainTriangleAnimation = null;
+		this._slideTransitions = null;
+
+		super.destruct();
 	}
 }
 

@@ -25,9 +25,13 @@ class BlockHeroMainViewModel extends DefaultComponentViewModel<BlockHeroMainCont
 		{
 			this._switchComplete = false;
 
+
 			let newIndex = this.activeIndex() + 1 < this.data.slides.length ? this.activeIndex() + 1 : 0;
 
-			this.controller.transitionController.transitionInNextSlide(newIndex)
+			this.controller.changeBackgroundImage(newIndex);
+
+			this.controller.transitionController.transitionOutStep(this.activeIndex())
+				.then(()=> this.controller.transitionController.transitionInStep(newIndex))
 				.then(()=> this.activeIndex(newIndex))
 				.then(() => this._switchComplete = true);
 		}

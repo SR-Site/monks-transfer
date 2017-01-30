@@ -26,15 +26,13 @@ class BlockPersonaSelectorViewModel extends DefaultComponentViewModel<BlockPerso
 		{
 			this._switchComplete = false;
 
-			this.controller.transitionInSlideContent(index)
-				.then(() => this._switchComplete = true);
-
-			// Update the active color
-			this.activeIndex(index);
-
-			// Transition the background
 			this.controller.changeBackgroundImage(index);
 
+			// Do some transitioning
+			this.controller.transitionController.transitionOutStep(this.activeIndex())
+				.then(()=> this.activeIndex(index))
+				.then(() => this.controller.transitionController.transitionInStep(index))
+				.then(() => this._switchComplete = true)
 		}
 	}
 

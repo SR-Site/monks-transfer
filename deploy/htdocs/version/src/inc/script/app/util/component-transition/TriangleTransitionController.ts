@@ -2,6 +2,15 @@ import DefaultTransitionController from "app/util/component-transition/DefaultTr
 
 class TriangleTransitionController extends DefaultTransitionController
 {
+	private _duration: number = 1;
+
+	constructor(element: HTMLElement, parentController: any, duration: number = 1)
+	{
+		super(element, parentController, true);
+
+		this._duration = duration;
+	}
+
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
@@ -9,7 +18,7 @@ class TriangleTransitionController extends DefaultTransitionController
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this.transitionInTimeline.fromTo(this.element, 1,
+		this.transitionInTimeline.fromTo(this.element, this._duration,
 			{
 				xPercent: -200,
 				yPercent: 100
@@ -17,7 +26,7 @@ class TriangleTransitionController extends DefaultTransitionController
 			{
 				xPercent: 0,
 				yPercent: 0,
-				ease:Expo.easeOut
+				ease: Expo.easeOut
 			}
 		);
 	}
@@ -29,7 +38,7 @@ class TriangleTransitionController extends DefaultTransitionController
 	 * */
 	protected setupTransitionOutTimeline(): void
 	{
-		this.transitionOutTimeline.fromTo(this.element, 1,
+		this.transitionOutTimeline.fromTo(this.element, this._duration,
 			{
 				xPercent: 0,
 				yPercent: 0
@@ -37,20 +46,10 @@ class TriangleTransitionController extends DefaultTransitionController
 			{
 				xPercent: 200,
 				yPercent: -100,
-				ease:Expo.easeIn
+				ease: Expo.easeIn
 			}
 		);
 	}
-
-	/**
-	 * @public
-	 * @method getTimeline
-	 */
-	public getTimeline(): Animation
-	{
-		return this.transitionInTimeline.play();
-	}
-
 }
 
 export default TriangleTransitionController;
