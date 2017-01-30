@@ -6,50 +6,52 @@
 				image: $data.image,
 				state: $root.deviceState()
 			}"></div>
-		</div>
 
-		<!-- ko if: $data.video -->
-			<!-- ko component: {
-				name: 'button/button-play-circle',
-				onComplete: $root.controller.callbackCounter.get(),
-				options: {
-					action: {
-						event: dataManager.videoOverlay.show.bind(dataManager.videoOverlay, {
-							video: video,
-							poster: image,
-							loop: false,
-							controls: $root.Bowser.mobile || $root.Bowser.tablet
-						})
+			<!-- ko if: $data.video -->
+				<!-- ko component: {
+					name: 'button/button-play-circle',
+					onComplete: $root.controller.callbackCounter.get(),
+					options: {
+						action: {
+							event: dataManager.videoOverlay.show.bind(dataManager.videoOverlay, {
+								video: video,
+								poster: image,
+								loop: false,
+								controls: $root.Bowser.mobile || $root.Bowser.tablet
+							})
+						}
 					}
-				}
-			} --><!-- /ko -->
-		<!-- /ko -->
+				} --><!-- /ko -->
+			<!-- /ko -->
+		</div>
 	</div>
 
 	<div class="description">
 		<div class="hover-container">
-			<h3 class="title copy-05 copy" data-bind="html: heading"></h3>
+			<div class="hover-content">
+				<h3 class="title copy-05 copy" data-bind="html: heading"></h3>
 
-			<!-- ko with: stats -->
-			<ul class="stats">
-				<!-- ko with: demographic -->
-				<li class="copy-01">
-					<span class="icon"></span>
-					<!-- ko text: $data --><!-- /ko -->
-				</li>
+				<!-- ko with: stats -->
+				<ul class="stats">
+					<!-- ko with: demographic -->
+					<li class="copy-01">
+						<span class="icon" data-bind="icon: 'pie-chart'"></span>
+						<span class="label" data-bind="html: $data"></span>
+					</li>
+					<!-- /ko -->
+
+					<!-- ko with: ageRange -->
+					<li class="copy-01">
+						<span class="icon" data-bind="icon: 'person'"></span>
+						<span class="label" data-bind="html: $data"></span>
+					</li>
+					<!-- /ko -->
+
+				</ul>
 				<!-- /ko -->
 
-				<!-- ko with: ageRange -->
-				<li class="copy-01">
-					<span class="icon"></span>
-					<!-- ko text: $data --><!-- /ko -->
-				</li>
-				<!-- /ko -->
-
-			</ul>
-			<!-- /ko -->
-
-			<p class="paragraph copy-01 copy" data-bind="html: paragraph"></p>
+				<p class="paragraph copy-01 copy" data-bind="html: paragraph"></p>
+			</div>
 		</div>
 	</div>
 </div>

@@ -14,6 +14,7 @@ import StringUtils from "../../lib/temple/util/type/StringUtils";
 import CommonEvent from "../../lib/temple/event/CommonEvent";
 import PageType from "../../lib/gaia/interface/PageType";
 import Promise = require("bluebird");
+import ScrollUtils from "../util/ScrollUtils";
 
 /**
  * @abstract class DefaultContentPageController
@@ -198,6 +199,8 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 	{
 		this.callbackCounter = new CallbackCounter();
 		this._scrollTracker = new ScrollTracker();
+
+		ScrollUtils.scrollTop = 0;
 
 		return this.getPageLayout()
 			.then(() =>

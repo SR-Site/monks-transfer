@@ -4,21 +4,27 @@ import IBlockProgramModuleOptions from 'app/component/block/block-program-module
 import BlockProgramModuleViewModel from 'app/component/block/block-program-module/BlockProgramModuleViewModel';
 
 import Log from "lib/temple/util/Log";
+import ProgramModuleItemController from "../../program-module-item/ProgramModuleItemController";
+import Promise = require("bluebird");
+import ProgramModuleItemTransitionController from "../../program-module-item/ProgramModuleItemTransitionController";
 
 class BlockProgramModuleController extends DefaultComponentController<BlockProgramModuleViewModel, IBlockProgramModuleOptions>
 {
-	/**
-	 *	Instance of Log debug utility for debug logging
-	 *	@property _debug
-	 *	@private
-	 */
-	private _debug:Log = new Log('app.component.BlockProgramModule');
+	private _hoverTimelineResolveMethod: Function;
+	private _hoverTimelinePromise: Promise<any>;
 
 	/**
-	 *	Overrides AbstractPageController.init()
-	 *	@method init
+	 *    Instance of Log debug utility for debug logging
+	 *    @property _debug
+	 *    @private
 	 */
-	public init():void
+	private _debug: Log = new Log('app.component.BlockProgramModule');
+
+	/**
+	 *    Overrides AbstractPageController.init()
+	 *    @method init
+	 */
+	public init(): void
 	{
 		super.init();
 
@@ -26,10 +32,50 @@ class BlockProgramModuleController extends DefaultComponentController<BlockProgr
 	}
 
 	/**
-	* @protected
-	* @method allComponentsLoaded
-	*/
-	protected allComponentsLoaded():void
+	 * @public
+	 * @method openProgramModule
+	 */
+	public openProgramModule(element: HTMLElement): void
+	{
+		const component = element.querySelector('.component-program-module-item');
+		const transitionController = <ProgramModuleItemTransitionController> this.transitionController.getTransitionController(component);
+
+		if(this._hoverTimelinePromise)
+		{
+			this._hoverTimelinePromise
+				.then(() => transitionController.onMouseEnter());
+		}
+		else
+		{
+			transitionController.onMouseEnter();
+		}
+
+	}
+
+	/**
+	 * @private
+	 * @method closeProgramModule
+	 */
+	private closeProgramModule(element: HTMLElement): void
+	{
+		this._hoverTimelinePromise = new Promise((resolve: Function) =>
+		{
+			this._hoverTimelineResolveMethod = resolve;
+		});
+
+		const component = element.querySelector('.component-program-module-item');
+		const transitionController = <ProgramModuleItemTransitionController> this.transitionController.getTransitionController(component);
+
+		transitionController.onMouseLeave()
+			.then(() => this._hoverTimelineResolveMethod());
+	}
+
+
+	/**
+	 * @protected
+	 * @method allComponentsLoaded
+	 */
+	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new BlockProgramModuleTransitionController(this.element, this);
 
@@ -40,7 +86,7 @@ class BlockProgramModuleController extends DefaultComponentController<BlockProgr
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 
 		// always call this last

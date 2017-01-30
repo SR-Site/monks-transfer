@@ -1,7 +1,6 @@
 .component-program-module-item {
 	position: relative;
-	@include size($sizeGrid*9, auto);
-	width: 25%;
+	width: 100%;
 	display: inline-block;
 
 	.placeholder {
@@ -27,7 +26,16 @@
 		margin-top: $sizeGrid;
 
 		.icon {
-			margin-left: $sizeGrid/2;
+			@include size($sizeGrid / 4);
+
+			path {
+				stroke: transparent;
+				fill: $colorPrimary;
+			}
+		}
+
+		.label {
+			margin-left: $sizeGrid / 4;
 		}
 
 		li {
@@ -67,17 +75,17 @@
 		overflow: hidden;
 		position: absolute;
 		border: 1px solid #e7e7e7;
-		transition: width 250ms ease(easeOutExpo);
+		//transition: width 500ms ease(easeInOutExpo);
 	}
 
-	&:first-child {
+	.first-child & {
 		.hover-container {
 			transform: none;
 			left: 0;
 		}
 	}
 
-	&:last-child {
+	.last-child & {
 		.hover-container {
 			left: auto;
 			right: 0;
@@ -85,19 +93,19 @@
 		}
 	}
 
-	@include hover() {
-		z-index: 1;
+	//@include hover() {
+	//	z-index: 1;
+	//
+	//	.hover-container {
+	//		width: 200%;
+	//	}
+	//}
 
-		.hover-container {
-			width: 200%;
-		}
-	}
-
-	&.is-hover {
-		z-index: 1;
-
-		.hover-container {
-			width: 200%;
-		}
-	}
+	//&.is-hover {
+	//	z-index: 1;
+	//
+	//	.hover-container {
+	//		width: 200%;
+	//	}
+	//}
 }

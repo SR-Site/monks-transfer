@@ -1,7 +1,17 @@
 <div class="component-block-program-module" data-bind="foreach: data.items">
-	<!-- ko component: {
-		name: 'program-module-item',
-		onComplete: $root.controller.callbackCounter.get(),
-		options: $data
-	} --><!-- /ko -->
+	<div class="program-module-item" data-bind="
+	css: {
+		'first-child': $index() === 0,
+		'last-child': $index() === $parent.data.items.length - 1
+	},
+	events: [
+		[$root.MouseEventHelper.MOUSEENTER, $root.handleMouseEnter.bind($root)],
+		[$root.MouseEventHelper.MOUSELEAVE, $root.handleMouseLeave.bind($root)]
+	]">
+		<!-- ko component: {
+			name: 'program-module-item',
+			onComplete: $root.controller.callbackCounter.get(),
+			options: $data
+		} --><!-- /ko -->
+	</div>
 </div>

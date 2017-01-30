@@ -6,6 +6,7 @@ import ko = require('knockout');
 
 class ProgramModuleItemViewModel extends DefaultComponentTransitionViewModel<ProgramModuleItemController, IProgramModuleItemOptions>
 {
+
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct

@@ -25,7 +25,6 @@ class ProgramModuleItemController extends DefaultComponentTransitionController<P
 		this._debug.log('Init');
 
 		this.transitionController = new ProgramModuleItemTransitionController(this.element, this);
-
 	}
 
 

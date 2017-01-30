@@ -1,7 +1,8 @@
 .component-block-program-module {
 	font-size: 0;
 
-	.component-program-module-item {
-
+	.program-module-item {
+		@include size(25%, auto);
+		display: inline-block;
 	}
 }

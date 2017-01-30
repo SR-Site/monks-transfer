@@ -7,6 +7,7 @@ import Theme from "../../../app/data/enum/style/Theme";
 import Direction from "../../../app/data/enum/layout/Direction";
 import bowser = require('bowser');
 import Orientation from "../../../app/data/enum/layout/Orientation";
+import MouseEventHelper from "../../../app/util/MouseEventHelper";
 
 /**
  * Abstract viewModel class for components. All component ViewModels should extend this class.
@@ -24,6 +25,7 @@ abstract class AbstractComponentViewModel<T extends AbstractComponentController<
 	public Bowser: Class = bowser;
 	public Orientation: Enum = Orientation;
 	public DeviceState: Enum = DeviceState;
+	public MouseEventHelper:Class = MouseEventHelper;
 
 	public deviceState: KnockoutObservable<DeviceState> = DataManager.getInstance().deviceStateTracker.currentState;
 
