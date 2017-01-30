@@ -1,8 +1,27 @@
 .component-block-program-module {
 	font-size: 0;
 
+	&.hover-active {
+		.hover-container {
+			background: $colorLightGrey;
+		}
+
+		.is-active {
+			.hover-container {
+				background: $colorWhite;
+			}
+		}
+	}
+
 	.program-module-item {
 		@include size(25%, auto);
 		display: inline-block;
+		cursor: pointer;
+	}
+
+	@include respond-to(SMALL) {
+		.program-module-item {
+			width: 100%;
+		}
 	}
 }

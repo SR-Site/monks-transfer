@@ -14,7 +14,7 @@ class ProgramModuleItemTransitionController extends DefaultTransitionController
 	{
 		this.transitionInTimeline.from(this.element, 0.4, {opacity: 0});
 
-		this.addEventListener(DefaultTransitionController.TRANSITION_IN_COMPLETE, ()=> this.setupHoverTimeline());
+		this.addEventListener(DefaultTransitionController.TRANSITION_IN_COMPLETE, () => this.setupHoverTimeline());
 	}
 
 	/**
@@ -46,10 +46,14 @@ class ProgramModuleItemTransitionController extends DefaultTransitionController
 			ease: Power3.easeOut
 		});
 
-		this._mouseEnterTimeline.to(this.element.querySelectorAll('.hover-container'), 0.4, {
-			ease: Expo.easeOut,
-			width: '200%'
-		});
+		this._mouseEnterTimeline.fromTo(this.element.querySelectorAll('.hover-container'), 0.4,
+			{
+				width: '100%'
+			},
+			{
+				ease: Expo.easeOut,
+				width: '200%'
+			});
 
 		this._mouseEnterTimeline.to(this.element.querySelectorAll('.hover-content'), 0.4, {
 			opacity: 1,

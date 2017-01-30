@@ -3,33 +3,48 @@ import BlockProgramModuleController from "app/component/block/block-program-modu
 import IBlockProgramModuleOptions from "app/component/block/block-program-module/IBlockProgramModuleOptions";
 
 import ko = require('knockout');
+import DataManager from "../../../data/DataManager";
+import {DeviceState} from "../../../data/scss-shared/MediaQueries";
 
 class BlockProgramModuleViewModel extends DefaultComponentViewModel<BlockProgramModuleController, IBlockProgramModuleOptions>
 {
+	public activeHoverIndex: KnockoutObservable<number> = ko.observable(null);
+
 	/**
 	 * @public
 	 * @method handleMouseEnter
 	 */
-	public handleMouseEnter(event:MouseEvent):void
+	public handleMouseEnter(index: number, event: MouseEvent): void
 	{
-		this.controller.openProgramModule(event.currentTarget);
+		if(DataManager.getInstance().deviceStateTracker.currentState() > DeviceState.SMALL)
+		{
+			this.activeHoverIndex(index);
+
+			this.controller.openProgramModule(event.currentTarget);
+		}
 	}
 
 	/**
 	 * @public
 	 * @method handleMouseLeave
 	 */
-	public handleMouseLeave(event:MouseEvent):void
+	public handleMouseLeave(event: MouseEvent): void
 	{
-		this.controller.closeProgramModule(event.currentTarget);
+		if(DataManager.getInstance().deviceStateTracker.currentState() > DeviceState.SMALL)
+		{
+			this.activeHoverIndex(null);
+
+			this.controller.closeProgramModule(event.currentTarget);
+		}
 	}
 
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
+		this.activeHoverIndex = null;
 
 		// always call this last
 		super.destruct();

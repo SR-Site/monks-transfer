@@ -2,6 +2,8 @@
 	position: relative;
 	width: 100%;
 	display: inline-block;
+	border-bottom: 1px solid #e7e7e7;
+	border-top: 1px solid #e7e7e7;
 
 	.placeholder {
 		@include size(100%, $sizeGrid*8);
@@ -46,8 +48,14 @@
 		}
 	}
 
-	.title {
+	.tags {
+		.component-button-tag:not(:first-child) {
+			margin-left: $sizeGrid / 2;
 
+		}
+	}
+
+	.title {
 	}
 
 	.paragraph {
@@ -74,14 +82,15 @@
 		transform: translate(-50%, 0);
 		overflow: hidden;
 		position: absolute;
-		border: 1px solid #e7e7e7;
-		//transition: width 500ms ease(easeInOutExpo);
+		border-left: 1px solid #e7e7e7;
+		transition: background .2s ease(easeInOut);
 	}
 
 	.first-child & {
 		.hover-container {
 			transform: none;
 			left: 0;
+			border-left: none;
 		}
 	}
 
@@ -93,19 +102,32 @@
 		}
 	}
 
-	//@include hover() {
-	//	z-index: 1;
-	//
-	//	.hover-container {
-	//		width: 200%;
-	//	}
-	//}
+	@include respond-to(SMALL) {
+		.placeholder {
+			height: 9.5 * $sizeGrid;
+		}
 
-	//&.is-hover {
-	//	z-index: 1;
-	//
-	//	.hover-container {
-	//		width: 200%;
-	//	}
-	//}
+		.stats {
+			.icon {
+				@include size($sizeGrid);
+			}
+		}
+
+		.title {
+			font-size: mobile-size(4.5rem);
+		}
+
+		.paragraph {
+			max-height: none;
+		}
+
+		.description {
+			height: auto;
+
+			.hover-container {
+				position: relative;
+				height: auto;
+			}
+		}
+	}
 }

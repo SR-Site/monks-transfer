@@ -1,11 +1,12 @@
-<div class="component-block-program-module" data-bind="foreach: data.items">
+<div class="component-block-program-module" data-bind="css: {'hover-active': activeHoverIndex() !== null},  foreach: data.items">
 	<div class="program-module-item" data-bind="
 	css: {
+		'is-active': $index() == $root.activeHoverIndex(),
 		'first-child': $index() === 0,
 		'last-child': $index() === $parent.data.items.length - 1
 	},
 	events: [
-		[$root.MouseEventHelper.MOUSEENTER, $root.handleMouseEnter.bind($root)],
+		[$root.MouseEventHelper.MOUSEENTER, $root.handleMouseEnter.bind($root, $index())],
 		[$root.MouseEventHelper.MOUSELEAVE, $root.handleMouseLeave.bind($root)]
 	]">
 		<!-- ko component: {
