@@ -1,16 +1,16 @@
 import DefaultButtonController from "../DefaultButtonController";
-import ButtonMainTransitionController from 'app/component/button/button-main/ButtonMainTransitionController';
-import IButtonMainOptions from 'app/component/button/button-main/IButtonMainOptions';
-import ButtonMainViewModel from 'app/component/button/button-main/ButtonMainViewModel';
-
+import ButtonMainTransitionController from "app/component/button/button-main/ButtonMainTransitionController";
+import IButtonMainOptions from "app/component/button/button-main/IButtonMainOptions";
+import ButtonMainViewModel from "app/component/button/button-main/ButtonMainViewModel";
 import Log from "lib/temple/util/Log";
 import Theme from "../../../data/enum/style/Theme";
-import NativeEventListener from "../../../../lib/temple/event/NativeEventListener";
-import ThrottleDebounce from "../../../../lib/temple/util/ThrottleDebounce";
+import DataManager from "../../../data/DataManager";
 
 class ButtonMainController extends DefaultButtonController<ButtonMainViewModel, IButtonMainOptions>
 {
 	public static BORDER_WIDTH: number = 5;
+
+	public transitionController:ButtonMainTransitionController;
 
 	private _hoverStroke: HTMLElement;
 
@@ -31,9 +31,9 @@ class ButtonMainController extends DefaultButtonController<ButtonMainViewModel, 
 
 		this._hoverStroke = <HTMLElement>this.element.querySelector('.hover-stroke');
 
-		this.destructibles.add(new NativeEventListener(window, 'resize', ThrottleDebounce.debounce(this.handleResize, 100, this)));
+		this.destructibles.addKOSubscription(DataManager.getInstance().deviceStateTracker.currentState.subscribe(this.handleDeviceStateChange.bind(this)))
 
-		this.handleResize();
+		this.setSize();
 	}
 
 	/**
@@ -46,7 +46,12 @@ class ButtonMainController extends DefaultButtonController<ButtonMainViewModel, 
 		return (this._width * 2) + (this._height * 2);
 	}
 
-	public get height():number
+	/**
+	 * @public
+	 * @method get height
+	 * @returns {number}
+	 */
+	public get height(): number
 	{
 		return this._height;
 	}
@@ -105,9 +110,11 @@ class ButtonMainController extends DefaultButtonController<ButtonMainViewModel, 
 	 * @private
 	 * @method handleResize
 	 */
-	private handleResize(): void
+	private handleDeviceStateChange(): void
 	{
 		this.setSize();
+
+		this.transitionController.resetHoverTimeline();
 	}
 
 	/**

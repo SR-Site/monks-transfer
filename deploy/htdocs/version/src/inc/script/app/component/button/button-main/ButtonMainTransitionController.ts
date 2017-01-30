@@ -6,7 +6,6 @@ class ButtonMainTransitionController extends DefaultTransitionController
 	private _hoverTimeline: TimelineLite;
 	private _hoverResolveMethod: Function;
 
-
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
@@ -16,7 +15,8 @@ class ButtonMainTransitionController extends DefaultTransitionController
 	{
 		this.transitionInTimeline.from(this.element.querySelector('.stripe'), 0.8, {
 			ease: Expo.easeOut,
-			width: 0
+			width: 0,
+			clearProps: "all"
 		}, 0);
 
 		this.transitionInTimeline.from(this.element.querySelector('.background'), 0.8, {
@@ -30,6 +30,21 @@ class ButtonMainTransitionController extends DefaultTransitionController
 		}, '=-0.5');
 
 		this.addEventListener(DefaultTransitionController.TRANSITION_IN_COMPLETE, () => this.setupHoverTimeline());
+	}
+
+	/**
+	 * @public
+	 * @method resetHoverTimeline
+	 */
+	public resetHoverTimeline(): void
+	{
+		if(this._hoverTimeline)
+		{
+			this._hoverTimeline.kill();
+			this._hoverTimeline = null;
+		}
+
+		this.setupHoverTimeline();
 	}
 
 	/**
