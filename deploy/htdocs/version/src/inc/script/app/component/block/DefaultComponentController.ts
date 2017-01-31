@@ -196,6 +196,7 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 	 */
 	protected allComponentsLoaded(): void
 	{
+
 	}
 
 	/**

@@ -28,9 +28,9 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 
 	private _components: {[id: string]: DefaultComponentController<DefaultComponentViewModel<any, any>, any>} = {};
 	private _filterMenu: FilterMenuController;
-	private _filters:{[filterType:string]:string};
+	private _filters: {[filterType: string]: string};
 	private _loader: Loader;
-	private _paginator:PaginatorDashedController;
+	private _paginator: PaginatorDashedController;
 
 
 	/**
@@ -51,6 +51,7 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	public handleDynamicComponentLoaded(controller: DefaultComponentController<any, any>): void
 	{
 		this._components[controller.options.id + controller.eventNamespace] = controller;
+
 		this.handleComponentReady(controller);
 	}
 
@@ -58,7 +59,7 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 * @public
 	 * @method handleFilterMenuReady
 	 */
-	public handleFilterMenuReady(controller: FilterMenuController):void
+	public handleFilterMenuReady(controller: FilterMenuController): void
 	{
 		this._filterMenu = controller;
 		this._filterMenu.addEventListener(CommonEvent.CHANGE, this.handleFilterChange.bind(this));
@@ -68,17 +69,17 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 * @public
 	 * @method handlePaginatorReady
 	 */
-	public handlePaginatorReady(controller: PaginatorDashedController):void
+	public handlePaginatorReady(controller: PaginatorDashedController): void
 	{
 		this._paginator = controller;
-		this._paginator.addEventListener(CarouselEvent.OPEN, (event:DataEvent<{index:number}>)=> this.loadPage(event.data.index));
+		this._paginator.addEventListener(CarouselEvent.OPEN, (event: DataEvent<{index: number}>) => this.loadPage(event.data.index));
 	}
 
 	/**
 	 * @private
 	 * @method handleFilterChange
 	 */
-	private handleFilterChange(event:DataEvent<{[filterType:string]:string}>):void
+	private handleFilterChange(event: DataEvent<{[filterType: string]: string}>): void
 	{
 		console.log('handleFilterChange: ', event.data);
 
@@ -106,10 +107,11 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 * @private
 	 * @method removeComponents
 	 */
-	private removeComponents():void
+	private removeComponents(): void
 	{
 		// Remove components from scrollTrackerPoint in DefaultContentPageController
 		this.parentPage.removeComponentsFromScrollTracker(this._components);
+
 		this._components = {};
 	}
 
@@ -133,32 +135,37 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 * @public
 	 * @method loadPage
 	 */
-	public loadPage(index:number = this.viewModel.activePageIndex()):void
+	public loadPage(index: number = this.viewModel.activePageIndex()): void
 	{
 		this.viewModel.offset = index * this.viewModel.limit;
 
-		this.beforeContentLoad();
+		this.beforeContentLoad().then(() =>
+		{
+			// Remove component from pagePage/scrollTracker if we do render/show all loaded items in the DOM.
+			if(this.viewModel.showInPages())
+			{
+				this.removeComponents();
+			}
 
-		// Remove component from pagePage/scrollTracker if we do render/show all loaded items in the DOM.
-		if(this.viewModel.showInPages()) {
-			this.removeComponents();
-		}
+			// If we already have this page in Storage, load from storage, if not fetch new content.
+			this.fetchPageFromStorage().catch(() => this.fetchContent());
+		});
 
-		// If we already have this page in Storage, load from storage, if not fetch new content.
-		this.fetchPageFromStorage().catch(() => this.fetchContent());
 	}
 
 	/**
 	 * @private
 	 * @method canFetchPageFromStorage
 	 */
-	private fetchPageFromStorage():Promise<any>
+	private fetchPageFromStorage(): Promise<any>
 	{
-		return new Promise((resolve:Function, reject:Function) =>{
+		return new Promise((resolve: Function, reject: Function) =>
+		{
 
 			const pageFound = this.viewModel.pages().find((page) => page.pageIndex === this.getPageIndexByOffset());
 
-			if(pageFound) {
+			if(pageFound)
+			{
 
 				// Destruct and recreate new CallbackCounter to be used for the new blocks that are loaded.
 				this.recreateCallbackCounter();
@@ -173,7 +180,8 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 
 				resolve();
 			}
-			else {
+			else
+			{
 				reject();
 			}
 		});
@@ -187,9 +195,7 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	{
 		this.viewModel.offset = this.viewModel.offset + this.viewModel.limit;
 
-		this.beforeContentLoad();
-
-		this.fetchContent();
+		this.beforeContentLoad().then(() => this.fetchContent());
 	}
 
 	/**
@@ -210,7 +216,7 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 * @private
 	 * @method getPageIndexByOffset
 	 */
-	private getPageIndexByOffset(offset:number = this.viewModel.offset):number
+	private getPageIndexByOffset(offset: number = this.viewModel.offset): number
 	{
 		return offset / this.viewModel.limit
 	}
@@ -227,7 +233,7 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 			this.viewModel.limit,
 			this._filters
 		).then((result) => this._loader.hide()
-			.then(() =>this.handleContentLoad(result)));
+			.then(() => this.handleContentLoad(result)));
 	}
 
 
@@ -269,7 +275,7 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 * @private
 	 * @method recreateCallbackCounter
 	 */
-	private recreateCallbackCounter():void
+	private recreateCallbackCounter(): void
 	{
 		// Destruct and recreate new CallbackCounter to be used for the new blocks that are loaded.
 		this.callbackCounter.destruct();
@@ -280,18 +286,32 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 * @private
 	 * @method addCallbackCounterComplete
 	 */
-	private addCallbackCounterCompleteListener():void
+	private addCallbackCounterCompleteListener(): void
 	{
+
+
 		// Once all loaded blocks are ready, register them in the DefaultContentPageController.
 		const allComponentsLoaded: Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
-		allComponentsLoaded.then(() => this.allDynamicComponentsLoaded());
+
+
+		allComponentsLoaded
+			.then(() =>
+			{
+				return Promise.all(Object.keys(this._components).map((key) => this._components[key].callbackCounter.promise));
+			})
+			.then(() =>
+			{
+				console.log('filter: addCallbackCounterCompleteListener');
+
+				this.allDynamicComponentsLoaded()
+			})
 	}
 
 	/**
 	 * @private
 	 * @method setActivePageIndex
 	 */
-	private setActivePageIndex(index:number):void
+	private setActivePageIndex(index: number): void
 	{
 		this.viewModel.activePageIndex(index);
 	}
@@ -300,20 +320,24 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 * @private
 	 * @method beforeContentLoad
 	 */
-	private beforeContentLoad():Promise<any>
+	private beforeContentLoad(): Promise<any>
 	{
-		TweenLite.set(this.element, {height: this.element.offsetHeight});
-
-		return this._loader.show();
+		return Promise.all([
+			new Promise((resolve: Function) =>
+			{
+				TweenLite.to(this.element, 0.2, {opacity: 0, height: this.element.offsetHeight, onComplete: resolve});
+			}),
+			this._loader.show()
+		])
 	}
 
 	/**
 	 * @private
 	 * @method afterContentRender
 	 */
-	private afterContentRender():void
+	private afterContentRender(): void
 	{
-		TweenLite.set(this.element, {clearProps: 'height'});
+		TweenLite.set(this.element, {clearProps: 'height', opacity: 1});
 	}
 
 	/**

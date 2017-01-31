@@ -22,6 +22,8 @@ class BlockArticleTeaserController extends DefaultComponentController<BlockArtic
 	{
 		super.init();
 
+		console.log('init article teaser , callbackcounter');
+
 		this._debug.log('Init');
 	}
 
@@ -32,6 +34,7 @@ class BlockArticleTeaserController extends DefaultComponentController<BlockArtic
 	protected allComponentsLoaded():void
 	{
 		this.transitionController = new BlockArticleTeaserTransitionController(this.element, this);
+		console.log('allComponentsLoaded articleTeaser');
 
 		super.allComponentsLoaded();
 	}

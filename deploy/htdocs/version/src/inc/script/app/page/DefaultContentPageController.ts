@@ -40,7 +40,7 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 	 * @property _beforeTransitionIn
 	 * @type {(removeHijack:boolean)=>void}
 	 */
-	private _beforeTransitionIn: (removeHijack?: boolean)=>void;
+	private _beforeTransitionIn: (removeHijack?: boolean) => void;
 	/**
 	 * @property _allComponentsLoaded
 	 * @type {Promise<any>}
@@ -65,7 +65,7 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 	 * @property _debouncedResizeHandler
 	 * @type {()=>void}
 	 */
-	private _debouncedResizeHandler: ()=>void = ThrottleDebounce.debounce(this.handleResize, 500, this);
+	private _debouncedResizeHandler: () => void = ThrottleDebounce.debounce(this.handleResize, 500, this);
 	/**
 	 * @property _dataManager
 	 * @type {DataManager}
@@ -75,12 +75,12 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 	 * @property _handleScrollSectionInViewListener
 	 * @type {()=>void}
 	 */
-	private _handleScrollSectionInViewListener: ()=>void;
+	private _handleScrollSectionInViewListener: () => void;
 	/**
 	 * @property _handleScrollSectionOutViewListener
 	 * @type {()=>void}
 	 */
-	private _handleScrollSectionOutViewListener: ()=>void;
+	private _handleScrollSectionOutViewListener: () => void;
 
 	/**
 	 * @public
@@ -246,20 +246,27 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 	{
 		Object.keys(components).forEach((key, index) =>
 		{
-			this._scrollTrackerPoints[key].removeEventListener(ScrollTrackerEvent.ENTER_VIEW, this._handleScrollSectionInViewListener);
-			this._scrollTrackerPoints[key].removeEventListener(ScrollTrackerEvent.LEAVE_VIEW, this._handleScrollSectionOutViewListener);
-
-			this._scrollTracker.removePoint(this._scrollTrackerPoints[key]);
-
 			if(this._scrollTrackerPoints[key])
 			{
-				this._scrollTrackerPoints[key] = null;
-				delete this._scrollTrackerPoints[key];
-			}
+				this._scrollTrackerPoints[key].removeEventListener(ScrollTrackerEvent.ENTER_VIEW, this._handleScrollSectionInViewListener);
+				this._scrollTrackerPoints[key].removeEventListener(ScrollTrackerEvent.LEAVE_VIEW, this._handleScrollSectionOutViewListener);
 
-			if(this._components[key])
+				this._scrollTracker.removePoint(this._scrollTrackerPoints[key]);
+
+				if(this._scrollTrackerPoints[key])
+				{
+					this._scrollTrackerPoints[key] = null;
+					delete this._scrollTrackerPoints[key];
+				}
+
+				if(this._components[key])
+				{
+					delete this._components[key];
+				}
+			}
+			else
 			{
-				delete this._components[key];
+				console.warn('Component does not exist, so unable to remove it');
 			}
 		});
 	}

@@ -185,6 +185,8 @@ class DefaultTransitionController extends EventDispatcher
 		{
 			if(this.transitionInTimeline.duration() === 0)
 			{
+				console.log(' [DefaultTransitionController] This block does not have transition, so resolve right away' );
+
 				resolve();
 			}
 			else

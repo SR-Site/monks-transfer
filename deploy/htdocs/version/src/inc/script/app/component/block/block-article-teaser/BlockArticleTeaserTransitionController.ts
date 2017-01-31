@@ -9,10 +9,9 @@ class BlockArticleTeaserTransitionController extends DefaultTransitionController
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
+		console.log('Setup article teaser timeline ');
 
 		const tags = Array.prototype.slice.call(this.element.querySelectorAll('.component-button-tag'));
-
-		console.log(this.element.offsetWidth);
 
 		this.transitionInTimeline.fromTo(this.element.querySelector('figure'), 2,
 			{
