@@ -21,29 +21,28 @@ import Theme from "./enum/style/Theme";
  */
 class DataManager
 {
-	private static _instance:DataManager;
+	private static _instance: DataManager;
 
-	public deviceStateTracker:DeviceStateTracker = new DeviceStateTracker();
-	public pageLoader:PageLoaderController;
+	public deviceStateTracker: DeviceStateTracker = new DeviceStateTracker();
+	public pageLoader: PageLoaderController;
 	public panelController: GlobalSlideoutPanelController;
 
 	/**
 	 * @property gateway
 	 * @type Gateway
 	 */
-	public gateway:IGateway;
-	public mockGateway:IGateway;
+	public gateway: IGateway;
 
 	/**
 	 * Global observables
 	 */
-	public headerTheme:KnockoutObservable<Theme> = ko.observable(Theme.LIGHT);
+	public headerTheme: KnockoutObservable<Theme> = ko.observable(Theme.LIGHT);
 
 	/**
 	 * Models
 	 */
-	public settingsModel:SettingsModel = new SettingsModel();
-	public serviceModel:ServiceModel = new ServiceModel();
+	public settingsModel: SettingsModel = new SettingsModel();
+	public serviceModel: ServiceModel = new ServiceModel();
 
 	public videoOverlay: VideoOverlayController<any, any>;
 
@@ -54,9 +53,9 @@ class DataManager
 	 * @method getInstance
 	 * @returns {DataManager}
 	 */
-	public static getInstance():DataManager
+	public static getInstance(): DataManager
 	{
-		if (!DataManager._instance)
+		if(!DataManager._instance)
 		{
 			DataManager._instance = new DataManager();
 			window['dataManager'] = DataManager._instance;
@@ -71,22 +70,11 @@ class DataManager
 	 *
 	 * @method setupGateway
 	 */
-	public setupGateway():void
+	public setupGateway(): void
 	{
-		this.mockGateway = new Gateway({
-			// the base url
-			url: configManagerInstance.getURL(URLNames.MOCK_API),
-			headers: {
-				'X-Force-Status-Code-200': 1
-			},
-			// the default output handler (can be changed to PostOutputHandler or JSONOutputHandler for the 'old gateway', or to RESTOutputHandler for the 'new style'
-			outputHandler: new RESTOutputHandler(),
-			inputHandler: new RESTInputHandler()
-		}, true);
-
 		this.gateway = new Gateway({
 			// the base url
-			url: configManagerInstance.getURL(URLNames.API),
+			url: configManagerInstance.getURL(configManagerInstance.getProperty(PropertyNames.MOCK_CONTENT) ? URLNames.MOCK_API : URLNames.API),
 			headers: {
 				'X-Force-Status-Code-200': 1
 			},
@@ -94,10 +82,15 @@ class DataManager
 			outputHandler: new RESTOutputHandler(),
 			inputHandler: new RESTInputHandler()
 		}, true);
+	}
 
-		const mockContent: boolean = configManagerInstance.getProperty(PropertyNames.MOCK_CONTENT);
-
-		this.serviceModel.contentService = new ContentService(mockContent ? this.mockGateway : this.gateway, false);
+	/**
+	 * @public
+	 * @method setupServices
+	 */
+	public setupServices(): void
+	{
+		this.serviceModel.contentService = new ContentService(this.gateway, false);
 	}
 
 	/**

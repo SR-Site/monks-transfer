@@ -50,6 +50,7 @@ class StartUp
 		DataManager.getInstance();
 
 		DataManager.getInstance().setupGateway();
+		DataManager.getInstance().setupServices();
 
 		Routes.init();
 
