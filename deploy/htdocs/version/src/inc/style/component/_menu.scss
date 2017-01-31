@@ -26,9 +26,7 @@
 				transition: opacity .2s ease(easeInOut);
 			}
 		}
-	}
 
-	.main-link {
 		@include hover() {
 
 			.label {
@@ -40,6 +38,7 @@
 			}
 		}
 	}
+
 
 	.subtitle {
 		color: $colorSecondary;
