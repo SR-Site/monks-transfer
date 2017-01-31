@@ -291,7 +291,10 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 		// Once all loaded blocks are ready, register them in the DefaultContentPageController.
 		const allComponentsLoaded: Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
 
-
+		// NOTE: if we subscribe to the allcomponents loaded right away this then will be triggered first which means
+		// they will be added to the scroll tracker before the setup transition is called, therefore we add an extra subscription
+		// to the sub-component callback counters to make sure this one is always at the end of the call stack, this
+		// felt a bit more secure then adding a setTimeout(()=> this.allDynamicComponentsLoaded(), 0) in case there will be more nesting
 		allComponentsLoaded
 			.then(() =>
 			{
