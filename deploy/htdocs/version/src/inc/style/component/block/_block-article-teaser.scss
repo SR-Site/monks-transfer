@@ -44,11 +44,37 @@
 			content: '';
 			transition: transform .2s ease(easeOut), opacity .2s ease(easeOut);
 		}
+
+		.hover-icon {
+			@include size($sizeGrid);
+			@include pos(auto, auto, $sizeGrid, $sizeGrid);
+			transform: translateX($sizeGrid * 2);
+			opacity: 0;
+			position: absolute;
+
+			svg {
+				overflow: visible;
+			}
+
+			path {
+				fill: $colorWhite;
+			}
+
+			circle {
+				fill: transparent;
+				stroke: $colorWhite;
+				stroke-width: 5px;
+			}
+		}
 	}
 
 	&.transition-in-complete {
 		figure {
 			transition: clip .2s ease(easeOut);
+
+			.hover-icon {
+				transition: all .2s ease(easeOut);
+			}
 		}
 
 		aside {
@@ -76,6 +102,11 @@
 
 				img {
 					transform: translateX(0);
+				}
+
+				.hover-icon {
+					transform: translateX(0);
+					opacity: 1;
 				}
 			}
 

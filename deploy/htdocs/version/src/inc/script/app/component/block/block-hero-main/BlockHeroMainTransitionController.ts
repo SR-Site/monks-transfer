@@ -151,7 +151,7 @@ class BlockHeroMainTransitionController extends DefaultTransitionController
 
 		// Slide in the main triangle
 		this.transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), '=+0.5');
-
+5
 		// Run the text animation
 		this.transitionInTimeline.add(() => this._slideTransitions[this.parentController.activeIndex].timeline.restart());
 
