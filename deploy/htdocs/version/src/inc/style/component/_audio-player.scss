@@ -21,13 +21,19 @@
 		}
 	}
 
-	.wave-form {
+	.wave-form-wrapper {
 		@include size(calc(100% - #{$sizeGrid * 3} - 0.5rem), 100%);
 		display: inline-block;
 		vertical-align: top;
 		margin-left: $sizeGrid;
 		position: relative;
 		overflow: hidden;
+
+	}
+
+	.wave-form {
+		@include coverer();
+		@include size(100%);
 
 		&:after {
 			@include size(100%, 50%);

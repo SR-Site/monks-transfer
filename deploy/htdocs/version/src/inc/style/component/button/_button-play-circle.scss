@@ -9,6 +9,7 @@
 
 		path {
 			fill: currentColor;
+			transform-origin: center center;
 		}
 
 		circle {
@@ -16,6 +17,7 @@
 			stroke: $colorWhite;
 			stroke-width: 1px;
 			transition: stroke .2s ease(easeInOut), stroke-width .2s ease(easeInOut), opacity .2s ease(easeInOut);
+			transform-origin: center center;
 		}
 	}
 

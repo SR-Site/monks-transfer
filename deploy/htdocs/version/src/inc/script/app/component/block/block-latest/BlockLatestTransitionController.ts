@@ -13,8 +13,9 @@ class BlockLatestTransitionController extends DefaultTransitionController
 
 		articles.forEach((article, index) =>
 		{
+			let offset = index > 0 ? '=-2.5' : 0;
 
-			this.transitionInTimeline.add(this.getSubTimeline(article), '=-2.5')
+			this.transitionInTimeline.add(this.getSubTimeline(article), offset)
 		})
 	}
 }
