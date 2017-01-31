@@ -1,0 +1,79 @@
+uuid: 347b9c44-ff3c-4673-9a11-a340aa766012
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockquote.field_image
+    - field.field.paragraph.blockquote.field_label
+    - field.field.paragraph.blockquote.field_paragraph
+    - field.field.paragraph.blockquote.field_styles
+    - field.field.paragraph.blockquote.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.blockquote
+  module:
+    - field_group
+    - image
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+id: paragraph.blockquote.default
+targetEntityType: paragraph
+bundle: blockquote
+mode: default
+content:
+  field_image:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_label:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_paragraph:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_styles:
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: styles
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+  field_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true

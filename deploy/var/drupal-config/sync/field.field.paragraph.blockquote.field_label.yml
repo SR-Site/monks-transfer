@@ -1,0 +1,19 @@
+uuid: 28b2b72a-1649-4f52-94a7-d49f1935f1ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_label
+    - paragraphs.paragraphs_type.blockquote
+id: paragraph.blockquote.field_label
+field_name: field_label
+entity_type: paragraph
+bundle: blockquote
+label: Quote
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
