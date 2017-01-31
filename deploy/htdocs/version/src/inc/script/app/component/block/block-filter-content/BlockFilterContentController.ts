@@ -288,8 +288,6 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 */
 	private addCallbackCounterCompleteListener(): void
 	{
-
-
 		// Once all loaded blocks are ready, register them in the DefaultContentPageController.
 		const allComponentsLoaded: Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
 
@@ -322,13 +320,21 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 */
 	private beforeContentLoad(): Promise<any>
 	{
-		return Promise.all([
-			new Promise((resolve: Function) =>
+		let promises = [this._loader.show()];
+
+		if(!this.viewModel.showInPages())
+		{
+			promises.push(new Promise((resolve: Function) =>
 			{
-				TweenLite.to(this.element, 0.2, {opacity: 0, height: this.element.offsetHeight, onComplete: resolve});
-			}),
-			this._loader.show()
-		])
+				TweenLite.to(this.element, 0.2, {
+					opacity: 0,
+					height: this.element.offsetHeight,
+					onComplete: resolve
+				});
+			}))
+		}
+
+		return Promise.all(promises);
 	}
 
 	/**
