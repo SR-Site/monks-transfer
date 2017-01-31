@@ -1,0 +1,7 @@
+uuid: 3ebdc666-1a51-461e-b1cb-9c052e0ac7f8
+langcode: en
+status: true
+dependencies: {  }
+id: blockstoryinfoimages
+label: 'Block story info images'
+behavior_plugins: {  }

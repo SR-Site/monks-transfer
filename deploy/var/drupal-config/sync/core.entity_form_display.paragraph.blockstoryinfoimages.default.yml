@@ -1,0 +1,56 @@
+uuid: 6d9fe048-a381-473f-8761-1120592d08c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockstoryinfoimages.field_stories
+    - field.field.paragraph.blockstoryinfoimages.field_styles
+    - paragraphs.paragraphs_type.blockstoryinfoimages
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+id: paragraph.blockstoryinfoimages.default
+targetEntityType: paragraph
+bundle: blockstoryinfoimages
+mode: default
+content:
+  field_stories:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_styles:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: styles
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,48 @@
+uuid: 3bd1bf23-f5d5-44f7-8a77-c013ee243f6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stories.field_heading
+    - field.field.paragraph.stories.field_image
+    - field.field.paragraph.stories.field_image2
+    - field.field.paragraph.stories.field_paragraph
+    - paragraphs.paragraphs_type.stories
+  module:
+    - image
+    - text
+id: paragraph.stories.default
+targetEntityType: paragraph
+bundle: stories
+mode: default
+content:
+  field_heading:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_image2:
+    weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_paragraph:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+hidden: {  }

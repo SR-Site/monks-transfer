@@ -32,6 +32,7 @@ dependencies:
     - paragraphs.paragraphs_type.blocksmallheading
     - paragraphs.paragraphs_type.blocksmallimage
     - paragraphs.paragraphs_type.blocksmallinfo
+    - paragraphs.paragraphs_type.blockstoryinfoimages
   module:
     - entity_reference_revisions
 id: node.page.field_blocks
@@ -56,8 +57,8 @@ settings:
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
-      blockblogpost: blockblogpost
       blockmore: blockmore
+      blockblogpost: blockblogpost
       blockherosecondary: blockherosecondary
       blockmap: blockmap
       blockheromain: blockheromain
@@ -74,6 +75,7 @@ settings:
       blocksmallheading: blocksmallheading
       blocksmallimage: blocksmallimage
       blocksmallinfo: blocksmallinfo
+      blockstoryinfoimages: blockstoryinfoimages
       blockpersonaselector: blockpersonaselector
     target_bundles_drag_drop:
       blockhowtoadvertise:
@@ -121,10 +123,10 @@ settings:
       slide:
         weight: 18
         enabled: false
-      blockblogpost:
+      blockmore:
         enabled: true
         weight: 19
-      blockmore:
+      blockblogpost:
         enabled: true
         weight: 19
       blockherosecondary:
@@ -178,16 +180,22 @@ settings:
       blocksmallimage:
         enabled: true
         weight: 38
-      blocksmallinfo:
-        enabled: true
-        weight: 39
       stat:
         weight: 39
         enabled: false
+      blocksmallinfo:
+        enabled: true
+        weight: 39
       statistic:
         weight: 40
         enabled: false
+      blockstoryinfoimages:
+        enabled: true
+        weight: 41
       blockpersonaselector:
         enabled: true
         weight: 54
+      stories:
+        weight: 79
+        enabled: false
 field_type: entity_reference_revisions
