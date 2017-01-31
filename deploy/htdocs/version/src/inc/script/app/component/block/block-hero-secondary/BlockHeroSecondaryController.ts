@@ -37,15 +37,23 @@ class BlockHeroSecondaryController extends DefaultComponentController<BlockHeroS
 	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new BlockHeroSecondaryTransitionController(this.element, this);
-		this.transitionController.addEventListener(DefaultTransitionController.TRANSITION_IN_START, () =>
+
+		super.allComponentsLoaded();
+	}
+
+	/**
+	 * @public
+	 * @method changeBackgroundImage
+	 */
+	public changeBackgroundImage(): void
+	{
+		if(this._imageCrossfader)
 		{
 			// Open the first image
 			this._imageCrossfader.open(
 				ImageHelper.getImageForMediaQuery(this.options.background)
 			)
-		});
-
-		super.allComponentsLoaded();
+		}
 	}
 
 	/**
