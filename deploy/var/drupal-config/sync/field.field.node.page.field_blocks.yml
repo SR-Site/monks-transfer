@@ -28,6 +28,7 @@ dependencies:
     - paragraphs.paragraphs_type.blockpersonaselector
     - paragraphs.paragraphs_type.blockprogrammodule
     - paragraphs.paragraphs_type.blockquote
+    - paragraphs.paragraphs_type.blockquotesecondary
   module:
     - entity_reference_revisions
 id: node.page.field_blocks
@@ -55,17 +56,18 @@ settings:
       blockmore: blockmore
       blockblogpost: blockblogpost
       blockherosecondary: blockherosecondary
-      blockmap: blockmap
       blockheromain: blockheromain
+      blockmap: blockmap
       blockmapsecondary: blockmapsecondary
       blockmarketmap: blockmarketmap
       blocknetworkoverview: blocknetworkoverview
-      blockherotertiary: blockherotertiary
       blockpagenotfound: blockpagenotfound
+      blockherotertiary: blockherotertiary
       blockpathtopurchase: blockpathtopurchase
       blockprogrammodule: blockprogrammodule
       blockquote: blockquote
       blockinfo: blockinfo
+      blockquotesecondary: blockquotesecondary
       blockpersonaselector: blockpersonaselector
     target_bundles_drag_drop:
       blockhowtoadvertise:
@@ -89,12 +91,12 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
-      blocklatest:
-        enabled: true
-        weight: 13
       link:
         weight: 13
         enabled: false
+      blocklatest:
+        enabled: true
+        weight: 13
       blockimagecarousel:
         enabled: true
         weight: 13
@@ -107,12 +109,12 @@ settings:
       blockaudiofragment:
         enabled: true
         weight: 16
-      slide:
-        weight: 18
-        enabled: false
       blockbutton:
         enabled: true
         weight: 18
+      slide:
+        weight: 18
+        enabled: false
       blockmore:
         enabled: true
         weight: 19
@@ -122,10 +124,10 @@ settings:
       blockherosecondary:
         enabled: true
         weight: 23
-      blockmap:
+      blockheromain:
         enabled: true
         weight: 26
-      blockheromain:
+      blockmap:
         enabled: true
         weight: 26
       blockmapsecondary:
@@ -137,10 +139,10 @@ settings:
       blocknetworkoverview:
         enabled: true
         weight: 29
-      blockherotertiary:
+      blockpagenotfound:
         enabled: true
         weight: 30
-      blockpagenotfound:
+      blockherotertiary:
         enabled: true
         weight: 30
       blockpathtopurchase:
@@ -156,6 +158,9 @@ settings:
         enabled: true
         weight: 35
       blockinfo:
+        enabled: true
+        weight: 36
+      blockquotesecondary:
         enabled: true
         weight: 36
       slideheromain:
