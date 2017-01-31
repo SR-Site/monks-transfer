@@ -22,12 +22,12 @@ class ButtonMainTransitionController extends DefaultTransitionController
 		this.transitionInTimeline.from(this.element.querySelector('.background'), 0.8, {
 			ease: Expo.easeOut,
 			opacity: 0
-		}, '=-0.5');
+		}, 0);
 
 		this.transitionInTimeline.from(this.element.querySelector('.label'), 0.8, {
 			ease: Expo.easeOut,
 			opacity: 0
-		}, '=-0.5');
+		}, 0);
 
 		this.addEventListener(DefaultTransitionController.TRANSITION_IN_COMPLETE, () => this.setupHoverTimeline());
 	}
@@ -66,6 +66,15 @@ class ButtonMainTransitionController extends DefaultTransitionController
 			}
 		});
 
+		this._hoverTimeline.fromTo(this.element.querySelector('.stripe'), 1,
+			{
+				scaleX: 1
+			},
+			{
+				scaleX: 0,
+				ease: Power3.easeInOut
+			});
+
 		this._hoverTimeline.fromTo(this.element.querySelector('.hover-stroke'), 1,
 			{
 				strokeDasharray: '0px ' + this.parentController.fullPath + 'px',
@@ -74,8 +83,8 @@ class ButtonMainTransitionController extends DefaultTransitionController
 			{
 				strokeDasharray: this.parentController.fullPath + 'px 0px',
 				strokeDashoffset: (this.parentController.fullPath / 2) + (this.parentController.height / 2),
-				ease: Expo.easeInOut
-			}
+				ease: Power3.easeInOut
+			}, '=-0.2'
 		)
 	}
 

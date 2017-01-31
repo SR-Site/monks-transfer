@@ -36,7 +36,7 @@
 		transform: scale(1);
 		position: absolute;
 		background: $colorSecondary;
-		transition: all .2s ease(easeInOut) .5s;
+
 	}
 
 	.label {
@@ -61,14 +61,6 @@
 			rect {
 				stroke: $colorWhite;
 			}
-		}
-	}
-
-	// Hover State
-	@include hover() {
-		.stripe {
-			transform: scaleX(0);
-			transition-delay: 0s;
 		}
 	}
 

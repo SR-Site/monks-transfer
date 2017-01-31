@@ -31,7 +31,7 @@
 					"link": {
 						"label": "Markets map",
 						"title": "Markets map",
-						"target": "market-map",
+						"target": "map",
 						"type": 0
 					}
 				},

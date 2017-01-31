@@ -29,9 +29,32 @@ class BlockImageWithContentTransitionController extends DefaultTransitionControl
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
+		const wrapper = <HTMLElement>this.element.querySelector('.site-frame');
+		const width = wrapper.offsetWidth;
+		const height = wrapper.offsetHeight;
+
 		const button = this.element.querySelector('.component-button-main');
 
-		this.transitionInTimeline.add(this._headingAnimation.getTimeline());
+		this.transitionInTimeline.fromTo(this.element.querySelector('.image'), 2,
+			{
+				clip: 'rect(0, 0,' + height + ', 0)'
+			},
+			{
+				clip: 'rect(0, ' + width + ', ' + height + ', 0)',
+				clearProps: "clip",
+				ease: Expo.easeInOut
+			});
+
+		this.transitionInTimeline.from(this.element.querySelector('.content'), 2,
+			{
+				xPercent: -150,
+				clearProps: "all",
+				ease: Expo.easeInOut
+			},
+			'=-1.8'
+		);
+
+		this.transitionInTimeline.add(this._headingAnimation.getTimeline(), '=-1');
 		this.transitionInTimeline.add(this._copyAnimation.getTimeline());
 
 		if(button)

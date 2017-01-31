@@ -7,7 +7,7 @@
 	<div class="slide-content-wrapper abs-fill">
 		<div class="background-triangle"></div>
 		<div class="secondary-background-triangle"></div>
-		<div class="tertiary-background-triangle" data-bind="visible: !$data.hasStatistics"></div>
+		<div class="tertiary-background-triangle" data-bind="visible: !$data.hasStatistics()"></div>
 		<!-- ko foreach: data.slides -->
 			<div class="slide-content" >
 				<h2 class="heading heading-01" data-bind="html: $data.heading"></h2>

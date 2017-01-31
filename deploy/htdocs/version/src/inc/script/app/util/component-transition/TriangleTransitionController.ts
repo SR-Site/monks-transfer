@@ -1,3 +1,4 @@
+
 import DefaultTransitionController from "app/util/component-transition/DefaultTransitionController";
 
 class TriangleTransitionController extends DefaultTransitionController
@@ -38,17 +39,42 @@ class TriangleTransitionController extends DefaultTransitionController
 	 * */
 	protected setupTransitionOutTimeline(): void
 	{
-		this.transitionOutTimeline.fromTo(this.element, this._duration,
-			{
-				xPercent: 0,
-				yPercent: 0
-			},
+		this.transitionOutTimeline.to(this.element, this._duration,
 			{
 				xPercent: 200,
 				yPercent: -100,
 				ease: Expo.easeIn
 			}
 		);
+	}
+
+	/**
+	 * @public
+	 * @method get transitionInDuration
+	 * @returns {Duration|any}
+	 */
+	public get transitionInDuration():number
+	{
+		return this.transitionInTimeline.duration();
+	}
+
+	/**
+	 * @public
+	 * @method get transitionInDuration
+	 * @returns {Duration|any}
+	 */
+	public get transitionOutDuration():number
+	{
+		return this.transitionOutTimeline.duration();
+	}
+
+	/**
+	 * @private
+	 * @method getTransitionInTimeline
+	 */
+	public getTransitionInTimeline():TimelineLite
+	{
+		return this.transitionInTimeline;
 	}
 }
 

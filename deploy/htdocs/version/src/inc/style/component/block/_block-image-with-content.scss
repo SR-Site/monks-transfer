@@ -12,6 +12,7 @@
 
 	.image {
 		@include size(100%);
+		position: absolute;
 	}
 
 	.content {
