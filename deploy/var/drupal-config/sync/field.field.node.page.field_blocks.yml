@@ -33,6 +33,7 @@ dependencies:
     - paragraphs.paragraphs_type.blocksmallimage
     - paragraphs.paragraphs_type.blocksmallinfo
     - paragraphs.paragraphs_type.blockstoryinfoimages
+    - paragraphs.paragraphs_type.blocktext
   module:
     - entity_reference_revisions
 id: node.page.field_blocks
@@ -57,16 +58,16 @@ settings:
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
-      blockmore: blockmore
       blockblogpost: blockblogpost
+      blockmore: blockmore
       blockherosecondary: blockherosecondary
       blockmap: blockmap
       blockheromain: blockheromain
       blockmapsecondary: blockmapsecondary
       blockmarketmap: blockmarketmap
       blocknetworkoverview: blocknetworkoverview
-      blockpagenotfound: blockpagenotfound
       blockherotertiary: blockherotertiary
+      blockpagenotfound: blockpagenotfound
       blockpathtopurchase: blockpathtopurchase
       blockprogrammodule: blockprogrammodule
       blockquote: blockquote
@@ -76,6 +77,7 @@ settings:
       blocksmallimage: blocksmallimage
       blocksmallinfo: blocksmallinfo
       blockstoryinfoimages: blockstoryinfoimages
+      blocktext: blocktext
       blockpersonaselector: blockpersonaselector
     target_bundles_drag_drop:
       blockhowtoadvertise:
@@ -102,12 +104,12 @@ settings:
       blocklatest:
         enabled: true
         weight: 13
-      link:
-        weight: 13
-        enabled: false
       blockimagecarousel:
         enabled: true
         weight: 13
+      link:
+        weight: 13
+        enabled: false
       step:
         weight: 15
         enabled: false
@@ -117,16 +119,16 @@ settings:
       blockaudiofragment:
         enabled: true
         weight: 16
-      blockbutton:
-        enabled: true
-        weight: 18
       slide:
         weight: 18
         enabled: false
-      blockmore:
+      blockbutton:
+        enabled: true
+        weight: 18
+      blockblogpost:
         enabled: true
         weight: 19
-      blockblogpost:
+      blockmore:
         enabled: true
         weight: 19
       blockherosecondary:
@@ -147,10 +149,10 @@ settings:
       blocknetworkoverview:
         enabled: true
         weight: 29
-      blockpagenotfound:
+      blockherotertiary:
         enabled: true
         weight: 30
-      blockherotertiary:
+      blockpagenotfound:
         enabled: true
         weight: 30
       blockpathtopurchase:
@@ -180,18 +182,21 @@ settings:
       blocksmallimage:
         enabled: true
         weight: 38
-      stat:
-        weight: 39
-        enabled: false
       blocksmallinfo:
         enabled: true
         weight: 39
+      stat:
+        weight: 39
+        enabled: false
       statistic:
         weight: 40
         enabled: false
       blockstoryinfoimages:
         enabled: true
         weight: 41
+      blocktext:
+        enabled: true
+        weight: 42
       blockpersonaselector:
         enabled: true
         weight: 54
