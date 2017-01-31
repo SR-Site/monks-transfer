@@ -31,6 +31,7 @@ dependencies:
     - paragraphs.paragraphs_type.blockquotesecondary
     - paragraphs.paragraphs_type.blocksmallheading
     - paragraphs.paragraphs_type.blocksmallimage
+    - paragraphs.paragraphs_type.blocksmallinfo
   module:
     - entity_reference_revisions
 id: node.page.field_blocks
@@ -72,6 +73,7 @@ settings:
       blockquotesecondary: blockquotesecondary
       blocksmallheading: blocksmallheading
       blocksmallimage: blocksmallimage
+      blocksmallinfo: blocksmallinfo
       blockpersonaselector: blockpersonaselector
     target_bundles_drag_drop:
       blockhowtoadvertise:
@@ -170,12 +172,15 @@ settings:
       blocksmallheading:
         enabled: true
         weight: 37
-      blocksmallimage:
-        enabled: true
-        weight: 38
       slideheromain:
         weight: 38
         enabled: false
+      blocksmallimage:
+        enabled: true
+        weight: 38
+      blocksmallinfo:
+        enabled: true
+        weight: 39
       stat:
         weight: 39
         enabled: false
