@@ -1,4 +1,4 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockMarketMapController from 'app/component/block/block-market-map/BlockMarketMapController';
 import IBlockMarketMapOptions from 'app/component/block/block-market-map/IBlockMarketMapOptions';
 
@@ -6,7 +6,7 @@ import ko = require('knockout');
 import PanelBlocks from "../../../data/enum/block/PanelBlocks";
 import DataManager from "../../../data/DataManager";
 
-class BlockMarketMapViewModel extends DefaultComponentViewModel<BlockMarketMapController, IBlockMarketMapOptions>
+class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarketMapController, IBlockMarketMapOptions>
 {
 
 	public sidePanelIsOpen:KnockoutObservable<boolean> = ko.observable(false);

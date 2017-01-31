@@ -1,4 +1,4 @@
-import DefaultButtonController from "../DefaultButtonController";
+import AbstractButtonController from "../AbstractButtonController";
 import ButtonStartAdvertisingTransitionController from 'app/component/button/button-start-advertising/ButtonStartAdvertisingTransitionController';
 import IButtonStartAdvertisingOptions from 'app/component/button/button-start-advertising/IButtonStartAdvertisingOptions';
 import ButtonStartAdvertisingViewModel from 'app/component/button/button-start-advertising/ButtonStartAdvertisingViewModel';
@@ -8,7 +8,7 @@ import NativeEventListener from "../../../../lib/temple/event/NativeEventListene
 import ThrottleDebounce from "../../../../lib/temple/util/ThrottleDebounce";
 import ScrollUtils from "../../../util/ScrollUtils";
 
-class ButtonStartAdvertisingController extends DefaultButtonController<ButtonStartAdvertisingViewModel, IButtonStartAdvertisingOptions>
+class ButtonStartAdvertisingController extends AbstractButtonController<ButtonStartAdvertisingViewModel, IButtonStartAdvertisingOptions>
 {
 	private static CENTER_PERCENTAGE:number = 0.6;
 

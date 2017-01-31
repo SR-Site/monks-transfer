@@ -1,4 +1,4 @@
-import DefaultButtonViewModel from "../DefaultButtonViewModel";
+import DefaultButtonViewModel from "../AbstractButtonViewModel";
 import ButtonCallToReachController from 'app/component/button/button-call-to-reach/ButtonCallToReachController';
 import IButtonCallToReachOptions from 'app/component/button/button-call-to-reach/IButtonCallToReachOptions';
 

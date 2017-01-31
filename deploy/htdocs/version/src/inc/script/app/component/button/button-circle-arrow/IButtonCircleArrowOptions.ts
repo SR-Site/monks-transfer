@@ -1,4 +1,4 @@
-import IDefaultButtonOptions from "../IDefaultButtonOptions";
+import IDefaultButtonOptions from "../IAbstractButtonOptions";
 import Direction from "../../../data/enum/layout/Direction";
 import Alignment from "../../../data/enum/layout/Alignment";
 

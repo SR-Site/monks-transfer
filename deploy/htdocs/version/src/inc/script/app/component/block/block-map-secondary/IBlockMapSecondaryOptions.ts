@@ -1,6 +1,6 @@
-import IDefaultComponentOptions from "../IDefaultComponentOptions";
+import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 
-export interface IBlockMapSecondaryOptions extends IDefaultComponentOptions
+export interface IBlockMapSecondaryOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

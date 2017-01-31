@@ -1,4 +1,4 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockPathToPurchaseController from 'app/component/block/block-path-to-purchase/BlockPathToPurchaseController';
 import IBlockPathToPurchaseOptions from 'app/component/block/block-path-to-purchase/IBlockPathToPurchaseOptions';
 
@@ -6,7 +6,7 @@ import ko = require('knockout');
 import StringUtils from "../../../../lib/temple/util/type/StringUtils";
 import MouseEventHelper from "../../../util/MouseEventHelper";
 
-class BlockPathToPurchaseViewModel extends DefaultComponentViewModel<BlockPathToPurchaseController, IBlockPathToPurchaseOptions>
+class BlockPathToPurchaseViewModel extends AbstractBlockComponentViewModel<BlockPathToPurchaseController, IBlockPathToPurchaseOptions>
 {
 	public activeIndex: KnockoutObservable<number> = ko.observable(0);
 	public StringUtils: Class = StringUtils;

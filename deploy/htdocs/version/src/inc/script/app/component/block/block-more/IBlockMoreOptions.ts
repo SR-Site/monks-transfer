@@ -1,9 +1,9 @@
-import IDefaultComponentOptions from "../IDefaultComponentOptions";
+import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import ITag from "../../../data/interface/action/ITag";
 import {IBlockArticleTeaserOptions} from "../block-article-teaser/IBlockArticleTeaserOptions";
 import IArticleTeaser from "../../../data/interface/media/IArticleTeaser";
 
-export interface IBlockMoreOptions extends IDefaultComponentOptions
+export interface IBlockMoreOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

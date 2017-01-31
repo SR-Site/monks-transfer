@@ -1,14 +1,14 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockHeroSecondaryTransitionController from 'app/component/block/block-hero-secondary/BlockHeroSecondaryTransitionController';
 import IBlockHeroSecondaryOptions from 'app/component/block/block-hero-secondary/IBlockHeroSecondaryOptions';
 import BlockHeroSecondaryViewModel from 'app/component/block/block-hero-secondary/BlockHeroSecondaryViewModel';
 
 import Log from "lib/temple/util/Log";
 import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
-import DefaultTransitionController from "../../../util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 import ImageHelper from "../../../util/ImageHelper";
 
-class BlockHeroSecondaryController extends DefaultComponentController<BlockHeroSecondaryViewModel, IBlockHeroSecondaryOptions>
+class BlockHeroSecondaryController extends AbstractBlockComponentController<BlockHeroSecondaryViewModel, IBlockHeroSecondaryOptions>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

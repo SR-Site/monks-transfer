@@ -1,10 +1,10 @@
-import DefaultButtonController from "../DefaultButtonController";
+import AbstractButtonController from "../AbstractButtonController";
 import ButtonMenuTransitionController from "app/component/button/button-menu/ButtonMenuTransitionController";
 import IButtonMenuOptions from "app/component/button/button-menu/IButtonMenuOptions";
 import ButtonMenuViewModel from "app/component/button/button-menu/ButtonMenuViewModel";
 import Log from "lib/temple/util/Log";
 
-class ButtonMenuController extends DefaultButtonController<ButtonMenuViewModel, IButtonMenuOptions>
+class ButtonMenuController extends AbstractButtonController<ButtonMenuViewModel, IButtonMenuOptions>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

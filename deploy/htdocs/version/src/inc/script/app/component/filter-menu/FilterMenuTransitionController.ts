@@ -1,8 +1,8 @@
-import DefaultTransitionController from "app/util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 import FilterMenuController from "./FilterMenuController";
 import Promise = require("bluebird");
 
-class FilterMenuTransitionController extends DefaultTransitionController
+class FilterMenuTransitionController extends AbstractTransitionController
 {
 	private _dropDownTimelines:Array<{
 		completeMethod:Function,

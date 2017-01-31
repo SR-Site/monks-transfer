@@ -1,6 +1,6 @@
-import DefaultTransitionController from "app/util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 
-class MapSliderTransitionController extends DefaultTransitionController
+class MapSliderTransitionController extends AbstractTransitionController
 {
 
 }

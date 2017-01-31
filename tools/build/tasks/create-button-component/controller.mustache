@@ -1,4 +1,4 @@
-import DefaultButtonController from "../DefaultButtonController";
+import AbstractButtonController from "../AbstractButtonController";
 import {{{filenames.transition}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.transition}}}';
 import {{{filenames.options}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.options}}}';
 import {{{filenames.viewModel}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.viewModel}}}';
@@ -8,7 +8,7 @@ import {{{filenames.event}}} from 'app/component/block/{{{subfolder}}}{{{compone
 
 import Log from "lib/temple/util/Log";
 
-class {{{filename}}} extends DefaultButtonController<{{{filenames.viewModel}}}, {{{filenames.options}}}>
+class {{{filename}}} extends AbstractButtonController<{{{filenames.viewModel}}}, {{{filenames.options}}}>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

@@ -1,7 +1,7 @@
 
-import DefaultTransitionController from "app/util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "./AbstractTransitionController";
 
-class TriangleTransitionController extends DefaultTransitionController
+class TriangleTransitionController extends AbstractTransitionController
 {
 	private _duration: number = 1;
 

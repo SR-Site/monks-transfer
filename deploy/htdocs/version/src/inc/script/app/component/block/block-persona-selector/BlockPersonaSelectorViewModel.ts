@@ -1,4 +1,4 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockPersonaSelectorController from 'app/component/block/block-persona-selector/BlockPersonaSelectorController';
 import IBlockPersonaSelectorOptions from 'app/component/block/block-persona-selector/IBlockPersonaSelectorOptions';
 
@@ -7,7 +7,7 @@ import StringUtils from "../../../../lib/temple/util/type/StringUtils";
 import PersonaType from "../../../data/enum/type/PersonaType";
 import MouseEventHelper from "../../../util/MouseEventHelper";
 
-class BlockPersonaSelectorViewModel extends DefaultComponentViewModel<BlockPersonaSelectorController, IBlockPersonaSelectorOptions>
+class BlockPersonaSelectorViewModel extends AbstractBlockComponentViewModel<BlockPersonaSelectorController, IBlockPersonaSelectorOptions>
 {
 	public StringUtils: Class = StringUtils;
 	public PersonaType: Enum = PersonaType;

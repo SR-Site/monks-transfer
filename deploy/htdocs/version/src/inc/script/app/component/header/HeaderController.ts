@@ -1,4 +1,4 @@
-import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import HeaderTransitionController from "app/component/header/HeaderTransitionController";
 import IHeaderOptions from "app/component/header/IHeaderOptions";
 import HeaderViewModel from "app/component/header/HeaderViewModel";
@@ -8,7 +8,7 @@ import ScrollUtils from "../../util/ScrollUtils";
 import KeyCode from "../../../lib/temple/util/key/KeyCode";
 import MenuEvent from "../../event/MenuEvent";
 
-class HeaderController extends DefaultComponentTransitionController<HeaderViewModel, IHeaderOptions>
+class HeaderController extends AbstractTransitionComponentController<HeaderViewModel, IHeaderOptions>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

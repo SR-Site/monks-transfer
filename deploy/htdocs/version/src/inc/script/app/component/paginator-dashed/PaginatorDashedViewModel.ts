@@ -1,4 +1,4 @@
-import DefaultComponentTransitionViewModel from "app/util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
+import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import PaginatorDashedController from 'app/component/paginator-dashed/PaginatorDashedController';
 import IPaginatorDashedOptions from 'app/component/paginator-dashed/IPaginatorDashedOptions';
 

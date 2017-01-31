@@ -1,4 +1,4 @@
-import DefaultButtonViewModel from "../DefaultButtonViewModel";
+import DefaultButtonViewModel from "../AbstractButtonViewModel";
 import ButtonMenuController from 'app/component/button/button-menu/ButtonMenuController';
 import IButtonMenuOptions from 'app/component/button/button-menu/IButtonMenuOptions';
 

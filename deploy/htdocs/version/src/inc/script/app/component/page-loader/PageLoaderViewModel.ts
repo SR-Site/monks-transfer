@@ -1,4 +1,4 @@
-import DefaultComponentTransitionViewModel from "app/util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
+import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import PageLoaderController from 'app/component/page-loader/PageLoaderController';
 import IPageLoaderOptions from 'app/component/page-loader/IPageLoaderOptions';
 

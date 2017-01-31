@@ -1,11 +1,11 @@
-import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import FooterTransitionController from 'app/component/footer/FooterTransitionController';
 import IFooterOptions from 'app/component/footer/IFooterOptions';
 import FooterViewModel from 'app/component/footer/FooterViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class FooterController extends DefaultComponentTransitionController<FooterViewModel, IFooterOptions>
+class FooterController extends AbstractTransitionComponentController<FooterViewModel, IFooterOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

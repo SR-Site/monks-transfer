@@ -1,10 +1,10 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockQuoteController from 'app/component/block/block-quote/BlockQuoteController';
 import IBlockQuoteOptions from 'app/component/block/block-quote/IBlockQuoteOptions';
 
 import ko = require('knockout');
 
-class BlockQuoteViewModel extends DefaultComponentViewModel<BlockQuoteController, IBlockQuoteOptions>
+class BlockQuoteViewModel extends AbstractBlockComponentViewModel<BlockQuoteController, IBlockQuoteOptions>
 {
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()

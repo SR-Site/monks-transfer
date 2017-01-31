@@ -1,4 +1,4 @@
-import DefaultButtonViewModel from "../DefaultButtonViewModel";
+import DefaultButtonViewModel from "../AbstractButtonViewModel";
 import ButtonTagController from 'app/component/button/button-tag/ButtonTagController';
 import IButtonTagOptions from 'app/component/button/button-tag/IButtonTagOptions';
 

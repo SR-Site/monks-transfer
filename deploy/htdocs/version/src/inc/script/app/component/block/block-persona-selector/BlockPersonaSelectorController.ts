@@ -1,4 +1,4 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockPersonaSelectorTransitionController from 'app/component/block/block-persona-selector/BlockPersonaSelectorTransitionController';
 import IBlockPersonaSelectorOptions from 'app/component/block/block-persona-selector/IBlockPersonaSelectorOptions';
 import BlockPersonaSelectorViewModel from 'app/component/block/block-persona-selector/BlockPersonaSelectorViewModel';
@@ -12,7 +12,7 @@ import DataEvent from "../../../../lib/temple/event/DataEvent";
 import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
 import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedController";
 
-class BlockPersonaSelectorController extends DefaultComponentController<BlockPersonaSelectorViewModel, IBlockPersonaSelectorOptions>
+class BlockPersonaSelectorController extends AbstractBlockComponentController<BlockPersonaSelectorViewModel, IBlockPersonaSelectorOptions>
 {
 	protected transitionController: BlockPersonaSelectorTransitionController;
 

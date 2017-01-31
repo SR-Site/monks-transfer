@@ -1,11 +1,11 @@
-import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import FilterMenuTransitionController from 'app/component/filter-menu/FilterMenuTransitionController';
 import IFilterMenuOptions from 'app/component/filter-menu/IFilterMenuOptions';
 import FilterMenuViewModel from 'app/component/filter-menu/FilterMenuViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class FilterMenuController extends DefaultComponentTransitionController<FilterMenuViewModel, IFilterMenuOptions>
+class FilterMenuController extends AbstractTransitionComponentController<FilterMenuViewModel, IFilterMenuOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

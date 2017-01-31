@@ -1,10 +1,10 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockTextController from 'app/component/block/block-text/BlockTextController';
 import IBlockTextOptions from 'app/component/block/block-text/IBlockTextOptions';
 
 import ko = require('knockout');
 
-class BlockTextViewModel extends DefaultComponentViewModel<BlockTextController, IBlockTextOptions>
+class BlockTextViewModel extends AbstractBlockComponentViewModel<BlockTextController, IBlockTextOptions>
 {
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()

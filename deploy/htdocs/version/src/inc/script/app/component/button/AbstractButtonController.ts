@@ -1,17 +1,17 @@
-import DefaultButtonViewModel from "./DefaultButtonViewModel";
-import IDefaultButtonOptions from "./IDefaultButtonOptions";
+import AbstractButtonViewModel from "./AbstractButtonViewModel";
+import IAbstractButtonOptions from "./IAbstractButtonOptions";
 import IMethod from "../../data/interface/action/IMethod";
 import ILink from "../../data/interface/action/ILink";
 import * as Gaia from "../../../lib/gaia/api/Gaia";
 import LinkType from "../../data/enum/type/LinkType";
 import ScrollUtils from "../../util/ScrollUtils";
-import DefaultComponentTransitionController from "../../util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import Branches from "../../data/enum/gaia/Branches";
 
-class DefaultButtonController<T, U extends IDefaultButtonOptions> extends DefaultComponentTransitionController<DefaultButtonViewModel<T, U>, U>
+abstract class AbstractButtonController<T, U extends IAbstractButtonOptions> extends AbstractTransitionComponentController<AbstractButtonViewModel<T, U>, U>
 {
 	static documentBase: string = $('meta[name="document-base"]').attr('content');
-	public viewModel: DefaultButtonViewModel<T, U> & any;
+	public viewModel: AbstractButtonViewModel<T, U> & any;
 
 	public init(): void
 	{
@@ -31,7 +31,7 @@ class DefaultButtonController<T, U extends IDefaultButtonOptions> extends Defaul
 	 * @method addClassNames
 	 * @description some buttons require some extra classnames add them in this method
 	 */
-	protected addClassNames():void
+	protected addClassNames(): void
 	{
 		// Add the size class name
 		if(this.options.size !== void 0)
@@ -44,7 +44,7 @@ class DefaultButtonController<T, U extends IDefaultButtonOptions> extends Defaul
 	 * @protected
 	 * @method allComponentsLoaded
 	 */
-	protected allComponentsLoaded():void
+	protected allComponentsLoaded(): void
 	{
 		super.allComponentsLoaded();
 
@@ -68,7 +68,7 @@ class DefaultButtonController<T, U extends IDefaultButtonOptions> extends Defaul
 		{
 			if(link.type == LinkType.INTERNAL)
 			{
-				this.element.setAttribute('href', DefaultButtonController.documentBase + link.target);
+				this.element.setAttribute('href', AbstractButtonController.documentBase + link.target);
 			}
 			else if(link.type == LinkType.EXTERNAL)
 			{
@@ -112,7 +112,7 @@ class DefaultButtonController<T, U extends IDefaultButtonOptions> extends Defaul
 			}
 			default:
 			{
-				console.warn('[DefaultButtonController] Unsupported link type');
+				console.warn('[AbstractButtonController] Unsupported link type');
 				break;
 			}
 		}
@@ -128,4 +128,4 @@ class DefaultButtonController<T, U extends IDefaultButtonOptions> extends Defaul
 	}
 }
 
-export default DefaultButtonController;
+export default AbstractButtonController;

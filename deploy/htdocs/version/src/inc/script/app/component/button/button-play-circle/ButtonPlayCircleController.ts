@@ -1,11 +1,11 @@
-import DefaultButtonController from "../DefaultButtonController";
+import AbstractButtonController from "../AbstractButtonController";
 import ButtonPlayCircleTransitionController from 'app/component/button/button-play-circle/ButtonPlayCircleTransitionController';
 import IButtonPlayCircleOptions from 'app/component/button/button-play-circle/IButtonPlayCircleOptions';
 import ButtonPlayCircleViewModel from 'app/component/button/button-play-circle/ButtonPlayCircleViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class ButtonPlayCircleController extends DefaultButtonController<ButtonPlayCircleViewModel, IButtonPlayCircleOptions>
+class ButtonPlayCircleController extends AbstractButtonController<ButtonPlayCircleViewModel, IButtonPlayCircleOptions>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

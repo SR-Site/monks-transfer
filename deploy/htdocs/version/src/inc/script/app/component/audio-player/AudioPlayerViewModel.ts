@@ -1,4 +1,4 @@
-import DefaultComponentTransitionViewModel from "app/util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
+import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import AudioPlayerController from 'app/component/audio-player/AudioPlayerController';
 import IAudioPlayerOptions from 'app/component/audio-player/IAudioPlayerOptions';
 

@@ -1,11 +1,11 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockPageNotFoundTransitionController from 'app/component/block/block-page-not-found/BlockPageNotFoundTransitionController';
 import IBlockPageNotFoundOptions from 'app/component/block/block-page-not-found/IBlockPageNotFoundOptions';
 import BlockPageNotFoundViewModel from 'app/component/block/block-page-not-found/BlockPageNotFoundViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class BlockPageNotFoundController extends DefaultComponentController<BlockPageNotFoundViewModel, IBlockPageNotFoundOptions>
+class BlockPageNotFoundController extends AbstractBlockComponentController<BlockPageNotFoundViewModel, IBlockPageNotFoundOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

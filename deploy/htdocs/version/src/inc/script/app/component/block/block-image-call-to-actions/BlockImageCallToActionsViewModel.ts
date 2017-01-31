@@ -1,11 +1,11 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockImageCallToActionsController from 'app/component/block/block-image-call-to-actions/BlockImageCallToActionsController';
 import IBlockImageCallToActionsOptions from 'app/component/block/block-image-call-to-actions/IBlockImageCallToActionsOptions';
 
 import ko = require('knockout');
 import StringUtils from "../../../../lib/temple/util/type/StringUtils";
 
-class BlockImageCallToActionsViewModel extends DefaultComponentViewModel<BlockImageCallToActionsController, IBlockImageCallToActionsOptions>
+class BlockImageCallToActionsViewModel extends AbstractBlockComponentViewModel<BlockImageCallToActionsController, IBlockImageCallToActionsOptions>
 {
 	public StringUtils:Class = StringUtils;
 

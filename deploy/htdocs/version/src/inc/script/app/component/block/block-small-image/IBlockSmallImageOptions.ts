@@ -1,8 +1,8 @@
-import IDefaultComponentOptions from "../IDefaultComponentOptions";
+import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import Alignment from "../../../data/enum/layout/Alignment";
 import IImage from "../../../data/interface/media/IImage";
 
-export interface IBlockSmallImageOptions extends IDefaultComponentOptions
+export interface IBlockSmallImageOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

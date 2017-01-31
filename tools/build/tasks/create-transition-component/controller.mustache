@@ -1,4 +1,4 @@
-import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractComponentTransitionController from "app/util/component-transition/abstract-transition-component/AbstractComponentTransitionController";
 import {{{filenames.transition}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.transition}}}';
 import {{{filenames.options}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.options}}}';
 import {{{filenames.viewModel}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.viewModel}}}';
@@ -8,7 +8,7 @@ import {{{filenames.event}}} from 'app/component/{{{subfolder}}}{{{componentId}}
 
 import Log from "lib/temple/util/Log";
 
-class {{{filename}}} extends DefaultComponentTransitionController<{{{filenames.viewModel}}}, {{{filenames.options}}}>
+class {{{filename}}} extends AbstractComponentTransitionController<{{{filenames.viewModel}}}, {{{filenames.options}}}>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging
@@ -31,9 +31,7 @@ class {{{filename}}} extends DefaultComponentTransitionController<{{{filenames.v
 		this._debug.log('Init');
 
 		this.transitionController = new {{{filenames.transition}}}(this.element, this);
-
 	}
-
 
 	/**
 	 *  Overrides AbstractComponentController.destruct()

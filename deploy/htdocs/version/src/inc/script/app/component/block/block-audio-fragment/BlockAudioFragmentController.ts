@@ -1,11 +1,11 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockAudioFragmentTransitionController from 'app/component/block/block-audio-fragment/BlockAudioFragmentTransitionController';
 import IBlockAudioFragmentOptions from 'app/component/block/block-audio-fragment/IBlockAudioFragmentOptions';
 import BlockAudioFragmentViewModel from 'app/component/block/block-audio-fragment/BlockAudioFragmentViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class BlockAudioFragmentController extends DefaultComponentController<BlockAudioFragmentViewModel, IBlockAudioFragmentOptions>
+class BlockAudioFragmentController extends AbstractBlockComponentController<BlockAudioFragmentViewModel, IBlockAudioFragmentOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

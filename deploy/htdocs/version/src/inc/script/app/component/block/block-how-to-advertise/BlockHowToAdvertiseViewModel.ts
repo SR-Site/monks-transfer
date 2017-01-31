@@ -1,10 +1,10 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockHowToAdvertiseController from 'app/component/block/block-how-to-advertise/BlockHowToAdvertiseController';
 import IBlockHowToAdvertiseOptions from 'app/component/block/block-how-to-advertise/IBlockHowToAdvertiseOptions';
 
 import ko = require('knockout');
 
-class BlockHowToAdvertiseViewModel extends DefaultComponentViewModel<BlockHowToAdvertiseController, IBlockHowToAdvertiseOptions>
+class BlockHowToAdvertiseViewModel extends AbstractBlockComponentViewModel<BlockHowToAdvertiseController, IBlockHowToAdvertiseOptions>
 {
 	public activeIndex:KnockoutObservable<number> = ko.observable(0);
 

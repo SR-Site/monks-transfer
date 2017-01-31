@@ -1,11 +1,11 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockMarketMapTransitionController from 'app/component/block/block-market-map/BlockMarketMapTransitionController';
 import IBlockMarketMapOptions from 'app/component/block/block-market-map/IBlockMarketMapOptions';
 import BlockMarketMapViewModel from 'app/component/block/block-market-map/BlockMarketMapViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class BlockMarketMapController extends DefaultComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions>
+class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

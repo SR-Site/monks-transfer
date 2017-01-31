@@ -1,6 +1,6 @@
-import DefaultTransitionController from "app/util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "./AbstractTransitionController";
 
-class SentenceTransitionController extends DefaultTransitionController
+class SentenceTransitionController extends AbstractTransitionController
 {
 	private _splitText:SplitText;
 
@@ -9,7 +9,7 @@ class SentenceTransitionController extends DefaultTransitionController
 	{
 		super(element, parentController, false);
 
-		this.addEventListener(DefaultTransitionController.TRANSITION_IN_COMPLETE, () =>{
+		this.addEventListener(AbstractTransitionController.TRANSITION_IN_COMPLETE, () =>{
 			this._splitText.revert();
 		});
 	}

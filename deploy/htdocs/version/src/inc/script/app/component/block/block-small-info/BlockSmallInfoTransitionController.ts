@@ -1,6 +1,6 @@
-import DefaultTransitionController from "app/util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 
-class BlockSmallInfoTransitionController extends DefaultTransitionController
+class BlockSmallInfoTransitionController extends AbstractTransitionController
 {
 	/**
 	 * @public

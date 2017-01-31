@@ -1,8 +1,8 @@
-import IDefaultComponentOptions from "../IDefaultComponentOptions";
+import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import ILink from "../../../data/interface/action/ILink";
 import IImage from "../../../data/interface/media/IImage";
 
-export interface IBlockPageNotFoundOptions extends IDefaultComponentOptions
+export interface IBlockPageNotFoundOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

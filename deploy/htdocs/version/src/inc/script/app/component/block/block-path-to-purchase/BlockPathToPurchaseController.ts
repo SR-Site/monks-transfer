@@ -1,4 +1,4 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockPathToPurchaseTransitionController from 'app/component/block/block-path-to-purchase/BlockPathToPurchaseTransitionController';
 import IBlockPathToPurchaseOptions from 'app/component/block/block-path-to-purchase/IBlockPathToPurchaseOptions';
 import BlockPathToPurchaseViewModel from 'app/component/block/block-path-to-purchase/BlockPathToPurchaseViewModel';
@@ -11,7 +11,7 @@ import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderCon
 import ImageHelper from "../../../util/ImageHelper";
 import Promise = require("bluebird");
 
-class BlockPathToPurchaseController extends DefaultComponentController<BlockPathToPurchaseViewModel, IBlockPathToPurchaseOptions>
+class BlockPathToPurchaseController extends AbstractBlockComponentController<BlockPathToPurchaseViewModel, IBlockPathToPurchaseOptions>
 {
 	private _infiniteImageCarousel: InfiniteImageCarousel;
 	private _imageCrossfader: ImageCrossfaderController;

@@ -1,4 +1,4 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockMapSecondaryTransitionController from 'app/component/block/block-map-secondary/BlockMapSecondaryTransitionController';
 import IBlockMapSecondaryOptions from 'app/component/block/block-map-secondary/IBlockMapSecondaryOptions';
 import BlockMapSecondaryViewModel from 'app/component/block/block-map-secondary/BlockMapSecondaryViewModel';
@@ -8,7 +8,7 @@ import ImageSequenceController from "../../image-sequence/ImageSequenceControlle
 import CommonEvent from "../../../../lib/temple/event/CommonEvent";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 
-class BlockMapSecondaryController extends DefaultComponentController<BlockMapSecondaryViewModel, IBlockMapSecondaryOptions>
+class BlockMapSecondaryController extends AbstractBlockComponentController<BlockMapSecondaryViewModel, IBlockMapSecondaryOptions>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

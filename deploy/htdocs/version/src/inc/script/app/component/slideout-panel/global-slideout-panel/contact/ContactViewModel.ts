@@ -1,4 +1,4 @@
-import DefaultComponentTransitionViewModel from "../../../../util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
+import DefaultComponentTransitionViewModel from "../../../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import ContactController from './ContactController';
 import IContactOptions from './IContactOptions';
 

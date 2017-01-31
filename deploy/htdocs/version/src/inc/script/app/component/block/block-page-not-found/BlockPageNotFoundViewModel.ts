@@ -1,10 +1,10 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockPageNotFoundController from 'app/component/block/block-page-not-found/BlockPageNotFoundController';
 import IBlockPageNotFoundOptions from 'app/component/block/block-page-not-found/IBlockPageNotFoundOptions';
 
 import ko = require('knockout');
 
-class BlockPageNotFoundViewModel extends DefaultComponentViewModel<BlockPageNotFoundController, IBlockPageNotFoundOptions>
+class BlockPageNotFoundViewModel extends AbstractBlockComponentViewModel<BlockPageNotFoundController, IBlockPageNotFoundOptions>
 {
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()

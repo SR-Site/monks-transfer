@@ -1,13 +1,13 @@
-import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import MenuTransitionController from 'app/component/menu/MenuTransitionController';
 import IMenuOptions from 'app/component/menu/IMenuOptions';
 import MenuViewModel from 'app/component/menu/MenuViewModel';
 
 import Log from "lib/temple/util/Log";
-import DefaultTransitionController from "../../util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 import Scrollbar from "../../../lib/temple/component/Scrollbar";
 
-class MenuController extends DefaultComponentTransitionController<MenuViewModel, IMenuOptions>
+class MenuController extends AbstractTransitionComponentController<MenuViewModel, IMenuOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging
@@ -27,7 +27,7 @@ class MenuController extends DefaultComponentTransitionController<MenuViewModel,
 		this._debug.log('Init');
 
 		this.transitionController = new MenuTransitionController(this.element, this);
-		this.transitionController.addEventListener(DefaultTransitionController.TRANSITION_IN_COMPLETE, this.handleTransitionInComplete.bind(this));
+		this.transitionController.addEventListener(AbstractTransitionController.TRANSITION_IN_COMPLETE, this.handleTransitionInComplete.bind(this));
 	}
 
 	/**

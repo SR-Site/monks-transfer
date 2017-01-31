@@ -1,6 +1,6 @@
-import DefaultTransitionController from "../../util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 
-class VideoOverlayTransitionController extends DefaultTransitionController
+class VideoOverlayTransitionController extends AbstractTransitionController
 {
 	/**
 	 * @public

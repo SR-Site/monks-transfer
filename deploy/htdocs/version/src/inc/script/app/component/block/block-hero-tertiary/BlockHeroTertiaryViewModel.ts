@@ -1,10 +1,10 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockHeroTertiaryController from 'app/component/block/block-hero-tertiary/BlockHeroTertiaryController';
 import IBlockHeroTertiaryOptions from 'app/component/block/block-hero-tertiary/IBlockHeroTertiaryOptions';
 
 import ko = require('knockout');
 
-class BlockHeroTertiaryViewModel extends DefaultComponentViewModel<BlockHeroTertiaryController, IBlockHeroTertiaryOptions>
+class BlockHeroTertiaryViewModel extends AbstractBlockComponentViewModel<BlockHeroTertiaryController, IBlockHeroTertiaryOptions>
 {
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()

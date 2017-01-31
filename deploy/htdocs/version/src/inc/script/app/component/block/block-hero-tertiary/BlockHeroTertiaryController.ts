@@ -1,11 +1,11 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockHeroTertiaryTransitionController from 'app/component/block/block-hero-tertiary/BlockHeroTertiaryTransitionController';
 import IBlockHeroTertiaryOptions from 'app/component/block/block-hero-tertiary/IBlockHeroTertiaryOptions';
 import BlockHeroTertiaryViewModel from 'app/component/block/block-hero-tertiary/BlockHeroTertiaryViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class BlockHeroTertiaryController extends DefaultComponentController<BlockHeroTertiaryViewModel, IBlockHeroTertiaryOptions>
+class BlockHeroTertiaryController extends AbstractBlockComponentController<BlockHeroTertiaryViewModel, IBlockHeroTertiaryOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

@@ -1,4 +1,4 @@
-import DefaultButtonViewModel from "../DefaultButtonViewModel";
+import DefaultButtonViewModel from "../AbstractButtonViewModel";
 import ButtonStartAdvertisingController from 'app/component/button/button-start-advertising/ButtonStartAdvertisingController';
 import IButtonStartAdvertisingOptions from 'app/component/button/button-start-advertising/IButtonStartAdvertisingOptions';
 

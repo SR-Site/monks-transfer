@@ -1,11 +1,11 @@
-import DefaultButtonController from "../DefaultButtonController";
+import AbstractButtonController from "../AbstractButtonController";
 import ButtonCircleArrowTransitionController from 'app/component/button/button-circle-arrow/ButtonCircleArrowTransitionController';
 import IButtonCircleArrowOptions from 'app/component/button/button-circle-arrow/IButtonCircleArrowOptions';
 import ButtonCircleArrowViewModel from 'app/component/button/button-circle-arrow/ButtonCircleArrowViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class ButtonCircleArrowController extends DefaultButtonController<ButtonCircleArrowViewModel, IButtonCircleArrowOptions>
+class ButtonCircleArrowController extends AbstractButtonController<ButtonCircleArrowViewModel, IButtonCircleArrowOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

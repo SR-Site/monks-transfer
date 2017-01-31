@@ -1,11 +1,11 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockArticleTeaserTransitionController from 'app/component/block/block-article-teaser/BlockArticleTeaserTransitionController';
 import IBlockArticleTeaserOptions from 'app/component/block/block-article-teaser/IBlockArticleTeaserOptions';
 import BlockArticleTeaserViewModel from 'app/component/block/block-article-teaser/BlockArticleTeaserViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class BlockArticleTeaserController extends DefaultComponentController<BlockArticleTeaserViewModel, IBlockArticleTeaserOptions>
+class BlockArticleTeaserController extends AbstractBlockComponentController<BlockArticleTeaserViewModel, IBlockArticleTeaserOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

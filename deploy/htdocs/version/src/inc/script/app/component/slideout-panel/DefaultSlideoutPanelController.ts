@@ -5,19 +5,19 @@ import CallbackCounter from "../../util/CallbackCounter";
 import DefaultSlideoutPanelTransitionController from "./DefaultSlideoutPanelTransitionController";
 import ScrollUtils from "../../util/ScrollUtils";
 import Scrollbar from "../../../lib/temple/component/Scrollbar";
-import DefaultComponentTransitionController from "../../util/component-transition/default-component-transition/DefaultComponentTransitionController";
-import DefaultComponentTransitionViewModel from "../../util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
+import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import NativeEventListener from "../../../lib/temple/event/NativeEventListener";
 import ThrottleDebounce from "../../../lib/temple/util/ThrottleDebounce";
 
-class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> extends DefaultComponentTransitionController<T, U>
+class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> extends AbstractTransitionComponentController<T, U>
 {
 	public callbackCounter: CallbackCounter = new CallbackCounter();
 
 	public viewModel: DefaultSlideoutPanelViewModel<T, U> & any;
 	public transitionController: DefaultSlideoutPanelTransitionController;
 
-	protected panelComponents: {[id: string]: DefaultComponentTransitionController<any, any>} = {};
+	protected panelComponents: {[id: string]: AbstractTransitionComponentController<any, any>} = {};
 	protected activePanel: string = '';
 
 	/**
@@ -46,9 +46,9 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 	 * @public
 	 * @method getPanelComponentById
 	 * @param panelId
-	 * @returns {DefaultComponentTransitionController}
+	 * @returns {AbstractTransitionComponentController}
 	 */
-	public getPanelComponentById(panelId): DefaultComponentTransitionController<any, any>
+	public getPanelComponentById(panelId): AbstractTransitionComponentController<any, any>
 	{
 		return this.panelComponents[panelId];
 	}
@@ -58,7 +58,7 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 	 * @method handleComponentReady
 	 * @param controller
 	 */
-	public handleComponentReady(controller: DefaultComponentTransitionController<DefaultComponentTransitionViewModel<any, any>, any>): void
+	public handleComponentReady(controller: AbstractTransitionComponentController<DefaultComponentTransitionViewModel<any, any>, any>): void
 	{
 		this.panelComponents[controller.options.id] = controller;
 	}

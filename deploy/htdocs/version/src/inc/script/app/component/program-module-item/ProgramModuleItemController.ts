@@ -1,11 +1,11 @@
-import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import ProgramModuleItemTransitionController from 'app/component/program-module-item/ProgramModuleItemTransitionController';
 import IProgramModuleItemOptions from 'app/component/program-module-item/IProgramModuleItemOptions';
 import ProgramModuleItemViewModel from 'app/component/program-module-item/ProgramModuleItemViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class ProgramModuleItemController extends DefaultComponentTransitionController<ProgramModuleItemViewModel, IProgramModuleItemOptions>
+class ProgramModuleItemController extends AbstractTransitionComponentController<ProgramModuleItemViewModel, IProgramModuleItemOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

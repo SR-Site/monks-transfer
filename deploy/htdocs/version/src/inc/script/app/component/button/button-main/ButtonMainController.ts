@@ -1,4 +1,4 @@
-import DefaultButtonController from "../DefaultButtonController";
+import AbstractButtonController from "../AbstractButtonController";
 import ButtonMainTransitionController from "app/component/button/button-main/ButtonMainTransitionController";
 import IButtonMainOptions from "app/component/button/button-main/IButtonMainOptions";
 import ButtonMainViewModel from "app/component/button/button-main/ButtonMainViewModel";
@@ -6,7 +6,7 @@ import Log from "lib/temple/util/Log";
 import Theme from "../../../data/enum/style/Theme";
 import DataManager from "../../../data/DataManager";
 
-class ButtonMainController extends DefaultButtonController<ButtonMainViewModel, IButtonMainOptions>
+class ButtonMainController extends AbstractButtonController<ButtonMainViewModel, IButtonMainOptions>
 {
 	public static BORDER_WIDTH: number = 5;
 

@@ -1,13 +1,13 @@
 import IVideoOverlayOptions from "app/component/video-overlay/IVideoOverlayOptions";
 import VideoOverlayViewModel from "app/component/video-overlay/VideoOverlayViewModel";
 import Log from "lib/temple/util/Log";
-import DefaultComponentTransitionController from "../../util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import VideoPlayerController from "../video-player/VideoPlayerController";
 import {IVideoPlayerOptions} from "../video-player/IVideoPlayerOptions";
 import VideoOverlayTransitionController from "./VideoOverlayTransitionController";
-import DefaultTransitionController from "../../util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 
-class VideoOverlayController<T, U extends IVideoOverlayOptions> extends DefaultComponentTransitionController<VideoOverlayViewModel<any, any>, IVideoOverlayOptions>
+class VideoOverlayController<T, U extends IVideoOverlayOptions> extends AbstractTransitionComponentController<VideoOverlayViewModel<any, any>, IVideoOverlayOptions>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging
@@ -33,12 +33,12 @@ class VideoOverlayController<T, U extends IVideoOverlayOptions> extends DefaultC
 		this.transitionController = new VideoOverlayTransitionController(this.element, this);
 
 		this.transitionController.addEventListener(
-			DefaultTransitionController.TRANSITION_IN_START,
+			AbstractTransitionController.TRANSITION_IN_START,
 			this.handleTransitionInStart.bind(this)
 		);
 
 		this.transitionController.addEventListener(
-			DefaultTransitionController.TRANSITION_OUT_COMPLETE,
+			AbstractTransitionController.TRANSITION_OUT_COMPLETE,
 			this.handleTransitionOutComplete.bind(this)
 		);
 	}

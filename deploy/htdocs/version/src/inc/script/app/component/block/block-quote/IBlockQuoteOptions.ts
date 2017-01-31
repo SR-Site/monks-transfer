@@ -1,7 +1,7 @@
-import IDefaultComponentOptions from "../IDefaultComponentOptions";
+import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import IImage from "../../../data/interface/media/IImage";
 
-export interface IBlockQuoteOptions extends IDefaultComponentOptions
+export interface IBlockQuoteOptions extends IAbstractBlockComponentOptions
 {
 	image:IImage;
 	quote:string;

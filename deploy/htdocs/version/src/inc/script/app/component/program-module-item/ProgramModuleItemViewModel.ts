@@ -1,4 +1,4 @@
-import DefaultComponentTransitionViewModel from "app/util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
+import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import ProgramModuleItemController from 'app/component/program-module-item/ProgramModuleItemController';
 import IProgramModuleItemOptions from 'app/component/program-module-item/IProgramModuleItemOptions';
 

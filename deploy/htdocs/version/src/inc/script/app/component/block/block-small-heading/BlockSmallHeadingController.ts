@@ -1,11 +1,11 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockSmallHeadingTransitionController from 'app/component/block/block-small-heading/BlockSmallHeadingTransitionController';
 import IBlockSmallHeadingOptions from 'app/component/block/block-small-heading/IBlockSmallHeadingOptions';
 import BlockSmallHeadingViewModel from 'app/component/block/block-small-heading/BlockSmallHeadingViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class BlockSmallHeadingController extends DefaultComponentController<BlockSmallHeadingViewModel, IBlockSmallHeadingOptions>
+class BlockSmallHeadingController extends AbstractBlockComponentController<BlockSmallHeadingViewModel, IBlockSmallHeadingOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

@@ -1,7 +1,7 @@
-import DefaultTransitionController from "app/util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 import Promise = require("bluebird");
 
-class ButtonMainTransitionController extends DefaultTransitionController
+class ButtonMainTransitionController extends AbstractTransitionController
 {
 	private _hoverTimeline: TimelineLite;
 	private _hoverResolveMethod: Function;
@@ -29,7 +29,7 @@ class ButtonMainTransitionController extends DefaultTransitionController
 			opacity: 0
 		}, 0);
 
-		this.addEventListener(DefaultTransitionController.TRANSITION_IN_COMPLETE, () => this.setupHoverTimeline());
+		this.addEventListener(AbstractTransitionController.TRANSITION_IN_COMPLETE, () => this.setupHoverTimeline());
 	}
 
 	/**

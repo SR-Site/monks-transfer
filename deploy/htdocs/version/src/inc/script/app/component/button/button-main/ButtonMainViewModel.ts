@@ -1,4 +1,4 @@
-import DefaultButtonViewModel from "../DefaultButtonViewModel";
+import DefaultButtonViewModel from "../AbstractButtonViewModel";
 import ButtonMainController from 'app/component/button/button-main/ButtonMainController';
 import IButtonMainOptions from 'app/component/button/button-main/IButtonMainOptions';
 

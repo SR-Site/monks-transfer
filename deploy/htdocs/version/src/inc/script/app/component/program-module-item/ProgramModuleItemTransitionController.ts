@@ -1,7 +1,7 @@
-import DefaultTransitionController from "app/util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 import Promise = require("bluebird");
 
-class ProgramModuleItemTransitionController extends DefaultTransitionController
+class ProgramModuleItemTransitionController extends AbstractTransitionController
 {
 	private _mouseEnterTimeline: TimelineLite;
 	private _mouseLeaveResolveMethod: Function;
@@ -14,7 +14,7 @@ class ProgramModuleItemTransitionController extends DefaultTransitionController
 	{
 		this.transitionInTimeline.from(this.element, 0.4, {opacity: 0});
 
-		this.addEventListener(DefaultTransitionController.TRANSITION_IN_COMPLETE, () => this.setupHoverTimeline());
+		this.addEventListener(AbstractTransitionController.TRANSITION_IN_COMPLETE, () => this.setupHoverTimeline());
 	}
 
 	/**

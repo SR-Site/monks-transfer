@@ -1,11 +1,11 @@
-import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import PageLoaderTransitionController from 'app/component/page-loader/PageLoaderTransitionController';
 import IPageLoaderOptions from 'app/component/page-loader/IPageLoaderOptions';
 import PageLoaderViewModel from 'app/component/page-loader/PageLoaderViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class PageLoaderController extends DefaultComponentTransitionController<PageLoaderViewModel, IPageLoaderOptions>
+class PageLoaderController extends AbstractTransitionComponentController<PageLoaderViewModel, IPageLoaderOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

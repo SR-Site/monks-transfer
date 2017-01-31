@@ -1,7 +1,7 @@
-import IDefaultComponentOptions from "../IDefaultComponentOptions";
+import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import IImage from "../../../data/interface/media/IImage";
 
-export interface IBlockAudioFragmentOptions extends IDefaultComponentOptions
+export interface IBlockAudioFragmentOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

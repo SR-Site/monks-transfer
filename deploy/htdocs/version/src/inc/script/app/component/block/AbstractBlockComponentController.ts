@@ -1,16 +1,16 @@
-import IDefaultComponentOptions from "./IDefaultComponentOptions";
+import IAbstractBlockComponentOptions from "./IAbstractBlockComponentOptions";
 import AbstractComponentController from "../../../lib/temple/component/AbstractComponentController";
-import DefaultComponentViewModel from "./DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "./AbstractBlockComponentViewModel";
 import CallbackCounter from "../../util/CallbackCounter";
-import DefaultContentPageController from "../../page/DefaultContentPageController";
-import DefaultTransitionController from "../../util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
+import ContentPagePageController from "../../page/content-page/ContentPagePageController";
 import Promise = require("bluebird");
 
 /**
- * @class DefaultComponentController
+ * @class AbstractBlockComponentController
  * @description This is the default class used for all the block components in the application
  */
-class DefaultComponentController<T, U extends IDefaultComponentOptions> extends AbstractComponentController<DefaultComponentViewModel<T, U>, U>
+abstract class AbstractBlockComponentController<T, U extends IAbstractBlockComponentOptions> extends AbstractComponentController<AbstractBlockComponentViewModel<T, U>, U>
 {
 	/**
 	 * @property transitionComplete
@@ -51,14 +51,14 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 	public disableTransitionIn: boolean = false;
 	/**
 	 * @property viewModel
-	 * @type {DefaultComponentViewModel}
+	 * @type {AbstractBlockComponentViewModel}
 	 */
-	protected viewModel: DefaultComponentViewModel<T, U> & any;
+	protected viewModel: AbstractBlockComponentViewModel<T, U> & any;
 	/**
 	 * @propety transitionController
-	 * @type {DefaultTransitionController}
+	 * @type {AbstractTransitionController}
 	 */
-	protected transitionController: DefaultTransitionController;
+	protected transitionController: AbstractTransitionController;
 
 	constructor(element, options)
 	{
@@ -90,7 +90,7 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 		this.callbackCounter.promise.then(() => this.allComponentsLoaded());
 
 		// Will be overwritten in parent class
-		this.transitionController = new DefaultTransitionController(this.element, this);
+		// this.transitionController = new AbstractTransitionController(this.element, this);
 
 		// Set the default classes for block components
 		if(this.options.windowed)
@@ -121,14 +121,14 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 	 * @method get parentPage
 	 * @description Method to find the parent page of the current component
 	 */
-	public get parentPage(): DefaultContentPageController<any>
+	public get parentPage(): ContentPagePageController
 	{
-		let parent = <DefaultContentPageController<any>>this.parent;
+		let parent = <ContentPagePageController>this.parent;
 
 		// Try to find the parent that is a page
 		while(parent.page == void 0)
 		{
-			parent = <DefaultContentPageController<any>>parent.parent;
+			parent = <ContentPagePageController>parent.parent;
 		}
 
 		return parent;
@@ -183,7 +183,7 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 	 * @handleComponentReady
 	 * @param controller
 	 */
-	public handleComponentReady(controller: DefaultComponentController<T, U>): void
+	public handleComponentReady(controller: AbstractBlockComponentController<T, U>): void
 	{
 		this.parentPage.handleComponentReady(controller);
 	}
@@ -231,4 +231,4 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 	}
 }
 
-export default DefaultComponentController;
+export default AbstractBlockComponentController;

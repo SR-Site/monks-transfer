@@ -1,7 +1,7 @@
 import IDefaultSlideoutPanelOptions from "./IDefaultSlideoutPanelOptions";
 import DefaultSlideoutPanelController from "./DefaultSlideoutPanelController";
 import PanelBlocks from "../../data/enum/block/PanelBlocks";
-import DefaultComponentTransitionViewModel from "../../util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
+import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import Promise = require("bluebird");
 
 class DefaultSlideoutPanelViewModel<T, U extends IDefaultSlideoutPanelOptions> extends DefaultComponentTransitionViewModel<DefaultSlideoutPanelController<T, U>, U>

@@ -1,7 +1,7 @@
-import DefaultTransitionController from "app/util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 import SentenceTransitionController from "../../../util/component-transition/SentenceTransitionController";
 
-class BlockImageWithContentTransitionController extends DefaultTransitionController
+class BlockImageWithContentTransitionController extends AbstractTransitionController
 {
 
 	private _headingAnimation: SentenceTransitionController;

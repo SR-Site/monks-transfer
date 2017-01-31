@@ -1,4 +1,4 @@
-import DefaultButtonViewModel from "../DefaultButtonViewModel";
+import DefaultButtonViewModel from "../AbstractButtonViewModel";
 import ButtonPlayCircleController from 'app/component/button/button-play-circle/ButtonPlayCircleController';
 import IButtonPlayCircleOptions from 'app/component/button/button-play-circle/IButtonPlayCircleOptions';
 

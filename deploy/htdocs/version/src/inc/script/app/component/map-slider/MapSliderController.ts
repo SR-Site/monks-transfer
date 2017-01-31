@@ -1,4 +1,4 @@
-import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import MapSliderTransitionController from "app/component/map-slider/MapSliderTransitionController";
 import IMapSliderOptions from "app/component/map-slider/IMapSliderOptions";
 import MapSliderViewModel from "app/component/map-slider/MapSliderViewModel";
@@ -6,7 +6,7 @@ import Log from "lib/temple/util/Log";
 import CommonEvent from "../../../lib/temple/event/CommonEvent";
 import bowser = require('bowser');
 
-class MapSliderController extends DefaultComponentTransitionController<MapSliderViewModel, IMapSliderOptions>
+class MapSliderController extends AbstractTransitionComponentController<MapSliderViewModel, IMapSliderOptions>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

@@ -1,11 +1,11 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockQuoteTransitionController from 'app/component/block/block-quote/BlockQuoteTransitionController';
 import IBlockQuoteOptions from 'app/component/block/block-quote/IBlockQuoteOptions';
 import BlockQuoteViewModel from 'app/component/block/block-quote/BlockQuoteViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class BlockQuoteController extends DefaultComponentController<BlockQuoteViewModel, IBlockQuoteOptions>
+class BlockQuoteController extends AbstractBlockComponentController<BlockQuoteViewModel, IBlockQuoteOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

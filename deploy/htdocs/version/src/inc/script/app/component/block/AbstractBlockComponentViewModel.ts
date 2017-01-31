@@ -1,19 +1,19 @@
-import IDefaultComponentOptions from "./IDefaultComponentOptions";
+import IAbstractBlockComponentOptions from "./IAbstractBlockComponentOptions";
 import AbstractComponentViewModel from "../../../lib/temple/component/AbstractComponentViewModel";
-import DefaultComponentController from "./DefaultComponentController";
+import AbstractBlockComponentController from "./AbstractBlockComponentController";
 import BlockType from "../../data/enum/type/BlockType";
 
 /**
- * @class DefaultComponentViewModel
+ * @class AbstractBlockComponentViewModel
  * @description This is the base viewModel used for all block components.
  */
-class DefaultComponentViewModel<T, U extends IDefaultComponentOptions> extends AbstractComponentViewModel<DefaultComponentController<T, U>, U>
+abstract class AbstractBlockComponentViewModel<T, U extends IAbstractBlockComponentOptions> extends AbstractComponentViewModel<AbstractBlockComponentController<T, U>, U>
 {
 	/**
 	 * @property controller
-	 * @type {DefaultComponentController<T, U>
+	 * @type {AbstractBlockComponentController<T, U>
 	 */
-	public controller:DefaultComponentController<T, U> & any;
+	public controller:AbstractBlockComponentController<T, U> & any;
 
 	/**
 	 * @property BlockTYpe
@@ -41,4 +41,4 @@ class DefaultComponentViewModel<T, U extends IDefaultComponentOptions> extends A
 	}
 }
 
-export default DefaultComponentViewModel;
+export default AbstractBlockComponentViewModel;

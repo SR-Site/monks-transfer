@@ -1,4 +1,4 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockHowToAdvertiseTransitionController from 'app/component/block/block-how-to-advertise/BlockHowToAdvertiseTransitionController';
 import IBlockHowToAdvertiseOptions from 'app/component/block/block-how-to-advertise/IBlockHowToAdvertiseOptions';
 import BlockHowToAdvertiseViewModel from 'app/component/block/block-how-to-advertise/BlockHowToAdvertiseViewModel';
@@ -10,7 +10,7 @@ import CommonEvent from "../../../../lib/temple/event/CommonEvent";
 import {IDraggableEventData} from "../../../util/DraggableInstance";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 
-class BlockHowToAdvertiseController extends DefaultComponentController<BlockHowToAdvertiseViewModel, IBlockHowToAdvertiseOptions>
+class BlockHowToAdvertiseController extends AbstractBlockComponentController<BlockHowToAdvertiseViewModel, IBlockHowToAdvertiseOptions>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

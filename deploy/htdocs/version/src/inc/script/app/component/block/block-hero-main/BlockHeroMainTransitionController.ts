@@ -1,8 +1,8 @@
-import DefaultTransitionController from "app/util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 import TriangleTransitionController from "../../../util/component-transition/TriangleTransitionController";
 import Promise = require("bluebird");
 
-class BlockHeroMainTransitionController extends DefaultTransitionController
+class BlockHeroMainTransitionController extends AbstractTransitionController
 {
 	private _mainTriangleAnimation: TriangleTransitionController;
 	private _slideTransitions: Array<{

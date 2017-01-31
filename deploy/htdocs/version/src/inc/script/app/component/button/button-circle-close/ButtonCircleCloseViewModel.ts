@@ -1,4 +1,4 @@
-import DefaultButtonViewModel from "../DefaultButtonViewModel";
+import DefaultButtonViewModel from "../AbstractButtonViewModel";
 import ButtonCircleCloseController from 'app/component/button/button-circle-close/ButtonCircleCloseController';
 import IButtonCircleCloseOptions from 'app/component/button/button-circle-close/IButtonCircleCloseOptions';
 

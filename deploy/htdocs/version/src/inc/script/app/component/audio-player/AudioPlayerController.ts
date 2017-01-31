@@ -1,4 +1,4 @@
-import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import AudioPlayerTransitionController from 'app/component/audio-player/AudioPlayerTransitionController';
 import IAudioPlayerOptions from 'app/component/audio-player/IAudioPlayerOptions';
 import AudioPlayerViewModel from 'app/component/audio-player/AudioPlayerViewModel';
@@ -6,7 +6,7 @@ import AudioPlayerViewModel from 'app/component/audio-player/AudioPlayerViewMode
 import Log from "lib/temple/util/Log";
 import ButtonPlayCircleController from "../button/button-play-circle/ButtonPlayCircleController";
 
-class AudioPlayerController extends DefaultComponentTransitionController<AudioPlayerViewModel, IAudioPlayerOptions>
+class AudioPlayerController extends AbstractTransitionComponentController<AudioPlayerViewModel, IAudioPlayerOptions>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

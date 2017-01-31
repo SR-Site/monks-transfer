@@ -1,10 +1,10 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockArticleTeaserController from 'app/component/block/block-article-teaser/BlockArticleTeaserController';
 import IBlockArticleTeaserOptions from 'app/component/block/block-article-teaser/IBlockArticleTeaserOptions';
 
 import ko = require('knockout');
 
-class BlockArticleTeaserViewModel extends DefaultComponentViewModel<BlockArticleTeaserController, IBlockArticleTeaserOptions>
+class BlockArticleTeaserViewModel extends AbstractBlockComponentViewModel<BlockArticleTeaserController, IBlockArticleTeaserOptions>
 {
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()

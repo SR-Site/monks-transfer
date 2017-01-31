@@ -1,4 +1,4 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockProgramModuleController from "app/component/block/block-program-module/BlockProgramModuleController";
 import IBlockProgramModuleOptions from "app/component/block/block-program-module/IBlockProgramModuleOptions";
 
@@ -6,7 +6,7 @@ import ko = require('knockout');
 import DataManager from "../../../data/DataManager";
 import {DeviceState} from "../../../data/scss-shared/MediaQueries";
 
-class BlockProgramModuleViewModel extends DefaultComponentViewModel<BlockProgramModuleController, IBlockProgramModuleOptions>
+class BlockProgramModuleViewModel extends AbstractBlockComponentViewModel<BlockProgramModuleController, IBlockProgramModuleOptions>
 {
 	public activeHoverIndex: KnockoutObservable<number> = ko.observable(null);
 

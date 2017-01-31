@@ -2,7 +2,7 @@ import VideoOverlayController from 'app/component/video-overlay/VideoOverlayCont
 import IVideoOverlayOptions from 'app/component/video-overlay/IVideoOverlayOptions';
 
 import ko = require('knockout');
-import DefaultComponentTransitionViewModel from "../../util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
+import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 
 class VideoOverlayViewModel<T, U extends IVideoOverlayOptions> extends DefaultComponentTransitionViewModel<VideoOverlayController<any, any>, IVideoOverlayOptions>
 {

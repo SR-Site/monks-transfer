@@ -1,11 +1,11 @@
-import DefaultButtonController from "../DefaultButtonController";
+import AbstractButtonController from "../AbstractButtonController";
 import ButtonCallToReachTransitionController from 'app/component/button/button-call-to-reach/ButtonCallToReachTransitionController';
 import IButtonCallToReachOptions from 'app/component/button/button-call-to-reach/IButtonCallToReachOptions';
 import ButtonCallToReachViewModel from 'app/component/button/button-call-to-reach/ButtonCallToReachViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class ButtonCallToReachController extends DefaultButtonController<ButtonCallToReachViewModel, IButtonCallToReachOptions>
+class ButtonCallToReachController extends AbstractButtonController<ButtonCallToReachViewModel, IButtonCallToReachOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

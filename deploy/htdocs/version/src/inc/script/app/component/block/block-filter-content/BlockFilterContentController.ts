@@ -1,4 +1,4 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockFilterContentTransitionController from "app/component/block/block-filter-content/BlockFilterContentTransitionController";
 import IBlockFilterContentOptions from "app/component/block/block-filter-content/IBlockFilterContentOptions";
 import BlockFilterContentViewModel from "app/component/block/block-filter-content/BlockFilterContentViewModel";
@@ -7,7 +7,7 @@ import DataManager from "../../../data/DataManager";
 import Promise = require("bluebird");
 import BlockHelper from "../../../util/BlockHelper";
 import CommonEvent from "../../../../lib/temple/event/CommonEvent";
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import IBlock from "../../../data/interface/block/IBlock";
 import CallbackCounter from "../../../util/CallbackCounter";
 import FilterMenuController from "../../filter-menu/FilterMenuController";
@@ -17,7 +17,7 @@ import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedCon
 import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
 import IGatewayResult from "../../../net/gateway/result/IGatewayResult";
 
-class BlockFilterContentController extends DefaultComponentController<BlockFilterContentViewModel, IBlockFilterContentOptions>
+class BlockFilterContentController extends AbstractBlockComponentController<BlockFilterContentViewModel, IBlockFilterContentOptions>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging
@@ -26,7 +26,7 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 */
 	private _debug: Log = new Log('app.component.BlockFilterContent');
 
-	private _components: {[id: string]: DefaultComponentController<DefaultComponentViewModel<any, any>, any>} = {};
+	private _components: {[id: string]: AbstractBlockComponentController<AbstractBlockComponentViewModel<any, any>, any>} = {};
 	private _filterMenu: FilterMenuController;
 	private _filters: {[filterType: string]: string};
 	private _loader: Loader;
@@ -48,7 +48,7 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 * @public
 	 * @method handleDynamicComponentLoaded
 	 */
-	public handleDynamicComponentLoaded(controller: DefaultComponentController<any, any>): void
+	public handleDynamicComponentLoaded(controller: AbstractBlockComponentController<any, any>): void
 	{
 		this._components[controller.options.id + controller.eventNamespace] = controller;
 

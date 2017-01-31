@@ -1,10 +1,10 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockLatestController from 'app/component/block/block-latest/BlockLatestController';
 import IBlockLatestOptions from 'app/component/block/block-latest/IBlockLatestOptions';
 
 import ko = require('knockout');
 
-class BlockLatestViewModel extends DefaultComponentViewModel<BlockLatestController, IBlockLatestOptions>
+class BlockLatestViewModel extends AbstractBlockComponentViewModel<BlockLatestController, IBlockLatestOptions>
 {
 	public findOutMoreDisabled:KnockoutObservable<boolean> = ko.observable(false);
 

@@ -1,8 +1,8 @@
-import IDefaultComponentOptions from "../IDefaultComponentOptions";
+import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import IImage from "../../../data/interface/media/IImage";
 import ILink from "../../../data/interface/action/ILink";
 
-export interface IBlockHeroMainOptions extends IDefaultComponentOptions
+export interface IBlockHeroMainOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

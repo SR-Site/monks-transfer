@@ -1,11 +1,11 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockStoryInfoImagesTransitionController from 'app/component/block/block-story-info-images/BlockStoryInfoImagesTransitionController';
 import IBlockStoryInfoImagesOptions from 'app/component/block/block-story-info-images/IBlockStoryInfoImagesOptions';
 import BlockStoryInfoImagesViewModel from 'app/component/block/block-story-info-images/BlockStoryInfoImagesViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class BlockStoryInfoImagesController extends DefaultComponentController<BlockStoryInfoImagesViewModel, IBlockStoryInfoImagesOptions>
+class BlockStoryInfoImagesController extends AbstractBlockComponentController<BlockStoryInfoImagesViewModel, IBlockStoryInfoImagesOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

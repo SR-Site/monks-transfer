@@ -1,4 +1,4 @@
-import DefaultComponentTransitionViewModel from "app/util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
+import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import MapSliderController from 'app/component/map-slider/MapSliderController';
 import IMapSliderOptions from 'app/component/map-slider/IMapSliderOptions';
 

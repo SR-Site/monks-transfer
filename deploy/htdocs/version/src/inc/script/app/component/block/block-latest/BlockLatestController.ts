@@ -1,11 +1,11 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockLatestTransitionController from 'app/component/block/block-latest/BlockLatestTransitionController';
 import IBlockLatestOptions from 'app/component/block/block-latest/IBlockLatestOptions';
 import BlockLatestViewModel from 'app/component/block/block-latest/BlockLatestViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class BlockLatestController extends DefaultComponentController<BlockLatestViewModel, IBlockLatestOptions>
+class BlockLatestController extends AbstractBlockComponentController<BlockLatestViewModel, IBlockLatestOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

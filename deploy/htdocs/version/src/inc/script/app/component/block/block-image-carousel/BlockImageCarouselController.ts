@@ -1,4 +1,4 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockImageCarouselTransitionController from 'app/component/block/block-image-carousel/BlockImageCarouselTransitionController';
 import IBlockImageCarouselOptions from 'app/component/block/block-image-carousel/IBlockImageCarouselOptions';
 import BlockImageCarouselViewModel from 'app/component/block/block-image-carousel/BlockImageCarouselViewModel';
@@ -9,7 +9,7 @@ import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedCon
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
 
-class BlockImageCarouselController extends DefaultComponentController<BlockImageCarouselViewModel, IBlockImageCarouselOptions>
+class BlockImageCarouselController extends AbstractBlockComponentController<BlockImageCarouselViewModel, IBlockImageCarouselOptions>
 {
 	private _infiniteImageCarousel:InfiniteImageCarousel;
 	private _paginatorDashedController:PaginatorDashedController;

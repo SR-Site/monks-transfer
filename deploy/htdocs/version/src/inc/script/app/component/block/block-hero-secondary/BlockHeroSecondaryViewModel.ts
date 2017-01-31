@@ -1,4 +1,4 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockHeroSecondaryController from 'app/component/block/block-hero-secondary/BlockHeroSecondaryController';
 import IBlockHeroSecondaryOptions from 'app/component/block/block-hero-secondary/IBlockHeroSecondaryOptions';
 
@@ -6,7 +6,7 @@ import ko = require('knockout');
 import Direction from "../../../data/enum/layout/Direction";
 import Alignment from "../../../data/enum/layout/Alignment";
 
-class BlockHeroSecondaryViewModel extends DefaultComponentViewModel<BlockHeroSecondaryController, IBlockHeroSecondaryOptions>
+class BlockHeroSecondaryViewModel extends AbstractBlockComponentViewModel<BlockHeroSecondaryController, IBlockHeroSecondaryOptions>
 {
 	public Direction:Enum = Direction;
 	public Alignment:Enum = Alignment;

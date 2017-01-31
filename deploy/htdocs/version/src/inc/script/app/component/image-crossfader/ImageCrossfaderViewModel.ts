@@ -1,4 +1,4 @@
-import DefaultComponentTransitionViewModel from "app/util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
+import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import ImageCrossfaderController from 'app/component/image-crossfader/ImageCrossfaderController';
 import IImageCrossfaderOptions from 'app/component/image-crossfader/IImageCrossfaderOptions';
 

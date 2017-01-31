@@ -1,4 +1,4 @@
-import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import ImageCrossfaderTransitionController from "app/component/image-crossfader/ImageCrossfaderTransitionController";
 import IImageCrossfaderOptions from "app/component/image-crossfader/IImageCrossfaderOptions";
 import ImageCrossfaderViewModel from "app/component/image-crossfader/ImageCrossfaderViewModel";
@@ -11,7 +11,7 @@ import IRectangle from "../../../lib/temple/geom/IRectangle";
 import TrianglePattern from "./util/TrianglePattern";
 import Promise = require("bluebird");
 
-class ImageCrossfaderController extends DefaultComponentTransitionController<ImageCrossfaderViewModel, IImageCrossfaderOptions>
+class ImageCrossfaderController extends AbstractTransitionComponentController<ImageCrossfaderViewModel, IImageCrossfaderOptions>
 {
 	/**
 	 * The amount of grid sizes each triangle contains

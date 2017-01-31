@@ -1,4 +1,4 @@
-import DefaultComponentTransitionViewModel from "app/util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
+import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import PercentageLoaderController from 'app/component/percentage-loader/PercentageLoaderController';
 import IPercentageLoaderOptions from 'app/component/percentage-loader/IPercentageLoaderOptions';
 

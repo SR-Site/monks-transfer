@@ -1,11 +1,11 @@
 import AbstractComponentController from "../../../../lib/temple/component/AbstractComponentController";
-import DefaultSubTransitionViewModel from "./DefaultComponentTransitionViewModel";
-import IDefaultComponentTransitionOptions from "./IDefaultComponentTransitionOptions";
+import DefaultSubTransitionViewModel from "./AbstractTransitionComponentViewModel";
+import IDefaultComponentTransitionOptions from "./IAbstractTransitionComponentOptions";
 import CallbackCounter from "../../CallbackCounter";
-import DefaultTransitionController from "../DefaultTransitionController";
+import AbstractTransitionController from "../AbstractTransitionController";
 import Promise = require("bluebird");
 
-abstract class DefaultComponentTransitionController<T, U extends IDefaultComponentTransitionOptions> extends AbstractComponentController<DefaultSubTransitionViewModel<T, U>, U>
+abstract class AbstractTransitionComponentController<T, U extends IDefaultComponentTransitionOptions> extends AbstractComponentController<DefaultSubTransitionViewModel<T, U>, U>
 {
 	/**
 	 * @property viewModel
@@ -14,9 +14,9 @@ abstract class DefaultComponentTransitionController<T, U extends IDefaultCompone
 	public viewModel: T & any;
 	/**
 	 * @property transitionController
-	 * @type {DefaultTransitionController}
+	 * @type {AbstractTransitionController}
 	 */
-	public transitionController: DefaultTransitionController;
+	public transitionController: AbstractTransitionController;
 	/**
 	 * @property callBackCounter
 	 * @type {CallbackCounter}
@@ -127,4 +127,4 @@ abstract class DefaultComponentTransitionController<T, U extends IDefaultCompone
 	}
 }
 
-export default DefaultComponentTransitionController;
+export default AbstractTransitionComponentController;

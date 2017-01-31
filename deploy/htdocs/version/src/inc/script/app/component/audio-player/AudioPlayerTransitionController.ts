@@ -1,6 +1,6 @@
-import DefaultTransitionController from "app/util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 
-class AudioPlayerTransitionController extends DefaultTransitionController
+class AudioPlayerTransitionController extends AbstractTransitionController
 {
 	/**
 	 * @public

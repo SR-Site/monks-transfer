@@ -1,6 +1,6 @@
-import IDefaultComponentOptions from "../IDefaultComponentOptions";
+import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 
-export interface IBlockSmallHeadingOptions extends IDefaultComponentOptions
+export interface IBlockSmallHeadingOptions extends IAbstractBlockComponentOptions
 {
 	heading: string;
 }

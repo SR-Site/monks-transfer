@@ -1,11 +1,11 @@
-import DefaultButtonController from "../DefaultButtonController";
+import AbstractButtonController from "../AbstractButtonController";
 import ButtonTagTransitionController from 'app/component/button/button-tag/ButtonTagTransitionController';
 import IButtonTagOptions from 'app/component/button/button-tag/IButtonTagOptions';
 import ButtonTagViewModel from 'app/component/button/button-tag/ButtonTagViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class ButtonTagController extends DefaultButtonController<ButtonTagViewModel, IButtonTagOptions>
+class ButtonTagController extends AbstractButtonController<ButtonTagViewModel, IButtonTagOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

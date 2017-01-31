@@ -1,4 +1,4 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockProgramModuleTransitionController from 'app/component/block/block-program-module/BlockProgramModuleTransitionController';
 import IBlockProgramModuleOptions from 'app/component/block/block-program-module/IBlockProgramModuleOptions';
 import BlockProgramModuleViewModel from 'app/component/block/block-program-module/BlockProgramModuleViewModel';
@@ -8,7 +8,7 @@ import ProgramModuleItemController from "../../program-module-item/ProgramModule
 import Promise = require("bluebird");
 import ProgramModuleItemTransitionController from "../../program-module-item/ProgramModuleItemTransitionController";
 
-class BlockProgramModuleController extends DefaultComponentController<BlockProgramModuleViewModel, IBlockProgramModuleOptions>
+class BlockProgramModuleController extends AbstractBlockComponentController<BlockProgramModuleViewModel, IBlockProgramModuleOptions>
 {
 	private _hoverTimelineResolveMethod: Function;
 	private _hoverTimelinePromise: Promise<any>;

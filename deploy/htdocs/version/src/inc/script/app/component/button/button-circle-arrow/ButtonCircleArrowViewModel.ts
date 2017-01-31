@@ -1,4 +1,4 @@
-import DefaultButtonViewModel from "../DefaultButtonViewModel";
+import DefaultButtonViewModel from "../AbstractButtonViewModel";
 import ButtonCircleArrowController from 'app/component/button/button-circle-arrow/ButtonCircleArrowController';
 import IButtonCircleArrowOptions from 'app/component/button/button-circle-arrow/IButtonCircleArrowOptions';
 

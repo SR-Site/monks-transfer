@@ -2,7 +2,7 @@ import ILink from "../../data/interface/action/ILink";
 import IMethod from "../../data/interface/action/IMethod";
 import ButtonSize from "../../data/enum/layout/ButtonSize";
 
-interface IDefaultButtonOptions
+interface IAbstractButtonOptions
 {
 	action: ILink|IMethod;
 	size?: ButtonSize;
@@ -10,4 +10,4 @@ interface IDefaultButtonOptions
 	transitionInOnInit?: boolean;
 }
 
-export default IDefaultButtonOptions;
+export default IAbstractButtonOptions;

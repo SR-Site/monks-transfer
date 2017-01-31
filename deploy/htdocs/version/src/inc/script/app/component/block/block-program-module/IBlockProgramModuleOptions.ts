@@ -1,6 +1,6 @@
-import IDefaultComponentOptions from "../IDefaultComponentOptions";
+import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 
-export interface IBlockProgramModuleOptions extends IDefaultComponentOptions {
+export interface IBlockProgramModuleOptions extends IAbstractBlockComponentOptions {
 
 }
 

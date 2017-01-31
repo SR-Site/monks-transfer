@@ -1,10 +1,10 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import {{{filenames.controller}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.controller}}}';
 import {{{filenames.options}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.options}}}';
 
 import ko = require('knockout');
 
-class {{{filename}}} extends DefaultComponentViewModel<{{{filenames.controller}}}, {{{filenames.options}}}>
+class {{{filename}}} extends AbstractBlockComponentViewModel<{{{filenames.controller}}}, {{{filenames.options}}}>
 {
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()

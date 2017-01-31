@@ -2,10 +2,10 @@ import ContactTransitionController from './ContactTransitionController';
 import Log from "../../../../../lib/temple/util/Log";
 import {IContactOptions} from "./IContactOptions";
 import ContactViewModel from "./ContactViewModel";
-import DefaultComponentTransitionController from "../../../../util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import Loader from "../../../../util/Loader";
 
-class ContactController extends DefaultComponentTransitionController<ContactViewModel, IContactOptions>
+class ContactController extends AbstractTransitionComponentController<ContactViewModel, IContactOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

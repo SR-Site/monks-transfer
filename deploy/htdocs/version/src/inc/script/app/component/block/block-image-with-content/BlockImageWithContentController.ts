@@ -1,4 +1,4 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockImageWithContentTransitionController from 'app/component/block/block-image-with-content/BlockImageWithContentTransitionController';
 import IBlockImageWithContentOptions from 'app/component/block/block-image-with-content/IBlockImageWithContentOptions';
 import BlockImageWithContentViewModel from 'app/component/block/block-image-with-content/BlockImageWithContentViewModel';
@@ -6,7 +6,7 @@ import BlockImageWithContentViewModel from 'app/component/block/block-image-with
 import Log from "lib/temple/util/Log";
 import Alignment from "../../../data/enum/layout/Alignment";
 
-class BlockImageWithContentController extends DefaultComponentController<BlockImageWithContentViewModel, IBlockImageWithContentOptions>
+class BlockImageWithContentController extends AbstractBlockComponentController<BlockImageWithContentViewModel, IBlockImageWithContentOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

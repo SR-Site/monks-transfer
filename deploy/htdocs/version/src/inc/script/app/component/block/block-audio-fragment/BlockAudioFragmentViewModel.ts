@@ -1,10 +1,10 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockAudioFragmentController from 'app/component/block/block-audio-fragment/BlockAudioFragmentController';
 import IBlockAudioFragmentOptions from 'app/component/block/block-audio-fragment/IBlockAudioFragmentOptions';
 
 import ko = require('knockout');
 
-class BlockAudioFragmentViewModel extends DefaultComponentViewModel<BlockAudioFragmentController, IBlockAudioFragmentOptions>
+class BlockAudioFragmentViewModel extends AbstractBlockComponentViewModel<BlockAudioFragmentController, IBlockAudioFragmentOptions>
 {
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()

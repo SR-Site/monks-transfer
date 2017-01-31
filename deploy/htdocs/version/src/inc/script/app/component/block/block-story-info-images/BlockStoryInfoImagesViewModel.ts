@@ -1,4 +1,4 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockStoryInfoImagesController from 'app/component/block/block-story-info-images/BlockStoryInfoImagesController';
 import IBlockStoryInfoImagesOptions from 'app/component/block/block-story-info-images/IBlockStoryInfoImagesOptions';
 
@@ -6,7 +6,7 @@ import ko = require('knockout');
 import MouseEventHelper from "../../../util/MouseEventHelper";
 import StringUtils from "../../../../lib/temple/util/type/StringUtils";
 
-class BlockStoryInfoImagesViewModel extends DefaultComponentViewModel<BlockStoryInfoImagesController, IBlockStoryInfoImagesOptions>
+class BlockStoryInfoImagesViewModel extends AbstractBlockComponentViewModel<BlockStoryInfoImagesController, IBlockStoryInfoImagesOptions>
 {
 	public MouseEventHelper:Class = MouseEventHelper;
 	public StringUtils:Class = StringUtils;

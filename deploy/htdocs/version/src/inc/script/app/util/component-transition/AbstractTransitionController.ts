@@ -1,20 +1,20 @@
 import EventDispatcher from "../../../lib/temple/event/EventDispatcher";
 import Promise = require("bluebird");
-import DefaultComponentController from "../../component/block/DefaultComponentController";
+import AbstractBlockComponentController from "../../component/block/AbstractBlockComponentController";
 import AbstractComponentController from "../../../lib/temple/component/AbstractComponentController";
-import DefaultComponentTransitionController from "./default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "./abstract-transition-component/AbstractTransitionComponentController";
 
 /**
- * @class DefaultTransitionController
+ * @class AbstractTransitionController
  * @description This class is used by all components that you want to be transition in/out
  *
- * When extending the DefaultTransitionController a transition out timeline is not required. If it's not provided it
+ * When extending the AbstractTransitionController a transition out timeline is not required. If it's not provided it
  * will reverse the transition in timeline when transition out is triggered.
  *
- * The DefaultTransitionController also contains a timeline for looping animations. If your component needs to keep
+ * The AbstractTransitionController also contains a timeline for looping animations. If your component needs to keep
  * animating after transition in is done you can use this timeline to setup a looping animation,
  */
-abstract class DefaultTransitionController extends EventDispatcher
+abstract class AbstractTransitionController extends EventDispatcher
 {
 	/**
 	 * @property TRANSITION_IN_COMPLETE
@@ -80,9 +80,9 @@ abstract class DefaultTransitionController extends EventDispatcher
 	 */
 	protected transitionInTimeline: TimelineLite = new TimelineLite({
 		paused: true,
-		onStart: this.handleAnimationStart.bind(this, DefaultTransitionController.IN),
-		onComplete: this.handleAnimationComplete.bind(this, DefaultTransitionController.FORWARD, DefaultTransitionController.IN),
-		onReverseComplete: this.handleAnimationComplete.bind(this, DefaultTransitionController.REVERSED, DefaultTransitionController.OUT)
+		onStart: this.handleAnimationStart.bind(this, AbstractTransitionController.IN),
+		onComplete: this.handleAnimationComplete.bind(this, AbstractTransitionController.FORWARD, AbstractTransitionController.IN),
+		onReverseComplete: this.handleAnimationComplete.bind(this, AbstractTransitionController.REVERSED, AbstractTransitionController.OUT)
 	});
 	/**
 	 * @property transitionOutTimeline
@@ -90,8 +90,8 @@ abstract class DefaultTransitionController extends EventDispatcher
 	 */
 	protected transitionOutTimeline: TimelineLite = new TimelineLite({
 		paused: true,
-		onStart: this.handleAnimationStart.bind(this, DefaultTransitionController.OUT),
-		onComplete: this.handleAnimationComplete.bind(this, DefaultTransitionController.FORWARD, DefaultTransitionController.OUT)
+		onStart: this.handleAnimationStart.bind(this, AbstractTransitionController.OUT),
+		onComplete: this.handleAnimationComplete.bind(this, AbstractTransitionController.FORWARD, AbstractTransitionController.OUT)
 	});
 	/**
 	 * @property _transitionInComplete
@@ -142,14 +142,14 @@ abstract class DefaultTransitionController extends EventDispatcher
 	 * @method getRootComponent
 	 * @returns {any}
 	 */
-	public getRootComponent(): DefaultComponentController<any, any>|DefaultComponentTransitionController<any,any>
+	public getRootComponent(): AbstractBlockComponentController<any, any>|AbstractTransitionComponentController<any,any>
 	{
 		let parent = this.parentController;
 
 		// Try to find the parent that is not a page
 		while(parent.parent && !parent.parent._page)
 		{
-			parent = <DefaultComponentController<any, any>|DefaultComponentTransitionController<any, any>>parent.parent
+			parent = <AbstractBlockComponentController<any, any>|AbstractTransitionComponentController<any, any>>parent.parent
 		}
 
 		return parent;
@@ -185,7 +185,7 @@ abstract class DefaultTransitionController extends EventDispatcher
 		{
 			if(this.transitionInTimeline.duration() === 0)
 			{
-				console.log(' [DefaultTransitionController] This block does not have transition, so resolve right away' );
+				console.log(' [AbstractTransitionController] This block does not have transition, so resolve right away' );
 
 				resolve();
 			}
@@ -222,7 +222,7 @@ abstract class DefaultTransitionController extends EventDispatcher
 	 * @public
 	 * @method getController
 	 */
-	public getTransitionController(element: Element|string): DefaultTransitionController
+	public getTransitionController(element: Element|string): AbstractTransitionController
 	{
 		const componentElement: Element = typeof element == 'string' ? this.element.querySelector(<string>element) : <Element>element;
 
@@ -236,7 +236,7 @@ abstract class DefaultTransitionController extends EventDispatcher
 			}
 		}
 
-		throw new Error('[DefaultTransitionController] This element does not own a transitionController');
+		throw new Error('[AbstractTransitionController] This element does not own a transitionController');
 	}
 
 	/**
@@ -246,7 +246,7 @@ abstract class DefaultTransitionController extends EventDispatcher
 	 * @param {string} type
 	 * @returns {TimelineLite|null}
 	 */
-	public getSubTimeline(element: Element|string, type: string = DefaultTransitionController.IN): TimelineLite|TimelineMax
+	public getSubTimeline(element: Element|string, type: string = AbstractTransitionController.IN): TimelineLite|TimelineMax
 	{
 		const transitionController = this.getTransitionController(element);
 
@@ -256,13 +256,13 @@ abstract class DefaultTransitionController extends EventDispatcher
 
 			switch(type)
 			{
-				case DefaultTransitionController.IN:
+				case AbstractTransitionController.IN:
 					timeline = transitionController.transitionInTimeline.play();
 					break;
-				case DefaultTransitionController.OUT:
+				case AbstractTransitionController.OUT:
 					timeline = transitionController.transitionOutTimeline.play();
 					break;
-				case DefaultTransitionController.LOOP:
+				case AbstractTransitionController.LOOP:
 					timeline = transitionController.loopingAnimationTimeline;
 					break;
 			}
@@ -270,7 +270,7 @@ abstract class DefaultTransitionController extends EventDispatcher
 			return timeline;
 		}
 
-		throw new Error('[DefaultTransitionController] This element does not own a transition [' + type + '] timeline , so unable to add it to the transition');
+		throw new Error('[AbstractTransitionController] This element does not own a transition [' + type + '] timeline , so unable to add it to the transition');
 	}
 
 	/**
@@ -310,19 +310,19 @@ abstract class DefaultTransitionController extends EventDispatcher
 
 		switch(type)
 		{
-			case DefaultTransitionController.IN:
-				transitionEvent = DefaultTransitionController.TRANSITION_IN_START;
+			case AbstractTransitionController.IN:
+				transitionEvent = AbstractTransitionController.TRANSITION_IN_START;
 
 				switch(direction)
 				{
-					case DefaultTransitionController.FORWARD:
+					case AbstractTransitionController.FORWARD:
 						this._transitionInStarted = true;
 						break;
 				}
 
 				break;
-			case DefaultTransitionController.OUT:
-				transitionEvent = DefaultTransitionController.TRANSITION_OUT_START;
+			case AbstractTransitionController.OUT:
+				transitionEvent = AbstractTransitionController.TRANSITION_OUT_START;
 				break;
 		}
 
@@ -340,19 +340,19 @@ abstract class DefaultTransitionController extends EventDispatcher
 
 		switch(type)
 		{
-			case DefaultTransitionController.IN:
-				transitionEvent = DefaultTransitionController.TRANSITION_IN_COMPLETE;
+			case AbstractTransitionController.IN:
+				transitionEvent = AbstractTransitionController.TRANSITION_IN_COMPLETE;
 
 				switch(direction)
 				{
-					case DefaultTransitionController.FORWARD:
+					case AbstractTransitionController.FORWARD:
 						this._transitionInComplete = true;
 						break;
 				}
 				break;
 
-			case DefaultTransitionController.OUT:
-				transitionEvent = DefaultTransitionController.TRANSITION_OUT_COMPLETE;
+			case AbstractTransitionController.OUT:
+				transitionEvent = AbstractTransitionController.TRANSITION_OUT_COMPLETE;
 				break;
 		}
 
@@ -401,4 +401,4 @@ abstract class DefaultTransitionController extends EventDispatcher
 	}
 }
 
-export default DefaultTransitionController;
+export default AbstractTransitionController;

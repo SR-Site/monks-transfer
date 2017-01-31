@@ -1,4 +1,4 @@
-import DefaultComponentTransitionViewModel from "app/util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
+import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import FilterMenuController from 'app/component/filter-menu/FilterMenuController';
 import IFilterMenuOptions from 'app/component/filter-menu/IFilterMenuOptions';
 

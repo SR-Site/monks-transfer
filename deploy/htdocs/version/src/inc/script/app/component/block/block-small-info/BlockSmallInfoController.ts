@@ -1,11 +1,11 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockSmallInfoTransitionController from 'app/component/block/block-small-info/BlockSmallInfoTransitionController';
 import IBlockSmallInfoOptions from 'app/component/block/block-small-info/IBlockSmallInfoOptions';
 import BlockSmallInfoViewModel from 'app/component/block/block-small-info/BlockSmallInfoViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class BlockSmallInfoController extends DefaultComponentController<BlockSmallInfoViewModel, IBlockSmallInfoOptions>
+class BlockSmallInfoController extends AbstractBlockComponentController<BlockSmallInfoViewModel, IBlockSmallInfoOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

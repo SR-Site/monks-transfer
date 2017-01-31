@@ -1,4 +1,4 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockHeroMainTransitionController from 'app/component/block/block-hero-main/BlockHeroMainTransitionController';
 import IBlockHeroMainOptions from 'app/component/block/block-hero-main/IBlockHeroMainOptions';
 import BlockHeroMainViewModel from 'app/component/block/block-hero-main/BlockHeroMainViewModel';
@@ -6,10 +6,10 @@ import BlockHeroMainViewModel from 'app/component/block/block-hero-main/BlockHer
 import Log from "lib/temple/util/Log";
 import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
 import Promise = require("bluebird");
-import DefaultTransitionController from "../../../util/component-transition/DefaultTransitionController";
+import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 import ImageHelper from "../../../util/ImageHelper";
 
-class BlockHeroMainController extends DefaultComponentController<BlockHeroMainViewModel, IBlockHeroMainOptions>
+class BlockHeroMainController extends AbstractBlockComponentController<BlockHeroMainViewModel, IBlockHeroMainOptions>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

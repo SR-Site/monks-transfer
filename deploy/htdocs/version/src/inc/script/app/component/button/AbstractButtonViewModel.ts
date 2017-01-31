@@ -1,13 +1,13 @@
-import IDefaultButtonOptions from "./IDefaultButtonOptions";
-import DefaultButtonController from "./DefaultButtonController";
+import IAbstractButtonOptions from "./IAbstractButtonOptions";
+import AbstractButtonController from "./AbstractButtonController";
 import ButtonSize from "../../data/enum/layout/ButtonSize";
 import IMethod from "../../data/interface/action/IMethod";
 import ILink from "../../data/interface/action/ILink";
-import DefaultComponentTransitionViewModel from "../../util/component-transition/default-component-transition/DefaultComponentTransitionViewModel";
+import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 
-class DefaultButtonViewModel<T, U extends IDefaultButtonOptions> extends DefaultComponentTransitionViewModel<DefaultButtonController<T, U>, U>
+abstract class AbstractButtonViewModel<T, U extends IAbstractButtonOptions> extends DefaultComponentTransitionViewModel<AbstractButtonController<T, U>, U>
 {
-	public controller: DefaultButtonController<T, U> & any;
+	public controller: AbstractButtonController<T, U> & any;
 	public disabled: KnockoutObservable<boolean> = ko.observable(false);
 	public css: KnockoutComputed<string>;
 
@@ -65,4 +65,4 @@ class DefaultButtonViewModel<T, U extends IDefaultButtonOptions> extends Default
 	}
 }
 
-export default DefaultButtonViewModel;
+export default AbstractButtonViewModel;

@@ -1,10 +1,10 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockImageCarouselController from 'app/component/block/block-image-carousel/BlockImageCarouselController';
 import IBlockImageCarouselOptions from 'app/component/block/block-image-carousel/IBlockImageCarouselOptions';
 
 import ko = require('knockout');
 
-class BlockImageCarouselViewModel extends DefaultComponentViewModel<BlockImageCarouselController, IBlockImageCarouselOptions>
+class BlockImageCarouselViewModel extends AbstractBlockComponentViewModel<BlockImageCarouselController, IBlockImageCarouselOptions>
 {
 	public currentPage:KnockoutObservable<number> = ko.observable(0);
 

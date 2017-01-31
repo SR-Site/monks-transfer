@@ -1,10 +1,10 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockMapSecondaryController from 'app/component/block/block-map-secondary/BlockMapSecondaryController';
 import IBlockMapSecondaryOptions from 'app/component/block/block-map-secondary/IBlockMapSecondaryOptions';
 
 import ko = require('knockout');
 
-class BlockMapSecondaryViewModel extends DefaultComponentViewModel<BlockMapSecondaryController, IBlockMapSecondaryOptions>
+class BlockMapSecondaryViewModel extends AbstractBlockComponentViewModel<BlockMapSecondaryController, IBlockMapSecondaryOptions>
 {
 	public sequenceProgress:KnockoutObservable<number> = ko.observable(0);
 

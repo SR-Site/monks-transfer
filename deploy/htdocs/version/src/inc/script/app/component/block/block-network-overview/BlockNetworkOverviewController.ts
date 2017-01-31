@@ -1,4 +1,4 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockNetworkOverviewTransitionController from 'app/component/block/block-network-overview/BlockNetworkOverviewTransitionController';
 import IBlockNetworkOverviewOptions from 'app/component/block/block-network-overview/IBlockNetworkOverviewOptions';
 import BlockNetworkOverviewViewModel from 'app/component/block/block-network-overview/BlockNetworkOverviewViewModel';
@@ -10,7 +10,7 @@ import CommonEvent from "../../../../lib/temple/event/CommonEvent";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 import {IDraggableEventData} from "../../../util/DraggableInstance";
 
-class BlockNetworkOverviewController extends DefaultComponentController<BlockNetworkOverviewViewModel, IBlockNetworkOverviewOptions>
+class BlockNetworkOverviewController extends AbstractBlockComponentController<BlockNetworkOverviewViewModel, IBlockNetworkOverviewOptions>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

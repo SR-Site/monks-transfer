@@ -1,7 +1,7 @@
 import IIndexable from "../../../lib/temple/core/IIndexable";
 import IBlock from "../../data/interface/block/IBlock";
 
-interface IDefaultComponentOptions extends IIndexable
+interface IAbstractBlockComponentOptions extends IIndexable
 {
 	/**
 	 * @ignore
@@ -40,4 +40,4 @@ interface IDefaultComponentOptions extends IIndexable
 	overlap?:boolean;
 }
 
-export default IDefaultComponentOptions;
+export default IAbstractBlockComponentOptions;

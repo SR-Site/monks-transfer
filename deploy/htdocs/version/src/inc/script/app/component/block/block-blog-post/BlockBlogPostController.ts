@@ -1,11 +1,11 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockBlogPostTransitionController from 'app/component/block/block-blog-post/BlockBlogPostTransitionController';
 import IBlockBlogPostOptions from 'app/component/block/block-blog-post/IBlockBlogPostOptions';
 import BlockBlogPostViewModel from 'app/component/block/block-blog-post/BlockBlogPostViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class BlockBlogPostController extends DefaultComponentController<BlockBlogPostViewModel, IBlockBlogPostOptions>
+class BlockBlogPostController extends AbstractBlockComponentController<BlockBlogPostViewModel, IBlockBlogPostOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

@@ -1,7 +1,7 @@
-import IDefaultComponentOptions from "../IDefaultComponentOptions";
+import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import ILink from "../../../data/interface/action/ILink";
 
-export interface IBlockHowToAdvertiseOptions extends IDefaultComponentOptions
+export interface IBlockHowToAdvertiseOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

@@ -1,4 +1,4 @@
-import DefaultComponentController from "../DefaultComponentController";
+import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockImageCallToActionsTransitionController from 'app/component/block/block-image-call-to-actions/BlockImageCallToActionsTransitionController';
 import IBlockImageCallToActionsOptions from 'app/component/block/block-image-call-to-actions/IBlockImageCallToActionsOptions';
 import BlockImageCallToActionsViewModel from 'app/component/block/block-image-call-to-actions/BlockImageCallToActionsViewModel';
@@ -7,7 +7,7 @@ import Log from "lib/temple/util/Log";
 import NativeEventListener from "../../../../lib/temple/event/NativeEventListener";
 import ThrottleDebounce from "../../../../lib/temple/util/ThrottleDebounce";
 
-class BlockImageCallToActionsController extends DefaultComponentController<BlockImageCallToActionsViewModel, IBlockImageCallToActionsOptions>
+class BlockImageCallToActionsController extends AbstractBlockComponentController<BlockImageCallToActionsViewModel, IBlockImageCallToActionsOptions>
 {
 	private static HOVER_SCALE: number = 1.1;
 

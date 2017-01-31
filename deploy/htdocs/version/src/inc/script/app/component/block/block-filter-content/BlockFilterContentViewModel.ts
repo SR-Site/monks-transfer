@@ -1,4 +1,4 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockFilterContentController from 'app/component/block/block-filter-content/BlockFilterContentController';
 import IBlockFilterContentOptions from 'app/component/block/block-filter-content/IBlockFilterContentOptions';
 
@@ -8,7 +8,7 @@ import BlockType from "../../../data/enum/type/BlockType";
 import DataManager from "../../../data/DataManager";
 import {DeviceState} from "../../../data/scss-shared/MediaQueries";
 
-class BlockFilterContentViewModel extends DefaultComponentViewModel<BlockFilterContentController, IBlockFilterContentOptions>
+class BlockFilterContentViewModel extends AbstractBlockComponentViewModel<BlockFilterContentController, IBlockFilterContentOptions>
 {
 	public BlockType:Enum = BlockType;
 

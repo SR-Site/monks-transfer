@@ -1,11 +1,11 @@
-import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import PaginatorDashedTransitionController from 'app/component/paginator-dashed/PaginatorDashedTransitionController';
 import IPaginatorDashedOptions from 'app/component/paginator-dashed/IPaginatorDashedOptions';
 import PaginatorDashedViewModel from 'app/component/paginator-dashed/PaginatorDashedViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class PaginatorDashedController extends DefaultComponentTransitionController<PaginatorDashedViewModel, IPaginatorDashedOptions>
+class PaginatorDashedController extends AbstractTransitionComponentController<PaginatorDashedViewModel, IPaginatorDashedOptions>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

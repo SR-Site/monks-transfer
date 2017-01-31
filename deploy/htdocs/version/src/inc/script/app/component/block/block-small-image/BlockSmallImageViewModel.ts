@@ -1,11 +1,11 @@
-import DefaultComponentViewModel from "../DefaultComponentViewModel";
+import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
 import BlockSmallImageController from 'app/component/block/block-small-image/BlockSmallImageController';
 import IBlockSmallImageOptions from 'app/component/block/block-small-image/IBlockSmallImageOptions';
 
 import ko = require('knockout');
 import Alignment from "../../../data/enum/layout/Alignment";
 
-class BlockSmallImageViewModel extends DefaultComponentViewModel<BlockSmallImageController, IBlockSmallImageOptions>
+class BlockSmallImageViewModel extends AbstractBlockComponentViewModel<BlockSmallImageController, IBlockSmallImageOptions>
 {
 
 	/**

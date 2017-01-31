@@ -1,11 +1,11 @@
-import DefaultComponentTransitionController from "app/util/component-transition/default-component-transition/DefaultComponentTransitionController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import PercentageLoaderTransitionController from 'app/component/percentage-loader/PercentageLoaderTransitionController';
 import IPercentageLoaderOptions from 'app/component/percentage-loader/IPercentageLoaderOptions';
 import PercentageLoaderViewModel from 'app/component/percentage-loader/PercentageLoaderViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class PercentageLoaderController extends DefaultComponentTransitionController<PercentageLoaderViewModel, IPercentageLoaderOptions>
+class PercentageLoaderController extends AbstractTransitionComponentController<PercentageLoaderViewModel, IPercentageLoaderOptions>
 {
 	private static _DURATION: number = 0.7;
 
