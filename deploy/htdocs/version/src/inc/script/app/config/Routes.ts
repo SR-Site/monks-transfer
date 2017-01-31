@@ -14,9 +14,9 @@ import {PropertyNames} from "../data/enum/ConfigNames";
  */
 class Routes
 {
-	public static HOME:string = '';
-	public static CONTACT_US:string ='contact-us';
-	public static PAGE_NOT_FOUND:string = 'page-not-found';
+	public static HOME: string = '';
+	public static CONTACT_US: string = 'contact-us';
+	public static PAGE_NOT_FOUND: string = 'page-not-found';
 
 	/**
 	 * Set up the global config and all individual route configuration here
@@ -25,7 +25,7 @@ class Routes
 	 *
 	 * @method init
 	 */
-	public static init():void
+	public static init(): void
 	{
 		var UINT = '^\\d+$';
 
@@ -45,7 +45,7 @@ class Routes
 		// config setup
 		Gaia.router.config()
 
-			// default assertion for all 'id' parameters
+		// default assertion for all 'id' parameters
 			.assert(Params.ID, UINT)
 
 			// default locale from ConfigManager
@@ -78,7 +78,7 @@ class Routes
 		// send to the backend so if you want a popup route it would be best to access it only from the root ('/') route.
 
 		// default page
-		Gaia.router.page('/:deeplink*', Branches.CONTENT_PAGE);
+		Gaia.router.page('/:' + Params.DEEPLINK + '*', Branches.CONTENT_PAGE);
 	}
 }
 

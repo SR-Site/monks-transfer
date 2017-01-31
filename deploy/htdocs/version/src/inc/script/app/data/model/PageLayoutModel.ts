@@ -14,7 +14,7 @@ class PageLayoutModel extends AbstractDataModel<IPageLayout>
 	 * @type {Array}
 	 * @description array used to store unknown deeplinks to avoid re-calling deeplinks that do not exist
 	 */
-	private _unknownDeeplinks:Array<string> = [];
+	private _unknownDeeplinks: Array<string> = [];
 
 	/**
 	 * @public
@@ -23,22 +23,24 @@ class PageLayoutModel extends AbstractDataModel<IPageLayout>
 	 * @param page
 	 * @returns {Promise}
 	 */
-	public getLayout(page:string):Promise<IPageLayout>
+	public getLayout(page: string): Promise<IPageLayout>
 	{
 		// First try to fetch the page from memory
-		const layout = this.getItemByID(page);
-
 		if(this._unknownDeeplinks.indexOf(page) > -1)
 		{
 			// Incorrect deeplink, reject right away
 			return Promise.reject(null)
 		}
-		else if(layout === void 0)
+		else if(this.hasItem(page))
+		{
+			return Promise.resolve(this.getItemById(page))
+		}
+		else
 		{
 			// If it's not loaded, fetch it from the backend
 			return DataManager.getInstance().serviceModel.contentService.getPageLayout(page)
-				.then((result)=>this.parsePageLayout(result.data, page))
-				.catch((result)=>
+				.then((result) => this.parsePageLayout(result.data, page))
+				.catch((result) =>
 				{
 					if(configManagerInstance.getProperty(PropertyNames.MOCK_CONTENT))
 					{
@@ -52,10 +54,6 @@ class PageLayoutModel extends AbstractDataModel<IPageLayout>
 					}
 				})
 		}
-		else
-		{
-			return Promise.resolve(layout)
-		}
 	}
 
 
@@ -65,12 +63,17 @@ class PageLayoutModel extends AbstractDataModel<IPageLayout>
 	 * @description After we fetch the page from the API we need to check all the blocks if they are compatible with the
 	 * with our block configuration.
 	 */
-	private parsePageLayout(pageLayout:IPageLayout, pageId:string):Promise<IPageLayout>
+	private parsePageLayout(pageLayout: IPageLayout, pageId: string): Promise<IPageLayout>
 	{
-		return new Promise((resolve:(result:IPageLayout)=>void, reject)=>
+		return new Promise((resolve: (result: IPageLayout) => void, reject) =>
 		{
 			// Create the layout object
-			let layout = {id: pageId, headerTheme: pageLayout.headerTheme, pageTitle: pageLayout.pageTitle, blocks: []};
+			let layout: IPageLayout = {
+				id: pageId,
+				headerTheme: pageLayout.headerTheme,
+				pageTitle: pageLayout.pageTitle,
+				blocks: []
+			};
 
 			// Loop through all the blocks and check if they are valid
 			layout.blocks = BlockHelper.parseBlocks(layout.blocks, pageLayout.blocks);

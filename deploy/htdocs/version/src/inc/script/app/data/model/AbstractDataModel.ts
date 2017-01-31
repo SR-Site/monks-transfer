@@ -1,10 +1,10 @@
 import IIndexable from "../../../lib/temple/core/IIndexable";
 import Destructible from "../../../lib/temple/core/Destructible";
 
-class AbstractDataModel<T extends IIndexable> extends Destructible
+abstract class AbstractDataModel<T extends IIndexable> extends Destructible
 {
-	protected _data:Array<T> = [];
-	protected _idMap:{[index:string]:number} = {};
+	protected _data: Array<T> = [];
+	protected _idMap: {[id: string]: T} = {};
 
 	/**
 	 * Method to add a item to the data model
@@ -13,17 +13,20 @@ class AbstractDataModel<T extends IIndexable> extends Destructible
 	 * @method addItem
 	 * @param item
 	 */
-	public addItem(item:T):void
+	public addItem(item: T): void
 	{
 		// Check for existing id otherwise add a index
 		item.id = item.id == void 0 ? this._data.length.toString() : item.id;
 
-		if(!this.getItemByID(item.id))
+		if(!this.hasItem(item.id))
 		{
 			this._data.push(item);
 
-			// Store the location
-			this._idMap[item.id] = this._data.length - 1;
+			this._idMap[item.id] = item;
+		}
+		else
+		{
+			throw new Error('Item with the following id: ' + item.id + ' already exists')
 		}
 	}
 
@@ -33,9 +36,11 @@ class AbstractDataModel<T extends IIndexable> extends Destructible
 	 * @public
 	 * @method updateItem
 	 */
-	public updateItem(item:T):void
+	public updateItem(item: T): void
 	{
-		if(this.getItemByID(item.id))
+		const old = this.getItemById(item.id);
+
+		if(old)
 		{
 			this._data[this._data.indexOf(item)] = item;
 		}
@@ -48,9 +53,9 @@ class AbstractDataModel<T extends IIndexable> extends Destructible
 	 * @method addItems
 	 * @param items
 	 */
-	public addItems(items:Array<T>):void
+	public addItems(items: Array<T>): void
 	{
-		for(var i = 0; i < items.length; i++)
+		for(let i = 0; i < items.length; i++)
 		{
 			this.addItem(items[i]);
 		}
@@ -60,7 +65,7 @@ class AbstractDataModel<T extends IIndexable> extends Destructible
 	 * @public
 	 * @method removeItems
 	 */
-	public removeItems():void
+	public removeItems(): void
 	{
 		this._data = [];
 		this._idMap = {};
@@ -73,9 +78,9 @@ class AbstractDataModel<T extends IIndexable> extends Destructible
 	 * @method getAllItems
 	 * @returns {Array<T>}
 	 */
-	public getAllItems():Array<T>
+	public getAllItems(): Array<T>
 	{
-		return this._data;
+		return this._data.concat([]);
 	}
 
 	/**
@@ -87,18 +92,9 @@ class AbstractDataModel<T extends IIndexable> extends Destructible
 	 * @param limit
 	 * @returns {Array<T>}
 	 */
-	public getItems(offset:number = 0, limit:number = 5):Array<T>
+	public getItems(offset: number = 0, limit: number = 5): Array<T>
 	{
-		var items:Array<T> = [];
-
-		for(var i = offset; i < limit; i++)
-		{
-			var item = this._data[i];
-
-			if(item) items.push(item);
-		}
-
-		return items
+		return this._data.slice(offset, limit);
 	}
 
 	/**
@@ -109,28 +105,44 @@ class AbstractDataModel<T extends IIndexable> extends Destructible
 	 * @param id
 	 * @returns {any}
 	 */
-	public getItemByID(id:string):T
+	public getItemById(id: string): T
 	{
-		return this._data[this._idMap[id]];
+		if(this.hasItem(id))
+		{
+			return this._idMap[id];
+		}
+
+		throw new Error('No item found with the following id: ' + id)
 	}
 
 	/**
 	 * Method that returns an array items based on id's
 	 *
 	 * @public
-	 * @method getItemsByIDs
+	 * @method getItemsByIds
 	 * @param ids
 	 */
-	public getItemsByIDs(ids:Array<string>):Array<T>
+	public getItemsByIds(ids: Array<string>): Array<T>
 	{
-		return ids.map((id)=> this._data[this._idMap[id]]);
+		return ids.map((id) => this._idMap[id]);
+	}
+
+	/**
+	 * @public
+	 * @method hasItemn
+	 * @param id
+	 * @returns {boolean}
+	 */
+	public hasItem(id:string): boolean
+	{
+		return id in this._idMap;
 	}
 
 	/**
 	 * @public
 	 * @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 		this._data = null;
 		this._idMap = null;
