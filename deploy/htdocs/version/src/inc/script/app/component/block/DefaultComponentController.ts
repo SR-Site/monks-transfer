@@ -109,7 +109,11 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 		}
 
 		// Add the class names to the element
-		this.viewModel.elementClassNames.forEach((className) => this.element.classList.add(className))
+		this.viewModel.elementClassNames.forEach((className) => this.element.classList.add(className));
+
+		// Store instance on element.
+		ko.utils.domData.set(this.element, AbstractComponentController.BINDING_NAME, this);
+
 	}
 
 	/**
@@ -200,6 +204,16 @@ class DefaultComponentController<T, U extends IDefaultComponentOptions> extends 
 	 */
 	public destruct(): void
 	{
+		// Cleaning up the instance domData
+		var disposeCallback = () =>
+		{
+			ko.utils.domNodeDisposal.removeDisposeCallback(this.element, disposeCallback);
+
+			ko.utils.domData.set(this.element, AbstractComponentController.BINDING_NAME, null);
+		};
+
+		ko.utils.domNodeDisposal.addDisposeCallback(this.element, disposeCallback);
+
 		if(this.transitionController)
 		{
 			this.transitionController.destruct();

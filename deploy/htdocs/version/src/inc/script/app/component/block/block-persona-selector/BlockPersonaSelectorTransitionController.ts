@@ -83,21 +83,21 @@ class BlockPersonaSelectorTransitionController extends DefaultTransitionControll
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this.transitionInTimeline.from(this.element, 0.5, {
-			autoAlpha: 0
-		});
+		this.transitionInTimeline.from(this.element, 0.5, { autoAlpha: 0 });
 
+		// Transition in the paginator
 		this.transitionInTimeline.from(this.element.querySelector('.component-paginator-dashed'), 0.5, {
 			autoAlpha: 0
 		});
 
-		this.transitionInTimeline.add(
-			() => this.parentController.changeBackgroundImage(this.parentController.activeIndex)
-		);
+		// Run the background switch
+		this.transitionInTimeline.add( () => this.parentController.changeBackgroundImage(this.parentController.activeIndex));
 
-		this.transitionInTimeline.add(
-			() => this._slideTransitions[this.parentController.activeIndex].timeline.restart()
-		)
+		// Slide in the main triangle
+		this.transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), '=+0.5');
+
+		// Run the text animation
+		this.transitionInTimeline.add( () => this._slideTransitions[this.parentController.activeIndex].timeline.restart())
 	}
 
 	/**
