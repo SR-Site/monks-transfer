@@ -52,7 +52,7 @@ class InitLocaleTask extends AbstractTask
 		new LocaleKnockoutBinding();
 		LocaleManager.getInstance().setFallbackLocale(this._fallbackLocale);
 
-		var jsonProvider= new JSONLocaleProvider(LocaleManager.getInstance());
+		let jsonProvider= new JSONLocaleProvider(LocaleManager.getInstance());
 		jsonProvider.addLocaleFile('en_US', 'data/locale/en_US.json', true);
 
 

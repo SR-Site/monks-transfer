@@ -78,7 +78,7 @@ const partials: Array<string> = [
 	'partial/asset/button/button-select-anchor.html'
 ];
 
-var sitemap:ISitemap = {
+let sitemap:ISitemap = {
 
 	title: 'Skeleton1 - Gaia - {page}',
 

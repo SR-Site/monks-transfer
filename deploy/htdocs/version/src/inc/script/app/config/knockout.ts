@@ -38,14 +38,14 @@ define([
 		isBound: false,
 		init: function(element, valueAccessor) {
 			// Let bindings proceed as normal *only if* my value is false
-			var shouldAllowBindings = ko.utils.unwrapObservable(valueAccessor());
+			let shouldAllowBindings = ko.utils.unwrapObservable(valueAccessor());
 
 			this.isBound = shouldAllowBindings;
 
 			return { controlsDescendantBindings: !shouldAllowBindings };
 		},
 		update: function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
-			var shouldAllowBindings = ko.utils.unwrapObservable(valueAccessor());
+			let shouldAllowBindings = ko.utils.unwrapObservable(valueAccessor());
 
 			if (shouldAllowBindings && !this.isBound)
 			{
@@ -65,16 +65,16 @@ define([
 			return;
 		}
 
-		var name = node.tagName.toLowerCase();
+		let name = node.tagName.toLowerCase();
 		if (name.substr(0, 2) == 'x-')
 		{
-			var templateName = name.substr(2);
-			var data = $(node).attr('data');
-			var template = $('#' + templateName)[0];
+			let templateName = name.substr(2);
+			let data = $(node).attr('data');
+			let template = $('#' + templateName)[0];
 
 			if (template)
 			{
-				var $newNode = $('<div/>');
+				let $newNode = $('<div/>');
 				$newNode.attr('data-bind', "template: {name: '" + templateName + "'" + (data ? ', data: ' + data : '') + '}');
 
 				$(node).replaceWith($newNode);
@@ -84,7 +84,7 @@ define([
 
 
 	// extending ko.punches for adding short-hand localizeText {{lt:text.to.be.localized}}
-	var wrapExpresssion = ko.punches['interpolationMarkup']['wrapExpresssion'];
+	let wrapExpresssion = ko.punches['interpolationMarkup']['wrapExpresssion'];
 
 	ko.punches['interpolationMarkup']['wrapExpresssion'] = function(expressionText)
 	{

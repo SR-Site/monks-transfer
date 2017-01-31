@@ -14,7 +14,7 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 
 	public filters: KnockoutObservable<{[type: string]: Array<{label:string;value:string;checked:KnockoutObservable<boolean>}>}> = ko.observable(null);
 	public selectedFiltersOptionCount:KnockoutComputed<Array<number>> = ko.computed(() =>{
-		var countArray = [];
+		let countArray = [];
 
 		if(this.filters()) {
 			Object.keys(this.filters()).forEach((key, index) =>{
@@ -32,13 +32,13 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 	 */
 	public getFilterData():{[filterType:string]:string}
 	{
-		var filterData = {};
+		let filterData = {};
 
 		// Loop through all filterTypes
 		Object.keys(this.filters()).forEach((key, index) =>{
 
 			// Find CHECKED options per filter type
-			var chosenOptions = this.filters()[index].filter((option) => option.checked());
+			let chosenOptions = this.filters()[index].filter((option) => option.checked());
 
 			// Create object[key] only if this filterType has chosen options.
 			if(chosenOptions && chosenOptions.length > 0) {

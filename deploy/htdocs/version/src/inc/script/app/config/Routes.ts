@@ -27,19 +27,19 @@ class Routes
 	 */
 	public static init(): void
 	{
-		var UINT = '^\\d+$';
+		let UINT = '^\\d+$';
 
 		// position or negative numbers without decimals
-		var INT = '^-?\\d+$';
+		let INT = '^-?\\d+$';
 
 		// position or negative numbers with or without decimals
-		var NUMBER = '^-?\\d+(\\.\\d+)?$';
+		let NUMBER = '^-?\\d+(\\.\\d+)?$';
 
 		// Only '1' or '0'
-		var BOOLEAN = '^1|0$';
+		let BOOLEAN = '^1|0$';
 
 		// used for slugs (e.g. foo-bar)
-		var SLUG = '^[\\w-]+$';
+		let SLUG = '^[\\w-]+$';
 
 
 		// config setup

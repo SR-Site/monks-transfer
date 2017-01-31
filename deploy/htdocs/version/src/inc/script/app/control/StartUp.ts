@@ -54,7 +54,7 @@ class StartUp
 
 		Routes.init();
 
-		var sequence = new Sequence();
+		let sequence = new Sequence();
 
 		if (DEBUG && configManagerInstance.getEnvironment() != EnvironmentNames.PRODUCTION)
 		{

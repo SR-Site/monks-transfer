@@ -38,8 +38,8 @@ export default class DevBarTask extends AbstractTask
 			return;
 		}
 
-		var $el = $('<div/>', {html: 'This version has only been tested on Chrome, if you\'re seeing this message please use Chrome for testing & reviewing.<br />Other browsers will be tested and QA\'ed before launch'}).addClass('dev-bar');
-		var $close = $('<span/>', {text: 'x'}).addClass('btn-close');
+		let $el = $('<div/>', {html: 'This version has only been tested on Chrome, if you\'re seeing this message please use Chrome for testing & reviewing.<br />Other browsers will be tested and QA\'ed before launch'}).addClass('dev-bar');
+		let $close = $('<span/>', {text: 'x'}).addClass('btn-close');
 
 		$el.append($close);
 

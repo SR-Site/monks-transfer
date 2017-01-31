@@ -17,7 +17,7 @@ class JSONOutputHandler implements IOutputHandler
 	 */
 	format(action:string, data:any, options:IGatewayOptions):any
 	{
-		for (var key in data)
+		for (let key in data)
 		{
 			if (data.hasOwnProperty(key) && (typeof data[key] === 'object' || typeof data[key] === 'array'))
 			{

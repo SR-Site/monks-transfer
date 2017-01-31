@@ -29,14 +29,14 @@ class BlockHelper
 				// Store the id
 				block.data.id = BlockHelper.availableBlocks[block.id].id;
 
-				var clone = JSON.parse(JSON.stringify(block));
+				let clone = JSON.parse(JSON.stringify(block));
 
 				// Merge the 2 object and store them in the blocks array
 				parsedBlocks.push(Object.assign(clone, BlockHelper.availableBlocks[block.id]));
 
 				if(block.data.blocks !== void 0)
 				{
-					var lastBlock = parsedBlocks[parsedBlocks.length - 1];
+					let lastBlock = parsedBlocks[parsedBlocks.length - 1];
 					lastBlock.data.blocks = [];
 
 					BlockHelper.parseBlocks(lastBlock.data.blocks, block.data.blocks, true);

@@ -209,7 +209,7 @@ abstract class DefaultInfiniteCarousel extends EventDispatcher
 			return;
 		}
 
-		var height: number = 0;
+		let height: number = 0;
 
 		if(!this._isFixedHeight)
 		{

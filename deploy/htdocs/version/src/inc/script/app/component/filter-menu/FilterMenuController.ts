@@ -46,7 +46,7 @@ class FilterMenuController extends AbstractTransitionComponentController<FilterM
 	 */
 	private setupFilters():void
 	{
-		var filters = {};
+		let filters = {};
 		this.viewModel.data.filters.forEach((filter:{type:number;options:Array<{value:string;label:string;}>}) =>{
 			filters[filter.type] = [];
 

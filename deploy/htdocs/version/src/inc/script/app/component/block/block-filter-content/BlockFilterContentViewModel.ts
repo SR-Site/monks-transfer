@@ -37,10 +37,10 @@ class BlockFilterContentViewModel extends AbstractBlockComponentViewModel<BlockF
 	 *  @description for desktop we want to show in it pages, on mobile we want to load all items underneath eachother
 	 */
 	public visibleItems:KnockoutComputed<Array<IBlock>> = ko.computed(() =>{
-		var items = [];
+		let items = [];
 
 		if(this.showInPages()) {
-			var pageFound = this.pages().find((page) => page.pageIndex == this.activePageIndex());
+			let pageFound = this.pages().find((page) => page.pageIndex == this.activePageIndex());
 
 			if(pageFound) {
 				items = pageFound.items;

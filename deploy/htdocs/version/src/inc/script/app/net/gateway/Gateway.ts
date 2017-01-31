@@ -199,7 +199,7 @@ class Gateway extends Destructible implements IGateway
 		}
 
 		// check cached call
-		var p:Promise<IGatewayResult<any>> = this.checkCachedCall(options);
+		let p:Promise<IGatewayResult<any>> = this.checkCachedCall(options);
 		if (p)
 		{
 			this._log.info('result \'' + action + '\' coming from cache!');
@@ -221,7 +221,7 @@ class Gateway extends Destructible implements IGateway
 	{
 		if (this._cachedCalls[options.cacheKey])
 		{
-			var cc:CachedCall = this._cachedCalls[options.cacheKey];
+			let cc:CachedCall = this._cachedCalls[options.cacheKey];
 
 			// cache is expired, invalidate cache
 			if (cc.isExpired())
@@ -365,9 +365,9 @@ class Gateway extends Destructible implements IGateway
 
 		this._log.log('options: ', options);
 
-		var jqXHR = $.ajax(options);
+		let jqXHR = $.ajax(options);
 
-		var p = new Promise<IGatewayResult<any>>((resolve: (result: IGatewayResult<any>) => void, reject: (error: IGatewayError) => void) =>
+		let p = new Promise<IGatewayResult<any>>((resolve: (result: IGatewayResult<any>) => void, reject: (error: IGatewayError) => void) =>
 		{
 
 			jqXHR.then(
@@ -375,7 +375,7 @@ class Gateway extends Destructible implements IGateway
 				{
 					delete this._runningCalls[options.cacheKey];
 
-					var response:IGatewayResult<any>;
+					let response:IGatewayResult<any>;
 					if(options.inputHandler)
 					{
 						response = options.inputHandler.format(data);
@@ -404,7 +404,7 @@ class Gateway extends Destructible implements IGateway
 				{
 					delete this._runningCalls[options.cacheKey];
 
-					var response = null;
+					let response = null;
 					try
 					{
 						response = JSON.parse(jqXHR.responseText);

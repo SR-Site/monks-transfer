@@ -104,7 +104,7 @@ abstract class AbstractTransitionComponentController<T, U extends IDefaultCompon
 	public destruct(): void
 	{
 		// Cleaning up the instance domData
-		var disposeCallback = () =>
+		let disposeCallback = () =>
 		{
 			ko.utils.domNodeDisposal.removeDisposeCallback(this.element, disposeCallback);
 
