@@ -318,14 +318,16 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 */
 	private beforeContentLoad(): Promise<any>
 	{
+		let contentItems = <HTMLElement>this.element.querySelector('.content-items');
+
 		if(this.viewModel.showInPages())
 		{
 			return Promise.all([
 				new Promise((resolve: Function) =>
 				{
-					TweenLite.to(this.element, 0.2, {
+					TweenLite.to(contentItems, 0.2, {
 						opacity: 0,
-						height: this.element.offsetHeight,
+						height: contentItems.offsetHeight,
 						onComplete: resolve
 					});
 				}),
@@ -344,7 +346,7 @@ class BlockFilterContentController extends DefaultComponentController<BlockFilte
 	 */
 	private afterContentRender(): void
 	{
-		TweenLite.set(this.element, {clearProps: 'height', opacity: 1});
+		TweenLite.set(this.element.querySelector('.content-items'), {clearProps: 'height', opacity: 1});
 	}
 
 	/**
