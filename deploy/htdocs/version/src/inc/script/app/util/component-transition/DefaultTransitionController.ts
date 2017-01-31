@@ -14,7 +14,7 @@ import DefaultComponentTransitionController from "./default-component-transition
  * The DefaultTransitionController also contains a timeline for looping animations. If your component needs to keep
  * animating after transition in is done you can use this timeline to setup a looping animation,
  */
-class DefaultTransitionController extends EventDispatcher
+abstract class DefaultTransitionController extends EventDispatcher
 {
 	/**
 	 * @property TRANSITION_IN_COMPLETE
@@ -65,7 +65,7 @@ class DefaultTransitionController extends EventDispatcher
 	 * @property transitionResolveMethod
 	 * @type {Function}
 	 */
-	public transitionResolveMethod: Function;
+	public transitionResolveMethod: ()=>void;
 	/**
 	 * @property loopingAnimationTimeline
 	 * @type {TimelineMax}
@@ -181,7 +181,7 @@ class DefaultTransitionController extends EventDispatcher
 	 */
 	public transitionIn(): Promise<any>
 	{
-		return new Promise((resolve: Function) =>
+		return new Promise((resolve: ()=>void) =>
 		{
 			if(this.transitionInTimeline.duration() === 0)
 			{
@@ -203,7 +203,7 @@ class DefaultTransitionController extends EventDispatcher
 	 */
 	public transitionOut(): Promise<any>
 	{
-		return new Promise((resolve: Function) =>
+		return new Promise((resolve: ()=>void) =>
 		{
 			this.transitionResolveMethod = resolve;
 
