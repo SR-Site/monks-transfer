@@ -1,0 +1,23 @@
+uuid: fb10249b-0ffb-419a-8406-fcb4381b21eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_alignment
+    - paragraphs.paragraphs_type.blocksmallimage
+  module:
+    - options
+id: paragraph.blocksmallimage.field_alignment
+field_name: field_alignment
+entity_type: paragraph
+bundle: blocksmallimage
+label: Alignment
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

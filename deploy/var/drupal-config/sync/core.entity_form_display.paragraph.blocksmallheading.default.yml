@@ -1,0 +1,52 @@
+uuid: 2ada7dd6-a6e3-400e-8f2d-c893e9c42b9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blocksmallheading.field_heading
+    - field.field.paragraph.blocksmallheading.field_styles
+    - paragraphs.paragraphs_type.blocksmallheading
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+id: paragraph.blocksmallheading.default
+targetEntityType: paragraph
+bundle: blocksmallheading
+mode: default
+content:
+  field_heading:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_styles:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: styles
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

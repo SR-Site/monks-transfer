@@ -1,0 +1,7 @@
+uuid: effbe7c1-db2a-4f2d-af26-d1bab2ffe146
+langcode: en
+status: true
+dependencies: {  }
+id: blocksmallheading
+label: 'Block small heading'
+behavior_plugins: {  }

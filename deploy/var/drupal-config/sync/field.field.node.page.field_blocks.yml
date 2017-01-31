@@ -29,6 +29,8 @@ dependencies:
     - paragraphs.paragraphs_type.blockprogrammodule
     - paragraphs.paragraphs_type.blockquote
     - paragraphs.paragraphs_type.blockquotesecondary
+    - paragraphs.paragraphs_type.blocksmallheading
+    - paragraphs.paragraphs_type.blocksmallimage
   module:
     - entity_reference_revisions
 id: node.page.field_blocks
@@ -53,11 +55,11 @@ settings:
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
-      blockmore: blockmore
       blockblogpost: blockblogpost
+      blockmore: blockmore
       blockherosecondary: blockherosecondary
-      blockheromain: blockheromain
       blockmap: blockmap
+      blockheromain: blockheromain
       blockmapsecondary: blockmapsecondary
       blockmarketmap: blockmarketmap
       blocknetworkoverview: blocknetworkoverview
@@ -68,6 +70,8 @@ settings:
       blockquote: blockquote
       blockinfo: blockinfo
       blockquotesecondary: blockquotesecondary
+      blocksmallheading: blocksmallheading
+      blocksmallimage: blocksmallimage
       blockpersonaselector: blockpersonaselector
     target_bundles_drag_drop:
       blockhowtoadvertise:
@@ -91,21 +95,21 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
-      link:
-        weight: 13
-        enabled: false
       blocklatest:
         enabled: true
         weight: 13
+      link:
+        weight: 13
+        enabled: false
       blockimagecarousel:
         enabled: true
         weight: 13
-      blockarticleteaser:
-        enabled: true
-        weight: 15
       step:
         weight: 15
         enabled: false
+      blockarticleteaser:
+        enabled: true
+        weight: 15
       blockaudiofragment:
         enabled: true
         weight: 16
@@ -115,19 +119,19 @@ settings:
       slide:
         weight: 18
         enabled: false
-      blockmore:
+      blockblogpost:
         enabled: true
         weight: 19
-      blockblogpost:
+      blockmore:
         enabled: true
         weight: 19
       blockherosecondary:
         enabled: true
         weight: 23
-      blockheromain:
+      blockmap:
         enabled: true
         weight: 26
-      blockmap:
+      blockheromain:
         enabled: true
         weight: 26
       blockmapsecondary:
@@ -163,6 +167,12 @@ settings:
       blockquotesecondary:
         enabled: true
         weight: 36
+      blocksmallheading:
+        enabled: true
+        weight: 37
+      blocksmallimage:
+        enabled: true
+        weight: 38
       slideheromain:
         weight: 38
         enabled: false

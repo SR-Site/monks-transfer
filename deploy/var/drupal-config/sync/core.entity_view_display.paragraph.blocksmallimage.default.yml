@@ -1,0 +1,41 @@
+uuid: 8037e0fc-34c2-43db-a7c2-4d260fcd60d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blocksmallimage.field_alignment
+    - field.field.paragraph.blocksmallimage.field_image
+    - field.field.paragraph.blocksmallimage.field_styles
+    - paragraphs.paragraphs_type.blocksmallimage
+  module:
+    - entity_reference_revisions
+    - image
+    - options
+id: paragraph.blocksmallimage.default
+targetEntityType: paragraph
+bundle: blocksmallimage
+mode: default
+content:
+  field_alignment:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden: {  }
