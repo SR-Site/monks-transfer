@@ -1,7 +1,8 @@
 import IIndexable from "../../../lib/temple/core/IIndexable";
 import IBlock from "../../data/interface/block/IBlock";
+import IAbstractTransitionComponentOptions from "../../util/component-transition/abstract-transition-component/IAbstractTransitionComponentOptions";
 
-interface IAbstractBlockComponentOptions extends IIndexable
+interface IAbstractBlockComponentOptions extends IAbstractTransitionComponentOptions
 {
 	/**
 	 * @ignore

@@ -1,16 +1,14 @@
 import IAbstractBlockComponentOptions from "./IAbstractBlockComponentOptions";
-import AbstractComponentController from "../../../lib/temple/component/AbstractComponentController";
 import AbstractBlockComponentViewModel from "./AbstractBlockComponentViewModel";
-import CallbackCounter from "../../util/CallbackCounter";
-import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 import ContentPagePageController from "../../page/content-page/ContentPagePageController";
+import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import Promise = require("bluebird");
 
 /**
  * @class AbstractBlockComponentController
  * @description This is the default class used for all the block components in the application
  */
-abstract class AbstractBlockComponentController<T, U extends IAbstractBlockComponentOptions> extends AbstractComponentController<AbstractBlockComponentViewModel<T, U>, U>
+abstract class AbstractBlockComponentController<T, U extends IAbstractBlockComponentOptions> extends AbstractTransitionComponentController<AbstractBlockComponentViewModel<T, U>, U>
 {
 	/**
 	 * @property transitionComplete
@@ -27,11 +25,6 @@ abstract class AbstractBlockComponentController<T, U extends IAbstractBlockCompo
 	 * @type {number}
 	 */
 	public transitionInThreshold: number = 0.25;
-	/**
-	 * @property callbackCounter
-	 * @type {CallbackCounter}
-	 */
-	public callbackCounter: CallbackCounter = new CallbackCounter();
 	/**
 	 * @property isInView
 	 * @type {boolean}
@@ -54,11 +47,6 @@ abstract class AbstractBlockComponentController<T, U extends IAbstractBlockCompo
 	 * @type {AbstractBlockComponentViewModel}
 	 */
 	protected viewModel: AbstractBlockComponentViewModel<T, U> & any;
-	/**
-	 * @propety transitionController
-	 * @type {AbstractTransitionController}
-	 */
-	protected transitionController: AbstractTransitionController;
 
 	constructor(element, options)
 	{
@@ -75,6 +63,7 @@ abstract class AbstractBlockComponentController<T, U extends IAbstractBlockCompo
 	{
 		// Add the block id to the block
 		let blockId = document.createElement('div');
+
 		blockId.innerHTML = this.options.id;
 		blockId.style.position = 'absolute';
 		blockId.style.left = '0';
@@ -86,11 +75,6 @@ abstract class AbstractBlockComponentController<T, U extends IAbstractBlockCompo
 		blockId.style.backgroundColor = (this.options.blocks ? '#f18e00' : '#f00');
 
 		this.element.appendChild(blockId);
-
-		this.callbackCounter.promise.then(() => this.allComponentsLoaded());
-
-		// Will be overwritten in parent class
-		// this.transitionController = new AbstractTransitionController(this.element, this);
 
 		// Set the default classes for block components
 		if(this.options.windowed)
@@ -111,8 +95,7 @@ abstract class AbstractBlockComponentController<T, U extends IAbstractBlockCompo
 		// Add the class names to the element
 		this.viewModel.elementClassNames.forEach((className) => this.element.classList.add(className));
 
-		// Store instance on element.
-		ko.utils.domData.set(this.element, AbstractComponentController.BINDING_NAME, this);
+		super.init();
 
 	}
 
@@ -142,20 +125,11 @@ abstract class AbstractBlockComponentController<T, U extends IAbstractBlockCompo
 	{
 		this.transitionInStarted = true;
 
-		return this.transitionController.transitionIn()
+		return super.transitionIn()
 			.then(() =>
 			{
 				this.transitionComplete = true;
 			})
-	}
-
-	/**
-	 * @public
-	 * @method transitionOut
-	 */
-	public transitionOut(): Promise<any>
-	{
-		return this.transitionController.transitionOut();
 	}
 
 	/**
@@ -189,43 +163,18 @@ abstract class AbstractBlockComponentController<T, U extends IAbstractBlockCompo
 	}
 
 	/**
-	 * All components loaded so before transition in
-	 * @protected
-	 * @method allComponentsLoaded
-	 * @description All components have been loaded
-	 */
-	protected allComponentsLoaded(): void
-	{
-
-	}
-
-	/**
 	 * @public
 	 * @method destruct
 	 */
 	public destruct(): void
 	{
-		// Cleaning up the instance domData
-		var disposeCallback = () =>
-		{
-			ko.utils.domNodeDisposal.removeDisposeCallback(this.element, disposeCallback);
+		this.transitionComplete = null;
+		this.disableTransitionIn = null;
+		this.transitionInStarted = null;
+		this.isInView = null;
+		this.animationsStarted = null;
 
-			ko.utils.domData.set(this.element, AbstractComponentController.BINDING_NAME, null);
-		};
 
-		ko.utils.domNodeDisposal.addDisposeCallback(this.element, disposeCallback);
-
-		if(this.transitionController)
-		{
-			this.transitionController.destruct();
-			this.transitionController = null;
-		}
-
-		if(this.callbackCounter)
-		{
-			this.callbackCounter.destruct();
-			this.callbackCounter = null;
-		}
 
 		super.destruct();
 	}

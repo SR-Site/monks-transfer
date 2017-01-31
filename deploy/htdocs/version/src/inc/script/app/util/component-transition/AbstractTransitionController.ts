@@ -20,50 +20,50 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 * @property TRANSITION_IN_COMPLETE
 	 * @type {string}
 	 */
-	public static TRANSITION_IN_COMPLETE: string = 'TRANSITION_IN_COMPLETE';
+	public static TRANSITION_IN_COMPLETE: string = 'AbstractTransitionController.TRANSITION_IN_COMPLETE';
 	/**
 	 * @property TRANSITION_OUT_COMPLETE
 	 * @type {string}
 	 */
-	public static TRANSITION_OUT_COMPLETE: string = 'TRANSITION_OUT_COMPLETE';
+	public static TRANSITION_OUT_COMPLETE: string = 'AbstractTransitionController.TRANSITION_OUT_COMPLETE';
 	/**
 	 * @property TRANSITION_IN_START
 	 * @type {string}
 	 */
-	public static TRANSITION_IN_START: string = 'TRANSITION_IN_START';
+	public static TRANSITION_IN_START: string = 'AbstractTransitionController.TRANSITION_IN_START';
 	/**
 	 * @property TRANSITION_OUT_START
 	 * @type {string}
 	 */
-	public static TRANSITION_OUT_START: string = 'TRANSITION_OUT_START';
+	public static TRANSITION_OUT_START: string = 'AbstractTransitionController.TRANSITION_OUT_START';
 	/**
 	 * @property FORWARD
 	 * @type {string}
 	 */
-	public static FORWARD: string = 'DefaultComponentTransition.FORWARD';
+	public static FORWARD: string = 'AbstractTransitionController.FORWARD';
 	/**
 	 * @property REVERSED
 	 * @type {string}
 	 */
-	public static REVERSED: string = 'DefaultComponentTransition.REVERSED';
+	public static REVERSED: string = 'AbstractTransitionController.REVERSED';
 	/**
 	 * @property IN
 	 * @type {string}
 	 */
-	public static IN: string = 'DefaultComponentTransition.IN';
+	public static IN: string = 'AbstractTransitionController.IN';
 	/**
 	 * @property OUT
 	 * @type {string}
 	 */
-	public static OUT: string = 'DefaultComponentTransition.OUT';
+	public static OUT: string = 'AbstractTransitionController.OUT';
 	/**
 	 * @property LOOP
 	 * @type {string}
 	 */
-	public static LOOP: string = 'DefaultComponentTransition.LOOP';
+	public static LOOP: string = 'AbstractTransitionController.LOOP';
 	/**
 	 * @property transitionResolveMethod
-	 * @type {Function}
+	 * @type {()=>void}
 	 */
 	public transitionResolveMethod: ()=>void;
 	/**
@@ -252,7 +252,7 @@ abstract class AbstractTransitionController extends EventDispatcher
 
 		if(transitionController)
 		{
-			var timeline: any;
+			let timeline: any;
 
 			switch(type)
 			{
@@ -306,7 +306,7 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 */
 	protected handleAnimationStart(type: string, direction: string): void
 	{
-		var transitionEvent: string;
+		let transitionEvent: string;
 
 		switch(type)
 		{
@@ -336,7 +336,7 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 */
 	protected handleAnimationComplete(direction: string, type: string): void
 	{
-		var transitionEvent: string;
+		let transitionEvent: string;
 
 		switch(type)
 		{

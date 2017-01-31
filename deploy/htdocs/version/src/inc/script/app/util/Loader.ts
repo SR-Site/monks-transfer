@@ -20,14 +20,14 @@ class Loader extends EventDispatcher
 	private _element:Element;
 	/**
 	 * @property _transitionOutPromise
-	 * @type {Function}
+	 * @type {()=>void}
 	 */
-	private _transitionOutPromise:Function;
+	private _transitionOutPromise:()=>void;
 	/**
 	 * @property
-	 * @type {Function}
+	 * @type {()=>void}
 	 */
-	private _transitionInPromise:Function;
+	private _transitionInPromise:()=>void;
 
 	constructor(private _wrapper:HTMLElement, className:string = '')
 	{
@@ -66,7 +66,7 @@ class Loader extends EventDispatcher
 			}
 		});
 
-		return new Promise((resolve:Function)=>
+		return new Promise((resolve:()=>void)=>
 		{
 			this._transitionInPromise = resolve;
 		});
@@ -89,7 +89,7 @@ class Loader extends EventDispatcher
 			}
 		});
 
-		return new Promise((resolve:Function)=>
+		return new Promise((resolve:()=>void)=>
 		{
 			this._transitionOutPromise = resolve;
 		});

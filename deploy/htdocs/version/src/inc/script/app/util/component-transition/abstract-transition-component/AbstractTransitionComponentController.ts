@@ -11,7 +11,7 @@ abstract class AbstractTransitionComponentController<T, U extends IDefaultCompon
 	 * @property viewModel
 	 * @type {T}
 	 */
-	public viewModel: T & any;
+	protected viewModel: T & any;
 	/**
 	 * @property transitionController
 	 * @type {AbstractTransitionController}
@@ -32,7 +32,7 @@ abstract class AbstractTransitionComponentController<T, U extends IDefaultCompon
 		// Store instance on element.
 		ko.utils.domData.set(this.element, AbstractComponentController.BINDING_NAME, this);
 
-		this.callbackCounter.promise.then(()=>this.allComponentsLoaded());
+		this.callbackCounter.promise.then(() => this.allComponentsLoaded());
 
 		// Manually resolve the callback counter if there a no components to wait for!
 		if(this.callbackCounter.count === 0)
@@ -93,7 +93,9 @@ abstract class AbstractTransitionComponentController<T, U extends IDefaultCompon
 	 * @description In the parent class we want this method to create the new transitionController instance because
 	 * it means all the sub-components are loaded and we are ready to go!
 	 */
-	protected allComponentsLoaded(): void {}
+	protected allComponentsLoaded(): void
+	{
+	}
 
 	/**
 	 * @public

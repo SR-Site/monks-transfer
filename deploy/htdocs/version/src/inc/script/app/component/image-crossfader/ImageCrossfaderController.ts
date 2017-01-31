@@ -100,7 +100,7 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 	 */
 	public open(path: string, duration: number = ImageCrossfaderController.DURATION, ease: Ease = Expo.easeInOut): Promise<any>
 	{
-		return new Promise((resolve: Function) =>
+		return new Promise((resolve: ()=>void) =>
 		{
 			this.getImage(path)
 				.then((image: HTMLImageElement) =>

@@ -2,12 +2,13 @@ import IAbstractBlockComponentOptions from "./IAbstractBlockComponentOptions";
 import AbstractComponentViewModel from "../../../lib/temple/component/AbstractComponentViewModel";
 import AbstractBlockComponentController from "./AbstractBlockComponentController";
 import BlockType from "../../data/enum/type/BlockType";
+import AbstractTransitionComponentViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 
 /**
  * @class AbstractBlockComponentViewModel
  * @description This is the base viewModel used for all block components.
  */
-abstract class AbstractBlockComponentViewModel<T, U extends IAbstractBlockComponentOptions> extends AbstractComponentViewModel<AbstractBlockComponentController<T, U>, U>
+abstract class AbstractBlockComponentViewModel<T, U extends IAbstractBlockComponentOptions> extends AbstractTransitionComponentViewModel<AbstractBlockComponentController<T, U>, U>
 {
 	/**
 	 * @property controller

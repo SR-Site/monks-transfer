@@ -41,7 +41,7 @@ import Promise = require("bluebird");
  * @class CallbackCounter
  * @extends Destructible
  * @constructor
- * @param {Function} callback A callback method to call when all components are loaded, if none is provided a Promise will be created.
+ * @param {()=>void} callback A callback method to call when all components are loaded, if none is provided a Promise will be created.
  * @returns {Object} The CallbackCounter instance.
  */
 class CallbackCounter extends Destructible
@@ -64,12 +64,12 @@ class CallbackCounter extends Destructible
 	/**
 	 * @private
 	 * @property _callback
-	 * @type {Function}
+	 * @type {()=>void}
 	 * @description The callback method that's called after all components are loaded
 	 */
-	private _callback: Function;
+	private _callback: () => void;
 
-	constructor(callback?: Function)
+	constructor(callback?: () => void)
 	{
 		super();
 
@@ -82,7 +82,7 @@ class CallbackCounter extends Destructible
 		else
 		{
 			// If no callback method was provided use a promise instead
-			this._promise = new Promise((resolve)=>
+			this._promise = new Promise((resolve: () => void) =>
 			{
 				this._callback = resolve;
 			});
@@ -92,10 +92,10 @@ class CallbackCounter extends Destructible
 	/**
 	 * @public
 	 * @method get
-	 * @param {Function} onReady The function that will be called when the component is ready.
-	 * @returns {Function} A new function that will be called by the component's onReady method it will trigger the original onReady method.
+	 * @param {()=>void} onReady The function that will be called when the component is ready.
+	 * @returns {()=>void} A new function that will be called by the component's onReady method it will trigger the original onReady method.
 	 */
-	public get(onReady?: Function): Function
+	public get(onReady?: (componentController: any) => void): (componentController: any) => void
 	{
 		this._count++;
 

@@ -4,7 +4,7 @@ import Promise = require("bluebird");
 class ButtonMainTransitionController extends AbstractTransitionController
 {
 	private _hoverTimeline: TimelineLite;
-	private _hoverResolveMethod: Function;
+	private _hoverResolveMethod: ()=>void;
 
 	/**
 	 * @public
@@ -113,7 +113,7 @@ class ButtonMainTransitionController extends AbstractTransitionController
 			return Promise.resolve();
 		}
 
-		return new Promise((resolve: Function) =>
+		return new Promise((resolve: ()=>void) =>
 		{
 			this._hoverResolveMethod = resolve;
 			this._hoverTimeline.reverse();

@@ -5,7 +5,7 @@ import Promise = require("bluebird");
 class FilterMenuTransitionController extends AbstractTransitionController
 {
 	private _dropDownTimelines:Array<{
-		completeMethod:Function,
+		completeMethod:()=>void,
 		timeline: TimelineLite
 	}> = [];
 
@@ -27,7 +27,7 @@ class FilterMenuTransitionController extends AbstractTransitionController
 
 		dropDownElements.forEach((element:HTMLElement, index:number) =>{
 
-			var timeline = new TimelineLite({
+			let timeline = new TimelineLite({
 				paused: true,
 				onComplete: ()=>{
 					this.handleDropDownAnimationComplete(index)
@@ -70,7 +70,7 @@ class FilterMenuTransitionController extends AbstractTransitionController
 	 */
 	public showDropDown(index:number):Promise<any>
 	{
-		return new Promise((resolve, reject) =>
+		return new Promise((resolve:()=>void, reject:()=>void) =>
 		{
 			this._dropDownTimelines[index].completeMethod = resolve;
 			this._dropDownTimelines[index].timeline.restart();
@@ -83,7 +83,7 @@ class FilterMenuTransitionController extends AbstractTransitionController
 	 */
 	public hideDropDown(index:number):Promise<any>
 	{
-		return new Promise((resolve, reject) =>
+		return new Promise((resolve:()=>void, reject:()=>void) =>
 		{
 			this._dropDownTimelines[index].completeMethod = resolve;
 			this._dropDownTimelines[index].timeline.reverse()

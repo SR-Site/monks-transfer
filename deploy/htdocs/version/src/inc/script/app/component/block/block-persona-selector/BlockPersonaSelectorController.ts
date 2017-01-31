@@ -14,7 +14,7 @@ import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedCon
 
 class BlockPersonaSelectorController extends AbstractBlockComponentController<BlockPersonaSelectorViewModel, IBlockPersonaSelectorOptions>
 {
-	protected transitionController: BlockPersonaSelectorTransitionController;
+	public transitionController: BlockPersonaSelectorTransitionController;
 
 	/**
 	 *    Instance of Log debug utility for debug logging

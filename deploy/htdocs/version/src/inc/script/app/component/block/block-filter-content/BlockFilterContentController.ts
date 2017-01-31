@@ -159,7 +159,7 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	 */
 	private fetchPageFromStorage(): Promise<any>
 	{
-		return new Promise((resolve: Function, reject: Function) =>
+		return new Promise((resolve: ()=>void, reject: ()=>void) =>
 		{
 
 			const pageFound = this.viewModel.pages().find((page) => page.pageIndex === this.getPageIndexByOffset());
@@ -326,7 +326,7 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 		if(this.viewModel.showInPages())
 		{
 			return Promise.all([
-				new Promise((resolve: Function) =>
+				new Promise((resolve: ()=>void) =>
 				{
 					TweenLite.to(contentItems, 0.2, {
 						opacity: 0,

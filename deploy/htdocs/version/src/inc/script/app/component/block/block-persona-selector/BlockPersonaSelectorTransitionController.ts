@@ -7,7 +7,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	private _mainTriangleAnimation: TriangleTransitionController;
 	private _slideTransitions: Array<{
 		timeline: TimelineLite,
-		completeMethod: Function
+		completeMethod: ()=>void
 	}> = [];
 
 	constructor(element: HTMLElement, parentController: any)
@@ -125,7 +125,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	 */
 	public transitionOutStep(index: number): Promise<any>
 	{
-		return new Promise((resolve, reject) =>
+		return new Promise((resolve:()=>void, reject:()=>void) =>
 		{
 			this._slideTransitions[index].completeMethod = resolve;
 			this._slideTransitions[index].timeline.reverse()
@@ -139,7 +139,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	 */
 	public transitionInStep(index: number): Promise<any>
 	{
-		return new Promise((resolve, reject) =>
+		return new Promise((resolve:()=>void, reject:()=>void) =>
 		{
 			// Switch the background
 			this.parentController.changeBackgroundImage(index);

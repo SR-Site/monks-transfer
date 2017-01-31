@@ -4,7 +4,7 @@ import Promise = require("bluebird");
 class ProgramModuleItemTransitionController extends AbstractTransitionController
 {
 	private _mouseEnterTimeline: TimelineLite;
-	private _mouseLeaveResolveMethod: Function;
+	private _mouseLeaveResolveMethod: ()=>void;
 
 	/**
 	 * @protected
@@ -87,7 +87,7 @@ class ProgramModuleItemTransitionController extends AbstractTransitionController
 			return Promise.resolve();
 		}
 
-		return new Promise((resolve: Function) =>
+		return new Promise((resolve: ()=>void) =>
 		{
 			this._mouseLeaveResolveMethod = resolve;
 

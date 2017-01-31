@@ -211,7 +211,7 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 		}
 		else
 		{
-			return new Promise((resolve: Function) => resolve());
+			return new Promise((resolve: ()=>void) => resolve());
 		}
 	}
 

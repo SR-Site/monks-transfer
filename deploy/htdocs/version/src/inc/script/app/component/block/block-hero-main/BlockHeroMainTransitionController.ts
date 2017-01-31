@@ -7,7 +7,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController
 	private _mainTriangleAnimation: TriangleTransitionController;
 	private _slideTransitions: Array<{
 		timeline: TimelineLite,
-		completeMethod: Function
+		completeMethod: () => void
 	}> = [];
 
 	constructor(element: HTMLElement, parentController: any)
@@ -110,7 +110,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController
 	public transitionOutStep(index: number): Promise<any>
 	{
 		return Promise.all([
-			new Promise((resolve, reject) =>
+			new Promise((resolve:()=>void, reject:()=>void) =>
 			{
 				this._slideTransitions[index].completeMethod = resolve;
 				this._slideTransitions[index].timeline.reverse()
@@ -128,7 +128,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController
 	{
 		return Promise.all([
 			this._mainTriangleAnimation.transitionIn(),
-			new Promise((resolve, reject) =>
+			new Promise((resolve:()=>void, reject:()=>void) =>
 			{
 				this._slideTransitions[index].completeMethod = resolve;
 				this._slideTransitions[index].timeline.restart();
@@ -144,14 +144,14 @@ class BlockHeroMainTransitionController extends AbstractTransitionController
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this.transitionInTimeline.from(this.element, 0.5, { opacity: 0 });
+		this.transitionInTimeline.from(this.element, 0.5, {opacity: 0});
 
 		// Run the background switch
 		this.transitionInTimeline.add(() => this.parentController.changeBackgroundImage(this.parentController.activeIndex), 0);
 
 		// Slide in the main triangle
 		this.transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), '=+0.5');
-5
+		5
 		// Run the text animation
 		this.transitionInTimeline.add(() => this._slideTransitions[this.parentController.activeIndex].timeline.restart());
 

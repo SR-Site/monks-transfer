@@ -10,7 +10,7 @@ import ProgramModuleItemTransitionController from "../../program-module-item/Pro
 
 class BlockProgramModuleController extends AbstractBlockComponentController<BlockProgramModuleViewModel, IBlockProgramModuleOptions>
 {
-	private _hoverTimelineResolveMethod: Function;
+	private _hoverTimelineResolveMethod: ()=>void;
 	private _hoverTimelinePromise: Promise<any>;
 
 	/**
@@ -58,7 +58,7 @@ class BlockProgramModuleController extends AbstractBlockComponentController<Bloc
 	 */
 	private closeProgramModule(element: HTMLElement): void
 	{
-		this._hoverTimelinePromise = new Promise((resolve: Function) =>
+		this._hoverTimelinePromise = new Promise((resolve: ()=>void) =>
 		{
 			this._hoverTimelineResolveMethod = resolve;
 		});

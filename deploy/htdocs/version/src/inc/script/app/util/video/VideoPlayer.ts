@@ -42,7 +42,7 @@ class VideoPlayer extends EventDispatcher
 	 */
 	public play():Promise<any>
 	{
-		return new Promise((resolve:Function)=>
+		return new Promise((resolve:()=>void)=>
 		{
 			this._videoElement.play();
 
@@ -56,7 +56,7 @@ class VideoPlayer extends EventDispatcher
 	 */
 	public setCurrentTime(time:number):Promise<any>
 	{
-		return new Promise((resolve:Function)=>
+		return new Promise((resolve:()=>void)=>
 		{
 			this._videoElement.currentTime = time;
 
@@ -70,7 +70,7 @@ class VideoPlayer extends EventDispatcher
 	 */
 	public getCurrentTime():Promise<any>
 	{
-		return new Promise((resolve:Function)=>
+		return new Promise((resolve:(currentTime:number)=>void)=>
 		{
 			resolve(this._videoElement.getCurrentTime());
 		});
@@ -82,7 +82,7 @@ class VideoPlayer extends EventDispatcher
 	 */
 	public getDuration():Promise<any>
 	{
-		return new Promise((resolve:Function)=>
+		return new Promise((resolve:(duration:number)=>void)=>
 		{
 			resolve(this._videoElement.getDuration());
 		});
@@ -94,7 +94,7 @@ class VideoPlayer extends EventDispatcher
 	 */
 	public pause():Promise<any>
 	{
-		return new Promise((resolve:Function)=>
+		return new Promise((resolve:()=>void)=>
 		{
 			this._videoElement.pause();
 
@@ -108,7 +108,7 @@ class VideoPlayer extends EventDispatcher
 	 */
 	public unload():Promise<any>
 	{
-		return new Promise((resolve:Function)=>
+		return new Promise((resolve:()=>void)=>
 		{
 			this._videoElement.currentTime = 0;
 			this._videoElement.pause();
@@ -125,7 +125,7 @@ class VideoPlayer extends EventDispatcher
 	 */
 	public setVolume(volume:number):Promise<any>
 	{
-		return new Promise((resolve:Function)=>
+		return new Promise((resolve:()=>void)=>
 		{
 			this._videoElement.volume = volume;
 
