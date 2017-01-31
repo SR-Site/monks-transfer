@@ -15,6 +15,7 @@ import CommonEvent from "../../lib/temple/event/CommonEvent";
 import PageType from "../../lib/gaia/interface/PageType";
 import Promise = require("bluebird");
 import ScrollUtils from "../util/ScrollUtils";
+import Routes from "../config/Routes";
 
 /**
  * @abstract class DefaultContentPageController
@@ -62,11 +63,6 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 	 */
 	private _scrollTrackerPoints: {[id: string]: ScrollTrackerPoint} = {};
 	/**
-	 * @property _debouncedResizeHandler
-	 * @type {()=>void}
-	 */
-	private _debouncedResizeHandler: () => void = ThrottleDebounce.debounce(this.handleResize, 500, this);
-	/**
 	 * @property _dataManager
 	 * @type {DataManager}
 	 */
@@ -93,7 +89,7 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 		this._currentDeeplink = Gaia.api.getDeeplink();
 
 		// listen to window resize for recalculating the scroll positions
-		this.destructibles.add(new NativeEventListener(window, 'resize', this._debouncedResizeHandler));
+		this.destructibles.add(new NativeEventListener(window, 'resize', ThrottleDebounce.debounce(this.handleResize, 500, this)));
 	}
 
 	/**
@@ -359,12 +355,13 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 		// If the route is a popup, strip the route for fetching the page content.
 		if(Gaia.api.getPage(Gaia.api.getCurrentBranch()).type == PageType.POPUP)
 		{
-			route = 'home';
+			// TODO:  The default route should be returned by the backend? Check with the backend guys
+			route = Routes.HOME;
 		}
 		else
 		{
 			// We want to fetch this from the backend!
-			route = route === '/' ? 'home' : route;
+			route = route === '/' ? Routes.HOME : route;
 		}
 
 		return DataManager.getInstance().settingsModel.pageLayoutModel.getLayout(
@@ -410,7 +407,6 @@ abstract class DefaultContentPageController<T extends DefaultContentPageViewMode
 		this._allComponentsLoaded = null;
 		this._components = null;
 		this._scrollTrackerPoints = null;
-		this._debouncedResizeHandler = null;
 		this._handleScrollSectionInViewListener = null;
 
 		super.destruct();

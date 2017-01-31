@@ -14,7 +14,7 @@ import {PropertyNames} from "../data/enum/ConfigNames";
  */
 class Routes
 {
-	public static HOME: string = '';
+	public static HOME: string = 'home';
 	public static CONTACT_US: string = 'contact-us';
 	public static PAGE_NOT_FOUND: string = 'page-not-found';
 
