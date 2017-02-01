@@ -84,9 +84,6 @@ class BlockPersonaSelectorController extends AbstractBlockComponentController<Bl
 	public handleImageCrossfaderReady(controller: ImageCrossfaderController): void
 	{
 		this._imageCrossfader = controller;
-
-		// Open the first image
-		this.changeBackgroundImage(this.viewModel.activeIndex());
 	}
 
 	/**
