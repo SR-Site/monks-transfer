@@ -9,15 +9,15 @@ class BlockAudioFragmentTransitionController extends AbstractTransitionControlle
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this._transitionInTimeline.from(this.element.querySelector('.heading'), 1,
+		this.transitionInTimeline.from(this.element.querySelector('.heading'), 1,
 			{ opacity: 0, y: 50, ease: Expo.easeOut }
 		);
 
-		this._transitionInTimeline.from(this.element.querySelector('.details'), 1,
+		this.transitionInTimeline.from(this.element.querySelector('.details'), 1,
 			{ opacity: 0, y: 50, ease: Expo.easeOut }
 		);
 
-		this._transitionInTimeline.add(this.getSubTimeline(this.element.querySelector('.component-audio-player')));
+		this.transitionInTimeline.add(this.getSubTimeline(this.element.querySelector('.component-audio-player')));
 	}
 }
 

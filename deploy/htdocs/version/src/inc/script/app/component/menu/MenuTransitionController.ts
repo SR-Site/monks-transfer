@@ -9,7 +9,7 @@ class MenuTransitionController extends AbstractTransitionController
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this._transitionInTimeline.from(this.element, 0.8, {
+		this.transitionInTimeline.from(this.element, 0.8, {
 			xPercent:100,
 			ease: Power4.easeInOut
 		});

@@ -10,12 +10,12 @@ class VideoOverlayTransitionController extends AbstractTransitionController
 	protected setupTransitionInTimeline(): void
 	{
 		// Fade in the mask
-		this._transitionInTimeline.from(this.element.querySelector('.mask'), 0.3, {
+		this.transitionInTimeline.from(this.element.querySelector('.mask'), 0.3, {
 			opacity: 0
 		});
 
 		// Slide in the Video Player
-		this._transitionInTimeline.from(this.element.querySelector('.component-video-player'), 0.5,
+		this.transitionInTimeline.from(this.element.querySelector('.component-video-player'), 0.5,
 			{
 				height: 0,
 				ease: Expo.easeOut
@@ -23,7 +23,7 @@ class VideoOverlayTransitionController extends AbstractTransitionController
 		);
 
 		// Slide in Button Close
-		this._transitionInTimeline.from(this.element.querySelector('.component-button-circle-close'), 0.5, {
+		this.transitionInTimeline.from(this.element.querySelector('.component-button-circle-close'), 0.5, {
 			x: 100,
 			ease: Expo.easeOut
 		});

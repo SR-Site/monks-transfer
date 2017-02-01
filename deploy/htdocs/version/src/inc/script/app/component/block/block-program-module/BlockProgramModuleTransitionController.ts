@@ -13,7 +13,7 @@ class BlockProgramModuleTransitionController extends AbstractTransitionControlle
 
 		Array.from(modules).forEach((element: HTMLElement, index: number) =>
 		{
-			this._transitionInTimeline.add(this.getSubTimeline(element))
+			this.transitionInTimeline.add(this.getSubTimeline(element))
 		});
 	}
 }

@@ -9,7 +9,7 @@ class BlockSmallImageTransitionController extends AbstractTransitionController
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this._transitionInTimeline.from(this.element.querySelector('img'), 2,
+		this.transitionInTimeline.from(this.element.querySelector('img'), 2,
 			{
 				opacity: 0,
 				clearProps: "opacity"

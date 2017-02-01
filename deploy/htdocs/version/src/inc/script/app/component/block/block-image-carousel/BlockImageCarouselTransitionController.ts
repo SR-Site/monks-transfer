@@ -14,19 +14,19 @@ class BlockImageCarouselTransitionController extends AbstractTransitionControlle
 		const pagination = this.element.querySelector('.pagination');
 		const mobilePagination = this.element.querySelector('.component-paginator-dashed');
 
-		this._transitionInTimeline.from(this.element.querySelector('.slider-viewport'), 1, {
+		this.transitionInTimeline.from(this.element.querySelector('.slider-viewport'), 1, {
 			opacity: 0
 		});
 
 		if(pagination && DataManager.getInstance().deviceStateTracker.currentState() > DeviceState.SMALL)
 		{
-			this._transitionInTimeline.from(pagination, 1, {
+			this.transitionInTimeline.from(pagination, 1, {
 				opacity: 0
 			})
 		}
 		else if(mobilePagination && DataManager.getInstance().deviceStateTracker.currentState() <= DeviceState.SMALL)
 		{
-			this._transitionInTimeline.add(this.getSubTimeline(mobilePagination));
+			this.transitionInTimeline.add(this.getSubTimeline(mobilePagination));
 		}
 	}
 }

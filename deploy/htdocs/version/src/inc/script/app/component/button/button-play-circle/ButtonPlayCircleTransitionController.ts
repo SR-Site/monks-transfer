@@ -9,7 +9,7 @@ class ButtonPlayCircleTransitionController extends AbstractTransitionController
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this._transitionInTimeline.from(this.element, 1,
+		this.transitionInTimeline.from(this.element, 1,
 			{ scale: 0, ease: Expo.easeOut }
 		);
 	}

@@ -9,13 +9,13 @@ class DefaultSlideoutPanelTransitionController extends AbstractTransitionControl
 	 */
 	protected setupTransitionInTimeline(): void
 	{
-		this._transitionInTimeline.from(this.element, 0.1, {opacity: 0, display: 'none'});
-		this._transitionInTimeline.to(this.element, 0.5, {
+		this.transitionInTimeline.from(this.element, 0.1, {opacity: 0, display: 'none'});
+		this.transitionInTimeline.to(this.element, 0.5, {
 			className: '+=is-open',
 			ease: Expo.easeInOut
 		});
 
-		this._transitionInTimeline.fromTo(this.element.nextElementSibling, 0.4, {
+		this.transitionInTimeline.fromTo(this.element.nextElementSibling, 0.4, {
 			opacity: 0,
 			display: 'none'
 		},

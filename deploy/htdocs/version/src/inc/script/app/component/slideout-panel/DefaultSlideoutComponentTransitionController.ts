@@ -9,7 +9,7 @@ class DefaultSlideoutComponentTransitionController extends AbstractTransitionCon
 	 */
 	protected setupTransitionInTimeline(): void
 	{
-		this._transitionInTimeline.from(this.element, 0.2, {opacity: 0, display: 'none'}, 0);
+		this.transitionInTimeline.from(this.element, 0.2, {opacity: 0, display: 'none'}, 0);
 	}
 }
 

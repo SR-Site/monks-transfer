@@ -147,19 +147,19 @@ class BlockHeroMainTransitionController extends AbstractTransitionController
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this._transitionInTimeline.from(this.element, 0.5, {opacity: 0});
+		this.transitionInTimeline.from(this.element, 0.5, {opacity: 0});
 
 		// Run the background switch
-		this._transitionInTimeline.add(() => this._parentController.changeBackgroundImage(this._parentController.activeIndex), 0);
+		this.transitionInTimeline.add(() => this._parentController.changeBackgroundImage(this._parentController.activeIndex), 0);
 
 		// Slide in the main triangle
-		this._transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), '=+0.5');
+		this.transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), '=+0.5');
 		5
 		// Run the text animation
-		this._transitionInTimeline.add(() => this._slideTransitions[this._parentController.activeIndex].timeline.restart());
+		this.transitionInTimeline.add(() => this._slideTransitions[this._parentController.activeIndex].timeline.restart());
 
 		// Slide in the secondary triangle
-		this._transitionInTimeline.from(this.element.querySelector('.secondary-background-triangle'), 1.5, {
+		this.transitionInTimeline.from(this.element.querySelector('.secondary-background-triangle'), 1.5, {
 			x: window.innerWidth,
 			y: -window.innerWidth,
 			ease: Expo.easeOut,
@@ -167,7 +167,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController
 		});
 
 		// Slide in the tertiary triangle
-		this._transitionInTimeline.from(this.element.querySelector('.tertiary-background-triangle'), 1.2, {
+		this.transitionInTimeline.from(this.element.querySelector('.tertiary-background-triangle'), 1.2, {
 			x: window.innerWidth,
 			y: -window.innerWidth,
 			ease: Expo.easeOut

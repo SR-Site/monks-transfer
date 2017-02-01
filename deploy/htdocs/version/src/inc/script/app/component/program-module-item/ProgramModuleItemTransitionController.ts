@@ -12,7 +12,7 @@ class ProgramModuleItemTransitionController extends AbstractTransitionController
 	 */
 	protected setupTransitionInTimeline(): void
 	{
-		this._transitionInTimeline.from(this.element, 0.4, {opacity: 0});
+		this.transitionInTimeline.from(this.element, 0.4, {opacity: 0});
 
 		this.addEventListener(AbstractTransitionController.TRANSITION_IN_COMPLETE, () => this.setupHoverTimeline());
 	}

@@ -11,9 +11,9 @@ class AudioPlayerTransitionController extends AbstractTransitionController
 	{
 		const waveForm = <HTMLElement>this.element.querySelector('.wave-form');
 
-		this._transitionInTimeline.add(this.getSubTimeline(this.element.querySelector('.component-button-play-circle')));
+		this.transitionInTimeline.add(this.getSubTimeline(this.element.querySelector('.component-button-play-circle')));
 
-		this._transitionInTimeline.fromTo(waveForm, 2,
+		this.transitionInTimeline.fromTo(waveForm, 2,
 			{
 				clip: 'rect(' + 0 + ', ' + 0 + ',' + waveForm.offsetHeight + ', ' + 0 + ')'
 			},

@@ -83,7 +83,7 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 * @property transitionInTimline
 	 * @type {TimelineLite}
 	 */
-	protected _transitionInTimeline: TimelineLite = new TimelineLite({
+	protected transitionInTimeline: TimelineLite = new TimelineLite({
 		paused: true,
 		onStart: this.handleAnimationStart.bind(this, AbstractTransitionController.IN),
 		onComplete: this.handleAnimationComplete.bind(this, AbstractTransitionController.FORWARD, AbstractTransitionController.IN),
@@ -93,7 +93,7 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 * @property transitionOutTimeline
 	 * @type {TimelineLite}
 	 */
-	protected _transitionOutTimeline: TimelineLite = new TimelineLite({
+	protected transitionOutTimeline: TimelineLite = new TimelineLite({
 		paused: true,
 		onStart: this.handleAnimationStart.bind(this, AbstractTransitionController.OUT),
 		onComplete: this.handleAnimationComplete.bind(this, AbstractTransitionController.FORWARD, AbstractTransitionController.OUT)
@@ -193,7 +193,7 @@ abstract class AbstractTransitionController extends EventDispatcher
 	{
 		return new Promise((resolve: () => void) =>
 		{
-			if(this._transitionInTimeline.duration() === 0)
+			if(this.transitionInTimeline.duration() === 0)
 			{
 				console.log(' [AbstractTransitionController] This block does not have transition, so resolve right away');
 
@@ -202,7 +202,7 @@ abstract class AbstractTransitionController extends EventDispatcher
 			else
 			{
 				this.transitionResolveMethod = resolve;
-				this._transitionInTimeline.restart();
+				this.transitionInTimeline.restart();
 			}
 		})
 	}
@@ -217,13 +217,13 @@ abstract class AbstractTransitionController extends EventDispatcher
 		{
 			this.transitionResolveMethod = resolve;
 
-			if(this._transitionOutTimeline.duration() > 0)
+			if(this.transitionOutTimeline.duration() > 0)
 			{
-				this._transitionOutTimeline.restart();
+				this.transitionOutTimeline.restart();
 			}
 			else
 			{
-				this._transitionInTimeline.reverse();
+				this.transitionInTimeline.reverse();
 			}
 		});
 	}
@@ -267,10 +267,10 @@ abstract class AbstractTransitionController extends EventDispatcher
 			switch(type)
 			{
 				case AbstractTransitionController.IN:
-					timeline = transitionController._transitionInTimeline.play();
+					timeline = transitionController.transitionInTimeline.play();
 					break;
 				case AbstractTransitionController.OUT:
-					timeline = transitionController._transitionInTimeline.play();
+					timeline = transitionController.transitionInTimeline.play();
 					break;
 				case AbstractTransitionController.LOOP:
 					timeline = transitionController.loopingAnimationTimeline;
@@ -385,16 +385,16 @@ abstract class AbstractTransitionController extends EventDispatcher
 	{
 		this.element = null;
 
-		if(this._transitionOutTimeline)
+		if(this.transitionOutTimeline)
 		{
-			this._transitionOutTimeline.kill();
-			this._transitionOutTimeline = null;
+			this.transitionOutTimeline.kill();
+			this.transitionOutTimeline = null;
 		}
 
-		if(this._transitionInTimeline)
+		if(this.transitionInTimeline)
 		{
-			this._transitionInTimeline.kill();
-			this._transitionInTimeline = null;
+			this.transitionInTimeline.kill();
+			this.transitionInTimeline = null;
 		}
 
 		if(this.loopingAnimationTimeline)

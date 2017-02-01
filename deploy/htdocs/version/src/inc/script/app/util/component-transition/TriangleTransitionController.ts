@@ -19,7 +19,7 @@ class TriangleTransitionController extends AbstractTransitionController
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this._transitionInTimeline.fromTo(this.element, this._duration,
+		this.transitionInTimeline.fromTo(this.element, this._duration,
 			{
 				xPercent: -200,
 				yPercent: 100
@@ -39,7 +39,7 @@ class TriangleTransitionController extends AbstractTransitionController
 	 * */
 	protected setupTransitionOutTimeline(): void
 	{
-		this._transitionOutTimeline.to(this.element, this._duration,
+		this.transitionOutTimeline.to(this.element, this._duration,
 			{
 				xPercent: 200,
 				yPercent: -100,
@@ -55,7 +55,7 @@ class TriangleTransitionController extends AbstractTransitionController
 	 */
 	public get transitionInDuration():number
 	{
-		return this._transitionInTimeline.duration();
+		return this.transitionInTimeline.duration();
 	}
 
 	/**
@@ -65,7 +65,7 @@ class TriangleTransitionController extends AbstractTransitionController
 	 */
 	public get transitionOutDuration():number
 	{
-		return this._transitionOutTimeline.duration();
+		return this.transitionOutTimeline.duration();
 	}
 
 	/**
@@ -74,7 +74,7 @@ class TriangleTransitionController extends AbstractTransitionController
 	 */
 	public getTransitionInTimeline():TimelineLite
 	{
-		return this._transitionInTimeline;
+		return this.transitionInTimeline;
 	}
 }
 

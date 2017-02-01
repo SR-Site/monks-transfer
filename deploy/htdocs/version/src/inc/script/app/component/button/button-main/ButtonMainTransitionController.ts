@@ -16,18 +16,18 @@ class ButtonMainTransitionController extends AbstractTransitionController
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this._transitionInTimeline.from(this.element.querySelector('.stripe'), 0.8, {
+		this.transitionInTimeline.from(this.element.querySelector('.stripe'), 0.8, {
 			ease: Expo.easeOut,
 			width: 0,
 			clearProps: "all"
 		}, 0);
 
-		this._transitionInTimeline.from(this.element.querySelector('.background'), 0.8, {
+		this.transitionInTimeline.from(this.element.querySelector('.background'), 0.8, {
 			ease: Expo.easeOut,
 			opacity: 0
 		}, 0);
 
-		this._transitionInTimeline.from(this.element.querySelector('.label'), 0.8, {
+		this.transitionInTimeline.from(this.element.querySelector('.label'), 0.8, {
 			ease: Expo.easeOut,
 			opacity: 0
 		}, 0);
