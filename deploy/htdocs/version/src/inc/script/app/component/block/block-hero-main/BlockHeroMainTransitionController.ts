@@ -38,8 +38,6 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 	{
 		const slideContent = Array.prototype.slice.call(this.element.querySelectorAll('.slide-content'));
 
-		this.parentController.activeIndex
-
 		this.parentController.options.slides.forEach((slide, index: number) =>
 		{
 			let element = slideContent[index];

@@ -3,70 +3,25 @@
 	<h3 class="sub-title copy" data-bind="html: subHeading"></h3>
 	<h2 class="heading-06 heading" data-bind="html: heading"></h2>
 
-	<fieldset class="form-fields" data-bind="validateWith: $root.myValidator">
-		<div class="text-input-holder">
-			<div class="input-text-main input-text">
-				<input required type="text" name="name" id="name" value="" data-bind="validationRule : $root.myValidator.rules.nonEmpty" />
-				<span class="placeholder-label">{{lt:global.form.placeholder.name}}</span>
-				<span class="focus-border"></span>
-			</div>
-		</div>
+	<fieldset class="form-fields" data-bind="validateWith: $root.myValidator, validateOn : 'value'">
 
-		<div class="text-input-holder">
-			<div class="input-text-main input-text">
-				<input required type="text" name="company" id="company" value="" data-bind="validationRule : $root.myValidator.rules.nonEmpty" />
-				<span class="placeholder-label">{{lt:global.form.placeholder.company}}</span>
-				<span class="focus-border"></span>
+		<!-- ko foreach: $root.fields -->
+			<div class="text-input-holder">
+				<div class="input-text-main input-text">
+					<input required type="text" value="" data-bind="
+						attr: {
+							name: $data.name,
+							id: $data.name
+						},
+						live: $data.observable,
+						validationRule : $data.validationRules,
+						focusBorder: {
+							value: $root.myValidator.field($data.name).value
+					}" />
+					<span class="placeholder-label" data-bind="localizedText: 'global.form.placeholder.' + $data.localeKey"></span>
+				</div>
 			</div>
-		</div>
-
-		<div class="text-input-holder">
-			<div class="input-text-main input-text">
-				<input required type="text" name="city" id="city" value="" data-bind="validationRule : $root.myValidator.rules.nonEmpty" />
-				<span class="placeholder-label">{{lt:global.form.placeholder.city}}</span>
-				<span class="focus-border"></span>
-			</div>
-		</div>
-
-		<div class="text-input-holder">
-			<div class="input-text-main input-text">
-				<input required type="text" name="state" id="state" value="" data-bind="validationRule : $root.myValidator.rules.nonEmpty" />
-				<span class="placeholder-label">{{lt:global.form.placeholder.state}}</span>
-				<span class="focus-border"></span>
-			</div>
-		</div>
-
-		<div class="text-input-holder">
-			<div class="input-text-main input-text">
-				<input required type="email" name="email" id="email" value="" data-bind="validationRule : $root.myValidator.rules.isValidEmail" />
-				<span class="placeholder-label">{{lt:global.form.placeholder.email}}</span>
-				<span class="focus-border"></span>
-			</div>
-		</div>
-
-		<div class="text-input-holder">
-			<div class="input-text-main input-text">
-				<input required type="tel" name="phone" id="phone" value="" data-bind="validationRule : $root.myValidator.rules.nonEmpty" />
-				<span class="placeholder-label">{{lt:global.form.placeholder.phone_number}}</span>
-				<span class="focus-border"></span>
-			</div>
-		</div>
-
-		<div class="text-input-holder">
-			<div class="input-text-main input-text">
-				<input required type="text" name="zipcode" id="zipcode" value="" data-bind="validationRule : $root.myValidator.rules.nonEmpty" />
-				<span class="placeholder-label">{{lt:global.form.placeholder.zipcode}}</span>
-				<span class="focus-border"></span>
-			</div>
-		</div>
-
-		<div class="text-input-holder">
-			<div class="input-text-main input-text">
-				<input required type="text" name="comments" id="comments" value="" data-bind="validationRule : $root.myValidator.rules.nonEmpty" />
-				<span class="placeholder-label">{{lt:global.form.placeholder.comments}}</span>
-				<span class="focus-border"></span>
-			</div>
-		</div>
+		<!-- /ko -->
 
 		<!-- ko component: {
 			name: 'button/button-main',

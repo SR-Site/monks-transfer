@@ -1,14 +1,65 @@
 import DefaultComponentTransitionViewModel from "../../../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
-import ContactController from './ContactController';
-import IContactOptions from './IContactOptions';
+import ContactController from "./ContactController";
+import IContactOptions from "./IContactOptions";
+import KnockoutValidator from "../../../../../lib/temple/util/knockoutvalidator/KnockoutValidator";
+import ValidationRules from "../../../../../lib/temple/util/knockoutvalidator/ValidationRules";
 
 import ko = require('knockout');
-import KnockoutValidator from "../../../../../lib/temple/util/knockoutvalidator/KnockoutValidator";
 
 class ContactViewModel extends DefaultComponentTransitionViewModel<ContactController, IContactOptions>
 {
 	public myValidator: KnockoutValidator = new KnockoutValidator();
 
+	public fields: Array<{name: string; localeKey: string, observable: KnockoutObservable<string>, validationRules: Array<RegExp>|RegExp}> = [
+		{
+			name: 'name',
+			localeKey: 'name',
+			validationRules: ValidationRules.nonEmpty,
+			observable: ko.observable('')
+		},
+		{
+			name: 'company',
+			localeKey: 'company',
+			validationRules: ValidationRules.nonEmpty,
+			observable: ko.observable('')
+		},
+		{
+			name: 'city',
+			localeKey: 'city',
+			validationRules: ValidationRules.nonEmpty,
+			observable: ko.observable('')
+		},
+		{
+			name: 'state',
+			localeKey: 'state',
+			validationRules: ValidationRules.nonEmpty,
+			observable: ko.observable('')
+		},
+		{
+			name: 'email',
+			localeKey: 'email',
+			validationRules: [ValidationRules.nonEmpty, ValidationRules.emailRegex],
+			observable: ko.observable('')
+		},
+		{
+			name: 'phone',
+			localeKey: 'phone_number',
+			validationRules: [ValidationRules.nonEmpty, ValidationRules.isValidPhone],
+			observable: ko.observable('')
+		},
+		{
+			name: 'zipcode',
+			localeKey: 'zipcode',
+			validationRules: ValidationRules.nonEmpty,
+			observable: ko.observable('')
+		},
+		{
+			name: 'comments',
+			localeKey: 'comments',
+			validationRules: ValidationRules.nonEmpty,
+			observable: ko.observable('')
+		}
+	];
 
 	/**
 	 * @public
@@ -23,7 +74,7 @@ class ContactViewModel extends DefaultComponentTransitionViewModel<ContactContro
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 
 		if(this.myValidator)
@@ -31,6 +82,8 @@ class ContactViewModel extends DefaultComponentTransitionViewModel<ContactContro
 			this.myValidator.destruct();
 			this.myValidator = null;
 		}
+
+		this.fields = null;
 
 		// always call this last
 		super.destruct();

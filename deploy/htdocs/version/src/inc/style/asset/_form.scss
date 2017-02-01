@@ -1,6 +1,8 @@
 .input-text {
 	position: relative;
+	overflow: hidden;
 
+	.shadow-element,
 	input {
 		position: relative;
 		display: inline-block;
@@ -11,8 +13,18 @@
 		background-color: transparent;
 		font: 400 1.5rem/1 $fontOpenSans;
 		text-indent: 0;
-		width: 100%;
 		outline: none;
+	}
+
+	.shadow-element {
+		opacity: 0;
+		display: inline-block;
+		position: absolute;
+		max-width: 100%;
+	}
+
+	input {
+		width: 100%;
 	}
 
 	&:focus {
@@ -33,15 +45,17 @@
 		transform: translate(0, 0);
 		font: 400 1.5rem / #{$sizeGrid} $fontOpenSans;
 		white-space: nowrap;
-		transition: all 250ms ease(easeOutExpo);
+		transition: transform 250ms ease(easeOutExpo), font-size 250ms ease(easeOutExpo);
 		pointer-events: none;
 	}
 
 	// Input
+	.shadow-element,
 	input {
 		font: 600 1.5rem / #{$sizeGrid} $fontOpenSans;
 
 		// Focus State
+		&.invalid,
 		&:valid,
 		&:focus {
 			+ .placeholder-label {
@@ -49,10 +63,6 @@
 				transform: translate(-100%, 0);
 				opacity: 0.5;
 				font-size: 1.3rem;
-			}
-
-			~ .focus-border { // todo grow on text-input-width?
-				width: 50%;
 			}
 		}
 	}
@@ -62,14 +72,14 @@
 		background-color: $colorSecondary;
 		position: absolute;
 		@include pos(auto, auto, -2px, 0);
-		transition: width 250ms ease(easeOutExpo);
+		//transition: width 250ms ease(easeOutExpo);
 	}
 
 	// Invalid State
 	&.valid,
 	&.invalid {
 		.focus-border {
-			width: 50%;
+			width: 100%;
 			background-color: $colorValidationError;
 		}
 	}
@@ -127,7 +137,6 @@
 
 		&:checked {
 			~ .element:after {
-
 			}
 		}
 	}
@@ -135,12 +144,10 @@
 	.text {
 		display: inline-block;
 		vertical-align: middle;
-
 	}
 
 	&.is-active {
 		.element:after {
-
 		}
 	}
 }
@@ -170,7 +177,6 @@
 		}
 	}
 }
-
 
 form {
 	padding: 0;
