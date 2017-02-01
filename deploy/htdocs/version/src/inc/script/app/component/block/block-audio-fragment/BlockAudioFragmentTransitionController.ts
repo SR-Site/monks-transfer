@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
+import BlockAudioFragmentController from "./BlockAudioFragmentController";
 
-class BlockAudioFragmentTransitionController extends AbstractTransitionController
+class BlockAudioFragmentTransitionController extends AbstractTransitionController<BlockAudioFragmentController>
 {
 	/**
 	 * @public

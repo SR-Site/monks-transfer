@@ -44,7 +44,7 @@ class DataManager
 	public settingsModel: SettingsModel = new SettingsModel();
 	public serviceModel: ServiceModel = new ServiceModel();
 
-	public videoOverlay: VideoOverlayController<any, any>;
+	public videoOverlay: VideoOverlayController;
 
 
 	/**

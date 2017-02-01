@@ -10,18 +10,19 @@ import Promise = require("bluebird");
  * @class AbstractTransitionComponentController
  * @description This class is used by all components that you want to be transition in/out
  */
-abstract class AbstractTransitionComponentController<T, U extends IDefaultComponentTransitionOptions> extends AbstractComponentController<DefaultSubTransitionViewModel<T, U>, U>
+abstract class AbstractTransitionComponentController<TController, TOptions extends IDefaultComponentTransitionOptions>
+	extends AbstractComponentController<DefaultSubTransitionViewModel<TController, TOptions>, TOptions>
 {
 	/**
 	 * @property viewModel
-	 * @type {T}
+	 * @type {TController}
 	 */
-	protected viewModel: T & any;
+	protected viewModel: TController & any;
 	/**
 	 * @property transitionController
 	 * @type {AbstractTransitionController}
 	 */
-	public transitionController: AbstractTransitionController;
+	public transitionController: AbstractTransitionController<AbstractTransitionComponentController<TController, TOptions>>;
 	/**
 	 * @property callBackCounter
 	 * @type {CallbackCounter}

@@ -3,21 +3,16 @@ import TriangleTransitionController from "../../../util/component-transition/Tri
 import Promise = require("bluebird");
 import BlockHeroMainController from "./BlockHeroMainController";
 
-class BlockHeroMainTransitionController extends AbstractTransitionController
+class BlockHeroMainTransitionController extends AbstractTransitionController<BlockHeroMainController>
 {
-	protected _parentController:BlockHeroMainController;
-
-	private _mainTriangleAnimation: TriangleTransitionController;
-	private _slideTransitions: Array<{
-		timeline: TimelineLite,
-		completeMethod: () => void
-	}> = [];
+	private _mainTriangleAnimation: TriangleTransitionController<BlockHeroMainController>;
+	private _slideTransitions: Array<{timeline: TimelineLite, completeMethod: () => void}> = [];
 
 	constructor(element: HTMLElement, parentController: any)
 	{
 		super(element, parentController);
 
-		this._mainTriangleAnimation = new TriangleTransitionController(
+		this._mainTriangleAnimation = new TriangleTransitionController<BlockHeroMainController>(
 			<HTMLElement>this.element.querySelector('.background-triangle'),
 			this._parentController
 		);
@@ -42,6 +37,8 @@ class BlockHeroMainTransitionController extends AbstractTransitionController
 	private setupSlideTransition(): void
 	{
 		const slideContent = Array.prototype.slice.call(this.element.querySelectorAll('.slide-content'));
+
+		this._parentController.activeIndex
 
 		this._parentController.options.slides.forEach((slide, index: number) =>
 		{
@@ -113,7 +110,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController
 	public transitionOutStep(index: number): Promise<any>
 	{
 		return Promise.all([
-			new Promise((resolve:()=>void, reject:()=>void) =>
+			new Promise((resolve: () => void, reject: () => void) =>
 			{
 				this._slideTransitions[index].completeMethod = resolve;
 				this._slideTransitions[index].timeline.reverse()
@@ -131,7 +128,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController
 	{
 		return Promise.all([
 			this._mainTriangleAnimation.transitionIn(),
-			new Promise((resolve:()=>void, reject:()=>void) =>
+			new Promise((resolve: () => void, reject: () => void) =>
 			{
 				this._slideTransitions[index].completeMethod = resolve;
 				this._slideTransitions[index].timeline.restart();

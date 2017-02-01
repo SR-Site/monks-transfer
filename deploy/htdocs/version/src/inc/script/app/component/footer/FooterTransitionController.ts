@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
+import FooterController from "./FooterController";
 
-class FooterTransitionController extends AbstractTransitionController
+class FooterTransitionController extends AbstractTransitionController<FooterController>
 {
 	/**
 	 * @public

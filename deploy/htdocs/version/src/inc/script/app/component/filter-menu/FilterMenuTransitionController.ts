@@ -2,10 +2,10 @@ import AbstractTransitionController from "../../util/component-transition/Abstra
 import FilterMenuController from "./FilterMenuController";
 import Promise = require("bluebird");
 
-class FilterMenuTransitionController extends AbstractTransitionController
+class FilterMenuTransitionController extends AbstractTransitionController<FilterMenuController>
 {
-	private _dropDownTimelines:Array<{
-		completeMethod:()=>void,
+	private _dropDownTimelines: Array<{
+		completeMethod: () => void,
 		timeline: TimelineLite
 	}> = [];
 
@@ -21,24 +21,30 @@ class FilterMenuTransitionController extends AbstractTransitionController
 	 * @public
 	 * @method setupDropdownTimeline
 	 */
-	public setupDropdownTimeline():void
+	public setupDropdownTimeline(): void
 	{
 		const dropDownElements = Array.prototype.slice.call(this.element.querySelectorAll('.filter-item'));
 
-		dropDownElements.forEach((element:HTMLElement, index:number) =>{
+		dropDownElements.forEach((element: HTMLElement, index: number) =>
+		{
 
 			let timeline = new TimelineLite({
 				paused: true,
-				onComplete: ()=>{
+				onComplete: () =>
+				{
 					this.handleDropDownAnimationComplete(index)
 				},
-				onReverseComplete: () =>{
+				onReverseComplete: () =>
+				{
 					this.handleDropDownAnimationComplete(index)
 				}
 			});
 
 			timeline.to(element, 0.25, {className: '+=is-hover', ease: Expo.easeInOut}, 0);
-			timeline.to(element.querySelector('.filter-dropdown'), 0.25, {className: '+=is-open', ease: Expo.easeInOut}, 0);
+			timeline.to(element.querySelector('.filter-dropdown'), 0.25, {
+				className: '+=is-open',
+				ease: Expo.easeInOut
+			}, 0);
 
 			this._dropDownTimelines.push({
 				timeline: timeline,
@@ -51,7 +57,7 @@ class FilterMenuTransitionController extends AbstractTransitionController
 	 * @private
 	 * @method handleDropDownAnimationComplete
 	 */
-	private handleDropDownAnimationComplete(index:number):void
+	private handleDropDownAnimationComplete(index: number): void
 	{
 		let transitionObject = this._dropDownTimelines[index];
 
@@ -68,9 +74,9 @@ class FilterMenuTransitionController extends AbstractTransitionController
 	 * @public
 	 * @method
 	 */
-	public showDropDown(index:number):Promise<any>
+	public showDropDown(index: number): Promise<any>
 	{
-		return new Promise((resolve:()=>void, reject:()=>void) =>
+		return new Promise((resolve: () => void, reject: () => void) =>
 		{
 			this._dropDownTimelines[index].completeMethod = resolve;
 			this._dropDownTimelines[index].timeline.restart();
@@ -81,9 +87,9 @@ class FilterMenuTransitionController extends AbstractTransitionController
 	 * @public
 	 * @method hideDropDown
 	 */
-	public hideDropDown(index:number):Promise<any>
+	public hideDropDown(index: number): Promise<any>
 	{
-		return new Promise((resolve:()=>void, reject:()=>void) =>
+		return new Promise((resolve: () => void, reject: () => void) =>
 		{
 			this._dropDownTimelines[index].completeMethod = resolve;
 			this._dropDownTimelines[index].timeline.reverse()

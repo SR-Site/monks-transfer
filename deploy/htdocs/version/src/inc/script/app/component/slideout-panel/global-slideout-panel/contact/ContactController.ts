@@ -13,8 +13,8 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 	 *	@private
 	 */
 	private _debug:Log = new Log('app.component.Contact');
-	private _loader: Loader;
 
+	private _loader: Loader;
 
 	/**
 	 *	Overrides AbstractPageController.init()

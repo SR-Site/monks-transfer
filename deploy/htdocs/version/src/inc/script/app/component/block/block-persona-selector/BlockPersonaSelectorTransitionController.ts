@@ -3,21 +3,19 @@ import Promise = require("bluebird");
 import TriangleTransitionController from "../../../util/component-transition/TriangleTransitionController";
 import BlockPersonaSelectorController from "./BlockPersonaSelectorController";
 
-class BlockPersonaSelectorTransitionController extends AbstractTransitionController
+class BlockPersonaSelectorTransitionController extends AbstractTransitionController<BlockPersonaSelectorController>
 {
-	protected _parentController:BlockPersonaSelectorController;
-
-	private _mainTriangleAnimation: TriangleTransitionController;
+	private _mainTriangleAnimation: TriangleTransitionController<BlockPersonaSelectorController>;
 	private _slideTransitions: Array<{
 		timeline: TimelineLite,
-		completeMethod: ()=>void
+		completeMethod: () => void
 	}> = [];
 
 	constructor(element: HTMLElement, parentController: any)
 	{
 		super(element, parentController);
 
-		this._mainTriangleAnimation = new TriangleTransitionController(
+		this._mainTriangleAnimation = new TriangleTransitionController<BlockPersonaSelectorController>(
 			<HTMLElement>this.element.querySelector('.background-triangle'),
 			this._parentController,
 			1
@@ -86,7 +84,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this.transitionInTimeline.from(this.element, 0.5, { autoAlpha: 0 });
+		this.transitionInTimeline.from(this.element, 0.5, {autoAlpha: 0});
 
 		// Transition in the paginator
 		this.transitionInTimeline.from(this.element.querySelector('.component-paginator-dashed'), 0.5, {
@@ -94,13 +92,13 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 		});
 
 		// Run the background switch
-		this.transitionInTimeline.add( () => this._parentController.changeBackgroundImage(this._parentController.activeIndex));
+		this.transitionInTimeline.add(() => this._parentController.changeBackgroundImage(this._parentController.activeIndex));
 
 		// Slide in the main triangle
 		this.transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), '=+0.5');
 
 		// Run the text animation
-		this.transitionInTimeline.add( () => this._slideTransitions[this._parentController.activeIndex].timeline.restart())
+		this.transitionInTimeline.add(() => this._slideTransitions[this._parentController.activeIndex].timeline.restart())
 	}
 
 	/**
@@ -128,7 +126,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	 */
 	public transitionOutStep(index: number): Promise<any>
 	{
-		return new Promise((resolve:()=>void, reject:()=>void) =>
+		return new Promise((resolve: () => void, reject: () => void) =>
 		{
 			this._slideTransitions[index].completeMethod = resolve;
 			this._slideTransitions[index].timeline.reverse()
@@ -142,7 +140,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	 */
 	public transitionInStep(index: number): Promise<any>
 	{
-		return new Promise((resolve:()=>void, reject:()=>void) =>
+		return new Promise((resolve: () => void, reject: () => void) =>
 		{
 			// Switch the background
 			this._parentController.changeBackgroundImage(index);

@@ -14,7 +14,7 @@ import Promise = require("bluebird");
  * The AbstractTransitionController also contains a timeline for looping animations. If your component needs to keep
  * animating after transition in is done you can use this timeline to setup a looping animation,
  */
-abstract class AbstractTransitionController extends EventDispatcher
+abstract class AbstractTransitionController<TParentController extends AbstractTransitionComponentController<any, any>> extends EventDispatcher
 {
 	/**
 	 * @property TRANSITION_IN_COMPLETE
@@ -102,7 +102,7 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 * @property _parentController
 	 * @property The _parentController can either be a page or another component
 	 */
-	protected _parentController: AbstractTransitionComponentController<any, any>;
+	protected _parentController: TParentController;
 	/**
 	 * @property _transitionInComplete
 	 * @type {boolean}
@@ -115,7 +115,7 @@ abstract class AbstractTransitionController extends EventDispatcher
 	private _transitionInStarted: boolean = false;
 
 
-	constructor(element: HTMLElement, parentController: AbstractTransitionComponentController<any, any>, waitForParent: boolean = true)
+	constructor(element: HTMLElement, parentController: TParentController, waitForParent: boolean = true)
 	{
 		super();
 
@@ -152,14 +152,14 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 * @method getRootComponent
 	 * @returns {any}
 	 */
-	public getRootComponent(): AbstractTransitionComponentController<any, any>
+	public getRootComponent(): TParentController
 	{
 		let parent = this._parentController;
 
 		// Try to find the parent that is not a page
 		while(parent.parent && !(<DefaultPageController<any>>parent.parent).page)
 		{
-			parent = <AbstractTransitionComponentController<any, any>>parent.parent
+			parent = <TParentController>parent.parent
 		}
 
 		return parent;
@@ -232,7 +232,7 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 * @public
 	 * @method getController
 	 */
-	public getTransitionController(element: Element|string): AbstractTransitionController
+	public getTransitionController(element: Element|string): AbstractTransitionController<any>
 	{
 		const componentElement: Element = typeof element == 'string' ? this.element.querySelector(<string>element) : <Element>element;
 

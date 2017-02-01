@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
+import BlockInfoController from "./BlockInfoController";
 
-class BlockInfoTransitionController extends AbstractTransitionController
+class BlockInfoTransitionController extends AbstractTransitionController<BlockInfoController>
 {
 	/**
 	 * @public

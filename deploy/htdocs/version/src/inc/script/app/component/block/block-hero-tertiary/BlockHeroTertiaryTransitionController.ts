@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
+import BlockHeroTertiaryController from "./BlockHeroTertiaryController";
 
-class BlockHeroTertiaryTransitionController extends AbstractTransitionController
+class BlockHeroTertiaryTransitionController extends AbstractTransitionController<BlockHeroTertiaryController>
 {
 	/**
 	 * @public

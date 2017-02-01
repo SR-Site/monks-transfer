@@ -1,8 +1,9 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 import DataManager from "../../../data/DataManager";
 import {DeviceState} from "../../../data/scss-shared/MediaQueries";
+import BlockQuoteController from "./BlockQuoteController";
 
-class BlockQuoteTransitionController extends AbstractTransitionController
+class BlockQuoteTransitionController extends AbstractTransitionController<BlockQuoteController>
 {
 	/**
 	 * @public

@@ -1,5 +1,7 @@
 import DefaultSlideoutComponentTransitionController from "../../DefaultSlideoutComponentTransitionController";
-class ContactTransitionController extends DefaultSlideoutComponentTransitionController
+import ContactController from "./ContactController";
+
+class ContactTransitionController extends DefaultSlideoutComponentTransitionController<ContactController>
 {
 
 }

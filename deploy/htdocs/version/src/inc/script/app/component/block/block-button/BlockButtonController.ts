@@ -8,17 +8,17 @@ import Log from "lib/temple/util/Log";
 class BlockButtonController extends AbstractBlockComponentController<BlockButtonViewModel, IBlockButtonOptions>
 {
 	/**
-	 *	Instance of Log debug utility for debug logging
-	 *	@property _debug
-	 *	@private
+	 *    Instance of Log debug utility for debug logging
+	 *    @property _debug
+	 *    @private
 	 */
-	private _debug:Log = new Log('app.component.BlockButton');
+	private _debug: Log = new Log('app.component.BlockButton');
 
 	/**
-	 *	Overrides AbstractPageController.init()
-	 *	@method init
+	 *    Overrides AbstractPageController.init()
+	 *    @method init
 	 */
-	public init():void
+	public init(): void
 	{
 		super.init();
 
@@ -26,10 +26,10 @@ class BlockButtonController extends AbstractBlockComponentController<BlockButton
 	}
 
 	/**
-	* @protected
-	* @method allComponentsLoaded
-	*/
-	protected allComponentsLoaded():void
+	 * @protected
+	 * @method allComponentsLoaded
+	 */
+	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new BlockButtonTransitionController(this.element, this);
 
@@ -40,7 +40,7 @@ class BlockButtonController extends AbstractBlockComponentController<BlockButton
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 
 		// always call this last

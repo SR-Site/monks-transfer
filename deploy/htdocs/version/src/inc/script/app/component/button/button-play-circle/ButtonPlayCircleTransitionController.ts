@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
+import ButtonPlayCircleController from "./ButtonPlayCircleController";
 
-class ButtonPlayCircleTransitionController extends AbstractTransitionController
+class ButtonPlayCircleTransitionController extends AbstractTransitionController<ButtonPlayCircleController>
 {
 	/**
 	 * @public

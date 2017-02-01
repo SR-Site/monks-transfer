@@ -2,10 +2,8 @@ import AbstractTransitionController from "../../../util/component-transition/Abs
 import Promise = require("bluebird");
 import ButtonMainController from "./ButtonMainController";
 
-class ButtonMainTransitionController extends AbstractTransitionController
+class ButtonMainTransitionController extends AbstractTransitionController<ButtonMainController>
 {
-	protected _parentController:ButtonMainController;
-
 	private _hoverTimeline: TimelineLite;
 	private _hoverResolveMethod: ()=>void;
 

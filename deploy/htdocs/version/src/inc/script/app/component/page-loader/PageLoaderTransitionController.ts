@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
+import PageLoaderController from "./PageLoaderController";
 
-class PageLoaderTransitionController extends AbstractTransitionController
+class PageLoaderTransitionController extends AbstractTransitionController<PageLoaderController>
 {
 	/**
 	 * @public

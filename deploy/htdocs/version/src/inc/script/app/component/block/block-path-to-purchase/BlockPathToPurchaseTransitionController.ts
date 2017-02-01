@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
+import BlockPathToPurchaseController from "./BlockPathToPurchaseController";
 
-class BlockPathToPurchaseTransitionController extends AbstractTransitionController
+class BlockPathToPurchaseTransitionController extends AbstractTransitionController<BlockPathToPurchaseController>
 {
 
 }

@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
+import AudioPlayerController from "./AudioPlayerController";
 
-class AudioPlayerTransitionController extends AbstractTransitionController
+class AudioPlayerTransitionController extends AbstractTransitionController<AudioPlayerController>
 {
 	/**
 	 * @public

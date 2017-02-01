@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
+import MenuController from "./MenuController";
 
-class MenuTransitionController extends AbstractTransitionController
+class MenuTransitionController extends AbstractTransitionController<MenuController>
 {
 	/**
 	 * @public

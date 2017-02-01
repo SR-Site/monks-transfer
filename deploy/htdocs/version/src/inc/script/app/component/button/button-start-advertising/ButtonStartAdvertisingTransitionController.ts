@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
+import ButtonStartAdvertisingController from "./ButtonStartAdvertisingController";
 
-class ButtonStartAdvertisingTransitionController extends AbstractTransitionController
+class ButtonStartAdvertisingTransitionController extends AbstractTransitionController<ButtonStartAdvertisingController>
 {
 	/**
 	 * @public

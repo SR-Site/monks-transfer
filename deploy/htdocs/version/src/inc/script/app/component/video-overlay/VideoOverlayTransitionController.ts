@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
+import VideoOverlayController from "./VideoOverlayController";
 
-class VideoOverlayTransitionController extends AbstractTransitionController
+class VideoOverlayTransitionController extends AbstractTransitionController<VideoOverlayController>
 {
 	/**
 	 * @public

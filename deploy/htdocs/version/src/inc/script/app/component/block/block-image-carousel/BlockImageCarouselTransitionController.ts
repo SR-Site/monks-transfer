@@ -1,8 +1,9 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 import DataManager from "../../../data/DataManager";
 import {DeviceState} from "../../../data/scss-shared/MediaQueries";
+import BlockImageCarouselController from "./BlockImageCarouselController";
 
-class BlockImageCarouselTransitionController extends AbstractTransitionController
+class BlockImageCarouselTransitionController extends AbstractTransitionController<BlockImageCarouselController>
 {
 	/**
 	 * @public

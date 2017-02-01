@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
+import PaginatorDashedController from "./PaginatorDashedController";
 
-class PaginatorDashedTransitionController extends AbstractTransitionController
+class PaginatorDashedTransitionController extends AbstractTransitionController<PaginatorDashedController>
 {
 	/**
 	 * @public

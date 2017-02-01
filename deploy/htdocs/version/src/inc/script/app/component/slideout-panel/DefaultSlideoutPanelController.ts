@@ -10,13 +10,8 @@ import DefaultComponentTransitionViewModel from "../../util/component-transition
 import NativeEventListener from "../../../lib/temple/event/NativeEventListener";
 import ThrottleDebounce from "../../../lib/temple/util/ThrottleDebounce";
 
-class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> extends AbstractTransitionComponentController<T, U>
+class DefaultSlideoutPanelController<TController, TOptions extends IDefaultSlideoutPanelOptions> extends AbstractTransitionComponentController<TController, TOptions>
 {
-	public callbackCounter: CallbackCounter = new CallbackCounter();
-
-	public viewModel: DefaultSlideoutPanelViewModel<T, U> & any;
-	public transitionController: DefaultSlideoutPanelTransitionController;
-
 	protected _panelComponents: {[id: string]: AbstractTransitionComponentController<any, any>} = {};
 	protected _activePanel: string = '';
 
@@ -30,7 +25,6 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 
 		this.addEvents();
 	}
-
 
 	/**
 	 * @public
@@ -106,13 +100,13 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 	{
 		if(this.viewModel.isOpen())
 		{
-			return this.showPanelContent(panelId).then(()=>this.checkScroll());
+			return this.showPanelContent(panelId).then(() => this.checkScroll());
 		}
 
 		this.viewModel.isOpen(true);
 
 		// Animate in Panel
-		return this.transitionController.transitionIn().then(() => this.showPanelContent(panelId)).then(()=>this.checkScroll());
+		return this.transitionController.transitionIn().then(() => this.showPanelContent(panelId)).then(() => this.checkScroll());
 	}
 
 	/**
@@ -192,7 +186,7 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 		}
 	}
 
-	public getCustomScrollbar():Scrollbar
+	public getCustomScrollbar(): Scrollbar
 	{
 		return ko.utils.domData.get(this.getCustomScrollElement(), Scrollbar.BINDING_NAME);
 	}
@@ -226,7 +220,7 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 	 * @private
 	 * @method handleResize
 	 */
-	private handleResize():void
+	private handleResize(): void
 	{
 		this.checkScroll();
 	}

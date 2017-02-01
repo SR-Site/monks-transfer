@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
+import ButtonMenuController from "./ButtonMenuController";
 
-class ButtonMenuTransitionController extends AbstractTransitionController
+class ButtonMenuTransitionController extends AbstractTransitionController<ButtonMenuController>
 {
 
 }

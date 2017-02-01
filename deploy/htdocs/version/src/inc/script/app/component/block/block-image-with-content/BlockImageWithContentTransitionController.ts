@@ -1,22 +1,22 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 import SentenceTransitionController from "../../../util/component-transition/SentenceTransitionController";
+import BlockImageWithContentController from "./BlockImageWithContentController";
 
-class BlockImageWithContentTransitionController extends AbstractTransitionController
+class BlockImageWithContentTransitionController extends AbstractTransitionController<BlockImageWithContentController>
 {
-
-	private _headingAnimation: SentenceTransitionController;
-	private _copyAnimation: SentenceTransitionController;
+	private _headingAnimation: SentenceTransitionController<BlockImageWithContentController>;
+	private _copyAnimation: SentenceTransitionController<BlockImageWithContentController>;
 
 	constructor(element: HTMLElement, parentController: any)
 	{
 		super(element, parentController);
 
-		this._headingAnimation = new SentenceTransitionController(
+		this._headingAnimation = new SentenceTransitionController<BlockImageWithContentController>(
 			<HTMLElement>this.element.querySelector('.heading'),
 			this._parentController
 		);
 
-		this._copyAnimation = new SentenceTransitionController(
+		this._copyAnimation = new SentenceTransitionController<BlockImageWithContentController>(
 			<HTMLElement>this.element.querySelector('.copy'),
 			this._parentController
 		);

@@ -7,7 +7,7 @@ import {IVideoPlayerOptions} from "../video-player/IVideoPlayerOptions";
 import VideoOverlayTransitionController from "./VideoOverlayTransitionController";
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 
-class VideoOverlayController<T, U extends IVideoOverlayOptions> extends AbstractTransitionComponentController<VideoOverlayViewModel<any, any>, IVideoOverlayOptions>
+class VideoOverlayController extends AbstractTransitionComponentController<VideoOverlayViewModel, IVideoOverlayOptions>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

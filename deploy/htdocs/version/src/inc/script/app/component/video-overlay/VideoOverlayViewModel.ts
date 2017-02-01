@@ -4,7 +4,7 @@ import IVideoOverlayOptions from 'app/component/video-overlay/IVideoOverlayOptio
 import ko = require('knockout');
 import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 
-class VideoOverlayViewModel<T, U extends IVideoOverlayOptions> extends DefaultComponentTransitionViewModel<VideoOverlayController<any, any>, IVideoOverlayOptions>
+class VideoOverlayViewModel extends DefaultComponentTransitionViewModel<VideoOverlayController, IVideoOverlayOptions>
 {
 	public videoMuted:KnockoutObservable<boolean> = ko.observable(false);
 	public isPlaying:KnockoutObservable<boolean>  = ko.observable(false);

@@ -133,7 +133,7 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	 * @public
 	 * @method handleVideoOverlayReady
 	 */
-	public handleVideoOverlayReady(controller:VideoOverlayController<any, any>):void
+	public handleVideoOverlayReady(controller:VideoOverlayController):void
 	{
 		this._dataManager.videoOverlay = controller;
 	}

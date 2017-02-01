@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
+import PercentageLoaderController from "./PercentageLoaderController";
 
-class PercentageLoaderTransitionController extends AbstractTransitionController
+class PercentageLoaderTransitionController extends AbstractTransitionController<PercentageLoaderController>
 {
 
 }

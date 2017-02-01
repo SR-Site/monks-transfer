@@ -1,6 +1,7 @@
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
+import HeaderController from "./HeaderController";
 
-class HeaderTransitionController extends AbstractTransitionController
+class HeaderTransitionController extends AbstractTransitionController<HeaderController>
 {
 	/**
 	 * @public

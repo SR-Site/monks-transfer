@@ -4,11 +4,12 @@ import PanelBlocks from "../../data/enum/block/PanelBlocks";
 import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import Promise = require("bluebird");
 
-class DefaultSlideoutPanelViewModel<T, U extends IDefaultSlideoutPanelOptions> extends DefaultComponentTransitionViewModel<DefaultSlideoutPanelController<T, U>, U>
+class DefaultSlideoutPanelViewModel<TController, TOptions extends IDefaultSlideoutPanelOptions>
+	extends DefaultComponentTransitionViewModel<DefaultSlideoutPanelController<TController, TOptions>, TOptions>
 {
 	public isOpen: KnockoutObservable<boolean> = ko.observable(false);
 	public PanelBlocks: Class = PanelBlocks;
-	public controller:DefaultSlideoutPanelController<T, U> & any;
+	public controller: DefaultSlideoutPanelController<TController, TOptions> & any;
 
 	/**
 	 * @public
