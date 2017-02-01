@@ -3,8 +3,8 @@ import Destructible from "../../../lib/temple/core/Destructible";
 
 abstract class AbstractDataModel<T extends IIndexable> extends Destructible
 {
-	protected _data: Array<T> = [];
-	protected _idMap: {[id: string]: T} = {};
+	protected data: Array<T> = [];
+	protected idMap: {[id: string]: T} = {};
 
 	/**
 	 * Method to add a item to the data model
@@ -16,13 +16,13 @@ abstract class AbstractDataModel<T extends IIndexable> extends Destructible
 	public addItem(item: T): void
 	{
 		// Check for existing id otherwise add a index
-		item.id = item.id == void 0 ? this._data.length.toString() : item.id;
+		item.id = item.id == void 0 ? this.data.length.toString() : item.id;
 
 		if(!this.hasItem(item.id))
 		{
-			this._data.push(item);
+			this.data.push(item);
 
-			this._idMap[item.id] = item;
+			this.idMap[item.id] = item;
 		}
 		else
 		{
@@ -42,7 +42,7 @@ abstract class AbstractDataModel<T extends IIndexable> extends Destructible
 
 		if(old)
 		{
-			this._data[this._data.indexOf(item)] = item;
+			this.data[this.data.indexOf(item)] = item;
 		}
 	}
 
@@ -67,8 +67,8 @@ abstract class AbstractDataModel<T extends IIndexable> extends Destructible
 	 */
 	public removeItems(): void
 	{
-		this._data = [];
-		this._idMap = {};
+		this.data = [];
+		this.idMap = {};
 	}
 
 	/**
@@ -80,7 +80,7 @@ abstract class AbstractDataModel<T extends IIndexable> extends Destructible
 	 */
 	public getAllItems(): Array<T>
 	{
-		return this._data.concat([]);
+		return this.data.concat([]);
 	}
 
 	/**
@@ -94,7 +94,7 @@ abstract class AbstractDataModel<T extends IIndexable> extends Destructible
 	 */
 	public getItems(offset: number = 0, limit: number = 5): Array<T>
 	{
-		return this._data.slice(offset, limit);
+		return this.data.slice(offset, limit);
 	}
 
 	/**
@@ -109,7 +109,7 @@ abstract class AbstractDataModel<T extends IIndexable> extends Destructible
 	{
 		if(this.hasItem(id))
 		{
-			return this._idMap[id];
+			return this.idMap[id];
 		}
 
 		throw new Error('No item found with the following id: ' + id)
@@ -124,7 +124,7 @@ abstract class AbstractDataModel<T extends IIndexable> extends Destructible
 	 */
 	public getItemsByIds(ids: Array<string>): Array<T>
 	{
-		return ids.map((id) => this._idMap[id]);
+		return ids.map((id) => this.idMap[id]);
 	}
 
 	/**
@@ -135,7 +135,7 @@ abstract class AbstractDataModel<T extends IIndexable> extends Destructible
 	 */
 	public hasItem(id:string): boolean
 	{
-		return id in this._idMap;
+		return id in this.idMap;
 	}
 
 	/**
@@ -144,8 +144,8 @@ abstract class AbstractDataModel<T extends IIndexable> extends Destructible
 	 */
 	public destruct(): void
 	{
-		this._data = null;
-		this._idMap = null;
+		this.data = null;
+		this.idMap = null;
 
 		super.destruct();
 	}

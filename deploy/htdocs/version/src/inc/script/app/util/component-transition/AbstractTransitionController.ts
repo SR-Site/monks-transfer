@@ -102,7 +102,7 @@ abstract class AbstractTransitionController<TParentController extends AbstractTr
 	 * @property _parentController
 	 * @property The _parentController can either be a page or another component
 	 */
-	protected _parentController: TParentController;
+	protected parentController: TParentController;
 	/**
 	 * @property _transitionInComplete
 	 * @type {boolean}
@@ -120,7 +120,7 @@ abstract class AbstractTransitionController<TParentController extends AbstractTr
 		super();
 
 		this.element = element;
-		this._parentController = parentController;
+		this.parentController = parentController;
 
 		if(waitForParent)
 		{
@@ -154,7 +154,7 @@ abstract class AbstractTransitionController<TParentController extends AbstractTr
 	 */
 	public getRootComponent(): TParentController
 	{
-		let parent = this._parentController;
+		let parent = this.parentController;
 
 		// Try to find the parent that is not a page
 		while(parent.parent && !(<DefaultPageController<any>>parent.parent).page)

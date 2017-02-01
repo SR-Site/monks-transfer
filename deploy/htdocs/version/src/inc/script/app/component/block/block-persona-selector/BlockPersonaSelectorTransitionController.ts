@@ -17,7 +17,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 
 		this._mainTriangleAnimation = new TriangleTransitionController<BlockPersonaSelectorController>(
 			<HTMLElement>this.element.querySelector('.background-triangle'),
-			this._parentController,
+			this.parentController,
 			1
 		);
 	}
@@ -42,7 +42,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	{
 		const personaContent = Array.prototype.slice.call(this.element.querySelectorAll('.persona'));
 
-		this._parentController.options.personas.forEach((persona, index: number) =>
+		this.parentController.options.personas.forEach((persona, index: number) =>
 		{
 			let element = personaContent[index];
 
@@ -92,13 +92,13 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 		});
 
 		// Run the background switch
-		this.transitionInTimeline.add(() => this._parentController.changeBackgroundImage(this._parentController.activeIndex));
+		this.transitionInTimeline.add(() => this.parentController.changeBackgroundImage(this.parentController.activeIndex));
 
 		// Slide in the main triangle
 		this.transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), '=+0.5');
 
 		// Run the text animation
-		this.transitionInTimeline.add(() => this._slideTransitions[this._parentController.activeIndex].timeline.restart())
+		this.transitionInTimeline.add(() => this._slideTransitions[this.parentController.activeIndex].timeline.restart())
 	}
 
 	/**
@@ -143,7 +143,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 		return new Promise((resolve: () => void, reject: () => void) =>
 		{
 			// Switch the background
-			this._parentController.changeBackgroundImage(index);
+			this.parentController.changeBackgroundImage(index);
 
 			// Slide out the main triangle
 			this._mainTriangleAnimation.transitionOut()

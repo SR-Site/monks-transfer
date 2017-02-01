@@ -14,7 +14,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 
 		this._mainTriangleAnimation = new TriangleTransitionController<BlockHeroMainController>(
 			<HTMLElement>this.element.querySelector('.background-triangle'),
-			this._parentController
+			this.parentController
 		);
 	}
 
@@ -38,9 +38,9 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 	{
 		const slideContent = Array.prototype.slice.call(this.element.querySelectorAll('.slide-content'));
 
-		this._parentController.activeIndex
+		this.parentController.activeIndex
 
-		this._parentController.options.slides.forEach((slide, index: number) =>
+		this.parentController.options.slides.forEach((slide, index: number) =>
 		{
 			let element = slideContent[index];
 			let heading = element.querySelector('.heading');
@@ -147,13 +147,13 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 		this.transitionInTimeline.from(this.element, 0.5, {opacity: 0});
 
 		// Run the background switch
-		this.transitionInTimeline.add(() => this._parentController.changeBackgroundImage(this._parentController.activeIndex), 0);
+		this.transitionInTimeline.add(() => this.parentController.changeBackgroundImage(this.parentController.activeIndex), 0);
 
 		// Slide in the main triangle
 		this.transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), '=+0.5');
-		5
+
 		// Run the text animation
-		this.transitionInTimeline.add(() => this._slideTransitions[this._parentController.activeIndex].timeline.restart());
+		this.transitionInTimeline.add(() => this._slideTransitions[this.parentController.activeIndex].timeline.restart());
 
 		// Slide in the secondary triangle
 		this.transitionInTimeline.from(this.element.querySelector('.secondary-background-triangle'), 1.5, {

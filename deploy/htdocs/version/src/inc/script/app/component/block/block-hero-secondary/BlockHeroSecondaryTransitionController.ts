@@ -4,7 +4,7 @@ import BlockHeroSecondaryController from "./BlockHeroSecondaryController";
 
 class BlockHeroSecondaryTransitionController extends AbstractTransitionController<BlockHeroSecondaryController>
 {
-	protected _parentController: BlockHeroSecondaryController;
+	protected parentController: BlockHeroSecondaryController;
 
 	private _mainTriangleAnimation: TriangleTransitionController<BlockHeroSecondaryController>;
 
@@ -14,7 +14,7 @@ class BlockHeroSecondaryTransitionController extends AbstractTransitionControlle
 
 		this._mainTriangleAnimation = new TriangleTransitionController<BlockHeroSecondaryController>(
 			<HTMLElement>this.element.querySelector('.background-triangle'),
-			this._parentController
+			this.parentController
 		);
 	}
 
@@ -32,7 +32,7 @@ class BlockHeroSecondaryTransitionController extends AbstractTransitionControlle
 		this.transitionInTimeline.from(this.element, 0.5, {opacity: 0});
 
 		// Run the background switch
-		this.transitionInTimeline.add(() => this._parentController.changeBackgroundImage(), 0);
+		this.transitionInTimeline.add(() => this.parentController.changeBackgroundImage(), 0);
 
 		// Slide in the main triangle
 		this.transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), '=+0.5');

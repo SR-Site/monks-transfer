@@ -12,7 +12,7 @@ class InitDataModel
 
 	set data(data: IInitData)
 	{
-		this._data = data;
+		this.data = data;
 
 		this.layoutModel.addSlideOutPanel(data.layout.slideOutPanel);
 		this.navigationModel.addItems(data.layout.navigation);

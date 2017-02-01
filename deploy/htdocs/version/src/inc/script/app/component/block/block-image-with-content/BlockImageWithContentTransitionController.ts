@@ -13,12 +13,12 @@ class BlockImageWithContentTransitionController extends AbstractTransitionContro
 
 		this._headingAnimation = new SentenceTransitionController<BlockImageWithContentController>(
 			<HTMLElement>this.element.querySelector('.heading'),
-			this._parentController
+			this.parentController
 		);
 
 		this._copyAnimation = new SentenceTransitionController<BlockImageWithContentController>(
 			<HTMLElement>this.element.querySelector('.copy'),
-			this._parentController
+			this.parentController
 		);
 	}
 
