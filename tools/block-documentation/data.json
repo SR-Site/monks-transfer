@@ -149,7 +149,7 @@
                     "name": "file",
                     "type": "string",
                     "required": true,
-                    "defaultValue": "null",
+                    "defaultValue": "/path/to/file.mp3",
                     "description": "The *.mp3 file that will be played",
                     "placeholder": "",
                     "properties": []
@@ -983,9 +983,36 @@
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
                     "placeholder": "0",
                     "properties": []
+                },
+                {
+                    "name": "link",
+                    "type": "ILink",
+                    "required": false,
+                    "defaultValue": "null",
+                    "description": "The link displayed in the info block",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
+                    "name": "paragraph",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The paragraph displayed in the info block",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
+                    "name": "heading",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The heading displayed in the info block",
+                    "placeholder": "",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockInfo\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blockInfo\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockLatest",

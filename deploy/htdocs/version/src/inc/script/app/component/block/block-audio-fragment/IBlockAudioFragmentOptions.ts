@@ -21,6 +21,7 @@ export interface IBlockAudioFragmentOptions extends IAbstractBlockComponentOptio
 	/**
 	 * @property
 	 * @description The *.mp3 file that will be played
+	 * @defaultValue /path/to/file.mp3
 	 */
 	file: string;
 }
