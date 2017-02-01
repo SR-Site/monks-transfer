@@ -11,7 +11,7 @@ class BlockArticleTeaserTransitionController extends AbstractTransitionControlle
 	{
 		const tags = Array.prototype.slice.call(this.element.querySelectorAll('.component-button-tag'));
 
-		this.transitionInTimeline.fromTo(this.element.querySelector('figure'), 2,
+		this._transitionInTimeline.fromTo(this.element.querySelector('figure'), 2,
 			{
 				clip: 'rect(0, ' + this.element.offsetWidth + ',' + this.element.offsetHeight + ', ' + this.element.offsetWidth + ')',
 				opacity: 0
@@ -24,7 +24,7 @@ class BlockArticleTeaserTransitionController extends AbstractTransitionControlle
 			});
 
 
-		this.transitionInTimeline.from(this.element.querySelector('img'), 1,
+		this._transitionInTimeline.from(this.element.querySelector('img'), 1,
 			{
 				xPercent: -10,
 				clearProps: "xPercent",
@@ -32,13 +32,13 @@ class BlockArticleTeaserTransitionController extends AbstractTransitionControlle
 			}, 0);
 
 
-		this.transitionInTimeline.from(this.element.querySelector('.heading'), 1,
+		this._transitionInTimeline.from(this.element.querySelector('.heading'), 1,
 			{
 				opacity: 0,
 				clearProps: "opacity",
 			}, '=-0.8');
 
-		this.transitionInTimeline.from(this.element.querySelector('.copy'), 1,
+		this._transitionInTimeline.from(this.element.querySelector('.copy'), 1,
 			{
 				opacity: 0,
 				clearProps: "opacity",
@@ -47,7 +47,7 @@ class BlockArticleTeaserTransitionController extends AbstractTransitionControlle
 
 		tags.forEach((tag, index) =>
 		{
-			this.transitionInTimeline.from(tag, 1,
+			this._transitionInTimeline.from(tag, 1,
 				{
 					opacity: 0,
 					clearProps: "opacity",
@@ -56,7 +56,7 @@ class BlockArticleTeaserTransitionController extends AbstractTransitionControlle
 
 
 		// Enable css transitions
-		this.transitionInTimeline.add(() => this.element.classList.add('transition-in-complete'));
+		this._transitionInTimeline.add(() => this.element.classList.add('transition-in-complete'));
 
 	}
 }

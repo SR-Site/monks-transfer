@@ -15,7 +15,7 @@ class BlockLatestTransitionController extends AbstractTransitionController
 		{
 			let offset = index > 0 ? '=-2.5' : 0;
 
-			this.transitionInTimeline.add(this.getSubTimeline(article), offset)
+			this._transitionInTimeline.add(this.getSubTimeline(article), offset)
 		})
 	}
 }

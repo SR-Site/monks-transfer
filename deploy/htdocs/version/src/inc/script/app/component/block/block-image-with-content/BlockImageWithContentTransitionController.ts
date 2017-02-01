@@ -13,12 +13,12 @@ class BlockImageWithContentTransitionController extends AbstractTransitionContro
 
 		this._headingAnimation = new SentenceTransitionController(
 			<HTMLElement>this.element.querySelector('.heading'),
-			this.parentController
+			this._parentController
 		);
 
 		this._copyAnimation = new SentenceTransitionController(
 			<HTMLElement>this.element.querySelector('.copy'),
-			this.parentController
+			this._parentController
 		);
 	}
 
@@ -35,7 +35,7 @@ class BlockImageWithContentTransitionController extends AbstractTransitionContro
 
 		const button = this.element.querySelector('.component-button-main');
 
-		this.transitionInTimeline.fromTo(this.element.querySelector('.image'), 2,
+		this._transitionInTimeline.fromTo(this.element.querySelector('.image'), 2,
 			{
 				clip: 'rect(0, 0,' + height + ', 0)'
 			},
@@ -45,7 +45,7 @@ class BlockImageWithContentTransitionController extends AbstractTransitionContro
 				ease: Expo.easeInOut
 			});
 
-		this.transitionInTimeline.from(this.element.querySelector('.content'), 2,
+		this._transitionInTimeline.from(this.element.querySelector('.content'), 2,
 			{
 				xPercent: -150,
 				clearProps: "all",
@@ -54,12 +54,12 @@ class BlockImageWithContentTransitionController extends AbstractTransitionContro
 			'=-1.8'
 		);
 
-		this.transitionInTimeline.add(this._headingAnimation.getTimeline(), '=-1');
-		this.transitionInTimeline.add(this._copyAnimation.getTimeline());
+		this._transitionInTimeline.add(this._headingAnimation.getTimeline(), '=-1');
+		this._transitionInTimeline.add(this._copyAnimation.getTimeline());
 
 		if(button)
 		{
-			this.transitionInTimeline.add(this.getSubTimeline(button));
+			this._transitionInTimeline.add(this.getSubTimeline(button));
 		}
 	}
 }

@@ -123,6 +123,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 				.then(() =>
 				{
 					this._currentDeeplink = event.routeResult[0].deeplink;
+
 					this.viewModel.pageLayout([]);
 
 					if(this.callbackCounter)

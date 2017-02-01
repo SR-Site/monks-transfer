@@ -28,7 +28,6 @@ class PageLoaderController extends AbstractTransitionComponentController<PageLoa
 
 	}
 
-
 	/**
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct

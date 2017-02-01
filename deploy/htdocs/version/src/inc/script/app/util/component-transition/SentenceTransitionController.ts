@@ -5,7 +5,7 @@ class SentenceTransitionController extends AbstractTransitionController
 	private _splitText:SplitText;
 
 
-	constructor(public element: HTMLElement, protected parentController: any )
+	constructor(public element: HTMLElement, parentController: any )
 	{
 		super(element, parentController, false);
 
@@ -33,15 +33,15 @@ class SentenceTransitionController extends AbstractTransitionController
 			(<HTMLElement>element.appendChild( document.createElement('span') )).classList.add('animation-line');
 
 			// Cover sentence with Animation Line
-			this.transitionInTimeline.to(element.querySelector('.animation-line'), duration, {x: '0%', ease: Expo.easeIn}, 'line1');
-			this.transitionInTimeline.addLabel('afterLine1', '-=0');
+			this._transitionInTimeline.to(element.querySelector('.animation-line'), duration, {x: '0%', ease: Expo.easeIn}, 'line1');
+			this._transitionInTimeline.addLabel('afterLine1', '-=0');
 
 			// Hide Mask Line
-			this.transitionInTimeline.set(element.querySelector('.mask-line'), {display: 'none'}, 'afterLine1');
+			this._transitionInTimeline.set(element.querySelector('.mask-line'), {display: 'none'}, 'afterLine1');
 
 			// Reveal Sentence
-			this.transitionInTimeline.to(element.querySelector('.animation-line'), duration, {width: '0%', ease: Expo.easeIn}, 'afterLine1');
-			this.transitionInTimeline.addLabel('line1', '-=' + duration*0.9);
+			this._transitionInTimeline.to(element.querySelector('.animation-line'), duration, {width: '0%', ease: Expo.easeIn}, 'afterLine1');
+			this._transitionInTimeline.addLabel('line1', '-=' + duration*0.9);
 		});
 	}
 
@@ -51,7 +51,7 @@ class SentenceTransitionController extends AbstractTransitionController
 	 */
 	public getTimeline():Animation
 	{
-		return this.transitionInTimeline.play();
+		return this._transitionInTimeline.play();
 	}
 
 }

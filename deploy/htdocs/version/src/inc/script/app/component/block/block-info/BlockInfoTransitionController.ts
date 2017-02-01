@@ -12,9 +12,9 @@ class BlockInfoTransitionController extends AbstractTransitionController
 		const heading = this.element.querySelector('.heading');
 		const copy = this.element.querySelector('.copy');
 
-		this.transitionInTimeline.from(this.element, 0.5, { opacity: 0, clearProps: "al" });
-		this.transitionInTimeline.from(heading, 0.5, { opacity: 0, y: 100, ease: Expo.easeOut, clearProps: "al" }, '=-0.3');
-		this.transitionInTimeline.from(copy, 0.5, { opacity: 0, y: 100, ease: Expo.easeOut, clearProps: "al" }, '=-0.3');
+		this._transitionInTimeline.from(this.element, 0.5, { opacity: 0, clearProps: "al" });
+		this._transitionInTimeline.from(heading, 0.5, { opacity: 0, y: 100, ease: Expo.easeOut, clearProps: "al" }, '=-0.3');
+		this._transitionInTimeline.from(copy, 0.5, { opacity: 0, y: 100, ease: Expo.easeOut, clearProps: "al" }, '=-0.3');
 	}
 }
 

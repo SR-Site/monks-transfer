@@ -1,8 +1,11 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 import Promise = require("bluebird");
+import ButtonMainController from "./ButtonMainController";
 
 class ButtonMainTransitionController extends AbstractTransitionController
 {
+	protected _parentController:ButtonMainController;
+
 	private _hoverTimeline: TimelineLite;
 	private _hoverResolveMethod: ()=>void;
 
@@ -13,18 +16,18 @@ class ButtonMainTransitionController extends AbstractTransitionController
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this.transitionInTimeline.from(this.element.querySelector('.stripe'), 0.8, {
+		this._transitionInTimeline.from(this.element.querySelector('.stripe'), 0.8, {
 			ease: Expo.easeOut,
 			width: 0,
 			clearProps: "all"
 		}, 0);
 
-		this.transitionInTimeline.from(this.element.querySelector('.background'), 0.8, {
+		this._transitionInTimeline.from(this.element.querySelector('.background'), 0.8, {
 			ease: Expo.easeOut,
 			opacity: 0
 		}, 0);
 
-		this.transitionInTimeline.from(this.element.querySelector('.label'), 0.8, {
+		this._transitionInTimeline.from(this.element.querySelector('.label'), 0.8, {
 			ease: Expo.easeOut,
 			opacity: 0
 		}, 0);
@@ -77,12 +80,12 @@ class ButtonMainTransitionController extends AbstractTransitionController
 
 		this._hoverTimeline.fromTo(this.element.querySelector('.hover-stroke'), 1,
 			{
-				strokeDasharray: '0px ' + this.parentController.fullPath + 'px',
-				strokeDashoffset: this.parentController.height / 2
+				strokeDasharray: '0px ' + this._parentController.fullPath + 'px',
+				strokeDashoffset: this._parentController.height / 2
 			},
 			{
-				strokeDasharray: this.parentController.fullPath + 'px 0px',
-				strokeDashoffset: (this.parentController.fullPath / 2) + (this.parentController.height / 2),
+				strokeDasharray: this._parentController.fullPath + 'px 0px',
+				strokeDashoffset: (this._parentController.fullPath / 2) + (this._parentController.height / 2),
 				ease: Power3.easeInOut
 			}, '=-0.2'
 		)

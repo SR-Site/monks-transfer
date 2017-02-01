@@ -9,7 +9,7 @@ class PaginatorDashedTransitionController extends AbstractTransitionController
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this.transitionInTimeline.from(this.element, 1, {
+		this._transitionInTimeline.from(this.element, 1, {
 			opacity: 0
 		})
 	}

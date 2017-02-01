@@ -9,7 +9,7 @@ class BlockButtonTransitionController extends AbstractTransitionController
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this.transitionInTimeline.add(this.getSubTimeline(this.element.querySelector('.component-button-main')));
+		this._transitionInTimeline.add(this.getSubTimeline(this.element.querySelector('.component-button-main')));
 	}
 }
 

@@ -1,8 +1,8 @@
 import EventDispatcher from "../../../lib/temple/event/EventDispatcher";
-import Promise = require("bluebird");
-import AbstractBlockComponentController from "../../component/block/AbstractBlockComponentController";
 import AbstractComponentController from "../../../lib/temple/component/AbstractComponentController";
 import AbstractTransitionComponentController from "./abstract-transition-component/AbstractTransitionComponentController";
+import DefaultPageController from "../../page/DefaultPageController";
+import Promise = require("bluebird");
 
 /**
  * @class AbstractTransitionController
@@ -62,10 +62,15 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 */
 	public static LOOP: string = 'AbstractTransitionController.LOOP';
 	/**
+	 * @public
+	 * @description the element on which the transition component is wrapped
+	 */
+	public element:HTMLElement;
+	/**
 	 * @property transitionResolveMethod
 	 * @type {()=>void}
 	 */
-	public transitionResolveMethod: ()=>void;
+	public transitionResolveMethod: () => void;
 	/**
 	 * @property loopingAnimationTimeline
 	 * @type {TimelineMax}
@@ -78,7 +83,7 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 * @property transitionInTimline
 	 * @type {TimelineLite}
 	 */
-	protected transitionInTimeline: TimelineLite = new TimelineLite({
+	protected _transitionInTimeline: TimelineLite = new TimelineLite({
 		paused: true,
 		onStart: this.handleAnimationStart.bind(this, AbstractTransitionController.IN),
 		onComplete: this.handleAnimationComplete.bind(this, AbstractTransitionController.FORWARD, AbstractTransitionController.IN),
@@ -88,11 +93,16 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 * @property transitionOutTimeline
 	 * @type {TimelineLite}
 	 */
-	protected transitionOutTimeline: TimelineLite = new TimelineLite({
+	protected _transitionOutTimeline: TimelineLite = new TimelineLite({
 		paused: true,
 		onStart: this.handleAnimationStart.bind(this, AbstractTransitionController.OUT),
 		onComplete: this.handleAnimationComplete.bind(this, AbstractTransitionController.FORWARD, AbstractTransitionController.OUT)
 	});
+	/**
+	 * @property _parentController
+	 * @property The _parentController can either be a page or another component
+	 */
+	protected _parentController: AbstractTransitionComponentController<any, any>;
 	/**
 	 * @property _transitionInComplete
 	 * @type {boolean}
@@ -105,12 +115,12 @@ abstract class AbstractTransitionController extends EventDispatcher
 	private _transitionInStarted: boolean = false;
 
 
-	constructor(public element: HTMLElement, protected parentController: any, waitForParent: boolean = true)
+	constructor(element: HTMLElement, parentController: AbstractTransitionComponentController<any, any>, waitForParent: boolean = true)
 	{
 		super();
 
 		this.element = element;
-		this.parentController = parentController;
+		this._parentController = parentController;
 
 		if(waitForParent)
 		{
@@ -142,14 +152,14 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 * @method getRootComponent
 	 * @returns {any}
 	 */
-	public getRootComponent(): AbstractBlockComponentController<any, any>|AbstractTransitionComponentController<any,any>
+	public getRootComponent(): AbstractTransitionComponentController<any, any>
 	{
-		let parent = this.parentController;
+		let parent = this._parentController;
 
 		// Try to find the parent that is not a page
-		while(parent.parent && !parent.parent._page)
+		while(parent.parent && !(<DefaultPageController<any>>parent.parent).page)
 		{
-			parent = <AbstractBlockComponentController<any, any>|AbstractTransitionComponentController<any, any>>parent.parent
+			parent = <AbstractTransitionComponentController<any, any>>parent.parent
 		}
 
 		return parent;
@@ -181,18 +191,18 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 */
 	public transitionIn(): Promise<any>
 	{
-		return new Promise((resolve: ()=>void) =>
+		return new Promise((resolve: () => void) =>
 		{
-			if(this.transitionInTimeline.duration() === 0)
+			if(this._transitionInTimeline.duration() === 0)
 			{
-				console.log(' [AbstractTransitionController] This block does not have transition, so resolve right away' );
+				console.log(' [AbstractTransitionController] This block does not have transition, so resolve right away');
 
 				resolve();
 			}
 			else
 			{
 				this.transitionResolveMethod = resolve;
-				this.transitionInTimeline.restart();
+				this._transitionInTimeline.restart();
 			}
 		})
 	}
@@ -203,17 +213,17 @@ abstract class AbstractTransitionController extends EventDispatcher
 	 */
 	public transitionOut(): Promise<any>
 	{
-		return new Promise((resolve: ()=>void) =>
+		return new Promise((resolve: () => void) =>
 		{
 			this.transitionResolveMethod = resolve;
 
-			if(this.transitionOutTimeline.duration() > 0)
+			if(this._transitionOutTimeline.duration() > 0)
 			{
-				this.transitionOutTimeline.restart();
+				this._transitionOutTimeline.restart();
 			}
 			else
 			{
-				this.transitionInTimeline.reverse();
+				this._transitionInTimeline.reverse();
 			}
 		});
 	}
@@ -257,10 +267,10 @@ abstract class AbstractTransitionController extends EventDispatcher
 			switch(type)
 			{
 				case AbstractTransitionController.IN:
-					timeline = transitionController.transitionInTimeline.play();
+					timeline = transitionController._transitionInTimeline.play();
 					break;
 				case AbstractTransitionController.OUT:
-					timeline = transitionController.transitionOutTimeline.play();
+					timeline = transitionController._transitionInTimeline.play();
 					break;
 				case AbstractTransitionController.LOOP:
 					timeline = transitionController.loopingAnimationTimeline;
@@ -375,16 +385,16 @@ abstract class AbstractTransitionController extends EventDispatcher
 	{
 		this.element = null;
 
-		if(this.transitionOutTimeline)
+		if(this._transitionOutTimeline)
 		{
-			this.transitionOutTimeline.kill();
-			this.transitionOutTimeline = null;
+			this._transitionOutTimeline.kill();
+			this._transitionOutTimeline = null;
 		}
 
-		if(this.transitionInTimeline)
+		if(this._transitionInTimeline)
 		{
-			this.transitionInTimeline.kill();
-			this.transitionInTimeline = null;
+			this._transitionInTimeline.kill();
+			this._transitionInTimeline = null;
 		}
 
 		if(this.loopingAnimationTimeline)

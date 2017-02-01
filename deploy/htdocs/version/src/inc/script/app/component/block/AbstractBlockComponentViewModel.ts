@@ -1,5 +1,4 @@
 import IAbstractBlockComponentOptions from "./IAbstractBlockComponentOptions";
-import AbstractComponentViewModel from "../../../lib/temple/component/AbstractComponentViewModel";
 import AbstractBlockComponentController from "./AbstractBlockComponentController";
 import BlockType from "../../data/enum/type/BlockType";
 import AbstractTransitionComponentViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
@@ -23,11 +22,11 @@ abstract class AbstractBlockComponentViewModel<T, U extends IAbstractBlockCompon
 	public BlockType:Class = BlockType;
 
 	/**
-	 * @property elementClassNames
+	 * @property _elementClassNames
 	 * @description Array containing all the that will be applied to the this.controller.element
 	 * @type {Array}
 	 */
-	protected elementClassNames:Array<string> = [];
+	public elementClassNames:Array<string> = [];
 
 	/**
 	 * @public
@@ -36,6 +35,7 @@ abstract class AbstractBlockComponentViewModel<T, U extends IAbstractBlockCompon
 	public destruct():void
 	{
 		this.BlockType = null;
+
 		this.elementClassNames = null;
 
 		super.destruct();

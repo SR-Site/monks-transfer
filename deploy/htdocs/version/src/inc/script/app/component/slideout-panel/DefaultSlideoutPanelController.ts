@@ -17,8 +17,8 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 	public viewModel: DefaultSlideoutPanelViewModel<T, U> & any;
 	public transitionController: DefaultSlideoutPanelTransitionController;
 
-	protected panelComponents: {[id: string]: AbstractTransitionComponentController<any, any>} = {};
-	protected activePanel: string = '';
+	protected _panelComponents: {[id: string]: AbstractTransitionComponentController<any, any>} = {};
+	protected _activePanel: string = '';
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -50,7 +50,7 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 	 */
 	public getPanelComponentById(panelId): AbstractTransitionComponentController<any, any>
 	{
-		return this.panelComponents[panelId];
+		return this._panelComponents[panelId];
 	}
 
 	/**
@@ -60,7 +60,7 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 	 */
 	public handleComponentReady(controller: AbstractTransitionComponentController<DefaultComponentTransitionViewModel<any, any>, any>): void
 	{
-		this.panelComponents[controller.options.id] = controller;
+		this._panelComponents[controller.options.id] = controller;
 	}
 
 	/**
@@ -70,17 +70,17 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 	 */
 	public setActivePanel(panelId)
 	{
-		this.activePanel = panelId;
+		this._activePanel = panelId;
 	}
 
 	/**
 	 * @public
-	 * @method get activePanel
+	 * @method get _activePanel
 	 *
 	 */
 	public getActivePanel()
 	{
-		return this.activePanel;
+		return this._activePanel;
 	}
 
 	/**
@@ -95,14 +95,14 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 		ScrollUtils.enableScroll();
 
 		// Animate out Out Panel
-		return this.hidePanelContent(this.activePanel).then(() => this.transitionController.transitionOut());
+		return this.hidePanelContent(this._activePanel).then(() => this.transitionController.transitionOut());
 	}
 
 	/**
 	 * @public
 	 * @method transitionIn
 	 */
-	public transitionIn(panelId: string = this.activePanel): Promise<any>
+	public transitionIn(panelId: string = this._activePanel): Promise<any>
 	{
 		if(this.viewModel.isOpen())
 		{
@@ -148,7 +148,7 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 	 */
 	public showPanelContent(panelId: string): Promise<any>
 	{
-		const prevPanel = this.activePanel;
+		const prevPanel = this._activePanel;
 
 		// Update the panel
 		this.setActivePanel(panelId);
@@ -158,14 +158,14 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 		{
 			return this.hidePanelContent(prevPanel).then(() =>
 			{
-				return this.panelComponents[panelId].transitionIn()
+				return this._panelComponents[panelId].transitionIn()
 					.then(() => this.updateCustomScrollbar());
 			});
 		}
 		else
 		{
 
-			return this.panelComponents[panelId].transitionIn()
+			return this._panelComponents[panelId].transitionIn()
 				.then(() => this.updateCustomScrollbar());
 		}
 	}
@@ -174,9 +174,9 @@ class DefaultSlideoutPanelController<T, U extends IDefaultSlideoutPanelOptions> 
 	 * @protected
 	 * @method hidePanelContent
 	 */
-	protected hidePanelContent(panelId: string = this.activePanel): Promise<any>
+	protected hidePanelContent(panelId: string = this._activePanel): Promise<any>
 	{
-		return this.panelComponents[panelId].transitionOut();
+		return this._panelComponents[panelId].transitionOut();
 	}
 
 	/**

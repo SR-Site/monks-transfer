@@ -13,7 +13,7 @@ class BlockFilterContentTransitionController extends AbstractTransitionControlle
 
 		if(button)
 		{
-			this.transitionInTimeline.add(this.getSubTimeline(button));
+			this._transitionInTimeline.add(this.getSubTimeline(button));
 		}
 	}
 }

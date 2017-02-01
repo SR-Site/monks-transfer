@@ -11,13 +11,13 @@ class BlockMoreTransitionController extends AbstractTransitionController
 	{
 		let articles = Array.prototype.slice.call(this.element.querySelectorAll('[class^=component-block]'));
 
-		this.transitionInTimeline.from(this.element.querySelector('.header'), 1, { y: 50, opacity: 0, ease: Expo.easeOut });
+		this._transitionInTimeline.from(this.element.querySelector('.header'), 1, { y: 50, opacity: 0, ease: Expo.easeOut });
 
 		articles.forEach((article, index) =>
 		{
 			let offset = index > 0 ? '=-2.5' : '=-0.8';
 
-			this.transitionInTimeline.add(this.getSubTimeline(article), offset)
+			this._transitionInTimeline.add(this.getSubTimeline(article), offset)
 		})
 	}
 }
