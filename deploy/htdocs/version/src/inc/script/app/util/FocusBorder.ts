@@ -64,15 +64,24 @@ class FocusBorder extends Destructible
 		// Measure the width
 		const borderWidth = this._shadowElement.offsetWidth;
 
-		// Measure the size
-		TweenLite.to(this._borderElement, 0.2, {
-			width: borderWidth
-		});
+		if(borderWidth > 0)
+		{
+			// Measure the size
+			TweenLite.to(this._borderElement, 0.2, {
+				width: borderWidth
+			});
 
-		// Hide or show the label
-		TweenLite.to(this._labelElement, 0.2, {
-			opacity: borderWidth > this._wrapper.offsetWidth - this._labelElement.offsetWidth ? 0 : 1
-		});
+			// Hide or show the label
+			TweenLite.to(this._labelElement, 0.2, {
+				opacity: borderWidth > this._wrapper.offsetWidth - this._labelElement.offsetWidth ? 0 : 1
+			});
+		}
+		else
+		{
+			this._borderElement.style.width = '';
+			this._labelElement.style.opacity = '';
+		}
+
 	}
 }
 
