@@ -1,4 +1,4 @@
-import AbstractComponentTransitionController from "app/util/component-transition/abstract-transition-component/AbstractComponentTransitionController";
+import AbstractTransitionComponentController from "app/util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import {{{filenames.transition}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.transition}}}';
 import {{{filenames.options}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.options}}}';
 import {{{filenames.viewModel}}} from 'app/component/{{{subfolder}}}{{{componentId}}}/{{{filenames.viewModel}}}';
@@ -8,7 +8,7 @@ import {{{filenames.event}}} from 'app/component/{{{subfolder}}}{{{componentId}}
 
 import Log from "lib/temple/util/Log";
 
-class {{{filename}}} extends AbstractComponentTransitionController<{{{filenames.viewModel}}}, {{{filenames.options}}}>
+class {{{filename}}} extends AbstractTransitionComponentController<{{{filenames.viewModel}}}, {{{filenames.options}}}>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging
@@ -29,8 +29,17 @@ class {{{filename}}} extends AbstractComponentTransitionController<{{{filenames.
 		this.dispatchEvent(new {{{filenames.event}}}({{{filenames.event}}}.INIT, this));
 {{/withEvents}}
 		this._debug.log('Init');
+	}
 
+	/**
+	* @protected
+	* @method allComponentsLoaded
+	*/
+	protected allComponentsLoaded():void
+	{
 		this.transitionController = new {{{filenames.transition}}}(this.element, this);
+
+		super.allComponentsLoaded();
 	}
 
 	/**

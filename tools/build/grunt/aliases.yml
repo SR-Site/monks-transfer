@@ -83,19 +83,19 @@ component:
   - 'sass'
   - 'postcss'
 
-block-compoonent:
+block-component:
   - 'create-block-component'
   - 'ts'
   - 'sass'
   - 'postcss'
 
-button-compoonent:
+button-component:
   - 'create-button-component'
   - 'ts'
   - 'sass'
   - 'postcss'
 
-transition-compoonent:
+transition-component:
   - 'create-transition-component'
   - 'ts'
   - 'sass'
