@@ -1,63 +1,26 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Debug\Debug;
 
-class HttpHelper {
-    public static function isHttps()
-    {
-        if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
-            return true;
-        }
-        if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
-            return true;
-        }
-        if (!empty($_SERVER['PORT']) && $_SERVER['PORT'] == 443) {
-            return true;
-        }
+$loader = require_once __DIR__.'/../app/autoload.php';
+require_once __DIR__.'/../app/AppKernel.php';
 
-        if ((!empty($_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO']) && $_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'] === 'https')) {
-            return true;
-        }
-
-        return false;
-    }
-
-    public static function getProtocol()
-    {
-        return self::isHttps() ? 'https:' : 'http:';
-    }
-
-    public static function getBasePath()
-    {
-        return self::getProtocol() . '//' . $_SERVER['HTTP_HOST'] . substr($_SERVER['SCRIPT_NAME'], 0, strrpos($_SERVER['SCRIPT_NAME'], '/')) . '/';
-    }
+$debug = false;
+if(ENVIRONMENT !== ENV_PRODUCTION) {
+    $debug = true;
+    Debug::enable();
 }
 
-$basepath = HttpHelper::getBasePath();
+Request::enableHttpMethodParameterOverride();
 
-?><!doctype html>
-<html class="no-js">
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+$kernel = new AppKernel(ENVIRONMENT, $debug);
+$kernel->loadClassCache();
 
-	<title>MediaMonks</title>
+$request = Request::createFromGlobals();
+$response = $kernel->handle($request);
 
-    <!-- this is used for history, absolute uri to your 'index' -->
-    <meta name="document-base" content="<?php echo $basepath ?>" />
+$response->send();
 
-    <!-- change this path to cdn or append version folder -->
-    <base href="<?php echo $basepath ?>version/src/" /> <!-- [deploytool] -->
-
-	<link href="inc/style/screen.css" rel="stylesheet" type="text/css" />
-
-	<script src="inc/script/vendor/modernizr/modernizr.js"></script>
-</head>
-<body data-gaia-container="main">
-
-    <!-- build:js inc/script/app/bundle.js -->
-	<script src="inc/script/vendor/require/require.js"></script>
-	<script src="inc/script/app/Bootstrap.js"></script>
-    <!-- endbuild -->
-
-</body>
-</html>
+$kernel->terminate($request, $response);

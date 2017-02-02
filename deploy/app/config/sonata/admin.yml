@@ -1,9 +1,0 @@
-sonata_admin:
-    title: "Spectrum Reach"
-    templates:
-        layout:  AppAdminBundle::layout.html.twig
-    security:
-        handler: sonata.admin.security.handler.role
-    dashboard:
-
-sonata_user:

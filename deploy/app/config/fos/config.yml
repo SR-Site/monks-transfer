@@ -1,3 +1,0 @@
-imports:
-    - { resource: user.yml }
-    - { resource: elastica.yml }
