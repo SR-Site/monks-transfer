@@ -1,0 +1,68 @@
+uuid: 08cf58ab-61a9-4934-be62-e41da8a11626
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockmap.field_autoplay
+    - field.field.paragraph.blockmap.field_image
+    - field.field.paragraph.blockmap.field_label
+    - field.field.paragraph.blockmap.field_steps_text
+    - field.field.paragraph.blockmap.field_styles
+    - field.field.paragraph.blockmap.field_value
+    - paragraphs.paragraphs_type.blockmap
+  module:
+    - entity_reference_revisions
+    - image
+id: paragraph.blockmap.default
+targetEntityType: paragraph
+bundle: blockmap
+mode: default
+content:
+  field_autoplay:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+  field_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_label:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_steps_text:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+  field_value:
+    weight: 6
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+hidden: {  }

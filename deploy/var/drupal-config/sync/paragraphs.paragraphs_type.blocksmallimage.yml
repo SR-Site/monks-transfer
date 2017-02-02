@@ -1,0 +1,7 @@
+uuid: 46ada1b0-9684-4b8c-be6a-e1d3c8b15918
+langcode: en
+status: true
+dependencies: {  }
+id: blocksmallimage
+label: 'Block small image'
+behavior_plugins: {  }

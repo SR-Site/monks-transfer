@@ -1,0 +1,22 @@
+uuid: e8507afb-46a2-4e0f-8863-3afb48578205
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - spectrum
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: spectrum_powered
+theme: spectrum
+region: '-1'
+weight: -3
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

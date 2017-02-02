@@ -1,0 +1,17 @@
+uuid: f2adf93d-96e0-4a91-af0e-5a740691a1a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - spectrum_rest
+    - user
+id: spectrum_rest_searchpages_v1
+plugin_id: spectrum_rest_searchpages_v1
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

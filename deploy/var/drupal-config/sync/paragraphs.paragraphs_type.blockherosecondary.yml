@@ -1,0 +1,7 @@
+uuid: d72e048f-23e1-4949-86d1-2fcaafe43c00
+langcode: en
+status: true
+dependencies: {  }
+id: blockherosecondary
+label: 'Block hero secondary'
+behavior_plugins: {  }

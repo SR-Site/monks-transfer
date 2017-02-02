@@ -1,0 +1,7 @@
+uuid: 53c89513-b5c5-4a86-a181-8f0eedc43dad
+langcode: en
+status: true
+dependencies: {  }
+id: blocknetworkoverview
+label: 'Block network overview'
+behavior_plugins: {  }

@@ -1,0 +1,40 @@
+uuid: 64de5efc-fe98-4c3c-918e-0213d52f4eff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stat.field_heading
+    - field.field.paragraph.stat.field_paragraph
+    - field.field.paragraph.stat.field_value
+    - paragraphs.paragraphs_type.stat
+  module:
+    - text
+id: paragraph.stat.default
+targetEntityType: paragraph
+bundle: stat
+mode: default
+content:
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_paragraph:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_value:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+hidden:
+  created: true
+  status: true
+  uid: true

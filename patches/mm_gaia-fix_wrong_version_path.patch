@@ -1,0 +1,22 @@
+diff --git a/mm_gaia.theme b/mm_gaia.theme
+index 3efe5f4..72f214e 100644
+--- a/mm_gaia.theme
++++ b/mm_gaia.theme
+@@ -105,14 +105,14 @@ function _mm_gaia_assets_alter(&$items) {
+   $asset_version = Settings::get('mm_deployment_version', 'src');
+   foreach ($items as $key => $info) {
+ 
+-    // Remove non-Gaia assets.
+-    if (!stristr($key, 'mm_gaia')) {
++    // Remove non-theme assets.
++    if (!stristr($key, 'themes')) {
+       unset($items[$key]);
+     }
+ 
+     // Replace placeholder with Gaia base path.
+     if (stristr($key, 'base_href')) {
+-      $items[$key]['data'] = str_replace('themes/mm_gaia/base_href/', $base_path . 'version/' . $asset_version . '/', $items[$key]['data']);
++      $items[$key]['data'] = str_replace([\Drupal::theme()->getActiveTheme()->getPath().'/base_href/', drupal_get_path('theme','mm_gaia').'/base_href/'], $base_path . 'version/' . $asset_version . '/', $items[$key]['data']);
+     }
+   }
+ }

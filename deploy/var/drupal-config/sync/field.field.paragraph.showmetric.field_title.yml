@@ -1,0 +1,19 @@
+uuid: 1d405397-6080-4958-b991-540abd44c152
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.showmetric
+id: paragraph.showmetric.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: showmetric
+label: Value
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

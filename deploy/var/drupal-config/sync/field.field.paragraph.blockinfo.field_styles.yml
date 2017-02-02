@@ -1,0 +1,99 @@
+uuid: 93c2f8da-3a12-486b-82b9-f7af676e5e75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_styles
+    - paragraphs.paragraphs_type.blockinfo
+    - paragraphs.paragraphs_type.styles
+  module:
+    - entity_reference_revisions
+id: paragraph.blockinfo.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: blockinfo
+label: Styles
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styles: styles
+    target_bundles_drag_drop:
+      blockarticleteaser:
+        weight: 25
+        enabled: false
+      blockaudiofragment:
+        weight: 26
+        enabled: false
+      blockblogpost:
+        weight: 27
+        enabled: false
+      blockbutton:
+        weight: 28
+        enabled: false
+      blockheromain:
+        weight: 29
+        enabled: false
+      blockherosecondary:
+        weight: 30
+        enabled: false
+      blockherotertiary:
+        weight: 31
+        enabled: false
+      blockhowtoadvertise:
+        weight: 32
+        enabled: false
+      blockimagecalltoactions:
+        weight: 33
+        enabled: false
+      blockimagecarousel:
+        weight: 34
+        enabled: false
+      blockimagewithcontent:
+        weight: 35
+        enabled: false
+      blockinfo:
+        weight: 36
+        enabled: false
+      blocklatest:
+        weight: 37
+        enabled: false
+      blockmore:
+        weight: 38
+        enabled: false
+      broadcastschedule:
+        weight: 39
+        enabled: false
+      calltoaction:
+        weight: 40
+        enabled: false
+      link:
+        weight: 41
+        enabled: false
+      showmetric:
+        weight: 42
+        enabled: false
+      slide:
+        weight: 43
+        enabled: false
+      slideheromain:
+        weight: 44
+        enabled: false
+      stat:
+        weight: 45
+        enabled: false
+      statistic:
+        weight: 46
+        enabled: false
+      step:
+        weight: 47
+        enabled: false
+      styles:
+        enabled: true
+        weight: 48
+field_type: entity_reference_revisions

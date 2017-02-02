@@ -1,0 +1,35 @@
+uuid: 6d81069f-7f52-4c04-8346-492173d10188
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.styles.field_margin_top
+    - field.field.paragraph.styles.field_overlap
+    - field.field.paragraph.styles.field_windowed
+    - paragraphs.paragraphs_type.styles
+id: paragraph.styles.default
+targetEntityType: paragraph
+bundle: styles
+mode: default
+content:
+  field_margin_top:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_overlap:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_windowed:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+hidden:
+  created: true
+  status: true
+  uid: true

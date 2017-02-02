@@ -1,0 +1,7 @@
+uuid: ff955088-5340-42ce-8d48-3d57b8b460ae
+langcode: en
+status: true
+dependencies: {  }
+id: blockprogrammodule
+label: 'Block program module'
+behavior_plugins: {  }

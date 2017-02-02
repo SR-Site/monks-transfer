@@ -1,0 +1,49 @@
+uuid: 4cce97c4-44ad-4ba5-9de4-db7539d28cff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockmore.field_articles
+    - field.field.paragraph.blockmore.field_heading
+    - field.field.paragraph.blockmore.field_links
+    - field.field.paragraph.blockmore.field_styles
+    - paragraphs.paragraphs_type.blockmore
+  module:
+    - entity_reference_revisions
+id: paragraph.blockmore.default
+targetEntityType: paragraph
+bundle: blockmore
+mode: default
+content:
+  field_articles:
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+  field_heading:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_links:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden: {  }

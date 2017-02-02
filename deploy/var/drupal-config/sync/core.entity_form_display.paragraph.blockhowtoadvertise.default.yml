@@ -1,0 +1,89 @@
+uuid: 82976770-096d-4a47-b09f-79da13bdca16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockhowtoadvertise.field_heading
+    - field.field.paragraph.blockhowtoadvertise.field_link
+    - field.field.paragraph.blockhowtoadvertise.field_steps
+    - field.field.paragraph.blockhowtoadvertise.field_styles
+    - paragraphs.paragraphs_type.blockhowtoadvertise
+  module:
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+      label: Styles
+    group_link:
+      children:
+        - field_link
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        label: Link
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Link
+id: paragraph.blockhowtoadvertise.default
+targetEntityType: paragraph
+bundle: blockhowtoadvertise
+mode: default
+content:
+  field_heading:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_link:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Link
+      title_plural: Links
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: link
+    third_party_settings: {  }
+  field_steps:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+  field_styles:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Style
+      title_plural: Styles
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: styles
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

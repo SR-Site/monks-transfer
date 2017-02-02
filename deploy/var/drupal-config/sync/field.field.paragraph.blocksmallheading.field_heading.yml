@@ -1,0 +1,19 @@
+uuid: 8f899ea9-1a33-4d3b-a32a-fcff26c4868e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.blocksmallheading
+id: paragraph.blocksmallheading.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: blocksmallheading
+label: Heading
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,37 @@
+uuid: d436cb9c-80b4-4501-acf5-dba5e0c5688c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.statistic.field_heading
+    - field.field.paragraph.statistic.field_stats
+    - paragraphs.paragraphs_type.statistic
+  module:
+    - paragraphs
+id: paragraph.statistic.default
+targetEntityType: paragraph
+bundle: statistic
+mode: default
+content:
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_stats:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: stat
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

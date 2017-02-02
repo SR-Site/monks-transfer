@@ -1,0 +1,23 @@
+uuid: b42bdbf3-4f12-45ba-9669-deba4bcd7493
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockmarketmap.field_styles
+    - paragraphs.paragraphs_type.blockmarketmap
+  module:
+    - entity_reference_revisions
+id: paragraph.blockmarketmap.default
+targetEntityType: paragraph
+bundle: blockmarketmap
+mode: default
+content:
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden: {  }

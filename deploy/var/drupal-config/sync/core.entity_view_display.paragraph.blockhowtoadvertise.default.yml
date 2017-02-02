@@ -1,0 +1,51 @@
+uuid: 7fb813aa-f001-4e11-bc0c-310f85411224
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockhowtoadvertise.field_heading
+    - field.field.paragraph.blockhowtoadvertise.field_link
+    - field.field.paragraph.blockhowtoadvertise.field_steps
+    - field.field.paragraph.blockhowtoadvertise.field_styles
+    - paragraphs.paragraphs_type.blockhowtoadvertise
+  module:
+    - entity_reference_revisions
+id: paragraph.blockhowtoadvertise.default
+targetEntityType: paragraph
+bundle: blockhowtoadvertise
+mode: default
+content:
+  field_heading:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_link:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_steps:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_styles:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

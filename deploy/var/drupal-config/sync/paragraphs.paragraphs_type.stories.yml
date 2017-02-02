@@ -1,0 +1,7 @@
+uuid: 6410ad72-1306-4ec9-bee8-a65106c6c28e
+langcode: en
+status: true
+dependencies: {  }
+id: stories
+label: Stories
+behavior_plugins: {  }

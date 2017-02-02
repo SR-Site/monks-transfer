@@ -1,0 +1,34 @@
+uuid: fe81faa1-01ce-476d-bc42-7fedc35485c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - spectrum_rest
+_core:
+  default_config_hash: KUjJ8Ti_ZJSlhGM88E_mhJP-8mmQRNUB6RFof615Kt0
+name: 'Restricted HTML'
+format: restricted_html
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<em> <strong> <u>'
+      filter_html_help: false
+      filter_html_nofollow: false
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  filter_nl2br:
+    id: filter_nl2br
+    provider: spectrum_rest
+    status: true
+    weight: 0
+    settings: {  }

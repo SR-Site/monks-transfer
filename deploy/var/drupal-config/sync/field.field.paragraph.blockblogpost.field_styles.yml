@@ -1,0 +1,75 @@
+uuid: 55a72955-fab9-470f-807b-217a127a886b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_styles
+    - paragraphs.paragraphs_type.blockblogpost
+    - paragraphs.paragraphs_type.styles
+  module:
+    - entity_reference_revisions
+id: paragraph.blockblogpost.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: blockblogpost
+label: Styles
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styles: styles
+    target_bundles_drag_drop:
+      blockarticleteaser:
+        weight: 17
+        enabled: false
+      blockaudiofragment:
+        weight: 18
+        enabled: false
+      blockblogpost:
+        weight: 19
+        enabled: false
+      blockhowtoadvertise:
+        weight: 20
+        enabled: false
+      blockimagecalltoactions:
+        weight: 21
+        enabled: false
+      blockimagecarousel:
+        weight: 22
+        enabled: false
+      blockimagewithcontent:
+        weight: 23
+        enabled: false
+      blocklatest:
+        weight: 24
+        enabled: false
+      blockmore:
+        weight: 25
+        enabled: false
+      broadcastschedule:
+        weight: 26
+        enabled: false
+      calltoaction:
+        weight: 27
+        enabled: false
+      link:
+        weight: 28
+        enabled: false
+      showmetric:
+        weight: 29
+        enabled: false
+      slide:
+        weight: 30
+        enabled: false
+      step:
+        weight: 31
+        enabled: false
+      styles:
+        enabled: true
+        weight: 32
+field_type: entity_reference_revisions

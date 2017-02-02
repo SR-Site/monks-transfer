@@ -1,0 +1,27 @@
+uuid: c78ca1dd-7286-4cb6-83c9-6e11fb78d0de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.personas
+  module:
+    - text
+id: paragraph.personas.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: personas
+label: Paragraph
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    basic_html: basic_html
+    bold_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

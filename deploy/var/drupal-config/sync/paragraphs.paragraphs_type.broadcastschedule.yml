@@ -1,0 +1,6 @@
+uuid: 2539fa0f-e896-4c7b-9b5f-641955556415
+langcode: en
+status: true
+dependencies: {  }
+id: broadcastschedule
+label: 'Broadcast schedule'

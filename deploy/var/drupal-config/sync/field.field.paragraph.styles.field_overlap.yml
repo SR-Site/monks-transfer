@@ -1,0 +1,23 @@
+uuid: d7d56f20-569f-4357-89a1-230cd5f70226
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlap
+    - paragraphs.paragraphs_type.styles
+id: paragraph.styles.field_overlap
+field_name: field_overlap
+entity_type: paragraph
+bundle: styles
+label: Overlap
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

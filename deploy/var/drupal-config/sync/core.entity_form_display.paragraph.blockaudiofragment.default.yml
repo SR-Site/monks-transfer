@@ -1,0 +1,79 @@
+uuid: 88af40a7-1078-4e6c-90dd-b596cf3fc57f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockaudiofragment.field_file
+    - field.field.paragraph.blockaudiofragment.field_image
+    - field.field.paragraph.blockaudiofragment.field_label
+    - field.field.paragraph.blockaudiofragment.field_paragraph
+    - field.field.paragraph.blockaudiofragment.field_styles
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.blockaudiofragment
+  module:
+    - field_group
+    - file
+    - image
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+id: paragraph.blockaudiofragment.default
+targetEntityType: paragraph
+bundle: blockaudiofragment
+mode: default
+content:
+  field_file:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+  field_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_label:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_paragraph:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_styles:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: styles
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

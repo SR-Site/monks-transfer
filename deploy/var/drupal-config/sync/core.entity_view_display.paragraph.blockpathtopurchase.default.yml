@@ -1,0 +1,23 @@
+uuid: da67e4c2-2bd9-4a8a-bb10-00456b3dc612
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockpathtopurchase.field_styles
+    - paragraphs.paragraphs_type.blockpathtopurchase
+  module:
+    - entity_reference_revisions
+id: paragraph.blockpathtopurchase.default
+targetEntityType: paragraph
+bundle: blockpathtopurchase
+mode: default
+content:
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden: {  }

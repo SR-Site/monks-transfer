@@ -1,0 +1,29 @@
+uuid: 68b7ea92-d852-48d7-8ffe-53ac7ca7f1d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockpathtopurchase.field_styles
+    - paragraphs.paragraphs_type.blockpathtopurchase
+  module:
+    - paragraphs
+id: paragraph.blockpathtopurchase.default
+targetEntityType: paragraph
+bundle: blockpathtopurchase
+mode: default
+content:
+  field_styles:
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: styles
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

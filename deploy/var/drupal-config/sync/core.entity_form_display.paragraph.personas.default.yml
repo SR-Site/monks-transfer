@@ -1,0 +1,77 @@
+uuid: 651505f1-6f7e-4652-a4a7-068691c814b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.personas.field_heading
+    - field.field.paragraph.personas.field_image
+    - field.field.paragraph.personas.field_link
+    - field.field.paragraph.personas.field_paragraph
+    - field.field.paragraph.personas.field_persona_type
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.personas
+  module:
+    - field_group
+    - image
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_link:
+      children:
+        - field_link
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: Link
+id: paragraph.personas.default
+targetEntityType: paragraph
+bundle: personas
+mode: default
+content:
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_image:
+    weight: 5
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_image
+  field_link:
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: link
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+  field_paragraph:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_persona_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+hidden:
+  created: true
+  status: true
+  uid: true

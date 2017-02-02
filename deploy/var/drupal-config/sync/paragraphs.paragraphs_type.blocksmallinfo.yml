@@ -1,0 +1,7 @@
+uuid: 22a2bf1e-6be6-47e9-9524-5507fe9c993e
+langcode: en
+status: true
+dependencies: {  }
+id: blocksmallinfo
+label: 'Block small info'
+behavior_plugins: {  }

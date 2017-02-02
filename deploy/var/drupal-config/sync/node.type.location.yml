@@ -1,0 +1,17 @@
+uuid: 8218d601-457d-4378-a3ad-6d351573c0f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Location
+type: location
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

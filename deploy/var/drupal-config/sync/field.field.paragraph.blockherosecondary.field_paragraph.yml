@@ -1,0 +1,27 @@
+uuid: c3f6a4ec-6dea-45cc-8963-fb50f32aaa35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.blockherosecondary
+  module:
+    - text
+id: paragraph.blockherosecondary.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: blockherosecondary
+label: Paragraph
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    basic_html: basic_html
+    bold_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

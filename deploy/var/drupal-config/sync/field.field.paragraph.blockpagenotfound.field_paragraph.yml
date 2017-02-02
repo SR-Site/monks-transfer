@@ -1,0 +1,27 @@
+uuid: cd83d3ec-7f1f-49b9-b301-3a282866940e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.blockpagenotfound
+  module:
+    - text
+id: paragraph.blockpagenotfound.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: blockpagenotfound
+label: Paragraph
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    basic_html: basic_html
+    bold_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

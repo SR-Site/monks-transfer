@@ -1,0 +1,9 @@
+name: Spectrum API Rest
+type: module
+description: Spectrum API Rest.
+core: 8.x
+package: Spectrum
+dependencies:
+  - mm_rest
+  - mm_slug
+  - paragraphs

@@ -1,0 +1,22 @@
+uuid: 7d477d26-c441-40cb-abc7-915c324fb70e
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - spectrum
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: spectrum_content
+theme: spectrum
+region: '-1'
+weight: 7
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

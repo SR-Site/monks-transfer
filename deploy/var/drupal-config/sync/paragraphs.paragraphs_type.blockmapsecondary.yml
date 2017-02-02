@@ -1,0 +1,7 @@
+uuid: 1f2a301f-3abf-4e95-b48e-4039c916749b
+langcode: en
+status: true
+dependencies: {  }
+id: blockmapsecondary
+label: 'Block map secondary'
+behavior_plugins: {  }

@@ -1,0 +1,57 @@
+uuid: ac782a4b-c8db-4363-b103-d213afa3c87e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slides
+    - paragraphs.paragraphs_type.blockimagecarousel
+    - paragraphs.paragraphs_type.slide
+  module:
+    - entity_reference_revisions
+id: paragraph.blockimagecarousel.field_slides
+field_name: field_slides
+entity_type: paragraph
+bundle: blockimagecarousel
+label: Slides
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      slide: slide
+    target_bundles_drag_drop:
+      blockhowtoadvertise:
+        weight: 11
+        enabled: false
+      blockimagecalltoactions:
+        weight: 12
+        enabled: false
+      blockimagecarousel:
+        weight: 13
+        enabled: false
+      broadcastschedule:
+        weight: 14
+        enabled: false
+      calltoaction:
+        weight: 15
+        enabled: false
+      link:
+        weight: 16
+        enabled: false
+      showmetric:
+        weight: 17
+        enabled: false
+      slide:
+        enabled: true
+        weight: 18
+      step:
+        weight: 19
+        enabled: false
+      styles:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

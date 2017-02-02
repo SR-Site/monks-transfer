@@ -1,0 +1,31 @@
+uuid: df211d20-03ef-4410-a477-f6f74dd90214
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.broadcastschedule.field_date_day
+    - field.field.paragraph.broadcastschedule.field_time_string
+    - paragraphs.paragraphs_type.broadcastschedule
+id: paragraph.broadcastschedule.default
+targetEntityType: paragraph
+bundle: broadcastschedule
+mode: default
+content:
+  field_date_day:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_time_string:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true

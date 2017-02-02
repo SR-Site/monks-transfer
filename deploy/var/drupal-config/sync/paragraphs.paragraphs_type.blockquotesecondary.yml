@@ -1,0 +1,7 @@
+uuid: ff0e339e-91ff-4af9-ac37-b61304271b3c
+langcode: en
+status: true
+dependencies: {  }
+id: blockquotesecondary
+label: 'Block quote secondary'
+behavior_plugins: {  }

@@ -1,0 +1,37 @@
+uuid: bc440f32-fb8b-4b6f-938e-98110d148a57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.showmetric.field_icon
+    - field.field.paragraph.showmetric.field_key
+    - field.field.paragraph.showmetric.field_title
+    - paragraphs.paragraphs_type.showmetric
+id: paragraph.showmetric.default
+targetEntityType: paragraph
+bundle: showmetric
+mode: default
+content:
+  field_icon:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_key:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true

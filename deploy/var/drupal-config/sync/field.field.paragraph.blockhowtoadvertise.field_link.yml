@@ -1,0 +1,42 @@
+uuid: 27e07787-9dc8-4972-9e64-f935ca724f5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.blockhowtoadvertise
+    - paragraphs.paragraphs_type.link
+  module:
+    - entity_reference_revisions
+id: paragraph.blockhowtoadvertise.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: blockhowtoadvertise
+label: Link
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      link: link
+    target_bundles_drag_drop:
+      link:
+        enabled: true
+        weight: 6
+      blockhowtoadvertise:
+        weight: 7
+        enabled: false
+      broadcastschedule:
+        weight: 8
+        enabled: false
+      showmetric:
+        weight: 9
+        enabled: false
+      styles:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

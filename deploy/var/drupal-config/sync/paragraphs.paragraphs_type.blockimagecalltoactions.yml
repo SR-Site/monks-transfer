@@ -1,0 +1,7 @@
+uuid: ea06f937-15e6-4c63-b375-064b3c31b0d8
+langcode: en
+status: true
+dependencies: {  }
+id: blockimagecalltoactions
+label: 'Block image call to actions'
+behavior_plugins: {  }

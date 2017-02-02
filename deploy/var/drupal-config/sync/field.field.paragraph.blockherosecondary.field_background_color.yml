@@ -1,0 +1,23 @@
+uuid: 5af1a9f1-3af1-4642-831d-4b84082780b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.blockherosecondary
+  module:
+    - jquery_colorpicker
+id: paragraph.blockherosecondary.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: blockherosecondary
+label: 'Background color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: jquery_colorpicker

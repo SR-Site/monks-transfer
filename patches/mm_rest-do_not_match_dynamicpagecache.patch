@@ -1,0 +1,30 @@
+diff --git a/src/EventSubscriber/IOEventSubscriber.php b/src/EventSubscriber/IOEventSubscriber.php
+index c5e899a..6e52bf2 100644
+--- a/src/EventSubscriber/IOEventSubscriber.php
++++ b/src/EventSubscriber/IOEventSubscriber.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\mm_rest\EventSubscriber;
+ 
++use Drupal\dynamic_page_cache\EventSubscriber\DynamicPageCacheSubscriber;
+ use Drupal\mm_rest\Model\ResponseModelFactory;
+ use Drupal\mm_rest\Request\RequestMatcherInterface;
+ use Drupal\mm_rest\Request\RequestTransformerInterface;
+@@ -118,7 +119,7 @@ class IOEventSubscriber implements EventSubscriberInterface {
+      */
+     public function onResponseEarly(FilterResponseEvent $event)
+     {
+-        if (!$this->eventRequestMatches($event)) {
++        if (!$this->eventRequestMatches($event) || $event->getResponse()->headers->get(DynamicPageCacheSubscriber::HEADER) == 'HIT') {
+             return;
+         }
+         $event->setResponse($this->responseTransformer->transformEarly($event->getRequest(), $event->getResponse()));
+@@ -131,7 +132,7 @@ class IOEventSubscriber implements EventSubscriberInterface {
+      */
+     public function onResponseLate(FilterResponseEvent $event)
+     {
+-        if (!$this->eventRequestMatches($event)) {
++      if (!$this->eventRequestMatches($event) || $event->getResponse()->headers->get(DynamicPageCacheSubscriber::HEADER) == 'HIT') {
+             return;
+         }
+         $this->responseTransformer->transformLate($event->getRequest(), $event->getResponse());

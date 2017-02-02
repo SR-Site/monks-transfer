@@ -1,0 +1,7 @@
+uuid: 2c940b4e-31bb-437a-99d4-47b1fc4f7528
+langcode: en
+status: true
+dependencies: {  }
+id: blockaudiofragment
+label: 'Block audio fragment'
+behavior_plugins: {  }

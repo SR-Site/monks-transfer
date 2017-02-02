@@ -1,0 +1,29 @@
+uuid: c380fdc8-8722-4565-82ff-e3ab96271f77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockblogpost.field_styles
+    - paragraphs.paragraphs_type.blockblogpost
+  module:
+    - paragraphs
+id: paragraph.blockblogpost.default
+targetEntityType: paragraph
+bundle: blockblogpost
+mode: default
+content:
+  field_styles:
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: styles
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

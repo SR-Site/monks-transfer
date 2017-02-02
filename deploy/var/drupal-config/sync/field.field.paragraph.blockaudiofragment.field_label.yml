@@ -1,0 +1,19 @@
+uuid: 184f7133-be7a-488b-b09b-551919fa0571
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_label
+    - paragraphs.paragraphs_type.blockaudiofragment
+id: paragraph.blockaudiofragment.field_label
+field_name: field_label
+entity_type: paragraph
+bundle: blockaudiofragment
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

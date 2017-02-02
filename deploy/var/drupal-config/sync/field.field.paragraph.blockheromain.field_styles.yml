@@ -1,0 +1,90 @@
+uuid: 40ce8cf6-9547-4362-be13-355afe701ac1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_styles
+    - paragraphs.paragraphs_type.blockheromain
+    - paragraphs.paragraphs_type.styles
+  module:
+    - entity_reference_revisions
+id: paragraph.blockheromain.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: blockheromain
+label: Styles
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styles: styles
+    target_bundles_drag_drop:
+      blockheromain:
+        weight: 22
+        enabled: false
+      blockarticleteaser:
+        weight: 23
+        enabled: false
+      blockaudiofragment:
+        weight: 24
+        enabled: false
+      blockblogpost:
+        weight: 25
+        enabled: false
+      blockbutton:
+        weight: 26
+        enabled: false
+      blockhowtoadvertise:
+        weight: 27
+        enabled: false
+      blockimagecalltoactions:
+        weight: 28
+        enabled: false
+      blockimagecarousel:
+        weight: 29
+        enabled: false
+      blockimagewithcontent:
+        weight: 30
+        enabled: false
+      blocklatest:
+        weight: 31
+        enabled: false
+      blockmore:
+        weight: 32
+        enabled: false
+      broadcastschedule:
+        weight: 33
+        enabled: false
+      calltoaction:
+        weight: 34
+        enabled: false
+      link:
+        weight: 35
+        enabled: false
+      showmetric:
+        weight: 36
+        enabled: false
+      slide:
+        weight: 37
+        enabled: false
+      slideheromain:
+        weight: 38
+        enabled: false
+      stat:
+        weight: 39
+        enabled: false
+      statistic:
+        weight: 40
+        enabled: false
+      step:
+        weight: 41
+        enabled: false
+      styles:
+        enabled: true
+        weight: 42
+field_type: entity_reference_revisions

@@ -1,0 +1,22 @@
+uuid: 856033a0-b3ec-41e2-b82e-bec407565209
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - spectrum
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: spectrum_breadcrumbs
+theme: spectrum
+region: '-1'
+weight: 6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

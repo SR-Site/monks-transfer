@@ -1,0 +1,7 @@
+uuid: f8d73b61-c2bb-4cd9-8963-1a8991cbc264
+langcode: en
+status: true
+dependencies: {  }
+id: stat
+label: Stat
+behavior_plugins: {  }

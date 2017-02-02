@@ -1,0 +1,7 @@
+uuid: c95ea89c-ea83-4aef-b81a-e0cf990e24ab
+langcode: en
+status: true
+dependencies: {  }
+id: blockherotertiary
+label: 'Block hero tertiary'
+behavior_plugins: {  }

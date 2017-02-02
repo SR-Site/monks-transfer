@@ -1,0 +1,23 @@
+uuid: dcc02805-41a5-4745-bda7-2fed8204a15e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_value
+    - paragraphs.paragraphs_type.blockmap
+id: paragraph.blockmap.field_value
+field_name: field_value
+entity_type: paragraph
+bundle: blockmap
+label: Total
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

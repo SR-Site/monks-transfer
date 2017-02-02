@@ -1,0 +1,7 @@
+uuid: cf92ec6b-76f4-49d7-9c71-66a63bbc9673
+langcode: en
+status: true
+dependencies: {  }
+id: blockpathtopurchase
+label: 'Block path to purchase'
+behavior_plugins: {  }

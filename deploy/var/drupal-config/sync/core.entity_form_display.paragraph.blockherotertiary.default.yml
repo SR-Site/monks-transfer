@@ -1,0 +1,54 @@
+uuid: 377506b2-b002-48cf-b009-c15d7b1914f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockherotertiary.field_image
+    - field.field.paragraph.blockherotertiary.field_styles
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.blockherotertiary
+  module:
+    - field_group
+    - image
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+id: paragraph.blockherotertiary.default
+targetEntityType: paragraph
+bundle: blockherotertiary
+mode: default
+content:
+  field_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_styles:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

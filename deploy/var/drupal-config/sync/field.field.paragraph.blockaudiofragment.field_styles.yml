@@ -1,0 +1,72 @@
+uuid: 678657fc-27b0-4e4d-a777-91e672c465d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_styles
+    - paragraphs.paragraphs_type.blockaudiofragment
+    - paragraphs.paragraphs_type.styles
+  module:
+    - entity_reference_revisions
+id: paragraph.blockaudiofragment.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: blockaudiofragment
+label: Styles
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styles: styles
+    target_bundles_drag_drop:
+      blockaudiofragment:
+        weight: 16
+        enabled: false
+      blockarticleteaser:
+        weight: 17
+        enabled: false
+      blockhowtoadvertise:
+        weight: 18
+        enabled: false
+      blockimagecalltoactions:
+        weight: 19
+        enabled: false
+      blockimagecarousel:
+        weight: 20
+        enabled: false
+      blockimagewithcontent:
+        weight: 21
+        enabled: false
+      blocklatest:
+        weight: 22
+        enabled: false
+      blockmore:
+        weight: 23
+        enabled: false
+      broadcastschedule:
+        weight: 24
+        enabled: false
+      calltoaction:
+        weight: 25
+        enabled: false
+      link:
+        weight: 26
+        enabled: false
+      showmetric:
+        weight: 27
+        enabled: false
+      slide:
+        weight: 28
+        enabled: false
+      step:
+        weight: 29
+        enabled: false
+      styles:
+        enabled: true
+        weight: 30
+field_type: entity_reference_revisions

@@ -1,0 +1,93 @@
+uuid: a5dc441f-4071-4f6e-a9d0-0d5890a57290
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.blockherosecondary
+    - paragraphs.paragraphs_type.link
+  module:
+    - entity_reference_revisions
+id: paragraph.blockherosecondary.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: blockherosecondary
+label: Link
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      link: link
+    target_bundles_drag_drop:
+      blockherosecondary:
+        weight: 23
+        enabled: false
+      blockarticleteaser:
+        weight: 24
+        enabled: false
+      blockaudiofragment:
+        weight: 25
+        enabled: false
+      blockblogpost:
+        weight: 26
+        enabled: false
+      blockbutton:
+        weight: 27
+        enabled: false
+      blockheromain:
+        weight: 28
+        enabled: false
+      blockhowtoadvertise:
+        weight: 29
+        enabled: false
+      blockimagecalltoactions:
+        weight: 30
+        enabled: false
+      blockimagecarousel:
+        weight: 31
+        enabled: false
+      blockimagewithcontent:
+        weight: 32
+        enabled: false
+      blocklatest:
+        weight: 33
+        enabled: false
+      blockmore:
+        weight: 34
+        enabled: false
+      broadcastschedule:
+        weight: 35
+        enabled: false
+      calltoaction:
+        weight: 36
+        enabled: false
+      link:
+        enabled: true
+        weight: 37
+      showmetric:
+        weight: 38
+        enabled: false
+      slide:
+        weight: 39
+        enabled: false
+      slideheromain:
+        weight: 40
+        enabled: false
+      stat:
+        weight: 41
+        enabled: false
+      statistic:
+        weight: 42
+        enabled: false
+      step:
+        weight: 43
+        enabled: false
+      styles:
+        weight: 44
+        enabled: false
+field_type: entity_reference_revisions

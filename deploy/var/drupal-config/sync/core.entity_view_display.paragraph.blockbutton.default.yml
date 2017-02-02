@@ -1,0 +1,40 @@
+uuid: b9de9a9d-8d27-4c7b-adfc-1b3bf3e7e76c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockbutton.field_alignment
+    - field.field.paragraph.blockbutton.field_link
+    - field.field.paragraph.blockbutton.field_styles
+    - paragraphs.paragraphs_type.blockbutton
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.blockbutton.default
+targetEntityType: paragraph
+bundle: blockbutton
+mode: default
+content:
+  field_alignment:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_link:
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden: {  }

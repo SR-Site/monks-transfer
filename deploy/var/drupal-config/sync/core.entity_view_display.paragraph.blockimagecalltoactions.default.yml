@@ -1,0 +1,32 @@
+uuid: 441dfea6-ad36-4201-978e-a3f81ad3dddb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockimagecalltoactions.field_calltoactions
+    - field.field.paragraph.blockimagecalltoactions.field_styles
+    - paragraphs.paragraphs_type.blockimagecalltoactions
+  module:
+    - entity_reference_revisions
+id: paragraph.blockimagecalltoactions.default
+targetEntityType: paragraph
+bundle: blockimagecalltoactions
+mode: default
+content:
+  field_calltoactions:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden: {  }

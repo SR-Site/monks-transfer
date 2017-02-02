@@ -1,0 +1,17 @@
+uuid: 4903e2a4-b9f6-44a3-819d-31e9ee88c36d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Network
+type: network
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

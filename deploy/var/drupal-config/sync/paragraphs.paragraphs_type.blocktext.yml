@@ -1,0 +1,7 @@
+uuid: c387fd05-d981-472c-a4c1-1582d16ebd28
+langcode: en
+status: true
+dependencies: {  }
+id: blocktext
+label: 'Block text'
+behavior_plugins: {  }

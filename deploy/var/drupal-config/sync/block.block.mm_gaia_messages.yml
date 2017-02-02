@@ -1,0 +1,22 @@
+uuid: 97808be5-8008-4fbf-a5fb-b0b4f30d7231
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mm_gaia
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: mm_gaia_messages
+theme: mm_gaia
+region: content
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

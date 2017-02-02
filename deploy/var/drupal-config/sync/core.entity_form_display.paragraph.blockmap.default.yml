@@ -1,0 +1,99 @@
+uuid: 34646c11-3385-49fb-8d9e-0434cba81828
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blockmap.field_autoplay
+    - field.field.paragraph.blockmap.field_image
+    - field.field.paragraph.blockmap.field_label
+    - field.field.paragraph.blockmap.field_steps_text
+    - field.field.paragraph.blockmap.field_styles
+    - field.field.paragraph.blockmap.field_value
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.blockmap
+  module:
+    - field_group
+    - image
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_s:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+    group_image_sequence:
+      children:
+        - field_image
+        - field_value
+        - field_label
+        - field_autoplay
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Image sequence'
+id: paragraph.blockmap.default
+targetEntityType: paragraph
+bundle: blockmap
+mode: default
+content:
+  field_autoplay:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_label:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_steps_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_styles:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: styles
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+  field_value:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+hidden:
+  created: true
+  status: true
+  uid: true
