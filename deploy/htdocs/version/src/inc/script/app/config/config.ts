@@ -87,7 +87,8 @@ let config: IConfig = {
 	},
 	properties: {
 		[PropertyNames.DEFAULT_LOCALE]: 'en_US',
-		[PropertyNames.MOCK_CONTENT]: true
+		[PropertyNames.MOCK_CONTENT]: true,
+		[PropertyNames.MAPBOX_ACCESS_TOKEN]: 'pk.eyJ1IjoibGFyc3ZhbmJyYWFtIiwiYSI6ImNpeW8zNXV2NjAwNjAzM3FsMnV1Z3E4Z2QifQ.UdtOqQiB6YK_lDBthfL6oA'
 	}
 };
 

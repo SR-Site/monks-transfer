@@ -11,10 +11,16 @@ class BlockFilterContentTransitionController extends AbstractTransitionControlle
 	protected setupTransitionInTimeline(): void
 	{
 		const button = this.element.querySelector('.component-button-main');
+		const paginator = this.element.querySelector('.component-paginator-dashed');
 
 		if(button)
 		{
 			this.transitionInTimeline.add(this.getSubTimeline(button));
+		}
+
+		if(paginator)
+		{
+			this.transitionInTimeline.add(this.getSubTimeline(paginator));
 		}
 	}
 }

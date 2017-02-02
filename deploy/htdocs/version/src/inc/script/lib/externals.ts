@@ -2,6 +2,7 @@ define([
 	'jquery',
 	'knockout',
 	'vendor/vimeo/player.min',
+	'vendor/mapbox/mapbox-gl',
 	'vendor/wavesurfer/wavesurfer',
 	'jquerymobile',
 	'vendor/knockout-punches/knockout.punches',
@@ -24,9 +25,9 @@ define([
 	'lib/knockout/knockout.image',
 	'lib/knockout/knockout.events',
 	'lib/knockout/knockout.focusBorder'
-], ($, ko, vimeo) =>
+], ($, ko, vimeo, mapbox) =>
 {
-
+	console.log(mapbox);
 	ko.punches.interpolationMarkup.enable();
 	ko.punches.attributeInterpolationMarkup.enable();
 	ko.punches.textFilter.enableForBinding('text');

@@ -26,9 +26,12 @@ class BlockPersonaSelectorViewModel extends AbstractBlockComponentViewModel<Bloc
 		{
 			this._switchComplete = false;
 
+			const oldIndex = this.activeIndex();
+
+			this.activeIndex(index);
+
 			// Do some transitioning
-			this.controller.transitionController.transitionOutStep(this.activeIndex())
-				.then(() => this.activeIndex(index))
+			this.controller.transitionController.transitionOutStep(oldIndex)
 				.then(() => this.controller.transitionController.transitionInStep(index))
 				.then(() => this._switchComplete = true)
 		}
