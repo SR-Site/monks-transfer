@@ -10,11 +10,15 @@ import {DeviceState} from "../../../data/scss-shared/MediaQueries";
 import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
 import ImageHelper from "../../../util/ImageHelper";
 import Promise = require("bluebird");
+import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedController";
+import DataEvent from "../../../../lib/temple/event/DataEvent";
+import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
 
 class BlockPathToPurchaseController extends AbstractBlockComponentController<BlockPathToPurchaseViewModel, IBlockPathToPurchaseOptions>
 {
 	private _infiniteImageCarousel: InfiniteImageCarousel;
 	private _imageCrossfader: ImageCrossfaderController;
+	private _paginatorDashedController: PaginatorDashedController;
 
 
 	/**
@@ -41,6 +45,27 @@ class BlockPathToPurchaseController extends AbstractBlockComponentController<Blo
 
 	/**
 	 * @public
+	 * @method handlePaginatorReady
+	 */
+	public handlePaginatorReady(controller: PaginatorDashedController): void
+	{
+		this._paginatorDashedController = controller;
+		controller.addEventListener(CarouselEvent.OPEN, (event: DataEvent<{index: number}>) => this.openIndex(event.data.index));
+	}
+
+	/**
+	 * @public
+	 * @method openIndex
+	 * @param index
+	 */
+	public openIndex(index: number): void
+	{
+		this._infiniteImageCarousel.open(index);
+	}
+
+
+	/**
+	 * @public
 	 * @method handleImageCrossfaderReady
 	 */
 	public handleImageCrossfaderReady(controller: ImageCrossfaderController): void
@@ -64,7 +89,9 @@ class BlockPathToPurchaseController extends AbstractBlockComponentController<Blo
 					this.options.steps[index].background
 				)
 			);
-		}else {
+		}
+		else
+		{
 			return Promise.resolve();
 		}
 	}
@@ -133,6 +160,14 @@ class BlockPathToPurchaseController extends AbstractBlockComponentController<Blo
 	 */
 	public destruct(): void
 	{
+		if(this._infiniteImageCarousel)
+		{
+			this._infiniteImageCarousel.destruct();
+			this._infiniteImageCarousel = null;
+		}
+
+		this._paginatorDashedController = null;
+		this._imageCrossfader = null;
 
 		// always call this last
 		super.destruct();
