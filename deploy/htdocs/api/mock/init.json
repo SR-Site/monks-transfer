@@ -53,6 +53,110 @@
 				}
 			],
 			"footer": {
+				"contactOptions": {
+					"email": "spectrumreach@spectrum.com",
+					"phone": "1-884-TO-REACH"
+				},
+				"mainLinks": [
+					{
+						"label": "Charter",
+						"title": "Charter",
+						"target": "home",
+						"type": 0
+					},
+					{
+						"label": "Spectrum",
+						"title": "Spectrum",
+						"target": "home",
+						"type": 0
+					},
+					{
+						"label": "Spectrum Business",
+						"title": "Spectrum Business",
+						"target": "home",
+						"type": 0
+					}
+				],
+				"secondaryLinks": [
+					[
+						{
+							"label": "About Spectrum Reach",
+							"title": "About Spectrum Reach",
+							"target": "home",
+							"type": 0
+						},
+						{
+							"label": "Careers",
+							"title": "Careers",
+							"target": "home",
+							"type": 0
+						},
+						{
+							"label": "Careers Business",
+							"title": "Careers Business",
+							"target": "home",
+							"type": 0
+						},
+						{
+							"label": "My Bright Rewards",
+							"title": "My Bright Rewards",
+							"target": "home",
+							"type": 0
+						},
+						{
+							"label": "Bill Pay",
+							"title": "Bill Pay",
+							"target": "home",
+							"type": 0
+						}
+					],
+					[
+						{
+							"label": "Brighthouse Business",
+							"title": "Brighthouse Business",
+							"target": "home",
+							"type": 0
+						},
+						{
+							"label": "Privacy Policy",
+							"title": "Privacy Policy",
+							"target": "home",
+							"type": 0
+						},
+						{
+							"label": "Spectrum Reach Terms",
+							"title": "Spectrum Reach Terms",
+							"target": "home",
+							"type": 0
+						},
+						{
+							"label": "Time Warner Terms",
+							"title": "Time Warner Terms",
+							"target": "home",
+							"type": 0
+						}
+					]
+				],
+				"social": {
+					"twitter": {
+						"label": "Twitter",
+						"title": "Twitter",
+						"target": "http://www.twitter.com",
+						"type": 1
+					},
+					"youtube": {
+						"label": "YouTube",
+						"title": "YouTube",
+						"target": "http://www.youtube.com",
+						"type": 1
+					},
+					"linkedin": {
+						"label": "LinkedIn",
+						"title": "LinkedIn",
+						"target": "http://www.youtube.com",
+						"type": 1
+					}
+				}
 			},
 			"slideOutPanel": {
 				"contact": {

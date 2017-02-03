@@ -1,76 +1,38 @@
-<footer class="component-footer">
+<footer class="component-footer" data-bind="with: dataManager.settingsModel.initDataModel.footerData">
 	<section class="top-section">
 		<h1 class="logo white"> <!-- 'primary' or 'inverted' -->
 			<span class="icon" data-bind="icon: 'logo'"></span>
 		</h1>
-		<ul class="contact-options">
-			<li class="contact-option">spectrumreach@speacktrumreach.com</li>
-			<li class="contact-option">1-844-TO-REACH</li>
+		<ul class="contact-options" data-bind="with: $data.contactOptions">
+			<li class="contact-option">{{$data.email}}</li>
+			<li class="contact-option">{{$data.phone}}</li>
 		</ul>
 	</section>
 	<section class="middle-section">
 		<nav class="call-to-actions left">
-			<ul class="full-list">
+			<ul class="full-list" data-bind="foreach: $data.mainLinks">
 				<li>
-					<a href="#">Charter</a>
-				</li>
-				<li>
-					<a href="#">Spectrum</a>
-				</li>
-				<li>
-					<a href="#">Spectrum Business</a>
+					<!-- ko template: { name: 'link-main', data: $data } --><!-- /ko -->
 				</li>
 			</ul>
 		</nav>
-		<nav class="call-to-actions middle">
-			<ul class="half-list">
+		<nav class="call-to-actions middle" data-bind="foreach: $data.secondaryLinks">
+			<ul class="half-list" data-bind="foreach: $data">
 				<li>
-					<a href="#">About Spectrum Reach</a>
-				</li>
-				<li>
-					<a href="#">Careers</a>
-				</li>
-				<li>
-					<a href="#">Careers Business</a>
-				</li>
-				<li>
-					<a href="#">My Bright Rewards</a>
-				</li>
-				<li>
-					<a href="#">Bill Pay</a>
-				</li>
-			</ul>
-			<ul class="half-list">
-				<li>
-					<a href="#">Brighthouse Business</a>
-				</li>
-				<li>
-					<a href="#">Privacy Policy</a>
-				</li>
-				<li>
-					<a href="#">Spectrum Reach Terms</a>
-				</li>
-				<li>
-					<a href="#">Time Warner Terms</a>
+					<!-- ko template: { name: 'link-main', data: $data } --><!-- /ko -->
 				</li>
 			</ul>
 		</nav>
 		<nav class="call-to-actions right">
-			<ul class="full-list social">
+			<ul class="full-list social" data-bind="with: $data.social">
 				<li>
-					<a href="#">
-						<span class="icon" data-bind="icon: 'twitter'"></span>
-					</a>
+					<!-- ko template: { name: 'link-icon', data: Object.assign({icon: 'twitter'}, $data.twitter) } --><!-- /ko -->
 				</li>
 				<li>
-					<a href="#">
-						<span class="icon" data-bind="icon: 'youtube'"></span>
-					</a>
+					<!-- ko template: { name: 'link-icon', data: Object.assign({icon: 'youtube'}, $data.youtube) } --><!-- /ko -->
 				</li>
 				<li>
-					<a href="#">
-						<span class="icon" data-bind="icon: 'linkedin'"></span>
-					</a>
+					<!-- ko template: { name: 'link-icon', data: Object.assign({icon: 'linkedin'}, $data.linkedin) } --><!-- /ko -->
 				</li>
 			</ul>
 		</nav>
