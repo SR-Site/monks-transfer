@@ -67,7 +67,7 @@ class ButtonMainTransitionController extends AbstractTransitionController<Button
 			}
 		});
 
-		this._hoverTimeline.fromTo(this.element.querySelector('.stripe'), 1,
+		this._hoverTimeline.fromTo(this.element.querySelector('.stripe'), 0.5,
 			{
 				scaleX: 1
 			},
@@ -76,7 +76,7 @@ class ButtonMainTransitionController extends AbstractTransitionController<Button
 				ease: Power3.easeInOut
 			});
 
-		this._hoverTimeline.fromTo(this.element.querySelector('.hover-stroke'), 1,
+		this._hoverTimeline.fromTo(this.element.querySelector('.hover-stroke'), 0.5,
 			{
 				strokeDasharray: '0px ' + this.parentController.fullPath + 'px',
 				strokeDashoffset: this.parentController.height / 2
