@@ -51,6 +51,10 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 				onReverseComplete: () => this.handleSlideTransitionComplete(index)
 			});
 
+			timeline.from(element, 0.1, {
+				display: 'none'
+			})
+
 			timeline.from(heading, 0.8, {
 				y: 50,
 				autoAlpha: 0,
