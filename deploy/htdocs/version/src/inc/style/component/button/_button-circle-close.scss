@@ -1,7 +1,7 @@
 .component-button-circle-close {
 	@include size($sizeGrid/2);
 	border-radius: 100%;
-	border: 1px solid $colorPrimary;
+	border: 1px solid rgba($colorPrimary, .3);
 	transition: background-color 250ms ease(linear);
 
 	.icon {
@@ -14,7 +14,7 @@
 		@include size($sizeGrid);
 
 		.icon {
-			@include size(12px);
+			@include size(10px);
 		}
 	}
 

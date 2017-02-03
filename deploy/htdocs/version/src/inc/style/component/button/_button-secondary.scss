@@ -1,4 +1,4 @@
-.component-button-main {
+.component-button-secondary {
 	@include size(auto, 5rem);
 	font: 800 1rem / calc(5rem - 2px) $fontOpenSans;
 	color: $colorPrimary;
@@ -7,7 +7,6 @@
 	display: inline-block;
 	position: relative;
 	vertical-align: middle;
-	margin-left: $sizeGridSecondary / 2;
 	z-index: 0;
 
 	svg {
@@ -19,24 +18,11 @@
 		fill: transparent;
 		stroke: rgba(0, 0, 0, .3);
 		stroke-width: 1px;
-
-		&.background {
-			stroke: rgba(0, 0, 0, .3);
-		}
-
-		&.hover-stroke {
-
-			stroke: $colorSecondary;
-		}
 	}
 
-	.stripe {
-		@include size($sizeGridSecondary, .4rem);
-		@include pos(calc(50% - .2rem), auto, auto, -$sizeGridSecondary / 2);
-		transform: scale(1);
-		position: absolute;
-		background: $colorSecondary;
-
+	.background {
+		stroke: $colorSecondary;
+		transition: stroke .2s ease(easeInOut);
 	}
 
 	.label {
@@ -44,12 +30,24 @@
 		vertical-align: top;
 	}
 
+	@include hover() {
+		.background {
+			stroke: rgba(0, 0, 0, .2);
+		}
+	}
+
 	// Light Theme
 	&.light {
 		color: $colorWhite;
 
-		rect {
-			stroke: rgba(255,255,255,.3);
+		.background {
+			stroke: rgba(255, 255, 255, .3);
+		}
+
+		@include hover() {
+			.background {
+				stroke: #fff;
+			}
 		}
 	}
 
@@ -59,11 +57,5 @@
 		font-size: mobile-size(1.8rem);
 		line-height: mobile-size(10rem);
 		padding: 0 $sizeGrid * 2;
-		margin-left: $sizeGrid;
-
-		.stripe {
-			@include size($sizeGrid*2, 1rem);
-			left: -$sizeGrid;
-		}
 	}
 }

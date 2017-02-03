@@ -12,7 +12,7 @@ class ContactTransitionController extends DefaultSlideoutComponentTransitionCont
 	{
 		super.setupTransitionInTimeline();
 
-		this.transitionInTimeline.add(this.getSubTimeline('.component-button-main'));
+		this.transitionInTimeline.add(this.getSubTimeline('.component-button-secondary'));
 	}
 }
 

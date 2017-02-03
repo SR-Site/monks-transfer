@@ -1,0 +1,13 @@
+<button class="component-button-secondary button" data-bind="
+	attr: {
+		title: title
+	},
+	events: [
+		[MouseEventHelper.CLICK, $root.handleClick.bind($root)]
+	]
+">
+	<span class="label">{{label}}</span>
+	<svg width="100%" height="100%" class="abs-fill" preserveAspectRatio="none">
+		<rect class="background" x="0.5" y="0.5" vector-effect="non-scaling-stroke"></rect>
+	</svg>
+</button>
