@@ -184,7 +184,7 @@
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-digital.jpg",
-								"small": "data/image/image-call-to-actions/image-tv.jpg",
+								"small": "data/image/image-call-to-actions/image-digital.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
@@ -198,7 +198,7 @@
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-creative.jpg",
-								"small": "data/image/image-call-to-actions/image-tv.jpg",
+								"small": "data/image/image-call-to-actions/image-creative.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
