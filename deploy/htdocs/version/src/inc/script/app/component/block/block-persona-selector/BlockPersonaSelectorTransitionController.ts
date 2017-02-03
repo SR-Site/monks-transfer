@@ -2,6 +2,8 @@ import AbstractTransitionController from "../../../util/component-transition/Abs
 import Promise = require("bluebird");
 import TriangleTransitionController from "../../../util/component-transition/TriangleTransitionController";
 import BlockPersonaSelectorController from "./BlockPersonaSelectorController";
+import {DeviceState} from "../../../data/scss-shared/MediaQueries";
+import DataManager from "../../../data/DataManager";
 
 class BlockPersonaSelectorTransitionController extends AbstractTransitionController<BlockPersonaSelectorController>
 {
@@ -84,12 +86,12 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
+		const pagination = this.element.querySelector('.component-paginator-dashed');
+
 		this.transitionInTimeline.from(this.element, 0.5, {autoAlpha: 0});
 
 		// Transition in the paginator
-		this.transitionInTimeline.from(this.element.querySelector('.component-paginator-dashed'), 0.5, {
-			autoAlpha: 0
-		});
+		this.transitionInTimeline.add(this.getSubTimeline(pagination));
 
 		// Run the background switch
 		this.transitionInTimeline.add(() => this.parentController.changeBackgroundImage(this.parentController.activeIndex));
@@ -143,16 +145,24 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 		return new Promise((resolve: () => void, reject: () => void) =>
 		{
 			// Switch the background
-			this.parentController.changeBackgroundImage(index);
+			if(DataManager.getInstance().deviceStateTracker.currentState() > DeviceState.SMALL)
+			{
+				this.parentController.changeBackgroundImage(index);
 
-			// Slide out the main triangle
-			this._mainTriangleAnimation.transitionOut()
-				.then(() => this._mainTriangleAnimation.transitionIn())
-				.then(() =>
-				{
-					this._slideTransitions[index].completeMethod = resolve;
-					this._slideTransitions[index].timeline.restart();
-				})
+				// Slide out the main triangle
+				this._mainTriangleAnimation.transitionOut()
+					.then(() => this._mainTriangleAnimation.transitionIn())
+					.then(() =>
+					{
+						this._slideTransitions[index].completeMethod = resolve;
+						this._slideTransitions[index].timeline.restart();
+					})
+			}
+			else
+			{
+				this._slideTransitions[index].completeMethod = resolve;
+				this._slideTransitions[index].timeline.restart();
+			}
 		});
 	}
 
