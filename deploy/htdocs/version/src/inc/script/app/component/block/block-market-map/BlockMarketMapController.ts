@@ -99,6 +99,8 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 					source: 'markets',
 					paint: {
 						'fill-pattern': 'stripe-pattern-2'
+						// 'fill-color': '#009bdb',
+						// 'fill-opacity': 0.3
 					}
 				})
 

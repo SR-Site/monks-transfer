@@ -18,6 +18,8 @@ class Routes
 	public static CONTACT_US: string = 'contact-us';
 	public static PAGE_NOT_FOUND: string = 'page-not-found';
 
+	public static FULL_TOUR:string = 'full-tour';
+
 	/**
 	 * Set up the global config and all individual route configuration here
 	 *
@@ -77,8 +79,12 @@ class Routes
 		// If you want a popup route, you should add it above the global deeplink route. Keep in mind that all routes are
 		// send to the backend so if you want a popup route it would be best to access it only from the root ('/') route.
 
+		// Manual route
+		Gaia.router.page('/' + Routes.FULL_TOUR + '/:' + Params.SLUG + '?', Branches.CONTENT_PAGE + '/' + Branches.POPUP_FULL_TOUR);
+
 		// default page
 		Gaia.router.page('/:' + Params.DEEPLINK + '*', Branches.CONTENT_PAGE);
+
 	}
 }
 

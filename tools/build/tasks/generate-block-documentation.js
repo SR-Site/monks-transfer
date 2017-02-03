@@ -23,17 +23,21 @@ module.exports = function( grunt )
 			{
 				console.log( 'Parse block data for:', block );
 
-				var blockId = upperCamelCase( block );
-				var properties = parseBlock( block ).reverse();
+				if(block === 'block-latest') {
 
-				output.blocks.push( {
-					blockId: blockId,
-					properties: properties,
-					example: JSON.stringify( {
-						id: camelCase( blockId ),
-						data: generateExampleJSON( properties, {} )
-					}, null, 4 )
-				} );
+					var blockId = upperCamelCase( block );
+					var properties = parseBlock( block ).reverse();
+
+					output.blocks.push( {
+						blockId: blockId,
+						properties: properties,
+						example: JSON.stringify( {
+							id: camelCase( blockId ),
+							data: generateExampleJSON( properties, {} )
+						}, null, 4 )
+					} );
+				}
+
 			} );
 
 			console.log( 'Writing data.json file' );
@@ -108,8 +112,11 @@ module.exports = function( grunt )
 		const blockOptionsPath = blockDir + '/' + block + '/I' + blockId + 'Options.ts';
 
 		// Parse the options file with typhen to get all the properties
-		const typhenResult = typhen.parse( blockOptionsPath ).types[0];
-		const properties = typhenResult.properties || typhenResult.type.properties;
+		const typhenResult = typhen.parse( blockOptionsPath );
+
+		// TODO: It kinda messes up when you reference to a interface in an array!
+		const typenTypes = typhenResult.types[0];
+		const properties = typenTypes.properties || typenTypes.type.properties;
 
 		return parseProperties( properties );
 	}
