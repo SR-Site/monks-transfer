@@ -2,6 +2,7 @@
 	@include size(auto, $sizeGrid * 2);
 	text-transform: uppercase;
 	color: $colorPrimary;
+	cursor: default;
 	padding: 0 $sizeGrid / 2;
 
 	.text {
