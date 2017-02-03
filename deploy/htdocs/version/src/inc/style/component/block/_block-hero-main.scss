@@ -34,7 +34,7 @@
 
 	.tertiary-background-triangle {
 		@include arrow(right, rgba($colorWhite, .95), $sizeGrid * 6);
-		@include pos(75%, auto, auto, $sizeGrid * 20);
+		@include pos(calc(50% + #{$sizeGrid * 6}), auto, auto, $sizeGrid * 20);
 		position: absolute;
 		pointer-events: none;
 	}
