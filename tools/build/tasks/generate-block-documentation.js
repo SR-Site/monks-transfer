@@ -23,20 +23,17 @@ module.exports = function( grunt )
 			{
 				console.log( 'Parse block data for:', block );
 
-				if(block === 'block-latest') {
+				var blockId = upperCamelCase( block );
+				var properties = parseBlock( block ).reverse();
 
-					var blockId = upperCamelCase( block );
-					var properties = parseBlock( block ).reverse();
-
-					output.blocks.push( {
-						blockId: blockId,
-						properties: properties,
-						example: JSON.stringify( {
-							id: camelCase( blockId ),
-							data: generateExampleJSON( properties, {} )
-						}, null, 4 )
-					} );
-				}
+				output.blocks.push( {
+					blockId: blockId,
+					properties: properties,
+					example: JSON.stringify( {
+						id: camelCase( blockId ),
+						data: generateExampleJSON( properties, {} )
+					}, null, 4 )
+				} );
 
 			} );
 
