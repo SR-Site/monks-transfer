@@ -3,6 +3,7 @@
 	@include pos($sizeGrid * 2, 0, 0, auto);
 	position: fixed;
 	overflow: hidden;
+	transform: translateX(100%);
 	z-index: zindex($layout, menu);
 
 	.menu-content,

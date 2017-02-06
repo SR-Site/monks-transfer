@@ -11,6 +11,8 @@ class MenuTransitionController extends AbstractTransitionController<MenuControll
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
+		this.transitionInTimeline.set(this.element, {x: 0});
+
 		this.transitionInTimeline.from(this.element.querySelector('.menu-background'), 1.2, {
 			xPercent: 100,
 			yPercent: -100,
