@@ -77,7 +77,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 				}, '=-0.7');
 			}
 
-			if(statistics)
+			if(statistics.length)
 			{
 				timeline.from(statistics[index].querySelector('.heading'), 0.8, {
 					y: 50,
