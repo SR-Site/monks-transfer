@@ -16,7 +16,11 @@ function build_frontend(){
 }
 
 function build_backend(){
-    echo "Todo"
+    changeDir ${BACKEND_BUILDROOT}
+    runComposer install
+    changeDir ${DRUSH_DIR}
+    drushCommand cim
+    drushCommand update-entities
 }
 
 function build_deploy(){

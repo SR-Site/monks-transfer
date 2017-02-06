@@ -11,14 +11,14 @@ COMPOSER_BIN="$(which composer)"
 
 #config
 ROOTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}")/../../" && pwd )"
-DRUSH_DIR="${ROOTDIR}/docroot"
+DRUSH_DIR="${ROOTDIR}/deploy/htdocs"
 GRUNT_DIR="${ROOTDIR}/tools/build"
 COMPOSER_DIR="${ROOTDIR}/"
 NPM_DIR="${ROOTDIR}/tools/build"
 TSD_DIR="${ROOTDIR}/tools/build"
 ASSETDIR="${ROOTDIR}docroot/sites/default/files"
 FRONTEND_BUILDROOT="${ROOTDIR}/tools/build"
-BACKEND_BUILDROOT=""
+BACKEND_BUILDROOT="${ROOTDIR}/"
 BLOCKDOCS="/var/www/block-docs/"
 JOB_NAME="Spectrum-Reach"
 
