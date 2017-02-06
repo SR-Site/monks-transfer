@@ -14,6 +14,8 @@ import FillLayout = mapboxgl.FillLayout;
 import GeoJSONSource = mapboxgl.GeoJSONSource;
 import FeatureCollection = GeoJSON.FeatureCollection;
 import IState from "./interface/IState";
+import Feature = GeoJSON.Feature;
+import Scrollbar from "../../../../lib/temple/component/Scrollbar";
 
 class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions>
 {
@@ -24,14 +26,12 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 */
 	private _debug: Log = new Log('app.component.BlockMarketMap');
 
+	private _featureCollection: FeatureCollection;
+	private _marketFeatureCollection: {[id: string]: Feature} = {};
+
 	private _map: mapboxgl.Map;
-	private _layers: {
-		[id: string]: {
-			source?: any;
-			outline?: mapboxgl.Map;
-			fill?: mapboxgl.Map;
-		}
-	} = {};
+	private _marketsOutlineLayer: mapboxgl.Map;
+	private _marketsFillLayer: mapboxgl.Map;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -45,6 +45,74 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 
 		// Set the access token
 		mapboxgl.accessToken = configManagerInstance.getProperty(PropertyNames.MAPBOX_ACCESS_TOKEN);
+	}
+
+	/**
+	 * @private
+	 * @method updateDataLayer
+	 */
+	public updateDataLayer(): void
+	{
+		// Get the state
+		const selectedState = this.viewModel.selectedState();
+
+		let data: FeatureCollection|Feature;
+
+		if(this._marketsFillLayer && this._marketsOutlineLayer)
+		{
+			this._map.removeSource('markets');
+
+			this._map.removeLayer('markets-fill');
+			this._map.removeLayer('markets-outline');
+
+		}
+
+		if(selectedState !== null)
+		{
+			// Decide what polygons should be visible
+			data = <Feature>this._marketFeatureCollection[selectedState.id];
+		}
+		else
+		{
+			data = <FeatureCollection>this._featureCollection;
+		}
+
+		// Add the source to the map
+		this._map.addSource('markets', {
+			"type": "geojson",
+			"data": data
+		});
+
+		// Create a  layer
+		this._marketsFillLayer = this._map.addLayer({
+			id: 'markets-fill',
+			type: 'fill',
+			source: 'markets',
+			paint: {
+				// 'fill-pattern': 'stripe-pattern-2'
+				'fill-color': '#009bdb',
+				'fill-opacity': 0.3
+			}
+		});
+
+		this._marketsOutlineLayer = this._map.addLayer({
+			id: 'markets-outline',
+			type: 'line',
+			source: 'markets',
+			paint: {
+				'line-width': 2,
+				'line-color': '#009bdb'
+			}
+		});
+	}
+
+	/**
+	 * @protected
+	 * @method allComponentsLoaded
+	 */
+	protected allComponentsLoaded(): void
+	{
+		this.transitionController = new BlockMarketMapTransitionController(this.element, this);
 
 		this._map = new mapboxgl.Map({
 			container: 'js-map',
@@ -55,6 +123,8 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 		});
 
 		this._map.on('load', this.handleMapLoad.bind(this));
+
+		super.allComponentsLoaded();
 	}
 
 	/**
@@ -65,73 +135,12 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	{
 		this.loadStates()
 			.then((states: Array<IState>) => this.viewModel.stateList(states))
-			.then(() => this.loadFeatures())
-			.then((data: FeatureCollection) => this.addDataLayer(data))
-			.then(() => this.addMapEvents());
+			.then(this.updateScrollBar.bind(this))
+			.then(this.loadFeatures.bind(this))
+			.then(this.updateDataLayer.bind(this))
+			.then(this.addMapEvents.bind(this));
 	}
 
-	/**
-	 * @private
-	 * @method addDataLayer
-	 * @param data
-	 */
-	private addDataLayer(data: FeatureCollection): void
-	{
-		// Parse it to multi-polygon to make it work... dafuq
-		data.features.forEach((feature, index) =>
-		{
-			if(feature.properties.id !== void 0)
-			{
-				if(this._layers[feature.properties.id] === void 0)
-				{
-					feature.geometry.type = 'MultiPolygon';
-					feature.geometry.coordinates = feature.geometry.coordinates.map((coordinate) => [coordinate]);
-
-					// Create the source for the map
-					this._layers[feature.properties.id] = {};
-
-					// Draw the layer for the outline
-					this._layers[feature.properties.id].outline = this._map.addLayer({
-						id: 'markets-outline-' + feature.properties.id,
-						type: 'line',
-						source: {
-							"type": "geojson",
-							"data": feature
-						},
-						paint: {
-							'line-width': 2,
-							'line-color': '#009bdb'
-						}
-					});
-
-					// Draw the layer for the fill
-					this._layers[feature.properties.id].fill = this._map.addLayer({
-						id: 'markets-fill-' + feature.properties.id,
-						type: 'fill',
-						source: {
-							"type": "geojson",
-							"data": feature
-						},
-						paint: {
-							// 'fill-pattern': 'stripe-pattern-2'
-							'fill-color': '#009bdb',
-							'fill-opacity': 0.3
-						}
-					})
-				}
-				else
-				{
-					console.warn('duplicate feature id', feature.properties.id);
-				}
-			}
-			else
-			{
-				console.warn('Unknown feature Id', feature)
-			}
-		});
-
-		console.log(this._layers);
-	}
 
 	/**
 	 * @private
@@ -139,13 +148,11 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 */
 	private addMapEvents(): void
 	{
-		const layers = Object.keys(this._layers).map((key: string) => 'markets-fill-' + key);
-
 		// When a click event occurs near a polygon, open a popup at the location of
 		// the feature, with description HTML from its properties.
 		this._map.on('click', (e) =>
 		{
-			let features = this._map.queryRenderedFeatures(e.point, {layers: layers});
+			let features = this._map.queryRenderedFeatures(e.point, {layers: ['markets-fill']});
 
 			if(!features.length)
 			{
@@ -162,7 +169,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 
 		this._map.on('mousemove', (e) =>
 		{
-			let features = this._map.queryRenderedFeatures(e.point, {layers: layers});
+			let features = this._map.queryRenderedFeatures(e.point, {layers: ['markets-fill']});
 			this._map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 		});
 	}
@@ -173,9 +180,9 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 * @method loadFeatures
 	 * @returns Promise<Array<IFeatures>>
 	 */
-	private loadFeatures(): Promise<FeatureCollection>
+	private loadFeatures(): Promise<any>
 	{
-		return new Promise((resolve: (data: FeatureCollection) => void) =>
+		return new Promise((resolve: () => void) =>
 		{
 			// type: 'geojson',
 			// data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_admin_1_states_provinces_shp.geojson'
@@ -184,7 +191,20 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 			// TODO: move to config? fetch from back-end?
 			let loadJSONTask = new LoadJSONTask('data/mapbox/original-markets.json', (data) =>
 			{
-				resolve(data);
+				// Parse it to multi-polygon to make it work... dafuq
+				data.features.forEach((feature) =>
+				{
+					feature.geometry.type = 'MultiPolygon';
+					feature.geometry.coordinates = feature.geometry.coordinates.map((coordinate) => [coordinate]);
+
+					// Save for faster lookup
+					this._marketFeatureCollection[feature.properties.id] = feature
+				});
+
+				// Store it
+				this._featureCollection = data;
+
+				resolve();
 
 				loadJSONTask.destruct();
 			});
@@ -215,16 +235,16 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 		})
 	}
 
-
 	/**
-	 * @protected
-	 * @method allComponentsLoaded
+	 * @private
+	 * @method updateScrollBar
 	 */
-	protected allComponentsLoaded(): void
+	private updateScrollBar(): void
 	{
-		this.transitionController = new BlockMarketMapTransitionController(this.element, this);
+		const scrollElement = <HTMLElement>this.element.querySelector('.js-scroll-wrapper');
 
-		super.allComponentsLoaded();
+		// Update the scroll bar
+		ko.utils.domData.get(scrollElement, Scrollbar.BINDING_NAME).update();
 	}
 
 	/**
