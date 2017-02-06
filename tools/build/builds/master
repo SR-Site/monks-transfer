@@ -19,8 +19,12 @@ function build_backend(){
     changeDir ${BACKEND_BUILDROOT}
     runComposer install
     changeDir ${DRUSH_DIR}
-    drushCommand cim
+    copyFileIfNotExists deploy/var/drupal-settings/example.settings.jenkins.php deploy/var/drupal-settings/example.settings.local.php
+    drushCommand cr
+    drushCommand ctim
+    drushCommand updb
     drushCommand update-entities
+    drushCommand cr
 }
 
 function build_deploy(){
