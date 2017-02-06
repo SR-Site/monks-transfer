@@ -3,9 +3,10 @@ import VideoOverlayViewModel from "app/component/video-overlay/VideoOverlayViewM
 import Log from "lib/temple/util/Log";
 import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import VideoPlayerController from "../video-player/VideoPlayerController";
-import {IVideoPlayerOptions} from "../video-player/IVideoPlayerOptions";
+
 import VideoOverlayTransitionController from "./VideoOverlayTransitionController";
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
+import IVideoPlayerOptions from "../video-player/IVideoPlayerOptions";
 
 class VideoOverlayController extends AbstractTransitionComponentController<VideoOverlayViewModel, IVideoOverlayOptions>
 {
@@ -91,7 +92,8 @@ class VideoOverlayController extends AbstractTransitionComponentController<Video
 	public hide(): void
 	{
 		this.transitionOut()
-			.then(() => {
+			.then(() =>
+			{
 				this._videoPlayer.removePlayer(this._videoPlayerOptions);
 				this.viewModel.videoMuted(false);
 			})

@@ -712,7 +712,7 @@ declare namespace mapboxgl
 
 		setText(test: string): this;
 
-		setHtml(html: string): this;
+		setHTML(html: string): this;
 
 		setDomContent(htmlNode: Node): this;
 	}

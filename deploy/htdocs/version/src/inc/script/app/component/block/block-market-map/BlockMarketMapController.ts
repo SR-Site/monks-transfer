@@ -13,6 +13,7 @@ import BackgroundLayout = mapboxgl.BackgroundLayout;
 import FillLayout = mapboxgl.FillLayout;
 import GeoJSONSource = mapboxgl.GeoJSONSource;
 import FeatureCollection = GeoJSON.FeatureCollection;
+import IState from "./interface/IState";
 
 class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions>
 {
@@ -24,7 +25,13 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	private _debug: Log = new Log('app.component.BlockMarketMap');
 
 	private _map: mapboxgl.Map;
-	private _layers: Array<Map> = [];
+	private _layers: {
+		[id: string]: {
+			source?: any;
+			outline?: mapboxgl.Map;
+			fill?: mapboxgl.Map;
+		}
+	} = {};
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -56,9 +63,11 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 */
 	private handleMapLoad(): void
 	{
-		this.loadFeatures()
+		this.loadStates()
+			.then((states: Array<IState>) => this.viewModel.stateList(states))
+			.then(() => this.loadFeatures())
 			.then((data: FeatureCollection) => this.addDataLayer(data))
-			.then(()=> this.addMapEvents());
+			.then(() => this.addMapEvents());
 	}
 
 	/**
@@ -66,42 +75,62 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 * @method addDataLayer
 	 * @param data
 	 */
-	private addDataLayer(data:FeatureCollection): void
+	private addDataLayer(data: FeatureCollection): void
 	{
-			// Parse it to multi-polygon to make it work... dafuq
-			data.features.forEach((feature) =>
+		// Parse it to multi-polygon to make it work... dafuq
+		data.features.forEach((feature, index) =>
+		{
+			if(feature.properties.id !== void 0)
 			{
-				feature.geometry.type = 'MultiPolygon';
-				feature.geometry.coordinates = feature.geometry.coordinates.map((coordinate) => [coordinate]);
-			});
+				if(this._layers[feature.properties.id] === void 0)
+				{
+					feature.geometry.type = 'MultiPolygon';
+					feature.geometry.coordinates = feature.geometry.coordinates.map((coordinate) => [coordinate]);
 
-			// Add the source to the map
-			this._map.addSource('markets', {
-				"type": "geojson",
-				"data": data
-			});
+					// Create the source for the map
+					this._layers[feature.properties.id] = {};
 
-			// Create a  layer
-			let fill = this._map.addLayer({
-				id: 'markets-fill',
-				type: 'fill',
-				source: 'markets',
-				paint: {
-					// 'fill-pattern': 'stripe-pattern-2'
-					'fill-color': '#009bdb',
-					'fill-opacity': 0.3
+					// Draw the layer for the outline
+					this._layers[feature.properties.id].outline = this._map.addLayer({
+						id: 'markets-outline-' + feature.properties.id,
+						type: 'line',
+						source: {
+							"type": "geojson",
+							"data": feature
+						},
+						paint: {
+							'line-width': 2,
+							'line-color': '#009bdb'
+						}
+					});
+
+					// Draw the layer for the fill
+					this._layers[feature.properties.id].fill = this._map.addLayer({
+						id: 'markets-fill-' + feature.properties.id,
+						type: 'fill',
+						source: {
+							"type": "geojson",
+							"data": feature
+						},
+						paint: {
+							// 'fill-pattern': 'stripe-pattern-2'
+							'fill-color': '#009bdb',
+							'fill-opacity': 0.3
+						}
+					})
 				}
-			});
-
-			let outline = this._map.addLayer({
-				id: 'markets-outline',
-				type: 'line',
-				source: 'markets',
-				paint: {
-					'line-width': 2,
-					'line-color': '#009bdb'
+				else
+				{
+					console.warn('duplicate feature id', feature.properties.id);
 				}
-			});
+			}
+			else
+			{
+				console.warn('Unknown feature Id', feature)
+			}
+		});
+
+		console.log(this._layers);
 	}
 
 	/**
@@ -110,11 +139,13 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 */
 	private addMapEvents(): void
 	{
+		const layers = Object.keys(this._layers).map((key: string) => 'markets-fill-' + key);
+
 		// When a click event occurs near a polygon, open a popup at the location of
 		// the feature, with description HTML from its properties.
-		this._map.on('click', function(e)
+		this._map.on('click', (e) =>
 		{
-			let features = this._map.queryRenderedFeatures(e.point, {layers: ['markets-fill']});
+			let features = this._map.queryRenderedFeatures(e.point, {layers: layers});
 
 			if(!features.length)
 			{
@@ -125,13 +156,13 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 
 			let popup = new mapboxgl.Popup()
 				.setLngLat(this._map.unproject(e.point))
-				.setHtml(feature.properties.name)
+				.setHTML(feature.properties.state)
 				.addTo(this._map);
 		});
 
-		this._map.on('mousemove', function(e)
+		this._map.on('mousemove', (e) =>
 		{
-			let features = this._map.queryRenderedFeatures(e.point, {layers: ['markets-fill']});
+			let features = this._map.queryRenderedFeatures(e.point, {layers: layers});
 			this._map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 		});
 	}
@@ -161,6 +192,27 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 			// Start loading
 			loadJSONTask.execute();
 		});
+	}
+
+	/**
+	 * @private
+	 * @method loadStates
+	 * @returns {PromiseBluebird}
+	 */
+	private loadStates(): Promise<any>
+	{
+		return new Promise((resolve: (states: Array<IState>) => void) =>
+		{
+			let loadJSONTask = new LoadJSONTask('data/mapbox/market-details.json', (data) =>
+			{
+				resolve(data);
+
+				loadJSONTask.destruct();
+			});
+
+			// Start loading
+			loadJSONTask.execute();
+		})
 	}
 
 
