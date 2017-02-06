@@ -1,6 +1,6 @@
 import IDefaultComponentTransitionOptions from "../../util/component-transition/abstract-transition-component/IAbstractTransitionComponentOptions";
 
-export interface IPageLoaderOptions extends IDefaultComponentTransitionOptions {
+interface IPageLoaderOptions extends IDefaultComponentTransitionOptions {
 
 }
 

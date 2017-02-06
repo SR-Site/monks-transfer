@@ -1,6 +1,6 @@
 import IDefaultButtonOptions from "../IAbstractButtonOptions";
 
-export interface IButtonCircleCloseOptions extends IDefaultButtonOptions {
+interface IButtonCircleCloseOptions extends IDefaultButtonOptions {
 
 }
 

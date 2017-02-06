@@ -1,6 +1,6 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 
-export interface IBlockQuoteSecondaryOptions extends IAbstractBlockComponentOptions
+interface IBlockQuoteSecondaryOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

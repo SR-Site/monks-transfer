@@ -1,6 +1,6 @@
 import IDefaultComponentTransitionOptions from "../../util/component-transition/abstract-transition-component/IAbstractTransitionComponentOptions";
 
-export interface IVideoOverlayOptions extends IDefaultComponentTransitionOptions {
+interface IVideoOverlayOptions extends IDefaultComponentTransitionOptions {
 
 }
 

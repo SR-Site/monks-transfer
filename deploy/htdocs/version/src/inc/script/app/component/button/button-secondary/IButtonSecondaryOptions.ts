@@ -1,6 +1,7 @@
 import IAbstractButtonOptions from "../IAbstractButtonOptions";
 
-export interface IButtonSecondaryOptions extends IAbstractButtonOptions {
+interface IButtonSecondaryOptions extends IAbstractButtonOptions
+{
 
 }
 

@@ -2,7 +2,7 @@ import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import ILink from "../../../data/interface/action/ILink";
 import IImage from "../../../data/interface/media/IImage";
 
-export interface IBlockHeroSecondaryOptions extends IAbstractBlockComponentOptions
+interface IBlockHeroSecondaryOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

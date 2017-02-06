@@ -1,6 +1,6 @@
 import IDefaultComponentTransitionOptions from "../../util/component-transition/abstract-transition-component/IAbstractTransitionComponentOptions";
 
-export interface IHeaderOptions extends IDefaultComponentTransitionOptions {
+interface IHeaderOptions extends IDefaultComponentTransitionOptions {
 
 }
 

@@ -3,7 +3,7 @@ import ITag from "../../../data/interface/action/ITag";
 import IArticleTeaser from "../../../data/interface/media/IArticleTeaser";
 import IImage from "../../../data/interface/media/IImage";
 
-export interface IBlockMoreOptions extends IAbstractBlockComponentOptions
+interface IBlockMoreOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

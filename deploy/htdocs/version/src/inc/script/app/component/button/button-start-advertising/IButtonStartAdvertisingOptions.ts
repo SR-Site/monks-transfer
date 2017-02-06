@@ -1,6 +1,7 @@
 import IDefaultButtonOptions from "../IAbstractButtonOptions";
 
-export interface IButtonStartAdvertisingOptions extends IDefaultButtonOptions {
+interface IButtonStartAdvertisingOptions extends IDefaultButtonOptions
+{
 
 }
 

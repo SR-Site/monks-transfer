@@ -2,7 +2,7 @@ import IDefaultComponentTransitionOptions from "../../util/component-transition/
 import IImage from "../../data/interface/media/IImage";
 import ITag from "../../data/interface/action/ITag";
 
-export interface IProgramModuleItemOptions extends IDefaultComponentTransitionOptions
+interface IProgramModuleItemOptions extends IDefaultComponentTransitionOptions
 {
 	/**
 	 * @property

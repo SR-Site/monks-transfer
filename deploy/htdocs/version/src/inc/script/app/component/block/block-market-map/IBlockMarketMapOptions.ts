@@ -1,6 +1,6 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 
-export interface IBlockMarketMapOptions extends IAbstractBlockComponentOptions {
+interface IBlockMarketMapOptions extends IAbstractBlockComponentOptions {
 
 }
 

@@ -1,7 +1,7 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import IImage from "../../../data/interface/media/IImage";
 
-export interface IBlockPathToPurchaseOptions extends IAbstractBlockComponentOptions
+interface IBlockPathToPurchaseOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

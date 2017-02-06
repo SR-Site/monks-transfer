@@ -1,4 +1,3 @@
-import IIndexable from "../../../lib/temple/core/IIndexable";
 import IBlock from "../../data/interface/block/IBlock";
 import IAbstractTransitionComponentOptions from "../../util/component-transition/abstract-transition-component/IAbstractTransitionComponentOptions";
 
@@ -31,7 +30,6 @@ interface IAbstractBlockComponentOptions extends IAbstractTransitionComponentOpt
 	 * @defaultValue false
 	 */
 	windowed?: boolean;
-
 	/**
 	 * @property
 	 * @description Overlap mean the z-index will be 1 instead of 0 so you can overlap elements
