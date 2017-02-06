@@ -37,10 +37,12 @@ class BlockImageWithContentTransitionController extends AbstractTransitionContro
 
 		this.transitionInTimeline.fromTo(this.element.querySelector('.image'), 2,
 			{
-				clip: 'rect(0, 0,' + height + ', 0)'
+				clip: 'rect(0, 0,' + height + ', 0)',
+				opacity: 0
 			},
 			{
 				clip: 'rect(0, ' + width + ', ' + height + ', 0)',
+				opacity: 1,
 				clearProps: "clip",
 				ease: Expo.easeInOut
 			});

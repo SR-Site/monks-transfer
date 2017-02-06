@@ -16,7 +16,7 @@ libraries, and the scaffold and build tools to get the project up and running an
     - run `npm install -g typescript` to install typescript to compile your code from your IDE
     - run `npm install -g node-sass` to install sass to compile your code form your IDE
 - (php) install composer from <https://getcomposer.org/download/>
-
+    
 ### WebStorm
 
 You can use any editor that has support for TypeScript and Sass, and you can compile your code from an IDE plugin or via
