@@ -12,6 +12,15 @@ class BlockProgramModuleViewModel extends AbstractBlockComponentViewModel<BlockP
 
 	/**
 	 * @public
+	 * @method getClassNames
+	 */
+	public getClassNames(index: number): string
+	{
+		return 'index-' + (index + 1) + (index === this.activeHoverIndex() ? ' is-active' : '');
+	}
+
+	/**
+	 * @public
 	 * @method handleMouseEnter
 	 */
 	public handleMouseEnter(index: number, event: MouseEvent): void

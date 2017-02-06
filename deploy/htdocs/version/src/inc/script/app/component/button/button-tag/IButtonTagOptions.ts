@@ -1,6 +1,7 @@
 import IDefaultButtonOptions from "../IAbstractButtonOptions";
 
-export interface IButtonTagOptions extends IDefaultButtonOptions {
+interface IButtonTagOptions extends IDefaultButtonOptions
+{
 
 }
 

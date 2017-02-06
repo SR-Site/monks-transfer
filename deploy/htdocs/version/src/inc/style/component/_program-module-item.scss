@@ -15,7 +15,7 @@
 	// Description
 	.description {
 		position: relative;
-		height: $sizeGrid*11;
+		height: $sizeGrid*14;
 
 		.hover-container {
 			padding: $sizeGrid*2;
@@ -86,7 +86,8 @@
 		transition: background .2s ease(easeInOut);
 	}
 
-	.first-child & {
+	.index-1 &,
+	.index-2 &{
 		.hover-container {
 			transform: none;
 			left: 0;
@@ -94,7 +95,8 @@
 		}
 	}
 
-	.last-child & {
+	.index-3 &,
+	.index-4 & {
 		.hover-container {
 			left: auto;
 			right: 0;

@@ -1,6 +1,6 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 
-export interface IBlockNetworkOverviewOptions extends IAbstractBlockComponentOptions {
+interface IBlockNetworkOverviewOptions extends IAbstractBlockComponentOptions {
 
 }
 

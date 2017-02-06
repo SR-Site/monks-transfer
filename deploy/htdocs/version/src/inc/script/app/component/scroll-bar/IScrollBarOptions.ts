@@ -1,4 +1,5 @@
-export interface IScrollBarOptions {
+interface IScrollBarOptions
+{
 
 }
 

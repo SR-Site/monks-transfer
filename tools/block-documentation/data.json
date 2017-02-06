@@ -2109,7 +2109,7 @@
                             "type": "string",
                             "required": true,
                             "defaultValue": "null",
-                            "description": "",
+                            "description": "The heading for the story",
                             "placeholder": "",
                             "properties": []
                         },
@@ -2118,7 +2118,7 @@
                             "type": "string",
                             "required": true,
                             "defaultValue": "null",
-                            "description": "",
+                            "description": "The paragraph for the story",
                             "placeholder": "",
                             "properties": []
                         },
@@ -2127,7 +2127,7 @@
                             "type": "IImage",
                             "required": true,
                             "defaultValue": "null",
-                            "description": "",
+                            "description": "The background image for the story",
                             "placeholder": "",
                             "properties": []
                         },
@@ -2136,7 +2136,7 @@
                             "type": "IImage",
                             "required": true,
                             "defaultValue": "null",
-                            "description": "",
+                            "description": "The blurred version of the image",
                             "placeholder": "",
                             "properties": []
                         }

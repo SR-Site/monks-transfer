@@ -37,6 +37,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 	private setupSlideTransition(): void
 	{
 		const slideContent = Array.prototype.slice.call(this.element.querySelectorAll('.slide-content'));
+		const statistics = this.element.querySelectorAll('.statistics-wrapper');
 
 		this.parentController.options.slides.forEach((slide, index: number) =>
 		{
@@ -51,10 +52,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 				onReverseComplete: () => this.handleSlideTransitionComplete(index)
 			});
 
-			timeline.from(element, 0.1, {
-				display: 'none'
-			})
-
+			timeline.from(element, 0.1, {display: 'none'});
 			timeline.from(heading, 0.8, {
 				y: 50,
 				autoAlpha: 0,
@@ -77,6 +75,21 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 					autoAlpha: 0,
 					ease: Expo.easeOut
 				}, '=-0.7');
+			}
+
+			if(statistics.length)
+			{
+				timeline.from(statistics[index].querySelector('.heading'), 0.8, {
+					y: 50,
+					autoAlpha: 0,
+					ease: Expo.easeOut
+				}, 0.2);
+
+				timeline.from(statistics[index].querySelectorAll('.statistic'), 0.8, {
+					y: 50,
+					autoAlpha: 0,
+					ease: Expo.easeOut
+				}, 0.25)
 			}
 
 			this._slideTransitions.push({

@@ -3,7 +3,7 @@ import Alignment from "../../../data/enum/layout/Alignment";
 import ILink from "../../../data/interface/action/ILink";
 import IImage from "../../../data/interface/media/IImage";
 
-export interface IBlockImageWithContentOptions extends IAbstractBlockComponentOptions
+interface IBlockImageWithContentOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

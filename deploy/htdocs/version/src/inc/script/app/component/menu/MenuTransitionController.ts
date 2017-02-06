@@ -11,9 +11,13 @@ class MenuTransitionController extends AbstractTransitionController<MenuControll
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this.transitionInTimeline.from(this.element, 0.8, {
+		this.transitionInTimeline.set(this.element, {x: 0});
+
+		this.transitionInTimeline.from(this.element.querySelector('.menu-background'), 1.2, {
 			xPercent: 100,
-			ease: Expo.easeOut
+			yPercent: -100,
+			rotation: -45,
+			ease: Power3.easeOut
 		});
 
 		Array.prototype.slice.call(this.element.querySelectorAll('.menu-item')).forEach((menuItem, index) =>
@@ -22,7 +26,7 @@ class MenuTransitionController extends AbstractTransitionController<MenuControll
 				xPercent: 50,
 				autoAlpha: 0,
 				ease: Expo.easeOut
-			}, index === 0 ? '=-0.75' : '=-1.45')
+			}, index === 0 ? '=-0.8' : '=-1.45')
 		})
 	}
 

@@ -349,6 +349,7 @@ declare namespace mapboxgl
 		static convert(point: Point | Array<Number>): Point;
 	}
 
+
 	class Map extends Evented
 	{
 		constructor(options: MapOptions);
@@ -695,7 +696,7 @@ declare namespace mapboxgl
 
 	class Popup
 	{
-		constructor(options: {
+		constructor(options?: {
 			closeButton?: boolean,
 			closeOnClick?: boolean,
 			anchor?: 'top' | 'bottom' | 'left' | 'right' | 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'

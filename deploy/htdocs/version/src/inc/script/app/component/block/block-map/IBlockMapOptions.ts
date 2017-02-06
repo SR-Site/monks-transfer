@@ -1,7 +1,7 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import IImageSequence from "../../../data/interface/media/IImageSequence";
 
-export interface IBlockMapOptions extends IAbstractBlockComponentOptions
+interface IBlockMapOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

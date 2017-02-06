@@ -14,6 +14,7 @@ class ProgramModuleItemTransitionController extends AbstractTransitionController
 	protected setupTransitionInTimeline(): void
 	{
 		this.transitionInTimeline.from(this.element, 0.4, {opacity: 0});
+		this.transitionInTimeline.add(this.getSubTimeline('.component-button-play-circle'), '=-0.2');
 
 		this.addEventListener(AbstractTransitionController.TRANSITION_IN_COMPLETE, () => this.setupHoverTimeline());
 	}

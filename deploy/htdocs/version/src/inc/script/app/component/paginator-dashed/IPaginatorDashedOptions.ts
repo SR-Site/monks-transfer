@@ -1,7 +1,7 @@
 import IDefaultComponentTransitionOptions from "../../util/component-transition/abstract-transition-component/IAbstractTransitionComponentOptions";
 import Orientation from "../../data/enum/layout/Orientation";
 
-export interface IPaginatorDashedOptions extends IDefaultComponentTransitionOptions {
+interface IPaginatorDashedOptions extends IDefaultComponentTransitionOptions {
 
 	/**
 	 * @property

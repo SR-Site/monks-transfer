@@ -2,7 +2,7 @@ import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import ILink from "../../../data/interface/action/ILink";
 import Alignment from "../../../data/enum/layout/Alignment";
 
-export interface IBlockButtonOptions extends IAbstractBlockComponentOptions
+interface IBlockButtonOptions extends IAbstractBlockComponentOptions
 {
 	/**
 	 * @property

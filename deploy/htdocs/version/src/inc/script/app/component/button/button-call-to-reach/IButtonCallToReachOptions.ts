@@ -1,6 +1,6 @@
 import IDefaultButtonOptions from "../IAbstractButtonOptions";
 
-export interface IButtonCallToReachOptions extends IDefaultButtonOptions
+interface IButtonCallToReachOptions extends IDefaultButtonOptions
 {
 	icon:string;
 }
