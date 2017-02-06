@@ -46,6 +46,9 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 		{
 			this.selectedState(data);
 		}
+
+		// Update the map
+		this.controller.updateDataLayer();
 	}
 
 	/**
