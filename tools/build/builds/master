@@ -22,9 +22,9 @@ function build_backend(){
     deleteCopyFile deploy/var/drupal-settings/settings.jenkins.php deploy/var/drupal-settings/settings.local.php
     changeDir ${DRUSH_DIR}    
     drushCommand cr
-    drushCommand ctim
+    #drushCommand ctim
     drushCommand updb
-    drushCommand update-entities
+    #drushCommand update-entities
     drushCommand cr
 }
 
