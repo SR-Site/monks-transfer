@@ -27,7 +27,9 @@
 			<div class="scroll-content" data-scroll-content>
 				<div class="scroll-content-inner" data-content-inner>
 					<ul class="filter-list" data-bind="foreach: $root.stateList()">
-						<li class="filter-list-item copy-03" data-bind="css: {'is-active': $root.selectedState() === $data }, tap: $root.onStateSelect.bind($root, $data)">{{value}}</li>
+						<li class="filter-list-item copy-03" data-bind="css: {'is-active': $root.selectedState() === $data }, tap: $root.onStateSelect.bind($root, $data)">
+							{{$data.label}}
+						</li>
 					</ul>
 				</div>
 			</div>
