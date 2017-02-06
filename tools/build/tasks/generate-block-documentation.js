@@ -35,6 +35,7 @@ module.exports = function( grunt )
 					}, null, 4 )
 				} );
 
+
 			} );
 
 			console.log( 'Writing data.json file' );

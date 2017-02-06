@@ -1,7 +1,7 @@
-import ITag from "../action/ITag";
-import IImage from "./IImage";
+import ITag from "./action/ITag";
+import IImage from "./media/IImage";
 
-interface IArticleTeaser
+interface INewsArticle
 {
 	/**
 	 * @property
@@ -30,4 +30,4 @@ interface IArticleTeaser
 	tags: Array<ITag>;
 }
 
-export default IArticleTeaser;
+export default INewsArticle;

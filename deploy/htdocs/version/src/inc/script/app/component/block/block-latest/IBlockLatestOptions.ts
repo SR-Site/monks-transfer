@@ -1,6 +1,6 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import ILink from "../../../data/interface/action/ILink";
-import IArticleTeaser from "../../../data/interface/media/IArticleTeaser";
+import INewsArticle from "../../../data/interface/INewsArticle";
 
 interface IBlockLatestOptions extends IAbstractBlockComponentOptions
 {
@@ -13,7 +13,7 @@ interface IBlockLatestOptions extends IAbstractBlockComponentOptions
 	 * @property
 	 * @description The array of articles added to this block
 	 */
-	articles: Array<IArticleTeaser>;
+	articles: Array<INewsArticle>;
 	/**
 	 * @property
 	 * @description The link added to the latest options block
