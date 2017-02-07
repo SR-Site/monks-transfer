@@ -44,8 +44,9 @@
 			transform: translateX(10%);
 		}
 
-		.heading {
+		.hover-heading {
 			@include pos($sizeGrid, auto, auto, $sizeGrid);
+			font: 600 2rem/1 $fontOpenSans;
 			width: 50%;
 			transform: translateX($sizeGrid * 2);
 			opacity: 0;
@@ -80,7 +81,7 @@
 		figure {
 			transition: clip .8s ease(easeOutExpo);
 
-			.heading,
+			.hover-heading,
 			.hover-icon {
 				transition: all .8s ease(easeOutExpo);
 			}
@@ -103,7 +104,7 @@
 					transform: translateX(0);
 				}
 
-				.heading,
+				.hover-heading,
 				.hover-icon {
 					transform: translateX(0);
 					opacity: 1;
