@@ -19,8 +19,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 
 		this._mainTriangleAnimation = new TriangleTransitionController<BlockPersonaSelectorController>(
 			<HTMLElement>this.element.querySelector('.background-triangle'),
-			this.parentController,
-			1
+			this.parentController
 		);
 	}
 
@@ -54,23 +53,23 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 				onReverseComplete: () => this.handleSlideTransitionComplete(index)
 			});
 
-			timeline.from(element.querySelector('.heading'), 0.8, {
-				y: 50,
+			timeline.from(element.querySelector('.heading'), 0.6, {
+				y: 30,
 				autoAlpha: 0,
-				ease: Expo.easeOut
+				ease: Quad.easeOut
 			});
 
-			timeline.from(element.querySelector('.copy'), 0.8, {
-				y: 50,
+			timeline.from(element.querySelector('.copy'), 0.6, {
+				y: 30,
 				autoAlpha: 0,
-				ease: Expo.easeOut
-			}, '=-0.7');
+				ease: Quad.easeOut
+			}, '=-0.5');
 
-			timeline.from(element.querySelector('.component-button-main'), 0.8, {
-				y: 50,
+			timeline.from(element.querySelector('.component-button-main'), 0.6, {
+				y: 30,
 				autoAlpha: 0,
-				ease: Expo.easeOut
-			}, '=-0.7');
+				ease: Quad.easeOut
+			}, '=-0.5');
 
 			this._slideTransitions.push({
 				timeline: timeline,
@@ -88,19 +87,24 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	{
 		const pagination = this.element.querySelector('.component-paginator-dashed');
 
-		this.transitionInTimeline.from(this.element, 0.5, {autoAlpha: 0});
-
-		// Transition in the paginator
-		this.transitionInTimeline.add(this.getSubTimeline(pagination));
+		this.transitionInTimeline.from(this.element, 0.01, {autoAlpha: 0});
 
 		// Run the background switch
-		this.transitionInTimeline.add(() => this.parentController.changeBackgroundImage(this.parentController.activeIndex));
+		this.transitionInTimeline.add(() => this.parentController.changeBackgroundImage(this.parentController.activeIndex), 0);
 
 		// Slide in the main triangle
-		this.transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), '=+0.5');
+		this.transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), 1);
 
 		// Run the text animation
-		this.transitionInTimeline.add(() => this._slideTransitions[this.parentController.activeIndex].timeline.restart())
+		const slideTransition = this._slideTransitions[this.parentController.activeIndex].timeline;
+
+		this.transitionInTimeline.add(() => slideTransition.restart(), 2.2 - slideTransition.duration());
+
+		if(DataManager.getInstance().deviceStateTracker.currentState() < DeviceState.MEDIUM)
+		{
+			// Transition in the paginator
+			this.transitionInTimeline.add(this.getSubTimeline(pagination));
+		}
 	}
 
 	/**
@@ -131,6 +135,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 		return new Promise((resolve: () => void, reject: () => void) =>
 		{
 			this._slideTransitions[index].completeMethod = resolve;
+			this._slideTransitions[index].timeline.timeScale(2);
 			this._slideTransitions[index].timeline.reverse()
 		})
 	}
@@ -151,16 +156,22 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 
 				// Slide out the main triangle
 				this._mainTriangleAnimation.transitionOut()
-					.then(() => this._mainTriangleAnimation.transitionIn())
 					.then(() =>
 					{
-						this._slideTransitions[index].completeMethod = resolve;
-						this._slideTransitions[index].timeline.restart();
+						this._mainTriangleAnimation.transitionIn();
+
+						setTimeout(() =>
+						{
+							this._slideTransitions[index].completeMethod = resolve;
+							this._slideTransitions[index].timeline.timeScale(1);
+							this._slideTransitions[index].timeline.restart();
+						}, 200)
 					})
 			}
 			else
 			{
 				this._slideTransitions[index].completeMethod = resolve;
+				this._slideTransitions[index].timeline.timeScale(1);
 				this._slideTransitions[index].timeline.restart();
 			}
 		});
