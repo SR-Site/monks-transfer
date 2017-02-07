@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3e342f2cf1ee621674bcd467cee8f2c9",
-    "content-hash": "80fa38ceae9a3d3d38175e4b56d3e7d8",
+    "hash": "e9551e5fdf4a27bf7456270fc861aceb",
+    "content-hash": "77c628e610645c274765aee41bf5ff4d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1250,7 +1250,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.2.zip",
-                "reference": null,
+                "reference": "8.x-1.2",
                 "shasum": "15261a4237cc2a743522a7bd81e9f34e01d12843"
             },
             "require": {
@@ -1380,7 +1380,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/field_group-8.x-1.0-rc6.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc6",
                 "shasum": "1ce3c6387e745a04a1099956a5bf39bb50096d44"
             },
             "require": {
@@ -1439,7 +1439,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/jquery_colorpicker-8.x-1.0-rc2.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc2",
                 "shasum": "5046d61bc21aa0c6846c323cf09ef695dbde469a"
             },
             "require": {
