@@ -1,11 +1,20 @@
 .component-button-start-advertising {
 	$size: $sizeGrid * 10;
-	@include pos(0, 0, auto, auto);
+	@include pos(0, -$sizeGrid * 3, auto, auto);
 	@include size($size / 2, $size);
 	position: absolute;
 	color: #fff;
 	text-align: right;
 	pointer-events: none;
+	transition: right .2s ease(easeInOut);
+
+	@include hover() {
+		right: 0;
+
+		.icon {
+			transform: rotate(0);
+		}
+	}
 
 	.background {
 		@include arrow(left, $colorPrimary, $size);
@@ -24,6 +33,8 @@
 
 	.icon {
 		@include size($sizeGrid);
+		transform: rotate(180deg);
+		transition: transform .2s ease(easeInOut);
 
 		path {
 			fill: currentColor;
