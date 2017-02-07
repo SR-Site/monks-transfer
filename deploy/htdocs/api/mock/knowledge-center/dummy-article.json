@@ -45,13 +45,13 @@
 						{
 							"label": "Sport",
 							"title": "Sport",
-							"target": "home",
+							"target": "knowledge-center#sport",
 							"type": 0
 						},
 						{
 							"label": "PDF",
 							"title": "PDF",
-							"target": "home",
+							"target": "knowledge-center#pdf",
 							"type": 0
 						}
 					],

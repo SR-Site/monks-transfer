@@ -27,7 +27,6 @@ class FilterMenuTransitionController extends AbstractTransitionController<Filter
 
 		dropDownElements.forEach((element: HTMLElement, index: number) =>
 		{
-
 			let timeline = new TimelineLite({
 				paused: true,
 				onComplete: () =>

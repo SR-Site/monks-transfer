@@ -33,7 +33,7 @@
 					"applyLabel": "Apply",
 					"filters": [
 						{
-							"type": 0,
+							"type": "category",
 							"label": "Category",
 							"options": [
 								{
@@ -47,7 +47,7 @@
 							]
 						},
 						{
-							"type": 1,
+							"type": "document_type",
 							"label": "Document Type",
 							"options": [
 								{
@@ -77,7 +77,7 @@
 							]
 						},
 						{
-							"type": 2,
+							"type": "platform",
 							"label": "Platform",
 							"options": [
 								{
@@ -99,7 +99,7 @@
 							]
 						},
 						{
-							"type": 3,
+							"type": "market",
 							"label": "Market",
 							"options": [
 								{

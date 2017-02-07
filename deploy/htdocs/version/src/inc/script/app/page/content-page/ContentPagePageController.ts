@@ -346,7 +346,8 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 */
 	private getPageLayout(): Promise<any>
 	{
-		let route = Gaia.api.getRoute();
+		// Filter out the hash tags
+		let route = Gaia.api.getRoute().split('#')[0];
 
 		// If the route is a popup, strip the route for fetching the page content.
 		if(Gaia.api.getPage(Gaia.api.getCurrentBranch()).type == PageType.POPUP)

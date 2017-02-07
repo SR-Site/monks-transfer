@@ -7,18 +7,21 @@ import CommonEvent from "../../../lib/temple/event/CommonEvent";
 
 class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenuController, IFilterMenuOptions>
 {
-	public activeDropdownIndex:KnockoutObservable<number> = ko.observable(null);
-	public filterOverlayIsOpen:KnockoutObservable<boolean> = ko.observable(false);
+	public activeDropdownIndex: KnockoutObservable<number> = ko.observable(null);
+	public filterOverlayIsOpen: KnockoutObservable<boolean> = ko.observable(false);
 
-	public filterChanged:KnockoutObservable<boolean> = ko.observable(false);
+	public filterChanged: KnockoutObservable<boolean> = ko.observable(false);
 
-	public filters: KnockoutObservable<{[type: string]: Array<{label:string;value:string;checked:KnockoutObservable<boolean>}>}> = ko.observable(null);
-	public selectedFiltersOptionCount:KnockoutComputed<Array<number>> = ko.computed(() =>{
+	public filters: KnockoutObservable<{[type: string]: Array<{label: string;value: string;checked: KnockoutObservable<boolean>}>}> = ko.observable(null);
+	public selectedFiltersOptionCount: KnockoutComputed<Array<number>> = ko.computed(() =>
+	{
 		let countArray = [];
 
-		if(this.filters()) {
-			Object.keys(this.filters()).forEach((key, index) =>{
-				countArray.push(this.filters()[index].filter((option) => option.checked()).length)
+		if(this.filters())
+		{
+			Object.keys(this.filters()).forEach((key, index) =>
+			{
+				countArray.push(this.filters()[key].filter((option) => option.checked()).length)
 			});
 		}
 
@@ -30,21 +33,23 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 	 * @public
 	 * @method getFilterData
 	 */
-	public getFilterData():{[filterType:string]:string}
+	public getFilterData(): {[filterType: string]: string}
 	{
 		let filterData = {};
 
 		// Loop through all filterTypes
-		Object.keys(this.filters()).forEach((key, index) =>{
+		Object.keys(this.filters()).forEach((key, index) =>
+		{
 
 			// Find CHECKED options per filter type
-			let chosenOptions = this.filters()[index].filter((option) => option.checked());
+			let chosenOptions = this.filters()[key].filter((option) => option.checked());
 
 			// Create object[key] only if this filterType has chosen options.
-			if(chosenOptions && chosenOptions.length > 0) {
+			if(chosenOptions && chosenOptions.length > 0)
+			{
 				filterData[key] = [];
 
-				chosenOptions.forEach((option) =>  filterData[key].push(option.value));
+				chosenOptions.forEach((option) => filterData[key].push(option.value));
 				filterData[key] = filterData[key].join(',');
 			}
 		});
@@ -61,15 +66,17 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 		const oldIndex = this.activeDropdownIndex();
 
 		// Close if clicked twice
-		if(index === this.activeDropdownIndex()) {
+		if(index === this.activeDropdownIndex())
+		{
 			this.handleCloseDropdownClick(index);
 			return;
-		};
+		}
 
 		// Update the active dropDownIndex
 		this.activeDropdownIndex(index);
 
-		if(typeof oldIndex === 'number') {
+		if(typeof oldIndex === 'number')
+		{
 			this.controller.transitionController.hideDropDown(oldIndex)
 				.then(() => this.controller.transitionController.showDropDown(index))
 		}
@@ -83,7 +90,7 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 	 * @public
 	 * @method handleCloseDropdownClick
 	 */
-	public handleCloseDropdownClick(index: number):void
+	public handleCloseDropdownClick(index: number): void
 	{
 		this.controller.transitionController.hideDropDown(index);
 		this.activeDropdownIndex(null);
@@ -93,7 +100,7 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 	 * @public
 	 * @method handleFilterOverlayLabelClick
 	 */
-	public handleFilterOverlayLabelClick():void
+	public handleFilterOverlayLabelClick(): void
 	{
 		if(this.filterOverlayIsOpen())
 		{
@@ -107,7 +114,7 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 	 * @public
 	 * @method applyFilter
 	 */
-	public applyFilter():void
+	public applyFilter(): void
 	{
 		this.controller.dispatch(CommonEvent.CHANGE, this.getFilterData());
 		this.filterChanged(false);
@@ -117,11 +124,13 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 	 * @public
 	 * @method resetFilter
 	 */
-	public resetFilter():void
+	public resetFilter(): void
 	{
 		// Only apply reset if any filter is set.
-		if(Object.keys(this.getFilterData()).length > 0) {
-			Object.keys(this.filters()).forEach((key, index) =>{
+		if(Object.keys(this.getFilterData()).length > 0)
+		{
+			Object.keys(this.filters()).forEach((key, index) =>
+			{
 				this.filters()[index].map((option) => option.checked(false));
 			});
 		}
@@ -131,7 +140,7 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 	 * @public
 	 * @method toggleFilterOverlay
 	 */
-	public toggleFilterOverlay():void
+	public toggleFilterOverlay(): void
 	{
 		this.filterOverlayIsOpen(!this.filterOverlayIsOpen());
 	}
@@ -140,7 +149,7 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 
 		// always call this last

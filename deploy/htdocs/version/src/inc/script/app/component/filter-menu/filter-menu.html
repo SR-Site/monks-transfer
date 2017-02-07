@@ -39,7 +39,7 @@
 				</button>
 
 				<div class="filter-dropdown">
-					<div class="inner-content" data-bind="foreach: $root.filters()[$index()]">
+					<div class="inner-content" data-bind="foreach: $root.filters()[$data.type]">
 						<label class="tag-checkbox custom-checkbox" data-bind="attr: {'for': value}">
 							<input class="abs-fill" type="checkbox" name="{{value}}" id="{{value}}" value="" data-bind="checked: checked"/>
 							<div class="element">{{label}}</div>
