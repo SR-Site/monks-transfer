@@ -24,10 +24,10 @@ class TaxonomyTermTagsV1 extends RestEntityProcessorBase {
   protected function getItemData($entity) {
 
     $data = [
-      "label" => "",
+      "label" => $entity->label(),
       "title" => $entity->label(),
-      "target" => "",
-      "type" => "",
+      "target" => "/knowledge-center#" . $entity->label(),
+      "type" => 0,
     ];
 
     return $data;
