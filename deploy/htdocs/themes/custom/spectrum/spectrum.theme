@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Spectrum theme.
+ */
+
+use Drupal\Core\Site\Settings;
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function spectrum_page_attachments_alter(array &$page) {
+  global $base_root, $base_path;
+  $base_root_url = $base_root . $base_path;
+
+  // Overwrite default drupal viewport tag.
+  $viewport = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no',
+    ),
+  );
+  $page['#attached']['html_head'][] = [$viewport, 'viewport'];
+
+  // Add document-base tag.
+  $docbase = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'document-base',
+      'content' => $base_root_url,
+    ),
+  );
+  $page['#attached']['html_head'][] = [$docbase, 'document-base'];
+
+  // Add dynamic base tag that uses the asset version number.
+  $asset_version = Settings::get('mm_deployment_version', 'src');
+  $base_href = array(
+    '#type' => 'html_tag',
+    '#tag' => 'base',
+    '#attributes' => array(
+      'href' => $base_root_url . 'version/' . $asset_version . '/',
+    ),
+  );
+  $page['#attached']['html_head'][] = [$base_href, 'base_href'];
+  $page['#cache']['contexts'][] = 'url';
+
+  // Remove non-Gaia meta-tags.
+  $meta_tags_to_remove = ['MobileOptimized', 'HandheldFriendly', 'cleartype'];
+  foreach ($page['#attached']['html_head'] as $index => $parts) {
+    if (in_array($parts[1], $meta_tags_to_remove)) {
+      unset($page['#attached']['html_head'][$index]);
+    }
+  }
+
+  // Remove non-Gaia link-tags.
+  $link_tags_to_remove = ['shortcut icon',];
+  foreach ($page['#attached']['html_head_link'] as $index => $parts) {
+    if (in_array($parts[0]['rel'], $link_tags_to_remove)) {
+      unset($page['#attached']['html_head_link'][$index]);
+    }
+  }
+}
