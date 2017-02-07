@@ -98,7 +98,7 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 	 * @param duration
 	 * @param ease
 	 */
-	public open(path: string, duration: number = ImageCrossfaderController.DURATION, ease: Ease = Expo.easeInOut): Promise<any>
+	public open(path: string, duration: number = ImageCrossfaderController.DURATION, ease: Ease = Quad.easeInOut): Promise<any>
 	{
 		return new Promise((resolve: ()=>void) =>
 		{

@@ -53,42 +53,43 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 			});
 
 			timeline.from(element, 0.1, {display: 'none'});
-			timeline.from(heading, 0.8, {
-				y: 50,
+
+			timeline.from(heading, 0.6, {
+				y: 30,
 				autoAlpha: 0,
-				ease: Expo.easeOut
+				ease: Quad.easeOut
 			});
 
 			if(copy)
 			{
-				timeline.from(copy, 0.8, {
-					y: 50,
+				timeline.from(copy, 0.6, {
+					y: 30,
 					autoAlpha: 0,
-					ease: Expo.easeOut
-				}, '=-0.7');
+					ease: Quad.easeOut
+				}, '=-0.5');
 			}
 
 			if(button)
 			{
-				timeline.from(button, 0.8, {
-					y: 50,
+				timeline.from(button, 0.6, {
+					y: 30,
 					autoAlpha: 0,
-					ease: Expo.easeOut
-				}, '=-0.7');
+					ease: Quad.easeOut
+				}, '=-0.5');
 			}
 
 			if(statistics.length)
 			{
-				timeline.from(statistics[index].querySelector('.heading'), 0.8, {
-					y: 50,
+				timeline.from(statistics[index].querySelector('.heading'), 0.6, {
+					y: 30,
 					autoAlpha: 0,
-					ease: Expo.easeOut
+					ease: Quad.easeOut
 				}, 0.2);
 
-				timeline.from(statistics[index].querySelectorAll('.statistic'), 0.8, {
-					y: 50,
+				timeline.from(statistics[index].querySelectorAll('.statistic'), 0.6, {
+					y: 30,
 					autoAlpha: 0,
-					ease: Expo.easeOut
+					ease: Quad.easeOut
 				}, 0.25)
 			}
 
@@ -125,11 +126,14 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 	public transitionOutStep(index: number): Promise<any>
 	{
 		return Promise.all([
+
 			new Promise((resolve: () => void, reject: () => void) =>
 			{
+				this._slideTransitions[index].timeline.timeScale(2);
 				this._slideTransitions[index].completeMethod = resolve;
 				this._slideTransitions[index].timeline.reverse()
 			}),
+
 			this._mainTriangleAnimation.transitionOut()
 		])
 	}
@@ -146,6 +150,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 			new Promise((resolve: () => void, reject: () => void) =>
 			{
 				this._slideTransitions[index].completeMethod = resolve;
+				this._slideTransitions[index].timeline.timeScale(1);
 				this._slideTransitions[index].timeline.restart();
 			}),
 		])
@@ -159,31 +164,34 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this.transitionInTimeline.from(this.element, 0.5, {opacity: 0});
+		this.transitionInTimeline.from(this.element, 0.01, {opacity: 0});
 
 		// Run the background switch
 		this.transitionInTimeline.add(() => this.parentController.changeBackgroundImage(this.parentController.activeIndex), 0);
 
 		// Slide in the main triangle
-		this.transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), '=+0.5');
-
-		// Run the text animation
-		this.transitionInTimeline.add(() => this._slideTransitions[this.parentController.activeIndex].timeline.restart());
+		this.transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), 1);
 
 		// Slide in the secondary triangle
-		this.transitionInTimeline.from(this.element.querySelector('.secondary-background-triangle'), 1.5, {
+		this.transitionInTimeline.from(this.element.querySelector('.secondary-background-triangle'), 2, {
 			x: window.innerWidth,
 			y: -window.innerWidth,
 			ease: Expo.easeOut,
 			delay: this._mainTriangleAnimation.transitionInDuration
-		});
+		}, 1);
 
 		// Slide in the tertiary triangle
-		this.transitionInTimeline.from(this.element.querySelector('.tertiary-background-triangle'), 1.2, {
+		this.transitionInTimeline.from(this.element.querySelector('.tertiary-background-triangle'), 1.6, {
 			x: window.innerWidth,
 			y: -window.innerWidth,
 			ease: Expo.easeOut
-		}, '=-1.3')
+		}, 1.4);
+
+		// Run the text animation
+		const slideTransition = this._slideTransitions[this.parentController.activeIndex].timeline;
+
+		this.transitionInTimeline.add(() => slideTransition.restart(), 3 - slideTransition.duration());
+
 	}
 
 	/**

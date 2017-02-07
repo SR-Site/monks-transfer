@@ -232,8 +232,8 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 			this.viewModel.offset,
 			this.viewModel.limit,
 			this._filters
-		).then((result) => this._loader.hide()
-			.then(() => this.handleContentLoad(result)));
+		).then((result) => this.handleContentLoad(result));
+			// .then(() => ));
 	}
 
 
@@ -334,12 +334,12 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 						onComplete: resolve
 					});
 				}),
-				this._loader.show()
+				// this._loader.show()
 			])
 		}
 		else
 		{
-			return this._loader.show();
+			// return this._loader.show();
 		}
 	}
 

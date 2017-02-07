@@ -11,6 +11,7 @@ class BlockFilterContentTransitionController extends AbstractTransitionControlle
 	protected setupTransitionInTimeline(): void
 	{
 		const button = this.element.querySelector('.component-button-main');
+
 		const paginator = this.element.querySelector('.component-paginator-dashed');
 
 		if(button)

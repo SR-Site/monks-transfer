@@ -12,6 +12,14 @@
 		border-right-width: $sizeGrid*4;
 	}
 
+	.clip-mask {
+		@include size(100%);
+		@include pos(0, 0, 0, 0);
+		background: $colorWhite;
+		position: absolute;
+		transform-origin: right center;
+	}
+
 	.inner-content {
 		padding: $sizeGrid*2 $sizeGrid $sizeGrid*2 $sizeGrid*2;
 		width: calc(100% - #{$sizeGrid});

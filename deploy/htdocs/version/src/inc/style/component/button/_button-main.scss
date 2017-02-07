@@ -25,7 +25,6 @@
 		}
 
 		&.hover-stroke {
-
 			stroke: $colorSecondary;
 		}
 	}
@@ -36,7 +35,6 @@
 		transform: scale(1);
 		position: absolute;
 		background: $colorSecondary;
-
 	}
 
 	.label {
@@ -48,8 +46,18 @@
 	&.light {
 		color: $colorWhite;
 
+		.stripe {
+			background: $colorWhite;
+		}
+
 		rect {
-			stroke: rgba(255,255,255,.3);
+			&.background {
+				stroke: rgba(255, 255, 255, .3);
+			}
+
+			&.hover-stroke {
+				stroke: $colorWhite;
+			}
 		}
 	}
 

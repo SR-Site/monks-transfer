@@ -1,5 +1,6 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 import BlockArticleTeaserController from "./BlockArticleTeaserController";
+import Promise = require("bluebird");
 
 class BlockArticleTeaserTransitionController extends AbstractTransitionController<BlockArticleTeaserController>
 {
@@ -12,7 +13,16 @@ class BlockArticleTeaserTransitionController extends AbstractTransitionControlle
 	{
 		const tags = Array.prototype.slice.call(this.element.querySelectorAll('.component-button-tag'));
 
-		this.transitionInTimeline.fromTo(this.element.querySelector('figure'), 2,
+		this.transitionInTimeline.fromTo(this.element, 0.5,
+			{
+				opacity: 0
+			},
+			{
+				opacity: 1
+			}
+		);
+
+		this.transitionInTimeline.fromTo(this.element.querySelector('figure'), 1.6,
 			{
 				clip: 'rect(0, ' + this.element.offsetWidth + ',' + this.element.offsetHeight + ', ' + this.element.offsetWidth + ')',
 				opacity: 0
@@ -21,15 +31,15 @@ class BlockArticleTeaserTransitionController extends AbstractTransitionControlle
 				clip: 'rect(0, ' + this.element.offsetWidth + ',' + this.element.offsetHeight + ', ' + this.element.offsetWidth / 2 + ')',
 				opacity: 1,
 				clearProps: "clip, opacity",
-				ease: Expo.easeInOut
+				ease: Expo.easeOut
 			});
 
 
-		this.transitionInTimeline.from(this.element.querySelector('img'), 1,
+		this.transitionInTimeline.from(this.element.querySelector('img'), 1.6,
 			{
 				xPercent: -10,
 				clearProps: "xPercent",
-				ease: Expo.easeInOut
+				ease: Expo.easeOut
 			}, 0);
 
 
@@ -53,7 +63,7 @@ class BlockArticleTeaserTransitionController extends AbstractTransitionControlle
 					opacity: 0,
 					clearProps: "opacity",
 				}, '=-0.8');
-		})
+		});
 
 
 		// Enable css transitions

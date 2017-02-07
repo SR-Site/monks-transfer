@@ -16,6 +16,10 @@
 		.component-block-info {
 			margin-left: 0;
 			margin-bottom: $sizeGrid * 2;
+
+			.clip-mask {
+				background: $colorLightGrey;
+			}
 		}
 	}
 
