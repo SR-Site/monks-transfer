@@ -19,8 +19,10 @@
 			height: calc(100% - #{$sizeGrid*4});
 		}
 
-		.scroll-content {}
-		.scroll-content-inner {}
+		.scroll-content { }
+		.scroll-content-inner {
+			width: calc(100% + 20px);
+		}
 
 		.scroll-bar {
 			width: $sizeGrid/2;
@@ -155,7 +157,7 @@
 			z-index: zindex($zIndex, ui);
 			line-height: $sizeGrid*4;
 			padding: 0 $sizeGrid;
-			border-bottom: 1px solid  rgba(#dadada, 0.6);
+			border-bottom: 1px solid rgba(#dadada, 0.6);
 
 			&:after {
 				@include pos(50%, $sizeGrid*2, auto, auto);

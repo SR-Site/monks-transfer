@@ -366,8 +366,6 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 		{
 			this.viewModel.pageLayout(result.blocks);
 
-			console.log(result);
-
 			// Set the header theme if available
 			this._dataManager.headerTheme(result.headerTheme);
 

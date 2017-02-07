@@ -25,9 +25,8 @@ define([
 	'lib/knockout/knockout.image',
 	'lib/knockout/knockout.events',
 	'lib/knockout/knockout.focusBorder'
-], ($, ko, vimeo, mapbox) =>
+], ($, ko, vimeo) =>
 {
-	console.log(mapbox);
 	ko.punches.interpolationMarkup.enable();
 	ko.punches.attributeInterpolationMarkup.enable();
 	ko.punches.textFilter.enableForBinding('text');
