@@ -1,0 +1,19 @@
+menus:
+  account:
+    active: false
+    weight: 0
+  admin:
+    active: false
+    weight: 1
+  footer:
+    active: false
+    weight: 2
+  main:
+    active: false
+    weight: 3
+  spectrum:
+    active: true
+    weight: 4
+  tools:
+    active: false
+    weight: 5

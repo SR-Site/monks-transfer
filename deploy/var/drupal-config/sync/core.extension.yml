@@ -19,7 +19,6 @@ module:
   image: 0
   jquery_colorpicker: 0
   link: 0
-  menu_admin_per_menu: 0
   menu_ui: 0
   mm_decoupled: 0
   mm_release_tracker: 0
@@ -42,10 +41,12 @@ module:
   taxonomy: 0
   text: 0
   toolbar: 0
+  toolbar_menu: 0
   update: 0
   user: 0
   video_embed_field: 0
   views_ui: 0
+  menu_admin_per_menu: 1
   menu_link_content: 1
   views: 10
   paragraphs: 11

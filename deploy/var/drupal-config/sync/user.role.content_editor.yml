@@ -1,0 +1,23 @@
+uuid: 6028fd07-0b74-4579-aad6-4b6bbb351428
+langcode: en
+status: true
+dependencies: {  }
+id: content_editor
+label: 'Content editor'
+weight: 3
+is_admin: null
+permissions:
+  - 'administer main menu items'
+  - 'create page content'
+  - 'delete any page content'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'edit any page content'
+  - 'edit own page content'
+  - 'revert page revisions'
+  - 'view page revisions'
+  - 'access site in maintenance mode'
+  - 'view the administration theme'
+  - 'access toolbar'
+  - 'view spectrum in toolbar'
+  - 'create url aliases'

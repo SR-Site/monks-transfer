@@ -13,3 +13,5 @@ permissions:
   2: 'access comments'
   3: 'access site-wide contact form'
   4: 'search content'
+  5: 'restful get spectrum_rest_page_v1'
+  6: 'restful get spectrum_rest_searchpages_v1'

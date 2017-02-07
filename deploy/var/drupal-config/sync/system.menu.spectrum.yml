@@ -1,0 +1,8 @@
+uuid: 53b7149c-7f30-4b17-b1a5-1c19bacabc9a
+langcode: en
+status: true
+dependencies: {  }
+id: spectrum
+label: Spectrum
+description: ''
+locked: false
