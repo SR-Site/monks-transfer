@@ -71,6 +71,7 @@ class PageLayoutModel extends AbstractDataModel<IPageLayout>
 			let layout: IPageLayout = {
 				id: pageId,
 				headerTheme: pageLayout.headerTheme,
+				hideContactButton: pageLayout.hideContactButton,
 				pageTitle: pageLayout.pageTitle,
 				blocks: []
 			};

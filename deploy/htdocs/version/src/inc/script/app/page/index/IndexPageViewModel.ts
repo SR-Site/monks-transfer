@@ -1,3 +1,4 @@
+
 import DefaultPageViewModel from "app/page/DefaultPageViewModel";
 import IndexPageController from "app/page/index/IndexPageController";
 import ko = require('knockout');
@@ -10,7 +11,9 @@ class IndexPageViewModel extends DefaultPageViewModel<IndexPageController>
 {
 	public ButtonSize:Class = ButtonSize;
 	public DeviceState:Enum = DeviceState;
-	public startAdvertisingDisabled:KnockoutObservable<boolean> = ko.observable(false);
+
+	public hideContactButton:KnockoutObservable<boolean> = ko.observable(false);
+
 
 	/**
 	 * @public
@@ -27,7 +30,7 @@ class IndexPageViewModel extends DefaultPageViewModel<IndexPageController>
 	 */
 	public destruct():void
 	{
-		this.startAdvertisingDisabled = null;
+		this.hideContactButton = null;
 
 		// always call this last
 		super.destruct();

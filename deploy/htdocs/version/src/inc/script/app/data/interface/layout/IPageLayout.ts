@@ -4,9 +4,10 @@ import Theme from "../../enum/style/Theme";
 
 interface IPageLayout extends IIndexable
 {
-	blocks:Array<IBlock>;
-	pageTitle:string;
-	headerTheme:Theme;
+	blocks: Array<IBlock>;
+	pageTitle: string;
+	headerTheme: Theme;
+	hideContactButton?: boolean;
 }
 
 export default IPageLayout;

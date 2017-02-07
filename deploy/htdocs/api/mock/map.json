@@ -3,6 +3,7 @@
 	"data": {
 		"pageTitle": "Map",
 		"headerTheme": 1,
+		"hideContactButton": true,
 		"blocks": [
 			{
 				"id": "marketMap",

@@ -35,6 +35,15 @@ class BlockImageWithContentTransitionController extends AbstractTransitionContro
 
 		const button = this.element.querySelector('.component-button-main');
 
+		this.transitionInTimeline.from(this.element.querySelector('.content'), 2,
+			{
+				xPercent: -100,
+				clearProps: "all",
+				ease: Expo.easeOut
+			}
+		);
+
+
 		this.transitionInTimeline.fromTo(this.element.querySelector('.image'), 2,
 			{
 				clip: 'rect(0, 0,' + height + ', 0)',
@@ -44,19 +53,10 @@ class BlockImageWithContentTransitionController extends AbstractTransitionContro
 				clip: 'rect(0, ' + width + ', ' + height + ', 0)',
 				opacity: 1,
 				clearProps: "clip",
-				ease: Expo.easeInOut
-			});
+				ease: Expo.easeOut
+			}, 0);
 
-		this.transitionInTimeline.from(this.element.querySelector('.content'), 2,
-			{
-				xPercent: -150,
-				clearProps: "all",
-				ease: Expo.easeInOut
-			},
-			'=-1.8'
-		);
-
-		this.transitionInTimeline.add(this._headingAnimation.getTimeline(), '=-1');
+		this.transitionInTimeline.add(this._headingAnimation.getTimeline(), '=-1.5');
 		this.transitionInTimeline.add(this._copyAnimation.getTimeline());
 
 		if(button)

@@ -43,12 +43,11 @@ class ProgramModuleItemTransitionController extends AbstractTransitionController
 			}
 		});
 
-		this._mouseEnterTimeline.to(this.element.querySelectorAll('.hover-content'), 0.4, {
-			opacity: 0,
-			ease: Power3.easeOut
-		});
+		this._mouseEnterTimeline.to(this.element.querySelectorAll('.hover-content'), 0.2, {
+			opacity: 0
+		}, 0);
 
-		this._mouseEnterTimeline.fromTo(this.element.querySelectorAll('.hover-container'), 0.4,
+		this._mouseEnterTimeline.fromTo(this.element.querySelectorAll('.hover-container'), 0.8,
 			{
 				width: '100%'
 			},
@@ -57,10 +56,9 @@ class ProgramModuleItemTransitionController extends AbstractTransitionController
 				width: '200%'
 			});
 
-		this._mouseEnterTimeline.to(this.element.querySelectorAll('.hover-content'), 0.4, {
-			opacity: 1,
-			ease: Power3.easeOut
-		});
+		this._mouseEnterTimeline.to(this.element.querySelectorAll('.hover-content'), 0.2, {
+			opacity: 1
+		}, '=-0.4');
 	}
 
 	/**

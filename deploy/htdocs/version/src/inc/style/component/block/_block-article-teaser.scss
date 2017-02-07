@@ -14,6 +14,13 @@
 		padding: $sizeGrid;
 		color: $colorPrimary;
 
+		&:after {
+			@include triangle(left, bottom, $colorWhite, $sizeGrid);
+			@include pos(auto, -$sizeGrid, 0, auto);
+			position: absolute;
+			content: '';
+		}
+
 		.heading {
 			margin-bottom: $sizeGrid / 2;
 		}
@@ -37,12 +44,13 @@
 			transform: translateX(10%);
 		}
 
-		&:after {
-			@include triangle(left, bottom, $colorWhite, $sizeGrid);
-			@include pos(auto, $sizeGrid * 7, 0, auto);
+		.heading {
+			@include pos($sizeGrid, auto, auto, $sizeGrid);
+			width: 50%;
+			transform: translateX($sizeGrid * 2);
+			opacity: 0;
 			position: absolute;
-			content: '';
-			transition: transform .2s ease(easeOut), opacity .2s ease(easeOut);
+			color: $colorWhite;
 		}
 
 		.hover-icon {
@@ -70,40 +78,32 @@
 
 	&.transition-in-complete {
 		figure {
-			transition: clip .2s ease(easeOut);
+			transition: clip .8s ease(easeOutExpo);
 
+			.heading,
 			.hover-icon {
-				transition: all .2s ease(easeOut);
+				transition: all .8s ease(easeOutExpo);
 			}
 		}
 
 		aside {
-			.copy {
-				transition: opacity .2s ease(easeOut);
-			}
-
-			.tags {
-				transition: opacity .2s ease(easeOut);
-			}
+			transition: transform .8s ease(easeOutExpo);
 		}
 
 		img {
-			transition: transform .2s ease(easeOut);
+			transition: transform .8s ease(easeOutExpo);
 		}
 
 		@include hover() {
+
 			figure {
 				clip: rect(0, $sizeGrid * 16, $sizeGrid * 8, 0);
-
-				&:after {
-					transform: translateX(-$sizeGrid * 9);
-					opacity: 0;
-				}
 
 				img {
 					transform: translateX(0);
 				}
 
+				.heading,
 				.hover-icon {
 					transform: translateX(0);
 					opacity: 1;
@@ -111,10 +111,7 @@
 			}
 
 			aside {
-				.tags,
-				.copy {
-					opacity: 0;
-				}
+				transform: translateX(calc(-100% - #{$sizeGrid}));
 			}
 		}
 	}
