@@ -17,13 +17,14 @@ function build_frontend(){
 
 function build_backend(){
     changeDir ${BACKEND_BUILDROOT}
-    runComposer install
-    copyFileIfNotExists deploy/var/drupal-settings/example.settings.jenkins.php deploy/var/drupal-settings/settings.local.php
+    runComposer install    
+    runSed -i -- 's/prod/jenkins/g' deploy/var/drupal-settings/environment.local.php
+    deleteCopyFile deploy/var/drupal-settings/settings.jenkins.php deploy/var/drupal-settings/settings.local.php
     changeDir ${DRUSH_DIR}    
     drushCommand cr
-    drushCommand ctim
+    #drushCommand ctim
     drushCommand updb
-    drushCommand update-entities
+    #drushCommand update-entities
     drushCommand cr
 }
 

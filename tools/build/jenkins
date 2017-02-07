@@ -7,6 +7,7 @@ NPM_BIN="$(which npm)"
 RSYNC_BIN="$(which rsync)"
 TSD_BIN="$(which tsd)"
 GIT_BIN="$(which git)"
+SED_BIN="$(which sed)"
 COMPOSER_BIN="$(which composer)"
 
 #config

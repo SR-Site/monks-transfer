@@ -36,6 +36,15 @@ function copyFileIfNotExists() {
 	fi
 }
 
+function runSed(){
+	echo "Running sed ${@}"
+	${SED_BIN} ${@}
+	if [ "$?" -ne 0 ]; then
+		echo "sed failed! - sed ${@}"
+		exit 1
+	fi 	
+}
+
 function createDir(){
 	echo "Creating directory ${1}"
 	mkdir -p "${1}"
