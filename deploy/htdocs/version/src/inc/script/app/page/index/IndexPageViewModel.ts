@@ -12,9 +12,6 @@ class IndexPageViewModel extends DefaultPageViewModel<IndexPageController>
 	public ButtonSize:Class = ButtonSize;
 	public DeviceState:Enum = DeviceState;
 
-	public hideContactButton:KnockoutObservable<boolean> = ko.observable(false);
-
-
 	/**
 	 * @public
 	 * @method handleStartAdvertisingClick
@@ -30,7 +27,6 @@ class IndexPageViewModel extends DefaultPageViewModel<IndexPageController>
 	 */
 	public destruct():void
 	{
-		this.hideContactButton = null;
 
 		// always call this last
 		super.destruct();

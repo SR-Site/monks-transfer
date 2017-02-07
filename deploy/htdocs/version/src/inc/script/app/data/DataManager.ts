@@ -37,6 +37,7 @@ class DataManager
 	 * Global observables
 	 */
 	public headerTheme: KnockoutObservable<Theme> = ko.observable(Theme.LIGHT);
+	public hideContactButton: KnockoutObservable<boolean> = ko.observable(false);
 
 	/**
 	 * Models

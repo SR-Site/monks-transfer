@@ -369,6 +369,9 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 			// Set the header theme if available
 			this._dataManager.headerTheme(result.headerTheme);
 
+			// Set the header theme if available
+			this._dataManager.hideContactButton(result.hideContactButton || false);
+
 			// Set the page title
 			document.title = result.pageTitle;
 

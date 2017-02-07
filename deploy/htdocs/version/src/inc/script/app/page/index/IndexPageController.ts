@@ -30,12 +30,12 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	 * @private
 	 * @property _beforeGoto
 	 */
-	private _beforeGoto: (removeHijack?: boolean)=>void;
+	private _beforeGoto: (removeHijack?: boolean) => void;
 	/**
 	 * @private
 	 * @property_beforeTransitionIn
 	 */
-	private _beforeTransitionIn: (removeHijack?: boolean)=>void;
+	private _beforeTransitionIn: (removeHijack?: boolean) => void;
 
 	private _headerController: HeaderController;
 	private _footerController: FooterController;
@@ -109,6 +109,25 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	public handleStartAdvertisingReady(controller: ButtonStartAdvertisingController): void
 	{
 		this._startAdvertising = controller;
+
+		// Listen to the page change
+		this.destructibles.addKOSubscription(this._dataManager.hideContactButton.subscribe(this.handleHideContactButtonChange.bind(this)));
+	}
+
+	/**
+	 * @private
+	 * @method handleHideContactButtonChange
+	 */
+	private handleHideContactButtonChange(hideContactButton: boolean): void
+	{
+		if(hideContactButton)
+		{
+			this._startAdvertising.transitionOut();
+		}
+		else
+		{
+			this._startAdvertising.transitionIn();
+		}
 	}
 
 	/**
@@ -133,7 +152,7 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	 * @public
 	 * @method handleVideoOverlayReady
 	 */
-	public handleVideoOverlayReady(controller:VideoOverlayController):void
+	public handleVideoOverlayReady(controller: VideoOverlayController): void
 	{
 		this._dataManager.videoOverlay = controller;
 	}
@@ -159,10 +178,10 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	 * @private
 	 * @method closeMenu
 	 */
-	private closeMenu():Promise<any>
+	private closeMenu(): Promise<any>
 	{
 		return this._menuController.transitionOut()
-			.then(()=>
+			.then(() =>
 			{
 				this._headerController.menuIsActive = false;
 			})
@@ -179,11 +198,11 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 			Promise.all([
 				this.closePanel(),
 				this.closeMenu()
-			]).then(()=> this._beforeGoto());
+			]).then(() => this._beforeGoto());
 		}
 		else
 		{
-			this.closePanel().then(() =>this._beforeGoto());
+			this.closePanel().then(() => this._beforeGoto());
 		}
 	}
 
@@ -196,7 +215,13 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 		const allComponentsLoaded: Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
 
 		// Wait  for all components to be loaded
-		allComponentsLoaded.then(() => this._beforeTransitionIn(true))
+		allComponentsLoaded.then(() =>
+		{
+			// Check on init
+			this.handleHideContactButtonChange(this._dataManager.hideContactButton());
+
+			this._beforeTransitionIn(true)
+		});
 	}
 
 	/**
@@ -210,8 +235,7 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 		DataManager.getInstance().pageLoader.transitionIn()
 			.then(() => Promise.all([
 				this._headerController.transitionIn(),
-				this._footerController.transitionIn(),
-				this._startAdvertising.transitionIn()
+				this._footerController.transitionIn()
 			]))
 			.then(() => super.transitionIn());
 	}
