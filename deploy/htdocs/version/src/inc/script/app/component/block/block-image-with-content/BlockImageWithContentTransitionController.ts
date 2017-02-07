@@ -56,14 +56,21 @@ class BlockImageWithContentTransitionController extends AbstractTransitionContro
 				ease: Expo.easeOut
 			}, 0);
 
-		this.transitionInTimeline.add(this._headingAnimation.getTimeline(), '=-1.5');
-		this.transitionInTimeline.add(this._copyAnimation.getTimeline());
+
+		const copyTimeline = this._copyAnimation.getTimeline();
+		const headingTimeline = this._headingAnimation.getTimeline();
+
+
+		this.transitionInTimeline.add(headingTimeline.play(), 1.1);
+		this.transitionInTimeline.add(copyTimeline.play(),  1.3);
+
 
 		if(button)
 		{
-			this.transitionInTimeline.add(this.getSubTimeline(button));
+			this.transitionInTimeline.add(this.getSubTimeline(button),  2.4);
 		}
 	}
 }
 
 export default BlockImageWithContentTransitionController;
+

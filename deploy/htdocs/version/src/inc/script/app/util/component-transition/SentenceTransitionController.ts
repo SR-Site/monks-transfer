@@ -59,7 +59,7 @@ class SentenceTransitionController<TParentController extends AbstractTransitionC
 	 */
 	public getTimeline(): Animation
 	{
-		return this.transitionInTimeline.play();
+		return this.transitionInTimeline;
 	}
 
 }
