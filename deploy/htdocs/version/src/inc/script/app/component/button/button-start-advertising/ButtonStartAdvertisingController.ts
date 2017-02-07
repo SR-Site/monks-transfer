@@ -75,7 +75,7 @@ class ButtonStartAdvertisingController extends AbstractButtonController<ButtonSt
 		}
 
 		// Animate to the position
-		TweenLite.to(this.element, 1, { y: yPos, ease: Expo.easeOut });
+		TweenLite.to(this.element, 0.8, { y: yPos, ease: Expo.easeOut });
 	}
 
 	/**

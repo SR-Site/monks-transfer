@@ -10,9 +10,9 @@ class ButtonStartAdvertisingTransitionController extends AbstractTransitionContr
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this.transitionInTimeline.from(this.element, 0.5, {
+		this.transitionInTimeline.from(this.element, 0.8, {
 			autoAlpha: 0,
-			ease: Power3.easeInOut
+			ease: Expo.easeOut
 		});
 	}
 }
