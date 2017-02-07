@@ -16,6 +16,8 @@ import FeatureCollection = GeoJSON.FeatureCollection;
 import IState from "./interface/IState";
 import Feature = GeoJSON.Feature;
 import Scrollbar from "../../../../lib/temple/component/Scrollbar";
+import StateModel from "../../../data/model/StateModel";
+import DataManager from "../../../data/DataManager";
 
 class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions>
 {
@@ -32,6 +34,8 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	private _map: mapboxgl.Map;
 	private _marketsOutlineLayer: mapboxgl.Map;
 	private _marketsFillLayer: mapboxgl.Map;
+
+	private _stateModel: StateModel = DataManager.getInstance().settingsModel.stateModel;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -69,8 +73,30 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 
 		if(selectedState !== null)
 		{
-			// Decide what polygons should be visible
-			data = <Feature>this._marketFeatureCollection[selectedState.id];
+			if(this._stateModel.hasItem(selectedState.statePostalCode))
+			{
+				const state = this._stateModel.getItemById(selectedState.statePostalCode);
+
+				// Decide what polygons should be visible
+				data = <Feature>this._marketFeatureCollection[selectedState.marketId];
+
+				if(data)
+				{
+					// Zoom to the correct position
+					this.resetMapZoom(state.coordinates.lat, state.coordinates.lng);
+				}
+				else
+				{
+					console.warn('State does not exist in the original-markets.json file');
+
+					// Use all blocks in case it breaks
+					data = <FeatureCollection>this._featureCollection;
+				}
+			}
+			else
+			{
+				console.warn('Unknown state postal code: ', selectedState);
+			}
 		}
 		else
 		{
@@ -116,8 +142,9 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 
 		this._map = new mapboxgl.Map({
 			container: 'js-map',
-			center: [-73.996052, 41.265085],
-			zoom: 8,
+			center: [-97.0364, 38.8951],
+			zoom: 4,
+			minZoom: 4,
 			scrollZoom: true,
 			style: 'mapbox://styles/larsvanbraam/ciyodzuy800ds2sla6tuazga1'
 		});
@@ -133,10 +160,26 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 */
 	private handleMapLoad(): void
 	{
-		this.loadStates()
-			.then((states: Array<IState>) => this.viewModel.stateList(states))
+		// data: 'https://spectrumreach.com/markets/markets-json'
+		this.loadJSON('data/mapbox/market-details.json')
+			.then((data: Array<IState>) => this.viewModel.stateList(data))
 			.then(this.updateScrollBar.bind(this))
-			.then(this.loadFeatures.bind(this))
+			.then(this.loadJSON.bind(this, 'data/mapbox/original-markets.json'))
+			.then((data: FeatureCollection) =>
+			{
+				// Parse it to multi-polygon to make it work... dafuq
+				data.features.forEach((feature) =>
+				{
+					feature.geometry.type = 'MultiPolygon';
+					feature.geometry.coordinates = feature.geometry.coordinates.map((coordinate) => [coordinate]);
+
+					// Save for faster lookup
+					this._marketFeatureCollection[feature.properties.id] = feature
+				});
+
+				// Store it
+				this._featureCollection = data;
+			})
 			.then(this.updateDataLayer.bind(this))
 			.then(this.addMapEvents.bind(this));
 	}
@@ -174,56 +217,32 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 		});
 	}
 
-
 	/**
 	 * @private
-	 * @method loadFeatures
-	 * @returns Promise<Array<IFeatures>>
+	 * @method resetMapZoom
+	 * @param lat
+	 * @param lng
+	 * @param duration
 	 */
-	private loadFeatures(): Promise<any>
+	private resetMapZoom(lat: number = -97.0364, lng: number = 38.8951, duration: number = 1000): void
 	{
-		return new Promise((resolve: () => void) =>
-		{
-			// type: 'geojson',
-			// data: 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_admin_1_states_provinces_shp.geojson'
-			// data: 'https://spectrumreach.com/markets/markets-json'
+		this._map.panTo(new mapboxgl.LngLat(lat, lng), {duration: duration});
 
-			// TODO: move to config? fetch from back-end?
-			let loadJSONTask = new LoadJSONTask('data/mapbox/original-markets.json', (data) =>
-			{
-				// Parse it to multi-polygon to make it work... dafuq
-				data.features.forEach((feature) =>
-				{
-					feature.geometry.type = 'MultiPolygon';
-					feature.geometry.coordinates = feature.geometry.coordinates.map((coordinate) => [coordinate]);
-
-					// Save for faster lookup
-					this._marketFeatureCollection[feature.properties.id] = feature
-				});
-
-				// Store it
-				this._featureCollection = data;
-
-				resolve();
-
-				loadJSONTask.destruct();
-			});
-
-			// Start loading
-			loadJSONTask.execute();
-		});
+		// Zoom + pan at the same time causes issues
+		setTimeout(() => this._map.zoomTo(6), duration);
 	}
 
 	/**
 	 * @private
-	 * @method loadStates
+	 * @method loadJSON
+	 * @param path
 	 * @returns {PromiseBluebird}
 	 */
-	private loadStates(): Promise<any>
+	private loadJSON(path: string): Promise<any>
 	{
-		return new Promise((resolve: (states: Array<IState>) => void) =>
+		return new Promise((resolve: (data: any) => void) =>
 		{
-			let loadJSONTask = new LoadJSONTask('data/mapbox/market-details.json', (data) =>
+			let loadJSONTask = new LoadJSONTask(path, (data) =>
 			{
 				resolve(data);
 
@@ -256,21 +275,6 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 
 		// always call this last
 		super.destruct();
-	}
-}
-
-interface IFeature
-{
-	type: string;
-	properties: {
-		id: string;
-		region: string;
-		state: string;
-		visible: string;
-	}
-	geometry: {
-		type: string;
-		coordinates: any;
 	}
 }
 

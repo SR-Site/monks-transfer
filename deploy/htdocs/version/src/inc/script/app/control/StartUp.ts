@@ -13,6 +13,8 @@ import {EnvironmentNames} from "../data/enum/ConfigNames";
 import LoadInitTask from "./LoadInitTask";
 import InitLocaleTask from "./InitLocaleTask";
 import bowser = require('bowser');
+import LoadJSONTask from "../../lib/temple/control/sequence/task/loader/LoadJSONTask";
+import IState from "../data/interface/IState";
 
 // localization
 //import InitLocaleTask from "app/control/InitLocaleTask";
@@ -36,11 +38,12 @@ class StartUp
 		window['ko'] = ko;
 	}
 
-	public execute(callback: () => void):void
+	public execute(callback: () => void): void
 	{
 		this._log.log('Execute');
 
-		if(!bowser.tablet && !bowser.mobile) {
+		if(!bowser.tablet && !bowser.mobile)
+		{
 			document.getElementsByTagName('html')[0].className += ' is-desktop';
 		}
 
@@ -56,13 +59,13 @@ class StartUp
 
 		let sequence = new Sequence();
 
-		if (DEBUG && configManagerInstance.getEnvironment() != EnvironmentNames.PRODUCTION)
+		if(DEBUG && configManagerInstance.getEnvironment() != EnvironmentNames.PRODUCTION)
 		{
 			sequence.add(new DevBarTask());
 		}
 
 		sequence.add(new LoadInitTask());
-
+		sequence.add(new LoadJSONTask('data/json/states.json', this.handleStatesLoaded.bind(this)));
 
 		// add your own tasks
 		sequence.add(new InitLocaleTask());
@@ -70,6 +73,15 @@ class StartUp
 		// do this last
 		sequence.add(new MethodTask(callback));
 		sequence.execute();
+	}
+
+	/**
+	 * @private
+	 * @method handleStatesLoaded
+	 */
+	private handleStatesLoaded(data: Array<IState>): void
+	{
+		DataManager.getInstance().settingsModel.stateModel.addItems(data);
 	}
 }
 

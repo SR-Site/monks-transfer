@@ -1,1621 +1,1719 @@
 [
 	{
-		"id": "3105",
-		"state": "",
-		"label": "Albany, NY",
+		"marketId": "3105",
+		"stateId": "",
+		"statePostalCode": "NY",
+		"city": "Albany",
 		"offices": [
 			{
 				"id": "3226",
 				"heading": "Latham Office",
-				"paragraph": "20 Century Hill Dr<br/> <br/> Latham, NY<br/> 12110<br/><br/> P+:  844-867-3224",
+				"paragraph": "20 Century Hill Dr<br/>Latham, NY<br/>12110<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3227",
 				"heading": "Malone Office",
-				"paragraph": "11 State St<br/> <br/> Malone, NY<br/> 12953<br/><br/> P+:  844-867-3224",
+				"paragraph": "11 State St<br/>Malone, NY<br/>12953<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3217",
 				"heading": "Pittsfield, MA Office",
-				"paragraph": "4 Federico Dr<br/> <br/> Pittsfield, MA<br/> 01201<br/><br/> P+:  844-867-3224",
+				"paragraph": "4 Federico Dr<br/>Pittsfield, MA<br/>01201<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "257",
-		"state": "282",
-		"label": "Alpena, MI",
+		"marketId": "257",
+		"stateId": "282",
+		"statePostalCode": "MI",
+		"city": "Alpena",
 		"offices": [
 			{
 				"id": "127",
 				"heading": "Alpena Office",
-				"paragraph": "2074 M-32<br/> <br/> Alpena, MI<br/> 49707<br/><br/> P+:  844-867-3224",
+				"paragraph": "2074 M-32<br/>Alpena, MI<br/>49707<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3107",
-		"state": "3159",
-		"label": "Austin, TX",
+		"marketId": "3107",
+		"stateId": "3159",
+		"statePostalCode": "TX",
+		"city": "Austin",
 		"offices": [
 			{
 				"id": "3161",
 				"heading": "Austin Office",
-				"paragraph": "11501 Alterra Pkwy<br/> Suite 400<br/> Austin, TX<br/> 78758<br/><br/> P+:  844-867-3224",
+				"paragraph": "11501 Alterra Pkwy<br/>Suite 400<br/>Austin, TX<br/>78758<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3285",
 				"heading": "San Marcos Office",
-				"paragraph": "1120 TX-123<br/> PO Box 1008<br/> San Marcos, TX<br/> 78666<br/><br/> P+:  844-867-3224",
+				"paragraph": "1120 TX-123<br/>PO Box 1008<br/>San Marcos, TX<br/>78666<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3407",
-		"state": "51",
-		"label": "Bakersfield, CA",
+		"marketId": "3407",
+		"stateId": "51",
+		"statePostalCode": "CA",
+		"city": "Bakersfield",
 		"offices": [
 			{
 				"id": "3412",
 				"heading": "Bakersfield Office",
-				"paragraph": "4450 California Ave<br/> Suite A<br/> Bakersfield, CA<br/> 93309<br/><br/> P+:  844-867-3224",
+				"paragraph": "4450 California Ave<br/>Suite A<br/>Bakersfield, CA<br/>93309<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3109",
-		"state": "3160",
-		"label": "Bangor, ME",
+		"marketId": "3109",
+		"stateId": "3160",
+		"statePostalCode": "ME",
+		"city": "Bangor",
 		"offices": [
 			{
 				"id": "3162",
 				"heading": "Bangor, ME Office",
-				"paragraph": "444 Perry Rd<br/> <br/> Bangor, ME<br/> 04401<br/><br/> P+:  888-867-3224",
+				"paragraph": "444 Perry Rd<br/>Bangor, ME<br/>04401<br> P+:  888-867-3224",
 				"email": ""
 			}
 		]
 	},
 	{
-		"id": "234",
-		"state": "66|67",
-		"label": "Billings, MT",
+		"marketId": "234",
+		"stateId": "66|67",
+		"statePostalCode": "MT",
+		"city": "Billings",
 		"offices": [
 			{
 				"id": "76",
 				"heading": "Billings Office",
-				"paragraph": "2727 Central Ave<br/> <br/> Billings, MT<br/> 59102<br/><br/> P+:  844-867-3224",
+				"paragraph": "2727 Central Ave<br/>Billings, MT<br/>59102<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3110",
-		"state": "3158|3163",
-		"label": "Binghamton, NY",
+		"marketId": "3110",
+		"stateId": "3158|3163",
+		"statePostalCode": "NY",
+		"city": "Binghamton",
 		"offices": [
 			{
 				"id": "3233",
 				"heading": "Vestal Office",
-				"paragraph": "120 Plaza Dr<br/> Suite D<br/> Vestal, NY<br/> 13850<br/><br/> P+:  844-867-3224",
+				"paragraph": "120 Plaza Dr<br/>Suite D<br/>Vestal, NY<br/>13850<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "271",
-		"state": "285",
-		"label": "Birmingham, AL",
+		"marketId": "271",
+		"stateId": "285",
+		"statePostalCode": "AL",
+		"city": "Birmingham",
 		"offices": [
 			{
 				"id": "87",
 				"heading": "Birmingham Office",
-				"paragraph": "2501 20th Pl S<br/> Suite 200<br/> Birmingham, AL<br/> 35223<br/><br/> P+:  844-867-3224",
+				"paragraph": "2501 20th Pl S<br/>Suite 200<br/>Birmingham, AL<br/>35223<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "88",
 				"heading": "Gadsden Office",
-				"paragraph": "307 Broad St<br/> <br/> Gadsden, AL<br/> 35901<br/><br/> P+:  844-867-3224",
+				"paragraph": "307 Broad St<br/>Gadsden, AL<br/>35901<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "569",
 				"heading": "Tuscaloosa Office",
-				"paragraph": "2306 11th St<br/> <br/> Tuscaloosa, AL<br/> 35401<br/><br/> P+:  844-867-3224",
+				"paragraph": "2306 11th St<br/>Tuscaloosa, AL<br/>35401<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3112",
-		"state": "3158|3163",
-		"label": "Buffalo, NY",
+		"marketId": "3112",
+		"stateId": "3158|3163",
+		"statePostalCode": "NY",
+		"city": "Buffalo",
 		"offices": [
 			{
 				"id": "3234",
 				"heading": "Buffalo Office",
-				"paragraph": "268 Main St<br/> <br/> Buffalo, NY<br/> 14202<br/><br/> P+:  844-867-3224",
+				"paragraph": "268 Main St<br/>Buffalo, NY<br/>14202<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3237",
 				"heading": "Jamestown Office",
-				"paragraph": "120 E 2nd St<br/> PO Box 6011<br/> Jamestown, NY<br/> 14701<br/><br/> P+:  844-867-3224",
+				"paragraph": "120 E 2nd St<br/>PO Box 6011<br/>Jamestown, NY<br/>14701<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3238",
 				"heading": "Olean Office",
-				"paragraph": "121 Albany Ave<br/> <br/> Olean, NY<br/> 14760<br/><br/> P+:  844-867-3224",
+				"paragraph": "121 Albany Ave<br/>Olean, NY<br/>14760<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "235",
-		"state": "66",
-		"label": "Butte, MT",
+		"marketId": "235",
+		"stateId": "66",
+		"statePostalCode": "MT",
+		"city": "Butte",
 		"offices": [
 			{
 				"id": "81",
 				"heading": "Bozeman Office",
-				"paragraph": "1165 N 14th Ave<br/> Suite 3<br/> Bozeman, MT<br/> 59715<br/><br/> P+:  844-867-3224",
+				"paragraph": "1165 N 14th Ave<br/>Suite 3<br/>Bozeman, MT<br/>59715<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "79",
 				"heading": "Butte Office",
-				"paragraph": "201 E Front St<br/> <br/> Butte, MT<br/> 59701<br/><br/> P+:  844-867-3224",
+				"paragraph": "201 E Front St<br/>Butte, MT<br/>59701<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "236",
-		"state": "67",
-		"label": "Casper/Riverton, WY",
+		"marketId": "236",
+		"stateId": "67",
+		"statePostalCode": "WY",
+		"city": "Casper/Riverton",
 		"offices": [
 			{
 				"id": "82",
 				"heading": "Casper Office",
-				"paragraph": "111 W 2nd St<br/> Suite 620<br/> Casper, WY<br/> 82601<br/><br/> P+:  844-867-3224",
+				"paragraph": "111 W 2nd St<br/>Suite 620<br/>Casper, WY<br/>82601<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3114",
-		"state": "287",
-		"label": "Charleston, SC",
+		"marketId": "3114",
+		"stateId": "287",
+		"statePostalCode": "SC",
+		"city": "Charleston",
 		"offices": []
 	},
 	{
-		"id": "272",
-		"state": "286",
-		"label": "Charlotte, NC",
+		"marketId": "272",
+		"stateId": "286",
+		"statePostalCode": "NC",
+		"city": "Charlotte",
 		"offices": [
 			{
 				"id": "161",
 				"heading": "Boone Office",
-				"paragraph": "719 Greenway Rd<br/> Suite G<br/> Boone, NC<br/> 28607<br/><br/> P+:  844-867-3224",
+				"paragraph": "719 Greenway Rd<br/>Suite G<br/>Boone, NC<br/>28607<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "163",
 				"heading": "Hickory Office",
-				"paragraph": "1305 10th Ave Ln SE<br/> <br/> Hickory, NC<br/> 28602<br/><br/> P+:  844-867-3224",
+				"paragraph": "1305 10th Ave Ln SE<br/>Hickory, NC<br/>28602<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3108",
-		"state": "286|287",
-		"label": "Charlotte, NC",
+		"marketId": "3108",
+		"stateId": "286|287",
+		"statePostalCode": "NC",
+		"city": "Charlotte",
 		"offices": [
 			{
 				"id": "3245",
 				"heading": "Charlotte Office",
-				"paragraph": "316 W Morehead St<br/> <br/> Charlotte, NC<br/> 28202<br/><br/> P+:  844-867-3224",
+				"paragraph": "316 W Morehead St<br/>Charlotte, NC<br/>28202<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3246",
 				"heading": "Morehead Square Office",
-				"paragraph": "1001 Morehead Square Dr<br/> Suite 200<br/> Charlotte, NC<br/> 28203<br/><br/> P+:  844-867-3224",
+				"paragraph": "1001 Morehead Square Dr<br/>Suite 200<br/>Charlotte, NC<br/>28203<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "237",
-		"state": "67",
-		"label": "Cheyenne/Scotts, WY",
+		"marketId": "237",
+		"stateId": "67",
+		"statePostalCode": "WY",
+		"city": "Cheyenne/Scotts",
 		"offices": [
 			{
 				"id": "198",
 				"heading": "Cheyenne Office",
-				"paragraph": "2617 E Lincolnway<br/> Suite E<br/> Cheyenne, WY<br/> 82001<br/><br/> P+:  844-867-3224",
+				"paragraph": "2617 E Lincolnway<br/>Suite E<br/>Cheyenne, WY<br/>82001<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "83",
 				"heading": "Scottsbluff Office",
-				"paragraph": "1204 Ave B<br/> Suite 3<br/> Scottsbluff, NE<br/> 69361<br/><br/> P+:  844-867-3224",
+				"paragraph": "1204 Ave B<br/>Suite 3<br/>Scottsbluff, NE<br/>69361<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "238",
-		"state": "51",
-		"label": "Chico/Redding, CA",
+		"marketId": "238",
+		"stateId": "51",
+		"statePostalCode": "CA",
+		"city": "Chico/Redding",
 		"offices": [
 			{
 				"id": "93",
 				"heading": "Chico Office",
-				"paragraph": "1560 Humboldt Rd<br/> Suite 4<br/> Chico, CA<br/> 95928<br/><br/> P+:  844-867-3224",
+				"paragraph": "1560 Humboldt Rd<br/>Suite 4<br/>Chico, CA<br/>95928<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "96",
 				"heading": "Redding Office",
-				"paragraph": "5835 Eastside Rd<br/> <br/> Redding, CA<br/> 96001<br/><br/> P+:  844-867-3224",
+				"paragraph": "5835 Eastside Rd<br/>Redding, CA<br/>96001<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3111",
-		"state": "3165|3166|43",
-		"label": "Cincinnati, OH",
+		"marketId": "3111",
+		"stateId": "3165|3166|43",
+		"statePostalCode": "OH",
+		"city": "Cincinnati",
 		"offices": [
 			{
 				"id": "3269",
 				"heading": "Blue Ash Office",
-				"paragraph": "9825 Kenwood Rd<br/> <br/> Blue Ash, OH<br/> 45242<br/><br/> P+:  844-867-3224",
+				"paragraph": "9825 Kenwood Rd<br/>Blue Ash, OH<br/>45242<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3256",
 				"heading": "Edgewood Office",
-				"paragraph": "100 Barnwood Dr<br/> <br/> Edgewood, KY<br/> 41017<br/><br/> P+:  844-867-3224",
+				"paragraph": "100 Barnwood Dr<br/>Edgewood, KY<br/>41017<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3113",
-		"state": "3168",
-		"label": "Clarksburg, WV",
+		"marketId": "3113",
+		"stateId": "3168",
+		"statePostalCode": "WV",
+		"city": "Clarksburg",
 		"offices": [
 			{
 				"id": "3242",
 				"heading": "Fairmont Office",
-				"paragraph": "1000 Technology Dr<br/> <br/> Fairmont, WV<br/> 26554<br/><br/> P+:  844-867-3224",
+				"paragraph": "1000 Technology Dr<br/>Fairmont, WV<br/>26554<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3115",
-		"state": "3165",
-		"label": "Cleveland, OH",
+		"marketId": "3115",
+		"stateId": "3165",
+		"statePostalCode": "OH",
+		"city": "Cleveland",
 		"offices": [
 			{
 				"id": "3265",
 				"heading": "Broadview Heights Office",
-				"paragraph": "9100 S Hills Blvd<br/> Suite 250<br/> Broadview Heights, OH<br/> 44147<br/><br/> P+:  844-867-3224",
+				"paragraph": "9100 S Hills Blvd<br/>Suite 250<br/>Broadview Heights, OH<br/>44147<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3106",
-		"state": "287",
-		"label": "Columbia. SC",
+		"marketId": "3106",
+		"stateId": "287",
+		"statePostalCode": "SC",
+		"city": "Columbia",
 		"offices": [
 			{
 				"id": "3249",
 				"heading": "West Columbia Office",
-				"paragraph": "3347 Platt Springs Rd<br/> <br/> West Columbia, SC<br/> 29170<br/><br/> P+:  844-867-3224",
+				"paragraph": "3347 Platt Springs Rd<br/>West Columbia, SC<br/>29170<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3116",
-		"state": "3165",
-		"label": "Columbus, OH",
+		"marketId": "3116",
+		"stateId": "3165",
+		"statePostalCode": "OH",
+		"city": "Columbus",
 		"offices": [
 			{
 				"id": "3259",
 				"heading": "Columbus Office",
-				"paragraph": "580 N 4th St<br/> Suite 350<br/> Columbus, OH<br/> 43215<br/><br/> P+:  844-867-3224",
+				"paragraph": "580 N 4th St<br/>Suite 350<br/>Columbus, OH<br/>43215<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3257",
 				"heading": "Heath Office",
-				"paragraph": "667 Hopewell Dr<br/> <br/> Heath, OH<br/> 43056<br/><br/> P+:  844-867-3224",
+				"paragraph": "667 Hopewell Dr<br/>Heath, OH<br/>43056<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3258",
 				"heading": "Lancaster Office",
-				"paragraph": "1315 Granville Pike<br/> <br/> Lancaster, OH<br/> 43130<br/><br/> P+:  844-867-3224",
+				"paragraph": "1315 Granville Pike<br/>Lancaster, OH<br/>43130<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3117",
-		"state": "3159",
-		"label": "Corpus Christi, TX",
+		"marketId": "3117",
+		"stateId": "3159",
+		"statePostalCode": "TX",
+		"city": "Corpus Christi",
 		"offices": [
 			{
 				"id": "3283",
 				"heading": "Corpus Christi Office",
-				"paragraph": "4455 S Padre Island Dr<br/> <br/> Corpus Christi, TX<br/> 78411 <br/><br/> P+:  844-867-3224",
+				"paragraph": "4455 S Padre Island Dr<br/>Corpus Christi, TX<br/>78411<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3118",
-		"state": "3159",
-		"label": "Dallas/Ft Worth, TX",
+		"marketId": "3118",
+		"stateId": "3159",
+		"statePostalCode": "TX",
+		"city": "Dallas/Ft Worth",
 		"offices": [
 			{
 				"id": "3277",
 				"heading": "Dallas Office",
-				"paragraph": "13727 Noel Rd<br/> Suite 500<br/> Dallas, TX<br/> 75240<br/><br/> P+:  844-867-3224",
+				"paragraph": "13727 Noel Rd<br/>Suite 500<br/>Dallas, TX<br/>75240<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3119",
-		"state": "3166|3165",
-		"label": "Dayton, OH",
+		"marketId": "3119",
+		"stateId": "3166|3165",
+		"statePostalCode": "OH",
+		"city": "Dayton",
 		"offices": [
 			{
 				"id": "3270",
 				"heading": "Dayton Office",
-				"paragraph": "8087 Washington Village Dr<br/> Suite 204<br/> Dayton, OH<br/> 45458<br/><br/> P+:  844-867-3224",
+				"paragraph": "8087 Washington Village Dr<br/>Suite 204<br/>Dayton, OH<br/>45458<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "258",
-		"state": "283|284|282",
-		"label": "Duluth/Superior, MN",
+		"marketId": "258",
+		"stateId": "283|284|282",
+		"statePostalCode": "MN",
+		"city": "Duluth/Superior",
 		"offices": [
 			{
 				"id": "134",
 				"heading": "Duluth Office",
-				"paragraph": "640 Garfield Ave<br/> <br/> Duluth, MN<br/> 55802<br/><br/> P+:  844-867-3224",
+				"paragraph": "640 Garfield Ave<br/>Duluth, MN<br/>55802<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "135",
 				"heading": "International Falls Office",
-				"paragraph": "1215 3rd Ave<br/> <br/> International Falls, MN<br/> 56649<br/><br/> P+:  844-267-3224",
+				"paragraph": "1215 3rd Ave<br/>International Falls, MN<br/>56649<br> P+:  844-267-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3120",
-		"state": "3195|3159",
-		"label": "El Paso, TX",
+		"marketId": "3120",
+		"stateId": "3195|3159",
+		"statePostalCode": "TX",
+		"city": "El Paso",
 		"offices": [
 			{
 				"id": "3286",
 				"heading": "El Paso Office",
-				"paragraph": "1155 Westmoreland Dr<br/> Suite 115<br/> El Paso, TX<br/> 79925<br/><br/> P+:  844-867-3224",
+				"paragraph": "1155 Westmoreland Dr<br/>Suite 115<br/>El Paso, TX<br/>79925<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3121",
-		"state": "3158|3163",
-		"label": "Elmira, NY",
+		"marketId": "3121",
+		"stateId": "3158|3163",
+		"statePostalCode": "NY",
+		"city": "Elmira",
 		"offices": [
 			{
 				"id": "3236",
 				"heading": "Hornell Office",
-				"paragraph": "166 Main St<br/> <br/> Hornell, NY<br/> 14843<br/><br/> P+:  844-867-3224",
+				"paragraph": "166 Main St<br/>Hornell, NY<br/>14843<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3239",
 				"heading": "Horseheads Office",
-				"paragraph": "3311 S Main St<br/> <br/> Horseheads, NY<br/> 14845<br/><br/> P+:  844-867-3224",
+				"paragraph": "3311 S Main St<br/>Horseheads, NY<br/>14845<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3122",
-		"state": "3163",
-		"label": "Erie, PA",
+		"marketId": "3122",
+		"stateId": "3163",
+		"statePostalCode": "PA",
+		"city": "Erie",
 		"offices": [
 			{
 				"id": "3241",
 				"heading": "Erie Office",
-				"paragraph": "2028 Filmore Ave<br/> <br/> Erie, PA<br/> 16506<br/><br/> P+:  844-867-3224",
+				"paragraph": "2028 Filmore Ave<br/>Erie, PA<br/>16506<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "259",
-		"state": "282",
-		"label": "Flint/Saginaw, MI",
+		"marketId": "259",
+		"stateId": "282",
+		"statePostalCode": "MI",
+		"city": "Flint/Saginaw",
 		"offices": [
 			{
 				"id": "129",
 				"heading": "Saginaw Office",
-				"paragraph": "1625 Concentric Blvd<br/> <br/> Saginaw, MI<br/> 48604<br/><br/> P+:  844-867-3224",
+				"paragraph": "1625 Concentric Blvd<br/>Saginaw, MI<br/>48604<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "240",
-		"state": "227",
-		"label": "Grand Junction, CO",
+		"marketId": "240",
+		"stateId": "227",
+		"statePostalCode": "CO",
+		"city": "Grand Junction",
 		"offices": [
 			{
 				"id": "102",
 				"heading": "Grand Junction Office",
-				"paragraph": "2472 Patterson Rd<br/> Unit 10<br/> Grand Junction, CO<br/> 81505<br/><br/> P+:  844-867-3224",
+				"paragraph": "2472 Patterson Rd<br/>Unit 10<br/>Grand Junction, CO<br/>81505<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "1187",
-		"state": "282",
-		"label": "Grand Rapids, MI",
+		"marketId": "1187",
+		"stateId": "282",
+		"statePostalCode": "MI",
+		"city": "Grand Rapids",
 		"offices": [
 			{
 				"id": "124",
 				"heading": "Grand Haven Office",
-				"paragraph": "1433 Fulton St<br/> <br/> Grand Haven, MI<br/> 49417<br/><br/> P+:  844-867-3224",
+				"paragraph": "1433 Fulton St<br/>Grand Haven, MI<br/>49417<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "125",
 				"heading": "Portage Office",
-				"paragraph": "4176 Commercial Ave<br/> <br/> Portage, MI<br/> 49002<br/><br/> P+:  844-867-3224",
+				"paragraph": "4176 Commercial Ave<br/>Portage, MI<br/>49002<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "241",
-		"state": "66",
-		"label": "Great Falls, MT",
+		"marketId": "241",
+		"stateId": "66",
+		"statePostalCode": "MT",
+		"city": "Great Falls",
 		"offices": [
 			{
 				"id": "151",
 				"heading": "Great Falls Office",
-				"paragraph": "1301 11th Ave S<br/> <br/> Great Falls, MT<br/> 59405<br/><br/> P+:  844-867-3224",
+				"paragraph": "1301 11th Ave S<br/>Great Falls, MT<br/>59405<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3124",
-		"state": "284",
-		"label": "Green Bay, WI",
+		"marketId": "3124",
+		"stateId": "284",
+		"statePostalCode": "WI",
+		"city": "Green Bay",
 		"offices": [
 			{
 				"id": "3273",
 				"heading": "Appleton Office",
-				"paragraph": "3520 East Destination Drive<br/> <br/> Appleton, WI<br/> 54915<br/><br/> P+:  844-867-3224",
+				"paragraph": "3520 East Destination Drive<br/>Appleton, WI<br/>54915<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "273",
-		"state": "286|287",
-		"label": "Green/Spart/Ash, SC",
+		"marketId": "273",
+		"stateId": "286|287",
+		"statePostalCode": "SC",
+		"city": "Green/Spart/Ash",
 		"offices": [
 			{
 				"id": "160",
 				"heading": "Asheville Office",
-				"paragraph": "89 Peachtree Rd<br/> Suite 200<br/> Asheville, NC<br/> 28803<br/><br/> P+:  844-867-3224",
+				"paragraph": "89 Peachtree Rd<br/>Suite 200<br/>Asheville, NC<br/>28803<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "176",
 				"heading": "Greenville Office",
-				"paragraph": "125 The Parkway<br/> Suite 200<br/> Greenville, SC<br/> 29615<br/><br/> P+:  844-867-3224",
+				"paragraph": "125 The Parkway<br/>Suite 200<br/>Greenville, SC<br/>29615<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3125",
-		"state": "286",
-		"label": "Greenville, NC",
+		"marketId": "3125",
+		"stateId": "286",
+		"statePostalCode": "NC",
+		"city": "Greenville",
 		"offices": []
 	},
 	{
-		"id": "3127",
-		"state": "3159",
-		"label": "Harlingen, TX",
+		"marketId": "3127",
+		"stateId": "3159",
+		"statePostalCode": "TX",
+		"city": "Harlingen",
 		"offices": [
 			{
 				"id": "3284",
 				"heading": "McAllen Office",
-				"paragraph": "1400 N McColl Rd<br/> Suite 206<br/> McAllen, TX<br/> 78501<br/><br/> P+:  844-867-3224",
+				"paragraph": "1400 N McColl Rd<br/>Suite 206<br/>McAllen, TX<br/>78501<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "242",
-		"state": "66|67",
-		"label": "Helena, MT",
+		"marketId": "242",
+		"stateId": "66|67",
+		"statePostalCode": "MT",
+		"city": "Helena",
 		"offices": [
 			{
 				"id": "153",
 				"heading": "Helena Office",
-				"paragraph": "951 W Custer Ave<br/> <br/> Helena, MT<br/> 59602<br/><br/> P+:  844-867-3224",
+				"paragraph": "951 W Custer Ave<br/>Helena, MT<br/>59602<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3128",
-		"state": "",
-		"label": "Honolulu, HI",
+		"marketId": "3128",
+		"stateId": "",
+		"statePostalCode": "HI",
+		"city": "Honolulu",
 		"offices": [
 			{
 				"id": "3347",
 				"heading": "Honolulu Office",
-				"paragraph": "200 Akamainui St<br/> <br/> Mililani, HI<br/> 96789<br/><br/> P+:  844-867-3224",
+				"paragraph": "200 Akamainui St<br/>Mililani, HI<br/>96789<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "275",
-		"state": "285",
-		"label": "Huntsville/Decatur, AL",
+		"marketId": "275",
+		"stateId": "285",
+		"statePostalCode": "AL",
+		"city": "Huntsville/Decatur",
 		"offices": [
 			{
 				"id": "89",
 				"heading": "Huntsville Office",
-				"paragraph": "1500 Perimeter Pkwy NW<br/> Suite 315<br/> Huntsville, AL<br/> 35806<br/><br/> P+:  844-867-3224",
+				"paragraph": "1500 Perimeter Pkwy NW<br/>Suite 315<br/>Huntsville, AL<br/>35806<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "243",
-		"state": "67",
-		"label": "Idaho Falls/Poca, WY",
+		"marketId": "243",
+		"stateId": "67",
+		"statePostalCode": "WY",
+		"city": "Idaho Falls/Poca",
 		"offices": [
 			{
 				"id": "809",
 				"heading": "Jackson, WY Office",
-				"paragraph": "145 E Snow King Ave<br/> <br/> Jackson, WY<br/> 83001<br/><br/> P+:  844-867-3224",
+				"paragraph": "145 E Snow King Ave<br/>Jackson, WY<br/>83001<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "276",
-		"state": "48",
-		"label": "Jackson, TN",
+		"marketId": "276",
+		"stateId": "48",
+		"statePostalCode": "TN",
+		"city": "Jackson",
 		"offices": [
 			{
 				"id": "182",
 				"heading": "Jackson Office",
-				"paragraph": "913 North Pkwy<br/> Suite D<br/> Jackson, TN<br/> 38305<br/><br/> P+:  844-867-3224",
+				"paragraph": "913 North Pkwy<br/>Suite D<br/>Jackson, TN<br/>38305<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3129",
-		"state": "3206|58",
-		"label": "Kansas City, MO",
+		"marketId": "3129",
+		"stateId": "3206|58",
+		"statePostalCode": "MO",
+		"city": "Kansas City",
 		"offices": [
 			{
 				"id": "3275",
 				"heading": "Overland Park Office",
-				"paragraph": "9225 Indian Creek Pkwy<br/> <br/> Overland Park, KS<br/> 66210<br/><br/> P+:  844-867-3224",
+				"paragraph": "9225 Indian Creek Pkwy<br/>Overland Park, KS<br/>66210<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "261",
-		"state": "284",
-		"label": "La Crosse, WI",
+		"marketId": "261",
+		"stateId": "284",
+		"statePostalCode": "WI",
+		"city": "La Crosse",
 		"offices": [
 			{
 				"id": "188",
 				"heading": "Altoona Office",
-				"paragraph": "1201 McCann Dr<br/> <br/> Altoona, WI<br/> 54720<br/><br/> P+:  844-867-3224",
+				"paragraph": "1201 McCann Dr<br/>Altoona, WI<br/>54720<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "189",
 				"heading": "Onalaska Office",
-				"paragraph": "1621 Main St<br/> <br/> Onalaska, WI<br/> 54650<br/><br/> P+:  844-867-3224",
+				"paragraph": "1621 Main St<br/>Onalaska, WI<br/>54650<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3130",
-		"state": "3159",
-		"label": "Laredo, TX",
+		"marketId": "3130",
+		"stateId": "3159",
+		"statePostalCode": "TX",
+		"city": "Laredo",
 		"offices": [
 			{
 				"id": "3281",
 				"heading": "Laredo Office",
-				"paragraph": "6402 N Bartlett Ave<br/> Unit 7<br/> Laredo, TX<br/> 78041<br/><br/> P+:  844-867-3224",
+				"paragraph": "6402 N Bartlett Ave<br/>Unit 7<br/>Laredo, TX<br/>78041<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3131",
-		"state": "43",
-		"label": "Lexington, KY",
+		"marketId": "3131",
+		"stateId": "43",
+		"statePostalCode": "KY",
+		"city": "Lexington",
 		"offices": [
 			{
 				"id": "3255",
 				"heading": "Lexington Office",
-				"paragraph": "101 Prosperous Pl<br/> <br/> Lexington, KY<br/> 40509<br/><br/> P+:  844-867-3224",
+				"paragraph": "101 Prosperous Pl<br/>Lexington, KY<br/>40509<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3132",
-		"state": "3165",
-		"label": "Lima, OH",
+		"marketId": "3132",
+		"stateId": "3165",
+		"statePostalCode": "OH",
+		"city": "Lima",
 		"offices": [
 			{
 				"id": "3271",
 				"heading": "Lima Office",
-				"paragraph": "3656 Allentown Rd<br/> <br/> Lima, OH<br/> 45807<br/><br/> P+:  844-867-3224",
+				"paragraph": "3656 Allentown Rd<br/>Lima, OH<br/>45807<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "244",
-		"state": "54",
-		"label": "Linc/Hast/Kearn, NE",
+		"marketId": "244",
+		"stateId": "54",
+		"statePostalCode": "NE",
+		"city": "Linc/Hast/Kearn",
 		"offices": [
 			{
 				"id": "166",
 				"heading": "Grand Island Office",
-				"paragraph": "205 N Webb Rd<br/> <br/> Grand Island, NE<br/> 68803<br/><br/> P+:  844-867-3224",
+				"paragraph": "205 N Webb Rd<br/>Grand Island, NE<br/>68803<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "167",
 				"heading": "Hastings Office",
-				"paragraph": "2303 W 2nd St<br/> <br/> Hastings, NE<br/> 68901<br/><br/> P+:  844-867-3224",
+				"paragraph": "2303 W 2nd St<br/>Hastings, NE<br/>68901<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "168",
 				"heading": "Kearney Office",
-				"paragraph": "809 Central Ave<br/> <br/> Kearney, NE<br/> 68847<br/><br/> P+:  844-867-3224",
+				"paragraph": "809 Central Ave<br/>Kearney, NE<br/>68847<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3133",
-		"state": "54",
-		"label": "Lincoln, NE",
+		"marketId": "3133",
+		"stateId": "54",
+		"statePostalCode": "NE",
+		"city": "Lincoln",
 		"offices": [
 			{
 				"id": "3276",
 				"heading": "Lincoln Office",
-				"paragraph": "4645 Normal Blvd<br/> <br/> Lincoln, NE<br/> 68506<br/><br/> P+:  844-867-3224",
+				"paragraph": "4645 Normal Blvd<br/>Lincoln, NE<br/>68506<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3134",
-		"state": "51",
-		"label": "Los Angeles, CA",
+		"marketId": "3134",
+		"stateId": "51",
+		"statePostalCode": "CA",
+		"city": "Los Angeles",
 		"offices": [
 			{
 				"id": "3296",
 				"heading": "Burbank Blvd Office",
-				"paragraph": "21800 Burbank Blvd<br/> <br/> Los Angeles, CA<br/> 91367<br/><br/> P+:  844-867-3224",
+				"paragraph": "21800 Burbank Blvd<br/>Los Angeles, CA<br/>91367<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3306",
 				"heading": "Camarillo Office",
-				"paragraph": "751 E Daily Dr<br/> <br/> Camarillo, CA<br/> 93010<br/><br/> P+:  844-867-3224",
+				"paragraph": "751 E Daily Dr<br/>Camarillo, CA<br/>93010<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3291",
 				"heading": "Cypress Office",
-				"paragraph": "6021 Katella Ave<br/> Suite 100<br/> Cypress, CA<br/> 90630<br/><br/> P+:  844-867-3224",
+				"paragraph": "6021 Katella Ave<br/>Suite 100<br/>Cypress, CA<br/>90630<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3290",
 				"heading": "El Segundo Office",
-				"paragraph": "2345 Alaska Ave<br/> <br/> El Segundo, CA<br/> 90245<br/><br/> P+:  844-867-3224",
+				"paragraph": "2345 Alaska Ave<br/>El Segundo, CA<br/>90245<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3304",
 				"heading": "Laguna Hills Office",
-				"paragraph": "23046 Avenida De La Carlota<br/> #400<br/> Laguna Hills, CA<br/> 92653<br/><br/> P+:  844-867-3224",
+				"paragraph": "23046 Avenida De La Carlota<br/>#400<br/>Laguna Hills, CA<br/>92653<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3292",
 				"heading": "Long Beach Office",
-				"paragraph": "5000 E Spring St<br/> Suite 360<br/> Long Beach, CA<br/> 90815<br/><br/> P+:  844-867-3224",
+				"paragraph": "5000 E Spring St<br/>Suite 360<br/>Long Beach, CA<br/>90815<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3297",
 				"heading": "Ontario Office",
-				"paragraph": "4100 E Jurupa St<br/> <br/> Ontario, CA<br/> 91761<br/><br/> P+:  844-867-3224",
+				"paragraph": "4100 E Jurupa St<br/>Ontario, CA<br/>91761<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3308",
 				"heading": "Palmdale Office",
-				"paragraph": "39115 Trade Center Dr<br/> Suite # 215<br/> Palmdale, CA<br/> 93551<br/><br/> P+:  844-867-3224",
+				"paragraph": "39115 Trade Center Dr<br/>Suite # 215<br/>Palmdale, CA<br/>93551<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3293",
 				"heading": "Pasadena Office",
-				"paragraph": "199 S Los Robles Ave<br/> Suite 770<br/> Pasadena, CA<br/> 91101<br/><br/> P+:  844-867-3224",
+				"paragraph": "199 S Los Robles Ave<br/>Suite 770<br/>Pasadena, CA<br/>91101<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3301",
 				"heading": "Redlands Office",
-				"paragraph": "1869 W Redlands Blvd<br/> <br/> Redlands, CA<br/> 92373<br/><br/> P+:  844-867-3224",
+				"paragraph": "1869 W Redlands Blvd<br/>Redlands, CA<br/>92373<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3305",
 				"heading": "Santa Anna Office",
-				"paragraph": "6 Hutton Centre Dr<br/> #150<br/> Santa Ana, CA<br/> 92707<br/><br/> P+:  844-867-3224",
+				"paragraph": "6 Hutton Centre Dr<br/>#150<br/>Santa Ana, CA<br/>92707<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3288",
 				"heading": "Santa Monica Blvd Office",
-				"paragraph": "11150 Santa Monica Blvd<br/> Suite 1000<br/> Los Angeles, CA<br/> 90025<br/><br/> P+:  844-867-3224",
+				"paragraph": "11150 Santa Monica Blvd<br/>Suite 1000<br/>Los Angeles, CA<br/>90025<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3289",
 				"heading": "Sunset Blvd Office",
-				"paragraph": "6430 Sunset Blvd<br/> <br/> Los Angeles, CA<br/> 90028<br/><br/> P+:  844-867-3224",
+				"paragraph": "6430 Sunset Blvd<br/>Los Angeles, CA<br/>90028<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3303",
 				"heading": "Temecula Office",
-				"paragraph": "27555 Ynez Rd<br/> Suite 203<br/> Temecula, CA<br/> 92591<br/><br/> P+:  844-867-3224",
+				"paragraph": "27555 Ynez Rd<br/>Suite 203<br/>Temecula, CA<br/>92591<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3295",
 				"heading": "Valencia Office",
-				"paragraph": "27433 Tourney Rd<br/> Suite 100<br/> Santa Clarita, CA<br/> 91355<br/><br/> P+:  844-867-3224",
+				"paragraph": "27433 Tourney Rd<br/>Suite 100<br/>Santa Clarita, CA<br/>91355<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3302",
 				"heading": "Victorville Office",
-				"paragraph": "14344 Cajon Ave<br/> Suite 1<br/> Victorville, CA<br/> 92392<br/><br/> P+:  84-4867-3224",
+				"paragraph": "14344 Cajon Ave<br/>Suite 1<br/>Victorville, CA<br/>92392<br> P+:  84-4867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3135",
-		"state": "43|3166",
-		"label": "Louisville, KY",
+		"marketId": "3135",
+		"stateId": "43|3166",
+		"statePostalCode": "KY",
+		"city": "Louisville",
 		"offices": [
 			{
 				"id": "3254",
 				"heading": "Commerce Crossing Office",
-				"paragraph": "4701 Commerce Crossings Dr<br/> <br/> Louisville, KY<br/> 40229<br/><br/> P+:  844-867-3224",
+				"paragraph": "4701 Commerce Crossings Dr<br/>Louisville, KY<br/>40229<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3253",
 				"heading": "Ormsby Park Office",
-				"paragraph": "10350 Ormsby Park Pl<br/> <br/> Louisville, KY<br/> 40223<br/><br/> P+:  844-867-3224",
+				"paragraph": "10350 Ormsby Park Pl<br/>Louisville, KY<br/>40223<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "262",
-		"state": "284",
-		"label": "Madison, WI",
+		"marketId": "262",
+		"stateId": "284",
+		"statePostalCode": "WI",
+		"city": "Madison",
 		"offices": [
 			{
 				"id": "190",
 				"heading": "Janesville Office",
-				"paragraph": "519 Midland Ct<br/> Suite 1<br/> Janesville, WI<br/> 53546<br/><br/> P+:  844-867-3224",
+				"paragraph": "519 Midland Ct<br/>Suite 1<br/>Janesville, WI<br/>53546<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "193",
 				"heading": "Madison Office",
-				"paragraph": "1241 John Q Hammons Dr<br/> Suite 502<br/> Madison, WI<br/> 53717<br/><br/> P+:  844-867-3224",
+				"paragraph": "1241 John Q Hammons Dr<br/>Suite 502<br/>Madison, WI<br/>53717<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "263",
-		"state": "283",
-		"label": "Mankato, MN",
+		"marketId": "263",
+		"stateId": "283",
+		"statePostalCode": "MN",
+		"city": "Mankato",
 		"offices": [
 			{
 				"id": "818",
 				"heading": "Rosemount, MN Office",
-				"paragraph": "15025 Glazier Ave<br/> Suite 102<br/> Apple Valley, MN<br/> 55124<br/><br/> P+:  844-867-3224",
+				"paragraph": "15025 Glazier Ave<br/>Suite 102<br/>Apple Valley, MN<br/>55124<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "264",
-		"state": "282",
-		"label": "Marquette, MI",
+		"marketId": "264",
+		"stateId": "282",
+		"statePostalCode": "MI",
+		"city": "Marquette",
 		"offices": [
 			{
 				"id": "126",
 				"heading": "Marquette Office",
-				"paragraph": "700 W Washington St<br/> Suite A<br/> Marquette, MI<br/> 49855<br/><br/> P+:  844-867-3224",
+				"paragraph": "700 W Washington St<br/>Suite A<br/>Marquette, MI<br/>49855<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "245",
-		"state": "233",
-		"label": "Medford/Klamath, OR",
+		"marketId": "245",
+		"stateId": "233",
+		"statePostalCode": "OR",
+		"city": "Medford/Klamath",
 		"offices": [
 			{
 				"id": "173",
 				"heading": "Medford Office",
-				"paragraph": "113 S Grape St<br/> <br/> Medford, OR<br/> 97501<br/><br/> P+:  844-867-3224",
+				"paragraph": "113 S Grape St<br/>Medford, OR<br/>97501<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "265",
-		"state": "284",
-		"label": "Milwaukee, WI",
+		"marketId": "265",
+		"stateId": "284",
+		"statePostalCode": "WI",
+		"city": "Milwaukee",
 		"offices": [
 			{
 				"id": "195",
 				"heading": "Sheboygan Office",
-				"paragraph": "1623 Broadway Ave<br/> <br/> Sheboygan, WI<br/> 53081<br/><br/> P+:  844-867-3224",
+				"paragraph": "1623 Broadway Ave<br/>Sheboygan, WI<br/>53081<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3136",
-		"state": "284",
-		"label": "Milwaukee, WI",
+		"marketId": "3136",
+		"stateId": "284",
+		"statePostalCode": "WI",
+		"city": "Milwaukee",
 		"offices": [
 			{
 				"id": "3272",
 				"heading": "Milwaukee Office",
-				"paragraph": "1320 N Doctor M.L.K. Dr<br/> <br/> Milwaukee, WI<br/> 53212<br/><br/> P+:  844-867-3224",
+				"paragraph": "1320 N Doctor M.L.K. Dr<br/>Milwaukee, WI<br/>53212<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "266",
-		"state": "283|284",
-		"label": "Minn/St. Paul, MN",
+		"marketId": "266",
+		"stateId": "283|284",
+		"statePostalCode": "MN",
+		"city": "Minn/St. Paul",
 		"offices": [
 			{
 				"id": "138",
 				"heading": "Buffalo Office",
-				"paragraph": "101 6th St NE<br/> <br/> Buffalo, MN<br/> 55313<br/><br/> P+:  844-867-3224",
+				"paragraph": "101 6th St NE<br/>Buffalo, MN<br/>55313<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "139",
 				"heading": "Waite Park / St. Cloud Office",
-				"paragraph": "400 Sundial Dr<br/> <br/> Waite Park, MN<br/> 56387<br/><br/> P+:  844-867-3224",
+				"paragraph": "400 Sundial Dr<br/>Waite Park, MN<br/>56387<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "246",
-		"state": "66",
-		"label": "Missoula, MT",
+		"marketId": "246",
+		"stateId": "66",
+		"statePostalCode": "MT",
+		"city": "Missoula",
 		"offices": [
 			{
 				"id": "155",
 				"heading": "Kalispell Office",
-				"paragraph": "333 1st Ave E<br/> <br/> Kalispell, MT<br/> 59901<br/><br/> P+:  844-867-3224",
+				"paragraph": "333 1st Ave E<br/>Kalispell, MT<br/>59901<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "157",
 				"heading": "Missoula Office",
-				"paragraph": "1724 Fairview Ave<br/> Suite B<br/> Missoula, MT<br/> 59801<br/><br/> P+:  844-867-3224",
+				"paragraph": "1724 Fairview Ave<br/>Suite B<br/>Missoula, MT<br/>59801<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "277",
-		"state": "285",
-		"label": "Montgomery, AL",
+		"marketId": "277",
+		"stateId": "285",
+		"statePostalCode": "AL",
+		"city": "Montgomery",
 		"offices": [
 			{
 				"id": "91",
 				"heading": "Montgomery Office",
-				"paragraph": "3321 Kessinger Dr<br/> <br/> Montgomery, AL<br/> 36116<br/><br/> P+:  844-867-3224",
+				"paragraph": "3321 Kessinger Dr<br/>Montgomery, AL<br/>36116<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3123",
-		"state": "287|286",
-		"label": "Myrtle Beach-Florence, SC",
+		"marketId": "3123",
+		"stateId": "287|286",
+		"statePostalCode": "SC",
+		"city": "Myrtle Beach-Florence",
 		"offices": [
 			{
 				"id": "3250",
 				"heading": "Florence Office",
-				"paragraph": "3235 S Cashua Dr<br/> <br/> Florence, SC<br/> 29501<br/><br/> P+:  844-867-3224",
+				"paragraph": "3235 S Cashua Dr<br/>Florence, SC<br/>29501<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3251",
 				"heading": "Myrtle Beach Office",
-				"paragraph": "2024 Corporate Centre Dr<br/> <br/> Myrtle Beach, SC<br/> 29577<br/><br/> P+:  844-867-3224",
+				"paragraph": "2024 Corporate Centre Dr<br/>Myrtle Beach, SC<br/>29577<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3137",
-		"state": "3158|3163",
-		"label": "New York, NY",
+		"marketId": "3137",
+		"stateId": "3158|3163",
+		"statePostalCode": "NY",
+		"city": "New York",
 		"offices": [
 			{
 				"id": "3222",
 				"heading": "Broadway Office",
-				"paragraph": "1633 Broadway<br/> 39th Floor<br/> New York, NY<br/> 10019<br/><br/> P+:  844-867-3224",
+				"paragraph": "1633 Broadway<br/>39th Floor<br/>New York, NY<br/>10019<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3225",
 				"heading": "Middletown Office",
-				"paragraph": "90 Crystal Run Rd<br/> Suite 301<br/> Middletown, NY<br/> 10941<br/><br/> P+:  844-867-3224",
+				"paragraph": "90 Crystal Run Rd<br/>Suite 301<br/>Middletown, NY<br/>10941<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3221",
 				"heading": "Palisades Park Office",
-				"paragraph": "200 Roosevelt Pl<br/> <br/> Palisades Park, NJ<br/> 07650<br/><br/> P+:  844-867-3224",
+				"paragraph": "200 Roosevelt Pl<br/>Palisades Park, NJ<br/>07650<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3223",
 				"heading": "Rockefeller Plaza Office",
-				"paragraph": "75 Rockefeller Plaza<br/> <br/> New York, NY<br/> 10019<br/><br/> P+:  844-867-3224",
+				"paragraph": "75 Rockefeller Plaza<br/>New York, NY<br/>10019<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3224",
 				"heading": "Staten Island Office",
-				"paragraph": "900 South Ave<br/> Suite 101<br/> Staten Island, NY<br/> 10314<br/><br/> P+:  844-867-3224",
+				"paragraph": "900 South Ave<br/>Suite 101<br/>Staten Island, NY<br/>10314<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3312",
-		"state": "286",
-		"label": "Norfolk, NC",
+		"marketId": "3312",
+		"stateId": "286",
+		"statePostalCode": "NC",
+		"city": "Norfolk",
 		"offices": []
 	},
 	{
-		"id": "279",
-		"state": "286",
-		"label": "Norfolk, VA",
+		"marketId": "279",
+		"stateId": "286",
+		"statePostalCode": "VA",
+		"city": "Norfolk",
 		"offices": [
 			{
 				"id": "164",
 				"heading": "Nags Head Office",
-				"paragraph": "2400 S Virginia Dare Trail<br/> <br/> Nags Head, NC<br/> 27959<br/><br/> P+:  844-867-3224",
+				"paragraph": "2400 S Virginia Dare Trail<br/>Nags Head, NC<br/>27959<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "247",
-		"state": "54",
-		"label": "North Platte, NE",
+		"marketId": "247",
+		"stateId": "54",
+		"statePostalCode": "NE",
+		"city": "North Platte",
 		"offices": [
 			{
 				"id": "812",
 				"heading": "North Platte Office",
-				"paragraph": "601 E Walker Rd<br/> <br/> North Platte, NE<br/> 69101<br/><br/> P+:  844-867-3224",
+				"paragraph": "601 E Walker Rd<br/>North Platte, NE<br/>69101<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "248",
-		"state": "54",
-		"label": "Omaha, NE",
+		"marketId": "248",
+		"stateId": "54",
+		"statePostalCode": "NE",
+		"city": "Omaha",
 		"offices": [
 			{
 				"id": "817",
 				"heading": "Omaha Office",
-				"paragraph": "601 E Walker Rd<br/> <br/> North Platte, NE<br/> 69101<br/><br/> P+:  844-867-3224",
+				"paragraph": "601 E Walker Rd<br/>North Platte, NE<br/>69101<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3138",
-		"state": "",
-		"label": "Omaha, NE",
+		"marketId": "3138",
+		"stateId": "",
+		"statePostalCode": "NE",
+		"city": "Omaha",
 		"offices": []
 	},
 	{
-		"id": "3313",
-		"state": "54",
-		"label": "Omaha, NE",
+		"marketId": "3313",
+		"stateId": "54",
+		"statePostalCode": "NE",
+		"city": "Omaha",
 		"offices": []
 	},
 	{
-		"id": "3389",
-		"state": "3387",
-		"label": "Orlando, FL",
+		"marketId": "3389",
+		"stateId": "3387",
+		"statePostalCode": "FL",
+		"city": "Orlando",
 		"offices": [
 			{
 				"id": "3395",
 				"heading": "Lake County Office",
-				"paragraph": "1300 Citizens Blvd<br/> Suite #390<br/> Leesburg, FL<br/> 34748<br/><br/> P+:  844-867-3224",
+				"paragraph": "1300 Citizens Blvd<br/>Suite #390<br/>Leesburg, FL<br/>34748<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3392",
 				"heading": "Melbourne Office",
-				"paragraph": "720 Magnolia Ave<br/> <br/> Melbourne, FL<br/> 32935<br/><br/> P+:  844-867-3224",
+				"paragraph": "720 Magnolia Ave<br/>Melbourne, FL<br/>32935<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3394",
 				"heading": "Orlando Office",
-				"paragraph": "2251 Lucien Way<br/> <br/> Maitland, FL<br/> 32751<br/><br/> P+:  844-867-3224",
+				"paragraph": "2251 Lucien Way<br/>Maitland, FL<br/>32751<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3396",
 				"heading": "Volusia Office",
-				"paragraph": "1475 S Nova Rd<br/> <br/> Daytona Beach, FL<br/> 32114<br/><br/> P+:  844-867-3224",
+				"paragraph": "1475 S Nova Rd<br/>Daytona Beach, FL<br/>32114<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "249",
-		"state": "58|60|43",
-		"label": "Pad/Cape Gir/Har, MO",
+		"marketId": "249",
+		"stateId": "58|60|43",
+		"statePostalCode": "MO",
+		"city": "Pad/Cape Gir/Har",
 		"offices": [
 			{
 				"id": "803",
 				"heading": "Cape Girardeau Office",
-				"paragraph": "1650 N Kingshighway<br/> Suite 305<br/> Cape Girardeau, MO<br/> 63701<br/><br/> P+:  844-867-3224",
+				"paragraph": "1650 N Kingshighway<br/>Suite 305<br/>Cape Girardeau, MO<br/>63701<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "107",
 				"heading": "Carbondale Office",
-				"paragraph": "2250 Reed Station Pkwy<br/> Suite 101<br/> Carbondale, IL<br/> 62901<br/><br/> P+:  844-867-3224",
+				"paragraph": "2250 Reed Station Pkwy<br/>Suite 101<br/>Carbondale, IL<br/>62901<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "2964",
 				"heading": "Paducah Office",
-				"paragraph": "2964 Jackson St<br/> Suite 3<br/> Paducah, KY<br/> 42003<br/><br/> P+:  844-867-3224",
+				"paragraph": "2964 Jackson St<br/>Suite 3<br/>Paducah, KY<br/>42003<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3139",
-		"state": "51",
-		"label": "Palm Springs, CA",
+		"marketId": "3139",
+		"stateId": "51",
+		"statePostalCode": "CA",
+		"city": "Palm Springs",
 		"offices": [
 			{
 				"id": "3299",
 				"heading": "Palm Desert Office",
-				"paragraph": "73061 Fred Waring Dr<br/> <br/> Palm Desert, CA<br/> 92260<br/><br/> P+:  844-867-3224",
+				"paragraph": "73061 Fred Waring Dr<br/>Palm Desert, CA<br/>92260<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3140",
-		"state": "3160",
-		"label": "Portland, ME",
+		"marketId": "3140",
+		"stateId": "3160",
+		"statePostalCode": "ME",
+		"city": "Portland",
 		"offices": [
 			{
 				"id": "3219",
 				"heading": "Augusta, ME Office",
-				"paragraph": "264 Civic Center Dr<br/> Suite 1C<br/> Augusta, ME<br/> 04330<br/><br/> P+:  844-867-3224",
+				"paragraph": "264 Civic Center Dr<br/>Suite 1C<br/>Augusta, ME<br/>04330<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3218",
 				"heading": "Portland, ME Office",
-				"paragraph": "477 Congress St<br/> 12th Floor<br/> Portland, ME<br/> 04101<br/><br/> P+:  844-867-3224",
+				"paragraph": "477 Congress St<br/>12th Floor<br/>Portland, ME<br/>04101<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3141",
-		"state": "3160",
-		"label": "Presque Isle, ME",
+		"marketId": "3141",
+		"stateId": "3160",
+		"statePostalCode": "ME",
+		"city": "Presque Isle",
 		"offices": [
 			{
 				"id": "3220",
 				"heading": "Pesque Isle Office",
-				"paragraph": "67 Industrial St<br/> <br/> Presque Isle, ME<br/> 04769<br/><br/> P+:  844-867-3224",
+				"paragraph": "67 Industrial St<br/>Presque Isle, ME<br/>04769<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "250",
-		"state": "58|60",
-		"label": "Quincy/Hannibal, MO",
+		"marketId": "250",
+		"stateId": "58|60",
+		"statePostalCode": "MO",
+		"city": "Quincy/Hannibal",
 		"offices": [
 			{
 				"id": "579",
 				"heading": "Quincy/Hannibal Office",
-				"paragraph": "2930 State St<br/> <br/> Quincy, IL<br/> 62301<br/><br/> P+:  844-867-3224",
+				"paragraph": "2930 State St<br/>Quincy, IL<br/>62301<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3142",
-		"state": "286",
-		"label": "Raleigh-Durham, NC",
+		"marketId": "3142",
+		"stateId": "286",
+		"statePostalCode": "NC",
+		"city": "Raleigh-Durham",
 		"offices": [
 			{
 				"id": "3247",
 				"heading": "Fayetteville Office",
-				"paragraph": "1333 Morganton Rd<br/> Suite C<br/> Fayetteville, NC<br/> 28305<br/><br/> P+:  844-867-3224",
+				"paragraph": "1333 Morganton Rd<br/>Suite C<br/>Fayetteville, NC<br/>28305<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3244",
 				"heading": "Morrisville Office",
-				"paragraph": "101 Innovation Ave<br/> Suite 100<br/> Morrisville, NC<br/> 27560<br/><br/> P+:  844-867-3224",
+				"paragraph": "101 Innovation Ave<br/>Suite 100<br/>Morrisville, NC<br/>27560<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "252",
-		"state": "50|51",
-		"label": "Reno, NV",
+		"marketId": "252",
+		"stateId": "50|51",
+		"statePostalCode": "NV",
+		"city": "Reno",
 		"offices": [
 			{
 				"id": "171",
 				"heading": "Reno Office",
-				"paragraph": "9335 Prototype Dr<br/> <br/> Reno, NV<br/> 89521<br/><br/> P+:  844-867-3224",
+				"paragraph": "9335 Prototype Dr<br/>Reno, NV<br/>89521<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "267",
-		"state": "283",
-		"label": "Roch/Mas Cty/Aus, MN",
+		"marketId": "267",
+		"stateId": "283",
+		"statePostalCode": "MN",
+		"city": "Roch/Mas Cty/Aus",
 		"offices": [
 			{
 				"id": "136",
 				"heading": "Rochester Office",
-				"paragraph": "3993 Heritage Pl NW<br/> <br/> Rochester, MN<br/> 55901<br/><br/> P+:  844-867-3224",
+				"paragraph": "3993 Heritage Pl NW<br/>Rochester, MN<br/>55901<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3143",
-		"state": "3158",
-		"label": "Rochester, NY",
+		"marketId": "3143",
+		"stateId": "3158",
+		"statePostalCode": "NY",
+		"city": "Rochester",
 		"offices": [
 			{
 				"id": "3235",
 				"heading": "Pittsford Office",
-				"paragraph": "1250 Pittsford Victor Rd<br/> Suite 220<br/> Pittsford, NY<br/> 14534<br/><br/> P+:  844-867--3224",
+				"paragraph": "1250 Pittsford Victor Rd<br/>Suite 220<br/>Pittsford, NY<br/>14534<br> P+:  844-867--3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "254",
-		"state": "51",
-		"label": "Sacramento/Stktn, CA",
+		"marketId": "254",
+		"stateId": "51",
+		"statePostalCode": "CA",
+		"city": "Sacramento/Stktn",
 		"offices": []
 	},
 	{
-		"id": "3144",
-		"state": "3159",
-		"label": "San Antonio, TX",
+		"marketId": "3144",
+		"stateId": "3159",
+		"statePostalCode": "TX",
+		"city": "San Antonio",
 		"offices": [
 			{
 				"id": "3282",
 				"heading": "San Antonio Office",
-				"paragraph": "900 Arion Pkwy<br/> Suite 101<br/> San Antonio, TX<br/> 78216<br/><br/> P+:  844-867-3224",
+				"paragraph": "900 Arion Pkwy<br/>Suite 101<br/>San Antonio, TX<br/>78216<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "253",
-		"state": "51",
-		"label": "Santa Barbara/Santa Maria, CA",
+		"marketId": "253",
+		"stateId": "51",
+		"statePostalCode": "CA",
+		"city": "Santa Barbara/Santa Maria",
 		"offices": [
 			{
 				"id": "94",
 				"heading": "Irwindale Office",
-				"paragraph": "4781 Irwindale Ave<br/> <br/> Irwindale, CA<br/> 91706<br/><br/> P+:  844-867-3224",
+				"paragraph": "4781 Irwindale Ave<br/>Irwindale, CA<br/>91706<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "95",
 				"heading": "Los Angeles Office",
-				"paragraph": "11111 Santa Monica Blvd<br/> Suite 2170<br/> LA, CA<br/> 90025<br/><br/> P+:  844-867-3224",
+				"paragraph": "11111 Santa Monica Blvd<br/>Suite 2170<br/>LA, CA<br/>90025<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "97",
 				"heading": "San Luis Obispo Office",
-				"paragraph": "181 Tank Farm Rd<br/> Suite 210 and 220<br/> San Luis Obispo, CA<br/> 93401<br/><br/> P+:  844-867-3224",
+				"paragraph": "181 Tank Farm Rd<br/>Suite 210 and 220<br/>San Luis Obispo, CA<br/>93401<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "802",
 				"heading": "Santa Barbara Office",
-				"paragraph": "1919 State St<br/> <br/> Santa Barbara, CA<br/> 93101<br/><br/> P+:  844-867-3224",
+				"paragraph": "1919 State St<br/>Santa Barbara, CA<br/>93101<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3145",
-		"state": "287",
-		"label": "Savannah, GA",
+		"marketId": "3145",
+		"stateId": "287",
+		"statePostalCode": "GA",
+		"city": "Savannah",
 		"offices": [
 			{
 				"id": "3252",
 				"heading": "Bluffton Office",
-				"paragraph": "26 Okatie Maintenance Yd<br/> <br/> Okatie, SC<br/> 29909<br/><br/> P+:  844-867-3224",
+				"paragraph": "26 Okatie Maintenance Yd<br/>Okatie, SC<br/>29909<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "814",
-		"state": "58|60",
-		"label": "St. Louis, MO",
+		"marketId": "814",
+		"stateId": "58|60",
+		"statePostalCode": "MO",
+		"city": "St. Louis",
 		"offices": [
 			{
 				"id": "816",
 				"heading": "Fairview Heights Office",
-				"paragraph": "16 Executive Dr<br/> Suite 220<br/> Fairview Heights, IL<br/> 62208<br/><br/> P+:  844-867-3224",
+				"paragraph": "16 Executive Dr<br/>Suite 220<br/>Fairview Heights, IL<br/>62208<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "147",
 				"heading": "St. Louis Office",
-				"paragraph": "1650 Des Peres Rd<br/> Suite 300<br/> St Louis, MO<br/> 63131<br/><br/> P+:  844-867-3224",
+				"paragraph": "1650 Des Peres Rd<br/>Suite 300<br/>St Louis, MO<br/>63131<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3146",
-		"state": "3158",
-		"label": "Syracuse, NY",
+		"marketId": "3146",
+		"stateId": "3158",
+		"statePostalCode": "NY",
+		"city": "Syracuse",
 		"offices": [
 			{
 				"id": "3240",
 				"heading": "Ithaca Office",
-				"paragraph": "517 W State St<br/> <br/> Ithaca, NY<br/> 14850<br/><br/> P+:  844-867-3224",
+				"paragraph": "517 W State St<br/>Ithaca, NY<br/>14850<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3229",
 				"heading": "Syracuse Office",
-				"paragraph": "815 Erie Blvd E<br/> <br/> Syracuse, NY<br/> 13210<br/><br/> P+:  844-867-3224",
+				"paragraph": "815 Erie Blvd E<br/>Syracuse, NY<br/>13210<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3397",
-		"state": "3387",
-		"label": "Tampa, FL",
+		"marketId": "3397",
+		"stateId": "3387",
+		"statePostalCode": "FL",
+		"city": "Tampa",
 		"offices": [
 			{
 				"id": "3399",
 				"heading": "Hillsborough Office",
-				"paragraph": "4400 W Dr M.L.K. Jr Blvd<br/> <br/> Tampa, FL<br/> 33614<br/><br/> P+:  844-867-3224",
+				"paragraph": "4400 W Dr M.L.K. Jr Blvd<br/>Tampa, FL<br/>33614<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3401",
 				"heading": "Manatee Office",
-				"paragraph": "5413 FL-64<br/> <br/> Bradenton, FL<br/> 34208<br/><br/> P+:  844-867-3224",
+				"paragraph": "5413 FL-64<br/>Bradenton, FL<br/>34208<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3402",
 				"heading": "Pasco Office",
-				"paragraph": "10555 Moon Lake Rd<br/> <br/> New Port Richey, FL<br/> 34654<br/><br/> P+:  844-867-3224",
+				"paragraph": "10555 Moon Lake Rd<br/>New Port Richey, FL<br/>34654<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3403",
 				"heading": "Pinellas Office",
-				"paragraph": "700 Carillon Pkwy<br/> <br/> St. Petersburg, FL<br/> 33716<br/><br/> P+:  844-867-3224",
+				"paragraph": "700 Carillon Pkwy<br/>St. Petersburg, FL<br/>33716<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3405",
 				"heading": "Polk Office",
-				"paragraph": "1004 US-92<br/> <br/> Auburndale, FL<br/> 33823<br/><br/> P+:  844-867-3224",
+				"paragraph": "1004 US-92<br/>Auburndale, FL<br/>33823<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3147",
-		"state": "3165",
-		"label": "Toledo, OH",
+		"marketId": "3147",
+		"stateId": "3165",
+		"statePostalCode": "OH",
+		"city": "Toledo",
 		"offices": [
 			{
 				"id": "3260",
 				"heading": "Perrysburg Office",
-				"paragraph": "3230 Levis Commons Blvd<br/> <br/> Perrysburg, OH<br/> 43551<br/><br/> P+:  844-867-3224",
+				"paragraph": "3230 Levis Commons Blvd<br/>Perrysburg, OH<br/>43551<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "269",
-		"state": "282",
-		"label": "Trav City/Cadillac, MI",
+		"marketId": "269",
+		"stateId": "282",
+		"statePostalCode": "MI",
+		"city": "Trav City/Cadillac",
 		"offices": [
 			{
 				"id": "130",
 				"heading": "Traverse City Office",
-				"paragraph": "1392 Trade Centre Dr<br/> <br/> Traverse City, MI<br/> 49696<br/><br/> P+:  844-867-3224",
+				"paragraph": "1392 Trade Centre Dr<br/>Traverse City, MI<br/>49696<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "280",
-		"state": "48",
-		"label": "Tri-Cities TN-VA",
+		"marketId": "280",
+		"stateId": "48",
+		"statePostalCode": "TN",
+		"city": "Tri-Cities",
 		"offices": [
 			{
 				"id": "181",
 				"heading": "Kingsport Office",
-				"paragraph": "10453 Wallace Alley St<br/> <br/> Kingsport, TN<br/> 37663<br/><br/> P+:  844-867-3224",
+				"paragraph": "10453 Wallace Alley St<br/>Kingsport, TN<br/>37663<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3148",
-		"state": "3158",
-		"label": "Utica, NY",
+		"marketId": "3148",
+		"stateId": "3158",
+		"statePostalCode": "NY",
+		"city": "Utica",
 		"offices": [
 			{
 				"id": "3232",
 				"heading": "Oneonta Office",
-				"paragraph": "123 Corporate Dr<br/> <br/> Oneonta, NY<br/> 13820<br/><br/> P+:  844-867-3224",
+				"paragraph": "123 Corporate Dr<br/>Oneonta, NY<br/>13820<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3583",
 				"heading": "Utica Office",
-				"paragraph": "1002 Firehouse Rd<br/> <br/> Utica, NY<br/> 13502<br/><br/> P+:  844-867-3224",
+				"paragraph": "1002 Firehouse Rd<br/>Utica, NY<br/>13502<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "1936",
-		"state": "1937|284",
-		"label": "Viroqua",
+		"marketId": "1936",
+		"stateId": "1937|284",
+		"city": "Viroqua",
+		"statePostalCode": "WI",
 		"offices": []
 	},
 	{
-		"id": "3149",
-		"state": "3159",
-		"label": "Waco, TX",
+		"marketId": "3149",
+		"stateId": "3159",
+		"statePostalCode": "TX",
+		"city": "Waco",
 		"offices": [
 			{
 				"id": "3278",
 				"heading": "Harker Heights Office",
-				"paragraph": "100 W Central Texas Expy<br/> Suite 206<br/> Harker Heights, TX<br/> 76548<br/><br/> P+:  844-867-3224",
+				"paragraph": "100 W Central Texas Expy<br/>Suite 206<br/>Harker Heights, TX<br/>76548<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3279",
 				"heading": "Waco Office",
-				"paragraph": "215 Factory Dr<br/> <br/> Waco, TX<br/> 76710<br/><br/> P+:  844-867-3224",
+				"paragraph": "215 Factory Dr<br/>Waco, TX<br/>76710<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3150",
-		"state": "3158",
-		"label": "Watertown, NY",
+		"marketId": "3150",
+		"stateId": "3158",
+		"statePostalCode": "NY",
+		"city": "Watertown",
 		"offices": [
 			{
 				"id": "3231",
 				"heading": "Massena Office",
-				"paragraph": "277 Andrews St<br/> <br/> Massena, NY<br/> 13662<br/><br/> P+:  844-867-3224",
+				"paragraph": "277 Andrews St<br/>Massena, NY<br/>13662<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3230",
 				"heading": "Watertown Office",
-				"paragraph": "340 Eastern Blvd<br/> <br/> Watertown, NY<br/> 13601<br/><br/> P+:  844-867-3224",
+				"paragraph": "340 Eastern Blvd<br/>Watertown, NY<br/>13601<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "270",
-		"state": "284",
-		"label": "Wausau/Rhineland, WI",
+		"marketId": "270",
+		"stateId": "284",
+		"statePostalCode": "WI",
+		"city": "Wausau/Rhineland",
 		"offices": [
 			{
 				"id": "194",
 				"heading": "Schofield Office",
-				"paragraph": "1519 Metro Dr<br/> Suite 400<br/> Schofield, WI<br/> 54476<br/><br/> P+:  844-867-3224",
+				"paragraph": "1519 Metro Dr<br/>Suite 400<br/>Schofield, WI<br/>54476<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3151",
-		"state": "286|287",
-		"label": "Wilmington, NC",
+		"marketId": "3151",
+		"stateId": "286|287",
+		"statePostalCode": "NC",
+		"city": "Wilmington",
 		"offices": [
 			{
 				"id": "3248",
 				"heading": "Wilmington Office",
-				"paragraph": "2321 Scientific Park Dr<br/> <br/> Wilmington, NC<br/> 28405<br/><br/> P+:  844-867-3224",
+				"paragraph": "2321 Scientific Park Dr<br/>Wilmington, NC<br/>28405<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3126",
-		"state": "286|290",
-		"label": "Winston Salem, NC",
+		"marketId": "3126",
+		"stateId": "286|290",
+		"statePostalCode": "NC",
+		"city": "Winston Salem",
 		"offices": [
 			{
 				"id": "3243",
 				"heading": "Greensboro Office",
-				"paragraph": "200 Centreport Dr<br/> Suite 200<br/> Greensboro, NC<br/> 27409<br/><br/> P+:  844-867-3224",
+				"paragraph": "200 Centreport Dr<br/>Suite 200<br/>Greensboro, NC<br/>27409<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "256",
-		"state": "281|233",
-		"label": "Yakima, WA",
+		"marketId": "256",
+		"stateId": "281|233",
+		"statePostalCode": "WA",
+		"city": "Yakima",
 		"offices": [
 			{
 				"id": "185",
 				"heading": "Kennewick Office",
-				"paragraph": "7601 W Clearwater Ave<br/> <br/> Kennewick, WA<br/> 99336<br/><br/> P+:  844-867-3224",
+				"paragraph": "7601 W Clearwater Ave<br/>Kennewick, WA<br/>99336<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3152",
-		"state": "3165|3163",
-		"label": "Youngstown, OH",
+		"marketId": "3152",
+		"stateId": "3165|3163",
+		"statePostalCode": "OH",
+		"city": "Youngstown",
 		"offices": [
 			{
 				"id": "3267",
 				"heading": "Warren Office",
-				"paragraph": "8600 E Market St<br/> Suite 4<br/> Warren, OH<br/> 44484<br/><br/> P+:  844-867-3224",
+				"paragraph": "8600 E Market St<br/>Suite 4<br/>Warren, OH<br/>44484<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3156",
-		"state": "3157|51",
-		"label": "Yuma, AZ",
+		"marketId": "3156",
+		"stateId": "3157|51",
+		"statePostalCode": "AZ",
+		"city": "Yuma",
 		"offices": [
 			{
 				"id": "3298",
 				"heading": "El Centro Office",
-				"paragraph": "603 Wake Ave<br/> Suite 1<br/> El Centro, CA<br/> 92243<br/><br/> P+:  844-867-3224",
+				"paragraph": "603 Wake Ave<br/>Suite 1<br/>El Centro, CA<br/>92243<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			},
 			{
 				"id": "3287",
 				"heading": "Yuma Office",
-				"paragraph": "350 W 16th St<br/> # 201<br/> Yuma, AZ<br/> 85364<br/><br/> P+:  844-867-3224",
+				"paragraph": "350 W 16th St<br/># 201<br/>Yuma, AZ<br/>85364<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]
 	},
 	{
-		"id": "3154",
-		"state": "3165",
-		"label": "Zanesville, OH",
+		"marketId": "3154",
+		"stateId": "3165",
+		"statePostalCode": "OH",
+		"city": "Zanesville",
 		"offices": [
 			{
 				"id": "3261",
 				"heading": "Zanesville Office",
-				"paragraph": "737 Howard St<br/> <br/> Zanesville, OH<br/> 43701<br/><br/> P+:  844-867-3224",
+				"paragraph": "737 Howard St<br/>Zanesville, OH<br/>43701<br> P+:  844-867-3224",
 				"email": "spectrumreach@spectrum.com"
 			}
 		]

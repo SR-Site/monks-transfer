@@ -28,7 +28,7 @@
 				<div class="scroll-content-inner" data-content-inner>
 					<ul class="filter-list" data-bind="foreach: $root.stateList()">
 						<li class="filter-list-item copy-03" data-bind="css: {'is-active': $root.selectedState() === $data }, tap: $root.onStateSelect.bind($root, $data)">
-							{{$data.label}}
+							{{$data.city}}, {{$data.statePostalCode}}
 						</li>
 					</ul>
 				</div>

@@ -1,0 +1,409 @@
+[
+	{
+		"label": "Alabama",
+		"coordinates": {
+			"lng": "32.806671",
+			"lat": "-86.791130"
+		},
+		"id": "AL"
+	},
+	{
+		"label": "Alaska",
+		"coordinates": {
+			"lng": "61.370716",
+			"lat": "-152.404419"
+		},
+		"id": "AK"
+	},
+	{
+		"label": "Arizona",
+		"coordinates": {
+			"lng": "33.729759",
+			"lat": "-111.431221"
+		},
+		"id": "AZ"
+	},
+	{
+		"label": "Arkansas",
+		"coordinates": {
+			"lng": "34.969704",
+			"lat": "-92.373123"
+		},
+		"id": "AR"
+	},
+	{
+		"label": "California",
+		"coordinates": {
+			"lng": "36.116203",
+			"lat": "-119.681564"
+		},
+		"id": "CA"
+	},
+	{
+		"label": "Colorado",
+		"coordinates": {
+			"lng": "39.059811",
+			"lat": "-105.311104"
+		},
+		"id": "CO"
+	},
+	{
+		"label": "Connecticut",
+		"coordinates": {
+			"lng": "41.597782",
+			"lat": "-72.755371"
+		},
+		"id": "CT"
+	},
+	{
+		"label": "Delaware",
+		"coordinates": {
+			"lng": "39.318523",
+			"lat": "-75.507141"
+		},
+		"id": "DE"
+	},
+	{
+		"label": "District of Columbia",
+		"coordinates": {
+			"lng": "38.897438",
+			"lat": "-77.026817"
+		}
+	},
+	{
+		"label": "Florida",
+		"coordinates": {
+			"lng": "27.766279",
+			"lat": "-81.686783"
+		},
+		"id": "FL"
+	},
+	{
+		"label": "Georgia",
+		"coordinates": {
+			"lng": "33.040619",
+			"lat": "-83.643074"
+		},
+		"id": "GA"
+	},
+	{
+		"label": "Hawaii",
+		"coordinates": {
+			"lng": "21.094318",
+			"lat": "-157.498337"
+		},
+		"id": "HI"
+	},
+	{
+		"label": "Idaho",
+		"coordinates": {
+			"lng": "44.240459",
+			"lat": "-114.478828"
+		},
+		"id": "ID"
+	},
+	{
+		"label": "Illinois",
+		"coordinates": {
+			"lng": "40.349457",
+			"lat": "-88.986137"
+		},
+		"id": "IL"
+	},
+	{
+		"label": "Indiana",
+		"coordinates": {
+			"lng": "39.849426",
+			"lat": "-86.258278"
+		},
+		"id": "IN"
+	},
+	{
+		"label": "Iowa",
+		"coordinates": {
+			"lng": "42.011539",
+			"lat": "-93.210526"
+		},
+		"id": "IA"
+	},
+	{
+		"label": "Kansas",
+		"coordinates": {
+			"lng": "38.526600",
+			"lat": "-96.726486"
+		},
+		"id": "KS"
+	},
+	{
+		"label": "Kentucky",
+		"coordinates": {
+			"lng": "37.668140",
+			"lat": "-84.670067"
+		},
+		"id": "KY"
+	},
+	{
+		"label": "Louisiana",
+		"coordinates": {
+			"lng": "31.169546",
+			"lat": "-91.867805"
+		},
+		"id": "LA"
+	},
+	{
+		"label": "Maine",
+		"coordinates": {
+			"lng": "44.693947",
+			"lat": "-69.381927"
+		},
+		"id": "ME"
+	},
+	{
+		"label": "Maryland",
+		"coordinates": {
+			"lng": "39.063946",
+			"lat": "-76.802101"
+		},
+		"id": "MD"
+	},
+	{
+		"label": "Massachusetts",
+		"coordinates": {
+			"lng": "42.230171",
+			"lat": "-71.530106"
+		},
+		"id": "MA"
+	},
+	{
+		"label": "Michigan",
+		"coordinates": {
+			"lng": "43.326618",
+			"lat": "-84.536095"
+		},
+		"id": "MI"
+	},
+	{
+		"label": "Minnesota",
+		"coordinates": {
+			"lng": "45.694454",
+			"lat": "-93.900192"
+		},
+		"id": "MN"
+	},
+	{
+		"label": "Mississippi",
+		"coordinates": {
+			"lng": "32.741646",
+			"lat": "-89.678696"
+		},
+		"id": "MS"
+	},
+	{
+		"label": "Missouri",
+		"coordinates": {
+			"lng": "38.456085",
+			"lat": "-92.288368"
+		},
+		"id": "MO"
+	},
+	{
+		"label": "Montana",
+		"coordinates": {
+			"lng": "46.921925",
+			"lat": "-110.454353"
+		},
+		"id": "MT"
+	},
+	{
+		"label": "Nebraska",
+		"coordinates": {
+			"lng": "41.125370",
+			"lat": "-98.268082"
+		},
+		"id": "NE"
+	},
+	{
+		"label": "Nevada",
+		"coordinates": {
+			"lng": "38.313515",
+			"lat": "-117.055374"
+		},
+		"id": "NV"
+	},
+	{
+		"label": "New Hampshire",
+		"coordinates": {
+			"lng": "43.452492",
+			"lat": "-71.563896"
+		},
+		"id": "NH"
+	},
+	{
+		"label": "New Jersey",
+		"coordinates": {
+			"lng": "40.298904",
+			"lat": "-74.521011"
+		},
+		"id": "NJ"
+	},
+	{
+		"label": "New Mexico",
+		"coordinates": {
+			"lng": "34.840515",
+			"lat": "-106.248482"
+		},
+		"id": "NM"
+	},
+	{
+		"label": "New York",
+		"coordinates": {
+			"lng": "42.165726",
+			"lat": "-74.948051"
+		},
+		"id": "NY"
+	},
+	{
+		"label": "North Carolina",
+		"coordinates": {
+			"lng": "35.630066",
+			"lat": "-79.806419"
+		},
+		"id": "NC"
+	},
+	{
+		"label": "North Dakota",
+		"coordinates": {
+			"lng": "47.528912",
+			"lat": "-99.784012"
+		},
+		"id": "ND"
+	},
+	{
+		"label": "Ohio",
+		"coordinates": {
+			"lng": "40.388783",
+			"lat": "-82.764915"
+		},
+		"id": "OH"
+	},
+	{
+		"label": "Oklahoma",
+		"coordinates": {
+			"lng": "35.565342",
+			"lat": "-96.928917"
+		},
+		"id": "OK"
+	},
+	{
+		"label": "Oregon",
+		"coordinates": {
+			"lng": "44.572021",
+			"lat": "-122.070938"
+		},
+		"id": "OR"
+	},
+	{
+		"label": "Pennsylvania",
+		"coordinates": {
+			"lng": "40.590752",
+			"lat": "-77.209755"
+		},
+		"id": "PA"
+	},
+	{
+		"label": "Rhode Island",
+		"coordinates": {
+			"lng": "41.680893",
+			"lat": "-71.511780"
+		},
+		"id": "RI"
+	},
+	{
+		"label": "South Carolina",
+		"coordinates": {
+			"lng": "33.856892",
+			"lat": "-80.945007"
+		},
+		"id": "SC"
+	},
+	{
+		"label": "South Dakota",
+		"coordinates": {
+			"lng": "44.299782",
+			"lat": "-99.438828"
+		},
+		"id": "SD"
+	},
+	{
+		"label": "Tennessee",
+		"coordinates": {
+			"lng": "35.747845",
+			"lat": "-86.692345"
+		},
+		"id": "TN"
+	},
+	{
+		"label": "Texas",
+		"coordinates": {
+			"lng": "31.054487",
+			"lat": "-97.563461"
+		},
+		"id": "TX"
+	},
+	{
+		"label": "Utah",
+		"coordinates": {
+			"lng": "40.150032",
+			"lat": "-111.862434"
+		},
+		"id": "UT"
+	},
+	{
+		"label": "Vermont",
+		"coordinates": {
+			"lng": "44.045876",
+			"lat": "-72.710686"
+		},
+		"id": "VT"
+	},
+	{
+		"label": "Virginia",
+		"coordinates": {
+			"lng": "37.769337",
+			"lat": "-78.169968"
+		},
+		"id": "VA"
+	},
+	{
+		"label": "Washington",
+		"coordinates": {
+			"lng": "47.400902",
+			"lat": "-121.490494"
+		},
+		"id": "WA"
+	},
+	{
+		"label": "West Virginia",
+		"coordinates": {
+			"lng": "38.491226",
+			"lat": "-80.954453"
+		},
+		"id": "WV"
+	},
+	{
+		"label": "Wisconsin",
+		"coordinates": {
+			"lng": "44.268543",
+			"lat": "-89.616508"
+		},
+		"id": "WI"
+	},
+	{
+		"label": "Wyoming",
+		"coordinates": {
+			"lng": "42.755966",
+			"lat": "-107.302490"
+		},
+		"id": "WY"
+	}
+]

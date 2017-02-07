@@ -2,7 +2,10 @@ import IIndexable from "../../../../../lib/temple/core/IIndexable";
 
 interface IState extends IIndexable
 {
-	state: string;
+	marketId: string;
+	stateId: string;
+	city: string;
+	statePostalCode: string;
 	label: string;
 	offices?: Array<{
 		id: string;
