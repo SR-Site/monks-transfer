@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockpathtopurchase.field_steps_purchase
     - field.field.paragraph.blockpathtopurchase.field_styles
     - paragraphs.paragraphs_type.blockpathtopurchase
   module:
@@ -12,6 +13,14 @@ targetEntityType: paragraph
 bundle: blockpathtopurchase
 mode: default
 content:
+  field_steps_purchase:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_styles:
     weight: 0
     label: above

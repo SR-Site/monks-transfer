@@ -27,7 +27,9 @@ class ParagraphBlockPathToPurchaseV1 extends SpectrumRestEntityProcessorBase {
 
     $data = [
       "id" => 'blockPathToPurchase',
-      "data" => $data,
+      "data" => $data + [
+        "steps" => $this->getItems($entity->get('field_steps_purchase')),
+      ],
     ];
 
     return $data;

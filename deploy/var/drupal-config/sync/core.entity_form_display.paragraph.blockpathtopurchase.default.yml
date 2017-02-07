@@ -3,17 +3,44 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockpathtopurchase.field_steps_purchase
     - field.field.paragraph.blockpathtopurchase.field_styles
     - paragraphs.paragraphs_type.blockpathtopurchase
   module:
+    - field_group
     - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
 id: paragraph.blockpathtopurchase.default
 targetEntityType: paragraph
 bundle: blockpathtopurchase
 mode: default
 content:
+  field_steps_purchase:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: steppurchase
+    third_party_settings: {  }
   field_styles:
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs

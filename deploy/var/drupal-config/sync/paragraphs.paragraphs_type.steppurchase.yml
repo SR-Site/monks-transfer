@@ -1,0 +1,7 @@
+uuid: bd9dc688-21f9-4648-9d34-888b268331c3
+langcode: en
+status: true
+dependencies: {  }
+id: steppurchase
+label: 'Step purchase'
+behavior_plugins: {  }
