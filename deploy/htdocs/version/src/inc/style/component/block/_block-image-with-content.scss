@@ -10,16 +10,6 @@
 	.overrule-overlap {
 		height: 100%;
 		position: relative;
-
-
-		//&:after {
-		//	content: '';
-		//	position: absolute;
-		//	@include pos(0, 0, 0, auto);
-		//	background: #fff;
-		//	@include size(720px, 480px);
-		//	z-index: 2;
-		//}
 	}
 
 	.image {
@@ -33,7 +23,6 @@
 		position: absolute;
 		background: #fff;
 		padding: $sizeGrid * 2;
-		z-index: 3!important;;
 
 
 		&:after {
