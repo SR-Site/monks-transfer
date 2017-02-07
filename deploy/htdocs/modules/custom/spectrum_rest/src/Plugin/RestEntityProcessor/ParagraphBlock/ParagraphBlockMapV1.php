@@ -25,10 +25,15 @@ class ParagraphBlockMapV1 extends SpectrumRestEntityProcessorBase {
 
     $data = parent::getCommonData($entity);
 
+    $steps = [];
+    foreach ($this->getItems($entity->get('field_steps_text')) as $item) {
+      $steps[] = ['label' => $item];
+    }
+
     $data = [
       "id" => 'blockMap',
       "data" => $data + [
-        "steps" => $this->getItems($entity->get('field_steps_text')),
+        "steps" => $steps,
         "imageSequence" => [
           "image" => $this->image($entity->get('field_image')),
           "total" => (int) $this->fieldProcessor->getFieldData($entity->get('field_value')),
