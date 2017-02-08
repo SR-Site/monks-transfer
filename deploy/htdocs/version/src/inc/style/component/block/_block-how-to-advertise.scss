@@ -30,7 +30,6 @@
 		white-space: nowrap;
 		line-height: $sizeGrid * 7;
 		overflow: hidden;
-		transition: max-width .2s ease(easeInOut);
 		cursor: pointer;
 
 		figure {
@@ -83,12 +82,12 @@
 
 		.step {
 			width: calc(100vw - 16rem);
-			max-width: calc(100vw - 16rem) !important;
 			height: auto;
 			white-space: normal;
 
 			aside {
 				width: 100%;
+				padding: 0 $sizeGrid * 2;
 			}
 
 			.copy-02 {
