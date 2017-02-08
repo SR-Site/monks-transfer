@@ -1,5 +1,6 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import IImageSequence from "../../../data/interface/media/IImageSequence";
+import IImage from "../../../data/interface/media/IImage";
 
 interface IBlockMapOptions extends IAbstractBlockComponentOptions
 {
@@ -8,6 +9,11 @@ interface IBlockMapOptions extends IAbstractBlockComponentOptions
 	 * @description The image sequence displayed in the map
 	 */
 	imageSequence: IImageSequence;
+	/**
+	 * @property
+	 * @description To save on image size the background of the image sequence is a separate image
+	 */
+	sequenceBackground:IImage;
 	/**
 	 * @property
 	 * @description The steps used to break the image sequence up

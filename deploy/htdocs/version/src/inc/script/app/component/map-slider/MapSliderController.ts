@@ -58,6 +58,7 @@ class MapSliderController extends AbstractTransitionComponentController<MapSlide
 		TweenLite.to(
 			this._knob, 1, {
 				x: this._gridSize * (this._stepCount * progress),
+				ease: Linear.easeNone,
 				onUpdate: () =>
 				{
 					this._draggableInstance.update();

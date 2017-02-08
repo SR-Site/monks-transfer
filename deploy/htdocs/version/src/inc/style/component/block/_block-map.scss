@@ -11,7 +11,7 @@
 	}
 
 	.map-image {
-		@include aspect-ratio(16px, 9px);
+		@include aspect-ratio(1280px, 680px);
 		position: relative;
 
 		.component-image-sequence {

@@ -59,8 +59,8 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 		// Prepare all the sources for the image sequence
 		for(let i = 0; i < this.options.imageSequence.total; i++)
 		{
-			this._sources[DeviceState.SMALL].push(this.options.imageSequence.image.small + NumberUtils.format(i, '', '', 0, 4) + this.options.imageSequence.extension);
-			this._sources[DeviceState.MEDIUM].push(this.options.imageSequence.image.normal + NumberUtils.format(i, '', '', 0, 4) + this.options.imageSequence.extension);
+			this._sources[DeviceState.SMALL].push(this.options.imageSequence.image.small + NumberUtils.format(i, '', '', 0, 3) + this.options.imageSequence.extension);
+			this._sources[DeviceState.MEDIUM].push(this.options.imageSequence.image.normal + NumberUtils.format(i, '', '', 0, 3) + this.options.imageSequence.extension);
 		}
 
 		this.destructibles.add(new NativeEventListener(window, 'resize', ThrottleDebounce.debounce(this.handleResize, 200, this)));

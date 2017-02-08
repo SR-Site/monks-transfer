@@ -3,6 +3,10 @@
 		<div class="aspect-ratio-wrapper overrule-overlap">
 			<div class="aspect-ratio-inner abs-fill">
 				<div class="map-image">
+					<img class="abs-fill" data-bind="image: {
+						image: data.sequenceBackground,
+						state: $root.deviceState()
+					}">
 					<!-- ko component: {
 						name: 'image-sequence',
 						onComplete: $root.controller.callbackCounter.get($root.controller.handleImageSequenceReady.bind($root.controller)),
@@ -10,10 +14,10 @@
 							imageSequence: data.imageSequence
 						}
 					} --><!-- /ko -->
-					<img class="abs-fill" src="data/image/map/map-background.png" alt="">
 				</div>
 				<div class="map-content" data-bind="with: data.steps[$root.activeIndex()]">
-					<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($root.activeIndex() + 1).toString(), 2, '0')"></span>
+					<span class="pagination-number"
+					      data-bind="html: $root.StringUtils.padLeft(($root.activeIndex() + 1).toString(), 2, '0')"></span>
 					<h3 class="heading heading-01" data-bind="html: heading"></h3>
 					<p class="copy copy-01" data-bind="html: paragraph"></p>
 				</div>

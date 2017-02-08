@@ -302,14 +302,19 @@
 							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
 						}
 					],
+					"sequenceBackground": {
+						"normal": "data/sequence/map/map_bg.png",
+						"small": "data/sequence/map/map_bg.png",
+						"alt": "Alt text"
+					},
 					"imageSequence": {
 						"image": {
-							"normal": "data/sequence/trailer/trailer_",
-							"small": "data/sequence/trailer/trailer_",
+							"normal": "data/sequence/map/map_lines_",
+							"small": "data/sequence/map/map_lines_",
 							"alt": "Alt text"
 						},
-						"extension": ".jpg",
-						"total": 301
+						"extension": ".png",
+						"total": 75
 					}
 				}
 			},
