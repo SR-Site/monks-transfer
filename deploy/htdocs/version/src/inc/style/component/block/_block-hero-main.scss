@@ -7,13 +7,14 @@
 
 		// Always apply a dark blue layer on top of the crossfader
 		.component-image-crossfader {
-			&:after {
+			.mask {
 				@include coverer();
 				@include size(100%);
 				position: absolute;
 				content: '';
 				background: rgba($colorPrimary, .5);
 			}
+
 		}
 	}
 

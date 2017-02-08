@@ -62,6 +62,8 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 	private _images: {[index: string]: HTMLImageElement;} = {};
 	private _animation: TweenLite;
 
+	private _overlayColor?: string;
+
 	/**
 	 *    Overrides AbstractPageController.init()
 	 *    @method init
@@ -93,6 +95,17 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 
 	/**
 	 * @public
+	 * @method setOverlay
+	 * @param overlayColor
+	 * @description if set a mask will be drawn on top of the image
+	 */
+	public setOverlay(overlayColor: string = 'rgba(0,48,87,0.5)')
+	{
+		this._overlayColor = overlayColor;
+	}
+
+	/**
+	 * @public
 	 * @method open
 	 * @param path
 	 * @param duration
@@ -100,7 +113,7 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 	 */
 	public open(path: string, duration: number = ImageCrossfaderController.DURATION, ease: Ease = Quad.easeInOut): Promise<any>
 	{
-		return new Promise((resolve: ()=>void) =>
+		return new Promise((resolve: () => void) =>
 		{
 			this.getImage(path)
 				.then((image: HTMLImageElement) =>
@@ -174,6 +187,13 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 				this._newImageOffset.width,
 				this._newImageOffset.height
 			);
+
+			if(this._overlayColor)
+			{
+				this._ctx.fillStyle = this._overlayColor;
+				this._ctx.rect(0, 0, this._canvas.width, this._canvas.height);
+				this._ctx.fill();
+			}
 		}
 
 		let rightProgress = Math.min(0.5, this._triangleProgress) / 0.5;
@@ -246,6 +266,14 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 				this._activeImageOffset.width,
 				this._activeImageOffset.height
 			);
+
+			if(this._overlayColor)
+			{
+				this._maskCtx.fillStyle = this._overlayColor;
+				this._maskCtx.rect(0, 0, this._canvas.width, this._canvas.height);
+				this._maskCtx.fill();
+			}
+
 		}
 		else
 		{
