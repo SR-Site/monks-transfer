@@ -4,23 +4,25 @@ import {IContactOptions} from "./IContactOptions";
 import ContactViewModel from "./ContactViewModel";
 import AbstractTransitionComponentController from "../../../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import Loader from "../../../../util/Loader";
+import DataManager from "../../../../data/DataManager";
 
 class ContactController extends AbstractTransitionComponentController<ContactViewModel, IContactOptions>
 {
 	/**
-	 *	Instance of Log debug utility for debug logging
-	 *	@property _debug
-	 *	@private
+	 *    Instance of Log debug utility for debug logging
+	 *    @property _debug
+	 *    @private
 	 */
-	private _debug:Log = new Log('app.component.Contact');
+	private _debug: Log = new Log('app.component.Contact');
 
 	private _loader: Loader;
+	private _dataManager:DataManager = DataManager.getInstance();
 
 	/**
-	 *	Overrides AbstractPageController.init()
-	 *	@method init
+	 *    Overrides AbstractPageController.init()
+	 *    @method init
 	 */
-	public init():void
+	public init(): void
 	{
 		super.init();
 
@@ -41,7 +43,10 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 		if(this.viewModel.myValidator.validate())
 		{
 			// Show loader
-			this._loader.show().then(() =>this._loader.hide());
+			this._loader.show()
+				.then(() => this._loader.hide())
+				.then(() => this._dataManager.panelController.transitionOut())
+				.then(() => this._dataManager.notification.showAlert('Success', 'Thank you for contacting'))
 		}
 	}
 
@@ -49,7 +54,7 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 		if(this._loader)
 		{
