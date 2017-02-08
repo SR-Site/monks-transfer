@@ -136,14 +136,26 @@
 
 		.input-text {
 			margin: 0 $sizeGrid;
+			overflow: visible;
+		}
+
+		.auto-complete {
+			@include size(calc(100% + #{$sizeGrid * 2}), $sizeGrid * 2);
+			@include pos(-10rem, auto, auto, -$sizeGrid);
+			background: $colorLightGrey;
+			position: absolute;
+			font: 600 1.6rem/#{$sizeGrid * 2} $fontOpenSans;
+			color: $colorPrimary;
+			padding: 0 $sizeGrid;
+			text-align: left;
 		}
 
 		.button-search {
+			@include size($sizeGrid*5, 100%);
 			background-color: $colorSecondary;
 			text-transform: uppercase;
 			font: 700 1rem / #{$sizeGrid*2} $fontOpenSans;
 			color: white;
-			@include size($sizeGrid*5, 100%);
 		}
 	}
 

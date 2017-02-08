@@ -13,12 +13,13 @@ import BackgroundLayout = mapboxgl.BackgroundLayout;
 import FillLayout = mapboxgl.FillLayout;
 import GeoJSONSource = mapboxgl.GeoJSONSource;
 import FeatureCollection = GeoJSON.FeatureCollection;
-import IState from "./interface/IState";
+import IState from "./interface/IMarketDetail";
 import Feature = GeoJSON.Feature;
 import Scrollbar from "../../../../lib/temple/component/Scrollbar";
 import StateModel from "../../../data/model/StateModel";
 import DataManager from "../../../data/DataManager";
 import PanelBlocks from "../../../data/enum/block/PanelBlocks";
+import IMarketDetail from "./interface/IMarketDetail";
 
 class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions>
 {
@@ -190,7 +191,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	{
 		// data: 'https://spectrumreach.com/markets/markets-json'
 		this.loadJSON('data/mapbox/market-details.json')
-			.then((data: Array<IState>) => this.viewModel.stateList(data))
+			.then((data: Array<IMarketDetail>) => this.viewModel.stateList(data))
 			.then(this.updateScrollBar.bind(this))
 			.then(this.loadJSON.bind(this, 'data/mapbox/original-markets.json'))
 			.then((data: FeatureCollection) =>

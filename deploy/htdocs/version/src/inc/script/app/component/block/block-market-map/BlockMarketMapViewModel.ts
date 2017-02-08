@@ -5,14 +5,94 @@ import IBlockMarketMapOptions from 'app/component/block/block-market-map/IBlockM
 import ko = require('knockout');
 import PanelBlocks from "../../../data/enum/block/PanelBlocks";
 import DataManager from "../../../data/DataManager";
-import IState from "./interface/IState";
+import IState from "./interface/IMarketDetail";
+import StateModel from "../../../data/model/StateModel";
+import IMarketDetail from "./interface/IMarketDetail";
 
 class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarketMapController, IBlockMarketMapOptions>
 {
 	public sidePanelIsOpen: KnockoutObservable<boolean> = ko.observable(false);
-	public selectedState: KnockoutObservable<{id: number;value: string;}> = ko.observable(null);
+	public selectedState: KnockoutObservable<IMarketDetail> = ko.observable(null);
 
-	public stateList: KnockoutObservableArray<IState> = ko.observableArray([]);
+	public searchQuery: KnockoutObservable<string> = ko.observable('');
+	public autoCompleteValue: KnockoutComputed<IMarketDetail>;
+
+	public stateList: KnockoutObservableArray<IMarketDetail> = ko.observableArray([]);
+	public stateModel: StateModel = DataManager.getInstance().settingsModel.stateModel;
+
+	constructor()
+	{
+		super();
+
+		this.autoCompleteValue = ko.computed(() =>
+		{
+			const query = this.searchQuery().toLowerCase();
+			const stateList = this.stateList();
+
+			if(query.length >= 3)
+			{
+				for(let i = 0; i < stateList.length; i++)
+				{
+					const state = stateList[i];
+
+					// Check for the city
+					if(this.isMatch(query, state.city))
+					{
+						return state;
+					}
+
+					// Check for the state
+					if(this.stateModel.hasItem(state.statePostalCode) &&
+						this.isMatch(query, this.stateModel.getItemById(state.statePostalCode).label.toLowerCase()))
+					{
+						return state;
+					}
+				}
+			}
+
+			return null;
+		})
+	}
+
+	/**
+	 * @private
+	 * @method isMatch
+	 */
+	private isMatch(query: string, source: string): boolean
+	{
+		const result = new RegExp('' + query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'gi').exec(source);
+
+		return result && result.length > 0;
+	}
+
+	/**
+	 * @public
+	 * @method handleAutoCompleteClick
+	 */
+	public handleAutoCompleteClick(data: IMarketDetail): void
+	{
+		// Select the state
+		this.onStateSelect(data);
+
+		// Clear the query
+		this.searchQuery('');
+	}
+
+	/**
+	 * @public
+	 * @method handleSubmit
+	 */
+	public handleSubmit(): void
+	{
+		if(this.autoCompleteValue())
+		{
+			// Select the state
+			this.onStateSelect(this.autoCompleteValue());
+
+			// Clear the query
+			this.searchQuery('');
+		}
+	}
 
 	/**
 	 * @public
@@ -54,7 +134,7 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 	 * @public
 	 * @method onStateSelect
 	 */
-	public onStateSelect(data: {id: number;value: string}): void
+	public onStateSelect(data: IMarketDetail): void
 	{
 		if(this.selectedState() == data)
 		{

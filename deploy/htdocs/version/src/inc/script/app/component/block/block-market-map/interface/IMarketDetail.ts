@@ -1,6 +1,6 @@
 import IIndexable from "../../../../../lib/temple/core/IIndexable";
 
-interface IState extends IIndexable
+interface IMarketDetail extends IIndexable
 {
 	marketId: string;
 	stateId: string;
@@ -15,4 +15,4 @@ interface IState extends IIndexable
 	}>
 }
 
-export default IState;
+export default IMarketDetail;
