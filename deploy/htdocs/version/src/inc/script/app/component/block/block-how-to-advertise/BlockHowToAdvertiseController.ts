@@ -1,17 +1,17 @@
 import AbstractBlockComponentController from "../AbstractBlockComponentController";
-import BlockHowToAdvertiseTransitionController from 'app/component/block/block-how-to-advertise/BlockHowToAdvertiseTransitionController';
-import IBlockHowToAdvertiseOptions from 'app/component/block/block-how-to-advertise/IBlockHowToAdvertiseOptions';
-import BlockHowToAdvertiseViewModel from 'app/component/block/block-how-to-advertise/BlockHowToAdvertiseViewModel';
-
+import BlockHowToAdvertiseTransitionController from "app/component/block/block-how-to-advertise/BlockHowToAdvertiseTransitionController";
+import IBlockHowToAdvertiseOptions from "app/component/block/block-how-to-advertise/IBlockHowToAdvertiseOptions";
+import BlockHowToAdvertiseViewModel from "app/component/block/block-how-to-advertise/BlockHowToAdvertiseViewModel";
 import Log from "lib/temple/util/Log";
-import DraggableInstance from "../../../util/DraggableInstance";
+import {IDraggableEventData} from "../../../util/DraggableInstance";
 import ScrollBarController from "../../scroll-bar/ScrollBarController";
 import CommonEvent from "../../../../lib/temple/event/CommonEvent";
-import {IDraggableEventData} from "../../../util/DraggableInstance";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 
 class BlockHowToAdvertiseController extends AbstractBlockComponentController<BlockHowToAdvertiseViewModel, IBlockHowToAdvertiseOptions>
 {
+	public transitionController: BlockHowToAdvertiseTransitionController;
+
 	/**
 	 *    Instance of Log debug utility for debug logging
 	 *    @property _debug
@@ -19,7 +19,8 @@ class BlockHowToAdvertiseController extends AbstractBlockComponentController<Blo
 	 */
 	private _debug: Log = new Log('app.component.BlockHowToAdvertise');
 
-	private _draggableInstance: DraggableInstance;
+
+	private _openStepAnimationProgress: number = 0;
 	private _scrollBarController: ScrollBarController;
 
 	/**
@@ -31,13 +32,6 @@ class BlockHowToAdvertiseController extends AbstractBlockComponentController<Blo
 		super.init();
 
 		this._debug.log('Init');
-
-		this._draggableInstance = new DraggableInstance(<HTMLElement>this.element.querySelector('.js-draggable-container'), {
-			invert: true,
-			enableTrackPad: true
-		});
-
-		this._draggableInstance.addEventListener(CommonEvent.UPDATE, this.handleDraggableInstanceUpdate.bind(this));
 	}
 
 	/**
@@ -46,9 +40,36 @@ class BlockHowToAdvertiseController extends AbstractBlockComponentController<Blo
 	 */
 	protected allComponentsLoaded(): void
 	{
+		const stepWrapper = <HTMLElement>this.element.querySelector('.steps-viewport');
+		const snapSteps = stepWrapper.offsetWidth / this.options.steps.length;
+
+		this._scrollBarController.setSnapPosition(snapSteps);
+
 		this.transitionController = new BlockHowToAdvertiseTransitionController(this.element, this);
 
 		super.allComponentsLoaded();
+	}
+
+	/**
+	 * @public
+	 * @method openStep
+	 */
+	public openStep(index: number): void
+	{
+		TweenLite.fromTo(this, 0.8,
+			{
+				_openStepAnimationProgress: this.transitionController.getHowToAdvertiseProgress()
+			},
+			{
+				_openStepAnimationProgress: index / (this.options.steps.length - 1),
+				ease: Quad.easeInOut,
+				onUpdate: () =>
+				{
+					this.transitionController.seekHowToAdvertiseTimeline(this._openStepAnimationProgress);
+					this._scrollBarController.progress = this._openStepAnimationProgress;
+				}
+			}
+		)
 	}
 
 	/**
@@ -68,23 +89,8 @@ class BlockHowToAdvertiseController extends AbstractBlockComponentController<Blo
 	 */
 	private handleScrollBarUpdate(event: DataEvent<IDraggableEventData>): void
 	{
-		if(this._draggableInstance)
-		{
-			this._draggableInstance.progress = event.data.progress;
-		}
-	}
+		this.transitionController.seekHowToAdvertiseTimeline(event.data.progress);
 
-	/**
-	 * @private
-	 * @method handleDraggableInstanceUpdate
-	 * @param event
-	 */
-	private handleDraggableInstanceUpdate(event: DataEvent<IDraggableEventData>): void
-	{
-		if(this._scrollBarController)
-		{
-			this._scrollBarController.progress = event.data.progress;
-		}
 	}
 
 	/**
@@ -96,11 +102,6 @@ class BlockHowToAdvertiseController extends AbstractBlockComponentController<Blo
 	{
 		this._scrollBarController = null;
 
-		if(this._draggableInstance)
-		{
-			this._draggableInstance.destruct();
-			this._draggableInstance = null;
-		}
 
 		// always call this last
 		super.destruct();

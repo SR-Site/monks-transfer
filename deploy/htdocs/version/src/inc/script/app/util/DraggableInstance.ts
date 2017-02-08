@@ -70,6 +70,15 @@ class DraggableInstance extends EventDispatcher
 
 	/**
 	 * @public
+	 * @method setSnapPosition
+	 */
+	public setSnapPosition(xPos: number): void
+	{
+		this._options.snap.x = xPos;
+	}
+
+	/**
+	 * @public
 	 * @method set allowDragging
 	 * @param allow
 	 */

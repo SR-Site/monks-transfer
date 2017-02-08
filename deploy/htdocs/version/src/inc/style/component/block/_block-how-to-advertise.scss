@@ -27,7 +27,6 @@
 	.step {
 		@include size($sizeGrid * 15, $sizeGrid * 7);
 		display: inline-block;
-		max-width: $sizeGrid * 7;
 		white-space: nowrap;
 		line-height: $sizeGrid * 7;
 		overflow: hidden;
@@ -40,8 +39,9 @@
 			display: inline-block;
 			vertical-align: top;
 			border-radius: 100%;
-			background: transparent;
+			background: $colorLightGrey;
 			transition: background .2s ease(easeInOut);
+			border: 4px solid $colorLightGrey;
 		}
 
 		.icon {
@@ -54,20 +54,6 @@
 			padding: $sizeGrid;
 			vertical-align: middle;
 			white-space: normal;
-		}
-
-		@include hover() {
-			figure {
-				background: $colorLightGrey;
-			}
-		}
-
-		&.is-active {
-			max-width: $sizeGrid * 15;
-
-			figure {
-				background: $colorLightGrey;
-			}
 		}
 	}
 

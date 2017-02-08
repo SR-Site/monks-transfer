@@ -7,28 +7,40 @@ import CommonEvent from "../../../lib/temple/event/CommonEvent";
 
 class ScrollBarController extends AbstractComponentController<ScrollBarViewModel, IScrollBarOptions>
 {
-	private _draggableInstance:DraggableInstance;
+	private _draggableInstance: DraggableInstance;
 
 	/**
 	 *    Instance of Log debug utility for debug logging
 	 *    @property _debug
 	 *    @private
 	 */
-	private _debug:Log = new Log('app.component.ScrollBar');
+	private _debug: Log = new Log('app.component.ScrollBar');
 
 	/**
 	 *    Overrides AbstractPageController.init()
 	 *    @method init
 	 */
-	public init():void
+	public init(): void
 	{
 		this._debug.log('Init');
 
 		// Create the draggable instance
-		this._draggableInstance = new DraggableInstance(this.element);
+		this._draggableInstance = new DraggableInstance(this.element, {
+			maxDuration: 0.5
+		});
 
 		// Bubble up the event
 		this._draggableInstance.addEventListener(CommonEvent.UPDATE, (event) => this.dispatchEvent(event));
+	}
+
+	/**
+	 * @public
+	 * @method setSnapPosition
+	 * @param xPos
+	 */
+	public setSnapPosition(xPos: number): void
+	{
+		this._draggableInstance.setSnapPosition(xPos);
 	}
 
 
@@ -36,7 +48,7 @@ class ScrollBarController extends AbstractComponentController<ScrollBarViewModel
 	 * @public
 	 * @method set enabled
 	 */
-	public set enabled(enabled:boolean)
+	public set enabled(enabled: boolean)
 	{
 		this._draggableInstance.enabled = enabled;
 	}
@@ -46,7 +58,7 @@ class ScrollBarController extends AbstractComponentController<ScrollBarViewModel
 	 * @method set progress
 	 * @param progress
 	 */
-	public set progress(progress:number)
+	public set progress(progress: number)
 	{
 		this._draggableInstance.progress = progress;
 	}
@@ -55,7 +67,7 @@ class ScrollBarController extends AbstractComponentController<ScrollBarViewModel
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 		if(this._draggableInstance)
 		{

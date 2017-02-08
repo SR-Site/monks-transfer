@@ -17,9 +17,11 @@
 		</div>
 
 		<div class="advertisement-steps">
-			<div class="js-draggable-container">
+			<div class="steps-viewport">
 				<ul class="steps js-draggable-element" data-bind="foreach: data.steps">
-					<li class="step" data-bind="css: {'is-active': $index() === $root.activeIndex()}, tap: $root.handleStepClick.bind($root, $index())">
+					<li class="step" data-bind="events: [
+						[ $root.MouseEventHelper.CLICK, $root.handleStepClick.bind($root, $index()) ]
+					]">
 						<figure>
 							<div class="icon abs-center" data-bind="icon: icon"></div>
 						</figure>
