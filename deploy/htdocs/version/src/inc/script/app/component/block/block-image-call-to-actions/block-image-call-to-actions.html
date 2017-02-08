@@ -15,6 +15,7 @@
 						image: $data.backgroundBlurred,
 						state: $root.deviceState()
 					}"/>
+
 			</div>
 		</div>
 		<div class="call-to-actions-content abs-fill" data-bind="foreach: data.callToActions">
@@ -31,6 +32,16 @@
 					<h3 class="heading heading-03" data-bind="html: heading"></h3>
 					<p class="copy copy-01" data-bind="html: paragraph"></p>
 				</span>
+
+				<div class="clip-mask">
+					<div class="triangle" data-bind="style: {
+						'border-bottom-width': $root.triangleSize()+ 'px',
+						'border-left-width': $root.triangleSize() + 'px',
+						'top': -$root.triangleSize() + 'px'
+					}">
+
+					</div>
+				</div>
 			</a>
 		</div>
 	</div>

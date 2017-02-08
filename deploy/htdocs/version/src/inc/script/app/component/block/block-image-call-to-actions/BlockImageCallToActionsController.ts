@@ -37,7 +37,17 @@ class BlockImageCallToActionsController extends AbstractBlockComponentController
 		this.destructibles.add(new NativeEventListener(window, 'resize', ThrottleDebounce.debounce(this.handleResize, 100, this)));
 
 		this.calculateSizes();
-		this.clipImages();
+		this.handleResize();
+	}
+
+	/**
+	 * @public
+	 * @method get triangleSize
+	 * @returns {any|any<number>}
+	 */
+	public get triangleSize():number
+	{
+		return this.viewModel.triangleSize();
 	}
 
 	/**
@@ -112,6 +122,8 @@ class BlockImageCallToActionsController extends AbstractBlockComponentController
 	private handleResize(): void
 	{
 		this.clipImages();
+
+		this.viewModel.triangleSize((1 / this.options.callToActions.length) * window.innerWidth)
 	}
 
 	/**

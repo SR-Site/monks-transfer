@@ -7,38 +7,46 @@ import StringUtils from "../../../../lib/temple/util/type/StringUtils";
 
 class BlockImageCallToActionsViewModel extends AbstractBlockComponentViewModel<BlockImageCallToActionsController, IBlockImageCallToActionsOptions>
 {
-	public StringUtils:Class = StringUtils;
+	public StringUtils: Class = StringUtils;
 
-	public activeImageIndex:KnockoutObservable<number> = ko.observable(null);
+	public activeImageIndex: KnockoutObservable<number> = ko.observable(null);
+	public triangleSize:KnockoutObservable<number> = ko.observable(0);
 
 	/**
-	* @public
-	* @method handleMouseEnter
-	*/
-	public handleMouseEnter(data):void
+	 * @public
+	 * @method handleMouseEnter
+	 */
+	public handleMouseEnter(data): void
 	{
-		this.activeImageIndex(this.data.callToActions.indexOf(data));
-		this.controller.clipImages(1);
+		if(this.controller.transitionController.transitionInComplete)
+		{
+			this.activeImageIndex(this.data.callToActions.indexOf(data));
+			this.controller.clipImages(1);
+		}
 	}
 
 	/**
-	* @public
-	* @method handleMouseLeave
-	*/
-	public handleMouseLeave():void
+	 * @public
+	 * @method handleMouseLeave
+	 */
+	public handleMouseLeave(): void
 	{
-		this.activeImageIndex(null);
-		this.controller.clipImages(1);
+		if(this.controller.transitionController.transitionInComplete)
+		{
+			this.activeImageIndex(null);
+			this.controller.clipImages(1);
+		}
 	}
 
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 		this.StringUtils = null;
 		this.activeImageIndex = null;
+		this.triangleSize = null;
 
 		// always call this last
 		super.destruct();

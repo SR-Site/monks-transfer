@@ -8,32 +8,23 @@ class BlockImageCallToActionsTransitionController extends AbstractTransitionCont
 	 * @method setupTransitionInTimeline
 	 * @description overwrite this method in the parent class
 	 * */
-	// protected setupTransitionInTimeline(): void
-	// {
-	// 	const callToActionImages = Array.prototype.slice.call(this.element.querySelectorAll('.call-to-action-image'));
-	// 	const elementHeight: number = this.element.offsetHeight;
-	// 	let left: number = 0;
-	//
-	// 	// Default size
-	// 	let elementWidth: number = this.element.offsetWidth / callToActionImages.length;
-	//
-	// 	callToActionImages.forEach((callToActionImage, index) =>
-	// 	{
-	// 		let right: number = left + elementWidth;
-	//
-	// 		this.transitionInTimeline.fromTo(callToActionImage, 1,
-	// 			{
-	// 				clip: 'rect(0px, ' + right + 'px, ' + 0 + 'px, ' + left + 'px)',
-	// 				ease: Expo.easeOut
-	// 			},
-	// 			{
-	// 				clip: 'rect(0px, ' + right + 'px, ' + elementHeight + 'px, ' + left + 'px)',
-	// 				ease: Expo.easeOut
-	// 			});
-	//
-	// 		left += elementWidth
-	// 	})
-	// }
+	protected setupTransitionInTimeline(): void
+	{
+		const clipMasks = Array.prototype.slice.call(this.element.querySelectorAll('.clip-mask'));
+
+		clipMasks.forEach((clipMask, index) =>
+		{
+			this.transitionInTimeline.fromTo(clipMask, 2,
+				{
+					y: 0,
+					ease: Expo.easeOut
+				},
+				{
+					y: this.element.offsetHeight + this.parentController.triangleSize,
+					ease: Expo.easeOut
+				}, index === 0 ? 0 : '=-1.6');
+		})
+	}
 }
 
 export default BlockImageCallToActionsTransitionController;

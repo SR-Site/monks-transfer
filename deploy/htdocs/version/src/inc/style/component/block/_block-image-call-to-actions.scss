@@ -32,6 +32,26 @@
 		}
 	}
 
+	.clip-mask {
+		@include size(100%);
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: $colorWhite;
+		z-index: 2;
+
+		.triangle {
+			@include size(0);
+			position: absolute;
+			border-top: 0;
+			border-right: 0;
+			border-bottom-style: solid;
+			border-bottom-color: $colorWhite;
+			border-left-style: solid;
+			border-left-color: transparent;
+		}
+	}
+
 	.text-wrapper {
 		@include pos($sizeGrid * 3, 0, auto, 0);
 		padding: 0 $sizeGrid * 2;
