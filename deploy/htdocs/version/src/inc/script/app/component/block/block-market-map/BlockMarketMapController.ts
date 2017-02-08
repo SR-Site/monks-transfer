@@ -18,6 +18,7 @@ import Feature = GeoJSON.Feature;
 import Scrollbar from "../../../../lib/temple/component/Scrollbar";
 import StateModel from "../../../data/model/StateModel";
 import DataManager from "../../../data/DataManager";
+import PanelBlocks from "../../../data/enum/block/PanelBlocks";
 
 class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions>
 {
@@ -52,6 +53,15 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	}
 
 	/**
+	 * @public
+	 * @method openContactPanel
+	 */
+	public openContactPanel(): void
+	{
+		DataManager.getInstance().panelController.transitionIn(PanelBlocks.CONTACT);
+	}
+
+	/**
 	 * @private
 	 * @method updateDataLayer
 	 */
@@ -62,12 +72,12 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 
 		let data: FeatureCollection|Feature;
 
-		if(this._marketsFillLayer && this._marketsOutlineLayer)
+		if(this._marketsFillLayer)
 		{
 			this._map.removeSource('markets');
 
 			this._map.removeLayer('markets-fill');
-			this._map.removeLayer('markets-outline');
+			//this._map.removeLayer('markets-outline');
 
 		}
 
@@ -121,15 +131,15 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 			}
 		});
 
-		this._marketsOutlineLayer = this._map.addLayer({
-			id: 'markets-outline',
-			type: 'line',
-			source: 'markets',
-			paint: {
-				'line-width': 2,
-				'line-color': '#009bdb'
-			}
-		});
+		// this._marketsOutlineLayer = this._map.addLayer({
+		// 	id: 'markets-outline',
+		// 	type: 'line',
+		// 	source: 'markets',
+		// 	paint: {
+		// 		'line-width': 2,
+		// 		'line-color': '#009bdb'
+		// 	}
+		// });
 	}
 
 	/**
@@ -191,30 +201,41 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 */
 	private addMapEvents(): void
 	{
-		// When a click event occurs near a polygon, open a popup at the location of
-		// the feature, with description HTML from its properties.
-		this._map.on('click', (e) =>
+		this._map.on('click', this.handleMapClick.bind(this));
+		this._map.on('mousemove', this.handleMapMouseMove.bind(this));
+	}
+
+	/**
+	 * @private
+	 * @method handleMapMouseMove
+	 */
+	private handleMapMouseMove(event: mapboxgl.EventData): void
+	{
+		let features = this._map.queryRenderedFeatures(event.point, {layers: ['markets-fill']});
+		this._map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+	}
+
+	/**
+	 * @private
+	 * @method handleMapClick
+	 */
+	private handleMapClick(event: mapboxgl.EventData): void
+	{
+		let features = this._map.queryRenderedFeatures(event.point, {layers: ['markets-fill']});
+
+		if(!features.length)
 		{
-			let features = this._map.queryRenderedFeatures(e.point, {layers: ['markets-fill']});
+			return;
+		}
 
-			if(!features.length)
-			{
-				return;
-			}
+		this.openContactPanel();
 
-			let feature = features[0];
-
-			let popup = new mapboxgl.Popup()
-				.setLngLat(this._map.unproject(e.point))
-				.setHTML(feature.properties.state)
-				.addTo(this._map);
-		});
-
-		this._map.on('mousemove', (e) =>
-		{
-			let features = this._map.queryRenderedFeatures(e.point, {layers: ['markets-fill']});
-			this._map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
-		});
+		// Phase 2 needs something like a popup
+		// let feature = features[0];
+		// let popup = new mapboxgl.Popup()
+		// 	.setLngLat(this._map.unproject(event.point))
+		// 	.setHTML(feature.properties.state)
+		// 	.addTo(this._map);
 	}
 
 	/**

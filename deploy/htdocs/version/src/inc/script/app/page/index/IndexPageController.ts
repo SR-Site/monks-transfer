@@ -215,13 +215,7 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 		const allComponentsLoaded: Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
 
 		// Wait  for all components to be loaded
-		allComponentsLoaded.then(() =>
-		{
-			// Check on init
-			this.handleHideContactButtonChange(this._dataManager.hideContactButton());
-
-			this._beforeTransitionIn(true)
-		});
+		allComponentsLoaded.then(() => this._beforeTransitionIn(true));
 	}
 
 	/**
@@ -238,6 +232,18 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 				this._footerController.transitionIn()
 			]))
 			.then(() => super.transitionIn());
+	}
+
+	/**
+	 * @public
+	 * @method transitionInComplete
+	 */
+	public transitionInComplete(): void
+	{
+		// Check on init
+		this.handleHideContactButtonChange(this._dataManager.hideContactButton());
+
+		super.transitionInComplete();
 	}
 
 

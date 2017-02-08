@@ -20,7 +20,7 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 	 */
 	public handleServiceClick(): void
 	{
-		DataManager.getInstance().panelController.transitionIn(PanelBlocks.CONTACT);
+		this.controller.openContactPanel()
 	}
 
 	/**

@@ -37,9 +37,7 @@ class BlockImageCallToActionsController extends AbstractBlockComponentController
 		this.destructibles.add(new NativeEventListener(window, 'resize', ThrottleDebounce.debounce(this.handleResize, 100, this)));
 
 		this.calculateSizes();
-		this.clipImages()
-
-		console.log(this._hoverSizes);
+		this.clipImages();
 	}
 
 	/**
@@ -57,17 +55,18 @@ class BlockImageCallToActionsController extends AbstractBlockComponentController
 	 * @public
 	 * @method clipImages
 	 */
-	public clipImages(duration:number = 0): void
+	public clipImages(duration: number = 0): void
 	{
 		let elementHeight: number = this.element.offsetHeight;
 		let left: number = 0;
 
+		// Default size
+		let elementWidth: number = this.element.offsetWidth / this.options.callToActions.length;
+
 		this._callToActionsImages.forEach((element: HTMLElement, index: number) =>
 		{
-			// Default size
-			let elementWidth: number = this.element.offsetWidth / this.options.callToActions.length;
-
-			if(this.viewModel.activeImageIndex() !== null) {
+			if(this.viewModel.activeImageIndex() !== null)
+			{
 				elementWidth = this.element.offsetWidth * this._hoverSizes[this.viewModel.activeImageIndex()][index];
 			}
 
