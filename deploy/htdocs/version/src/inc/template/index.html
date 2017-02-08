@@ -21,6 +21,11 @@
 } --><!-- /ko -->
 
 <!-- ko component: {
+	name: 'notification',
+	onComplete: $root.controller.callbackCounter.get($root.controller.handleNotificationReady.bind($root.controller))
+} --><!-- /ko -->
+
+<!-- ko component: {
 	name: 'page-loader',
 	onComplete: $root.controller.callbackCounter.get($root.controller.handlePageLoaderReady.bind($root.controller))
 } --><!-- /ko -->

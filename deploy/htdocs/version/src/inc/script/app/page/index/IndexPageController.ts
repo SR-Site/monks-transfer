@@ -14,6 +14,7 @@ import GlobalSlideoutPanelController from "../../component/slideout-panel/global
 import Promise = require("bluebird");
 import ko = require("knockout");
 import VideoOverlayController from "../../component/video-overlay/VideoOverlayController";
+import NotificationController from "../../component/notification/NotificationController";
 
 class IndexPageController extends DefaultPageController<IndexPageViewModel>
 {
@@ -90,6 +91,15 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	public handleFooterReady(controller: FooterController): void
 	{
 		this._footerController = controller;
+	}
+
+	/**
+	 * @public
+	 * @method handleNotificationReady
+	 */
+	public handleNotificationReady(controller: NotificationController): void
+	{
+		this._dataManager.notification = controller;
 	}
 
 	/**
@@ -258,6 +268,14 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 			this.callbackCounter.destruct();
 			this.callbackCounter = null;
 		}
+
+		this._dataManager = null;
+		this._beforeGoto = null;
+		this._beforeTransitionIn = null;
+		this._headerController = null;
+		this._footerController = null;
+		this._menuController = null;
+		this._startAdvertising = null;
 
 		// always call this last
 		super.destruct();

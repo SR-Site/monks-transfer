@@ -13,6 +13,7 @@ import PageLoaderController from "../component/page-loader/PageLoaderController"
 import GlobalSlideoutPanelController from "../component/slideout-panel/global-slideout-panel/GlobalSlideoutPanelController";
 import VideoOverlayController from "../component/video-overlay/VideoOverlayController";
 import Theme from "./enum/style/Theme";
+import NotificationController from "../component/notification/NotificationController";
 
 
 /**
@@ -24,8 +25,10 @@ class DataManager
 	private static _instance: DataManager;
 
 	public deviceStateTracker: DeviceStateTracker = new DeviceStateTracker();
+
 	public pageLoader: PageLoaderController;
 	public panelController: GlobalSlideoutPanelController;
+	public notification:NotificationController;
 
 	/**
 	 * @property gateway

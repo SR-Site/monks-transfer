@@ -1,0 +1,52 @@
+<div class="component-notification">
+	<div class="mask" data-bind="tap: $root.handleCloseClick.bind($root)"></div>
+	<div class="content-wrapper">
+		<a href="#" class="close" data-bind="tap: $root.handleCloseClick.bind($root)"></a>
+
+		<h2 class="heading heading-08">{{title}}</h2>
+		<p class="heading copy-02" data-bind="html: message"></p>
+
+		<div class="actions text-align-center">
+			<!-- ko if: state() == NotificationState.ALERT -->
+
+				<!-- ko component: {
+					name: 'button/button-secondary',
+					options: {
+						action: {
+							event: $root.handleAcceptClick.bind($root),
+							label: localeManager.getString('global.cta.ok')
+						},
+						size: $root.ButtonSize.SMALL
+					}
+				} --><!-- /ko -->
+
+			<!-- /ko -->
+
+			<!-- ko if: state() == NotificationState.CONFIRM -->
+
+				<!-- ko component: {
+					name: 'button/button-secondary',
+					options: {
+						action: {
+							event: $root.handleAcceptClick.bind($root),
+							label: localeManager.getString('global.cta.yes')
+						},
+						size: $root.ButtonSize.SMALL
+					}
+				} --><!-- /ko -->
+
+				<!-- ko component: {
+					name: 'button/button-secondary',
+					options: {
+						action: {
+							event: $root.handleDeclineClick.bind($root),
+							label: localeManager.getString('global.cta.no')
+						},
+						size: $root.ButtonSize.SMALL
+					}
+				} --><!-- /ko -->
+
+			<!-- /ko -->
+		</div>
+	</div>
+</div>
