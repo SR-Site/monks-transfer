@@ -43,19 +43,19 @@ class ProgramModuleItemTransitionController extends AbstractTransitionController
 			}
 		});
 
-		this._mouseEnterTimeline.to(this.element.querySelectorAll('.hover-content'), 0.1, { opacity: 0 }, 0);
-		this._mouseEnterTimeline.fromTo(this.element.querySelectorAll('.hover-container'), 0.5,
+		this._mouseEnterTimeline.to(this.element.querySelectorAll('.hover-content'), 0.3, { opacity: 0 }, 0);
+		this._mouseEnterTimeline.fromTo(this.element.querySelectorAll('.hover-container'), 0.3,
 			{
 				width: '100%'
 			},
 			{
-				ease: Expo.easeOut,
+				ease: Quad.easeInOut,
 				width: '200%'
 			});
 
 		this._mouseEnterTimeline.to(this.element.querySelectorAll('.hover-content'), 0.2, {
 			opacity: 1
-		}, '=-0.3');
+		});
 	}
 
 	/**
