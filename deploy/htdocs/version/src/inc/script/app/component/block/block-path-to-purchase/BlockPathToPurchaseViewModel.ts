@@ -10,7 +10,7 @@ class BlockPathToPurchaseViewModel extends AbstractBlockComponentViewModel<Block
 {
 	public activeIndex: KnockoutObservable<number> = ko.observable(0);
 	public StringUtils: Class = StringUtils;
-	public MouseEventHelper:Class = MouseEventHelper;
+	public MouseEventHelper: Class = MouseEventHelper;
 
 
 	private _switchComplete = true;
@@ -23,11 +23,23 @@ class BlockPathToPurchaseViewModel extends AbstractBlockComponentViewModel<Block
 	{
 		if(this._switchComplete)
 		{
+			const oldIndex = this.activeIndex();
+
 			this._switchComplete = false;
 
 			this.activeIndex(index);
 
-			this.controller.changeBackgroundImage(index)
+			this.controller.transitionController.transitionOutStep(oldIndex)
+				.then(() =>
+				{
+					this.controller.changeBackgroundImage(index);
+
+					// Let the next animation wait
+					setTimeout(
+						this.controller.transitionController.transitionInStep.bind(this.controller.transitionController, index),
+						1000
+					);
+				})
 				.then(() => this._switchComplete = true);
 		}
 	}

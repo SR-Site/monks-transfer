@@ -7,6 +7,24 @@
 		@include size(100%);
 	}
 
+	.slide-details {
+		@include size(25%, auto);
+		@include pos($sizeGrid * 3, auto, auto, 50%);
+		position: absolute;
+		transform: translateX(-50%);
+		text-align: center;
+
+		.slide-detail {
+			@include size(100%, auto);
+			@include pos(0, 0, auto, 0);
+			position: absolute;
+		}
+
+		.heading {
+			margin-bottom: $sizeGrid / 2;
+		}
+	}
+
 	.steps {
 		@extend %reset-list;
 		display: flex;

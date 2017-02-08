@@ -20,6 +20,8 @@ class BlockPathToPurchaseController extends AbstractBlockComponentController<Blo
 	private _imageCrossfader: ImageCrossfaderController;
 	private _paginatorDashedController: PaginatorDashedController;
 
+	public transitionController: BlockPathToPurchaseTransitionController;
+
 
 	/**
 	 *    Instance of Log debug utility for debug logging

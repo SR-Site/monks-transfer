@@ -63,6 +63,8 @@
 						{
 							"heading": "Dream",
 							"paragraph": "They are open to possibility",
+							"secondaryHeading": "Dream",
+							"secondaryParagraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at massa dapibus, ullamcorper elit at, feugiat nisi.",
 							"background": {
 								"normal": "data/image/path-to-purchase/background-1.jpg",
 								"small": "data/image/path-to-purchase/background-1.jpg",
@@ -72,6 +74,8 @@
 						{
 							"heading": "Search",
 							"paragraph": "They make a descision to",
+							"secondaryHeading": "Search",
+							"secondaryParagraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at massa dapibus, ullamcorper elit at, feugiat nisi.",
 							"background": {
 								"normal": "data/image/path-to-purchase/background-2.jpg",
 								"small": "data/image/path-to-purchase/background-2.jpg",
@@ -81,6 +85,8 @@
 						{
 							"heading": "Purchase",
 							"paragraph": "They begin shopping",
+							"secondaryHeading": "Purchase",
+							"secondaryParagraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at massa dapibus, ullamcorper elit at, feugiat nisi.",
 							"background": {
 								"normal": "data/image/path-to-purchase/background-3.jpg",
 								"small": "data/image/path-to-purchase/background-3.jpg",
@@ -90,6 +96,8 @@
 						{
 							"heading": "Ownership",
 							"paragraph": "They evaluate their options",
+							"secondaryHeading": "Ownership",
+							"secondaryParagraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at massa dapibus, ullamcorper elit at, feugiat nisi.",
 							"background": {
 								"normal": "data/image/path-to-purchase/background-4.jpg",
 								"small": "data/image/path-to-purchase/background-4.jpg",
@@ -99,6 +107,8 @@
 						{
 							"heading": "Support",
 							"paragraph": "They are making the purchase",
+							"secondaryHeading": "Support",
+							"secondaryParagraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at massa dapibus, ullamcorper elit at, feugiat nisi.",
 							"background": {
 								"normal": "data/image/path-to-purchase/background-5.jpg",
 								"small": "data/image/path-to-purchase/background-5.jpg",
