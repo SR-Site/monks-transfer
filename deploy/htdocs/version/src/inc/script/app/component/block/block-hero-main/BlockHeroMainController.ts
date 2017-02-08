@@ -72,7 +72,11 @@ class BlockHeroMainController extends AbstractBlockComponentController<BlockHero
 	public handleImageCrossfaderReady(controller: ImageCrossfaderController): void
 	{
 		this._imageCrossfader = controller;
-		this._imageCrossfader.setOverlay('rgba(0,48,87,0.5)')
+
+		if(this.viewModel.hasStatistics())
+		{
+			this._imageCrossfader.setOverlay('rgba(0,48,87,0.5)')
+		}
 	}
 
 	/**

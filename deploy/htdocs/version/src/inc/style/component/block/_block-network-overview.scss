@@ -21,7 +21,6 @@
 
 	.network-logo {
 		opacity: .2;
-		transition: opacity .2s ease(easeInOut);
 	}
 
 	.component-scroll-bar {
@@ -35,13 +34,24 @@
 		filter: grayscale(100%);
 		border-left: 1px solid rgba(#323232, 0.2);
 		position: relative;
-		transition: filter .2s ease(easeInOut);
+	}
 
-		@include hover() {
-			filter: grayscale(0%);
+	&.enable-css-animations {
 
-			.network-logo {
-				opacity: 1;
+		.network-logo {
+			transition: opacity .2s ease(linear);
+		}
+
+		.network-list-item {
+			transition: filter .2s ease(linear), background .2s ease(linear);
+
+			@include hover() {
+				background: $colorLightGrey;
+				filter: grayscale(0%);
+
+				.network-logo {
+					opacity: 1;
+				}
 			}
 		}
 	}

@@ -9,6 +9,8 @@ import ScrollBarController from "../../scroll-bar/ScrollBarController";
 import CommonEvent from "../../../../lib/temple/event/CommonEvent";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 import {IDraggableEventData} from "../../../util/DraggableInstance";
+import AbstractTransitionComponentController from "../../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
+import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 
 class BlockNetworkOverviewController extends AbstractBlockComponentController<BlockNetworkOverviewViewModel, IBlockNetworkOverviewOptions>
 {
@@ -47,6 +49,10 @@ class BlockNetworkOverviewController extends AbstractBlockComponentController<Bl
 	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new BlockNetworkOverviewTransitionController(this.element, this);
+		this.transitionController.addEventListener(AbstractTransitionController.TRANSITION_IN_COMPLETE, () =>
+		{
+			this.element.classList.add('enable-css-animations');
+		});
 
 		super.allComponentsLoaded();
 	}
