@@ -25,6 +25,24 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 
 	/**
 	 * @public
+	 * @method handleZoomInClick
+	 */
+	public handleZoomInClick(): void
+	{
+		this.controller.zoomIn()
+	}
+
+	/**
+	 * @public
+	 * @method handleZoomOutClick
+	 */
+	public handleZoomOutClick(): void
+	{
+		this.controller.zoomOut();
+	}
+
+	/**
+	 * @public
 	 * @method toggleSidePanel
 	 */
 	public toggleSidePanel(): void

@@ -1,7 +1,30 @@
 <div class="component-block-market-map" data-bind="with: data">
 
-	<div class="map-box abs-fill" id="js-map">
-		<!--<img class="abs-fill fit-cover" src="data/image/market-map/map.jpg " />-->
+	<div class="map-box abs-fill" id="js-map"></div>
+
+	<div class="zoom-actions">
+		<!-- ko component: {
+			name: 'button/button-circle-icon',
+			options: {
+				'icon': 'plus',
+				'action': {
+					event: $root.handleZoomInClick.bind($root),
+					label: 'Zoom in',
+					title: 'Zoom in'
+				}
+			}
+		} --><!-- /ko -->
+		<!-- ko component: {
+			name: 'button/button-circle-icon',
+			options: {
+				'icon': 'minus',
+				'action': {
+					event: $root.handleZoomOutClick.bind($root),
+					label: 'Zoom in',
+					title: 'Zoom in'
+				}
+			}
+		} --><!-- /ko -->
 	</div>
 
 	<div class="selected-value copy-03" data-bind="

@@ -1,0 +1,10 @@
+<button class="component-button-circle-icon button" data-bind="
+	attr: {
+		title: title
+	},
+	events: [
+		[MouseEventHelper.CLICK, $root.handleClick.bind($root)]
+	]
+">
+	<span class="icon"data-bind="icon: data.icon"></span>
+</button>

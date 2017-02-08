@@ -62,6 +62,24 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	}
 
 	/**
+	 * @public
+	 * @method zoomIn
+	 */
+	public zoomIn():void
+	{
+		this._map.zoomIn()
+	}
+
+	/**
+	 * @public
+	 * @method zoomOut
+	 */
+	public zoomOut():void
+	{
+		this._map.zoomOut()
+	}
+
+	/**
 	 * @private
 	 * @method updateDataLayer
 	 */
@@ -155,7 +173,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 			center: [-97.0364, 38.8951],
 			zoom: 4,
 			minZoom: 4,
-			scrollZoom: true,
+			scrollZoom: false,
 			style: 'mapbox://styles/larsvanbraam/ciyodzuy800ds2sla6tuazga1'
 		});
 

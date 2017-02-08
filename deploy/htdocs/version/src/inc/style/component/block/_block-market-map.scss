@@ -3,8 +3,23 @@
 	@include aspect-ratio($sizeGrid*36, $sizeGrid*22);
 	max-height: calc(100vh - #{$sizeHeader});
 
-	.map-box { // todo init map
+	.map-box {
 		z-index: zindex($zIndex, map);
+	}
+
+	.zoom-actions {
+		@include pos(50%, auto, auto, $sizeGrid * 2);
+		position: absolute;
+		z-index: zindex($zIndex, ui);
+		transform: translateY(-50%);
+
+		.component-button-circle-icon {
+			display: block;
+
+			&:not(:first-child) {
+				margin-top: $sizeGrid / 2;
+			}
+		}
 	}
 
 	// Side Panel
