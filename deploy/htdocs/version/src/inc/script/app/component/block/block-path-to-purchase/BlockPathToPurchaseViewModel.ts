@@ -5,13 +5,13 @@ import IBlockPathToPurchaseOptions from 'app/component/block/block-path-to-purch
 import ko = require('knockout');
 import StringUtils from "../../../../lib/temple/util/type/StringUtils";
 import MouseEventHelper from "../../../util/MouseEventHelper";
+import Promise = require("bluebird");
 
 class BlockPathToPurchaseViewModel extends AbstractBlockComponentViewModel<BlockPathToPurchaseController, IBlockPathToPurchaseOptions>
 {
 	public activeIndex: KnockoutObservable<number> = ko.observable(0);
 	public StringUtils: Class = StringUtils;
 	public MouseEventHelper: Class = MouseEventHelper;
-
 
 	private _switchComplete = true;
 
@@ -21,11 +21,11 @@ class BlockPathToPurchaseViewModel extends AbstractBlockComponentViewModel<Block
 	 */
 	private handleClick(index: number): void
 	{
-		if(this._switchComplete)
+		if(this._switchComplete && this.controller.transitionController.transitionInComplete)
 		{
-			const oldIndex = this.activeIndex();
-
 			this._switchComplete = false;
+
+			const oldIndex = this.activeIndex();
 
 			this.activeIndex(index);
 
@@ -33,13 +33,13 @@ class BlockPathToPurchaseViewModel extends AbstractBlockComponentViewModel<Block
 				.then(() =>
 				{
 					this.controller.changeBackgroundImage(index);
-
-					// Let the next animation wait
-					setTimeout(
-						this.controller.transitionController.transitionInStep.bind(this.controller.transitionController, index),
-						1000
-					);
 				})
+				.then(() =>
+				{
+					// Let the next animation wait
+					return new Promise((resolve: () => void) => setTimeout(resolve, 1000))
+				})
+				.then(() => this.controller.transitionController.transitionInStep(index))
 				.then(() => this._switchComplete = true);
 		}
 	}
