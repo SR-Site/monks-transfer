@@ -1,11 +1,12 @@
 import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockImageCallToActionsTransitionController from 'app/component/block/block-image-call-to-actions/BlockImageCallToActionsTransitionController';
 import IBlockImageCallToActionsOptions from 'app/component/block/block-image-call-to-actions/IBlockImageCallToActionsOptions';
-import BlockImageCallToActionsViewModel from 'app/component/block/block-image-call-to-actions/BlockImageCallToActionsViewModel';
+
 
 import Log from "lib/temple/util/Log";
 import NativeEventListener from "../../../../lib/temple/event/NativeEventListener";
 import ThrottleDebounce from "../../../../lib/temple/util/ThrottleDebounce";
+import BlockImageCallToActionsViewModel from "./BlockImageCallToActionsViewModel";
 
 class BlockImageCallToActionsController extends AbstractBlockComponentController<BlockImageCallToActionsViewModel, IBlockImageCallToActionsOptions>
 {
@@ -45,7 +46,7 @@ class BlockImageCallToActionsController extends AbstractBlockComponentController
 	 * @method get triangleSize
 	 * @returns {any|any<number>}
 	 */
-	public get triangleSize():number
+	public get triangleSize(): number
 	{
 		return this.viewModel.triangleSize();
 	}
@@ -123,7 +124,7 @@ class BlockImageCallToActionsController extends AbstractBlockComponentController
 	{
 		this.clipImages();
 
-		this.viewModel.triangleSize((1 / this.options.callToActions.length) * window.innerWidth)
+		this.viewModel.triangleSize((1 / this.options.callToActions.length) * document.body.offsetWidth);
 	}
 
 	/**
