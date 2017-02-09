@@ -19,7 +19,6 @@ class BlockMapController extends AbstractBlockComponentController<BlockMapViewMo
 	private _debug: Log = new Log('app.component.BlockMap');
 
 	private _imageSequence: ImageSequenceController;
-	private _mapSlider: MapSliderController;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -68,6 +67,8 @@ class BlockMapController extends AbstractBlockComponentController<BlockMapViewMo
 	 */
 	private handleMapSliderProgressChange(event: DataEvent<{progress: number}>): void
 	{
+		console.log(event.data.progress);
+
 		this._imageSequence.seek(
 			this.progressToFrameNumber(event.data.progress)
 		);
@@ -91,7 +92,6 @@ class BlockMapController extends AbstractBlockComponentController<BlockMapViewMo
 	 */
 	public destruct(): void
 	{
-
 		// always call this last
 		super.destruct();
 	}

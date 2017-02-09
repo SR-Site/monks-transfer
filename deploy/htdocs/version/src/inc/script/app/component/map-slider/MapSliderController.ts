@@ -108,9 +108,10 @@ class MapSliderController extends AbstractTransitionComponentController<MapSlide
 	 */
 	private handleDrag(): void
 	{
-		let progress = this._draggableInstance.x / (this._draggableInstance.maxX + this._knob.offsetWidth);
+		let progress = this._draggableInstance.x / this._draggableInstance.maxX;
+		let visualProgress = this._draggableInstance.x / (this._draggableInstance.maxX + this._knob.offsetWidth);
 
-		this.viewModel.progress(progress);
+		this.viewModel.progress(visualProgress);
 		this.viewModel.activeIndex(Math.round(progress * this._stepCount));
 
 		this.dispatch(CommonEvent.UPDATE, {
