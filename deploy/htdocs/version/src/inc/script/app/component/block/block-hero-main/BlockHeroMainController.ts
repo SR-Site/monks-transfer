@@ -1,13 +1,12 @@
 import AbstractBlockComponentController from "../AbstractBlockComponentController";
-import BlockHeroMainTransitionController from 'app/component/block/block-hero-main/BlockHeroMainTransitionController';
-import IBlockHeroMainOptions from 'app/component/block/block-hero-main/IBlockHeroMainOptions';
-import BlockHeroMainViewModel from 'app/component/block/block-hero-main/BlockHeroMainViewModel';
-
+import BlockHeroMainTransitionController from "app/component/block/block-hero-main/BlockHeroMainTransitionController";
+import IBlockHeroMainOptions from "app/component/block/block-hero-main/IBlockHeroMainOptions";
+import BlockHeroMainViewModel from "app/component/block/block-hero-main/BlockHeroMainViewModel";
 import Log from "lib/temple/util/Log";
 import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
-import Promise = require("bluebird");
-import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 import ImageHelper from "../../../util/ImageHelper";
+import Promise = require("bluebird");
+import DataManager from "../../../data/DataManager";
 
 class BlockHeroMainController extends AbstractBlockComponentController<BlockHeroMainViewModel, IBlockHeroMainOptions>
 {
@@ -32,18 +31,6 @@ class BlockHeroMainController extends AbstractBlockComponentController<BlockHero
 
 		this.viewModel.hasStatistics(this.options.slides.map((slide) => slide.statistics !== void 0).indexOf(true) > -1);
 	}
-
-	/**
-	 * @protected
-	 * @method allComponentsLoaded
-	 */
-	protected allComponentsLoaded(): void
-	{
-		this.transitionController = new BlockHeroMainTransitionController(this.element, this);
-
-		super.allComponentsLoaded();
-	}
-
 	/**
 	 * @public
 	 * @method changeBackgroundImage
@@ -87,6 +74,17 @@ class BlockHeroMainController extends AbstractBlockComponentController<BlockHero
 	public get activeIndex(): number
 	{
 		return this.viewModel.activeIndex();
+	}
+
+	/**
+	 * @protected
+	 * @method allComponentsLoaded
+	 */
+	protected allComponentsLoaded(): void
+	{
+		this.transitionController = new BlockHeroMainTransitionController(this.element, this);
+
+		super.allComponentsLoaded();
 	}
 
 	/**

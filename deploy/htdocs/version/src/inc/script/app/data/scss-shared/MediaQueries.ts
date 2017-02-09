@@ -13,11 +13,11 @@ export let mediaQueries:{[breakpoint:string]:string;} = {
 	// Tablets landscape
 	LARGE : "(max-width: 1024px)",
 	// Normal desktop
-	X_LARGE: "(max-width: 1280px)",
+	X_LARGE: "(max-width: 1439px)",
 	// Large desktop
-	XX_LARGE: "(max-width: 1440px)",
+	XX_LARGE: "(max-width: 1659px)",
 	// Extra large desktop
-	XXX_LARGE: "(min-width: 1441px)",
+	XXX_LARGE: "(min-width: 1660px)",
 
 	MEDIUM_ISOLATE : "(min-width: 768px) and (max-width: 1023px)"
 };

@@ -4,6 +4,7 @@ import IDefaultComponentTransitionOptions from "./IAbstractTransitionComponentOp
 import CallbackCounter from "../../CallbackCounter";
 import AbstractTransitionController from "../AbstractTransitionController";
 import Promise = require("bluebird");
+import DataManager from "../../../data/DataManager";
 
 
 /**
@@ -11,7 +12,7 @@ import Promise = require("bluebird");
  * @description This class is used by all components that you want to be transition in/out
  */
 abstract class AbstractTransitionComponentController<TController, TOptions extends IDefaultComponentTransitionOptions>
-	extends AbstractComponentController<DefaultSubTransitionViewModel<TController, TOptions>, TOptions>
+extends AbstractComponentController<DefaultSubTransitionViewModel<TController, TOptions>, TOptions>
 {
 	/**
 	 * @property viewModel

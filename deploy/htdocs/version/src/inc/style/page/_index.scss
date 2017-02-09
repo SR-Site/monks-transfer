@@ -18,6 +18,18 @@
 	}
 
 	/**
+	 * Development device state indicator
+	 */
+	.device-state-indicator {
+		@include pos(auto, auto, 0, 0);
+		position: fixed;
+		background: green;
+		color: white;
+		font: 400 14px/1 $fontOpenSans;
+		padding: 10px;
+	}
+
+	/**
 	 * Development grid
 	 */
 	.grid {

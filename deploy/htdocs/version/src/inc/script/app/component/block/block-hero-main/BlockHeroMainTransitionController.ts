@@ -2,20 +2,31 @@ import AbstractTransitionController from "../../../util/component-transition/Abs
 import TriangleTransitionController from "../../../util/component-transition/TriangleTransitionController";
 import Promise = require("bluebird");
 import BlockHeroMainController from "./BlockHeroMainController";
+import DataManager from "../../../data/DataManager";
+import DestructibleHelper from "../../../../lib/temple/core/DestructibleHelper";
 
 class BlockHeroMainTransitionController extends AbstractTransitionController<BlockHeroMainController>
 {
 	private _mainTriangleAnimation: TriangleTransitionController<BlockHeroMainController>;
 	private _slideTransitions: Array<{timeline: TimelineLite, completeMethod: () => void}> = [];
 
+	private _destructibles: DestructibleHelper = new DestructibleHelper();
+
 	constructor(element: HTMLElement, parentController: any)
 	{
 		super(element, parentController);
 
-		this._mainTriangleAnimation = new TriangleTransitionController<BlockHeroMainController>(
-			<HTMLElement>this.element.querySelector('.background-triangle'),
-			this.parentController
-		);
+		this._destructibles.addKOSubscription(
+			DataManager.getInstance().deviceStateTracker.currentState.subscribe(() =>
+			{
+				this.setupSlideTransition();
+
+				setTimeout(() =>
+				{
+					this.transitionInStep(this.parentController.activeIndex);
+				}, 100);
+			})
+		)
 	}
 
 	/**
@@ -28,76 +39,6 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 		this.setupSlideTransition();
 
 		super.setupTransitionTimeline();
-	}
-
-	/**
-	 * @private
-	 * @method setupSlideTransition
-	 */
-	private setupSlideTransition(): void
-	{
-		const slideContent = Array.prototype.slice.call(this.element.querySelectorAll('.slide-content'));
-		const statistics = this.element.querySelectorAll('.statistics-wrapper');
-
-		this.parentController.options.slides.forEach((slide, index: number) =>
-		{
-			let element = slideContent[index];
-			let heading = element.querySelector('.heading');
-			let copy = element.querySelector('.copy');
-			let button = element.querySelector('.component-button-circle-arrow');
-
-			let timeline = new TimelineLite({
-				paused: true,
-				onComplete: () => this.handleSlideTransitionComplete(index),
-				onReverseComplete: () => this.handleSlideTransitionComplete(index)
-			});
-
-			timeline.from(element, 0.1, {display: 'none'});
-
-			timeline.from(heading, 0.6, {
-				y: 30,
-				autoAlpha: 0,
-				ease: Quad.easeOut
-			});
-
-			if(copy)
-			{
-				timeline.from(copy, 0.6, {
-					y: 30,
-					autoAlpha: 0,
-					ease: Quad.easeOut
-				}, '=-0.5');
-			}
-
-			if(button)
-			{
-				timeline.from(button, 0.6, {
-					y: 30,
-					autoAlpha: 0,
-					ease: Quad.easeOut
-				}, '=-0.5');
-			}
-
-			if(statistics.length)
-			{
-				timeline.from(statistics[index].querySelector('.heading'), 0.6, {
-					y: 30,
-					autoAlpha: 0,
-					ease: Quad.easeOut
-				}, 0.2);
-
-				timeline.from(statistics[index].querySelectorAll('.statistic'), 0.6, {
-					y: 30,
-					autoAlpha: 0,
-					ease: Quad.easeOut
-				}, 0.25)
-			}
-
-			this._slideTransitions.push({
-				timeline: timeline,
-				completeMethod: null
-			});
-		});
 	}
 
 	/**
@@ -191,7 +132,111 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 		const slideTransition = this._slideTransitions[this.parentController.activeIndex].timeline;
 
 		this.transitionInTimeline.add(() => slideTransition.restart(), 3 - slideTransition.duration());
+	}
 
+	/**
+	 * @private
+	 * @method setupSlideTransition
+	 */
+	private setupSlideTransition(): void
+	{
+		const slideContent = Array.prototype.slice.call(this.element.querySelectorAll('.slide-content'));
+		const statistics = this.element.querySelectorAll('.statistics-wrapper');
+
+		this.clearCurrentTimelines();
+
+		this.parentController.options.slides.forEach((slide, index: number) =>
+		{
+			let element = slideContent[index];
+			let heading = element.querySelector('.heading');
+			let copy = element.querySelector('.copy');
+			let button = element.querySelector('.component-button-circle-arrow');
+
+			let timeline = new TimelineLite({
+				paused: true,
+				onComplete: () => this.handleSlideTransitionComplete(index),
+				onReverseComplete: () => this.handleSlideTransitionComplete(index)
+			});
+
+			timeline.from(element, 0.1, {display: 'none'});
+
+			timeline.from(heading, 0.6, {
+				y: 30,
+				autoAlpha: 0,
+				ease: Quad.easeOut
+			});
+
+			if(copy)
+			{
+				timeline.from(copy, 0.6, {
+					y: 30,
+					autoAlpha: 0,
+					ease: Quad.easeOut
+				}, '=-0.5');
+			}
+
+			if(button)
+			{
+				timeline.from(button, 0.6, {
+					y: 30,
+					autoAlpha: 0,
+					ease: Quad.easeOut
+				}, '=-0.5');
+			}
+
+			if(statistics.length)
+			{
+				timeline.from(statistics[index].querySelector('.heading'), 0.6, {
+					y: 30,
+					autoAlpha: 0,
+					ease: Quad.easeOut
+				}, 0.2);
+
+				timeline.from(statistics[index].querySelectorAll('.statistic'), 0.6, {
+					y: 30,
+					autoAlpha: 0,
+					ease: Quad.easeOut
+				}, 0.25)
+			}
+
+			this._slideTransitions.push({
+				timeline: timeline,
+				completeMethod: null
+			});
+		});
+	}
+
+	/**
+	 * @private
+	 * @method clearCurrentTimelines
+	 */
+	private clearCurrentTimelines(): void
+	{
+		// Remove existing timeline configuration before setting it
+		this._slideTransitions.forEach((slideTransition, index) =>
+		{
+			if(slideTransition.timeline)
+			{
+				this.clearTimeline(slideTransition.timeline);
+			}
+
+			slideTransition.timeline = null;
+			slideTransition.completeMethod = null;
+		});
+
+
+		// Kill the main triangle animation
+		if(this._mainTriangleAnimation)
+		{
+			this._mainTriangleAnimation.destruct();
+		}
+
+		this._slideTransitions = [];
+
+		this._mainTriangleAnimation = new TriangleTransitionController<BlockHeroMainController>(
+			<HTMLElement>this.element.querySelector('.background-triangle'),
+			this.parentController
+		);
 	}
 
 	/**

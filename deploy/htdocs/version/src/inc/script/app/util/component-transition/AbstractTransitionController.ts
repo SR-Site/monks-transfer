@@ -65,7 +65,7 @@ abstract class AbstractTransitionController<TParentController extends AbstractTr
 	 * @public
 	 * @description the element on which the transition component is wrapped
 	 */
-	public element:HTMLElement;
+	public element: HTMLElement;
 	/**
 	 * @property transitionResolveMethod
 	 * @type {()=>void}
@@ -126,7 +126,10 @@ abstract class AbstractTransitionController<TParentController extends AbstractTr
 		{
 			this.getRootComponent().callbackCounter.promise.then(() =>
 			{
-				this.setupTransitionTimeline();
+				if(!this.isDestructed())
+				{
+					this.setupTransitionTimeline();
+				}
 			});
 		}
 		else
@@ -378,6 +381,35 @@ abstract class AbstractTransitionController<TParentController extends AbstractTr
 	}
 
 	/**
+	 * @protected
+	 * @method clearTimeline
+	 * @param timeline
+	 */
+	protected clearTimeline(timeline: TimelineLite): void
+	{
+		let targets = timeline.getChildren();
+
+		for(let i = 0; i < targets.length; i++)
+		{
+			TweenLite.set((<Tween>targets[i]).target, {clearProps: "all"});
+		}
+
+		timeline.clear();
+	}
+
+	/**
+	 * @protected
+	 * @method killAndClearTimeline
+	 * @param timeline
+	 */
+	protected killAndClearTimeline(timeline: TimelineLite): void
+	{
+		this.clearTimeline(timeline);
+
+		timeline.kill();
+	}
+
+	/**
 	 * @public
 	 * @method destruct
 	 */
@@ -387,22 +419,24 @@ abstract class AbstractTransitionController<TParentController extends AbstractTr
 
 		if(this.transitionOutTimeline)
 		{
-			this.transitionOutTimeline.kill();
+			this.killAndClearTimeline(this.transitionOutTimeline);
+
 			this.transitionOutTimeline = null;
 		}
 
 		if(this.transitionInTimeline)
 		{
-			this.transitionInTimeline.kill();
+			this.killAndClearTimeline(this.transitionInTimeline);
+
 			this.transitionInTimeline = null;
 		}
 
 		if(this.loopingAnimationTimeline)
 		{
-			this.loopingAnimationTimeline.kill();
+			this.killAndClearTimeline(this.loopingAnimationTimeline);
+
 			this.loopingAnimationTimeline = null;
 		}
-
 
 		this.transitionResolveMethod = null;
 		this._transitionInComplete = null;
