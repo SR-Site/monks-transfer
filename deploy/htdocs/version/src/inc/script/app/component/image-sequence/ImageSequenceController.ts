@@ -45,6 +45,7 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	private _ctx: CanvasRenderingContext2D;
 	private _playAnimation: TweenLite;
 
+	private _loopTimeout:number;
 	private _stopped: boolean = false;
 
 	/**
@@ -74,7 +75,7 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	 * @public
 	 * @method play
 	 */
-	public play(loop: boolean = false): void
+	public play(loop: boolean = false, loopDelay: number = 0): void
 	{
 		this._stopped = false;
 
@@ -93,7 +94,12 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 			{
 				if(loop && !this._stopped)
 				{
-					this.play(loop);
+					clearTimeout(this._loopTimeout);
+
+					this._loopTimeout = setTimeout(() =>
+					{
+						this.play(loop, loopDelay);
+					}, loopDelay)
 				}
 			}
 		})
@@ -106,6 +112,8 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	public stop(): void
 	{
 		this._stopped = true;
+
+		clearTimeout(this._loopTimeout)
 
 		if(this._playAnimation)
 		{

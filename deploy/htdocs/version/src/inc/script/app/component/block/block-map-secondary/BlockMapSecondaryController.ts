@@ -60,7 +60,7 @@ class BlockMapSecondaryController extends AbstractBlockComponentController<Block
 	 */
 	private handleImageSequenceLoaded(): void
 	{
-		this._imageSequenceController.play(true);
+		this._imageSequenceController.play(true, 2000);
 	}
 
 	/**
