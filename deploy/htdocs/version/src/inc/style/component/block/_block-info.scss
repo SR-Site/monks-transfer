@@ -21,7 +21,7 @@
 	}
 
 	.inner-content {
-		padding: $sizeGrid*2 $sizeGrid $sizeGrid*2 $sizeGrid*2;
+		padding: $sizeGrid*2.5;
 		width: calc(100% - #{$sizeGrid});
 		background-color: $colorSecondary;
 		display: flex;
@@ -45,7 +45,7 @@
 	}
 
 	.description {
-		width: calc(100% - #{$sizeGrid*11});
+		width: calc(100% - #{$sizeGrid*5});
 	}
 
 	.copy {
@@ -61,12 +61,21 @@
 		@include size(16 * $sizeGrid, 8 * $sizeGrid);
 
 		.inner-content {
-			padding: $sizeGrid;
+			padding: $sizeGrid * 1.5 $sizeGrid * 2;
 			height: 100%;
+			flex-direction: column;
+
+			.copy {
+				display: none;
+			}
+		}
+
+		.component-button-main {
+			align-self: flex-start
 		}
 
 		.description {
-			width: calc(100% - #{$sizeGrid*3.5});
+			width: 100%;
 		}
 	}
 

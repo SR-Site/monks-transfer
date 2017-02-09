@@ -43,7 +43,7 @@
 		position: absolute;
 		@include offset(0, 0);
 		transform: translate(0, 0);
-		font: 400 1.5rem / #{$sizeGrid} $fontOpenSans;
+		font: 400 1.4rem / #{$sizeGrid} $fontOpenSans;
 		white-space: nowrap;
 		transition: transform 250ms ease(easeOutExpo), font-size 250ms ease(easeOutExpo);
 		pointer-events: none;
@@ -52,17 +52,16 @@
 	// Input
 	.shadow-element,
 	input {
-		font: 600 1.5rem / #{$sizeGrid} $fontOpenSans;
+		font: 400 1.6rem / #{$sizeGrid} $fontOpenSans;
 
 		// Focus State
 		&.invalid,
 		&:valid,
 		&:focus {
 			+ .placeholder-label {
-				left: 100%;
+				left: calc(100% - #{$sizeGrid / 2});
 				transform: translate(-100%, 0);
 				opacity: 0.5;
-				font-size: 1.3rem;
 			}
 		}
 	}

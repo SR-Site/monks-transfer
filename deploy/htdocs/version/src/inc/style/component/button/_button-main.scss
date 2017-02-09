@@ -3,7 +3,7 @@
 	font: 800 1rem / calc(5rem - 2px) $fontOpenSans;
 	color: $colorPrimary;
 	text-transform: uppercase;
-	padding: 0 $sizeGrid / 2;
+	padding: 0 $sizeGridSecondary;
 	display: inline-block;
 	position: relative;
 	vertical-align: middle;
@@ -47,7 +47,7 @@
 		color: $colorWhite;
 
 		.stripe {
-			background: $colorWhite;
+			background: #000;
 		}
 
 		rect {
@@ -56,9 +56,13 @@
 			}
 
 			&.hover-stroke {
-				stroke: $colorWhite;
+				stroke: #000;
 			}
 		}
+	}
+
+	@include respond-to(X_LARGE) {
+		height: 4.5rem;
 	}
 
 	// Breakpoints

@@ -46,6 +46,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 		this.parentController.options.personas.forEach((persona, index: number) =>
 		{
 			let element = personaContent[index];
+			let button = element.querySelector('.component-button-main');
 
 			let timeline = new TimelineLite({
 				paused: true,
@@ -65,11 +66,10 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 				ease: Quad.easeOut
 			}, '=-0.5');
 
-			timeline.from(element.querySelector('.component-button-main'), 0.6, {
-				y: 30,
-				autoAlpha: 0,
-				ease: Quad.easeOut
-			}, '=-0.5');
+			if(button)
+			{
+				timeline.add(this.getSubTimeline(button), '=-0.2');
+			}
 
 			this._slideTransitions.push({
 				timeline: timeline,

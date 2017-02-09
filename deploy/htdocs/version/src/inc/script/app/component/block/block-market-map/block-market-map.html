@@ -84,7 +84,7 @@
 
 	<form class="search-bar" data-bind="submit: $root.handleSubmit.bind($root)">
 		<div class="input-text-main input-text large">
-			<input type="text" name="search" id="search" data-bind="
+			<input type="text" name="search" id="search" autocomplete="off" data-bind="
 			live: $root.searchQuery,
 			focusBorder: {
 				value: $root.searchQuery

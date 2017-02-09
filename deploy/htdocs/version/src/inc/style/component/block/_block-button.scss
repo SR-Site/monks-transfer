@@ -1,5 +1,8 @@
 .component-block-button {
-	padding: .5rem $sizeGrid * 7;
+
+	.site-frame	{
+		padding: 0.5rem $sizeGrid * 7;
+	}
 
 	&.align-left {
 		text-align: left;

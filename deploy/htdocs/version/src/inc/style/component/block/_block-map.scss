@@ -27,7 +27,7 @@
 		position: absolute;
 
 		.pagination-number {
-			@include pos(0, auto, auto, 0);
+			@include pos(-10px, auto, auto, 0);
 			transform: translate(-50%, -50%);
 			position: absolute;
 		}

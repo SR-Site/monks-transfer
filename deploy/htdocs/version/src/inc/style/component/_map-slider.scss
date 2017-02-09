@@ -84,23 +84,5 @@
 		background: transparent;
 		transition: background .2s ease(easeInOut);
 		pointer-events: all;
-
-		&:before {
-			@include abs-center($sizeGrid / 4);
-			border-radius: 100%;
-			background: $colorWhite;
-			content: '';
-			opacity: 0;
-			transition: opacity .2s ease(easeInOut);
-		}
-
-		@include hover() {
-			background: $colorSecondary;
-
-			&:before{
-				opacity: 1;
-			}
-
-		}
 	}
 }

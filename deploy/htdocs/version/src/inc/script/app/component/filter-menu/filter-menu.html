@@ -60,8 +60,10 @@
 			</li>
 			<!-- /ko -->
 
-			<li class="button-reset button" data-bind="tap: $root.resetFilter.bind($root)">
-				<span class="icon abs-center" data-bind="icon: 'reset'"></span>
+			<li class="reset-wrapper">
+				<button class="button-reset button" data-bind="tap: $root.resetFilter.bind($root)" title="Reset selection">
+					<span class="icon abs-center" data-bind="icon: 'reset'"></span>
+				</button>
 			</li>
 		</ul>
 	</div>

@@ -1,12 +1,12 @@
 .component-button-circle-arrow {
 	.label {
-		font: 800 1.1rem / 1 $fontOpenSans;
+		font: 800 1.2rem / 1 $fontOpenSans;
 		text-transform: uppercase;
 		color: $colorWhite;
 	}
 
 	.icon {
-		@include size($sizeGrid);
+		@include size($sizeGridSecondary * 2);
 	}
 
 	.order-container {

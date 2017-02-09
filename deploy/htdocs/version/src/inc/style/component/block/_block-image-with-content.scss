@@ -4,7 +4,6 @@
 
 	.site-frame {
 		height: 100%;
-
 	}
 
 	.overrule-overlap {
@@ -22,8 +21,7 @@
 		height: auto;
 		position: absolute;
 		background: #fff;
-		padding: $sizeGrid * 2;
-
+		padding: $sizeGrid * 3;
 
 		&:after {
 			position: absolute;

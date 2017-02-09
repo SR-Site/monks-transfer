@@ -1,6 +1,6 @@
 .component-block-market-map {
-	$zIndex: map, ui;
 	@include aspect-ratio($sizeGrid*36, $sizeGrid*22);
+	$zIndex: map, ui;
 	max-height: calc(100vh - #{$sizeHeader});
 
 	.map-box {

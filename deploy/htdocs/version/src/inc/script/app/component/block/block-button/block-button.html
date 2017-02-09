@@ -3,14 +3,16 @@
 		'align-right': data.alignment === Alignment.RIGHT
 	}">
 	<div class="overrule-overlap">
-		<!-- ko component: {
-				name: 'button/button-main',
-				onComplete: $root.controller.callbackCounter.get(),
-				options: {
-					action: data.link,
-					size: $root.ButtonSize.LARGE,
-					disabled: $root.findOutMoreDisabled
-				}
-			} --><!-- /ko -->
+		<div class="site-frame">
+			<!-- ko component: {
+					name: 'button/button-main',
+					onComplete: $root.controller.callbackCounter.get(),
+					options: {
+						action: data.link,
+						size: $root.ButtonSize.LARGE,
+						disabled: $root.findOutMoreDisabled
+					}
+				} --><!-- /ko -->
+		</div>
 	</div>
 </div>

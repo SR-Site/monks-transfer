@@ -1,14 +1,14 @@
 // Default Heading Styles.
 .heading {
 
-	.highlight{
+	.highlight {
 		color: $colorSecondary;
 	}
 }
 
 // Open sans extra bold
 .heading-01 {
-	font: 800 6.5rem / 1.07 $fontOpenSans;
+	font: 800 7rem / 1.07 $fontOpenSans;
 }
 
 // Open sans extra bold
@@ -21,9 +21,9 @@
 	font: 700 3.6rem / 1.25 $fontOpenSans;
 }
 
-// Open sans semi-bold
+// Open sans bold
 .heading-04 {
-	font: 600 3.6rem / 1.25 $fontOpenSans;
+	font: 700 4rem / 1.25 $fontOpenSans;
 }
 
 // Open sans regular
@@ -33,7 +33,7 @@
 
 // Open sans regular
 .heading-06 {
-	font: 400 2.6rem / 1.23 $fontOpenSans;
+	font: 400 3rem / 1.23 $fontOpenSans;
 }
 
 // Open sans semi-bold
@@ -56,8 +56,35 @@
 	font: 800 1.2rem / 1.75 $fontOpenSans;
 }
 
-
 // Breakpoints
+@include respond-to(XX_LARGE) {
+	.heading-01 {
+		font-size: 6.5rem;
+	}
+
+	.heading-04 {
+		font-size: 3.6rem;
+	}
+
+	.heading-06 {
+		font-size: 2.6rem;
+	}
+}
+
+@include respond-to(X_LARGE) {
+	.heading-01 {
+		font-size: 5.5rem;
+	}
+
+	.heading-04 {
+		font-size: 3.2rem;
+	}
+
+	.heading-06 {
+		font-size: 2.4rem;
+	}
+}
+
 @include respond-to(SMALL) {
 	.heading-01 {
 		font-size: mobile-size(8rem);

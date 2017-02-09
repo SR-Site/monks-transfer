@@ -6,8 +6,8 @@
 	padding-bottom: $sizeGrid / 2;
 
 	&:after {
-		@include pos(auto, auto, $sizeGrid / 8, 0);
-		@include size(100%, 1px);
+		@include pos(auto, auto, 0, 0);
+		@include size(20px, 1px);
 		transform: rotate(-#{$angle}deg);
 		position: absolute;
 		background: currentColor;

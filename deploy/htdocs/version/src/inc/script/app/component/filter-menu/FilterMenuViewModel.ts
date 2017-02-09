@@ -131,7 +131,7 @@ class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenu
 		{
 			Object.keys(this.filters()).forEach((key, index) =>
 			{
-				this.filters()[index].map((option) => option.checked(false));
+				this.filters()[key].map((option) => option.checked(false));
 			});
 		}
 	}
