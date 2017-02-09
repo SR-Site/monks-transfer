@@ -84,13 +84,15 @@ class ScrollUtils
 	 * Method used to get the scrollElement, for all browsers it's the document.body. Firefox and IE are the exception that uses
 	 * the html element for setting the scrollTop position.
 	 *
-	 * @private static
+	 * @public static
 	 * @method get scrollElement
 	 * @returns {Element|HTMLElement}
 	 */
-	private static get scrollElement():Element
+	public static get scrollElement():Element
 	{
-		return bowser.name == BrowserName.FIREFOX || bowser.name == BrowserName.INTERNET_EXPLORER ? document.documentElement : document.body;
+		const browserName = bowser.name.toLowerCase();
+
+		return browserName == BrowserName.FIREFOX || browserName == BrowserName.INTERNET_EXPLORER ? document.documentElement : document.body;
 	}
 }
 
