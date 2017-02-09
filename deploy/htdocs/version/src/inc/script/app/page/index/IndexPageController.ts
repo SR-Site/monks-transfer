@@ -54,23 +54,25 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 		this._beforeTransitionIn = Gaia.api.beforeTransitionIn(this.handleBeforeTransitionIn.bind(this), true);
 		this._beforeGoto = Gaia.api.beforeGoto(this.handleBeforeGoto.bind(this), true, false);
 
-		// TODO: remove this!
-		let gridElement = (<HTMLElement>this.element.querySelector('.grid'));
-
-		document.addEventListener('keyup', (event: KeyboardEvent) =>
+		if(DEBUG)
 		{
-			if(event.keyCode === KeyCode.NUM_1)
+			let gridElement = (<HTMLElement>this.element.querySelector('.grid'));
+
+			document.addEventListener('keyup', (event: KeyboardEvent) =>
 			{
-				if(gridElement.classList.contains('is-active'))
+				if(event.keyCode === KeyCode.NUM_1)
 				{
-					gridElement.classList.remove('is-active');
+					if(gridElement.classList.contains('is-active'))
+					{
+						gridElement.classList.remove('is-active');
+					}
+					else
+					{
+						gridElement.classList.add('is-active');
+					}
 				}
-				else
-				{
-					gridElement.classList.add('is-active');
-				}
-			}
-		})
+			})
+		}
 	}
 
 	/**

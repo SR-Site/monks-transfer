@@ -61,20 +61,23 @@ abstract class AbstractBlockComponentController<T, U extends IAbstractBlockCompo
 	 */
 	public init(): void
 	{
-		// Add the block id to the block
-		let blockId = document.createElement('div');
+		if(DEBUG)
+		{
+			// Add the block id to the block
+			let blockId = document.createElement('div');
 
-		blockId.innerHTML = this.options.id;
-		blockId.style.position = 'absolute';
-		blockId.style.left = '0';
-		blockId.style.top = '0';
-		blockId.style.padding = (this.options.blocks ? '15px' : '5px');
-		blockId.style.fontSize = '15px';
-		blockId.style.color = '#fff';
-		blockId.style.zIndex = '9999';
-		blockId.style.backgroundColor = (this.options.blocks ? '#f18e00' : '#f00');
+			blockId.innerHTML = this.options.id;
+			blockId.style.position = 'absolute';
+			blockId.style.left = '0';
+			blockId.style.top = '0';
+			blockId.style.padding = (this.options.blocks ? '15px' : '5px');
+			blockId.style.fontSize = '15px';
+			blockId.style.color = '#fff';
+			blockId.style.zIndex = '9999';
+			blockId.style.backgroundColor = (this.options.blocks ? '#f18e00' : '#f00');
 
-		this.element.appendChild(blockId);
+			this.element.appendChild(blockId);
+		}
 
 		// Set the default classes for block components
 		if(this.options.windowed)
@@ -173,7 +176,6 @@ abstract class AbstractBlockComponentController<T, U extends IAbstractBlockCompo
 		this.transitionInStarted = null;
 		this.isInView = null;
 		this.animationsStarted = null;
-
 
 
 		super.destruct();
