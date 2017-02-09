@@ -3,17 +3,42 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockinfo.field_block_info
     - field.field.paragraph.blockinfo.field_styles
     - paragraphs.paragraphs_type.blockinfo
   module:
+    - entity_reference_revisions
+    - field_group
     - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: false
+      label: Styles
 id: paragraph.blockinfo.default
 targetEntityType: paragraph
 bundle: blockinfo
 mode: default
 content:
+  field_block_info:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
   field_styles:
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs

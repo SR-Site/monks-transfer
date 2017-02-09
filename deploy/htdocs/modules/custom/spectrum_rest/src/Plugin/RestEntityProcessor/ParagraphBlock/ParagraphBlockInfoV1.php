@@ -24,10 +24,11 @@ class ParagraphBlockInfoV1 extends SpectrumRestEntityProcessorBase {
   protected function getItemData($entity) {
 
     $data = parent::getCommonData($entity);
+    $block_info = $this->fieldProcessor->getFieldData($entity->get('field_block_info'), ['view_mode' => 'teaser']);
 
     $data = [
       "id" => 'blockInfo',
-      "data" => $data,
+      "data" => $data + ($block_info ?: []),
     ];
 
     return $data;

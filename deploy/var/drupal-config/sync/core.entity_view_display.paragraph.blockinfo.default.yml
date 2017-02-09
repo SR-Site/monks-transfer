@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockinfo.field_block_info
     - field.field.paragraph.blockinfo.field_styles
     - paragraphs.paragraphs_type.blockinfo
   module:
@@ -12,6 +13,14 @@ targetEntityType: paragraph
 bundle: blockinfo
 mode: default
 content:
+  field_block_info:
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
   field_styles:
     weight: 0
     label: above

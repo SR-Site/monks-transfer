@@ -1,0 +1,17 @@
+uuid: 1d3ae3c2-dd7e-4f57-86e0-cf7d32dde01a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Block Info'
+type: block_info
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false
