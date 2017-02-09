@@ -1,0 +1,9 @@
+uuid: b750c996-e5aa-4423-85f8-77d8d3ebe1f5
+langcode: en
+status: true
+dependencies: {  }
+name: Platform
+vid: platform
+description: ''
+hierarchy: 0
+weight: 0

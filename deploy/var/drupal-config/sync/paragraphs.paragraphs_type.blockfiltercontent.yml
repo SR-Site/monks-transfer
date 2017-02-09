@@ -1,0 +1,7 @@
+uuid: 5e0dd364-2b03-423a-bfbe-836aadf54049
+langcode: en
+status: true
+dependencies: {  }
+id: blockfiltercontent
+label: 'Block filter content'
+behavior_plugins: {  }
