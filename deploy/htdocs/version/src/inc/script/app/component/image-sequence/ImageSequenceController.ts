@@ -45,6 +45,8 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	private _ctx: CanvasRenderingContext2D;
 	private _playAnimation: TweenLite;
 
+	private _stopped: boolean = false;
+
 	/**
 	 *    Overrides AbstractPageController.init()
 	 *    @method init
@@ -72,13 +74,13 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	 * @public
 	 * @method play
 	 */
-	public play(): void
+	public play(loop: boolean = false): void
 	{
+		this._stopped = false;
+
 		// Animate the frame count
 		let frameCounter = {frame: 0};
 		let totalDuration = this.options.imageSequence.total / ImageSequenceController.FPS;
-
-		this.stop();
 
 		this._playAnimation = TweenLite.to(frameCounter, totalDuration, {
 			ease: Linear.easeNone,
@@ -86,6 +88,13 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 			onUpdate: () =>
 			{
 				this.seek(Math.round(frameCounter.frame));
+			},
+			onComplete: () =>
+			{
+				if(loop && !this._stopped)
+				{
+					this.play(loop);
+				}
 			}
 		})
 	}
@@ -96,6 +105,8 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	 */
 	public stop(): void
 	{
+		this._stopped = true;
+
 		if(this._playAnimation)
 		{
 			this._playAnimation.kill();
@@ -123,12 +134,12 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 		if(image)
 		{
 			this._ctx.clearRect(0, 0, this.element.offsetWidth, this.element.offsetHeight);
-			this._ctx.drawImage( image, 0, 0, this.element.offsetWidth, this.element.offsetHeight );
+			this._ctx.drawImage(image, 0, 0, this.element.offsetWidth, this.element.offsetHeight);
 
 			this._currentFrame = frame;
 
 			this.dispatch(CommonEvent.UPDATE, {
-				progress: frame / this.options.imageSequence.total
+				progress: frame / (this.options.imageSequence.total - 1)
 			})
 		}
 	}
@@ -211,7 +222,7 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 		}
 		else
 		{
-			return new Promise((resolve: ()=>void) => resolve());
+			return new Promise((resolve: () => void) => resolve());
 		}
 	}
 
