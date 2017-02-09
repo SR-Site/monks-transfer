@@ -12,6 +12,16 @@ class DrupalScriptHandler {
     return $project_root .  '/deploy/htdocs';
   }
 
+  public static function copySqlSrvDrivers(Event $event) {
+    $fs = new Filesystem();
+    $root = static::getDrupalRoot(getcwd());
+
+    if ($fs->exists($root . '/modules/contrib/sqlsrv/drivers')) {
+      $fs->mirror("$root/modules/contrib/sqlsrv/drivers", "$root/drivers", NULL, ['delete' => TRUE, 'override' => TRUE]);
+      $event->getIO()->write("SQLSRV drivers copied into Drupal root.");
+    }
+  }
+
   public static function createRequiredFiles(Event $event) {
     $fs = new Filesystem();
     $root = static::getDrupalRoot(getcwd());
