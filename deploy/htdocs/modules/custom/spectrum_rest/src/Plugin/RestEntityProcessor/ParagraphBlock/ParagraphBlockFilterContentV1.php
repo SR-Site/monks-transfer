@@ -46,6 +46,11 @@ class ParagraphBlockFilterContentV1 extends SpectrumRestEntityProcessorBase {
     return $data;
   }
 
+  /**
+   * Get Filter's options.
+   *
+   * @return array
+   */
   protected function getFilterOptions() {
     $filters = [];
     $vocabularies = ['category', 'document_type', 'market', 'platform'];
