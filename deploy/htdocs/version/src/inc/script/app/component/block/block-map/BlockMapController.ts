@@ -67,8 +67,6 @@ class BlockMapController extends AbstractBlockComponentController<BlockMapViewMo
 	 */
 	private handleMapSliderProgressChange(event: DataEvent<{progress: number}>): void
 	{
-		console.log(event.data.progress);
-
 		this._imageSequence.seek(
 			this.progressToFrameNumber(event.data.progress)
 		);

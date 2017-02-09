@@ -21,7 +21,11 @@ class BlockImageCallToActionsTransitionController extends AbstractTransitionCont
 				},
 				{
 					y: this.element.offsetHeight + this.parentController.triangleSize,
-					ease: Expo.easeOut
+					ease: Expo.easeOut,
+					onComplete: () =>
+					{
+						TweenLite.set(clipMask, {display: 'none'})
+					}
 				}, index === 0 ? 0 : '=-1.6');
 		})
 	}

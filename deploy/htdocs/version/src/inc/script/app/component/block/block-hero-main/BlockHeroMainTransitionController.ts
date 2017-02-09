@@ -217,7 +217,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 		{
 			if(slideTransition.timeline)
 			{
-				this.clearTimeline(slideTransition.timeline);
+				this.killAndClearTimeline(slideTransition.timeline);
 			}
 
 			slideTransition.timeline = null;

@@ -1,10 +1,14 @@
 <div class="component-block-persona-selector">
 	<!-- ko if: dataManager.deviceStateTracker.currentState() > $root.DeviceState.SMALL -->
-		<div class="background-image abs-fill">
-			<!-- ko component: {
-				name: 'image-crossfader',
-				onComplete: $root.controller.callbackCounter.get($root.controller.handleImageCrossfaderReady.bind($root.controller))
-			} --><!-- /ko -->
+		<div class="background-image abs-fill" data-bind="foreach: data.personas">
+			<div class="image abs-fill" data-bind="
+					css: {
+						'is-active': $root.activeIndex() == $index()
+					},
+					image: {
+						image: $data.image,
+						state: $root.deviceState()
+					}"></div>
 		</div>
 	<!-- /ko -->
 	<div class="slider">

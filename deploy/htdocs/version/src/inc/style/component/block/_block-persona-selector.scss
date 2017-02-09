@@ -10,6 +10,18 @@
 		overflow: hidden;
 	}
 
+	.background-image {
+		.image {
+			background-size: cover;
+			opacity: 0;
+			transition: opacity .8s ease(Linear)
+		}
+
+		.is-active {
+			opacity: 1;
+		}
+	}
+
 	.background-triangle {
 		@include arrow(right, $colorWhite, $sizeGrid * 40);
 		@include pos(calc(50% + #{$sizeGrid * 2}), auto, auto, -$sizeGrid * 3);
@@ -229,6 +241,7 @@
 		$buttonHeight: $sizeGrid * 2.5;
 
 		.persona-button,
+		.persona-options,
 		.persona-option {
 			height: $buttonHeight;
 		}
@@ -248,6 +261,7 @@
 		$buttonHeight: $sizeGrid * 2;
 
 		.persona-button,
+		.persona-options,
 		.persona-option {
 			height: $buttonHeight;
 		}
@@ -269,7 +283,12 @@
 				padding-left: 0;
 			}
 		}
+	}
 
+	@include respond-to(MEDIUM) {
+		.persona-options {
+			bottom: $sizeGrid;
+		}
 	}
 
 	@include respond-to(SMALL) {

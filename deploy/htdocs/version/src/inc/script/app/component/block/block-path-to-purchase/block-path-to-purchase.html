@@ -1,10 +1,16 @@
 <div class="component-block-path-to-purchase">
 	<div class="inner-wrapper abs-fill">
 		<!-- ko if: dataManager.deviceStateTracker.currentState() > $root.DeviceState.SMALL -->
-			<!-- ko component: {
-				name: 'image-crossfader',
-				onComplete: $root.controller.callbackCounter.get($root.controller.handleImageCrossfaderReady.bind($root.controller))
-			} --><!-- /ko -->
+		<div class="background-image abs-fill" data-bind="foreach: data.steps">
+			<div class="image abs-fill" data-bind="
+				css: {
+					'is-active': $root.activeIndex() == $index()
+				},
+				image: {
+					image: $data.background,
+					state: $root.deviceState()
+			}"></div>
+		</div>
 		<!-- /ko -->
 
 		<div class="slide-details" data-bind="foreach:data.steps">

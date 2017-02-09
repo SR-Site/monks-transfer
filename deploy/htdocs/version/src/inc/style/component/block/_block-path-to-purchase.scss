@@ -4,7 +4,15 @@
 	@include aspect-ratio(36 * $sizeGrid, 15 *$sizeGrid);
 
 	.background-image {
-		@include size(100%);
+		.image {
+			background-size: cover;
+			opacity: 0;
+			transition: opacity .8s ease(Linear)
+		}
+
+		.is-active {
+			opacity: 1;
+		}
 	}
 
 	.slide-details {

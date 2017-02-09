@@ -97,8 +97,6 @@ class HeaderController extends AbstractTransitionComponentController<HeaderViewM
 	 */
 	private handleScroll(): void
 	{
-		console.log('handle scroll');
-
 		this.viewModel.enableSolidBackground(ScrollUtils.scrollTop > this.element.offsetHeight);
 
 		// Close the menu on scrolling

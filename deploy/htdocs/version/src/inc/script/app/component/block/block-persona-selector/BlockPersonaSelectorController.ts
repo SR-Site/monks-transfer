@@ -1,16 +1,13 @@
 import AbstractBlockComponentController from "../AbstractBlockComponentController";
-import BlockPersonaSelectorTransitionController from 'app/component/block/block-persona-selector/BlockPersonaSelectorTransitionController';
-import IBlockPersonaSelectorOptions from 'app/component/block/block-persona-selector/IBlockPersonaSelectorOptions';
-import BlockPersonaSelectorViewModel from 'app/component/block/block-persona-selector/BlockPersonaSelectorViewModel';
-
+import BlockPersonaSelectorTransitionController from "app/component/block/block-persona-selector/BlockPersonaSelectorTransitionController";
+import IBlockPersonaSelectorOptions from "app/component/block/block-persona-selector/IBlockPersonaSelectorOptions";
+import BlockPersonaSelectorViewModel from "app/component/block/block-persona-selector/BlockPersonaSelectorViewModel";
 import Log from "lib/temple/util/Log";
-import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
-import ImageHelper from "../../../util/ImageHelper";
-import Promise = require("bluebird");
 import InfiniteImageCarousel from "../../../util/infinite-carousel/InfiniteImageCarousel";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
 import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedController";
+import Promise = require("bluebird");
 
 class BlockPersonaSelectorController extends AbstractBlockComponentController<BlockPersonaSelectorViewModel, IBlockPersonaSelectorOptions>
 {
@@ -23,7 +20,6 @@ class BlockPersonaSelectorController extends AbstractBlockComponentController<Bl
 	 */
 	private _debug: Log = new Log('app.component.BlockPersonaSelector');
 
-	private _imageCrossfader: ImageCrossfaderController;
 	private _infiniteImageCarousel: InfiniteImageCarousel;
 	private _paginatorDashedController: PaginatorDashedController;
 
@@ -79,36 +75,6 @@ class BlockPersonaSelectorController extends AbstractBlockComponentController<Bl
 
 	/**
 	 * @public
-	 * @method handleImageCrossfaderReady
-	 */
-	public handleImageCrossfaderReady(controller: ImageCrossfaderController): void
-	{
-		this._imageCrossfader = controller;
-	}
-
-	/**
-	 * @public
-	 * @method changeBackgroundImage
-	 * @param index
-	 */
-	public changeBackgroundImage(index: number): Promise<any>
-	{
-		if(this._imageCrossfader)
-		{
-			return this._imageCrossfader.open(
-				ImageHelper.getImageForMediaQuery(
-					this.options.personas[index].image
-				)
-			);
-		}
-		else
-		{
-			return Promise.resolve();
-		}
-	}
-
-	/**
-	 * @public
 	 * @method transitionInSlideContent
 	 */
 	public transitionInSlideContent(index: number): Promise<any>
@@ -149,7 +115,6 @@ class BlockPersonaSelectorController extends AbstractBlockComponentController<Bl
 	 */
 	public destruct(): void
 	{
-		this._imageCrossfader = null;
 		this._paginatorDashedController = null;
 
 		if(this._infiniteImageCarousel)

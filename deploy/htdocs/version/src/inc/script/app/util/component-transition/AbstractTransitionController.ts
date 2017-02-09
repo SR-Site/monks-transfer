@@ -391,7 +391,14 @@ abstract class AbstractTransitionController<TParentController extends AbstractTr
 
 		for(let i = 0; i < targets.length; i++)
 		{
-			TweenLite.set((<Tween>targets[i]).target, {clearProps: "all"});
+			if((<Tween>targets[i]).target)
+			{
+				TweenLite.set((<Tween>targets[i]).target, {clearProps: "all"});
+			}
+			else
+			{
+				this.clearTimeline(<TimelineLite>targets[i]);
+			}
 		}
 
 		timeline.clear();

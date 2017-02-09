@@ -30,15 +30,6 @@ class BlockPathToPurchaseViewModel extends AbstractBlockComponentViewModel<Block
 			this.activeIndex(index);
 
 			this.controller.transitionController.transitionOutStep(oldIndex)
-				.then(() =>
-				{
-					this.controller.changeBackgroundImage(index);
-				})
-				.then(() =>
-				{
-					// Let the next animation wait
-					return new Promise((resolve: () => void) => setTimeout(resolve, 1000))
-				})
 				.then(() => this.controller.transitionController.transitionInStep(index))
 				.then(() => this._switchComplete = true);
 		}
