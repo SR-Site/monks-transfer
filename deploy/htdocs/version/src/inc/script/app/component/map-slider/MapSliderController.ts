@@ -92,7 +92,7 @@ class MapSliderController extends AbstractTransitionComponentController<MapSlide
 			onDragEnd: this.handleDrag.bind(this),
 			onThrowUpdate: this.handleDrag.bind(this),
 			onThrowComplete: this.handleDrag.bind(this),
-			allowNativeTouchScrolling: bowser.mobile || bowser.tablet,
+			allowNativeTouchScrolling: (bowser.mobile || bowser.tablet) ? true : false,
 			snap: {
 				x: (endPos: number) =>
 				{
