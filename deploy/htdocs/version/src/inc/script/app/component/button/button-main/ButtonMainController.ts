@@ -10,8 +10,9 @@ class ButtonMainController extends AbstractButtonController<ButtonMainViewModel,
 {
 	public static BORDER_WIDTH: number = 5;
 
-	public transitionController:ButtonMainTransitionController;
+	public transitionController: ButtonMainTransitionController;
 
+	private _backgroundStroke: HTMLElement;
 	private _hoverStroke: HTMLElement;
 
 	private _width: number = 0;
@@ -30,6 +31,7 @@ class ButtonMainController extends AbstractButtonController<ButtonMainViewModel,
 		this._debug.log('Init');
 
 		this._hoverStroke = <HTMLElement>this.element.querySelector('.hover-stroke');
+		this._backgroundStroke = <HTMLElement>this.element.querySelector('.background');
 
 		this.destructibles.addKOSubscription(DataManager.getInstance().deviceStateTracker.currentState.subscribe(this.handleDeviceStateChange.bind(this)))
 
@@ -93,11 +95,15 @@ class ButtonMainController extends AbstractButtonController<ButtonMainViewModel,
 		{
 			this._hoverStroke.style.strokeWidth = ButtonMainController.BORDER_WIDTH + 'px';
 
-			this._hoverStroke.setAttribute('width', this.element.offsetWidth - (ButtonMainController.BORDER_WIDTH * 2) + 'px');
-			this._hoverStroke.setAttribute('height', this.element.offsetHeight - (ButtonMainController.BORDER_WIDTH * 2) + 'px');
-
 			this._width = this.element.offsetWidth;
 			this._height = this.element.offsetHeight;
+
+			this._hoverStroke.setAttribute('width', this._width + 'px');
+			this._hoverStroke.setAttribute('height', this._height  + 'px');
+
+			this._backgroundStroke.setAttribute('width', this._width + 'px');
+			this._backgroundStroke.setAttribute('height', this._height + 'px');
+
 
 			// Calculate the dash array value's
 			this._hoverStroke.style.strokeDasharray = '0px ' + this.fullPath + 'px';
