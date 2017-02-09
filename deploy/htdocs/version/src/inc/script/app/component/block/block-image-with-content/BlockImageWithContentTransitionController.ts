@@ -1,27 +1,8 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
-import SentenceTransitionController from "../../../util/component-transition/SentenceTransitionController";
 import BlockImageWithContentController from "./BlockImageWithContentController";
 
 class BlockImageWithContentTransitionController extends AbstractTransitionController<BlockImageWithContentController>
 {
-	private _headingAnimation: SentenceTransitionController<BlockImageWithContentController>;
-	private _copyAnimation: SentenceTransitionController<BlockImageWithContentController>;
-
-	constructor(element: HTMLElement, parentController: any)
-	{
-		super(element, parentController);
-
-		this._headingAnimation = new SentenceTransitionController<BlockImageWithContentController>(
-			<HTMLElement>this.element.querySelector('.heading'),
-			this.parentController
-		);
-
-		this._copyAnimation = new SentenceTransitionController<BlockImageWithContentController>(
-			<HTMLElement>this.element.querySelector('.copy'),
-			this.parentController
-		);
-	}
-
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
@@ -43,7 +24,6 @@ class BlockImageWithContentTransitionController extends AbstractTransitionContro
 			}
 		);
 
-
 		this.transitionInTimeline.fromTo(this.element.querySelector('.image'), 2,
 			{
 				clip: 'rect(0, 0,' + height + ', 0)',
@@ -56,18 +36,19 @@ class BlockImageWithContentTransitionController extends AbstractTransitionContro
 				ease: Expo.easeOut
 			}, 0);
 
+		this.transitionInTimeline.from(this.element.querySelector('.heading'), 0.8, {
+			opacity: 0,
+			ease: Linear.easeNone
+		}, 1.1);
 
-		const copyTimeline = this._copyAnimation.getTimeline();
-		const headingTimeline = this._headingAnimation.getTimeline();
-
-
-		this.transitionInTimeline.add(headingTimeline.play(), 1.1);
-		this.transitionInTimeline.add(copyTimeline.play(),  1.3);
-
+		this.transitionInTimeline.from(this.element.querySelector('.copy'), 0.8, {
+			opacity: 0,
+			ease: Linear.easeNone
+		}, 1.3);
 
 		if(button)
 		{
-			this.transitionInTimeline.add(this.getSubTimeline(button),  2.4);
+			this.transitionInTimeline.add(this.getSubTimeline(button), 1.5);
 		}
 	}
 }
