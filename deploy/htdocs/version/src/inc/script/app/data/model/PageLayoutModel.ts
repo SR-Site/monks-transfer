@@ -42,6 +42,8 @@ class PageLayoutModel extends AbstractDataModel<IPageLayout>
 				.then((result) => this.parsePageLayout(result.data, page))
 				.catch((result) =>
 				{
+					if(DEBUG) console.error(result);
+
 					if(configManagerInstance.getProperty(PropertyNames.MOCK_CONTENT))
 					{
 						return this.getLayout(Routes.PAGE_NOT_FOUND);
