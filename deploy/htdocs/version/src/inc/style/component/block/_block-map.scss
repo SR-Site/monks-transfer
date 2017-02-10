@@ -2,29 +2,18 @@
 	user-select: none;
 
 	.aspect-ratio-wrapper {
-		@include aspect-ratio($sizeGrid * 32, $sizeGrid * 21);
-	}
-
-	.aspect-ratio-inner {
-		padding: $sizeGrid * 2;
-		background: $colorLightGrey;
-	}
-
-	.map-image {
-		@include aspect-ratio(1280px, 680px);
 		position: relative;
-
-		.component-image-sequence {
-			@include coverer();
-			@include size(100%);
-		}
+		background: $colorLightGrey;
+		padding: $sizeGrid * 2 $sizeGrid * 4;
+		font-size: 0;
 	}
 
 	.map-content {
-		@include size($sizeGrid * 5, auto);
-		@include pos(50%, auto, auto, $sizeGrid * 4);
-		transform: translateY(-50%);
-		position: absolute;
+		@include size($sizeGrid * 9, auto);
+		display: inline-block;
+		vertical-align: bottom;
+		position: relative;
+		margin-bottom: $sizeGrid * 3;
 
 		.pagination-number {
 			@include pos(-10px, auto, auto, 0);
@@ -37,49 +26,50 @@
 		}
 	}
 
-	.component-map-slider {
-		@include size($sizeGrid * 28, $sizeGrid * 2);
-		@include pos(auto, auto, $sizeGrid, 50%);
-		transform: translateX(-50%);
-		position: absolute;
+	.map-image-wrapper {
+		@include size(calc(100% - #{$sizeGrid * 9}), auto);
+		display: inline-block;
+		vertical-align: top;
 	}
 
-	// Breakpoints
-	@include respond-to(LARGE) {
-		.component-map-slider {
-			width: calc(100% - #{$sizeGrid * 2});
+	.map-image {
+		@include size(100%, auto);
+		@include aspect-ratio(800px, 560px);
+
+		.sequence-background,
+		.component-image-sequence {
+			@include coverer();
+			@include size(100%);
 		}
+	}
+
+	.component-map-slider {
+		@include size(100%, $sizeGrid * 2);
+		position: relative;
+	}
+
+	@include respond-to(X_LARGE) {
+		.aspect-ratio-wrapper {
+			padding: $sizeGrid * 2;
+		}
+
 	}
 
 	@include respond-to(SMALL) {
 		.aspect-ratio-wrapper {
-			&:before {
-				display: none;
-			}
+			display: flex;
+			flex-direction: column;
 		}
 
-		.aspect-ratio-inner {
-			padding: 0;
-			position: relative;
-			height: auto;
+		.map-image-wrapper {
+			width: 100%;
+			order: 0;
 		}
 
 		.map-content {
-			@include offset(0, 0);
-			margin: $sizeGrid 0 $sizeGrid*2 $sizeGrid*4;
-			width: calc(100% - #{$sizeGrid*6});
-			position: relative;
-			transform: none;
-		}
-
-		.map-image {
-			@include aspect-ratio($sizeGrid * 32, $sizeGrid * 21);
-		}
-
-		.component-map-slider {
-			position: relative;
-			bottom: auto;
+			order: 1;
 			width: 100%;
+			margin-top: $sizeGrid * 2;
 		}
 	}
 }

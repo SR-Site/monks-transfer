@@ -22,7 +22,7 @@
 
 	.map-image {
 		@include size(100%, auto);
-		@include aspect-ratio(1280px, 680px);
+		@include aspect-ratio(800px, 560px);
 
 		.sequence-background,
 		.component-image-sequence {
