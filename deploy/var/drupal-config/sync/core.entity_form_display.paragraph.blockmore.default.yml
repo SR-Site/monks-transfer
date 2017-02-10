@@ -9,7 +9,6 @@ dependencies:
     - field.field.paragraph.blockmore.field_styles
     - paragraphs.paragraphs_type.blockmore
   module:
-    - entity_reference_revisions
     - field_group
     - paragraphs
 third_party_settings:
@@ -45,15 +44,15 @@ bundle: blockmore
 mode: default
 content:
   field_articles:
-    weight: 3
+    weight: 1
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_autocomplete
   field_heading:
-    weight: 1
+    weight: 3
     settings:
       size: 60
       placeholder: ''

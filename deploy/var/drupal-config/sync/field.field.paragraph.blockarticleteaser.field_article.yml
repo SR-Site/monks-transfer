@@ -1,4 +1,4 @@
-uuid: 719893bd-8cad-4032-ac4f-77afba93b473
+uuid: 73dc0750-84bc-4de5-8a72-f803710c1436
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,6 @@ dependencies:
     - field.storage.paragraph.field_article
     - node.type.article
     - paragraphs.paragraphs_type.blockarticleteaser
-  module:
-    - entity_reference_revisions
 id: paragraph.blockarticleteaser.field_article
 field_name: field_article
 entity_type: paragraph
@@ -28,4 +26,4 @@ settings:
       direction: ASC
     auto_create: false
     auto_create_bundle: ''
-field_type: entity_reference_revisions
+field_type: entity_reference

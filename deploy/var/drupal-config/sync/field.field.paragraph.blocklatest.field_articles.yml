@@ -1,4 +1,4 @@
-uuid: 3525c4d8-4574-4f0e-aa08-47f04f6bb858
+uuid: 859cef70-dfd1-493b-9eba-accc3e08ac2e
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,6 @@ dependencies:
     - field.storage.paragraph.field_articles
     - node.type.article
     - paragraphs.paragraphs_type.blocklatest
-  module:
-    - entity_reference_revisions
 id: paragraph.blocklatest.field_articles
 field_name: field_articles
 entity_type: paragraph
@@ -15,7 +13,7 @@ bundle: blocklatest
 label: Articles
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -24,7 +22,8 @@ settings:
     target_bundles:
       article: article
     sort:
-      field: _none
+      field: title
+      direction: ASC
     auto_create: false
     auto_create_bundle: ''
-field_type: entity_reference_revisions
+field_type: entity_reference

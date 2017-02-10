@@ -1,4 +1,4 @@
-uuid: ff5bece3-29b9-4f02-88df-0805c45cda0c
+uuid: 7fb1370b-4302-4e3d-a3a8-4968c6df7db4
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,6 @@ dependencies:
     - field.storage.paragraph.field_articles
     - node.type.article
     - paragraphs.paragraphs_type.blockmore
-  module:
-    - entity_reference_revisions
 id: paragraph.blockmore.field_articles
 field_name: field_articles
 entity_type: paragraph
@@ -15,7 +13,7 @@ bundle: blockmore
 label: Articles
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -28,4 +26,4 @@ settings:
       direction: ASC
     auto_create: false
     auto_create_bundle: ''
-field_type: entity_reference_revisions
+field_type: entity_reference

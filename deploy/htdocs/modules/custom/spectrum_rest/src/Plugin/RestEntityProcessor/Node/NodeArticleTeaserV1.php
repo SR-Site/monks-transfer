@@ -24,7 +24,7 @@ class NodeArticleTeaserV1 extends SpectrumRestEntityProcessorBase {
   protected function getItemData($entity) {
 
     $data = [
-      "tags" => $this->fieldProcessor->getFieldData($entity->get('field_tags')),
+      "tags" => $this->getTags($entity),
       "image" => $this->image($entity->get('field_image')),
       "target" => $this->aliasManager->getAliasByPath('/' . $entity->toUrl()->getInternalPath()),
       "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_content')),
