@@ -4,8 +4,6 @@ import IDefaultComponentTransitionOptions from "./IAbstractTransitionComponentOp
 import CallbackCounter from "../../CallbackCounter";
 import AbstractTransitionController from "../AbstractTransitionController";
 import Promise = require("bluebird");
-import DataManager from "../../../data/DataManager";
-
 
 /**
  * @class AbstractTransitionComponentController

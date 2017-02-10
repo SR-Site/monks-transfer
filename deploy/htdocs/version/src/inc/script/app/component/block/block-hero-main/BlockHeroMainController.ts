@@ -6,7 +6,6 @@ import Log from "lib/temple/util/Log";
 import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
 import ImageHelper from "../../../util/ImageHelper";
 import Promise = require("bluebird");
-import DataManager from "../../../data/DataManager";
 
 class BlockHeroMainController extends AbstractBlockComponentController<BlockHeroMainViewModel, IBlockHeroMainOptions>
 {

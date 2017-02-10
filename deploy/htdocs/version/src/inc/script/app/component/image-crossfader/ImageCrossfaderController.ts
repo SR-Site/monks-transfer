@@ -10,6 +10,7 @@ import ThrottleDebounce from "../../../lib/temple/util/ThrottleDebounce";
 import IRectangle from "../../../lib/temple/geom/IRectangle";
 import TrianglePattern from "./util/TrianglePattern";
 import Promise = require("bluebird");
+import bowser = require("bowser");
 
 class ImageCrossfaderController extends AbstractTransitionComponentController<ImageCrossfaderViewModel, IImageCrossfaderOptions>
 {
@@ -63,6 +64,12 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 	private _animation: TweenLite;
 
 	private _overlayColor?: string;
+
+	/**
+	 * @property _oldWidth
+	 * @description On android devices a resize is triggerd when the height changes. We do not want this to happen
+	 */
+	private _oldWidth: number = 0;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -120,7 +127,7 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 				{
 					this._newImage = image;
 				})
-				.then(() => this.handleResize())
+				.then(() => this.calculateDimensions())
 				.then(() =>
 				{
 					this._animation = TweenLite.fromTo(this, duration,
@@ -226,6 +233,22 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 	 */
 	private handleResize(): void
 	{
+		if(bowser.android && this._oldWidth === document.body.offsetWidth)
+		{
+			return;
+		}
+
+		this.calculateDimensions();
+	}
+
+	/**
+	 * @private
+	 * @method calculateDimensions
+	 */
+	private calculateDimensions(): void
+	{
+		this._oldWidth = window.innerWidth;
+
 		// Measure the REM size to calculate the triangle grid
 		this._gridSize = (<HTMLElement><HTMLElement>this.element.querySelector('.grid-size')).offsetWidth;
 
