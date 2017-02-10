@@ -175,6 +175,14 @@
 			}
 		}
 	}
+
+	@include respond-to(SMALL) {
+		.element {
+			height: 4rem;
+			font-size: mobile-size(2rem);
+			line-height: 4rem;
+		}
+	}
 }
 
 form {

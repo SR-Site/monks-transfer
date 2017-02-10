@@ -159,7 +159,7 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	 */
 	private fetchPageFromStorage(): Promise<any>
 	{
-		return new Promise((resolve: ()=>void, reject: ()=>void) =>
+		return new Promise((resolve: () => void, reject: () => void) =>
 		{
 
 			const pageFound = this.viewModel.pages().find((page) => page.pageIndex === this.getPageIndexByOffset());
@@ -233,7 +233,7 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 			this.viewModel.limit,
 			this._filters
 		).then((result) => this.handleContentLoad(result));
-			// .then(() => ));
+		// .then(() => ));
 	}
 
 
@@ -325,21 +325,18 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 
 		if(this.viewModel.showInPages())
 		{
-			return Promise.all([
-				new Promise((resolve: ()=>void) =>
-				{
-					TweenLite.to(contentItems, 0.2, {
-						opacity: 0,
-						height: contentItems.offsetHeight,
-						onComplete: resolve
-					});
-				}),
-				// this._loader.show()
-			])
+			return new Promise((resolve: () => void) =>
+			{
+				TweenLite.to(contentItems, 0.2, {
+					opacity: 0,
+					height: contentItems.offsetHeight,
+					onComplete: resolve
+				});
+			})
 		}
 		else
 		{
-			// return this._loader.show();
+			return Promise.resolve();
 		}
 	}
 

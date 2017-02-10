@@ -193,12 +193,12 @@
 
 		// Filter Overlay
 		.filter-overlay {
+			@include size(100%, $sizeGrid*4);
 			position: fixed;
 			display: block;
 			background-color: white;
 			left: 0;
 			bottom: 0;
-			@include size(100%, $sizeGrid*4);
 			transition: height 250ms ease(easeOutExpo);
 			overflow: hidden;
 
@@ -207,38 +207,10 @@
 			}
 
 			.filter-label {
-				width: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
+				@include size(100%, $sizeGrid * 4);
+				padding: 0;
+				text-align: center;
 				font-size: mobile-size(2.8rem);
-				height: $sizeGrid*4;
-			}
-
-			.button-reset,
-			.button-close {
-				@include size($sizeGrid*4);
-
-				.icon {
-					@include size(10px);
-				}
-			}
-
-			.button-close {
-				border-right: 1px solid rgba(white, 0.6);
-			}
-
-			.button-reset {
-				border-left: 1px solid rgba(white, 0.6);
-			}
-
-			.button-apply {
-				height: 100%;
-				flex-grow: 1;
-				font-size: inherit;
-				text-transform: inherit;
-				font-family: inherit;
-				font-weight: inherit;
 			}
 
 			// Open State
@@ -247,33 +219,75 @@
 			}
 		}
 
+		.filter-actions {
+			@include size(100%, $sizeGrid * 4);
+			font-size: 0;
+			background: $colorTertiary;
+		}
+
+		.button-apply,
+		.button-close,
+		.button-reset {
+			display: inline-block;
+			vertical-align: top;
+			border: none;
+			border-radius: 0;
+		}
+
+		.button-reset,
+		.button-close {
+			@include size($sizeGrid * 4);
+			color: $colorWhite;
+
+			.icon {
+				@include size(16px);
+			}
+		}
+
+		.button-close {
+			border-right: 1px solid rgba(white, 0.6);
+		}
+
+		.button-reset {
+			@include pos(auto, auto, auto);
+			margin: 0;
+			position: relative;
+			border-left: 1px solid rgba(white, 0.6);
+		}
+
+		.button-apply {
+			@include size(calc(100% - #{$sizeGrid * 8}), $sizeGrid * 4);
+			font: 700 mobile-size(2.8rem)/#{$sizeGrid * 4} $fontOpenSans;
+			text-transform: uppercase;
+			color: $colorWhite;
+		}
+
 		// Filter Overlay Content
 		.filter-overlay-content {
 			position: relative;
 			height: calc(100% - #{$sizeGrid*4});
 			overflow: hidden;
-		}
 
-		// Filter Overlay Group
-		.filter-overlay-group {
+			// Filter Overlay Group
+			.filter-overlay-group {
 
-			&:not(:first-child) {
-				margin-top: $sizeGrid*2;
+				&:not(:first-child) {
+					margin-top: $sizeGrid*2;
+				}
+
+				.label {
+					margin-bottom: $sizeGrid/2;
+					font-size: mobile-size(2.4rem);
+					font-weight: 600;
+					font-family: $fontOpenSans;
+				}
 			}
 
-			.label {
-				margin-bottom: $sizeGrid/2;
-				font-size: mobile-size(2.4rem);
-				font-weight: 600;
-				font-family: $fontOpenSans;
-			}
-		}
-
-		// Filter Overlay Tags
-		.filter-overlay-tags {
-
-			.tag-checkbox {
-				margin-top: $sizeGrid/2;
+			// Filter Overlay Tags
+			.filter-overlay-tags {
+				.tag-checkbox {
+					margin-top: $sizeGrid/2;
+				}
 			}
 		}
 	}

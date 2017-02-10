@@ -18,7 +18,7 @@ class BlockSmallInfoTransitionController extends AbstractTransitionController<Bl
 		this.transitionInTimeline.from(heading, 0.8, { y: 50, autoAlpha: 0, ease: Expo.easeOut }, '=+0.5');
 
 		if( copy ) this.transitionInTimeline.from(copy, 0.8, { y: 50, autoAlpha: 0, ease: Expo.easeOut }, '=-0.7');
-		if( button ) this.transitionInTimeline.from(button, 0.8, { y: 50, autoAlpha: 0, ease: Expo.easeOut }, '=-0.7');
+		if( button ) this.transitionInTimeline.add(this.getSubTimeline(button), '=-0.7');
 	}
 }
 
