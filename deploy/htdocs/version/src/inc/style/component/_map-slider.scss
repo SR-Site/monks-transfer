@@ -82,7 +82,27 @@
 		position: absolute;
 		border-radius: 100%;
 		background: transparent;
-		transition: background .2s ease(easeInOut);
+		transition: background .2s ease(linear), borderColor .2s ease(linear);
 		pointer-events: all;
+
+		&:before {
+			@include abs-center(10px);
+			content: '';
+			border-radius: 100%;
+			background: $colorSecondary;
+			transform: scale(0);
+			opacity: 0;
+			transition: opacity .2s ease(linear), transform .2s ease(easeInOut);
+		}
+
+		@include hover() {
+			background: $colorLightGrey;
+			border-color: $colorSecondary;
+
+			&:before {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
 	}
 }
