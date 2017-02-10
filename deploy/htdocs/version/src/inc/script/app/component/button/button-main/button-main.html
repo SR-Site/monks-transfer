@@ -1,7 +1,7 @@
 <a class="component-button-main button" data-bind="attr: { title: title }, events: [
-	[MouseEventHelper.CLICK, $root.handleClick.bind($root)],
 	[MouseEventHelper.MOUSEENTER, $root.handleMouseEnter.bind($root)],
-	[MouseEventHelper.MOUSELEAVE, $root.handleMouseLeave.bind($root)]
+	[MouseEventHelper.MOUSELEAVE, $root.handleMouseLeave.bind($root)],
+	[MouseEventHelper.CLICK, $root.handleClick.bind($root)]
 ]">
 	<span class="label">{{label}}</span>
 	<svg width="100%" height="100%" class="abs-fill" preserveAspectRatio="none">
