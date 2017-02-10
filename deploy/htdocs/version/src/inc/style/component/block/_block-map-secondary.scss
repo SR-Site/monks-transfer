@@ -64,6 +64,12 @@
 		}
 	}
 
+	@include respond-to(LARGE) {
+		.map-content {
+			padding-right: $sizeGrid;
+		}
+	}
+
 	@include respond-to(SMALL) {
 		.aspect-ratio-wrapper {
 			display: flex;

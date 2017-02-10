@@ -4,7 +4,6 @@
 	position: relative;
 	overflow: hidden;
 	max-width: $largeSiteFrame;
-
 	/**
 	 * Define the site frame sizes for the different media queries
 	 */
@@ -17,7 +16,11 @@
 	//}
 
 	&.windowed {
-		padding: 0 $sizeGrid * 2 ;
+		padding: 0 $sizeGrid * 2;
+	}
+
+	@include respond-to(LARGE) {
+		max-width: calc(100vw - #{$sizeGrid * 2});
 	}
 
 	@include respond-to(SMALL) {
