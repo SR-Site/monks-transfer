@@ -67,6 +67,11 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 */
 	private _handleScrollSectionInViewListener: () => void;
 	/**
+	 * @property handleScrollSectionBeyondViewListener
+	 * @type {()=>void}
+	 */
+	private handleScrollSectionBeyondViewListener: () => void;
+	/**
 	 * @property _handleScrollSectionOutViewListener
 	 * @type {()=>void}
 	 */
@@ -242,6 +247,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 			{
 				this._scrollTrackerPoints[key].removeEventListener(ScrollTrackerEvent.ENTER_VIEW, this._handleScrollSectionInViewListener);
 				this._scrollTrackerPoints[key].removeEventListener(ScrollTrackerEvent.LEAVE_VIEW, this._handleScrollSectionOutViewListener);
+				this._scrollTrackerPoints[key].removeEventListener(ScrollTrackerEvent.SCROLLED_BEYOND, this.handleScrollSectionBeyondViewListener);
 
 				this._scrollTracker.removePoint(this._scrollTrackerPoints[key]);
 
@@ -286,9 +292,11 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 				// Bind the event
 				this._handleScrollSectionInViewListener = this.handleScrollSectionInView.bind(this, key);
 				this._handleScrollSectionOutViewListener = this.handleScrollSectionOutView.bind(this, key);
+				this.handleScrollSectionBeyondViewListener = this.handleScrollSectionBeyondView.bind(this, key);
 
 				scrollTrackerPoint.addEventListener(ScrollTrackerEvent.ENTER_VIEW, this._handleScrollSectionInViewListener);
 				scrollTrackerPoint.addEventListener(ScrollTrackerEvent.LEAVE_VIEW, this._handleScrollSectionOutViewListener);
+				scrollTrackerPoint.addEventListener(ScrollTrackerEvent.SCROLLED_BEYOND, this.handleScrollSectionBeyondViewListener);
 
 				// Store the reference
 				this._scrollTrackerPoints[key] = scrollTrackerPoint;
@@ -317,16 +325,31 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 */
 	private handleScrollSectionInView(id: string): void
 	{
+		const component = this._components[id];
+
 		// Set isInView boolean on the component
-		this._components[id].isInView = true;
-		this._components[id].startAnimations();
+		component.isInView = true;
+		component.startAnimations();
+
+		this.handleScrollSectionBeyondView(id);
+	};
+
+	/**
+	 * @private
+	 * @method handleScrollSectionBeyondView
+	 */
+	private handleScrollSectionBeyondView(id: string): void
+	{
+		const component = this._components[id];
 
 		// Avoid multiple transition in triggers
-		if(!this._components[id].transitionInStarted && !this._components[id].disableTransitionIn)
+		if(
+			!component.transitionInStarted && !component.disableTransitionIn && !component.transitionComplete
+		)
 		{
-			this._components[id].transitionIn();
+			component.transitionIn();
 		}
-	};
+	}
 
 	/**
 	 * @private

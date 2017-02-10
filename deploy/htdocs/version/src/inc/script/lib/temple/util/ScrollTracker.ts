@@ -232,6 +232,8 @@ export class ScrollTrackerEvent extends AbstractEvent
 	public static ENTER_VIEW: string = 'ScrollTrackerEvent.ENTER_VIEW';
 	public static LEAVE_VIEW: string = 'ScrollTrackerEvent.LEAVE_VIEW';
 	public static BOUNDS_CHANGED: string = 'ScrollTrackerEvent.BOUNDS_CHANGED';
+	public static SCROLLED_BEYOND: string = 'ScrollTrackerEvent.SCROLLED_BEYOND';
+
 
 	constructor(type: string,
 	            public point: ScrollTrackerPoint,
@@ -263,6 +265,11 @@ export class ScrollTrackerPoint extends EventDispatcher
 	 * Updated when checkInView() is called.
 	 */
 	public isInBounds: boolean = false;
+	/**
+	 * Boolean indicating if the top of the viewport has been scrolled beyond this point
+	 */
+	public hasScrolledBeyond:boolean = false;
+
 
 	constructor(private _position: number,
 	            private _height: number,
@@ -338,10 +345,23 @@ export class ScrollTrackerPoint extends EventDispatcher
 		var viewStart = this._tracker.viewStart; // pageYOffset
 		var viewEnd = this._tracker.viewEnd; // pageYOffset + windowHeight
 		var scrollSize = this._tracker.scrollSize; // maxWindowSCroll
+		var positionFromStart = this._side == Side.START ? this._position :scrollSize - this._position;
 
 		// var positionFromStart = this._side == Side.START ? this._position : scrollSize - this._position;
 		var isInView = viewEnd >= this._position && viewEnd <= this._position + this._height + window.innerHeight;
 		this.isInBounds = this._position >= 0 && this._position <= viewEnd;
+
+		if(!this.hasScrolledBeyond) {
+			var hasScrolledBeyond = viewEnd >= positionFromStart;
+			if(hasScrolledBeyond) {
+				this.hasScrolledBeyond = true;
+				this.dispatchEvent(new ScrollTrackerEvent(
+					ScrollTrackerEvent.SCROLLED_BEYOND,
+					this,
+					Side.END
+				));
+			}
+		}
 
 		if(this.isInView != isInView)
 		{
