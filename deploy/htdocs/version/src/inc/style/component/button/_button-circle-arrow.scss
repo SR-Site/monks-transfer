@@ -6,7 +6,7 @@
 	}
 
 	.icon {
-		@include size($sizeGridSecondary * 2);
+		@include size(50px); // Design wants it to be fixed 50px
 	}
 
 	.order-container {

@@ -77,7 +77,7 @@
 	.knob {
 		@include pos(50%, auto, auto, 0);
 		@include size($sizeGrid * 2);
-		transform: translateY(-50%);
+		margin-top: -$sizeGrid;
 		border: 1px solid $colorBorder;
 		position: absolute;
 		border-radius: 100%;

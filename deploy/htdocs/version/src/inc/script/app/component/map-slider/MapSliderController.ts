@@ -5,6 +5,8 @@ import MapSliderViewModel from "app/component/map-slider/MapSliderViewModel";
 import Log from "lib/temple/util/Log";
 import CommonEvent from "../../../lib/temple/event/CommonEvent";
 import bowser = require('bowser');
+import ThrottleDebounce from "../../../lib/temple/util/ThrottleDebounce";
+import NativeEventListener from "../../../lib/temple/event/NativeEventListener";
 
 class MapSliderController extends AbstractTransitionComponentController<MapSliderViewModel, IMapSliderOptions>
 {
@@ -36,13 +38,15 @@ class MapSliderController extends AbstractTransitionComponentController<MapSlide
 		this._stepCount = this.element.querySelectorAll('.steps li').length - 1;
 		this._knob = <HTMLElement>this.element.querySelector('.knob');
 		this._bounds = <HTMLElement>this.element.querySelector('.knob-wrapper');
+
+		this.destructibles.add(new NativeEventListener(window, 'resize', ThrottleDebounce.debounce(this.handleResize, 100, this)))
 	}
 
 	/**
 	 * @public
 	 * @method getactiveIndex
 	 */
-	public get activeIndex():KnockoutObservable<number>
+	public get activeIndex(): KnockoutObservable<number>
 	{
 		return this.viewModel.activeIndex;
 	}
@@ -77,7 +81,7 @@ class MapSliderController extends AbstractTransitionComponentController<MapSlide
 	{
 		super.allComponentsLoaded();
 
-		this._gridSize = (this._bounds.offsetWidth - this._knob.offsetWidth) / this._stepCount;
+		this.handleResize();
 
 		this._draggableInstance = Draggable.create(this._knob, {
 			type: 'x',
@@ -117,6 +121,23 @@ class MapSliderController extends AbstractTransitionComponentController<MapSlide
 		this.dispatch(CommonEvent.UPDATE, {
 			progress: progress
 		})
+	}
+
+	/**
+	 * @private
+	 * @method handleResize
+	 */
+	private handleResize(): void
+	{
+		this._gridSize = (this._bounds.offsetWidth - this._knob.offsetWidth) / this._stepCount;
+
+		if(this._draggableInstance)
+		{
+			this._draggableInstance.update(true);
+
+			// Reset the position
+			this.openIndex(this.viewModel.activeIndex());
+		}
 	}
 
 	/**
