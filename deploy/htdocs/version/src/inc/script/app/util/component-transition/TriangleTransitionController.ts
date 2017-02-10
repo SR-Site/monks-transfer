@@ -1,15 +1,16 @@
-
 import AbstractTransitionController from "./AbstractTransitionController";
 import AbstractTransitionComponentController from "./abstract-transition-component/AbstractTransitionComponentController";
 
 class TriangleTransitionController<TParentController extends AbstractTransitionComponentController<any, any>> extends AbstractTransitionController<TParentController>
 {
 	private _duration: number = 1;
+	private _clearProps: boolean = false;
 
-	constructor(element: HTMLElement, parentController: any, duration: number = 1)
+	constructor(element: HTMLElement, parentController: any, duration: number = 1, clearProps: boolean = false)
 	{
 		super(element, parentController, true);
 
+		this._clearProps = clearProps;
 		this._duration = duration;
 	}
 
@@ -28,7 +29,8 @@ class TriangleTransitionController<TParentController extends AbstractTransitionC
 			{
 				xPercent: 0,
 				yPercent: 0,
-				ease: Expo.easeOut
+				ease: Expo.easeOut,
+				clearProps: this._clearProps ? "all" : ""
 			}
 		);
 	}
@@ -44,7 +46,8 @@ class TriangleTransitionController<TParentController extends AbstractTransitionC
 			{
 				xPercent: 200,
 				yPercent: -100,
-				ease: Expo.easeIn
+				ease: Expo.easeIn,
+				clearProps: this._clearProps ? "all" : ""
 			}
 		);
 	}
@@ -54,7 +57,7 @@ class TriangleTransitionController<TParentController extends AbstractTransitionC
 	 * @method get transitionInDuration
 	 * @returns {Duration|any}
 	 */
-	public get transitionInDuration():number
+	public get transitionInDuration(): number
 	{
 		return this.transitionInTimeline.duration();
 	}
@@ -64,7 +67,7 @@ class TriangleTransitionController<TParentController extends AbstractTransitionC
 	 * @method get transitionInDuration
 	 * @returns {Duration|any}
 	 */
-	public get transitionOutDuration():number
+	public get transitionOutDuration(): number
 	{
 		return this.transitionOutTimeline.duration();
 	}
@@ -73,7 +76,7 @@ class TriangleTransitionController<TParentController extends AbstractTransitionC
 	 * @private
 	 * @method getTransitionInTimeline
 	 */
-	public getTransitionInTimeline():TimelineLite
+	public getTransitionInTimeline(): TimelineLite
 	{
 		return this.transitionInTimeline;
 	}

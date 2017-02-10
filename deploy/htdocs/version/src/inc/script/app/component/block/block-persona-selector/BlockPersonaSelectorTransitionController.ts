@@ -9,7 +9,6 @@ import DestructibleHelper from "../../../../lib/temple/core/DestructibleHelper";
 class BlockPersonaSelectorTransitionController extends AbstractTransitionController<BlockPersonaSelectorController>
 {
 	private _mainTriangleAnimation: TriangleTransitionController<BlockPersonaSelectorController>;
-	private _destructibles: DestructibleHelper = new DestructibleHelper();
 	private _slideTransitions: Array<{
 		timeline: TimelineLite,
 		completeMethod: () => void
@@ -18,18 +17,6 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	constructor(element: HTMLElement, parentController: any)
 	{
 		super(element, parentController);
-
-		this._destructibles.addKOSubscription(
-			DataManager.getInstance().deviceStateTracker.currentState.subscribe(() =>
-			{
-				this.setupTriangleAnimation();
-
-				setTimeout(() =>
-				{
-					this._mainTriangleAnimation.transitionIn();
-				}, 100);
-			})
-		)
 	}
 
 	/**
@@ -39,6 +26,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	 */
 	public setupTransitionTimeline(): void
 	{
+		this.setupTriangleAnimation();
 		this.setupSlideTransition();
 
 		super.setupTransitionTimeline();
@@ -51,8 +39,6 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	private setupSlideTransition(): void
 	{
 		const personaContent = Array.prototype.slice.call(this.element.querySelectorAll('.persona'));
-
-		this.setupTriangleAnimation();
 
 		this.parentController.options.personas.forEach((persona, index: number) =>
 		{
@@ -157,26 +143,9 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	{
 		return new Promise((resolve: () => void, reject: () => void) =>
 		{
-			// Switch the background
-			if(DataManager.getInstance().deviceStateTracker.currentState() > DeviceState.SMALL)
-			{
-				// Slide out the main triangle
-				this._mainTriangleAnimation.transitionOut()
-					.then(() =>
-					{
-						this._mainTriangleAnimation.transitionIn();
-
-						this._slideTransitions[index].completeMethod = resolve;
-						this._slideTransitions[index].timeline.timeScale(1);
-						this._slideTransitions[index].timeline.restart();
-					})
-			}
-			else
-			{
-				this._slideTransitions[index].completeMethod = resolve;
-				this._slideTransitions[index].timeline.timeScale(1);
-				this._slideTransitions[index].timeline.restart();
-			}
+			this._slideTransitions[index].completeMethod = resolve;
+			this._slideTransitions[index].timeline.timeScale(1);
+			this._slideTransitions[index].timeline.restart();
 		});
 	}
 
@@ -194,7 +163,9 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 
 		this._mainTriangleAnimation = new TriangleTransitionController<BlockPersonaSelectorController>(
 			<HTMLElement>this.element.querySelector('.background-triangle'),
-			this.parentController
+			this.parentController,
+			1,
+			true
 		);
 	}
 
