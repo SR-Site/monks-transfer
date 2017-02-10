@@ -10,11 +10,16 @@ class BlockLatestTransitionController extends AbstractTransitionController<Block
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		let articles = Array.prototype.slice.call(this.element.querySelectorAll('[class^=component-block]'));
+		const articles = Array.prototype.slice.call(this.element.querySelectorAll('[class^=component-block]'));
+
+		this.transitionInTimeline.from(this.element, 0.8, {opacity: 0});
+		this.transitionInTimeline.from(this.element.querySelector('.heading'), 0.8, {opacity: 0});
+
+		this.transitionInTimeline.add(this.getSubTimeline('.component-button-main'), '=-0.2');
 
 		articles.forEach((article, index) =>
 		{
-			let offset = index > 0 ? '=-2.5' : 0;
+			let offset = index > 0 ? '=-2.5' : '=-0.5';
 
 			this.transitionInTimeline.add(this.getSubTimeline(article), offset)
 		})
