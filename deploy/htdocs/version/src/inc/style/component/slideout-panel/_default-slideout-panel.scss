@@ -37,6 +37,10 @@
 
 	@include respond-to(SMALL) {
 		max-width: 100%;
+
+		.input-focussed & {
+			position: absolute;
+		}
 	}
 }
 

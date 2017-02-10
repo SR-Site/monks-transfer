@@ -81,9 +81,17 @@
 			top: 5rem;
 		}
 
+		.clip-mask {
+			display: none;
+		}
+
 		.call-to-actions-wrapper {
 			position: relative;
 			height: auto;
+		}
+
+		.call-to-actions-image {
+			object-fit: cover;
 		}
 
 		.call-to-actions-content {

@@ -1,10 +1,11 @@
-import ContactTransitionController from './ContactTransitionController';
+import ContactTransitionController from "./ContactTransitionController";
 import Log from "../../../../../lib/temple/util/Log";
 import {IContactOptions} from "./IContactOptions";
 import ContactViewModel from "./ContactViewModel";
 import AbstractTransitionComponentController from "../../../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import Loader from "../../../../util/Loader";
 import DataManager from "../../../../data/DataManager";
+import FixedElementHelper from "../../../../util/FixedElementHelper";
 
 class ContactController extends AbstractTransitionComponentController<ContactViewModel, IContactOptions>
 {
@@ -16,7 +17,9 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 	private _debug: Log = new Log('app.component.Contact');
 
 	private _loader: Loader;
-	private _dataManager:DataManager = DataManager.getInstance();
+	private _dataManager: DataManager = DataManager.getInstance();
+	private _fixedInputElementHelper: FixedElementHelper;
+
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -32,6 +35,8 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 		this.viewModel.myValidator.applyClassesToParent = true;
 
 		this.transitionController = new ContactTransitionController(this.element, this);
+
+		this._fixedInputElementHelper = new FixedElementHelper(this.element);
 	}
 
 	/**
@@ -60,6 +65,12 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 		{
 			this._loader.destruct();
 			this._loader = null;
+		}
+
+		if(this._fixedInputElementHelper)
+		{
+			this._fixedInputElementHelper.destruct();
+			this._fixedInputElementHelper = null;
 		}
 
 		// always call this last

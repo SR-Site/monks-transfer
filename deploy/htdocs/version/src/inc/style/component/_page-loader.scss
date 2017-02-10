@@ -5,8 +5,12 @@
 	z-index: zindex($layout, pageLoader);
 	position: fixed;
 
-	.spinnner {
+	.spinner {
 		@include size(32px);
+
+		img {
+			@include size(100%);
+		}
 	}
 }
 

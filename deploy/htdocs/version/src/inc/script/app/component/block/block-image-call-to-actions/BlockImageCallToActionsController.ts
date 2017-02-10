@@ -7,6 +7,8 @@ import Log from "lib/temple/util/Log";
 import NativeEventListener from "../../../../lib/temple/event/NativeEventListener";
 import ThrottleDebounce from "../../../../lib/temple/util/ThrottleDebounce";
 import BlockImageCallToActionsViewModel from "./BlockImageCallToActionsViewModel";
+import DataManager from "../../../data/DataManager";
+import {DeviceState} from "../../../data/scss-shared/MediaQueries";
 
 class BlockImageCallToActionsController extends AbstractBlockComponentController<BlockImageCallToActionsViewModel, IBlockImageCallToActionsOptions>
 {
@@ -122,7 +124,10 @@ class BlockImageCallToActionsController extends AbstractBlockComponentController
 	 */
 	private handleResize(): void
 	{
-		this.clipImages();
+		if(DataManager.getInstance().deviceStateTracker.currentState() > DeviceState.SMALL)
+		{
+			this.clipImages();
+		}
 
 		this.viewModel.triangleSize((1 / this.options.callToActions.length) * document.body.offsetWidth);
 	}

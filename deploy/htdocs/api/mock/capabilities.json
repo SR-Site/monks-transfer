@@ -633,6 +633,7 @@
 				"id": "map",
 				"data": {
 					"windowed": true,
+					"marginTop": 2,
 					"steps": [
 						{
 							"label": "200m",

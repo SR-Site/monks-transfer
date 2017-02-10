@@ -6,9 +6,12 @@ import ButtonSize from "../../data/enum/layout/ButtonSize";
 import PanelBlocks from "../../data/enum/block/PanelBlocks";
 import DataManager from "../../data/DataManager";
 import {DeviceState} from "../../data/scss-shared/MediaQueries";
+import FixedElementHelper from "../../util/FixedElementHelper";
 
 class IndexPageViewModel extends DefaultPageViewModel<IndexPageController>
 {
+	public inputFocussed:KnockoutObservable<boolean> = FixedElementHelper.inputFocussed;
+
 	public ButtonSize:Class = ButtonSize;
 	public DeviceState:Enum = DeviceState;
 

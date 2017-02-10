@@ -158,7 +158,6 @@ class DefaultSlideoutPanelController<TController, TOptions extends IDefaultSlide
 		}
 		else
 		{
-
 			return this.panelComponents[panelId].transitionIn()
 				.then(() => this.updateCustomScrollbar());
 		}
@@ -208,6 +207,7 @@ class DefaultSlideoutPanelController<TController, TOptions extends IDefaultSlide
 	{
 		// On panel Mask click, hide the panel
 		let mask = $(this.element).next('.slideout-panel-mask')[0];
+
 		if(mask)
 		{
 			mask.addEventListener('click', this.viewModel.handleCloseClick.bind(this.viewModel));

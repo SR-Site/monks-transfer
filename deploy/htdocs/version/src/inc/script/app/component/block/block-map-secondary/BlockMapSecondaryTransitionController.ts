@@ -10,6 +10,11 @@ class BlockMapSecondaryTransitionController extends AbstractTransitionController
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
+		this.transitionInTimeline.from(this.element, 0.8, {
+			opacity: 0,
+			ease: Linear.easeNone
+		});
+
 		const button = this.element.querySelector('.component-button-main');
 
 		this.transitionInTimeline.add(this.getSubTimeline(button));

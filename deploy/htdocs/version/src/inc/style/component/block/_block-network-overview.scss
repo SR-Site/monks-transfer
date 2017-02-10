@@ -57,7 +57,10 @@
 	}
 
 	@include respond-to(SMALL) {
-		padding-bottom: $sizeGrid*3;
+
+		.network-list-wrapper {
+			padding-bottom: $sizeGrid * 2;
+		}
 
 		.network-list-item {
 			@include size(calc(100vw / 2));
