@@ -51,6 +51,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 				onReverseComplete: () => this.handleSlideTransitionComplete(index)
 			});
 
+			timeline.from(element, 0.1, {display: 'none'});
 			timeline.from(element.querySelector('.heading'), 0.6, {
 				y: 30,
 				autoAlpha: 0,
