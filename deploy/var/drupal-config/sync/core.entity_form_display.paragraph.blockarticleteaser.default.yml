@@ -7,7 +7,6 @@ dependencies:
     - field.field.paragraph.blockarticleteaser.field_styles
     - paragraphs.paragraphs_type.blockarticleteaser
   module:
-    - entity_reference_revisions
     - field_group
     - paragraphs
 third_party_settings:
@@ -30,13 +29,13 @@ bundle: blockarticleteaser
 mode: default
 content:
   field_article:
-    type: entity_reference_revisions_autocomplete
     weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    type: entity_reference_autocomplete
   field_styles:
     weight: 1
     settings:

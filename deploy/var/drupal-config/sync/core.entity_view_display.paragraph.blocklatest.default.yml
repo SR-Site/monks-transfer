@@ -19,10 +19,9 @@ content:
     weight: 3
     label: above
     settings:
-      view_mode: default
-      link: ''
+      link: true
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    type: entity_reference_label
   field_heading:
     weight: 1
     label: above

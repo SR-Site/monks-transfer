@@ -2,7 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\Node;
 
-use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
+use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 use Drupal\user\Entity\User;
 
 /**
@@ -17,7 +17,7 @@ use Drupal\user\Entity\User;
  *   view_mode = "default"
  * )
  */
-class NodeArticleV1 extends RestEntityProcessorBase {
+class NodeArticleV1 extends SpectrumRestEntityProcessorBase {
 
   /**
    * {@inheritdoc}
@@ -36,7 +36,7 @@ class NodeArticleV1 extends RestEntityProcessorBase {
       ],
       "image" => $this->fieldProcessor->getFieldData($entity->field_image),
       "read_time" => $this->fieldProcessor->getFieldData($entity->field_read_time),
-      "tags" => $this->fieldProcessor->getFieldData($entity->field_tags),
+      "tags" => $this->getTags($entity),
       "content" => $this->fieldProcessor->getFieldData($entity->field_content),
     ];
 

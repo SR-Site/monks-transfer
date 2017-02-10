@@ -106,4 +106,21 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
     return $data;
   }
 
+  /**
+   * Returns an array of taxonomy terms from all vocabularies.
+   *
+   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   * @return array|string
+   */
+  protected function getTags(ContentEntityInterface $entity) {
+    $tags = [];
+
+    $tags = array_merge($tags, $this->getItems($entity->get('field_category')) ?: []);
+    $tags = array_merge($tags, $this->getItems($entity->get('field_document_type')) ?: []);
+    $tags = array_merge($tags, $this->getItems($entity->get('field_market')) ?: []);
+    $tags = array_merge($tags, $this->getItems($entity->get('field_platform')) ?: []);
+
+    return $tags;
+  }
+
 }
