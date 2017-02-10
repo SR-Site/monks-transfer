@@ -168,10 +168,15 @@
 			display: none;
 		}
 
+		.map-box-wrapper {
+			@include size(100%, calc(100vh - #{$sizeGrid*12}));
+			position: relative;
+		}
+
 		// Map Box
 		.map-box {
 			position: relative;
-			height: calc(100vh - #{$sizeGrid*12});
+			height: 100%;
 		}
 
 		// Selected Value
@@ -227,15 +232,18 @@
 			.input-text-main {
 				margin: $sizeGrid 0;
 				padding: 0 $sizeGrid;
+			}
 
-				.placeholder-label {
-					margin-left: $sizeGrid;
-				}
+			.auto-complete {
+				@include size(100%, $sizeGrid * 4);
+				@include pos(-$sizeGrid * 4, 0, auto, 0);
+				font-size: 3rem;
 			}
 
 			.button-search {
 				@include size(100%, $sizeGrid*4);
 				font-size: mobile-size(2.8rem);
+				line-height: $sizeGrid * 4;
 			}
 		}
 
