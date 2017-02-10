@@ -12,7 +12,6 @@ class BlockLatestTransitionController extends AbstractTransitionController<Block
 	{
 		const articles = Array.prototype.slice.call(this.element.querySelectorAll('[class^=component-block]'));
 
-		this.transitionInTimeline.from(this.element, 0.8, {opacity: 0});
 		this.transitionInTimeline.from(this.element.querySelector('.heading'), 0.8, {opacity: 0});
 
 		this.transitionInTimeline.add(this.getSubTimeline('.component-button-main'), '=-0.2');
