@@ -1,19 +1,17 @@
-uuid: 4a8f4b3b-4318-409c-aac4-bf97887832ea
+uuid: 29efc683-ac01-4532-83ea-a1ad60e7ea4a
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - node.type.network
+    - node.type.block_info
   module:
     - user
-id: node.network.teaser
+id: node.block_info.teaser
 targetEntityType: node
-bundle: network
+bundle: block_info
 mode: teaser
 content:
   links:
     weight: 100
-hidden:
-  field_image: true
-  field_image2: true
+hidden: {  }

@@ -1,0 +1,31 @@
+uuid: f53be8b1-f0f9-4f6e-883e-35a47ea6ddd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block_info
+    - node.type.block_info
+    - paragraphs.paragraphs_type.blockinfo
+  module:
+    - entity_reference_revisions
+id: paragraph.blockinfo.field_block_info
+field_name: field_block_info
+entity_type: paragraph
+bundle: blockinfo
+label: 'Block info'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      block_info: block_info
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference_revisions

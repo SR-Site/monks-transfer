@@ -1,13 +1,14 @@
-uuid: f47eccae-5dbc-4578-920b-28b1362a0da6
+uuid: 971276a1-6f95-4349-aef8-342f26573b7e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.blockinfo.field_block_info
-    - field.field.paragraph.blockinfo.field_styles
-    - paragraphs.paragraphs_type.blockinfo
+    - field.field.paragraph.blockfiltercontent.field_apply_label
+    - field.field.paragraph.blockfiltercontent.field_filter_label
+    - field.field.paragraph.blockfiltercontent.field_load_more_label
+    - field.field.paragraph.blockfiltercontent.field_styles
+    - paragraphs.paragraphs_type.blockfiltercontent
   module:
-    - entity_reference_revisions
     - field_group
     - paragraphs
 third_party_settings:
@@ -24,19 +25,32 @@ third_party_settings:
         open: false
         required_fields: false
       label: Styles
-id: paragraph.blockinfo.default
+id: paragraph.blockfiltercontent.default
 targetEntityType: paragraph
-bundle: blockinfo
+bundle: blockfiltercontent
 mode: default
 content:
-  field_block_info:
-    weight: 2
+  field_apply_label:
+    weight: 3
     settings:
-      match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: string_textfield
+  field_filter_label:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_load_more_label:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_styles:
     weight: 1
     settings:
@@ -45,7 +59,7 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: styles
+      default_paragraph_type: ''
     third_party_settings: {  }
     type: entity_reference_paragraphs
 hidden:

@@ -1,0 +1,27 @@
+uuid: 47ef60e7-590a-44a4-b45c-2ddb7a8855d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.block_info
+  module:
+    - text
+id: node.block_info.field_content
+field_name: field_content
+entity_type: node
+bundle: block_info
+label: Paragraph
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    basic_html: basic_html
+    bold_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

@@ -1,0 +1,34 @@
+uuid: 706c18ed-089b-449d-8be2-c16178fce8d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.block_info.field_content
+    - field.field.node.block_info.field_link
+    - node.type.block_info
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.block_info.default
+targetEntityType: node
+bundle: block_info
+mode: default
+content:
+  field_content:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_link:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden: {  }

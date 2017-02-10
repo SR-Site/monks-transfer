@@ -35,6 +35,7 @@ deploy/htdocs/assets
 deploy/bin
 
 #Ignore core and contrib files, use composer
+deploy/htdocs/drivers
 deploy/htdocs/core
 deploy/htdocs/modules/contrib
 deploy/htdocs/modules/mediamonks
@@ -42,4 +43,5 @@ deploy/htdocs/themes/contrib
 deploy/htdocs/themes/mediamonks
 deploy/htdocs/library/contrib
 deploy/htdocs/profiles/contrib
+deploy/htdocs/sites/default/files
 drush/contrib
