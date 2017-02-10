@@ -4,8 +4,12 @@
 			<span class="icon" data-bind="icon: 'logo'"></span>
 		</h1>
 		<ul class="contact-options" data-bind="with: $data.contactOptions">
-			<li class="contact-option">{{$data.email}}</li>
-			<li class="contact-option">{{$data.phone}}</li>
+			<li class="contact-option">
+				<a class="link link-main" href="mailto:{{$data.email}}?SUBJECT={{$data.emailSubject}}&BODY={{$data.emailBody}}">{{$data.email}}</a>
+			</li>
+			<li class="contact-option">
+				<a class="link link-main" href="tel:{{$data.phone}}">{{$data.phone}}</a>
+			</li>
 		</ul>
 	</section>
 	<section class="middle-section">

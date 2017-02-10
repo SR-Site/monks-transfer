@@ -55,6 +55,8 @@
 			"footer": {
 				"contactOptions": {
 					"email": "spectrumreach@spectrum.com",
+					"emailSubject": "Email subject goes here",
+					"emailBody": "Email body goes here",
 					"phone": "1-884-TO-REACH"
 				},
 				"mainLinks": [

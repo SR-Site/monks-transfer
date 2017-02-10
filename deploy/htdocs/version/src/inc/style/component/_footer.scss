@@ -36,9 +36,12 @@
 
 	.contact-option {
 		color: #fff;
-		font: 400 1.6rem / 1 $fontOpenSans;
 		display: inline-block;
 		vertical-align: middle;
+
+		.link {
+			font: 400 1.6rem / 1 $fontOpenSans;
+		}
 
 		&:not(:first-child) {
 			margin-left: $sizeGrid * 2;
