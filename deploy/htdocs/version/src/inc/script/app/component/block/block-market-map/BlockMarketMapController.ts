@@ -12,6 +12,8 @@ import StateModel from "../../../data/model/StateModel";
 import DataManager from "../../../data/DataManager";
 import PanelBlocks from "../../../data/enum/block/PanelBlocks";
 import Promise = require("bluebird");
+import MarketSearchController from "../../market-search/MarketSearchController";
+import DataEvent from "../../../../lib/temple/event/DataEvent";
 
 
 class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions>
@@ -25,6 +27,8 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 
 	private _featureCollection: GeoJSON.FeatureCollection;
 	private _marketFeatureCollection: {[id: string]: GeoJSON.Feature} = {};
+
+	private _marketSearchController: MarketSearchController;
 
 	private _map: mapboxgl.Map;
 	private _marketsOutlineLayer: mapboxgl.Map;
@@ -44,28 +48,19 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 
 		// Set the access token
 		mapboxgl.accessToken = configManagerInstance.getProperty(PropertyNames.MAPBOX_ACCESS_TOKEN);
-
-		this.destructibles.addKOSubscription(this.viewModel.searchQuery.subscribe((value) =>
-		{
-			if(value.length === 0)
-			{
-				this.resetStateSelection();
-			}
-		}));
 	}
-
 
 	/**
 	 * @public
-	 * @method resetStateSelection
+	 * @method handleMarketSearchReady
 	 */
-	public resetStateSelection(): void
+	public handleMarketSearchReady(controller: MarketSearchController): void
 	{
-		this.viewModel.selectedState(null);
-		this.viewModel.searchQuery('');
+		this._marketSearchController = controller;
 
-		this.updateDataLayer();
-		this.resetMapZoom();
+		this._marketSearchController.addEventListener(MarketSearchController.RESET, this.resetMarket.bind(this));
+		this._marketSearchController.addEventListener(MarketSearchController.SELECT,
+			(event: DataEvent<IMarketDetail>) => this.selectMarket(event.data))
 	}
 
 	/**
@@ -102,7 +97,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	public updateDataLayer(): void
 	{
 		// Get the state
-		const selectedState = this.viewModel.selectedState();
+		const selectedMarket = this.viewModel.selectedMarket();
 
 		let data: GeoJSON.FeatureCollection|GeoJSON.Feature;
 
@@ -115,14 +110,14 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 
 		}
 
-		if(selectedState !== null)
+		if(selectedMarket !== null)
 		{
-			if(this._stateModel.hasItem(selectedState.statePostalCode))
+			if(this._stateModel.hasItem(selectedMarket.statePostalCode))
 			{
-				const state = this._stateModel.getItemById(selectedState.statePostalCode);
+				const state = this._stateModel.getItemById(selectedMarket.statePostalCode);
 
 				// Decide what polygons should be visible
-				data = <GeoJSON.Feature>this._marketFeatureCollection[selectedState.marketId];
+				data = <GeoJSON.Feature>this._marketFeatureCollection[selectedMarket.marketId];
 
 				if(data)
 				{
@@ -139,7 +134,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 			}
 			else
 			{
-				console.warn('Unknown state postal code: ', selectedState);
+				console.warn('Unknown state postal code: ', selectedMarket);
 			}
 		}
 		else
@@ -200,12 +195,26 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 
 	/**
 	 * @private
-	 * @method checkNoResults
+	 * @method resetMarket
 	 */
-	private checkNoResults(result): void
+	private resetMarket(): void
 	{
+		this.viewModel.selectedMarket(null);
 
-		console.log('check no result', result);
+		this.updateDataLayer();
+		this.resetMapZoom();
+	}
+
+	/**
+	 * @private
+	 * @method selectMarket
+	 */
+	private selectMarket(market: IMarketDetail): void
+	{
+		this.viewModel.selectedMarket(market);
+		this._marketSearchController.setMarket(market);
+
+		this.updateDataLayer();
 	}
 
 	/**
@@ -215,10 +224,11 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	private handleMapLoad(): void
 	{
 		// data: 'https://spectrumreach.com/markets/markets-json'
-		this.loadJSON('data/mapbox/market-details.json')
-			.then((data: Array<IMarketDetail>) => this.viewModel.stateList(data))
+
+		this.loadJSON('data/mapbox/markets.json')
+			.then(this.handleMarketsLoaded.bind(this))
 			.then(this.updateScrollBar.bind(this))
-			.then(this.loadJSON.bind(this, 'data/mapbox/original-markets.json'))
+			.then(this.loadJSON.bind(this, 'data/mapbox/markets-polygon.json'))
 			.then((data: GeoJSON.FeatureCollection) =>
 			{
 				// Parse it to multi-polygon to make it work... dafuq
@@ -238,6 +248,18 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 			.then(this.addMapEvents.bind(this));
 	}
 
+	/**
+	 * @private
+	 * @method handleMarketsLoaded
+	 */
+	private handleMarketsLoaded(data: Array<IMarketDetail>): void
+	{
+		// Startup the autocomplete search
+		this._marketSearchController.setupAutoComplete(data);
+
+		// Udate the scrollbar on the right
+		this.viewModel.marketList(data);
+	}
 
 	/**
 	 * @private

@@ -1,0 +1,84 @@
+.component-market-search {
+	font-size: 0;
+
+	.query-wrapper {
+		@include size(100%, $sizeGrid * 2);
+		background: $colorWhite;
+
+		&.has-input {
+			.text-input-holder {
+				padding-left: $sizeGrid * 2;
+			}
+
+			.component-button-circle-close {
+				display: block;
+			}
+		}
+	}
+
+	.search-button,
+	.text-input-holder {
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+	}
+
+	.text-input-holder {
+		@include size(calc(100% - #{$sizeGrid * 5.5}), 100%);
+		padding: 0 $sizeGrid;
+		box-sizing: border-box;
+		z-index: 1;
+		background: $colorWhite;
+	}
+
+	.input-text-main {
+		margin-top: $sizeGrid / 2;
+	}
+
+	.search-button {
+		@include size($sizeGrid * 5.5, $sizeGrid * 2);
+		background: $colorSecondary;
+		color: $colorWhite;
+		font: 700 1rem/1 $fontOpenSans;
+		text-transform: uppercase;
+	}
+
+	.note {
+		@include size(calc(100% - #{$sizeGrid * 5.5}), $sizeGrid * 2);
+		@include pos(-$sizeGrid * 2, auto, auto, 0);
+		background: $colorLightGrey;
+		position: absolute;
+		transform: translateY(100%);
+		transition: transform .5s ease(easeInOutExpo);
+		overflow: hidden;
+		z-index: 0;
+
+		.copy {
+			@include offset(0, 50%);
+			transform: translateY(-50%);
+			position: absolute;
+			font: 400 1.2rem / 1 $fontOpenSans;
+			padding: 0 $sizeGrid;
+		}
+
+		.button {
+			@include size(100%, $sizeGrid * 2);
+			display: block;
+			font: 600 1.6rem/#{$sizeGrid * 2} $fontOpenSans;
+			text-align: left;
+			padding: 0 $sizeGrid;
+		}
+
+		&.is-active {
+			transform: translateY(0);
+		}
+	}
+
+	.component-button-circle-close {
+		@include offset($sizeGrid / 2, 50%);
+		transform: translateY(-50%);
+		position: absolute;
+		z-index: 1;
+		display: none;
+	}
+}

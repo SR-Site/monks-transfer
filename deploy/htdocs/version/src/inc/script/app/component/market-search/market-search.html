@@ -1,0 +1,40 @@
+<div class="component-market-search">
+
+	<form class="query-wrapper"
+	      data-bind="submit: $root.handleSubmit.bind($root), css: {'has-input': $root.query().length}">
+		<div class="text-input-holder">
+			<div class="input-text input-text-main">
+				<input required type="text" value="" data-bind="
+						live: $root.query,
+						focusBorder: {
+							value: $root.query
+						}"/>
+				<span class="placeholder-label">Which region do you want to advertise in?</span>
+			</div>
+		</div>
+
+		<button class="button search-button" type="submit">Search</button>
+
+		<div class="note" data-bind="css: {'is-active': $root.noteActive()}">
+
+			<!-- ko with: $root.suggestion() -->
+			<button class="button suggestion-button"
+			        data-bind="html: $data.label, tap: $root.handleSelectMarket.bind($root, $data.value)"></button>
+			<!-- /ko -->
+
+			<!-- ko ifnot: $root.suggestion() -->
+			<p class="copy copy-01">Sorry, this is not currently in our coverage area, contact us to for more
+				information.</p>
+			<!-- /ko -->
+		</div>
+
+		<!-- ko component: {
+			name: 'button/button-circle-close',
+			options: {
+				action: {
+					event: $root.handleClear.bind($root)
+				}
+			}
+		} --><!-- /ko -->
+	</form>
+</div>

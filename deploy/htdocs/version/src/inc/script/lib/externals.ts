@@ -4,6 +4,7 @@ define([
 	'vendor/vimeo/player.min',
 	'vendor/mapbox/mapbox-gl',
 	'vendor/wavesurfer/wavesurfer',
+	'vendor/auto-complete/auto-complete',
 	'jquerymobile',
 	'vendor/knockout-punches/knockout.punches',
 	'lib/knockout/knockout.gaia',

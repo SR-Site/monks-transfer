@@ -31,16 +31,16 @@
 
 	<div class="selected-value copy-03" data-bind="
 		css: {
-			'has-value': $root.selectedState(),
+			'has-value': $root.selectedMarket(),
 			'is-open': $root.sidePanelIsOpen()
 		},
 		tap: $root.toggleSidePanel.bind($root)
 	">
-		<!-- ko if: $root.selectedState() -->
-			{{ $root.selectedState().city }}, {{$root.selectedState().statePostalCode}}
+		<!-- ko if: $root.selectedMarket() -->
+			{{ $root.selectedMarket().city }}, {{$root.selectedMarket().statePostalCode}}
 		<!-- /ko -->
 
-		<!-- ko ifnot: $root.selectedState() -->
+		<!-- ko ifnot: $root.selectedMarket() -->
 			{{lt:global.form.select.state}}
 		<!-- /ko -->
 	</div>
@@ -51,8 +51,8 @@
 		}">
 			<div class="scroll-content" data-scroll-content>
 				<div class="scroll-content-inner" data-content-inner>
-					<ul class="filter-list" data-bind="foreach: $root.stateList()">
-						<li class="filter-list-item copy-03" data-bind="css: {'is-active': $root.selectedState() === $data }, tap: $root.onStateSelect.bind($root, $data)">
+					<ul class="filter-list" data-bind="foreach: $root.marketList()">
+						<li class="filter-list-item copy-03" data-bind="css: {'is-active': $root.selectedMarket() === $data }, tap: $root.handleSelectMarket.bind($root, $data)">
 							{{$data.city}}, {{$data.statePostalCode}}
 						</li>
 					</ul>
@@ -84,61 +84,66 @@
 		</button>
 	</div>
 
-	<form class="search-bar" data-bind="submit: $root.handleSubmit.bind($root), css: {'has-input': $root.searchQuery().length}">
-		<div class="input-text-main input-text large">
-			<input type="text" name="search" id="search" autocomplete="off" data-bind="
-			live: $root.searchQuery,
-			focusBorder: {
-				value: $root.searchQuery
-			}"/>
-			<span class="placeholder-label">
-				Which region do you want to advertise in?
-			</span>
-			<span class="focus-border"></span>
+	<!-- ko component: {
+		name: 'market-search',
+		onComplete: $root.controller.handleMarketSearchReady.bind($root.controller)
+	} --><!-- /ko -->
 
-			<!-- ko if: $root.noResultMessageActive -->
-				<span class="note no-result-message">
-					Sorry, this is not currently in our coverage area, contact us to for more information.
-				</span>
-			<!-- /ko -->
+	<!--<form class="search-bar" data-bind="submit: $root.handleSubmit.bind($root), css: {'has-input': $root.searchQuery().length}">-->
+		<!--<div class="input-text-main input-text large">-->
+			<!--<input type="text" name="search" id="search" autocomplete="off" data-bind="-->
+			<!--live: $root.searchQuery,-->
+			<!--focusBorder: {-->
+				<!--value: $root.searchQuery-->
+			<!--}"/>-->
+			<!--<span class="placeholder-label">-->
+				<!--Which region do you want to advertise in?-->
+			<!--</span>-->
+			<!--<span class="focus-border"></span>-->
 
-			<!-- ko ifnot: $root.selectedState() -->
-				<!-- ko with: $root.autoCompleteValue() -->
-					<button class="note button auto-complete" data-bind="events: [
-						[$root.MouseEventHelper.CLICK, $root.handleAutoCompleteClick.bind($root, $data)]
-					]">
-						{{$data.city}}, {{$data.statePostalCode}}
-					</button>
-				<!-- /ko -->
-			<!-- /ko -->
-		</div>
-		<button class="button-search button" data-bind="html: searchLabel" type="submit"></button>
-		<!-- ko component: {
-			name: 'button/button-circle-close',
-			options: {
-				action: {
-					event: $root.handleClearClick.bind($root)
-				}
-			}
-		} --><!-- /ko -->
-	</form>
+			<!--&lt;!&ndash; ko if: $root.noResultMessageActive &ndash;&gt;-->
+				<!--<span class="note no-result-message">-->
+					<!--Sorry, this is not currently in our coverage area, contact us to for more information.-->
+				<!--</span>-->
+			<!--&lt;!&ndash; /ko &ndash;&gt;-->
 
-	<button class="service-info button" data-bind="tap: $root.handleServiceClick.bind($root)">
-		<div class="profile-image bg-cover" data-bind="image: {
-				image: service.image,
-				state: $root.deviceState()
-			}"></div>
+			<!--&lt;!&ndash; ko ifnot: $root.selectedState() &ndash;&gt;-->
+				<!--&lt;!&ndash; ko with: $root.autoCompleteValue() &ndash;&gt;-->
+					<!--<button class="note button auto-complete" data-bind="events: [-->
+						<!--[$root.MouseEventHelper.CLICK, $root.handleAutoCompleteClick.bind($root, $data)]-->
+					<!--]">-->
+						<!--{{$data.city}}, {{$data.statePostalCode}}-->
+					<!--</button>-->
+				<!--&lt;!&ndash; /ko &ndash;&gt;-->
+			<!--&lt;!&ndash; /ko &ndash;&gt;-->
+		<!--</div>-->
+		<!--<button class="button-search button" data-bind="html: searchLabel" type="submit"></button>-->
+		<!--&lt;!&ndash; ko component: {-->
+			<!--name: 'button/button-circle-close',-->
+			<!--options: {-->
+				<!--action: {-->
+					<!--event: $root.handleClearClick.bind($root)-->
+				<!--}-->
+			<!--}-->
+		<!--} &ndash;&gt;&lt;!&ndash; /ko &ndash;&gt;-->
+	<!--</form>-->
 
-		<div class="profile-info">
-			<p class="name copy-02 copy" data-bind="html: service.name"></p>
-			<p class="role copy" data-bind="html: service.role"></p>
-		</div>
+	<!--<button class="service-info button" data-bind="tap: $root.handleServiceClick.bind($root)">-->
+		<!--<div class="profile-image bg-cover" data-bind="image: {-->
+				<!--image: service.image,-->
+				<!--state: $root.deviceState()-->
+			<!--}"></div>-->
 
-		<!-- ko template: {
-			name: 'button-select-anchor',
-			data: {
-				direction: $root.Direction.RIGHT
-			}
-		} --><!-- /ko -->
-	</button>
+		<!--<div class="profile-info">-->
+			<!--<p class="name copy-02 copy" data-bind="html: service.name"></p>-->
+			<!--<p class="role copy" data-bind="html: service.role"></p>-->
+		<!--</div>-->
+
+		<!--&lt;!&ndash; ko template: {-->
+			<!--name: 'button-select-anchor',-->
+			<!--data: {-->
+				<!--direction: $root.Direction.RIGHT-->
+			<!--}-->
+		<!--} &ndash;&gt;&lt;!&ndash; /ko &ndash;&gt;-->
+	<!--</button>-->
 </div>
