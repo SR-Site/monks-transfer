@@ -338,6 +338,18 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 */
 	public destruct(): void
 	{
+		if(this._map)
+		{
+			// This method also cleans up the layers according to the documentation!
+			this._map.remove();
+			this._map = null;
+		}
+
+		this._marketsOutlineLayer = null;
+		this._marketsFillLayer = null;
+		this._featureCollection = null;
+		this._marketFeatureCollection = null;
+		this._stateModel = null;
 
 		// always call this last
 		super.destruct();

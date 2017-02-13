@@ -86,7 +86,7 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 	public handleAutoCompleteClick(data: IMarketDetail): void
 	{
 		// Select the state
-		this.onStateSelect(data);
+		this.handleStateSelect(data);
 	}
 
 	/**
@@ -98,7 +98,7 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 		if(this.autoCompleteValue())
 		{
 			// Select the state
-			this.onStateSelect(this.autoCompleteValue());
+			this.handleStateSelect(this.autoCompleteValue());
 		}
 	}
 
@@ -149,9 +149,9 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 
 	/**
 	 * @public
-	 * @method onStateSelect
+	 * @method handleStateSelect
 	 */
-	public onStateSelect(data: IMarketDetail): void
+	public handleStateSelect(data: IMarketDetail): void
 	{
 		if(this.selectedState() == data)
 		{
@@ -163,10 +163,8 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 		else
 		{
 			this.searchQuery(data.city + ', ' + data.statePostalCode);
-
 			this.selectedState(data);
 		}
-
 
 		// Update the map
 		this.controller.updateDataLayer();
