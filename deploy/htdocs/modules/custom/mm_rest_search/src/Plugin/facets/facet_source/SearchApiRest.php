@@ -4,10 +4,12 @@ namespace Drupal\mm_rest_search\Plugin\facets\facet_source;
 
 use Drupal\Component\Utility\UrlHelper;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Path\CurrentPathStack;
 use Drupal\facets\FacetSource\SearchApiFacetSourceInterface;
 use Drupal\facets\Plugin\facets\facet_source\SearchApiBaseFacetSource;
 use Drupal\search_api\Entity\Index;
 use Drupal\search_api\Query\ResultSetInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * A facet source to support search api views trough display plugins.
@@ -41,6 +43,13 @@ class SearchApiRest extends SearchApiBaseFacetSource implements SearchApiFacetSo
   protected $configFactory;
 
   /**
+   * The path current service.
+   *
+   * @var \Drupal\Core\Path\CurrentPathStack
+   */
+  protected $pathCurrent;
+
+  /**
    * The search index the query should is executed on.
    *
    * @var \Drupal\search_api\IndexInterface
@@ -50,8 +59,10 @@ class SearchApiRest extends SearchApiBaseFacetSource implements SearchApiFacetSo
   /**
    * {@inheritdoc}
    */
-  public function __construct(array $configuration, $plugin_id, array $plugin_definition, $query_type_plugin_manager, $search_results_cache) {
+  public function __construct(array $configuration, $plugin_id, array $plugin_definition, $query_type_plugin_manager, $search_results_cache, CurrentPathStack $path_current) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $query_type_plugin_manager, $search_results_cache);
+
+    $this->pathCurrent = $path_current;
 
     /* @var $search_api_index \Drupal\search_api\IndexInterface */
     $this->index = Index::load($plugin_definition['index_name']);
@@ -59,6 +70,20 @@ class SearchApiRest extends SearchApiBaseFacetSource implements SearchApiFacetSo
     if (empty($this->index)) {
       throw new \Exception($this->t("Index '@index' does not exist.", ['@index' => $plugin_definition['index_name']]));
     }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('plugin.manager.facets.query_type'),
+      $container->get('search_api.query_helper'),
+      $container->get('path.current')
+    );
   }
 
   /**
@@ -131,7 +156,16 @@ class SearchApiRest extends SearchApiBaseFacetSource implements SearchApiFacetSo
   public function isRenderedInCurrentRequest() {
     $request = \Drupal::requestStack()->getMasterRequest();
 
-    if ($request->getRequestUri() == $this->getPath()) {
+    $currentPath = $this->pathCurrent->getPath();
+
+    // GET parameter _format is required, otherwise Url::createFromRequest() will fail.
+    // @see Drupal\facets\Plugin\facets\url_processor\QueryString::buildUrls()
+    // @see Drupal\mm_rest_search\Plugin\facets\facet_source\SearchApiRest::getPath()
+    if ($format = $request->get('_format')) {
+      $currentPath .= '?' . UrlHelper::buildQuery(['_format' => $format]) ;
+    }
+
+    if ($currentPath == $this->getPath()) {
       return TRUE;
     }
 
