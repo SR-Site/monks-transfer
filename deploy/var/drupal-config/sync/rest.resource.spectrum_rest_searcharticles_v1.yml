@@ -1,0 +1,17 @@
+uuid: 94e4eea5-d56a-450c-b137-ab9bd4c5a9f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - spectrum_rest
+    - user
+id: spectrum_rest_searcharticles_v1
+plugin_id: spectrum_rest_searcharticles_v1
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
