@@ -58,6 +58,7 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 
 				if(!this.selectedState())
 				{
+					// Display a message if there was no state found
 					this.noResultMessageActive(true);
 				}
 			}

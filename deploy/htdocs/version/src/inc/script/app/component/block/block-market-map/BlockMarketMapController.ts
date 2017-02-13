@@ -11,15 +11,8 @@ import Scrollbar from "../../../../lib/temple/component/Scrollbar";
 import StateModel from "../../../data/model/StateModel";
 import DataManager from "../../../data/DataManager";
 import PanelBlocks from "../../../data/enum/block/PanelBlocks";
-import ThrottleDebounce from "../../../../lib/temple/util/ThrottleDebounce";
 import Promise = require("bluebird");
-import Layer = mapboxgl.Layer;
-import Map = mapboxgl.Map;
-import BackgroundLayout = mapboxgl.BackgroundLayout;
-import FillLayout = mapboxgl.FillLayout;
-import GeoJSONSource = mapboxgl.GeoJSONSource;
-import FeatureCollection = GeoJSON.FeatureCollection;
-import Feature = GeoJSON.Feature;
+
 
 class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions>
 {
@@ -30,8 +23,8 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 */
 	private _debug: Log = new Log('app.component.BlockMarketMap');
 
-	private _featureCollection: FeatureCollection;
-	private _marketFeatureCollection: {[id: string]: Feature} = {};
+	private _featureCollection: GeoJSON.FeatureCollection;
+	private _marketFeatureCollection: {[id: string]: GeoJSON.Feature} = {};
 
 	private _map: mapboxgl.Map;
 	private _marketsOutlineLayer: mapboxgl.Map;
@@ -111,7 +104,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 		// Get the state
 		const selectedState = this.viewModel.selectedState();
 
-		let data: FeatureCollection|Feature;
+		let data: GeoJSON.FeatureCollection|GeoJSON.Feature;
 
 		if(this._marketsFillLayer)
 		{
@@ -129,7 +122,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 				const state = this._stateModel.getItemById(selectedState.statePostalCode);
 
 				// Decide what polygons should be visible
-				data = <Feature>this._marketFeatureCollection[selectedState.marketId];
+				data = <GeoJSON.Feature>this._marketFeatureCollection[selectedState.marketId];
 
 				if(data)
 				{
@@ -141,7 +134,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 					console.warn('State does not exist in the original-markets.json file');
 
 					// Use all blocks in case it breaks
-					data = <FeatureCollection>this._featureCollection;
+					data = <GeoJSON.FeatureCollection>this._featureCollection;
 				}
 			}
 			else
@@ -151,7 +144,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 		}
 		else
 		{
-			data = <FeatureCollection>this._featureCollection;
+			data = <GeoJSON.FeatureCollection>this._featureCollection;
 		}
 
 		// Add the source to the map
@@ -226,7 +219,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 			.then((data: Array<IMarketDetail>) => this.viewModel.stateList(data))
 			.then(this.updateScrollBar.bind(this))
 			.then(this.loadJSON.bind(this, 'data/mapbox/original-markets.json'))
-			.then((data: FeatureCollection) =>
+			.then((data: GeoJSON.FeatureCollection) =>
 			{
 				// Parse it to multi-polygon to make it work... dafuq
 				data.features.forEach((feature) =>
