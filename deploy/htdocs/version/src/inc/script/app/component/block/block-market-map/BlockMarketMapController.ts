@@ -190,7 +190,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 			zoom: 4,
 			minZoom: 4,
 			scrollZoom: false,
-			style: 'mapbox://styles/larsvanbraam/ciyodzuy800ds2sla6tuazga1'
+			style: configManagerInstance.getProperty(PropertyNames.MAPBOX_MAP_STYLE)
 		});
 
 		this._map.on('load', this.handleMapLoad.bind(this));

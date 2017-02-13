@@ -26,4 +26,5 @@ export class PropertyNames
 	public static DEFAULT_LOCALE:string = 'defaultLocale';
 	public static MOCK_CONTENT:string = 'mockContent';
 	public static MAPBOX_ACCESS_TOKEN:string = 'mapboxAccessToken';
+	public static MAPBOX_MAP_STYLE:string = 'mapboxMapStyle';
 }
