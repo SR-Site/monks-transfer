@@ -3,22 +3,14 @@
 	<!-- ko if: $root.filters() -->
 	<div class="menu">
 
-		<button class="filter-label button"
-		        data-bind="css: {'is-disabled': !$root.filterChanged()}, tap: ($root.filterChanged() ? $root.applyFilter.bind($root) : null)">
-
-			<!-- ko ifnot: $root.filterChanged() -->
-			<!-- ko text: label --><!-- /ko -->
-			<span class="icon" data-bind="icon: 'filter'"></span>
-
-			<!-- /ko -->
-
-
-			<!-- ko if: $root.filterChanged() -->
-			<!-- ko text: applyLabel --><!-- /ko -->
-			<!-- /ko -->
-		</button>
-
 		<ul class="filters" data-bind="">
+
+			<li class="reset-wrapper">
+				<button class="button-reset button" data-bind="tap: $root.resetFilter.bind($root)"
+				        title="Reset selection">
+					<span class="icon abs-center" data-bind="icon: 'reset'"></span>
+				</button>
+			</li>
 
 			<!-- ko foreach: filters -->
 			<li class="filter-item">
@@ -62,14 +54,21 @@
 				</div>
 			</li>
 			<!-- /ko -->
-
-			<li class="reset-wrapper">
-				<button class="button-reset button" data-bind="tap: $root.resetFilter.bind($root)"
-				        title="Reset selection">
-					<span class="icon abs-center" data-bind="icon: 'reset'"></span>
-				</button>
-			</li>
 		</ul>
+
+		<button class="filter-label button"
+		        data-bind="css: {'is-disabled': !$root.filterChanged()}, tap: ($root.filterChanged() ? $root.applyFilter.bind($root) : null)">
+
+			<!-- ko ifnot: $root.filterChanged() -->
+				<!-- ko text: label --><!-- /ko -->
+				<span class="icon" data-bind="icon: 'filter'"></span>
+
+			<!-- /ko -->
+
+			<!-- ko if: $root.filterChanged() -->
+				<!-- ko text: applyLabel --><!-- /ko -->
+			<!-- /ko -->
+		</button>
 	</div>
 
 	<div class="filter-overlay" data-bind="css: {'is-open': $root.filterOverlayIsOpen()}">
@@ -86,7 +85,7 @@
 						<div class="filter-overlay-group">
 							<span class="label" data-bind="html: label"></span>
 
-							<div class="filter-overlay-tags" data-bind="foreach: $root.filters()[$data.type]">
+							<div class="filter-overlay-tags" data-bind="foreach: $root.filters()[$data.typ]">
 
 								<label class="tag-checkbox custom-checkbox"
 								       data-bind="attr: {'for': value + '_mobile'}">
