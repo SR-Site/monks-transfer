@@ -140,8 +140,11 @@
 		}
 
 		.contact-option {
-			font-size: mobile-size(2.4rem);
 			width: 100%;
+
+			.link {
+				font-size: mobile-size(2.4rem);
+			}
 
 			&:not(:first-child) {
 				margin: 0;
