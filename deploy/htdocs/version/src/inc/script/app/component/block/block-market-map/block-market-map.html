@@ -91,15 +91,25 @@
 			focusBorder: {
 				value: $root.searchQuery
 			}"/>
-			<span class="placeholder-label">Which region do you want to advertise in?</span>
+			<span class="placeholder-label">
+				Which region do you want to advertise in?
+			</span>
 			<span class="focus-border"></span>
 
-			<!-- ko with: $root.autoCompleteValue() -->
-				<button class="button auto-complete" data-bind="events: [
-					[$root.MouseEventHelper.CLICK, $root.handleAutoCompleteClick.bind($root, $data)]
-				]">
-					{{$data.city}}, {{$data.statePostalCode}}
-				</button>
+			<!-- ko if: $root.noResultMessageActive -->
+				<span class="note no-result-message">
+					Sorry, this is not currently in our coverage area, contact us to for more information.
+				</span>
+			<!-- /ko -->
+
+			<!-- ko ifnot: $root.selectedState() -->
+				<!-- ko with: $root.autoCompleteValue() -->
+					<button class="note button auto-complete" data-bind="events: [
+						[$root.MouseEventHelper.CLICK, $root.handleAutoCompleteClick.bind($root, $data)]
+					]">
+						{{$data.city}}, {{$data.statePostalCode}}
+					</button>
+				<!-- /ko -->
 			<!-- /ko -->
 		</div>
 		<button class="button-search button" data-bind="html: searchLabel" type="submit"></button>

@@ -1,13 +1,11 @@
 import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel";
-import BlockMarketMapController from 'app/component/block/block-market-map/BlockMarketMapController';
-import IBlockMarketMapOptions from 'app/component/block/block-market-map/IBlockMarketMapOptions';
+import BlockMarketMapController from "app/component/block/block-market-map/BlockMarketMapController";
+import IBlockMarketMapOptions from "app/component/block/block-market-map/IBlockMarketMapOptions";
+import DataManager from "../../../data/DataManager";
+import IMarketDetail from "./interface/IMarketDetail";
+import StateModel from "../../../data/model/StateModel";
 
 import ko = require('knockout');
-import PanelBlocks from "../../../data/enum/block/PanelBlocks";
-import DataManager from "../../../data/DataManager";
-import IState from "./interface/IMarketDetail";
-import StateModel from "../../../data/model/StateModel";
-import IMarketDetail from "./interface/IMarketDetail";
 
 class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarketMapController, IBlockMarketMapOptions>
 {
@@ -20,6 +18,8 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 	public stateList: KnockoutObservableArray<IMarketDetail> = ko.observableArray([]);
 	public stateModel: StateModel = DataManager.getInstance().settingsModel.stateModel;
 
+	public noResultMessageActive: KnockoutObservable<boolean> = ko.observable(false);
+
 	constructor()
 	{
 		super();
@@ -28,6 +28,12 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 		{
 			const query = this.searchQuery().toLowerCase();
 			const stateList = this.stateList();
+
+			// Hid the no result message
+			this.noResultMessageActive(false);
+
+			// Return the selected value if available
+			if(this.selectedState()) return this.selectedState();
 
 			if(query.length >= 3)
 			{
@@ -42,16 +48,23 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 					}
 
 					// Check for the state
-					if(this.stateModel.hasItem(state.statePostalCode) &&
+					if(
+						this.stateModel.hasItem(state.statePostalCode) &&
 						this.isMatch(query, this.stateModel.getItemById(state.statePostalCode).label.toLowerCase()))
 					{
 						return state;
 					}
 				}
+
+				if(!this.selectedState())
+				{
+					this.noResultMessageActive(true);
+				}
 			}
 
 			return null;
 		})
+
 	}
 
 	/**
@@ -148,8 +161,9 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 		}
 		else
 		{
-			this.selectedState(data);
 			this.searchQuery(data.city + ', ' + data.statePostalCode);
+
+			this.selectedState(data);
 		}
 
 

@@ -157,15 +157,22 @@
 			display: none;
 		}
 
-		.auto-complete {
+		.note {
 			@include size(calc(100% + #{$sizeGrid * 2}), $sizeGrid * 2);
 			@include pos(-10rem, auto, auto, -$sizeGrid);
 			background: $colorLightGrey;
 			position: absolute;
-			font: 600 1.6rem/#{$sizeGrid * 2} $fontOpenSans;
 			color: $colorPrimary;
 			padding: 0 $sizeGrid;
 			text-align: left;
+
+			&.button {
+				font: 600 1.6rem/#{$sizeGrid * 2} $fontOpenSans;
+			}
+
+			&.no-result-message {
+				font: 600 1.2rem/#{$sizeGrid * 2} $fontOpenSans;
+			}
 		}
 
 		.button-search {
@@ -256,10 +263,19 @@
 				top: $sizeGrid * 2;
 			}
 
-			.auto-complete {
+			.note {
 				@include size(calc(100% + #{$sizeGrid * 2}), $sizeGrid * 4);
 				@include pos(-20rem, 0, auto, -$sizeGrid * 2);
-				font-size: 3rem;
+
+
+				&.no-result-message {
+					font-size: 2rem;
+					line-height: $sizeGrid * 4;
+				}
+
+				&.button {
+					font-size: 3rem;
+				}
 			}
 
 			.button-search {

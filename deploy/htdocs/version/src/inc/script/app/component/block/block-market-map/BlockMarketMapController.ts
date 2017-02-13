@@ -6,6 +6,12 @@ import Log from "lib/temple/util/Log";
 import configManagerInstance from "../../../../lib/temple/config/configManagerInstance";
 import {PropertyNames} from "../../../data/enum/ConfigNames";
 import LoadJSONTask from "../../../../lib/temple/control/sequence/task/loader/LoadJSONTask";
+import IMarketDetail from "./interface/IMarketDetail";
+import Scrollbar from "../../../../lib/temple/component/Scrollbar";
+import StateModel from "../../../data/model/StateModel";
+import DataManager from "../../../data/DataManager";
+import PanelBlocks from "../../../data/enum/block/PanelBlocks";
+import ThrottleDebounce from "../../../../lib/temple/util/ThrottleDebounce";
 import Promise = require("bluebird");
 import Layer = mapboxgl.Layer;
 import Map = mapboxgl.Map;
@@ -13,13 +19,7 @@ import BackgroundLayout = mapboxgl.BackgroundLayout;
 import FillLayout = mapboxgl.FillLayout;
 import GeoJSONSource = mapboxgl.GeoJSONSource;
 import FeatureCollection = GeoJSON.FeatureCollection;
-import IState from "./interface/IMarketDetail";
 import Feature = GeoJSON.Feature;
-import Scrollbar from "../../../../lib/temple/component/Scrollbar";
-import StateModel from "../../../data/model/StateModel";
-import DataManager from "../../../data/DataManager";
-import PanelBlocks from "../../../data/enum/block/PanelBlocks";
-import IMarketDetail from "./interface/IMarketDetail";
 
 class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions>
 {
@@ -58,14 +58,15 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 			{
 				this.resetStateSelection();
 			}
-		}))
+		}));
 	}
+
 
 	/**
 	 * @public
 	 * @method resetStateSelection
 	 */
-	public resetStateSelection():void
+	public resetStateSelection(): void
 	{
 		this.viewModel.selectedState(null);
 		this.viewModel.searchQuery('');
@@ -206,6 +207,16 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 
 	/**
 	 * @private
+	 * @method checkNoResults
+	 */
+	private checkNoResults(result): void
+	{
+
+		console.log('check no result', result);
+	}
+
+	/**
+	 * @private
 	 * @method handleMapLoad
 	 */
 	private handleMapLoad(): void
@@ -286,7 +297,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 * @param zoomLevel
 	 * @param duration
 	 */
-	private resetMapZoom(lat: number = -97.0364, lng: number = 38.8951, zoomLevel:number = 4, duration: number = 1000): void
+	private resetMapZoom(lat: number = -97.0364, lng: number = 38.8951, zoomLevel: number = 4, duration: number = 1000): void
 	{
 		this._map.panTo(new mapboxgl.LngLat(lat, lng), {duration: duration});
 
