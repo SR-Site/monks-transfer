@@ -73,9 +73,6 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 	{
 		// Select the state
 		this.onStateSelect(data);
-
-		// Clear the query
-		this.searchQuery('');
 	}
 
 	/**
@@ -88,9 +85,6 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 		{
 			// Select the state
 			this.onStateSelect(this.autoCompleteValue());
-
-			// Clear the query
-			this.searchQuery('');
 		}
 	}
 
@@ -123,6 +117,15 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 
 	/**
 	 * @public
+	 * @method handleClearClick
+	 */
+	public handleClearClick(): void
+	{
+		this.controller.resetStateSelection();
+	}
+
+	/**
+	 * @public
 	 * @method toggleSidePanel
 	 */
 	public toggleSidePanel(): void
@@ -139,11 +142,16 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 		if(this.selectedState() == data)
 		{
 			this.selectedState(null);
+
+			// Clear the query
+			this.searchQuery('');
 		}
 		else
 		{
 			this.selectedState(data);
+			this.searchQuery(data.city + ', ' + data.statePostalCode);
 		}
+
 
 		// Update the map
 		this.controller.updateDataLayer();

@@ -134,9 +134,27 @@
 		flex-wrap: nowrap;
 		align-items: center;
 
+		&.has-input {
+
+			.input-text {
+				margin-left: $sizeGrid * 2;
+			}
+
+			.component-button-circle-close {
+				display: block;
+			}
+		}
+
 		.input-text {
 			margin: 0 $sizeGrid;
 			overflow: visible;
+		}
+
+		.component-button-circle-close {
+			@include pos(50%, auto, auto, $sizeGrid / 2);
+			position: absolute;
+			transform: translateY(-50%);
+			display: none;
 		}
 
 		.auto-complete {
@@ -224,8 +242,8 @@
 
 		// Search Bar
 		.search-bar {
-			position: relative;
 			height: $sizeGrid*8;
+			position: relative;
 			@include pos(auto, auto, auto, auto);
 			flex-wrap: wrap;
 
@@ -234,9 +252,13 @@
 				padding: 0 $sizeGrid;
 			}
 
+			.component-button-circle-close {
+				top: $sizeGrid * 2;
+			}
+
 			.auto-complete {
-				@include size(100%, $sizeGrid * 4);
-				@include pos(-$sizeGrid * 4, 0, auto, 0);
+				@include size(calc(100% + #{$sizeGrid * 2}), $sizeGrid * 4);
+				@include pos(-20rem, 0, auto, -$sizeGrid * 2);
 				font-size: 3rem;
 			}
 

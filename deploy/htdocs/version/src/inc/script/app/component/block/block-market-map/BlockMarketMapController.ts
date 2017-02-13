@@ -51,6 +51,27 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 
 		// Set the access token
 		mapboxgl.accessToken = configManagerInstance.getProperty(PropertyNames.MAPBOX_ACCESS_TOKEN);
+
+		this.destructibles.addKOSubscription(this.viewModel.searchQuery.subscribe((value) =>
+		{
+			if(value.length === 0)
+			{
+				this.resetStateSelection();
+			}
+		}))
+	}
+
+	/**
+	 * @public
+	 * @method resetStateSelection
+	 */
+	public resetStateSelection():void
+	{
+		this.viewModel.selectedState(null);
+		this.viewModel.searchQuery('');
+
+		this.updateDataLayer();
+		this.resetMapZoom();
 	}
 
 	/**
@@ -66,7 +87,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 * @public
 	 * @method zoomIn
 	 */
-	public zoomIn():void
+	public zoomIn(): void
 	{
 		this._map.zoomIn()
 	}
@@ -75,7 +96,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 * @public
 	 * @method zoomOut
 	 */
-	public zoomOut():void
+	public zoomOut(): void
 	{
 		this._map.zoomOut()
 	}
@@ -112,7 +133,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 				if(data)
 				{
 					// Zoom to the correct position
-					this.resetMapZoom(state.coordinates.lat, state.coordinates.lng);
+					this.resetMapZoom(state.coordinates.lat, state.coordinates.lng, 6);
 				}
 				else
 				{
@@ -262,14 +283,15 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 * @method resetMapZoom
 	 * @param lat
 	 * @param lng
+	 * @param zoomLevel
 	 * @param duration
 	 */
-	private resetMapZoom(lat: number = -97.0364, lng: number = 38.8951, duration: number = 1000): void
+	private resetMapZoom(lat: number = -97.0364, lng: number = 38.8951, zoomLevel:number = 4, duration: number = 1000): void
 	{
 		this._map.panTo(new mapboxgl.LngLat(lat, lng), {duration: duration});
 
 		// Zoom + pan at the same time causes issues
-		setTimeout(() => this._map.zoomTo(6), duration);
+		setTimeout(() => this._map.zoomTo(zoomLevel), duration);
 	}
 
 	/**

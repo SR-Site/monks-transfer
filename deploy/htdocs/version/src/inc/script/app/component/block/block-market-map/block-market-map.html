@@ -84,7 +84,7 @@
 		</button>
 	</div>
 
-	<form class="search-bar" data-bind="submit: $root.handleSubmit.bind($root)">
+	<form class="search-bar" data-bind="submit: $root.handleSubmit.bind($root), css: {'has-input': $root.searchQuery().length}">
 		<div class="input-text-main input-text large">
 			<input type="text" name="search" id="search" autocomplete="off" data-bind="
 			live: $root.searchQuery,
@@ -101,9 +101,16 @@
 					{{$data.city}}, {{$data.statePostalCode}}
 				</button>
 			<!-- /ko -->
-
 		</div>
 		<button class="button-search button" data-bind="html: searchLabel" type="submit"></button>
+		<!-- ko component: {
+			name: 'button/button-circle-close',
+			options: {
+				action: {
+					event: $root.handleClearClick.bind($root)
+				}
+			}
+		} --><!-- /ko -->
 	</form>
 
 	<button class="service-info button" data-bind="tap: $root.handleServiceClick.bind($root)">
