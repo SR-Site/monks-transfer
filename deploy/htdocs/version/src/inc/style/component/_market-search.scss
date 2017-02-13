@@ -6,6 +6,7 @@
 		background: $colorWhite;
 
 		&.has-input {
+
 			.text-input-holder {
 				padding-left: $sizeGrid * 2;
 			}
@@ -21,13 +22,13 @@
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
+		z-index: 1;
 	}
 
 	.text-input-holder {
 		@include size(calc(100% - #{$sizeGrid * 5.5}), 100%);
 		padding: 0 $sizeGrid;
 		box-sizing: border-box;
-		z-index: 1;
 		background: $colorWhite;
 	}
 
@@ -80,5 +81,52 @@
 		position: absolute;
 		z-index: 1;
 		display: none;
+	}
+
+	@include respond-to(SMALL) {
+		$height: $sizeGrid * 4;
+
+		.query-wrapper {
+			height: $height * 2;
+
+			&.has-input {
+				.text-input-holder {
+					padding-left: $sizeGrid * 3;
+				}
+			}
+		}
+
+		.component-button-circle-close {
+			top: $height / 2;
+		}
+
+		.input-text-main {
+			margin-top: $sizeGrid;
+		}
+
+		.search-button,
+		.text-input-holder {
+			@include size(100%, $height)
+		}
+
+		.search-button {
+			font-size: mobile-size(2.8rem);
+			line-height: $height;
+		}
+
+		.note {
+			@include size(100%, $height);
+			top: -$height;
+
+			.copy {
+				font-size: mobile-size(2rem);
+			}
+
+			.button {
+				font-size: mobile-size(2rem);
+				line-height: $height;
+				height: $height;
+			}
+		}
 	}
 }

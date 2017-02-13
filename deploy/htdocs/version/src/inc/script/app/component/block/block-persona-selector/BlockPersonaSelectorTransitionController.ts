@@ -85,7 +85,7 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	{
 		const pagination = this.element.querySelector('.component-paginator-dashed');
 
-		this.transitionInTimeline.from(this.element, 0.01, {autoAlpha: 0});
+		this.transitionInTimeline.from(this.element, 0.8, {autoAlpha: 0});
 
 		// Slide in the main triangle
 		this.transitionInTimeline.add(() => this._mainTriangleAnimation.getTransitionInTimeline().play(), 1);

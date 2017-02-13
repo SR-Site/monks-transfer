@@ -254,6 +254,9 @@
 		}
 
 		// Search Bar
+		.component-market-search {
+			@include pos(auto, 0, 0, 0);
+		}
 		//.search-bar {
 		//	height: $sizeGrid*8;
 		//	position: relative;
