@@ -8,10 +8,10 @@
 				"id": "heroSecondary",
 				"data": {
 					"overlap": true,
-					"heading": "We're in a Golden Age of Television",
+					"heading": "The Unstoppable Stopping Power of TV",
 					"link": {
-						"label": "Find out more",
-						"title": "Find out more",
+						"label": "Here’s Why",
+						"title": "Here’s Why",
 						"target": "/television",
 						"type": 2
 					},
@@ -29,8 +29,8 @@
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": true,
-					"heading": "The <span class='highlight'>Power</span> of <span class='highlight'>Television</span> is Underestimated",
-					"paragraph": "<strong>TV is still the best way to build your brand.</strong><br/><br/> With television your business gets noticed and stands out from the competition. Your advertising message is in the spotlight during the television shows everyone is talking about.",
+					"heading": "TV is Digital, and it’s <span class='highlight'>Everywhere</span>",
+					"paragraph": "<strong>Now more than ever, consumers are accessing live TV content on their laptops, tablets, and mobile devices. TV is no longer in competition with Digital because TV is Digital. <br/>On average, 89.5% of adults 18+ spend over four hours a day watching live TV. Our targeted solutions can help you reach them on every screen, anytime, anywhere.",
 					"background": {
 						"normal": "data/image/image-with-content/background.jpg",
 						"small": "data/image/image-with-content/background.jpg",
@@ -45,8 +45,8 @@
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": false,
-					"heading": "<span class='highlight'>Multiscreen</span> is here: <br/>TV is on every screen.",
-					"paragraph": "We’ll place your business next to the shows your target audience watches, and you’ll watch your revenue grow.",
+					"heading": "<span class='highlight'>TV </span>Drives <span class='highlight'>Online</span> Engagement",
+					"paragraph": "Watching TV is now a multi-screen activity, as evidenced by the 80% of viewers who use a laptop, tablet, or smartphone to browse the internet while watching. Whether they’re researching a product, joining the conversation on social media, or visiting a specific website, TV influences consumers to seek out more information online.",
 					"background": {
 						"normal": "data/image/image-with-content/background.jpg",
 						"small": "data/image/image-with-content/background.jpg",
@@ -75,7 +75,7 @@
 				"data": {
 					"windowed": true,
 					"marginTop": 0,
-					"heading": "Customised <br/><span class='highlight'>Digital Solutions</span>"
+					"heading": "TV <br/><span class='highlight'>delivers</span>"
 				}
 			},
 			{
@@ -85,8 +85,8 @@
 					"marginTop": 0,
 					"stories": [
 						{
-							"heading": "Online Display and Video",
-							"paragraph": "Quisque congue nunc in viverra sodales. Lorem ipsum non aliquam nunc ipsum sid.",
+							"heading": "Start with Television:",
+							"paragraph": "Your brand deserves to be seen. Get in front of your most valuable customers by advertising on the top 50+ cable networks, with the best in sports, news, and entertainment programming.",
 							"background": {
 								"normal": "data/image/story-info-images/story-1-background.jpg",
 								"small": "data/image/story-info-images/story-1-background.jpg",
@@ -99,8 +99,8 @@
 							}
 						},
 						{
-							"heading": "Social Media",
-							"paragraph": "Quisque congue nunc in viverra sodales. Lorem ipsum non aliquam nunc ipsum sid.",
+							"heading": "Expand on multiple screens:",
+							"paragraph": "Reach your customer wherever they’re watching with targeted ads on TV, online, and on mobile.",
 							"background": {
 								"normal": "data/image/story-info-images/story-2-background.jpg",
 								"small": "data/image/story-info-images/story-2-background.jpg",
@@ -113,8 +113,8 @@
 							}
 						},
 						{
-							"heading": "Search",
-							"paragraph": "Quisque congue nunc in viverra sodales. Lorem ipsum non aliquam nunc ipsum sid.",
+							"heading": "Reach even more:",
+							"paragraph": "With exclusive, interactive products created for businesses who want to build deeper relationships with customers.",
 							"background": {
 								"normal": "data/image/story-info-images/story-1-background.jpg",
 								"small": "data/image/story-info-images/story-1-background.jpg",
@@ -134,8 +134,8 @@
 				"data": {
 					"windowed": true,
 					"marginTop": 0,
-					"heading": "Top programming. <br/>Engaged audiences",
-					"paragraph": "Get your message in front of the right people, at the right time. We’ll place your business next to the shows.",
+					"heading": "Immerse Your Brand <br/>in the Best Content",
+					"paragraph": "With over 400 of the best shows across the top 50+ cable networks, it’s easy to connect with your target audience in the content they love most.",
 					"link": {
 						"label": "See all shows",
 						"title": "See all shows",
@@ -282,24 +282,24 @@
 					"windowed": true,
 					"steps": [
 						{
-							"label": "200m",
-							"heading": "200m",
-							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+							"label": "Scale that works for you",
+							"heading": "Scale that works for you",
+							"paragraph": "Whether you want to reach over 27 million households or just the homes within two miles of your business, we have you covered. We’re talking 41 states and 100+DMAs."
 						},
 						{
-							"label": "81%",
-							"heading": "81%",
-							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+							"label": "Focus on where you need to be",
+							"heading": "Focus on where you need to be",
+							"paragraph": "If your business is invested in only one part of the country, narrow your target for a wiser spend."
 						},
 						{
-							"label": "15 years",
-							"heading": "15 years",
-							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+							"label": "Aim for a smaller target",
+							"heading": "Aim for a smaller target",
+							"paragraph": "Your business only serves one market area. This is so easy."
 						},
 						{
-							"label": "110+",
-							"heading": "110+",
-							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+							"label": "Where you are is where it’s at",
+							"heading": "Where you are is where it’s at",
+							"paragraph": "This is your zone, your town, your neighbourhood. Get ready with a smile because your customers are going to be dropping by."
 						}
 					],
 					"sequenceBackground": {
@@ -366,8 +366,8 @@
 					"marginTop": 2,
 					"callToActions": [
 						{
-							"heading": "Compliment television <br/>spend with Digital",
-							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"heading": "The power of TV + Digital",
+							"paragraph": "Access to the best content; your advertisement during news, sports and award winning shows",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-tv.jpg",
 								"small": "data/image/image-call-to-actions/image-tv.jpg",
@@ -380,7 +380,7 @@
 							}
 						},
 						{
-							"heading": "A new era <br/>for Television",
+							"heading": "Meet <span class='highlight'>kernel,</span> <br/>Let’s Grow Your Brand",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-digital.jpg",

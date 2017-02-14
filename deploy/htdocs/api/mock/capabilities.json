@@ -10,8 +10,8 @@
 					"overlap": true,
 					"slides": [
 						{
-							"heading": "Choose your stage",
-							"paragraph": "Advertise during: Sunday NFL Countdown ESPN",
+							"heading": "Find Your Audience",
+							"paragraph": "They’re watching, and they’re paying attention. So, align your brand with the high-profile, high-performing shows people are glued to.",
 							"link": {
 								"label": "Play showreel",
 								"title": "Play showreel",
@@ -51,8 +51,8 @@
 							}
 						},
 						{
-							"heading": "Choose your stage",
-							"paragraph": "Advertise during: Sunday NFL Countdown ESPN",
+							"heading": "Find Your Audience",
+							"paragraph": "They’re watching, and they’re paying attention. So, align your brand with the high-profile, high-performing shows people are glued to.",
 							"link": {
 								"label": "Play showreel",
 								"title": "Play showreel",
@@ -253,8 +253,8 @@
 				"data": {
 					"windowed": true,
 					"marginTop": 0,
-					"heading": "We got <span class='highlight'>Network</span> for Days",
-					"paragraph": "With over 50 networks to choose from, in blandit lorem ipsum dolor sit"
+					"heading": "The <span class='highlight'>Top</span> 50+",
+					"paragraph": "Sports, news, entertainment, drama, reality, family. We have the right networks and programming to reach your demographic."
 				}
 			},
 			{
@@ -636,24 +636,24 @@
 					"marginTop": 2,
 					"steps": [
 						{
-							"label": "200m",
-							"heading": "200m",
-							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+							"label": "Scale that works for you",
+							"heading": "Scale that works for you",
+							"paragraph": "Whether you want to reach over 27 million households or just the homes within two miles of your business, we have you covered. We’re talking 41 states and 100+DMAs."
 						},
 						{
-							"label": "81%",
-							"heading": "81%",
-							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+							"label": "Focus on where you need to be",
+							"heading": "Focus on where you need to be",
+							"paragraph": "If your business is invested in only one part of the country, narrow your target for a wiser spend."
 						},
 						{
-							"label": "15 years",
-							"heading": "15 years",
-							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+							"label": "Aim for a smaller target",
+							"heading": "Aim for a smaller target",
+							"paragraph": "Your business only serves one market area. This is so easy."
 						},
 						{
-							"label": "110+",
-							"heading": "110+",
-							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+							"label": "Where you are is where it’s at",
+							"heading": "Where you are is where it’s at",
+							"paragraph": "This is your zone, your town, your neighbourhood. Get ready with a smile because your customers are going to be dropping by."
 						}
 					],
 					"sequenceBackground": {

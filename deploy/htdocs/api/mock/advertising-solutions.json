@@ -8,8 +8,8 @@
 				"id": "heroSecondary",
 				"data": {
 					"overlap": true,
-					"heading": "We'll help you find your format",
-					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
+					"heading": "Powered By Your Potential",
+					"paragraph": "Spectrum Reach is the marketing platform of choice to help your business reach new heights, without wasting your time, money, and energy.",
 					"link": {
 						"label": "Find out more",
 						"title": "Find out more",
@@ -28,9 +28,9 @@
 				"data": {
 					"windowed": true,
 					"marginTop": 2,
-					"heading": "Use Data and Highly <span class='highlight'>Targeted</span> Geographic <span class='highlight'>Zones</span>",
-					"subHeading": "We're champions of data.",
-					"paragraph": "<p>Knowing your customer demographic and then using geographic targeting is a powerful way to reach the right people.</p><p> Learn about our scale of reach across the country.</p>",
+					"heading": "Measurability without <span class='highlight'>measure</span>",
+					"subHeading": "You want a choice of highly-targeted geographic zones.",
+					"paragraph": "<p>You want data, insights and back-end reporting so you know you’ve made the right decisions. You want a marketing partner who gets it.</p>",
 					"link": {
 						"label": "Explore the market",
 						"title": "Explore the market",
@@ -57,8 +57,8 @@
 				"id": "smallInfo",
 				"data": {
 					"windowed": true,
-					"heading": "Understanding  your <br/>Customer’s <span class='highlight'>Path to Purchase</span>",
-					"paragraph": "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum."
+					"heading": "Our Platform is <br/><span class='highlight'>Our Promise to You</span>",
+					"paragraph": "Combined with our national scale and resources, only we can deliver:"
 				}
 			},
 			{
@@ -66,10 +66,10 @@
 				"data": {
 					"steps": [
 						{
-							"heading": "Dream",
+							"heading": "Zero-in-ability",
 							"paragraph": "They are open to possibility",
-							"secondaryHeading": "Dream",
-							"secondaryParagraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at massa dapibus, ullamcorper elit at, feugiat nisi.",
+							"secondaryHeading": "Zero-in-ability",
+							"secondaryParagraph": "Spend with precision by targeting the right television audiences in over 27 million households or just the homes within two miles of your business.",
 							"background": {
 								"normal": "data/image/path-to-purchase/background-1.jpg",
 								"small": "data/image/path-to-purchase/background-1.jpg",
@@ -77,10 +77,10 @@
 							}
 						},
 						{
-							"heading": "Search",
+							"heading": "Feet on your Street",
 							"paragraph": "They make a descision to",
-							"secondaryHeading": "Search",
-							"secondaryParagraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at massa dapibus, ullamcorper elit at, feugiat nisi.",
+							"secondaryHeading": "Feet on your Street",
+							"secondaryParagraph": "Partner with a dedicated team of experts that live and work in your local community.",
 							"background": {
 								"normal": "data/image/path-to-purchase/background-2.jpg",
 								"small": "data/image/path-to-purchase/background-2.jpg",
@@ -88,10 +88,10 @@
 							}
 						},
 						{
-							"heading": "Purchase",
+							"heading": "The Top 50+",
 							"paragraph": "They begin shopping",
-							"secondaryHeading": "Purchase",
-							"secondaryParagraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at massa dapibus, ullamcorper elit at, feugiat nisi.",
+							"secondaryHeading": "The Top 50+",
+							"secondaryParagraph": "Share the stage and align your brand with over 400 of the most-watched and most-loved programs across 50+ networks.",
 							"background": {
 								"normal": "data/image/path-to-purchase/background-3.jpg",
 								"small": "data/image/path-to-purchase/background-3.jpg",
@@ -99,10 +99,10 @@
 							}
 						},
 						{
-							"heading": "Ownership",
+							"heading": "Super Screens",
 							"paragraph": "They evaluate their options",
-							"secondaryHeading": "Ownership",
-							"secondaryParagraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at massa dapibus, ullamcorper elit at, feugiat nisi.",
+							"secondaryHeading": "Super Screens",
+							"secondaryParagraph": "Engage your audience using the most innovative ad technology on TV, online, mobile, social, and search.",
 							"background": {
 								"normal": "data/image/path-to-purchase/background-4.jpg",
 								"small": "data/image/path-to-purchase/background-4.jpg",
@@ -110,10 +110,10 @@
 							}
 						},
 						{
-							"heading": "Support",
+							"heading": "The Works",
 							"paragraph": "They are making the purchase",
-							"secondaryHeading": "Support",
-							"secondaryParagraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at massa dapibus, ullamcorper elit at, feugiat nisi.",
+							"secondaryHeading": "The Works",
+							"secondaryParagraph": "Develop a memorable, effective campaign with our best-in-class sales, planning, reporting, and creative.",
 							"background": {
 								"normal": "data/image/path-to-purchase/background-5.jpg",
 								"small": "data/image/path-to-purchase/background-5.jpg",
@@ -128,7 +128,7 @@
 				"data": {
 					"marginTop": 2,
 					"windowed": true,
-					"heading": "Get more from your<br/><span class='highlight'>Marketing</span>"
+					"heading": "Solutions for Your <br/><span class='highlight'>Success</span>"
 				}
 			},
 			{
@@ -139,7 +139,7 @@
 					"callToActions": [
 						{
 							"heading": "Television",
-							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"paragraph": "The foundation of a solid brand is built on TV, the most powerful video platform ever created.",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-tv.jpg",
 								"small": "data/image/image-call-to-actions/image-tv.jpg",
@@ -148,12 +148,12 @@
 							"backgroundBlurred": {
 								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
 								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
-								"alt": "Background image alt text"
+								"alt": "Background image alt text" 
 							}
 						},
 						{
 							"heading": "Digital",
-							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"paragraph": "Extend your campaign and make your message stronger across every screen, everywhere your customers are, no matter what.",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-digital.jpg",
 								"small": "data/image/image-call-to-actions/image-digital.jpg",
@@ -167,7 +167,7 @@
 						},
 						{
 							"heading": "Creative <br/>services",
-							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"paragraph": "Your brand’s story deserves to be told by award-winning storytellers – and we have them. If your message isn’t right on point, you’re just wasting your energy.",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-creative.jpg",
 								"small": "data/image/image-call-to-actions/image-creative.jpg",
@@ -188,8 +188,8 @@
 					"marginTop": 2,
 					"personas": [
 						{
-							"heading": "Small businesses",
-							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"heading": "Local",
+							"paragraph": "Your mission: to make your idea happen. No industry jargon, just the best solutions to hit consumers with all you’ve got.",
 							"personaType": 0,
 							"link": {
 								"label": "Grow your buisiness",
@@ -204,8 +204,8 @@
 							}
 						},
 						{
-							"heading": "Automotive",
-							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"heading": "National",
+							"paragraph": "Your mission is to find innovative ideas that connect with customers all across the country. You have the pulse on what they want and the competition. We have the resources to help you win.",
 							"personaType": 1,
 							"link": {
 								"label": "Grow your buisiness",
@@ -220,8 +220,8 @@
 							}
 						},
 						{
-							"heading": "Enterprise",
-							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"heading": "Agencies",
+							"paragraph": "You confidently take your clients through new marketing platforms and schedules that simply blow their minds. There’s a lot at stake. That’s why we have the top-tier programming on the networks that move the needle.",
 							"personaType": 2,
 							"link": {
 								"label": "Grow your buisiness",
@@ -236,8 +236,8 @@
 							}
 						},
 						{
-							"heading": "Local media buying",
-							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"heading": "Automotive",
+							"paragraph": "Potential car buyers should have a clear sense of what sets you apart from your competition. Our automotive specialists can equip you with the products, tools and insights that drive traffic to your dealership and help you sell more.",
 							"personaType": 3,
 							"link": {
 								"label": "Grow your buisiness",

@@ -11,8 +11,8 @@
 					"backgroundColor": "rgba(245, 161, 27, 0.95)",
 					"heading": "Kernel, a Full Service Creative Agency.",
 					"link": {
-						"label": "Find out more",
-						"title": "Find out more",
+						"label": "Let’s grow your brand",
+						"title": "Let’s grow your brand",
 						"target": "/advertising-solutions",
 						"type": 2
 					},
@@ -28,9 +28,9 @@
 				"data": {
 					"windowed": true,
 					"marginTop": 2,
-					"quote": "“Because of your skill, work and excellence so many doors have opend to us and we are poised to expand in some really huge ways.”",
-					"name": "John Doe",
-					"description": "Foo bar",
+					"quote": "“The best media plan in the world won’t work if your creative message doesn’t resonate with your consumers.”",
+					"name": "Fred Bucher",
+					"description": "CMO, Spectrum Reach",
 					"image": {
 						"normal": "data/image/quote/person.jpg",
 						"small": "data/image/quote/person.jpg",
@@ -42,8 +42,8 @@
 				"id": "smallInfo",
 				"data": {
 					"windowed": true,
-					"heading": "Award winning <span class='highlight'>Creative skills</span>",
-					"paragraph": "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum."
+					"heading": "Let’s get creative <span class='highlight'>together</span>",
+					"paragraph": "Your message can be told by big agency talent who work and live where you do. Kernel delivers a suite of cost-effective creative services for any size business."
 				}
 			},
 			{
@@ -85,8 +85,8 @@
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": false,
-					"heading": "Let us tell your story. <span class='highlight'>Contact Kernel</span> to get started.",
-					"paragraph": "Creativity comes at all price points. Start with a great idea and then we scale to fit your budget",
+					"heading": "A <span class='highlight'>creative </span>solution for every screen ",
+					"paragraph": "We go to market in a way that most agencies can’t, with the right mix of talent, technology, affordability, and scale. We’ve figured out a way to deliver an effective creative campaign across multiple screens for less, often at just a fraction of the cost of your total media spend.",
 					"link": {
 						"label": "Contact Kernel",
 						"title": "Contact Kernel",
@@ -148,8 +148,8 @@
 					"marginTop": 2,
 					"windowed": true,
 					"croppedImage": false,
-					"heading": "Use <span class='highlight'>Data</span> and <span class='highlight'>Targeting</span> to Spend Smart.",
-					"paragraph": "We know more about your customers than anyone else. Use the power of data to get your message in front of the right people, at the right time.",
+					"heading": "Work with our <span class='highlight'>award-winning </span> staff",
+					"paragraph": "Addys. Tellys. Emmys. <br/>Kernel is loaded with award-winning talent, crafting campaigns for businesses of all sizes, and providing full service creative needs from ideation to post-production.",
 					"background": {
 						"normal": "data/image/image-with-content/background.jpg",
 						"small": "data/image/image-with-content/background.jpg",
@@ -164,8 +164,8 @@
 					"marginTop": 2,
 					"windowed": true,
 					"croppedImage": false,
-					"heading": "Let us tell your story. <span class='highlight'>Contact Kernel</span> to get started.",
-					"paragraph": "Creativity comes at all price points. Start with a great idea and then we scale to fit your budget",
+					"heading": "Your story <span class='highlight'>starts</span> here",
+					"paragraph": "Whether you’re launching a new product that could make or break your year, or looking to establish brand loyalty, it’s time to say hello to Kernel.",
 					"background": {
 						"normal": "data/image/image-with-content/background.jpg",
 						"small": "data/image/image-with-content/background.jpg",
@@ -180,7 +180,7 @@
 					"marginTop": 2,
 					"callToActions": [
 						{
-							"heading": "Compliment television <br/>spend with Digital",
+							"heading": "The Unstoppable Stopping Power<br/><span class='highlight'>of Television</span>",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-tv.jpg",
@@ -194,16 +194,16 @@
 							}
 						},
 						{
-							"heading": "A new era <br/>for Television",
-							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"heading": "The power of TV + Digital",
+							"paragraph": "Access to the best content; your advertisement during news, sports and award winning shows",
 							"background": {
-								"normal": "data/image/image-call-to-actions/image-digital.jpg",
-								"small": "data/image/image-call-to-actions/image-digital.jpg",
+								"normal": "data/image/image-call-to-actions/image-tv.jpg",
+								"small": "data/image/image-call-to-actions/image-tv.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image/image-call-to-actions/image-digital-blurred.jpg",
-								"small": "data/image/image-call-to-actions/image-digital-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
+								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						}
