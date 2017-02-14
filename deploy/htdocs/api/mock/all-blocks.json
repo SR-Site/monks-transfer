@@ -523,14 +523,14 @@
 						}
 					],
 					"sequenceBackground": {
-						"normal": "data/sequence/map/map_bg.png",
-						"small": "data/sequence/map/map_bg.png",
+						"normal": "data/sequence/map/desktop/map_bg.png",
+						"small": "data/sequence/map/mobile/map_bg_mobile.png",
 						"alt": "Alt text"
 					},
 					"imageSequence": {
 						"image": {
-							"normal": "data/sequence/map/map_lines_",
-							"small": "data/sequence/map/map_lines_",
+							"normal": "data/sequence/map/desktop/map_lines_",
+							"small": "data/sequence/map/mobile/map_lines_mobile_",
 							"alt": "Alt text"
 						},
 						"extension": ".png",
@@ -554,13 +554,13 @@
 					},
 					"sequenceBackground": {
 						"normal": "data/sequence/map-secondary/desktop/map_bg.png",
-						"small": "data/sequence/map-secondary/mobile/map_bg.png",
+						"small": "data/sequence/map-secondary/mobile/map_bg_mobile.png",
 						"alt": "Alt text"
 					},
 					"imageSequence": {
 						"image": {
 							"normal": "data/sequence/map-secondary/desktop/map_lines_",
-							"small": "data/sequence/map-secondary/desktop/map_lines_",
+							"small": "data/sequence/map-secondary/desktop/map_lines_mobile_",
 							"alt": "Alt text"
 						},
 						"extension": ".png",
