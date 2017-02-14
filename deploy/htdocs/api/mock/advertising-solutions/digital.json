@@ -219,6 +219,12 @@
 								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
 								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
 								"alt": "Background image alt text"
+							},
+							"link": {
+								"label": "Reach us here",
+								"title": "Reach us here",
+								"target": "home",
+								"type": 0
 							}
 						},
 						{
@@ -233,6 +239,12 @@
 								"normal": "data/image/image-call-to-actions/image-digital-blurred.jpg",
 								"small": "data/image/image-call-to-actions/image-digital-blurred.jpg",
 								"alt": "Background image alt text"
+							},
+							"link": {
+								"label": "Reach us here",
+								"title": "Reach us here",
+								"target": "home",
+								"type": 0
 							}
 						}
 					]

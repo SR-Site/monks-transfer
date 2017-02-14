@@ -19,14 +19,15 @@
 			</div>
 		</div>
 		<div class="call-to-actions-content abs-fill" data-bind="foreach: data.callToActions">
-			<a href="#" data-bind="
+			<a data-bind="
+				gaiaOpenLink: $data.link,
 				style: {
 					width: (100 / $parent.data.callToActions.length) + '%'
 				},
-				event: {
-					'mouseenter': $root.handleMouseEnter.bind($root),
-					'mouseleave': $root.handleMouseLeave.bind($root)
-				}">
+				events: [
+					['mouseenter',  $root.handleMouseEnter.bind($root)],
+					['mouseleave', $root.handleMouseLeave.bind($root)]
+				]">
 				<span class="text-wrapper">
 					<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
 					<h3 class="heading heading-03" data-bind="html: heading"></h3>
