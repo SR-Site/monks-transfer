@@ -11,7 +11,7 @@
 					"slides": [
 						{
 							"heading": "Never stop reaching",
-							"paragraph": "The right time and place to advertise your business",
+							"paragraph": "It’s time to stop doing business as usual and start doing business as exceptional. Welcome to the new Spectrum Reach.",
 							"link": {
 								"label": "Find out more",
 								"title": "Find out more",
@@ -49,8 +49,8 @@
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": false,
-					"heading": "<span class='highlight'>Plan</span>",
-					"paragraph": "Welcome to a new era of television and digital advertising. Viewing habits are changing now that tv is more than one screen.",
+					"heading": "<span class='highlight'>Partnership</span>",
+					"paragraph": "Whoever helps you build your brand should be human, local and fully committed to your success.",
 					"link": {
 						"label": "Find out more",
 						"title": "Find out more",
@@ -71,8 +71,8 @@
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": true,
-					"heading": "<span class='highlight'>Buy</span>",
-					"paragraph": "Welcome to a new era of television and digital advertising. Viewing habits are changing now that tv is more than one screen.",
+					"heading": "<span class='highlight'>Platform</span>",
+					"paragraph": "The right screens, the right shows and the right marketing products are crucial in engaging customers ready to buy.",
 					"link": {
 						"label": "Find out more",
 						"title": "Find out more",
@@ -93,8 +93,8 @@
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": false,
-					"heading": "<span class='highlight'>Measure</span>",
-					"paragraph": "Welcome to a new era of television and digital advertising. Viewing habits are changing now that tv is more than one screen.",
+					"heading": "<span class='highlight'>Performance</span>",
+					"paragraph": "The time, money and energy put into a campaign will mean nothing without rich data to evaluate your investment and inform your next move.",
 					"link": {
 						"label": "Find out more",
 						"title": "Find out more",
@@ -115,8 +115,8 @@
 					"heading": "Find the Right Way to Reach <br/>your <span class='highlight'>Customers</span>",
 					"paragraph": "We've created a great line-up of advertising opportunities that make it easy for you to talk to best customers",
 					"link": {
-						"label": "Find your market",
-						"title": "Find your market",
+						"label": "Reach us here",
+						"title": "Reach us here",
 						"target": "home",
 						"type": 0
 					}
@@ -128,24 +128,24 @@
 					"windowed": true,
 					"steps": [
 						{
-							"label": "200m",
-							"heading": "200m",
-							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+							"label": "Scale",
+							"heading": "Scale that works for you",
+							"paragraph": "Whether you want to reach over 27 million households or just the homes within two miles of your business, we have you covered. We’re talking 41 states and 100+DMAs."
 						},
 						{
-							"label": "81%",
-							"heading": "81%",
-							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+							"label": "Focus",
+							"heading": "Focus on where you need to be",
+							"paragraph": "If your business is invested in only one part of the country, narrow your target for a wiser spend."
 						},
 						{
-							"label": "15 years",
-							"heading": "15 years",
-							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+							"label": "Aim",
+							"heading": "Aim for a smaller target",
+							"paragraph": "Your business only serves one market area. This is so easy."
 						},
 						{
-							"label": "110+",
-							"heading": "110+",
-							"paragraph": "Of smartphone owners purchased a product with their phone while watching TV"
+							"label": "Where",
+							"heading": "Where you are is where it’s at",
+							"paragraph": "This is your zone, your town, your neighbourhood. Get ready with a smile because your customers are going to be dropping by."
 						}
 					],
 					"sequenceBackground": {
@@ -172,7 +172,7 @@
 					"callToActions": [
 						{
 							"heading": "Television",
-							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"paragraph": "The foundation of a solid brand is built on TV, the most powerful video platform ever created.",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-tv.jpg",
 								"small": "data/image/image-call-to-actions/image-tv.jpg",
@@ -181,12 +181,18 @@
 							"backgroundBlurred": {
 								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
 								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
-								"alt": "Background image alt text"
+								"alt": "Background image alt text" 
+							},
+							"link": {
+								"label": "Reach us here",
+								"title": "Reach us here",
+								"target": "home",
+								"type": 0
 							}
 						},
 						{
 							"heading": "Digital",
-							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"paragraph": "Extend your campaign and make your message stronger across every screen, everywhere your customers are, no matter what.",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-digital.jpg",
 								"small": "data/image/image-call-to-actions/image-digital.jpg",
@@ -196,11 +202,17 @@
 								"normal": "data/image/image-call-to-actions/image-digital-blurred.jpg",
 								"small": "data/image/image-call-to-actions/image-digital-blurred.jpg",
 								"alt": "Background image alt text"
+							},
+							"link": {
+								"label": "Reach us here",
+								"title": "Reach us here",
+								"target": "home",
+								"type": 0
 							}
 						},
 						{
 							"heading": "Creative <br/>services",
-							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"paragraph": "Your brand’s story deserves to be told by award-winning storytellers – and we have them. If your message isn’t right on point, you’re just wasting your energy.",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-creative.jpg",
 								"small": "data/image/image-call-to-actions/image-creative.jpg",
@@ -210,6 +222,12 @@
 								"normal": "data/image/image-call-to-actions/image-creative-blurred.jpg",
 								"small": "data/image/image-call-to-actions/image-creative-blurred.jpg",
 								"alt": "Background image alt text"
+							},
+							"link": {
+								"label": "Reach us here",
+								"title": "Reach us here",
+								"target": "home",
+								"type": 0
 							}
 						}
 					]
@@ -221,8 +239,8 @@
 					"windowed": false,
 					"heading": "The latest from Spectrum Reach",
 					"link": {
-						"label": "Find out more",
-						"title": "Find out more",
+						"label": "Reach us here",
+						"title": "Reach us here",
 						"target": "home",
 						"type": 0
 					},
@@ -331,8 +349,8 @@
 				"data": {
 					"personas": [
 						{
-							"heading": "Small businesses",
-							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"heading": "Local",
+							"paragraph": "Your mission: to make your idea happen. No industry jargon, just the best solutions to hit consumers with all you’ve got.",
 							"personaType": 0,
 							"link": {
 								"label": "Grow your buisiness",
@@ -347,8 +365,8 @@
 							}
 						},
 						{
-							"heading": "Automotive",
-							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"heading": "National",
+							"paragraph": "Your mission is to find innovative ideas that connect with customers all across the country. You have the pulse on what they want and the competition. We have the resources to help you win.",
 							"personaType": 1,
 							"link": {
 								"label": "Grow your buisiness",
@@ -363,8 +381,8 @@
 							}
 						},
 						{
-							"heading": "Enterprise",
-							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"heading": "Agencies",
+							"paragraph": "You confidently take your clients through new marketing platforms and schedules that simply blow their minds. There’s a lot at stake. That’s why we have the top-tier programming on the networks that move the needle.",
 							"personaType": 2,
 							"link": {
 								"label": "Grow your buisiness",
@@ -379,8 +397,8 @@
 							}
 						},
 						{
-							"heading": "Local media buying",
-							"paragraph": "Want to expand out from advertising on Facebook and Google",
+							"heading": "Automotive",
+							"paragraph": "Potential car buyers should have a clear sense of what sets you apart from your competition. Our automotive specialists can equip you with the products, tools and insights that drive traffic to your dealership and help you sell more.",
 							"personaType": 3,
 							"link": {
 								"label": "Grow your buisiness",

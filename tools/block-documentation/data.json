@@ -1207,6 +1207,15 @@
                     ]
                 },
                 {
+                    "name": "sequenceBackground",
+                    "type": "IImage",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "To save on image size the background of the image sequence is a separate image",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
                     "name": "imageSequence",
                     "type": "IImageSequence",
                     "required": true,
@@ -1216,7 +1225,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockMap\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"label\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"path/to/image.jpg\",\n                \"small\": \"path/to/image.jpg\",\n                \"alt\": \"Lorem ipsum dolor sit amet\"\n            },\n            \"total\": 1,\n            \"extension\": \"Lorem ipsum dolor sit amet\",\n            \"autoplay\": true\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"blockMap\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"label\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"sequenceBackground\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"path/to/image.jpg\",\n                \"small\": \"path/to/image.jpg\",\n                \"alt\": \"Lorem ipsum dolor sit amet\"\n            },\n            \"total\": 1,\n            \"extension\": \"Lorem ipsum dolor sit amet\",\n            \"autoplay\": true\n        }\n    }\n}"
         },
         {
             "blockId": "BlockMapSecondary",
@@ -1249,6 +1258,24 @@
                     "properties": []
                 },
                 {
+                    "name": "imageSequence",
+                    "type": "IImageSequence",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The image sequence displayed in the map",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
+                    "name": "sequenceBackground",
+                    "type": "IImage",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "To save on image size the background of the image sequence is a separate image",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
@@ -1276,7 +1303,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blockMapSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"subHeading\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"blockMapSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"path/to/image.jpg\",\n                \"small\": \"path/to/image.jpg\",\n                \"alt\": \"Lorem ipsum dolor sit amet\"\n            },\n            \"total\": 1,\n            \"extension\": \"Lorem ipsum dolor sit amet\",\n            \"autoplay\": true\n        },\n        \"sequenceBackground\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"subHeading\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "BlockMarketMap",
@@ -1666,11 +1693,29 @@
                             "description": "The background image per step",
                             "placeholder": "",
                             "properties": []
+                        },
+                        {
+                            "name": "secondaryHeading",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The secondary heading displayed in the step",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "secondaryParagraph",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The secondary paragraph displayed in the step",
+                            "placeholder": "",
+                            "properties": []
                         }
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"blockPathToPurchase\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"blockPathToPurchase\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"secondaryHeading\": \"Lorem ipsum dolor sit amet\",\n                \"secondaryParagraph\": \"Lorem ipsum dolor sit amet\"\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "BlockPersonaSelector",

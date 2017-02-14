@@ -81,7 +81,7 @@ const partials: Array<string> = [
 
 let sitemap:ISitemap = {
 
-	title: 'Skeleton1 - Gaia - {page}',
+	title: 'Welcome to Spectrumreach | {page}',
 
 	config: {
 		controllerPath: 'app/page/',

@@ -17,7 +17,7 @@
 
 	.slide-details {
 		@include size(25%, auto);
-		@include pos($sizeGrid * 3, auto, auto, 50%);
+		@include pos($sizeGrid * 2, auto, auto, 50%);
 		position: absolute;
 		transform: translateX(-50%);
 		text-align: center;

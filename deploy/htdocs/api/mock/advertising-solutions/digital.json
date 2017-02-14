@@ -8,11 +8,11 @@
 				"id": "heroSecondary",
 				"data": {
 					"overlap": true,
-					"heading": "We'll Help you Find Your Format",
-					"paragraph": "Spectrum Reach develops measurable data infused marketing solutions to reach your best customers and grow your business.",
+					"heading": "The Power of TV + Digital",
+					"paragraph": "Extending your message across multiple screens amplifies the impact of your advertising.",
 					"link": {
-						"label": "Find out more",
-						"title": "Find out more",
+						"label": "Learn How",
+						"title": "Learn How",
 						"target": "/advertising-solutions",
 						"type": 2
 					},
@@ -30,8 +30,8 @@
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": true,
-					"heading": "Media Habits are <span class='highlight'>Changing</span>",
-					"paragraph": "Has your business got an edge on the competition? <br/><br/>We’ve got multiple products that build awareness, drive sales and can guarantee that customers will find your business quickly.",
+					"heading": "The New Media <span class='highlight'>Landscape</span>",
+					"paragraph": "With the majority of consumers using multiple devices throughout the day, it has never been more essential to have a multi-screen advertising strategy. In fact, brand recall has been shown to double when the same ad runs on both TV and online. When combined, TV and Digital work together to make your ads more memorable and effective.",
 					"background": {
 						"normal": "data/image/image-with-content/background.jpg",
 						"small": "data/image/image-with-content/background.jpg",
@@ -46,8 +46,8 @@
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": false,
-					"heading": "Extend your <span class='highlight'>Message Online</span>",
-					"paragraph": "Spectrum Reach offers custom solutions for the modern digital landscape. We reach customers no one else can across every screen.",
+					"heading": "TV Drives <span class='highlight'>Digital</span>",
+					"paragraph": "Extending your message across multiple screens amplifies the impact of your advertising.",
 					"background": {
 						"normal": "data/image/image-with-content/background.jpg",
 						"small": "data/image/image-with-content/background.jpg",
@@ -62,7 +62,7 @@
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": false,
-					"heading": "Digital Offers you <span class='highlight'>Trackability</span>",
+					"heading": "Measured for <span class='highlight'>Success</span>",
 					"paragraph": "Reach the same people as before, but with Digital you can accurately track which of your campaigns are a sucess.",
 					"background": {
 						"normal": "data/image/image-with-content/background.jpg",
@@ -87,7 +87,7 @@
 					"stories": [
 						{
 							"heading": "Online Display and Video",
-							"paragraph": "Quisque congue nunc in viverra sodales. Lorem ipsum non aliquam nunc ipsum sid.",
+							"paragraph": "Expand your message and improve brand loyalty and recognition as you engage your online audience across their favourite websites.",
 							"background": {
 								"normal": "data/image/story-info-images/story-1-background.jpg",
 								"small": "data/image/story-info-images/story-1-background.jpg",
@@ -101,7 +101,7 @@
 						},
 						{
 							"heading": "Social Media",
-							"paragraph": "Quisque congue nunc in viverra sodales. Lorem ipsum non aliquam nunc ipsum sid.",
+							"paragraph": "Social media has a broad impact on the way we share information and get our news. We can help you create an effective campaign that helps you have real conversations and get useful feedback from consumers.",
 							"background": {
 								"normal": "data/image/story-info-images/story-2-background.jpg",
 								"small": "data/image/story-info-images/story-2-background.jpg",
@@ -115,7 +115,7 @@
 						},
 						{
 							"heading": "Search",
-							"paragraph": "Quisque congue nunc in viverra sodales. Lorem ipsum non aliquam nunc ipsum sid.",
+							"paragraph": "Be easy to find. Consumers are going online to window shop, research, and purchase. Maximise your results with a managed end-to-end solution optimised across top search engines.",
 							"background": {
 								"normal": "data/image/story-info-images/story-1-background.jpg",
 								"small": "data/image/story-info-images/story-1-background.jpg",
@@ -208,7 +208,7 @@
 					"marginTop": 2,
 					"callToActions": [
 						{
-							"heading": "A new era for <br/><span class='highlight'>Television</span>",
+							"heading": "The Unstoppable Stopping Power<br/><span class='highlight'>of Television</span>",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-tv.jpg",
@@ -219,10 +219,16 @@
 								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
 								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
 								"alt": "Background image alt text"
+							},
+							"link": {
+								"label": "Reach us here",
+								"title": "Reach us here",
+								"target": "home",
+								"type": 0
 							}
 						},
 						{
-							"heading": "Meet <span class='highlight'>kernel,</span> <br/>Tell us what you need.",
+							"heading": "Meet <span class='highlight'>kernel,</span> <br/>Let’s Grow Your Brand",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-digital.jpg",
@@ -233,6 +239,12 @@
 								"normal": "data/image/image-call-to-actions/image-digital-blurred.jpg",
 								"small": "data/image/image-call-to-actions/image-digital-blurred.jpg",
 								"alt": "Background image alt text"
+							},
+							"link": {
+								"label": "Reach us here",
+								"title": "Reach us here",
+								"target": "home",
+								"type": 0
 							}
 						}
 					]
