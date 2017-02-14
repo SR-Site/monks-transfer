@@ -158,8 +158,8 @@
 		}
 
 		.note {
-			@include size(calc(100% + #{$sizeGrid * 2}), $sizeGrid * 2);
-			@include pos(-10rem, auto, auto, -$sizeGrid);
+			@include size(calc(100% + #{$sizeGrid * 3}), $sizeGrid * 2);
+			@include pos(-10rem, auto, auto, -$sizeGrid * 2 );
 			background: $colorLightGrey;
 			position: absolute;
 			color: $colorPrimary;
