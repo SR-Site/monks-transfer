@@ -3,8 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.block_info.field_category
     - field.field.node.block_info.field_content
+    - field.field.node.block_info.field_document_type
     - field.field.node.block_info.field_link
+    - field.field.node.block_info.field_market
+    - field.field.node.block_info.field_platform
     - node.type.block_info
   module:
     - field_group
@@ -35,6 +39,14 @@ content:
     weight: 4
     settings: {  }
     third_party_settings: {  }
+  field_category:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
   field_content:
     weight: 26
     settings:
@@ -42,6 +54,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+  field_document_type:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
   field_link:
     type: entity_reference_paragraphs
     weight: 8
@@ -53,6 +73,22 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+  field_market:
+    weight: 29
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+  field_platform:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
   path:
     type: path
     weight: 7

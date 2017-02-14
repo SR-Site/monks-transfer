@@ -1,0 +1,28 @@
+uuid: aeacddc3-3c11-4982-b684-19a6a352e05c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_platform
+    - node.type.block_info
+    - taxonomy.vocabulary.platform
+id: node.block_info.field_platform
+field_name: field_platform
+entity_type: node
+bundle: block_info
+label: Platform
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      platform: platform
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -16,7 +16,20 @@ use Drupal\mm_rest\Plugin\RestEntityProcessorManager;
 
 use Drupal\facets\FacetManager\DefaultFacetManager;
 
+use Drupal\mm_rest\Response\OffsetPaginatedResponse;
+
+
 abstract class ResourceSearch extends MMResourceBase {
+
+  /**
+   * Default offset.
+   */
+  const OFFSET_DEFAULT = 0;
+
+  /**
+   * Default limit.
+   */
+  const LIMIT_DEFAULT = 10;
 
   /**
    * The default facet manager.
@@ -28,7 +41,7 @@ abstract class ResourceSearch extends MMResourceBase {
   /**
    * Returns the search results.
    *
-   * @return array
+   * @return \Drupal\mm_rest\Response\OffsetPaginatedResponse
    * @throws \Drupal\facets\Exception\Exception
    *
    * @TODO: refactor, separate into different protected functions.
@@ -66,6 +79,16 @@ abstract class ResourceSearch extends MMResourceBase {
       $query->keys($keys);
     }
 
+    // Pagination
+    $offset = $request->get('offset');
+    $limit = $request->get('limit');
+
+    $offset = (int) $offset ?: self::OFFSET_DEFAULT;
+    $limit = (int) $limit ?: self::LIMIT_DEFAULT;
+
+    $query->range($offset, $limit);
+
+    // Get results.
     $result = $query->execute();
     $items = $result->getResultItems();
 
@@ -92,7 +115,7 @@ abstract class ResourceSearch extends MMResourceBase {
 
     $this->addCacheableDependency();
 
-    return $data;
+    return new OffsetPaginatedResponse($data, $offset, $limit, (int) $result->getResultCount());
   }
 
   /**
