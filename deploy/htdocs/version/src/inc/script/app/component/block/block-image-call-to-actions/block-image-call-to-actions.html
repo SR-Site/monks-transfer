@@ -25,8 +25,8 @@
 					width: (100 / $parent.data.callToActions.length) + '%'
 				},
 				events: [
-					['mouseenter',  $root.handleMouseEnter.bind($root)],
-					['mouseleave', $root.handleMouseLeave.bind($root)]
+					['mouseenter',  $root.handleMouseEnter.bind($root, $data)],
+					['mouseleave', $root.handleMouseLeave.bind($root, $data)]
 				]">
 				<span class="text-wrapper">
 					<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
