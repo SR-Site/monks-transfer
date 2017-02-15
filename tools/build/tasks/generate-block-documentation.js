@@ -27,7 +27,7 @@ module.exports = function( grunt )
 				var properties = parseBlock( block ).reverse();
 
 				output.blocks.push( {
-					blockId: blockId,
+					blockId: camelCase(blockId),
 					properties: properties,
 					example: JSON.stringify( {
 						id: camelCase( blockId ),
