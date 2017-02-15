@@ -185,6 +185,8 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 	 */
 	private draw(): void
 	{
+		if(this.isDestructed()) return;
+
 		if(this._newImage)
 		{
 			this._ctx.drawImage(

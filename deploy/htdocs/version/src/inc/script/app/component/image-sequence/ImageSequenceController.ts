@@ -77,6 +77,8 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	 */
 	public play(loop: boolean = false, loopDelay: number = 0): void
 	{
+		if(this.isDestructed()) return;
+
 		this._stopped = false;
 
 		// Animate the frame count

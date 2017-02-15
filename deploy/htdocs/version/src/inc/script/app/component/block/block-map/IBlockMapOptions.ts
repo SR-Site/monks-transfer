@@ -24,6 +24,16 @@ interface IBlockMapOptions extends IAbstractBlockComponentOptions
 		 * @description The label displayed on the step
 		 */
 		label: string
+		/**
+		 * @property
+		 * @description The heading displayed in the carousel
+		 */
+		heading:string;
+		/**
+		 * @property
+		 * @description The paragraph displayed in the carousel
+		 */
+		paragraph:string;
 	}>;
 }
 

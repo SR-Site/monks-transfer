@@ -21,6 +21,8 @@ import Promise = require("bluebird");
 
 class ContentPagePageController extends DefaultPageController<ContentPagePageViewModel>
 {
+	private _startupPagePromise: Promise<any>;
+
 	/**
 	 * @property callbackCounter
 	 * @type {CallbackCounter}
@@ -145,11 +147,20 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 					this._scrollTrackerPoints = {};
 					this._allComponentsLoaded = null;
 
-					this.startupPage()
+					if(this._startupPagePromise && !this._startupPagePromise.isResolved())
+					{
+						// User tried to leave the page before the page was done, so we want to cancel it!
+						this._startupPagePromise.cancel();
+						this._startupPagePromise = null;
+					}
+
+					this._startupPagePromise = this.startupPage()
 						.catch((result) =>
 						{
 							throw result;
-						})
+						});
+
+					this._startupPagePromise.isCancellable();
 				});
 		}
 	}

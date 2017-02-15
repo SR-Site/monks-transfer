@@ -32,6 +32,20 @@ class BlockNetworkOverviewController extends AbstractBlockComponentController<Bl
 	{
 		super.init();
 
+		let rowCount = Math.ceil(this.options.items.length / 2);
+
+		this.options.items.forEach((item, index) =>
+		{
+			if(index < rowCount)
+			{
+				this.viewModel.topList.push(item);
+			}
+			else
+			{
+				this.viewModel.bottomList.push(item);
+			}
+		});
+
 		this._draggableInstance = new DraggableInstance(<HTMLElement>this.element.querySelector('.js-draggable-container'), {
 			invert: true,
 			enableTrackPad: true

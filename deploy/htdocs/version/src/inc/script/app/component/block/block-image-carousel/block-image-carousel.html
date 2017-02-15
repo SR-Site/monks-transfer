@@ -20,27 +20,15 @@
 		</div>
 
 		<div class="pagination site-frame">
-			<div class="track">
-				<div class="progress" data-bind="style: {'width': (($root.currentPage() / (data.slides.length - 1)) * 100) + '%'}"></div>
-			</div>
-			<ul data-bind="foreach: data.slides">
-				<li>
-					<button class="button pagination-button" data-bind="
-						html: $index() + 1,
-						css: {'is-active': $index() === $root.currentPage()},
-						tap: $root.handleOpenIndexClick.bind($root, $index())"></button>
-				</li>
-			</ul>
+			<!-- ko component: {
+				name: 'paginator-dashed',
+				onComplete: $root.controller.callbackCounter.get($root.controller.handlePaginatorReady.bind($root.controller)),
+				options: {
+					items: data.slides,
+					currentPage: $root.currentPage,
+					orientation: $root.Orientation.HORIZONTAL
+				}
+			} --><!-- /ko -->
 		</div>
-
-		<!-- ko component: {
-			name: 'paginator-dashed',
-			onComplete: $root.controller.callbackCounter.get($root.controller.handlePaginatorReady.bind($root.controller)),
-			options: {
-				items: data.slides,
-				currentPage: $root.currentPage,
-				orientation: $root.Orientation.HORIZONTAL
-			}
-		} --><!-- /ko -->
 	</div>
 </div>

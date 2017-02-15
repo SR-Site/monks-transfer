@@ -46,79 +46,12 @@
 	}
 
 	.component-paginator-dashed {
-		display: none;
-	}
-
-	.pagination {
-		@include size(100%, $sizeGrid * 2);
-		padding: 0 $sizeGrid * 3 0 $sizeGrid * 4;
-		position: relative;
-
-		.track {
-			@include size(auto, 1px);
-			@include pos(50%, $sizeGrid * 4, auto, $sizeGrid * 5);
-			transform: translateY(-50%);
-			position: absolute;
-			background: $colorBorder;
-		}
-
-		.progress {
-			@include size(0, 4px);
-			@include pos(50%, auto, auto, 0);
-			position: absolute;
-			transform: translateY(-50%);
-			background: $colorPrimary;
-			transition: width .2s ease(easeInOut);
-			//padding-left: $sizeGrid * 1;
-		}
-
-		ul {
-			@extend %reset-list;
-			@include size(100%);
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding: 0 $sizeGrid;
-			position: relative;
-		}
-
-		li {
-			@include size($sizeGrid * 2);
-			display: inline-block;
-			position: relative;
-
-		}
-
-		.pagination-button {
-			@include size($sizeGrid * 2);
-			display: inline-block;
-			border: 1px solid $colorBorder;
-			text-align: center;
-			border-radius: 100%;
-			color: $colorBorder;
-			background: $colorWhite;
-			font: 700 1.4rem / #{$sizeGrid * 2} $fontOpenSans;
-			position: relative;
-			transition: color .2s ease(easeInOut);
-
-			&.is-active {
-				color: $colorPrimary;
-			}
-		}
+		margin-top: $sizeGrid*2;
 	}
 
 	@include respond-to(SMALL) {
 		.slider-viewport {
 			padding: 0 $sizeGrid 0 0;
-		}
-
-		.pagination {
-			display: none;
-		}
-
-		.component-paginator-dashed {
-			display: block;
-			margin-top: $sizeGrid*2;
 		}
 	}
 }

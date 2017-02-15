@@ -1,6 +1,4 @@
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
-import DataManager from "../../../data/DataManager";
-import {DeviceState} from "../../../data/scss-shared/MediaQueries";
 import BlockImageCarouselController from "./BlockImageCarouselController";
 
 class BlockImageCarouselTransitionController extends AbstractTransitionController<BlockImageCarouselController>
@@ -19,16 +17,7 @@ class BlockImageCarouselTransitionController extends AbstractTransitionControlle
 			opacity: 0
 		});
 
-		if(pagination && DataManager.getInstance().deviceStateTracker.currentState() > DeviceState.SMALL)
-		{
-			this.transitionInTimeline.from(pagination, 1, {
-				opacity: 0
-			})
-		}
-		else if(mobilePagination && DataManager.getInstance().deviceStateTracker.currentState() <= DeviceState.SMALL)
-		{
-			this.transitionInTimeline.add(this.getSubTimeline(mobilePagination));
-		}
+		this.transitionInTimeline.add(this.getSubTimeline(mobilePagination));
 	}
 }
 

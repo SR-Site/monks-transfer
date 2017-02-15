@@ -23,7 +23,7 @@ module.exports = function( grunt )
 			{
 				console.log( 'Parse block data for:', block );
 
-				var blockId = upperCamelCase( block );
+				var blockId = upperCamelCase(block.split('-').slice(1).join('-'));
 				var properties = parseBlock( block ).reverse();
 
 				output.blocks.push( {
