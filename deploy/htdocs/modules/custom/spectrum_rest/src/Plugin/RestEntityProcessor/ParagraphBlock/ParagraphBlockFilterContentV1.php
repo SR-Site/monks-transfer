@@ -33,7 +33,7 @@ class ParagraphBlockFilterContentV1 extends SpectrumRestEntityProcessorBase {
     $filters = $this->getFilterOptions();
 
     $data = [
-      "id" => 'blockFilterContent',
+      "id" => 'filterContent',
       "data" => $data + [
         "loadMoreLabel" => $this->fieldProcessor->getFieldData($entity->get('field_load_more_label')),
         "filters" => $filters,

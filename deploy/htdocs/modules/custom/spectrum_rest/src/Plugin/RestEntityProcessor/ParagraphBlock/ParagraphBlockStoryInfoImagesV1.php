@@ -26,7 +26,7 @@ class ParagraphBlockStoryInfoImagesV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockStoryInfoImages',
+      "id" => 'storyInfoImages',
       "data" => $data + [
         "stories" => $this->getItems($entity->get('field_stories')),
       ],

@@ -27,7 +27,7 @@ class ParagraphBlockInfoV1 extends SpectrumRestEntityProcessorBase {
     $block_info = $this->fieldProcessor->getFieldData($entity->get('field_block_info'), ['view_mode' => 'teaser']);
 
     $data = [
-      "id" => 'blockInfo',
+      "id" => 'info',
       "data" => $data + ($block_info ?: []),
     ];
 

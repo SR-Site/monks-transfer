@@ -31,7 +31,7 @@ class ParagraphBlockMapV1 extends SpectrumRestEntityProcessorBase {
     }
 
     $data = [
-      "id" => 'blockMap',
+      "id" => 'map',
       "data" => $data + [
         "steps" => $steps,
         "imageSequence" => [

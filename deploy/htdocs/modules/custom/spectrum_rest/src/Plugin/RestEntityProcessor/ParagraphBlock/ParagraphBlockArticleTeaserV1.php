@@ -27,7 +27,7 @@ class ParagraphBlockArticleTeaserV1 extends SpectrumRestEntityProcessorBase {
     $article = $this->fieldProcessor->getFieldData($entity->get('field_article'), ['view_mode' => 'teaser']);
 
     $data = [
-      "id" => 'blockArticleTeaser',
+      "id" => 'articleTeaser',
       "data" => $styles + $article,
     ];
 

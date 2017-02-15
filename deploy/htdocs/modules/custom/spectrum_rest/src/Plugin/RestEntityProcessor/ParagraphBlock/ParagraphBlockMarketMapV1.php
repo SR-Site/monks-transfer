@@ -26,7 +26,7 @@ class ParagraphBlockMarketMapV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockMarketMap',
+      "id" => 'marketMap',
       "data" => $data,
     ];
 

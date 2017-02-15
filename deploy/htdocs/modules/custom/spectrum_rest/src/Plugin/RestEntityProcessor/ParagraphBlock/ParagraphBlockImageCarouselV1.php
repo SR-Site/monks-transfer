@@ -26,7 +26,7 @@ class ParagraphBlockImageCarouselV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockImageCarousel',
+      "id" => 'imageCarousel',
       "data" => $data + [
         "slides" => $this->getItems($entity->get('field_slides')),
       ],

@@ -26,7 +26,7 @@ class ParagraphBlockLatestV1 extends SpectrumRestEntityProcessorBase {
     $styles = $this->fieldProcessor->getFieldData($entity->get('field_styles'));
 
     $data = [
-      "id" => 'blockLatest',
+      "id" => 'latest',
       "data" => $styles + [
         "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
         "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),

@@ -26,7 +26,7 @@ class ParagraphBlockHeroMainV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockHeroMain',
+      "id" => 'heroMain',
       "data" => $data + [
         "slides" => $this->getItems($entity->get('field_slides')),
       ],

@@ -26,7 +26,7 @@ class ParagraphBlockBlogPostV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockBlogPost',
+      "id" => 'blogPost',
       "data" => $data,
     ];
 

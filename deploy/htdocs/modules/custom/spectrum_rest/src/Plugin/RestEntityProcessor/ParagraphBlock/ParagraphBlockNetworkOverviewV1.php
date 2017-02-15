@@ -26,7 +26,7 @@ class ParagraphBlockNetworkOverviewV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockNetworkOverview',
+      "id" => 'networkOverview',
       "data" => $data,
     ];
 

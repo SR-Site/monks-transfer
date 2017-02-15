@@ -26,7 +26,7 @@ class ParagraphBlockMapSecondaryV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockMapSecondary',
+      "id" => 'mapSecondary',
       "data" => $data + [
         "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
         "subHeading" => $this->fieldProcessor->getFieldData($entity->get('field_subheading')),

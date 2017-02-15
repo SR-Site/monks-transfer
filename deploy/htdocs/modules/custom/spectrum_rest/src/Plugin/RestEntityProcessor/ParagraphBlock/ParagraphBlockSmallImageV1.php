@@ -26,7 +26,7 @@ class ParagraphBlockSmallImageV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockSmallImage',
+      "id" => 'smallImage',
       "data" => $data + [
         "image" => $this->image($entity->get('field_image')),
         "alignment" => (int) $entity->get('field_alignment')->value,

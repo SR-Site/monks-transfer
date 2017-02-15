@@ -26,7 +26,7 @@ class ParagraphBlockPersonaSelectorV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockPersonaSelector',
+      "id" => 'personaSelector',
       "data" => $data + [
         "personas" => $this->getItems($entity->get('field_personas')),
       ],

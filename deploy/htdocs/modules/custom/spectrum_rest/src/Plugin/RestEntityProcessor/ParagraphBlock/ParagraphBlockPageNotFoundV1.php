@@ -26,7 +26,7 @@ class ParagraphBlockPageNotFoundV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockPageNotFound',
+      "id" => 'pageNotFound',
       "data" => $data + [
         "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),
         "image" => $this->image($entity->get('field_image')),

@@ -26,7 +26,7 @@ class ParagraphBlockPathToPurchaseV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockPathToPurchase',
+      "id" => 'pathToPurchase',
       "data" => $data + [
         "steps" => $this->getItems($entity->get('field_steps_purchase')),
       ],

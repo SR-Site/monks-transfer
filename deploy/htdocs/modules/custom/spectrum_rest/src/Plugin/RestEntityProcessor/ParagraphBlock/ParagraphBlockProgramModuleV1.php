@@ -26,7 +26,7 @@ class ParagraphBlockProgramModuleV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockProgramModule',
+      "id" => 'programModule',
       "data" => $data,
     ];
 
