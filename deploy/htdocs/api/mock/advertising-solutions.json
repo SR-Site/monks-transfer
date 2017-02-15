@@ -148,12 +148,12 @@
 							"backgroundBlurred": {
 								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
 								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
-								"alt": "Background image alt text" 
+								"alt": "Background image alt text"
 							},
 							"link": {
 								"label": "Reach us here",
 								"title": "Reach us here",
-								"target": "home",
+								"target": "advertising-solutions/television",
 								"type": 0
 							}
 						},
@@ -173,7 +173,7 @@
 							"link": {
 								"label": "Reach us here",
 								"title": "Reach us here",
-								"target": "home",
+								"target": "advertising-solutions/digital",
 								"type": 0
 							}
 						},
@@ -193,7 +193,7 @@
 							"link": {
 								"label": "Reach us here",
 								"title": "Reach us here",
-								"target": "home",
+								"target": "advertising-solutions/creative-services",
 								"type": 0
 							}
 						}

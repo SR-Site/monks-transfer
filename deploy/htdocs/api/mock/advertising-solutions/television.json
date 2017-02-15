@@ -32,8 +32,8 @@
 					"heading": "TV is Digital, and it’s <span class='highlight'>Everywhere</span>",
 					"paragraph": "<strong>Now more than ever, consumers are accessing live TV content on their laptops, tablets, and mobile devices. TV is no longer in competition with Digital because TV is Digital. <br/>On average, 89.5% of adults 18+ spend over four hours a day watching live TV. Our targeted solutions can help you reach them on every screen, anytime, anywhere.",
 					"background": {
-						"normal": "data/image/image-with-content/background.jpg",
-						"small": "data/image/image-with-content/background.jpg",
+						"normal": "data/image/image-with-content/background-7.jpg",
+						"small": "data/image/image-with-content/background-7.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -75,7 +75,7 @@
 				"data": {
 					"windowed": true,
 					"marginTop": 0,
-					"heading": "TV <br/><span class='highlight'>delivers</span>"
+					"heading": "TV <br/><span class='highlight'>Delivers</span>"
 				}
 			},
 			{
@@ -386,7 +386,7 @@
 							}
 						},
 						{
-							"heading": "Meet <span class='highlight'>kernel,</span> <br/>Let’s Grow Your Brand",
+							"heading": "Meet <span class='highlight'>Kernel,</span> <br/>Let’s Grow Your Brand",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-digital.jpg",

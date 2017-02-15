@@ -1,7 +1,7 @@
 {
 	"statusCode": 200,
 	"data": {
-		"pageTitle": "Knowledge center",
+		"pageTitle": "Knowledge Center",
 		"blocks": [
 			{
 				"id": "heroSecondary",
@@ -9,7 +9,7 @@
 					"overlap": true,
 					"marginTop": 0,
 					"windowed": false,
-					"heading": "Knowledge center",
+					"heading": "Knowledge Center",
 					"paragraph": "Media trends are affecting your business. Here’s what you need to know.",
 					"link": {
 						"label": "Find out more",
