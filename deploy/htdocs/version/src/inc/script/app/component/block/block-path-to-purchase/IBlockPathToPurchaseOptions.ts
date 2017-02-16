@@ -25,11 +25,6 @@ interface IBlockPathToPurchaseOptions extends IAbstractBlockComponentOptions
 		background: IImage
 		/**
 		 * @property
-		 * @description The secondary heading displayed in the step
-		 */
-		secondaryHeading: string;
-		/**
-		 * @property
 		 * @description The secondary paragraph displayed in the step
 		 */
 		secondaryParagraph: string;

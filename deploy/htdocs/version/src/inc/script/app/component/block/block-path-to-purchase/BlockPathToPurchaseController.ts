@@ -67,44 +67,12 @@ class BlockPathToPurchaseController extends AbstractBlockComponentController<Blo
 
 
 	/**
-	 * @public
-	 * @method handleImageCrossfaderReady
-	 */
-	public handleImageCrossfaderReady(controller: ImageCrossfaderController): void
-	{
-		this._imageCrossfader = controller;
-
-		this.changeBackgroundImage(0);
-	}
-
-	/**
-	 * @public
-	 * @method changeBackgroundImage
-	 * @param index
-	 */
-	public changeBackgroundImage(index: number): Promise<any>
-	{
-		if(this._imageCrossfader)
-		{
-			return this._imageCrossfader.open(
-				ImageHelper.getImageForMediaQuery(
-					this.options.steps[index].background
-				)
-			);
-		}
-		else
-		{
-			return Promise.resolve();
-		}
-	}
-
-	/**
 	 * @private
 	 * @method handleDeviceStateChange
 	 */
 	private handleDeviceStateChange(state: DeviceState): void
 	{
-		if(state < DeviceState.MEDIUM)
+		if(state <= DeviceState.MEDIUM)
 		{
 			this.initCarousel();
 		}
@@ -169,7 +137,6 @@ class BlockPathToPurchaseController extends AbstractBlockComponentController<Blo
 		}
 
 		this._paginatorDashedController = null;
-		this._imageCrossfader = null;
 
 		// always call this last
 		super.destruct();

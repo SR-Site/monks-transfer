@@ -13,26 +13,13 @@ class BlockPathToPurchaseViewModel extends AbstractBlockComponentViewModel<Block
 	public StringUtils: Class = StringUtils;
 	public MouseEventHelper: Class = MouseEventHelper;
 
-	private _switchComplete = true;
-
 	/**
 	 * @private
 	 * @method handleClick
 	 */
 	private handleClick(index: number): void
 	{
-		if(this._switchComplete && this.controller.transitionController.transitionInComplete)
-		{
-			this._switchComplete = false;
-
-			const oldIndex = this.activeIndex();
-
-			this.activeIndex(index);
-
-			this.controller.transitionController.transitionOutStep(oldIndex)
-				.then(() => this.controller.transitionController.transitionInStep(index))
-				.then(() => this._switchComplete = true);
-		}
+		this.activeIndex(index);
 	}
 
 	/**

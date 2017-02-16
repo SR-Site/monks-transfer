@@ -1,7 +1,6 @@
 .component-block-path-to-purchase {
-	$stepHeight: 7 * $sizeGrid;
-	$stepWidth: 7 * $sizeGrid;
-	@include aspect-ratio(36 * $sizeGrid, 15 *$sizeGrid);
+	$stepWidth: 6.5 * $sizeGrid;
+	@include size(100%, ($stepWidth * 2) + $sizeGrid * 4);
 
 	.background-image {
 		.image {
@@ -15,123 +14,121 @@
 		}
 	}
 
-	.slide-details {
-		@include size(25%, auto);
-		@include pos($sizeGrid * 2, auto, auto, 50%);
+	.slider-viewport {
+		@include size(100%, $stepWidth);
+		@include pos(auto, auto, $sizeGrid * 2, 0);
 		position: absolute;
-		transform: translateX(-50%);
-		text-align: center;
+		overflow: visible;
+	}
 
-		.slide-detail {
-			@include size(100%, auto);
-			@include pos(0, 0, auto, 0);
+	.steps {
+		@extend %reset-list;
+		@include size(100%);
+		@include center-block();
+		font-size: 0;
+		text-align: center;
+		overflow: visible;
+	}
+
+	.step-wrapper:last-child {
+		.step:after {
+			display: none;
+		}
+	}
+
+	.step {
+		@include size(100%);
+		@include pos(auto, 0, 0, 0);
+		position: absolute;
+		display: flex;
+		color: $colorWhite;
+		transition: color .2s ease(linear), height .5s ease(easeInOutCubic);
+		cursor: pointer;
+		overflow: hidden;
+
+		&:after {
+			@include size(1px, auto);
+			right: 0;
 			position: absolute;
+			background: $colorBorder;
+			content: '';
+			transition: opacity .5s ease(linear);
+		}
+	}
+
+	.step-content {
+		@include size(calc(100% - #{$sizeGrid}), 100%);
+		background: currentColor;
+		display: inline-block;
+		vertical-align: bottom;
+		padding-top: $sizeGrid;
+		padding-bottom: $sizeGrid;
+		text-align: left;
+
+		.heading,
+		.copy {
+			margin-left: $sizeGrid / 2;
+			color: $colorPrimary;
 		}
 
 		.heading {
 			margin-bottom: $sizeGrid / 2;
 		}
+
+		.secondary-content {
+			margin-top: $sizeGrid / 2;
+			opacity: 0;
+			transition: opacity .5s ease(linear);
+		}
 	}
 
-	.steps {
-		@extend %reset-list;
-		display: flex;
-		justify-content: center;
-		overflow: visible;
-	}
-
-	.component-paginator-dashed {
-		display: none;
-	}
-
-	.slider-viewport {
-		@include pos(auto, auto, $sizeGrid * 2, 50%);
-		@include size(auto, $stepHeight);
-		position: absolute;
-		overflow: visible;
-		transform: translateX(-50%);
-	}
-
-	.step {
-		@include size($stepWidth, $stepHeight);
-		vertical-align: top;
-		font-size: 0;
-		display: flex;
+	.step-edge {
+		@include size($sizeGrid, calc(100% - #{$sizeGrid}));
+		background: currentColor;
+		display: inline-block;
 		position: relative;
-		cursor: pointer;
-		color: $colorWhite;
-		transition: color .2s ease(easeInOut);
-
-		@include hover() {
-			color: $colorLightGrey;
-		}
-
-		&.is-active {
-			color: $colorPrimary;
-
-			.step-content {
-				.copy {
-					color: $colorWhite;
-				}
-			}
-
-			@include hover() {
-				color: $colorPrimary;
-			}
-		}
 
 		&:after {
-			@include size(1px, $stepHeight - $sizeGrid);
-			position: absolute;
-			right: 0;
-			background: $colorBorder;
 			content: '';
+			position: absolute;
 		}
+	}
 
-		.step-content {
-			@include size($stepWidth - $sizeGrid, 100%);
-			background: currentColor;
-			display: inline-block;
-			padding-top: $sizeGrid;
-			padding-bottom: $sizeGrid;
-			vertical-align: top;
-			text-align: left;
-			transition: background .2s ease(easeInOut);
-
-			.copy {
-				margin-left: $sizeGrid / 2;
-				color: $colorPrimary;
-			}
-
-			.copy-02 {
-				margin-bottom: $sizeGrid / 2;
-			}
-		}
-
-		.step-edge {
-			@include size($sizeGrid, $stepHeight - $sizeGrid);
-			background: currentColor;
-			display: inline-block;
-			position: relative;
-			vertical-align: top;
-			transition: background .2s ease(easeInOut);
+	// Active state
+	.is-active {
+		.step {
+			color: $colorPrimary;
+			height: 200%;
 
 			&:after {
-				@include triangle(left, top, currentColor, $sizeGrid);
-				@include pos(auto, 0, -$sizeGrid, auto);
-				position: absolute;
-				content: '';
-				transition: border-color .2s ease(easeInOut);
+				opacity: 0;
+			}
+
+			.heading,
+			.copy {
+				color: $colorWhite;
+			}
+
+			.secondary-content {
+				opacity: 1;
 			}
 		}
+	}
 
+	// Up/down pattern
+	.step-wrapper {
+		@include size($stepWidth, $stepWidth);
+		display: inline-block;
+		vertical-align: bottom;
+		position: relative;
 		/**
 		 * Every 1st block
 		 */
 		&:nth-child(1n + 0) {
 
-			&:after {
-				top: 0
+			.step:after {
+				top: 0;
+				bottom: $sizeGrid;
 			}
 
 			.step-content {
@@ -142,6 +139,7 @@
 
 			.step-edge {
 				order: 2;
+				align-self: flex-start;
 
 				&:after {
 					@include triangle(left, top, currentColor, $sizeGrid);
@@ -156,8 +154,9 @@
 		&:nth-child(2n + 0) {
 			transform: translateY(-$sizeGrid);
 
-			&:after {
+			.step:after {
 				top: $sizeGrid;
+				bottom: 0;
 			}
 
 			.step-content {
@@ -168,7 +167,7 @@
 
 			.step-edge {
 				order: 1;
-				margin-top: $sizeGrid;
+				align-self: flex-end;
 
 				&:after {
 					@include triangle(right, bottom, currentColor, $sizeGrid);
@@ -182,8 +181,9 @@
 		 */
 		&:nth-child(3n + 0) {
 
-			&:after {
+			.step:after {
 				top: 0;
+				bottom: $sizeGrid;
 			}
 
 			.step-content {
@@ -194,6 +194,7 @@
 
 			.step-edge {
 				order: 2;
+				align-self: flex-start;
 			}
 
 		}
@@ -204,8 +205,9 @@
 		&:nth-child(4n + 0) {
 			transform: translateY(-$sizeGrid);
 
-			&:after {
+			.step:after {
 				top: $sizeGrid;
+				bottom: 0;
 			}
 
 			.step-content {
@@ -215,6 +217,7 @@
 
 			.step-edge {
 				order: 2;
+				align-self: flex-end;
 
 				&:after {
 					@include triangle(left, bottom, currentColor, $sizeGrid);
@@ -222,18 +225,131 @@
 				}
 			}
 		}
+	}
 
-		&:last-child {
-			&:after {
-				display: none;
+	.component-paginator-dashed {
+		display: none;
+	}
+
+	@include respond-to('X_LARGE') {
+		$stepWidth: 5 * $sizeGrid;
+		@include size(100%, ($stepWidth * 2) + $sizeGrid * 4);
+
+		.slider-viewport {
+			@include size(100%, $stepWidth);
+		}
+
+		.step-content {
+			@include size(calc(100% - #{$sizeGrid / 2}), 100%);
+			padding-top: $sizeGrid / 2;
+			padding-bottom: $sizeGrid / 2;
+
+			.copy,
+			.heading {
+				margin-left: $sizeGrid / 4;
+			}
+
+			.copy-01 {
+				font-size: 1.4rem;
+			}
+		}
+
+		.step-edge {
+			@include size($sizeGrid / 2, calc(100% - #{$sizeGrid / 2}));
+		}
+
+		// Up/down pattern
+		.step-wrapper {
+			@include size($stepWidth, $stepWidth);
+			/**
+			 * Every 1st block
+			 */
+			&:nth-child(1n + 0) {
+				.step:after {
+					bottom: $sizeGrid / 2;
+					top: 0;
+				}
+
+				.step-content {
+					padding-left: $sizeGrid  / 2;
+				}
+
+				.step-edge {
+					&:after {
+						@include triangle(left, top, currentColor, $sizeGrid / 2);
+						@include pos(auto, 0, -$sizeGrid / 2, auto);
+					}
+				}
+			}
+
+			/**
+			 * Every 2nd block
+			 */
+			&:nth-child(2n + 0) {
+				transform: translateY(-$sizeGrid / 2);
+
+				.step:after {
+					top: $sizeGrid / 2;
+					bottom: 0;
+				}
+
+				.step-content {
+					padding-right: $sizeGrid / 2;
+				}
+
+				.step-edge {
+
+					&:after {
+						@include triangle(right, bottom, currentColor, $sizeGrid / 2);
+						@include pos(-$sizeGrid / 2, 0, auto, auto);
+					}
+				}
+			}
+
+			/**
+			 * Every 3rd block
+			 */
+			&:nth-child(3n + 0) {
+				.step:after {
+					bottom: $sizeGrid / 2;
+					top: 0;
+				}
+
+				.step-content {
+					padding-left: $sizeGrid / 2;
+				}
+			}
+
+			/**
+			 * Every 4th block
+			 */
+			&:nth-child(4n + 0) {
+				transform: translateY(-$sizeGrid / 2);
+
+				.step:after {
+					top: $sizeGrid / 2;
+					bottom: 0;
+				}
+
+				.step-content {
+					padding-left: $sizeGrid / 2;
+				}
+
+				.step-edge {
+					&:after {
+						@include triangle(left, bottom, currentColor, $sizeGrid / 2);
+						@include pos(-$sizeGrid / 2, 0, auto, auto);
+					}
+				}
 			}
 		}
 	}
 
 	// Breakpoints
-	@include respond-to(SMALL) {
+	@include respond-to(MEDIUM) {
+		@include size(100%, auto);
 
-		&:before {
+		.background-image {
 			display: none;
 		}
 
@@ -242,26 +358,18 @@
 			height: auto;
 		}
 
-		.background-image {
-			display: none;
-		}
-
-		.steps {
-			height: 100%;
-		}
-
 		.slider-viewport {
+			@include pos(auto, auto, auto, auto);
+			@include size(100%, $sizeGrid * 12);
+			@include center-block();
 			overflow: hidden;
-			transform: none;
 			position: relative;
-			left: $sizeGrid;
-			bottom: 0;
-			@include size(calc(100vw - #{$sizeGrid*2}), $sizeGrid*12);
 		}
 
-		.step {
+		.step-wrapper {
 			@include coverer();
 			@include size(100%);
+			padding: 0 $sizeGrid;
 
 			&:nth-child(2n + 0) {
 				transform: none;
@@ -271,65 +379,94 @@
 				transform: none;
 			}
 
-
 			@include hover() {
 				color: $colorWhite;
 			}
+		}
 
-			&.is-active {
-				color: $colorWhite;
+		.step {
+			@include pos(auto, auto, auto, auto);
+			position: relative;
+		}
 
-				.step-content {
-					.copy {
-						color: $colorPrimary;
-					}
-				}
+		// On mobile there is no pattern so ignore all the super detailed NTH-child selectors with importants!
+		.step-content {
+			border-top: 1px solid $colorBorder;
+			border-bottom: 1px solid $colorBorder;
+			border-left: 1px solid $colorBorder;
+			padding-left: $sizeGrid !important;
+			padding-right: 0 !important;
+			padding-top: $sizeGrid * 2;
+			order: 1 !important;
 
-				@include hover() {
-					color: $colorPrimary;
-				}
+			.heading,
+			.copy {
+				margin-left: $sizeGrid * 2;
 			}
 
-			.step-content {
-				padding: $sizeGrid*2 !important;
-				width: calc(100% - #{$sizeGrid});
-				border-top: 1px solid $colorBorder;
-				border-left: 1px solid $colorBorder;
-				border-bottom: 1px solid $colorBorder;
-				order: 0!important;;
-
-				.copy-02 {
-					font-size: mobile-size(3.5rem);
-					margin-top: $sizeGrid/2;
-				}
+			.copy-01 {
+				font-size: 1.8rem;
 			}
 
-			.step-edge {
-				height: calc(100% - #{$sizeGrid});
-				border-top: 1px solid $colorBorder;
-				border-right: 1px solid $colorBorder;
-				margin-top: 0!important;
-				order: 1!important;
-
-				&:after {
-					border: none !important;
-					width: 1px !important;
-					height: $sizeGrid*1.5 !important;
-					transform: rotate(#{$angle}deg) !important;
-					background-color: $colorBorder;
-					@include pos(auto !important, 0 !important, -$sizeGrid*1.5 !important, auto !important);
-					transform-origin: right top;
-				}
+			.secondary-content {
+				opacity: 1;
 			}
+		}
 
+		// On mobile there is no pattern so ignore all the super detailed NTH-child selectors with importants!
+		.step-edge {
+			border-top: 1px solid $colorBorder;
+			border-right: 1px solid $colorBorder;
+			order: 2 !important;
+			align-self: flex-start !important;
+
+			&:after {
+				bottom: -$sizeGrid * 1.5 !important;
+				top: auto !important;
+				right: -1px !important;
+				width: 1px !important;
+				height: $sizeGrid * 1.5 !important;
+				border: none !important;
+				transform: rotate(#{$angle}deg);
+				transform-origin: right top;
+				background: $colorBorder;
+			}
+		}
+
+		.step {
 			&:after {
 				display: none;
 			}
 		}
 
 		.component-paginator-dashed {
-			display: block;
 			margin-top: $sizeGrid;
+			display: block;
+		}
+
+		// Active state
+		.is-active {
+			.step {
+				color: $colorWhite;
+				height: 100%;
+
+				.heading,
+				.copy {
+					color: $colorPrimary;
+				}
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.step-content {
+			.copy-01 {
+				font-size: mobile-size(2.8rem);
+			}
+
+			.secondary-content {
+				display: none;
+			}
 		}
 	}
 }
