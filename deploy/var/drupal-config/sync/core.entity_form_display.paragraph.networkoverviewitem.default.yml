@@ -1,42 +1,43 @@
-uuid: c380fdc8-8722-4565-82ff-e3ab96271f77
+uuid: 90bcd646-7eff-4ba3-aab6-4431b6fd67c4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.blockblogpost.field_article
-    - field.field.paragraph.blockblogpost.field_styles
-    - paragraphs.paragraphs_type.blockblogpost
+    - field.field.paragraph.networkoverviewitem.field_image
+    - field.field.paragraph.networkoverviewitem.field_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.networkoverviewitem
   module:
     - field_group
+    - image
     - paragraphs
 third_party_settings:
   field_group:
-    group_styles:
+    group_link:
       children:
-        - field_styles
+        - field_link
       parent_name: ''
       weight: 0
       format_type: details
       format_settings:
         id: ''
         classes: ''
-        open: false
+        open: true
         required_fields: true
-      label: Styles
-id: paragraph.blockblogpost.default
+      label: Link
+id: paragraph.networkoverviewitem.default
 targetEntityType: paragraph
-bundle: blockblogpost
+bundle: networkoverviewitem
 mode: default
 content:
-  field_article:
+  field_image:
     weight: 2
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-  field_styles:
+    type: image_image
+  field_link:
     weight: 1
     settings:
       title: Paragraph
@@ -44,7 +45,7 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: styles
+      default_paragraph_type: _none
     third_party_settings: {  }
     type: entity_reference_paragraphs
 hidden:

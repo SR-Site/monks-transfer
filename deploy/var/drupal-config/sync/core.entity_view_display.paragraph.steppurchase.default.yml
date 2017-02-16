@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.steppurchase.field_heading
     - field.field.paragraph.steppurchase.field_image
     - field.field.paragraph.steppurchase.field_paragraph
+    - field.field.paragraph.steppurchase.field_paragraph2
     - paragraphs.paragraphs_type.steppurchase
   module:
     - image
@@ -32,6 +33,12 @@ content:
     type: image
   field_paragraph:
     weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_paragraph2:
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }

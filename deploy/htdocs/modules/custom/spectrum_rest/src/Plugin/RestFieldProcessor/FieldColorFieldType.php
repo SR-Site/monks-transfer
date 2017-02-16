@@ -9,18 +9,23 @@ use Drupal\mm_rest\Plugin\RestFieldProcessorBase;
  *
  * @RestFieldProcessor(
  *   id = "jquery_colorpicker",
- *   label = @Translation("jquery colorpicker"),
+ *   label = @Translation("Color field type"),
  *   field_types = {
- *     "jquery_colorpicker"
+ *     "color_field_type"
  *   }
  * )
  */
-class FieldJqueryColorpicker extends RestFieldProcessorBase {
+class FieldColorFieldType extends RestFieldProcessorBase {
 
   /**
    * {@inheritdoc}
    */
   protected function getItemData($field, $options = array()) {
-    return $field->value;
+    $values = $field->getValue();
+
+    list($r,$g,$b) = sscanf($values['color'], "#%02x%02x%02x");
+    $a = $values['opacity'];
+
+    return "rgba($r, $g, $b, $a)";
   }
 }

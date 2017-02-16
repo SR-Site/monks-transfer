@@ -1,12 +1,12 @@
-uuid: 93fae010-afe2-4025-a616-d83296092c80
+uuid: bc3c0be2-da71-486e-a3f4-edb78949f93a
 langcode: en
 status: true
 dependencies:
   module:
     - entity_reference_revisions
     - paragraphs
-id: paragraph.field_steps_purchase
-field_name: field_steps_purchase
+id: paragraph.field_steps_map
+field_name: field_steps_map
 entity_type: paragraph
 type: entity_reference_revisions
 settings:

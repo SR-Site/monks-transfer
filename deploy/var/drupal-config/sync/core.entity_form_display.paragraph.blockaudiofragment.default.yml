@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockaudiofragment.field_description
     - field.field.paragraph.blockaudiofragment.field_file
     - field.field.paragraph.blockaudiofragment.field_image
     - field.field.paragraph.blockaudiofragment.field_label
-    - field.field.paragraph.blockaudiofragment.field_paragraph
     - field.field.paragraph.blockaudiofragment.field_styles
     - image.style.thumbnail
     - paragraphs.paragraphs_type.blockaudiofragment
@@ -15,7 +15,6 @@ dependencies:
     - file
     - image
     - paragraphs
-    - text
 third_party_settings:
   field_group:
     group_styles:
@@ -35,33 +34,33 @@ targetEntityType: paragraph
 bundle: blockaudiofragment
 mode: default
 content:
+  field_description:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_file:
-    weight: 2
+    weight: 1
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
   field_image:
-    weight: 3
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_label:
-    weight: 5
+    weight: 4
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_paragraph:
-    weight: 4
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
   field_styles:
     weight: 1
     settings:

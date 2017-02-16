@@ -33,7 +33,7 @@ class ParagraphBlockAudioFragmentV1 extends SpectrumRestEntityProcessorBase {
       "data" => $data + [
         "file" => $file,
         "image" => $this->image($entity->get('field_image')),
-        "description" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
+        "description" => $this->fieldProcessor->getFieldData($entity->get('field_description')),
         "name" => $this->fieldProcessor->getFieldData($entity->get('field_label')),
       ],
     ];

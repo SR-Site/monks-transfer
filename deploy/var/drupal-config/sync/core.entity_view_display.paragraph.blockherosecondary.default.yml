@@ -11,9 +11,9 @@ dependencies:
     - field.field.paragraph.blockherosecondary.field_styles
     - paragraphs.paragraphs_type.blockherosecondary
   module:
+    - color_field
     - entity_reference_revisions
     - image
-    - jquery_colorpicker
     - text
 id: paragraph.blockherosecondary.default
 targetEntityType: paragraph
@@ -23,9 +23,11 @@ content:
   field_background_color:
     weight: 5
     label: above
-    settings: {  }
+    settings:
+      format: hex
+      opacity: true
     third_party_settings: {  }
-    type: jquery_colorpicker_color_display
+    type: color_field_formatter_text
   field_heading:
     weight: 4
     label: above

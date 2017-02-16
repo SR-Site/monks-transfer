@@ -1,11 +1,11 @@
-uuid: 71cf2812-ee7b-4f4e-a09b-0512905cd169
+uuid: a6cca066-970c-46c1-960e-4d335a96dbf5
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_steps_text
-field_name: field_steps_text
+id: paragraph.field_description
+field_name: field_description
 entity_type: paragraph
 type: string
 settings:
@@ -14,7 +14,7 @@ settings:
   case_sensitive: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -1,16 +1,16 @@
-uuid: f7ea09f3-5aeb-4716-944a-c9e1b1bd21d1
+uuid: a06c8ee2-025a-4631-ab78-bd9ef07163b3
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_heading
-    - paragraphs.paragraphs_type.blocksmallinfo
-id: paragraph.blocksmallinfo.field_heading
+    - paragraphs.paragraphs_type.stepmap
+id: paragraph.stepmap.field_heading
 field_name: field_heading
 entity_type: paragraph
-bundle: blocksmallinfo
+bundle: stepmap
 label: Heading
-description: 'Text between ** ** will be highlighted, e.g This is a **highlighted** text.'
+description: ''
 required: true
 translatable: true
 default_value: {  }

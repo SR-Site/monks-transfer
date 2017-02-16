@@ -2,35 +2,31 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\Paragraph;
 
-use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
+use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
 
 /**
  * Returns the structured data of an entity.
  *
  * @RestEntityProcessor(
- *   id = "spectrum_rest_paragraph_slideheromain_v1",
- *   label = @Translation("Paragraph: slideheromain"),
+ *   id = "spectrum_rest_paragraph_stepmap_v1",
+ *   label = @Translation("Paragraph: stepmap"),
  *   version = "v1",
  *   entity_type = "paragraph",
- *   bundle = "slideheromain",
+ *   bundle = "stepmap",
  *   view_mode = "default"
  * )
  */
-class ParagraphSlideHeroMainV1 extends SpectrumRestEntityProcessorBase {
+class ParagraphStepMapV1 extends RestEntityProcessorBase {
 
   /**
    * {@inheritdoc}
    */
   protected function getItemData($entity) {
 
-    $statistics = $this->getItems($entity->get('field_statistics'));
-
     $data = [
+      "label" => $this->fieldProcessor->getFieldData($entity->get('field_label')),
       "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
       "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
-      "background" => $this->image($entity->get('field_image')),
-      "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),
-      "statistics" => $statistics ?: NULL,
     ];
 
     return $data;

@@ -27,6 +27,7 @@ class ParagraphStepPurchaseV1 extends SpectrumRestEntityProcessorBase {
       "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
       "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
       "background" => $this->image($entity->get('field_image')),
+      "secondaryParagraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph2')),
     ];
 
     return $data;

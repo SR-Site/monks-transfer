@@ -6,7 +6,6 @@ dependencies:
     - field.field.paragraph.slideheromain.field_heading
     - field.field.paragraph.slideheromain.field_image
     - field.field.paragraph.slideheromain.field_link
-    - field.field.paragraph.slideheromain.field_link2
     - field.field.paragraph.slideheromain.field_paragraph
     - field.field.paragraph.slideheromain.field_statistics
     - image.style.thumbnail
@@ -32,8 +31,7 @@ third_party_settings:
         required_fields: false
       label: Link
     group_link2:
-      children:
-        - field_link2
+      children: {  }
       parent_name: ''
       weight: 5
       format_type: details
@@ -87,17 +85,6 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     type: entity_reference_paragraphs
-  field_link2:
-    type: entity_reference_paragraphs
-    weight: 8
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
   field_paragraph:
     weight: 2
     settings:
@@ -114,7 +101,7 @@ content:
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: _none
     third_party_settings: {  }
 hidden:
   created: true

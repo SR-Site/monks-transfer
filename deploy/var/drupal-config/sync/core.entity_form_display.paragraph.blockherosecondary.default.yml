@@ -12,9 +12,9 @@ dependencies:
     - image.style.thumbnail
     - paragraphs.paragraphs_type.blockherosecondary
   module:
+    - color_field
     - field_group
     - image
-    - jquery_colorpicker
     - paragraphs
     - text
 third_party_settings:
@@ -50,10 +50,9 @@ mode: default
 content:
   field_background_color:
     weight: 6
-    settings:
-      color: FFFFFF
+    settings: {  }
     third_party_settings: {  }
-    type: jquery_colorpicker
+    type: color_field_widget_html5
   field_heading:
     weight: 5
     settings:

@@ -1,15 +1,16 @@
-uuid: 635d88c0-76c7-4368-a045-e97df53f44bc
+uuid: ea026d8d-e781-42b4-8a24-103d0111c289
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_autoplay
-field_name: field_autoplay
+    - text
+id: paragraph.field_paragraph2
+field_name: field_paragraph2
 entity_type: paragraph
-type: boolean
+type: text_long
 settings: {  }
-module: core
+module: text
 locked: false
 cardinality: 1
 translatable: true
