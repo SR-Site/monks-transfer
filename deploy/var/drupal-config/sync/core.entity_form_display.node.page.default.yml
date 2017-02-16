@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.field_blocks
+    - field.field.node.page.field_metatags
     - node.type.page
   module:
+    - metatag
     - paragraphs
     - path
 _core:
@@ -31,6 +33,11 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
+  field_metatags:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
   path:
     type: path
     weight: 30
