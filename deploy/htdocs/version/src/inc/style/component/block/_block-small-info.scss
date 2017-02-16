@@ -20,12 +20,15 @@
 		margin-top: $sizeGrid;
 	}
 
-	// Breakpoints
-	@include respond-to(SMALL) {
+	@include respond-to(MEDIUM) {
 		.site-frame {
 			padding-left: $sizeGrid*2;
 			padding-right: $sizeGrid*2;
 		}
+	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
 
 		.description,
 		.introduction {

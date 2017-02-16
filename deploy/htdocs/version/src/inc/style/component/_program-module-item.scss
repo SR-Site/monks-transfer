@@ -51,7 +51,6 @@
 	.tags {
 		.component-button-tag:not(:first-child) {
 			margin-left: $sizeGrid / 2;
-
 		}
 	}
 
@@ -87,11 +86,10 @@
 	}
 
 	.index-1 &,
-	.index-2 &{
+	.index-2 & {
 		.hover-container {
 			transform: none;
 			left: 0;
-
 		}
 	}
 
@@ -108,6 +106,18 @@
 		}
 	}
 
+	@include respond-to(LARGE) {
+		.description {
+			.hover-container {
+				padding: $sizeGrid;
+			}
+		}
+
+		.paragraph {
+			max-height: none;
+		}
+	}
+
 	@include respond-to(SMALL) {
 		.placeholder {
 			height: 9.5 * $sizeGrid;
@@ -121,10 +131,6 @@
 
 		.title {
 			font-size: mobile-size(4.5rem);
-		}
-
-		.paragraph {
-			max-height: none;
 		}
 
 		.description {

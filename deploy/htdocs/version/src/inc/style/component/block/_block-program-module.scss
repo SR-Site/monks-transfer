@@ -19,6 +19,12 @@
 		cursor: pointer;
 	}
 
+	@include respond-to(MEDIUM) {
+		.program-module-item {
+			width: 50%;
+		}
+	}
+
 	@include respond-to(SMALL) {
 		.program-module-item {
 			width: 100%;

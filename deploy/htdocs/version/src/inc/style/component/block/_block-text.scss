@@ -18,12 +18,15 @@
 		}
 	}
 
-	// Breakpoints
-	@include respond-to(SMALL) {
+	@include respond-to(MEDIUM) {
 		.site-frame {
 			padding-left: $sizeGrid;
 			padding-right: $sizeGrid;
 		}
+	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
 
 		h1, h2, h3, h4 {
 			font-size: mobile-size(3.5rem);
