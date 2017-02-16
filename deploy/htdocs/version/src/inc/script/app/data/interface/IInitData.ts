@@ -15,7 +15,7 @@ export interface IInitData
 			secondaryLinks: Array<Array<ILink>>;
 			social: {
 				twitter: ILink;
-				youtube: ILink;
+				vimeo: ILink;
 				linkedin: ILink;
 			}
 		};

@@ -147,10 +147,10 @@
 						"target": "http://www.twitter.com",
 						"type": 1
 					},
-					"youtube": {
-						"label": "YouTube",
-						"title": "YouTube",
-						"target": "http://www.youtube.com",
+					"vimeo": {
+						"label": "Vimeo",
+						"title": "Vimeo",
+						"target": "http://www.vimeo.com",
 						"type": 1
 					},
 					"linkedin": {
