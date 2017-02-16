@@ -7,6 +7,8 @@ import VideoPlayerController from "../video-player/VideoPlayerController";
 import VideoOverlayTransitionController from "./VideoOverlayTransitionController";
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 import IVideoPlayerOptions from "../video-player/IVideoPlayerOptions";
+import KeyCode from "../../../lib/temple/util/key/KeyCode";
+import NativeEventListener from "../../../lib/temple/event/NativeEventListener";
 
 class VideoOverlayController extends AbstractTransitionComponentController<VideoOverlayViewModel, IVideoOverlayOptions>
 {
@@ -42,6 +44,8 @@ class VideoOverlayController extends AbstractTransitionComponentController<Video
 			AbstractTransitionController.TRANSITION_OUT_COMPLETE,
 			this.handleTransitionOutComplete.bind(this)
 		);
+
+		this.destructibles.add(new NativeEventListener(document.body, 'keyup', this.handleKeyUp));
 	}
 
 	/**
@@ -54,6 +58,8 @@ class VideoOverlayController extends AbstractTransitionComponentController<Video
 		this._videoPlayer.addEventListener(VideoPlayerController.ENDED, () =>
 		{
 			this.viewModel.isPlaying(false);
+
+			this.hide();
 		});
 	}
 
@@ -97,9 +103,20 @@ class VideoOverlayController extends AbstractTransitionComponentController<Video
 				this._videoPlayer.removePlayer(this._videoPlayerOptions);
 				this.viewModel.videoMuted(false);
 			})
-
-
 	}
+
+	/**
+	 * @private
+	 * @method handleKeyPress
+	 */
+	private handleKeyUp = (event: KeyboardEvent): void =>
+	{
+		if(event.keyCode == KeyCode.ESCAPE)
+		{
+			this.hide();
+		}
+	};
+
 
 	/**
 	 *  @private
@@ -138,6 +155,13 @@ class VideoOverlayController extends AbstractTransitionComponentController<Video
 	 */
 	public destruct(): void
 	{
+		if(this._videoPlayer)
+		{
+			this._videoPlayer.destruct();
+			this._videoPlayer = null;
+		}
+
+		this._videoPlayerOptions = null;
 
 		// always call this last
 		super.destruct();

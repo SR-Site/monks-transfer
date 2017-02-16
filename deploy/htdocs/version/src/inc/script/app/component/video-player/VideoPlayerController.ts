@@ -10,45 +10,64 @@ import ThrottleDebounce from "../../../lib/temple/util/ThrottleDebounce";
 import ElementResizer, {ScaleMode} from "../../../lib/temple/util/ui/ElementResizer";
 import Promise = require("bluebird");
 import bowser = require('bowser');
+import VideoControlsController from "../video-controls/VideoControlsController";
+import DataEvent from "../../../lib/temple/event/DataEvent";
 
 class VideoPlayerController extends AbstractComponentController<VideoPlayerViewModel, IVideoPlayerOptions>
 {
-	public static ENDED:string = 'VideoPlayerController.ENDED';
-	public static TIME_UPDATE:string = 'VideoPlayerController.TIME_UPDATE';
+	public static ENDED: string = 'VideoPlayerController.ENDED';
+	public static TIME_UPDATE: string = 'VideoPlayerController.TIME_UPDATE';
 
 	/**
 	 *    Instance of Log debug utility for debug logging
 	 *    @property _debug
 	 *    @private
 	 */
-	private _debug:Log = new Log('app.component.VideoPlayer');
+	private _debug: Log = new Log('app.component.VideoPlayer');
 
 	/**
 	 * The video player object
 	 */
-	private _videoPlayer:Vimeo.Player|VideoPlayer;
+	private _videoPlayer: Vimeo.Player|VideoPlayer;
+	private _videoControls: VideoControlsController;
 
 
 	/**
 	 *    Overrides AbstractPageController.init()
 	 *    @method init
 	 */
-	public init():void
+	public init(): void
 	{
 		this._debug.log('Init');
 
 		this.destructibles.add(new NativeEventListener(window, 'resize', ThrottleDebounce.debounce(this.handleResize, 250, this)));
 
-		if(this.options.video) {
+		if(this.options.video)
+		{
 			this.initPlayer();
 		}
+	}
+
+	public handleVideoControlsReady(controller: VideoControlsController): void
+	{
+		this._videoControls = controller;
+
+		controller.addEventListener(VideoControlsController.PAUSE, this.pause.bind(this));
+		controller.addEventListener(VideoControlsController.PLAY, this.play.bind(this));
+		controller.addEventListener(VideoControlsController.MUTE, this.setMute.bind(this, true));
+		controller.addEventListener(VideoControlsController.UNMUTE, this.setMute.bind(this, false));
+		controller.addEventListener(VideoControlsController.SEEK, (event: DataEvent<{progress: number}>) =>
+		{
+			this._videoPlayer.getDuration()
+				.then((duration) => this.setCurrentTime(duration * event.data.progress));
+		});
 	}
 
 	/**
 	 *    Overrides AbstractPageController.init()
 	 *    @method initPlayer
 	 */
-	public initPlayer(options:IVideoPlayerOptions = this.options):void
+	public initPlayer(options: IVideoPlayerOptions = this.options): void
 	{
 		this.options = options;
 
@@ -77,7 +96,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 *    Overrides AbstractPageController.init()
 	 *    @method removePlayer
 	 */
-	public removePlayer(options:IVideoPlayerOptions = this.options):void
+	public removePlayer(options: IVideoPlayerOptions = this.options): void
 	{
 		if(this._videoPlayer)
 		{
@@ -88,8 +107,9 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 				(<Vimeo.Player>this._videoPlayer).off('ended');
 				(<Vimeo.Player>this._videoPlayer).off('timeupdate')
 			}
-			else {
-				let videoPlayer:VideoPlayer = <VideoPlayer>this._videoPlayer;
+			else
+			{
+				let videoPlayer: VideoPlayer = <VideoPlayer>this._videoPlayer;
 				videoPlayer.destruct();
 				videoPlayer = null;
 			}
@@ -98,13 +118,26 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 		}
 	}
 
+	public hideControls(): void
+	{
+		if(this._videoControls)
+		{
+
+		}
+	}
+
 	/**
 	 * @public
 	 * @method play
 	 * @returns {PromiseBluebird<any>}
 	 */
-	public play():Promise<any>
+	public play(): Promise<any>
 	{
+		if(this._videoControls)
+		{
+			this._videoControls.isPlaying = true;
+		}
+
 		return this._videoPlayer.play();
 	}
 
@@ -113,7 +146,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 * @method pause
 	 * @returns {PromiseBluebird<any>}
 	 */
-	public pause():Promise<any>
+	public pause(): Promise<any>
 	{
 		return this._videoPlayer.pause();
 	}
@@ -122,7 +155,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 * @public
 	 * @method setCurrentTime
 	 */
-	public setCurrentTime(time:number):Promise<any>
+	public setCurrentTime(time: number): Promise<any>
 	{
 		return this._videoPlayer.setCurrentTime(time);
 	}
@@ -132,7 +165,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 * @Method unload
 	 * @returns {PromiseBluebird<any>}
 	 */
-	public unload():Promise<any>
+	public unload(): Promise<any>
 	{
 		return this._videoPlayer.unload();
 	}
@@ -142,16 +175,29 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 * @method setMute
 	 * @param {boolean} mute
 	 */
-	public setMute(mute:boolean):void
+	public setMute(mute: boolean): void
 	{
 		this._videoPlayer.setVolume(mute ? 0 : 1);
+	}
+
+	/**
+	 * @public
+	 * @method setControlVisibility
+	 * @param isActive
+	 */
+	public setControlVisibility(isActive: boolean): void
+	{
+		if(this._videoControls)
+		{
+			this._videoControls.isActive = isActive;
+		}
 	}
 
 	/**
 	 * @private
 	 * @method createInternalVideoPlayer
 	 */
-	private createInternalVideoPlayer():void
+	private createInternalVideoPlayer(): void
 	{
 		this._videoPlayer = new VideoPlayer(
 			this.element,
@@ -173,7 +219,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 * @private
 	 * @method createVideoPlayer
 	 */
-	private createVimeoPlayer():void
+	private createVimeoPlayer(): void
 	{
 		this._videoPlayer = new Vimeo.Player(
 			this.element,
@@ -197,14 +243,14 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 
 		player.on('ended', this.handleVideoEnded);
 		player.on('timeupdate', this.handleTimeUpdate);
-		player.ready().then(()=> this.handleVideoPlayerReady())
+		player.ready().then(() => this.handleVideoPlayerReady())
 	}
 
 	/**
 	 * @private
 	 * @method handleVideoPlayerReady
 	 */
-	private handleVideoPlayerReady():void
+	private handleVideoPlayerReady(): void
 	{
 		this.handleResize();
 	}
@@ -213,7 +259,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 * @private
 	 * @method handleResize
 	 */
-	private handleResize():void
+	private handleResize(): void
 	{
 		// Only run if the video element is created
 		if(this.element.firstElementChild && (bowser.msie || bowser.msedge))
@@ -230,7 +276,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	/**
 	 * @private handleVideoEnded
 	 */
-	private handleVideoEnded = ():void =>
+	private handleVideoEnded = (): void =>
 	{
 		this.dispatch(VideoPlayerController.ENDED);
 	};
@@ -241,7 +287,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 * @method handleTimeUpdate
 	 * @param event
 	 */
-	private handleTimeUpdate = (event):void =>
+	private handleTimeUpdate = (event): void =>
 	{
 		this.dispatch(VideoPlayerController.TIME_UPDATE);
 
@@ -253,16 +299,29 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 * @private
 	 * @method updateProgressBar
 	 */
-	private updateProgressBar():void
+	private updateProgressBar(): void
 	{
+		if(this._videoControls)
+		{
+			let currentTime: number;
+			let duration: number;
 
+			this._videoPlayer.getCurrentTime()
+				.then((value) => currentTime = value)
+				.then(() => this._videoPlayer.getDuration())
+				.then((value) => duration = value)
+				.then(() =>
+				{
+					this._videoControls.progress = currentTime / duration;
+				})
+		}
 	}
 
 	/**
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 		this.removePlayer();
 

@@ -25,7 +25,7 @@ class VideoOverlayTransitionController extends AbstractTransitionController<Vide
 
 		// Slide in Button Close
 		this.transitionInTimeline.from(this.element.querySelector('.component-button-circle-close'), 0.5, {
-			x: 100,
+			scale: 0,
 			ease: Expo.easeOut
 		});
 	}
