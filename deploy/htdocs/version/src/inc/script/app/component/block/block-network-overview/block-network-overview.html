@@ -1,30 +1,19 @@
 <div class="component-block-network-overview" data-bind="with: data">
 	<div class="overrule-overlap network-list-wrapper">
 		<div class="js-draggable-container">
-			<div class="network-list js-draggable-element">
-
-				<div class="network-row" data-bind="foreach: items">
-					<!-- ko if: $index() % 2 == 0 -->
+			<div class="network-list js-draggable-element" data-bind="foreach: $root.rows">
+				<div class="network-row" data-bind="foreach: $data">
+					<!-- ko if: $data.link -->
 						<a class="network-list-item bg-contain" href="" data-bind="gaiaOpenLink: $data.link">
-							<span class="network-logo abs-fill bg-contain" data-bind="image: {
-								image: $data.image,
-								state: $root.deviceState()
-							}"></span>
+							<span class="network-logo abs-fill bg-contain" data-bind="image: { image: $data.image, state: $root.deviceState() }"></span>
 						</a>
 					<!-- /ko -->
-				</div>
-
-				<div class="network-row" data-bind="foreach: items">
-					<!-- ko ifnot: $index() % 2 == 0 -->
-						<a class="network-list-item bg-contain" href="" data-bind="gaiaOpenLink: $data.link">
-								<span class="network-logo abs-fill bg-contain" data-bind="image: {
-									image: $data.image,
-									state: $root.deviceState()
-								}"></span>
-						</a>
+					<!-- ko ifnot: $data.link -->
+						<div class="network-list-item bg-contain">
+							<span class="network-logo abs-fill bg-contain" data-bind="image: { image: $data.image, state: $root.deviceState() }"></span>
+						</div>
 					<!-- /ko -->
 				</div>
-
 			</div>
 		</div>
 		<!-- ko component: {

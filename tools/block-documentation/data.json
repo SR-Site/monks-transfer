@@ -1586,7 +1586,7 @@
                         {
                             "name": "link",
                             "type": "ILink",
-                            "required": true,
+                            "required": false,
                             "defaultValue": "null",
                             "description": "The link when clicked on a item",
                             "placeholder": "",

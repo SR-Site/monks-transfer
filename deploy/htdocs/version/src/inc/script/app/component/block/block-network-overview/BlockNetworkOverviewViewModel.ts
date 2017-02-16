@@ -6,6 +6,8 @@ import ko = require('knockout');
 
 class BlockNetworkOverviewViewModel extends AbstractBlockComponentViewModel<BlockNetworkOverviewController, IBlockNetworkOverviewOptions>
 {
+	public rows:KnockoutObservableArray<any> = ko.observableArray();
+
 	public topList:KnockoutObservableArray<any> = ko.observableArray();
 	public bottomList:KnockoutObservableArray<any> = ko.observableArray();
 

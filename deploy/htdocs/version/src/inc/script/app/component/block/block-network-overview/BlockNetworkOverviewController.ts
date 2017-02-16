@@ -32,19 +32,24 @@ class BlockNetworkOverviewController extends AbstractBlockComponentController<Bl
 	{
 		super.init();
 
-		let rowCount = Math.ceil(this.options.items.length / 2);
+		let itemsPerRow = Math.ceil(this.options.items.length / 2);
+		let topRow = [];
+		let bottomRow = [];
 
 		this.options.items.forEach((item, index) =>
 		{
-			if(index < rowCount)
+			if(index < itemsPerRow)
 			{
-				this.viewModel.topList.push(item);
+				topRow.push(item);
 			}
 			else
 			{
-				this.viewModel.bottomList.push(item);
+				bottomRow.push(item);
 			}
 		});
+
+		this.viewModel.rows.push(topRow);
+		this.viewModel.rows.push(bottomRow);
 
 		this._draggableInstance = new DraggableInstance(<HTMLElement>this.element.querySelector('.js-draggable-container'), {
 			invert: true,

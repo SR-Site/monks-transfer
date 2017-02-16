@@ -13,7 +13,7 @@ interface IBlockNetworkOverviewOptions extends IAbstractBlockComponentOptions
 		 * @property
 		 * @description The link when clicked on a item
 		 */
-		link: ILink;
+		link?: ILink;
 		/**
 		 * @property
 		 * @descrioption The logo of the network
