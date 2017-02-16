@@ -1750,15 +1750,6 @@
                             "properties": []
                         },
                         {
-                            "name": "secondaryHeading",
-                            "type": "string",
-                            "required": true,
-                            "defaultValue": "null",
-                            "description": "The secondary heading displayed in the step",
-                            "placeholder": "",
-                            "properties": []
-                        },
-                        {
                             "name": "secondaryParagraph",
                             "type": "string",
                             "required": true,
@@ -1770,7 +1761,7 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"pathToPurchase\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"secondaryHeading\": \"Lorem ipsum dolor sit amet\",\n                \"secondaryParagraph\": \"Lorem ipsum dolor sit amet\"\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"pathToPurchase\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"secondaryParagraph\": \"Lorem ipsum dolor sit amet\"\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "personaSelector",
