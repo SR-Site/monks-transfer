@@ -6,6 +6,7 @@ export interface IInitData
 	layout: {
 		navigation: Array<INavigationItem>;
 		footer: {
+			copyright: string;
 			contactOptions: {
 				email: string;
 				phone: string;

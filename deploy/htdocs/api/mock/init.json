@@ -53,6 +53,7 @@
 				}
 			],
 			"footer": {
+				"copyright": "©Charter Communications",
 				"contactOptions": {
 					"email": "spectrumreach@spectrum.com",
 					"emailSubject": "Email subject goes here",
