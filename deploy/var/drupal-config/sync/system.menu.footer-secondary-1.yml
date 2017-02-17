@@ -1,0 +1,8 @@
+uuid: 53405668-122b-473e-926d-a0327bf25cdf
+langcode: en
+status: true
+dependencies: {  }
+id: footer-secondary-1
+label: 'Footer secondary 1'
+description: ''
+locked: false
