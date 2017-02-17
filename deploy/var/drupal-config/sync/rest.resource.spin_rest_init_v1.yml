@@ -1,0 +1,17 @@
+uuid: 17dcbb7c-9b43-45d4-a547-68291cc175d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - spectrum_rest
+    - user
+id: spin_rest_init_v1
+plugin_id: spin_rest_init_v1
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

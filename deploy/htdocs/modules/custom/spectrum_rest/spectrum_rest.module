@@ -5,6 +5,8 @@
  * Contains spectrum_rest.module..
  */
 
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -25,4 +27,19 @@ function spectrum_rest_help($route_name, RouteMatchInterface $route_match) {
 
     default:
   }
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function HOOK_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+
+  if ($entity_type->id() == 'menu_link_content') {
+    $fields['FIELD_NAME'] = BaseFieldDefinition::create('FIELD_TYPE')
+      ->setLabel(t('FIELD_LABEL'))
+      ->setDescription(t('FIELD_DESCRIPTION '));
+  }
+
+  return $fields;
 }
