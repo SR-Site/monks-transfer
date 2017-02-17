@@ -213,9 +213,165 @@
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
                     "placeholder": "0",
                     "properties": []
+                },
+                {
+                    "name": "social",
+                    "type": "Array",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "An array of social links to the article",
+                    "placeholder": "",
+                    "properties": [
+                        {
+                            "name": "target",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The target of the link",
+                            "placeholder": "path/to/page",
+                            "properties": []
+                        },
+                        {
+                            "name": "type",
+                            "type": "LinkType",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The type of the link",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "label",
+                            "type": "string",
+                            "required": false,
+                            "defaultValue": "null",
+                            "description": "The label displayed in the action",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "title",
+                            "type": "string",
+                            "required": false,
+                            "defaultValue": "null",
+                            "description": "The title used for accessibility",
+                            "placeholder": "",
+                            "properties": []
+                        }
+                    ]
+                },
+                {
+                    "name": "author",
+                    "type": "Object",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The author of the blog post",
+                    "placeholder": "",
+                    "properties": [
+                        {
+                            "name": "name",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The name of the author",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "role",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The role of the author",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "image",
+                            "type": "IImage",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "An image of the author",
+                            "placeholder": "",
+                            "properties": []
+                        }
+                    ]
+                },
+                {
+                    "name": "tags",
+                    "type": "Array",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The tags linked to the block",
+                    "placeholder": "",
+                    "properties": [
+                        {
+                            "name": "target",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The target of the link",
+                            "placeholder": "path/to/page",
+                            "properties": []
+                        },
+                        {
+                            "name": "type",
+                            "type": "LinkType",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The type of the link",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "label",
+                            "type": "string",
+                            "required": false,
+                            "defaultValue": "null",
+                            "description": "The label displayed in the action",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "title",
+                            "type": "string",
+                            "required": false,
+                            "defaultValue": "null",
+                            "description": "The title used for accessibility",
+                            "placeholder": "",
+                            "properties": []
+                        }
+                    ]
+                },
+                {
+                    "name": "paragraph",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The main paragraph displayed on the block",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
+                    "name": "subHeading",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The sub heading displayed on the block",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
+                    "name": "heading",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The main heading displayed on the block",
+                    "placeholder": "",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blogPost\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"blogPost\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"social\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"author\": \"TODO: Object\",\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"subHeading\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "button",
