@@ -8,7 +8,6 @@
 	}
 
 	.error-code {
-		@include pos(0, 0, 0, 0);
 		font: 800 80rem/1 $fontOpenSans;
 		position: absolute;
 		color: rgba($colorWhite, .05);
@@ -27,10 +26,34 @@
 			margin-top: $sizeGrid;
 		}
 	}
+	@include respond-to(X_LARGE) {
+		.error-code {
+			font-size: 60rem;
+		}
+	}
 
-	@include respond-to(LARGE){
+	@include respond-to(LARGE) {
 		.error-code {
 			font-size: 50rem;
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.error-code {
+			font-size: 40rem;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		@include aspect-ratio(4px, 3px);
+
+		.message {
+			width: 100%;
+			padding: 0 $sizeGrid;
+		}
+
+		.error-code {
+			font-size: mobile-size(40rem);
 		}
 	}
 }
