@@ -2,6 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\rest\resource;
 
+use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\mm_rest\CacheableMetaDataCollectorInterface;
@@ -90,6 +91,19 @@ class PageResource extends ResourceBase {
     // Drupal\mm_rest_example\Plugin\RestEntityProcessor\NodeArticleV1 will be
     // used.
     return $this->getEntityData($this->requestData);
+  }
+
+  /**
+   * @inheritDoc
+   */
+  protected function addCacheableDependency() {
+    parent::addCacheableDependency();
+
+    /** @var \Drupal\Core\Cache\CacheableMetadata $meta_data */
+    $metadata = new CacheableMetadata();
+    $metadata->setCacheContexts(['url.query_args:slugfound']);
+    $metadata->setCacheMaxAge(86400);
+    $this->cacheabilityCollector->addCacheableDependency($metadata);
   }
 
   /**
