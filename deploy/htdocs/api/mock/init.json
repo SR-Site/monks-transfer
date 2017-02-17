@@ -1,5 +1,15 @@
 {
 	"data": {
+		"contactOptions": {
+			"phone": {
+				"phoneNumber": "1-844-TO-REACH"
+			},
+			"email": {
+				"emailAddress": "spectrumreach@spectrum.com",
+				"emailSubject": "Email subject goes here",
+				"emailBody": "Email body goes here"
+			}
+		},
 		"layout": {
 			"navigation": [
 				{
@@ -54,12 +64,6 @@
 			],
 			"footer": {
 				"copyright": "©Charter Communications",
-				"contactOptions": {
-					"email": "spectrumreach@spectrum.com",
-					"emailSubject": "Email subject goes here",
-					"emailBody": "Email body goes here",
-					"phone": "1-844-TO-REACH"
-				},
 				"mainLinks": [
 					{
 						"label": "Charter",

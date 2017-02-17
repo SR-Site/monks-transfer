@@ -3,12 +3,12 @@
 		<h1 class="logo white"> <!-- 'primary' or 'inverted' -->
 			<span class="icon" data-bind="icon: 'logo'"></span>
 		</h1>
-		<ul class="contact-options" data-bind="with: $data.contactOptions">
+		<ul class="contact-options" data-bind="with: dataManager.settingsModel.initDataModel.contactOptions">
 			<li class="contact-option">
-				<a class="link link-main" href="mailto:{{$data.email}}?SUBJECT={{$data.emailSubject}}&BODY={{$data.emailBody}}">{{$data.email}}</a>
+				<a class="link link-main" href="mailto:{{$data.email.emailAddress}}?SUBJECT={{$data.email.emailSubject}}&BODY={{$data.email.emailBody}}">{{$data.email.emailAddress}}</a>
 			</li>
 			<li class="contact-option">
-				<a class="link link-main" href="tel:{{$data.phone}}">{{$data.phone}}</a>
+				<a class="link link-main" href="tel:{{$data.phone.phoneNumber}}">{{$data.phone.phoneNumber}}</a>
 			</li>
 		</ul>
 	</section>

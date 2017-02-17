@@ -13,10 +13,12 @@
 			background: $colorWhite;
 			padding: $sizeGrid $sizeGrid * 2;
 			flex-grow: 1;
-			transition: background .2s ease(easeInOut);
+			transition: background .4s ease(linear);
 
 			.copy {
-				transition: opacity .2s ease(easeInOut);
+				transition: opacity .4s ease(linear), transform .4s ease(easeInOutCubic);
+				opacity: 0;
+				transform: translateY(50px);
 			}
 
 			.heading,
@@ -28,7 +30,8 @@
 				background: transparent;
 
 				.copy {
-					opacity :0;
+					opacity :1;
+					transform: translateX(0);
 				}
 			}
 		}

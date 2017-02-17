@@ -20,8 +20,8 @@
 			options: {
 				icon: 'contact',
 				action: {
-					label: localeManager.getString('global.cta.to_reach'),
-					title: localeManager.getString('global.cta.to_reach'),
+					label: dataManager.settingsModel.initDataModel.contactOptions.phone.phoneNumber,
+					title: dataManager.settingsModel.initDataModel.contactOptions.phone.phoneNumber,
 					event: function(){console.log('call us')}
 				},
 				size: $root.ButtonSize.LARGE,
