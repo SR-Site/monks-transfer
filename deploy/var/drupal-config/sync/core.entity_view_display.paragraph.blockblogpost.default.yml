@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockblogpost.field_article
     - field.field.paragraph.blockblogpost.field_styles
     - paragraphs.paragraphs_type.blockblogpost
   module:
@@ -12,6 +13,13 @@ targetEntityType: paragraph
 bundle: blockblogpost
 mode: default
 content:
+  field_article:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
   field_styles:
     weight: 0
     label: above

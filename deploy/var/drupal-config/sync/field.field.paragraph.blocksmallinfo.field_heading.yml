@@ -10,7 +10,7 @@ field_name: field_heading
 entity_type: paragraph
 bundle: blocksmallinfo
 label: Heading
-description: ''
+description: 'Text between ** ** will be highlighted, e.g This is a **highlighted** text.'
 required: true
 translatable: true
 default_value: {  }

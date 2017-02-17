@@ -28,6 +28,12 @@ class ParagraphBlockMapSecondaryV1 extends SpectrumRestEntityProcessorBase {
     $data = [
       "id" => 'mapSecondary',
       "data" => $data + [
+        "imageSequence" => [
+          "image" => $this->image($entity->get('field_image')),
+          "total" => (int) $this->fieldProcessor->getFieldData($entity->get('field_value')),
+          "extension" => $this->fieldProcessor->getFieldData($entity->get('field_label')),
+        ],
+        "sequenceBackground" => $this->image($entity->get('field_image2')),
         "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
         "subHeading" => $this->fieldProcessor->getFieldData($entity->get('field_subheading')),
         "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),

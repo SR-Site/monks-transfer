@@ -1,17 +1,17 @@
-uuid: 64ebb876-3c6b-4c45-947f-71933aee81fa
+uuid: dd69fd02-e0a3-413f-9672-f4184fa6a495
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_paragraph
-    - paragraphs.paragraphs_type.blockquote
+    - paragraphs.paragraphs_type.stepmap
   module:
     - text
-id: paragraph.blockquote.field_paragraph
+id: paragraph.stepmap.field_paragraph
 field_name: field_paragraph
 entity_type: paragraph
-bundle: blockquote
-label: Description
+bundle: stepmap
+label: Paragraph
 description: ''
 required: true
 translatable: true

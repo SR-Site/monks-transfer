@@ -1,4 +1,4 @@
-uuid: 5af1a9f1-3af1-4642-831d-4b84082780b9
+uuid: f4d1859a-c551-4855-9d7f-3c55b7eae18a
 langcode: en
 status: true
 dependencies:
@@ -6,18 +6,20 @@ dependencies:
     - field.storage.paragraph.field_background_color
     - paragraphs.paragraphs_type.blockherosecondary
   module:
-    - jquery_colorpicker
+    - color_field
 id: paragraph.blockherosecondary.field_background_color
 field_name: field_background_color
 entity_type: paragraph
 bundle: blockherosecondary
 label: 'Background color'
-description: ''
+description: 'The opacity may be between 0 and 1, e.g. 0.3, 0.2, 0.9, 1.'
 required: false
 translatable: false
 default_value:
   -
-    value: {  }
+    color: '#000000'
+    opacity: '1'
 default_value_callback: ''
-settings: {  }
-field_type: jquery_colorpicker
+settings:
+  opacity: 1
+field_type: color_field_type

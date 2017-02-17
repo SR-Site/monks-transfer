@@ -1,0 +1,41 @@
+uuid: 5812add6-e26f-41e4-afe2-cf8814b3fee9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stepmap.field_heading
+    - field.field.paragraph.stepmap.field_label
+    - field.field.paragraph.stepmap.field_paragraph
+    - paragraphs.paragraphs_type.stepmap
+  module:
+    - text
+id: paragraph.stepmap.default
+targetEntityType: paragraph
+bundle: stepmap
+mode: default
+content:
+  field_heading:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_label:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_paragraph:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.blockmap.field_autoplay
     - field.field.paragraph.blockmap.field_image
+    - field.field.paragraph.blockmap.field_image2
     - field.field.paragraph.blockmap.field_label
-    - field.field.paragraph.blockmap.field_steps_text
+    - field.field.paragraph.blockmap.field_steps_map
     - field.field.paragraph.blockmap.field_styles
     - field.field.paragraph.blockmap.field_value
     - image.style.thumbnail
@@ -34,7 +34,6 @@ third_party_settings:
         - field_image
         - field_value
         - field_label
-        - field_autoplay
       parent_name: ''
       weight: 2
       format_type: details
@@ -49,14 +48,15 @@ targetEntityType: paragraph
 bundle: blockmap
 mode: default
 content:
-  field_autoplay:
-    weight: 6
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
   field_image:
     weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_image2:
+    weight: 1
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -69,13 +69,17 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_steps_text:
-    weight: 1
+  field_steps_map:
+    type: entity_reference_paragraphs
+    weight: 3
     settings:
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: string_textfield
   field_styles:
     weight: 1
     settings:

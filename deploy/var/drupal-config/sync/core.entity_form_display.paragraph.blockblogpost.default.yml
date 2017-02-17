@@ -3,17 +3,41 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockblogpost.field_article
     - field.field.paragraph.blockblogpost.field_styles
     - paragraphs.paragraphs_type.blockblogpost
   module:
+    - field_group
     - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
 id: paragraph.blockblogpost.default
 targetEntityType: paragraph
 bundle: blockblogpost
 mode: default
 content:
+  field_article:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   field_styles:
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs

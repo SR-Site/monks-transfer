@@ -1,15 +1,16 @@
-uuid: 635d88c0-76c7-4368-a045-e97df53f44bc
+uuid: f15f879a-72b4-4c87-a78e-d1b533a5a50b
 langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_autoplay
-field_name: field_autoplay
-entity_type: paragraph
-type: boolean
+    - metatag
+    - node
+id: node.field_metatags
+field_name: field_metatags
+entity_type: node
+type: metatag
 settings: {  }
-module: core
+module: metatag
 locked: false
 cardinality: 1
 translatable: true

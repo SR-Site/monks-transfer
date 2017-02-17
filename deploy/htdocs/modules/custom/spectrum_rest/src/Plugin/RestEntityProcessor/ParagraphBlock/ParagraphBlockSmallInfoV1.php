@@ -24,15 +24,22 @@ class ParagraphBlockSmallInfoV1 extends SpectrumRestEntityProcessorBase {
   protected function getItemData($entity) {
 
     $data = parent::getCommonData($entity);
+    $link = $this->fieldProcessor->getFieldData($entity->get('field_link'));
+
+    $heading = $this->fieldProcessor->getFieldData($entity->get('field_heading'));
+    $heading = preg_replace('/\*\*(.*)\*\*/', '<span class="highlight">$1</span>', $heading);
 
     $data = [
       "id" => 'smallInfo',
       "data" => $data + [
-        "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),
         "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
-        "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
+        "heading" => $heading,
       ],
     ];
+
+    if (!empty($link)) {
+      $data['data']['link'] = $link;
+    }
 
     return $data;
   }

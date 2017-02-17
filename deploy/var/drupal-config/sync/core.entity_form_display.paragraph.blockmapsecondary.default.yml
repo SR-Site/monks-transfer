@@ -4,12 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.blockmapsecondary.field_heading
+    - field.field.paragraph.blockmapsecondary.field_image
+    - field.field.paragraph.blockmapsecondary.field_image2
+    - field.field.paragraph.blockmapsecondary.field_label
     - field.field.paragraph.blockmapsecondary.field_paragraph
     - field.field.paragraph.blockmapsecondary.field_styles
     - field.field.paragraph.blockmapsecondary.field_subheading
+    - field.field.paragraph.blockmapsecondary.field_value
+    - image.style.thumbnail
     - paragraphs.paragraphs_type.blockmapsecondary
   module:
     - field_group
+    - image
     - paragraphs
     - text
 third_party_settings:
@@ -26,20 +32,55 @@ third_party_settings:
         open: false
         required_fields: true
       label: Styles
+    group_image_sequence:
+      children:
+        - field_image
+        - field_value
+        - field_label
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Image sequence'
 id: paragraph.blockmapsecondary.default
 targetEntityType: paragraph
 bundle: blockmapsecondary
 mode: default
 content:
   field_heading:
-    weight: 4
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_image2:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_label:
+    weight: 7
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_paragraph:
-    weight: 2
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
@@ -57,12 +98,18 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
   field_subheading:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_value:
+    weight: 6
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
 hidden:
   created: true
   status: true

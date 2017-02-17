@@ -3,22 +3,28 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockaudiofragment.field_description
     - field.field.paragraph.blockaudiofragment.field_file
     - field.field.paragraph.blockaudiofragment.field_image
     - field.field.paragraph.blockaudiofragment.field_label
-    - field.field.paragraph.blockaudiofragment.field_paragraph
     - field.field.paragraph.blockaudiofragment.field_styles
     - paragraphs.paragraphs_type.blockaudiofragment
   module:
     - entity_reference_revisions
     - file
     - image
-    - text
 id: paragraph.blockaudiofragment.default
 targetEntityType: paragraph
 bundle: blockaudiofragment
 mode: default
 content:
+  field_description:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   field_file:
     weight: 1
     label: above
@@ -40,12 +46,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_paragraph:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
   field_styles:
     weight: 0
     label: above
