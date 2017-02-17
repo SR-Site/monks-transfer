@@ -240,6 +240,13 @@
 	@include respond-to(XX_LARGE) {
 		$buttonHeight: $sizeGrid * 2.5;
 
+		.persona-content {
+			.persona {
+				width: 100%;
+				padding-left: $sizeGrid * 2;
+			}
+		}
+
 		.persona-button,
 		.persona-options,
 		.persona-option {
@@ -286,6 +293,10 @@
 	}
 
 	@include respond-to(MEDIUM) {
+		.persona-content {
+			top: 40%;
+		}
+
 		.persona-options {
 			bottom: $sizeGrid;
 		}
