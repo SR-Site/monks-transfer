@@ -1,0 +1,4 @@
+
+administer spectrum settings:
+  title: 'Administer Spectrum settings'
+  description: 'Allow access to Spectrum settings form'

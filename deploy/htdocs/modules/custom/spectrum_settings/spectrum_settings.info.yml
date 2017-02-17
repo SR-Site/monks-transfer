@@ -1,0 +1,5 @@
+name: Spectrum settings
+type: module
+description: Spectrum settings module
+core: 8.x
+package: Spectrum
