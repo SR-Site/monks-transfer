@@ -27,6 +27,11 @@ export interface IBlockFilterContentOptions extends IAbstractBlockComponentOptio
 	filters: Array<{
 		/**
 		 * @property
+		 * @description The label linked to the filter
+		 */
+		label:string;
+		/**
+		 * @property
 		 * @description The type of the filter
 		 */
 		type: number;

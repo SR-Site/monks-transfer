@@ -1,8 +1,8 @@
-import IDefaultSubTransitionOptions from "./IAbstractTransitionComponentOptions";
+import IAbstractTransitionComponentOptions from "./IAbstractTransitionComponentOptions";
 import AbstractComponentViewModel from "../../../../lib/temple/component/AbstractComponentViewModel";
 import DefaultSubTransitionController from "./AbstractTransitionComponentController";
 
-abstract class AbstractTransitionComponentViewModel<T, U extends IDefaultSubTransitionOptions> extends AbstractComponentViewModel<DefaultSubTransitionController<T, U>, U>
+abstract class AbstractTransitionComponentViewModel<T, U extends IAbstractTransitionComponentOptions> extends AbstractComponentViewModel<DefaultSubTransitionController<T, U>, U>
 {
 	public controller: T & any;
 }

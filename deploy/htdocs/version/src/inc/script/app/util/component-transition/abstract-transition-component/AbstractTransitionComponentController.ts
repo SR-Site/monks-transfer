@@ -1,5 +1,5 @@
 import AbstractComponentController from "../../../../lib/temple/component/AbstractComponentController";
-import DefaultSubTransitionViewModel from "./AbstractTransitionComponentViewModel";
+import AbstractTransitionComponentViewModel from "./AbstractTransitionComponentViewModel";
 import IDefaultComponentTransitionOptions from "./IAbstractTransitionComponentOptions";
 import CallbackCounter from "../../CallbackCounter";
 import AbstractTransitionController from "../AbstractTransitionController";
@@ -10,7 +10,7 @@ import Promise = require("bluebird");
  * @description This class is used by all components that you want to be transition in/out
  */
 abstract class AbstractTransitionComponentController<TController, TOptions extends IDefaultComponentTransitionOptions>
-extends AbstractComponentController<DefaultSubTransitionViewModel<TController, TOptions>, TOptions>
+extends AbstractComponentController<AbstractTransitionComponentViewModel<TController, TOptions>, TOptions>
 {
 	/**
 	 * @property viewModel

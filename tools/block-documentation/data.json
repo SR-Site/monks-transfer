@@ -316,6 +316,15 @@
                     "placeholder": "",
                     "properties": [
                         {
+                            "name": "label",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The label linked to the filter",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
                             "name": "type",
                             "type": "number",
                             "required": true,
@@ -382,7 +391,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"filterContent\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"loadMoreLabel\": \"Lorem ipsum dolor sit amet\",\n        \"filters\": [\n            {\n                \"type\": 1,\n                \"options\": [\n                    {\n                        \"value\": \"Lorem ipsum dolor sit amet\",\n                        \"label\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ]\n            }\n        ],\n        \"applyLabel\": \"Lorem ipsum dolor sit amet\",\n        \"filterLabel\": \"Lorem ipsum dolor sit amet\",\n        \"endpoint\": \"api/v1/path/to/endpoint\"\n    }\n}"
+            "example": "{\n    \"id\": \"filterContent\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"loadMoreLabel\": \"Lorem ipsum dolor sit amet\",\n        \"filters\": [\n            {\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"type\": 1,\n                \"options\": [\n                    {\n                        \"value\": \"Lorem ipsum dolor sit amet\",\n                        \"label\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ]\n            }\n        ],\n        \"applyLabel\": \"Lorem ipsum dolor sit amet\",\n        \"filterLabel\": \"Lorem ipsum dolor sit amet\",\n        \"endpoint\": \"api/v1/path/to/endpoint\"\n    }\n}"
         },
         {
             "blockId": "heroMain",
