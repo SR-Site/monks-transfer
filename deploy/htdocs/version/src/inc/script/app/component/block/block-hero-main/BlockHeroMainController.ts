@@ -1,4 +1,4 @@
-import AbstractBlockComponentController from "../AbstractBlockComponentController";
+	import AbstractBlockComponentController from "../AbstractBlockComponentController";
 import BlockHeroMainTransitionController from "app/component/block/block-hero-main/BlockHeroMainTransitionController";
 import IBlockHeroMainOptions from "app/component/block/block-hero-main/IBlockHeroMainOptions";
 import BlockHeroMainViewModel from "app/component/block/block-hero-main/BlockHeroMainViewModel";
@@ -28,7 +28,7 @@ class BlockHeroMainController extends AbstractBlockComponentController<BlockHero
 
 		this._debug.log('Init');
 
-		this.viewModel.hasStatistics(this.options.slides.map((slide) => slide.statistics !== void 0).indexOf(true) > -1);
+		this.viewModel.hasStatistics(this.options.slides.map((slide) => slide.statistics !== null).indexOf(true) > -1);
 	}
 	/**
 	 * @public

@@ -25,7 +25,6 @@ class BlockHeroMainViewModel extends AbstractBlockComponentViewModel<BlockHeroMa
 		{
 			this._switchComplete = false;
 
-
 			let newIndex = this.activeIndex() + 1 < this.data.slides.length ? this.activeIndex() + 1 : 0;
 
 			this.controller.changeBackgroundImage(newIndex);
