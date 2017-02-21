@@ -9,7 +9,6 @@ class FilterMenuTransitionController extends AbstractTransitionController<Filter
 		timeline: TimelineLite
 	}> = [];
 
-
 	constructor(element: HTMLElement, parentController: FilterMenuController)
 	{
 		super(element, parentController);

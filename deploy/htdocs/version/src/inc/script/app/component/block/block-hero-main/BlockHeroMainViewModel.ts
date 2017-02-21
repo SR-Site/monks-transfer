@@ -8,6 +8,8 @@ import ko = require('knockout');
 
 class BlockHeroMainViewModel extends AbstractBlockComponentViewModel<BlockHeroMainController, IBlockHeroMainOptions>
 {
+	public controller: BlockHeroMainController;
+
 	public Direction: Enum = Direction;
 	public Alignment: Enum = Alignment;
 	public activeIndex: KnockoutObservable<number> = ko.observable(0);
@@ -27,11 +29,7 @@ class BlockHeroMainViewModel extends AbstractBlockComponentViewModel<BlockHeroMa
 
 			let newIndex = this.activeIndex() + 1 < this.data.slides.length ? this.activeIndex() + 1 : 0;
 
-			this.controller.changeBackgroundImage(newIndex);
-
-			this.controller.transitionController.transitionOutStep(this.activeIndex())
-				.then(()=> this.controller.transitionController.transitionInStep(newIndex))
-				.then(()=> this.activeIndex(newIndex))
+			this.controller.openNextStep(newIndex)
 				.then(() => this._switchComplete = true);
 		}
 	}

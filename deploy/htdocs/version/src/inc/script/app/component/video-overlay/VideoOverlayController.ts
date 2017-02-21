@@ -10,7 +10,7 @@ import IVideoPlayerOptions from "../video-player/IVideoPlayerOptions";
 import KeyCode from "../../../lib/temple/util/key/KeyCode";
 import NativeEventListener from "../../../lib/temple/event/NativeEventListener";
 
-class VideoOverlayController extends AbstractTransitionComponentController<VideoOverlayViewModel, IVideoOverlayOptions>
+class VideoOverlayController extends AbstractTransitionComponentController<VideoOverlayViewModel, IVideoOverlayOptions, VideoOverlayTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

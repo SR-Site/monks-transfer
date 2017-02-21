@@ -1,11 +1,11 @@
-import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
-import FilterMenuController from 'app/component/filter-menu/FilterMenuController';
-import IFilterMenuOptions from 'app/component/filter-menu/IFilterMenuOptions';
-
-import ko = require('knockout');
+import AbstractTransitionComponentViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
+import FilterMenuController from "app/component/filter-menu/FilterMenuController";
+import IFilterMenuOptions from "app/component/filter-menu/IFilterMenuOptions";
 import CommonEvent from "../../../lib/temple/event/CommonEvent";
 
-class FilterMenuViewModel extends DefaultComponentTransitionViewModel<FilterMenuController, IFilterMenuOptions>
+import ko = require('knockout');
+
+class FilterMenuViewModel extends AbstractTransitionComponentViewModel<FilterMenuController, IFilterMenuOptions>
 {
 	public activeDropdownIndex: KnockoutObservable<number> = ko.observable(null);
 	public filterOverlayIsOpen: KnockoutObservable<boolean> = ko.observable(false);

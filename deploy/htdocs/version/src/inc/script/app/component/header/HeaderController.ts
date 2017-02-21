@@ -8,7 +8,7 @@ import ScrollUtils from "../../util/ScrollUtils";
 import KeyCode from "../../../lib/temple/util/key/KeyCode";
 import MenuEvent from "../../event/MenuEvent";
 
-class HeaderController extends AbstractTransitionComponentController<HeaderViewModel, IHeaderOptions>
+class HeaderController extends AbstractTransitionComponentController<HeaderViewModel, IHeaderOptions, HeaderTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

@@ -1,26 +1,20 @@
 import AbstractBlockComponentController from "../AbstractBlockComponentController";
-import BlockPathToPurchaseTransitionController from 'app/component/block/block-path-to-purchase/BlockPathToPurchaseTransitionController';
-import IBlockPathToPurchaseOptions from 'app/component/block/block-path-to-purchase/IBlockPathToPurchaseOptions';
-import BlockPathToPurchaseViewModel from 'app/component/block/block-path-to-purchase/BlockPathToPurchaseViewModel';
-
+import BlockPathToPurchaseTransitionController from "app/component/block/block-path-to-purchase/BlockPathToPurchaseTransitionController";
+import IBlockPathToPurchaseOptions from "app/component/block/block-path-to-purchase/IBlockPathToPurchaseOptions";
+import BlockPathToPurchaseViewModel from "app/component/block/block-path-to-purchase/BlockPathToPurchaseViewModel";
 import Log from "lib/temple/util/Log";
 import InfiniteImageCarousel from "../../../util/infinite-carousel/InfiniteImageCarousel";
 import DataManager from "../../../data/DataManager";
 import {DeviceState} from "../../../data/scss-shared/MediaQueries";
-import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
-import ImageHelper from "../../../util/ImageHelper";
-import Promise = require("bluebird");
 import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedController";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
+import Promise = require("bluebird");
 
-class BlockPathToPurchaseController extends AbstractBlockComponentController<BlockPathToPurchaseViewModel, IBlockPathToPurchaseOptions>
+class BlockPathToPurchaseController extends AbstractBlockComponentController<BlockPathToPurchaseViewModel, IBlockPathToPurchaseOptions, BlockPathToPurchaseTransitionController>
 {
 	private _infiniteImageCarousel: InfiniteImageCarousel;
-	private _imageCrossfader: ImageCrossfaderController;
 	private _paginatorDashedController: PaginatorDashedController;
-
-	public transitionController: BlockPathToPurchaseTransitionController;
 
 
 	/**

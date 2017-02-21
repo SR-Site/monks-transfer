@@ -3,12 +3,17 @@ import AbstractBlockComponentViewModel from "./AbstractBlockComponentViewModel";
 import ContentPagePageController from "../../page/content-page/ContentPagePageController";
 import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import Promise = require("bluebird");
+import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 
 /**
  * @class AbstractBlockComponentController
  * @description This is the default class used for all the block components in the application
  */
-abstract class AbstractBlockComponentController<T, U extends IAbstractBlockComponentOptions> extends AbstractTransitionComponentController<AbstractBlockComponentViewModel<T, U>, U>
+abstract class AbstractBlockComponentController<
+	TViewModel extends AbstractBlockComponentViewModel<any, any>,
+	TOptions extends IAbstractBlockComponentOptions,
+	TTransitionController extends AbstractTransitionController<any>>
+extends AbstractTransitionComponentController<TViewModel, TOptions, TTransitionController>
 {
 	/**
 	 * @property transitionComplete
@@ -42,11 +47,6 @@ abstract class AbstractBlockComponentController<T, U extends IAbstractBlockCompo
 	 * @type {boolean}
 	 */
 	public disableTransitionIn: boolean = false;
-	/**
-	 * @property viewModel
-	 * @type {AbstractBlockComponentViewModel}
-	 */
-	protected viewModel: AbstractBlockComponentViewModel<T, U> & any;
 
 	constructor(element, options)
 	{
@@ -160,7 +160,7 @@ abstract class AbstractBlockComponentController<T, U extends IAbstractBlockCompo
 	 * @handleComponentReady
 	 * @param controller
 	 */
-	public handleComponentReady(controller: AbstractBlockComponentController<T, U>): void
+	public handleComponentReady(controller: AbstractBlockComponentController<TViewModel, TOptions, TTransitionController>): void
 	{
 		this.parentPage.handleComponentReady(controller);
 	}

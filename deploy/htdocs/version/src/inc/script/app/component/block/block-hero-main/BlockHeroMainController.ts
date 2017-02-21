@@ -10,7 +10,7 @@ import Promise = require("bluebird");
 import bowser = require("bowser");
 import VideoType from "../../../data/enum/type/VideoType";
 
-class BlockHeroMainController extends AbstractBlockComponentController<BlockHeroMainViewModel, IBlockHeroMainOptions>
+class BlockHeroMainController extends AbstractBlockComponentController<BlockHeroMainViewModel, IBlockHeroMainOptions, BlockHeroMainTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging
@@ -41,6 +41,19 @@ class BlockHeroMainController extends AbstractBlockComponentController<BlockHero
 		{
 			this.setupVideoElements();
 		}
+	}
+
+	/**
+	 * @public
+	 * @method openNextStep
+	 */
+	public openNextStep(index:number):Promise<any>
+	{
+		this.changeBackgroundImage(index);
+
+		return this.transitionController.transitionOutStep(this.viewModel.activeIndex())
+			.then(()=> this.transitionController.transitionInStep(index))
+			.then(()=> this.viewModel.activeIndex(index))
 	}
 
 	/**

@@ -6,7 +6,7 @@ import AudioPlayerViewModel from 'app/component/audio-player/AudioPlayerViewMode
 import Log from "lib/temple/util/Log";
 import ButtonPlayCircleController from "../button/button-play-circle/ButtonPlayCircleController";
 
-class AudioPlayerController extends AbstractTransitionComponentController<AudioPlayerViewModel, IAudioPlayerOptions>
+class AudioPlayerController extends AbstractTransitionComponentController<AudioPlayerViewModel, IAudioPlayerOptions, AudioPlayerTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

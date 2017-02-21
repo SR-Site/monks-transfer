@@ -6,7 +6,7 @@ import FilterMenuViewModel from 'app/component/filter-menu/FilterMenuViewModel';
 import Log from "lib/temple/util/Log";
 import Scrollbar from "../../../lib/temple/component/Scrollbar";
 
-class FilterMenuController extends AbstractTransitionComponentController<FilterMenuViewModel, IFilterMenuOptions>
+class FilterMenuController extends AbstractTransitionComponentController<FilterMenuViewModel, IFilterMenuOptions, FilterMenuTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

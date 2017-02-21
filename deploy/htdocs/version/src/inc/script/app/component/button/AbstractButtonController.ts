@@ -7,11 +7,15 @@ import LinkType from "../../data/enum/type/LinkType";
 import ScrollUtils from "../../util/ScrollUtils";
 import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import Branches from "../../data/enum/gaia/Branches";
+import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 
-abstract class AbstractButtonController<T, U extends IAbstractButtonOptions> extends AbstractTransitionComponentController<AbstractButtonViewModel<T, U>, U>
+abstract class AbstractButtonController<
+	TViewModel extends AbstractButtonViewModel<any, any>,
+	TOptions extends IAbstractButtonOptions,
+	TTransitionController extends AbstractTransitionController<any>>
+extends AbstractTransitionComponentController<TViewModel, TOptions, TTransitionController>
 {
 	static documentBase: string = $('meta[name="document-base"]').attr('content');
-	public viewModel: AbstractButtonViewModel<T, U> & any;
 
 	public init(): void
 	{

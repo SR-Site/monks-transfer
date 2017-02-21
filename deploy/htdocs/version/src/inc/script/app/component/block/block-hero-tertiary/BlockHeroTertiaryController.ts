@@ -10,7 +10,7 @@ import bowser = require("bowser");
 import VideoType from "../../../data/enum/type/VideoType";
 import ImageHelper from "../../../util/ImageHelper";
 
-class BlockHeroTertiaryController extends AbstractBlockComponentController<BlockHeroTertiaryViewModel, IBlockHeroTertiaryOptions>
+class BlockHeroTertiaryController extends AbstractBlockComponentController<BlockHeroTertiaryViewModel, IBlockHeroTertiaryOptions, BlockHeroTertiaryTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

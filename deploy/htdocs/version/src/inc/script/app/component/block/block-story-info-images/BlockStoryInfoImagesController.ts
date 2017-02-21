@@ -5,7 +5,7 @@ import BlockStoryInfoImagesViewModel from 'app/component/block/block-story-info-
 
 import Log from "lib/temple/util/Log";
 
-class BlockStoryInfoImagesController extends AbstractBlockComponentController<BlockStoryInfoImagesViewModel, IBlockStoryInfoImagesOptions>
+class BlockStoryInfoImagesController extends AbstractBlockComponentController<BlockStoryInfoImagesViewModel, IBlockStoryInfoImagesOptions, BlockStoryInfoImagesTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

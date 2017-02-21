@@ -5,7 +5,7 @@ import BlockSmallImageViewModel from 'app/component/block/block-small-image/Bloc
 
 import Log from "lib/temple/util/Log";
 
-class BlockSmallImageController extends AbstractBlockComponentController<BlockSmallImageViewModel, IBlockSmallImageOptions>
+class BlockSmallImageController extends AbstractBlockComponentController<BlockSmallImageViewModel, IBlockSmallImageOptions, BlockSmallImageTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

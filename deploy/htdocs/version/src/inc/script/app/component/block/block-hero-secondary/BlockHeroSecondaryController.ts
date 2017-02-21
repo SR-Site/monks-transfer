@@ -9,7 +9,7 @@ import VideoElement from "../../../../lib/temple/util/VideoElement";
 import VideoType from "../../../data/enum/type/VideoType";
 import bowser = require("bowser");
 
-class BlockHeroSecondaryController extends AbstractBlockComponentController<BlockHeroSecondaryViewModel, IBlockHeroSecondaryOptions>
+class BlockHeroSecondaryController extends AbstractBlockComponentController<BlockHeroSecondaryViewModel, IBlockHeroSecondaryOptions, BlockHeroSecondaryTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

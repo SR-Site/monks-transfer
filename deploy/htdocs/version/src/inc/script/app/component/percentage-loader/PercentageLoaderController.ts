@@ -5,7 +5,7 @@ import PercentageLoaderViewModel from 'app/component/percentage-loader/Percentag
 
 import Log from "lib/temple/util/Log";
 
-class PercentageLoaderController extends AbstractTransitionComponentController<PercentageLoaderViewModel, IPercentageLoaderOptions>
+class PercentageLoaderController extends AbstractTransitionComponentController<PercentageLoaderViewModel, IPercentageLoaderOptions, PercentageLoaderTransitionController>
 {
 	private static _DURATION: number = 0.7;
 

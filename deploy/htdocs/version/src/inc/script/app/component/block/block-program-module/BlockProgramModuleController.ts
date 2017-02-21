@@ -1,14 +1,12 @@
 import AbstractBlockComponentController from "../AbstractBlockComponentController";
-import BlockProgramModuleTransitionController from 'app/component/block/block-program-module/BlockProgramModuleTransitionController';
-import IBlockProgramModuleOptions from 'app/component/block/block-program-module/IBlockProgramModuleOptions';
-import BlockProgramModuleViewModel from 'app/component/block/block-program-module/BlockProgramModuleViewModel';
-
+import BlockProgramModuleTransitionController from "app/component/block/block-program-module/BlockProgramModuleTransitionController";
+import IBlockProgramModuleOptions from "app/component/block/block-program-module/IBlockProgramModuleOptions";
+import BlockProgramModuleViewModel from "app/component/block/block-program-module/BlockProgramModuleViewModel";
 import Log from "lib/temple/util/Log";
-import ProgramModuleItemController from "../../program-module-item/ProgramModuleItemController";
-import Promise = require("bluebird");
 import ProgramModuleItemTransitionController from "../../program-module-item/ProgramModuleItemTransitionController";
+import Promise = require("bluebird");
 
-class BlockProgramModuleController extends AbstractBlockComponentController<BlockProgramModuleViewModel, IBlockProgramModuleOptions>
+class BlockProgramModuleController extends AbstractBlockComponentController<BlockProgramModuleViewModel, IBlockProgramModuleOptions, BlockProgramModuleTransitionController>
 {
 	private _hoverTimelineResolveMethod: ()=>void;
 	private _hoverTimelinePromise: Promise<any>;
@@ -49,14 +47,13 @@ class BlockProgramModuleController extends AbstractBlockComponentController<Bloc
 		{
 			transitionController.onMouseEnter();
 		}
-
 	}
 
 	/**
-	 * @private
+	 * @public
 	 * @method closeProgramModule
 	 */
-	private closeProgramModule(element: HTMLElement): void
+	public closeProgramModule(element: HTMLElement): void
 	{
 		this._hoverTimelinePromise = new Promise((resolve: ()=>void) =>
 		{
@@ -88,6 +85,8 @@ class BlockProgramModuleController extends AbstractBlockComponentController<Bloc
 	 */
 	public destruct(): void
 	{
+		this._hoverTimelineResolveMethod = null;
+		this._hoverTimelinePromise = null;
 
 		// always call this last
 		super.destruct();

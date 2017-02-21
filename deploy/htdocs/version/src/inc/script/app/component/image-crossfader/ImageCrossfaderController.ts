@@ -12,7 +12,7 @@ import TrianglePattern from "./util/TrianglePattern";
 import Promise = require("bluebird");
 import bowser = require("bowser");
 
-class ImageCrossfaderController extends AbstractTransitionComponentController<ImageCrossfaderViewModel, IImageCrossfaderOptions>
+class ImageCrossfaderController extends AbstractTransitionComponentController<ImageCrossfaderViewModel, IImageCrossfaderOptions, ImageCrossfaderTransitionController>
 {
 	/**
 	 * @description Not sure if we want to crossfade playing video's it could be a performance issue

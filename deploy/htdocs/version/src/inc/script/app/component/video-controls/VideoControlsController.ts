@@ -5,7 +5,7 @@ import VideoControlsViewModel from 'app/component/video-controls/VideoControlsVi
 
 import Log from "lib/temple/util/Log";
 
-class VideoControlsController extends AbstractTransitionComponentController<VideoControlsViewModel, IVideoControlsOptions>
+class VideoControlsController extends AbstractTransitionComponentController<VideoControlsViewModel, IVideoControlsOptions, VideoControlsTransitionController>
 {
 	public static PLAY: string = 'VideoControlsController.PLAY';
 	public static PAUSE: string = 'VideoControlsController.PAUSE';

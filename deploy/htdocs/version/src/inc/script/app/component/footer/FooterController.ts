@@ -5,7 +5,7 @@ import FooterViewModel from 'app/component/footer/FooterViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class FooterController extends AbstractTransitionComponentController<FooterViewModel, IFooterOptions>
+class FooterController extends AbstractTransitionComponentController<FooterViewModel, IFooterOptions, FooterTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

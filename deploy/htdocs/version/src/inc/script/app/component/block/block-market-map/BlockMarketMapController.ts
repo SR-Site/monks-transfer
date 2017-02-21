@@ -16,7 +16,7 @@ import MarketSearchController from "../../market-search/MarketSearchController";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 
 
-class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions>
+class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions, BlockMarketMapTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging
@@ -206,10 +206,10 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	}
 
 	/**
-	 * @private
+	 * @public
 	 * @method selectMarket
 	 */
-	private selectMarket(market: IMarketDetail): void
+	public selectMarket(market: IMarketDetail): void
 	{
 		this.viewModel.selectedMarket(market);
 		this._marketSearchController.setMarket(market);

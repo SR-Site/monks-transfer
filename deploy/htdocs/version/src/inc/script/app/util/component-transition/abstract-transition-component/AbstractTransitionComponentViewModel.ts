@@ -1,10 +1,11 @@
 import IAbstractTransitionComponentOptions from "./IAbstractTransitionComponentOptions";
 import AbstractComponentViewModel from "../../../../lib/temple/component/AbstractComponentViewModel";
-import DefaultSubTransitionController from "./AbstractTransitionComponentController";
+import AbstractTransitionComponentController from "./AbstractTransitionComponentController";
 
-abstract class AbstractTransitionComponentViewModel<T, U extends IAbstractTransitionComponentOptions> extends AbstractComponentViewModel<DefaultSubTransitionController<T, U>, U>
+abstract class AbstractTransitionComponentViewModel<TController extends AbstractTransitionComponentController<any, any, any>, TOptions extends IAbstractTransitionComponentOptions>
+extends AbstractComponentViewModel<TController, TOptions>
 {
-	public controller: T & any;
+	controller: TController;
 }
 
 export default AbstractTransitionComponentViewModel;

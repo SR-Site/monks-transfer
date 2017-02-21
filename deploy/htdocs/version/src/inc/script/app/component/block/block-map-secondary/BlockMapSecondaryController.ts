@@ -8,7 +8,7 @@ import ImageSequenceController from "../../image-sequence/ImageSequenceControlle
 import CommonEvent from "../../../../lib/temple/event/CommonEvent";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 
-class BlockMapSecondaryController extends AbstractBlockComponentController<BlockMapSecondaryViewModel, IBlockMapSecondaryOptions>
+class BlockMapSecondaryController extends AbstractBlockComponentController<BlockMapSecondaryViewModel, IBlockMapSecondaryOptions, BlockMapSecondaryTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

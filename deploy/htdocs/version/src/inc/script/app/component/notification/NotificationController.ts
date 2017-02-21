@@ -10,7 +10,7 @@ import AbstractTransitionComponentController from "../../util/component-transiti
 import Promise = require("bluebird");
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 
-class NotificationController extends AbstractTransitionComponentController<NotificationViewModel, INotificationOptions>
+class NotificationController extends AbstractTransitionComponentController<NotificationViewModel, INotificationOptions, NotificationTransitionController>
 {
 	private _debug: Log = new Log('App.Component.Notification');
 	private _transitionTimeline: TimelineLite;

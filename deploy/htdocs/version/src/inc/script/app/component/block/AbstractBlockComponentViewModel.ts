@@ -7,14 +7,9 @@ import AbstractTransitionComponentViewModel from "../../util/component-transitio
  * @class AbstractBlockComponentViewModel
  * @description This is the base viewModel used for all block components.
  */
-abstract class AbstractBlockComponentViewModel<T, U extends IAbstractBlockComponentOptions> extends AbstractTransitionComponentViewModel<AbstractBlockComponentController<T, U>, U>
+abstract class AbstractBlockComponentViewModel<TController extends AbstractBlockComponentController<any, any, any>, TOptions extends IAbstractBlockComponentOptions>
+	extends AbstractTransitionComponentViewModel<TController, TOptions>
 {
-	/**
-	 * @property controller
-	 * @type {AbstractBlockComponentController<T, U>
-	 */
-	public controller:AbstractBlockComponentController<T, U> & any;
-
 	/**
 	 * @property BlockTYpe
 	 * @type {BlockType}

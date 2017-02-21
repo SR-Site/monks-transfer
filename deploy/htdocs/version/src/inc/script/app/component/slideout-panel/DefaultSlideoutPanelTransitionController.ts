@@ -1,7 +1,7 @@
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 import DefaultSlideoutPanelController from "./DefaultSlideoutPanelController";
 
-class DefaultSlideoutPanelTransitionController extends AbstractTransitionController<DefaultSlideoutPanelController<any, any>>
+class DefaultSlideoutPanelTransitionController<TParentController extends DefaultSlideoutPanelController<any, any, any>> extends AbstractTransitionController<TParentController>
 {
 	/**
 	 * @public

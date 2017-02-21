@@ -10,7 +10,7 @@ import BlockImageCallToActionsViewModel from "./BlockImageCallToActionsViewModel
 import DataManager from "../../../data/DataManager";
 import {DeviceState} from "../../../data/scss-shared/MediaQueries";
 
-class BlockImageCallToActionsController extends AbstractBlockComponentController<BlockImageCallToActionsViewModel, IBlockImageCallToActionsOptions>
+class BlockImageCallToActionsController extends AbstractBlockComponentController<BlockImageCallToActionsViewModel, IBlockImageCallToActionsOptions, BlockImageCallToActionsTransitionController>
 {
 	private static HOVER_SCALE: number = 1.1;
 

@@ -16,7 +16,7 @@ import MouseEventHelper from "../../../app/util/MouseEventHelper";
  * @class AbstractComponentViewModel
  * @extend temple.events.EventDispatcher
  */
-abstract class AbstractComponentViewModel<T extends AbstractComponentController<any, any>, U> extends Destructible
+abstract class AbstractComponentViewModel<TController extends AbstractComponentController<any, any>, TOptions> extends Destructible
 {
 	public MediaQueries: Class = mediaQueries;
 	public ButtonSize: Enum = ButtonSize;
@@ -34,14 +34,14 @@ abstract class AbstractComponentViewModel<T extends AbstractComponentController<
 	 *
 	 * @property controller
 	 */
-	public controller: T & AbstractComponentController<this, U>;
+	public controller: TController & AbstractComponentController<this, TOptions>;
 
 	/**
 	 * Sets the reference to the controller instance for this component.
 	 * @param controller The controller instance
 	 * @method setController
 	 */
-	public setController(controller: T & AbstractComponentController<this, U>)
+	public setController(controller: TController & AbstractComponentController<this, TOptions>)
 	{
 		this.controller = controller;
 	}
@@ -52,7 +52,7 @@ abstract class AbstractComponentViewModel<T extends AbstractComponentController<
 	 * @description shorthand method to get the component options, which contains the backend data
 	 * @returns {any}
 	 */
-	public get data(): U
+	public get data(): TOptions
 	{
 		return this.controller.options;
 	}

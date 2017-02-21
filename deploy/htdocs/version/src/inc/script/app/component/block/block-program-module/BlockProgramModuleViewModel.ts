@@ -29,7 +29,7 @@ class BlockProgramModuleViewModel extends AbstractBlockComponentViewModel<BlockP
 		{
 			this.activeHoverIndex(index);
 
-			this.controller.openProgramModule(event.currentTarget);
+			this.controller.openProgramModule(<HTMLElement>event.currentTarget);
 		}
 	}
 
@@ -43,7 +43,7 @@ class BlockProgramModuleViewModel extends AbstractBlockComponentViewModel<BlockP
 		{
 			this.activeHoverIndex(null);
 
-			this.controller.closeProgramModule(event.currentTarget);
+			this.controller.closeProgramModule(<HTMLElement>event.currentTarget);
 		}
 	}
 

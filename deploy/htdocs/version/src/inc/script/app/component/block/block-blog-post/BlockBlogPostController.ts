@@ -5,7 +5,7 @@ import BlockBlogPostViewModel from 'app/component/block/block-blog-post/BlockBlo
 
 import Log from "lib/temple/util/Log";
 
-class BlockBlogPostController extends AbstractBlockComponentController<BlockBlogPostViewModel, IBlockBlogPostOptions>
+class BlockBlogPostController extends AbstractBlockComponentController<BlockBlogPostViewModel, IBlockBlogPostOptions, BlockBlogPostTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

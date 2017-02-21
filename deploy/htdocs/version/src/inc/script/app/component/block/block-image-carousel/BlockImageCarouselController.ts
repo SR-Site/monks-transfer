@@ -9,7 +9,7 @@ import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedCon
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
 
-class BlockImageCarouselController extends AbstractBlockComponentController<BlockImageCarouselViewModel, IBlockImageCarouselOptions>
+class BlockImageCarouselController extends AbstractBlockComponentController<BlockImageCarouselViewModel, IBlockImageCarouselOptions, BlockImageCarouselTransitionController>
 {
 	private _infiniteImageCarousel:InfiniteImageCarousel;
 	private _paginatorDashedController:PaginatorDashedController;

@@ -9,7 +9,7 @@ import DataManager from "../../data/DataManager";
 import StateModel from "../../data/model/StateModel";
 import ThrottleDebounce from "../../../lib/temple/util/ThrottleDebounce";
 
-class MarketSearchController extends AbstractTransitionComponentController<MarketSearchViewModel, IMarketSearchOptions>
+class MarketSearchController extends AbstractTransitionComponentController<MarketSearchViewModel, IMarketSearchOptions, MarketSearchTransitionController>
 {
 	public static RESET: string = 'MarketSearchController.RESET';
 	public static SELECT: string = 'MarketSearchController.SELECT';

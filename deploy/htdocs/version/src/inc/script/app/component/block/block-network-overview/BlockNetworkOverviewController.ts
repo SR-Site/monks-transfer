@@ -1,18 +1,15 @@
 import AbstractBlockComponentController from "../AbstractBlockComponentController";
-import BlockNetworkOverviewTransitionController from 'app/component/block/block-network-overview/BlockNetworkOverviewTransitionController';
-import IBlockNetworkOverviewOptions from 'app/component/block/block-network-overview/IBlockNetworkOverviewOptions';
-import BlockNetworkOverviewViewModel from 'app/component/block/block-network-overview/BlockNetworkOverviewViewModel';
-
+import BlockNetworkOverviewTransitionController from "app/component/block/block-network-overview/BlockNetworkOverviewTransitionController";
+import IBlockNetworkOverviewOptions from "app/component/block/block-network-overview/IBlockNetworkOverviewOptions";
+import BlockNetworkOverviewViewModel from "app/component/block/block-network-overview/BlockNetworkOverviewViewModel";
 import Log from "lib/temple/util/Log";
-import DraggableInstance from "../../../util/DraggableInstance";
+import DraggableInstance, {IDraggableEventData} from "../../../util/DraggableInstance";
 import ScrollBarController from "../../scroll-bar/ScrollBarController";
 import CommonEvent from "../../../../lib/temple/event/CommonEvent";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
-import {IDraggableEventData} from "../../../util/DraggableInstance";
-import AbstractTransitionComponentController from "../../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 
-class BlockNetworkOverviewController extends AbstractBlockComponentController<BlockNetworkOverviewViewModel, IBlockNetworkOverviewOptions>
+class BlockNetworkOverviewController extends AbstractBlockComponentController<BlockNetworkOverviewViewModel, IBlockNetworkOverviewOptions, BlockNetworkOverviewTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

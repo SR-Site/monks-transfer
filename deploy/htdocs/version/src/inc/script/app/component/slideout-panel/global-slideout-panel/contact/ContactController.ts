@@ -7,7 +7,7 @@ import Loader from "../../../../util/Loader";
 import DataManager from "../../../../data/DataManager";
 import FixedElementHelper from "../../../../util/FixedElementHelper";
 
-class ContactController extends AbstractTransitionComponentController<ContactViewModel, IContactOptions>
+class ContactController extends AbstractTransitionComponentController<ContactViewModel, IContactOptions, ContactTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

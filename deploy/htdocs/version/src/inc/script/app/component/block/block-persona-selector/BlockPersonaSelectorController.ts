@@ -9,10 +9,8 @@ import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
 import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedController";
 import Promise = require("bluebird");
 
-class BlockPersonaSelectorController extends AbstractBlockComponentController<BlockPersonaSelectorViewModel, IBlockPersonaSelectorOptions>
+class BlockPersonaSelectorController extends AbstractBlockComponentController<BlockPersonaSelectorViewModel, IBlockPersonaSelectorOptions, BlockPersonaSelectorTransitionController>
 {
-	public transitionController: BlockPersonaSelectorTransitionController;
-
 	/**
 	 *    Instance of Log debug utility for debug logging
 	 *    @property _debug

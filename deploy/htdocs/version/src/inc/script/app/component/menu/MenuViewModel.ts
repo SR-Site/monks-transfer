@@ -20,7 +20,7 @@ class MenuViewModel extends DefaultComponentTransitionViewModel<MenuController, 
 	public handleClickContact(): void
 	{
 		// Close the menu panel
-		this.controller.dispatch(MenuEvent.CLOSE)
+		this.controller.dispatch(MenuEvent.CLOSE);
 
 		// Open the contact panel
 		DataManager.getInstance().panelController.transitionIn(PanelBlocks.CONTACT);

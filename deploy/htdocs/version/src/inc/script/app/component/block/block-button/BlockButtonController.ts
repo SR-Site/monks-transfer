@@ -5,7 +5,7 @@ import BlockButtonViewModel from 'app/component/block/block-button/BlockButtonVi
 
 import Log from "lib/temple/util/Log";
 
-class BlockButtonController extends AbstractBlockComponentController<BlockButtonViewModel, IBlockButtonOptions>
+class BlockButtonController extends AbstractBlockComponentController<BlockButtonViewModel, IBlockButtonOptions, BlockButtonTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

@@ -5,7 +5,7 @@ import BlockTextViewModel from 'app/component/block/block-text/BlockTextViewMode
 
 import Log from "lib/temple/util/Log";
 
-class BlockTextController extends AbstractBlockComponentController<BlockTextViewModel, IBlockTextOptions>
+class BlockTextController extends AbstractBlockComponentController<BlockTextViewModel, IBlockTextOptions, BlockTextTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

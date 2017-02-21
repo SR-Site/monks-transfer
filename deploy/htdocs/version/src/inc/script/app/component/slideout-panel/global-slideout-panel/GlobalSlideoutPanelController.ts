@@ -3,9 +3,10 @@ import GlobalSlideoutPanelViewModel from "./GlobalSlideoutPanelViewModel";
 import IGlobalSlideoutPanelOptions from "./IGlobalSlideoutPanelOptions";
 import DefaultSlideoutPanelController from "../DefaultSlideoutPanelController";
 import DefaultSlideoutPanelTransitionController from "../DefaultSlideoutPanelTransitionController";
+import GlobalSlideoutPanelTransitionController from "./GlobalSlideoutPanelTransitionController";
 import Promise = require("bluebird");
 
-class GlobalSlideoutPanelController extends DefaultSlideoutPanelController<GlobalSlideoutPanelViewModel, IGlobalSlideoutPanelOptions>
+class GlobalSlideoutPanelController extends DefaultSlideoutPanelController<GlobalSlideoutPanelViewModel, IGlobalSlideoutPanelOptions, GlobalSlideoutPanelTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging
