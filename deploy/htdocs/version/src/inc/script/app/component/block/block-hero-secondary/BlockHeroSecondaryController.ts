@@ -19,7 +19,7 @@ class BlockHeroSecondaryController extends AbstractBlockComponentController<Bloc
 	private _debug: Log = new Log('app.component.BlockHeroSecondary');
 
 	private _imageCrossfader: ImageCrossfaderController;
-	private _videoElement: VideoElement = new VideoElement();
+	private _videoElement: VideoElement;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -31,6 +31,7 @@ class BlockHeroSecondaryController extends AbstractBlockComponentController<Bloc
 
 		if(this.canPlayVideo() && this.hasVideo())
 		{
+			this._videoElement = new VideoElement();
 			this._videoElement.setWidth(1280);
 			this._videoElement.setHeight(720);
 			this._videoElement.setVolume(0);

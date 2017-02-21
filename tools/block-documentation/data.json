@@ -811,6 +811,15 @@
                     "properties": []
                 },
                 {
+                    "name": "backgroundVideo",
+                    "type": "IVideo",
+                    "required": false,
+                    "defaultValue": "null",
+                    "description": "The slide background video, this will overrule the background image on desktop. Note that we can only use internal videos!",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
                     "name": "background",
                     "type": "IImage",
                     "required": true,
@@ -820,7 +829,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"heroTertiary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"heroTertiary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"backgroundVideo\": {\n            \"url\": \"path/to/video.mp4\",\n            \"type\": 0\n        },\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
         },
         {
             "blockId": "howToAdvertise",

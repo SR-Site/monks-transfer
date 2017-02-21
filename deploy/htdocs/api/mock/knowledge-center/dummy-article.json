@@ -11,6 +11,10 @@
 						"normal": "data/image/hero-tertiary/background.jpg",
 						"small": "data/image/hero-tertiary/background.jpg",
 						"alt": "Background image alt text"
+					},
+					"backgroundVideo": {
+						"url": "data/video/video.mp4",
+						"type": 0
 					}
 				}
 			},
