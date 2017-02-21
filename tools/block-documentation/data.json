@@ -53,7 +53,7 @@
                             "required": true,
                             "defaultValue": "null",
                             "description": "The type of the link",
-                            "placeholder": "",
+                            "placeholder": "0",
                             "properties": []
                         },
                         {
@@ -237,7 +237,7 @@
                             "required": true,
                             "defaultValue": "null",
                             "description": "The type of the link",
-                            "placeholder": "",
+                            "placeholder": "0",
                             "properties": []
                         },
                         {
@@ -320,7 +320,7 @@
                             "required": true,
                             "defaultValue": "null",
                             "description": "The type of the link",
-                            "placeholder": "",
+                            "placeholder": "0",
                             "properties": []
                         },
                         {
@@ -724,6 +724,15 @@
                     "properties": []
                 },
                 {
+                    "name": "backgroundVideo",
+                    "type": "IVideo",
+                    "required": false,
+                    "defaultValue": "null",
+                    "description": "The slide background video, this will overrule the background image on desktop. Note that we can only use internal videos!",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
                     "name": "background",
                     "type": "IImage",
                     "required": true,
@@ -769,7 +778,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"heroSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"backgroundColor\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"heroSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"backgroundVideo\": {\n            \"url\": \"path/to/video.mp4\",\n            \"type\": 0\n        },\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"backgroundColor\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "heroTertiary",
@@ -1303,7 +1312,7 @@
                                     "required": true,
                                     "defaultValue": "null",
                                     "description": "The type of the link",
-                                    "placeholder": "",
+                                    "placeholder": "0",
                                     "properties": []
                                 },
                                 {
@@ -2550,7 +2559,7 @@
                     "required": true,
                     "defaultValue": "null",
                     "description": "The type of the link",
-                    "placeholder": "",
+                    "placeholder": "0",
                     "properties": []
                 },
                 {
