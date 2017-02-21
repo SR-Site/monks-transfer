@@ -124,15 +124,31 @@ abstract class AbstractTransitionController<TParentController extends AbstractTr
 
 		if(waitForParent)
 		{
-			this.getRootComponent().callbackCounter.promise.then(() =>
+			const rootComponentCallbackCounter = this.getRootComponent().callbackCounter;
+			if(rootComponentCallbackCounter)
 			{
-				if(!this.isDestructed())
-				{
-					this.setupTransitionTimeline();
-				}
-			});
+				rootComponentCallbackCounter.promise.then(() => this.handleRootComponentLoaded());
+			}
+			// In case a transitionComponent is not nested
+			// within a transitionComponent (thus has not a callbackCounter).
+			else
+			{
+				this.handleRootComponentLoaded();
+			}
 		}
 		else
+		{
+			this.setupTransitionTimeline();
+		}
+	}
+
+	/**
+	 * @private
+	 * @method handleRootComponentLoaded
+	 */
+	private handleRootComponentLoaded(): void
+	{
+		if(!this.isDestructed())
 		{
 			this.setupTransitionTimeline();
 		}
