@@ -18,12 +18,6 @@
 								"target": "/capabilities",
 								"type": 2
 							},
-							"secondaryLink": {
-								"label": "Next",
-								"title": "Next",
-								"target": "/home",
-								"type": 1
-							},
 							"background": {
 								"normal": "data/image/hero-main/slide-1.jpg",
 								"small": "data/image/hero-main/slide-1.jpg",
@@ -58,12 +52,6 @@
 								"title": "Play showreel",
 								"target": "/capabilities",
 								"type": 2
-							},
-							"secondaryLink": {
-								"label": "Next",
-								"title": "Next",
-								"target": "/home",
-								"type": 1
 							},
 							"background": {
 								"normal": "data/image/hero-main/slide-2.jpg",

@@ -1526,9 +1526,55 @@
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
                     "placeholder": "0",
                     "properties": []
+                },
+                {
+                    "name": "searchLabel",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The label of the search button",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
+                    "name": "service",
+                    "type": "Object",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The service displayed in the right bottom corner",
+                    "placeholder": "",
+                    "properties": [
+                        {
+                            "name": "name",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The name of the service person",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "role",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The role of the service person",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "image",
+                            "type": "IImage",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The image of the service person",
+                            "placeholder": "",
+                            "properties": []
+                        }
+                    ]
                 }
             ],
-            "example": "{\n    \"id\": \"marketMap\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"marketMap\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"searchLabel\": \"Lorem ipsum dolor sit amet\",\n        \"service\": \"TODO: Object\"\n    }\n}"
         },
         {
             "blockId": "more",

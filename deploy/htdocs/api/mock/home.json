@@ -22,7 +22,12 @@
 								"normal": "data/image/hero-main/slide-1.jpg",
 								"small": "data/image/hero-main/slide-1.jpg",
 								"alt": "Background image alt text"
-							}
+							},
+							"backgroundVideo": {
+								"url": "data/video/video.mp4",
+								"videoType": 0
+							},
+							"statistics": null
 						},
 						{
 							"heading": "Lorem ipsum dolor sit amet",
@@ -37,7 +42,12 @@
 								"normal": "data/image/hero-main/slide-2.jpg",
 								"small": "data/image/hero-main/slide-2.jpg",
 								"alt": "Background image alt text"
-							}
+							},
+							"backgroundVideo": {
+								"url": "data/video/video_2.mp4",
+								"videoType": 0
+							},
+							"statistics": null
 						}
 					]
 				}

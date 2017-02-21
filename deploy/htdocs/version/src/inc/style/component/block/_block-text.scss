@@ -18,7 +18,8 @@
 		}
 	}
 
-	@include respond-to(MEDIUM) {
+
+	@include respond-to(LARGE) {
 		.site-frame {
 			padding-left: $sizeGrid;
 			padding-right: $sizeGrid;

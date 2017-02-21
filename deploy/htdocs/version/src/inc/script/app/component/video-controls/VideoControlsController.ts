@@ -85,8 +85,6 @@ class VideoControlsController extends AbstractTransitionComponentController<Vide
 		this._knob = <HTMLElement>this.element.querySelector('.knob');
 		this._bounds = <HTMLElement>this.element.querySelector('.progress-bar-wrapper');
 
-		console.log(this._bounds);
-
 		this.createDraggableInstance();
 
 		super.allComponentsLoaded();

@@ -24,6 +24,16 @@
 	}
 
 	// Breakpoints
+	@include respond-to(LARGE) {
+		.content-items {
+			justify-content: center;
+
+			.component-block-info {
+				margin-left: auto;
+			}
+		}
+	}
+
 	@include respond-to(SMALL) {
 		.load-more-button-wrapper {
 			padding-left: $sizeGrid;
