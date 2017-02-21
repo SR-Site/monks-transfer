@@ -12,6 +12,7 @@ interface ILink extends IAction
 	/**
 	 * @property
 	 * @description The type of the link
+	 * @placeholder 0
 	 */
 	type:LinkType;
 	/**

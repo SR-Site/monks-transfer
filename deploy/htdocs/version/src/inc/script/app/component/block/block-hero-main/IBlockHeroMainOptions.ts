@@ -28,7 +28,7 @@ interface IBlockHeroMainOptions extends IAbstractBlockComponentOptions
 		background: IImage;
 		/**
 		 * @property
-		 * @description The slide background video, this will overrule the background image on desktop
+		 * @description The slide background video, this will overrule the background image on desktop. Note that we can only use internal videos!
 		 */
 		backgroundVideo?:IVideo;
 		/**
