@@ -117,6 +117,8 @@ class BlockHeroTertiaryController extends AbstractBlockComponentController<Block
 	 */
 	public destruct(): void
 	{
+		this._imageCrossfader = null;
+		this._videoElement = null;
 
 		// always call this last
 		super.destruct();
