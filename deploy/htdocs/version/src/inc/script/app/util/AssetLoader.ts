@@ -19,6 +19,9 @@ class AssetLoader
 		{
 			let tmpImage = new Image();
 
+				// Set to Anonymous to allow cross domain assets on canvas
+				tmpImage.crossOrigin = 'Anonymous';
+
 			$(tmpImage)
 				.on('load', (event) => resolve(tmpImage))
 				.on('error', (reason) => reject('Could not start image load; error processing image'))
