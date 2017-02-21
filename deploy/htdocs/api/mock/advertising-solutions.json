@@ -20,6 +20,10 @@
 						"normal": "data/image/hero-secondary/background.jpg",
 						"small": "data/image/hero-secondary/background.jpg",
 						"alt": "Background image alt text"
+					},
+					"backgroundVideo": {
+						"url": "data/video/video.mp4",
+						"type": 0
 					}
 				}
 			},
