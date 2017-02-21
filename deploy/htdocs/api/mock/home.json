@@ -25,7 +25,7 @@
 							},
 							"backgroundVideo": {
 								"url": "data/video/video.mp4",
-								"videoType": 0
+								"type": 0
 							},
 							"statistics": null
 						},
