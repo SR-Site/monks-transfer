@@ -5,6 +5,7 @@ import LinkType from "../../app/data/enum/type/LinkType";
 import ILink from "../../app/data/interface/action/ILink";
 import Branches from "../../app/data/enum/gaia/Branches";
 import ko = require('knockout');
+import Params from "../../app/data/enum/gaia/Params";
 
 class KnockoutGaiaGoto
 {
@@ -36,6 +37,13 @@ class KnockoutGaiaGoto
 		{
 			branch = value[0];
 			deeplink = value[1];
+		}
+
+		// Remove the first slash from the route, because Gaia handles this!
+		let deeplinkParam = deeplink[Params.DEEPLINK];
+		if(deeplinkParam !== void 0)
+		{
+			deeplink[Params.DEEPLINK] = deeplinkParam.charAt(0) === '/' ? deeplinkParam.slice(1) : deeplinkParam;
 		}
 
 		let route = Gaia.router.assemble(branch, deeplink) || '/';
