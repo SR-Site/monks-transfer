@@ -18,8 +18,7 @@
 	&.windowed {
 		padding: 0 $sizeGrid * 2;
 	}
-
-	@include respond-to(LARGE) {
+	@include respond-to(X_LARGE){
 		max-width: calc(100vw - #{$sizeGrid * 2});
 	}
 
