@@ -183,6 +183,7 @@
 						{
 							"heading": "Television",
 							"paragraph": "The foundation of a solid brand is built on TV, the most powerful video platform ever created.",
+							"theme": 1,
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-tv.jpg",
 								"small": "data/image/image-call-to-actions/image-tv.jpg",
@@ -203,6 +204,7 @@
 						{
 							"heading": "Digital",
 							"paragraph": "Extend your campaign and make your message stronger across every screen, everywhere your customers are, no matter what.",
+							"theme": 1,
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-digital.jpg",
 								"small": "data/image/image-call-to-actions/image-digital.jpg",
@@ -223,6 +225,7 @@
 						{
 							"heading": "Creative <br/>services",
 							"paragraph": "Your brand’s story deserves to be told by award-winning storytellers – and we have them. If your message isn’t right on point, you’re just wasting your energy.",
+							"theme": 1,
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-creative.jpg",
 								"small": "data/image/image-call-to-actions/image-creative.jpg",
@@ -259,6 +262,7 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"target": "knowledge-center/dummy-article",
+							"theme": 0,
 							"image": {
 								"normal": "data/image/latest/latest-article-image-1.jpg",
 								"small": "data/image/latest/image-small.jpg",
@@ -283,6 +287,7 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"target": "knowledge-center/dummy-article",
+							"theme": 1,
 							"image": {
 								"normal": "data/image/latest/latest-article-image-2.jpg",
 								"small": "data/image/latest/image-small.jpg",
@@ -307,6 +312,7 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"target": "knowledge-center/dummy-article",
+							"theme": 0,
 							"image": {
 								"normal": "data/image/latest/latest-article-image-2.jpg",
 								"small": "data/image/latest/image-small.jpg",
@@ -331,6 +337,7 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"target": "knowledge-center/dummy-article",
+							"theme": 0,
 							"image": {
 								"normal": "data/image/latest/latest-article-image-1.jpg",
 								"small": "data/image/latest/image-small.jpg",

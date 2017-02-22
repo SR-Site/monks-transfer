@@ -110,6 +110,7 @@
 					"slides": [
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
+							"theme": 0,
 							"image": {
 								"normal": "data/image/image-carousel/image-1.jpg",
 								"small": "data/image/image-carousel/image-1.jpg",
@@ -118,6 +119,7 @@
 						},
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
+							"theme": 1,
 							"image": {
 								"normal": "data/image/image-carousel/image-2.jpg",
 								"small": "data/image/image-carousel/image-2.jpg",
@@ -126,6 +128,7 @@
 						},
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
+							"theme": 0,
 							"image": {
 								"normal": "data/image/image-carousel/image-1.jpg",
 								"small": "data/image/image-carousel/image-1.jpg",
@@ -160,6 +163,7 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"target": "knowledge-center/dummy-article",
+							"theme": 0,
 							"image": {
 								"normal": "data/image/latest/latest-article-image-1.jpg",
 								"small": "data/image/latest/latest-article-image-1.jpg",
@@ -184,6 +188,7 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"target": "knowledge-center/dummy-article",
+							"theme": 1,
 							"image": {
 								"normal": "data/image/latest/latest-article-image-2.jpg",
 								"small": "data/image/latest/latest-article-image-2.jpg",
@@ -208,6 +213,7 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"target": "knowledge-center/dummy-article",
+							"theme": 1,
 							"image": {
 								"normal": "data/image/latest/latest-article-image-2.jpg",
 								"small": "data/image/latest/latest-article-image-2.jpg",
@@ -232,6 +238,7 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"target": "knowledge-center/dummy-article",
+							"theme": 0,
 							"image": {
 								"normal": "data/image/latest/latest-article-image-1.jpg",
 								"small": "data/image/latest/latest-article-image-1.jpg",

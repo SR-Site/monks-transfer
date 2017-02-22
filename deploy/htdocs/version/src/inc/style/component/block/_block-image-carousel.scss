@@ -41,7 +41,14 @@
 		figcaption {
 			@include pos(auto, auto, $sizeGrid * 2, $sizeGrid * 2);
 			position: absolute;
+		}
+
+		.theme-light {
 			color: $colorWhite;
+		}
+
+		.theme-dark {
+			color: $colorPrimary;
 		}
 	}
 

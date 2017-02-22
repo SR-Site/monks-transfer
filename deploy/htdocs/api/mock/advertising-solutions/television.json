@@ -87,6 +87,7 @@
 						{
 							"heading": "Start with Television:",
 							"paragraph": "Your brand deserves to be seen. Get in front of your most valuable customers by advertising on the top 50+ cable networks, with the best in sports, news, and entertainment programming.",
+							"theme": 1,
 							"background": {
 								"normal": "data/image/story-info-images/story-1-background.jpg",
 								"small": "data/image/story-info-images/story-1-background.jpg",
@@ -101,6 +102,7 @@
 						{
 							"heading": "Expand on multiple screens:",
 							"paragraph": "Reach your customer wherever they’re watching with targeted ads on TV, online, and on mobile.",
+							"theme": 0,
 							"background": {
 								"normal": "data/image/story-info-images/story-2-background.jpg",
 								"small": "data/image/story-info-images/story-2-background.jpg",
@@ -115,6 +117,7 @@
 						{
 							"heading": "Reach even more:",
 							"paragraph": "With exclusive, interactive products created for businesses who want to build deeper relationships with customers.",
+							"theme": 1,
 							"background": {
 								"normal": "data/image/story-info-images/story-1-background.jpg",
 								"small": "data/image/story-info-images/story-1-background.jpg",
@@ -368,6 +371,7 @@
 						{
 							"heading": "The power of TV + Digital",
 							"paragraph": "Access to the best content; your advertisement during news, sports and award winning shows",
+							"theme": 1,
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-tv.jpg",
 								"small": "data/image/image-call-to-actions/image-tv.jpg",
@@ -388,6 +392,7 @@
 						{
 							"heading": "Meet <span class='highlight'>kernel,</span> <br/>Let’s Grow Your Brand",
 							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"theme": 1,
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-digital.jpg",
 								"small": "data/image/image-call-to-actions/image-digital.jpg",

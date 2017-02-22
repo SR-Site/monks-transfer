@@ -2,12 +2,14 @@ import AbstractBlockComponentViewModel from "../AbstractBlockComponentViewModel"
 import BlockImageCallToActionsController from "app/component/block/block-image-call-to-actions/BlockImageCallToActionsController";
 import IBlockImageCallToActionsOptions from "app/component/block/block-image-call-to-actions/IBlockImageCallToActionsOptions";
 import StringUtils from "../../../../lib/temple/util/type/StringUtils";
+import ThemeHelper from "../../../util/ThemeHelper";
 
 import ko = require('knockout');
 
 class BlockImageCallToActionsViewModel extends AbstractBlockComponentViewModel<BlockImageCallToActionsController, IBlockImageCallToActionsOptions>
 {
 	public StringUtils: Class = StringUtils;
+	public ThemeHelper:Class = ThemeHelper;
 
 	public activeImageIndex: KnockoutObservable<number> = ko.observable(null);
 	public triangleSize:KnockoutObservable<number> = ko.observable(0);
@@ -46,6 +48,7 @@ class BlockImageCallToActionsViewModel extends AbstractBlockComponentViewModel<B
 	 */
 	public destruct(): void
 	{
+		this.ThemeHelper = null;
 		this.StringUtils = null;
 		this.activeImageIndex = null;
 		this.triangleSize = null;

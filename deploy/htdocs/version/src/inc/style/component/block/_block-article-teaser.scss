@@ -75,6 +75,25 @@
 		}
 	}
 
+	.theme-dark {
+		figure {
+			.hover-heading {
+				color: $colorPrimary;
+			}
+
+			.hover-icon {
+
+				path {
+					fill: $colorPrimary;
+				}
+
+				circle {
+					stroke: $colorPrimary;
+				}
+			}
+		}
+	}
+
 	&.transition-in-complete {
 		figure {
 			transition: clip .8s ease(easeOutExpo);

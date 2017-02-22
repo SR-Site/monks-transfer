@@ -14,6 +14,7 @@
 			padding: $sizeGrid $sizeGrid * 2;
 			flex-grow: 1;
 			transition: background .4s ease(linear);
+			color: $colorPrimary;
 
 			.copy {
 				transition: opacity .4s ease(linear), transform .4s ease(easeInOutCubic);
@@ -32,6 +33,14 @@
 				.copy {
 					opacity :1;
 					transform: translateX(0);
+				}
+
+				.theme-dark {
+					color: $colorPrimary;
+				}
+
+				.theme-light {
+					color: $colorWhite;
 				}
 			}
 		}

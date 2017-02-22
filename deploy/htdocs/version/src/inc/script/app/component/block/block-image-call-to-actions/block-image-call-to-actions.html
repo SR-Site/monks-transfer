@@ -1,4 +1,5 @@
-<div class="component-block-image-call-to-actions" data-bind="css: {'windowed': data.windowed, 'transition-in-complete': $root.transitionInComplete()}">
+<div class="component-block-image-call-to-actions"
+     data-bind="css: {'windowed': data.windowed, 'transition-in-complete': $root.transitionInComplete()}">
 	<div class="call-to-actions-wrapper abs-fill">
 		<div class="call-to-actions-images abs-fill" data-bind="foreach: data.callToActions">
 			<div class="call-to-action-image abs-fill" data-bind="css: {
@@ -28,19 +29,22 @@
 					['mouseenter',  $root.handleMouseEnter.bind($root, $data)],
 					['mouseleave', $root.handleMouseLeave.bind($root, $data)]
 				]">
-				<span class="text-wrapper">
-					<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
-					<h3 class="heading heading-03" data-bind="html: heading"></h3>
-					<p class="copy copy-01" data-bind="html: paragraph"></p>
-				</span>
+				<div class="theme" data-bind="css: $root.ThemeHelper.getTheme($data.theme)">
+					<span class="text-wrapper">
+						<span class="pagination-number"
+						      data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
+						<h3 class="heading heading-03" data-bind="html: heading"></h3>
+						<p class="copy copy-01" data-bind="html: paragraph"></p>
+					</span>
 
-				<div class="clip-mask">
-					<div class="triangle" data-bind="style: {
-						'border-bottom-width': $root.triangleSize()+ 'px',
-						'border-left-width': $root.triangleSize() + 'px',
-						'top': -$root.triangleSize() + 'px'
-					}">
+					<div class="clip-mask">
+						<div class="triangle" data-bind="style: {
+							'border-bottom-width': $root.triangleSize()+ 'px',
+							'border-left-width': $root.triangleSize() + 'px',
+							'top': -$root.triangleSize() + 'px'
+						}">
 
+						</div>
 					</div>
 				</div>
 			</a>

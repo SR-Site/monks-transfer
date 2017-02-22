@@ -31,6 +31,15 @@
                     "properties": []
                 },
                 {
+                    "name": "theme",
+                    "type": "Theme",
+                    "required": true,
+                    "defaultValue": "0",
+                    "description": "Sometimes you want to switch a color based on the background image to increase readability",
+                    "placeholder": "1",
+                    "properties": []
+                },
+                {
                     "name": "tags",
                     "type": "Array",
                     "required": true,
@@ -113,7 +122,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"articleTeaser\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"target\": \"Lorem ipsum dolor sit amet\",\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"articleTeaser\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"theme\": 0,\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"target\": \"Lorem ipsum dolor sit amet\",\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "audioFragment",
@@ -1001,11 +1010,20 @@
                             "description": "Link",
                             "placeholder": "",
                             "properties": []
+                        },
+                        {
+                            "name": "theme",
+                            "type": "Theme",
+                            "required": true,
+                            "defaultValue": "1",
+                            "description": "Sometimes you want to switch a color based on the background image to increase readability",
+                            "placeholder": "1",
+                            "properties": []
                         }
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"imageCallToActions\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"callToActions\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"imageCallToActions\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"callToActions\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"theme\": 0\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "imageCarousel",
@@ -1343,6 +1361,15 @@
                                     "properties": []
                                 }
                             ]
+                        },
+                        {
+                            "name": "theme",
+                            "type": "Theme",
+                            "required": true,
+                            "defaultValue": "0",
+                            "description": "Sometimes you want to switch a color based on the background image to increase readability",
+                            "placeholder": "1",
+                            "properties": []
                         }
                     ]
                 },
@@ -1356,7 +1383,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"latest\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"articles\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"target\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"tags\": [\n                    {\n                        \"target\": \"path/to/page\",\n                        \"type\": 0,\n                        \"label\": \"Lorem ipsum dolor sit amet\",\n                        \"title\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ]\n            }\n        ],\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"latest\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"articles\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"target\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"tags\": [\n                    {\n                        \"target\": \"path/to/page\",\n                        \"type\": 0,\n                        \"label\": \"Lorem ipsum dolor sit amet\",\n                        \"title\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ],\n                \"theme\": 0\n            }\n        ],\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "map",
@@ -1722,6 +1749,15 @@
                                     "properties": []
                                 }
                             ]
+                        },
+                        {
+                            "name": "theme",
+                            "type": "Theme",
+                            "required": true,
+                            "defaultValue": "0",
+                            "description": "Sometimes you want to switch a color based on the background image to increase readability",
+                            "placeholder": "1",
+                            "properties": []
                         }
                     ]
                 },
@@ -1781,7 +1817,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"more\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"articles\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"target\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"tags\": [\n                    {\n                        \"target\": \"path/to/page\",\n                        \"type\": 0,\n                        \"label\": \"Lorem ipsum dolor sit amet\",\n                        \"title\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ]\n            }\n        ],\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"more\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"articles\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"target\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"tags\": [\n                    {\n                        \"target\": \"path/to/page\",\n                        \"type\": 0,\n                        \"label\": \"Lorem ipsum dolor sit amet\",\n                        \"title\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ],\n                \"theme\": 0\n            }\n        ],\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "networkOverview",
@@ -2468,11 +2504,20 @@
                             "description": "The blurred version of the image",
                             "placeholder": "",
                             "properties": []
+                        },
+                        {
+                            "name": "theme",
+                            "type": "Theme",
+                            "required": true,
+                            "defaultValue": "1",
+                            "description": "Sometimes you want to switch a color based on the background image to increase readability",
+                            "placeholder": "1",
+                            "properties": []
                         }
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"storyInfoImages\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"stories\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"storyInfoImages\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"stories\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"theme\": 0\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "text",
@@ -2671,6 +2716,19 @@
                 {
                     "name": "SCROLL_TO_NEXT_SECTION",
                     "value": 2
+                }
+            ]
+        },
+        {
+            "name": "Theme",
+            "properties": [
+                {
+                    "name": "LIGHT",
+                    "value": 0
+                },
+                {
+                    "name": "DARK",
+                    "value": 1
                 }
             ]
         },

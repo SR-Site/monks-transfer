@@ -1,5 +1,6 @@
 import ITag from "./action/ITag";
 import IImage from "./media/IImage";
+import Theme from "../enum/style/Theme";
 
 interface INewsArticle
 {
@@ -28,6 +29,13 @@ interface INewsArticle
 	 * @description The tags linked to this article
 	 */
 	tags: Array<ITag>;
+	/**
+	 * @property
+	 * @description Sometimes you want to switch a color based on the background image to increase readability
+	 * @placeholder 1
+	 * @defaultValue 0
+	 */
+	theme:Theme;
 }
 
 export default INewsArticle;

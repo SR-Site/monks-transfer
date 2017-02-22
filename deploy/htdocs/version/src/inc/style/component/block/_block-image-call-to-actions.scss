@@ -9,9 +9,16 @@
 			cursor: pointer;
 			text-decoration: none;
 			position: relative;
-			color: $colorPrimary;
 			height: 100%;
 			display: inline-block;
+
+			.theme-dark {
+				color: $colorPrimary;
+			}
+
+			.theme-light {
+				color: $colorWhite;
+			}
 		}
 
 		.heading {
@@ -80,7 +87,7 @@
 		}
 	}
 
-	@include respond-to(MEDIUM){
+	@include respond-to(MEDIUM) {
 		.text-wrapper {
 			top: $sizeGridSecondary;
 			padding: 0 $sizeGridSecondary;

@@ -3,18 +3,20 @@
 		<div class="slider-viewport infinite-carousel js-image-carousel">
 			<ul class="slides js-slides" data-bind="foreach: data.slides">
 				<li class="slide js-slide">
-					<figure class="abs-fill">
-						<img data-bind="
-								image: {
-							image: $data.image,
-							state: $root.deviceState()
-						}"/>
-						<!-- ko if: heading -->
-							<figcaption>
-								<p class="copy copy-01" data-bind="html: heading"></p>
-							</figcaption>
-						<!-- /ko -->
-					</figure>
+					<div class="theme" data-bind="css: $root.ThemeHelper.getTheme($data.theme)">
+						<figure class="abs-fill">
+							<img data-bind="
+									image: {
+								image: $data.image,
+								state: $root.deviceState()
+							}"/>
+							<!-- ko if: heading -->
+								<figcaption>
+									<p class="copy copy-01" data-bind="html: heading"></p>
+								</figcaption>
+							<!-- /ko -->
+						</figure>
+					</div>
 				</li>
 			</ul>
 		</div>

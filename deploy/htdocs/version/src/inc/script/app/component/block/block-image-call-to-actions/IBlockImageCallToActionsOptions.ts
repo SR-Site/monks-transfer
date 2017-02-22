@@ -1,6 +1,7 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import IImage from "../../../data/interface/media/IImage";
 import ILink from "../../../data/interface/action/ILink";
+import Theme from "../../../data/enum/style/Theme";
 
 interface IBlockImageCallToActionsOptions extends IAbstractBlockComponentOptions
 {
@@ -35,6 +36,13 @@ interface IBlockImageCallToActionsOptions extends IAbstractBlockComponentOptions
 		 * @description Link
 		 */
 		link: ILink;
+		/**
+		 * @property
+		 * @description Sometimes you want to switch a color based on the background image to increase readability
+		 * @placeholder 1
+		 * @defaultValue 1
+		 */
+		theme:Theme;
 	}>
 }
 
