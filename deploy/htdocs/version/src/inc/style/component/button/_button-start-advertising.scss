@@ -41,8 +41,9 @@
 		}
 
 		circle {
-			fill: transparent;
-			stroke: $colorWhite;
+			fill: $colorSecondary;
+			stroke: $colorSecondary;
+			opacity: 1;
 			stroke-width: 1px;
 			transition: stroke .2s ease(easeInOut), stroke-width .2s ease(easeInOut), opacity .2s ease(easeInOut);
 		}
@@ -62,12 +63,6 @@
 	@include hover() {
 		.icon {
 			color: $colorWhite;
-
-			circle {
-				fill: $colorSecondary;
-				stroke: $colorSecondary;
-				opacity: 1;
-			}
 		}
 	}
 }

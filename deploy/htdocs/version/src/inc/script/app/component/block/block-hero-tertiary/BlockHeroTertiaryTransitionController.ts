@@ -12,6 +12,8 @@ class BlockHeroTertiaryTransitionController extends AbstractTransitionController
 	{
 		this.transitionInTimeline.from(this.element, 1, {opacity: 0});
 
+		// Run the background switch
+		this.transitionInTimeline.add(() => this.parentController.changeBackgroundImage(), 0);
 	}
 }
 

@@ -20,32 +20,49 @@
 						"normal": "data/image/hero-secondary/background.jpg",
 						"small": "data/image/hero-secondary/background.jpg",
 						"alt": "Background image alt text"
+					},
+					"backgroundVideo": {
+						"url": "data/video/video.mp4",
+						"type": 0
 					}
 				}
 			},
 			{
-				"id": "mapSecondary",
+				"id": "map",
 				"data": {
 					"windowed": true,
 					"marginTop": 2,
-					"heading": "Measurability without <span class='highlight'>measure</span>",
-					"subHeading": "You want a choice of highly-targeted geographic zones.",
-					"paragraph": "<p>You want data, insights and back-end reporting so you know you’ve made the right decisions. You want a marketing partner who gets it.</p>",
-					"link": {
-						"label": "Explore the market",
-						"title": "Explore the market",
-						"target": "map",
-						"type": 2
-					},
+					"steps": [
+						{
+							"label": "Scale",
+							"heading": "Scale that works for you",
+							"paragraph": "Whether you want to reach over 27 million households or just the homes within two miles of your business, we have you covered. We’re talking 41 states and 100+DMAs."
+						},
+						{
+							"label": "Focus",
+							"heading": "Focus on where you need to be",
+							"paragraph": "If your business is invested in only one part of the country, narrow your target for a wiser spend."
+						},
+						{
+							"label": "Aim",
+							"heading": "Aim for a smaller target",
+							"paragraph": "Your business only serves one market area. This is so easy."
+						},
+						{
+							"label": "Where",
+							"heading": "Where you are is where it’s at",
+							"paragraph": "This is your zone, your town, your neighbourhood. Get ready with a smile because your customers are going to be dropping by."
+						}
+					],
 					"sequenceBackground": {
-						"normal": "data/sequence/map-secondary/desktop/map_bg.png",
-						"small": "data/sequence/map-secondary/mobile/map_bg.png",
+						"normal": "data/sequence/map/desktop/map_bg.png",
+						"small": "data/sequence/map/mobile/map_bg_mobile.png",
 						"alt": "Alt text"
 					},
 					"imageSequence": {
 						"image": {
-							"normal": "data/sequence/map-secondary/desktop/map_lines_",
-							"small": "data/sequence/map-secondary/desktop/map_lines_",
+							"normal": "data/sequence/map/desktop/map_lines_",
+							"small": "data/sequence/map/mobile/map_lines_mobile_",
 							"alt": "Alt text"
 						},
 						"extension": ".png",
@@ -140,6 +157,7 @@
 						{
 							"heading": "Television",
 							"paragraph": "The foundation of a solid brand is built on TV, the most powerful video platform ever created.",
+							"theme": 1,
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-tv.jpg",
 								"small": "data/image/image-call-to-actions/image-tv.jpg",
@@ -160,6 +178,7 @@
 						{
 							"heading": "Digital",
 							"paragraph": "Extend your campaign and make your message stronger across every screen, everywhere your customers are, no matter what.",
+							"theme": 1,
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-digital.jpg",
 								"small": "data/image/image-call-to-actions/image-digital.jpg",
@@ -180,6 +199,7 @@
 						{
 							"heading": "Creative <br/>services",
 							"paragraph": "Your brand’s story deserves to be told by award-winning storytellers – and we have them. If your message isn’t right on point, you’re just wasting your energy.",
+							"theme": 1,
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-creative.jpg",
 								"small": "data/image/image-call-to-actions/image-creative.jpg",

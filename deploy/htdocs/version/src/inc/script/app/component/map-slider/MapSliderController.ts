@@ -8,7 +8,7 @@ import bowser = require('bowser');
 import ThrottleDebounce from "../../../lib/temple/util/ThrottleDebounce";
 import NativeEventListener from "../../../lib/temple/event/NativeEventListener";
 
-class MapSliderController extends AbstractTransitionComponentController<MapSliderViewModel, IMapSliderOptions>
+class MapSliderController extends AbstractTransitionComponentController<MapSliderViewModel, IMapSliderOptions, MapSliderTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

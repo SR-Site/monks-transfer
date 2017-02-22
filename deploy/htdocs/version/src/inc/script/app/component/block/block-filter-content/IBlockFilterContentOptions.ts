@@ -13,18 +13,21 @@ export interface IBlockFilterContentOptions extends IAbstractBlockComponentOptio
 	 * @description The main label that indicates the filters
 	 */
 	filterLabel: string;
-
 	/**
 	 * @property
 	 * @description The label for apply the filter
 	 */
 	applyLabel: string;
-
 	/**
 	 * @property
 	 * @description The array containing the available filters
 	 */
 	filters: Array<{
+		/**
+		 * @property
+		 * @description The label linked to the filter
+		 */
+		label:string;
 		/**
 		 * @property
 		 * @description The type of the filter

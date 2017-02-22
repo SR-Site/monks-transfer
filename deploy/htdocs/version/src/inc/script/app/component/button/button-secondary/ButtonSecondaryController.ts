@@ -5,7 +5,7 @@ import ButtonSecondaryViewModel from 'app/component/button/button-secondary/Butt
 
 import Log from "lib/temple/util/Log";
 
-class ButtonSecondaryController extends AbstractButtonController<ButtonSecondaryViewModel, IButtonSecondaryOptions>
+class ButtonSecondaryController extends AbstractButtonController<ButtonSecondaryViewModel, IButtonSecondaryOptions, ButtonSecondaryTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

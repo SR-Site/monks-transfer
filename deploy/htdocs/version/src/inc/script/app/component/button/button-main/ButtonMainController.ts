@@ -6,11 +6,9 @@ import Log from "lib/temple/util/Log";
 import Theme from "../../../data/enum/style/Theme";
 import DataManager from "../../../data/DataManager";
 
-class ButtonMainController extends AbstractButtonController<ButtonMainViewModel, IButtonMainOptions>
+class ButtonMainController extends AbstractButtonController<ButtonMainViewModel, IButtonMainOptions, ButtonMainTransitionController>
 {
 	public static BORDER_WIDTH: number = 5;
-
-	public transitionController: ButtonMainTransitionController;
 
 	private _backgroundStroke: HTMLElement;
 	private _hoverStroke: HTMLElement;

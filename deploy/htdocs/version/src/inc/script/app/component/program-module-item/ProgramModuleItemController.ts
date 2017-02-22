@@ -5,7 +5,7 @@ import ProgramModuleItemViewModel from 'app/component/program-module-item/Progra
 
 import Log from "lib/temple/util/Log";
 
-class ProgramModuleItemController extends AbstractTransitionComponentController<ProgramModuleItemViewModel, IProgramModuleItemOptions>
+class ProgramModuleItemController extends AbstractTransitionComponentController<ProgramModuleItemViewModel, IProgramModuleItemOptions, ProgramModuleItemTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

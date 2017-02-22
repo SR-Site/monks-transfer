@@ -26,7 +26,7 @@ class ParagraphBlockMoreV1 extends SpectrumRestEntityProcessorBase {
     $styles = $this->fieldProcessor->getFieldData($entity->get('field_styles'));
 
     $data = [
-      "id" => 'blockMore',
+      "id" => 'more',
       "data" => $styles + [
         "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
         "tags" => $this->fieldProcessor->getFieldData($entity->get('field_links')),

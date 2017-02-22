@@ -1,7 +1,6 @@
 <div class="component-block-hero-tertiary">
-	<img data-bind="
-			image: {
-				image: data.background,
-				state: $root.deviceState()
-			}" />
+	<!-- ko component: {
+		name: 'image-crossfader',
+		onComplete: $root.controller.callbackCounter.get($root.controller.handleImageCrossfaderReady.bind($root.controller))
+	} --><!-- /ko -->
 </div>

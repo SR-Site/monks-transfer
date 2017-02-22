@@ -1,9 +1,10 @@
 import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import HeaderController from "app/component/header/HeaderController";
 import IHeaderOptions from "app/component/header/IHeaderOptions";
-import MenuEvent from "../../event/MenuEvent";
+import DataManager from "../../data/DataManager";
 
 import ko = require('knockout');
+import ThemeHelper from "../../util/ThemeHelper";
 
 class HeaderViewModel extends DefaultComponentTransitionViewModel<HeaderController, IHeaderOptions>
 {
@@ -11,6 +12,35 @@ class HeaderViewModel extends DefaultComponentTransitionViewModel<HeaderControll
 	public menuButtonActive: KnockoutObservable<boolean> = ko.observable(false);
 	public callButtonDisabled: KnockoutObservable<boolean> = ko.observable(false);
 	public enableSolidBackground: KnockoutObservable<boolean> = ko.observable(false);
+	public classNames: KnockoutComputed<string>;
+
+	constructor()
+	{
+		super();
+
+		this.classNames = ko.computed(() =>
+		{
+			let classes = [];
+
+			classes.push(ThemeHelper.getTheme(DataManager.getInstance().headerTheme()));
+
+			if(this.enableSolidBackground())
+			{
+				classes.push('enable-solid-background')
+			}
+
+			return classes.join(' ');
+		})
+	}
+
+	/**
+	 * @public
+	 * @method handleCallClick
+	 */
+	public handleCallClick(): void
+	{
+		window.open('tel:' + DataManager.getInstance().settingsModel.initDataModel.contactOptions.phone.phoneNumber);
+	}
 
 	/**
 	 * @public

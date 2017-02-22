@@ -1,0 +1,141 @@
+uuid: 07ce54bb-d730-4916-b336-59177dbd5fef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - field.storage.node.field_market
+    - field.storage.node.field_platform
+    - field.storage.node.field_document_type
+    - search_api.server.database
+  module:
+    - taxonomy
+    - search_api
+    - node
+id: articles
+name: Articles
+description: ''
+read_only: false
+field_settings:
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          article: default
+          block_info: ''
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  category:
+    label: Category
+    datasource_id: 'entity:node'
+    property_path: 'field_category:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_category
+      module:
+        - taxonomy
+  market:
+    label: Market
+    datasource_id: 'entity:node'
+    property_path: 'field_market:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_market
+      module:
+        - taxonomy
+  platform:
+    label: Platform
+    datasource_id: 'entity:node'
+    property_path: 'field_platform:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_platform
+      module:
+        - taxonomy
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+  document_type:
+    label: 'Document type'
+    datasource_id: 'entity:node'
+    property_path: 'field_document_type:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_document_type
+      module:
+        - taxonomy
+processor_settings:
+  content_access:
+    plugin_id: content_access
+    settings:
+      weights:
+        preprocess_query: -10
+  ignorecase:
+    plugin_id: ignorecase
+    settings:
+      fields:
+        - rendered_item
+        - category
+        - document_type
+        - market
+        - platform
+      weights:
+        preprocess_index: -10
+        preprocess_query: -10
+  aggregated_field:
+    plugin_id: aggregated_field
+    settings: {  }
+  rendered_item:
+    plugin_id: rendered_item
+    settings: {  }
+  node_status:
+    plugin_id: node_status
+    settings: {  }
+  add_url:
+    plugin_id: add_url
+    settings: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+datasource_settings:
+  'entity:node':
+    plugin_id: 'entity:node'
+    settings:
+      bundles:
+        default: false
+        selected:
+          - article
+          - block_info
+      languages:
+        default: true
+        selected: {  }
+tracker_settings:
+  default:
+    plugin_id: default
+    settings: {  }
+server: database

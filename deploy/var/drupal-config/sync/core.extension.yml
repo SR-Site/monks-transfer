@@ -3,7 +3,9 @@ module:
   block: 0
   breakpoint: 0
   ckeditor: 0
+  color_field: 0
   config: 0
+  ctools: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
@@ -20,6 +22,9 @@ module:
   jquery_colorpicker: 0
   link: 0
   menu_ui: 0
+  metatag: 0
+  metatag_open_graph: 0
+  metatag_twitter_cards: 0
   mm_decoupled: 0
   mm_release_tracker: 0
   mm_rest: 0
@@ -36,10 +41,12 @@ module:
   search_api_db: 0
   serialization: 0
   spectrum_rest: 0
+  spectrum_settings: 0
   sqlsrv: 0
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
   toolbar_menu: 0
   update: 0
@@ -48,6 +55,7 @@ module:
   views_ui: 0
   menu_admin_per_menu: 1
   menu_link_content: 1
+  pathauto: 1
   views: 10
   paragraphs: 11
   standard: 1000

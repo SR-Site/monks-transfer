@@ -2,7 +2,7 @@ import ContentPagePageViewModel from "app/page/content-page/ContentPagePageViewM
 import CallbackCounter from "../../util/CallbackCounter";
 import DefaultPageController from "../DefaultPageController";
 import AbstractBlockComponentController from "../../component/block/AbstractBlockComponentController";
-import DefaultComponentViewModel from "../../component/block/AbstractBlockComponentViewModel";
+import AbstractBlockComponentViewModel from "../../component/block/AbstractBlockComponentViewModel";
 import ScrollTracker, {ScrollTrackerPoint, ScrollTrackerEvent} from "../../../lib/temple/util/ScrollTracker";
 import DataManager from "../../data/DataManager";
 import * as Gaia from "lib/gaia/api/Gaia";
@@ -21,6 +21,8 @@ import Promise = require("bluebird");
 
 class ContentPagePageController extends DefaultPageController<ContentPagePageViewModel>
 {
+	private _startupPagePromise: Promise<any>;
+
 	/**
 	 * @property callbackCounter
 	 * @type {CallbackCounter}
@@ -45,7 +47,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 * @property _components
 	 * @type {Object}
 	 */
-	private _components: {[id: string]: AbstractBlockComponentController<DefaultComponentViewModel<any, any>, any>} = {};
+	private _components: {[id: string]: AbstractBlockComponentController<any, any, any>} = {};
 	/**
 	 * @property _scrollTracker
 	 * @type {ScrollTracker}
@@ -96,7 +98,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 * @method get activeBlock
 	 * @returns {KnockoutObservable<AbstractBlockComponentController<any, any>>}
 	 */
-	public get activeBlock(): KnockoutObservable<AbstractBlockComponentController<any, any>>
+	public get activeBlock(): KnockoutObservable<AbstractBlockComponentController<any, any, any>>
 	{
 		return this.viewModel.activeBlock;
 	}
@@ -106,7 +108,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 * @method get components
 	 * @returns {AbstractBlockComponentController<DefaultComponentViewModel<any, any>, any>[]}
 	 */
-	public get components(): Array<AbstractBlockComponentController<DefaultComponentViewModel<any, any>, any>>
+	public get components(): Array<AbstractBlockComponentController<any, any, any>>
 	{
 		return Object.keys(this._components).map(key => this._components[key]);
 	}
@@ -145,11 +147,20 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 					this._scrollTrackerPoints = {};
 					this._allComponentsLoaded = null;
 
-					this.startupPage()
+					if(this._startupPagePromise && !this._startupPagePromise.isResolved())
+					{
+						// User tried to leave the page before the page was done, so we want to cancel it!
+						this._startupPagePromise.cancel();
+						this._startupPagePromise = null;
+					}
+
+					this._startupPagePromise = this.startupPage()
 						.catch((result) =>
 						{
 							throw result;
-						})
+						});
+
+					this._startupPagePromise.isCancellable();
 				});
 		}
 	}
@@ -159,7 +170,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 * @method handleComponentReady
 	 * @param controller
 	 */
-	public handleComponentReady(controller: AbstractBlockComponentController<any, any>): void
+	public handleComponentReady(controller: AbstractBlockComponentController<any, any, any>): void
 	{
 		// Some components change the entire view. For examle filter components.
 		controller.addEventListener(CommonEvent.RESIZE, this.handleResize.bind(this));
@@ -226,7 +237,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 			const controller = this._components[key];
 			const scrollTrackerPoint = this._scrollTrackerPoints[key];
 			const element = controller.element;
-			const parent = <AbstractBlockComponentController<any, any>|ContentPagePageController>controller.parent;
+			const parent = <AbstractBlockComponentController<any, any, any>|ContentPagePageController>controller.parent;
 			const threshold = element.offsetHeight * controller.transitionInThreshold;
 			const elementHeight = element.offsetHeight - threshold;
 
@@ -239,7 +250,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 * @public
 	 * @method removeComponentsFromScrollTracker
 	 */
-	public removeComponentsFromScrollTracker(components: {[id: string]: AbstractBlockComponentController<DefaultComponentViewModel<any, any>, any>}): void
+	public removeComponentsFromScrollTracker(components: {[id: string]: AbstractBlockComponentController<any, any, any>}): void
 	{
 		Object.keys(components).forEach((key, index) =>
 		{
@@ -274,7 +285,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 * @public
 	 * @method addScrollTrackerPoints
 	 */
-	public addComponentsToScrollTracker(components: {[id: string]: AbstractBlockComponentController<DefaultComponentViewModel<any, any>, any>}): void
+	public addComponentsToScrollTracker(components: {[id: string]: AbstractBlockComponentController<any, any, any>}): void
 	{
 		Object.keys(components).forEach((key, index) =>
 		{
@@ -284,7 +295,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 			{
 				const element = controller.element;
 				const threshold = window.innerHeight * controller.transitionInThreshold;
-				const parent = <AbstractBlockComponentController<any, any>|ContentPagePageController>controller.parent;
+				const parent = <AbstractBlockComponentController<any, any, any>|ContentPagePageController>controller.parent;
 				const yPosition = Math.round(parent.element.offsetTop + element.offsetTop + threshold);
 				const elementHeight = element.offsetHeight - threshold;
 				const scrollTrackerPoint = this._scrollTracker.addPoint(yPosition, elementHeight);

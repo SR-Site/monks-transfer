@@ -1,4 +1,4 @@
-import {IInitData} from "../interface/IInitData";
+import {IInitData, IContactOptions} from "../interface/IInitData";
 import LayoutModel from "./LayoutModel";
 import NavigationModel from "./NavigationModel";
 import ILink from "../interface/action/ILink";
@@ -33,6 +33,15 @@ class InitDataModel
 	public get data(): IInitData
 	{
 		return this._data;
+	}
+
+	/**
+	 * @public
+	 * @method getContactOptions
+	 */
+	public get contactOptions():IContactOptions
+	{
+		return this._data.contactOptions
 	}
 
 	/**

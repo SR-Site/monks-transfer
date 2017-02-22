@@ -5,7 +5,7 @@ import BlockQuoteSecondaryViewModel from 'app/component/block/block-quote-second
 
 import Log from "lib/temple/util/Log";
 
-class BlockQuoteSecondaryController extends AbstractBlockComponentController<BlockQuoteSecondaryViewModel, IBlockQuoteSecondaryOptions>
+class BlockQuoteSecondaryController extends AbstractBlockComponentController<BlockQuoteSecondaryViewModel, IBlockQuoteSecondaryOptions, BlockQuoteSecondaryTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

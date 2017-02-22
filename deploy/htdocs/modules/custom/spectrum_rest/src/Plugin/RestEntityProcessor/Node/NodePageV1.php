@@ -41,6 +41,7 @@ class NodePageV1 extends RestEntityProcessorBase {
     }
 
     $data = [
+      'headerTheme' => (int) $entity->get('field_header_theme')->value,
       'pageTitle' => $entity->label(),
       'blocks' => $blocks,
     ];

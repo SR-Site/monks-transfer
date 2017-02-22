@@ -1,0 +1,7 @@
+uuid: cac7d9ec-8608-42e0-a5b3-cfaf9d5bd21b
+langcode: en
+status: true
+dependencies: {  }
+id: networkoverviewitem
+label: 'Network overview item'
+behavior_plugins: {  }

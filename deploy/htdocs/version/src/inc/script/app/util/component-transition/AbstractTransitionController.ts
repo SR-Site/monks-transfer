@@ -14,7 +14,7 @@ import Promise = require("bluebird");
  * The AbstractTransitionController also contains a timeline for looping animations. If your component needs to keep
  * animating after transition in is done you can use this timeline to setup a looping animation,
  */
-abstract class AbstractTransitionController<TParentController extends AbstractTransitionComponentController<any, any>> extends EventDispatcher
+abstract class AbstractTransitionController<TParentController extends AbstractTransitionComponentController<any, any, any>> extends EventDispatcher
 {
 	/**
 	 * @property TRANSITION_IN_COMPLETE
@@ -124,15 +124,31 @@ abstract class AbstractTransitionController<TParentController extends AbstractTr
 
 		if(waitForParent)
 		{
-			this.getRootComponent().callbackCounter.promise.then(() =>
+			const rootComponentCallbackCounter = this.getRootComponent().callbackCounter;
+			if(rootComponentCallbackCounter)
 			{
-				if(!this.isDestructed())
-				{
-					this.setupTransitionTimeline();
-				}
-			});
+				rootComponentCallbackCounter.promise.then(() => this.handleRootComponentLoaded());
+			}
+			// In case a transitionComponent is not nested
+			// within a transitionComponent (thus has not a callbackCounter).
+			else
+			{
+				this.handleRootComponentLoaded();
+			}
 		}
 		else
+		{
+			this.setupTransitionTimeline();
+		}
+	}
+
+	/**
+	 * @private
+	 * @method handleRootComponentLoaded
+	 */
+	private handleRootComponentLoaded(): void
+	{
+		if(!this.isDestructed())
 		{
 			this.setupTransitionTimeline();
 		}

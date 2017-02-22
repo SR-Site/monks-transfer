@@ -1,6 +1,7 @@
 {
 	"statusCode": 200,
 	"data": {
+		"headerTheme": 0,
 		"pageTitle": "Knowledge Center",
 		"blocks": [
 			{
@@ -33,7 +34,7 @@
 					"applyLabel": "Apply",
 					"filters": [
 						{
-							"type": "category",
+							"type": 0,
 							"label": "Category",
 							"options": [
 								{
@@ -47,7 +48,7 @@
 							]
 						},
 						{
-							"type": "document_type",
+							"type": 1,
 							"label": "Document Type",
 							"options": [
 								{
@@ -77,7 +78,7 @@
 							]
 						},
 						{
-							"type": "platform",
+							"type": 2,
 							"label": "Platform",
 							"options": [
 								{
@@ -99,7 +100,7 @@
 							]
 						},
 						{
-							"type": "market",
+							"type": 3,
 							"label": "Market",
 							"options": [
 								{

@@ -9,4 +9,8 @@
 		color: $colorPrimary;
 		transition: color 250ms ease(linear);
 	}
+
+	@include respond-to(LARGE) {
+		@include size($sizeGrid);
+	}
 }

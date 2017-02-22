@@ -9,7 +9,7 @@ import MapSliderController from "../../map-slider/MapSliderController";
 import CommonEvent from "../../../../lib/temple/event/CommonEvent";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 
-class BlockMapController extends AbstractBlockComponentController<BlockMapViewModel, IBlockMapOptions>
+class BlockMapController extends AbstractBlockComponentController<BlockMapViewModel, IBlockMapOptions, BlockMapTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging

@@ -1,6 +1,7 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import IImage from "../../../data/interface/media/IImage";
 import ITag from "../../../data/interface/action/ITag";
+import Theme from "../../../data/enum/style/Theme";
 
 interface IBlockArticleTeaserOptions extends IAbstractBlockComponentOptions
 {
@@ -29,6 +30,13 @@ interface IBlockArticleTeaserOptions extends IAbstractBlockComponentOptions
 	 * @description The tags linked to this article
 	 */
 	tags: Array<ITag>;
+	/**
+	 * @property
+	 * @description Sometimes you want to switch a color based on the background image to increase readability
+	 * @placeholder 1
+	 * @defaultValue 0
+	 */
+	theme:Theme;
 }
 
 export default IBlockArticleTeaserOptions;

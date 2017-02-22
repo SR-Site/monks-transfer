@@ -26,7 +26,7 @@ class ParagraphBlockButtonV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockButton',
+      "id" => 'button',
       "data" => $data + [
         "alignment" => (int) $entity->get('field_alignment')->value,
         "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),

@@ -1,25 +1,27 @@
 <a class="component-block-article-teaser" data-bind="gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: data.target}]">
-	<figure class="abs-fill">
-		<img data-bind="
-			image: {
-				image: data.image,
-				state: $root.deviceState()
-			}" />
-			<h2 class="hover-heading" data-bind="html: data.heading"></h2>
-			<span class="hover-icon" data-bind="icon: 'circle-arrow-right'"></span>
-	</figure>
-	<aside>
-		<h2 class="heading heading-07" data-bind="html: data.heading"></h2>
-		<p class="copy copy-01" data-bind="html: data.paragraph"></p>
-		<div class="tags" data-bind="foreach: data.tags">
-			<!-- ko component: {
-				name: 'button/button-tag',
-				onComplete: $root.controller.callbackCounter.get(),
-				options: {
-					action: $data,
-					size: $root.ButtonSize.LARGE
-				}
-			} --><!-- /ko -->
-		</div>
-	</aside>
+	<div class="theme" data-bind="css: ThemeHelper.getTheme(data.theme)">
+		<figure class="abs-fill">
+			<img data-bind="
+				image: {
+					image: data.image,
+					state: $root.deviceState()
+				}" />
+				<h2 class="hover-heading" data-bind="html: data.heading"></h2>
+				<span class="hover-icon" data-bind="icon: 'circle-arrow-right'"></span>
+		</figure>
+		<aside>
+			<h2 class="heading heading-07" data-bind="html: data.heading"></h2>
+			<p class="copy copy-01" data-bind="html: data.paragraph"></p>
+			<div class="tags" data-bind="foreach: data.tags">
+				<!-- ko component: {
+					name: 'button/button-tag',
+					onComplete: $root.controller.callbackCounter.get(),
+					options: {
+						action: $data,
+						size: $root.ButtonSize.LARGE
+					}
+				} --><!-- /ko -->
+			</div>
+		</aside>
+	</div>
 </a>

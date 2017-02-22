@@ -1,6 +1,7 @@
 import DefaultSlideoutPanelTransitionController from "../DefaultSlideoutPanelTransitionController";
+import GlobalSlideoutPanelController from "./GlobalSlideoutPanelController";
 
-class GlobalSlideoutPanelTransitionController extends DefaultSlideoutPanelTransitionController
+class GlobalSlideoutPanelTransitionController extends DefaultSlideoutPanelTransitionController<GlobalSlideoutPanelController>
 {
 
 

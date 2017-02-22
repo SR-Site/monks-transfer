@@ -17,7 +17,7 @@ import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedCon
 import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
 import IGatewayResult from "../../../net/gateway/result/IGatewayResult";
 
-class BlockFilterContentController extends AbstractBlockComponentController<BlockFilterContentViewModel, IBlockFilterContentOptions>
+class BlockFilterContentController extends AbstractBlockComponentController<BlockFilterContentViewModel, IBlockFilterContentOptions, BlockFilterContentTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging
@@ -26,7 +26,7 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	 */
 	private _debug: Log = new Log('app.component.BlockFilterContent');
 
-	private _components: {[id: string]: AbstractBlockComponentController<AbstractBlockComponentViewModel<any, any>, any>} = {};
+	private _components: {[id: string]: AbstractBlockComponentController<any, any, any>} = {};
 	private _filterMenu: FilterMenuController;
 	private _filters: {[filterType: string]: string};
 	private _loader: Loader;
@@ -48,7 +48,7 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	 * @public
 	 * @method handleDynamicComponentLoaded
 	 */
-	public handleDynamicComponentLoaded(controller: AbstractBlockComponentController<any, any>): void
+	public handleDynamicComponentLoaded(controller: AbstractBlockComponentController<any, any, any>): void
 	{
 		this._components[controller.options.id + controller.eventNamespace] = controller;
 
@@ -244,7 +244,7 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	private handleContentLoad(result: IGatewayResult<{blocks: Array<IBlock>}>): void
 	{
 		// Save Amount of totalPages in a Array for the PaginatorController.
-		this.viewModel.totalPages(new Array(Math.ceil(result.pagination.total / this.viewModel.limit)));
+		this.viewModel.totalPages(Math.ceil(result.pagination.total / this.viewModel.limit));
 
 		// Destruct and recreate new CallbackCounter to be used for the new blocks that are loaded.
 		this.recreateCallbackCounter();

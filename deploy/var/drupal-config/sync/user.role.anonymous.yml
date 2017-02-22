@@ -15,3 +15,6 @@ permissions:
   4: 'search content'
   5: 'restful get spectrum_rest_page_v1'
   6: 'restful get spectrum_rest_searchpages_v1'
+  7: 'restful get spectrum_rest_searcharticles_v1'
+  8: 'restful get spin_rest_init_v1'
+  9: 'restful get spectrum_rest_article_v1'

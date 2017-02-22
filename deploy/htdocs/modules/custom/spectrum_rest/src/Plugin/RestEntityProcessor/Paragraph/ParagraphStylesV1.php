@@ -26,7 +26,7 @@ class ParagraphStylesV1 extends RestEntityProcessorBase {
     $data = [
       "overlap" => $this->fieldProcessor->getFieldData($entity->get('field_overlap')),
       "windowed" => $this->fieldProcessor->getFieldData($entity->get('field_windowed')),
-      "marginTop" => (int) $this->fieldProcessor->getFieldData($entity->get('field_margin_top')),
+      "marginTop" => (int) $entity->get('field_margin_top')->value,
     ];
 
     return $data;

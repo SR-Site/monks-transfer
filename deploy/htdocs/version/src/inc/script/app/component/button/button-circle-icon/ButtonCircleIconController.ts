@@ -5,7 +5,7 @@ import ButtonCircleIconViewModel from 'app/component/button/button-circle-icon/B
 
 import Log from "lib/temple/util/Log";
 
-class ButtonCircleIconController extends AbstractButtonController<ButtonCircleIconViewModel, IButtonCircleIconOptions>
+class ButtonCircleIconController extends AbstractButtonController<ButtonCircleIconViewModel, IButtonCircleIconOptions, ButtonCircleIconTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

@@ -9,15 +9,15 @@
 			cursor: pointer;
 			text-decoration: none;
 			position: relative;
-			color: $colorPrimary;
 			height: 100%;
 			display: inline-block;
 
-			@include hover() {
-				.copy {
-					opacity: 1;
-					transform: translateY(0);
-				}
+			.theme-dark {
+				color: $colorPrimary;
+			}
+
+			.theme-light {
+				color: $colorWhite;
 			}
 		}
 
@@ -69,6 +69,28 @@
 			.blurred-image {
 				opacity: 1;
 			}
+		}
+	}
+
+	&.transition-in-complete {
+		.call-to-actions-content {
+			font-size: 0;
+
+			a {
+				@include hover() {
+					.copy {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+			}
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.text-wrapper {
+			top: $sizeGridSecondary;
+			padding: 0 $sizeGridSecondary;
 		}
 	}
 

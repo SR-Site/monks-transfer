@@ -8,7 +8,7 @@ import NativeEventListener from "../../../../lib/temple/event/NativeEventListene
 import ThrottleDebounce from "../../../../lib/temple/util/ThrottleDebounce";
 import ScrollUtils from "../../../util/ScrollUtils";
 
-class ButtonStartAdvertisingController extends AbstractButtonController<ButtonStartAdvertisingViewModel, IButtonStartAdvertisingOptions>
+class ButtonStartAdvertisingController extends AbstractButtonController<ButtonStartAdvertisingViewModel, IButtonStartAdvertisingOptions, ButtonStartAdvertisingTransitionController>
 {
 	private static CENTER_PERCENTAGE:number = 0.6;
 

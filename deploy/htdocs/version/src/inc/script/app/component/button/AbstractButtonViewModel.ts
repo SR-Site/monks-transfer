@@ -5,9 +5,11 @@ import IMethod from "../../data/interface/action/IMethod";
 import ILink from "../../data/interface/action/ILink";
 import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 
-abstract class AbstractButtonViewModel<T, U extends IAbstractButtonOptions> extends DefaultComponentTransitionViewModel<AbstractButtonController<T, U>, U>
+abstract class AbstractButtonViewModel<
+	TController extends AbstractButtonController<any, any, any>,
+	TOptions extends IAbstractButtonOptions
+> extends DefaultComponentTransitionViewModel<TController, TOptions>
 {
-	public controller: AbstractButtonController<T, U> & any;
 	public disabled: KnockoutObservable<boolean> = ko.observable(false);
 	public css: KnockoutComputed<string>;
 

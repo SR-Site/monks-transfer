@@ -26,7 +26,7 @@ class ParagraphBlockImageWithContentV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockImageWithContent',
+      "id" => 'imageWithContent',
       "data" => $data + [
         "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),
         "background" => $this->image($entity->get('field_image')),

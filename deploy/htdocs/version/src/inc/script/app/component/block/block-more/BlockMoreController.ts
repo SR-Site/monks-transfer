@@ -5,7 +5,7 @@ import BlockMoreViewModel from 'app/component/block/block-more/BlockMoreViewMode
 
 import Log from "lib/temple/util/Log";
 
-class BlockMoreController extends AbstractBlockComponentController<BlockMoreViewModel, IBlockMoreOptions>
+class BlockMoreController extends AbstractBlockComponentController<BlockMoreViewModel, IBlockMoreOptions, BlockMoreTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

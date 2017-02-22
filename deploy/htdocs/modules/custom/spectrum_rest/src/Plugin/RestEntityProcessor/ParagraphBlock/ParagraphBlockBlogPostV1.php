@@ -24,10 +24,11 @@ class ParagraphBlockBlogPostV1 extends SpectrumRestEntityProcessorBase {
   protected function getItemData($entity) {
 
     $data = parent::getCommonData($entity);
+    $article = $this->fieldProcessor->getFieldData($entity->get('field_article'), ['view_mode' => 'teaser']);
 
     $data = [
-      "id" => 'blockBlogPost',
-      "data" => $data,
+      "id" => 'blogPost',
+      "data" => $data + $article,
     ];
 
     return $data;

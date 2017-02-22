@@ -1,20 +1,9 @@
 .component-video-overlay {
-
 	@include size(100%, 100%);
 	@include pos(0, 0, auto, 0);
-	position: fixed	;
+	position: fixed;
 	visibility: hidden;
 	z-index: zindex($layout, popup);
-
-	.component-video-player {
-		@include size(80%, auto);
-		@include pos(50%, auto, auto, 50%);
-		max-width: $sizeGridSecondary * 27;
-		transform: translate(-50%, -50%);
-		position: absolute;
-		overflow: hidden;
-		@include aspect-ratio(16px, 9px);
-	}
 
 	.mask {
 		@include coverer();
@@ -23,8 +12,26 @@
 		background: rgba(#000, .6);
 	}
 
+	.video-wrapper {
+		@include size(80%, auto);
+		@include aspect-ratio(16px, 9px);
+		@include pos(50%, auto, auto, 50%);
+		max-width: $sizeGridSecondary * 27;
+		position: absolute;
+		transform: translate(-50%, -50%);
+	}
+
+	.component-video-player {
+		@include size(100%);
+		@include offset(50%, 50%);
+		transform: translate(-50%, -50%);
+		overflow: hidden;
+		position: absolute;
+
+	}
+
 	.component-button-circle-close {
-		@include pos($sizeGrid, $sizeGrid, auto, auto);
+		@include pos(-$sizeGrid, -$sizeGrid, auto, auto);
 		position: absolute;
 		background-color: $colorPrimary;
 		color: white;

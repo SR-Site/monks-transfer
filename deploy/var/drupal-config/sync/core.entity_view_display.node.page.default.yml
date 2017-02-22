@@ -4,9 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.page.field_blocks
+    - field.field.node.page.field_header_theme
+    - field.field.node.page.field_metatags
     - node.type.page
   module:
     - entity_reference_revisions
+    - metatag
+    - options
     - user
 _core:
   default_config_hash: oZ-7vpIJxjxL2up9B5KrJGD0lazQ9aN0P-fIPo6OrSU
@@ -23,6 +27,18 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+  field_header_theme:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_metatags:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
   links:
     weight: 101
 hidden: {  }

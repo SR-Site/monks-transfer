@@ -21,3 +21,6 @@ permissions:
   - 'use text format bold_html'
   - 'restful get spectrum_rest_page_v1'
   - 'restful get spectrum_rest_searchpages_v1'
+  - 'restful get spectrum_rest_searcharticles_v1'
+  - 'restful get spin_rest_init_v1'
+  - 'restful get spectrum_rest_article_v1'

@@ -1,5 +1,6 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import IImage from "../../../data/interface/media/IImage";
+import Theme from "../../../data/enum/style/Theme";
 
 interface IBlockStoryInfoImagesOptions extends IAbstractBlockComponentOptions
 {
@@ -28,6 +29,13 @@ interface IBlockStoryInfoImagesOptions extends IAbstractBlockComponentOptions
 		 * @description The blurred version of the image
 		 */
 		backgroundBlurred:IImage;
+		/**
+		 * @property
+		 * @description Sometimes you want to switch a color based on the background image to increase readability
+		 * @placeholder 1
+		 * @defaultValue 1
+		 */
+		theme:Theme;
 	}>
 }
 

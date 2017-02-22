@@ -5,7 +5,7 @@ import ButtonCircleCloseViewModel from 'app/component/button/button-circle-close
 
 import Log from "lib/temple/util/Log";
 
-class ButtonCircleCloseController extends AbstractButtonController<ButtonCircleCloseViewModel, IButtonCircleCloseOptions>
+class ButtonCircleCloseController extends AbstractButtonController<ButtonCircleCloseViewModel, IButtonCircleCloseOptions, ButtonCircleCloseTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

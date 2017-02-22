@@ -7,7 +7,7 @@ import Log from "lib/temple/util/Log";
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
 import Scrollbar from "../../../lib/temple/component/Scrollbar";
 
-class MenuController extends AbstractTransitionComponentController<MenuViewModel, IMenuOptions>
+class MenuController extends AbstractTransitionComponentController<MenuViewModel, IMenuOptions, MenuTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

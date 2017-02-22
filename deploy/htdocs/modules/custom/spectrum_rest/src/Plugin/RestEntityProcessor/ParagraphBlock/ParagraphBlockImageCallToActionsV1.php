@@ -26,7 +26,7 @@ class ParagraphBlockImageCallToActionsV1 extends SpectrumRestEntityProcessorBase
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockImageCallToActions',
+      "id" => 'imageCallToActions',
       "data" => $data + [
         "callToActions" => $this->getItems($entity->get('field_calltoactions')),
       ],

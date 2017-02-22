@@ -1,0 +1,11 @@
+{
+  "name": "mediamonks/spectrum_settings",
+  "type": "drupal-module",
+  "description": "Spectrum settings module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "",
+  "minimum-stability": "dev",
+  "support": { },
+  "require": { }
+}

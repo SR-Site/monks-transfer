@@ -1,26 +1,20 @@
 import AbstractBlockComponentController from "../AbstractBlockComponentController";
-import BlockPathToPurchaseTransitionController from 'app/component/block/block-path-to-purchase/BlockPathToPurchaseTransitionController';
-import IBlockPathToPurchaseOptions from 'app/component/block/block-path-to-purchase/IBlockPathToPurchaseOptions';
-import BlockPathToPurchaseViewModel from 'app/component/block/block-path-to-purchase/BlockPathToPurchaseViewModel';
-
+import BlockPathToPurchaseTransitionController from "app/component/block/block-path-to-purchase/BlockPathToPurchaseTransitionController";
+import IBlockPathToPurchaseOptions from "app/component/block/block-path-to-purchase/IBlockPathToPurchaseOptions";
+import BlockPathToPurchaseViewModel from "app/component/block/block-path-to-purchase/BlockPathToPurchaseViewModel";
 import Log from "lib/temple/util/Log";
 import InfiniteImageCarousel from "../../../util/infinite-carousel/InfiniteImageCarousel";
 import DataManager from "../../../data/DataManager";
 import {DeviceState} from "../../../data/scss-shared/MediaQueries";
-import ImageCrossfaderController from "../../image-crossfader/ImageCrossfaderController";
-import ImageHelper from "../../../util/ImageHelper";
-import Promise = require("bluebird");
 import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedController";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
+import Promise = require("bluebird");
 
-class BlockPathToPurchaseController extends AbstractBlockComponentController<BlockPathToPurchaseViewModel, IBlockPathToPurchaseOptions>
+class BlockPathToPurchaseController extends AbstractBlockComponentController<BlockPathToPurchaseViewModel, IBlockPathToPurchaseOptions, BlockPathToPurchaseTransitionController>
 {
 	private _infiniteImageCarousel: InfiniteImageCarousel;
-	private _imageCrossfader: ImageCrossfaderController;
 	private _paginatorDashedController: PaginatorDashedController;
-
-	public transitionController: BlockPathToPurchaseTransitionController;
 
 
 	/**
@@ -67,44 +61,12 @@ class BlockPathToPurchaseController extends AbstractBlockComponentController<Blo
 
 
 	/**
-	 * @public
-	 * @method handleImageCrossfaderReady
-	 */
-	public handleImageCrossfaderReady(controller: ImageCrossfaderController): void
-	{
-		this._imageCrossfader = controller;
-
-		this.changeBackgroundImage(0);
-	}
-
-	/**
-	 * @public
-	 * @method changeBackgroundImage
-	 * @param index
-	 */
-	public changeBackgroundImage(index: number): Promise<any>
-	{
-		if(this._imageCrossfader)
-		{
-			return this._imageCrossfader.open(
-				ImageHelper.getImageForMediaQuery(
-					this.options.steps[index].background
-				)
-			);
-		}
-		else
-		{
-			return Promise.resolve();
-		}
-	}
-
-	/**
 	 * @private
 	 * @method handleDeviceStateChange
 	 */
 	private handleDeviceStateChange(state: DeviceState): void
 	{
-		if(state < DeviceState.MEDIUM)
+		if(state <= DeviceState.MEDIUM)
 		{
 			this.initCarousel();
 		}
@@ -169,7 +131,6 @@ class BlockPathToPurchaseController extends AbstractBlockComponentController<Blo
 		}
 
 		this._paginatorDashedController = null;
-		this._imageCrossfader = null;
 
 		// always call this last
 		super.destruct();

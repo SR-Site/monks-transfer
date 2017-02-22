@@ -1,5 +1,15 @@
 {
 	"data": {
+		"contactOptions": {
+			"phone": {
+				"phoneNumber": "1-844-TO-REACH"
+			},
+			"email": {
+				"emailAddress": "spectrumreach@spectrum.com",
+				"emailSubject": "Email subject goes here",
+				"emailBody": "Email body goes here"
+			}
+		},
 		"layout": {
 			"navigation": [
 				{
@@ -53,12 +63,7 @@
 				}
 			],
 			"footer": {
-				"contactOptions": {
-					"email": "spectrumreach@spectrum.com",
-					"emailSubject": "Email subject goes here",
-					"emailBody": "Email body goes here",
-					"phone": "1-884-TO-REACH"
-				},
+				"copyright": "©Charter Communications",
 				"mainLinks": [
 					{
 						"label": "Charter",
@@ -143,19 +148,19 @@
 					"twitter": {
 						"label": "Twitter",
 						"title": "Twitter",
-						"target": "http://www.twitter.com",
+						"target": "https://twitter.com/SpectrumReach",
 						"type": 1
 					},
-					"youtube": {
-						"label": "YouTube",
-						"title": "YouTube",
-						"target": "http://www.youtube.com",
+					"instagram": {
+						"label": "Vimeo",
+						"title": "Vimeo",
+						"target": "http://www.vimeo.com",
 						"type": 1
 					},
 					"linkedin": {
 						"label": "LinkedIn",
 						"title": "LinkedIn",
-						"target": "http://www.youtube.com",
+						"target": "https://www.linkedin.com/company/spectrum-reach",
 						"type": 1
 					}
 				}

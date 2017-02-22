@@ -26,9 +26,9 @@ class ParagraphBlockQuoteV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockQuote',
+      "id" => 'quote',
       "data" => $data + [
-        "description" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
+        "description" => $this->fieldProcessor->getFieldData($entity->get('field_description')),
         "name" => $this->fieldProcessor->getFieldData($entity->get('field_title')),
         "quote" => $this->fieldProcessor->getFieldData($entity->get('field_label')),
         "image" => $this->image($entity->get('field_image')),

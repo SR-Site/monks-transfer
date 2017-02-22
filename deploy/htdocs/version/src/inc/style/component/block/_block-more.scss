@@ -33,13 +33,19 @@
 		}
 	}
 
+	@include respond-to(LARGE) {
+		.latest-articles {
+			justify-content: center;
+		}
+	}
+
 	@include respond-to(SMALL) {
 
 		.latest-articles {
 			padding-left: $sizeGrid;
 			padding-right: $sizeGrid;
 
-			.component-block-article-teaser:not(:first-child) {
+			.component-block-article-teaser:not(:nth-child(-n+2)) {
 				display: none;
 			}
 

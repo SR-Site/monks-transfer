@@ -11,6 +11,10 @@
 						"normal": "data/image/hero-tertiary/background.jpg",
 						"small": "data/image/hero-tertiary/background.jpg",
 						"alt": "Background image alt text"
+					},
+					"backgroundVideo": {
+						"url": "data/video/video.mp4",
+						"type": 0
 					}
 				}
 			},
@@ -106,6 +110,7 @@
 					"slides": [
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
+							"theme": 0,
 							"image": {
 								"normal": "data/image/image-carousel/image-1.jpg",
 								"small": "data/image/image-carousel/image-1.jpg",
@@ -114,6 +119,7 @@
 						},
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
+							"theme": 1,
 							"image": {
 								"normal": "data/image/image-carousel/image-2.jpg",
 								"small": "data/image/image-carousel/image-2.jpg",
@@ -122,6 +128,7 @@
 						},
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
+							"theme": 0,
 							"image": {
 								"normal": "data/image/image-carousel/image-1.jpg",
 								"small": "data/image/image-carousel/image-1.jpg",
@@ -156,6 +163,7 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"target": "knowledge-center/dummy-article",
+							"theme": 0,
 							"image": {
 								"normal": "data/image/latest/latest-article-image-1.jpg",
 								"small": "data/image/latest/latest-article-image-1.jpg",
@@ -180,6 +188,7 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"target": "knowledge-center/dummy-article",
+							"theme": 1,
 							"image": {
 								"normal": "data/image/latest/latest-article-image-2.jpg",
 								"small": "data/image/latest/latest-article-image-2.jpg",
@@ -204,6 +213,7 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"target": "knowledge-center/dummy-article",
+							"theme": 1,
 							"image": {
 								"normal": "data/image/latest/latest-article-image-2.jpg",
 								"small": "data/image/latest/latest-article-image-2.jpg",
@@ -228,6 +238,7 @@
 							"heading": "Go Beyond High Profile Sport Events",
 							"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
 							"target": "knowledge-center/dummy-article",
+							"theme": 0,
 							"image": {
 								"normal": "data/image/latest/latest-article-image-1.jpg",
 								"small": "data/image/latest/latest-article-image-1.jpg",

@@ -1,7 +1,7 @@
 import AbstractTransitionController from "./AbstractTransitionController";
 import AbstractTransitionComponentController from "./abstract-transition-component/AbstractTransitionComponentController";
 
-class SentenceTransitionController<TParentController extends AbstractTransitionComponentController<any, any>> extends AbstractTransitionController<TParentController>
+class SentenceTransitionController<TParentController extends AbstractTransitionComponentController<any, any, any>> extends AbstractTransitionController<TParentController>
 {
 	private _splitText: SplitText;
 

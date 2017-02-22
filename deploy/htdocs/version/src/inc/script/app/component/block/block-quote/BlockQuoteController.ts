@@ -5,7 +5,7 @@ import BlockQuoteViewModel from 'app/component/block/block-quote/BlockQuoteViewM
 
 import Log from "lib/temple/util/Log";
 
-class BlockQuoteController extends AbstractBlockComponentController<BlockQuoteViewModel, IBlockQuoteOptions>
+class BlockQuoteController extends AbstractBlockComponentController<BlockQuoteViewModel, IBlockQuoteOptions, BlockQuoteTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

@@ -3,9 +3,11 @@ import ILink from "./action/ILink";
 
 export interface IInitData
 {
+	contactOptions: IContactOptions
 	layout: {
 		navigation: Array<INavigationItem>;
 		footer: {
+			copyright: string;
 			contactOptions: {
 				email: string;
 				phone: string;
@@ -14,7 +16,7 @@ export interface IInitData
 			secondaryLinks: Array<Array<ILink>>;
 			social: {
 				twitter: ILink;
-				youtube: ILink;
+				instagram: ILink;
 				linkedin: ILink;
 			}
 		};
@@ -23,4 +25,16 @@ export interface IInitData
 		}
 	};
 	language: any;
+}
+
+export interface IContactOptions
+{
+	phone: {
+		phoneNumber: string;
+	}
+	email: {
+		emailAddress: string;
+		emailBody: string;
+		emailSubject: string;
+	}
 }

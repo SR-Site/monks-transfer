@@ -18,12 +18,6 @@
 								"target": "/capabilities",
 								"type": 2
 							},
-							"secondaryLink": {
-								"label": "Next",
-								"title": "Next",
-								"target": "/home",
-								"type": 1
-							},
 							"background": {
 								"normal": "data/image/hero-main/slide-1.jpg",
 								"small": "data/image/hero-main/slide-1.jpg",
@@ -58,12 +52,6 @@
 								"title": "Play showreel",
 								"target": "/capabilities",
 								"type": 2
-							},
-							"secondaryLink": {
-								"label": "Next",
-								"title": "Next",
-								"target": "/home",
-								"type": 1
 							},
 							"background": {
 								"normal": "data/image/hero-main/slide-2.jpg",
@@ -267,12 +255,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -280,12 +262,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -293,12 +269,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -306,12 +276,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -319,12 +283,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -332,12 +290,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -345,12 +297,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -358,12 +304,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -371,12 +311,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -384,12 +318,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -397,12 +325,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -410,12 +332,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -423,12 +339,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -436,12 +346,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -449,12 +353,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -462,12 +360,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -475,12 +367,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -488,12 +374,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -501,12 +381,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -514,12 +388,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -527,12 +395,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -540,12 +402,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -553,12 +409,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -566,12 +416,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -579,12 +423,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -592,12 +430,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -605,12 +437,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						},
 						{
@@ -618,12 +444,6 @@
 								"small": "data/image/network-overview/cnn.png",
 								"normal": "data/image/network-overview/cnn.png",
 								"alt": "CNN"
-							},
-							"link": {
-								"label": "Read the FAQS",
-								"title": "Read the FAQS",
-								"target": "http://www.google.com",
-								"type": 1
 							}
 						}
 					]
@@ -658,13 +478,13 @@
 					],
 					"sequenceBackground": {
 						"normal": "data/sequence/map/desktop/map_bg.png",
-						"small": "data/sequence/map/mobile/map_bg.png",
+						"small": "data/sequence/map/mobile/map_bg_mobile.png",
 						"alt": "Alt text"
 					},
 					"imageSequence": {
 						"image": {
 							"normal": "data/sequence/map/desktop/map_lines_",
-							"small": "data/sequence/map/mobile/map_lines_",
+							"small": "data/sequence/map/mobile/map_lines_mobile_",
 							"alt": "Alt text"
 						},
 						"extension": ".png",

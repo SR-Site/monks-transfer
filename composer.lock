@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fe8e18579945822be5a970b2017c80b3",
-    "content-hash": "633b27cf32d6cc72a89b3ed8ad88f2b9",
+    "hash": "575b856b0db6d2f87cfa63b51f5fcae6",
+    "content-hash": "fcb681b297920d530c402d9734d3e72f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -990,6 +990,49 @@
             }
         },
         {
+            "name": "drupal/color_field",
+            "version": "2.0.0-rc1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/color_field",
+                "reference": "8.x-2.0-rc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/color_field-8.x-2.0-rc1.zip",
+                "reference": "8.x-2.0-rc1",
+                "shasum": "92d0963e59d6b735dc1cc78df34e6c00ab8f4ffa"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.0-rc1",
+                    "datestamp": "1447537139"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "targoo",
+                    "homepage": "https://www.drupal.org/user/431910"
+                }
+            ],
+            "description": "Provides a color field type to store the color value and opacity",
+            "homepage": "https://www.drupal.org/project/color_field",
+            "support": {
+                "source": "http://cgit.drupalcode.org/color_field"
+            }
+        },
+        {
             "name": "drupal/console",
             "version": "0.11.3",
             "source": {
@@ -1255,6 +1298,85 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "time": "2017-02-01 17:03:36"
+        },
+        {
+            "name": "drupal/ctools",
+            "version": "3.0.0-alpha27",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/ctools",
+                "reference": "8.x-3.0-alpha27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.0-alpha27.zip",
+                "reference": "8.x-3.0-alpha27",
+                "shasum": "3e069c46902dd05c2a4e0caf7b185942e9b53238"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-alpha27",
+                    "datestamp": "1471723439"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "EclipseGc",
+                    "homepage": "https://www.drupal.org/user/61203"
+                },
+                {
+                    "name": "damiankloip",
+                    "homepage": "https://www.drupal.org/user/1037976"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "esmerel",
+                    "homepage": "https://www.drupal.org/user/164022"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "merlinofchaos",
+                    "homepage": "https://www.drupal.org/user/26979"
+                },
+                {
+                    "name": "neclimdul",
+                    "homepage": "https://www.drupal.org/user/48673"
+                },
+                {
+                    "name": "sdboyer",
+                    "homepage": "https://www.drupal.org/user/146719"
+                },
+                {
+                    "name": "sun",
+                    "homepage": "https://www.drupal.org/user/54136"
+                },
+                {
+                    "name": "tim.plunkett",
+                    "homepage": "https://www.drupal.org/user/241634"
+                }
+            ],
+            "description": "Provides a number of utility and helper APIs for Drupal developers and site builders.",
+            "homepage": "https://www.drupal.org/project/ctools",
+            "support": {
+                "source": "http://cgit.drupalcode.org/ctools"
+            }
         },
         {
             "name": "drupal/entity_reference_revisions",
@@ -1540,21 +1662,25 @@
         },
         {
             "name": "drupal/metatag",
-            "version": "1.0.0-beta11",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/metatag",
-                "reference": "8.x-1.0-beta11"
+                "reference": "8.x-1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.0-beta11.zip",
-                "reference": "8.x-1.0-beta11",
-                "shasum": "d73fb7ba41833bd8ccb9a661aafc47258b4c7e18"
+                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "604e45e89c19f5a8960b6a8ae3d80500d4328e6b"
             },
             "require": {
                 "drupal/core": "*",
                 "drupal/token": "*"
+            },
+            "require-dev": {
+                "drupal/metatag_dc": "*",
+                "drupal/metatag_open_graph": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -1562,8 +1688,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta11",
-                    "datestamp": "1478265227"
+                    "version": "8.x-1.0",
+                    "datestamp": "1485902197"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1650,6 +1776,63 @@
                 "source": "http://cgit.drupalcode.org/paragraphs"
             },
             "time": "2017-01-19 09:39:08"
+        },
+        {
+            "name": "drupal/pathauto",
+            "version": "1.0.0-rc1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/pathauto",
+                "reference": "8.x-1.0-rc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.0-rc1.zip",
+                "reference": null,
+                "shasum": "2460339ac8739317b3c4e66e9ce7142cc02adac3"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/ctools": "*",
+                "drupal/token": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-rc1",
+                    "datestamp": "1485702484"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Freso",
+                    "homepage": "https://www.drupal.org/user/27504"
+                },
+                {
+                    "name": "greggles",
+                    "homepage": "https://www.drupal.org/user/36762"
+                }
+            ],
+            "description": "Provides a mechanism for modules to automatically generate aliases for the content they manage.",
+            "homepage": "https://www.drupal.org/project/pathauto",
+            "support": {
+                "source": "http://cgit.drupalcode.org/pathauto"
+            }
         },
         {
             "name": "drupal/restui",
@@ -1944,6 +2127,49 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/token",
                 "issues": "https://www.drupal.org/project/issues/token"
+            }
+        },
+        {
+            "name": "drupal/toolbar_menu",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/toolbar_menu",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/toolbar_menu-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "ee6f95fcb3b941a34c796c259d99633bbcbcbd01"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1455823439"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "vpeltot",
+                    "homepage": "https://www.drupal.org/user/1361586"
+                }
+            ],
+            "description": "Add your favorite menu (Structure > Menu) in the Drupal Toolbar",
+            "homepage": "https://www.drupal.org/project/toolbar_menu",
+            "support": {
+                "source": "http://cgit.drupalcode.org/toolbar_menu"
             }
         },
         {

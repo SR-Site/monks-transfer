@@ -25,6 +25,10 @@ class LoadInitTask extends AbstractTask
 
 			})
 			.then(this.done.bind(this))
+			.catch((reason) =>
+			{
+				console.error('[LoadInitTask] Failed loading the init task', reason)
+			})
 	}
 
 	/**

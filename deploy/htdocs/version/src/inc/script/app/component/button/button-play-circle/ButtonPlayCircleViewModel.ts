@@ -9,17 +9,6 @@ class ButtonPlayCircleViewModel extends DefaultButtonViewModel<ButtonPlayCircleC
 	public isPlaying:KnockoutObservable<boolean> = ko.observable(false);
 
 	/**
-	 * @public
-	 * @method handleClick
-	 */
-	public handleClick(event:MouseEvent): void
-	{
-		this.isPlaying(!this.isPlaying());
-
-		super.handleClick(event);
-	}
-
-	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct
 	 */

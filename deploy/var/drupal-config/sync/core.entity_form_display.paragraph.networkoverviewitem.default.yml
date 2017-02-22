@@ -1,0 +1,54 @@
+uuid: 90bcd646-7eff-4ba3-aab6-4431b6fd67c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.networkoverviewitem.field_image
+    - field.field.paragraph.networkoverviewitem.field_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.networkoverviewitem
+  module:
+    - field_group
+    - image
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_link:
+      children:
+        - field_link
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: Link
+id: paragraph.networkoverviewitem.default
+targetEntityType: paragraph
+bundle: networkoverviewitem
+mode: default
+content:
+  field_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_link:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

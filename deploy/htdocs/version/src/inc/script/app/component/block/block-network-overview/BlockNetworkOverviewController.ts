@@ -1,18 +1,15 @@
 import AbstractBlockComponentController from "../AbstractBlockComponentController";
-import BlockNetworkOverviewTransitionController from 'app/component/block/block-network-overview/BlockNetworkOverviewTransitionController';
-import IBlockNetworkOverviewOptions from 'app/component/block/block-network-overview/IBlockNetworkOverviewOptions';
-import BlockNetworkOverviewViewModel from 'app/component/block/block-network-overview/BlockNetworkOverviewViewModel';
-
+import BlockNetworkOverviewTransitionController from "app/component/block/block-network-overview/BlockNetworkOverviewTransitionController";
+import IBlockNetworkOverviewOptions from "app/component/block/block-network-overview/IBlockNetworkOverviewOptions";
+import BlockNetworkOverviewViewModel from "app/component/block/block-network-overview/BlockNetworkOverviewViewModel";
 import Log from "lib/temple/util/Log";
-import DraggableInstance from "../../../util/DraggableInstance";
+import DraggableInstance, {IDraggableEventData} from "../../../util/DraggableInstance";
 import ScrollBarController from "../../scroll-bar/ScrollBarController";
 import CommonEvent from "../../../../lib/temple/event/CommonEvent";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
-import {IDraggableEventData} from "../../../util/DraggableInstance";
-import AbstractTransitionComponentController from "../../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 
-class BlockNetworkOverviewController extends AbstractBlockComponentController<BlockNetworkOverviewViewModel, IBlockNetworkOverviewOptions>
+class BlockNetworkOverviewController extends AbstractBlockComponentController<BlockNetworkOverviewViewModel, IBlockNetworkOverviewOptions, BlockNetworkOverviewTransitionController>
 {
 	/**
 	 *    Instance of Log debug utility for debug logging
@@ -31,6 +28,25 @@ class BlockNetworkOverviewController extends AbstractBlockComponentController<Bl
 	public init(): void
 	{
 		super.init();
+
+		let itemsPerRow = Math.ceil(this.options.items.length / 2);
+		let topRow = [];
+		let bottomRow = [];
+
+		this.options.items.forEach((item, index) =>
+		{
+			if(index < itemsPerRow)
+			{
+				topRow.push(item);
+			}
+			else
+			{
+				bottomRow.push(item);
+			}
+		});
+
+		this.viewModel.rows.push(topRow);
+		this.viewModel.rows.push(bottomRow);
 
 		this._draggableInstance = new DraggableInstance(<HTMLElement>this.element.querySelector('.js-draggable-container'), {
 			invert: true,

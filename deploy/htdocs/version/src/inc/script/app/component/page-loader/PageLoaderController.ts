@@ -5,7 +5,7 @@ import PageLoaderViewModel from 'app/component/page-loader/PageLoaderViewModel';
 
 import Log from "lib/temple/util/Log";
 
-class PageLoaderController extends AbstractTransitionComponentController<PageLoaderViewModel, IPageLoaderOptions>
+class PageLoaderController extends AbstractTransitionComponentController<PageLoaderViewModel, IPageLoaderOptions, PageLoaderTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

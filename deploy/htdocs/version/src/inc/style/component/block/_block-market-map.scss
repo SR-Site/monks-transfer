@@ -123,65 +123,10 @@
 		}
 	}
 
-	// Search Bar
-	.search-bar {
+	.component-market-search {
+		@include pos(auto, $sizeGrid * 9, $sizeGrid * 2, $sizeGrid * 2);
 		position: absolute;
-		@include pos(auto, $sizeGrid*9, $sizeGrid*2, $sizeGrid*2);
 		z-index: zindex($zIndex, ui);
-		height: $sizeGrid*2;
-		background-color: white;
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: center;
-
-		&.has-input {
-
-			.input-text {
-				margin-left: $sizeGrid * 2;
-			}
-
-			.component-button-circle-close {
-				display: block;
-			}
-		}
-
-		.input-text {
-			margin: 0 $sizeGrid;
-			overflow: visible;
-		}
-
-		.component-button-circle-close {
-			@include pos(50%, auto, auto, $sizeGrid / 2);
-			position: absolute;
-			transform: translateY(-50%);
-			display: none;
-		}
-
-		.note {
-			@include size(calc(100% + #{$sizeGrid * 3}), $sizeGrid * 2);
-			@include pos(-10rem, auto, auto, -$sizeGrid * 2 );
-			background: $colorLightGrey;
-			position: absolute;
-			color: $colorPrimary;
-			padding: 0 $sizeGrid;
-			text-align: left;
-
-			&.button {
-				font: 600 1.6rem/#{$sizeGrid * 2} $fontOpenSans;
-			}
-
-			&.no-result-message {
-				font: 600 1.2rem/#{$sizeGrid * 2} $fontOpenSans;
-			}
-		}
-
-		.button-search {
-			@include size($sizeGrid*5, 100%);
-			background-color: $colorSecondary;
-			text-transform: uppercase;
-			font: 700 1rem / #{$sizeGrid*2} $fontOpenSans;
-			color: white;
-		}
 	}
 
 	// Breakpoint
@@ -248,41 +193,8 @@
 		}
 
 		// Search Bar
-		.search-bar {
-			height: $sizeGrid*8;
-			position: relative;
-			@include pos(auto, auto, auto, auto);
-			flex-wrap: wrap;
-
-			.input-text-main {
-				margin: $sizeGrid 0;
-				padding: 0 $sizeGrid;
-			}
-
-			.component-button-circle-close {
-				top: $sizeGrid * 2;
-			}
-
-			.note {
-				@include size(calc(100% + #{$sizeGrid * 2}), $sizeGrid * 4);
-				@include pos(-20rem, 0, auto, -$sizeGrid * 2);
-
-
-				&.no-result-message {
-					font-size: 2rem;
-					line-height: $sizeGrid * 4;
-				}
-
-				&.button {
-					font-size: 3rem;
-				}
-			}
-
-			.button-search {
-				@include size(100%, $sizeGrid*4);
-				font-size: mobile-size(2.8rem);
-				line-height: $sizeGrid * 4;
-			}
+		.component-market-search {
+			@include pos(auto, 0, 0, 0);
 		}
 
 		// Side Panel

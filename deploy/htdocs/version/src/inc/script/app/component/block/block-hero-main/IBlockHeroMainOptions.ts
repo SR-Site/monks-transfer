@@ -1,6 +1,7 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import IImage from "../../../data/interface/media/IImage";
 import ILink from "../../../data/interface/action/ILink";
+import IVideo from "../../../data/interface/media/IVideo";
 
 interface IBlockHeroMainOptions extends IAbstractBlockComponentOptions
 {
@@ -25,6 +26,11 @@ interface IBlockHeroMainOptions extends IAbstractBlockComponentOptions
 		 * @description The slide background image
 		 */
 		background: IImage;
+		/**
+		 * @property
+		 * @description The slide background video, this will overrule the background image on desktop. Note that we can only use internal videos!
+		 */
+		backgroundVideo?:IVideo;
 		/**
 		 * @property
 		 * @description The slide link

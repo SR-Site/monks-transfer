@@ -1,0 +1,33 @@
+uuid: efaf90e7-808e-43f7-be43-f27eec27adb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.networkoverviewitem.field_image
+    - field.field.paragraph.networkoverviewitem.field_link
+    - paragraphs.paragraphs_type.networkoverviewitem
+  module:
+    - entity_reference_revisions
+    - image
+id: paragraph.networkoverviewitem.default
+targetEntityType: paragraph
+bundle: networkoverviewitem
+mode: default
+content:
+  field_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_link:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden: {  }

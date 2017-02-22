@@ -14,9 +14,9 @@ class Endpoints
 	 */
 	public static getEndpoint(endpoint: string): string
 	{
-		let mockContent:boolean = configManagerInstance.getProperty(PropertyNames.MOCK_CONTENT);
+		let mockContent: boolean = configManagerInstance.getProperty(PropertyNames.MOCK_CONTENT);
 
-		return Endpoints._ENDPOINTS[endpoint][mockContent ? Endpoints._MOCK : Endpoints._API]
+		return Endpoints._ENDPOINTS[endpoint][mockContent ? Endpoints._MOCK : Endpoints._API] + (mockContent ? '' : '?_format=json')
 	}
 
 	/**
@@ -47,7 +47,7 @@ class Endpoints
 		},
 		[Endpoints.PAGE_LAYOUT]: {
 			[Endpoints._MOCK]: '{page}.json',
-			[Endpoints._API]: 'pages/{page}'
+			[Endpoints._API]: 'page/{page}'
 		}
 	};
 }

@@ -5,7 +5,7 @@ import ButtonCallToReachViewModel from 'app/component/button/button-call-to-reac
 
 import Log from "lib/temple/util/Log";
 
-class ButtonCallToReachController extends AbstractButtonController<ButtonCallToReachViewModel, IButtonCallToReachOptions>
+class ButtonCallToReachController extends AbstractButtonController<ButtonCallToReachViewModel, IButtonCallToReachOptions, ButtonCallToReachTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

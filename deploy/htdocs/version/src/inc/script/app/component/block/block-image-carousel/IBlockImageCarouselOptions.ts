@@ -1,5 +1,6 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import IImage from "../../../data/interface/media/IImage";
+import Theme from "../../../data/enum/style/Theme";
 
 export interface IBlockImageCarouselOptions extends IAbstractBlockComponentOptions
 {
@@ -20,6 +21,13 @@ export interface IBlockImageCarouselOptions extends IAbstractBlockComponentOptio
 		 * @description The image displayed on the slide
 		 */
 		image: IImage;
+		/**
+		 * @property
+		 * @description Sometimes you want to switch a color based on the background image to increase readability
+		 * @placeholder 1
+		 * @defaultValue 1
+		 */
+		theme:Theme;
 	}>
 }
 

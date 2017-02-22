@@ -21,7 +21,7 @@ class ContentPagePageViewModel extends DefaultPageViewModel<ContentPagePageContr
 	 * @property activeBlock
 	 * @type {KnockoutObservable<T>}
 	 */
-	public activeBlock:KnockoutObservable<AbstractBlockComponentController<any, any>> = ko.observable(null);
+	public activeBlock:KnockoutObservable<AbstractBlockComponentController<any, any, any>> = ko.observable(null);
 
 	/**
 	 * @public

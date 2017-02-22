@@ -3,9 +3,11 @@ import BlockImageCarouselController from 'app/component/block/block-image-carous
 import IBlockImageCarouselOptions from 'app/component/block/block-image-carousel/IBlockImageCarouselOptions';
 
 import ko = require('knockout');
+import ThemeHelper from "../../../util/ThemeHelper";
 
 class BlockImageCarouselViewModel extends AbstractBlockComponentViewModel<BlockImageCarouselController, IBlockImageCarouselOptions>
 {
+	public ThemeHelper:Class= ThemeHelper;
 	public currentPage:KnockoutObservable<number> = ko.observable(0);
 
 	/**
@@ -24,6 +26,7 @@ class BlockImageCarouselViewModel extends AbstractBlockComponentViewModel<BlockI
 	 */
 	public destruct():void
 	{
+		this.ThemeHelper = null;
 		this.currentPage = null;
 
 		// always call this last

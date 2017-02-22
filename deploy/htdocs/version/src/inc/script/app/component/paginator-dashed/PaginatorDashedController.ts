@@ -5,7 +5,7 @@ import PaginatorDashedViewModel from 'app/component/paginator-dashed/PaginatorDa
 
 import Log from "lib/temple/util/Log";
 
-class PaginatorDashedController extends AbstractTransitionComponentController<PaginatorDashedViewModel, IPaginatorDashedOptions>
+class PaginatorDashedController extends AbstractTransitionComponentController<PaginatorDashedViewModel, IPaginatorDashedOptions, PaginatorDashedTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

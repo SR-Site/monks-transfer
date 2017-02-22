@@ -5,7 +5,7 @@ import BlockAudioFragmentViewModel from 'app/component/block/block-audio-fragmen
 
 import Log from "lib/temple/util/Log";
 
-class BlockAudioFragmentController extends AbstractBlockComponentController<BlockAudioFragmentViewModel, IBlockAudioFragmentOptions>
+class BlockAudioFragmentController extends AbstractBlockComponentController<BlockAudioFragmentViewModel, IBlockAudioFragmentOptions, BlockAudioFragmentTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

@@ -30,9 +30,7 @@
 		}
 
 		.component-button-tag {
-			&:not(:first-child) {
-				margin-left: $sizeGrid / 4;
-			}
+			margin: 2px;
 		}
 	}
 
@@ -40,7 +38,7 @@
 		clip: rect(0, $sizeGrid * 16, $sizeGrid * 8, $sizeGrid * 8);
 
 		img {
-			width: 100%;
+			height: 100%;
 			transform: translateX(10%);
 		}
 
@@ -73,6 +71,25 @@
 				fill: transparent;
 				stroke: $colorWhite;
 				stroke-width: 5px;
+			}
+		}
+	}
+
+	.theme-dark {
+		figure {
+			.hover-heading {
+				color: $colorPrimary;
+			}
+
+			.hover-icon {
+
+				path {
+					fill: $colorPrimary;
+				}
+
+				circle {
+					stroke: $colorPrimary;
+				}
 			}
 		}
 	}
@@ -116,6 +133,48 @@
 			}
 		}
 	}
+
+	@include respond-to(X_LARGE) {
+		width: 15 * $sizeGrid;
+
+		aside {
+			width: 7.5 * $sizeGrid;
+		}
+
+		figure {
+			clip: rect(0, $sizeGrid * 15, $sizeGrid * 8, $sizeGrid * 7.5);
+		}
+
+		&.transition-in-complete {
+			@include hover() {
+				figure {
+					clip: rect(0, $sizeGrid * 15, $sizeGrid * 8, 0);
+				}
+			}
+		}
+	}
+
+	@include respond-to(LARGE) {
+		width: 16 * $sizeGrid;
+
+		aside {
+			width: 8 * $sizeGrid;
+		}
+
+		figure {
+			clip: rect(0, $sizeGrid * 16, $sizeGrid * 8, $sizeGrid * 8);
+		}
+
+		&.transition-in-complete {
+			@include hover() {
+				figure {
+					clip: rect(0, $sizeGrid * 16, $sizeGrid * 8, 0);
+				}
+			}
+		}
+	}
+
+
 
 	@include respond-to(SMALL) {
 		@include size(100%, auto);

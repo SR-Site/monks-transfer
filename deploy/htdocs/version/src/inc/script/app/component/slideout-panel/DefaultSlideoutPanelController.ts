@@ -1,18 +1,20 @@
 import Promise = require("bluebird");
 import IDefaultSlideoutPanelOptions from "./IDefaultSlideoutPanelOptions";
 import DefaultSlideoutPanelViewModel from "./DefaultSlideoutPanelViewModel";
-import CallbackCounter from "../../util/CallbackCounter";
-import DefaultSlideoutPanelTransitionController from "./DefaultSlideoutPanelTransitionController";
 import ScrollUtils from "../../util/ScrollUtils";
 import Scrollbar from "../../../lib/temple/component/Scrollbar";
 import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
-import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import NativeEventListener from "../../../lib/temple/event/NativeEventListener";
 import ThrottleDebounce from "../../../lib/temple/util/ThrottleDebounce";
+import DefaultSlideoutPanelTransitionController from "./DefaultSlideoutPanelTransitionController";
 
-class DefaultSlideoutPanelController<TController, TOptions extends IDefaultSlideoutPanelOptions> extends AbstractTransitionComponentController<TController, TOptions>
+class DefaultSlideoutPanelController<
+	TViewModel extends DefaultSlideoutPanelViewModel<any, any>,
+	TOptions extends IDefaultSlideoutPanelOptions,
+	TTransitionController extends DefaultSlideoutPanelTransitionController<any>>
+extends AbstractTransitionComponentController<TViewModel, TOptions, TTransitionController>
 {
-	protected panelComponents: {[id: string]: AbstractTransitionComponentController<any, any>} = {};
+	protected panelComponents: {[id: string]: AbstractTransitionComponentController<any, any, any>} = {};
 	protected activePanel: string = '';
 
 	/**
@@ -42,7 +44,7 @@ class DefaultSlideoutPanelController<TController, TOptions extends IDefaultSlide
 	 * @param panelId
 	 * @returns {AbstractTransitionComponentController}
 	 */
-	public getPanelComponentById(panelId): AbstractTransitionComponentController<any, any>
+	public getPanelComponentById(panelId): AbstractTransitionComponentController<any, any, any>
 	{
 		return this.panelComponents[panelId];
 	}
@@ -52,7 +54,7 @@ class DefaultSlideoutPanelController<TController, TOptions extends IDefaultSlide
 	 * @method handleComponentReady
 	 * @param controller
 	 */
-	public handleComponentReady(controller: AbstractTransitionComponentController<DefaultComponentTransitionViewModel<any, any>, any>): void
+	public handleComponentReady(controller: AbstractTransitionComponentController<any, any, any>): void
 	{
 		this.panelComponents[controller.options.id] = controller;
 	}

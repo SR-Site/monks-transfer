@@ -1,3 +1,9 @@
-<div class="component-video-player" data-bind="with: data">
-
+<div class="component-video-player" data-bind="events: [
+	[MouseEventHelper.MOUSEMOVE, $root.handleMouseMove.bind($root)],
+	[MouseEventHelper.MOUSELEAVE, $root.handleMouseLeave.bind($root)]
+]">
+	<!-- ko component: {
+		name: 'video-controls',
+		onComplete: $root.controller.handleVideoControlsReady.bind($root.controller)
+	} --><!-- /ko-->
 </div>

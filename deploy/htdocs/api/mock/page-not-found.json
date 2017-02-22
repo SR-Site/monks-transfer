@@ -10,7 +10,7 @@
 					"errorCode": 404,
 					"heading": "page not found",
 					"paragraph": "The page you were looking for doesn't exist.",
-					"background": {
+					"image": {
 						"normal": "data/image/page-not-found/background.jpg",
 						"small": "data/image/page-not-found/background.jpg",
 						"alt": "Background image alt text"

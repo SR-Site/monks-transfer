@@ -1,8 +1,4 @@
-<header class="component-header" data-bind="css: {
-	'enable-solid-background': $root.enableSolidBackground,
-	'theme-light': dataManager.headerTheme() === $root.Theme.LIGHT,
-	'theme-dark': dataManager.headerTheme() === $root.Theme.DARK
-}">
+<header class="component-header" data-bind="css: $root.classNames()">
 
 	<h1 class="logo" data-bind="
 		gaiaGoto: [Branches.CONTENT_PAGE, 'home'],
@@ -20,9 +16,9 @@
 			options: {
 				icon: 'contact',
 				action: {
-					label: localeManager.getString('global.cta.to_reach'),
-					title: localeManager.getString('global.cta.to_reach'),
-					event: function(){console.log('call us')}
+					label: dataManager.settingsModel.initDataModel.contactOptions.phone.phoneNumber,
+					title: dataManager.settingsModel.initDataModel.contactOptions.phone.phoneNumber,
+					event: $root.handleCallClick.bind($root)
 				},
 				size: $root.ButtonSize.LARGE,
 				disabled: $root.callButtonDisabled

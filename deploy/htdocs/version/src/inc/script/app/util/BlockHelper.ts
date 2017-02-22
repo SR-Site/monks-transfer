@@ -1,6 +1,7 @@
 import IBlock from "../data/interface/block/IBlock";
 import {IBlockConfig} from "../data/interface/block/IBlockConfig";
 import {blockConfig} from "../config/blockConfig";
+import StringUtils from "../../lib/temple/util/type/StringUtils";
 
 /**
  * @class BlockHelper
@@ -8,7 +9,7 @@ import {blockConfig} from "../config/blockConfig";
  */
 class BlockHelper
 {
-	public static availableBlocks:IBlockConfig = blockConfig;
+	public static availableBlocks: IBlockConfig = blockConfig;
 
 	/**
 	 * @public
@@ -19,20 +20,22 @@ class BlockHelper
 	 * @description A simple method that parses an array of blocks as provided by the API and converts them to something
 	 * the application understands. It also filters out unsupported blocks
 	 */
-	public static parseBlocks(parsedBlocks:Array<IBlock>, blocks:Array<IBlock>, recursive:boolean = false):Array<IBlock>
+	public static parseBlocks(parsedBlocks: Array<IBlock>, blocks: Array<IBlock>, recursive: boolean = false): Array<IBlock>
 	{
 		// Loop through the blocks
-		blocks.forEach((block, index)=>
+		blocks.forEach((block, index) =>
 		{
-			if(BlockHelper.isValidBlock(block.id))
+			const blockId = BlockHelper.parseBlockId(block.id);
+
+			if(BlockHelper.isValidBlock(blockId))
 			{
 				// Store the id
-				block.data.id = BlockHelper.availableBlocks[block.id].id;
+				block.data.id = BlockHelper.availableBlocks[blockId].id;
 
 				let clone = JSON.parse(JSON.stringify(block));
 
 				// Merge the 2 object and store them in the blocks array
-				parsedBlocks.push(Object.assign(clone, BlockHelper.availableBlocks[block.id]));
+				parsedBlocks.push(Object.assign(clone, BlockHelper.availableBlocks[blockId]));
 
 				if(block.data.blocks !== void 0)
 				{
@@ -58,9 +61,9 @@ class BlockHelper
 	 * @param {string} id
 	 * @returns {boolean}
 	 */
-	public static isValidBlock(id:string):boolean
+	public static isValidBlock(id: string): boolean
 	{
-		if(BlockHelper.availableBlocks[id] !== void 0)
+		if(BlockHelper.availableBlocks[BlockHelper.parseBlockId(id)] !== void 0)
 		{
 			return true;
 		}
@@ -69,6 +72,29 @@ class BlockHelper
 			console.warn('[PageLayoutModel] Trying to add a invalid block (' + id + '), add it to the BlockConfig.ts first');
 			return false;
 		}
+	}
+
+	/**
+	 * @private
+	 * @method parseBlockId
+	 * @description If the backend returns the block id with the block prefix we want to strip this out. Because blocks never start with the block prefix.
+	 * @param id
+	 * @returns {string}
+	 */
+	private static parseBlockId(id:string):string
+	{
+		const prefix = 'block';
+
+		if(id.indexOf(prefix) === 0)
+		{
+			// Strip out the block part
+			id = id.replace(prefix, '');
+
+			// lowercase the first character to match the new id
+			id = StringUtils.swapCase(id.charAt(0)) + id.slice(1);
+		}
+
+		return id;
 	}
 }
 

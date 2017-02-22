@@ -26,7 +26,7 @@ class ParagraphBlockHeroTertiaryV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockHeroTertiary',
+      "id" => 'heroTertiary',
       "data" => $data + [
         "background" => $this->image($entity->get('field_image')),
       ],

@@ -5,7 +5,7 @@ import BlockSmallInfoViewModel from 'app/component/block/block-small-info/BlockS
 
 import Log from "lib/temple/util/Log";
 
-class BlockSmallInfoController extends AbstractBlockComponentController<BlockSmallInfoViewModel, IBlockSmallInfoOptions>
+class BlockSmallInfoController extends AbstractBlockComponentController<BlockSmallInfoViewModel, IBlockSmallInfoOptions, BlockSmallInfoTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

@@ -76,6 +76,12 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
     // It have to be always an array.
     $items = $this->fieldProcessor->getFieldData($field, $options);
 
+    /** @var \Drupal\Core\Field\FieldStorageDefinitionInterface $fieldStorage */
+    $fieldStorage = $field->getFieldDefinition()->getFieldStorageDefinition();
+    if (empty($items) && $fieldStorage->isMultiple()) {
+      $items = [];
+    }
+
     if (count($field) == 1) {
       $items = [$items];
     }

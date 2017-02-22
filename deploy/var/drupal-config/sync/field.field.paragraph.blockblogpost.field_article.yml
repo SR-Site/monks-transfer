@@ -1,0 +1,29 @@
+uuid: cc689290-f099-478b-abb0-1492f15d6e72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_article
+    - node.type.article
+    - paragraphs.paragraphs_type.blockblogpost
+id: paragraph.blockblogpost.field_article
+field_name: field_article
+entity_type: paragraph
+bundle: blockblogpost
+label: Article
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -8,10 +8,8 @@ import ScrollBarController from "../../scroll-bar/ScrollBarController";
 import CommonEvent from "../../../../lib/temple/event/CommonEvent";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 
-class BlockHowToAdvertiseController extends AbstractBlockComponentController<BlockHowToAdvertiseViewModel, IBlockHowToAdvertiseOptions>
+class BlockHowToAdvertiseController extends AbstractBlockComponentController<BlockHowToAdvertiseViewModel, IBlockHowToAdvertiseOptions, BlockHowToAdvertiseTransitionController>
 {
-	public transitionController: BlockHowToAdvertiseTransitionController;
-
 	/**
 	 *    Instance of Log debug utility for debug logging
 	 *    @property _debug

@@ -1,16 +1,17 @@
-uuid: c23e5e55-f81f-44f6-9651-62015e9887f2
+uuid: 73a03ad9-2c66-45ed-b05f-cb4ec1e27150
 langcode: en
 status: true
 dependencies:
   module:
-    - jquery_colorpicker
+    - color_field
     - paragraphs
 id: paragraph.field_background_color
 field_name: field_background_color
 entity_type: paragraph
-type: jquery_colorpicker
-settings: {  }
-module: jquery_colorpicker
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
 locked: false
 cardinality: 1
 translatable: true

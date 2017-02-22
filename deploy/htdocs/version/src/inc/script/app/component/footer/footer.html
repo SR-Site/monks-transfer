@@ -3,12 +3,12 @@
 		<h1 class="logo white"> <!-- 'primary' or 'inverted' -->
 			<span class="icon" data-bind="icon: 'logo'"></span>
 		</h1>
-		<ul class="contact-options" data-bind="with: $data.contactOptions">
+		<ul class="contact-options" data-bind="with: dataManager.settingsModel.initDataModel.contactOptions">
 			<li class="contact-option">
-				<a class="link link-main" href="mailto:{{$data.email}}?SUBJECT={{$data.emailSubject}}&BODY={{$data.emailBody}}">{{$data.email}}</a>
+				<a class="link link-main" href="mailto:{{$data.email.emailAddress}}?SUBJECT={{$data.email.emailSubject}}&BODY={{$data.email.emailBody}}">{{$data.email.emailAddress}}</a>
 			</li>
 			<li class="contact-option">
-				<a class="link link-main" href="tel:{{$data.phone}}">{{$data.phone}}</a>
+				<a class="link link-main" href="tel:{{$data.phone.phoneNumber}}">{{$data.phone.phoneNumber}}</a>
 			</li>
 		</ul>
 	</section>
@@ -33,7 +33,7 @@
 					<!-- ko template: { name: 'link-icon', data: Object.assign({icon: 'twitter'}, $data.twitter) } --><!-- /ko -->
 				</li>
 				<li>
-					<!-- ko template: { name: 'link-icon', data: Object.assign({icon: 'youtube'}, $data.youtube) } --><!-- /ko -->
+					<!-- ko template: { name: 'link-icon', data: Object.assign({icon: 'instagram'}, $data.instagram) } --><!-- /ko -->
 				</li>
 				<li>
 					<!-- ko template: { name: 'link-icon', data: Object.assign({icon: 'linkedin'}, $data.linkedin) } --><!-- /ko -->
@@ -42,6 +42,6 @@
 		</nav>
 	</section>
 	<section class="bottom-section">
-		<p class="copyright">@Charter Communications</p>
+		<p class="copyright" data-bind="html: $data.copyright"></p>
 	</section>
 </footer>

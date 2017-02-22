@@ -26,7 +26,7 @@ class ParagraphBlockHeroSecondaryV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'blockHeroSecondary',
+      "id" => 'heroSecondary',
       "data" => $data + [
         "background" => $this->image($entity->get('field_image')),
         "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),

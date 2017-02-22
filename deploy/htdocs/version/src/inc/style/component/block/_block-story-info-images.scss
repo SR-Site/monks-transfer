@@ -13,10 +13,13 @@
 			background: $colorWhite;
 			padding: $sizeGrid $sizeGrid * 2;
 			flex-grow: 1;
-			transition: background .2s ease(easeInOut);
+			transition: background .4s ease(linear);
+			color: $colorPrimary;
 
 			.copy {
-				transition: opacity .2s ease(easeInOut);
+				transition: opacity .4s ease(linear), transform .4s ease(easeInOutCubic);
+				opacity: 0;
+				transform: translateY(50px);
 			}
 
 			.heading,
@@ -28,7 +31,16 @@
 				background: transparent;
 
 				.copy {
-					opacity :0;
+					opacity :1;
+					transform: translateX(0);
+				}
+
+				.theme-dark {
+					color: $colorPrimary;
+				}
+
+				.theme-light {
+					color: $colorWhite;
 				}
 			}
 		}
@@ -108,6 +120,8 @@
 
 				.copy {
 					margin-top: $sizeGrid/2;
+					opacity :1;
+					transform: translateX(0);
 				}
 
 				&.is-active {

@@ -5,7 +5,7 @@ import ButtonTagViewModel from 'app/component/button/button-tag/ButtonTagViewMod
 
 import Log from "lib/temple/util/Log";
 
-class ButtonTagController extends AbstractButtonController<ButtonTagViewModel, IButtonTagOptions>
+class ButtonTagController extends AbstractButtonController<ButtonTagViewModel, IButtonTagOptions, ButtonTagTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging

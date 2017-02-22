@@ -1,27 +1,35 @@
 .component-block-text {
 
-	.site-frame	{
+	.site-frame {
 		padding-left: $sizeGrid * 7;
 		padding-right: $sizeGrid * 7;
 	}
 
-	h1,h2,h3,h4 {
+	h1, h2, h3, h4 {
 		@extend %heading-07;
 		padding-bottom: $sizeGrid/2;
 	}
 
 	p {
 		@extend %copy-01;
+
+		&:not(:first-child) {
+			margin-top: $sizeGrid;
+		}
 	}
 
-	// Breakpoints
-	@include respond-to(SMALL) {
+
+	@include respond-to(LARGE) {
 		.site-frame {
 			padding-left: $sizeGrid;
 			padding-right: $sizeGrid;
 		}
+	}
 
-		h1,h2,h3,h4 {
+	// Breakpoints
+	@include respond-to(SMALL) {
+
+		h1, h2, h3, h4 {
 			font-size: mobile-size(3.5rem);
 			padding-bottom: $sizeGrid;
 		}

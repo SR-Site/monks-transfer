@@ -5,7 +5,7 @@ import BlockArticleTeaserViewModel from 'app/component/block/block-article-tease
 
 import Log from "lib/temple/util/Log";
 
-class BlockArticleTeaserController extends AbstractBlockComponentController<BlockArticleTeaserViewModel, IBlockArticleTeaserOptions>
+class BlockArticleTeaserController extends AbstractBlockComponentController<BlockArticleTeaserViewModel, IBlockArticleTeaserOptions, BlockArticleTeaserTransitionController>
 {
 	/**
 	 *	Instance of Log debug utility for debug logging
