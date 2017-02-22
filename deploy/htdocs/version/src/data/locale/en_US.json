@@ -12,7 +12,8 @@
 		"form": {
 			"placeholder": {
 				"email": "Email Address",
-				"name": "Your Name",
+				"firstName": "First Name",
+				"lastName": "Last name",
 				"phone_number": "Phone Number",
 				"state": "State",
 				"city": "City",

@@ -12,8 +12,14 @@ class ContactViewModel extends DefaultComponentTransitionViewModel<ContactContro
 
 	public fields: Array<{name: string; localeKey: string, observable: KnockoutObservable<string>, validationRules: Array<RegExp>|RegExp}> = [
 		{
-			name: 'name',
-			localeKey: 'name',
+			name: 'firstName',
+			localeKey: 'firstName',
+			validationRules: ValidationRules.nonEmpty,
+			observable: ko.observable('')
+		},
+		{
+			name: 'lastName',
+			localeKey: 'lastName',
 			validationRules: ValidationRules.nonEmpty,
 			observable: ko.observable('')
 		},
