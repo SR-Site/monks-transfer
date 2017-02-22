@@ -148,10 +148,10 @@
 					"twitter": {
 						"label": "Twitter",
 						"title": "Twitter",
-						"target": "http://www.twitter.com",
+						"target": "https://twitter.com/SpectrumReach",
 						"type": 1
 					},
-					"vimeo": {
+					"instagram": {
 						"label": "Vimeo",
 						"title": "Vimeo",
 						"target": "http://www.vimeo.com",
@@ -160,7 +160,7 @@
 					"linkedin": {
 						"label": "LinkedIn",
 						"title": "LinkedIn",
-						"target": "http://www.youtube.com",
+						"target": "https://www.linkedin.com/company/spectrum-reach",
 						"type": 1
 					}
 				}
