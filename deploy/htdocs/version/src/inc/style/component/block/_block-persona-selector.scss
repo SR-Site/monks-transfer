@@ -308,7 +308,7 @@
 		}
 
 		.persona-content-wrapper {
-			@include aspect-ratio(640px, 560px);
+			@include aspect-ratio(640px, 500px);
 			position: relative;
 			transform: none;
 		}
@@ -320,8 +320,10 @@
 		}
 
 		.persona {
+			@include offset(0, $sizeGrid);
 			width: 100%;
 			padding: 0 $sizeGrid * 2;
+			transform: none;
 		}
 
 		.persona-options,
