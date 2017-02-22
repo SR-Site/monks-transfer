@@ -111,6 +111,8 @@
 
 				.copy {
 					margin-top: $sizeGrid/2;
+					opacity :1;
+					transform: translateX(0);
 				}
 
 				&.is-active {

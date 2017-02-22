@@ -22,7 +22,7 @@
 				action: {
 					label: dataManager.settingsModel.initDataModel.contactOptions.phone.phoneNumber,
 					title: dataManager.settingsModel.initDataModel.contactOptions.phone.phoneNumber,
-					event: function(){console.log('call us')}
+					event: $root.handleCallClick.bind($root)
 				},
 				size: $root.ButtonSize.LARGE,
 				disabled: $root.callButtonDisabled

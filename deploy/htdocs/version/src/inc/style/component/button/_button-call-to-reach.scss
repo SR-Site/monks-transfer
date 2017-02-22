@@ -2,8 +2,16 @@
 	@include size(auto, $sizeGrid * 2);
 	text-transform: uppercase;
 	color: $colorPrimary;
-	cursor: default;
 	padding: 0 $sizeGrid / 2;
+
+	.theme-light & {
+		color: $colorWhite;
+
+	}
+
+	.enable-solid-background & {
+		color: $colorPrimary;
+	}
 
 	.text {
 		font: 700 1.2rem / 1 $fontOpenSans;
