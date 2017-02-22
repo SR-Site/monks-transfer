@@ -9,6 +9,8 @@ import ThrottleDebounce from "../../../../lib/temple/util/ThrottleDebounce";
 import BlockImageCallToActionsViewModel from "./BlockImageCallToActionsViewModel";
 import DataManager from "../../../data/DataManager";
 import {DeviceState} from "../../../data/scss-shared/MediaQueries";
+import AbstractTransitionComponentController from "../../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
+import AbstractTransitionController from "../../../util/component-transition/AbstractTransitionController";
 
 class BlockImageCallToActionsController extends AbstractBlockComponentController<BlockImageCallToActionsViewModel, IBlockImageCallToActionsOptions, BlockImageCallToActionsTransitionController>
 {
@@ -60,6 +62,9 @@ class BlockImageCallToActionsController extends AbstractBlockComponentController
 	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new BlockImageCallToActionsTransitionController(this.element, this);
+		this.transitionController.addEventListener(AbstractTransitionController.TRANSITION_IN_COMPLETE, ()=>{
+			this.viewModel.transitionInComplete(true);
+		});
 
 		super.allComponentsLoaded();
 	}

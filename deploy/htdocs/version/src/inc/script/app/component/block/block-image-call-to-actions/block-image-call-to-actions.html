@@ -1,4 +1,4 @@
-<div class="component-block-image-call-to-actions" data-bind="css: {'windowed': data.windowed}">
+<div class="component-block-image-call-to-actions" data-bind="css: {'windowed': data.windowed, 'transition-in-complete': $root.transitionInComplete()}">
 	<div class="call-to-actions-wrapper abs-fill">
 		<div class="call-to-actions-images abs-fill" data-bind="foreach: data.callToActions">
 			<div class="call-to-action-image abs-fill" data-bind="css: {

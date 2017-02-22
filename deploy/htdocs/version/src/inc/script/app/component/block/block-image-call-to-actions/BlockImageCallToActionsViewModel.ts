@@ -11,6 +11,8 @@ class BlockImageCallToActionsViewModel extends AbstractBlockComponentViewModel<B
 
 	public activeImageIndex: KnockoutObservable<number> = ko.observable(null);
 	public triangleSize:KnockoutObservable<number> = ko.observable(0);
+	public transitionInComplete:KnockoutObservable<boolean> = ko.observable(false);
+
 
 	/**
 	 * @public
