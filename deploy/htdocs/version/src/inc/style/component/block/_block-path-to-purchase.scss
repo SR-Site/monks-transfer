@@ -46,6 +46,10 @@
 		cursor: pointer;
 		overflow: hidden;
 
+		@include hover() {
+			color: $colorLightGrey;
+		}
+
 		&:after {
 			@include size(1px, auto);
 			right: 0;
@@ -99,6 +103,10 @@
 		.step {
 			color: $colorPrimary;
 			height: 200%;
+
+			@include hover() {
+				color: $colorPrimary;
+			}
 
 			&:after {
 				opacity: 0;
