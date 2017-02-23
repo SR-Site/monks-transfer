@@ -4,298 +4,227 @@ module.exports = function( grunt )
 	const path = require( 'path' );
 	const upperCamelCase = require( 'uppercamelcase' );
 	const camelCase = require( 'camelcase' );
+	const snakeCase = require( 'snake-case' );
 	const typhen = require( 'typhen' );
 	const jsonfile = require( 'jsonfile' );
+	const schemaParser = require( 'json-schema-ref-parser' );
 
-	var blockDir = grunt.config( 'generate-block-documentation.options.input' );
+	// Get the root of the block dir from the config file
+	const blockDir = grunt.config( 'generate-block-documentation.options.input' );
+	const tmpDir = grunt.config( 'generate-block-documentation.options.tmpFolder' );
+
+	// Load the Typhen json schema plugin
+	const jsonPlugin = typhen.loadPlugin( 'typhen-json-schema', {
+		'baseUri': tmpDir,
+		'enumType': 'string'
+	} );
+
+	// Setup the output object that will be written into the json file
 	var output = {blocks: [], references: [], enums: []};
+	var done;
 
 	grunt.registerMultiTask(
 		'generate-block-documentation',
 		'Generate documentation for the blocks in the Blocks.ts file',
 		function()
 		{
-			const done = this.async();
-			const blocks = getDirectories( blockDir );
+			done = this.async();
 
-			// Loop through all the blocks
-			blocks.forEach( function( block, index )
+			const blockDirectories = getDirectories( blockDir );
+
+			var promises = [];
+
+			// Loop through all the blocks directories
+			blockDirectories.forEach( function( blockDirectory, index )
 			{
-				console.log( 'Parse block data for:', block );
+				const blockId = directoryNameToBlockId( blockDirectory );
 
-				var blockId = upperCamelCase(block.split('-').slice(1).join('-'));
-				var properties = parseBlock( block ).reverse();
+				if( blockId == 'personaSelector' )
+				{
+					promises.push(
+						getSchema( blockDirectory )
+					);
 
-				output.blocks.push( {
-					blockId: camelCase(blockId),
-					properties: properties,
-					example: JSON.stringify( {
-						id: camelCase( blockId ),
-						data: generateExampleJSON( properties, {} )
-					}, null, 4 )
-				} );
-
+					console.log( blockId );
+				}
 
 			} );
 
-			console.log( 'Writing data.json file' );
-
-			// All done, write the json file
-			jsonfile.writeFileSync( grunt.config( 'generate-block-documentation.options.output' ) + 'data.json', output, {spaces: 4} );
-
-			done();
+			Promise.all( promises )
+				.then( writeFile )
+				.catch( function( error )
+				{
+					console.log( error );
+				} )
 		}
 	);
 
 	/**
-	 * @method generateExampleJSON
-	 * @description This method recursively generated mock data for the types
+	 * @method writeFile
+	 * @description Write the result into a json file so we can render out the options
 	 */
-	function generateExampleJSON( properties, base )
+	function writeFile()
 	{
-		properties.forEach( function( property )
+		console.log( 'Writing data.json file' );
+
+		// All done, write the json file
+		jsonfile.writeFileSync( grunt.config( 'generate-block-documentation.options.output' ) + 'data.json', output, {spaces: 4} );
+
+		console.log( output );
+
+		done();
+	}
+
+	/**
+	 * @method getSchema
+	 * @description Read the file and parse the interfaces with the json plugin
+	 * @param {string} directoryName
+	 * @returns {PromiseBluebird<U>|Thenable<U>}
+	 */
+	function getSchema( directoryName )
+	{
+		return typhen.run( {
+			plugin: jsonPlugin,
+			src: directoryNameToOptionsPath( directoryName ),
+			dest: tmpDir
+		} ).then( function()
 		{
-			if( property.type === 'string' )
-			{
-				base[property.name] = property.placeholder || 'Lorem ipsum dolor sit amet';
-			}
-			else if( property.type === 'boolean' )
-			{
-				base[property.name] = true;
-			}
-			else if( property.type === 'number' )
-			{
-				base[property.name] = 1;
-			}
-			else if( hasReference( property.type, output.references ) )
-			{
-				var reference = hasReference( property.type, output.references );
+			parseSchema( directoryName )
+		} )
+	}
 
-				base[property.name] = {};
-				base[property.name] = generateExampleJSON( reference.properties, base[property.name] );
-			}
-			else if( hasReference( property.type, output.enums ) )
-			{
-				var reference = hasReference( property.type, output.enums );
+	/**
+	 * @method parseSchema
+	 * @description After the schema was fetched we want to parse parse all the references in the same file
+	 */
+	function parseSchema( directoryName )
+	{
+		var schema = getJsonFile( directoryNameToSchemaPath( directoryName ) );
 
-				// As default value always choose the first option
-				base[property.name] = reference.properties[0].value;
-			}
-			else if( property.type === 'Array' )
-			{
-				base[property.name] = [];
-				base[property.name].push( generateExampleJSON( property.properties, {} ) );
-			}
-			else
-			{
-				base[property.name] = 'TODO: ' + property.type;
-			}
+		output.blocks.push( {
+			blockId: directoryNameToBlockId( directoryName ),
+			properties: parseProperties( schema.title, schema, [] )
 		} );
 
+		// console.log( jsonFile );
+	}
+
+	function getPropertyObject( name, data )
+	{
+		return {
+			name: name,
+			type: data.enum ? name : data.type,
+			required: data.isRequired,
+			defaultValue: '-',
+			description: data.description,
+			placeholder: '-',
+			properties: []
+		}
+	}
+
+	function parseProperties( name, data, base )
+	{
+		var properties = [];
+
+		if( data.type === 'object' )
+		{
+			properties = Object.keys( data.properties ).map( function( key, index )
+			{
+				return {
+					name: key,
+					data: data.properties[key]
+				}
+			} );
+		}
+		else if( data.type === 'array' )
+		{
+			properties = [{
+				name: name,
+				data: data.items
+			}];
+		}
+
+		// Parse the data for each property
+		properties.forEach( function( property )
+		{
+			var propertyObject = getPropertyObject(
+				property.name,
+				Object.assign(
+					property.data,
+					{
+						isRequired: data.required && data.required.indexOf( property.name ) > -1
+					}
+				) );
+
+			// Store the enum reference
+			if(data.enum) parseEnum(property.name, property.data.enum);
+
+			base.push( propertyObject );
+
+			// Check if the propertyData has more properties and restart the loop
+			if( property.data.type == 'object' )
+			{
+				parseProperties( property.name, property.data, propertyObject.properties );
+			}
+			else if( property.data.type == 'array' )
+			{
+				parseProperties( property.name, property.data.items, propertyObject.properties );
+			}
+		} );
 
 		return base;
 	}
 
-	/**
-	 * @method parseBlock
-	 * @param block
-	 * @returns Array
-	 */
-	function parseBlock( block )
+	function parseEnum(enumData)
 	{
-		// parse the folder name to pascal case
-		const blockId = upperCamelCase( block );
-
-		// Build the path to the options
-		const blockOptionsPath = blockDir + '/' + block + '/I' + blockId + 'Options.ts';
-
-		// Parse the options file with typhen to get all the properties
-		const typhenResult = typhen.parse( blockOptionsPath );
-
-		// TODO: It kinda messes up when you reference to a interface in an array!
-		const typenTypes = typhenResult.types[0];
-		const properties = typenTypes.properties || typenTypes.type.properties;
-
-		return parseProperties( properties );
+		const enumObject = {}
+		output.enums.find()
 	}
 
 	/**
-	 * @METHOD parseProperties
-	 * @param properties
-	 * @returns {Array}
+	 * @method directoryNameToOptionsPath
+	 * @param directoryName
+	 * @returns {string}
 	 */
-	function parseProperties( properties )
+
+	function directoryNameToOptionsPath( directoryName )
 	{
-		if( !properties )
-		{ properties = [] }
-
-		// Keep track of the parsed properties
-		var parsedProperties = [];
-
-		// Parse all the properties
-		properties.forEach( function( property, index )
-		{
-			// If the @ignore comment was added we will skip the property
-			if( !getDocComment( property.docComment || [], '@ignore' ) )
-			{
-				parsedProperties.push( parseProperty( property ) );
-			}
-		} );
-
-		// Return the parsed properties
-		return parsedProperties;
+		return blockDir + '/' + directoryName + '/I' + upperCamelCase( directoryName ) + 'Options.ts';
 	}
 
 	/**
-	 * @property
-	 * @description Parse the properties and return the new parsed object
+	 * @method directoryNameToSchemaPath
+	 * @description parses the directoryName to the schama path
+	 * @param directoryName
+	 * @returns {string}
 	 */
-	function parseProperty( property )
+	function directoryNameToSchemaPath( directoryName )
 	{
-		var childProperties = null;
+		const tmpFolderName = 'i_' + snakeCase( directoryName + 'Options' );
 
-		if( property.type.rawName === 'Array' )
-		{
-			childProperties = property.type.type.properties;
-		}
-		else if( property.type.rawName === '' ) // If the rawName == '' the interface was an object, it's super werid!
-		{
-			childProperties = property.type.properties;
-		}
-
-		return {
-			name: property.rawName,
-			type: getType( property.type ),
-			required: !property.isOptional,
-			defaultValue: getDocComment( property.docComment, '@defaultValue' ) || 'null',
-			description: getDocComment( property.docComment, '@description' ),
-			placeholder: getDocComment( property.docComment, '@placeholder' ),
-			properties: parseProperties( childProperties )
-		}
+		return tmpDir + '/' + tmpFolderName + '/' + tmpFolderName + '.json';
 	}
 
 	/**
-	 * @method getDocComment
-	 * @description Fetch a desired doc comment based on the @property
-	 * @param docComment
-	 * @param property
+	 * @method directoryNameToBlockId
+	 * @description It parses the name of the directory to the desired id of the block
+	 * @param directoryName
+	 * @returns {string}
 	 */
-	function getDocComment( docComment, property )
+	function directoryNameToBlockId( directoryName )
 	{
-		if( Array.isArray( docComment ) )
-		{
-			for( var i = 0; i < docComment.length; i++ )
-			{
-				if( docComment[i].indexOf( property ) > -1 )
-				{
-					return docComment[i].replace( property + ' ', '' ).toString();
-				}
-			}
-		}
-
-		// No match was found
-		return '';
+		return camelCase( directoryName.split( '-' ).slice( 1 ).join( '-' ) );
 	}
 
 	/**
-	 * @method getType
-	 * @param PrimitiveType
-	 * @description Get type from the type object
+	 * @method getJsonFile
+	 * @description reads a json file and returns the contents
+	 * @param {string} path
+	 * @returns any
 	 */
-	function getType( PrimitiveType )
+	function getJsonFile( path )
 	{
-		if( PrimitiveType.properties && PrimitiveType.rawName.indexOf( 'I' ) === 0 )
-		{
-			parseObjectReference( PrimitiveType.rawName, PrimitiveType.properties );
-		}
-		else if( PrimitiveType.members )
-		{
-			parseEnumReference( PrimitiveType.rawName, PrimitiveType.members );
-		}
-
-		// No name means it's a custom Object
-		if( PrimitiveType.rawName === '' )
-		{
-			return 'Object';
-		}
-		else
-		{
-			return PrimitiveType.rawName;
-		}
-	}
-
-	/**
-	 * @method hasReference
-	 * @param name
-	 * @returns {boolean}
-	 */
-	function hasReference( name, array )
-	{
-		return array.find( function( item )
-		{
-			return item.name === name
-		} );
-	}
-
-	/**
-	 * @method parseReference
-	 * @param properties
-	 */
-	function parseObjectReference( name, properties )
-	{
-		if( !hasReference( name, output.references ) && Array.isArray( properties ) )
-		{
-			// Keep track of the parsed properties
-			var parsedProperties = [];
-
-			// Parse all the properties
-			properties.forEach( function( property )
-			{
-				// If the @ignore comment was added we will skip the property
-				if( !getDocComment( property.docComment || [], '@ignore' ) )
-				{
-					parsedProperties.push( parseProperty( property ) );
-				}
-			} );
-
-			output.references.push( {
-				name: name,
-				properties: parsedProperties
-			} );
-		}
-	}
-
-	/**
-	 * @method parseEnum
-	 * @description Parse an enum reference
-	 * @param {string} name
-	 * @param {Array} members
-	 */
-	function parseEnumReference( name, members )
-	{
-		if( !hasReference( name, output.enums ) && Array.isArray( members ) )
-		{
-			// Keep track of the parsed properties
-			var parsedProperties = [];
-
-			// Parse all the properties
-			members.forEach( function( member )
-			{
-				// If the @ignore comment was added we will skip the property
-				if( !getDocComment( member.docComment || [], '@ignore' ) )
-				{
-					parsedProperties.push( {
-						name: member.rawName,
-						value: member.value
-					} );
-				}
-			} );
-
-			output.enums.push( {
-				name: name,
-				properties: parsedProperties
-			} );
-		}
+		return JSON.parse( fs.readFileSync( path, 'utf8' ) );
 	}
 
 	/**

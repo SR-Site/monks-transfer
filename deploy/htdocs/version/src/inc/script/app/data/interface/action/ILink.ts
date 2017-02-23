@@ -20,7 +20,7 @@ interface ILink extends IAction
 	 * @property
 	 * @description The deeplink data of the link
 	 */
-	deeplink?:Object;
+	deeplink?:any;
 }
 
 export default ILink;
