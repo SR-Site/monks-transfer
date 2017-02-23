@@ -53,6 +53,7 @@
 					"slides": [
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
+							"theme": 0,
 							"image": {
 								"normal": "data/image/image-carousel/image-1.jpg",
 								"small": "data/image/image-carousel/image-1.jpg",
@@ -61,6 +62,7 @@
 						},
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
+							"theme": 1,
 							"image": {
 								"normal": "data/image/image-carousel/image-2.jpg",
 								"small": "data/image/image-carousel/image-2.jpg",
@@ -69,6 +71,7 @@
 						},
 						{
 							"heading": "Farmer boys - 'Fresh Fish'",
+							"theme": 0,
 							"image": {
 								"normal": "data/image/image-carousel/image-1.jpg",
 								"small": "data/image/image-carousel/image-1.jpg",
@@ -98,47 +101,6 @@
 						"small": "data/image/image-with-content/background.jpg",
 						"alt": "Background image alt text"
 					}
-				}
-			},
-			{
-				"id": "howToAdvertise",
-				"data": {
-					"marginTop": 2,
-					"windowed": true,
-					"heading": "How to <span class='highlight'>Advertise</span> on Television",
-					"link": {
-						"label": "Find out more",
-						"title": "Find out more",
-						"target": "home",
-						"type": 0
-					},
-					"steps": [
-						{
-							"heading": "Create your message",
-							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
-							"icon": "triangle-advertise-icon-1"
-						},
-						{
-							"heading": "Create your message",
-							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
-							"icon": "triangle-advertise-icon-2"
-						},
-						{
-							"heading": "Create your message",
-							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
-							"icon": "triangle-advertise-icon-3"
-						},
-						{
-							"heading": "Create your message",
-							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
-							"icon": "triangle-advertise-icon-4"
-						},
-						{
-							"heading": "Create your message",
-							"paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
-							"icon": "triangle-advertise-icon-5"
-						}
-					]
 				}
 			},
 			{
