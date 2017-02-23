@@ -9,7 +9,7 @@
 				"data": {
 					"overlap": true,
 					"backgroundColor": "rgba(245, 161, 27, 0.95)",
-					"heading": "Kernel, a Full Service Creative Agency.",
+					"heading": "Kernel, a Full Service Creative Agency",
 					"link": {
 						"label": "Let’s grow your brand",
 						"title": "Let’s grow your brand",
@@ -181,7 +181,7 @@
 					"callToActions": [
 						{
 							"heading": "The Unstoppable Stopping Power<br/><span class='highlight'>of Television</span>",
-							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"paragraph": "It’s a great time to build your brand on television.",
 							"theme": 1,
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-tv.jpg",
@@ -196,13 +196,13 @@
 							"link": {
 								"label": "Reach us here",
 								"title": "Reach us here",
-								"target": "home",
+								"target": "advertising-solutions/television",
 								"type": 0
 							}
 						},
 						{
 							"heading": "The power of TV + Digital",
-							"paragraph": "Access to the best content; your advertisement during news, sports and award winning shows",
+							"paragraph": "advertising-solutions/television",
 							"theme": 1,
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-tv.jpg",
@@ -217,7 +217,7 @@
 							"link": {
 								"label": "Reach us here",
 								"title": "Reach us here",
-								"target": "home",
+								"target": "advertising-solutions/digital",
 								"type": 0
 							}
 						}

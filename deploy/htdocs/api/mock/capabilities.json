@@ -11,7 +11,7 @@
 					"slides": [
 						{
 							"heading": "Find Your Audience",
-							"paragraph": "They’re watching, and they’re paying attention. So, align your brand with the high-profile, high-performing shows people are glued to.",
+							"paragraph": "They're watching, and they’re paying attention. Align your brand with the high-profile, high-performing shows your customers are glued to.",
 							"link": {
 								"label": "Play showreel",
 								"title": "Play showreel",
@@ -87,7 +87,7 @@
 				"data": {
 					"marginTop": 2,
 					"windowed": true,
-					"html": "<p>Get your message in front of the right people at the right time. We'll place your business next to the show your target audience. Get your message in front of the right people at the right time. Lorem ipsum dolor sit</p>"
+					"html": "<p>With over 400 of the best shows across the top 50+ cable networks, it’s easy to connect with your target audience in the content they love most.</p>"
 				}
 			},
 			{
@@ -97,9 +97,9 @@
 					"windowed": true,
 					"alignment": 0,
 					"link": {
-						"label": "See all shows",
-						"title": "See all shows",
-						"target": "knowledge-center",
+						"label": "See more shows",
+						"title": "See more shows",
+						"target": "capabilities",
 						"type": 0
 					}
 				}

@@ -57,7 +57,7 @@
 		</ul>
 
 		<button class="filter-label button"
-		        data-bind="css: {'is-disabled': !$root.filterChanged()}, tap: ($root.filterChanged() ? $root.applyFilter.bind($root) : null)">
+		        data-bind="css: {'is-disabled': !$root.filterChanged()}, tap: ($root.filterChanged() ? $root.applyFilter.bind($root) : $root.handleFilterClick.bind($root))">
 
 			<!-- ko ifnot: $root.filterChanged() -->
 				<!-- ko text: label --><!-- /ko -->

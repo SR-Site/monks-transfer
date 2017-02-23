@@ -9,6 +9,7 @@
 				"data": {
 					"overlap": true,
 					"heading": "The Unstoppable Stopping Power of TV",
+                    "paragraph": "With new advances in advertising technology and the power of cable programming, it’s a great time to build your brand on TV.",
 					"link": {
 						"label": "Here’s Why",
 						"title": "Here’s Why",
@@ -30,7 +31,7 @@
 					"marginTop": 2,
 					"croppedImage": true,
 					"heading": "TV is Digital, and it’s <span class='highlight'>Everywhere</span>",
-					"paragraph": "<strong>Now more than ever, consumers are accessing live TV content on their laptops, tablets, and mobile devices. TV is no longer in competition with Digital because TV is Digital. <br/>On average, 89.5% of adults 18+ spend over four hours a day watching live TV. Our targeted solutions can help you reach them on every screen, anytime, anywhere.",
+					"paragraph": "With access to live TV content on their laptops, tablets, and mobile devices, <strong>89.5% of adults 18+ spend over four hours a day on average watching TV.</strong> Our targeted solutions can help you reach them on every screen, wherever and whenever they’re watching.",
 					"background": {
 						"normal": "data/image/image-with-content/background-7.jpg",
 						"small": "data/image/image-with-content/background-7.jpg",
@@ -46,7 +47,7 @@
 					"marginTop": 2,
 					"croppedImage": false,
 					"heading": "<span class='highlight'>TV </span>Drives <span class='highlight'>Online</span> Engagement",
-					"paragraph": "Watching TV is now a multi-screen activity, as evidenced by the 80% of viewers who use a laptop, tablet, or smartphone to browse the internet while watching. Whether they’re researching a product, joining the conversation on social media, or visiting a specific website, TV influences consumers to seek out more information online.",
+					"paragraph": "Watching television is now a multi-screen activity, with <strong>80% of viewers using a laptop, tablet, or smartphone to browse the internet while watching.</strong> Whether they’re researching a product or visiting a specific website, TV influences consumers to seek out more information online.",
 					"background": {
 						"normal": "data/image/image-with-content/background.jpg",
 						"small": "data/image/image-with-content/background.jpg",
@@ -54,22 +55,7 @@
 					}
 				}
 			},
-			{
-				"id": "imageWithContent",
-				"data": {
-					"alignment": 0,
-					"windowed": true,
-					"marginTop": 2,
-					"croppedImage": false,
-					"heading": "Use <span class='highlight'>Data</span> and <span class='highlight'>Targeting</span> to Spend Smart",
-					"paragraph": "We know more about your customers than anyone else. Use the power of data to get your message in front of the right people, at the right time.",
-					"background": {
-						"normal": "data/image/image-with-content/background.jpg",
-						"small": "data/image/image-with-content/background.jpg",
-						"alt": "Background image alt text"
-					}
-				}
-			},
+
 			{
 				"id": "smallInfo",
 				"data": {
@@ -140,9 +126,9 @@
 					"heading": "Immerse Your Brand <br/>in the Best Content",
 					"paragraph": "With over 400 of the best shows across the top 50+ cable networks, it’s easy to connect with your target audience in the content they love most.",
 					"link": {
-						"label": "See all shows",
-						"title": "See all shows",
-						"target": "/knowledge-center",
+						"label": "See more shows",
+						"title": "See more shows",
+						"target": "capabilities",
 						"type": 0
 					}
 				}
@@ -370,7 +356,7 @@
 					"callToActions": [
 						{
 							"heading": "The power of TV + Digital",
-							"paragraph": "Access to the best content; your advertisement during news, sports and award winning shows",
+							"paragraph": "Amplify the impact of your advertising across multiple screens.",
 							"theme": 1,
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-tv.jpg",
@@ -385,13 +371,13 @@
 							"link": {
 								"label": "Reach us here",
 								"title": "Reach us here",
-								"target": "home",
+								"target": "advertising-solutions/digital",
 								"type": 0
 							}
 						},
 						{
 							"heading": "Meet <span class='highlight'>Kernel,</span> <br/>Let’s Grow Your Brand",
-							"paragraph": "Access to he best content; your advertisement during news, sports and award winning shows",
+							"paragraph": "Discover our full service, in-house creative agency.",
 							"theme": 1,
 							"background": {
 								"normal": "data/image/image-call-to-actions/image-digital.jpg",
@@ -406,7 +392,7 @@
 							"link": {
 								"label": "Reach us here",
 								"title": "Reach us here",
-								"target": "home",
+								"target": "advertising-solutions/creative-services",
 								"type": 0
 							}
 						}

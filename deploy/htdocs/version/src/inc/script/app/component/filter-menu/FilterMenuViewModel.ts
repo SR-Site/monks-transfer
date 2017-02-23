@@ -88,6 +88,15 @@ class FilterMenuViewModel extends AbstractTransitionComponentViewModel<FilterMen
 
 	/**
 	 * @public
+	 * @method handleFilterClick
+	 */
+	public handleFilterClick():void
+	{
+
+	}
+
+	/**
+	 * @public
 	 * @method handleCloseDropdownClick
 	 */
 	public handleCloseDropdownClick(index: number): void

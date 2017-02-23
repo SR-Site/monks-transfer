@@ -22,25 +22,24 @@
 				},
 				{
 					"link": {
-						"label": "Advertising solutions",
-						"title": "Advertising solutions",
+						"label": "Advertising Solutions",
+						"title": "Advertising Solutions",
 						"target": "advertising-solutions",
 						"type": 0
-					},
-					"subtitle": "We offer advertising solutions for <a data-gaia-goto-route href='advertising-solutions/television'>Television</a>, <a data-gaia-goto-route href='advertising-solutions/digital'>Digital</a> and <a data-gaia-goto-route href='advertising-solutions/creative-services'>Creative services</a>"
+					}
 				},
 				{
 					"link": {
-						"label": "Capabilities",
-						"title": "Capabilities",
+						"label": "Featured Programs",
+						"title": "Featured Programs",
 						"target": "capabilities",
 						"type": 0
 					}
 				},
 				{
 					"link": {
-						"label": "Markets map",
-						"title": "Markets map",
+						"label": "Markets Map",
+						"title": "Markets Map",
 						"target": "map",
 						"type": 0
 					}
@@ -55,8 +54,8 @@
 				},
 				{
 					"link": {
-						"label": "Contact us",
-						"title": "Contact us",
+						"label": "Contact Us",
+						"title": "Contact Us",
 						"target": "contact-us",
 						"type": 0
 					}

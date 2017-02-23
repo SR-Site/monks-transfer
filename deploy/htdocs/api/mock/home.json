@@ -11,7 +11,7 @@
 					"slides": [
 						{
 							"heading": "Never Stop Reaching",
-							"paragraph": "It’s time to stop doing business as usual and start doing business as exceptional. Welcome to the new Spectrum Reach.",
+							"paragraph": "It’s time to stop doing business as usual and start doing business as exceptional.<br>Welcome to the new Spectrum Reach.",
 							"link": {
 								"label": "Find out more",
 								"title": "Find out more",
@@ -60,7 +60,7 @@
 					"marginTop": 2,
 					"croppedImage": false,
 					"heading": "<span class='highlight'>Partnership</span>",
-					"paragraph": "Whoever helps you build your brand should be human, local and fully committed to your success.",
+					"paragraph": "Whoever helps you build your brand should be local, personalized and fully committed to your success.",
 					"link": {
 						"label": "Find out more",
 						"title": "Find out more",
@@ -122,11 +122,11 @@
 				"id": "smallInfo",
 				"data": {
 					"windowed": true,
-					"heading": "Find the Right Way to Reach <br/>your <span class='highlight'>Customers</span>",
-					"paragraph": "We've created a great line-up of advertising opportunities that make it easy for you to talk to best customers",
+					"heading": "The Right Way to Reach <br/>Your <span class='highlight'>Audience</span>",
+					"paragraph": "We go beyond advertising solutions, creating unique opportunities to interact with your best customers on every screen.",
 					"link": {
-						"label": "Reach us here",
-						"title": "Reach us here",
+						"label": "Learn more",
+						"title": "Learn more",
 						"target": "home",
 						"type": 0
 					}
@@ -140,7 +140,7 @@
 						{
 							"label": "Scale",
 							"heading": "Scale that works for you",
-							"paragraph": "Whether you want to reach over 27 million households or just the homes within two miles of your business, we have you covered. We’re talking 41 states and 100+DMAs."
+							"paragraph": "Whether you want to reach over 27 million households or just the homes within two miles of your business, we have you covered. We’re talking 41 states and 100+ Markets."
 						},
 						{
 							"label": "Focus",
@@ -206,13 +206,13 @@
 							"paragraph": "Extend your campaign and make your message stronger across every screen, everywhere your customers are, no matter what.",
 							"theme": 1,
 							"background": {
-								"normal": "data/image/image-call-to-actions/WomenlookingatDevices.jpg",
-								"small": "data/image/image-call-to-actions/WomenlookingatDevices.jpg",
+								"normal": "data/image/image-call-to-actions/women-looking-at-devices.jpg",
+								"small": "data/image/image-call-to-actions/women-looking-at-devices.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image/image-call-to-actions/image-digital-blurred.jpg",
-								"small": "data/image/image-call-to-actions/image-digital-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/women-looking-at-devices-blurred.jpg",
+								"small": "data/image/image-call-to-actions/women-looking-at-devices-blurred.jpg",
 								"alt": "Background image alt text"
 							},
 							"link": {
@@ -250,11 +250,11 @@
 				"id": "latest",
 				"data": {
 					"windowed": false,
-					"heading": "The latest from Spectrum Reach",
+					"heading": "The Latest from Spectrum Reach",
 					"link": {
-						"label": "Reach us here",
-						"title": "Reach us here",
-						"target": "home",
+						"label": "See All Articles",
+						"title": "See All Articles",
+						"target": "knowledge-center",
 						"type": 0
 					},
 					"articles": [
@@ -372,7 +372,7 @@
 							"link": {
 								"label": "Grow your buisiness",
 								"title": "Grow your buisiness",
-								"target": "home",
+								"target": "contact-us",
 								"type": 0
 							},
 							"image": {
@@ -388,7 +388,7 @@
 							"link": {
 								"label": "Grow your business",
 								"title": "Grow your business",
-								"target": "home",
+								"target": "contact-us",
 								"type": 0
 							},
 							"image": {
@@ -404,7 +404,7 @@
 							"link": {
 								"label": "Grow your business",
 								"title": "Grow your business",
-								"target": "home",
+								"target": "contact-us",
 								"type": 0
 							},
 							"image": {
