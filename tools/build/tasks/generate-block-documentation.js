@@ -120,8 +120,11 @@ module.exports = function( grunt )
 	 */
 	function parseBlock( blockDirectory )
 	{
+		// Get the file path
+		const path = blockDirectoryToOptionsPath( blockDirectory );
+
 		// Parse the options file with typhen to get all the properties
-		const typhenResult = typhen.parse( blockDirectoryToOptionsPath( blockDirectory ) );
+		const typhenResult = typhen.parse( path);
 
 		// TODO: It kinda messes up when you reference to a interface in an array!
 		const typenTypes = typhenResult.types[0];
@@ -342,7 +345,7 @@ module.exports = function( grunt )
 	 */
 	function blockDirectoryToOptionsPath( blockDirectory )
 	{
-		return blockDir + '/' + blockDirectory + '/I' + camelCase( blockDirectory ) + 'Options.ts';
+		return blockDir + '/' + blockDirectory + '/I' + upperCamelCase( blockDirectory ) + 'Options.ts';
 	}
 
 	/**
