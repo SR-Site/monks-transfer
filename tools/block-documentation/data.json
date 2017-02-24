@@ -2725,6 +2725,10 @@
                 {
                     "name": "SCROLL_TO_NEXT_SECTION",
                     "value": 2
+                },
+                {
+                    "name": "CONTACT_US",
+                    "value": 3
                 }
             ]
         },
