@@ -93,8 +93,8 @@
 					"link": {
 						"label": "Contact Kernel",
 						"title": "Contact Kernel",
-						"target": "home",
-						"type": 0
+						"target": "http://hellokernel.com/contactus/",
+						"type": 1
 					},
 					"background": {
 						"normal": "data/image/image-with-content/background.jpg",
