@@ -510,7 +510,7 @@ class KnockoutValidator extends Destructible
 		{
 			if(values.hasOwnProperty(i))
 			{
-				if(typeof values[i] == 'Array')
+				if(typeof values[i] == 'array')
 				{
 					for(var j = 0; j < values[i].length; j++)
 					{
