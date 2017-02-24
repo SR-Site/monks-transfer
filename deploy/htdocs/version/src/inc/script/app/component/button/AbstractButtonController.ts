@@ -8,6 +8,8 @@ import ScrollUtils from "../../util/ScrollUtils";
 import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import Branches from "../../data/enum/gaia/Branches";
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
+import DataManager from "../../data/DataManager";
+import PanelBlocks from "../../data/enum/block/PanelBlocks";
 
 abstract class AbstractButtonController<
 	TViewModel extends AbstractButtonViewModel<any, any>,
@@ -111,6 +113,12 @@ extends AbstractTransitionComponentController<TViewModel, TOptions, TTransitionC
 				ScrollUtils.scrollToPosition(
 					nextElement.offset().top
 				);
+
+				break;
+			}
+			case LinkType.CONTACT_US:
+			{
+				DataManager.getInstance().panelController.transitionIn(PanelBlocks.CONTACT);
 
 				break;
 			}
