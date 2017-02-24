@@ -19,7 +19,7 @@
 			.copy {
 				transition: opacity .4s ease(linear), transform .4s ease(easeInOutCubic);
 				opacity: 0;
-				transform: translateY(50px);
+				transform: translateX(50px);
 			}
 
 			.heading,
