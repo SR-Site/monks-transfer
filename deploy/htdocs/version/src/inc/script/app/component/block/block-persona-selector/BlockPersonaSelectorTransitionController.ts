@@ -109,6 +109,8 @@ class BlockPersonaSelectorTransitionController extends AbstractTransitionControl
 	 */
 	private handleSlideTransitionComplete(index: number): void
 	{
+		if(this.isDestructed()) return;
+
 		let transitionObject = this._slideTransitions[index];
 
 		if(transitionObject && transitionObject.completeMethod)
