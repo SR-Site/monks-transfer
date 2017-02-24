@@ -3,6 +3,10 @@ import ILink from "./action/ILink";
 
 export interface IInitData
 {
+	routes: {
+		landing:string;
+		notFound:string;
+	};
 	contactOptions: IContactOptions
 	layout: {
 		navigation: Array<INavigationItem>;

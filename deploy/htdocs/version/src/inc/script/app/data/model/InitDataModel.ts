@@ -39,9 +39,29 @@ class InitDataModel
 	 * @public
 	 * @method getContactOptions
 	 */
-	public get contactOptions():IContactOptions
+	public get contactOptions(): IContactOptions
 	{
 		return this._data.contactOptions
+	}
+
+	/**
+	 * @public
+	 * @method get landingRoute
+	 * @returns {string}
+	 */
+	public get landingRoute(): string
+	{
+		return this._data.routes.landing;
+	}
+
+	/**
+	 * @public
+	 * @method get notFound
+	 * @returns {string}
+	 */
+	public get notFoundRoute(): string
+	{
+		return this._data.routes.notFound;
 	}
 
 	/**
@@ -50,7 +70,7 @@ class InitDataModel
 	 * @returns {{contactOptions: {email: string, phone: string}, mainLinks: Array<ILink>, secondaryLinks: Array<Array<ILink>>}}
 	 */
 	public get footerData(): {
-		contactOptions: { email: string; phone: string; };
+		contactOptions: {email: string; phone: string;};
 		mainLinks: Array<ILink>;
 		secondaryLinks: Array<Array<ILink>>;
 	}

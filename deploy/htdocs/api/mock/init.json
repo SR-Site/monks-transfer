@@ -1,5 +1,9 @@
 {
 	"data": {
+		"routes": {
+			"landing": "home",
+			"notFound": "page-not-found"
+		},
 		"contactOptions": {
 			"phone": {
 				"phoneNumber": "1-844-TO-REACH"

@@ -37,16 +37,21 @@ class PageLayoutModel extends AbstractDataModel<IPageLayout>
 		}
 		else
 		{
+			let dataManager = DataManager.getInstance();
+
 			// If it's not loaded, fetch it from the backend
-			return DataManager.getInstance().serviceModel.contentService.getPageLayout(page)
+			return dataManager.serviceModel.contentService.getPageLayout(page)
 				.then((result) => this.parsePageLayout(result.data, page))
 				.catch((result) =>
 				{
-					if(DEBUG) console.error(result);
+					if(DEBUG)
+					{
+						console.error(result);
+					}
 
 					if(configManagerInstance.getProperty(PropertyNames.MOCK_CONTENT))
 					{
-						return this.getLayout(Routes.PAGE_NOT_FOUND);
+						return this.getLayout(dataManager.settingsModel.initDataModel.notFoundRoute);
 					}
 					else
 					{
@@ -87,7 +92,6 @@ class PageLayoutModel extends AbstractDataModel<IPageLayout>
 			resolve(layout);
 		});
 	}
-
 }
 
 export default PageLayoutModel;
