@@ -167,13 +167,13 @@
 							"paragraph": "advertising-solutions/television",
 							"theme": 1,
 							"background": {
-								"normal": "data/image/image-call-to-actions/image-tv.jpg",
-								"small": "data/image/image-call-to-actions/image-tv.jpg",
+								"normal": "data/image/image-call-to-actions/women-looking-at-devices.jpg",
+								"small": "data/image/image-call-to-actions/women-looking-at-devices.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
-								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
+								"normal": "data/image/image-call-to-actions/women-looking-at-devices-blurred.jpg",
+								"small": "data/image/image-call-to-actions/women-looking-at-devices-blurred.jpg",
 								"alt": "Background image alt text"
 							},
 							"link": {
