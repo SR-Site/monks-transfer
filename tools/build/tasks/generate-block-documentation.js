@@ -20,7 +20,6 @@ module.exports = function( grunt )
 			const done = this.async();
 			const blockDiretories = getDirectories( blockDir );
 
-			console.log();
 			var bar = new ProgressBar( 'Building documentation [:bar] :percent :block', {
 				complete: '=',
 				incomplete: '-',
