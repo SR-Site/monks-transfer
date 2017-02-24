@@ -109,7 +109,7 @@
 					"link": {
 						"label": "Learn more",
 						"title": "Learn more",
-						"target": "home",
+						"target": "advertising-solutions",
 						"type": 0
 					}
 				}
@@ -352,10 +352,10 @@
 							"paragraph": "Your mission: to make your idea happen. No industry jargon, just the best solutions to hit consumers with all you’ve got.",
 							"personaType": 0,
 							"link": {
-								"label": "Grow your buisiness",
-								"title": "Grow your buisiness",
+								"label": "Grow your business",
+								"title": "Grow your business",
 								"target": "contact-us",
-								"type": 0
+								"type": 3
 							},
 							"image": {
 								"normal": "data/image/persona-selector/persona-background-image-5.jpg",
@@ -371,7 +371,7 @@
 								"label": "Grow your business",
 								"title": "Grow your business",
 								"target": "contact-us",
-								"type": 0
+								"type": 3
 							},
 							"image": {
 								"normal": "data/image/persona-selector/persona-background-image-6.jpg",
@@ -387,7 +387,7 @@
 								"label": "Grow your business",
 								"title": "Grow your business",
 								"target": "contact-us",
-								"type": 0
+								"type": 3
 							},
 							"image": {
 								"normal": "data/image/persona-selector/persona-background-image-7.jpg",
@@ -402,8 +402,8 @@
 							"link": {
 								"label": "Grow your business",
 								"title": "Grow your business",
-								"target": "home",
-								"type": 0
+								"target": "contact-us",
+								"type": 3
 							},
 							"image": {
 								"normal": "data/image/persona-selector/persona-background-image-8.jpg",

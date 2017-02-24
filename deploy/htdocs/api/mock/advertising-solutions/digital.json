@@ -145,7 +145,7 @@
 						"label": "Explore the market",
 						"title": "Explore the market",
 						"target": "map",
-						"type": 2
+						"type": 0
 					},
 					"sequenceBackground": {
 						"normal": "data/sequence/map-secondary/desktop/map_bg.png",

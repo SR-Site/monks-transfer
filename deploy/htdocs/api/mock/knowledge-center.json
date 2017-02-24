@@ -126,7 +126,7 @@
 					"link": {
 						"label": "Read the FAQS",
 						"title": "Read the FAQS",
-						"target": "faq",
+						"target": "knowledge-center",
 						"type": 0
 					}
 				}
