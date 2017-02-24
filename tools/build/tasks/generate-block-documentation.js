@@ -9,7 +9,7 @@ module.exports = function( grunt )
 	const typhen = require( 'typhen' );
 	const jsonfile = require( 'jsonfile' );
 
-	var blockDir = getConfig('options.input');
+	var blockDir = getConfig('input');
 	var output = {blocks: [], references: [], enums: []};
 
 	grunt.registerMultiTask(
@@ -50,7 +50,7 @@ module.exports = function( grunt )
 
 			// All done, write the json file
 			jsonfile.writeFile(
-				getConfig('options.output')+ 'data.json',
+				getConfig('output')+ 'data.json',
 				output,
 				{
 					spaces: 4
@@ -75,15 +75,15 @@ module.exports = function( grunt )
 		{
 			if( property.type === 'string' )
 			{
-				base[property.name] = property.placeholder || 'Lorem ipsum dolor sit amet';
+				base[property.name] = property.placeholder || getConfig('placeholderValues.string');
 			}
 			else if( property.type === 'boolean' )
 			{
-				base[property.name] = true;
+				base[property.name] = getConfig('placeholderValues.boolean');
 			}
 			else if( property.type === 'number' )
 			{
-				base[property.name] = 1;
+				base[property.name] = getConfig('placeholderValues.number');
 			}
 			else if( hasReference( property.type, output.references ) )
 			{
@@ -353,6 +353,6 @@ module.exports = function( grunt )
 	 */
 	function getConfig( key )
 	{
-		return grunt.config( 'generate-block-documentation.' + key )
+		return grunt.config( 'generate-block-documentation.options.' + key )
 	}
 };
