@@ -73,7 +73,7 @@
 						{
 							"heading": "Start with Television:",
 							"paragraph": "Your brand deserves to be seen. Get in front of your most valuable customers by advertising on the top 50+ cable networks, with the best in sports, news, and entertainment programming.",
-							"theme": 1,
+							"theme": 0,
 							"background": {
 								"normal": "data/image/story-info-images/story-3-background.jpg",
 								"small": "data/image/story-info-images/story-3-background.jpg",
@@ -103,7 +103,7 @@
 						{
 							"heading": "Reach even more:",
 							"paragraph": "With exclusive, interactive products created for businesses who want to build deeper relationships with customers.",
-							"theme": 1,
+							"theme": 0,
 							"background": {
 								"normal": "data/image/story-info-images/story-5-background.jpg",
 								"small": "data/image/story-info-images/story-5-background.jpg",
@@ -140,14 +140,45 @@
 					"items": [
 						{
 							"image": {
-								"small": "data/image/program-module/image-2.jpg",
-								"normal": "data/image/program-module/image-2.jpg",
+								"small": "data/image/program-module/image-5.png",
+								"normal": "data/image/program-module/image-5.png",
 								"alt": "imageName"
 							},
-							"heading": "Keeping Up with the kardashians",
-							"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+							"heading": "Angie Tribeca",
+							"paragraph": "This comedy stars Rashida Jones as a lone-wolf LAPD detective who is not so thrilled when he boss assigns her a partner.",
 							"stats": {
-								"ageRange": "Men 25 -35",
+								"ageRange": "Women 18-49",
+								"demographic": "33% Parents"
+							},
+							"video": {
+								"url": "data/video/video.mp4",
+								"type": 0
+							},
+							"tags": [
+								{
+									"label": "Comedy",
+									"title": "Comedy",
+									"target": "home",
+									"type": 0
+								},
+								{
+									"label": "PDF",
+									"title": "PDF",
+									"target": "home",
+									"type": 0
+								}
+							]
+						},
+						{
+							"image": {
+								"small": "data/image/program-module/image-6.png",
+								"normal": "data/image/program-module/image-6.png",
+								"alt": "imageName"
+							},
+							"heading": "NBA Playoffs",
+							"paragraph": "Nearly 90% of the NBA Playoffs leading up to the NBA Finals are on Cable, not including ESPN Deportes, which airs the Finals in Spanish-Language. The Finals begin 6/1 and run through 6/18.",
+							"stats": {
+								"ageRange": "Men 18-49",
 								"demographic": "33% Parents"
 							},
 							"video": {
@@ -171,14 +202,14 @@
 						},
 						{
 							"image": {
-								"small": "data/image/program-module/image-2.jpg",
-								"normal": "data/image/program-module/image-2.jpg",
+								"small": "data/image/program-module/image-4.png",
+								"normal": "data/image/program-module/image-4.png",
 								"alt": "imageName"
 							},
-							"heading": "Keeping Up with the kardashians",
-							"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+							"heading": "Meow Madness",
+							"paragraph": "The special will showcase adoptable kittens in the most competitive tournament the basketball world has ever see",
 							"stats": {
-								"ageRange": "Men 25 -35",
+								"ageRange": "Families",
 								"demographic": "33% Parents"
 							},
 							"video": {
@@ -187,8 +218,8 @@
 							},
 							"tags": [
 								{
-									"label": "Sport",
-									"title": "Sport",
+									"label": "Animals",
+									"title": "Animals",
 									"target": "home",
 									"type": 0
 								},
@@ -202,14 +233,14 @@
 						},
 						{
 							"image": {
-								"small": "data/image/program-module/image-2.jpg",
-								"normal": "data/image/program-module/image-2.jpg",
+								"small": "data/image/program-module/image-3.png",
+								"normal": "data/image/program-module/image-3.png",
 								"alt": "imageName"
 							},
-							"heading": "Keeping Up with the kardashians",
-							"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+							"heading": "Pretty Little Liars (Final Season)",
+							"paragraph": "Follows four best friends who, after their best friend goes missing, discover they're receiving messages from someone who knows all their secrets.",
 							"stats": {
-								"ageRange": "Men 25 -35",
+								"ageRange": "Millennial",
 								"demographic": "33% Parents"
 							},
 							"video": {
@@ -218,39 +249,8 @@
 							},
 							"tags": [
 								{
-									"label": "Sport",
-									"title": "Sport",
-									"target": "home",
-									"type": 0
-								},
-								{
-									"label": "PDF",
-									"title": "PDF",
-									"target": "home",
-									"type": 0
-								}
-							]
-						},
-						{
-							"image": {
-								"small": "data/image/program-module/image-2.jpg",
-								"normal": "data/image/program-module/image-2.jpg",
-								"alt": "imageName"
-							},
-							"heading": "Keeping Up with the kardashians",
-							"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
-							"stats": {
-								"ageRange": "Men 25 -35",
-								"demographic": "33% Parents"
-							},
-							"video": {
-								"url": "data/video/video.mp4",
-								"type": 0
-							},
-							"tags": [
-								{
-									"label": "Sport",
-									"title": "Sport",
+									"label": "Reallife",
+									"title": "Reallife",
 									"target": "home",
 									"type": 0
 								},
@@ -269,6 +269,7 @@
 				"id": "map",
 				"data": {
 					"windowed": true,
+					"marginTop": 2,
 					"steps": [
 						{
 							"label": "Scale that works for you",
