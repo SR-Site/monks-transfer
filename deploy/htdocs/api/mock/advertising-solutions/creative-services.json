@@ -32,8 +32,8 @@
 					"name": "Fred Bucher",
 					"description": "CMO, Spectrum Reach",
 					"image": {
-						"normal": "data/image/quote/person.jpg",
-						"small": "data/image/quote/person.jpg",
+						"normal": "data/image/quote/person-fred.png",
+						"small": "data/image/quote/person-fred.png",
 						"alt": "Background image alt text"
 					}
 				}

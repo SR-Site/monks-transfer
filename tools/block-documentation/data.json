@@ -1080,11 +1080,20 @@
                             "description": "The image displayed on the slide",
                             "placeholder": "",
                             "properties": []
+                        },
+                        {
+                            "name": "theme",
+                            "type": "Theme",
+                            "required": true,
+                            "defaultValue": "1",
+                            "description": "Sometimes you want to switch a color based on the background image to increase readability",
+                            "placeholder": "1",
+                            "properties": []
                         }
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"imageCarousel\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"imageCarousel\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"theme\": 0\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "imageWithContent",

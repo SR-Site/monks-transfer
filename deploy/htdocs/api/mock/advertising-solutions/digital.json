@@ -33,8 +33,8 @@
 					"heading": "The New Media <span class='highlight'>Landscape</span>",
 					"paragraph": "With the majority of consumers using multiple devices throughout the day, it’s never been more essential to have a multi-screen advertising strategy. When combined, TV and Digital work together to make your ads more memorable, even <strong>doubling your message recall</strong> when the same ad runs on both TV and online.",
 					"background": {
-						"normal": "data/image/image-with-content/background.jpg",
-						"small": "data/image/image-with-content/background.jpg",
+						"normal": "data/image/image-with-content/background-10.jpg",
+						"small": "data/image/image-with-content/background-10-small.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -49,8 +49,8 @@
 					"heading": "TV Drives <span class='highlight'>Digital</span>",
 					"paragraph": "<strong>75% of adults 18-49 will look up information online about an ad they are currently watching</strong>, proving that TV has the power to boost action, not just awareness. This may be the reason why some of the biggest advertisers on TV today are pure-play digital companies.",
 					"background": {
-						"normal": "data/image/image-with-content/background.jpg",
-						"small": "data/image/image-with-content/background.jpg",
+						"normal": "data/image/image-with-content/background-11.jpg",
+						"small": "data/image/image-with-content/background-11-small.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -65,8 +65,8 @@
 					"heading": "Measured for <span class='highlight'>Success</span>",
 					"paragraph": "Part of what makes advertising on TV and Digital so effective is <strong>the innovative technology to track your campaign performance</strong> over time. Now you can see how well you’re spending your marketing dollars and adjust your strategy as you move forward.",
 					"background": {
-						"normal": "data/image/image-with-content/background.jpg",
-						"small": "data/image/image-with-content/background.jpg",
+						"normal": "data/image/image-with-content/background-12.jpg",
+						"small": "data/image/image-with-content/background-12-small.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -90,13 +90,13 @@
 							"paragraph": "Your brand deserves to be seen. Get in front of your most valuable customers by advertising on the top 50+ cable networks, with the best in sports, news, and entertainment programming.",
 							"theme": 1,
 							"background": {
-								"normal": "data/image/story-info-images/story-1-background.jpg",
-								"small": "data/image/story-info-images/story-1-background.jpg",
+								"normal": "data/image/story-info-images/story-6-background.jpg",
+								"small": "data/image/story-info-images/story-6-background.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image/story-info-images/story-1-background-blurred.jpg",
-								"small": "data/image/story-info-images/story-1-background-blurred.jpg",
+								"normal": "data/image/story-info-images/story-6-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-6-background-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						},
@@ -105,28 +105,28 @@
 							"paragraph": "Reach your customer wherever they’re watching with targeted ads on TV, online, and on mobile.",
 							"theme": 0,
 							"background": {
-								"normal": "data/image/story-info-images/story-2-background.jpg",
-								"small": "data/image/story-info-images/story-2-background.jpg",
+								"normal": "data/image/story-info-images/story-7-background.jpg",
+								"small": "data/image/story-info-images/story-7-background.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image/story-info-images/story-2-background-blurred.jpg",
-								"small": "data/image/story-info-images/story-2-background-blurred.jpg",
+								"normal": "data/image/story-info-images/story-7-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-7-background-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						},
 						{
 							"heading": "Social Media",
 							"paragraph": "Establish a presence on social media to introduce your brand to a local audience and gain a following. Drive traffic to your website with display ads that promote special offers and incentives.",
-							"theme": 1,
+							"theme": 0,
 							"background": {
-								"normal": "data/image/story-info-images/story-1-background.jpg",
-								"small": "data/image/story-info-images/story-1-background.jpg",
+								"normal": "data/image/story-info-images/story-8-background.jpg",
+								"small": "data/image/story-info-images/story-8-background.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image/story-info-images/story-1-background-blurred.jpg",
-								"small": "data/image/story-info-images/story-1-background-blurred.jpg",
+								"normal": "data/image/story-info-images/story-8-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-8-background-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						}

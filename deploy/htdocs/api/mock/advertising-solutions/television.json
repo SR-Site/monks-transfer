@@ -33,8 +33,8 @@
 					"heading": "TV is Digital, and it’s <span class='highlight'>Everywhere</span>",
 					"paragraph": "With access to live TV content on their laptops, tablets, and mobile devices, <strong>89.5% of adults 18+ spend over four hours a day on average watching TV.</strong> Our targeted solutions can help you reach them on every screen, wherever and whenever they’re watching.",
 					"background": {
-						"normal": "data/image/image-with-content/background-7.jpg",
-						"small": "data/image/image-with-content/background-7.jpg",
+						"normal": "data/image/image-with-content/background-8.jpg",
+						"small": "data/image/image-with-content/background-8-small.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -49,8 +49,8 @@
 					"heading": "<span class='highlight'>TV </span>Drives <span class='highlight'>Online</span> Engagement",
 					"paragraph": "Watching television is now a multi-screen activity, with <strong>80% of viewers using a laptop, tablet, or smartphone to browse the internet while watching.</strong> Whether they’re researching a product or visiting a specific website, TV influences consumers to seek out more information online.",
 					"background": {
-						"normal": "data/image/image-with-content/background.jpg",
-						"small": "data/image/image-with-content/background.jpg",
+						"normal": "data/image/image-with-content/background-9.jpg",
+						"small": "data/image/image-with-content/background-9-small.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -75,43 +75,43 @@
 							"paragraph": "Your brand deserves to be seen. Get in front of your most valuable customers by advertising on the top 50+ cable networks, with the best in sports, news, and entertainment programming.",
 							"theme": 1,
 							"background": {
-								"normal": "data/image/story-info-images/story-1-background.jpg",
-								"small": "data/image/story-info-images/story-1-background.jpg",
+								"normal": "data/image/story-info-images/story-3-background.jpg",
+								"small": "data/image/story-info-images/story-3-background.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image/story-info-images/story-1-background-blurred.jpg",
-								"small": "data/image/story-info-images/story-1-background-blurred.jpg",
+								"normal": "data/image/story-info-images/story-3-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-3-background-blurred.jpg",
 								"alt": "Background image alt text"
-							}
+							}							
 						},
 						{
 							"heading": "Expand on multiple screens:",
 							"paragraph": "Reach your customer wherever they’re watching with targeted ads on TV, online, and on mobile.",
 							"theme": 0,
 							"background": {
-								"normal": "data/image/story-info-images/story-2-background.jpg",
-								"small": "data/image/story-info-images/story-2-background.jpg",
+								"normal": "data/image/story-info-images/story-4-background.jpg",
+								"small": "data/image/story-info-images/story-4-background.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image/story-info-images/story-2-background-blurred.jpg",
-								"small": "data/image/story-info-images/story-2-background-blurred.jpg",
+								"normal": "data/image/story-info-images/story-4-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-4-background-blurred.jpg",
 								"alt": "Background image alt text"
-							}
+							}							
 						},
 						{
 							"heading": "Reach even more:",
 							"paragraph": "With exclusive, interactive products created for businesses who want to build deeper relationships with customers.",
 							"theme": 1,
 							"background": {
-								"normal": "data/image/story-info-images/story-1-background.jpg",
-								"small": "data/image/story-info-images/story-1-background.jpg",
+								"normal": "data/image/story-info-images/story-5-background.jpg",
+								"small": "data/image/story-info-images/story-5-background.jpg",
 								"alt": "Background image alt text"
 							},
 							"backgroundBlurred": {
-								"normal": "data/image/story-info-images/story-1-background-blurred.jpg",
-								"small": "data/image/story-info-images/story-1-background-blurred.jpg",
+								"normal": "data/image/story-info-images/story-5-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-5-background-blurred.jpg",
 								"alt": "Background image alt text"
 							}
 						}
