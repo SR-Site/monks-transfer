@@ -1,5 +1,6 @@
 import IOutputHandler from "./IOutputHandler";
 import IGatewayOptions from "../IGatewayOptions";
+import Type from "../../../../lib/temple/util/Type";
 
 /**
  * Formats the request according to the Flash Gateway 'multipart/json' spec, where each key is a JSON formatted string.
@@ -19,7 +20,7 @@ class JSONOutputHandler implements IOutputHandler
 	{
 		for (let key in data)
 		{
-			if (data.hasOwnProperty(key) && (typeof data[key] === 'object' || typeof data[key] === 'array'))
+			if (data.hasOwnProperty(key) && (Type.isObject(data[key]) || Type.isArray(data[key])))
 			{
 				data[key] = JSON.stringify(data[key]);
 			}

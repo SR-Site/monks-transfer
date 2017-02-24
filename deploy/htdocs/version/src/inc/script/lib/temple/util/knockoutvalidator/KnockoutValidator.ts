@@ -3,6 +3,7 @@ import ValidatorFieldAccessor from "./ValidatorFieldAccessor";
 import Destructible from "lib/temple/core/Destructible";
 import Log from "../Log";
 import ValidationRules from "./ValidationRules";
+import Type from "../Type";
 
 let _log:Log = new Log('lib.temple.utils.knockoutvalidator.KnockoutValidator');
 
@@ -510,7 +511,7 @@ class KnockoutValidator extends Destructible
 		{
 			if(values.hasOwnProperty(i))
 			{
-				if(typeof values[i] == 'array')
+				if(Type.isArray(values[i]))
 				{
 					for(var j = 0; j < values[i].length; j++)
 					{

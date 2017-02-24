@@ -85,7 +85,7 @@
     "request": "",
     "requirejs": "^2.1.22",
     "time-grunt": "",
-    "typescript": "^2.1.4",
+    "typescript": "^2.2.1",
     "typhen-json-schema": "^0.4.0",
     "underscore.string": "^3.3.4",
     "walk": ""

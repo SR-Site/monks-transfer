@@ -43,6 +43,11 @@ import StringUtils from "../temple/util/type/StringUtils";
  */
 class KnockoutIcon
 {
+	public static getLocation():string
+	{
+		return document.location.protocol + '//' + document.location.host + document.location.pathname + document.location.search;
+	}
+
 	public static EVENT_ICON_RENDER:string = 'KnockoutIcon.ICON_RENDERED';
 
 	private static _ICON_PREFIX:string = '.icon-';
@@ -92,11 +97,6 @@ class KnockoutIcon
 		KnockoutIcon.embedIcon(element, id, KnockoutIcon.getLocation(), options);
 
 		return {};
-	}
-
-	public static getLocation():string
-	{
-		return document.location.protocol + '//' + document.location.host + document.location.pathname + document.location.search;
 	}
 
 	/**
@@ -288,7 +288,7 @@ class KnockoutIcon
 				// Thanks Modernizr & Erik Dahlstrom
 				var svg = !!document.createElementNS &&
 					!!document.createElementNS('http://www.w3.org/2000/svg', 'svg')['createSVGRect'] &&
-					!!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") &&
+					// document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Image', '1.1') && TODO: Does not compile
 					!(window['opera'] && navigator.userAgent.indexOf('Chrome') === -1) &&
 					navigator.userAgent.indexOf('Series40') === -1;
 
