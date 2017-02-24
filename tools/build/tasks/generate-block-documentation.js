@@ -1,5 +1,7 @@
 module.exports = function( grunt )
 {
+	const ProgressBar = require( 'progress' );
+
 	const fs = require( 'fs' );
 	const path = require( 'path' );
 	const upperCamelCase = require( 'uppercamelcase' );
@@ -7,7 +9,7 @@ module.exports = function( grunt )
 	const typhen = require( 'typhen' );
 	const jsonfile = require( 'jsonfile' );
 
-	var blockDir = grunt.config( 'generate-block-documentation.options.input' );
+	var blockDir = getConfig('input');
 	var output = {blocks: [], references: [], enums: []};
 
 	grunt.registerMultiTask(
@@ -16,34 +18,49 @@ module.exports = function( grunt )
 		function()
 		{
 			const done = this.async();
-			const blocks = getDirectories( blockDir );
+			const blockDiretories = getDirectories( blockDir );
+
+			var bar = new ProgressBar( 'Building documentation [:bar] :percent :block', {
+				complete: '=',
+				incomplete: '-',
+				width: 20,
+				total: blockDiretories.length - 1
+			} );
 
 			// Loop through all the blocks
-			blocks.forEach( function( block, index )
+			blockDiretories.forEach( function( blockDirectory, index )
 			{
-				console.log( 'Parse block data for:', block );
-
-				var blockId = upperCamelCase(block.split('-').slice(1).join('-'));
-				var properties = parseBlock( block ).reverse();
+				const blockId = blockDirectoryToBlockId( blockDirectory );
+				const properties = parseBlock( blockDirectory ).reverse();
 
 				output.blocks.push( {
-					blockId: camelCase(blockId),
+					blockId: blockId,
 					properties: properties,
 					example: JSON.stringify( {
-						id: camelCase( blockId ),
+						id: blockId,
 						data: generateExampleJSON( properties, {} )
 					}, null, 4 )
 				} );
 
-
+				bar.tick( {'block': blockId} );
 			} );
 
-			console.log( 'Writing data.json file' );
+			console.log( '[Info] All blocks have been parsed, writing to file..' );
 
 			// All done, write the json file
-			jsonfile.writeFileSync( grunt.config( 'generate-block-documentation.options.output' ) + 'data.json', output, {spaces: 4} );
+			jsonfile.writeFile(
+				getConfig('output')+ 'data.json',
+				output,
+				{
+					spaces: 4
+				},
+				function()
+				{
+					console.log( '[Success] Writing to file is done!' );
 
-			done();
+					done();
+				} );
+
 		}
 	);
 
@@ -57,15 +74,15 @@ module.exports = function( grunt )
 		{
 			if( property.type === 'string' )
 			{
-				base[property.name] = property.placeholder || 'Lorem ipsum dolor sit amet';
+				base[property.name] = property.placeholder || getConfig('placeholderValues.string');
 			}
 			else if( property.type === 'boolean' )
 			{
-				base[property.name] = true;
+				base[property.name] = getConfig('placeholderValues.boolean');
 			}
 			else if( property.type === 'number' )
 			{
-				base[property.name] = 1;
+				base[property.name] = getConfig('placeholderValues.number');
 			}
 			else if( hasReference( property.type, output.references ) )
 			{
@@ -101,16 +118,13 @@ module.exports = function( grunt )
 	 * @param block
 	 * @returns Array
 	 */
-	function parseBlock( block )
+	function parseBlock( blockDirectory )
 	{
-		// parse the folder name to pascal case
-		const blockId = upperCamelCase( block );
-
-		// Build the path to the options
-		const blockOptionsPath = blockDir + '/' + block + '/I' + blockId + 'Options.ts';
+		// Get the file path
+		const path = blockDirectoryToOptionsPath( blockDirectory );
 
 		// Parse the options file with typhen to get all the properties
-		const typhenResult = typhen.parse( blockOptionsPath );
+		const typhenResult = typhen.parse( path);
 
 		// TODO: It kinda messes up when you reference to a interface in an array!
 		const typenTypes = typhenResult.types[0];
@@ -127,7 +141,9 @@ module.exports = function( grunt )
 	function parseProperties( properties )
 	{
 		if( !properties )
-		{ properties = [] }
+		{
+			properties = []
+		}
 
 		// Keep track of the parsed properties
 		var parsedProperties = [];
@@ -309,5 +325,36 @@ module.exports = function( grunt )
 		{
 			return fs.statSync( path.join( src, file ) ).isDirectory();
 		} );
+	}
+
+	/**
+	 * @method blockDirectoryToBlockId
+	 * @param blockDirectory
+	 * @description Parse the block directory name to the internally used block id's
+	 * @returns {string}
+	 */
+	function blockDirectoryToBlockId( blockDirectory )
+	{
+		return camelCase( blockDirectory.split( '-' ).slice( 1 ).join( '-' ) );
+	}
+
+	/**
+	 * @method blockDirectoryToOptionsPath
+	 * @param blockDirectory
+	 * @returns {string}
+	 */
+	function blockDirectoryToOptionsPath( blockDirectory )
+	{
+		return blockDir + '/' + blockDirectory + '/I' + upperCamelCase( blockDirectory ) + 'Options.ts';
+	}
+
+	/**
+	 * @method getConfig
+	 * @description Small wrapper around the config getter
+	 * @param key
+	 */
+	function getConfig( key )
+	{
+		return grunt.config( 'generate-block-documentation.options.' + key )
 	}
 };

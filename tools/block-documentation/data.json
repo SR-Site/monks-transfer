@@ -2081,7 +2081,7 @@
                     "type": "Array",
                     "required": true,
                     "defaultValue": "null",
-                    "description": "",
+                    "description": "The persona's displayed in the carousel",
                     "placeholder": "",
                     "properties": [
                         {
@@ -2089,7 +2089,7 @@
                             "type": "string",
                             "required": true,
                             "defaultValue": "null",
-                            "description": "",
+                            "description": "The main heading displayed for the persona",
                             "placeholder": "",
                             "properties": []
                         },
@@ -2098,7 +2098,7 @@
                             "type": "string",
                             "required": true,
                             "defaultValue": "null",
-                            "description": "",
+                            "description": "The main paragraph displayed for the persona",
                             "placeholder": "",
                             "properties": []
                         },
@@ -2107,7 +2107,7 @@
                             "type": "PersonaType",
                             "required": true,
                             "defaultValue": "null",
-                            "description": "",
+                            "description": "The type of the persona",
                             "placeholder": "",
                             "properties": []
                         },
@@ -2116,7 +2116,7 @@
                             "type": "ILink",
                             "required": true,
                             "defaultValue": "null",
-                            "description": "",
+                            "description": "The link added to the persona",
                             "placeholder": "",
                             "properties": []
                         },
@@ -2125,7 +2125,7 @@
                             "type": "IImage",
                             "required": true,
                             "defaultValue": "null",
-                            "description": "",
+                            "description": "The image displayed on the background",
                             "placeholder": "",
                             "properties": []
                         }
