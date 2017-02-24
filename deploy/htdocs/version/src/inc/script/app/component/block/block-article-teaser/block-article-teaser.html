@@ -12,16 +12,18 @@
 		<aside>
 			<h2 class="heading heading-07" data-bind="html: data.heading"></h2>
 			<p class="copy copy-01" data-bind="html: data.paragraph"></p>
-			<div class="tags" data-bind="foreach: data.tags">
-				<!-- ko component: {
-					name: 'button/button-tag',
-					onComplete: $root.controller.callbackCounter.get(),
-					options: {
-						action: $data,
-						size: $root.ButtonSize.LARGE
-					}
-				} --><!-- /ko -->
-			</div>
+			<!-- ko with: data.tags -->
+				<div class="tags" data-bind="foreach: $data">
+					<!-- ko component: {
+						name: 'button/button-tag',
+						onComplete: $root.controller.callbackCounter.get(),
+						options: {
+							action: $data,
+							size: $root.ButtonSize.LARGE
+						}
+					} --><!-- /ko -->
+				</div>
+			<!-- /ko -->
 		</aside>
 	</div>
 </a>

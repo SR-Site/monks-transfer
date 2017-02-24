@@ -28,14 +28,14 @@ interface INewsArticle
 	 * @property
 	 * @description The tags linked to this article
 	 */
-	tags: Array<ITag>;
+	tags?: Array<ITag>;
 	/**
 	 * @property
 	 * @description Sometimes you want to switch a color based on the background image to increase readability
 	 * @placeholder 1
 	 * @defaultValue 0
 	 */
-	theme:Theme;
+	theme: Theme;
 }
 
 export default INewsArticle;
