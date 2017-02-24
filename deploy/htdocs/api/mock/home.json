@@ -53,6 +53,14 @@
 				}
 			},
 			{
+				"id": "smallHeading",
+				"data": {
+					"windowed": false,
+					"marginTop": 2,
+					"heading": "The Three Essentials for Marketing Success"
+				}
+			},
+			{
 				"id": "imageWithContent",
 				"data": {
 					"alignment": 0,
@@ -88,6 +96,7 @@
 				"id": "imageWithContent",
 				"data": {
 					"alignment": 0,
+
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": false,
