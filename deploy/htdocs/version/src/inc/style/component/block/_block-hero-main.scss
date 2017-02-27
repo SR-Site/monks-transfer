@@ -1,5 +1,6 @@
 .component-block-hero-main {
 	@include size(100%, 100vh);
+	min-height: $sizeGrid * 24; // Make sure the secondary triangle fit's in the block
 
 	&.has-statistics {
 

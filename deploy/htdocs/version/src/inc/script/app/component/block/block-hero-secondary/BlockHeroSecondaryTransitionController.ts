@@ -14,7 +14,9 @@ class BlockHeroSecondaryTransitionController extends AbstractTransitionControlle
 
 		this._mainTriangleAnimation = new TriangleTransitionController<BlockHeroSecondaryController>(
 			<HTMLElement>this.element.querySelector('.background-triangle'),
-			this.parentController
+			this.parentController,
+			1,
+			true
 		);
 	}
 

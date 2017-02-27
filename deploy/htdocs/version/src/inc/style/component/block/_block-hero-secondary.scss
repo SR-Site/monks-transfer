@@ -40,7 +40,7 @@
 		}
 	}
 
-	@include respond-to(SMALL){
+	@include respond-to(SMALL) {
 		min-height: 0;
 		height: calc(100vh - #{$sizeGrid * 2});
 
