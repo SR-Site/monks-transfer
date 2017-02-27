@@ -5,6 +5,10 @@ body {
 	color: $colorPrimary;
 }
 
+html {
+	overflow: visible;
+}
+
 body {
 	width: 100%;
 	overflow-y: scroll;

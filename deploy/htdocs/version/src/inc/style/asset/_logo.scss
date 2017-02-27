@@ -9,6 +9,10 @@
 	}
 
 
+	.icon {
+		@include size(100%);
+	}
+
 	// Primary logo colors
 	.theme-light &,
 	&.primary {

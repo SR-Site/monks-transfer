@@ -6,7 +6,6 @@
 
 	.theme-light & {
 		color: $colorWhite;
-
 	}
 
 	.enable-solid-background & {
@@ -31,6 +30,10 @@
 	@include respond-to(SMALL) {
 		@include size(auto, $sizeGrid * 4);
 		padding: 0 $sizeGrid;
+
+		.theme-light & {
+			color: $colorPrimary;
+		}
 
 		.text {
 			font-size: mobile-size(2.2rem);
