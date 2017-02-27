@@ -28,7 +28,22 @@
 		margin-left: $sizeGrid;
 		position: relative;
 		overflow: hidden;
+	}
 
+	.fallback-progress {
+		@include size(100%, $sizeGridSecondary);
+		@include pos(50%, auto, auto, 0);
+		transform: translateY(-50%);
+		background: rgba(0, 0, 0, .1);
+		position: absolute;
+
+		.progress {
+			@include size(0, $sizeGridSecondary);
+			@include pos(0, auto, 0, 0);
+			position: absolute;
+			transition: .2s width ease(linear);
+			background: $colorPrimary;
+		}
 	}
 
 	.wave-form {

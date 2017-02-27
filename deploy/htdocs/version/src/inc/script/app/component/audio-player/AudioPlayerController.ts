@@ -5,6 +5,8 @@ import AudioPlayerViewModel from 'app/component/audio-player/AudioPlayerViewMode
 
 import Log from "lib/temple/util/Log";
 import ButtonPlayCircleController from "../button/button-play-circle/ButtonPlayCircleController";
+import AudioElement from "../../../lib/temple/util/AudioElement";
+import MediaElement from "../../../lib/temple/util/MediaElement";
 
 class AudioPlayerController extends AbstractTransitionComponentController<AudioPlayerViewModel, IAudioPlayerOptions, AudioPlayerTransitionController>
 {
@@ -16,6 +18,7 @@ class AudioPlayerController extends AbstractTransitionComponentController<AudioP
 	private _debug: Log = new Log('app.component.AudioPlayer');
 
 	private _wavesurfer: WaveSurfer;
+	private _fallbackPlayer: AudioElement;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -47,6 +50,61 @@ class AudioPlayerController extends AbstractTransitionComponentController<AudioP
 	 */
 	protected allComponentsLoaded(): void
 	{
+		if(this.viewModel.hasWebAudioSupport)
+		{
+			this.createWaveSurfer();
+		}
+		else
+		{
+			this.createFallbackPlayer();
+		}
+	}
+
+	/**
+	 * @public
+	 * @method playAudio
+	 */
+	public playAudio(): void
+	{
+		if(this.viewModel.hasWebAudioSupport)
+		{
+			this._wavesurfer.playPause();
+		}
+		else
+		{
+			if(this.viewModel.isPlaying())
+			{
+				this._fallbackPlayer.pause();
+				this.viewModel.isPlaying(false);
+			}
+			else
+			{
+				this._fallbackPlayer.play();
+				this.viewModel.isPlaying(true);
+			}
+		}
+	}
+
+	/**
+	 * @private
+	 * @method createFallbackPlayer
+	 */
+	private createFallbackPlayer(): void
+	{
+		this._fallbackPlayer = new AudioElement();
+		this._fallbackPlayer.setSrc(this.options.file);
+		this._fallbackPlayer.addEventListener(MediaElement.EVENT_TIMEUPDATE, () =>
+		{
+			this.viewModel.progress(this._fallbackPlayer.currentTime / this._fallbackPlayer.duration);
+		})
+	}
+
+	/**
+	 * @private
+	 * @method createWaveSurfer
+	 */
+	private createWaveSurfer(): void
+	{
 		let height = (<HTMLElement>this.element.querySelector('.component-button-play-circle')).offsetHeight;
 
 		this._wavesurfer = WaveSurfer.create({
@@ -63,22 +121,19 @@ class AudioPlayerController extends AbstractTransitionComponentController<AudioP
 		this._wavesurfer.load(this.options.file)
 	}
 
-
-	/**
-	 * @public
-	 * @method playAudio
-	 */
-	public playAudio(): void
-	{
-		this._wavesurfer.playPause();
-	}
-
 	/**
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
 	public destruct(): void
 	{
+		if(this._wavesurfer)
+		{
+			this._wavesurfer.destroy();
+			this._wavesurfer = null;
+		}
+
+		this._fallbackPlayer = null;
 
 		// always call this last
 		super.destruct();

@@ -22,6 +22,8 @@ class ButtonPlayCircleController extends AbstractButtonController<ButtonPlayCirc
 	{
 		super.init();
 
+		this.applyThreeWayBinding(this.options.isPlaying, this.viewModel.isPlaying);
+
 		this._debug.log('Init');
 	}
 
