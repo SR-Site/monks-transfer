@@ -96,7 +96,6 @@
 				"id": "imageWithContent",
 				"data": {
 					"alignment": 0,
-
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": false,
@@ -183,7 +182,7 @@
 							"backgroundBlurred": {
 								"normal": "data/image/image-call-to-actions/image-tv-blurred.jpg",
 								"small": "data/image/image-call-to-actions/image-tv-blurred.jpg",
-								"alt": "Background image alt text" 
+								"alt": "Background image alt text"
 							},
 							"link": {
 								"label": "Reach us here",
@@ -258,21 +257,7 @@
 								"normal": "data/image/latest/latest-article-image-1.jpg",
 								"small": "data/image/latest/image-small.jpg",
 								"alt": "Background image alt text"
-							},
-							"tags": [
-								{
-									"label": "Sport",
-									"title": "Sport",
-									"target": "home",
-									"type": 0
-								},
-								{
-									"label": "PDF",
-									"title": "PDF",
-									"target": "home",
-									"type": 0
-								}
-							]
+							}
 						},
 						{
 							"heading": "Go Beyond High Profile Sport Events",
@@ -283,21 +268,7 @@
 								"normal": "data/image/latest/latest-article-image-2.jpg",
 								"small": "data/image/latest/image-small.jpg",
 								"alt": "Background image alt text"
-							},
-							"tags": [
-								{
-									"label": "Sport",
-									"title": "Sport",
-									"target": "home",
-									"type": 0
-								},
-								{
-									"label": "PDF",
-									"title": "PDF",
-									"target": "home",
-									"type": 0
-								}
-							]
+							}
 						},
 						{
 							"heading": "Go Beyond High Profile Sport Events",
@@ -308,21 +279,7 @@
 								"normal": "data/image/latest/latest-article-image-2.jpg",
 								"small": "data/image/latest/image-small.jpg",
 								"alt": "Background image alt text"
-							},
-							"tags": [
-								{
-									"label": "Sport",
-									"title": "Sport",
-									"target": "home",
-									"type": 0
-								},
-								{
-									"label": "PDF",
-									"title": "PDF",
-									"target": "home",
-									"type": 0
-								}
-							]
+							}
 						},
 						{
 							"heading": "Go Beyond High Profile Sport Events",
@@ -333,21 +290,7 @@
 								"normal": "data/image/latest/latest-article-image-1.jpg",
 								"small": "data/image/latest/image-small.jpg",
 								"alt": "Background image alt text"
-							},
-							"tags": [
-								{
-									"label": "Sport",
-									"title": "Sport",
-									"target": "home",
-									"type": 0
-								},
-								{
-									"label": "PDF",
-									"title": "PDF",
-									"target": "home",
-									"type": 0
-								}
-							]
+							}
 						}
 					]
 				}
