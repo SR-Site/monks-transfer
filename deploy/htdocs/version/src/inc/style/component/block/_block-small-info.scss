@@ -5,6 +5,10 @@
 		padding: $sizeGrid * 2 $sizeGrid * 5;
 	}
 
+	.description {
+		padding-left: $sizeGrid;
+	}
+
 	.description,
 	.introduction {
 		@include size(50%, auto);
@@ -29,6 +33,10 @@
 
 	// Breakpoints
 	@include respond-to(SMALL) {
+
+		.description {
+			padding-left: 0;
+		}
 
 		.description,
 		.introduction {
