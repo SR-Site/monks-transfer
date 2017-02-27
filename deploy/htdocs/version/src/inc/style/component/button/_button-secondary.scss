@@ -8,22 +8,8 @@
 	position: relative;
 	vertical-align: middle;
 	z-index: 0;
-
-	svg {
-		overflow: visible;
-	}
-
-	rect {
-		@include size(100%);
-		fill: transparent;
-		stroke: rgba(0, 0, 0, .3);
-		stroke-width: 1px;
-	}
-
-	.background {
-		stroke: $colorSecondary;
-		transition: stroke .2s ease(easeInOut);
-	}
+	border: 1px solid $colorSecondary;
+	transition: border-color .2s ease(linear);
 
 	.label {
 		display: inline-block;
@@ -31,23 +17,15 @@
 	}
 
 	@include hover() {
-		.background {
-			stroke: rgba(0, 0, 0, .2);
-		}
+		border-color: rgba(0, 0, 0, .2);
 	}
 
 	// Light Theme
 	&.light {
-		color: $colorWhite;
-
-		.background {
-			stroke: rgba(255, 255, 255, .3);
-		}
+		border-color: rgba(255, 255, 255, .3);
 
 		@include hover() {
-			.background {
-				stroke: #fff;
-			}
+			border-color: #fff;
 		}
 	}
 
