@@ -133,6 +133,7 @@
 		transition: background #{$animationDuration} #{$ease};
 		text-align: left;
 		margin-right: $sizeGrid;
+		overflow: visible; // Dafuq, without this IE does not show pseudo elements
 
 		&:after {
 			@include size($sizeGrid, $buttonHeight - $sizeGrid);

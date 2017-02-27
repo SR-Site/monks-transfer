@@ -72,6 +72,7 @@
 		color: $colorWhite;
 		display: block;
 		position: relative;
+		overflow: visible;
 
 		.label {
 			display: block;
@@ -81,7 +82,7 @@
 			&:before {
 				@include size($sizeGrid, .4rem);
 				@include pos(50%, auto, auto, 0);
-				transform: translate(calc(-100% - #{$sizeGrid * 0.5}), -50%);
+				transform: translate(-$sizeGrid * 1.5, -50%);
 				background: $colorSecondary;
 				position: absolute;
 				content: '';

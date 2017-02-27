@@ -386,7 +386,6 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 		// If the route is a popup, strip the route for fetching the page content.
 		if(Gaia.api.getPage(Gaia.api.getCurrentBranch()).type == PageType.POPUP)
 		{
-			// TODO:  The default route should be returned by the backend? Check with the backend guys
 			route = this._dataManager.settingsModel.initDataModel.landingRoute;
 		}
 		else
@@ -394,6 +393,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 			// We want to fetch this from the backend!
 			route = route === '/' ? this._dataManager.settingsModel.initDataModel.landingRoute : route;
 		}
+
 
 		return DataManager.getInstance().settingsModel.pageLayoutModel.getLayout(
 			StringUtils.startsWith(route, '/') ? route.substr(1) : route
