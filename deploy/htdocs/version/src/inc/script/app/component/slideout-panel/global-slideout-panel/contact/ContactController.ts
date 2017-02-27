@@ -6,6 +6,7 @@ import AbstractTransitionComponentController from "../../../../util/component-tr
 import Loader from "../../../../util/Loader";
 import DataManager from "../../../../data/DataManager";
 import FixedElementHelper from "../../../../util/FixedElementHelper";
+import LocaleManager from "../../../../../lib/temple/locale/LocaleManager";
 
 class ContactController extends AbstractTransitionComponentController<ContactViewModel, IContactOptions, ContactTransitionController>
 {
@@ -51,8 +52,29 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 			this._loader.show()
 				.then(() => this._loader.hide())
 				.then(() => this._dataManager.panelController.transitionOut())
-				.then(() => this._dataManager.notification.showAlert('Success', 'Thank you for contacting'))
+				.then(() => this._dataManager.notification.showAlert(
+					LocaleManager.getInstance().getString('notification.alert.contact_success.heading'),
+					LocaleManager.getInstance().getString('notification.alert.contact_success.paragraph')
+				))
+				.then(() => this.resetForm());
 		}
+	}
+
+	/**
+	 * @private
+	 * @method resetForm
+	 */
+	private resetForm(): void
+	{
+		// Reset all the values
+		this.viewModel.fields.forEach((field) =>
+		{
+			// Reset the value
+			field.observable('');
+
+			// Reset the validation status
+			this.viewModel.myValidator.field(field.name).isValid(null);
+		})
 	}
 
 	/**

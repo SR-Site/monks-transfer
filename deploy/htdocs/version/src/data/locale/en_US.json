@@ -35,6 +35,10 @@
 				"heading": "Oops",
 				"paragraph": "Something went wrong."
 			},
+			"contact_success": {
+				"heading": "Thank you!",
+				"paragraph": "We’re excited to have a chance to meet you. Your request is being directed to your personal media consultant. Expect to hear from us soon!"
+			},
 			"server_message": {
 
 			}
