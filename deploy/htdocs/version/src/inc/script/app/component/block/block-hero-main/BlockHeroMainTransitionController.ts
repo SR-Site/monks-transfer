@@ -248,6 +248,12 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 		this._mainTriangleAnimation = null;
 		this._slideTransitions = null;
 
+		if(this._destructibles)
+		{
+			this._destructibles.destruct();
+			this._destructibles = null;
+		}
+
 		super.destruct();
 	}
 }

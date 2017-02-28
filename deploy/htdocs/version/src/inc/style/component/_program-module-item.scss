@@ -59,7 +59,6 @@
 
 	.paragraph {
 		margin-top: $sizeGrid;
-		max-height: $sizeGrid*2;
 		overflow: hidden;
 	}
 
@@ -111,10 +110,6 @@
 			.hover-container {
 				padding: $sizeGrid;
 			}
-		}
-
-		.paragraph {
-			max-height: none;
 		}
 	}
 

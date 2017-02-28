@@ -67,7 +67,7 @@
 	}
 
 	.statistics-wrapper {
-		@include pos(auto, auto, $sizeGrid * 2, calc(50% + #{$sizeGrid}));
+		@include pos(auto, auto, $sizeGrid * 2, $sizeGrid * 22);
 		position: absolute;
 		color: $colorWhite;
 		vertical-align: top;
@@ -100,12 +100,57 @@
 		z-index: 2;
 	}
 
+	@include respond-to(XX_LARGE) {
+		.statistics-wrapper {
+			left: $sizeGrid * 21;
+		}
+	}
+
+	@include respond-to(LARGE) {
+		.statistics-wrapper {
+			width: $sizeGrid * 2.5;
+		}
+
+		.statistic {
+			margin-top: $sizeGrid / 2;
+			margin-left: 0;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.background-triangle {
+			left: -$sizeGrid * 6
+		}
+
+		.slide-content {
+			padding-left: $sizeGrid;
+			padding-right: $sizeGrid;
+		}
+
+		.secondary-background-triangle {
+			left: $sizeGrid * 8;
+		}
+
+		.tertiary-background-triangle {
+			left: $sizeGrid * 14;
+		}
+
+		.statistics-wrapper {
+			left: $sizeGrid * 15;
+		}
+	}
+
 	@include respond-to(SMALL) {
 		min-height: 0;
 		height: calc(100vh - #{$sizeGrid * 2});
 
 		.background-triangle {
 			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 48);
+			left: 0;
 		}
 
 		.secondary-background-triangle {
@@ -120,6 +165,7 @@
 		.slide-content {
 			@include size($sizeGrid * 18, auto);
 			padding-left: $sizeGrid * 2;
+			padding-right: 0;
 		}
 
 		.statistics-wrapper {

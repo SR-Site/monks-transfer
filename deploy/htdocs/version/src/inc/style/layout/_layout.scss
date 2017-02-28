@@ -49,6 +49,12 @@ body {
 /**
  * Define the root font size for the different media queries
  */
+@include respond-to(X_LARGE) {
+	:root {
+		font-size: $baseFontSize * 0.9;
+	}
+}
+
 @include respond-to(LARGE) {
 	:root {
 		font-size: $baseFontSize * 0.9;
