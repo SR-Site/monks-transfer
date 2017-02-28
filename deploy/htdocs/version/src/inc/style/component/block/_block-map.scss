@@ -14,6 +14,7 @@
 		vertical-align: bottom;
 		position: relative;
 		margin-bottom: $sizeGrid * 3;
+		min-height: $sizeGrid * 12.5;
 
 		.pagination-number {
 			@include pos(-10px, auto, auto, 0);
@@ -70,6 +71,7 @@
 			order: 1;
 			width: 100%;
 			margin-top: $sizeGrid * 2;
+			min-height: 0;
 		}
 	}
 }
