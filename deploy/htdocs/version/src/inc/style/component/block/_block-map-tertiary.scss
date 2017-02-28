@@ -1,0 +1,13 @@
+.component-block-map-tertiary {
+	position: relative;
+
+	.slides {
+		@include aspect-ratio(1100px, 550px);
+		width: calc(100% - #{$sizeGrid * 3});
+		margin-left: $sizeGrid * 3;
+	}
+
+	.slide {
+		background: $colorLightGrey
+	}
+}

@@ -34,6 +34,7 @@ class Blocks
 	public static PROGRAM_MODULE:string = 'block-program-module';
 	public static AUDIO_FRAGMENT:string = 'block-audio-fragment';
 	public static BUTTON:string = 'block-button';
+	public static MAP_TERTIARY:string = 'block-map-tertiary';
 }
 
 

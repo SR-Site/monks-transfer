@@ -133,5 +133,9 @@ export const blockConfig:IBlockConfig = {
 	button: {
 		id: Blocks.BUTTON,
 		type: BlockType.COMPONENT
+	},
+	mapTertiary: {
+		id: Blocks.MAP_TERTIARY,
+		type: BlockType.COMPONENT
 	}
 };
