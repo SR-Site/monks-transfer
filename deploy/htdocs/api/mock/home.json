@@ -43,10 +43,6 @@
 								"small": "data/image/hero-main/slide-2.jpg",
 								"alt": "Background image alt text"
 							},
-							"backgroundVideo": {
-								"url": "data/video/video_2.mp4",
-								"videoType": 0
-							},
 							"statistics": null
 						}
 					]
