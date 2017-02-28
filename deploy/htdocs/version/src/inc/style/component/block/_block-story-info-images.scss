@@ -112,23 +112,20 @@
 			.story {
 				padding: $sizeGrid*2 $sizeGrid*3 $sizeGrid*4;
 				border-top: 1px solid $colorBorder;
+				background: $colorWhite;
 
 				.copy,
 				.heading {
 					margin-left: $sizeGrid;
+					opacity: 1;
+					transform: translateX(0);
+					color: $colorPrimary;
 				}
 
 				.copy {
 					margin-top: $sizeGrid/2;
 					opacity :1;
 					transform: translateX(0);
-				}
-
-				&.is-active {
-
-					.copy {
-						opacity: 1;
-					}
 				}
 			}
 		}
