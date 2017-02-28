@@ -13,6 +13,7 @@ import MenuEvent from "../../event/MenuEvent";
 import GlobalSlideoutPanelController from "../../component/slideout-panel/global-slideout-panel/GlobalSlideoutPanelController";
 import Promise = require("bluebird");
 import ko = require("knockout");
+import bowser = require("bowser");
 import VideoOverlayController from "../../component/video-overlay/VideoOverlayController";
 import NotificationController from "../../component/notification/NotificationController";
 
@@ -227,7 +228,20 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 		const allComponentsLoaded: Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
 
 		// Wait  for all components to be loaded
-		allComponentsLoaded.then(() => this._beforeTransitionIn(true));
+		allComponentsLoaded.then(() =>
+		{
+			if(bowser.ios)
+			{
+				// Note: Move the page loader to the root to overlap the fixed header element, this is super hacky but otherwise the fixed header on iOS get's clipped when scrolling
+				document.body.insertBefore(this._dataManager.pageLoader.element, document.body.firstChild);
+
+				// Note: If the header component is not  the first element in the DOM the fixed position
+				// will make the overflow look weird and end up with the header being clipped
+				document.body.insertBefore(this._headerController.element, document.body.firstChild);
+			}
+
+			this._beforeTransitionIn(true);
+		})
 	}
 
 	/**

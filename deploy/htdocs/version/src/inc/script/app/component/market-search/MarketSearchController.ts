@@ -57,6 +57,8 @@ class MarketSearchController extends AbstractTransitionComponentController<Marke
 	 */
 	public setupAutoComplete(markets: Array<IMarketDetail>): void
 	{
+		if(this.isDestructed()) return;
+
 		this._markets = markets;
 
 		this.parseChoices(markets);
