@@ -35,14 +35,6 @@ class BlockArticleTeaserTransitionController extends AbstractTransitionControlle
 			});
 
 
-		this.transitionInTimeline.from(this.element.querySelector('img'), 1.6,
-			{
-				xPercent: -10,
-				clearProps: "xPercent",
-				ease: Expo.easeOut
-			}, 0);
-
-
 		this.transitionInTimeline.from(this.element.querySelector('.heading'), 1,
 			{
 				opacity: 0,

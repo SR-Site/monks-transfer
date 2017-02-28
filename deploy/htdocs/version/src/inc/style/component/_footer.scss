@@ -18,14 +18,14 @@
 			content: '';
 			background: rgba($colorWhite, .1);
 		}
+	}
 
-		.logo {
-			float: left;
-		}
+	.logo {
+		float: left;
+	}
 
-		.contact-options {
-			float: right;
-		}
+	.contact-options {
+		float: right;
 	}
 
 	.middle-section,
@@ -145,6 +145,7 @@
 			height: auto;
 			white-space: normal;
 			margin: $sizeGrid * 2 0;
+			float: left;
 		}
 
 		.contact-option {
