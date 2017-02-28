@@ -6,6 +6,7 @@
 	color: $colorWhite;
 
 	span {
+		display: inline-block;
 		vertical-align: middle;
 	}
 
@@ -21,9 +22,8 @@
 		margin-left: $sizeGrid;
 	}
 
-	.icon {
-		@include size($sizeGrid / 2);
-		margin-left: $sizeGridSecondary;
+	.hamburger {
+		margin-left: $sizeGrid / 4;
 	}
 
 	@include respond-to(SMALL) {
