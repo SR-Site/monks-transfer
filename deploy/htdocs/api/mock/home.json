@@ -24,7 +24,7 @@
 								"alt": "Background image alt text"
 							},
 							"backgroundVideo": {
-								"url": "https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/1193/8/205968496/701598450.mp4?token=58b5cbc3_0x5b82e57082cd8567fb191f9b046ba8a1358de88a",
+								"url": "data/video/video.mp4",
 								"type": 0
 							},
 							"statistics": null
