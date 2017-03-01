@@ -4,6 +4,10 @@
 		<p class="copy copy-03" data-bind="html: data.slideData.paragraph"></p>
 	</header>
 
+	<div class="slide-statistics abs-center" data-bind="foreach: data.slideData.statistics">
+		<div class="statistic"></div>
+	</div>
+
 	<div class="slide-title">
 		<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft((data.index + 1).toString(), 2, '0')"></span>
 		<h3 class="heading heading-01" data-bind="html: data.slideData.heading"></h3>

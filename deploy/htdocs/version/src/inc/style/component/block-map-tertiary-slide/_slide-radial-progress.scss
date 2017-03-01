@@ -1,3 +1,15 @@
 .component-slide-radial-progress {
 
+	.slide-statistics {
+		@include size($sizeGrid * 15, auto);
+		text-align: center;
+	}
+
+	.statistic {
+		@include size($sizeGrid * 4);
+		background: $colorPrimary;
+		display: inline-block;
+		vertical-align: top;
+		margin: $sizeGrid / 2;
+	}
 }

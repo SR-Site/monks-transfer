@@ -8,6 +8,10 @@
 		color: $colorPrimary;
 	}
 
+	.slide-statistics {
+		font-size: 0;
+	}
+
 	.slide-title {
 		@include size($sizeGrid * 6, auto);
 		@include pos(50%, auto, auto, -$sizeGrid * 3);
