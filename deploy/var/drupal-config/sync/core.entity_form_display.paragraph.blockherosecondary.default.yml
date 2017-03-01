@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.blockherosecondary.field_background_color
+    - field.field.paragraph.blockherosecondary.field_file
     - field.field.paragraph.blockherosecondary.field_heading
     - field.field.paragraph.blockherosecondary.field_image
     - field.field.paragraph.blockherosecondary.field_link
@@ -14,6 +15,7 @@ dependencies:
   module:
     - color_field
     - field_group
+    - file
     - image
     - paragraphs
     - text
@@ -35,7 +37,7 @@ third_party_settings:
       children:
         - field_link
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: details
       format_settings:
         id: ''
@@ -53,6 +55,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
+  field_file:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
   field_heading:
     weight: 5
     settings:
@@ -61,7 +69,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_image:
-    weight: 1
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

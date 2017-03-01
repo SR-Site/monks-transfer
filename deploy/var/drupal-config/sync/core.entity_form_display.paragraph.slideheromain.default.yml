@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.slideheromain.field_file
     - field.field.paragraph.slideheromain.field_heading
     - field.field.paragraph.slideheromain.field_image
     - field.field.paragraph.slideheromain.field_link
@@ -12,6 +13,7 @@ dependencies:
     - paragraphs.paragraphs_type.slideheromain
   module:
     - field_group
+    - file
     - image
     - paragraphs
     - text
@@ -46,7 +48,7 @@ third_party_settings:
       children:
         - field_statistics
       parent_name: ''
-      weight: 20
+      weight: 6
       format_type: details
       format_settings:
         label: Statistics
@@ -60,8 +62,14 @@ targetEntityType: paragraph
 bundle: slideheromain
 mode: default
 content:
+  field_file:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
   field_heading:
-    weight: 1
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -86,7 +94,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
   field_paragraph:
-    weight: 2
+    weight: 1
     settings:
       rows: 5
       placeholder: ''
