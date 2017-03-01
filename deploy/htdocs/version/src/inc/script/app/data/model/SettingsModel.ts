@@ -1,6 +1,7 @@
 import PageLayoutModel from "./PageLayoutModel";
 import InitDataModel from "./InitDataModel";
 import StateModel from "./StateModel";
+import TertiaryMapDataModel from "./TertiaryMapDataModel";
 
 /**
  * @class SettingsModel
@@ -12,6 +13,7 @@ class SettingsModel
 	public initDataModel:InitDataModel = new InitDataModel();
 
 	public stateModel:StateModel = new StateModel();
+	public tertiaryMapDataModel:TertiaryMapDataModel = new TertiaryMapDataModel();
 }
 
 export default SettingsModel;

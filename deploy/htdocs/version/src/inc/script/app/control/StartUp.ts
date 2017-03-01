@@ -15,6 +15,7 @@ import InitLocaleTask from "./InitLocaleTask";
 import bowser = require('bowser');
 import LoadJSONTask from "../../lib/temple/control/sequence/task/loader/LoadJSONTask";
 import IState from "../data/interface/IState";
+import ITertiaryMapData from "../data/interface/ITertiaryMapData";
 
 // localization
 //import InitLocaleTask from "app/control/InitLocaleTask";
@@ -65,6 +66,7 @@ class StartUp
 		}
 
 		sequence.add(new LoadInitTask());
+		sequence.add(new LoadJSONTask('data/json/map-tertiary-data.json', this.handleMapTertiaryLoaded.bind(this)));
 		sequence.add(new LoadJSONTask('data/json/states.json', this.handleStatesLoaded.bind(this)));
 
 		// add your own tasks
@@ -82,6 +84,15 @@ class StartUp
 	private handleStatesLoaded(data: Array<IState>): void
 	{
 		DataManager.getInstance().settingsModel.stateModel.addItems(data);
+	}
+
+	/**
+	 * @private
+	 * @method handleMapTertiaryLoaded
+	 */
+	private handleMapTertiaryLoaded(data: Array<ITertiaryMapData>): void
+	{
+		DataManager.getInstance().settingsModel.tertiaryMapDataModel.addItems(data);
 	}
 }
 

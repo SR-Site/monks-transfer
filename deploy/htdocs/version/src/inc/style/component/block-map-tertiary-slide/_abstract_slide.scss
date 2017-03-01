@@ -1,0 +1,17 @@
+.map-tertiary-slide {
+	.slide-heading {
+		@include size(100%, auto);
+		@include pos($sizeGrid, auto, auto, 0);
+		padding: 0 $sizeGrid * 2;
+		position: absolute;
+		text-align: center;
+		color: $colorPrimary;
+	}
+
+	.slide-title {
+		@include size($sizeGrid * 6, auto);
+		@include pos(50%, auto, auto, -$sizeGrid * 3);
+		transform: translateY(-50%);
+		position: absolute;
+	}
+}

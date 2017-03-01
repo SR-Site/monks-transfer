@@ -40,6 +40,10 @@
 %heading-07,
 .heading-07 {
 	font: 600 1.8rem / 1.16 $fontOpenSans;
+
+	strong {
+		font-weight: 700;
+	}
 }
 
 // Open sans extra-bold

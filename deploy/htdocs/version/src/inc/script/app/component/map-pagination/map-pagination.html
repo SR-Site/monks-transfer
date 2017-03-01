@@ -1,0 +1,18 @@
+<div class="component-map-pagination">
+	<button class="button navigation-button" data-bind="tap: $root.handlePreviousClick.bind($root)">
+		<span class="icon abs-center" data-bind="icon: 'circle-arrow-left'"></span>
+	</button>
+	<div class="pagination-steps">
+		<span class="progress" data-bind="style: {width: $root.activeIndex() / (data.slides().length - 1) * 100 + '%'}"></span>
+		<ul data-bind="foreach: data.slides">
+			<li class="step" data-bind="
+				tap: $root.handleSelectClick.bind($root, $index()),
+				css: {'is-active': $index() == $root.activeIndex()},
+				html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')
+			"></li>
+		</ul>
+	</div>
+	<button class="button navigation-button" data-bind="tap: $root.handleNextClick.bind($root)">
+		<span class="icon" data-bind="icon: 'circle-arrow-right'"></span>
+	</button>
+</div>

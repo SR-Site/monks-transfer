@@ -1,0 +1,123 @@
+[
+	{
+		"id": 0,
+		"slides": [
+			{
+				"type": 0,
+				"heading": "Reach Families",
+				"subHeading": "How to reach families",
+				"paragraph": "40% of families agree that the quality of the programs they watch is important",
+				"statistics": [
+					{
+						"label": "Own a home",
+						"value": 65
+					},
+					{
+						"label": "Have kids age 6-11",
+						"value": 20
+					},
+					{
+						"label": "Median HHI",
+						"value": "$57k+"
+					}
+				]
+			},
+			{
+				"type": 0,
+				"heading": "Men 25-54",
+				"subHeading": "How to reach men 25-54",
+				"paragraph": "41% of men 25-54 agree that screen size is important when it comes to watching TV",
+				"statistics": [
+					{
+						"label": "single",
+						"value": 28
+					},
+					{
+						"label": "Some college",
+						"value": 18
+					},
+					{
+						"label": "Own a home",
+						"value": 56
+					},
+					{
+						"label": "Median HHi",
+						"value": "$51k+"
+					},
+					{
+						"label": "Have kids age 6-11",
+						"value": 32
+					},
+					{
+						"label": "use search sites",
+						"value": 84
+					}
+				]
+			},
+			{
+				"type": 0,
+				"heading": "Reach Millennials",
+				"subHeading": "How to reach Millennials",
+				"paragraph": "35% of millennials agree that the ability to watch a program whenever they want is very important",
+				"statistics": [
+					{
+						"label": "single",
+						"value": 28
+					},
+					{
+						"label": "Some college",
+						"value": 18
+					},
+					{
+						"label": "Own a home",
+						"value": 56
+					},
+					{
+						"label": "Median HHi",
+						"value": "$51k+"
+					},
+					{
+						"label": "Have kids age 6-11",
+						"value": 32
+					},
+					{
+						"label": "use search sites",
+						"value": 84
+					}
+				]
+			},
+			{
+				"type": 0,
+				"heading": "Women 25-54",
+				"subHeading": "How to reach Women 25-54",
+				"paragraph": "41% of women 25-54 agree that the quality of the programs they watch is important",
+				"statistics": [
+					{
+						"label": "single",
+						"value": 28
+					},
+					{
+						"label": "Some college",
+						"value": 18
+					},
+					{
+						"label": "Own a home",
+						"value": 56
+					},
+					{
+						"label": "Median HHi",
+						"value": "$51k+"
+					},
+					{
+						"label": "Have kids age 6-11",
+						"value": 32
+					},
+					{
+						"label": "use search sites",
+						"value": 84
+					}
+				]
+			}
+		]
+	}
+]
