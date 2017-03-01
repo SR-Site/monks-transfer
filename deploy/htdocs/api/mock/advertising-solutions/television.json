@@ -55,69 +55,6 @@
 					}
 				}
 			},
-
-			{
-				"id": "smallInfo",
-				"data": {
-					"windowed": true,
-					"marginTop": 0,
-					"heading": "TV <br/><span class='highlight'>Delivers</span>"
-				}
-			},
-			{
-				"id": "storyInfoImages",
-				"data": {
-					"windowed": true,
-					"marginTop": 0,
-					"stories": [
-						{
-							"heading": "Start with Television:",
-							"paragraph": "Your brand deserves to be seen. Get in front of your most valuable customers by advertising on the top 50+ cable networks, with the best in sports, news, and entertainment programming.",
-							"theme": 0,
-							"background": {
-								"normal": "data/image/story-info-images/story-3-background.jpg",
-								"small": "data/image/story-info-images/story-3-background.jpg",
-								"alt": "Background image alt text"
-							},
-							"backgroundBlurred": {
-								"normal": "data/image/story-info-images/story-3-background-blurred.jpg",
-								"small": "data/image/story-info-images/story-3-background-blurred.jpg",
-								"alt": "Background image alt text"
-							}							
-						},
-						{
-							"heading": "Expand on multiple screens:",
-							"paragraph": "Reach your customer wherever they’re watching with targeted ads on TV, online, and on mobile.",
-							"theme": 0,
-							"background": {
-								"normal": "data/image/story-info-images/story-4-background.jpg",
-								"small": "data/image/story-info-images/story-4-background.jpg",
-								"alt": "Background image alt text"
-							},
-							"backgroundBlurred": {
-								"normal": "data/image/story-info-images/story-4-background-blurred.jpg",
-								"small": "data/image/story-info-images/story-4-background-blurred.jpg",
-								"alt": "Background image alt text"
-							}							
-						},
-						{
-							"heading": "Reach even more:",
-							"paragraph": "With exclusive, interactive products created for businesses who want to build deeper relationships with customers.",
-							"theme": 0,
-							"background": {
-								"normal": "data/image/story-info-images/story-5-background.jpg",
-								"small": "data/image/story-info-images/story-5-background.jpg",
-								"alt": "Background image alt text"
-							},
-							"backgroundBlurred": {
-								"normal": "data/image/story-info-images/story-5-background-blurred.jpg",
-								"small": "data/image/story-info-images/story-5-background-blurred.jpg",
-								"alt": "Background image alt text"
-							}
-						}
-					]
-				}
-			},
 			{
 				"id": "smallInfo",
 				"data": {
@@ -261,6 +198,68 @@
 									"type": 0
 								}
 							]
+						}
+					]
+				}
+			},
+			{
+				"id": "smallInfo",
+				"data": {
+					"windowed": true,
+					"marginTop": 0,
+					"heading": "TV <br/><span class='highlight'>Delivers</span>"
+				}
+			},
+			{
+				"id": "storyInfoImages",
+				"data": {
+					"windowed": true,
+					"marginTop": 0,
+					"stories": [
+						{
+							"heading": "Start with Television:",
+							"paragraph": "Your brand deserves to be seen. Get in front of your most valuable customers by advertising on the top 50+ cable networks, with the best in sports, news, and entertainment programming.",
+							"theme": 0,
+							"background": {
+								"normal": "data/image/story-info-images/story-3-background.jpg",
+								"small": "data/image/story-info-images/story-3-background.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image/story-info-images/story-3-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-3-background-blurred.jpg",
+								"alt": "Background image alt text"
+							}							
+						},
+						{
+							"heading": "Expand on multiple screens:",
+							"paragraph": "Reach your customer wherever they’re watching with targeted ads on TV, online, and on mobile.",
+							"theme": 0,
+							"background": {
+								"normal": "data/image/story-info-images/story-4-background.jpg",
+								"small": "data/image/story-info-images/story-4-background.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image/story-info-images/story-4-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-4-background-blurred.jpg",
+								"alt": "Background image alt text"
+							}							
+						},
+						{
+							"heading": "Reach even more:",
+							"paragraph": "With exclusive, interactive products created for businesses who want to build deeper relationships with customers.",
+							"theme": 0,
+							"background": {
+								"normal": "data/image/story-info-images/story-5-background.jpg",
+								"small": "data/image/story-info-images/story-5-background.jpg",
+								"alt": "Background image alt text"
+							},
+							"backgroundBlurred": {
+								"normal": "data/image/story-info-images/story-5-background-blurred.jpg",
+								"small": "data/image/story-info-images/story-5-background-blurred.jpg",
+								"alt": "Background image alt text"
+							}
 						}
 					]
 				}
