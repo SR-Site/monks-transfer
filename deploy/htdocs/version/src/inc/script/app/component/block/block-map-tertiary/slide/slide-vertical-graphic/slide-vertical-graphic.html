@@ -1,0 +1,16 @@
+<div class="map-tertiary-slide component-slide-vertical-graphic">
+	<header class="slide-heading">
+		<h2 class="heading heading-07"><strong data-bind="html: data.slideData.subHeading"></strong></h2>
+		<p class="copy copy-03" data-bind="html: data.slideData.paragraph"></p>
+	</header>
+
+	<div class="slide-statistics abs-center" data-bind="foreach: data.slideData.statistics">
+		<div class="statistic">STATISTIC</div>
+	</div>
+
+	<div class="slide-title">
+		<span class="pagination-number"
+		      data-bind="html: $root.StringUtils.padLeft((data.index + 1).toString(), 2, '0')"></span>
+		<h3 class="heading heading-01" data-bind="html: data.slideData.heading"></h3>
+	</div>
+</div>

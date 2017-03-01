@@ -1,4 +1,6 @@
 .map-tertiary-slide {
+	@include size(100%);
+
 	.slide-heading {
 		@include size(100%, auto);
 		@include pos($sizeGrid, auto, auto, 0);
@@ -13,7 +15,7 @@
 	}
 
 	.slide-title {
-		@include size($sizeGrid * 6, auto);
+		@include size($sizeGrid * 7, auto);
 		@include pos(50%, auto, auto, -$sizeGrid * 3);
 		transform: translateY(-50%);
 		position: absolute;

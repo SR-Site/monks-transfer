@@ -1,4 +1,5 @@
 <div data-bind="css: {'input-focussed': inputFocussed()}">
+	<!-- NOTE: on iOS this component get's moved to the document.body to fix sticky header issues -->
 	<!-- ko component: {
 		name: 'header',
 		onComplete: $root.controller.callbackCounter.get($root.controller.handleHeaderReady.bind($root.controller))
@@ -26,6 +27,7 @@
 		onComplete: $root.controller.callbackCounter.get($root.controller.handleNotificationReady.bind($root.controller))
 	} --><!-- /ko -->
 
+	<!-- NOTE: on iOS this component get's moved to the document.body to fix sticky header issues -->
 	<!-- ko component: {
 		name: 'page-loader',
 		onComplete: $root.controller.callbackCounter.get($root.controller.handlePageLoaderReady.bind($root.controller))

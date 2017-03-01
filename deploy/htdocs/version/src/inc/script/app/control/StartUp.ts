@@ -66,6 +66,9 @@ class StartUp
 		}
 
 		sequence.add(new LoadInitTask());
+		/**
+		 * See the "MapTertiaryData.ts" file for the id's of each of the data set
+		 */
 		sequence.add(new LoadJSONTask('data/json/map-tertiary-data.json', this.handleMapTertiaryLoaded.bind(this)));
 		sequence.add(new LoadJSONTask('data/json/states.json', this.handleStatesLoaded.bind(this)));
 

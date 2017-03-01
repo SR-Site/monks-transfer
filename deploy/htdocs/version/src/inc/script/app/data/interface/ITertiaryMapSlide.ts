@@ -21,12 +21,17 @@ interface ITertiaryMapSlide
 	 * @property
 	 * @description The extra information paragraph displayed on the slide
 	 */
-	paragraph: string;
+	paragraph?: string;
 	/**
 	 * @property
 	 * @description The statistics showed on the slide
 	 */
 	statistics: Array<{
+		/**
+		 * @property
+		 * @description Sometimes we want to display an icon
+		 */
+		icon?: string;
 		/**
 		 * @property
 		 * @description A short description for the value

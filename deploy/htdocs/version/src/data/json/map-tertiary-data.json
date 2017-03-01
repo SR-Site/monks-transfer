@@ -119,5 +119,75 @@
 				]
 			}
 		]
+	},
+	{
+		"id": 1,
+		"slides": [
+			{
+				"type": 2,
+				"heading": "Multi-Screens",
+				"subHeading": "Multi-screen Campaigns are essential",
+				"statistics": [
+					{
+						"icon": "person",
+						"label": "7am",
+						"value": "Smartphones Cable tv"
+					},
+					{
+						"icon": "person",
+						"label": "11am",
+						"value": "online"
+					},
+					{
+						"icon": "person",
+						"label": "3pm",
+						"value": "All Devices"
+					},
+					{
+						"icon": "person",
+						"label": "7pm",
+						"value": "Cable TV - Tablets"
+					},
+					{
+						"icon": "person",
+						"label": "11pm",
+						"value": "Cable TV"
+					}
+				]
+			},
+			{
+				"type": 3,
+				"heading": "Adults",
+				"subHeading": "Consistent multi-screen advertising builds brand awareness over time",
+				"paragraph": "<strong>Reach</strong> Percentage of target audience exposed to a commercial at least once <br/><strong>Frequency</strong> Average number of times your target audience sees an ad during campaign",
+				"statistics": [
+					{
+						"icon": "person",
+						"label": "7am",
+						"value": "Smartphones Cable tv"
+					},
+					{
+						"icon": "person",
+						"label": "11am",
+						"value": "online"
+					},
+					{
+						"icon": "person",
+						"label": "3pm",
+						"value": "All Devices"
+					},
+					{
+						"icon": "person",
+						"label": "7pm",
+						"value": "Cable TV - Tablets"
+					},
+					{
+						"icon": "person",
+						"label": "11pm",
+						"value": "Cable TV"
+					}
+				]
+			}
+		]
 	}
 ]
