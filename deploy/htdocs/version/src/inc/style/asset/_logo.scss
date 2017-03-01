@@ -13,46 +13,26 @@
 		@include size(100%);
 	}
 
-	// Primary logo colors
-	.theme-light &,
-	&.primary {
-
+	.theme-light & {
 		.text-top,
 		.text-bottom {
 			color: $colorWhite;
 		}
 
 		.arrow {
-			color: $colorSecondary;
+			color: #0177bc;
 		}
 	}
 
-	// Primary logo colors
-	&.white {
-
-		.text-top,
-		.text-bottom {
-			color: $colorWhite;
-		}
-
-		.arrow {
-			color: $colorWhite;
-		}
-	}
-
-	// Inverted logo for on light backgrounds
-	.theme-dark &,
-	&.inverted {
+	&.enable-solid-background,
+	.theme-dark & {
 		.text-top {
-			color: $colorQuaternary;
+			color: #808285;
 		}
 
+		.arrow,
 		.text-bottom {
-			color: $colorPrimary;
-		}
-
-		.arrow {
-			color: $colorSecondary;
+			color: #00629b;
 		}
 	}
 

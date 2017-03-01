@@ -63,11 +63,11 @@
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": false,
-					"heading": "<span class='highlight'>Partnership</span>",
-					"paragraph": "Whoever helps you build your brand should be local, personalized and fully committed to your success.",
+					"heading": "<span class='highlight'>Platform</span>",
+					"paragraph": "The right screens, the right shows and the right marketing products are crucial in engaging customers ready to buy.",
 					"background": {
-						"normal": "data/image/image-with-content/background-4.jpg",
-						"small": "data/image/image-with-content/background-4-small.jpg",
+						"normal": "data/image/image-with-content/background-5.jpg",
+						"small": "data/image/image-with-content/background-5-small.jpg",
 						"alt": "Background image alt text"
 					}
 				}
@@ -79,11 +79,11 @@
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": false,
-					"heading": "<span class='highlight'>Platform</span>",
-					"paragraph": "The right screens, the right shows and the right marketing products are crucial in engaging customers ready to buy.",
+					"heading": "<span class='highlight'>Partnership</span>",
+					"paragraph": "Whoever helps you build your brand should be local, personalized and fully committed to your success.",
 					"background": {
-						"normal": "data/image/image-with-content/background-5.jpg",
-						"small": "data/image/image-with-content/background-5-small.jpg",
+						"normal": "data/image/image-with-content/background-4.jpg",
+						"small": "data/image/image-with-content/background-4-small.jpg",
 						"alt": "Background image alt text"
 					}
 				}
