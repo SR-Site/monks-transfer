@@ -63,7 +63,7 @@
 			{
 				"id": "imageWithContent",
 				"data": {
-					"alignment": 1,
+					"alignment": 0,
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": false,
@@ -79,7 +79,7 @@
 			{
 				"id": "imageWithContent",
 				"data": {
-					"alignment": 0,
+					"alignment": 1,
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": false,
