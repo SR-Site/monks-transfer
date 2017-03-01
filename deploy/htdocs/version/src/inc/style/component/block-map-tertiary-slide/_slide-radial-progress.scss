@@ -7,9 +7,33 @@
 
 	.statistic {
 		@include size($sizeGrid * 4);
-		background: $colorPrimary;
 		display: inline-block;
 		vertical-align: top;
 		margin: $sizeGrid / 2;
+	}
+
+	.component-percentage-loader {
+		@include center-block();
+
+		.svg-holder {
+			@include size($sizeGrid * 3);
+		}
+
+		circle {
+			stroke: $colorSecondary;
+		}
+
+		.animated-line-track {
+			stroke-width: 2px;
+		}
+
+		.animated-line {
+			stroke-width: 10px;
+		}
+	}
+
+	.label {
+		display: block;
+		margin-top: $sizeGrid / 2;
 	}
 }
