@@ -68,7 +68,7 @@
 					"marginTop": 2,
 					"croppedImage": false,
 					"heading": "<span class='highlight'>Platform</span>",
-					"paragraph": "The right screens, the right shows and the right marketing products are crucial in engaging customers ready to buy.",
+					"paragraph": "Access to the right screens, the right shows, and the most advanced advertising products is crucial in engaging customers who are ready to buy.",
 					"background": {
 						"normal": "data/image/image-with-content/background-5.jpg",
 						"small": "data/image/image-with-content/background-5-small.jpg",
@@ -84,7 +84,7 @@
 					"marginTop": 2,
 					"croppedImage": false,
 					"heading": "<span class='highlight'>Partnership</span>",
-					"paragraph": "Whoever helps you build your brand should be local, personalized and fully committed to your success.",
+					"paragraph": "Whoever helps you build your brand should be local, personable and fully committed to your success.",
 					"background": {
 						"normal": "data/image/image-with-content/background-4.jpg",
 						"small": "data/image/image-with-content/background-4-small.jpg",
@@ -130,7 +130,7 @@
 						{
 							"label": "Scale",
 							"heading": "Scale that works for you",
-							"paragraph": "Whether you want to reach over 27 million households or just the homes within two miles of your business, we have you covered. We’re talking 41 states and 100+ Markets."
+							"paragraph": "Whether you want to reach over 27 million households or just the homes within two miles of your business, we have you covered. We’re talking 41 states and 100+ markets."
 						},
 						{
 							"label": "Focus",
@@ -145,7 +145,7 @@
 						{
 							"label": "Where",
 							"heading": "Where you are is where it’s at",
-							"paragraph": "This is your zone, your town, your neighbourhood. Get ready with a smile because your customers are going to be dropping by."
+							"paragraph": "This is your zone, your town, your neighborhood. Get ready with a smile because your customers are going to be dropping by."
 						}
 					],
 					"sequenceBackground": {

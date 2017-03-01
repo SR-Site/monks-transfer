@@ -30,8 +30,8 @@
 					"windowed": true,
 					"marginTop": 2,
 					"croppedImage": true,
-					"heading": "TV is Digital, and it’s <span class='highlight'>Everywhere</span>",
-					"paragraph": "With access to live TV content on their laptops, tablets, and mobile devices, <strong>89.5% of adults 18+ spend over four hours a day on average watching TV.</strong> Our targeted solutions can help you reach them on every screen, wherever and whenever they’re watching.",
+					"heading": "TV Dominates on Every <span class='highlight'>Screen</span>",
+					"paragraph": "With access to live TV content on their laptops, tablets, and mobile devices, <strong>89.5% of adults 18+ spend over four hours a day on average, watching TV.</strong> Our targeted solutions can help you reach them on every screen, wherever and whenever they’re watching.",
 					"background": {
 						"normal": "data/image/image-with-content/background-8.jpg",
 						"small": "data/image/image-with-content/background-8-small.jpg",
@@ -314,7 +314,7 @@
 					"marginTop": 2,
 					"callToActions": [
 						{
-							"heading": "The power of TV + Digital",
+							"heading": "The Power of TV + Digital",
 							"paragraph": "Amplify the impact of your advertising across multiple screens.",
 							"theme": 1,
 							"background": {
