@@ -11,6 +11,7 @@ dependencies:
     - field.field.paragraph.blockmapsecondary.field_styles
     - field.field.paragraph.blockmapsecondary.field_subheading
     - field.field.paragraph.blockmapsecondary.field_value
+    - image.style.preview_500xauto
     - paragraphs.paragraphs_type.blockmapsecondary
   module:
     - entity_reference_revisions
@@ -32,7 +33,7 @@ content:
     weight: 4
     label: above
     settings:
-      image_style: ''
+      image_style: preview_500xauto
       image_link: ''
     third_party_settings: {  }
     type: image
@@ -40,7 +41,7 @@ content:
     weight: 7
     label: above
     settings:
-      image_style: ''
+      image_style: preview_500xauto
       image_link: ''
     third_party_settings: {  }
     type: image

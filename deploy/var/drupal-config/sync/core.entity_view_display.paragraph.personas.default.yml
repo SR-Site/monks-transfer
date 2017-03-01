@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.personas.field_link
     - field.field.paragraph.personas.field_paragraph
     - field.field.paragraph.personas.field_persona_type
+    - image.style.preview_500xauto
     - paragraphs.paragraphs_type.personas
   module:
     - entity_reference_revisions
@@ -30,7 +31,7 @@ content:
     weight: 4
     label: above
     settings:
-      image_style: ''
+      image_style: preview_500xauto
       image_link: ''
     third_party_settings: {  }
     type: image

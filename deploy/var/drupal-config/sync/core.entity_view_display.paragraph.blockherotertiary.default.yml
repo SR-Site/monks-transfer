@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.blockherotertiary.field_image
     - field.field.paragraph.blockherotertiary.field_styles
+    - image.style.preview_500xauto
     - paragraphs.paragraphs_type.blockherotertiary
   module:
     - entity_reference_revisions
@@ -18,7 +19,7 @@ content:
     weight: 0
     label: above
     settings:
-      image_style: ''
+      image_style: preview_500xauto
       image_link: ''
     third_party_settings: {  }
     type: image

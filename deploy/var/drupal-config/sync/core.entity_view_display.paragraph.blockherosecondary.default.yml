@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.blockherosecondary.field_link
     - field.field.paragraph.blockherosecondary.field_paragraph
     - field.field.paragraph.blockherosecondary.field_styles
+    - image.style.preview_500xauto
     - paragraphs.paragraphs_type.blockherosecondary
   module:
     - color_field
@@ -39,7 +40,7 @@ content:
     weight: 1
     label: above
     settings:
-      image_style: ''
+      image_style: preview_500xauto
       image_link: ''
     third_party_settings: {  }
     type: image

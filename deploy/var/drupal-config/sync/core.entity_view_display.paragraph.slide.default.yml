@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.slide.field_heading
     - field.field.paragraph.slide.field_image
+    - image.style.preview_500xauto
     - paragraphs.paragraphs_type.slide
   module:
     - image
@@ -24,7 +25,7 @@ content:
     weight: 1
     label: above
     settings:
-      image_style: ''
+      image_style: preview_500xauto
       image_link: ''
     third_party_settings: {  }
     type: image

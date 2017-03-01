@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.blockaudiofragment.field_image
     - field.field.paragraph.blockaudiofragment.field_label
     - field.field.paragraph.blockaudiofragment.field_styles
+    - image.style.preview_500xauto
     - paragraphs.paragraphs_type.blockaudiofragment
   module:
     - entity_reference_revisions
@@ -35,7 +36,7 @@ content:
     weight: 2
     label: above
     settings:
-      image_style: ''
+      image_style: preview_500xauto
       image_link: ''
     third_party_settings: {  }
     type: image
