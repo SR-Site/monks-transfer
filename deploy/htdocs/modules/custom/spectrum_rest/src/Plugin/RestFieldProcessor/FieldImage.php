@@ -94,7 +94,7 @@ class FieldImage extends RestFieldProcessorBase {
    *   style is unknown. This will generate the requested styled image.
    */
   protected function getStyledImageUrl($field, $style) {
-    $original_url = $field->get('entity')->uri->value;
+    $original_url = $field->entity->uri->value;
 
     $style = ImageStyle::load($style);
     if ($style) {

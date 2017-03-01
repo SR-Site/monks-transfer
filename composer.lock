@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "575b856b0db6d2f87cfa63b51f5fcae6",
-    "content-hash": "fcb681b297920d530c402d9734d3e72f",
+    "hash": "fd9cad96c6f3e5f7362bfcb09e26b0a5",
+    "content-hash": "177c679890a058732e8f692812394a59",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1568,6 +1568,65 @@
             }
         },
         {
+            "name": "drupal/imagick",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/imagick",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/imagick-8.x-1.0.zip",
+                "reference": null,
+                "shasum": "521559cadf3a9b315599d9004643b203104e3024"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1487249883"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Karel Bemelmans",
+                    "homepage": "https://www.drupal.org/user/1205344"
+                },
+                {
+                    "name": "aspilicious",
+                    "homepage": "https://www.drupal.org/user/172527"
+                },
+                {
+                    "name": "bceyssens",
+                    "homepage": "https://www.drupal.org/user/2743951"
+                },
+                {
+                    "name": "kristofvanroy",
+                    "homepage": "https://www.drupal.org/user/382101"
+                },
+                {
+                    "name": "stijndm",
+                    "homepage": "https://www.drupal.org/user/201482"
+                }
+            ],
+            "description": "Imagick toolkit for image manipulation within Drupal",
+            "homepage": "https://www.drupal.org/project/imagick",
+            "support": {
+                "source": "http://cgit.drupalcode.org/imagick"
+            }
+        },
+        {
             "name": "drupal/jquery_colorpicker",
             "version": "1.0.0-rc2",
             "source": {
@@ -1788,7 +1847,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.0-rc1.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc1",
                 "shasum": "2460339ac8739317b3c4e66e9ce7142cc02adac3"
             },
             "require": {
