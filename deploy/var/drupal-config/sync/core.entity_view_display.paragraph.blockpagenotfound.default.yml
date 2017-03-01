@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.blockpagenotfound.field_paragraph
     - field.field.paragraph.blockpagenotfound.field_styles
     - field.field.paragraph.blockpagenotfound.field_value
+    - image.style.preview_500xauto
     - paragraphs.paragraphs_type.blockpagenotfound
   module:
     - entity_reference_revisions
@@ -30,7 +31,7 @@ content:
     weight: 2
     label: above
     settings:
-      image_style: ''
+      image_style: preview_500xauto
       image_link: ''
     third_party_settings: {  }
     type: image

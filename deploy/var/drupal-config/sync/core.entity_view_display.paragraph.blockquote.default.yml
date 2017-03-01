@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.blockquote.field_label
     - field.field.paragraph.blockquote.field_styles
     - field.field.paragraph.blockquote.field_title
+    - image.style.preview_500xauto
     - paragraphs.paragraphs_type.blockquote
   module:
     - entity_reference_revisions
@@ -28,7 +29,7 @@ content:
     weight: 3
     label: above
     settings:
-      image_style: ''
+      image_style: preview_500xauto
       image_link: ''
     third_party_settings: {  }
     type: image
