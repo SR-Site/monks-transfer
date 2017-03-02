@@ -1,10 +1,6 @@
 .component-block-map-tertiary {
 	position: relative;
 
-	.background {
-		background-size: cover;
-	}
-
 	.slide-wrapper {
 		width: calc(100% - #{$sizeGrid * 3});
 		margin-left: $sizeGrid * 3;
@@ -12,7 +8,14 @@
 
 	.slides {
 		@include aspect-ratio(1100px, 550px);
-		background: $colorLightGrey
+	}
+
+	.solid-background {
+		@include offset(0, 0);
+		@include aspect-ratio(1100px, 550px, false);
+		@include size(100%, auto);
+		background: $colorLightGrey;
+		position: absolute;
 	}
 
 	.component-map-pagination {
@@ -25,13 +28,16 @@
 			margin: 0;
 		}
 
-		.slides{
-			@include aspect-ratio(640px, 680px);
+		.slides {
+			@include aspect-ratio(640px, 890px);
+			background: transparent;
 		}
 
-		.background {
-			@include size(100%, auto);
-			@include aspect-ratio(1100px, 550px, false);
+		.solid-background {
+			@include offset(0, 0);
+			@include aspect-ratio(640px, 670px);
+			background: $colorLightGrey;
+			position: absolute;
 		}
 	}
 }

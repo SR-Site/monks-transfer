@@ -98,4 +98,56 @@
 			stroke-width: 1px;
 		}
 	}
+
+	@include respond-to(SMALL) {
+		.slide-heading {
+			.copy {
+				display: none;
+			}
+		}
+
+		.slide-statistics {
+			@include pos(auto, auto, auto, auto);
+			position: relative;
+			transform: none
+		}
+
+		.statistics-wrapper {
+			flex-direction: column;
+		}
+
+		.statistic {
+			@include size(100%, auto);
+			display: flex;
+			padding: $sizeGrid 0;
+
+			&.introduction {
+				@include size($sizeGrid * 4, auto);
+
+				.middle-statistic {
+					@include size(100%, $sizeGrid);
+					margin: 0;
+				}
+			}
+		}
+
+		.end {
+			transform: rotate(90deg);
+			margin-left: 0;
+		}
+
+		.value,
+		.label {
+			font-size: mobile-size(2.8rem);
+		}
+
+		.middle-statistic {
+			@include size($sizeGrid * 2, auto);
+		}
+
+		.separator {
+			display: none;
+		}
+
+	}
 }

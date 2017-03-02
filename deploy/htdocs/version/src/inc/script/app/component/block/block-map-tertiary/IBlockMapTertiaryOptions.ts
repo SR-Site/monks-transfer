@@ -9,11 +9,6 @@ interface IBlockMapTertiaryOptions extends IAbstractBlockComponentOptions
 	 * @description There are a couple of predefined tertiary map carousels, the avialable options are defined in the enum
 	 */
 	tertiaryMapData: MapTertiaryData;
-	/**
-	 * @property
-	 * @description The background displayed behind the slides
-	 */
-	background: IImage;
 }
 
 export default IBlockMapTertiaryOptions;

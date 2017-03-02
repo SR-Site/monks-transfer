@@ -1,4 +1,11 @@
 <div class="map-tertiary-slide abs-fill component-slide-vertical-graphic">
+	<!-- ko if: data.slideData.background -->
+	<div class="background abs-fill" data-bind="image: {
+			image: data.slideData.background,
+			state: $root.deviceState()
+		}"></div>
+	<!-- /ko -->
+
 	<header class="slide-heading">
 		<h2 class="heading heading-07"><strong data-bind="html: data.slideData.subHeading"></strong></h2>
 		<p class="copy copy-03" data-bind="html: data.slideData.paragraph"></p>

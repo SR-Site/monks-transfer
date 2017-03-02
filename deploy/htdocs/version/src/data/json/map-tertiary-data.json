@@ -7,6 +7,11 @@
 				"heading": "Reach Families",
 				"subHeading": "How to reach families",
 				"paragraph": "40% of families agree that the quality of the programs they watch is important",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"alt": "How to reach families"
+				},
 				"statistics": [
 					{
 						"label": "Own a home",
@@ -27,6 +32,11 @@
 				"heading": "Men 25-54",
 				"subHeading": "How to reach men 25-54",
 				"paragraph": "41% of men 25-54 agree that screen size is important when it comes to watching TV",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"alt": "How to reach families"
+				},
 				"statistics": [
 					{
 						"label": "single",
@@ -59,6 +69,11 @@
 				"heading": "Reach Millennials",
 				"subHeading": "How to reach Millennials",
 				"paragraph": "35% of millennials agree that the ability to watch a program whenever they want is very important",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"alt": "How to reach families"
+				},
 				"statistics": [
 					{
 						"label": "single",
@@ -91,6 +106,11 @@
 				"heading": "Women 25-54",
 				"subHeading": "How to reach Women 25-54",
 				"paragraph": "41% of women 25-54 agree that the quality of the programs they watch is important",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"alt": "How to reach families"
+				},
 				"statistics": [
 					{
 						"label": "single",
@@ -127,6 +147,11 @@
 				"type": 2,
 				"heading": "Multi-Screens",
 				"subHeading": "Multi-screen Campaigns are essential",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"alt": "How to reach families"
+				},
 				"statistics": [
 					{
 						"icon": "map-tertiary-1",
@@ -160,6 +185,11 @@
 				"heading": "Adults",
 				"subHeading": "Consistent multi-screen advertising builds brand awareness over time",
 				"paragraph": "<strong>Reach</strong> Percentage of target audience exposed to a commercial at least once <br/><strong>Frequency</strong> Average number of times your target audience sees an ad during campaign",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"alt": "How to reach families"
+				},
 				"statistics": [
 					{
 						"label": {
@@ -206,6 +236,11 @@
 				"heading": "Audience",
 				"subHeading": "Audience focused networks deliver a growing audience",
 				"paragraph": "Our targeted networks continue to increase their reach while broadcast declines.",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"alt": "How to reach families"
+				},
 				"statistics": [
 					{
 						"label": "Audience Focussed Networks",
@@ -240,6 +275,11 @@
 				"heading": "Audience",
 				"subHeading": "Audience focused networks deliver a growing audience",
 				"paragraph": "Our targeted networks continue to increase their reach while broadcast declines.",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"alt": "How to reach families"
+				},
 				"statistics": [
 					{
 						"label": "Audience Focussed Networks",

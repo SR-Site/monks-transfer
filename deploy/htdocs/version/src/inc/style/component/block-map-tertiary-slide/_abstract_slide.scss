@@ -20,6 +20,12 @@
 		position: absolute;
 	}
 
+	.background {
+		background-size: cover;
+		background-position: center center;
+	}
+
+
 	@include respond-to(SMALL) {
 
 		.slide-heading {

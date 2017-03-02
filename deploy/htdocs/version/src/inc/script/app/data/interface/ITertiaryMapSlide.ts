@@ -1,4 +1,5 @@
 import MapTertiarySlideType from "../../component/block/block-map-tertiary/enum/MapTertiarySlideType";
+import IImage from "./media/IImage";
 
 interface ITertiaryMapSlide
 {
@@ -22,6 +23,11 @@ interface ITertiaryMapSlide
 	 * @description The extra information paragraph displayed on the slide
 	 */
 	paragraph?: string;
+	/**
+	 * @property
+	 * @description The background image of the slide
+	 */
+	background:IImage;
 	/**
 	 * @property
 	 * @description The statistics showed on the slide

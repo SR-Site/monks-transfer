@@ -70,6 +70,10 @@
 			transform: none
 		}
 
+		.track {
+			display: none;
+		}
+
 		.statistics-wrapper {
 			display: block;
 
@@ -84,10 +88,7 @@
 				}
 			}
 
-			.icon {
-				display: none;
-			}
-
+			.icon,
 			.separator {
 				display: none;
 			}

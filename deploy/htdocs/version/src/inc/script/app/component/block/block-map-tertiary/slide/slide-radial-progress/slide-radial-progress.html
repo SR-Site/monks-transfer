@@ -1,10 +1,18 @@
 <div class="map-tertiary-slide abs-fill component-slide-radial-progress">
+
+	<!-- ko if: data.slideData.background -->
+		<div class="background abs-fill" data-bind="image: {
+			image: data.slideData.background,
+			state: $root.deviceState()
+		}"></div>
+	<!-- /ko -->
+
 	<header class="slide-heading">
 		<h2 class="heading heading-07"><strong data-bind="html: data.slideData.subHeading"></strong></h2>
 		<p class="copy copy-03" data-bind="html: data.slideData.paragraph"></p>
 	</header>
 
-	<div class="slide-statistics abs-center" data-bind="foreach: data.slideData.statistics">
+	<div class="slide-statistics abs-center" data-bind="foreach: data.slideData.statistics, css: {'single-column': data.slideData.statistics.length <= 3}">
 		<div class="statistic">
 			<!-- ko component: {
 				name: 'percentage-loader',
