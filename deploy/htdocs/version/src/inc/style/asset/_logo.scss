@@ -8,11 +8,13 @@
 		fill: currentColor;
 	}
 
-
 	.icon {
 		@include size(100%);
 	}
 
+	/**
+	 * Light theme
+	 */
 	.theme-light & {
 		.text-top,
 		.text-bottom {
@@ -24,7 +26,9 @@
 		}
 	}
 
-	&.enable-solid-background,
+	/**
+	 * Dark theme
+	 */
 	.theme-dark & {
 		.text-top {
 			color: #808285;
@@ -36,32 +40,47 @@
 		}
 	}
 
-	@include respond-to(XX_LARGE){
+	/**
+	 * Theme used on a solid background
+	 */
+	.enable-solid-background & {
+		.text-top {
+			color: #808285;
+		}
+
+		.arrow,
+		.text-bottom {
+			color: #00629b;
+		}
+	}
+
+	@include respond-to(XX_LARGE) {
 		@include size(120px, 40px);
 	}
 
-	@include respond-to(X_LARGE){
+	@include respond-to(X_LARGE) {
 		@include size(110px, 35px);
 	}
 
-	@include respond-to(LARGE){
+	@include respond-to(LARGE) {
 		@include size(90px, 30px);
 	}
 
-	@include respond-to(SMALL){
+	@include respond-to(SMALL) {
 		@include size(60px, 19px);
 
-		&.primary {
+		/**
+		 * Mobile has no themes
+		 */
+		.theme-light &,
+		.theme-dark & {
 			.text-top {
-				color: $colorQuaternary;
+				color: #808285;
 			}
 
+			.arrow,
 			.text-bottom {
-				color: $colorPrimary;
-			}
-
-			.arrow {
-				color: $colorSecondary;
+				color: #00629b;
 			}
 		}
 	}
