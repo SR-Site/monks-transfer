@@ -4,6 +4,7 @@ import IMapPaginationOptions from 'app/component/map-pagination/IMapPaginationOp
 import MapPaginationViewModel from 'app/component/map-pagination/MapPaginationViewModel';
 
 import Log from "lib/temple/util/Log";
+import NativeEventListener from "../../../lib/temple/event/NativeEventListener";
 
 class MapPaginationController extends AbstractTransitionComponentController<MapPaginationViewModel, IMapPaginationOptions, MapPaginationTransitionController>
 {
@@ -26,12 +27,12 @@ class MapPaginationController extends AbstractTransitionComponentController<MapP
 	{
 		super.init();
 
-		this.destructibles.addKOSubscription(this.options.slides.subscribe((slides) =>
-		{
-			this.viewModel.total(slides.length - 1)
-		}));
-
 		this._debug.log('Init');
+
+		this.destructibles.add(new NativeEventListener(window, 'resize', this.handleResize.bind(this)));
+
+		this.handleResize();
+
 	}
 
 	/**
@@ -42,6 +43,15 @@ class MapPaginationController extends AbstractTransitionComponentController<MapP
 	public set transitionInProgress(value: boolean)
 	{
 		this._transitionInProgress = value
+	}
+
+	/**
+	 * @public
+	 * @method handleResize
+	 */
+	public handleResize(): void
+	{
+		this.viewModel.totalWidth((<HTMLElement>this.element.querySelector('.pagination-steps')).offsetWidth);
 	}
 
 	/**
@@ -67,6 +77,8 @@ class MapPaginationController extends AbstractTransitionComponentController<MapP
 	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new MapPaginationTransitionController(this.element, this);
+
+		this.viewModel.steps(Array.prototype.slice.call(this.element.querySelectorAll('.step')))
 
 		super.allComponentsLoaded();
 	}
