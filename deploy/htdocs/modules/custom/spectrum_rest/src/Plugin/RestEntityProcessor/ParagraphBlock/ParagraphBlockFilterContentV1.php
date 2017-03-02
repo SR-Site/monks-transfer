@@ -56,10 +56,13 @@ class ParagraphBlockFilterContentV1 extends SpectrumRestEntityProcessorBase {
     $vocabularies = ['category', 'document_type', 'market', 'platform'];
 
     foreach ($vocabularies as $index => $vid) {
+      /** @var \Drupal\taxonomy\Entity\Vocabulary $vocabulary */
+      $vocabulary = \Drupal::entityTypeManager()->getStorage('taxonomy_vocabulary')->load($vid);
       $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
 
       $filter = [
         'type' => $index,
+        'label' => $vocabulary->label(),
         'options' => [],
       ];
 
