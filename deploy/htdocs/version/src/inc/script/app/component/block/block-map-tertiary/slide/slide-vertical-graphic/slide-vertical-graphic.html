@@ -1,11 +1,27 @@
-<div class="map-tertiary-slide component-slide-vertical-graphic">
+<div class="map-tertiary-slide abs-fill component-slide-vertical-graphic">
 	<header class="slide-heading">
 		<h2 class="heading heading-07"><strong data-bind="html: data.slideData.subHeading"></strong></h2>
 		<p class="copy copy-03" data-bind="html: data.slideData.paragraph"></p>
 	</header>
 
-	<div class="slide-statistics abs-center" data-bind="foreach: data.slideData.statistics">
-		<div class="statistic">STATISTIC</div>
+	<div class="slide-statistics" data-bind="foreach: data.slideData.statistics">
+		<div class="statistic">
+			<div class="graphics" data-bind="foreach: $data.values">
+				<div class="graphic">
+					<!-- ko component: {
+						name: 'vertical-graphic',
+						onComplete: $root.controller.callbackCounter.get(),
+						options: {
+							value: $data.value
+						}
+					} --><!-- /ko -->
+					<p class="label copy copy-03" data-bind="html: $data.label"></p>
+				</div>
+			</div>
+			<p class="statistic-label copy copy-03">
+				<strong data-bind="html: $data.label"></strong>
+			</p>
+		</div>
 	</div>
 
 	<div class="slide-title">

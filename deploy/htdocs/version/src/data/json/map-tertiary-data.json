@@ -129,27 +129,27 @@
 				"subHeading": "Multi-screen Campaigns are essential",
 				"statistics": [
 					{
-						"icon": "person",
+						"icon": "map-tertiary-1",
 						"label": "7am",
 						"value": "Smartphones Cable tv"
 					},
 					{
-						"icon": "person",
+						"icon": "map-tertiary-2",
 						"label": "11am",
 						"value": "online"
 					},
 					{
-						"icon": "person",
+						"icon": "map-tertiary-3",
 						"label": "3pm",
 						"value": "All Devices"
 					},
 					{
-						"icon": "person",
+						"icon": "map-tertiary-4",
 						"label": "7pm",
 						"value": "Cable TV - Tablets"
 					},
 					{
-						"icon": "person",
+						"icon": "map-tertiary-5",
 						"label": "11pm",
 						"value": "Cable TV"
 					}
@@ -193,6 +193,66 @@
 							"top": "70%",
 							"bottom": "6.1x"
 						}
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 2,
+		"slides": [
+			{
+				"type": 1,
+				"heading": "Audience",
+				"subHeading": "Audience focused networks deliver a growing audience",
+				"paragraph": "Our targeted networks continue to increase their reach while broadcast declines.",
+				"statistics": [
+					{
+						"label": "Audience Focussed Networks",
+						"values": [
+							{
+								"label": "2006",
+								"value": 20
+							},
+							{
+								"label": "2016",
+								"value": 85
+							}
+						]
+					},
+					{
+						"label": "Broadcast TV",
+						"values": [
+							{
+								"label": "2006",
+								"value": 40
+							},
+							{
+								"label": "2016",
+								"value": 60
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": 1,
+				"heading": "Audience",
+				"subHeading": "Audience focused networks deliver a growing audience",
+				"paragraph": "Our targeted networks continue to increase their reach while broadcast declines.",
+				"statistics": [
+					{
+						"label": "Audience Focussed Networks",
+						"values": [
+							{
+								"label": "2006",
+								"value": 20
+							},
+							{
+								"label": "2016",
+								"value": 85
+							}
+						]
 					}
 				]
 			}

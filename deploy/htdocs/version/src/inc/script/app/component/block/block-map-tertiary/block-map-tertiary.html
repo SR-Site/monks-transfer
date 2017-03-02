@@ -9,16 +9,14 @@
 
 				<!-- ko foreach: $root.slides() -->
 
-					<div class="slide abs-fill">
-						<!-- ko component: {
-							name: $root.slideTypeMap[$data.type],
-							onComplete: $root.controller.callbackCounter.get($root.controller.handleSlideReady.bind($root.controller, $index())),
-							options:{
-								index: $index(),
-								slideData: $data
-							}
-						} --><!-- /ko -->
-					</div>
+					<!-- ko component: {
+						name: $root.slideTypeMap[$data.type],
+						onComplete: $root.controller.callbackCounter.get($root.controller.handleSlideReady.bind($root.controller, $index())),
+						options:{
+							index: $index(),
+							slideData: $data
+						}
+					} --><!-- /ko -->
 
 				<!-- /ko -->
 			</div>

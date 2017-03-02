@@ -1,3 +1,50 @@
 .component-slide-vertical-graphic {
+	display: flex;
+	justify-content: space-between;
 
+	.slide-statistics {
+		@include pos(50%, $sizeGrid * 6, auto, $sizeGrid * 6);
+		position: absolute;
+		transform: translateY(-50%);
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.statistic {
+		@include size($sizeGrid * 6);
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+	}
+
+	.statistic-label {
+		color: $colorLocalMedia;
+		margin-top: $sizeGrid / 2;
+	}
+
+	.graphics {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.graphic {
+		display: inline-block;
+
+		&:nth-child(odd){
+			.component-vertical-graphic {
+				color: $colorSecondary;
+			}
+		}
+
+		&:nth-child(even){
+			.component-vertical-graphic {
+				color: $colorPrimary;
+			}
+		}
+
+		.label {
+			display: block;
+			color: $colorSecondary;
+		}
+	}
 }

@@ -27,10 +27,6 @@
 		.icon {
 			@include size($sizeGrid * 2);
 			display: block;
-
-			path {
-				fill: $colorLocalMedia;
-			}
 		}
 
 		.separator {

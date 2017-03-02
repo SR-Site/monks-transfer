@@ -12,6 +12,7 @@ class SlideRadialProgressTransitionController extends AbstractTransitionControll
 	{
 		this.transitionInTimeline.from(this.element, 0.5, {
 			autoAlpha: 0,
+			display: 'none',
 			ease: Linear.easeNone
 		});
 	}
