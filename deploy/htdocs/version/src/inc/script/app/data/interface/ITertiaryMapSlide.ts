@@ -6,7 +6,7 @@ interface ITertiaryMapSlide
 	 * @property
 	 * @description The slide type
 	 */
-	type: MapTertiarySlideType;
+		type: MapTertiarySlideType;
 	/**
 	 * @property
 	 * @description The main heading on the slide
@@ -36,12 +36,12 @@ interface ITertiaryMapSlide
 		 * @property
 		 * @description A short description for the value
 		 */
-		label: string;
+		label: string | {top: string;middle?: string;bottom?: string};
 		/**
 		 * @property
 		 * @description The value of the statistic
 		 */
-		value: string;
+		value: string | {top: string; bottom: string;};
 	}>
 }
 

@@ -26,6 +26,11 @@ class MapPaginationController extends AbstractTransitionComponentController<MapP
 	{
 		super.init();
 
+		this.destructibles.addKOSubscription(this.options.slides.subscribe((slides) =>
+		{
+			this.viewModel.total(slides.length - 1)
+		}));
+
 		this._debug.log('Init');
 	}
 
@@ -34,7 +39,7 @@ class MapPaginationController extends AbstractTransitionComponentController<MapP
 	 * @method set transitionInProgress
 	 * @param value
 	 */
-	public set transitionInProgress(value:boolean)
+	public set transitionInProgress(value: boolean)
 	{
 		this._transitionInProgress = value
 	}

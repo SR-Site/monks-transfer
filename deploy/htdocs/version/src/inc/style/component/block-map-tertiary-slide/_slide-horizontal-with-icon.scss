@@ -9,6 +9,7 @@
 		@extend %reset-list;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 
 		li {
 			@include size($sizeGrid * 2, $sizeGrid * 5);
@@ -28,7 +29,7 @@
 			display: block;
 
 			path {
-				fill: $colorPrimary;
+				fill: $colorLocalMedia;
 			}
 		}
 
@@ -41,8 +42,8 @@
 
 			svg {
 				@include size(1px, 100%);
-				stroke: $colorSecondary;
-				stroke-dasharray: 2, 2;
+				stroke: $colorLocalMedia;
+				stroke-dasharray: 4, 4;
 				stroke-width: 2px;
 			}
 		}
@@ -61,8 +62,8 @@
 
 	.track {
 		@include size(100%, 1px);
-		stroke: $colorSecondary;
-		stroke-dasharray: 2, 2;
+		stroke: $colorLocalMedia;
+		stroke-dasharray: 4, 4;
 		stroke-width: 2px;
 	}
 }

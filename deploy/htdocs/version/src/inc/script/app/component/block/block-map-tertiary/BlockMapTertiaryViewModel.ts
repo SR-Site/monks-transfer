@@ -12,9 +12,9 @@ class BlockMapTertiaryViewModel extends AbstractBlockComponentViewModel<BlockMap
 	public slides: KnockoutObservableArray<ITertiaryMapSlide> = ko.observableArray([]);
 	public slideTypeMap: {[index: number]: string} = {
 		[MapTertiarySlideType.RADIAL_PROGRESS]: 'block/block-map-tertiary/slide/slide-radial-progress',
-		[MapTertiarySlideType.VERTICAL_GRAPHIC]: 'block/block-map-tertiary/slide/slide-radial-progress',
+		[MapTertiarySlideType.VERTICAL_GRAPHIC]: 'block/block-map-tertiary/slide/slide-vertical-graphic',
 		[MapTertiarySlideType.HORIZONTAL_WITH_ICON]: 'block/block-map-tertiary/slide/slide-horizontal-with-icon',
-		[MapTertiarySlideType.HORIZONTAL_WITHOUT_ICON]: 'block/block-map-tertiary/slide/slide-vertical-graphic',
+		[MapTertiarySlideType.HORIZONTAL_WITHOUT_ICON]: 'block/block-map-tertiary/slide/slide-horizontal-without-icon',
 	};
 
 	/**

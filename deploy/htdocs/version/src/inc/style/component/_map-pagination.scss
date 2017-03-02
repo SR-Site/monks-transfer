@@ -31,7 +31,7 @@
 		ul {
 			@extend %reset-list;
 			@include size(auto, $sizeGrid * 1.5);
-			@include pos(50%, $sizeGrid, auto, $sizeGrid);
+			@include pos(50%, 0, auto, 0);
 			transform: translateY(-50%);
 			display: flex;
 			position: absolute;

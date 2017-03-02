@@ -4,8 +4,63 @@
 		<p class="copy copy-03" data-bind="html: data.slideData.paragraph"></p>
 	</header>
 
-	<div class="slide-statistics abs-center" data-bind="foreach: data.slideData.statistics">
-		<div class="statistic">STATISTIC</div>
+	<div class="slide-statistics">
+		<div class="statistics-wrapper">
+			<div class="statistic introduction">
+				<div class="middle-statistic">
+					<span class="abs-center">
+						<span class="label">Weeks</span>
+					</span>
+				</div>
+			</div>
+			<div class="separator">
+				<svg width="100%" height="100%" class="track" preserveAspectRatio="none">
+					<line x1="0" y1="0" x2="1000" y2="0" />
+				</svg>
+			</div>
+			<!-- ko foreach: data.slideData.statistics -->
+				<div class="statistic">
+					<div class="top-statistic">
+						<span class="abs-center">
+							<span class="value" data-bind="html: $data.value.top"></span>
+							<strong class="label" data-bind="html: $data.label.top"></strong>
+						</span>
+					</div>
+					<div class="middle-statistic">
+						<div class="separator separator-top">
+							<svg width="100%" height="100%" class="track" preserveAspectRatio="none">
+								<line x1="0" y1="0" x2="0" y2="100" />
+							</svg>
+						</div>
+						<span class="abs-center">
+							<span class="label" data-bind="html: $data.label.middle"></span>
+						</span>
+						<div class="separator separator-bottom">
+							<svg width="100%" height="100%" class="track" preserveAspectRatio="none">
+								<line x1="0" y1="0" x2="0" y2="100" />
+							</svg>
+						</div>
+					</div>
+					<div class="bottom-statistic">
+						<span class="abs-center">
+							<span class="value" data-bind="html: $data.value.bottom"></span>
+							<strong class="label" data-bind="html: $data.label.bottom"></strong>
+						</span>
+					</div>
+				</div>
+				<div class="separator">
+					<svg width="100%" height="100%" class="track" preserveAspectRatio="none">
+						<line x1="0" y1="0" x2="1000" y2="0" />
+					</svg>
+				</div>
+			<!-- /ko -->
+			<div class="end">
+				<svg width="100%" height="100%" class="arrow" preserveAspectRatio="none">
+					<line x1="0" y1="0" x2="10" y2="10" />
+					<line x1="0" y1="20" x2="10" y2="10" />
+				</svg>
+			</div>
+		</div>
 	</div>
 
 	<div class="slide-title">

@@ -3,7 +3,7 @@
 		<span class="icon abs-center" data-bind="icon: 'circle-arrow-left'"></span>
 	</button>
 	<div class="pagination-steps">
-		<span class="progress" data-bind="style: {width: $root.activeIndex() / (data.slides().length - 1) * 100 + '%'}"></span>
+		<span class="progress" data-bind="style: {width: progress()}"></span>
 		<ul data-bind="foreach: data.slides">
 			<li class="step" data-bind="
 				tap: $root.handleSelectClick.bind($root, $index()),

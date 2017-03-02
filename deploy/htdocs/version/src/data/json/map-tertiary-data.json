@@ -162,29 +162,37 @@
 				"paragraph": "<strong>Reach</strong> Percentage of target audience exposed to a commercial at least once <br/><strong>Frequency</strong> Average number of times your target audience sees an ad during campaign",
 				"statistics": [
 					{
-						"icon": "person",
-						"label": "7am",
-						"value": "Smartphones Cable tv"
+						"label": {
+							"top": "Reach",
+							"middle": "4",
+							"bottom": "Frequency"
+						},
+						"value": {
+							"top": "36%",
+							"bottom": "1.9x"
+						}
 					},
 					{
-						"icon": "person",
-						"label": "11am",
-						"value": "online"
+						"label": {
+							"top": "Reach",
+							"middle": "13",
+							"bottom": "Frequency"
+						},
+						"value": {
+							"top": "57%",
+							"bottom": "3.9x"
+						}
 					},
 					{
-						"icon": "person",
-						"label": "3pm",
-						"value": "All Devices"
-					},
-					{
-						"icon": "person",
-						"label": "7pm",
-						"value": "Cable TV - Tablets"
-					},
-					{
-						"icon": "person",
-						"label": "11pm",
-						"value": "Cable TV"
+						"label": {
+							"top": "Reach",
+							"middle": "26",
+							"bottom": "Frequency"
+						},
+						"value": {
+							"top": "70%",
+							"bottom": "6.1x"
+						}
 					}
 				]
 			}

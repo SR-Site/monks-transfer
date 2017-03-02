@@ -1,3 +1,101 @@
 .component-slide-horizontal-without-icon {
+	.slide-statistics {
+		@include pos(50%, $sizeGrid * 3, auto, $sizeGrid * 6);
+		position: absolute;
+		transform: translateY(-50%);
+	}
 
+	.statistics-wrapper {
+		@extend %reset-list;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.statistic {
+		@include size($sizeGrid * 1.5, $sizeGrid * 5);
+		display: inline-block;
+		text-align: center;
+
+		&.introduction {
+			width: $sizeGrid * 3;
+
+			.middle-statistic {
+				@include text-overflow();
+				margin-top: $sizeGrid * 2;
+			}
+		}
+	}
+
+	.top-statistic,
+	.middle-statistic,
+	.bottom-statistic {
+		position: relative;
+		width: 100%;
+	}
+
+	.bottom-statistic,
+	.top-statistic {
+		height: $sizeGrid * 2;
+		line-height: $sizeGrid * 2;
+	}
+
+	.middle-statistic {
+		height: $sizeGrid;
+		font-weight: 700;
+		line-height: $sizeGrid;
+	}
+
+	.label,
+	.value {
+		display: block;
+		font: 400 1.4rem / 1.2 $fontOpenSans;
+	}
+
+	.label {
+		font-weight: 700;
+	}
+
+	.separator-top,
+	.separator-bottom {
+		@include size(1px, 2rem);
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+
+		.track {
+			@include size(1px, 100%);
+		}
+	}
+
+	.separator-top {
+		top: -2rem;
+	}
+
+	.separator-bottom {
+		bottom: -2rem;
+	}
+
+	.separator {
+		overflow: hidden;
+	}
+
+	.track {
+		@include size(100%, 1px);
+		stroke: $colorLocalMedia;
+		stroke-dasharray: 4, 4;
+		stroke-width: 2px;
+	}
+
+	.end {
+		@include size(10px, 20px);
+		flex-shrink: 0;
+		margin-left: -5px;
+
+		line {
+			stroke: $colorLocalMedia;
+			stroke-dasharray: 3, 3;
+			stroke-width: 1px;
+		}
+	}
 }

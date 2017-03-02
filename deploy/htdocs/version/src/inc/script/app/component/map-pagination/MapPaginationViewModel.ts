@@ -9,11 +9,17 @@ class MapPaginationViewModel extends AbstractTransitionComponentViewModel<MapPag
 {
 	public StringUtils: Class = StringUtils;
 	public activeIndex: KnockoutObservable<number> = ko.observable(0);
-	public progress: KnockoutComputed<number>;
+	public total: KnockoutObservable<number> = ko.observable(0);
+	public progress: KnockoutComputed<string>;
 
 	constructor()
 	{
 		super();
+
+		this.progress = ko.computed(() =>
+		{
+			return this.activeIndex() / this.total() * 100 + '%';
+		})
 	}
 
 	/**
