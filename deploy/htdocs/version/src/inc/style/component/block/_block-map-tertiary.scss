@@ -15,7 +15,23 @@
 		background: $colorLightGrey
 	}
 
-	.component-map-pagination{
+	.component-map-pagination {
 		margin-top: $sizeGrid;
+	}
+
+	@include respond-to('SMALL') {
+		.slide-wrapper {
+			width: 100%;
+			margin: 0;
+		}
+
+		.slides{
+			@include aspect-ratio(640px, 680px);
+		}
+
+		.background {
+			@include size(100%, auto);
+			@include aspect-ratio(1100px, 550px, false);
+		}
 	}
 }

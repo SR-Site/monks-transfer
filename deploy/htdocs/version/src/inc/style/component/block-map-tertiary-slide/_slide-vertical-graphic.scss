@@ -47,4 +47,19 @@
 			color: $colorSecondary;
 		}
 	}
+
+	@include respond-to(SMALL) {
+		display: block;
+
+		.slide-statistics {
+			@include pos(auto, auto, auto, auto);
+			position: relative;
+			transform: none;
+			margin-top: $sizeGrid
+		}
+
+		.statistic {
+			@include size(25%, auto);
+		}
+	}
 }

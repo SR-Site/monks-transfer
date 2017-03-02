@@ -62,4 +62,50 @@
 		stroke-dasharray: 4, 4;
 		stroke-width: 2px;
 	}
+
+	@include respond-to(SMALL) {
+		.slide-statistics {
+			@include pos(auto, auto, auto, auto);
+			position: relative;
+			transform: none
+		}
+
+		.statistics-wrapper {
+			display: block;
+
+			li {
+				@include size(100%, auto);
+				display: block;
+				transform: none;
+
+				&:last-child,
+				&:first-child {
+					transform: none;
+				}
+			}
+
+			.icon {
+				display: none;
+			}
+
+			.separator {
+				display: none;
+			}
+
+			.description {
+				@include size(100%, auto);
+				text-align: left;
+				padding: $sizeGrid $sizeGrid * 2;
+
+				.value,
+				.label {
+					display: inline-block;
+				}
+
+				.label {
+					padding-right: $sizeGrid * 2;
+				}
+			}
+		}
+	}
 }

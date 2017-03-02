@@ -1,5 +1,4 @@
 .map-tertiary-slide {
-	@include size(100%);
 
 	.slide-heading {
 		@include size(100%, auto);
@@ -19,5 +18,29 @@
 		@include pos(50%, auto, auto, -$sizeGrid * 3);
 		transform: translateY(-50%);
 		position: absolute;
+	}
+
+	@include respond-to(SMALL) {
+
+		.slide-heading {
+			@include pos(auto, auto, auto, auto);
+			padding: $sizeGrid $sizeGrid 0 $sizeGrid;
+			position: relative;
+		}
+
+		.slide-statistics {
+			width: 100%;
+			position: relative;
+			transform: none;
+		}
+
+		.slide-title {
+			@include size(100%, auto);
+			@include pos(auto, auto, auto, auto);
+			position: relative;
+			transform: none;
+			padding: 0 $sizeGrid * 2;
+			margin-top: $sizeGrid;
+		}
 	}
 }
