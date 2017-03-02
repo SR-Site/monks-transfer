@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.slideheromain.field_file
     - field.field.paragraph.slideheromain.field_heading
     - field.field.paragraph.slideheromain.field_image
     - field.field.paragraph.slideheromain.field_link
@@ -12,6 +13,7 @@ dependencies:
     - paragraphs.paragraphs_type.slideheromain
   module:
     - entity_reference_revisions
+    - file
     - image
     - text
 id: paragraph.slideheromain.default
@@ -19,6 +21,12 @@ targetEntityType: paragraph
 bundle: slideheromain
 mode: default
 content:
+  field_file:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
   field_heading:
     weight: 0
     label: above

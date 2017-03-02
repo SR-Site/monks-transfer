@@ -28,6 +28,7 @@ class ParagraphBlockHeroTertiaryV1 extends SpectrumRestEntityProcessorBase {
     $data = [
       "id" => 'heroTertiary',
       "data" => $data + [
+        "backgroundVideo" => $this->video($entity->get('field_file')),
         "background" => $this->image($entity->get('field_image')),
       ],
     ];
