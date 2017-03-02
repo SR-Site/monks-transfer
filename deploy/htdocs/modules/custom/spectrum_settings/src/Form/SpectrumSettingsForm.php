@@ -84,6 +84,15 @@ class SpectrumSettingsForm extends ConfigFormBase {
       '#attributes' => ['data-autocomplete-first-character-blacklist' => '/#?'],
     );
 
+    $form['contact_to'] = array(
+      '#type' => 'email',
+      '#title' => $this->t('Contact Form destination'),
+      '#description' => $this->t('E-mail destination to send contact e-mails, e.g. email@example.com'),
+      '#default_value' => $this->state->get('contact_to'),
+      '#maxlength' => 255,
+      '#size' => 32,
+    );
+
     // Social networks.
 
     $form['group0'] = array(
@@ -162,6 +171,7 @@ class SpectrumSettingsForm extends ConfigFormBase {
 
     $this->state->set('ga_account', $form_state->getValue('ga_account'));
     $this->state->set('site_404', static::getUserEnteredStringAsUri($form_state->getValue('site_404')));
+    $this->state->set('contact_to', $form_state->getValue('contact_to'));
 
     // Social networks.
     $socialNetworks = $form_state->getValue('social_networks');

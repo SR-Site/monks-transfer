@@ -18,3 +18,4 @@ permissions:
   7: 'restful get spectrum_rest_searcharticles_v1'
   8: 'restful get spin_rest_init_v1'
   9: 'restful get spectrum_rest_article_v1'
+  10: 'restful post spectrum_rest_contact_v1'

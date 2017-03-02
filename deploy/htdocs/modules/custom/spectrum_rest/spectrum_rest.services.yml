@@ -1,0 +1,5 @@
+services:
+  spectrum_rest.denormalizer.contact:
+    class: Drupal\spectrum_rest\Normalizer\SpectrumContactDenormalizer
+    tags:
+      - { name: normalizer }

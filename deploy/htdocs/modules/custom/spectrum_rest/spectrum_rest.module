@@ -9,6 +9,17 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Routing\RouteMatchInterface;
 
+const SPECTRUM_CONTACT_EMAIL_BODY =
+  'First name: @firstName' . PHP_EOL .
+  'Last name: @lastName' . PHP_EOL .
+  'Company: @company' . PHP_EOL .
+  'City: @city' . PHP_EOL .
+  'State: @state' . PHP_EOL .
+  'E-mail: @email' . PHP_EOL .
+  'Phone: @phone' . PHP_EOL .
+  'Zip code: @zipCode' . PHP_EOL .
+  'Comments: @comments' . PHP_EOL;
+
 /**
  * Implements hook_help().
  *
@@ -42,4 +53,43 @@ function HOOK_entity_base_field_info(EntityTypeInterface $entity_type) {
   }
 
   return $fields;
+}
+
+/**
+ * Implements hook_mail().
+ *
+ * @param $key
+ * @param $message
+ * @param $params
+ */
+function spectrum_rest_mail($key, &$message, $params) {
+
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+
+  switch ($key) {
+    case 'spectrum_contact':
+      /** @var \Drupal\spectrum_rest\SpectrumContactInterface $contact */
+      $contact = $params['contact'];
+
+      $args = [
+        '@firstName' => $contact->firstName,
+        '@lastName' => $contact->lastName,
+        '@company' => $contact->company,
+        '@city' => $contact->city,
+        '@state' => $contact->state,
+        '@email' => $contact->email,
+        '@phone' => $contact->phone,
+        '@zipCode' => $contact->zipCode,
+        '@comments' => $contact->comments,
+      ];
+
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('Contact from Spectrum: @last_name @first_name', ['@first_name' => $contact->firstName, '@last_name' => $contact->lastName], $options);
+      $message['body'][] = t(SPECTRUM_CONTACT_EMAIL_BODY, $args);
+
+      break;
+  }
+
 }

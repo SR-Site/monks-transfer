@@ -3,15 +3,13 @@
 namespace Drupal\spectrum_rest\Plugin\rest\resource;
 
 use Drupal\Component\Utility\UrlHelper;
+use Drupal\Core\Access\CsrfTokenGenerator;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Access\AccessResultAllowed;
 use Drupal\Core\Cache\CacheableMetadata;
-use Drupal\Core\Entity\EntityFieldManagerInterface;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Menu\MenuLinkTreeElement;
 use Drupal\Core\Menu\MenuLinkTreeInterface;
 use Drupal\Core\Menu\MenuTreeParameters;
-use Drupal\Core\Path\AliasManagerInterface;
 use Drupal\Core\State\StateInterface;
 use Drupal\Core\Language\Language;
 use Drupal\mm_rest\CacheableMetaDataCollectorInterface;
@@ -65,27 +63,11 @@ class InitResource extends ResourceBase {
   protected $state;
 
   /**
-   * The Path AliasManager service.
+   * CSRF Token service.
    *
-   * @var \Drupal\Core\Path\AliasManagerInterface
+   * @var \Drupal\Core\Access\CsrfTokenGenerator
    */
-  protected $pathAliasManager;
-
-  /**
-   * the Entity Type Manager service.
-   *
-   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
-   */
-  protected $entityTypeManager;
-
-  /**
-   * Field definition service.
-   *
-   * @var \Drupal\Core\Entity\EntityFieldManagerInterface
-   */
-  protected $fieldManager;
-
-  protected $entityRepository;
+  protected $csrfToken;
 
   /**
    * InitResource constructor.
@@ -101,19 +83,14 @@ class InitResource extends ResourceBase {
    * @param \Drupal\mm_rest\CacheableMetaDataCollectorInterface $cacheable_metadata_collector
    * @param \Drupal\Core\Menu\MenuLinkTreeInterface $menu_link_tree
    * @param \Drupal\Core\State\StateInterface $state
-   * @param \Drupal\Core\Path\AliasManagerInterface $path_alias_manager
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
-   * @param \Drupal\Core\Entity\EntityFieldManagerInterface $field_manager
+   * @param \Drupal\Core\Access\CsrfTokenGenerator $csrf_token
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, Request $request, RestEntityProcessorManager $entity_processor, ConfigFactoryInterface $configFactory, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, MenuLinkTreeInterface $menu_link_tree, StateInterface $state, AliasManagerInterface $path_alias_manager, EntityTypeManagerInterface $entity_type_manager, EntityFieldManagerInterface $field_manager, $entity_repository) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, Request $request, RestEntityProcessorManager $entity_processor, ConfigFactoryInterface $configFactory, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, MenuLinkTreeInterface $menu_link_tree, StateInterface $state, CsrfTokenGenerator $csrf_token) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger, $request, $entity_processor, $configFactory, $cacheable_metadata_collector);
 
     $this->menuLinkTree = $menu_link_tree;
     $this->state = $state;
-    $this->pathAliasManager = $path_alias_manager;
-    $this->entityTypeManager = $entity_type_manager;
-    $this->fieldManager = $field_manager;
-    $this->entityRepository = $entity_repository;
+    $this->csrfToken = $csrf_token;
   }
 
   /**
@@ -132,10 +109,7 @@ class InitResource extends ResourceBase {
       $container->get('mm_rest.cacheable_metadata_collector'),
       $container->get('menu.link_tree'),
       $container->get('state'),
-      $container->get('path.alias_manager'),
-      $container->get('entity_type.manager'),
-      $container->get('entity_field.manager'),
-      $container->get('entity.repository')
+      $container->get('csrf_token')
     );
   }
 
@@ -153,6 +127,7 @@ class InitResource extends ResourceBase {
    */
   public function get() {
     $data = [
+      'csrfToken' => $this->csrfToken->get('rest'),
       'contactOptions' => [
         'phone' => [
           'phoneNumber' => '1-844-TO-REACH',
