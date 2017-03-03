@@ -14,6 +14,7 @@ import PanelBlocks from "../../../data/enum/block/PanelBlocks";
 import Promise = require("bluebird");
 import MarketSearchController from "../../market-search/MarketSearchController";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
+import Loader from "../../../util/Loader";
 
 
 class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions, BlockMarketMapTransitionController>
@@ -35,6 +36,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	private _marketsFillLayer: mapboxgl.Map;
 
 	private _stateModel: StateModel = DataManager.getInstance().settingsModel.stateModel;
+	private _loader: Loader;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -45,6 +47,8 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 		super.init();
 
 		this._debug.log('Init');
+
+		this._loader = new Loader(this.element);
 
 		// Set the access token
 		mapboxgl.accessToken = configManagerInstance.getProperty(PropertyNames.MAPBOX_ACCESS_TOKEN);
@@ -224,8 +228,8 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	private handleMapLoad(): void
 	{
 		// data: 'https://spectrumreach.com/markets/markets-json'
-
-		this.loadJSON('data/mapbox/markets.json')
+		this._loader.show()
+			.then(() => this.loadJSON('data/mapbox/markets.json'))
 			.then(this.handleMarketsLoaded.bind(this))
 			.then(this.updateScrollBar.bind(this))
 			.then(this.loadJSON.bind(this, 'data/mapbox/markets-polygon.json'))
@@ -251,7 +255,8 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 				this._featureCollection = data;
 			})
 			.then(this.updateDataLayer.bind(this))
-			.then(this.addMapEvents.bind(this));
+			.then(this.addMapEvents.bind(this))
+			.then(() => this._loader.hide());
 	}
 
 	/**
