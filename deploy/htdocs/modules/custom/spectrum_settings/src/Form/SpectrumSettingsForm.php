@@ -125,7 +125,7 @@ class SpectrumSettingsForm extends ConfigFormBase {
 
     $form['group0']['social_networks'] = array(
       '#type' => 'table',
-      '#header' => array(t('ID'), t('Target'), t('Weight'), t('Delete')),
+      '#header' => array(t('ID'), t('Label'), t('Target'), t('Weight'), t('Delete')),
       '#empty' => t('There are no items yet. Add an item.', array(
       )),
       // TableDrag: Each array value is a list of callback arguments for
@@ -146,6 +146,7 @@ class SpectrumSettingsForm extends ConfigFormBase {
     $items[] = [
       'weight' => 99,
       'id' => '',
+      'label' => '',
       'target' => '',
     ];
 
@@ -159,6 +160,11 @@ class SpectrumSettingsForm extends ConfigFormBase {
         '#type' => 'textfield',
         '#default_value' => $item['id'],
         '#placeholder' => empty($item['id']) ? t('Add a new item') : NULL,
+      );
+
+      $form['group0']['social_networks'][$id]['label'] = array(
+        '#type' => 'textfield',
+        '#default_value' => $item['label'],
       );
 
       $form['group0']['social_networks'][$id]['target'] = array(

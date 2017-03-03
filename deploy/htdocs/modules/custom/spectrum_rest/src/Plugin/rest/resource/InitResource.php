@@ -159,7 +159,7 @@ class InitResource extends ResourceBase {
             $this->getMenu('footer-secondary-1'),
             $this->getMenu('footer-secondary-2'),
           ],
-          'social' => $this->getMenu('social'),
+          'social' => $this->getSocialNetworks(),
         ],
         'slideOutPanel' => [
           'contact' => [
@@ -294,6 +294,31 @@ class InitResource extends ResourceBase {
     }
 
     return $parsed_array;
+  }
+
+  /**
+   * Returns the Spectrum social networks.
+   *
+   * @return array
+   */
+  protected function getSocialNetworks() {
+    $items = [];
+    $networks = $this->state->get('socialNetworks');
+
+    if (empty($networks)) {
+      return [];
+    }
+
+    foreach ($networks as $network) {
+      $items[$network['id']] = [
+        'label' => $network['label'] ?: NULL,
+        'title' => $network['label'] ?: NULL,
+        'target' => $network['target'] ?: NULL,
+        'type' => $network['target'] ? (int) UrlHelper::isExternal($network['target']) : NULL,
+      ];
+    }
+
+    return $items;
   }
 
   /**
