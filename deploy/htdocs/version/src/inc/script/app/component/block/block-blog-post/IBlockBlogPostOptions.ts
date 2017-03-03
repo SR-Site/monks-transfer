@@ -21,6 +21,12 @@ interface IBlockBlogPostOptions extends IAbstractBlockComponentOptions
 	 */
 	paragraph: string;
 	/**
+	 * @property
+	 * @description The publish date of the article
+	 * @placeholder 01/01/2017
+	 */
+	date:string;
+	/**
 	 * @propety
 	 * @description The tags linked to the block
 	 */

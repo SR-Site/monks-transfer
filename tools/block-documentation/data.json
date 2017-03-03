@@ -353,6 +353,15 @@
                     ]
                 },
                 {
+                    "name": "date",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The publish date of the article",
+                    "placeholder": "01/01/2017",
+                    "properties": []
+                },
+                {
                     "name": "paragraph",
                     "type": "string",
                     "required": true,
@@ -380,7 +389,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blogPost\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"social\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"author\": \"TODO: Object\",\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"subHeading\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"blogPost\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"social\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"author\": \"TODO: Object\",\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"date\": \"01/01/2017\",\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"subHeading\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "button",
