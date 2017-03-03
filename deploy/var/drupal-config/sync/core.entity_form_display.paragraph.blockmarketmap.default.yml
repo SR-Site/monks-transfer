@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockmarketmap.field_description
+    - field.field.paragraph.blockmarketmap.field_filter_label
     - field.field.paragraph.blockmarketmap.field_heading
     - field.field.paragraph.blockmarketmap.field_image
     - field.field.paragraph.blockmarketmap.field_label
@@ -34,22 +36,36 @@ targetEntityType: paragraph
 bundle: blockmarketmap
 mode: default
 content:
-  field_heading:
+  field_description:
     weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_filter_label:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_heading:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_image:
-    weight: 4
+    weight: 6
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_label:
-    weight: 3
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -67,7 +83,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
   field_title:
-    weight: 2
+    weight: 4
     settings:
       size: 60
       placeholder: ''
