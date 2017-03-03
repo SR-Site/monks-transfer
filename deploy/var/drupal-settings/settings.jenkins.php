@@ -23,6 +23,11 @@ $databases['default']['default'] = array (
   'collation' => 'utf8mb4_general_ci',
 );
 
+// File system.
+$settings['file_public_path'] = 'assets';
+$settings['file_private_path'] = '';
+$config['system.file']['path']['temporary'] = '/tmp';
+
 // The path at which the front-end files can be found.
 //   This will be used in base path. Example:
 //   <base href="https://staging.example.com/version/0123456789/" />
