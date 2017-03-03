@@ -26,7 +26,7 @@ class ParagraphStatV1 extends RestEntityProcessorBase {
     $data = [
       "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
       "description" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
-      "value" => $this->fieldProcessor->getFieldData($entity->get('field_value')),
+      "value" => (int) $this->fieldProcessor->getFieldData($entity->get('field_value')),
     ];
 
     return $data;
