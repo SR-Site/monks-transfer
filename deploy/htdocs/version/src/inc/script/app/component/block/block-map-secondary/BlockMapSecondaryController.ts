@@ -19,6 +19,27 @@ class BlockMapSecondaryController extends AbstractBlockComponentController<Block
 
 	private _imageSequenceController: ImageSequenceController;
 
+	constructor(element: HTMLElement, options: IBlockMapSecondaryOptions)
+	{
+		// TODO: for release this data will be static since we need to figure out a way to manage image sequence entities in the CMS
+		super(element, Object.assign(options, {
+			"sequenceBackground": {
+				"normal": "data/sequence/map_secondary/desktop/map_bg.png",
+				"small": "data/sequence/map_secondary/mobile/map_bg_mobile.png",
+				"alt": "Background image"
+			},
+			"imageSequence": {
+				"image": {
+					"normal": "data/sequence/map_secondary/desktop/map_lines_",
+					"small": "data/sequence/map_secondary/mobile/map_lines_mobile_",
+					"alt": "Image sequence"
+				},
+				"extension": ".png",
+				"total": 75
+			}
+		}));
+	}
+
 	/**
 	 *    Overrides AbstractPageController.init()
 	 *    @method init
