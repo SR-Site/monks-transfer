@@ -53,7 +53,7 @@ class ContentService extends AbstractService
 	 * @param filter
 	 * @returns {Promise<IGatewayResult<any>>}
 	 */
-	public loadMore(endpoint: string, offset: number, limit: number, filter: {[filterType:string]:string}): Promise<IGatewayResult<{blocks: Array<IBlock>}>>
+	public loadMore(endpoint: string, offset: number, limit: number, filter: {[filterType: string]: string}): Promise<IGatewayResult<{blocks: Array<IBlock>}>>
 	{
 
 		return this.gateway.get(

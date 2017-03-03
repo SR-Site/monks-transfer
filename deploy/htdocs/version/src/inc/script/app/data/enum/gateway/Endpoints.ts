@@ -25,6 +25,7 @@ class Endpoints
 	 */
 	public static INIT: string = 'init';
 	public static PAGE_LAYOUT: string = 'pageLayout';
+	public static CONTACT: string = 'contact';
 
 	/**
 	 * Define the types of api's below this point
@@ -48,6 +49,10 @@ class Endpoints
 		[Endpoints.PAGE_LAYOUT]: {
 			[Endpoints._MOCK]: '{page}.json',
 			[Endpoints._API]: 'page/{page}'
+		},
+		[Endpoints.CONTACT]: {
+			[Endpoints._MOCK]: 'contact.json',
+			[Endpoints._API]: 'contact'
 		}
 	};
 }

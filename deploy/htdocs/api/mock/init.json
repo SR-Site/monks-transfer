@@ -14,6 +14,7 @@
 				"emailBody": "Email body goes here"
 			}
 		},
+		"csrfToken": "124567",
 		"layout": {
 			"navigation": [
 				{

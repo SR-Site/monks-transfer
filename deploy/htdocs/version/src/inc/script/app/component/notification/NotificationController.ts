@@ -16,7 +16,7 @@ class NotificationController extends AbstractTransitionComponentController<Notif
 	private _transitionTimeline: TimelineLite;
 
 	private _resultPromise: Promise<INotificationResult>;
-	private _resolvePromise: (result: INotificationResult)=>void;
+	private _resolvePromise: (result: INotificationResult) => void;
 
 	/**
 	 *    Overrides AbstractComponentController.init()
@@ -88,6 +88,7 @@ class NotificationController extends AbstractTransitionComponentController<Notif
 
 		return this.show(NotificationState.ALERT, title, paragraph)
 	}
+
 	/**
 	 * @private
 	 * @method show
@@ -106,14 +107,14 @@ class NotificationController extends AbstractTransitionComponentController<Notif
 			this.transitionOut();
 
 			// Subscribe to the already existing promise, when it's resolved return the new show promise
-			return this._resultPromise.then(()=>
+			return this._resultPromise.then(() =>
 			{
 				return this.show(state, title, message);
 			});
 		}
 		else
 		{
-			this._resultPromise = new Promise<INotificationResult>((resolve: (result: INotificationResult)=>void)=>
+			this._resultPromise = new Promise<INotificationResult>((resolve: (result: INotificationResult) => void) =>
 			{
 				this.viewModel.state(state);
 				this.viewModel.title(title);

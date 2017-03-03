@@ -8,10 +8,10 @@ import StateModel from "./StateModel";
  */
 class SettingsModel
 {
-	public pageLayoutModel:PageLayoutModel = new PageLayoutModel();
-	public initDataModel:InitDataModel = new InitDataModel();
+	public pageLayoutModel: PageLayoutModel = new PageLayoutModel();
+	public initDataModel: InitDataModel = new InitDataModel();
 
-	public stateModel:StateModel = new StateModel();
+	public stateModel: StateModel = new StateModel();
 }
 
 export default SettingsModel;

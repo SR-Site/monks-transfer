@@ -7,6 +7,8 @@ import Loader from "../../../../util/Loader";
 import DataManager from "../../../../data/DataManager";
 import FixedElementHelper from "../../../../util/FixedElementHelper";
 import LocaleManager from "../../../../../lib/temple/locale/LocaleManager";
+import {IContactData} from "../../../../data/service/UserService";
+import IGatewayError from "../../../../net/gateway/result/IGatewayError";
 
 class ContactController extends AbstractTransitionComponentController<ContactViewModel, IContactOptions, ContactTransitionController>
 {
@@ -50,15 +52,25 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 		{
 			// Show loader
 			this._loader.show()
+				.then(() => DataManager.getInstance().serviceModel.userService.contact(
+					<IContactData>this.viewModel.myValidator.getValues()
+				))
 				.then(() => this._loader.hide())
 				.then(() => this._dataManager.panelController.transitionOut())
 				.then(() => this._dataManager.notification.showAlert(
 					LocaleManager.getInstance().getString('notification.alert.contact_success.heading'),
 					LocaleManager.getInstance().getString('notification.alert.contact_success.paragraph')
 				))
-				.then(() => this.resetForm());
+				.then(() => this.resetForm())
+				.catch((result: IGatewayError) =>
+				{
+					this._loader.hide()
+						.then(() => this._dataManager.notification.showServerError(result.error.code))
+				});
 		}
 	}
+
+
 
 	/**
 	 * @private
