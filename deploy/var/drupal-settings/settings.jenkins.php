@@ -32,3 +32,6 @@ $config['system.file']['path']['temporary'] = '/tmp';
 //   This will be used in base path. Example:
 //   <base href="https://staging.example.com/version/0123456789/" />
 $settings['mm_deployment_version'] = 'src'; // [deploytool]
+
+// Configuration directories.
+$config_directories[CONFIG_SYNC_DIRECTORY] = DRUPAL_ROOT . '/../var/drupal-config/sync';
