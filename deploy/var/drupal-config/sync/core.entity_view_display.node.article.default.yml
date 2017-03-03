@@ -11,10 +11,12 @@ dependencies:
     - field.field.node.article.field_market
     - field.field.node.article.field_platform
     - field.field.node.article.field_read_time
+    - field.field.node.article.field_theme
     - image.style.large
     - node.type.article
   module:
     - image
+    - options
     - text
     - user
 _core:
@@ -81,6 +83,12 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+  field_theme:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   links:
     weight: 100
 hidden:

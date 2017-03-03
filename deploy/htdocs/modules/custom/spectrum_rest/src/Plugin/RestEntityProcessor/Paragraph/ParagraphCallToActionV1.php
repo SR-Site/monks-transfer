@@ -29,6 +29,7 @@ class ParagraphCallToActionV1 extends SpectrumRestEntityProcessorBase {
       "background" => $this->image($entity->get('field_image')),
       "backgroundBlurred" => $this->image($entity->get('field_image'), ['style' => 'blur']),
       "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),
+      "theme" => (int) $entity->get('field_theme')->value,
     ];
 
     return $data;

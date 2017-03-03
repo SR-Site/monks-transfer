@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.field.paragraph.slide.field_heading
     - field.field.paragraph.slide.field_image
+    - field.field.paragraph.slide.field_theme
     - image.style.preview_500xauto
     - paragraphs.paragraphs_type.slide
   module:
     - image
+    - options
 id: paragraph.slide.default
 targetEntityType: paragraph
 bundle: slide
@@ -29,4 +31,10 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_theme:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
 hidden: {  }

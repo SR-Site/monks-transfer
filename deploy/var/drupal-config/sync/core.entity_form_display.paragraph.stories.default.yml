@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.stories.field_heading
     - field.field.paragraph.stories.field_image
     - field.field.paragraph.stories.field_paragraph
+    - field.field.paragraph.stories.field_theme
     - image.style.thumbnail
     - paragraphs.paragraphs_type.stories
   module:
@@ -37,6 +38,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+  field_theme:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
 hidden:
   created: true
   status: true

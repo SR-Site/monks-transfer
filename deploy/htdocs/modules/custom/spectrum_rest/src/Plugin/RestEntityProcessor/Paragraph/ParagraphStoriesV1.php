@@ -28,6 +28,7 @@ class ParagraphStoriesV1 extends SpectrumRestEntityProcessorBase {
       "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
       "background" => $this->image($entity->get('field_image')),
       "backgroundBlurred" => $this->image($entity->get('field_image'), ['style' => 'blur']),
+      "theme" => (int) $entity->get('field_theme')->value,
     ];
 
     return $data;
