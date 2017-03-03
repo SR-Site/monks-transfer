@@ -753,7 +753,7 @@
                 {
                     "name": "link",
                     "type": "ILink",
-                    "required": true,
+                    "required": false,
                     "defaultValue": "null",
                     "description": "Think added to the hero main",
                     "placeholder": "",
@@ -2214,9 +2214,129 @@
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
                     "placeholder": "0",
                     "properties": []
+                },
+                {
+                    "name": "items",
+                    "type": "Array",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The array of programs displayed on this block",
+                    "placeholder": "",
+                    "properties": [
+                        {
+                            "name": "image",
+                            "type": "IImage",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The main image displayed for the program",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "heading",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The title of the program",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "paragraph",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The paragraph of text displayed for the program",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "stats",
+                            "type": "Object",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "Some stats for the program",
+                            "placeholder": "",
+                            "properties": [
+                                {
+                                    "name": "ageRange",
+                                    "type": "string",
+                                    "required": true,
+                                    "defaultValue": "null",
+                                    "description": "The age range for the program",
+                                    "placeholder": "",
+                                    "properties": []
+                                },
+                                {
+                                    "name": "demographic",
+                                    "type": "string",
+                                    "required": true,
+                                    "defaultValue": "null",
+                                    "description": "The demographics for the program",
+                                    "placeholder": "",
+                                    "properties": []
+                                }
+                            ]
+                        },
+                        {
+                            "name": "video",
+                            "type": "IVideo",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The teaser video linked to the program",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "tags",
+                            "type": "Array",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The tags related to the program",
+                            "placeholder": "",
+                            "properties": [
+                                {
+                                    "name": "target",
+                                    "type": "string",
+                                    "required": true,
+                                    "defaultValue": "null",
+                                    "description": "The target of the link",
+                                    "placeholder": "path/to/page",
+                                    "properties": []
+                                },
+                                {
+                                    "name": "type",
+                                    "type": "LinkType",
+                                    "required": true,
+                                    "defaultValue": "null",
+                                    "description": "The type of the link",
+                                    "placeholder": "0",
+                                    "properties": []
+                                },
+                                {
+                                    "name": "label",
+                                    "type": "string",
+                                    "required": false,
+                                    "defaultValue": "null",
+                                    "description": "The label displayed in the action",
+                                    "placeholder": "",
+                                    "properties": []
+                                },
+                                {
+                                    "name": "title",
+                                    "type": "string",
+                                    "required": false,
+                                    "defaultValue": "null",
+                                    "description": "The title used for accessibility",
+                                    "placeholder": "",
+                                    "properties": []
+                                }
+                            ]
+                        }
+                    ]
                 }
             ],
-            "example": "{\n    \"id\": \"programModule\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"programModule\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"items\": [\n            {\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"stats\": \"TODO: Object\",\n                \"video\": {\n                    \"url\": \"path/to/video.mp4\",\n                    \"type\": 0\n                },\n                \"tags\": [\n                    {\n                        \"target\": \"path/to/page\",\n                        \"type\": 0,\n                        \"label\": \"Lorem ipsum dolor sit amet\",\n                        \"title\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ]\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "quote",
