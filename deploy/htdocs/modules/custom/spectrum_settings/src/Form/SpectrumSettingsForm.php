@@ -2,8 +2,9 @@
 
 namespace Drupal\spectrum_settings\Form;
 
-use Drupal\Core\Entity\Element\EntityAutocomplete;
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Entity\Element\EntityAutocomplete;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\State\StateInterface;
@@ -73,17 +74,6 @@ class SpectrumSettingsForm extends ConfigFormBase {
       '#size' => 32,
     );
 
-    $form['site_404'] = array(
-      '#type' => 'entity_autocomplete',
-      '#title' => $this->t('Default 404 (not found) page'),
-      '#description' => $this->t('External or internal URLs, e.g. http://google.com, /user, #header, Some page title.'),
-      '#default_value' => static::getUriAsDisplayableString($this->state->get('site_404')),
-      '#element_validate' => array(array(get_called_class(), 'validateUriElement')),
-      '#target_type' => 'node',
-      '#process_default_value' => FALSE,
-      '#attributes' => ['data-autocomplete-first-character-blacklist' => '/#?'],
-    );
-
     $form['contact_to'] = array(
       '#type' => 'email',
       '#title' => $this->t('Contact Form destination'),
@@ -91,6 +81,37 @@ class SpectrumSettingsForm extends ConfigFormBase {
       '#default_value' => $this->state->get('contact_to'),
       '#maxlength' => 255,
       '#size' => 32,
+    );
+
+    // Init routers.
+
+    $form['group_routers'] = array(
+      '#type' => 'fieldset',
+      '#title' => $this->t('Routers'),
+      '#collapsible' => FALSE,
+      '#collapsed' => FALSE,
+    );
+
+    $form['group_routers']['site_404'] = array(
+      '#type' => 'entity_autocomplete',
+      '#title' => $this->t('Default 404 (not found) page'),
+      '#description' => $this->t('External or internal URLs, e.g. http://google.com, /user, #header, some page title.'),
+      '#default_value' => static::getUriAsDisplayableString($this->state->get('site_404')),
+      '#element_validate' => array(array(get_called_class(), 'validateUriElement')),
+      '#target_type' => 'node',
+      '#process_default_value' => FALSE,
+      '#attributes' => ['data-autocomplete-first-character-blacklist' => '/#?'],
+    );
+
+    $form['group_routers']['site_frontpage'] = array(
+      '#type' => 'entity_autocomplete',
+      '#title' => $this->t('Default landing (home) page'),
+      '#description' => $this->t('External or internal URLs, e.g. http://google.com, /user, #header, some page title.'),
+      '#default_value' => static::getUriAsDisplayableString($this->state->get('site_frontpage')),
+      '#element_validate' => array(array(get_called_class(), 'validateUriElement')),
+      '#target_type' => 'node',
+      '#process_default_value' => FALSE,
+      '#attributes' => ['data-autocomplete-first-character-blacklist' => '/#?'],
     );
 
     // Social networks.
@@ -171,6 +192,7 @@ class SpectrumSettingsForm extends ConfigFormBase {
 
     $this->state->set('ga_account', $form_state->getValue('ga_account'));
     $this->state->set('site_404', static::getUserEnteredStringAsUri($form_state->getValue('site_404')));
+    $this->state->set('site_frontpage', static::getUserEnteredStringAsUri($form_state->getValue('site_frontpage')));
     $this->state->set('contact_to', $form_state->getValue('contact_to'));
 
     // Social networks.
@@ -183,6 +205,9 @@ class SpectrumSettingsForm extends ConfigFormBase {
     }
 
     $this->state->set('socialNetworks', $social);
+
+    // Invalidate spectrum settings.
+    Cache::invalidateTags(['spectrum:settings']);
   }
 
   /**

@@ -10,6 +10,7 @@ use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Menu\MenuLinkTreeElement;
 use Drupal\Core\Menu\MenuLinkTreeInterface;
 use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\Path\AliasManagerInterface;
 use Drupal\Core\State\StateInterface;
 use Drupal\Core\Language\Language;
 use Drupal\mm_rest\CacheableMetaDataCollectorInterface;
@@ -70,6 +71,13 @@ class InitResource extends ResourceBase {
   protected $csrfToken;
 
   /**
+   * The Path AliasManager service.
+   *
+   * @var \Drupal\Core\Path\AliasManagerInterface
+   */
+  protected $pathAliasManager;
+
+  /**
    * InitResource constructor.
    *
    * @param array $configuration
@@ -84,13 +92,15 @@ class InitResource extends ResourceBase {
    * @param \Drupal\Core\Menu\MenuLinkTreeInterface $menu_link_tree
    * @param \Drupal\Core\State\StateInterface $state
    * @param \Drupal\Core\Access\CsrfTokenGenerator $csrf_token
+   * @param \Drupal\Core\Path\AliasManagerInterface $path_alias_manager
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, Request $request, RestEntityProcessorManager $entity_processor, ConfigFactoryInterface $configFactory, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, MenuLinkTreeInterface $menu_link_tree, StateInterface $state, CsrfTokenGenerator $csrf_token) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, Request $request, RestEntityProcessorManager $entity_processor, ConfigFactoryInterface $configFactory, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, MenuLinkTreeInterface $menu_link_tree, StateInterface $state, CsrfTokenGenerator $csrf_token, AliasManagerInterface $path_alias_manager) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger, $request, $entity_processor, $configFactory, $cacheable_metadata_collector);
 
     $this->menuLinkTree = $menu_link_tree;
     $this->state = $state;
     $this->csrfToken = $csrf_token;
+    $this->pathAliasManager = $path_alias_manager;
   }
 
   /**
@@ -109,7 +119,8 @@ class InitResource extends ResourceBase {
       $container->get('mm_rest.cacheable_metadata_collector'),
       $container->get('menu.link_tree'),
       $container->get('state'),
-      $container->get('csrf_token')
+      $container->get('csrf_token'),
+      $container->get('path.alias_manager')
     );
   }
 
@@ -128,6 +139,7 @@ class InitResource extends ResourceBase {
   public function get() {
     $data = [
       'csrfToken' => $this->csrfToken->get('rest'),
+      'routes' => $this->getRouters(),
       'contactOptions' => [
         'phone' => [
           'phoneNumber' => '1-844-TO-REACH',
@@ -170,6 +182,43 @@ class InitResource extends ResourceBase {
     $this->addCacheableDependency();
 
     return $data;
+  }
+
+  /**
+   * Returns an array of pre configured routers.
+   *
+   * @return array
+   */
+  protected function getRouters() {
+    $routers = [
+      'landing' => $this->urlHelper($this->state->get('site_frontpage')),
+      'notFound' => $this->urlHelper($this->state->get('site_404')),
+    ];
+
+    return $routers;
+  }
+
+  /**
+   * Helper function for transform internal/external links into URLs.
+   *
+   * @param $url
+   * @return null|string
+   */
+  protected function urlHelper($url) {
+    if (empty($url)) {
+      return NULL;
+    }
+
+    $url = UrlHelper::stripDangerousProtocols($url);
+    $external = UrlHelper::isExternal($url);
+
+    if (!$external) {
+      $url = $url[0] == '/' ? $url : "/$url";
+      $url = $this->pathAliasManager->getAliasByPath($url);
+      $url = substr($url, 1);
+    }
+
+    return $url;
   }
 
   /**
@@ -264,7 +313,7 @@ class InitResource extends ResourceBase {
       'config:system.menu.footer-secondary-1',
       'config:system.menu.footer-secondary-2',
       'config:system.menu.social',
-      //'config:spin_settings.settings',
+      'spectrum:settings',
     ]);
 
     $this->cacheabilityCollector->addCacheableDependency($meta_data);
