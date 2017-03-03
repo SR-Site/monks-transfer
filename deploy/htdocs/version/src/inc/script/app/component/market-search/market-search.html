@@ -9,11 +9,11 @@
 						focusBorder: {
 							value: $root.query
 						}"/>
-				<span class="placeholder-label">Which region do you want to advertise in?</span>
+				<span class="placeholder-label" data-bind="html: data.searchPlaceholder"></span>
 			</div>
 		</div>
 
-		<button class="button search-button" type="submit">Search</button>
+		<button class="button search-button" type="submit" data-bind="html: data.searchLabel"></button>
 
 		<div class="note" data-bind="css: {'is-active': $root.noteActive()}">
 
@@ -23,8 +23,7 @@
 			<!-- /ko -->
 
 			<!-- ko ifnot: $root.suggestion() -->
-			<p class="copy copy-01">Sorry, this is not currently in our coverage area, contact us to for more
-				information.</p>
+			<p class="copy copy-01" data-bind="html: data.notFoundMessage"></p>
 			<!-- /ko -->
 		</div>
 

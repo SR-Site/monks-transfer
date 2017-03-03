@@ -18,7 +18,9 @@
 							"alt": "Samantha Smith"
 						}
 					},
-					"searchLabel": "Search"
+					"searchLabel": "Search",
+					"searchPlaceholder": "Which region do you want to advertise in?",
+					"notFoundMessage": "Sorry, this is not currently in our coverage area, contact us to for more information."
 				}
 			},
 			{

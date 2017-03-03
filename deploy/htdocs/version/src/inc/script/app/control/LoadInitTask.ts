@@ -21,6 +21,11 @@ class LoadInitTask extends AbstractTask
 		dm.serviceModel.contentService.getInit()
 			.then((response: IGatewayResult<IInitData>) =>
 			{
+				response.data.routes = {
+					"landing": "home",
+					"notFound": "page-not-found"
+				};
+
 				dm.settingsModel.initDataModel.data = response.data;
 
 			})

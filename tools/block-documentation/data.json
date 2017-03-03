@@ -1328,7 +1328,7 @@
                         {
                             "name": "tags",
                             "type": "Array",
-                            "required": true,
+                            "required": false,
                             "defaultValue": "null",
                             "description": "The tags linked to this article",
                             "placeholder": "",
@@ -1561,6 +1561,39 @@
             "example": "{\n    \"id\": \"mapSecondary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"path/to/image.jpg\",\n                \"small\": \"path/to/image.jpg\",\n                \"alt\": \"Lorem ipsum dolor sit amet\"\n            },\n            \"total\": 1,\n            \"extension\": \"Lorem ipsum dolor sit amet\",\n            \"autoplay\": true\n        },\n        \"sequenceBackground\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"subHeading\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
+            "blockId": "mapTertiary",
+            "properties": [
+                {
+                    "name": "overlap",
+                    "type": "boolean",
+                    "required": false,
+                    "defaultValue": "false",
+                    "description": "Overlap mean the z-index will be 1 instead of 0 so you can overlap elements",
+                    "placeholder": "false",
+                    "properties": []
+                },
+                {
+                    "name": "windowed",
+                    "type": "boolean",
+                    "required": false,
+                    "defaultValue": "false",
+                    "description": "Windowed means the block will be surrounded by a white border of 2 * gridSize",
+                    "placeholder": "false",
+                    "properties": []
+                },
+                {
+                    "name": "marginTop",
+                    "type": "number",
+                    "required": false,
+                    "defaultValue": "0",
+                    "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
+                    "placeholder": "0",
+                    "properties": []
+                }
+            ],
+            "example": "{\n    \"id\": \"mapTertiary\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
+        },
+        {
             "blockId": "marketMap",
             "properties": [
                 {
@@ -1591,11 +1624,29 @@
                     "properties": []
                 },
                 {
-                    "name": "searchLabel",
+                    "name": "notFoundMessage",
                     "type": "string",
                     "required": true,
                     "defaultValue": "null",
-                    "description": "The label of the search button",
+                    "description": "notFoundMessage",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
+                    "name": "searchPlaceholder",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "the placeholder string displayed on the search form",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
+                    "name": "searchlabel",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The label for the search button",
                     "placeholder": "",
                     "properties": []
                 },
@@ -1637,7 +1688,7 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"marketMap\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"searchLabel\": \"Lorem ipsum dolor sit amet\",\n        \"service\": \"TODO: Object\"\n    }\n}"
+            "example": "{\n    \"id\": \"marketMap\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"notFoundMessage\": \"Lorem ipsum dolor sit amet\",\n        \"searchPlaceholder\": \"Lorem ipsum dolor sit amet\",\n        \"searchlabel\": \"Lorem ipsum dolor sit amet\",\n        \"service\": \"TODO: Object\"\n    }\n}"
         },
         {
             "blockId": "more",
@@ -1716,7 +1767,7 @@
                         {
                             "name": "tags",
                             "type": "Array",
-                            "required": true,
+                            "required": false,
                             "defaultValue": "null",
                             "description": "The tags linked to this article",
                             "placeholder": "",
