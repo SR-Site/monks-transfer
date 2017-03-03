@@ -26,7 +26,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	private _debug: Log = new Log('app.component.BlockMarketMap');
 
 	private _featureCollection: GeoJSON.FeatureCollection;
-	private _marketFeatureCollection: {[id: string]: GeoJSON.Feature} = {};
+	private _marketFeatureCollection: {[id: string]: GeoJSON.FeatureCollection} = {};
 
 	private _marketSearchController: MarketSearchController;
 
@@ -99,7 +99,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 		// Get the state
 		const selectedMarket = this.viewModel.selectedMarket();
 
-		let data: GeoJSON.FeatureCollection|GeoJSON.Feature;
+		let data: GeoJSON.FeatureCollection;
 
 		if(this._marketsFillLayer)
 		{
@@ -117,7 +117,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 				const state = this._stateModel.getItemById(selectedMarket.statePostalCode);
 
 				// Decide what polygons should be visible
-				data = <GeoJSON.Feature>this._marketFeatureCollection[selectedMarket.marketId];
+				data = <GeoJSON.FeatureCollection>this._marketFeatureCollection[selectedMarket.marketId];
 
 				if(data)
 				{
@@ -231,14 +231,20 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 			.then(this.loadJSON.bind(this, 'data/mapbox/markets-polygon.json'))
 			.then((data: GeoJSON.FeatureCollection) =>
 			{
-				// Parse it to multi-polygon to make it work... dafuq
 				data.features.forEach((feature) =>
 				{
-					feature.geometry.type = 'MultiPolygon';
-					feature.geometry.coordinates = feature.geometry.coordinates.map((coordinate) => [coordinate]);
+					const featureId = feature.properties.id;
 
-					// Save for faster lookup
-					this._marketFeatureCollection[feature.properties.id] = feature
+					// Save in feature collections for faster lookup
+					if(!this._marketFeatureCollection[featureId])
+					{
+						this._marketFeatureCollection[featureId] = {
+							type: 'FeatureCollection',
+							features: []
+						};
+					}
+
+					this._marketFeatureCollection[featureId].features.push(feature);
 				});
 
 				// Store it
