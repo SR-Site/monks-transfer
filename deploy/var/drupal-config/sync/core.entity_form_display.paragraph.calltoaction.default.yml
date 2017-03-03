@@ -5,12 +5,29 @@ dependencies:
   config:
     - field.field.paragraph.calltoaction.field_heading
     - field.field.paragraph.calltoaction.field_image
+    - field.field.paragraph.calltoaction.field_link
     - field.field.paragraph.calltoaction.field_paragraph
     - image.style.thumbnail
     - paragraphs.paragraphs_type.calltoaction
   module:
+    - field_group
     - image
+    - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_link:
+      children:
+        - field_link
+      parent_name: ''
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: Link
 id: paragraph.calltoaction.default
 targetEntityType: paragraph
 bundle: calltoaction
@@ -30,6 +47,17 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+  field_link:
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: link
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
   field_paragraph:
     weight: 1
     settings:
