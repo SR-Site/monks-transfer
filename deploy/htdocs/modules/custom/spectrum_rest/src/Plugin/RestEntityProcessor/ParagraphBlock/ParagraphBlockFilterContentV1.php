@@ -21,7 +21,7 @@ class ParagraphBlockFilterContentV1 extends SpectrumRestEntityProcessorBase {
   /**
    * URL for the search articles endpoint.
    */
-  const ENDPOINT_SEARCH = '/api/v1/search/article';
+  const ENDPOINT_SEARCH = '/search/article';
 
   /**
    * {@inheritdoc}
