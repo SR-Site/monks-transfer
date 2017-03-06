@@ -76,7 +76,9 @@ let config: IConfig = {
 			extends: EnvironmentNames.PRODUCTION,
 			variables: {},
 			urls: {},
-			properties: {}
+			properties: {
+				[PropertyNames.MOCK_CONTENT]: false
+			}
 		},
 		[EnvironmentNames.LOCAL]: {
 			extends: EnvironmentNames.PRODUCTION,
@@ -95,7 +97,7 @@ let config: IConfig = {
 	},
 	properties: {
 		[PropertyNames.DEFAULT_LOCALE]: 'en_US',
-		[PropertyNames.MOCK_CONTENT]: false,
+		[PropertyNames.MOCK_CONTENT]: true,
 		[PropertyNames.MAPBOX_ACCESS_TOKEN]: 'pk.eyJ1IjoibGFyc3ZhbmJyYWFtIiwiYSI6ImNpeW8zNXV2NjAwNjAzM3FsMnV1Z3E4Z2QifQ.UdtOqQiB6YK_lDBthfL6oA',
 		[PropertyNames.MAPBOX_MAP_STYLE]: 'mapbox://styles/larsvanbraam/ciyodzuy800ds2sla6tuazga1'
 	}
