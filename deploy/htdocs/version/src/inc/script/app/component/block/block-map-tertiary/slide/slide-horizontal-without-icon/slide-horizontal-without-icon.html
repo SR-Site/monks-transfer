@@ -21,8 +21,11 @@
 				</div>
 			</div>
 			<div class="separator">
-				<svg width="100%" height="100%" class="track" preserveAspectRatio="none">
-					<line x1="0" y1="0" x2="1000" y2="0" />
+				<svg width="100%" height="100%" class="dashed-line abs-center" preserveAspectRatio="none">
+					<line x1="1" y1="1" data-bind="attr: {
+						'x2': $root.deviceState() > $root.DeviceState.SMALL ? 200 : 0,
+						'y2': $root.deviceState() > $root.DeviceState.SMALL ? 0 : 100
+					}"/>
 				</svg>
 			</div>
 			<!-- ko foreach: data.slideData.statistics -->
@@ -35,16 +38,22 @@
 					</div>
 					<div class="middle-statistic">
 						<div class="separator separator-top">
-							<svg width="100%" height="100%" class="track" preserveAspectRatio="none">
-								<line x1="0" y1="0" x2="0" y2="100" />
+							<svg width="100%" height="100%" class="dashed-line abs-center" preserveAspectRatio="none">
+								<line x1="1" y1="1" data-bind="attr: {
+									'x2': $root.deviceState() > $root.DeviceState.SMALL ? 1 : 100,
+									'y2': $root.deviceState() > $root.DeviceState.SMALL ? 100 : 1
+								}"/>
 							</svg>
 						</div>
 						<span class="abs-center">
 							<span class="label" data-bind="html: $data.label.middle"></span>
 						</span>
 						<div class="separator separator-bottom">
-							<svg width="100%" height="100%" class="track" preserveAspectRatio="none">
-								<line x1="0" y1="0" x2="0" y2="100" />
+							<svg width="100%" height="100%" class="dashed-line abs-center" preserveAspectRatio="none">
+								<line x1="1" y1="1" data-bind="attr: {
+									'x2': $root.deviceState() > $root.DeviceState.SMALL ? 1 : 100,
+									'y2': $root.deviceState() > $root.DeviceState.SMALL ? 100 : 1
+								}"/>
 							</svg>
 						</div>
 					</div>
@@ -56,8 +65,11 @@
 					</div>
 				</div>
 				<div class="separator">
-					<svg width="100%" height="100%" class="track" preserveAspectRatio="none">
-						<line x1="0" y1="0" x2="1000" y2="0" />
+					<svg width="100%" height="100%" class="dashed-line abs-center" preserveAspectRatio="none">
+						<line x1="1" y1="1" data-bind="attr: {
+							'x2': $root.deviceState() > $root.DeviceState.SMALL ? 200 : 1,
+							'y2': $root.deviceState() > $root.DeviceState.SMALL ? 1 : 100
+						}"/>
 					</svg>
 				</div>
 			<!-- /ko -->

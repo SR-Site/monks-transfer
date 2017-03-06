@@ -63,7 +63,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 
-		.track {
+		.dashed-line {
 			@include size(1px, 100%);
 		}
 	}
@@ -77,26 +77,26 @@
 	}
 
 	.separator {
-		overflow: hidden;
+		position: relative;
 	}
 
-	.track {
+	.dashed-line {
 		@include size(100%, 1px);
 		stroke: $colorLocalMedia;
-		stroke-dasharray: 4, 4;
-		stroke-width: 2px;
+		stroke-dasharray: 3, 3;
+		stroke-width: 1px;
+	}
+
+	.arrow {
+		stroke: $colorLocalMedia;
+		stroke-dasharray: 3, 3;
+		stroke-width: 1px;
 	}
 
 	.end {
 		@include size(10px, 20px);
 		flex-shrink: 0;
 		margin-left: -5px;
-
-		line {
-			stroke: $colorLocalMedia;
-			stroke-dasharray: 3, 3;
-			stroke-width: 1px;
-		}
 	}
 
 	@include respond-to(SMALL) {
@@ -109,7 +109,7 @@
 		.slide-statistics {
 			@include pos(auto, auto, auto, auto);
 			position: relative;
-			transform: none
+			transform: none;
 		}
 
 		.statistics-wrapper {
@@ -141,13 +141,33 @@
 			font-size: mobile-size(2.8rem);
 		}
 
+
+		.separator-top,
+		.separator-bottom {
+			@include size($sizeGrid, 1px);
+			transform: translateY(-50%);
+			position: absolute;
+
+			.dashed-line {
+				@include size(100%, 1px);
+			}
+		}
+
+		.separator-top {
+			@include pos(50%, auto, auto, -$sizeGrid);
+		}
+
+		.separator-bottom {
+			@include pos(50%, -$sizeGrid, auto, auto);
+		}
+
 		.middle-statistic {
 			@include size($sizeGrid * 2, auto);
+			padding: 0 $sizeGrid;
 		}
 
-		.separator {
-			display: none;
+		.dashed-line {
+			@include size(1px, $sizeGrid);
 		}
-
 	}
 }
