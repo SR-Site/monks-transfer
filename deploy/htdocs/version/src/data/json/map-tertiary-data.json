@@ -74,10 +74,38 @@
 				]
 			},
 			{
-				"type": 0,
+				"type": 4,
 				"heading": "Reach Millennials",
 				"subHeading": "How to reach Millennials",
 				"paragraph": "35% of millennials agree that the ability to watch a program whenever they want is very important",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"alt": "How to reach families"
+				},
+				"statistics": [
+					{
+						"icon": "heart",
+						"label": "single",
+						"value": "28%"
+					},
+					{
+						"icon": "academic-cap",
+						"label": "Some college",
+						"value": "18%"
+					},
+					{
+						"icon": "academic-cap",
+						"label": "Own a home",
+						"value": "56%"
+					}
+				]
+			},
+			{
+				"type": 4,
+				"heading": "Women 25-54",
+				"subHeading": "How to reach Women 25-54",
+				"paragraph": "41% of women 25-54 agree that the quality of the programs they watch is important",
 				"background": {
 					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
 					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
@@ -113,44 +141,6 @@
 						"icon": "academic-cap",
 						"label": "use search sites",
 						"value": "84%"
-					}
-				]
-			},
-			{
-				"type": 0,
-				"heading": "Women 25-54",
-				"subHeading": "How to reach Women 25-54",
-				"paragraph": "41% of women 25-54 agree that the quality of the programs they watch is important",
-				"background": {
-					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"alt": "How to reach families"
-				},
-				"statistics": [
-					{
-						"icon": "heart",
-						"label": "single",
-						"value": "28%"
-					},
-					{
-						"icon": "academic-cap",
-						"label": "Some college",
-						"value": "18%"
-					},
-					{
-						"icon": "academic-cap",
-						"label": "Own a home",
-						"value": "56%"
-					},
-					{
-						"icon": "academic-cap",
-						"label": "Median HHi",
-						"value": "$51k+"
-					},
-					{
-						"icon": "academic-cap",
-						"label": "Have kids age 6-11",
-						"value": "32%"
 					}
 				]
 			}

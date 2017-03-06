@@ -18,7 +18,13 @@
 		}
 
 		path {
-			fill: $colorSecondary;
+			fill: $borderColor;
+		}
+
+		&.is-active {
+			path {
+				fill: $colorSecondary;
+			}
 		}
 	}
 
@@ -75,6 +81,36 @@
 
 		&.is-active {
 			border-color: $colorBorder;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		height: $sizeGrid * 4;
+
+		.navigation-button {
+			@include size($sizeGrid * 4);
+
+			.icon {
+				@include size($sizeGrid * 3);
+			}
+		}
+
+		.step {
+			@include size($sizeGrid * 3);
+			line-height: $sizeGrid * 3;
+			font-size: mobile-size(2rem);
+		}
+
+		.pagination-steps {
+			@include size(calc(100% - #{$sizeGrid * 8}), $sizeGrid * 4);
+
+			.progress {
+				width: 50%;
+			}
+
+			ul {
+				@include size(100%, $sizeGrid * 3);
+			}
 		}
 	}
 }

@@ -5,6 +5,13 @@
 		transform: translateY(-50%);
 	}
 
+	.full-line {
+		@include size(100%, 1px);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
 	.statistics-wrapper {
 		@extend %reset-list;
 		display: flex;
@@ -37,10 +44,7 @@
 			margin-bottom: $sizeGrid / 4;
 
 			svg {
-				@include size(1px, 100%);
 				stroke: $colorLocalMedia;
-				stroke-dasharray: 4, 4;
-				stroke-width: 2px;
 			}
 		}
 
@@ -56,8 +60,7 @@
 		}
 	}
 
-	.track {
-		@include size(100%, 1px);
+	.dashed-line {
 		stroke: $colorLocalMedia;
 		stroke-dasharray: 4, 4;
 		stroke-width: 2px;
@@ -68,10 +71,6 @@
 			@include pos(auto, auto, auto, auto);
 			position: relative;
 			transform: none
-		}
-
-		.track {
-			display: none;
 		}
 
 		.statistics-wrapper {
@@ -88,8 +87,7 @@
 				}
 			}
 
-			.icon,
-			.separator {
+			.icon {
 				display: none;
 			}
 
@@ -98,15 +96,37 @@
 				text-align: left;
 				padding: $sizeGrid $sizeGrid * 2;
 
-				.value,
-				.label {
+				.separator {
+					@include size($sizeGrid, 1px);
 					display: inline-block;
+					vertical-align: middle;
+					margin: 0 $sizeGrid * .5;
 				}
 
 				.label {
-					padding-right: $sizeGrid * 2;
+					width: $sizeGrid * 3;
+					text-align: center;
+				}
+
+				.value,
+				.label {
+					display: inline-block;
+					vertical-align: middle;
 				}
 			}
+		}
+
+		.full-line {
+			@include pos(7rem, auto, 7rem, $sizeGrid * 6);
+			@include size(1px, auto);
+			position: absolute;
+			transform: none;
+		}
+
+		.dashed-line {
+			stroke: $colorLocalMedia;
+			stroke-dasharray: 3, 3;
+			stroke-width: 1px;
 		}
 	}
 }

@@ -30,13 +30,13 @@
 	.graphic {
 		display: inline-block;
 
-		&:nth-child(odd){
+		&:nth-child(odd) {
 			.component-vertical-graphic {
 				color: $colorSecondary;
 			}
 		}
 
-		&:nth-child(even){
+		&:nth-child(even) {
 			.component-vertical-graphic {
 				color: $colorPrimary;
 			}
@@ -51,7 +51,7 @@
 	@include respond-to(SMALL) {
 		display: block;
 
-		.slide-heading {
+		.copy {
 			display: none;
 		}
 
@@ -64,7 +64,7 @@
 		}
 
 		.statistic {
-			@include size(25%, auto);
+			@include size(33%, auto);
 		}
 	}
 }

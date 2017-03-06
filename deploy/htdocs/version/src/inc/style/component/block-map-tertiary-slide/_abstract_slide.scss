@@ -40,7 +40,6 @@
 			@include size(100%, 340px);
 		}
 
-
 		.slide-title {
 			@include size(100%, auto);
 			@include pos(auto, auto, auto, auto);
@@ -48,6 +47,10 @@
 			transform: none;
 			padding: 0 $sizeGrid * 2;
 			margin-top: $sizeGrid;
+
+			.heading-01 {
+				font-size: mobile-size(9.5rem);
+			}
 		}
 	}
 }

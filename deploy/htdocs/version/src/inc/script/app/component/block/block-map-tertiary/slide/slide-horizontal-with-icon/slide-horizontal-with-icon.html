@@ -12,19 +12,40 @@
 	</header>
 
 	<div class="slide-statistics">
-		<svg width="100%" height="100%" class="track abs-center" preserveAspectRatio="none">
-			<line x1="0" y1="0" x2="1000" y2="0" />
-		</svg>
+
+		<span class="full-line">
+			<!-- ko if: $root.deviceState() > $root.DeviceState.SMALL -->
+			<svg width="100%" height="100%" class="dashed-line abs-center" preserveAspectRatio="none">
+				<line x1="0" y1="0" x2="1000" y2="0" />
+			</svg>
+			<!-- /ko -->
+
+			<!-- ko if: $root.deviceState() <= $root.DeviceState.SMALL -->
+			<svg width="100%" height="100%" class="dashed-line abs-center" preserveAspectRatio="none">
+				<line x1="0" y1="0" x2="0" y2="1000" />
+			</svg>
+			<!-- /ko -->
+		</span>
+
 		<ul class="statistics-wrapper" data-bind="foreach: data.slideData.statistics">
 			<li>
 				<div class="icon" data-bind="icon: $data.icon"></div>
-				<span class="separator">
-					<svg width="100%" height="100%" class="track abs-center" preserveAspectRatio="none">
-						<line x1="0" y1="0" x2="0" y2="100" />
-					</svg>
-				</span>
+				<!-- ko if: $root.deviceState() > $root.DeviceState.SMALL -->
+					<span class="separator">
+						<svg width="100%" height="100%" class="dashed-line abs-center" preserveAspectRatio="none">
+							<line x1="0" y1="0" x2="0" y2="100" />
+						</svg>
+					</span>
+				<!-- /ko -->
 				<div class="description">
 					<span class="label copy copy-03" data-bind="html: $data.label"></span>
+					<!-- ko if: $root.deviceState() <= $root.DeviceState.SMALL -->
+					<span class="separator">
+						<svg width="100%" height="100%" class="dashed-line abs-center" preserveAspectRatio="none">
+							<line x1="0" y1="0" x2="100" y2="0" />
+						</svg>
+					</span>
+					<!-- /ko -->
 					<span class="value copy copy-03">
 						<strong data-bind="html: $data.value"></strong>
 					</span>
