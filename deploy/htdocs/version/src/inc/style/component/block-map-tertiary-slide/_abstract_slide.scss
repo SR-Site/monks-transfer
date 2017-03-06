@@ -21,10 +21,12 @@
 	}
 
 	.background {
+		@include size(100%);
+		@include offset(0, 0);
 		background-size: cover;
+		position: absolute;
 		background-position: center center;
 	}
-
 
 	@include respond-to(SMALL) {
 
@@ -34,11 +36,10 @@
 			position: relative;
 		}
 
-		.slide-statistics {
-			width: 100%;
-			position: relative;
-			transform: none;
+		.background {
+			@include size(100%, 340px);
 		}
+
 
 		.slide-title {
 			@include size(100%, auto);

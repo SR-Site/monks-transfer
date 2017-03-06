@@ -51,11 +51,16 @@
 	@include respond-to(SMALL) {
 		display: block;
 
+		.slide-heading {
+			display: none;
+		}
+
 		.slide-statistics {
 			@include pos(auto, auto, auto, auto);
+			@include size(100%, 270px);
 			position: relative;
 			transform: none;
-			margin-top: $sizeGrid
+			margin-top: $sizeGrid;
 		}
 
 		.statistic {

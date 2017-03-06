@@ -23,7 +23,8 @@
 		margin-bottom: 1rem;
 	}
 
-	@include respond-to(SMALL){
+	@include respond-to(SMALL) {
+
 		.bar-wrapper {
 			height: $sizeGrid * 10;
 		}

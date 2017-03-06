@@ -46,12 +46,11 @@
 
 		.slide-statistics {
 			@include pos(auto, auto, auto, auto);
-			@include size(100%, auto);
+			@include size(100%, 270px);
 			position: relative;
 			transform: none;
-			text-align: center;
-			padding: 0 $sizeGrid * 2;
 			margin-top: $sizeGrid;
+			text-align: center;
 
 			&.single-column {
 				display: flex;
@@ -64,15 +63,49 @@
 			@include size(50%, auto);
 			font-size: 0;
 			margin: 0;
-			text-align: left;
 			margin-top: $sizeGrid;
 
+			.statistic-inner-wrapper {
+				display: flex;
+				align-items: center;
+			}
+
+
+			&:nth-child(even) {
+
+				.statistic-inner-wrapper {
+					text-align: left;
+				}
+
+				.component-percentage-loader {
+					order: 0;
+				}
+
+				.label {
+					order: 1;
+				}
+			}
+
+			&:nth-child(odd) {
+				.statistic-inner-wrapper {
+					text-align: right;
+				}
+
+
+				.component-percentage-loader {
+					order: 1;
+				}
+
+				.label {
+					order: 0;
+				}
+			}
 
 			.label {
 				width: calc(100% - #{$sizeGrid * 5});
 				display: inline-block;
 				vertical-align: middle;
-				padding: 0 0 0 $sizeGrid;
+				padding: 0 $sizeGrid;
 			}
 		}
 
@@ -81,7 +114,7 @@
 			vertical-align: middle;
 
 			.svg-holder {
-				@include size($sizeGrid * 5);
+				@include size($sizeGrid * 4);
 			}
 		}
 

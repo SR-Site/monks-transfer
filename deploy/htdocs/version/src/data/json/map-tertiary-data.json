@@ -3,7 +3,7 @@
 		"id": 0,
 		"slides": [
 			{
-				"type": 0,
+				"type": 4,
 				"heading": "Reach Families",
 				"subHeading": "How to reach families",
 				"paragraph": "40% of families agree that the quality of the programs they watch is important",
@@ -14,21 +14,24 @@
 				},
 				"statistics": [
 					{
+						"icon": "heart",
 						"label": "Own a home",
 						"value": 65
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Have kids age 6-11",
 						"value": 20
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Median HHI",
 						"value": "$57k+"
 					}
 				]
 			},
 			{
-				"type": 0,
+				"type": 4,
 				"heading": "Men 25-54",
 				"subHeading": "How to reach men 25-54",
 				"paragraph": "41% of men 25-54 agree that screen size is important when it comes to watching TV",
@@ -39,28 +42,34 @@
 				},
 				"statistics": [
 					{
+						"icon": "heart",
 						"label": "single",
-						"value": 28
+						"value": "28%"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Some college",
-						"value": 18
+						"value": "18%"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Own a home",
-						"value": 56
+						"value": "56%"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Median HHi",
 						"value": "$51k+"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Have kids age 6-11",
-						"value": 32
+						"value": "32%"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "use search sites",
-						"value": 84
+						"value": "84%"
 					}
 				]
 			},
@@ -76,28 +85,34 @@
 				},
 				"statistics": [
 					{
+						"icon": "heart",
 						"label": "single",
-						"value": 28
+						"value": "28%"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Some college",
-						"value": 18
+						"value": "18%"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Own a home",
-						"value": 56
+						"value": "56%"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Median HHi",
 						"value": "$51k+"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Have kids age 6-11",
-						"value": 32
+						"value": "32%"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "use search sites",
-						"value": 84
+						"value": "84%"
 					}
 				]
 			},
@@ -113,28 +128,29 @@
 				},
 				"statistics": [
 					{
+						"icon": "heart",
 						"label": "single",
-						"value": 28
+						"value": "28%"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Some college",
-						"value": 18
+						"value": "18%"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Own a home",
-						"value": 56
+						"value": "56%"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Median HHi",
 						"value": "$51k+"
 					},
 					{
+						"icon": "academic-cap",
 						"label": "Have kids age 6-11",
-						"value": 32
-					},
-					{
-						"label": "use search sites",
-						"value": 84
+						"value": "32%"
 					}
 				]
 			}

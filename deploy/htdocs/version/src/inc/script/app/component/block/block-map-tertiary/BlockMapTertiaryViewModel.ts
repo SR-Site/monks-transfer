@@ -15,6 +15,7 @@ class BlockMapTertiaryViewModel extends AbstractBlockComponentViewModel<BlockMap
 		[MapTertiarySlideType.VERTICAL_GRAPHIC]: 'block/block-map-tertiary/slide/slide-vertical-graphic',
 		[MapTertiarySlideType.HORIZONTAL_WITH_ICON]: 'block/block-map-tertiary/slide/slide-horizontal-with-icon',
 		[MapTertiarySlideType.HORIZONTAL_WITHOUT_ICON]: 'block/block-map-tertiary/slide/slide-horizontal-without-icon',
+		[MapTertiarySlideType.ICON_PROGRESS]: 'block/block-map-tertiary/slide/slide-icon-progress',
 	};
 
 	/**

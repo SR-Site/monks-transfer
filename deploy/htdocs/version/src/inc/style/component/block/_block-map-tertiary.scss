@@ -8,14 +8,15 @@
 
 	.slides {
 		@include aspect-ratio(1100px, 550px);
+		background: $colorLightGrey;
 	}
 
 	.solid-background {
 		@include offset(0, 0);
 		@include aspect-ratio(1100px, 550px, false);
 		@include size(100%, auto);
-		background: $colorLightGrey;
 		position: absolute;
+		background: transparent;
 	}
 
 	.component-map-pagination {
@@ -29,15 +30,19 @@
 		}
 
 		.slides {
-			@include aspect-ratio(640px, 890px);
+			@include size(100%, 455px);
 			background: transparent;
 		}
 
 		.solid-background {
 			@include offset(0, 0);
-			@include aspect-ratio(640px, 670px);
+			@include size(100%, 340px);
 			background: $colorLightGrey;
 			position: absolute;
+
+			&:before {
+				display: none;
+			}
 		}
 	}
 }
