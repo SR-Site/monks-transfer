@@ -30,7 +30,7 @@ class TriangleTransitionController<TParentController extends AbstractTransitionC
 				xPercent: 0,
 				yPercent: 0,
 				ease: Expo.easeOut,
-				clearProps: this._clearProps ? "all" : ""
+				clearProps: this._clearProps ? "xPercent, yPercent" : ""
 			}
 		);
 	}
@@ -47,7 +47,7 @@ class TriangleTransitionController<TParentController extends AbstractTransitionC
 				xPercent: 200,
 				yPercent: -100,
 				ease: Expo.easeIn,
-				clearProps: this._clearProps ? "all" : ""
+				clearProps: this._clearProps ? "xPercent, yPercent" : ""
 			}
 		);
 	}

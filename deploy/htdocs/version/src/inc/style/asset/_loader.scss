@@ -4,6 +4,7 @@
 	position: absolute;
 	background: rgba($colorWhite, .5);
 	z-index: zindex($layout, inlineLoader);
+	display: none;
 
 	&:after {
 		@include abs-center(32px);
