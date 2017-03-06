@@ -57,6 +57,9 @@ class StartUp
 
 		Routes.init();
 
+		// Only enable debug mode on local
+		DEBUG = configManagerInstance.getEnvironment() === EnvironmentNames.LOCAL;
+
 		let sequence = new Sequence();
 
 		if(DEBUG && configManagerInstance.getEnvironment() != EnvironmentNames.PRODUCTION)

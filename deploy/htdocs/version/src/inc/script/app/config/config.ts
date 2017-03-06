@@ -72,9 +72,17 @@ let config: IConfig = {
 			urls: {},
 			properties: {}
 		},
+		[EnvironmentNames.MONK_APPS]: {
+			extends: EnvironmentNames.PRODUCTION,
+			variables: {},
+			urls: {},
+			properties: {}
+		},
 		[EnvironmentNames.LOCAL]: {
 			extends: EnvironmentNames.PRODUCTION,
-			variables: {}
+			variables: {},
+			urls: {},
+			properties: {}
 		}
 	},
 	variables: {
@@ -112,6 +120,12 @@ switch(host.split(':').shift())
 	case 'localhost':
 	{
 		environment = EnvironmentNames.LOCAL;
+		break;
+	}
+
+	case 'spectrumreach.jl.monkapps.com':
+	{
+		environment = EnvironmentNames.MONK_APPS;
 		break;
 	}
 
