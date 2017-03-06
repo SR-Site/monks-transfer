@@ -3,22 +3,31 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockherotertiary.field_file
     - field.field.paragraph.blockherotertiary.field_image
     - field.field.paragraph.blockherotertiary.field_styles
+    - image.style.preview_500xauto
     - paragraphs.paragraphs_type.blockherotertiary
   module:
     - entity_reference_revisions
+    - file
     - image
 id: paragraph.blockherotertiary.default
 targetEntityType: paragraph
 bundle: blockherotertiary
 mode: default
 content:
+  field_file:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
   field_image:
     weight: 0
     label: above
     settings:
-      image_style: ''
+      image_style: preview_500xauto
       image_link: ''
     third_party_settings: {  }
     type: image

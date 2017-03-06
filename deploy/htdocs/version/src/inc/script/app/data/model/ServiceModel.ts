@@ -1,4 +1,5 @@
 import ContentService from "../service/ContentService";
+import UserService from "../service/UserService";
 
 /**
  * @class ServiceModel
@@ -6,7 +7,8 @@ import ContentService from "../service/ContentService";
  */
 class ServiceModel
 {
-	public contentService:ContentService;
+	public contentService: ContentService;
+	public userService: UserService;
 }
 
 export default ServiceModel;

@@ -5,6 +5,7 @@
 export class EnvironmentNames
 {
 	public static PRODUCTION:string = 'production';
+	public static MONK_APPS:string = 'monkApps';
 	public static LOCAL:string = 'local';
 }
 

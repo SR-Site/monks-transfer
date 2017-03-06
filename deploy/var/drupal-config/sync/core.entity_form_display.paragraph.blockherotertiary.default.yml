@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockherotertiary.field_file
     - field.field.paragraph.blockherotertiary.field_image
     - field.field.paragraph.blockherotertiary.field_styles
     - image.style.thumbnail
     - paragraphs.paragraphs_type.blockherotertiary
   module:
     - field_group
+    - file
     - image
     - paragraphs
 third_party_settings:
@@ -30,8 +32,14 @@ targetEntityType: paragraph
 bundle: blockherotertiary
 mode: default
 content:
-  field_image:
+  field_file:
     weight: 1
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+  field_image:
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

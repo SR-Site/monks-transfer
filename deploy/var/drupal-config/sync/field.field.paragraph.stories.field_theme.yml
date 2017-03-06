@@ -1,0 +1,23 @@
+uuid: db426c00-71fe-4957-9270-726db0e3cae7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_theme
+    - paragraphs.paragraphs_type.stories
+  module:
+    - options
+id: paragraph.stories.field_theme
+field_name: field_theme
+entity_type: paragraph
+bundle: stories
+label: Theme
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

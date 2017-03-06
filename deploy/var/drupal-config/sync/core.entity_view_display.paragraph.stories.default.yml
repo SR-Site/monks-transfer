@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.field.paragraph.stories.field_heading
     - field.field.paragraph.stories.field_image
-    - field.field.paragraph.stories.field_image2
     - field.field.paragraph.stories.field_paragraph
+    - field.field.paragraph.stories.field_theme
+    - image.style.preview_500xauto
     - paragraphs.paragraphs_type.stories
   module:
     - image
+    - options
     - text
 id: paragraph.stories.default
 targetEntityType: paragraph
@@ -27,15 +29,7 @@ content:
     weight: 2
     label: above
     settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-  field_image2:
-    weight: 3
-    label: above
-    settings:
-      image_style: ''
+      image_style: preview_500xauto
       image_link: ''
     third_party_settings: {  }
     type: image
@@ -45,4 +39,10 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+  field_theme:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
 hidden: {  }

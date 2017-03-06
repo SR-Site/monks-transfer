@@ -14,6 +14,7 @@ import GlobalSlideoutPanelController from "../component/slideout-panel/global-sl
 import VideoOverlayController from "../component/video-overlay/VideoOverlayController";
 import Theme from "./enum/style/Theme";
 import NotificationController from "../component/notification/NotificationController";
+import UserService from "./service/UserService";
 
 
 /**
@@ -28,7 +29,7 @@ class DataManager
 
 	public pageLoader: PageLoaderController;
 	public panelController: GlobalSlideoutPanelController;
-	public notification:NotificationController;
+	public notification: NotificationController;
 
 	/**
 	 * @property gateway
@@ -95,6 +96,7 @@ class DataManager
 	public setupServices(): void
 	{
 		this.serviceModel.contentService = new ContentService(this.gateway, false);
+		this.serviceModel.userService = new UserService(this.gateway, false);
 	}
 
 	/**

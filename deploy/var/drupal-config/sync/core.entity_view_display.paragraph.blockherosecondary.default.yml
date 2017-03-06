@@ -4,15 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.blockherosecondary.field_background_color
+    - field.field.paragraph.blockherosecondary.field_file
     - field.field.paragraph.blockherosecondary.field_heading
     - field.field.paragraph.blockherosecondary.field_image
     - field.field.paragraph.blockherosecondary.field_link
     - field.field.paragraph.blockherosecondary.field_paragraph
     - field.field.paragraph.blockherosecondary.field_styles
+    - image.style.preview_500xauto
     - paragraphs.paragraphs_type.blockherosecondary
   module:
     - color_field
     - entity_reference_revisions
+    - file
     - image
     - text
 id: paragraph.blockherosecondary.default
@@ -28,6 +31,12 @@ content:
       opacity: true
     third_party_settings: {  }
     type: color_field_formatter_text
+  field_file:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
   field_heading:
     weight: 4
     label: above
@@ -39,7 +48,7 @@ content:
     weight: 1
     label: above
     settings:
-      image_style: ''
+      image_style: preview_500xauto
       image_link: ''
     third_party_settings: {  }
     type: image

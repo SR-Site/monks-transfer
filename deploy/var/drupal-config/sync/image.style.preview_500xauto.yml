@@ -1,0 +1,15 @@
+uuid: b2b661eb-8f17-4f6a-92f2-f3108610d2f4
+langcode: en
+status: true
+dependencies: {  }
+name: preview_500xauto
+label: 'Preview (500xAuto)'
+effects:
+  c5de809a-f970-465d-b7e9-7af3ea03f2ce:
+    uuid: c5de809a-f970-465d-b7e9-7af3ea03f2ce
+    id: image_scale
+    weight: 1
+    data:
+      width: 480
+      height: null
+      upscale: false

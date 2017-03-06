@@ -1,32 +1,15 @@
-.form-loader { // todo add styles
+.js-loader {
+	@include size(100%);
+	@include offset(0,0);
 	position: absolute;
-	@include offset(0, 0);
-	@include size(100%, 100%);
-	background-color: white;
-	z-index: 1;
-	opacity: 0;
+	background: rgba($colorWhite, .5);
+	z-index: zindex($layout, inlineLoader);
 	display: none;
-}
-
-.loader { // todo add styles
-	border: 0.5rem solid rgba(255, 255, 255, 0.2);
-	border-left: 0.5rem solid currentColor;
-	animation: loader 1.1s infinite linear;
-	border-radius: 50%;
-	@include size(5rem);
 
 	&:after {
-		border-radius: 50%;
-		@include size(5rem);
-	}
-}
-
-
-@keyframes loader {
-	0% {
-		transform: translate(-50%, -50%) rotate(0deg);
-	}
-	100% {
-		transform: translate(-50%, -50%) rotate(360deg);
+		@include abs-center(32px);
+		background: url('../image/loading.gif') no-repeat center center;
+		background-size: cover;
+		content: '';
 	}
 }

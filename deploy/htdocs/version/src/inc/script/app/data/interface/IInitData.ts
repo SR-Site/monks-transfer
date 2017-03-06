@@ -4,10 +4,11 @@ import ILink from "./action/ILink";
 export interface IInitData
 {
 	routes: {
-		landing:string;
-		notFound:string;
+		landing: string;
+		notFound: string;
 	};
 	contactOptions: IContactOptions
+	csrfToken: string;
 	layout: {
 		navigation: Array<INavigationItem>;
 		footer: {

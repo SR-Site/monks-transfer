@@ -1,8 +1,7 @@
 import AbstractBlockComponentController from "../AbstractBlockComponentController";
-import BlockMapTransitionController from 'app/component/block/block-map/BlockMapTransitionController';
-import IBlockMapOptions from 'app/component/block/block-map/IBlockMapOptions';
-import BlockMapViewModel from 'app/component/block/block-map/BlockMapViewModel';
-
+import BlockMapTransitionController from "app/component/block/block-map/BlockMapTransitionController";
+import IBlockMapOptions from "app/component/block/block-map/IBlockMapOptions";
+import BlockMapViewModel from "app/component/block/block-map/BlockMapViewModel";
 import Log from "lib/temple/util/Log";
 import ImageSequenceController from "../../image-sequence/ImageSequenceController";
 import MapSliderController from "../../map-slider/MapSliderController";
@@ -19,6 +18,27 @@ class BlockMapController extends AbstractBlockComponentController<BlockMapViewMo
 	private _debug: Log = new Log('app.component.BlockMap');
 
 	private _imageSequence: ImageSequenceController;
+
+	constructor(element: HTMLElement, options: IBlockMapOptions)
+	{
+		// TODO: for release this data will be static since we need to figure out a way to manage image sequence entities in the CMS
+		super(element, Object.assign(options, {
+			"sequenceBackground": {
+				"normal": "data/sequence/map/desktop/map_bg.png",
+				"small": "data/sequence/map/mobile/map_bg_mobile.png",
+				"alt": "Background image"
+			},
+			"imageSequence": {
+				"image": {
+					"normal": "data/sequence/map/desktop/map_lines_",
+					"small": "data/sequence/map/mobile/map_lines_mobile_",
+					"alt": "Image sequence"
+				},
+				"extension": ".png",
+				"total": 75
+			}
+		}));
+	}
 
 	/**
 	 *    Overrides AbstractPageController.init()

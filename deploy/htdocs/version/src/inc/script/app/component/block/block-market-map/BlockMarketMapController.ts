@@ -14,6 +14,7 @@ import PanelBlocks from "../../../data/enum/block/PanelBlocks";
 import Promise = require("bluebird");
 import MarketSearchController from "../../market-search/MarketSearchController";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
+import Loader from "../../../util/Loader";
 
 
 class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions, BlockMarketMapTransitionController>
@@ -26,7 +27,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	private _debug: Log = new Log('app.component.BlockMarketMap');
 
 	private _featureCollection: GeoJSON.FeatureCollection;
-	private _marketFeatureCollection: {[id: string]: GeoJSON.Feature} = {};
+	private _marketFeatureCollection: {[id: string]: GeoJSON.FeatureCollection} = {};
 
 	private _marketSearchController: MarketSearchController;
 
@@ -35,6 +36,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	private _marketsFillLayer: mapboxgl.Map;
 
 	private _stateModel: StateModel = DataManager.getInstance().settingsModel.stateModel;
+	private _loader: Loader;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -45,6 +47,8 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 		super.init();
 
 		this._debug.log('Init');
+
+		this._loader = new Loader(this.element);
 
 		// Set the access token
 		mapboxgl.accessToken = configManagerInstance.getProperty(PropertyNames.MAPBOX_ACCESS_TOKEN);
@@ -99,7 +103,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 		// Get the state
 		const selectedMarket = this.viewModel.selectedMarket();
 
-		let data: GeoJSON.FeatureCollection|GeoJSON.Feature;
+		let data: GeoJSON.FeatureCollection;
 
 		if(this._marketsFillLayer)
 		{
@@ -117,7 +121,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 				const state = this._stateModel.getItemById(selectedMarket.statePostalCode);
 
 				// Decide what polygons should be visible
-				data = <GeoJSON.Feature>this._marketFeatureCollection[selectedMarket.marketId];
+				data = <GeoJSON.FeatureCollection>this._marketFeatureCollection[selectedMarket.marketId];
 
 				if(data)
 				{
@@ -224,28 +228,35 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	private handleMapLoad(): void
 	{
 		// data: 'https://spectrumreach.com/markets/markets-json'
-
-		this.loadJSON('data/mapbox/markets.json')
+		this._loader.show()
+			.then(() => this.loadJSON('data/mapbox/markets.json'))
 			.then(this.handleMarketsLoaded.bind(this))
 			.then(this.updateScrollBar.bind(this))
 			.then(this.loadJSON.bind(this, 'data/mapbox/markets-polygon.json'))
 			.then((data: GeoJSON.FeatureCollection) =>
 			{
-				// Parse it to multi-polygon to make it work... dafuq
 				data.features.forEach((feature) =>
 				{
-					feature.geometry.type = 'MultiPolygon';
-					feature.geometry.coordinates = feature.geometry.coordinates.map((coordinate) => [coordinate]);
+					const featureId = feature.properties.id;
 
-					// Save for faster lookup
-					this._marketFeatureCollection[feature.properties.id] = feature
+					// Save in feature collections for faster lookup
+					if(!this._marketFeatureCollection[featureId])
+					{
+						this._marketFeatureCollection[featureId] = {
+							type: 'FeatureCollection',
+							features: []
+						};
+					}
+
+					this._marketFeatureCollection[featureId].features.push(feature);
 				});
 
 				// Store it
 				this._featureCollection = data;
 			})
 			.then(this.updateDataLayer.bind(this))
-			.then(this.addMapEvents.bind(this));
+			.then(this.addMapEvents.bind(this))
+			.then(() => this._loader.hide());
 	}
 
 	/**

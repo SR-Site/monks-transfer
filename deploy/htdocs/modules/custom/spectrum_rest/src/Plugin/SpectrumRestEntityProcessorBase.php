@@ -113,6 +113,18 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
   }
 
   /**
+   * Returns a video URL.
+   *
+   * @param \Drupal\Core\Field\FieldItemListInterface $field
+   * @param array $options
+   * @return string
+   */
+  public function video(FieldItemListInterface $field, array $options = []) {
+    $video = $this->fieldProcessor->getFieldData($field, $options);
+    return isset($video['url']) ? $video['url'] : NULL;
+  }
+
+  /**
    * Returns an array of taxonomy terms from all vocabularies.
    *
    * @param \Drupal\Core\Entity\ContentEntityInterface $entity

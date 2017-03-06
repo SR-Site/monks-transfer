@@ -1,0 +1,19 @@
+uuid: 13230279-cd9c-42b4-a0a1-46042aa62db2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.blockmarketmap
+id: paragraph.blockmarketmap.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: blockmarketmap
+label: 'Search label'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

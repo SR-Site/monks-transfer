@@ -3,14 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.slideheromain.field_file
     - field.field.paragraph.slideheromain.field_heading
     - field.field.paragraph.slideheromain.field_image
     - field.field.paragraph.slideheromain.field_link
     - field.field.paragraph.slideheromain.field_paragraph
     - field.field.paragraph.slideheromain.field_statistics
+    - image.style.preview_500xauto
     - paragraphs.paragraphs_type.slideheromain
   module:
     - entity_reference_revisions
+    - file
     - image
     - text
 id: paragraph.slideheromain.default
@@ -18,6 +21,12 @@ targetEntityType: paragraph
 bundle: slideheromain
 mode: default
 content:
+  field_file:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
   field_heading:
     weight: 0
     label: above
@@ -29,7 +38,7 @@ content:
     weight: 3
     label: above
     settings:
-      image_style: ''
+      image_style: preview_500xauto
       image_link: ''
     third_party_settings: {  }
     type: image

@@ -23,12 +23,13 @@ class ParagraphSlideHeroMainV1 extends SpectrumRestEntityProcessorBase {
    */
   protected function getItemData($entity) {
 
-    $statistics = $this->getItems($entity->get('field_statistics'));
+    $statistics = $this->fieldProcessor->getFieldData($entity->get('field_statistics'));
 
     $data = [
       "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
       "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
       "background" => $this->image($entity->get('field_image')),
+      "backgroundVideo" => $this->video($entity->get('field_file')),
       "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),
       "statistics" => $statistics ?: NULL,
     ];

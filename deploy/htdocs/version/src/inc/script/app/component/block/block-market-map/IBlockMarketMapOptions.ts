@@ -26,9 +26,19 @@ interface IBlockMarketMapOptions extends IAbstractBlockComponentOptions
 	};
 	/**
 	 * @property
-	 * @description The label of the search button
+	 * @description The label for the search button
 	 */
-	searchLabel: string;
+	searchlabel: string;
+	/**
+	 * @property
+	 * @description the placeholder string displayed on the search form
+	 */
+	searchPlaceholder:string;
+	/**
+	 * @property
+	 * @description notFoundMessage
+	 */
+	notFoundMessage:string;
 }
 
 export default IBlockMarketMapOptions;

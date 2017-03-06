@@ -54,7 +54,7 @@ class ContactViewModel extends DefaultComponentTransitionViewModel<ContactContro
 			observable: ko.observable('')
 		},
 		{
-			name: 'zipcode',
+			name: 'zipCode',
 			localeKey: 'zipcode',
 			validationRules: ValidationRules.nonEmpty,
 			observable: ko.observable('')

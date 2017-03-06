@@ -3,11 +3,10 @@
 namespace Drupal\spectrum_rest\Plugin\rest\resource;
 
 use Drupal\Component\Utility\UrlHelper;
+use Drupal\Core\Access\CsrfTokenGenerator;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Access\AccessResultAllowed;
 use Drupal\Core\Cache\CacheableMetadata;
-use Drupal\Core\Entity\EntityFieldManagerInterface;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Menu\MenuLinkTreeElement;
 use Drupal\Core\Menu\MenuLinkTreeInterface;
 use Drupal\Core\Menu\MenuTreeParameters;
@@ -65,27 +64,18 @@ class InitResource extends ResourceBase {
   protected $state;
 
   /**
+   * CSRF Token service.
+   *
+   * @var \Drupal\Core\Access\CsrfTokenGenerator
+   */
+  protected $csrfToken;
+
+  /**
    * The Path AliasManager service.
    *
    * @var \Drupal\Core\Path\AliasManagerInterface
    */
   protected $pathAliasManager;
-
-  /**
-   * the Entity Type Manager service.
-   *
-   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
-   */
-  protected $entityTypeManager;
-
-  /**
-   * Field definition service.
-   *
-   * @var \Drupal\Core\Entity\EntityFieldManagerInterface
-   */
-  protected $fieldManager;
-
-  protected $entityRepository;
 
   /**
    * InitResource constructor.
@@ -101,19 +91,16 @@ class InitResource extends ResourceBase {
    * @param \Drupal\mm_rest\CacheableMetaDataCollectorInterface $cacheable_metadata_collector
    * @param \Drupal\Core\Menu\MenuLinkTreeInterface $menu_link_tree
    * @param \Drupal\Core\State\StateInterface $state
+   * @param \Drupal\Core\Access\CsrfTokenGenerator $csrf_token
    * @param \Drupal\Core\Path\AliasManagerInterface $path_alias_manager
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
-   * @param \Drupal\Core\Entity\EntityFieldManagerInterface $field_manager
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, Request $request, RestEntityProcessorManager $entity_processor, ConfigFactoryInterface $configFactory, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, MenuLinkTreeInterface $menu_link_tree, StateInterface $state, AliasManagerInterface $path_alias_manager, EntityTypeManagerInterface $entity_type_manager, EntityFieldManagerInterface $field_manager, $entity_repository) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, Request $request, RestEntityProcessorManager $entity_processor, ConfigFactoryInterface $configFactory, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, MenuLinkTreeInterface $menu_link_tree, StateInterface $state, CsrfTokenGenerator $csrf_token, AliasManagerInterface $path_alias_manager) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger, $request, $entity_processor, $configFactory, $cacheable_metadata_collector);
 
     $this->menuLinkTree = $menu_link_tree;
     $this->state = $state;
+    $this->csrfToken = $csrf_token;
     $this->pathAliasManager = $path_alias_manager;
-    $this->entityTypeManager = $entity_type_manager;
-    $this->fieldManager = $field_manager;
-    $this->entityRepository = $entity_repository;
   }
 
   /**
@@ -132,10 +119,8 @@ class InitResource extends ResourceBase {
       $container->get('mm_rest.cacheable_metadata_collector'),
       $container->get('menu.link_tree'),
       $container->get('state'),
-      $container->get('path.alias_manager'),
-      $container->get('entity_type.manager'),
-      $container->get('entity_field.manager'),
-      $container->get('entity.repository')
+      $container->get('csrf_token'),
+      $container->get('path.alias_manager')
     );
   }
 
@@ -153,6 +138,8 @@ class InitResource extends ResourceBase {
    */
   public function get() {
     $data = [
+      'csrfToken' => $this->csrfToken->get('rest'),
+      'routes' => $this->getRouters(),
       'contactOptions' => [
         'phone' => [
           'phoneNumber' => '1-844-TO-REACH',
@@ -172,7 +159,7 @@ class InitResource extends ResourceBase {
             $this->getMenu('footer-secondary-1'),
             $this->getMenu('footer-secondary-2'),
           ],
-          'social' => $this->getMenu('social'),
+          'social' => $this->getSocialNetworks(),
         ],
         'slideOutPanel' => [
           'contact' => [
@@ -195,6 +182,43 @@ class InitResource extends ResourceBase {
     $this->addCacheableDependency();
 
     return $data;
+  }
+
+  /**
+   * Returns an array of pre configured routers.
+   *
+   * @return array
+   */
+  protected function getRouters() {
+    $routers = [
+      'landing' => $this->urlHelper($this->state->get('site_frontpage')),
+      'notFound' => $this->urlHelper($this->state->get('site_404')),
+    ];
+
+    return $routers;
+  }
+
+  /**
+   * Helper function for transform internal/external links into URLs.
+   *
+   * @param $url
+   * @return null|string
+   */
+  protected function urlHelper($url) {
+    if (empty($url)) {
+      return NULL;
+    }
+
+    $url = UrlHelper::stripDangerousProtocols($url);
+    $external = UrlHelper::isExternal($url);
+
+    if (!$external) {
+      $url = $url[0] == '/' ? $url : "/$url";
+      $url = $this->pathAliasManager->getAliasByPath($url);
+      $url = substr($url, 1);
+    }
+
+    return $url;
   }
 
   /**
@@ -273,6 +297,31 @@ class InitResource extends ResourceBase {
   }
 
   /**
+   * Returns the Spectrum social networks.
+   *
+   * @return array
+   */
+  protected function getSocialNetworks() {
+    $items = [];
+    $networks = $this->state->get('socialNetworks');
+
+    if (empty($networks)) {
+      return [];
+    }
+
+    foreach ($networks as $network) {
+      $items[$network['id']] = [
+        'label' => $network['label'] ?: NULL,
+        'title' => $network['label'] ?: NULL,
+        'target' => $network['target'] ?: NULL,
+        'type' => $network['target'] ? (int) UrlHelper::isExternal($network['target']) : NULL,
+      ];
+    }
+
+    return $items;
+  }
+
+  /**
    * Add Cache dependency when a node is created or modified, when FE menu is
    * edited and Spin settings are updated.
    */
@@ -289,7 +338,7 @@ class InitResource extends ResourceBase {
       'config:system.menu.footer-secondary-1',
       'config:system.menu.footer-secondary-2',
       'config:system.menu.social',
-      //'config:spin_settings.settings',
+      'spectrum:settings',
     ]);
 
     $this->cacheabilityCollector->addCacheableDependency($meta_data);

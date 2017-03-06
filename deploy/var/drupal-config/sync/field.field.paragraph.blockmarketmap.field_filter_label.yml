@@ -1,0 +1,19 @@
+uuid: 5f7d1899-94f8-43b7-b82a-dc32b4f14194
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_filter_label
+    - paragraphs.paragraphs_type.blockmarketmap
+id: paragraph.blockmarketmap.field_filter_label
+field_name: field_filter_label
+entity_type: paragraph
+bundle: blockmarketmap
+label: 'Search placeholder'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

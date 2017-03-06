@@ -24,7 +24,7 @@ interface IBlockHeroSecondaryOptions extends IAbstractBlockComponentOptions
 	 * @property
 	 * @description Think added to the hero main
 	 */
-	link: ILink;
+	link?: ILink;
 	/**
 	 * @property
 	 * @description The background image

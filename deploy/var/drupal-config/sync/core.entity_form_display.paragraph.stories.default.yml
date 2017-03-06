@@ -5,8 +5,8 @@ dependencies:
   config:
     - field.field.paragraph.stories.field_heading
     - field.field.paragraph.stories.field_image
-    - field.field.paragraph.stories.field_image2
     - field.field.paragraph.stories.field_paragraph
+    - field.field.paragraph.stories.field_theme
     - image.style.thumbnail
     - paragraphs.paragraphs_type.stories
   module:
@@ -31,13 +31,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-  field_image2:
-    weight: 3
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
   field_paragraph:
     weight: 1
     settings:
@@ -45,6 +38,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+  field_theme:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
 hidden:
   created: true
   status: true

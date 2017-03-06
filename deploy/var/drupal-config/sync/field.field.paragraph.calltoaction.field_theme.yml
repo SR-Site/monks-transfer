@@ -1,0 +1,23 @@
+uuid: 6cabc8ce-0e1a-488f-b3e7-7f5403365060
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_theme
+    - paragraphs.paragraphs_type.calltoaction
+  module:
+    - options
+id: paragraph.calltoaction.field_theme
+field_name: field_theme
+entity_type: paragraph
+bundle: calltoaction
+label: Theme
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,0 +1,27 @@
+uuid: b1d40f0f-7797-47b4-bfef-82005b15e59a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_file
+    - paragraphs.paragraphs_type.blockherosecondary
+  module:
+    - file
+id: paragraph.blockherosecondary.field_file
+field_name: field_file
+entity_type: paragraph
+bundle: blockherosecondary
+label: 'Background video'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'mp4 avi'
+  max_filesize: '20 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

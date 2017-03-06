@@ -53,12 +53,15 @@ class ContentService extends AbstractService
 	 * @param filter
 	 * @returns {Promise<IGatewayResult<any>>}
 	 */
-	public loadMore(endpoint: string, offset: number, limit: number, filter: {[filterType:string]:string}): Promise<IGatewayResult<{blocks: Array<IBlock>}>>
+	public loadMore(endpoint: string, offset: number, limit: number, filter: {[filterType: string]: string}): Promise<IGatewayResult<{blocks: Array<IBlock>}>>
 	{
+		// TODO: Strip out the /api/v1 part, backend should not return it though!
+		endpoint = endpoint.replace('/api/v1/', '');
 
 		return this.gateway.get(
 			endpoint,
 			Object.assign({
+				_format: 'json',
 				limit: limit,
 				offset: offset
 			}, filter)
