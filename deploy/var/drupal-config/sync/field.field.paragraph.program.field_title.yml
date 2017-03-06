@@ -1,0 +1,19 @@
+uuid: 7b8dd76d-c44e-458c-8b2e-e92f275bcc19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.program
+id: paragraph.program.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: program
+label: 'Age range'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

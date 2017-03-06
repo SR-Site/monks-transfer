@@ -1,0 +1,27 @@
+uuid: ca01800a-85f8-41c1-a516-2ed92029cd36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_file
+    - paragraphs.paragraphs_type.program
+  module:
+    - file
+id: paragraph.program.field_file
+field_name: field_file
+entity_type: paragraph
+bundle: program
+label: Video
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+  file_extensions: mp4
+  max_filesize: '20 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
