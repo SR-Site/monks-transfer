@@ -61,6 +61,7 @@ class ContentService extends AbstractService
 		return this.gateway.get(
 			endpoint,
 			Object.assign({
+				_format: 'json',
 				limit: limit,
 				offset: offset
 			}, filter)
