@@ -16,6 +16,8 @@ class BlockMapTertiaryTransitionController extends AbstractTransitionController<
 		});
 
 		this.transitionInTimeline.add(() => this.parentController.activeSlide.transitionIn());
+
+		this.transitionInTimeline.add(this.getSubTimeline('.component-map-pagination'));
 	}
 }
 
