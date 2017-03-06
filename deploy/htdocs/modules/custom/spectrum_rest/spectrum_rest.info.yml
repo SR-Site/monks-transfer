@@ -7,3 +7,4 @@ dependencies:
   - mm_rest
   - mm_slug
   - paragraphs
+  - mm_rest_search

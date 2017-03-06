@@ -183,7 +183,7 @@ class SearchApiRest extends SearchApiBaseFacetSource implements SearchApiFacetSo
    * {@inheritdoc}
    */
   public function calculateDependencies() {
-    return ['module' => ['mm_rest']];
+    return ['module' => ['node', 'mm_rest']];
   }
 
 }
