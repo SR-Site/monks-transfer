@@ -10,6 +10,15 @@ module.exports = function( grunt )
 	var blockDir = getConfig( 'input' );
 	var output = {blocks: [], references: [], enums: []};
 
+	// All supported primary types
+	const type = {
+		'ARRAY': 'Array',
+		'OBJECT': 'Object',
+		'STRING': 'string',
+		'NUMBER': 'number',
+		'BOOLEAN': 'boolean'
+	};
+
 	grunt.registerMultiTask(
 		'generate-block-documentation',
 		'Generate documentation for the blocks in the Blocks.ts file',
@@ -63,43 +72,62 @@ module.exports = function( grunt )
 	{
 		properties.forEach( function( property )
 		{
-			if( property.type === 'string' )
-			{
-				base[property.name] = property.placeholder || getConfig( 'placeholderValues.string' );
-			}
-			else if( property.type === 'boolean' )
-			{
-				base[property.name] = getConfig( 'placeholderValues.boolean' );
-			}
-			else if( property.type === 'number' )
-			{
-				base[property.name] = getConfig( 'placeholderValues.number' );
-			}
-			else if( hasReference( property.type, output.references ) )
-			{
-				var reference = hasReference( property.type, output.references );
+			var reference;
 
+			if( hasReference( property.type, output.references ) )
+			{
+				reference = hasReference( property.type, output.references );
+
+				// If we found a reference object, start generating the example JSON
 				base[property.name] = generateExampleJSON( reference.properties, {} );
 			}
 			else if( hasReference( property.type, output.enums ) )
 			{
-				var reference = hasReference( property.type, output.enums );
+				reference = hasReference( property.type, output.enums );
 
-				// As default value always choose the first option
+				// If we found a reference Enum, we always choose the first option as default
 				base[property.name] = reference.properties[0].value;
-			}
-			else if( property.type === 'Array' )
-			{
-				base[property.name] = [];
-				base[property.name].push( generateExampleJSON( property.properties, {} ) );
-			}
-			else if( property.type === 'Object' )
-			{
-				base[property.name] = generateExampleJSON( property.properties, {} );
 			}
 			else
 			{
-				base[property.name] = 'TODO: ' + property.type;
+				switch( property.type )
+				{
+					case type.STRING:
+					{
+						base[property.name] = property.placeholder || getConfig( 'placeholderValues.string' );
+
+						break;
+					}
+					case type.BOOLEAN:
+					{
+						base[property.name] = getConfig( 'placeholderValues.boolean' );
+
+						break;
+					}
+					case type.NUMBER:
+					{
+						base[property.name] = getConfig( 'placeholderValues.number' );
+
+						break;
+					}
+					case type.OBJECT:
+					{
+						base[property.name] = generateExampleJSON( property.properties, {} );
+
+						break;
+					}
+					case type.ARRAY:
+					{
+						base[property.name] = [];
+						base[property.name].push( generateExampleJSON( property.properties, {} ) );
+
+						break;
+					}
+					default:
+					{
+						base[property.name] = 'TODO: ' + property.type;
+					}
+				}
 			}
 		} );
 
