@@ -23,11 +23,7 @@ class BlockMapSecondaryController extends AbstractBlockComponentController<Block
 	{
 		// TODO: for release this data will be static since we need to figure out a way to manage image sequence entities in the CMS
 		super(element, Object.assign(options, {
-			"sequenceBackground": {
-				"normal": "data/sequence/map-secondary/desktop/map_bg.png",
-				"small": "data/sequence/map-secondary/mobile/map_bg_mobile.png",
-				"alt": "Background image"
-			},
+			"sequenceBackground": null,
 			"imageSequence": {
 				"image": {
 					"normal": "data/sequence/map-secondary/desktop/map_lines_",

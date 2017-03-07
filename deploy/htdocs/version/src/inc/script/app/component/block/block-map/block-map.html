@@ -4,11 +4,13 @@
 			<div class="solid-background"></div>
 			<div class="slides">
 				<div class="sequence-wrapper">
-					<img class="sequence-background abs-fill" data-bind="image:
-					{
-						image: data.sequenceBackground,
-						state: $root.deviceState()
-					}">
+					<!-- ko if: data.sequenceBackground -->
+						<img class="sequence-background abs-fill" data-bind="image:
+						{
+							image: data.sequenceBackground,
+							state: $root.deviceState()
+						}">
+					<!-- /ko -->
 					<!-- ko component: {
 						name: 'image-sequence',
 						onComplete: $root.controller.callbackCounter.get($root.controller.handleImageSequenceReady.bind($root.controller)),

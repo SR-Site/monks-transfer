@@ -13,7 +13,7 @@ interface IBlockMapOptions extends IAbstractBlockComponentOptions
 	 * @property
 	 * @description To save on image size the background of the image sequence is a separate image
 	 */
-	sequenceBackground:IImage;
+	sequenceBackground?:IImage;
 	/**
 	 * @property
 	 * @description The steps used to break the image sequence up
