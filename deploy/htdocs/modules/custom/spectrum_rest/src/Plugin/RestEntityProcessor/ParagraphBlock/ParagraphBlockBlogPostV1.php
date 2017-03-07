@@ -24,7 +24,22 @@ class ParagraphBlockBlogPostV1 extends SpectrumRestEntityProcessorBase {
   protected function getItemData($entity) {
 
     $data = parent::getCommonData($entity);
-    $article = $this->fieldProcessor->getFieldData($entity->get('field_article'), ['view_mode' => 'teaser']);
+
+    $node = $entity->get('field_article');
+
+    if ($node->isEmpty()) {
+      // If the current page is not an article, avoid the exception and return
+      // and empty object.
+      try {
+        $article = $this->entityProcessor->getEntityData($entity->getParentEntity(), 'v1', ['view_mode' => 'teaser']);
+      }
+      catch (\Exception $e) {
+        $article = [];
+      }
+    }
+    else {
+      $article = $this->fieldProcessor->getFieldData($node, ['view_mode' => 'teaser']);
+    }
 
     $data = [
       "id" => 'blogPost',
