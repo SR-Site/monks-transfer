@@ -2,6 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin;
 
+use Drupal\Core\Datetime\DateFormatter;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Field\FieldItemListInterface;
@@ -27,16 +28,25 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
   protected $aliasManager;
 
   /**
+   * The Date formatter service.
+   *
+   * @var \Drupal\Core\Datetime\DateFormatter
+   */
+  protected $dateFormatter;
+
+  /**
    * @param array $configuration
    * @param string $plugin_id
    * @param mixed $plugin_definition
    * @param \Drupal\mm_rest\Plugin\RestEntityProcessorManager $entity_processor
    * @param \Drupal\mm_rest\Plugin\RestFieldProcessorManager $field_processor
    * @param \Drupal\mm_rest\CacheableMetaDataCollectorInterface $cacheable_metadata_collector
+   * @param \Drupal\Core\Datetime\DateFormatter $date_formatter
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, RestEntityProcessorManager $entity_processor, RestFieldProcessorManager $field_processor, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, EntityRepositoryInterface $entity_repository, AliasManagerInterface $alias_manager) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, RestEntityProcessorManager $entity_processor, RestFieldProcessorManager $field_processor, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, EntityRepositoryInterface $entity_repository, AliasManagerInterface $alias_manager, DateFormatter $date_formatter) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $entity_processor, $field_processor, $cacheable_metadata_collector, $entity_repository);
     $this->aliasManager = $alias_manager;
+    $this->dateFormatter = $date_formatter;
   }
 
   /**
@@ -51,7 +61,8 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
       $container->get('plugin.manager.mm_rest_field_processor'),
       $container->get('mm_rest.cacheable_metadata_collector'),
       $container->get('entity.repository'),
-      $container->get('path.alias_manager')
+      $container->get('path.alias_manager'),
+      $container->get('date.formatter')
     );
   }
 

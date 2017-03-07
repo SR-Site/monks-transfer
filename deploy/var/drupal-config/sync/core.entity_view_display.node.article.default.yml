@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article.field_excerpt
     - field.field.node.article.field_header_theme
     - field.field.node.article.field_image
+    - field.field.node.article.field_links
     - field.field.node.article.field_market
     - field.field.node.article.field_platform
     - field.field.node.article.field_read_time
@@ -78,6 +79,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     label: hidden
+  field_links:
+    type: entity_reference_revisions_entity_view
+    weight: 111
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_market:
     weight: 106
     label: above

@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article.field_excerpt
     - field.field.node.article.field_header_theme
     - field.field.node.article.field_image
+    - field.field.node.article.field_links
     - field.field.node.article.field_market
     - field.field.node.article.field_platform
     - field.field.node.article.field_read_time
@@ -44,6 +45,7 @@ third_party_settings:
         - field_content
         - field_image
         - field_read_time
+        - field_links
         - field_category
         - field_document_type
         - field_market
@@ -97,7 +99,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
   field_category:
-    weight: 24
+    weight: 22
     settings:
       match_operator: CONTAINS
       size: 60
@@ -112,7 +114,7 @@ content:
     third_party_settings: {  }
     type: text_textarea
   field_document_type:
-    weight: 25
+    weight: 23
     settings:
       match_operator: CONTAINS
       size: 60
@@ -138,8 +140,19 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_links:
+    type: entity_reference_paragraphs
+    weight: 21
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
   field_market:
-    weight: 26
+    weight: 24
     settings:
       match_operator: CONTAINS
       size: 60
@@ -147,7 +160,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
   field_platform:
-    weight: 27
+    weight: 25
     settings:
       match_operator: CONTAINS
       size: 60
