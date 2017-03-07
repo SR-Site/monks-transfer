@@ -253,6 +253,7 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 
 						resolve(image);
 					})
+					.catch((reason) => console.log('[Unable to load image', reason));
 			}
 		});
 	}
