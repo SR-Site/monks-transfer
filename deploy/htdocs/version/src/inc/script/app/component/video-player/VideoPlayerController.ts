@@ -111,9 +111,9 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 				videoPlayer.off('ended');
 				videoPlayer.off('timeupdate');
 
-				// Remove the iFrame from the DOM
-				this.element.removeChild(videoPlayer.element);
-
+				// Do not remove the video player from the DOM because otherwise it has issues when creating a new instance.
+				// There is no actual destroy method, see ticket https://github.com/vimeo/player.js/issues/126
+				videoPlayer.element.style.display = 'none';
 				videoPlayer = null;
 			}
 			else
@@ -251,6 +251,8 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 			});
 
 		const player = (<Vimeo.Player>this._videoPlayer);
+
+		player.element.style.display = 'block';
 
 		if(DEBUG)
 		{
