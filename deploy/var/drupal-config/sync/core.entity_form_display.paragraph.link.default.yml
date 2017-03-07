@@ -23,7 +23,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_target:
-    weight: 2
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -37,7 +37,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_type:
-    weight: 3
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
