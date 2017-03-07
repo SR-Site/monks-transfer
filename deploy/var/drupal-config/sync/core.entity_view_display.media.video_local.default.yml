@@ -1,0 +1,25 @@
+uuid: 5d84f368-9067-481c-860e-fb9a0161c396
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.video_local.field_video_local
+    - media_entity.bundle.video_local
+  module:
+    - file
+id: media.video_local.default
+targetEntityType: media
+bundle: video_local
+mode: default
+content:
+  field_video_local:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

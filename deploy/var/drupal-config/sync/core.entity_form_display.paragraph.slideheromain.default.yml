@@ -3,17 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.slideheromain.field_file
+    - entity_browser.browser.video
     - field.field.paragraph.slideheromain.field_heading
     - field.field.paragraph.slideheromain.field_image
     - field.field.paragraph.slideheromain.field_link
     - field.field.paragraph.slideheromain.field_paragraph
     - field.field.paragraph.slideheromain.field_statistics
+    - field.field.paragraph.slideheromain.field_video
     - image.style.thumbnail
     - paragraphs.paragraphs_type.slideheromain
   module:
+    - entity_browser
     - field_group
-    - file
     - image
     - paragraphs
     - text
@@ -62,12 +63,6 @@ targetEntityType: paragraph
 bundle: slideheromain
 mode: default
 content:
-  field_file:
-    weight: 2
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
   field_heading:
     weight: 0
     settings:
@@ -76,7 +71,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_image:
-    weight: 3
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -111,6 +106,19 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
+  field_video:
+    weight: 3
+    settings:
+      entity_browser: video
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: default
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
 hidden:
   created: true
   status: true

@@ -1,20 +1,20 @@
-uuid: ca01800a-85f8-41c1-a516-2ed92029cd36
+uuid: a60f443b-855c-4bac-832a-3e9dd687091e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_file
-    - paragraphs.paragraphs_type.program
+    - field.storage.media.field_video_local
+    - media_entity.bundle.video_local
   module:
     - file
-id: paragraph.program.field_file
-field_name: field_file
-entity_type: paragraph
-bundle: program
-label: Video
+id: media.video_local.field_video_local
+field_name: field_video_local
+entity_type: media
+bundle: video_local
+label: Video_local
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
