@@ -79,8 +79,7 @@ module.exports = function( grunt )
 			{
 				var reference = hasReference( property.type, output.references );
 
-				base[property.name] = {};
-				base[property.name] = generateExampleJSON( reference.properties, base[property.name] );
+				base[property.name] = generateExampleJSON( reference.properties, {} );
 			}
 			else if( hasReference( property.type, output.enums ) )
 			{
@@ -93,6 +92,10 @@ module.exports = function( grunt )
 			{
 				base[property.name] = [];
 				base[property.name].push( generateExampleJSON( property.properties, {} ) );
+			}
+			else if( property.type === 'Object' )
+			{
+				base[property.name] = generateExampleJSON( property.properties, {} );
 			}
 			else
 			{
