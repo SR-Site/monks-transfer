@@ -55,8 +55,11 @@ class ContentService extends AbstractService
 	 */
 	public loadMore(endpoint: string, offset: number, limit: number, filter: {[filterType: string]: string}): Promise<IGatewayResult<{blocks: Array<IBlock>}>>
 	{
-		// TODO: Strip out the /api/v1 part, backend should not return it though!
-		endpoint = endpoint.replace('/api/v1/', '');
+		if(endpoint.indexOf('/') === 0)
+		{
+			// Strip out the first "/"
+			endpoint = endpoint.substring(1);
+		}
 
 		return this.gateway.get(
 			endpoint,
