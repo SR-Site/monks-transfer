@@ -4,9 +4,9 @@ import IBlockMapOptions from "app/component/block/block-map/IBlockMapOptions";
 import BlockMapViewModel from "app/component/block/block-map/BlockMapViewModel";
 import Log from "lib/temple/util/Log";
 import ImageSequenceController from "../../image-sequence/ImageSequenceController";
-import MapSliderController from "../../map-slider/MapSliderController";
-import CommonEvent from "../../../../lib/temple/event/CommonEvent";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
+import AbstractTransitionComponentController from "../../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
+import MapPaginationController from "../../map-pagination/MapPaginationController";
 
 class BlockMapController extends AbstractBlockComponentController<BlockMapViewModel, IBlockMapOptions, BlockMapTransitionController>
 {
@@ -17,6 +17,8 @@ class BlockMapController extends AbstractBlockComponentController<BlockMapViewMo
 	 */
 	private _debug: Log = new Log('app.component.BlockMap');
 
+	private _slides: {[index: string]: AbstractTransitionComponentController<any, any, any>} = {};
+	private _pagination: MapPaginationController;
 	private _imageSequence: ImageSequenceController;
 
 	constructor(element: HTMLElement, options: IBlockMapOptions)
@@ -48,7 +50,19 @@ class BlockMapController extends AbstractBlockComponentController<BlockMapViewMo
 	{
 		super.init();
 
+		this.viewModel.slides(this.options.steps);
+
 		this._debug.log('Init');
+	}
+
+	/**
+	 * @public
+	 * @method get activeSlide
+	 * @returns {any<number>}
+	 */
+	public get activeSlide(): AbstractTransitionComponentController<any, any, any>
+	{
+		return this._slides[this.viewModel.activeSlide()];
 	}
 
 	/**
@@ -64,13 +78,44 @@ class BlockMapController extends AbstractBlockComponentController<BlockMapViewMo
 	 * @public
 	 * @method handleMapSliderReady
 	 */
-	public handleMapSliderReady(controller: MapSliderController): void
+	public handleMapPaginationReady(controller: MapPaginationController): void
 	{
-		controller.addEventListener(CommonEvent.UPDATE, this.handleMapSliderProgressChange.bind(this));
-
-		this.applyThreeWayBinding(controller.activeIndex, this.viewModel.activeIndex);
+		this._pagination = controller;
+		this._pagination.addEventListener(
+			MapPaginationController.SELECT_INDEX,
+			(event: DataEvent<{index: number}>) => this.openSlide(event.data.index)
+		);
 	}
 
+	/**
+	 * @public
+	 * @method handleSlideReady
+	 */
+	public handleSlideReady(index: number, controller: AbstractTransitionComponentController<any, any, any>): void
+	{
+		// Store the slide reference
+		this._slides[index] = controller;
+	}
+
+	/**
+	 * @private
+	 * @method openSlide
+	 */
+	private openSlide(index: number): void
+	{
+		const stepCount = this.options.steps.length - 1;
+		const currentProgress = this.viewModel.activeSlide() / stepCount;
+		const targetProgress = index / stepCount;
+
+		this._slides[this.viewModel.activeSlide()].transitionOut()
+			.then(() => this._imageSequence.playFromTo(
+				this.progressToFrameNumber(currentProgress),
+				this.progressToFrameNumber(targetProgress)
+			))
+			.then(() => this._slides[index].transitionIn())
+			.then(() => this.viewModel.activeSlide(index))
+			.then(() => this._pagination.transitionInProgress = false);
+	}
 
 	/**
 	 * @private

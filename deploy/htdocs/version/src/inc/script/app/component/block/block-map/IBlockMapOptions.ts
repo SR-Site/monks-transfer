@@ -23,7 +23,7 @@ interface IBlockMapOptions extends IAbstractBlockComponentOptions
 		 * @property
 		 * @description The label displayed on the step
 		 */
-		label: string
+		label: string;
 		/**
 		 * @property
 		 * @description The heading displayed in the carousel

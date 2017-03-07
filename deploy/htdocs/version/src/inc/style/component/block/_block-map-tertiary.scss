@@ -32,6 +32,10 @@
 		.slides {
 			@include size(100%, 455px);
 			background: transparent;
+
+			&:before {
+				display: none;
+			}
 		}
 
 		.solid-background {

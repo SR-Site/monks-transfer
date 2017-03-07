@@ -1,77 +1,67 @@
 .component-block-map {
 	user-select: none;
 
-	.aspect-ratio-wrapper {
-		position: relative;
+	.slide-wrapper {
+		width: calc(100% - #{$sizeGrid * 3});
+		margin-left: $sizeGrid * 3;
+	}
+
+	.slides {
+		@include aspect-ratio(1100px, 550px);
 		background: $colorLightGrey;
-		padding: $sizeGrid * 2 $sizeGrid * 4;
-		font-size: 0;
 	}
 
-	.map-content {
-		@include size($sizeGrid * 9, auto);
-		display: inline-block;
-		vertical-align: bottom;
-		position: relative;
-		margin-bottom: $sizeGrid * 3;
-		min-height: $sizeGrid * 12.5;
-
-		.pagination-number {
-			@include pos(-10px, auto, auto, 0);
-			transform: translate(-50%, -50%);
-			position: absolute;
-		}
-
-		.heading {
-			margin-bottom: $sizeGrid;
-		}
-	}
-
-	.map-image-wrapper {
-		@include size(calc(100% - #{$sizeGrid * 9}), auto);
-		display: inline-block;
-		vertical-align: top;
-	}
-
-	.map-image {
+	.solid-background {
+		@include offset(0, 0);
+		@include aspect-ratio(1100px, 550px, false);
 		@include size(100%, auto);
-		@include aspect-ratio(800px, 560px);
+		position: absolute;
+		background: transparent;
+	}
 
-		.sequence-background,
+	.sequence-wrapper {
+		@include coverer();
+		position: absolute;
+	}
+
+	.component-map-pagination {
+		margin-top: $sizeGrid;
+	}
+
+	@include respond-to('SMALL') {
+		.slide-wrapper {
+			width: 100%;
+			margin: 0;
+		}
+
+		.sequence-wrapper {
+			@include aspect-ratio(640px, 448px, false);
+			@include size(100%, auto);
+			@include pos(0, 0, auto, 0);
+		}
+
+		.slides {
+			@include size(100%, 455px);
+			background: transparent;
+
+			&:before {
+				display: none;
+			}
+		}
+
 		.component-image-sequence {
 			@include coverer();
-			@include size(100%);
-		}
-	}
-
-	.component-map-slider {
-		@include size(100%, $sizeGrid * 2);
-		position: relative;
-	}
-
-	@include respond-to(X_LARGE) {
-		.aspect-ratio-wrapper {
-			padding: $sizeGrid * 2;
 		}
 
-	}
+		.solid-background {
+			@include offset(0, 0);
+			@include size(100%, 340px);
+			background: $colorLightGrey;
+			position: absolute;
 
-	@include respond-to(SMALL) {
-		.aspect-ratio-wrapper {
-			display: flex;
-			flex-direction: column;
-		}
-
-		.map-image-wrapper {
-			width: 100%;
-			order: 0;
-		}
-
-		.map-content {
-			order: 1;
-			width: 100%;
-			margin-top: $sizeGrid * 2;
-			min-height: 0;
+			&:before {
+				display: none;
+			}
 		}
 	}
 }

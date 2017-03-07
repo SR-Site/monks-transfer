@@ -7,7 +7,7 @@ interface ITertiaryMapSlide
 	 * @property
 	 * @description The slide type
 	 */
-		type: MapTertiarySlideType;
+	type: MapTertiarySlideType;
 	/**
 	 * @property
 	 * @description The main heading on the slide

@@ -3,7 +3,7 @@ import ITertiaryMapSlide from "../../data/interface/ITertiaryMapSlide";
 
 interface IMapPaginationOptions extends IAbstractTransitionComponentOptions
 {
-	slides: KnockoutObservableArray<ITertiaryMapSlide>;
+	slides: KnockoutObservableArray<ITertiaryMapSlide|{label: string; heading: string; paragraph: string;}>;
 }
 
 export default IMapPaginationOptions;
