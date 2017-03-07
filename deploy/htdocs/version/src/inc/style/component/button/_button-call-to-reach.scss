@@ -27,13 +27,18 @@
 		}
 	}
 
-	@include respond-to(SMALL) {
-		@include size(auto, $sizeGrid * 4);
+	@include respond-to(MEDIUM) {
+		@include size(auto, $sizeGrid * 2);
 		padding: 0 $sizeGrid;
 
 		.theme-light & {
 			color: $colorPrimary;
 		}
+
+	}
+
+	@include respond-to(SMALL) {
+		height: $sizeGrid * 4;
 
 		.text {
 			font-size: mobile-size(2.2rem);
