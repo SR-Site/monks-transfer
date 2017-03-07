@@ -21,6 +21,7 @@
 
 	.sequence-wrapper {
 		@include coverer();
+		@include size(100%);
 		position: absolute;
 	}
 
@@ -51,6 +52,7 @@
 
 		.component-image-sequence {
 			@include coverer();
+			@include size(100%);
 		}
 
 		.solid-background {

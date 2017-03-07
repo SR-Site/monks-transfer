@@ -58,7 +58,6 @@
  * Places an element absolute on top of the entire wrapper
  */
 @mixin coverer {
-	@include size(100%);
 	@include pos(0, 0, 0, 0);
 	position: absolute;
 }
