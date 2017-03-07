@@ -97,7 +97,7 @@
 		}
 
 		.icon {
-			@include size($sizeGrid * 4);
+			@include size($sizeGrid * 3.5);
 			display: inline-block;
 			vertical-align: middle;
 		}
