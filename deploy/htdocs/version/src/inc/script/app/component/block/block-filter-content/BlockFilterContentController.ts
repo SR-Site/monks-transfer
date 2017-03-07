@@ -81,8 +81,6 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	 */
 	private handleFilterChange(event: DataEvent<{[filterType: string]: string}>): void
 	{
-		console.log('handleFilterChange: ', event.data);
-
 		// Save Selected Filters
 		this._filters = event.data;
 
@@ -100,7 +98,7 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 		this.viewModel.activePageIndex(0);
 
 		// Fetch New Content
-		this.loadMore();
+		this.loadPage();
 	}
 
 	/**
