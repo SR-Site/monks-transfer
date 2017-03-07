@@ -1,7 +1,5 @@
 module.exports = function( grunt )
 {
-	const ProgressBar = require( 'progress' );
-
 	const fs = require( 'fs' );
 	const path = require( 'path' );
 	const upperCamelCase = require( 'uppercamelcase' );
@@ -9,7 +7,7 @@ module.exports = function( grunt )
 	const typhen = require( 'typhen' );
 	const jsonfile = require( 'jsonfile' );
 
-	var blockDir = getConfig('input');
+	var blockDir = getConfig( 'input' );
 	var output = {blocks: [], references: [], enums: []};
 
 	grunt.registerMultiTask(
@@ -20,18 +18,13 @@ module.exports = function( grunt )
 			const done = this.async();
 			const blockDiretories = getDirectories( blockDir );
 
-			var bar = new ProgressBar( 'Building documentation [:bar] :percent :block', {
-				complete: '=',
-				incomplete: '-',
-				width: 20,
-				total: blockDiretories.length - 1
-			} );
-
 			// Loop through all the blocks
 			blockDiretories.forEach( function( blockDirectory, index )
 			{
 				const blockId = blockDirectoryToBlockId( blockDirectory );
 				const properties = parseBlock( blockDirectory ).reverse();
+
+				console.log( '[' + Math.round( index / (blockDiretories.length - 1) * 100 ) + '%] Parsing block with id: ' + blockId );
 
 				output.blocks.push( {
 					blockId: blockId,
@@ -41,15 +34,13 @@ module.exports = function( grunt )
 						data: generateExampleJSON( properties, {} )
 					}, null, 4 )
 				} );
-
-				bar.tick( {'block': blockId} );
 			} );
 
 			console.log( '[Info] All blocks have been parsed, writing to file..' );
 
 			// All done, write the json file
 			jsonfile.writeFile(
-				getConfig('output')+ 'data.json',
+				getConfig( 'output' ) + 'data.json',
 				output,
 				{
 					spaces: 4
@@ -74,15 +65,15 @@ module.exports = function( grunt )
 		{
 			if( property.type === 'string' )
 			{
-				base[property.name] = property.placeholder || getConfig('placeholderValues.string');
+				base[property.name] = property.placeholder || getConfig( 'placeholderValues.string' );
 			}
 			else if( property.type === 'boolean' )
 			{
-				base[property.name] = getConfig('placeholderValues.boolean');
+				base[property.name] = getConfig( 'placeholderValues.boolean' );
 			}
 			else if( property.type === 'number' )
 			{
-				base[property.name] = getConfig('placeholderValues.number');
+				base[property.name] = getConfig( 'placeholderValues.number' );
 			}
 			else if( hasReference( property.type, output.references ) )
 			{
@@ -124,7 +115,7 @@ module.exports = function( grunt )
 		const path = blockDirectoryToOptionsPath( blockDirectory );
 
 		// Parse the options file with typhen to get all the properties
-		const typhenResult = typhen.parse( path);
+		const typhenResult = typhen.parse( path );
 
 		// TODO: It kinda messes up when you reference to a interface in an array!
 		const typenTypes = typhenResult.types[0];
