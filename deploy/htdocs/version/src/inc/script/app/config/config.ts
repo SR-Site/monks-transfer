@@ -120,6 +120,7 @@ if(host.indexOf('mediamonks.local') != -1)
 switch(host.split(':').shift())
 {
 	case 'localhost':
+	case 'spectrum.dev':
 	{
 		environment = EnvironmentNames.LOCAL;
 		break;
