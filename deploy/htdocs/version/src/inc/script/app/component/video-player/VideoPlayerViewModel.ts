@@ -4,10 +4,12 @@ import IVideoPlayerOptions from 'app/component/video-player/IVideoPlayerOptions'
 
 import ko = require('knockout');
 import MouseEventHelper from "../../util/MouseEventHelper";
+import VideoType from "../../data/enum/type/VideoType";
 
 class VideoPlayerViewModel extends AbstractComponentViewModel<VideoPlayerController, IVideoPlayerOptions>
 {
 	public MouseEventHelper: Class = MouseEventHelper;
+	public VideoType: Enum = VideoType;
 
 	public _mouseMoveTimeout: number;
 
@@ -45,6 +47,8 @@ class VideoPlayerViewModel extends AbstractComponentViewModel<VideoPlayerControl
 		clearTimeout(this._mouseMoveTimeout);
 
 		this.MouseEventHelper = null;
+		this.VideoType = null;
+
 		this._mouseMoveTimeout = null;
 
 		// always call this last

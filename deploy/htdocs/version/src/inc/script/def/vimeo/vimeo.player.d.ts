@@ -7,6 +7,11 @@ declare module Vimeo
 		constructor(element:HTMLElement|Node|string|Object, options?:VimeoPlayerOptions)
 
 		/**
+		 * The injected iFrame element
+		 */
+		element:HTMLIFrameElement;
+
+		/**
 		 * Add an event listener for the specified event. Will call the callback with a single parameter, data, that contains the data for that event. See events below for details.
 		 * @param event
 		 * @param callback

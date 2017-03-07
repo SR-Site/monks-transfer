@@ -30,6 +30,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 */
 	private _videoPlayer: Vimeo.Player|VideoPlayer;
 	private _videoControls: VideoControlsController;
+	private _enableCustomControls:boolean = false;
 
 
 	/**
@@ -104,8 +105,16 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 
 			if(options.video.type == VideoType.VIMEO)
 			{
-				(<Vimeo.Player>this._videoPlayer).off('ended');
-				(<Vimeo.Player>this._videoPlayer).off('timeupdate')
+				let videoPlayer:Vimeo.Player = <Vimeo.Player>this._videoPlayer;
+
+				// Remove all event listeners
+				videoPlayer.off('ended');
+				videoPlayer.off('timeupdate');
+
+				// Remove the iFrame from the DOM
+				this.element.removeChild(videoPlayer.element);
+
+				videoPlayer = null;
 			}
 			else
 			{
@@ -118,6 +127,10 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 		}
 	}
 
+	/**
+	 * @public
+	 * @method hideControls
+	 */
 	public hideControls(): void
 	{
 		if(this._videoControls)
@@ -187,7 +200,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 */
 	public setControlVisibility(isActive: boolean): void
 	{
-		if(this._videoControls)
+		if(this._videoControls && this._enableCustomControls)
 		{
 			this._videoControls.isActive = isActive;
 		}
@@ -199,6 +212,8 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 */
 	private createInternalVideoPlayer(): void
 	{
+		this._enableCustomControls = true;
+
 		this._videoPlayer = new VideoPlayer(
 			this.element,
 			{
@@ -221,6 +236,8 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 */
 	private createVimeoPlayer(): void
 	{
+		this._enableCustomControls = false;
+
 		this._videoPlayer = new Vimeo.Player(
 			this.element,
 			{
