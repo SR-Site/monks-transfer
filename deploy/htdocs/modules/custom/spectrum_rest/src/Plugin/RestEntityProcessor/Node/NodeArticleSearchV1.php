@@ -26,6 +26,8 @@ class NodeArticleSearchV1 extends NodeArticleTeaserV1 {
       "data" => parent::getItemData($entity),
     ];
 
+    $data["data"]["paragraph"] = $this->fieldProcessor->getFieldData($entity->get('field_excerpt'));
+
     return $data;
   }
 
