@@ -1,0 +1,12 @@
+diff --git a/mm_gaia.libraries.yml b/mm_gaia.libraries.yml
+index 39d021c..115bded 100644
+--- a/mm_gaia.libraries.yml
++++ b/mm_gaia.libraries.yml
+@@ -2,7 +2,6 @@
+ gaia:
+   css:
+     theme:
+-      base_href/inc/style/fonts.css: { preprocess: false, minified: true }
+       base_href/inc/style/screen.css: { preprocess: false, minified: true }
+ 
+ gaia-src:
