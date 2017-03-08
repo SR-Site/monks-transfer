@@ -12,6 +12,7 @@ import Promise = require("bluebird");
 import bowser = require('bowser');
 import VideoControlsController from "../video-controls/VideoControlsController";
 import DataEvent from "../../../lib/temple/event/DataEvent";
+import URLUtils from "../../../lib/temple/util/URLUtils";
 
 class VideoPlayerController extends AbstractComponentController<VideoPlayerViewModel, IVideoPlayerOptions>
 {
@@ -30,7 +31,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 */
 	private _videoPlayer: Vimeo.Player|VideoPlayer;
 	private _videoControls: VideoControlsController;
-	private _enableCustomControls:boolean = false;
+	private _enableCustomControls: boolean = false;
 
 
 	/**
@@ -105,7 +106,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 
 			if(options.video.type == VideoType.VIMEO)
 			{
-				let videoPlayer:Vimeo.Player = <Vimeo.Player>this._videoPlayer;
+				let videoPlayer: Vimeo.Player = <Vimeo.Player>this._videoPlayer;
 
 				// Remove all event listeners
 				videoPlayer.off('ended');
@@ -232,6 +233,26 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 
 	/**
 	 * @private
+	 * @method vimeoUrlToVimeoId
+	 * @param url
+	 * @returns {RegExpMatchArray|null}
+	 */
+	private vimeoUrlToVimeoId(url: string): string
+	{
+		if(URLUtils.isAbsolute(url))
+		{
+			const match = url.match(/(videos|video|channels|\.com)\/([\d]+)/);
+
+			return match.length ? match[2] : null;
+		}
+		else
+		{
+			return url;
+		}
+	}
+
+	/**
+	 * @private
 	 * @method createVideoPlayer
 	 */
 	private createVimeoPlayer(): void
@@ -241,7 +262,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 		this._videoPlayer = new Vimeo.Player(
 			this.element,
 			{
-				id: this.options.video.url,
+				id: this.vimeoUrlToVimeoId(this.options.video.url),
 				width: 640,
 				height: 480,
 				loop: this.options.loop,
