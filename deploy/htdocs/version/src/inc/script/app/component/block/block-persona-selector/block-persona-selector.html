@@ -30,7 +30,7 @@
 		<div class="persona-content" data-bind="foreach: data.personas">
 			<div class="persona abs-center">
 				<h2 class="heading heading-04" data-bind="html: $data.heading"></h2>
-				<p class="copy copy-01" data-bind="html: $data.paragraph"></p>
+				<p class="copy copy-01" data-bind="html: $root.StringUtils.truncate($data.paragraph, 150)"></p>
 				<!-- ko component: {
 						name: 'button/button-main',
 						onComplete: $root.controller.callbackCounter.get(),
