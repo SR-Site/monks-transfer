@@ -3,14 +3,9 @@
 function build_frontend(){
     changeDir ${FRONTEND_BUILDROOT}
     npmCommand install
-    npmCommand install
-    gruntCommand clean
-    tsdCommand install
     gruntCommand ts
     gruntCommand sass
     gruntCommand postcss
-    gruntCommand requirejs
-    gruntCommand clean-build
     gruntCommand generate-block-documentation
     blockDocumentation ../block-documentation/
 }
