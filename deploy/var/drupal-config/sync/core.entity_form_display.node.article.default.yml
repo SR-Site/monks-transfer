@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.article.field_market
     - field.field.node.article.field_platform
     - field.field.node.article.field_read_time
+    - field.field.node.article.field_subheading
     - field.field.node.article.field_theme
     - image.style.thumbnail
     - node.type.article
@@ -40,8 +41,9 @@ third_party_settings:
     group_tab_fields:
       children:
         - title
-        - field_excerpt
+        - field_subheading
         - field_theme
+        - field_excerpt
         - field_content
         - field_image
         - field_read_time
@@ -99,21 +101,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
   field_category:
-    weight: 22
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-  field_content:
-    weight: 18
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-  field_document_type:
     weight: 23
     settings:
       match_operator: CONTAINS
@@ -121,8 +108,23 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
+  field_content:
+    weight: 19
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_document_type:
+    weight: 24
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
   field_excerpt:
-    weight: 16
+    weight: 18
     settings:
       size: 60
       placeholder: ''
@@ -135,14 +137,14 @@ content:
     type: options_select
   field_image:
     type: image_image
-    weight: 19
+    weight: 20
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
   field_links:
     type: entity_reference_paragraphs
-    weight: 21
+    weight: 22
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -152,14 +154,6 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
   field_market:
-    weight: 24
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
-  field_platform:
     weight: 25
     settings:
       match_operator: CONTAINS
@@ -167,12 +161,27 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
+  field_platform:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
   field_read_time:
-    weight: 20
+    weight: 21
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+  field_subheading:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_theme:
     weight: 17
     settings: {  }

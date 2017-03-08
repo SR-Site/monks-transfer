@@ -28,10 +28,10 @@ class NodeArticleTeaserV1 extends SpectrumRestEntityProcessorBase {
       "author" => $this->entityProcessor->getEntityData($entity->getRevisionAuthor(), 'v1'),
       "tags" => $this->getTags($entity),
       "views" => 0,
-      "time" => $this->fieldProcessor->getFieldData($entity->get('field_read_time')) . ":00",
+      "time" => (int) $this->fieldProcessor->getFieldData($entity->get('field_read_time')),
       "date" => $this->dateFormatter->format($entity->getCreatedTime(), 'custom', 'd/m/Y'),
-      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_content')),
-      "subheading" => $this->fieldProcessor->getFieldData($entity->get('field_excerpt')),
+      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_excerpt')),
+      "subHeading" => $this->fieldProcessor->getFieldData($entity->get('field_subheading')),
       "heading" => $entity->label(),
     ];
 
