@@ -1,0 +1,19 @@
+uuid: dcd791e0-b3e2-4622-bbe3-55da0a798400
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - media_entity
+id: media.field_video_url
+field_name: field_video_url
+entity_type: media
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

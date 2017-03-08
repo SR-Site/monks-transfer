@@ -3,17 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.program.field_file
+    - entity_browser.browser.video
     - field.field.paragraph.program.field_heading
     - field.field.paragraph.program.field_image
     - field.field.paragraph.program.field_label
     - field.field.paragraph.program.field_paragraph
     - field.field.paragraph.program.field_tags
     - field.field.paragraph.program.field_title
+    - field.field.paragraph.program.field_video
     - image.style.thumbnail
     - paragraphs.paragraphs_type.program
   module:
-    - file
+    - entity_browser
     - image
     - text
 id: paragraph.program.default
@@ -21,12 +22,6 @@ targetEntityType: paragraph
 bundle: program
 mode: default
 content:
-  field_file:
-    weight: 6
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
   field_heading:
     weight: 1
     settings:
@@ -42,7 +37,7 @@ content:
     third_party_settings: {  }
     type: image_image
   field_label:
-    weight: 5
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -56,7 +51,7 @@ content:
     third_party_settings: {  }
     type: text_textarea
   field_tags:
-    weight: 7
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -64,12 +59,25 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
   field_title:
-    weight: 4
+    weight: 3
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_video:
+    weight: 5
+    settings:
+      entity_browser: video
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: default
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
 hidden:
   created: true
   status: true

@@ -29,7 +29,7 @@ class ParagraphSlideHeroMainV1 extends SpectrumRestEntityProcessorBase {
       "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
       "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
       "background" => $this->image($entity->get('field_image')),
-      "backgroundVideo" => $this->video($entity->get('field_file')),
+      "backgroundVideo" => $this->fieldProcessor->getFieldData($entity->get('field_video')) ?: [],
       "link" => $this->fieldProcessor->getFieldData($entity->get('field_link')),
       "statistics" => $statistics ?: NULL,
     ];

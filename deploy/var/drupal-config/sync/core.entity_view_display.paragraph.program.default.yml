@@ -3,17 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.program.field_file
     - field.field.paragraph.program.field_heading
     - field.field.paragraph.program.field_image
     - field.field.paragraph.program.field_label
     - field.field.paragraph.program.field_paragraph
     - field.field.paragraph.program.field_tags
     - field.field.paragraph.program.field_title
+    - field.field.paragraph.program.field_video
     - image.style.preview_500xauto
     - paragraphs.paragraphs_type.program
   module:
-    - file
     - image
     - text
 id: paragraph.program.default
@@ -21,12 +20,6 @@ targetEntityType: paragraph
 bundle: program
 mode: default
 content:
-  field_file:
-    weight: 6
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: file_default
   field_heading:
     weight: 1
     label: above
@@ -69,4 +62,11 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_video:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
 hidden: {  }

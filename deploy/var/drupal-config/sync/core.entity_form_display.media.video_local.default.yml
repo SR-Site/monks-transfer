@@ -1,0 +1,24 @@
+uuid: 1a6d56c7-1445-4a2d-aa22-c6b757ae2732
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.video_local.field_video_local
+    - media_entity.bundle.video_local
+  module:
+    - file
+id: media.video_local.default
+targetEntityType: media
+bundle: video_local
+mode: default
+content:
+  field_video_local:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+hidden:
+  created: true
+  name: true
+  uid: true

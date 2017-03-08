@@ -22,8 +22,12 @@ class NodeArticleSearchV1 extends NodeArticleTeaserV1 {
   protected function getItemData($entity) {
 
     $data = [
-      "id" => "articleTeaser",
-      "data" => parent::getItemData($entity),
+      "theme" => (int) $entity->get('field_theme')->value,
+      "tags" => $this->getTags($entity),
+      "image" => $this->image($entity->get('field_image')),
+      "target" => $this->aliasManager->getAliasByPath('/' . $entity->toUrl()->getInternalPath()),
+      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_excerpt')),
+      "heading" => $entity->label(),
     ];
 
     return $data;

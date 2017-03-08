@@ -11,8 +11,8 @@ field_name: field_article
 entity_type: paragraph
 bundle: blockblogpost
 label: Article
-description: ''
-required: true
+description: 'Article to show. If you leave it empty, it will show the current article if the actual URL is an article.'
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

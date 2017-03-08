@@ -1,0 +1,34 @@
+uuid: c68177d4-9f3a-49a9-8eb3-ba087dc0657e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.video_external.field_media_video_embed_field
+    - image.style.medium
+    - media_entity.bundle.video_external
+  module:
+    - image
+id: media.video_external.default
+targetEntityType: media
+bundle: video_external
+mode: default
+content:
+  name:
+    type: string
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  thumbnail:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_video_embed_field: true
+  uid: true

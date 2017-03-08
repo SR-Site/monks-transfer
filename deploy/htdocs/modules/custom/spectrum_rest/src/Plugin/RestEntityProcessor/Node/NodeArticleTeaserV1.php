@@ -24,11 +24,12 @@ class NodeArticleTeaserV1 extends SpectrumRestEntityProcessorBase {
   protected function getItemData($entity) {
 
     $data = [
-      "theme" => (int) $entity->get('field_theme')->value,
+      "social" => $this->getItems($entity->get('field_links')),
+      "author" => $this->entityProcessor->getEntityData($entity->getRevisionAuthor(), 'v1'),
       "tags" => $this->getTags($entity),
-      "image" => $this->image($entity->get('field_image')),
-      "target" => $this->aliasManager->getAliasByPath('/' . $entity->toUrl()->getInternalPath()),
+      "date" => $this->dateFormatter->format($entity->getCreatedTime(), 'custom', 'd/m/Y'),
       "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_content')),
+      "subheading" => $this->fieldProcessor->getFieldData($entity->get('field_excerpt')),
       "heading" => $entity->label(),
     ];
 

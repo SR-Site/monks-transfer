@@ -31,7 +31,7 @@ class ParagraphProgramV1 extends SpectrumRestEntityProcessorBase {
         "ageRange" => $this->fieldProcessor->getFieldData($entity->get('field_title')),
         "demographic" => $this->fieldProcessor->getFieldData($entity->get('field_label')),
       ],
-      "video" => $this->video($entity->get('field_file')),
+      "video" => $this->fieldProcessor->getFieldData($entity->get('field_video')) ?: [],
       "tags" => $this->getItems($entity->get('field_tags'))
     ];
 

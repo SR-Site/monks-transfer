@@ -1,0 +1,15 @@
+uuid: e2cd5018-8741-40d4-bf77-4689f454add1
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_video
+id: video_local
+label: 'Video local'
+description: ''
+type: video
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_video_local
+field_map: {  }
