@@ -96,7 +96,7 @@
 	<script type="text/html" id="table">
 		<table class="table">
 			<thead>
-				<tr data-bind="foreach: Object.keys($data[0])">
+				<tr data-bind="foreach: Object.keys($data[0] || {})">
 					<!-- ko if: skippedProperties.indexOf($data) == -1 -->
 						<th data-bind="html: $data"></th>
 					<!-- /ko -->
