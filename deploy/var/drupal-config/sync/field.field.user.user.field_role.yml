@@ -1,16 +1,16 @@
-uuid: cdacac3b-07e2-4e39-9f81-3c9f3e04e707
+uuid: 89a4fc8f-8fb5-4a0c-9f76-4d7307de7a89
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_title
+    - field.storage.user.field_role
   module:
     - user
-id: user.user.field_title
-field_name: field_title
+id: user.user.field_role
+field_name: field_role
 entity_type: user
 bundle: user
-label: Title
+label: Role
 description: ''
 required: true
 translatable: false
