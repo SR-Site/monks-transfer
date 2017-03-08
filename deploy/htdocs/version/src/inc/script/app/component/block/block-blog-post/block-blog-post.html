@@ -21,14 +21,18 @@
 			</div>
 
 			<ul class="blog-details">
+				<!-- ko if: data.time -->
 				<li>
 					<span class="icon" data-bind="icon: 'time'"></span>
 					<!-- ko text: time --><!-- /ko -->
 				</li>
+				<!-- /ko -->
+				<!-- ko if: data.views -->
 				<li>
 					<span class="icon" data-bind="icon: 'views'"></span>
 					<!-- ko text: views --><!-- /ko -->
 				</li>
+				<!-- /ko -->
 
 				<!-- ko foreach: social -->
 					<li>

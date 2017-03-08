@@ -353,6 +353,24 @@
                     ]
                 },
                 {
+                    "name": "views",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The amount of views on the article",
+                    "placeholder": "24:00",
+                    "properties": []
+                },
+                {
+                    "name": "time",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The reading time of the article",
+                    "placeholder": "24:00",
+                    "properties": []
+                },
+                {
                     "name": "date",
                     "type": "string",
                     "required": true,
@@ -389,7 +407,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blogPost\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"social\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"author\": {\n            \"name\": \"Lorem ipsum dolor sit amet\",\n            \"role\": \"Lorem ipsum dolor sit amet\",\n            \"image\": {\n                \"normal\": \"path/to/image.jpg\",\n                \"small\": \"path/to/image.jpg\",\n                \"alt\": \"Lorem ipsum dolor sit amet\"\n            }\n        },\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"date\": \"01/01/2017\",\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"subHeading\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"blogPost\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"social\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"author\": {\n            \"name\": \"Lorem ipsum dolor sit amet\",\n            \"role\": \"Lorem ipsum dolor sit amet\",\n            \"image\": {\n                \"normal\": \"path/to/image.jpg\",\n                \"small\": \"path/to/image.jpg\",\n                \"alt\": \"Lorem ipsum dolor sit amet\"\n            }\n        },\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"views\": \"24:00\",\n        \"time\": \"24:00\",\n        \"date\": \"01/01/2017\",\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"subHeading\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
             "blockId": "button",
@@ -1473,7 +1491,7 @@
                 {
                     "name": "sequenceBackground",
                     "type": "IImage",
-                    "required": true,
+                    "required": false,
                     "defaultValue": "null",
                     "description": "To save on image size the background of the image sequence is a separate image",
                     "placeholder": "",
@@ -1533,7 +1551,7 @@
                 {
                     "name": "sequenceBackground",
                     "type": "IImage",
-                    "required": true,
+                    "required": false,
                     "defaultValue": "null",
                     "description": "To save on image size the background of the image sequence is a separate image",
                     "placeholder": "",
