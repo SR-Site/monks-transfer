@@ -1,0 +1,19 @@
+uuid: 5dfd1457-76b5-4e2e-bae9-653e1f5b8931
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subheading
+    - node.type.article
+id: node.article.field_subheading
+field_name: field_subheading
+entity_type: node
+bundle: article
+label: Subheading
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

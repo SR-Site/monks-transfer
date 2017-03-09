@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_name
+    - field.field.user.user.field_role
     - field.field.user.user.field_title
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -16,8 +18,15 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  field_title:
-    weight: 6
+  field_name:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_role:
+    weight: 8
     label: above
     settings:
       link_to_entity: false
@@ -33,4 +42,5 @@ content:
       image_link: content
     third_party_settings: {  }
     label: hidden
-hidden: {  }
+hidden:
+  field_title: true

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.video
+    - entity_browser.browser.video_internal
     - field.field.paragraph.slideheromain.field_heading
     - field.field.paragraph.slideheromain.field_image
     - field.field.paragraph.slideheromain.field_link
@@ -109,7 +109,7 @@ content:
   field_video:
     weight: 3
     settings:
-      entity_browser: video
+      entity_browser: video_internal
       field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true

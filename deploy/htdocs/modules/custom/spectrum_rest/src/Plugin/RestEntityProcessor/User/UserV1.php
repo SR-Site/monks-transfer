@@ -2,7 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\User;
 
-use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
+use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 
 /**
  * Returns the structured data of an entity.
@@ -16,7 +16,7 @@ use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
  *   view_mode = "default"
  * )
  */
-class UserV1 extends RestEntityProcessorBase {
+class UserV1 extends SpectrumRestEntityProcessorBase {
 
   /**
    * {@inheritdoc}
@@ -24,9 +24,9 @@ class UserV1 extends RestEntityProcessorBase {
   protected function getItemData($entity) {
 
     $data = [
-      'name' => 'name',
-      'role' => 'role',
-      'image' => 'image',
+      'name' => $this->fieldProcessor->getFieldData($entity->get('field_name')),
+      'role' => $this->fieldProcessor->getFieldData($entity->get('field_role')),
+      'image' => $this->image($entity->get('user_picture')),
     ];
 
     return $data;
