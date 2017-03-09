@@ -43,7 +43,8 @@ module.exports = function (grunt)
 			pluginsRoot: 'tools/build/node_modules',
 			staticMappings: {
 				availabletasks: 'grunt-available-tasks',
-				scsslint: 'grunt-scss-lint'
+				scsslint: 'grunt-scss-lint',
+				'generate-block-documentation': 'block-documentation'
 			}
 		}
 	});
