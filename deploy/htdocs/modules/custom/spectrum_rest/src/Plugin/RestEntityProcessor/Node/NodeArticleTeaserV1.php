@@ -26,6 +26,7 @@ class NodeArticleTeaserV1 extends SpectrumRestEntityProcessorBase {
     $data = [
       "social" => $this->getItems($entity->get('field_links')),
       "author" => $this->entityProcessor->getEntityData($entity->getRevisionAuthor(), 'v1'),
+      "image" => $this->image($entity->get('field_image')),
       "tags" => $this->getTags($entity),
       "views" => 0,
       "time" => (int) $this->fieldProcessor->getFieldData($entity->get('field_read_time')),
