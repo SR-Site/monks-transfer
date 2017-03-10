@@ -8,6 +8,6 @@ spectrum_rest.contact.create_request:
 spectrum_rest.contact.process_response:
   path: 'api/v1/contact/process'
   defaults: { _controller: '\Drupal\spectrum_rest\Controller\Contact::processRequest' }
-  methods:  [POST]
+  methods:  [POST, GET]
   requirements:
     _access: 'TRUE'
