@@ -47,7 +47,7 @@
 		overflow: hidden;
 
 		@include hover() {
-			color: $colorLightGrey;
+			color: $colorBorder;
 		}
 
 		&:after {
