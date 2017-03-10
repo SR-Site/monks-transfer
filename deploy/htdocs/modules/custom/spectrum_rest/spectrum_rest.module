@@ -43,21 +43,6 @@ function spectrum_rest_help($route_name, RouteMatchInterface $route_match) {
 }
 
 /**
- * Implements hook_entity_base_field_info().
- */
-function HOOK_entity_base_field_info(EntityTypeInterface $entity_type) {
-  $fields = [];
-
-  if ($entity_type->id() == 'menu_link_content') {
-    $fields['FIELD_NAME'] = BaseFieldDefinition::create('FIELD_TYPE')
-      ->setLabel(t('FIELD_LABEL'))
-      ->setDescription(t('FIELD_DESCRIPTION '));
-  }
-
-  return $fields;
-}
-
-/**
  * Implements hook_mail().
  *
  * @param $key
@@ -99,6 +84,7 @@ function spectrum_rest_mail($key, &$message, $params) {
 /**
  * Implements hook_entity_prepare_form().
  *
+ * Add default paragraphs when creating a bide Article.
  * @TODO: hard-coded solution. Find out a better way with settings in the UI.
  *
  * @param EntityInterface $entity
@@ -125,7 +111,7 @@ function spectrum_rest_entity_prepare_form(EntityInterface $entity, $operation, 
     $entity_type = $entity_manager->getDefinition($target_type);
     $bundle_key = $entity_type->getKey('bundle');
 
-    /** @var FieldableEntityInterface $paragraphs_entity */
+    /** @var Drupal\Core\Entity\FieldableEntityInterface $paragraphs_entity */
     $paragraphs_entity = $entity_manager->getStorage($target_type)->create(array(
       $bundle_key => $bundle_name,
       'langcode' => $langcode,
