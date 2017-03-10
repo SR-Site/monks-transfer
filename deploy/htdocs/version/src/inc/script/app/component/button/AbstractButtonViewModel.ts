@@ -19,6 +19,8 @@ abstract class AbstractButtonViewModel<
 	 */
 	public handleClick(event:MouseEvent): void
 	{
+		event.preventDefault();
+
 		// Do not execute method when is-disabled is set to button.
 		if(this.controller.element.classList.contains('is-disabled')) return;
 
