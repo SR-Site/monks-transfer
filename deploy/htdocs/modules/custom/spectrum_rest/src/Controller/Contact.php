@@ -82,9 +82,10 @@ class Contact extends ControllerBase {
       'form_params' => $contact->getProperties(),
     ]);
 
-    $response = json_decode($request->getBody()->getContents(), TRUE);
+    $content = $request->getBody()->getContents();
+    $response = json_decode($content, TRUE);
 
-    return ['status' => !isset($response['data']['errors'])];
+    return ['status' => !isset($response['data']['errors']), 'response' => $content];
   }
 
   /**
