@@ -52,6 +52,7 @@ class ViewCounter extends ControllerBase {
   /**
    * Increment the node counter and return it.
    * TODO: add some kind of validation like a token.
+   * TODO: improve performance, maybe use/create an script like statistics.php
    *
    * @param string $slug
    * @return array
