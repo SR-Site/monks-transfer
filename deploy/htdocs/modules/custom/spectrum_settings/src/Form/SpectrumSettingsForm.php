@@ -83,6 +83,29 @@ class SpectrumSettingsForm extends ConfigFormBase {
       '#size' => 32,
     );
 
+    // Pardot.
+
+    $form['group_pardot'] = array(
+      '#type' => 'fieldset',
+      '#title' => $this->t('Pardot contact form'),
+      '#collapsible' => FALSE,
+      '#collapsed' => FALSE,
+    );
+
+    $form['group_pardot']['pardot_action'] = array(
+      '#type' => 'url',
+      '#title' => $this->t('Destination URL to the Pardot contact form'),
+      '#default_value' => $this->state->get('pardot_action'),
+      '#size' => 32,
+    );
+
+    $form['group_pardot']['pardot_referer'] = array(
+      '#type' => 'url',
+      '#title' => $this->t('Referer URL to the Pardot contact form'),
+      '#default_value' => $this->state->get('pardot_referer'),
+      '#size' => 32,
+    );
+
     // Init routers.
 
     $form['group_routers'] = array(
@@ -200,6 +223,8 @@ class SpectrumSettingsForm extends ConfigFormBase {
     $this->state->set('site_404', static::getUserEnteredStringAsUri($form_state->getValue('site_404')));
     $this->state->set('site_frontpage', static::getUserEnteredStringAsUri($form_state->getValue('site_frontpage')));
     $this->state->set('contact_to', $form_state->getValue('contact_to'));
+    $this->state->set('pardot_referer', $form_state->getValue('pardot_referer'));
+    $this->state->set('pardot_action', $form_state->getValue('pardot_action'));
 
     // Social networks.
     $socialNetworks = $form_state->getValue('social_networks');
