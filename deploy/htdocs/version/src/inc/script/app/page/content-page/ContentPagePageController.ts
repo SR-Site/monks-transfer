@@ -2,7 +2,6 @@ import ContentPagePageViewModel from "app/page/content-page/ContentPagePageViewM
 import CallbackCounter from "../../util/CallbackCounter";
 import DefaultPageController from "../DefaultPageController";
 import AbstractBlockComponentController from "../../component/block/AbstractBlockComponentController";
-import AbstractBlockComponentViewModel from "../../component/block/AbstractBlockComponentViewModel";
 import ScrollTracker, {ScrollTrackerPoint, ScrollTrackerEvent} from "../../../lib/temple/util/ScrollTracker";
 import DataManager from "../../data/DataManager";
 import * as Gaia from "lib/gaia/api/Gaia";
@@ -12,7 +11,6 @@ import GaiaHistoryEvent from "../../../lib/gaia/event/GaiaHistoryEvent";
 import CommonEvent from "../../../lib/temple/event/CommonEvent";
 import ScrollUtils from "../../util/ScrollUtils";
 import PageType from "../../../lib/gaia/interface/PageType";
-import Routes from "../../config/Routes";
 import StringUtils from "../../../lib/temple/util/type/StringUtils";
 import IPageLayout from "../../data/interface/layout/IPageLayout";
 
@@ -394,9 +392,13 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 			route = route === '/' ? this._dataManager.settingsModel.initDataModel.landingRoute : route;
 		}
 
+		route = StringUtils.startsWith(route, '/') ? route.substr(1) : route;
+
+		// Store the route for updating the header logo
+		DataManager.getInstance().currentRoute(route);
 
 		return DataManager.getInstance().settingsModel.pageLayoutModel.getLayout(
-			StringUtils.startsWith(route, '/') ? route.substr(1) : route
+			route
 		).then((result: IPageLayout) =>
 		{
 			this.viewModel.pageLayout(result.blocks);

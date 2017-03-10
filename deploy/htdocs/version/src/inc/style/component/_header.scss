@@ -11,6 +11,10 @@
 		transform: translateY(-50%);
 		position: absolute;
 		cursor: pointer;
+
+		&.is-disabled {
+			cursor: default;
+		}
 	}
 
 	.call-to-actions {
