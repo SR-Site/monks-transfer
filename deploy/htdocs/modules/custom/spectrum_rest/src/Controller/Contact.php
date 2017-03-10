@@ -84,7 +84,7 @@ class Contact extends ControllerBase {
 
     $response = json_decode($request->getBody()->getContents(), TRUE);
 
-    return ['status' => !(isset($response['data']['errors']) && $response['data']['errors'] == TRUE)];
+    return ['status' => !isset($response['data']['errors'])];
   }
 
   /**
