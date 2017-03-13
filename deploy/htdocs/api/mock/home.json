@@ -39,7 +39,26 @@
 								"small": "data/image/hero-main/slide-2.jpg",
 								"alt": "Background image alt text"
 							},
-							"statistics": null
+							"statistics": {
+								"heading": "Who's watching?",
+								"stats": [
+									{
+										"heading": "Etnicity",
+										"description": "Hispanic",
+										"value": 44
+									},
+									{
+										"heading": "Demographics",
+										"description": "Man 18-32",
+										"value": 30
+									},
+									{
+										"heading": "Income",
+										"description": "$55k or more",
+										"value": 77
+									}
+								]
+							}
 						}
 					]
 				}
