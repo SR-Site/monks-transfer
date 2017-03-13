@@ -140,14 +140,14 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 	 */
 	private setupSlideTransition(): void
 	{
-		const slideContent = Array.prototype.slice.call(this.element.querySelectorAll('.slide-content'));
-		const statistics = this.element.querySelectorAll('.statistics-wrapper');
+		const slides = Array.prototype.slice.call(this.element.querySelectorAll('.slide'));
 
 		this.clearCurrentTimelines();
 
 		this.parentController.options.slides.forEach((slide, index: number) =>
 		{
-			let element = slideContent[index];
+			let element = slides[index];
+			let statisticsWrapper = element.querySelector('.statistics-wrapper');
 			let heading = element.querySelector('.heading');
 			let copy = element.querySelector('.copy');
 			let button = element.querySelector('.component-button-circle-arrow');
@@ -184,15 +184,15 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 				}, '=-0.5');
 			}
 
-			if(statistics.length)
+			if(statisticsWrapper)
 			{
-				timeline.from(statistics[index].querySelector('.heading'), 0.6, {
+				timeline.from(statisticsWrapper.querySelector('.heading'), 0.6, {
 					y: 30,
 					autoAlpha: 0,
 					ease: Quad.easeOut
 				}, 0.2);
 
-				timeline.from(statistics[index].querySelectorAll('.statistic'), 0.6, {
+				timeline.from(statisticsWrapper.querySelectorAll('.statistic'), 0.6, {
 					y: 30,
 					autoAlpha: 0,
 					ease: Quad.easeOut

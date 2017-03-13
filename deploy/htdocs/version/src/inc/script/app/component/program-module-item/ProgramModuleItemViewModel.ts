@@ -3,9 +3,12 @@ import ProgramModuleItemController from 'app/component/program-module-item/Progr
 import IProgramModuleItemOptions from 'app/component/program-module-item/IProgramModuleItemOptions';
 
 import ko = require('knockout');
+import StringUtils from "../../../lib/temple/util/type/StringUtils";
 
 class ProgramModuleItemViewModel extends DefaultComponentTransitionViewModel<ProgramModuleItemController, IProgramModuleItemOptions>
 {
+
+	public StringUtils:Class = StringUtils;
 
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
@@ -13,6 +16,7 @@ class ProgramModuleItemViewModel extends DefaultComponentTransitionViewModel<Pro
 	 */
 	public destruct():void
 	{
+		this.StringUtils = null;
 
 		// always call this last
 		super.destruct();

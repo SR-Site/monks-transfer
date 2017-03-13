@@ -2308,7 +2308,7 @@
                         {
                             "name": "video",
                             "type": "IVideo",
-                            "required": true,
+                            "required": false,
                             "defaultValue": "null",
                             "description": "The teaser video linked to the program",
                             "placeholder": "",

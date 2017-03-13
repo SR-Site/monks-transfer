@@ -60,6 +60,14 @@
 	.paragraph {
 		margin-top: $sizeGrid;
 		overflow: hidden;
+
+		&.truncated-copy {
+			display: block;
+		}
+
+		&.full-copy {
+			display: none;
+		}
 	}
 
 	.tags {
@@ -126,6 +134,17 @@
 
 		.title {
 			font-size: mobile-size(4.5rem);
+		}
+
+		.paragraph {
+
+			&.truncated-copy {
+				display: none!important;
+			}
+
+			&.full-copy {
+				display: block!important;
+			}
 		}
 
 		.description {
