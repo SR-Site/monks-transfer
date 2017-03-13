@@ -9,6 +9,7 @@ import IBlock from "../interface/block/IBlock";
 import {PropertyNames} from "../enum/ConfigNames";
 import configManagerInstance from "../../../lib/temple/config/configManagerInstance";
 import URLUtils from "../../../lib/temple/util/URLUtils";
+import IViewCountData from "../interface/IViewCountData";
 
 class ContentService extends AbstractService
 {
@@ -40,6 +41,19 @@ class ContentService extends AbstractService
 		return this.gateway.get(
 			StringUtils.replaceVars(Endpoints.getEndpoint(Endpoints.PAGE_LAYOUT), {page: page})
 		)
+	}
+
+	/**
+	 * @public
+	 * @method viewCount
+	 * @param slug
+	 * @returns {Promise<IGatewayResult<IViewCountData>>}
+	 */
+	public viewCount(slug: string): Promise<IGatewayResult<IViewCountData>>
+	{
+		return this.gateway.post(StringUtils.replaceVars(
+			Endpoints.getEndpoint(Endpoints.VIEW_COUNT), {slug: slug}
+		), {});
 	}
 
 	/**

@@ -6,7 +6,7 @@ import {IInitData} from "../data/interface/IInitData";
 
 /**
  * @namespace app.control
- * @class LoadFacebookApiTask
+ * @class LoadInitTask
  * @extend temple.control.sequence.tasks.AbstractTask
  */
 class LoadInitTask extends AbstractTask
@@ -21,13 +21,7 @@ class LoadInitTask extends AbstractTask
 		dm.serviceModel.contentService.getInit()
 			.then((response: IGatewayResult<IInitData>) =>
 			{
-				response.data.routes = {
-					"landing": "home",
-					"notFound": "page-not-found"
-				};
-
 				dm.settingsModel.initDataModel.data = response.data;
-
 			})
 			.then(this.done.bind(this))
 			.catch((reason) =>
