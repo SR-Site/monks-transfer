@@ -45,7 +45,7 @@ interface IBlockProgramModuleOptions extends IAbstractBlockComponentOptions
 		 * @property
 		 * @description The teaser video linked to the program
 		 */
-		video: IVideo;
+		video?: IVideo;
 		/**
 		 * @property
 		 * @description The tags related to the program
