@@ -51,6 +51,9 @@ class ContentService extends AbstractService
 	 */
 	public viewCount(page: string): Promise<IGatewayResult<IViewCountData>>
 	{
+		// Strip out the first slash because it breaks the API
+		page = page.charAt(0) === '/' ? page.slice(1) : page;
+
 		return this.gateway.post(StringUtils.replaceVars(
 			Endpoints.getEndpoint(Endpoints.VIEW_COUNT), {page: page}
 		), {});
