@@ -1,0 +1,20 @@
+spectrum_rest.contact.create_request:
+  path: 'api/v1/contact'
+  defaults: { _controller: '\Drupal\spectrum_rest\Controller\Contact::createRequest' }
+  methods:  [POST]
+  requirements:
+    _access: 'TRUE'
+
+spectrum_rest.contact.process_response:
+  path: 'api/v1/contact/process'
+  defaults: { _controller: '\Drupal\spectrum_rest\Controller\Contact::processRequest' }
+  methods:  [POST, GET]
+  requirements:
+    _access: 'TRUE'
+
+spectrum_rest.view_counter:
+  path: 'api/v1/counter/{slug}'
+  defaults: { _controller: '\Drupal\spectrum_rest\Controller\ViewCounter::count' }
+  methods:  [POST]
+  requirements:
+    _access: 'TRUE'

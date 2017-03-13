@@ -50,6 +50,7 @@ module:
   spectrum_rest: 0
   spectrum_settings: 0
   sqlsrv: 0
+  statistics: 0
   system: 0
   taxonomy: 0
   text: 0
