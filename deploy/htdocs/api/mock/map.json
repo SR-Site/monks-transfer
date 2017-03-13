@@ -8,7 +8,7 @@
 			{
 				"id": "marketMap",
 				"data": {
-					"marginTop": 2,
+					"marginTop": 0,
 					"service": {
 						"name": "Samantha Smith",
 						"role": "Customer Service",

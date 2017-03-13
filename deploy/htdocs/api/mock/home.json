@@ -23,6 +23,10 @@
 								"small": "data/image/hero-main/slide-4.jpg",
 								"alt": "Background image alt text"
 							},
+							"backgroundVideo": {
+								"url": "https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/1193/8/205968496/701598463.mp4?token=58c6e7aa_0x32045a91109e78c38011869eeac0c21ee9cd2eae",
+								"type": 0
+							},
 							"statistics": null
 						},
 						{
