@@ -46,13 +46,13 @@ class ContentService extends AbstractService
 	/**
 	 * @public
 	 * @method viewCount
-	 * @param slug
+	 * @param page
 	 * @returns {Promise<IGatewayResult<IViewCountData>>}
 	 */
-	public viewCount(slug: string): Promise<IGatewayResult<IViewCountData>>
+	public viewCount(page: string): Promise<IGatewayResult<IViewCountData>>
 	{
 		return this.gateway.post(StringUtils.replaceVars(
-			Endpoints.getEndpoint(Endpoints.VIEW_COUNT), {slug: slug}
+			Endpoints.getEndpoint(Endpoints.VIEW_COUNT), {page: page}
 		), {});
 	}
 

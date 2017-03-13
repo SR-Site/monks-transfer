@@ -53,7 +53,7 @@ class Endpoints
 		},
 		[Endpoints.VIEW_COUNT]: {
 			[Endpoints._MOCK]: 'view-count.json',
-			[Endpoints._API]: 'counter'
+			[Endpoints._API]: 'counter/{page}'
 		},
 		[Endpoints.CONTACT]: {
 			[Endpoints._MOCK]: 'contact.json',
