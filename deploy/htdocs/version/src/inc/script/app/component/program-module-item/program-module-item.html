@@ -50,7 +50,8 @@
 				</ul>
 				<!-- /ko -->
 
-				<p class="paragraph copy-01 copy" data-bind="html: paragraph"></p>
+				<div class="copy copy-01 paragraph truncated-copy" data-bind="html: $root.StringUtils.truncate(paragraph, 150)"></div>
+				<div class="copy copy-01 paragraph full-copy" data-bind="html: paragraph"></div>
 
 				<!-- ko if: $data.tags -->
 					<div class="tags" data-bind="foreach: tags">

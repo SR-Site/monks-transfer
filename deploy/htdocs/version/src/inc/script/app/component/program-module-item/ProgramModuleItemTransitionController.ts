@@ -44,6 +44,8 @@ class ProgramModuleItemTransitionController extends AbstractTransitionController
 		});
 
 		this._mouseEnterTimeline.to(this.element.querySelectorAll('.hover-content'), 0.3, { opacity: 0 }, 0);
+		this._mouseEnterTimeline.set(this.element.querySelectorAll('.truncated-copy'), { display: 'none'});
+		this._mouseEnterTimeline.set(this.element.querySelectorAll('.full-copy'), { display: 'block'});
 		this._mouseEnterTimeline.fromTo(this.element.querySelectorAll('.hover-container'), 0.3,
 			{
 				width: '100%'

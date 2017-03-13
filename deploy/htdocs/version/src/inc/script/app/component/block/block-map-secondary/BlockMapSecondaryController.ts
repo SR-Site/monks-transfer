@@ -26,8 +26,8 @@ class BlockMapSecondaryController extends AbstractBlockComponentController<Block
 			"sequenceBackground": null,
 			"imageSequence": {
 				"image": {
-					"normal": "data/sequence/map_secondary/desktop/map_lines_",
-					"small": "data/sequence/map_secondary/mobile/map_lines_mobile_",
+					"normal": "data/sequence/map-secondary/desktop/map_lines_",
+					"small": "data/sequence/map-secondary/mobile/map_lines_mobile_",
 					"alt": "Image sequence"
 				},
 				"extension": ".png",
