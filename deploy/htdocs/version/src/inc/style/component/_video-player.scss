@@ -7,7 +7,6 @@
 		@include coverer();
 		@include size(100%);
 		position: absolute;
-		object-fit: cover;
 	}
 
 	.component-video-controls {
