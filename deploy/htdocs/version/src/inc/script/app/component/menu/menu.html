@@ -9,7 +9,7 @@
 
 						<li class="menu-item">
 
-							<!-- ko if: $data.link.target !== $root.Routes.CONTACT_US -->
+							<!-- ko if: $data.link.target !== '/' + $root.Routes.CONTACT_US -->
 								<!-- ko with: $data.link -->
 								<a class="main-link" data-bind="gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: $data.target}]">
 									<span class="label" data-bind="html: $data.label"></span>
@@ -17,7 +17,7 @@
 								<!-- /ko -->
 							<!-- /ko -->
 
-							<!-- ko if: $data.link.target == $root.Routes.CONTACT_US -->
+							<!-- ko if: $data.link.target == '/' + $root.Routes.CONTACT_US -->
 							<button class="button main-link" data-bind="tap: $root.handleClickContact.bind($root)">
 								<span class="label" data-bind="html: $data.link.label"></span>
 							</button>
