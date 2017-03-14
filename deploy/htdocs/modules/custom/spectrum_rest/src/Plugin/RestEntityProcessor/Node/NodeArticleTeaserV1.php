@@ -34,6 +34,8 @@ class NodeArticleTeaserV1 extends SpectrumRestEntityProcessorBase {
       "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_excerpt')),
       "subHeading" => $this->fieldProcessor->getFieldData($entity->get('field_subheading')),
       "heading" => $entity->label(),
+      "theme" => $entity->get('field_theme')->value,
+      "target" => \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $entity->id()], ['absolute' => 0])->toString(),
     ];
 
     return $data;
