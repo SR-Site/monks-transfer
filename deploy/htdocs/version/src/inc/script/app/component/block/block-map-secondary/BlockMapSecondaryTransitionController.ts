@@ -17,7 +17,10 @@ class BlockMapSecondaryTransitionController extends AbstractTransitionController
 
 		const button = this.element.querySelector('.component-button-main');
 
-		this.transitionInTimeline.add(this.getSubTimeline(button));
+		if(button)
+		{
+			this.transitionInTimeline.add(this.getSubTimeline(button));
+		}
 	}
 }
 
