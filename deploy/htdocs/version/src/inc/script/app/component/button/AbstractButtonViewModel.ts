@@ -35,13 +35,9 @@ abstract class AbstractButtonViewModel<
 		{
 			this.controller.triggerMethod();
 		}
-		else if((<ILink>this.data.action).target !== void 0)
-		{
-			this.controller.openLink()
-		}
 		else
 		{
-			console.warn('[DefaultButtonViewModel] Unknown action:', this.data.action)
+			this.controller.openLink();
 		}
 	}
 
