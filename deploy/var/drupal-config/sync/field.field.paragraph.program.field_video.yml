@@ -14,7 +14,7 @@ entity_type: paragraph
 bundle: program
 label: Video
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
