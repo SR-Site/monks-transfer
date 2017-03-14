@@ -108,50 +108,6 @@ class ViewCounterResource extends ResourceBase {
     }
 
     /**
-     * @inheritDoc
-     */
-    public function get($slug) {
-        $this->disableCache();
-
-        $count = 0;
-        $slug = $this->slugPathProcessor->resolveSlug($this->request, $slug);
-
-        // Try to load the entity based on the slug.
-        /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
-        $entity = $this->slugResolver->loadEntityBySlug('articles/' . $slug);
-
-
-        if(empty($entity))
-            throw new NotFoundHttpException($this->t('Not found'));
-
-        $enabled = \Drupal::config('statistics.settings')->get('count_content_views');
-
-        if ($enabled) {
-            $db = Database::getConnection();
-
-            $db->merge('node_counter')
-                ->key('nid', $entity->id())
-                ->fields(array(
-                    'daycount' => 1,
-                    'totalcount' => 1,
-                    'timestamp' => REQUEST_TIME,
-                ))
-                ->expression('daycount', 'daycount + 1')
-                ->expression('totalcount', 'totalcount + 1')
-                ->execute();
-
-            $query = $db->select('node_counter');
-            $query->fields('node_counter', ['daycount', 'totalcount'])->condition('nid', $entity->id());
-
-            $data = $query->execute();
-
-            $count = $data->fetchAssoc();
-        }
-
-        return $count;
-    }
-
-    /**
      * Disable cache.
      */
     protected function disableCache() {
