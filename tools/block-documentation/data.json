@@ -1109,6 +1109,15 @@
                             "properties": []
                         },
                         {
+                            "name": "video",
+                            "type": "IVideo",
+                            "required": false,
+                            "defaultValue": "null",
+                            "description": "We can also play a video in the carousel",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
                             "name": "theme",
                             "type": "Theme",
                             "required": true,
@@ -1120,7 +1129,7 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"imageCarousel\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"theme\": 0\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"imageCarousel\",\n    \"data\": {\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"video\": {\n                    \"url\": \"path/to/video.mp4\",\n                    \"type\": 0\n                },\n                \"theme\": 0\n            }\n        ]\n    }\n}"
         },
         {
             "blockId": "imageWithContent",
