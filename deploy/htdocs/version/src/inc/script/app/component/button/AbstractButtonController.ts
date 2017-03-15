@@ -107,11 +107,12 @@ extends AbstractTransitionComponentController<TViewModel, TOptions, TTransitionC
 			}
 			case LinkType.SCROLL_TO_NEXT_SECTION:
 			{
-				let parents = $(this.element).parents('[class^="component-block"]');
-				let nextElement = $(parents[parents.length - 1]).next('[class^="component-block"]');
+				const headerHeight = (<HTMLElement>document.body.querySelector('.component-header')).offsetHeight;
+				const parents = $(this.element).parents('[class^="component-block"]');
+				const nextElement = $(parents[parents.length - 1]).next('[class^="component-block"]');
 
 				ScrollUtils.scrollToPosition(
-					nextElement.offset().top
+					nextElement.position().top - headerHeight
 				);
 
 				break;
