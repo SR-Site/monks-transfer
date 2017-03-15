@@ -31,7 +31,7 @@ class NodeArticleTeaserV1 extends SpectrumRestEntityProcessorBase {
       "views" => 0,
       "time" => (int) $this->fieldProcessor->getFieldData($entity->get('field_read_time')),
       "date" => $this->dateFormatter->format($entity->getCreatedTime(), 'custom', 'd/m/Y'),
-      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_excerpt')),
+      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_content')),
       "subHeading" => $this->fieldProcessor->getFieldData($entity->get('field_subheading')),
       "heading" => $entity->label(),
       "theme" => $entity->get('field_theme')->value,

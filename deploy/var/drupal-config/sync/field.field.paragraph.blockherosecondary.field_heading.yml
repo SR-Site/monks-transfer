@@ -1,19 +1,22 @@
-uuid: 65f29dfc-efa2-434f-897f-502d0ee6b8f9
+uuid: 593b7b70-b642-4160-9be3-ce30212fb5ed
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_heading
     - paragraphs.paragraphs_type.blockherosecondary
+  module:
+    - text
 id: paragraph.blockherosecondary.field_heading
 field_name: field_heading
 entity_type: paragraph
 bundle: blockherosecondary
 label: Heading
 description: ''
-required: true
-translatable: true
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  allowed_formats: {  }
+field_type: text_long

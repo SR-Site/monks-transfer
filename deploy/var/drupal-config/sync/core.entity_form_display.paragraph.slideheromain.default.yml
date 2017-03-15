@@ -64,12 +64,12 @@ bundle: slideheromain
 mode: default
 content:
   field_heading:
-    weight: 0
+    weight: 9
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: text_textarea
   field_image:
     weight: 2
     settings:

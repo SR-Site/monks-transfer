@@ -28,7 +28,7 @@ class ParagraphLinkV1 extends RestEntityProcessorBase {
       "label" => $this->fieldProcessor->getFieldData($entity->get('field_label')),
       "title" => $this->fieldProcessor->getFieldData($entity->get('field_title')),
       "target" => isset($link['target']) ? $link['target'] : NULL,
-      "type" => isset($entity->get('field_type')->value) ? $entity->get('field_type')->value : NULL,
+      "type" => isset($entity->get('field_type')->value) ? (int)$entity->get('field_type')->value : NULL,
     ];
 
     return $data;

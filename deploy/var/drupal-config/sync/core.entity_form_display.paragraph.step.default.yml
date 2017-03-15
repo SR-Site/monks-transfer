@@ -15,12 +15,12 @@ bundle: step
 mode: default
 content:
   field_heading:
-    weight: 0
+    weight: 5
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: text_textarea
   field_icon_list:
     weight: 3
     settings: {  }

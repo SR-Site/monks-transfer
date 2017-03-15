@@ -21,12 +21,11 @@ bundle: calltoaction
 mode: default
 content:
   field_heading:
-    weight: 0
+    weight: 6
     label: above
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    type: string
+    type: text_default
   field_image:
     weight: 2
     label: above
