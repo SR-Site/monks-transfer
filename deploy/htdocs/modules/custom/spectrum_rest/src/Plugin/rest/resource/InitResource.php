@@ -153,7 +153,7 @@ class InitResource extends ResourceBase {
       'layout' => [
         'navigation' => $this->getMenu('main'),
         'footer' => [
-          'copyright' => 'Charter Communications',
+          'copyright' => '© 2017 Charter Communications',
           'mainLinks' => $this->getMenu('footer'),
           'secondaryLinks' => [
             $this->getMenu('footer-secondary-1'),
