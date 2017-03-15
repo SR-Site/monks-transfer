@@ -31,14 +31,14 @@ class ParagraphBlockBlogPostV1 extends SpectrumRestEntityProcessorBase {
       // If the current page is not an article, avoid the exception and return
       // and empty object.
       try {
-        $article = $this->entityProcessor->getEntityData($entity->getParentEntity(), 'v1', ['view_mode' => 'teaser']);
+        $article = $this->entityProcessor->getEntityData($entity->getParentEntity(), 'v1', ['view_mode' => 'blogpost']);
       }
       catch (\Exception $e) {
         $article = [];
       }
     }
     else {
-      $article = $this->fieldProcessor->getFieldData($node, ['view_mode' => 'teaser']);
+      $article = $this->fieldProcessor->getFieldData($node, ['view_mode' => 'blogpost']);
     }
 
     $data = [
