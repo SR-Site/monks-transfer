@@ -43,17 +43,15 @@
 		</div>
 	</div>
 	<ul class="persona-options" data-bind="foreach: data.personas">
-		<li class="persona-option" data-bind="css: {'is-active': $root.activeIndex() === $index()}, events: [
-			[$root.MouseEventHelper.CLICK, $root.handleClick.bind($root, $index())]
-		]">
-			<button class="persona-button button" data-bind="css: $root.PersonaType[personaType].toLowerCase()">
+		<li class="persona-option" data-bind="css: {'is-active': $root.activeIndex() === $index()}">
+			<a class="persona-button button" data-bind="css: $root.PersonaType[personaType].toLowerCase(), tap: $root.handleClick.bind($root, $index())">
 				<span class="label-wrapper">
 					<span class="label">
 						<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
 						<span class="copy copy-01" data-bind="html:$data.heading"></span>
 					</span>
 				</span>
-			</button>
+			</a>
 		</li>
 	</ul>
 
