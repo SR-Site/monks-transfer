@@ -164,7 +164,7 @@ class InitResource extends ResourceBase {
         'slideOutPanel' => [
           'contact' => [
             'subHeading' => 'Get Started Today.',
-            'heading' => 'Lets Talk! Tell Us How We Can Help You Advertise',
+            'heading' => 'Let\'s talk! Tell us how we can help you advertise.',
             'submitLabel' => 'Send',
           ],
         ],
