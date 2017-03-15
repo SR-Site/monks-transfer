@@ -96,8 +96,6 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 		this._overlayCanvas = document.createElement('canvas');
 		this._overlayCtx = this._overlayCanvas.getContext('2d');
 
-		document.body.appendChild(this._overlayCanvas)
-
 		// Main display canvas
 		this._canvas = this.element.querySelector('canvas');
 		this._ctx = this._canvas.getContext('2d');
@@ -105,7 +103,6 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 		// Mask canvas
 		this._maskCanvas = document.createElement('canvas');
 		this._maskCtx = this._maskCanvas.getContext('2d');
-
 
 		// Create the triangle pattern
 		this._trianglePattern = new TrianglePattern();
@@ -467,6 +464,8 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 		this._canvas = null;
 		this._ctx = null;
 
+		this._overlayCanvas = null;
+		this._overlayCtx = null;
 		this._maskCanvas = null;
 		this._maskCtx = null;
 		this._activeImage = null;
