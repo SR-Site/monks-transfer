@@ -1,10 +1,12 @@
-uuid: 13230279-cd9c-42b4-a0a1-46042aa62db2
+uuid: 8162c2d5-6438-4cae-a052-7efc8ee4c242
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_heading
     - paragraphs.paragraphs_type.blockmarketmap
+  module:
+    - text
 id: paragraph.blockmarketmap.field_heading
 field_name: field_heading
 entity_type: paragraph
@@ -15,5 +17,11 @@ required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  allowed_formats:
+    basic_html: basic_html
+    bold_html: bold_html
+    restricted_html: restricted_html
+    full_html: full_html
+    plain_text: plain_text
+field_type: text_long

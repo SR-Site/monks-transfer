@@ -1,19 +1,27 @@
-uuid: f7ea09f3-5aeb-4716-944a-c9e1b1bd21d1
+uuid: b3875664-5016-402a-a1a8-5a35b53a5f5c
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_heading
     - paragraphs.paragraphs_type.blocksmallinfo
+  module:
+    - text
 id: paragraph.blocksmallinfo.field_heading
 field_name: field_heading
 entity_type: paragraph
 bundle: blocksmallinfo
 label: Heading
-description: 'Text between ** ** will be highlighted, e.g This is a **highlighted** text.'
+description: ''
 required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  allowed_formats:
+    basic_html: basic_html
+    bold_html: bold_html
+    restricted_html: restricted_html
+    full_html: full_html
+    plain_text: plain_text
+field_type: text_long

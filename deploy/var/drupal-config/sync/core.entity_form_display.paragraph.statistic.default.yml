@@ -8,18 +8,19 @@ dependencies:
     - paragraphs.paragraphs_type.statistic
   module:
     - paragraphs
+    - text
 id: paragraph.statistic.default
 targetEntityType: paragraph
 bundle: statistic
 mode: default
 content:
   field_heading:
-    weight: 0
+    weight: 3
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: text_textarea
   field_stats:
     weight: 1
     settings:

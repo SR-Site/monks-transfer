@@ -11,6 +11,7 @@ dependencies:
   module:
     - field_group
     - paragraphs
+    - text
 third_party_settings:
   field_group:
     group_styles:
@@ -52,12 +53,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
   field_heading:
-    weight: 3
+    weight: 6
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: text_textarea
   field_links:
     type: entity_reference_paragraphs
     weight: 4
