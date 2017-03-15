@@ -23,6 +23,18 @@
 		background: #fff;
 		padding: $sizeGrid * 2 $sizeGrid * 2.5;
 
+		@include respond-to(X_LARGE) {
+			padding: $sizeGrid * 2;
+		}
+
+		@include respond-to(LARGE) {
+			padding: $sizeGrid * 1.5;
+		}
+
+		@include respond-to(MEDIUM) {
+			padding: $sizeGrid;
+		}
+
 		&:after {
 			position: absolute;
 			bottom: 0;
