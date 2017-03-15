@@ -115,6 +115,10 @@
 								"normal": "data/image/image-carousel/image-1.jpg",
 								"small": "data/image/image-carousel/image-1.jpg",
 								"alt": "Background image alt text"
+							},
+							"video": {
+								"url": "https://player.vimeo.com/external/197117903.hd.mp4?s=b445b298c32605125a44c1aff0d8884b7968d86c&profile_id=119",
+								"type": 0
 							}
 						},
 						{

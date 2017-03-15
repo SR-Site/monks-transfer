@@ -1,6 +1,7 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
 import IImage from "../../../data/interface/media/IImage";
 import Theme from "../../../data/enum/style/Theme";
+import IVideo from "../../../data/interface/media/IVideo";
 
 export interface IBlockImageCarouselOptions extends IAbstractBlockComponentOptions
 {
@@ -21,6 +22,11 @@ export interface IBlockImageCarouselOptions extends IAbstractBlockComponentOptio
 		 * @description The image displayed on the slide
 		 */
 		image: IImage;
+		/**
+		 * @property
+		 * @description We can also play a video in the carousel
+		 */
+		video?:IVideo;
 		/**
 		 * @property
 		 * @description Sometimes you want to switch a color based on the background image to increase readability

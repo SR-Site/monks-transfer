@@ -56,6 +56,10 @@
 		margin-top: $sizeGrid*2;
 	}
 
+	.component-button-play-circle {
+		@include abs-center($sizeGrid * 2);
+	}
+
 	@include respond-to(SMALL) {
 		.slider-viewport {
 			padding: 0 $sizeGrid 0 0;

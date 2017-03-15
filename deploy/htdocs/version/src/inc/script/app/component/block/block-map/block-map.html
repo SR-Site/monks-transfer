@@ -2,9 +2,11 @@
 	<div class="site-frame">
 		<div class="aspect-ratio-wrapper">
 			<div class="map-content" data-bind="with: data.steps[$root.activeIndex()]">
-				<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($root.activeIndex() + 1).toString(), 2, '0')"></span>
-				<h3 class="heading heading-01" data-bind="html: heading"></h3>
-				<p class="copy copy-01" data-bind="html: paragraph"></p>
+				<div class="bottom-alignment">
+					<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($root.activeIndex() + 1).toString(), 2, '0')"></span>
+					<h3 class="heading heading-01" data-bind="html: heading"></h3>
+					<p class="copy copy-01" data-bind="html: paragraph"></p>
+				</div>
 			</div>
 			<div class="map-image-wrapper">
 				<div class="map-image">

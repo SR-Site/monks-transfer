@@ -232,12 +232,17 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 		{
 			if(bowser.ios)
 			{
+				// Note: If the header component is not  the first element in the DOM the fixed position
+				// will make the overflow look weird and end up with the header being clipped
+				document.body.insertBefore(this._dataManager.panelController.element, document.body.firstChild);
+				
 				// Note: Move the page loader to the root to overlap the fixed header element, this is super hacky but otherwise the fixed header on iOS get's clipped when scrolling
 				document.body.insertBefore(this._dataManager.pageLoader.element, document.body.firstChild);
 
 				// Note: If the header component is not  the first element in the DOM the fixed position
 				// will make the overflow look weird and end up with the header being clipped
 				document.body.insertBefore(this._headerController.element, document.body.firstChild);
+
 			}
 
 			this._beforeTransitionIn(true);

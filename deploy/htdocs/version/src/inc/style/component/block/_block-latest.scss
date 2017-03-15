@@ -16,7 +16,7 @@
 		@include size(100%, auto);
 		font-size: 0;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		flex-wrap: wrap;
 
 		.component-block-article-teaser {
@@ -27,7 +27,8 @@
 
 	@include respond-to(LARGE) {
 		.latest-articles {
-			justify-content: center;
+			align-items: center;
+			flex-direction: column;
 		}
 	}
 
