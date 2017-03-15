@@ -140,7 +140,7 @@
 
 	.persona-button {
 		@include size(calc(100% - #{$sizeGrid}), $buttonHeight);
-		color: $colorLightGrey;
+		color: $colorBorder;
 		transition: background #{$animationDuration} #{$ease};
 		text-align: left;
 		margin-right: $sizeGrid;
