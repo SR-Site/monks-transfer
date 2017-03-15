@@ -13,8 +13,8 @@
 		display: inline-block;
 		vertical-align: bottom;
 		position: relative;
-		margin-bottom: $sizeGrid * 3;
-		min-height: $sizeGrid * 12.5;
+		margin-bottom: $sizeGrid * 2;
+		height: $sizeGrid * 12.5;
 
 		.pagination-number {
 			@include pos(-10px, auto, auto, 0);
@@ -24,6 +24,11 @@
 
 		.heading {
 			margin-bottom: $sizeGrid;
+		}
+
+		.bottom-alignment {
+			position: absolute;
+			bottom: 0;
 		}
 	}
 
