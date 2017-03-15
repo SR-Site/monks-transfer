@@ -27,7 +27,7 @@ class ParagraphSlideV1 extends SpectrumRestEntityProcessorBase {
       "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
       "image" => $this->image($entity->get('field_image')),
       "theme" => (int) $entity->get('field_theme')->value,
-      "video" => $this->fieldProcessor->getFieldData($entity->get('field_video')),
+      "video" => $entity->get('field_video')->isEmpty() ? NULL : $this->fieldProcessor->getFieldData($entity->get('field_video')),
     ];
 
     return $data;
