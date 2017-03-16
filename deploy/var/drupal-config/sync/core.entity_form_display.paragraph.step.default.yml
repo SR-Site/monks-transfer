@@ -15,14 +15,14 @@ bundle: step
 mode: default
 content:
   field_heading:
-    weight: 5
+    weight: 0
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
   field_icon_list:
-    weight: 3
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
