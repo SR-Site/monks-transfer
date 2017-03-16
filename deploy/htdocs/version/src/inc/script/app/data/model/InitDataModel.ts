@@ -1,7 +1,8 @@
-import {IInitData, IContactOptions} from "../interface/IInitData";
 import LayoutModel from "./LayoutModel";
 import NavigationModel from "./NavigationModel";
 import ILink from "../interface/action/ILink";
+import IInitData from "../interface/IInitData";
+import IContactOptions from "../interface/IContactOptions";
 
 class InitDataModel
 {
