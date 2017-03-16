@@ -30,7 +30,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  *   version = "v1",
  *   label = @Translation("Spectrum rest increase counter for an article"),
  *   uri_paths = {
- *     "canonical" = "/api/v1/counter/article/{slug}",
+ *     "canonical" = "/api/v1/counter/articles/{slug}",
  *   }
  * )
  */
