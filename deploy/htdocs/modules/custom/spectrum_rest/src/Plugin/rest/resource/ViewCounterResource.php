@@ -194,6 +194,9 @@ class ViewCounterResource extends ResourceBase {
             $count = $data->fetchAssoc();
         }
 
-        return $count['totalcount'];
+        return [
+            "totalcount" => $count['totalcount'],
+            "daycount" =>  $count['totalcount']
+        ];
     }
 }
