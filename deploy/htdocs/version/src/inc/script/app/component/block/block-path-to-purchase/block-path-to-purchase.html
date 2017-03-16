@@ -25,7 +25,7 @@
 							<p class="copy copy-01" data-bind="html: paragraph"></p>
 
 							<div class="secondary-content">
-								<p class="copy copy-01" data-bind="html: secondaryParagraph"></p>
+								<p class="copy copy-01" data-bind="html: $root.StringUtils.truncate(secondaryParagraph, 150)"></p>
 							</div>
 						</div>
 						<div class="step-edge"></div>
