@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.stories.field_heading
-    - field.field.paragraph.stories.field_heading_temp
     - field.field.paragraph.stories.field_image
     - field.field.paragraph.stories.field_paragraph
     - field.field.paragraph.stories.field_theme
@@ -19,19 +18,12 @@ bundle: stories
 mode: default
 content:
   field_heading:
-    weight: 5
+    weight: 0
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-  field_heading_temp:
-    weight: 4
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
   field_image:
     weight: 2
     settings:

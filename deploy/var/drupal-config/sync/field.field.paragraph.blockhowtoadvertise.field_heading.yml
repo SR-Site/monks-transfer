@@ -1,4 +1,4 @@
-uuid: 73a12c84-b7d4-47db-8648-b1b7ea91384d
+uuid: 43b3c3fc-e94b-45ac-a8ef-23d1deeecc0c
 langcode: en
 status: true
 dependencies:
@@ -13,10 +13,15 @@ entity_type: paragraph
 bundle: blockhowtoadvertise
 label: Heading
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  allowed_formats: {  }
+  allowed_formats:
+    bold_html: bold_html
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
 field_type: text_long

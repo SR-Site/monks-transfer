@@ -35,14 +35,14 @@ bundle: personas
 mode: default
 content:
   field_heading:
-    weight: 7
+    weight: 0
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
   field_image:
-    weight: 5
+    weight: 4
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber

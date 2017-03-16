@@ -1,4 +1,4 @@
-uuid: b3169004-77e8-429c-9d7f-7b311be26a9d
+uuid: 2738860d-57cb-4f56-be04-3c1127bec99b
 langcode: en
 status: true
 dependencies:
@@ -19,9 +19,9 @@ default_value: {  }
 default_value_callback: ''
 settings:
   allowed_formats:
-    basic_html: basic_html
     bold_html: bold_html
-    restricted_html: restricted_html
-    full_html: full_html
-    plain_text: plain_text
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
 field_type: text_long

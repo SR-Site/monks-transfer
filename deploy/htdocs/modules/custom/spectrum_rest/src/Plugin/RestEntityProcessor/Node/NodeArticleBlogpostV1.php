@@ -8,15 +8,15 @@ use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
  * Returns the structured data of an entity.
  *
  * @RestEntityProcessor(
- *   id = "spectrum_rest_node_article_teaser_v1",
- *   label = @Translation("Node: Article - Teaser"),
+ *   id = "spectrum_rest_node_article_blogpost_v1",
+ *   label = @Translation("Node: Article - Blog Post"),
  *   version = "v1",
  *   entity_type = "node",
  *   bundle = "article",
- *   view_mode = "teaser"
+ *   view_mode = "blogpost"
  * )
  */
-class NodeArticleTeaserV1 extends SpectrumRestEntityProcessorBase {
+class NodeArticleBlogpostV1 extends SpectrumRestEntityProcessorBase {
 
   /**
    * {@inheritdoc}
@@ -31,7 +31,7 @@ class NodeArticleTeaserV1 extends SpectrumRestEntityProcessorBase {
       "views" => 0,
       "time" => (int) $this->fieldProcessor->getFieldData($entity->get('field_read_time')),
       "date" => $this->dateFormatter->format($entity->getCreatedTime(), 'custom', 'd/m/Y'),
-      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_excerpt')),
+      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_content')),
       "subHeading" => $this->fieldProcessor->getFieldData($entity->get('field_subheading')),
       "heading" => $entity->label(),
       "theme" => $entity->get('field_theme')->value,

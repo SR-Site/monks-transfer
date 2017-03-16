@@ -10,9 +10,16 @@ effects:
   644ea8fe-e370-48e7-8d8c-c5c3ddfe623d:
     uuid: 644ea8fe-e370-48e7-8d8c-c5c3ddfe623d
     id: image_blur
-    weight: 1
+    weight: -10
     data:
       type: '2'
       radius: '8'
       sigma: '8'
       angle: '0'
+  4fb669ad-36f7-4a50-b932-9e423bc7e11f:
+    uuid: 4fb669ad-36f7-4a50-b932-9e423bc7e11f
+    id: image_coloroverlay
+    weight: -9
+    data:
+      HEX: '#ffffff'
+      alpha: '22'
