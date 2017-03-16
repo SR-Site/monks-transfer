@@ -1,4 +1,4 @@
-uuid: 8162c2d5-6438-4cae-a052-7efc8ee4c242
+uuid: f1d81d99-0629-41be-a64e-2315a344c2a9
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ id: paragraph.blockmarketmap.field_heading
 field_name: field_heading
 entity_type: paragraph
 bundle: blockmarketmap
-label: 'Search label'
+label: Heading
 description: ''
 required: true
 translatable: true
@@ -19,9 +19,9 @@ default_value: {  }
 default_value_callback: ''
 settings:
   allowed_formats:
-    basic_html: basic_html
     bold_html: bold_html
-    restricted_html: restricted_html
-    full_html: full_html
-    plain_text: plain_text
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
 field_type: text_long
