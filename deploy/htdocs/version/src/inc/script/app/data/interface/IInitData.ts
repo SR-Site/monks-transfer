@@ -1,6 +1,6 @@
 import ILink from "./action/ILink";
 import INavigationItem from "./INavigationItem";
-import IContactOptions from "./IContactOptions";
+import OptionsData from "./OptionsData";
 
 interface IInitData
 {
@@ -18,9 +18,9 @@ interface IInitData
 		notFound: string;
 	};
 	/**
-	 * @description The routes
+	 * @description The data for the contact options
 	 */
-	// contactOptions: IContactOptions;
+	contactOptions: OptionsData;
 	/**
 	 * @description The routes
 	 */

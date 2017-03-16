@@ -1,4 +1,4 @@
-interface IContactOptions
+interface OptionsData
 {
 	/**
 	 * @description Phone contact object
@@ -28,4 +28,4 @@ interface IContactOptions
 	};
 }
 
-export default IContactOptions;
+export default OptionsData;

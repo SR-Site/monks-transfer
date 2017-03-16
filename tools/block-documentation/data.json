@@ -1,69 +1,328 @@
 {
     "blocks": [],
-    "references": [],
-    "enums": [],
+    "references": [
+        {
+            "name": "ILink",
+            "properties": [
+                {
+                    "name": "target",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The target of the link",
+                    "placeholder": "path/to/page",
+                    "properties": []
+                },
+                {
+                    "name": "type",
+                    "type": "LinkType",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The type of the link",
+                    "placeholder": "0",
+                    "properties": []
+                },
+                {
+                    "name": "label",
+                    "type": "string",
+                    "required": false,
+                    "defaultValue": "null",
+                    "description": "The label displayed in the action",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
+                    "name": "title",
+                    "type": "string",
+                    "required": false,
+                    "defaultValue": "null",
+                    "description": "The title used for accessibility",
+                    "placeholder": "",
+                    "properties": []
+                }
+            ]
+        }
+    ],
+    "enums": [
+        {
+            "name": "LinkType",
+            "properties": [
+                {
+                    "name": "INTERNAL",
+                    "value": 0
+                },
+                {
+                    "name": "EXTERNAL",
+                    "value": 1
+                },
+                {
+                    "name": "SCROLL_TO_NEXT_SECTION",
+                    "value": 2
+                },
+                {
+                    "name": "CONTACT_US",
+                    "value": 3
+                }
+            ]
+        }
+    ],
     "files": [
         {
             "name": "IInitData",
             "properties": [
                 {
-                    "name": "email",
+                    "name": "language",
+                    "type": "any",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The routes",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
+                    "name": "layout",
                     "type": "Object",
                     "required": true,
                     "defaultValue": "null",
-                    "description": "Email contact object",
+                    "description": "The routes",
                     "placeholder": "",
                     "properties": [
                         {
-                            "name": "emailAddress",
-                            "type": "string",
+                            "name": "navigation",
+                            "type": "Array",
                             "required": true,
                             "defaultValue": "null",
-                            "description": "Email address",
+                            "description": "The routes",
                             "placeholder": "",
-                            "properties": []
+                            "properties": [
+                                {
+                                    "name": "link",
+                                    "type": "ILink",
+                                    "required": true,
+                                    "defaultValue": "null",
+                                    "description": "",
+                                    "placeholder": "",
+                                    "properties": []
+                                },
+                                {
+                                    "name": "subtitle",
+                                    "type": "string",
+                                    "required": false,
+                                    "defaultValue": "null",
+                                    "description": "",
+                                    "placeholder": "",
+                                    "properties": []
+                                }
+                            ]
                         },
                         {
-                            "name": "emailBody",
-                            "type": "string",
+                            "name": "footer",
+                            "type": "Object",
                             "required": true,
                             "defaultValue": "null",
-                            "description": "Email body text",
+                            "description": "The routes",
                             "placeholder": "",
-                            "properties": []
+                            "properties": [
+                                {
+                                    "name": "copyright",
+                                    "type": "string",
+                                    "required": true,
+                                    "defaultValue": "null",
+                                    "description": "The routes",
+                                    "placeholder": "",
+                                    "properties": []
+                                },
+                                {
+                                    "name": "contactOptions",
+                                    "type": "Object",
+                                    "required": true,
+                                    "defaultValue": "null",
+                                    "description": "The routes",
+                                    "placeholder": "",
+                                    "properties": [
+                                        {
+                                            "name": "email",
+                                            "type": "string",
+                                            "required": true,
+                                            "defaultValue": "null",
+                                            "description": "The routes",
+                                            "placeholder": "",
+                                            "properties": []
+                                        },
+                                        {
+                                            "name": "phone",
+                                            "type": "string",
+                                            "required": true,
+                                            "defaultValue": "null",
+                                            "description": "The routes",
+                                            "placeholder": "",
+                                            "properties": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "mainLinks",
+                                    "type": "Array",
+                                    "required": true,
+                                    "defaultValue": "null",
+                                    "description": "The routes",
+                                    "placeholder": "",
+                                    "properties": [
+                                        {
+                                            "name": "target",
+                                            "type": "string",
+                                            "required": true,
+                                            "defaultValue": "null",
+                                            "description": "The target of the link",
+                                            "placeholder": "path/to/page",
+                                            "properties": []
+                                        },
+                                        {
+                                            "name": "type",
+                                            "type": "LinkType",
+                                            "required": true,
+                                            "defaultValue": "null",
+                                            "description": "The type of the link",
+                                            "placeholder": "0",
+                                            "properties": []
+                                        },
+                                        {
+                                            "name": "label",
+                                            "type": "string",
+                                            "required": false,
+                                            "defaultValue": "null",
+                                            "description": "The label displayed in the action",
+                                            "placeholder": "",
+                                            "properties": []
+                                        },
+                                        {
+                                            "name": "title",
+                                            "type": "string",
+                                            "required": false,
+                                            "defaultValue": "null",
+                                            "description": "The title used for accessibility",
+                                            "placeholder": "",
+                                            "properties": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "secondaryLinks",
+                                    "type": "Array",
+                                    "required": true,
+                                    "defaultValue": "null",
+                                    "description": "The routes",
+                                    "placeholder": "",
+                                    "properties": []
+                                },
+                                {
+                                    "name": "social",
+                                    "type": "Object",
+                                    "required": true,
+                                    "defaultValue": "null",
+                                    "description": "The routes",
+                                    "placeholder": "",
+                                    "properties": [
+                                        {
+                                            "name": "twitter",
+                                            "type": "ILink",
+                                            "required": true,
+                                            "defaultValue": "null",
+                                            "description": "The routes",
+                                            "placeholder": "",
+                                            "properties": []
+                                        },
+                                        {
+                                            "name": "instagram",
+                                            "type": "ILink",
+                                            "required": true,
+                                            "defaultValue": "null",
+                                            "description": "The routes",
+                                            "placeholder": "",
+                                            "properties": []
+                                        },
+                                        {
+                                            "name": "linkedin",
+                                            "type": "ILink",
+                                            "required": true,
+                                            "defaultValue": "null",
+                                            "description": "The routes",
+                                            "placeholder": "",
+                                            "properties": []
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "name": "emailSubject",
-                            "type": "string",
+                            "name": "slideOutPanel",
+                            "type": "Object",
                             "required": true,
                             "defaultValue": "null",
-                            "description": "Email subject",
+                            "description": "The routes",
                             "placeholder": "",
-                            "properties": []
+                            "properties": [
+                                {
+                                    "name": "contact",
+                                    "type": "any",
+                                    "required": true,
+                                    "defaultValue": "null",
+                                    "description": "The routes",
+                                    "placeholder": "",
+                                    "properties": []
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "name": "phone",
+                    "name": "csrfToken",
+                    "type": "string",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The routes",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
+                    "name": "contactOptions",
+                    "type": "OptionsData",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "The data for the contact options",
+                    "placeholder": "",
+                    "properties": []
+                },
+                {
+                    "name": "routes",
                     "type": "Object",
                     "required": true,
                     "defaultValue": "null",
-                    "description": "Phone contact object",
+                    "description": "The routes",
                     "placeholder": "",
                     "properties": [
                         {
-                            "name": "phoneNumber",
+                            "name": "landing",
                             "type": "string",
                             "required": true,
                             "defaultValue": "null",
-                            "description": "Phone number",
+                            "description": "The routes",
+                            "placeholder": "",
+                            "properties": []
+                        },
+                        {
+                            "name": "notFound",
+                            "type": "string",
+                            "required": true,
+                            "defaultValue": "null",
+                            "description": "The routes",
                             "placeholder": "",
                             "properties": []
                         }
                     ]
                 }
             ],
-            "example": "{\n    \"email\": {\n        \"emailAddress\": \"Lorem ipsum dolor sit amet\",\n        \"emailBody\": \"Lorem ipsum dolor sit amet\",\n        \"emailSubject\": \"Lorem ipsum dolor sit amet\"\n    },\n    \"phone\": {\n        \"phoneNumber\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"language\": \"TODO: any\",\n    \"layout\": {\n        \"navigation\": [\n            {\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"subtitle\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"footer\": {\n            \"copyright\": \"Lorem ipsum dolor sit amet\",\n            \"contactOptions\": {\n                \"email\": \"Lorem ipsum dolor sit amet\",\n                \"phone\": \"Lorem ipsum dolor sit amet\"\n            },\n            \"mainLinks\": [\n                {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                }\n            ],\n            \"secondaryLinks\": [\n                {}\n            ],\n            \"social\": {\n                \"twitter\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"instagram\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"linkedin\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        },\n        \"slideOutPanel\": {\n            \"contact\": \"TODO: any\"\n        }\n    },\n    \"csrfToken\": \"Lorem ipsum dolor sit amet\",\n    \"contactOptions\": \"TODO: OptionsData\",\n    \"routes\": {\n        \"landing\": \"Lorem ipsum dolor sit amet\",\n        \"notFound\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         }
     ]
 }
