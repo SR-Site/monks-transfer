@@ -273,6 +273,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 
 		const player = (<Vimeo.Player>this._videoPlayer);
 
+		player.loadVideo(parseInt(this.options.video.url));
 		player.element.style.display = 'block';
 
 		if(DEBUG)
