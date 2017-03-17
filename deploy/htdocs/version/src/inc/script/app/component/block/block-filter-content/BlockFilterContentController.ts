@@ -67,6 +67,8 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 					}
 				})
 			});
+
+		DataManager.getInstance().beforeGotoPool.add(this.handleBeforeGoto.bind(this));
 	}
 
 	/**
@@ -374,6 +376,22 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	}
 
 	/**
+	 * @private
+	 * @method handleBeforeGoto
+	 */
+	private handleBeforeGoto(releaseBeforeGoto: (removeHijack?: boolean) => void): void
+	{
+		// Remove the param from the url
+		const url = URLUtils.removeParameter(window.location.href, BlockFilterContentController.GET_PARAM);
+
+		// update the history pushstate with the new url
+		history.pushState('', '', url);
+
+		// Release and remove the hijack
+		releaseBeforeGoto(true);
+	}
+
+	/**
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
@@ -382,7 +400,6 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 		this._components = null;
 		this._filterMenu = null;
 		this._loader = null;
-
 
 		// always call this last
 		super.destruct();
