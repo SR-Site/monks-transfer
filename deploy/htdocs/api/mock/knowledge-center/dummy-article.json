@@ -39,7 +39,7 @@
 						{
 							"label": "PDF",
 							"title": "PDF",
-							"target": "knowledge-center#pdf",
+							"target": "knowledge-center#path-to-purchase",
 							"type": 0
 						}
 					],
