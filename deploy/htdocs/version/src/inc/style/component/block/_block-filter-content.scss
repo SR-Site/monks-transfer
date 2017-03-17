@@ -24,8 +24,29 @@
 		}
 	}
 
-	// Breakpoints
+	 //Breakpoints
+	@include respond-to(X_LARGE) {
+		.content-items {
+			justify-content: space-around;
+
+			.component-block-article-teaser,
+			.component-block-info {
+				margin: 0 $sizeGrid  $sizeGrid * 2 $sizeGrid;
+			}
+		}
+	}
+
+	//Breakpoints
 	@include respond-to(LARGE) {
+		.content-items {
+			.component-block-article-teaser,
+			.component-block-info {
+				margin: 0 $sizeGrid / 2 $sizeGrid $sizeGrid / 2;
+			}
+		}
+	}
+
+	@include respond-to(MEDIUM) {
 		.content-items {
 			justify-content: center;
 

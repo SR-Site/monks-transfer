@@ -157,25 +157,25 @@
 		}
 	}
 
-	@include respond-to(LARGE) {
-		width: 16 * $sizeGrid;
-
-		aside {
-			width: 8 * $sizeGrid;
-		}
-
-		figure {
-			clip: rect(0, $sizeGrid * 16, $sizeGrid * 8, $sizeGrid * 8);
-		}
-
-		&.transition-in-complete {
-			@include hover() {
-				figure {
-					clip: rect(0, $sizeGrid * 16, $sizeGrid * 8, 0);
-				}
-			}
-		}
-	}
+	//@include respond-to(LARGE) {
+	//	width: 16 * $sizeGrid;
+	//
+	//	aside {
+	//		width: 8 * $sizeGrid;
+	//	}
+	//
+	//	figure {
+	//		clip: rect(0, $sizeGrid * 16, $sizeGrid * 8, $sizeGrid * 8);
+	//	}
+	//
+	//	&.transition-in-complete {
+	//		@include hover() {
+	//			figure {
+	//				clip: rect(0, $sizeGrid * 16, $sizeGrid * 8, 0);
+	//			}
+	//		}
+	//	}
+	//}
 
 	@include respond-to(SMALL) {
 		@include size(100%, auto);

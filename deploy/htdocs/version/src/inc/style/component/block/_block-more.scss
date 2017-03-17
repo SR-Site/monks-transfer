@@ -24,7 +24,7 @@
 		@include size(100%, auto);
 		font-size: 0;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		flex-wrap: wrap;
 
 		.component-block-article-teaser {
@@ -33,9 +33,26 @@
 		}
 	}
 
+	//Breakpoints
+	@include respond-to(X_LARGE) {
+		.latest-articles {
+			justify-content: space-around;
+
+			.component-block-article-teaser,
+			.component-block-info {
+				margin: 0 $sizeGrid  $sizeGrid * 2 $sizeGrid;
+			}
+		}
+	}
+
+	//Breakpoints
 	@include respond-to(LARGE) {
 		.latest-articles {
-			justify-content: center;
+
+			.component-block-article-teaser,
+			.component-block-info {
+				margin: 0 $sizeGrid / 2 $sizeGrid $sizeGrid / 2;
+			}
 		}
 	}
 

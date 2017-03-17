@@ -77,6 +77,10 @@
 		.description {
 			width: 100%;
 		}
+
+		@include respond-to(X_LARGE){
+			@include size(15 * $sizeGrid, 8 * $sizeGrid);
+		}
 	}
 
 	// Breakpoints
