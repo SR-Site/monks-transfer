@@ -33,7 +33,7 @@
 						{
 							"label": "Sport",
 							"title": "Sport",
-							"target": "knowledge-center#sport",
+							"target": "knowledge-center?filters=sport_0",
 							"type": 0
 						},
 						{
