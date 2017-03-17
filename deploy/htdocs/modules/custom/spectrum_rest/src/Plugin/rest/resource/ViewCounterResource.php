@@ -30,7 +30,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  *   version = "v1",
  *   label = @Translation("Spectrum rest increase counter for an article"),
  *   uri_paths = {
- *     "canonical" = "/api/v1/counter/article/{slug}",
+ *     "canonical" = "/api/v1/counter/articles/{slug}",
  *   }
  * )
  */
@@ -120,46 +120,7 @@ class ViewCounterResource extends ResourceBase {
     /**
      * @inheritDoc
      */
-    public function post($slug) {
-        $this->disableCache();
-
-        $count = 0;
-        $slug = $this->slugPathProcessor->resolveSlug($this->request, $slug);
-
-        // Try to load the entity based on the slug.
-        /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
-        $entity = $this->slugResolver->loadEntityBySlug('articles/' . $slug);
-
-
-        if(empty($entity))
-            throw new NotFoundHttpException($this->t('Not found'));
-
-        $enabled = \Drupal::config('statistics.settings')->get('count_content_views');
-
-        if ($enabled) {
-            $db = Database::getConnection();
-
-            $db->merge('node_counter')
-                ->key('nid', $entity->id())
-                ->fields(array(
-                    'totalcount' => 1,
-                    'timestamp' => REQUEST_TIME,
-                ))
-                ->expression('totalcount', 'totalcount + 1')
-                ->execute();
-
-            $query = $db->select('node_counter');
-            $query->fields('node_counter', ['totalcount'])->condition('nid', $entity->id());
-
-            $data = $query->execute();
-
-            $count = $data->fetchAssoc();
-        }
-
-        return $count;
-    }
-
-//    public function get($slug) {
+//    public function post($slug) {
 //        $this->disableCache();
 //
 //        $count = 0;
@@ -169,9 +130,8 @@ class ViewCounterResource extends ResourceBase {
 //        /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
 //        $entity = $this->slugResolver->loadEntityBySlug('articles/' . $slug);
 //
-//
 //        if(empty($entity))
-//            throw new NotFoundHttpException($this->t('Not found'));
+//            throw new NotFoundHttpException($this->t('Not found entity'));
 //
 //        $enabled = \Drupal::config('statistics.settings')->get('count_content_views');
 //
@@ -195,6 +155,48 @@ class ViewCounterResource extends ResourceBase {
 //            $count = $data->fetchAssoc();
 //        }
 //
-//        return $count['totalcount'];
+//        return $count;
 //    }
+
+    public function get($slug) {
+        $this->disableCache();
+
+        $count = 0;
+        $slug = $this->slugPathProcessor->resolveSlug($this->request, $slug);
+
+        // Try to load the entity based on the slug.
+        /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
+        $entity = $this->slugResolver->loadEntityBySlug('articles/' . $slug);
+
+
+        if(empty($entity))
+            throw new NotFoundHttpException($this->t('Not found entity'));
+
+        $enabled = \Drupal::config('statistics.settings')->get('count_content_views');
+
+        if ($enabled) {
+            $db = Database::getConnection();
+
+            $db->merge('node_counter')
+                ->key('nid', $entity->id())
+                ->fields(array(
+                    'totalcount' => 1,
+                    'timestamp' => REQUEST_TIME,
+                ))
+                ->expression('totalcount', 'totalcount + 1')
+                ->execute();
+
+            $query = $db->select('node_counter');
+            $query->fields('node_counter', ['totalcount'])->condition('nid', $entity->id());
+
+            $data = $query->execute();
+
+            $count = $data->fetchAssoc();
+        }
+
+        return [
+            "totalcount" => $count['totalcount'],
+            "daycount" =>  $count['totalcount']
+        ];
+    }
 }

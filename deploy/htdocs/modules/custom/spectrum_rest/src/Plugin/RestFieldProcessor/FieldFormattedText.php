@@ -23,7 +23,13 @@ class FieldFormattedText extends RestFieldProcessorBase {
    * {@inheritdoc}
    */
   protected function getItemData($field, $options = array()) {
-    $html = $field->format == 'bold_html' ? strip_tags($field->value, '<strong><br /><br>') : $field->value;
+    $html = $field->value;
+
+    if($field->format == 'bold_html') {
+        $html = strip_tags($html, '<strong><br /><br>');
+        $html = str_replace(array("\r\n", "\r", "\n"), "<br />", $html);
+        $html = str_replace('<br /><br />', "<br />", $html);
+    }
 
     return check_markup($html, $field->format);
   }
