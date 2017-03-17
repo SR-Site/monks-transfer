@@ -7,8 +7,6 @@
 	.menu {
 		@include size(100%, $sizeGrid*2);
 		display: flex;
-		border-left: 1px solid $colorBorder;
-		border-right: 1px solid $colorBorder;
 	}
 
 	// Component Button Tag
