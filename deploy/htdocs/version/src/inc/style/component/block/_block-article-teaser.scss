@@ -157,25 +157,48 @@
 		}
 	}
 
-	//@include respond-to(LARGE) {
-	//	width: 16 * $sizeGrid;
-	//
-	//	aside {
-	//		width: 8 * $sizeGrid;
-	//	}
-	//
-	//	figure {
-	//		clip: rect(0, $sizeGrid * 16, $sizeGrid * 8, $sizeGrid * 8);
-	//	}
-	//
-	//	&.transition-in-complete {
-	//		@include hover() {
-	//			figure {
-	//				clip: rect(0, $sizeGrid * 16, $sizeGrid * 8, 0);
-	//			}
-	//		}
-	//	}
-	//}
+	@include respond-to(ARTICLE_TEASER_LARGE) {
+		width: 12 * $sizeGrid;
+
+		aside {
+			width: 6 * $sizeGrid;
+			padding: $sizeGrid;
+		}
+
+		figure {
+			clip: rect(0, $sizeGrid * 12, $sizeGrid * 8, $sizeGrid * 6);
+		}
+
+		&.transition-in-complete {
+			@include hover() {
+				figure {
+					clip: rect(0, $sizeGrid * 12, $sizeGrid * 8, 0);
+				}
+			}
+		}
+	}
+
+
+	@include respond-to(ARTICLE_TEASER_MEDIUM) {
+		width: 9 * $sizeGrid;
+
+		aside {
+			width: 6 * $sizeGrid;
+			padding: $sizeGrid;
+		}
+
+		figure {
+			clip: rect(0, $sizeGrid * 9, $sizeGrid * 8, $sizeGrid * 6);
+		}
+
+		&.transition-in-complete {
+			@include hover() {
+				figure {
+					clip: rect(0, $sizeGrid * 9, $sizeGrid * 8, 0);
+				}
+			}
+		}
+	}
 
 	@include respond-to(SMALL) {
 		@include size(100%, auto);

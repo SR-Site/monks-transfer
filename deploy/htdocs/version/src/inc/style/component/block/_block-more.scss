@@ -45,13 +45,20 @@
 		}
 	}
 
-	//Breakpoints
 	@include respond-to(LARGE) {
-		.latest-articles {
-
+		.content-items {
 			.component-block-article-teaser,
 			.component-block-info {
 				margin: 0 $sizeGrid / 2 $sizeGrid $sizeGrid / 2;
+			}
+		}
+	}
+
+	@include respond-to(ARTICLE_TEASER_MEDIUM) {
+		.content-items {
+			.component-block-article-teaser,
+			.component-block-info {
+				margin: 0 $sizeGrid / 4 $sizeGrid $sizeGrid / 4;
 			}
 		}
 	}

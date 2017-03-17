@@ -84,6 +84,8 @@
 		flex-basis: 0;
 
 		.label {
+			@include text-overflow();
+			width: 60%;
 			font: 600 1.2rem / 2rem $fontOpenSans;
 		}
 

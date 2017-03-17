@@ -19,7 +19,13 @@ export let mediaQueries:{[breakpoint:string]:string;} = {
 	// Extra large desktop
 	XXX_LARGE: "(min-width: 1660px)",
 
-	MEDIUM_ISOLATE : "(min-width: 768px) and (max-width: 1023px)"
+	MEDIUM_ISOLATE : "(min-width: 768px) and (max-width: 1023px)",
+
+	// Exception for the article teaser blocks
+	ARTICLE_TEASER_MEDIUM: "(max-width: 1010px)",
+
+	ARTICLE_TEASER_LARGE: "(max-width: 1225px)",
+
 };
 
 export let angle:number = 45;

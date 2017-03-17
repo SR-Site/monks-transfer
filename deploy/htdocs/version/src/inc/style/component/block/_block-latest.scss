@@ -29,21 +29,23 @@
 	@include respond-to(X_LARGE) {
 		.latest-articles {
 			justify-content: space-around;
+		}
+	}
 
+	@include respond-to(LARGE) {
+		.content-items {
 			.component-block-article-teaser,
 			.component-block-info {
-				margin: 0 $sizeGrid  $sizeGrid * 2 $sizeGrid;
+				margin: 0 $sizeGrid / 2 $sizeGrid $sizeGrid / 2;
 			}
 		}
 	}
 
-	//Breakpoints
-	@include respond-to(LARGE) {
-		.latest-articles {
-
+	@include respond-to(ARTICLE_TEASER_MEDIUM) {
+		.content-items {
 			.component-block-article-teaser,
 			.component-block-info {
-				margin: 0 $sizeGrid / 2 $sizeGrid $sizeGrid / 2;
+				margin: 0 $sizeGrid / 4 $sizeGrid $sizeGrid / 4;
 			}
 		}
 	}
