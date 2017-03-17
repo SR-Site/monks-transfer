@@ -18,6 +18,19 @@ class FilterMenuTransitionController extends AbstractTransitionController<Filter
 
 	/**
 	 * @public
+	 * @method setupTransitionInTimeline
+	 * @description overwrite this method in the parent class
+	 * */
+	protected setupTransitionInTimeline(): void
+	{
+		this.transitionInTimeline.from(this.element, 0.5, {
+			opacity: 0,
+			ease: Linear.easeNone
+		});
+	}
+
+	/**
+	 * @public
 	 * @method setupDropdownTimeline
 	 */
 	public setupDropdownTimeline(): void

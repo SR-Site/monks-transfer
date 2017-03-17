@@ -37,6 +37,12 @@ interface IAbstractBlockComponentOptions extends IAbstractTransitionComponentOpt
 	 * @defaultValue false
 	 */
 	overlap?:boolean;
+	/**
+	 * @property
+	 * @description The id of the section so that we can scroll to this component with a gaiaGoto
+	 * @defaultValue uniqueSectionName
+	 */
+	scrollSection?:string;
 }
 
 export default IAbstractBlockComponentOptions;

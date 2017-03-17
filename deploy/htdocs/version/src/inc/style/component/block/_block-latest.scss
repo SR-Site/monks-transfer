@@ -16,7 +16,7 @@
 		@include size(100%, auto);
 		font-size: 0;
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		flex-wrap: wrap;
 
 		.component-block-article-teaser {
@@ -25,10 +25,28 @@
 		}
 	}
 
-	@include respond-to(LARGE) {
+	//Breakpoints
+	@include respond-to(X_LARGE) {
 		.latest-articles {
-			align-items: center;
-			flex-direction: column;
+			justify-content: space-around;
+		}
+	}
+
+	@include respond-to(LARGE) {
+		.content-items {
+			.component-block-article-teaser,
+			.component-block-info {
+				margin: 0 $sizeGrid / 2 $sizeGrid $sizeGrid / 2;
+			}
+		}
+	}
+
+	@include respond-to(ARTICLE_TEASER_MEDIUM) {
+		.content-items {
+			.component-block-article-teaser,
+			.component-block-info {
+				margin: 0 $sizeGrid / 4 $sizeGrid $sizeGrid / 4;
+			}
 		}
 	}
 

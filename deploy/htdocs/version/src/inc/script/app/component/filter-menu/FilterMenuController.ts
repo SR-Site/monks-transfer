@@ -38,6 +38,27 @@ class FilterMenuController extends AbstractTransitionComponentController<FilterM
 	}
 
 	/**
+	 * @public
+	 * @method setFilters
+	 * @param tags
+	 */
+	public setFilters(targetFilters: {[type: string]: Array<{label: string;value: string;}>}): void
+	{
+		const filters = this.viewModel.filters();
+
+		Object.keys(targetFilters).forEach((type) =>
+		{
+			targetFilters[type].forEach((targetFilter) =>
+			{
+				filters[type].find((filter) => filter.value === targetFilter.value).checked(true);
+			});
+		});
+
+		// Apply the filters
+		this.viewModel.applyFilter();
+	}
+
+	/**
 	 * @private
 	 * @method handleFilterChange
 	 */

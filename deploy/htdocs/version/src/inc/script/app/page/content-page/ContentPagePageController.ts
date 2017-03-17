@@ -27,6 +27,11 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 */
 	public callbackCounter: CallbackCounter;
 	/**
+	 * @property _currentRoute
+	 * @type {string}
+	 */
+	private _currentRoute:string;
+	/**
 	 * @property _currentDeeplink
 	 * @type {Object}
 	 */
@@ -87,6 +92,8 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 
 		this._currentDeeplink = Gaia.api.getDeeplink();
 
+		this._currentRoute = Gaia.api.getRoute().split('#')[0];
+
 		// listen to window resize for recalculating the scroll positions
 		this.destructibles.add(new NativeEventListener(window, 'resize', ThrottleDebounce.debounce(this.handleResize, 500, this)));
 	}
@@ -122,12 +129,17 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 
 		// TODO: maybe do the check based on the deeplink data instead of a simple stringify, this works because the back-end decides the param order
 		if(!Gaia.api.getPage(event.routeResult[0].branch).isPopup() &&
-			JSON.stringify(this._currentDeeplink) != JSON.stringify(event.routeResult[0].deeplink))
+			JSON.stringify(this._currentDeeplink) != JSON.stringify(event.routeResult[0].deeplink) &&
+			this._currentRoute != event.routeResult.route.split('#')[0]
+		)
 		{
 			this._dataManager.pageLoader.transitionIn()
 				.then(() =>
 				{
 					this._currentDeeplink = event.routeResult[0].deeplink;
+
+					// Filter out the hash tags
+					this._currentRoute = event.routeResult.route.split('#')[0];
 
 					this.viewModel.pageLayout([]);
 
@@ -161,6 +173,35 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 					this._startupPagePromise.isCancellable();
 				});
 		}
+		else
+		{
+			this.scrollToComponentFromURL(1);
+		}
+	}
+
+	/**
+	 * @private
+	 * @method scrollToComponentFromURL
+	 */
+	private scrollToComponentFromURL(duration: number = 0): void
+	{
+		const route: string = Gaia.api.getRoute();
+
+		if(route.indexOf('#') > -1)
+		{
+			const scrollId: string = route.split('#')[1];
+			const scrollToComponentElement: HTMLElement = <HTMLElement>this.element.querySelector(`[data-scroll-section="${scrollId}"]`);
+			const headerHeight:number = (<HTMLElement>document.body.querySelector('.component-header')).offsetHeight;
+
+			if(scrollToComponentElement)
+			{
+				ScrollUtils.scrollToPosition(
+					$(scrollToComponentElement).offset().top - headerHeight,
+					duration
+				);
+			}
+		}
+
 	}
 
 	/**
@@ -217,6 +258,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 				return this._allComponentsLoaded;
 			})
 			.then(() => this.setScrollSections())
+			.then(() => this.scrollToComponentFromURL())
 			.then(() => this._dataManager.pageLoader.transitionOut())
 			.catch((result) =>
 			{
@@ -436,6 +478,8 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 			this._scrollTracker = null;
 		}
 
+		this._currentDeeplink = null;
+		this._currentRoute = null;
 		this._dataManager = null;
 		this._beforeTransitionIn = null;
 		this._allComponentsLoaded = null;

@@ -16,9 +16,12 @@ import Loader from "../../../util/Loader";
 import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedController";
 import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
 import IGatewayResult from "../../../net/gateway/result/IGatewayResult";
+import URLUtils from "../../../../lib/temple/util/URLUtils";
 
 class BlockFilterContentController extends AbstractBlockComponentController<BlockFilterContentViewModel, IBlockFilterContentOptions, BlockFilterContentTransitionController>
 {
+	public static GET_PARAM: string = 'filters';
+
 	/**
 	 *    Instance of Log debug utility for debug logging
 	 *    @property _debug
@@ -32,6 +35,8 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	private _loader: Loader;
 	private _paginator: PaginatorDashedController;
 
+	private _deeplinkedFilters: {[type: string]: Array<{label: string;value: string;}>} = {};
+
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -42,6 +47,28 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 		super.init();
 
 		this._loader = new Loader(this.element);
+
+		// fetch any deeplinked tags from the url
+		URLUtils.getParameter(window.location.href, BlockFilterContentController.GET_PARAM).split(',')
+			.forEach((filterValue: string) =>
+			{
+				this.options.filters.forEach((category: {label: string;type: number;options: Array<{label: string;value: string;}>}) =>
+				{
+					const filter = category.options.find((filter) => filter.value === filterValue);
+
+					if(filter)
+					{
+						if(!this._deeplinkedFilters[category.type])
+						{
+							this._deeplinkedFilters[category.type] = [];
+						}
+
+						this._deeplinkedFilters[category.type].push(filter);
+					}
+				})
+			});
+
+		DataManager.getInstance().beforeGotoPool.add(this.handleBeforeGoto.bind(this));
 	}
 
 	/**
@@ -63,6 +90,7 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	{
 		this._filterMenu = controller;
 		this._filterMenu.addEventListener(CommonEvent.CHANGE, this.handleFilterChange.bind(this));
+		this._filterMenu.setFilters(this._deeplinkedFilters);
 	}
 
 	/**
@@ -107,10 +135,13 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	 */
 	private removeComponents(): void
 	{
-		// Remove components from scrollTrackerPoint in DefaultContentPageController
-		this.parentPage.removeComponentsFromScrollTracker(this._components);
+		if(Object.keys(this._components).length)
+		{
+			// Remove components from scrollTrackerPoint in DefaultContentPageController
+			this.parentPage.removeComponentsFromScrollTracker(this._components);
 
-		this._components = {};
+			this._components = {};
+		}
 	}
 
 	/**
@@ -204,9 +235,6 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	{
 		this.transitionController = new BlockFilterContentTransitionController(this.element, this);
 
-		// Load on init
-		this.fetchContent();
-
 		super.allComponentsLoaded();
 	}
 
@@ -289,7 +317,7 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 		// Once all loaded blocks are ready, register them in the DefaultContentPageController.
 		const allComponentsLoaded: Promise<any> = this.callbackCounter.count > 0 ? this.callbackCounter.promise : Promise.resolve();
 
-		// NOTE: if we subscribe to the allcomponents loaded right away this then will be triggered first which means
+		// NOTE: if we subscribe to the allComponents loaded right away this then will be triggered first which means
 		// they will be added to the scroll tracker before the setup transition is called, therefore we add an extra subscription
 		// to the sub-component callback counters to make sure this one is always at the end of the call stack, this
 		// felt a bit more secure then adding a setTimeout(()=> this.allDynamicComponentsLoaded(), 0) in case there will be more nesting
@@ -348,6 +376,22 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	}
 
 	/**
+	 * @private
+	 * @method handleBeforeGoto
+	 */
+	private handleBeforeGoto(releaseBeforeGoto: (removeHijack?: boolean) => void): void
+	{
+		// Remove the param from the url
+		const url = URLUtils.removeParameter(window.location.href, BlockFilterContentController.GET_PARAM);
+
+		// update the history pushstate with the new url
+		history.pushState('', '', url);
+
+		// Release and remove the hijack
+		releaseBeforeGoto(true);
+	}
+
+	/**
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
@@ -356,7 +400,6 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 		this._components = null;
 		this._filterMenu = null;
 		this._loader = null;
-
 
 		// always call this last
 		super.destruct();
