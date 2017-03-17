@@ -193,6 +193,7 @@ class InitResource extends ResourceBase {
     $routers = [
       'landing' => $this->urlHelper($this->state->get('site_frontpage')),
       'notFound' => $this->urlHelper($this->state->get('site_404')),
+      'articleOverviewPage' => $this->urlHelper($this->state->get('article_overview_page')),
     ];
 
     return $routers;
