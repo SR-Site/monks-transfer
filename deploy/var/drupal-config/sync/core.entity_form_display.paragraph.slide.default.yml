@@ -3,13 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.video
     - field.field.paragraph.slide.field_heading
     - field.field.paragraph.slide.field_image
     - field.field.paragraph.slide.field_theme
+    - field.field.paragraph.slide.field_video
     - image.style.thumbnail
     - paragraphs.paragraphs_type.slide
   module:
+    - entity_browser
     - image
+    - text
 id: paragraph.slide.default
 targetEntityType: paragraph
 bundle: slide
@@ -18,10 +22,10 @@ content:
   field_heading:
     weight: 0
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: text_textarea
   field_image:
     weight: 1
     settings:
@@ -34,6 +38,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+  field_video:
+    weight: 3
+    settings:
+      entity_browser: video
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
 hidden:
   created: true
   status: true

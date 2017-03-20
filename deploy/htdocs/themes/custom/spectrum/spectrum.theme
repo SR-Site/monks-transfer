@@ -63,4 +63,13 @@ function spectrum_page_attachments_alter(array &$page) {
       unset($page['#attached']['html_head_link'][$index]);
     }
   }
+  
+  // Add document-base tag.
+  $favicon = array(
+	  'rel' => 'shortcut icon',
+	  'content' => '/favicon.ico',
+	  'type' => "image/x-icon",
+	  'title' => 'favicon'
+  );
+  $page['#attached']['html_head_link'][] = [$favicon, 'document-base'];
 }

@@ -1,0 +1,22 @@
+uuid: 9f0f7628-2ec1-4860-9106-89030d887f76
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - spectrum_rest
+    - user
+id: spectrum_rest_view_counter_v1
+plugin_id: spectrum_rest_view_counter_v1
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie
+  POST:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

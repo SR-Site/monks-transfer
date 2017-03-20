@@ -14,4 +14,10 @@ mode: teaser
 content:
   links:
     weight: 100
-hidden: {  }
+hidden:
+  field_category: true
+  field_content: true
+  field_document_type: true
+  field_link: true
+  field_market: true
+  field_platform: true

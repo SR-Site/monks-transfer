@@ -142,18 +142,18 @@ class InitResource extends ResourceBase {
       'routes' => $this->getRouters(),
       'contactOptions' => [
         'phone' => [
-          'phoneNumber' => '1-844-TO-REACH',
+          'phoneNumber' => $this->state->get('contact_options_phone'),
         ],
         'email' => [
-          'emailAddress' => 'spectrumreach@spectrum.com',
-          'emailSubject' => 'Email subject goes here',
-          'emailBody' => 'Email body goes here',
+          'emailAddress' => $this->state->get('contact_options_email_address'),
+          'emailSubject' => $this->state->get('contact_options_email_subject'),
+          'emailBody' => $this->state->get('contact_options_email_body'),
         ],
       ],
       'layout' => [
         'navigation' => $this->getMenu('main'),
         'footer' => [
-          'copyright' => '© 2017 Charter Communications',
+          'copyright' => $this->state->get('footer_copyright'),
           'mainLinks' => $this->getMenu('footer'),
           'secondaryLinks' => [
             $this->getMenu('footer-secondary-1'),
@@ -163,8 +163,8 @@ class InitResource extends ResourceBase {
         ],
         'slideOutPanel' => [
           'contact' => [
-            'subHeading' => 'Get Started Today.',
-            'heading' => 'Let\'s talk! Tell us how we can help you advertise.',
+            'subHeading' => $this->state->get('slideout_panel_subheading'),
+            'heading' => $this->state->get('slideout_panel_heading'),
             'submitLabel' => 'Send',
           ],
         ],

@@ -68,6 +68,7 @@
 			{
 				"id": "pathToPurchase",
 				"data": {
+					"scrollSection": "path-to-purchase",
 					"steps": [
 						{
 							"heading": "Zero-in-ability",

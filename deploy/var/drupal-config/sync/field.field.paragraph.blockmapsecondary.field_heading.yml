@@ -1,10 +1,12 @@
-uuid: 375f74a4-e41a-4e21-b225-895547a7c246
+uuid: 0bb91619-1c90-4a81-a17f-e6a7fadf9034
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_heading
     - paragraphs.paragraphs_type.blockmapsecondary
+  module:
+    - text
 id: paragraph.blockmapsecondary.field_heading
 field_name: field_heading
 entity_type: paragraph
@@ -15,5 +17,11 @@ required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  allowed_formats:
+    bold_html: bold_html
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

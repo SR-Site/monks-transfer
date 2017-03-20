@@ -37,12 +37,12 @@ content:
   field_heading:
     weight: 0
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: text_textarea
   field_image:
-    weight: 5
+    weight: 4
     settings:
       preview_image_style: thumbnail
       progress_indicator: throbber

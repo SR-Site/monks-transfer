@@ -1,10 +1,12 @@
-uuid: fff7d3ea-36c3-40d4-bd32-9578fcfcb674
+uuid: ba38e436-be64-4f8b-900a-ff300eed9d20
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_heading
     - paragraphs.paragraphs_type.program
+  module:
+    - text
 id: paragraph.program.field_heading
 field_name: field_heading
 entity_type: paragraph
@@ -15,5 +17,11 @@ required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  allowed_formats:
+    bold_html: bold_html
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

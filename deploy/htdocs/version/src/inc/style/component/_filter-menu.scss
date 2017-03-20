@@ -70,7 +70,6 @@
 
 	// Filters
 	.filters {
-		position: relative;
 		display: flex;
 		flex-grow: 1;
 		height: 100%;
@@ -84,6 +83,8 @@
 		flex-basis: 0;
 
 		.label {
+			@include text-overflow();
+			width: 60%;
 			font: 600 1.2rem / 2rem $fontOpenSans;
 		}
 
@@ -112,6 +113,7 @@
 		max-height: 0;
 		overflow: hidden;
 		//transition: max-height 250ms ease(easeOutExpo);
+		background: $colorWhite;
 		font-size: 0;
 
 		.inner-content {
@@ -125,13 +127,16 @@
 		}
 
 		.component-button-circle-close {
-			position: absolute;
 			@include pos(50%, $sizeGrid, auto, auto);
+			position: absolute;
 			transform: translate(0, -50%);
 		}
 
 		&.is-open {
 			max-height: $sizeGrid*2;
+			border-left: 1px solid $colorBorder;
+			border-right: 1px solid $colorBorder;
+			border-bottom: 1px solid $colorBorder;
 		}
 	}
 
@@ -191,6 +196,17 @@
 			color: $colorTertiary;
 			transition: color 250ms ease(linear);
 			@include size(7px, 4px);
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.filter-label {
+			width: $sizeGrid*3;
+			padding-left: $sizeGrid / 2;
+		}
+
+		.filter-button {
+			padding-left: $sizeGrid / 2;
 		}
 	}
 

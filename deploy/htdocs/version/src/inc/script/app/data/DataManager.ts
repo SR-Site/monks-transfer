@@ -15,6 +15,7 @@ import VideoOverlayController from "../component/video-overlay/VideoOverlayContr
 import Theme from "./enum/style/Theme";
 import NotificationController from "../component/notification/NotificationController";
 import UserService from "./service/UserService";
+import BeforeGotoPool from "../util/BeforeGotoPool";
 
 
 /**
@@ -51,6 +52,7 @@ class DataManager
 	public serviceModel: ServiceModel = new ServiceModel();
 
 	public videoOverlay: VideoOverlayController;
+	public beforeGotoPool:BeforeGotoPool = new BeforeGotoPool();
 
 
 	/**
