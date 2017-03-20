@@ -5,6 +5,11 @@
 		padding-right: $sizeGrid * 7;
 	}
 
+	.overrule-overlap {
+		background: $colorWhite;
+		padding: $sizeGrid;
+	}
+
 	h1, h2, h3, h4 {
 		@extend %heading-07;
 		padding-bottom: $sizeGrid/2;
@@ -17,7 +22,6 @@
 			margin-top: $sizeGrid;
 		}
 	}
-
 
 	@include respond-to(LARGE) {
 		.site-frame {
