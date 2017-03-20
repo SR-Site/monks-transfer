@@ -4,4 +4,9 @@
 		padding-left: $sizeGrid * 4;
 		padding-right: $sizeGrid * 4;
 	}
+
+	.overrule-overlap {
+		background: $colorWhite;
+		padding: $sizeGrid;
+	}
 }

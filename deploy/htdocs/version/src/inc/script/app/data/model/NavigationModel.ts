@@ -1,14 +1,9 @@
-import ILink from "../interface/action/ILink";
 import AbstractDataModel from "./AbstractDataModel";
+import INavigationItem from "../interface/INavigationItem";
 
 class NavigationModel extends AbstractDataModel<INavigationItem>
 {
 
-}
-
-export interface INavigationItem {
-	link:ILink;
-	subtitle?:string;
 }
 
 export default NavigationModel;

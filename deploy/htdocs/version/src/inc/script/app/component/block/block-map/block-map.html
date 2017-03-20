@@ -1,6 +1,6 @@
 <div class="component-block-map" data-bind="css: {'windowed': data.windowed}">
 	<div class="site-frame">
-		<div class="aspect-ratio-wrapper">
+		<div class="aspect-ratio-wrapper overrule-overlap">
 			<div class="map-content" data-bind="with: data.steps[$root.activeIndex()]">
 				<div class="bottom-alignment">
 					<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($root.activeIndex() + 1).toString(), 2, '0')"></span>

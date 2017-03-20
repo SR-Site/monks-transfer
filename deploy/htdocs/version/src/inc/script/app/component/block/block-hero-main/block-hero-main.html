@@ -18,16 +18,33 @@
 					<!-- /ko -->
 
 					<!-- ko if: $data.link -->
-					<!-- ko component: {
-						name: 'button/button-circle-arrow',
-						onComplete: $root.controller.callbackCounter.get(),
-						options: {
-							action: link,
-							arrowDirection: $root.Direction.DOWN,
-							arrowPosition: $root.Alignment.LEFT,
-							size: $root.ButtonSize.LARGE
-						}
-					} --><!-- /ko -->
+						<!-- ko component: {
+							name: 'button/button-circle-arrow',
+							onComplete: $root.controller.callbackCounter.get(),
+							options: {
+								action: link,
+								arrowDirection: $root.Direction.DOWN,
+								arrowPosition: $root.Alignment.LEFT,
+								size: $root.ButtonSize.LARGE
+							}
+						} --><!-- /ko -->
+					<!-- /ko -->
+
+					<!-- ko if: $parent.data.slides.length > 1 -->
+						<!-- ko component: {
+							name: 'button/button-circle-arrow',
+							onComplete: $root.controller.callbackCounter.get(),
+							options: {
+								action: {
+									title: localeManager.getString('global.cta.next'),
+									label: localeManager.getString('global.cta.next'),
+									event: $root.handleNextClick.bind($root)
+								},
+								arrowDirection: $root.Direction.RIGHT,
+								arrowPosition: $root.Alignment.LEFT,
+								size: $root.ButtonSize.LARGE
+							}
+						} --><!-- /ko -->
 					<!-- /ko -->
 				</div>
 				<!-- ko with: $data.statistics -->
@@ -53,23 +70,4 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- ko if: data.slides.length > 1 -->
-		<div class="secondary-link">
-			<!-- ko component: {
-				name: 'button/button-circle-arrow',
-				onComplete: $root.controller.callbackCounter.get(),
-				options: {
-					action: {
-						title: localeManager.getString('global.cta.next'),
-						label: localeManager.getString('global.cta.next'),
-						event: $root.handleNextClick.bind($root)
-					},
-					arrowDirection: $root.Direction.RIGHT,
-					arrowPosition: $root.Alignment.RIGHT,
-					size: $root.ButtonSize.LARGE
-				}
-			} --><!-- /ko -->
-		</div>
-	<!-- /ko -->
 </div>

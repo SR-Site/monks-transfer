@@ -45,6 +45,10 @@
 			&:not(:first-child) {
 				margin-left: $sizeGrid/2;
 			}
+
+			.icon {
+				width: 12px;
+			}
 		}
 	}
 
