@@ -1,97 +1,98 @@
 import ILink from "./action/ILink";
 import INavigationItem from "./INavigationItem";
-import OptionsData from "./OptionsData";
+import IContactOptions from "./IContactOptions";
 
 interface IInitData
 {
 	/**
-	 * @description The routes
+	 * @description Any hardcoded routes that will be used for redirection
 	 */
 	routes: {
 		/**
-		 * @description The routes
+		 * @description The default landing route if no route is provided
 		 */
 		landing: string;
 		/**
-		 * @description The routes
+		 * @description The default route if a page is not found
 		 */
 		notFound: string;
 	};
 	/**
-	 * @description The data for the contact options
+	 * @description The data used for contacting
 	 */
-	contactOptions: OptionsData;
+	contactOptions: IContactOptions;
 	/**
-	 * @description The routes
+	 * @description The csrfToken used for posting the contact form to the backend
 	 */
 	csrfToken: string;
 	/**
-	 * @description The routes
+	 * @description The structure of the layout
 	 */
 	layout: {
 		/**
-		 * @description The routes
+		 * @description The main navigation items
 		 */
 		navigation: Array<INavigationItem>;
 		/**
-		 * @description The routes
+		 * @description The footer layout structure
 		 */
 		footer: {
 			/**
-			 * @description The routes
+			 * @description The copyright label
 			 */
 			copyright: string;
 			/**
-			 * @description The routes
+			 * @description The footer contact options
 			 */
 			contactOptions: {
 				/**
-				 * @description The routes
+				 * @description The email address used to contact to
 				 */
 				email: string;
 				/**
-				 * @description The routes
+				 * @description The phone number used to contact to
 				 */
 				phone: string;
 			};
 			/**
-			 * @description The routes
+			 * @description The main links for the footer navigation
 			 */
 			mainLinks: Array<ILink>;
 			/**
-			 * @description The routes
+			 * @description The secondary links for the footer navigation
 			 */
 			secondaryLinks: Array<Array<ILink>>;
 			/**
-			 * @description The routes
+			 * @description The social items in the footer
 			 */
 			social: {
 				/**
-				 * @description The routes
+				 * @description The link for twitter
 				 */
 				twitter: ILink;
 				/**
-				 * @description The routes
+				 * @description The link for Instagram
 				 */
 				instagram: ILink;
 				/**
-				 * @description The routes
+				 * @description The link for LinkedIn
 				 */
 				linkedin: ILink;
 			}
 		};
 		/**
-		 * @description The routes
+		 * @description The data for the global slide-out panels
 		 */
 		slideOutPanel: {
 			/**
-			 * @description The routes
+			 * @description The data for the contact panel
 			 */
 			contact: any;
 		}
 	};
 	/**
-	 * @description The routes
+	 * @ignore
+	 * @description Any language stuff could go here, ignore for now!
 	 */
 	language: any;
 }

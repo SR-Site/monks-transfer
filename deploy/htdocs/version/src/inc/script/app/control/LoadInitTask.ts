@@ -2,7 +2,7 @@ import Promise = require('bluebird');
 import AbstractTask from "../../lib/temple/control/sequence/task/AbstractTask";
 import DataManager from "../data/DataManager";
 import IGatewayResult from "../net/gateway/result/IGatewayResult";
-import {IInitData} from "../data/interface/IInitData";
+import IInitData from "../data/interface/IInitData";
 
 /**
  * @namespace app.control
