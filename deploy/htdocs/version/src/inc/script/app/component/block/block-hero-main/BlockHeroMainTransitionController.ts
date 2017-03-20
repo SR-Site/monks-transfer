@@ -8,7 +8,7 @@ import DestructibleHelper from "../../../../lib/temple/core/DestructibleHelper";
 class BlockHeroMainTransitionController extends AbstractTransitionController<BlockHeroMainController>
 {
 	private _mainTriangleAnimation: TriangleTransitionController<BlockHeroMainController>;
-	private _slideTransitions: Array<{timeline: TimelineLite, completeMethod: () => void}> = [];
+	private _slideTransitions: Array<{ timeline: TimelineLite, completeMethod: () => void }> = [];
 
 	private _destructibles: DestructibleHelper = new DestructibleHelper();
 
@@ -150,7 +150,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 			let statisticsWrapper = element.querySelector('.statistics-wrapper');
 			let heading = element.querySelector('.heading');
 			let copy = element.querySelector('.copy');
-			let button = element.querySelector('.component-button-circle-arrow');
+			let buttons = element.querySelectorAll('.component-button-circle-arrow');
 
 			let timeline = new TimelineLite({
 				paused: true,
@@ -175,14 +175,14 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 				}, '=-0.5');
 			}
 
-			if(button)
+			buttons.forEach((button) =>
 			{
 				timeline.from(button, 0.6, {
 					y: 30,
 					autoAlpha: 0,
 					ease: Quad.easeOut
 				}, '=-0.5');
-			}
+			})
 
 			if(statisticsWrapper)
 			{

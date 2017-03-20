@@ -59,6 +59,11 @@
 		.copy {
 			margin-bottom: $sizeGrid * 2;
 		}
+
+		.component-button-circle-arrow {
+			display: block;
+			margin-bottom: $sizeGrid / 2;
+		}
 	}
 
 	img {
