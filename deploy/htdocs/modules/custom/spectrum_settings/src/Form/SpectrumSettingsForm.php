@@ -199,6 +199,16 @@ class SpectrumSettingsForm extends ConfigFormBase {
       '#attributes' => ['data-autocomplete-first-character-blacklist' => '/#?'],
     );
 
+    $form['group_routers']['article_overview_page'] = array(
+          '#type' => 'entity_autocomplete',
+          '#title' => $this->t('Article overview page'),
+          '#default_value' => static::getUriAsDisplayableString($this->state->get('article_overview_page')),
+          '#element_validate' => array(array(get_called_class(), 'validateUriElement')),
+          '#target_type' => 'node',
+          '#process_default_value' => FALSE,
+          '#attributes' => ['data-autocomplete-first-character-blacklist' => '/#?'],
+    );
+
     $form['group_routers']['site_frontpage'] = array(
       '#type' => 'entity_autocomplete',
       '#title' => $this->t('Default landing (home) page'),
@@ -306,6 +316,7 @@ class SpectrumSettingsForm extends ConfigFormBase {
     $this->state->set('contact_options_email_body', $form_state->getValue('contact_options_email_body'));
     $this->state->set('contact_options_email_subject', $form_state->getValue('contact_options_email_subject'));
     $this->state->set('contact_options_phone', $form_state->getValue('contact_options_phone'));
+    $this->state->set('article_overview_page', $form_state->getValue('article_overview_page'));
 
     // Social networks.
     $socialNetworks = $form_state->getValue('social_networks');
