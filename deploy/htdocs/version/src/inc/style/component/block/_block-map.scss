@@ -4,17 +4,17 @@
 	.aspect-ratio-wrapper {
 		position: relative;
 		background: $colorLightGrey;
-		padding: $sizeGrid * 2 $sizeGrid * 4;
+		padding: $sizeGrid * 2;
 		font-size: 0;
 	}
 
 	.map-content {
-		@include size($sizeGrid * 9, auto);
+		@include size($sizeGrid * 12, auto);
 		display: inline-block;
 		vertical-align: bottom;
 		position: relative;
 		margin-bottom: $sizeGrid * 2;
-		height: $sizeGrid * 12.5;
+		//height: $sizeGrid * 12.5;
 
 		.pagination-number {
 			@include pos(-10px, auto, auto, 0);
@@ -25,15 +25,10 @@
 		.heading {
 			margin-bottom: $sizeGrid;
 		}
-
-		.bottom-alignment {
-			position: absolute;
-			bottom: 0;
-		}
 	}
 
 	.map-image-wrapper {
-		@include size(calc(100% - #{$sizeGrid * 9}), auto);
+		@include size(calc(100% - #{$sizeGrid * 12}), auto);
 		display: inline-block;
 		vertical-align: top;
 	}
@@ -58,10 +53,19 @@
 		.aspect-ratio-wrapper {
 			padding: $sizeGrid * 2;
 		}
-
 	}
 
-	@include respond-to(SMALL) {
+	@include respond-to(LARGE) {
+		.map-content {
+			width: $sizeGrid  * 10;
+		}
+
+		.map-image-wrapper {
+			width: calc(100% - #{$sizeGrid * 10});
+		}
+	}
+
+	@include respond-to(MEDIUM) {
 		.aspect-ratio-wrapper {
 			display: flex;
 			flex-direction: column;
@@ -76,6 +80,7 @@
 			order: 1;
 			width: 100%;
 			margin-top: $sizeGrid * 2;
+			margin-bottom: 0;
 			min-height: 0;
 			height: auto;
 
