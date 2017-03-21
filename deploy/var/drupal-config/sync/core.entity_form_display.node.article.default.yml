@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.article.field_read_time
     - field.field.node.article.field_subheading
     - field.field.node.article.field_theme
+    - field.field.node.article.field_thought_leadership
     - image.style.thumbnail
     - node.type.article
   module:
@@ -52,6 +53,7 @@ third_party_settings:
         - field_document_type
         - field_market
         - field_platform
+        - field_thought_leadership
       parent_name: group_tabs
       weight: 14
       format_type: tab
@@ -187,6 +189,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+  field_thought_leadership:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
   path:
     type: path
     weight: 5
