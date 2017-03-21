@@ -1,9 +1,9 @@
 {
 	"statusCode": 200,
 	"pagination": {
-		"total": 56,
-		"offset": 0, 
-		"limit": 4
+		"offset": 0,
+		"limit": 4,
+		"total": 6
 	},
 	"data": {
 		"pageTitle":  "Knowledge center",
