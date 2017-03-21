@@ -30,7 +30,7 @@ class NodeArticleBlogpostV1 extends SpectrumRestEntityProcessorBase {
       "tags" => $this->getTags($entity),
       "views" => 0,
       "time" => (int) $this->fieldProcessor->getFieldData($entity->get('field_read_time')),
-      "date" => $this->dateFormatter->format($entity->getCreatedTime(), 'custom', 'd/m/Y'),
+      "date" => $this->dateFormatter->format($entity->getCreatedTime(), 'custom', 'm/d/Y'),
       "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_content')),
       "subHeading" => $this->fieldProcessor->getFieldData($entity->get('field_subheading')),
       "heading" => $entity->label(),
