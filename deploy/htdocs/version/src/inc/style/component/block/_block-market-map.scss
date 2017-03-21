@@ -139,8 +139,12 @@
 		}
 
 		.map-box-wrapper {
-			@include size(100%, calc(100vh - #{$sizeGrid*12}));
+			@include size(100%, calc(100vh - #{$sizeGrid*6}));
 			position: relative;
+		}
+
+		.zoom-actions {
+			left: $sizeGrid;
 		}
 
 		// Map Box
