@@ -98,20 +98,21 @@
 		text-decoration: none;
 		color: $colorPrimary;
 
-		.profile-image {
-			@include size($sizeGrid*1.5);
-			border-radius: 100%;
-			overflow: hidden;
+		.service-contact {
 			margin-right: $sizeGrid/2;
-			flex-shrink: 0;
-		}
+			text-align: left;
 
-		.profile-info {
-			.name { }
+			.icon {
+				@include size(16px);
+			}
 
-			.role {
+			.contact-heading {
+				text-transform: uppercase;
+			}
+
+			.contact-option {
 				font: 400 1.2rem / 1 $fontOpenSans;
-				margin-top: $sizeGrid/4;
+				padding: 5px 0;
 			}
 		}
 
