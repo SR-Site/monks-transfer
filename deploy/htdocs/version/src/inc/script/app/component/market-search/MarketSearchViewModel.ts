@@ -5,23 +5,30 @@ import IMarketSearchOptions from "app/component/market-search/IMarketSearchOptio
 import ko = require('knockout');
 import IMarketDetail from "../block/block-market-map/interface/IMarketDetail";
 import DataManager from "../../data/DataManager";
+import {DeviceState} from "../../data/scss-shared/MediaQueries";
 
 class MarketSearchViewModel extends AbstractTransitionComponentViewModel<MarketSearchController, IMarketSearchOptions>
 {
 	public query: KnockoutObservable<string> = ko.observable('');
 
-	public suggestion: KnockoutObservable<{label: string; value: string;}> = ko.observable(null);
+	public suggestions: KnockoutObservableArray<{ label: string; value: string; }> = ko.observableArray([]);
 	public selectedMarket: KnockoutObservable<IMarketDetail> = ko.observable(null);
 	public hasSuggestions: KnockoutObservable<boolean> = ko.observable(true);
 	public noteActive: KnockoutComputed<boolean>;
+	public noteHeight: KnockoutComputed<string>;
 
 	constructor()
 	{
 		super();
 
+		this.noteHeight = ko.computed(() =>
+		{
+			const gridSize = this.deviceState() <= DeviceState.SMALL ? 16 : 8;
+			return Math.max(1, Math.min(3, this.suggestions().length - 1)) * gridSize + 'rem'
+		})
 		this.noteActive = ko.computed(() =>
 		{
-			return !this.hasSuggestions() || (this.suggestion() && !this.selectedMarket())
+			return !this.hasSuggestions() || (this.suggestions().length && !this.selectedMarket())
 		})
 
 	}
@@ -70,13 +77,13 @@ class MarketSearchViewModel extends AbstractTransitionComponentViewModel<MarketS
 	 */
 	public handleSubmit(): void
 	{
-		const suggestion = this.suggestion();
-
-		if(suggestion)
-		{
-			// Select the market
-			this.handleSelectMarket(suggestion.value);
-		}
+		// const suggestion = this.suggestions();
+		//
+		// if(suggestion)
+		// {
+		// 	// Select the market
+		// 	this.handleSelectMarket(suggestion.value);
+		// }
 	}
 
 	/**
@@ -86,7 +93,7 @@ class MarketSearchViewModel extends AbstractTransitionComponentViewModel<MarketS
 	public destruct(): void
 	{
 		this.query = null;
-		this.suggestion = null;
+		this.suggestions = null;
 
 		this.selectedMarket = null;
 		this.noteActive = null;

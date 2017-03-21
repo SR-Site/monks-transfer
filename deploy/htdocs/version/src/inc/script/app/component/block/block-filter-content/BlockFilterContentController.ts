@@ -270,7 +270,7 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	private handleContentLoad(result: IGatewayResult<{blocks: Array<IBlock>}>): void
 	{
 		// Save Amount of totalPages in a Array for the PaginatorController.
-		this.viewModel.totalPages(Math.ceil(result.pagination.total / this.viewModel.limit));
+		this.viewModel.totalPages(new Array(Math.ceil(result.pagination.total / this.viewModel.limit)));
 
 		// Destruct and recreate new CallbackCounter to be used for the new blocks that are loaded.
 		this.recreateCallbackCounter();

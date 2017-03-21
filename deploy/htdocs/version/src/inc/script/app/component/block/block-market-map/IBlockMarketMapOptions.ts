@@ -10,19 +10,9 @@ interface IBlockMarketMapOptions extends IAbstractBlockComponentOptions
 	service: {
 		/**
 		 * @property
-		 * @description The name of the service person
+		 * @description The heading displayed in the service panel
 		 */
-		name: string;
-		/**
-		 * @property
-		 * @description The role of the service person
-		 */
-		role: string;
-		/**
-		 * @property
-		 * @description The image of the service person
-		 */
-		image: IImage;
+		heading:string;
 	};
 	/**
 	 * @property

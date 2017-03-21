@@ -66,15 +66,15 @@
 		</div>
 
 		<button class="service-info button" data-bind="tap: $root.handleServiceClick.bind($root)">
-			<div class="profile-image bg-cover" data-bind="image: {
-				image: service.image,
-				state: $root.deviceState()
-			}"></div>
 
-			<div class="profile-info">
-				<p class="name copy-02 copy" data-bind="html: service.name"></p>
-				<p class="role copy" data-bind="html: service.role"></p>
-			</div>
+			<span class="service-contact" data-bind="with: service">
+				<h3 class="contact-heading heading heading-09" data-bind="html: $data.heading">Start advertising today</h3>
+				<p class="contact-option copy copy-02" data-bind="html: dataManager.settingsModel.initDataModel.contactOptions.email.emailAddress"></p>
+				<p class="contact-option copy copy-02">
+					<span class="icon" data-bind="icon: 'contact'"></span>
+					<span data-bind="html: dataManager.settingsModel.initDataModel.contactOptions.phone.phoneNumber"></span>
+				</p>
+			</span>
 
 			<!-- ko template: {
 				name: 'button-select-anchor',

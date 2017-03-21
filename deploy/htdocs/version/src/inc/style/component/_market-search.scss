@@ -44,15 +44,23 @@
 		text-transform: uppercase;
 	}
 
+	.note-wrapper {
+		@include size(calc(100% - #{$sizeGrid * 5.5}), $sizeGrid * 6);
+		@include pos(auto, auto, $sizeGrid * 2, 0);
+		position: absolute;
+		overflow: hidden;
+		z-index: 0;
+		pointer-events: none;
+	}
+
 	.note {
-		@include size(calc(100% - #{$sizeGrid * 5.5}), $sizeGrid * 2);
-		@include pos(-$sizeGrid * 2, auto, auto, 0);
+		@include size(100%, auto);
+		@include pos(auto, auto, 0, 0);
 		background: $colorLightGrey;
 		position: absolute;
 		transform: translateY(100%);
 		transition: transform .5s ease(easeInOutExpo);
-		overflow: hidden;
-		z-index: 0;
+		pointer-events: all;
 
 		.copy {
 			@include offset(0, 50%);
@@ -68,6 +76,11 @@
 			font: 600 1.6rem/#{$sizeGrid * 2} $fontOpenSans;
 			text-align: left;
 			padding: 0 $sizeGrid;
+			transition: background .2s ease(easeInOutCubic);
+
+			@include hover() {
+				background: darken($colorLightGrey, 5%);
+			}
 		}
 
 		&.is-active {
@@ -114,10 +127,12 @@
 			line-height: $height;
 		}
 
-		.note {
-			@include size(100%, $height);
-			top: -$height;
+		.note-wrapper {
+			@include size(100%, $height * 3);
+			bottom: $height * 2;
+		}
 
+		.note {
 			.copy {
 				font-size: mobile-size(2rem);
 			}
