@@ -41,9 +41,11 @@ $config['system.file']['path']['temporary'] = '/tmp';
 // $settings['container_yamls'][] = DRUPAL_ROOT . '/../var/drupal-settings/services.prod.yml';
 
 // Trusted host configuration.
-$settings['trusted_host_patterns'] = array(
-  '^example\.com$',
-);
+#$settings['trusted_host_patterns'] = array(
+#  '^example\.com$',
+#);
+unset($settings['trusted_host_patterns']);
 
 // Configuration directories.
 $config_directories[CONFIG_SYNC_DIRECTORY] = DRUPAL_ROOT . '/../var/drupal-config/sync';
+
