@@ -101,7 +101,7 @@ module.exports = function(grunt, options)
 			normalizeDirDefines: "skip",
 			fileExclusionRegExp: /(^bundle.js$|^\.svn$|^\.git$|^\.gitignore$|^\.idea$|.+?\.pem$|.+?\.pub$|.+?\.map$|.+?\.map.+?|^\.DS_STORE$|.+?\.sh$|^Thumbs\.db$)/,
 			modules: modules,
-			removeCombined: true,
+			removeCombined: false,
 			namespace: 'spectrumreach'
 		},
 
