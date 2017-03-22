@@ -2,8 +2,19 @@
 
 /**
  * @file
- * Contains Drupal settings and configuration override for production.
+ * Contains Drupal settings and configuration override for staging.
  */
+ // Drupal database credentials.
+ $databases['default']['default'] = array (
+   'database' => 'spectrumusuat',
+   'username' => 'spectrumusuat',
+   'password' => 'hzPIhMD2w2wwEhwSSDhULugW4zRfF624',
+   'host' => 'mysql',
+   'port' => '3306',
+   'driver' => 'mysql',
+   'prefix' => '',
+   'collation' => 'utf8mb4_general_ci',
+ );
 
 // Performance and logging.
 $config['system.logging']['error_level'] = 'hide';                // hide|some|all|verbose
@@ -21,11 +32,11 @@ $settings['file_private_path'] = '';
 $config['system.file']['path']['temporary'] = '/tmp';
 
 // Additional services.
-// $settings['container_yamls'][] = DRUPAL_ROOT . '/../var/drupal-settings/services.prod.yml';
+// $settings['container_yamls'][] = DRUPAL_ROOT . '/../var/drupal-settings/services.stage.yml';
 
 // Trusted host configuration.
 $settings['trusted_host_patterns'] = array(
-  '^example\.com$',
+  '^stage\.example\.com$',
 );
 
 // Configuration directories.

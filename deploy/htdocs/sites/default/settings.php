@@ -29,4 +29,7 @@ $settings['install_profile'] = 'standard';
  */
 require DRUPAL_ROOT . '/../var/drupal-settings/environment.local.php';
 require DRUPAL_ROOT . '/../var/drupal-settings/settings.' . $settings['mm_dtap_environment'] . '.php';
+
+// https://wiki.mediamonks.net/Hosting_Environment_Naming_Convention
+require DRUPAL_ROOT . '/../var/drupal-settings/settings.' . getenv('ENVIRONMENT') . '.php';
 require DRUPAL_ROOT . '/../var/drupal-settings/settings.local.php';
