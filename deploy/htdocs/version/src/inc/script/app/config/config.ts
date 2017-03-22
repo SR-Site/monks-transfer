@@ -70,7 +70,11 @@ let config: IConfig = {
 		[EnvironmentNames.PRODUCTION]: {
 			variables: {},
 			urls: {},
-			properties: {}
+			properties: {
+				properties: {
+					[PropertyNames.MOCK_CONTENT]: false
+				}
+			}
 		},
 		[EnvironmentNames.MONK_APPS]: {
 			extends: EnvironmentNames.PRODUCTION,
