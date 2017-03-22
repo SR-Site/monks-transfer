@@ -28,7 +28,8 @@ requirejs.config({
 		SplitText:      'vendor/gsap/utils/SplitText',
 		EasePack:       'vendor/gsap/easing/EasePack',
 		moment:         'vendor/moment/moment',
-		bluebird:       'vendor/bluebird/bluebird'
+		bluebird:       'vendor/bluebird/bluebird',
+		mapbox:         'vendor/mapbox/mapbox-gl'
 	},
 	map: {},
 	shim: {
