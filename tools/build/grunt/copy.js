@@ -11,6 +11,14 @@ module.exports = function (grunt, options)
 			src: ['deploy/htdocs/api/mock/**/*.*', 'deploy/htdocs/api/mock/*.*'],
 			dest: '<%= buildDir %>'
 		},
+		'require-files': {
+			expand: true,
+			cwd: '<%= sourceDir %>inc/script/',
+			src: [
+				'vendor/mapbox/*.*'
+			],
+			dest: '<%= buildDir %>/version/inc/script/'
+		},
 		'dotfiles': {
 			files: [{
 				expand: true,
