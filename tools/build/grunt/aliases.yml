@@ -30,7 +30,7 @@ test:
 release:
   - 'clean:default'
   - 'ts:default'
-  - 'karma:unit'
+  #- 'karma:unit'
   - 'sass'
   - 'postcss'
   - 'requirejs:release'
