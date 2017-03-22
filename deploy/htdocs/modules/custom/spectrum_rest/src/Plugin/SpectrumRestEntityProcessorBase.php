@@ -136,6 +136,7 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
     $tags = array_merge($tags, $this->getItems($entity->get('field_document_type')) ?: []);
     $tags = array_merge($tags, $this->getItems($entity->get('field_market')) ?: []);
     $tags = array_merge($tags, $this->getItems($entity->get('field_platform')) ?: []);
+    $tags = array_merge($tags, $this->getItems($entity->get('field_thought_leadership')) ?: []);
 
     return $tags;
   }

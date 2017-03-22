@@ -1,0 +1,28 @@
+uuid: f48a8b66-f86e-45b5-8f58-fd66872d58d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_thought_leadership
+    - node.type.article
+    - taxonomy.vocabulary.thought_leadership
+id: node.article.field_thought_leadership
+field_name: field_thought_leadership
+entity_type: node
+bundle: article
+label: 'Thought Leadership'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      thought_leadership: thought_leadership
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
