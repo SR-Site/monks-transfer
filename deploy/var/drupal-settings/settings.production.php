@@ -4,6 +4,12 @@
  * @file
  * Contains Drupal settings and configuration override for production.
  */
+
+// The salt.
+//   Always override this value and use the same value for all environments.
+$settings['hash_salt'] = 'SALT-SALT-SALT';
+
+
  // Drupal database credentials.
  $databases['default']['default'] = array (
    'database' => 'spectrum-reach-corporate-website-prod',
