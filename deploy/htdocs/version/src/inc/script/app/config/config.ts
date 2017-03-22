@@ -71,9 +71,7 @@ let config: IConfig = {
 			variables: {},
 			urls: {},
 			properties: {
-				properties: {
-					[PropertyNames.MOCK_CONTENT]: false
-				}
+				[PropertyNames.MOCK_CONTENT]: false
 			}
 		},
 		[EnvironmentNames.MONK_APPS]: {
