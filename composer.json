@@ -55,39 +55,35 @@
     "repositories": {
         "mediamonks-drupal-decoupled": {
             "type": "git",
-            "url": "git@git.assembla.com:mediamonks-drupal.mm_decoupled.git"
+            "url": "https://git.assembla.com/mediamonks-drupal.mm_decoupled.git"
         },
         "mediamonks-drupal-gaia": {
             "type": "git",
-            "url": "git@git.assembla.com:mediamonks-drupal.mm_gaia.git"
+            "url": "https://git.assembla.com/mediamonks-drupal.mm_gaia.git"
         },
         "mediamonks-drupal-prerender": {
             "type": "git",
-            "url": "git@git.assembla.com:mediamonks-drupal.mm_prerender.git"
+            "url": "https://git.assembla.com/mediamonks-drupal.mm_prerender.git"
         },
         "mediamonks-drupal-release_tracker": {
             "type": "git",
-            "url": "git@git.assembla.com:mediamonks-drupal.mm_release_tracker.git"
+            "url": "https://git.assembla.com/mediamonks-drupal.mm_release_tracker.git"
         },
         "mediamonks-drupal-rest": {
             "type": "git",
-            "url": "git@git.assembla.com:mediamonks-drupal.mm_rest.git"
+            "url": "https://git.assembla.com/mediamonks-drupal.mm_rest.git"
         },
         "mediamonks-drupal-domainmenu": {
             "type": "git",
-            "url": "git@git.assembla.com:mediamonks^mediamonks-drupal.mm_domainmenu.git"
+            "url": "https://git.assembla.com/mediamonks^mediamonks-drupal.mm_domainmenu.git"
         },
         "mediamonks-drupal-slug": {
             "type": "git",
-            "url": "git@git.assembla.com:mediamonks-drupal.mm_slug.git"
-        },
-        "drupal": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
+            "url": "https://git.assembla.com/mediamonks-drupal.mm_slug.git"
         },
         "composer": {
             "type": "composer",
-            "url": "https://packagist.drupal-composer.org"
+            "url": "https://packages.drupal.org/8"
         },
         "phpmssql": {
             "type": "git",
