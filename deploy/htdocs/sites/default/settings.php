@@ -17,6 +17,11 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
 $settings['install_profile'] = 'standard';
 
+// The path at which the front-end files can be found.
+//   This will be used in base path. Example:
+//   <base href="https://staging.example.com/version/0123456789/" />
+$settings['mm_deployment_version'] = 'src'; // [deploytool]
+
 /**
  * Load local settings and configuration override.
  *
@@ -29,4 +34,9 @@ $settings['install_profile'] = 'standard';
  */
 require DRUPAL_ROOT . '/../var/drupal-settings/environment.local.php';
 require DRUPAL_ROOT . '/../var/drupal-settings/settings.' . $settings['mm_dtap_environment'] . '.php';
+
+// https://wiki.mediamonks.net/Hosting_Environment_Naming_Convention
+if(getenv('ENVIRONMENT')) {
+	require DRUPAL_ROOT . '/../var/drupal-settings/settings.' . getenv('ENVIRONMENT') . '.php';
+}
 require DRUPAL_ROOT . '/../var/drupal-settings/settings.local.php';
