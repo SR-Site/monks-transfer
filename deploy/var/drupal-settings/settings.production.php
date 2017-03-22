@@ -6,9 +6,9 @@
  */
  // Drupal database credentials.
  $databases['default']['default'] = array (
-   'database' => 'spectrumus',
-   'username' => 'spectrumusprod',
-   'password' => 'Skh9Ka6mN1d1Op45Lhz7zakhQtMXGSGN',
+   'database' => 'spectrum-reach-corporate-website-prod',
+   'username' => 'spectrumreacprod',
+   'password' => '0f87H9PuLlNVGrcHtGStXRLF03hJf5eX',
    'host' => 'mysql',
    'port' => '3306',
    'driver' => 'mysql',
