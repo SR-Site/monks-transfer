@@ -4,6 +4,12 @@
  * @file
  * Contains Drupal settings and configuration override for production.
  */
+
+// The salt.
+//   Always override this value and use the same value for all environments.
+$settings['hash_salt'] = 'SALT-SALT-SALT';
+
+
  // Drupal database credentials.
  $databases['default']['default'] = array (
    'database' => 'spectrum-reach-corporate-website-prod',
@@ -35,9 +41,11 @@ $config['system.file']['path']['temporary'] = '/tmp';
 // $settings['container_yamls'][] = DRUPAL_ROOT . '/../var/drupal-settings/services.prod.yml';
 
 // Trusted host configuration.
-$settings['trusted_host_patterns'] = array(
-  '^example\.com$',
-);
+#$settings['trusted_host_patterns'] = array(
+#  '^example\.com$',
+#);
+unset($settings['trusted_host_patterns']);
 
 // Configuration directories.
 $config_directories[CONFIG_SYNC_DIRECTORY] = DRUPAL_ROOT . '/../var/drupal-config/sync';
+
