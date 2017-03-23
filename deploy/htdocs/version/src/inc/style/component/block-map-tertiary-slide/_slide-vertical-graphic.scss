@@ -19,7 +19,7 @@
 
 	.statistic-label {
 		color: $colorLocalMedia;
-		margin-top: $sizeGrid / 2;
+		margin-top: $sizeGrid / 4;
 	}
 
 	.graphics {
@@ -45,6 +45,7 @@
 		.label {
 			display: block;
 			color: $colorSecondary;
+			margin-top: $sizeGrid / 4;
 		}
 	}
 

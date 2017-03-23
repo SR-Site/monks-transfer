@@ -284,65 +284,77 @@
 		"id": 2,
 		"slides": [
 			{
-				"type": 1,
-				"heading": "Audience",
+				"type": 6,
+				"heading": "The Right Audience",
 				"subHeading": "Audience focused networks deliver a growing audience",
 				"paragraph": "Our targeted networks continue to increase their reach while broadcast declines.",
 				"background": {
-					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"alt": "How to reach families"
+					"normal": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
+					"alt": "Empty"
 				},
 				"statistics": [
 					{
-						"label": "Audience Focussed Networks",
-						"values": [
-							{
-								"label": "2006",
-								"value": 20
-							},
-							{
-								"label": "2016",
-								"value": 85
-							}
-						]
+						"image": {
+							"normal": "inc/image/map-tertiary-audiences/2016-sport-lovers.jpg",
+							"small": "inc/image/map-tertiary-audiences/2016-sport-lovers.jpg",
+							"alt": "Yard Crashers"
+						},
+						"label": "Sport Lovers",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-sport-lovers.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-sport-lovers.jpg",
+							"alt": "Program"
+						}
 					},
 					{
-						"label": "Broadcast TV",
-						"values": [
-							{
-								"label": "2006",
-								"value": 40
-							},
-							{
-								"label": "2016",
-								"value": 60
-							}
-						]
+						"image": {
+							"normal": "inc/image/map-tertiary-audiences/2016-hispanics.jpg",
+							"small": "inc/image/map-tertiary-audiences/2016-hispanics.jpg",
+							"alt": "Teachers"
+						},
+						"label": "Hispanics",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-hispanics.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-hispanics.jpg",
+							"alt": "Program"
+						}
+					},
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-audiences/2016-families.jpg",
+							"small": "inc/image/map-tertiary-audiences/2016-families.jpg",
+							"alt": "SAG Awards"
+						},
+						"label": "Families",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-families.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-families.jpg",
+							"alt": "Program"
+						}
 					}
 				]
 			},
 			{
 				"type": 1,
-				"heading": "Audience",
-				"subHeading": "Audience focused networks deliver a growing audience",
-				"paragraph": "Our targeted networks continue to increase their reach while broadcast declines.",
+				"heading": "Live TV Viewers",
+				"subHeading": "Better than ratings",
+				"paragraph": "Cable’s targeted networks deliver viewers that are engaged, loyal, influential and tune in live. <br/>AND, 62% of people correctly recalled half or more of the ads they had seen on TV. That’s over 15 percentage points higher than the next media vehicle.",
 				"background": {
-					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"alt": "How to reach families"
+					"normal": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
+					"alt": "Empty"
 				},
 				"statistics": [
 					{
-						"label": "Audience Focussed Networks",
 						"values": [
 							{
-								"label": "2006",
-								"value": 20
+								"label": "Cable Targeted Networks",
+								"value": 71
 							},
 							{
-								"label": "2016",
-								"value": 85
+								"label": "Broadcast Networks",
+								"value": 56
 							}
 						]
 					}

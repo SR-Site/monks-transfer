@@ -19,6 +19,8 @@
 		display: inline-block;
 		border-radius: 100%;
 		vertical-align: top;
+		font: 400 1.5rem / #{$sizeGrid } $fontOpenSans;
+		text-align: center;
 	}
 
 	.description {

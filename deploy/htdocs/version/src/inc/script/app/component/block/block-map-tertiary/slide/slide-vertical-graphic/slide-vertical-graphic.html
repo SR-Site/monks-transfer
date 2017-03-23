@@ -22,12 +22,16 @@
 							value: $data.value
 						}
 					} --><!-- /ko -->
-					<p class="label copy copy-03" data-bind="html: $data.label"></p>
+					<p class="label copy copy-03">
+						<strong data-bind="html: $data.label"></strong>
+					</p>
 				</div>
 			</div>
-			<p class="statistic-label copy copy-03">
-				<strong data-bind="html: $data.label"></strong>
-			</p>
+			<!-- ko if: $data.label -->
+				<p class="statistic-label copy copy-03">
+					<strong data-bind="html: $data.label"></strong>
+				</p>
+			<!-- /ko -->
 		</div>
 	</div>
 
