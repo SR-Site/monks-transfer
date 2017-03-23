@@ -45,3 +45,4 @@ deploy/htdocs/library/contrib
 deploy/htdocs/profiles/contrib
 deploy/htdocs/sites/default/files
 drush/contrib
+/composer.lock
