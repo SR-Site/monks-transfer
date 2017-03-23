@@ -44,7 +44,7 @@
 			margin-bottom: $sizeGrid / 4;
 
 			svg {
-				stroke: $colorLocalMedia;
+				stroke: currentColor;
 			}
 		}
 
@@ -61,7 +61,7 @@
 	}
 
 	.dashed-line {
-		stroke: $colorLocalMedia;
+		stroke: currentColor;
 		stroke-dasharray: 4, 4;
 		stroke-width: 2px;
 	}
@@ -124,7 +124,7 @@
 		}
 
 		.dashed-line {
-			stroke: $colorLocalMedia;
+			stroke: currentColor;
 			stroke-dasharray: 3, 3;
 			stroke-width: 1px;
 		}

@@ -82,14 +82,14 @@
 
 	.dashed-line {
 		@include size(100%, 1px);
-		stroke: $colorLocalMedia;
+		stroke: currentColor;
 		stroke-dasharray: 3, 3;
 		stroke-width: 1px;
 	}
 
 	.arrow {
 		@include size(10px, 20px);
-		stroke: $colorLocalMedia;
+		stroke: currentColor;
 		stroke-dasharray: 3, 3;
 		stroke-width: 1px;
 	}

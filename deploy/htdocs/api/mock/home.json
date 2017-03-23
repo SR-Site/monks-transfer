@@ -142,8 +142,8 @@
 				"id": "mapTertiary",
 				"data": {
 					"windowed": false,
+					"tertiaryMapData": 0,
 					"marginTop": 1,
-					"tertiaryMapData": 2,
 					"background": {
 						"normal": "data/image/map-tertiary/map-background.png",
 						"small": "data/image/map-tertiary/map-background.png",
@@ -168,8 +168,8 @@
 				"id": "mapTertiary",
 				"data": {
 					"windowed": false,
-					"tertiaryMapData": 0,
 					"marginTop": 1,
+					"tertiaryMapData": 2,
 					"background": {
 						"normal": "data/image/map-tertiary/map-background.png",
 						"small": "data/image/map-tertiary/map-background.png",

@@ -1,0 +1,87 @@
+.component-slide-cards {
+	.slide-statistics {
+		@include pos(50%, $sizeGrid * 6, auto, $sizeGrid * 6);
+		position: absolute;
+		transform: translateY(-50%);
+	}
+
+	.statistics-wrapper {
+		@extend %reset-list;
+		display: flex;
+		justify-content: center;
+		align-item: top
+	}
+
+	.statistic {
+		@include size($sizeGrid * 5, auto);
+		background: $colorWhite;
+		display: inline-block;
+		border: 1px solid $colorBorder;
+		margin: 0 0.5rem;
+	}
+
+	.card-label {
+		text-align: center;
+		margin-top: $sizeGrid / 4;
+	}
+
+	.card-value,
+	.card-image {
+		@include size(100%, auto);
+
+		img {
+			@include size(100%, auto);
+		}
+	}
+
+	@include respond-to(LARGE) {
+		.slide-statistics {
+			@include pos(50%, $sizeGrid * 4, auto, $sizeGrid * 4);
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.slide-statistics {
+			top: 65%;
+		}
+
+		.statistics-wrapper {
+			flex-direction: column;
+		}
+
+		.statistic {
+			@include size(100%, auto);
+			padding: 0.5rem;
+			margin: 0.5rem 0;
+			display: flex;
+		}
+
+
+		.card-image {
+			display: none;
+		}
+
+		.card-value,
+		.card-label {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.card-label {
+			order: 1;
+		}
+
+		.card-value {
+			@include size($sizeGrid * 2, auto);
+			order: 0;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		display: block;
+
+		.statistics-wrapper {
+			padding: 0 $sizeGrid * 2;
+		}
+	}
+}

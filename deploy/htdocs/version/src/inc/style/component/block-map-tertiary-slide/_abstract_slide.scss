@@ -1,4 +1,5 @@
 .map-tertiary-slide {
+	color: $colorLocalMedia;
 
 	.slide-heading {
 		@include size(100%, auto);
@@ -6,7 +7,6 @@
 		padding: 0 $sizeGrid * 2;
 		position: absolute;
 		text-align: center;
-		color: $colorLocalMedia;
 	}
 
 	.slide-statistics {
@@ -28,12 +28,26 @@
 		background-position: center center;
 	}
 
+	@include respond-to(MEDIUM) {
+		.slide-title {
+			width: $sizeGrid * 5;
+
+			.heading-01 {
+				font-size: 3rem;
+			}
+		}
+	}
+
 	@include respond-to(SMALL) {
 
 		.slide-heading {
 			@include pos(auto, auto, auto, auto);
 			padding: $sizeGrid $sizeGrid 0 $sizeGrid;
 			position: relative;
+
+			.copy-03 {
+				display: none;
+			}
 		}
 
 		.background {

@@ -3,144 +3,210 @@
 		"id": 0,
 		"slides": [
 			{
-				"type": 4,
-				"heading": "Reach Families",
-				"subHeading": "How to reach families",
-				"paragraph": "40% of families agree that the quality of the programs they watch is important",
-				"background": {
-					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"alt": "How to reach families"
-				},
-				"statistics": [
-					{
-						"icon": "heart",
-						"label": "Own a home",
-						"value": 65
-					},
-					{
-						"icon": "academic-cap",
-						"label": "Have kids age 6-11",
-						"value": 20
-					},
-					{
-						"icon": "academic-cap",
-						"label": "Median HHI",
-						"value": "$57k+"
-					}
-				]
-			},
-			{
-				"type": 4,
+				"type": 6,
 				"heading": "Men 25-54",
-				"subHeading": "How to reach men 25-54",
-				"paragraph": "41% of men 25-54 agree that screen size is important when it comes to watching TV",
+				"subHeading": "How to reach Men 25-54",
+				"paragraph": "In the past 30 days 30% of men 25-54 went online for sports information and updates.",
 				"background": {
-					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"alt": "How to reach families"
+					"normal": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
+					"alt": "Empty"
 				},
 				"statistics": [
 					{
-						"icon": "heart",
-						"label": "single",
-						"value": "28%"
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-nca-football.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-nca-football.jpg",
+							"alt": "Yard Crashers"
+						},
+						"label": "Yard Crashers",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-espn2.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-espn2.jpg",
+							"alt": "Program"
+						}
 					},
 					{
-						"icon": "academic-cap",
-						"label": "Some college",
-						"value": "18%"
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-legion.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-legion.jpg",
+							"alt": "Critics Choice Awards"
+						},
+						"label": "Critics Choice Awards",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-fox.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-fox.jpg",
+							"alt": "Program"
+						}
 					},
 					{
-						"icon": "academic-cap",
-						"label": "Own a home",
-						"value": "56%"
-					},
-					{
-						"icon": "academic-cap",
-						"label": "Median HHi",
-						"value": "$51k+"
-					},
-					{
-						"icon": "academic-cap",
-						"label": "Have kids age 6-11",
-						"value": "32%"
-					},
-					{
-						"icon": "academic-cap",
-						"label": "use search sites",
-						"value": "84%"
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-pga-tour.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-pga-tour.jpg",
+							"alt": "Critics Choice Awards"
+						},
+						"label": "Vikings",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-nbc-golf.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-nbc-golf.jpg",
+							"alt": "Program"
+						}
 					}
 				]
 			},
 			{
-				"type": 4,
+				"type": 6,
 				"heading": "Reach Millennials",
 				"subHeading": "How to reach Millennials",
 				"paragraph": "35% of millennials agree that the ability to watch a program whenever they want is very important",
 				"background": {
-					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"alt": "How to reach families"
+					"normal": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
+					"alt": "Empty"
 				},
 				"statistics": [
 					{
-						"icon": "heart",
-						"label": "single",
-						"value": "28%"
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-wags.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-wags.jpg",
+							"alt": "Yard Crashers"
+						},
+						"label": "Odd Mom Out",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-e.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-e.jpg",
+							"alt": "Program"
+						}
 					},
 					{
-						"icon": "academic-cap",
-						"label": "Some college",
-						"value": "18%"
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-scream.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-scream.jpg",
+							"alt": "Teachers"
+						},
+						"label": "Critics Choice Awards",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-mtv.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-mtv.jpg",
+							"alt": "Program"
+						}
 					},
 					{
-						"icon": "academic-cap",
-						"label": "Own a home",
-						"value": "56%"
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-another-period.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-another-period.jpg",
+							"alt": "SAG Awards"
+						},
+						"label": "SAG Awards",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-comedy-central.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-comedy-central.jpg",
+							"alt": "Program"
+						}
 					}
 				]
 			},
 			{
-				"type": 4,
+				"type": 6,
 				"heading": "Women 25-54",
 				"subHeading": "How to reach Women 25-54",
 				"paragraph": "41% of women 25-54 agree that the quality of the programs they watch is important",
 				"background": {
-					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"alt": "How to reach families"
+					"normal": "inc/image/map-tertiary-backgrounds/background-women.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-women.jpg",
+					"alt": "How to reach Women"
 				},
 				"statistics": [
 					{
-						"icon": "heart",
-						"label": "single",
-						"value": "28%"
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-yard-crashers.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-yard-crashers.jpg",
+							"alt": "Yard Crashers"
+						},
+						"label": "Yard Crashers",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-diy.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-diy.jpg",
+							"alt": "Program"
+						}
 					},
 					{
-						"icon": "academic-cap",
-						"label": "Some college",
-						"value": "18%"
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-critics-choice-awards.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-critics-choice-awards.jpg",
+							"alt": "Critics Choice Awards"
+						},
+						"label": "Critics Choice Awards",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-ae.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-ae.jpg",
+							"alt": "Program"
+						}
 					},
 					{
-						"icon": "academic-cap",
-						"label": "Own a home",
-						"value": "56%"
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-vikings.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-vikings.jpg",
+							"alt": "Critics Choice Awards"
+						},
+						"label": "Vikings",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-history.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-history.jpg",
+							"alt": "Program"
+						}
+					}
+				]
+			},
+			{
+				"type": 6,
+				"heading": "Baby Boomers",
+				"subHeading": "How to reach Boomers",
+				"paragraph": "93% of Adults 50+ use television to watch video.",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/background-baby-boomers.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-baby-boomers.jpg",
+					"alt": "How to reach baby boomers"
+				},
+				"statistics": [
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-odd-mom-out.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-odd-mom-out.jpg",
+							"alt": "Yard Crashers"
+						},
+						"label": "Odd Mom Out",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-bravo.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-bravo.jpg",
+							"alt": "Program"
+						}
 					},
 					{
-						"icon": "academic-cap",
-						"label": "Median HHi",
-						"value": "$51k+"
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-teachers.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-teachers.jpg",
+							"alt": "Teachers"
+						},
+						"label": "Critics Choice Awards",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-tv-land.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-tv-land.jpg",
+							"alt": "Program"
+						}
 					},
 					{
-						"icon": "academic-cap",
-						"label": "Have kids age 6-11",
-						"value": "32%"
-					},
-					{
-						"icon": "academic-cap",
-						"label": "use search sites",
-						"value": "84%"
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-sag-awards.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-sag-awards.jpg",
+							"alt": "SAG Awards"
+						},
+						"label": "SAG Awards",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-tbs-tnt.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-tbs-tnt.jpg",
+							"alt": "Program"
+						}
 					}
 				]
 			}
@@ -151,11 +217,12 @@
 		"slides": [
 			{
 				"type": 2,
-				"heading": "Multi-Screens",
+				"heading": "All Day Reach",
 				"subHeading": "Multi-screen Campaigns are essential",
+				"paragraph": "Multi-screen advertising engages that right customer with your message. <br/>82% of daily media consumption occurs across TV, Online and Mobile.",
 				"background": {
-					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"normal": "inc/image/map-tertiary-backgrounds/background-all-day-reach.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-all-day-reach.jpg",
 					"alt": "How to reach families"
 				},
 				"statistics": [
@@ -187,48 +254,27 @@
 				]
 			},
 			{
-				"type": 3,
-				"heading": "Adults",
-				"subHeading": "Consistent multi-screen advertising builds brand awareness over time",
-				"paragraph": "<strong>Reach</strong> Percentage of target audience exposed to a commercial at least once <br/><strong>Frequency</strong> Average number of times your target audience sees an ad during campaign",
+				"type": 5,
+				"heading": "Multi-Screen",
+				"subHeading": "Welcome to the new media landscape",
+				"paragraph": "Multi-screen is now the norm",
 				"background": {
-					"normal": "inc/image/map-tertiary-backgrounds/map-background.png",
-					"small": "inc/image/map-tertiary-backgrounds/map-background.png",
+					"normal": "inc/image/map-tertiary-backgrounds/background-multi-screen.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-multi-screen.jpg",
 					"alt": "How to reach families"
 				},
 				"statistics": [
 					{
-						"label": {
-							"top": "Reach",
-							"middle": "4",
-							"bottom": "Frequency"
-						},
-						"value": {
-							"top": "36%",
-							"bottom": "1.9x"
-						}
+						"label": "Television drives digital engagement",
+						"value": "66% of smartphone users reach for their device to learn more about a product they saw advertised on TV."
 					},
 					{
-						"label": {
-							"top": "Reach",
-							"middle": "13",
-							"bottom": "Frequency"
-						},
-						"value": {
-							"top": "57%",
-							"bottom": "3.9x"
-						}
+						"label": "Ad recall doubles when TV and Online are combined",
+						"value": "Brand recall is 27% when viewing TV ad alone, and increases to 50% when ad is seen on TV and Online. Message recall is doubled when seen on TV and Online."
 					},
 					{
-						"label": {
-							"top": "Reach",
-							"middle": "26",
-							"bottom": "Frequency"
-						},
-						"value": {
-							"top": "70%",
-							"bottom": "6.1x"
-						}
+						"label": "TV ads drive action",
+						"value": "62% of adults 18-49 shop online or purchase something they have seen on a show or ad they are currently watching."
 					}
 				]
 			}

@@ -8,14 +8,16 @@ import MapTertiarySlideType from "./enum/MapTertiarySlideType";
 
 class BlockMapTertiaryViewModel extends AbstractBlockComponentViewModel<BlockMapTertiaryController, IBlockMapTertiaryOptions>
 {
-	public activeSlide:KnockoutObservable<number> = ko.observable(0);
+	public activeSlide: KnockoutObservable<number> = ko.observable(0);
 	public slides: KnockoutObservableArray<ITertiaryMapSlide> = ko.observableArray([]);
-	public slideTypeMap: {[index: number]: string} = {
+	public slideTypeMap: { [index: number]: string } = {
 		[MapTertiarySlideType.RADIAL_PROGRESS]: 'block/block-map-tertiary/slide/slide-radial-progress',
 		[MapTertiarySlideType.VERTICAL_GRAPHIC]: 'block/block-map-tertiary/slide/slide-vertical-graphic',
 		[MapTertiarySlideType.HORIZONTAL_WITH_ICON]: 'block/block-map-tertiary/slide/slide-horizontal-with-icon',
 		[MapTertiarySlideType.HORIZONTAL_WITHOUT_ICON]: 'block/block-map-tertiary/slide/slide-horizontal-without-icon',
 		[MapTertiarySlideType.ICON_PROGRESS]: 'block/block-map-tertiary/slide/slide-icon-progress',
+		[MapTertiarySlideType.VERTICAL_LIST]: 'block/block-map-tertiary/slide/slide-vertical-list',
+		[MapTertiarySlideType.CARDS]: 'block/block-map-tertiary/slide/slide-cards',
 	};
 
 	/**

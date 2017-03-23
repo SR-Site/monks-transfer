@@ -1,8 +1,7 @@
 import IAbstractTransitionComponentOptions from "../../../../../util/component-transition/abstract-transition-component/IAbstractTransitionComponentOptions";
 
-interface ISlideIconProgressOptions extends IAbstractTransitionComponentOptions
-{
+interface ISlideCardsOptions extends IAbstractTransitionComponentOptions {
 
 }
 
-export default ISlideIconProgressOptions;
+export default ISlideCardsOptions;

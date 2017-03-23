@@ -35,6 +35,11 @@ interface ITertiaryMapSlide
 	statistics: Array<{
 		/**
 		 * @property
+		 * @description Sometimes we want to display an image
+		 */
+		image?:IImage;
+		/**
+		 * @property
 		 * @description Sometimes we want to display an icon
 		 */
 		icon?: string;
@@ -47,7 +52,7 @@ interface ITertiaryMapSlide
 		 * @property
 		 * @description The value of the statistic
 		 */
-		value: string | {top: string; bottom: string;};
+		value: string | {top: string; bottom: string;} | IImage;
 	}>
 }
 

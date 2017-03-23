@@ -1,0 +1,77 @@
+.component-slide-vertical-list {
+	.slide-statistics {
+		@include pos(50%, $sizeGrid * 8, auto, $sizeGrid * 8);
+		position: absolute;
+		transform: translateY(-50%);
+	}
+
+	.statistics-wrapper {
+		@extend %reset-list;
+	}
+
+	.statistic {
+		margin-bottom: $sizeGrid;
+	}
+
+	.step {
+		@include size($sizeGrid);
+		border: 1px dashed $colorLocalMedia;
+		display: inline-block;
+		border-radius: 100%;
+		vertical-align: top;
+	}
+
+	.description {
+		@include size(calc(100% - #{$sizeGrid * 2}), auto);
+		margin-left: $sizeGrid;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	@include respond-to(LARGE) {
+		.slide-statistics {
+			@include pos(60%, $sizeGrid * 4, auto, $sizeGrid * 4);
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.slide-statistics {
+			.copy-03 {
+				display: none;
+			}
+		}
+
+		.statistic {
+			margin-bottom: $sizeGrid / 2;
+		}
+
+		.step,
+		.description {
+			vertical-align: middle;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		display: block;
+
+		.statistics-wrapper {
+			padding: 0 $sizeGrid * 2;
+		}
+
+		.slide-statistics {
+			@include pos(auto, auto, auto, auto);
+			@include size(100%, 270px);
+			position: relative;
+			transform: none;
+			margin-top: $sizeGrid;
+
+			.heading-08 {
+				font-size: 3rem;
+			}
+
+			.copy-03 {
+				display: block;
+			}
+		}
+	}
+}
