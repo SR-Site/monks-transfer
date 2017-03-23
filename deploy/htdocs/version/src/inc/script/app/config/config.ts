@@ -75,7 +75,6 @@ let config: IConfig = {
 			}
 		},
 		[EnvironmentNames.MONK_APPS]: {
-			extends: EnvironmentNames.PRODUCTION,
 			variables: {},
 			urls: {},
 			properties: {
@@ -83,7 +82,6 @@ let config: IConfig = {
 			}
 		},
 		[EnvironmentNames.LOCAL]: {
-			extends: EnvironmentNames.PRODUCTION,
 			variables: {},
 			urls: {},
 			properties: {}
