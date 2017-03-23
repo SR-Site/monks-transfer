@@ -14,7 +14,13 @@ class ProgramModuleItemTransitionController extends AbstractTransitionController
 	protected setupTransitionInTimeline(): void
 	{
 		this.transitionInTimeline.from(this.element, 0.4, {opacity: 0});
-		this.transitionInTimeline.add(this.getSubTimeline('.component-button-play-circle'), '=-0.2');
+
+		const playButton = this.element.querySelector('.component-button-play-circle');
+
+		if(playButton)
+		{
+			this.transitionInTimeline.add(this.getSubTimeline(playButton), 0);
+		}
 
 		this.addEventListener(AbstractTransitionController.TRANSITION_IN_COMPLETE, () => this.setupHoverTimeline());
 	}
@@ -43,7 +49,9 @@ class ProgramModuleItemTransitionController extends AbstractTransitionController
 			}
 		});
 
-		this._mouseEnterTimeline.to(this.element.querySelectorAll('.hover-content'), 0.3, { opacity: 0 }, 0);
+		this._mouseEnterTimeline.to(this.element.querySelectorAll('.hover-content'), 0.3, {opacity: 0}, 0);
+		this._mouseEnterTimeline.set(this.element.querySelectorAll('.truncated-copy'), {display: 'none'});
+		this._mouseEnterTimeline.set(this.element.querySelectorAll('.full-copy'), {display: 'block'});
 		this._mouseEnterTimeline.fromTo(this.element.querySelectorAll('.hover-container'), 0.3,
 			{
 				width: '100%'

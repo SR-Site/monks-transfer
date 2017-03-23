@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.field_blocks
     - field.field.node.page.field_header_theme
+    - field.field.node.page.field_hide_contact_button
     - field.field.node.page.field_metatags
     - node.type.page
   module:
@@ -20,12 +21,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
   field_blocks:
     type: entity_reference_paragraphs
-    weight: 7
+    weight: 8
     settings:
       title: Block
       title_plural: Blocks
@@ -35,31 +36,37 @@ content:
       default_paragraph_type: _none
     third_party_settings: {  }
   field_header_theme:
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
+  field_hide_contact_button:
+    type: boolean_checkbox
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_metatags:
-    weight: 8
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
   path:
     type: path
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 5
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 6
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -70,7 +77,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60

@@ -19,3 +19,5 @@ permissions:
   8: 'restful get spin_rest_init_v1'
   9: 'restful get spectrum_rest_article_v1'
   10: 'restful post spectrum_rest_contact_v1'
+  11: 'restful get spin_rest_view_counter_v1'
+  12: 'restful post spectrum_rest_view_counter_v1'

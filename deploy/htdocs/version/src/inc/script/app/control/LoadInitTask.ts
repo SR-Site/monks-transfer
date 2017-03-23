@@ -2,11 +2,11 @@ import Promise = require('bluebird');
 import AbstractTask from "../../lib/temple/control/sequence/task/AbstractTask";
 import DataManager from "../data/DataManager";
 import IGatewayResult from "../net/gateway/result/IGatewayResult";
-import {IInitData} from "../data/interface/IInitData";
+import IInitData from "../data/interface/IInitData";
 
 /**
  * @namespace app.control
- * @class LoadFacebookApiTask
+ * @class LoadInitTask
  * @extend temple.control.sequence.tasks.AbstractTask
  */
 class LoadInitTask extends AbstractTask
@@ -21,13 +21,7 @@ class LoadInitTask extends AbstractTask
 		dm.serviceModel.contentService.getInit()
 			.then((response: IGatewayResult<IInitData>) =>
 			{
-				response.data.routes = {
-					"landing": "home",
-					"notFound": "page-not-found"
-				};
-
 				dm.settingsModel.initDataModel.data = response.data;
-
 			})
 			.then(this.done.bind(this))
 			.catch((reason) =>

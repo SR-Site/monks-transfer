@@ -47,13 +47,13 @@ class BlockHeroMainController extends AbstractBlockComponentController<BlockHero
 	 * @public
 	 * @method openNextStep
 	 */
-	public openNextStep(index:number):Promise<any>
+	public openNextStep(index: number): Promise<any>
 	{
 		this.changeBackgroundImage(index);
 
 		return this.transitionController.transitionOutStep(this.viewModel.activeIndex())
-			.then(()=> this.transitionController.transitionInStep(index))
-			.then(()=> this.viewModel.activeIndex(index))
+			.then(() => this.transitionController.transitionInStep(index))
+			.then(() => this.viewModel.activeIndex(index))
 	}
 
 	/**
@@ -179,6 +179,8 @@ class BlockHeroMainController extends AbstractBlockComponentController<BlockHero
 			this._videoElements.length = 0;
 			this._videoElements = null;
 		}
+
+		this._imageCrossfader = null;
 
 		// always call this last
 		super.destruct();

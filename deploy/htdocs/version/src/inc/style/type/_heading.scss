@@ -1,7 +1,7 @@
 // Default Heading Styles.
 .heading {
 
-	.highlight {
+	strong {
 		color: $colorSecondary;
 	}
 }
@@ -9,26 +9,46 @@
 // Open sans extra bold
 .heading-01 {
 	font: 800 7rem / 1.07 $fontOpenSans;
+
+	strong {
+		font-weight: 800;
+	}
 }
 
 // Open sans extra bold
 .heading-02 {
 	font: 800 4.5rem / 1.11 $fontOpenSans;
+
+	strong {
+		font-weight: 800;
+	}
 }
 
 // Open sans bold
 .heading-03 {
 	font: 700 3.6rem / 1.25 $fontOpenSans;
+
+	strong {
+		font-weight: 700;
+	}
 }
 
 // Open sans bold
 .heading-04 {
 	font: 700 4rem / 1.25 $fontOpenSans;
+
+	strong {
+		font-weight: 700;
+	}
 }
 
 // Open sans regular
 .heading-05 {
 	font: 400 3.6rem / 1.25 $fontOpenSans;
+
+	strong {
+		font-weight: 400;
+	}
 }
 
 // Open sans regular
@@ -42,7 +62,7 @@
 	font: 600 1.8rem / 1.16 $fontOpenSans;
 
 	strong {
-		font-weight: 700;
+		font-weight: 600;
 	}
 }
 
@@ -58,6 +78,10 @@
 // Open sans extra-bold
 .heading-09 {
 	font: 800 1.2rem / 1.75 $fontOpenSans;
+
+	strong {
+		font-weight: 800;
+	}
 }
 
 // Breakpoints

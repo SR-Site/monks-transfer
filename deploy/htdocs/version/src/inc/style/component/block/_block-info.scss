@@ -77,6 +77,24 @@
 		.description {
 			width: 100%;
 		}
+
+
+		@include respond-to(X_LARGE){
+			width: 15 * $sizeGrid;
+		}
+
+		@include respond-to(ARTICLE_TEASER_LARGE) {
+			width: 12 * $sizeGrid;
+		}
+
+		@include respond-to(ARTICLE_TEASER_MEDIUM) {
+			width: 9 * $sizeGrid;
+
+			.inner-content {
+				padding: $sizeGrid ;
+			}
+		}
+
 	}
 
 	// Breakpoints

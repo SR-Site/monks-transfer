@@ -3,11 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_title
+    - field.field.user.user.field_name
+    - field.field.user.user.field_role
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - path
     - user
 _core:
   default_config_hash: LLAieeozVsoZDb-2PbFxRJpQqnKmpR7-4OoRJnduz-U
@@ -22,19 +24,31 @@ content:
     third_party_settings: {  }
   contact:
     weight: 5
-  field_title:
-    weight: 1
+  field_name:
+    weight: 2
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  language:
+  field_role:
+    type: string_textfield
     weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  language:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
   user_picture:
@@ -43,5 +57,5 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    weight: 2
+    weight: 4
 hidden: {  }

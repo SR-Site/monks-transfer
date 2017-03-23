@@ -5,8 +5,10 @@
  * Contains spectrum_rest.module..
  */
 
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 const SPECTRUM_CONTACT_EMAIL_BODY =
@@ -38,21 +40,6 @@ function spectrum_rest_help($route_name, RouteMatchInterface $route_match) {
 
     default:
   }
-}
-
-/**
- * Implements hook_entity_base_field_info().
- */
-function HOOK_entity_base_field_info(EntityTypeInterface $entity_type) {
-  $fields = [];
-
-  if ($entity_type->id() == 'menu_link_content') {
-    $fields['FIELD_NAME'] = BaseFieldDefinition::create('FIELD_TYPE')
-      ->setLabel(t('FIELD_LABEL'))
-      ->setDescription(t('FIELD_DESCRIPTION '));
-  }
-
-  return $fields;
 }
 
 /**
@@ -90,6 +77,48 @@ function spectrum_rest_mail($key, &$message, $params) {
       $message['body'][] = t(SPECTRUM_CONTACT_EMAIL_BODY, $args);
 
       break;
+  }
+
+}
+
+/**
+ * Implements hook_entity_prepare_form().
+ *
+ * Add default paragraphs when creating a bide Article.
+ * @TODO: hard-coded solution. Find out a better way with settings in the UI.
+ *
+ * @param EntityInterface $entity
+ * @param string $operation
+ * @param FormStateInterface $form_state
+ */
+function spectrum_rest_entity_prepare_form(EntityInterface $entity, $operation, FormStateInterface $form_state) {
+
+  if (!($operation == 'default' && $entity->getEntityTypeId() == 'node' && $entity->bundle() == 'article')) {
+    return;
+  }
+
+  $bundles = ['blockherotertiary', 'blockblogpost'];
+  /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $entity_manager */
+  $entity_manager = \Drupal::entityTypeManager();
+  $langcode = $form_state->get('langcode');
+
+  /** @var \Drupal\Core\Field\EntityReferenceFieldItemListInterface $field */
+  $field = $entity->get('field_blocks');
+  $target_type = $field->getSetting('target_type');
+
+  foreach ($bundles as $bundle_name) {
+    // Create paragraph and display.
+    $entity_type = $entity_manager->getDefinition($target_type);
+    $bundle_key = $entity_type->getKey('bundle');
+
+    /** @var Drupal\Core\Entity\FieldableEntityInterface $paragraphs_entity */
+    $paragraphs_entity = $entity_manager->getStorage($target_type)->create(array(
+      $bundle_key => $bundle_name,
+      'langcode' => $langcode,
+    ));
+
+    // Field values.
+    $field->appendItem($paragraphs_entity);
   }
 
 }

@@ -2,7 +2,7 @@ define([
 	'jquery',
 	'knockout',
 	'vendor/vimeo/player.min',
-	'vendor/mapbox/mapbox-gl',
+	'mapbox',
 	'vendor/wavesurfer/wavesurfer',
 	'vendor/auto-complete/auto-complete',
 	'jquerymobile',

@@ -11,7 +11,7 @@
 		</figure>
 		<aside>
 			<h2 class="heading heading-07" data-bind="html: data.heading"></h2>
-			<p class="copy copy-01" data-bind="html: data.paragraph"></p>
+			<div class="copy copy-01" data-bind="html: $root.StringUtils.truncate(data.paragraph, 60)"></div>
 			<!-- ko with: data.tags -->
 				<div class="tags" data-bind="foreach: $data">
 					<!-- ko component: {

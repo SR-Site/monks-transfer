@@ -11,13 +11,14 @@ dependencies:
   module:
     - field_group
     - paragraphs
+    - text
 third_party_settings:
   field_group:
     group_styles:
       children:
         - field_styles
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: details
       format_settings:
         id: ''
@@ -29,7 +30,7 @@ third_party_settings:
       children:
         - field_links
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: details
       format_settings:
         label: Links
@@ -44,7 +45,7 @@ bundle: blockmore
 mode: default
 content:
   field_articles:
-    weight: 1
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -52,12 +53,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
   field_heading:
-    weight: 3
+    weight: 0
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: text_textarea
   field_links:
     type: entity_reference_paragraphs
     weight: 4

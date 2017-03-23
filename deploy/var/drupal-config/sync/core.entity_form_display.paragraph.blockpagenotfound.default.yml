@@ -22,7 +22,7 @@ third_party_settings:
       children:
         - field_styles
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: details
       format_settings:
         id: ''
@@ -48,14 +48,14 @@ bundle: blockpagenotfound
 mode: default
 content:
   field_heading:
-    weight: 6
+    weight: 0
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: text_textarea
   field_image:
-    weight: 4
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -73,7 +73,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
   field_paragraph:
-    weight: 5
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -91,7 +91,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
   field_value:
-    weight: 7
+    weight: 5
     settings:
       placeholder: ''
     third_party_settings: {  }

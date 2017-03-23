@@ -1,0 +1,19 @@
+uuid: 13c5d1a6-92ea-44bc-b78b-03f0ec6ad4dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_temp
+    - paragraphs.paragraphs_type.stories
+id: paragraph.stories.field_heading_temp
+field_name: field_heading_temp
+entity_type: paragraph
+bundle: stories
+label: heading_temp
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

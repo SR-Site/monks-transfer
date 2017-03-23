@@ -10,6 +10,24 @@
 								image: $data.image,
 								state: $root.deviceState()
 							}"/>
+
+							<!-- ko if: $data.video -->
+								<!-- ko component: {
+									name: 'button/button-play-circle',
+									onComplete: $root.controller.callbackCounter.get(),
+									options: {
+										action: {
+											event: dataManager.videoOverlay.show.bind(dataManager.videoOverlay, {
+												video: video,
+												poster: image,
+												loop: false,
+												controls: $root.Bowser.mobile || $root.Bowser.tablet
+											})
+										}
+									}
+								} --><!-- /ko -->
+							<!-- /ko -->
+
 							<!-- ko if: heading -->
 								<figcaption>
 									<p class="copy copy-01" data-bind="html: heading"></p>

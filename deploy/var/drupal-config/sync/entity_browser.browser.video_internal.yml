@@ -1,0 +1,39 @@
+uuid: 955a986e-dc7e-4810-9b66-817243ccb42e
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_browser_entity_form
+name: video_internal
+label: 'Video internal'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select video'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  1a15ddcf-0f66-4ad2-abcd-7c1858ce99bb:
+    settings:
+      entity_type: media
+      bundle: video_local
+      form_mode: default
+      submit_text: Save
+    uuid: 1a15ddcf-0f66-4ad2-abcd-7c1858ce99bb
+    weight: 1
+    label: 'Local video'
+    id: entity_form
+  a4705b2d-5498-41b8-a5ea-05870fede676:
+    settings:
+      entity_type: media
+      bundle: video_url
+      form_mode: default
+      submit_text: Save
+    uuid: a4705b2d-5498-41b8-a5ea-05870fede676
+    weight: 2
+    label: 'Video URL'
+    id: entity_form

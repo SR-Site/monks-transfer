@@ -9,6 +9,10 @@
 			"to_reach": "1-844-to-reach",
 			"next": "Next"
 		},
+		"title": {
+			"view_count": "View count",
+			"reading_time": "Reading time"
+		},
 		"form": {
 			"placeholder": {
 				"email": "Email Address",
@@ -22,7 +26,6 @@
 				"company": "Company Name"
 			},
 			"label": {
-
 			},
 			"select": {
 				"state": "Select a State"
@@ -40,14 +43,11 @@
 				"paragraph": "We’re excited to have a chance to meet you. Your request is being directed to your personal media consultant. Expect to hear from us soon!"
 			},
 			"server_message": {
-
 			}
 		},
 		"confirmation": {
-
 		}
 	},
 	"block": {
-
 	}
 }

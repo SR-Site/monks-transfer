@@ -56,4 +56,13 @@ class SpectrumContact implements SpectrumContactInterface {
     return $this->properties[$key] = $value;
   }
 
+  /**
+   * Return all properties.
+   *
+   * @return array
+   */
+  public function getProperties() {
+    return $this->properties;
+  }
+
 }

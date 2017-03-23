@@ -66,11 +66,9 @@
 		@include size(90px, 30px);
 	}
 
-	@include respond-to(SMALL) {
-		@include size(60px, 19px);
-
+	@include respond-to(MEDIUM) {
 		/**
-		 * Mobile has no themes
+		 * Tablet portrait and mobile have no themes
 		 */
 		.theme-light &,
 		.theme-dark & {
@@ -83,5 +81,8 @@
 				color: #00629b;
 			}
 		}
+	}
+	@include respond-to(SMALL) {
+		@include size(60px, 19px);
 	}
 }

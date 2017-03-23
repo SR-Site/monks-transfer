@@ -31,7 +31,7 @@
 				background: transparent;
 
 				.copy {
-					opacity :1;
+					opacity: 1;
 					transform: translateX(0);
 				}
 
@@ -90,7 +90,30 @@
 	}
 
 	// Breakpoints
-	@include respond-to(SMALL) {
+	@include respond-to(LARGE) {
+		.story-content {
+			width: 75%;
+
+			.story {
+				padding: $sizeGrid / 2;
+			}
+		}
+
+		.blurred-image,
+		.default-image {
+			width: 75%;
+
+			img {
+				width: (100 / 75) * 100%;
+			}
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+
+		// Overwrite all the borders because otherwise it does not fit in the screen
+		border-left: none!important;
+		border-right: none!important;
 
 		&:before {
 			display: none;
@@ -124,7 +147,7 @@
 
 				.copy {
 					margin-top: $sizeGrid/2;
-					opacity :1;
+					opacity: 1;
 					transform: translateX(0);
 				}
 			}

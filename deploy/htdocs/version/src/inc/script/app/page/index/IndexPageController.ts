@@ -30,11 +30,6 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 
 	/**
 	 * @private
-	 * @property _beforeGoto
-	 */
-	private _beforeGoto: (removeHijack?: boolean) => void;
-	/**
-	 * @private
 	 * @property_beforeTransitionIn
 	 */
 	private _beforeTransitionIn: (removeHijack?: boolean) => void;
@@ -52,8 +47,9 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	{
 		super.init();
 
+		this._dataManager.beforeGotoPool.add(this.handleBeforeGoto.bind(this));
+
 		this._beforeTransitionIn = Gaia.api.beforeTransitionIn(this.handleBeforeTransitionIn.bind(this), true);
-		this._beforeGoto = Gaia.api.beforeGoto(this.handleBeforeGoto.bind(this), true, false);
 
 		if(DEBUG)
 		{
@@ -204,18 +200,18 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 	 * @private
 	 * @method handleBeforeGoto
 	 */
-	private handleBeforeGoto(): void
+	private handleBeforeGoto(releaseBeforeGoto: (removeHijack?:boolean) => void): void
 	{
 		if(this._headerController.menuIsActive)
 		{
 			Promise.all([
 				this.closePanel(),
 				this.closeMenu()
-			]).then(() => this._beforeGoto());
+			]).then(() => releaseBeforeGoto());
 		}
 		else
 		{
-			this.closePanel().then(() => this._beforeGoto());
+			this.closePanel().then(() => releaseBeforeGoto());
 		}
 	}
 
@@ -232,12 +228,17 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 		{
 			if(bowser.ios)
 			{
+				// Note: If the header component is not  the first element in the DOM the fixed position
+				// will make the overflow look weird and end up with the header being clipped
+				document.body.insertBefore(this._dataManager.panelController.element, document.body.firstChild);
+				
 				// Note: Move the page loader to the root to overlap the fixed header element, this is super hacky but otherwise the fixed header on iOS get's clipped when scrolling
 				document.body.insertBefore(this._dataManager.pageLoader.element, document.body.firstChild);
 
 				// Note: If the header component is not  the first element in the DOM the fixed position
 				// will make the overflow look weird and end up with the header being clipped
 				document.body.insertBefore(this._headerController.element, document.body.firstChild);
+
 			}
 
 			this._beforeTransitionIn(true);
@@ -286,7 +287,6 @@ class IndexPageController extends DefaultPageController<IndexPageViewModel>
 		}
 
 		this._dataManager = null;
-		this._beforeGoto = null;
 		this._beforeTransitionIn = null;
 		this._headerController = null;
 		this._footerController = null;

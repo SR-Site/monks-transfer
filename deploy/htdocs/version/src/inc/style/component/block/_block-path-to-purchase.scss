@@ -47,7 +47,7 @@
 		overflow: hidden;
 
 		@include hover() {
-			color: $colorLightGrey;
+			color: $colorBorder;
 		}
 
 		&:after {
@@ -221,6 +221,7 @@
 			.step-content {
 				order: 1;
 				padding-left: $sizeGrid;
+				padding-right: 0;
 			}
 
 			.step-edge {
@@ -364,20 +365,21 @@
 		.inner-wrapper {
 			position: relative;
 			height: auto;
+			overflow: hidden;
 		}
 
 		.slider-viewport {
 			@include pos(auto, auto, auto, auto);
-			@include size(100%, $sizeGrid * 12);
+			@include size(calc(100% - #{$sizeGrid * 4}), $sizeGrid * 12);
 			@include center-block();
-			overflow: hidden;
+			overflow: visible;
 			position: relative;
 		}
 
 		.step-wrapper {
 			@include coverer();
 			@include size(100%);
-			padding: 0 $sizeGrid;
+			padding: 0 $sizeGrid / 2;
 
 			&:nth-child(2n + 0) {
 				transform: none;
@@ -403,7 +405,7 @@
 			border-bottom: 1px solid $colorBorder;
 			border-left: 1px solid $colorBorder;
 			padding-left: $sizeGrid !important;
-			padding-right: 0 !important;
+			padding-right: $sizeGrid !important;
 			padding-top: $sizeGrid * 2;
 			order: 1 !important;
 

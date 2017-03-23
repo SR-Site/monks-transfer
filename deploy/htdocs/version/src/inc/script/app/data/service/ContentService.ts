@@ -9,6 +9,7 @@ import IBlock from "../interface/block/IBlock";
 import {PropertyNames} from "../enum/ConfigNames";
 import configManagerInstance from "../../../lib/temple/config/configManagerInstance";
 import URLUtils from "../../../lib/temple/util/URLUtils";
+import IViewCountData from "../interface/IViewCountData";
 
 class ContentService extends AbstractService
 {
@@ -44,6 +45,22 @@ class ContentService extends AbstractService
 
 	/**
 	 * @public
+	 * @method viewCount
+	 * @param page
+	 * @returns {Promise<IGatewayResult<IViewCountData>>}
+	 */
+	public viewCount(page: string): Promise<IGatewayResult<IViewCountData>>
+	{
+		// Strip out the first slash because it breaks the API
+		page = page.charAt(0) === '/' ? page.slice(1) : page;
+
+		return this.gateway.get(StringUtils.replaceVars(
+			Endpoints.getEndpoint(Endpoints.VIEW_COUNT), {page: page}
+		), {});
+	}
+
+	/**
+	 * @public
 	 * @method loadMore
 	 * @description Some blocks might have a load more functionality where it loads more blocks into that block, this
 	 * method can be used for loading more blocks!
@@ -55,8 +72,11 @@ class ContentService extends AbstractService
 	 */
 	public loadMore(endpoint: string, offset: number, limit: number, filter: {[filterType: string]: string}): Promise<IGatewayResult<{blocks: Array<IBlock>}>>
 	{
-		// TODO: Strip out the /api/v1 part, backend should not return it though!
-		endpoint = endpoint.replace('/api/v1/', '');
+		if(endpoint.indexOf('/') === 0)
+		{
+			// Strip out the first "/"
+			endpoint = endpoint.substring(1);
+		}
 
 		return this.gateway.get(
 			endpoint,

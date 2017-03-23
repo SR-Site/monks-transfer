@@ -25,6 +25,7 @@ class Endpoints
 	 */
 	public static INIT: string = 'init';
 	public static PAGE_LAYOUT: string = 'pageLayout';
+	public static VIEW_COUNT: string = 'viewCount';
 	public static CONTACT: string = 'contact';
 
 	/**
@@ -49,6 +50,10 @@ class Endpoints
 		[Endpoints.PAGE_LAYOUT]: {
 			[Endpoints._MOCK]: '{page}.json',
 			[Endpoints._API]: 'page/{page}'
+		},
+		[Endpoints.VIEW_COUNT]: {
+			[Endpoints._MOCK]: 'view-count.json',
+			[Endpoints._API]: 'counter/{page}'
 		},
 		[Endpoints.CONTACT]: {
 			[Endpoints._MOCK]: 'contact.json',

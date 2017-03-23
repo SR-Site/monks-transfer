@@ -95,6 +95,12 @@ extends AbstractTransitionComponentController<TViewModel, TOptions, TTransitionC
 			this.viewModel.elementClassNames.push('margin-top-' + this.options.marginTop);
 		}
 
+		// Add scrollSection to element if found
+		if(this.options.scrollSection)
+		{
+			this.element.setAttribute('data-scroll-section', this.options.scrollSection);
+		}
+
 		// Add the class names to the element
 		this.viewModel.elementClassNames.forEach((className) => this.element.classList.add(className));
 

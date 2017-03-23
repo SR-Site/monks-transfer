@@ -22,13 +22,15 @@ class BlockArticleTeaserTransitionController extends AbstractTransitionControlle
 			}
 		);
 
+		const clipSize = this.element.querySelector('aside').offsetWidth
+
 		this.transitionInTimeline.fromTo(this.element.querySelector('figure'), 1.6,
 			{
 				clip: 'rect(0, ' + this.element.offsetWidth + ',' + this.element.offsetHeight + ', ' + this.element.offsetWidth + ')',
 				opacity: 0
 			},
 			{
-				clip: 'rect(0, ' + this.element.offsetWidth + ',' + this.element.offsetHeight + ', ' + this.element.offsetWidth / 2 + ')',
+				clip: 'rect(0, ' + this.element.offsetWidth + ',' + this.element.offsetHeight + ', ' + clipSize + ')',
 				opacity: 1,
 				clearProps: "clip, opacity",
 				ease: Expo.easeOut

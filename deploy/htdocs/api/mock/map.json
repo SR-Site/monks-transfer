@@ -8,15 +8,9 @@
 			{
 				"id": "marketMap",
 				"data": {
-					"marginTop": 2,
+					"marginTop": 0,
 					"service": {
-						"name": "Samantha Smith",
-						"role": "Customer Service",
-						"image": {
-							"normal": "data/image/market-map/profile-image.jpg",
-							"small": "data/image/market-map/profile-image.jpg",
-							"alt": "Samantha Smith"
-						}
+						"heading": "Start advertising today"
 					},
 					"searchLabel": "Search",
 					"searchPlaceholder": "Which region do you want to advertise in?",

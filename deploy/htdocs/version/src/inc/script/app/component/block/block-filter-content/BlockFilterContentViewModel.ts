@@ -14,7 +14,7 @@ class BlockFilterContentViewModel extends AbstractBlockComponentViewModel<BlockF
 
 	public items:KnockoutObservableArray<IBlock> = ko.observableArray([]);
 	public activePageIndex:KnockoutObservable<number> = ko.observable(0);
-	public totalPages:KnockoutObservable<number> = ko.observable(0);
+	public totalPages:KnockoutObservableArray<number> = ko.observableArray([]);
 	public limit:number = 4;
 	public offset: number = 0;
 

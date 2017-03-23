@@ -57,9 +57,8 @@ class SearchApiRestDeriver extends FacetSourceDeriverBase {
 
     foreach ($plugins as $plugin) {
       if (isset($plugin['index_name']) && isset($plugin['uri_paths']['canonical'])) {
-        $plugin_derivatives = array();
         $machine_name = $plugin['id'];
-        $plugin_derivatives[$machine_name] = [
+        $this->derivatives[$base_plugin_id][$machine_name] = [
             'id' => $base_plugin_id . ':' . $machine_name,
             'label' => $plugin['label'],
             'description' => $this->t('Provides a facet source.'),
@@ -67,8 +66,6 @@ class SearchApiRestDeriver extends FacetSourceDeriverBase {
             'resource_id' => $machine_name,
             'path' => $plugin['uri_paths']['canonical'],
           ] + $base_plugin_definition;
-
-        $this->derivatives[$base_plugin_id] = $plugin_derivatives;
       }
     }
 

@@ -15,14 +15,7 @@
     "test-karma-coverage": "karma start ../test/karma.teamcity.conf.js --single-run --browsers PhantomJS --colors false"
   },
   "appversion": "1.0",
-  "dependencies": {
-    "camelcase": "^4.0.0",
-    "json-schema-ref-parser": "^3.1.2",
-    "jsonfile": "^2.4.0",
-    "typhen": "^1.0.1",
-    "typhen-json-schema": "^0.4.0",
-    "uppercamelcase": "^1.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/createjs": "0.0.29",
     "@types/greensock": "^1.15.32",
@@ -90,6 +83,13 @@
     "typescript": "^2.2.1",
     "typhen-json-schema": "^0.4.0",
     "underscore.string": "^3.3.4",
-    "walk": ""
+    "walk": "",
+    "block-documentation": "",
+    "camelcase": "^4.0.0",
+    "json-schema-ref-parser": "^3.1.2",
+    "jsonfile": "^2.4.0",
+    "typhen": "^1.0.1",
+    "typhen-json-schema": "^0.4.0",
+    "uppercamelcase": "^1.1.0"
   }
 }

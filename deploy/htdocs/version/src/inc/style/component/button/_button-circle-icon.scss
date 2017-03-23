@@ -13,4 +13,8 @@
 	@include respond-to(LARGE) {
 		@include size($sizeGrid);
 	}
+
+	@include respond-to(SMALL) {
+		@include size($sizeGrid * 2);
+	}
 }

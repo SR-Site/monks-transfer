@@ -3,14 +3,23 @@
 function build_frontend(){
     changeDir ${FRONTEND_BUILDROOT}
     npmCommand install
-    npmCommand install
-    gruntCommand clean
-    tsdCommand install
-    gruntCommand ts
+    # gruntCommand ts
+    # gruntCommand sass
+    # gruntCommand postcss
+
+    gruntCommand clean:default
+    gruntCommand ts:default
     gruntCommand sass
     gruntCommand postcss
-    gruntCommand requirejs
-    gruntCommand clean-build
+    gruntCommand requirejs:release
+    gruntCommand newer:uglify:release
+    gruntCommand newer:cssmin:default
+    gruntCommand newer:imagemin:default
+    gruntCommand newer:pngmin:default
+    gruntCommand clean-build:default
+    gruntCommand copy:versioning
+    gruntCommand usemin:html
+
     gruntCommand generate-block-documentation
     blockDocumentation ../block-documentation/
 }
@@ -18,7 +27,7 @@ function build_frontend(){
 function build_backend(){
     changeDir ${BACKEND_BUILDROOT}
     runComposer install    
-    runSed -i -- 's/prod/jenkins/g' deploy/var/drupal-settings/environment.local.php
+    runSed -i -- 's/production/jenkins/g' deploy/var/drupal-settings/environment.local.php
     deleteCopyFile deploy/var/drupal-settings/settings.jenkins.php deploy/var/drupal-settings/settings.local.php
     changeDir ${DRUSH_DIR}    
     drushCommand cr

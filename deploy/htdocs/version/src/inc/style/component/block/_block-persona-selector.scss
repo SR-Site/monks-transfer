@@ -59,8 +59,13 @@
 		display: inline-block;
 
 		@include hover() {
+
 			.persona-button {
 				color: $colorSmallBusinesses;
+
+				&:before {
+					background: transparent;
+				}
 
 				.label {
 					color: $colorWhite;
@@ -93,8 +98,14 @@
 		}
 
 		&.is-active {
+			border: none;
+
 			.persona-button {
 				color: $colorSmallBusinesses;
+
+				&:before {
+					background: transparent;
+				}
 
 				.label {
 					color: $colorWhite;
@@ -129,7 +140,7 @@
 
 	.persona-button {
 		@include size(calc(100% - #{$sizeGrid}), $buttonHeight);
-		color: $colorWhite;
+		color: $colorBorder;
 		transition: background #{$animationDuration} #{$ease};
 		text-align: left;
 		margin-right: $sizeGrid;
@@ -150,6 +161,8 @@
 			transition: all #{$animationDuration} #{$ease};
 			position: absolute;
 			content: '';
+
+			background: currentColor;
 		}
 
 		.label-wrapper {

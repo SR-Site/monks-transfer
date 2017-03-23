@@ -1,0 +1,36 @@
+uuid: 11fcb648-4e50-48cc-87df-9ccd83c76e98
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_icon_list
+field_name: field_icon_list
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: triangle-advertise-icon-1
+      label: 'Triangle advertise icon 1'
+    -
+      value: triangle-advertise-icon-2
+      label: 'Triangle advertise icon 2'
+    -
+      value: triangle-advertise-icon-3
+      label: 'Triangle advertise icon 3'
+    -
+      value: triangle-advertise-icon-4
+      label: 'Triangle advertise icon 4'
+    -
+      value: triangle-advertise-icon-5
+      label: 'Triangle advertise icon 5'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

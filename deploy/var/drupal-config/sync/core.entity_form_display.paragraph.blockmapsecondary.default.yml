@@ -24,7 +24,7 @@ third_party_settings:
       children:
         - field_styles
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: details
       format_settings:
         id: ''
@@ -38,7 +38,7 @@ third_party_settings:
         - field_value
         - field_label
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: details
       format_settings:
         id: ''
@@ -52,12 +52,12 @@ bundle: blockmapsecondary
 mode: default
 content:
   field_heading:
-    weight: 5
+    weight: 0
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: text_textarea
   field_image:
     weight: 5
     settings:
@@ -66,7 +66,7 @@ content:
     third_party_settings: {  }
     type: image_image
   field_image2:
-    weight: 1
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -80,7 +80,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_paragraph:
-    weight: 3
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -98,7 +98,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
   field_subheading:
-    weight: 4
+    weight: 5
     settings:
       size: 60
       placeholder: ''

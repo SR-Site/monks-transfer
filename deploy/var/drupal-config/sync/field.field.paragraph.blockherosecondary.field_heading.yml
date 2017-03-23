@@ -1,10 +1,12 @@
-uuid: 65f29dfc-efa2-434f-897f-502d0ee6b8f9
+uuid: eafbc6d4-7fba-4357-903d-866d6ed58096
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_heading
     - paragraphs.paragraphs_type.blockherosecondary
+  module:
+    - text
 id: paragraph.blockherosecondary.field_heading
 field_name: field_heading
 entity_type: paragraph
@@ -15,5 +17,11 @@ required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  allowed_formats:
+    bold_html: bold_html
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

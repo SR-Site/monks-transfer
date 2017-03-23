@@ -7,7 +7,7 @@ interface IPaginatorDashedOptions extends IDefaultComponentTransitionOptions {
 	 * @property
 	 * @description Array containing the amount of paginator items
 	 */
-	items:Array<any>;
+	items:Array<any>|KnockoutObservableArray<any>;
 
 	/**
 	 * @property

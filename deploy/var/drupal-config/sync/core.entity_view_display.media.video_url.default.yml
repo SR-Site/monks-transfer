@@ -1,0 +1,30 @@
+uuid: cae5331b-126c-431b-8293-12fa74f04d19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.video_url.field_video_url
+    - media_entity.bundle.video_url
+  module:
+    - link
+id: media.video_url.default
+targetEntityType: media
+bundle: video_url
+mode: default
+content:
+  field_video_url:
+    weight: 0
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

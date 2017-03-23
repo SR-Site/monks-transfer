@@ -1,13 +1,14 @@
 import AbstractTransitionComponentController from "app/util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
-import MarketSearchTransitionController from 'app/component/market-search/MarketSearchTransitionController';
-import IMarketSearchOptions from 'app/component/market-search/IMarketSearchOptions';
-import MarketSearchViewModel from 'app/component/market-search/MarketSearchViewModel';
+import MarketSearchTransitionController from "app/component/market-search/MarketSearchTransitionController";
+import IMarketSearchOptions from "app/component/market-search/IMarketSearchOptions";
+import MarketSearchViewModel from "app/component/market-search/MarketSearchViewModel";
 
 import Log from "lib/temple/util/Log";
 import IMarketDetail from "../block/block-market-map/interface/IMarketDetail";
 import DataManager from "../../data/DataManager";
 import StateModel from "../../data/model/StateModel";
 import ThrottleDebounce from "../../../lib/temple/util/ThrottleDebounce";
+import Scrollbar from "../../../lib/temple/component/Scrollbar";
 
 class MarketSearchController extends AbstractTransitionComponentController<MarketSearchViewModel, IMarketSearchOptions, MarketSearchTransitionController>
 {
@@ -26,6 +27,7 @@ class MarketSearchController extends AbstractTransitionComponentController<Marke
 	private _choices: Array<Array<any>> = [];
 
 	private _markets: Array<IMarketDetail>;
+	private _scrollbar:Scrollbar;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -57,7 +59,10 @@ class MarketSearchController extends AbstractTransitionComponentController<Marke
 	 */
 	public setupAutoComplete(markets: Array<IMarketDetail>): void
 	{
-		if(this.isDestructed()) return;
+		if(this.isDestructed())
+		{
+			return;
+		}
 
 		this._markets = markets;
 
@@ -99,7 +104,7 @@ class MarketSearchController extends AbstractTransitionComponentController<Marke
 	public clearSearch(): void
 	{
 		this.viewModel.selectedMarket(null);
-		this.viewModel.suggestion(null);
+		this.viewModel.suggestions([]);
 		this.viewModel.hasSuggestions(true);
 
 		this.viewModel.query('');
@@ -123,6 +128,8 @@ class MarketSearchController extends AbstractTransitionComponentController<Marke
 	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new MarketSearchTransitionController(this.element, this);
+
+		this._scrollbar = ko.utils.domData.get(this.element.querySelector('.js-scroll-wrapper'), 'scrollbar');
 
 		super.allComponentsLoaded();
 	}
@@ -158,16 +165,17 @@ class MarketSearchController extends AbstractTransitionComponentController<Marke
 		}
 
 		this.viewModel.hasSuggestions(suggestions.length > 0);
-		this.viewModel.suggestion(null);
+		this.viewModel.suggestions([]);
 
-		if(suggestions.length)
+		suggestions.forEach((suggestion: Array<string>) =>
 		{
-			// Only the first item
-			this.viewModel.suggestion({
-				label: suggestions[0][0],
-				value: suggestions[0][1]
+			this.viewModel.suggestions.push({
+				label: suggestion[0],
+				value: suggestion[1]
 			});
-		}
+		});
+
+		this._scrollbar.update();
 	}
 
 

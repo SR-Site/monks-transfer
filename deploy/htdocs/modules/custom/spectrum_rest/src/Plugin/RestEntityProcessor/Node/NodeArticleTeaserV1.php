@@ -24,12 +24,18 @@ class NodeArticleTeaserV1 extends SpectrumRestEntityProcessorBase {
   protected function getItemData($entity) {
 
     $data = [
-      "theme" => (int) $entity->get('field_theme')->value,
-      "tags" => $this->getTags($entity),
+      "social" => $this->getItems($entity->get('field_links')),
+      "author" => $this->entityProcessor->getEntityData($entity->getRevisionAuthor(), 'v1'),
       "image" => $this->image($entity->get('field_image')),
-      "target" => $this->aliasManager->getAliasByPath('/' . $entity->toUrl()->getInternalPath()),
-      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_content')),
+      "tags" => $this->getTags($entity),
+      "views" => 0,
+      "time" => (int) $this->fieldProcessor->getFieldData($entity->get('field_read_time')),
+      "date" => $this->dateFormatter->format($entity->getCreatedTime(), 'custom', 'd/m/Y'),
+      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_excerpt')),
+      "subHeading" => $this->fieldProcessor->getFieldData($entity->get('field_subheading')),
       "heading" => $entity->label(),
+      "theme" => $entity->get('field_theme')->value,
+      "target" => \Drupal\Core\Url::fromRoute('entity.node.canonical', ['node' => $entity->id()], ['absolute' => 0])->toString(),
     ];
 
     return $data;

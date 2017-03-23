@@ -15,17 +15,31 @@
 
 		<button class="button search-button" type="submit" data-bind="html: data.searchLabel"></button>
 
-		<div class="note" data-bind="css: {'is-active': $root.noteActive()}">
+		<div class="note-wrapper">
+			<div class="note scroll-wrapper js-scroll-wrapper" data-bind="
+				css: { 'is-active': $root.noteActive() },
+				style: { 'height': $root.noteHeight() },
+				scrollbar: { setContentSize:false }
+			">
+				<div class="scroll-content" data-scroll-content>
+					<div class="scroll-content-inner" data-content-inner>
+						<!-- ko foreach: $root.suggestions -->
+						<button class="button suggestion-button"
+						        data-bind="html: $data.label, tap: $root.handleSelectMarket.bind($root, $data.value)"></button>
+						<!-- /ko -->
 
-			<!-- ko with: $root.suggestion() -->
-			<button class="button suggestion-button"
-			        data-bind="html: $data.label, tap: $root.handleSelectMarket.bind($root, $data.value)"></button>
-			<!-- /ko -->
+						<!-- ko if: $root.suggestions().length === 0 -->
+						<p class="copy copy-01" data-bind="html: data.notFoundMessage"></p>
+						<!-- /ko -->
+					</div>
+				</div>
 
-			<!-- ko ifnot: $root.suggestion() -->
-			<p class="copy copy-01" data-bind="html: data.notFoundMessage"></p>
-			<!-- /ko -->
+				<div class="scroll-bar" data-scroll-bar>
+					<div class="knob" data-scroll-knob></div>
+				</div>
+			</div>
 		</div>
+
 
 		<!-- ko component: {
 			name: 'button/button-circle-close',

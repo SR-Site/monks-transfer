@@ -3,6 +3,7 @@
 	<h1 class="logo" data-bind="
 		gaiaGoto: [Branches.CONTENT_PAGE, 'home'],
 		css: {
+			'is-disabled': dataManager.currentRoute() === dataManager.settingsModel.initDataModel.data.routes.landing,
 			'enable-solid-background': $root.enableSolidBackground()
 		}"> <!-- 'primary' or 'inverted' -->
 		<span class="icon" data-bind="icon: 'logo'"></span>

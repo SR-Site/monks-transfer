@@ -83,6 +83,102 @@ class SpectrumSettingsForm extends ConfigFormBase {
       '#size' => 32,
     );
 
+    // Contact.
+    $form['group_contact_options'] = [
+        '#type' => 'fieldset',
+        '#title' => $this->t('Init resource contact form'),
+        '#collapsible' => FALSE,
+        '#collapsed' => FALSE,
+        "options" => [
+            "contact_options_phone" => [
+                '#type' => 'textfield',
+                '#title' => $this->t('Phone'),
+                '#default_value' => empty($this->state->get('contact_options_phone')) ? '1-844-TO-REACH' : $this->state->get('contact_options_phone'),
+                '#size' => 32
+            ],
+            [
+                '#type' => 'fieldset',
+                '#title' => $this->t('Email'),
+                '#collapsible' => FALSE,
+                '#collapsed' => FALSE,
+                "options" => [
+                    "contact_options_email_subject" => [
+                        '#type' => 'textfield',
+                        '#title' => $this->t('Subject'),
+                        '#default_value' => empty($this->state->get('contact_options_email_subject')) ? 'Email subject goes here' : $this->state->get('contact_options_email_subject')
+                    ],
+                    "contact_options_email_body" => [
+                        '#type' => 'textfield',
+                        '#title' => $this->t('Body'),
+                        '#default_value' => empty($this->state->get('contact_options_email_body')) ? 'Email body goes here' : $this->state->get('contact_options_email_body')
+                    ],
+                    "contact_options_email_address" => [
+                        '#type' => 'textfield',
+                        '#title' => $this->t('Address'),
+                        '#default_value' => empty($this->state->get('contact_options_email_address')) ? 'spectrumreach@spectrum.com' : $this->state->get('contact_options_email_address')
+                    ]
+                ]
+            ]
+        ]
+    ];
+
+     $form['group_footer'] = [
+          '#type' => 'fieldset',
+          '#title' => $this->t('Footer'),
+          '#collapsible' => FALSE,
+          '#collapsed' => FALSE,
+          "options" => [
+              "footer_copyright" => [
+                  '#type' => 'textarea',
+                  '#title' => $this->t('Copyright'),
+                  '#default_value' => empty($this->state->get('footer_copyright')) ? 'Charter Communications &copy;' : $this->state->get('footer_copyright'),
+                  '#size' => 32
+              ]
+          ]
+      ];
+
+      $form['group_slideout_panel'] = [
+          '#type' => 'fieldset',
+          '#title' => $this->t('Slideout panel'),
+          '#collapsible' => FALSE,
+          '#collapsed' => FALSE,
+          "options" => [
+              "slideout_panel_heading" => [
+                  '#type' => 'textfield',
+                  '#title' => $this->t('Heading'),
+                  '#default_value' => empty($this->state->get('slideout_panel_heading')) ? 'Let\'s talk!<br/>Tell us how we can help you advertise.' : $this->state->get('slideout_panel_heading')
+              ],
+              "slideout_panel_subheading" => [
+                  '#type' => 'textfield',
+                  '#title' => $this->t('Subheading'),
+                  '#default_value' => empty($this->state->get('slideout_panel_subheading')) ? 'Get Started Today.' : $this->state->get('slideout_panel_subheading')
+              ]
+          ]
+      ];
+
+      // Pardot.
+
+    $form['group_pardot'] = array(
+      '#type' => 'fieldset',
+      '#title' => $this->t('Pardot contact form'),
+      '#collapsible' => FALSE,
+      '#collapsed' => FALSE,
+    );
+
+    $form['group_pardot']['pardot_action'] = array(
+      '#type' => 'url',
+      '#title' => $this->t('Destination URL to the Pardot contact form'),
+      '#default_value' => $this->state->get('pardot_action'),
+      '#size' => 32,
+    );
+
+    $form['group_pardot']['pardot_referer'] = array(
+      '#type' => 'url',
+      '#title' => $this->t('Referer URL to the Pardot contact form'),
+      '#default_value' => $this->state->get('pardot_referer'),
+      '#size' => 32,
+    );
+
     // Init routers.
 
     $form['group_routers'] = array(
@@ -101,6 +197,16 @@ class SpectrumSettingsForm extends ConfigFormBase {
       '#target_type' => 'node',
       '#process_default_value' => FALSE,
       '#attributes' => ['data-autocomplete-first-character-blacklist' => '/#?'],
+    );
+
+    $form['group_routers']['article_overview_page'] = array(
+          '#type' => 'entity_autocomplete',
+          '#title' => $this->t('Article overview page'),
+          '#default_value' => static::getUriAsDisplayableString($this->state->get('article_overview_page')),
+          '#element_validate' => array(array(get_called_class(), 'validateUriElement')),
+          '#target_type' => 'node',
+          '#process_default_value' => FALSE,
+          '#attributes' => ['data-autocomplete-first-character-blacklist' => '/#?'],
     );
 
     $form['group_routers']['site_frontpage'] = array(
@@ -200,6 +306,17 @@ class SpectrumSettingsForm extends ConfigFormBase {
     $this->state->set('site_404', static::getUserEnteredStringAsUri($form_state->getValue('site_404')));
     $this->state->set('site_frontpage', static::getUserEnteredStringAsUri($form_state->getValue('site_frontpage')));
     $this->state->set('contact_to', $form_state->getValue('contact_to'));
+    $this->state->set('pardot_referer', $form_state->getValue('pardot_referer'));
+    $this->state->set('pardot_action', $form_state->getValue('pardot_action'));
+
+    $this->state->set('slideout_panel_subheading', $form_state->getValue('slideout_panel_subheading'));
+    $this->state->set('slideout_panel_heading', $form_state->getValue('slideout_panel_heading'));
+    $this->state->set('footer_copyright', $form_state->getValue('footer_copyright'));
+    $this->state->set('contact_options_email_address', $form_state->getValue('contact_options_email_address'));
+    $this->state->set('contact_options_email_body', $form_state->getValue('contact_options_email_body'));
+    $this->state->set('contact_options_email_subject', $form_state->getValue('contact_options_email_subject'));
+    $this->state->set('contact_options_phone', $form_state->getValue('contact_options_phone'));
+    $this->state->set('article_overview_page', $form_state->getValue('article_overview_page'));
 
     // Social networks.
     $socialNetworks = $form_state->getValue('social_networks');

@@ -16,6 +16,7 @@
 		.component-block-info {
 			margin-left: 0;
 			margin-bottom: $sizeGrid * 2;
+			margin-right: 0;
 
 			.clip-mask {
 				background: $colorLightGrey;
@@ -23,13 +24,28 @@
 		}
 	}
 
-	// Breakpoints
+	 //Breakpoints
+	@include respond-to(X_LARGE) {
+		.content-items {
+			justify-content: space-around;
+		}
+	}
+
+	//Breakpoints
 	@include respond-to(LARGE) {
 		.content-items {
-			justify-content: center;
-
+			.component-block-article-teaser,
 			.component-block-info {
-				margin-left: auto;
+				margin: 0 $sizeGrid / 2 $sizeGrid $sizeGrid / 2;
+			}
+		}
+	}
+
+	@include respond-to(ARTICLE_TEASER_MEDIUM) {
+		.content-items {
+			.component-block-article-teaser,
+			.component-block-info {
+				margin: 0 $sizeGrid / 4 $sizeGrid $sizeGrid / 4;
 			}
 		}
 	}

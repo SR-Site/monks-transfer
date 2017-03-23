@@ -1,10 +1,12 @@
-uuid: a06c8ee2-025a-4631-ab78-bd9ef07163b3
+uuid: ec35ee8e-1990-4206-a23d-930c65739728
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_heading
     - paragraphs.paragraphs_type.stepmap
+  module:
+    - text
 id: paragraph.stepmap.field_heading
 field_name: field_heading
 entity_type: paragraph
@@ -15,5 +17,11 @@ required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  allowed_formats:
+    bold_html: bold_html
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

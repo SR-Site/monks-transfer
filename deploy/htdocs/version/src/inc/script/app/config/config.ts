@@ -70,10 +70,11 @@ let config: IConfig = {
 		[EnvironmentNames.PRODUCTION]: {
 			variables: {},
 			urls: {},
-			properties: {}
+			properties: {
+				[PropertyNames.MOCK_CONTENT]: false
+			}
 		},
 		[EnvironmentNames.MONK_APPS]: {
-			extends: EnvironmentNames.PRODUCTION,
 			variables: {},
 			urls: {},
 			properties: {
@@ -81,7 +82,6 @@ let config: IConfig = {
 			}
 		},
 		[EnvironmentNames.LOCAL]: {
-			extends: EnvironmentNames.PRODUCTION,
 			variables: {},
 			urls: {},
 			properties: {}
@@ -121,6 +121,7 @@ switch(host.split(':').shift())
 {
 	case 'spectrum.dev':
 	case 'localhost':
+	case 'spectrum.dev':
 	{
 		environment = EnvironmentNames.LOCAL;
 		break;

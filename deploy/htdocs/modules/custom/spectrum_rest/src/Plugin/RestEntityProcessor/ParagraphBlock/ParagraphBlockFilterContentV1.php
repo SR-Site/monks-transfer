@@ -21,7 +21,7 @@ class ParagraphBlockFilterContentV1 extends SpectrumRestEntityProcessorBase {
   /**
    * URL for the search articles endpoint.
    */
-  const ENDPOINT_SEARCH = '/api/v1/search/article';
+  const ENDPOINT_SEARCH = '/search/article';
 
   /**
    * {@inheritdoc}
@@ -53,7 +53,7 @@ class ParagraphBlockFilterContentV1 extends SpectrumRestEntityProcessorBase {
    */
   protected function getFilterOptions() {
     $filters = [];
-    $vocabularies = ['category', 'document_type', 'market', 'platform'];
+    $vocabularies = ['category', 'thought_leadership', 'platform', 'document_type'];
 
     foreach ($vocabularies as $index => $vid) {
       /** @var \Drupal\taxonomy\Entity\Vocabulary $vocabulary */

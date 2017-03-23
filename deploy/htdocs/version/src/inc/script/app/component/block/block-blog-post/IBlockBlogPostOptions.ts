@@ -27,6 +27,17 @@ interface IBlockBlogPostOptions extends IAbstractBlockComponentOptions
 	 */
 	date:string;
 	/**
+	 * @property
+	 * @description The reading time of the article
+	 * @placeholder 24:00
+	 */
+	time:string;
+	/**
+	 * @property
+	 * @description The amount of views on the article
+	 */
+	views:number;
+	/**
 	 * @propety
 	 * @description The tags linked to the block
 	 */

@@ -25,6 +25,18 @@
 			transition: all 250ms ease(easeOutExpo);
 		}
 
+		.nr {
+			opacity: 1;
+			transform: translateY(50%);
+			transition: transform 250ms ease(easeOutExpo);
+
+			&:before {
+				content: counter(item, decimal-leading-zero) "";
+				display: block;
+				text-align: left;
+			}
+		}
+
 		// Active State
 		&.is-active {
 			color: $colorSecondary;
@@ -34,13 +46,7 @@
 			}
 
 			.nr {
-				opacity: 1;
-
-				&:before {
-					content: counter(item, decimal-leading-zero) "";
-					display: block;
-					text-align: left;
-				}
+				transform: translateY(0);
 			}
 		}
 

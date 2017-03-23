@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockprogrammodule.field_programs
     - field.field.paragraph.blockprogrammodule.field_styles
     - paragraphs.paragraphs_type.blockprogrammodule
   module:
@@ -12,6 +13,14 @@ targetEntityType: paragraph
 bundle: blockprogrammodule
 mode: default
 content:
+  field_programs:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_styles:
     weight: 0
     label: above

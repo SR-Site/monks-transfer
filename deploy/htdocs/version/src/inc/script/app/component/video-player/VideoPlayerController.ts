@@ -12,6 +12,7 @@ import Promise = require("bluebird");
 import bowser = require('bowser');
 import VideoControlsController from "../video-controls/VideoControlsController";
 import DataEvent from "../../../lib/temple/event/DataEvent";
+import URLUtils from "../../../lib/temple/util/URLUtils";
 
 class VideoPlayerController extends AbstractComponentController<VideoPlayerViewModel, IVideoPlayerOptions>
 {
@@ -30,6 +31,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 */
 	private _videoPlayer: Vimeo.Player|VideoPlayer;
 	private _videoControls: VideoControlsController;
+	private _enableCustomControls: boolean = false;
 
 
 	/**
@@ -104,8 +106,16 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 
 			if(options.video.type == VideoType.VIMEO)
 			{
-				(<Vimeo.Player>this._videoPlayer).off('ended');
-				(<Vimeo.Player>this._videoPlayer).off('timeupdate')
+				let videoPlayer: Vimeo.Player = <Vimeo.Player>this._videoPlayer;
+
+				// Remove all event listeners
+				videoPlayer.off('ended');
+				videoPlayer.off('timeupdate');
+
+				// Do not remove the video player from the DOM because otherwise it has issues when creating a new instance.
+				// There is no actual destroy method, see ticket https://github.com/vimeo/player.js/issues/126
+				videoPlayer.element.style.display = 'none';
+				videoPlayer = null;
 			}
 			else
 			{
@@ -118,6 +128,10 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 		}
 	}
 
+	/**
+	 * @public
+	 * @method hideControls
+	 */
 	public hideControls(): void
 	{
 		if(this._videoControls)
@@ -187,7 +201,7 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 */
 	public setControlVisibility(isActive: boolean): void
 	{
-		if(this._videoControls)
+		if(this._videoControls && this._enableCustomControls)
 		{
 			this._videoControls.isActive = isActive;
 		}
@@ -199,6 +213,8 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 	 */
 	private createInternalVideoPlayer(): void
 	{
+		this._enableCustomControls = true;
+
 		this._videoPlayer = new VideoPlayer(
 			this.element,
 			{
@@ -217,14 +233,37 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 
 	/**
 	 * @private
+	 * @method vimeoUrlToVimeoId
+	 * @param url
+	 * @returns {RegExpMatchArray|null}
+	 */
+	private vimeoUrlToVimeoId(url: string): string
+	{
+		if(URLUtils.isAbsolute(url))
+		{
+			const match = url.match(/(videos|video|channels|\.com)\/([\d]+)/);
+
+			return match.length ? match[2] : null;
+		}
+		else
+		{
+			return url;
+		}
+	}
+
+	/**
+	 * @private
 	 * @method createVideoPlayer
 	 */
 	private createVimeoPlayer(): void
 	{
+		this._enableCustomControls = false;
+		const vimeoId = parseInt(this.vimeoUrlToVimeoId(this.options.video.url));
+
 		this._videoPlayer = new Vimeo.Player(
 			this.element,
 			{
-				id: this.options.video.url,
+				id: vimeoId,
 				width: 640,
 				height: 480,
 				loop: this.options.loop,
@@ -234,6 +273,9 @@ class VideoPlayerController extends AbstractComponentController<VideoPlayerViewM
 			});
 
 		const player = (<Vimeo.Player>this._videoPlayer);
+
+		player.loadVideo(vimeoId);
+		player.element.style.display = 'block';
 
 		if(DEBUG)
 		{

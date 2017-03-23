@@ -1,6 +1,7 @@
 import IDefaultComponentTransitionOptions from "../../util/component-transition/abstract-transition-component/IAbstractTransitionComponentOptions";
 import IImage from "../../data/interface/media/IImage";
 import ITag from "../../data/interface/action/ITag";
+import IVideo from "../../data/interface/media/IVideo";
 
 interface IProgramModuleItemOptions extends IDefaultComponentTransitionOptions
 {
@@ -42,9 +43,14 @@ interface IProgramModuleItemOptions extends IDefaultComponentTransitionOptions
 		image: IImage;
 		/**
 		 * @property
+		 * @description The video linked to the program module
+		 */
+		video?:IVideo;
+		/**
+		 * @property
 		 * @description The array of tags displayed at the bottom of the block
 		 */
-		tags: Array<ITag>;
+		tags?: Array<ITag>;
 	}>
 }
 

@@ -8,28 +8,46 @@
 		<div class="background-triangle"></div>
 		<div class="secondary-background-triangle"></div>
 		<div class="tertiary-background-triangle" data-bind="visible: !$data.hasStatistics()"></div>
-		<!-- ko foreach: data.slides -->
-			<div class="slide-content" >
-				<h2 class="heading heading-01" data-bind="html: $data.heading"></h2>
+		<div class="slides" data-bind="foreach: data.slides">
+			<div class="slide">
+				<div class="slide-content" >
+					<h2 class="heading heading-01" data-bind="html: $data.heading"></h2>
 
-				<!-- ko if: $data.paragraph -->
+					<!-- ko if: $data.paragraph -->
 					<p class="copy copy-01" data-bind="html: $data.paragraph"></p>
-				<!-- /ko -->
+					<!-- /ko -->
 
-				<!-- ko if: $data.link -->
-					<!-- ko component: {
-						name: 'button/button-circle-arrow',
-						onComplete: $root.controller.callbackCounter.get(),
-						options: {
-							action: link,
-							arrowDirection: $root.Direction.DOWN,
-							arrowPosition: $root.Alignment.LEFT,
-							size: $root.ButtonSize.LARGE
-						}
-					} --><!-- /ko -->
-				<!-- /ko -->
-			</div>
-			<!-- ko with: $data.statistics -->
+					<!-- ko if: $data.link -->
+						<!-- ko component: {
+							name: 'button/button-circle-arrow',
+							onComplete: $root.controller.callbackCounter.get(),
+							options: {
+								action: link,
+								arrowDirection: $root.Direction.DOWN,
+								arrowPosition: $root.Alignment.LEFT,
+								size: $root.ButtonSize.LARGE
+							}
+						} --><!-- /ko -->
+					<!-- /ko -->
+
+					<!-- ko if: $parent.data.slides.length > 1 -->
+						<!-- ko component: {
+							name: 'button/button-circle-arrow',
+							onComplete: $root.controller.callbackCounter.get(),
+							options: {
+								action: {
+									title: localeManager.getString('global.cta.next'),
+									label: localeManager.getString('global.cta.next'),
+									event: $root.handleNextClick.bind($root)
+								},
+								arrowDirection: $root.Direction.RIGHT,
+								arrowPosition: $root.Alignment.LEFT,
+								size: $root.ButtonSize.LARGE
+							}
+						} --><!-- /ko -->
+					<!-- /ko -->
+				</div>
+				<!-- ko with: $data.statistics -->
 				<div class="statistics-wrapper">
 					<h3 class="heading heading-07" data-bind="html: $data.heading"></h3>
 					<div class="statistics" data-bind="foreach: $data.stats">
@@ -48,26 +66,8 @@
 						</div>
 					</div>
 				</div>
-			<!-- /ko -->
-		<!-- /ko -->
-	</div>
-
-	<!-- ko if: data.slides.length > 1 -->
-		<div class="secondary-link">
-			<!-- ko component: {
-				name: 'button/button-circle-arrow',
-				onComplete: $root.controller.callbackCounter.get(),
-				options: {
-					action: {
-						title: localeManager.getString('global.cta.next'),
-						label: localeManager.getString('global.cta.next'),
-						event: $root.handleNextClick.bind($root)
-					},
-					arrowDirection: $root.Direction.RIGHT,
-					arrowPosition: $root.Alignment.RIGHT,
-					size: $root.ButtonSize.LARGE
-				}
-			} --><!-- /ko -->
+				<!-- /ko -->
+			</div>
 		</div>
-	<!-- /ko -->
+	</div>
 </div>

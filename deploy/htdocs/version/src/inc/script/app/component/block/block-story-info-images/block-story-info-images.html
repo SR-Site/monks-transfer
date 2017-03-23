@@ -29,7 +29,7 @@
 				<div class="theme" data-bind="css: $root.ThemeHelper.getTheme($data.theme)">
 					<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
 					<h2 class="heading heading-06" data-bind="html: heading"></h2>
-					<p class="copy copy-01" data-bind="html: paragraph"></p>
+					<p class="copy copy-01" data-bind="html: $root.StringUtils.truncate(paragraph, 150)"></p>
 				</div>
 			</article>
 		</div>

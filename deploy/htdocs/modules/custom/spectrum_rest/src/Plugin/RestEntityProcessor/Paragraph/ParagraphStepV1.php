@@ -26,7 +26,7 @@ class ParagraphStepV1 extends RestEntityProcessorBase {
     $data = [
       "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
       "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
-      "icon" => $this->fieldProcessor->getFieldData($entity->get('field_key')),
+      "icon" => $entity->get('field_icon_list')->value,
     ];
 
     return $data;

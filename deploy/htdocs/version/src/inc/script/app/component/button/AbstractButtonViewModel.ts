@@ -4,11 +4,12 @@ import ButtonSize from "../../data/enum/layout/ButtonSize";
 import IMethod from "../../data/interface/action/IMethod";
 import ILink from "../../data/interface/action/ILink";
 import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
+import Type from "../../../lib/temple/util/Type";
 
 abstract class AbstractButtonViewModel<
 	TController extends AbstractButtonController<any, any, any>,
 	TOptions extends IAbstractButtonOptions
-> extends DefaultComponentTransitionViewModel<TController, TOptions>
+	> extends DefaultComponentTransitionViewModel<TController, TOptions>
 {
 	public disabled: KnockoutObservable<boolean> = ko.observable(false);
 	public css: KnockoutComputed<string>;
@@ -17,22 +18,26 @@ abstract class AbstractButtonViewModel<
 	 * @public
 	 * @method handleClick
 	 */
-	public handleClick(event:MouseEvent): void
+	public handleClick(event: MouseEvent): void
 	{
+		if(Type.isFunction(event.preventDefault))
+		{
+			event.preventDefault();
+		}
+
 		// Do not execute method when is-disabled is set to button.
-		if(this.controller.element.classList.contains('is-disabled')) return;
+		if(this.controller.element.classList.contains('is-disabled'))
+		{
+			return;
+		}
 
 		if((<IMethod>this.data.action).event !== void 0)
 		{
 			this.controller.triggerMethod();
 		}
-		else if((<ILink>this.data.action).target !== void 0)
-		{
-			this.controller.openLink()
-		}
 		else
 		{
-			console.warn('[DefaultButtonViewModel] Unknown action:', this.data.action)
+			this.controller.openLink();
 		}
 	}
 
@@ -61,7 +66,7 @@ abstract class AbstractButtonViewModel<
 	 * @method  get title
 	 * @returns {any}
 	 */
-	public get title():string
+	public get title(): string
 	{
 		return (<ILink>this.data.action).title
 	}

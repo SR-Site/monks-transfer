@@ -26,6 +26,7 @@ module.exports = function (grunt, options)
 				        'inc/script/test',
 				        'inc/script/doc',
 
+				        '!inc/script/vendor/mapbox/mapbox-gl.js',
 				        '!inc/script/lib/modernizr.js',
 				        '!inc/script/lib/require/require.js',
 				        '!inc/script/app/config/requirejs.config.js',

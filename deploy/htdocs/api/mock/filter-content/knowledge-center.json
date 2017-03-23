@@ -1,9 +1,9 @@
 {
 	"statusCode": 200,
 	"pagination": {
-		"total": 56,
-		"offset": 0, 
-		"limit": 4
+		"offset": 0,
+		"limit": 4,
+		"total": 6
 	},
 	"data": {
 		"pageTitle":  "Knowledge center",
@@ -13,7 +13,7 @@
 				"id": "articleTeaser",
 				"data": {
 					"heading": "Go Beyond High Profile Sport Events",
-					"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer.",
+					"paragraph": "Lorem ipsum dolor sit ametm conse ctetuer. Lorem ipsum dolor sit ametm conse ctetuer. Lorem ipsum dolor sit ametm conse ctetuer.",
 					"theme": 0,
 					"target": "knowledge-center/dummy-article",
 					"image": {

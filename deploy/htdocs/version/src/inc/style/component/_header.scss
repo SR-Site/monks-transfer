@@ -11,6 +11,10 @@
 		transform: translateY(-50%);
 		position: absolute;
 		cursor: pointer;
+
+		&.is-disabled {
+			cursor: default;
+		}
 	}
 
 	.call-to-actions {
@@ -34,11 +38,19 @@
 		box-shadow: 0 5px 32px 0 rgba(0, 0, 0, .04);
 	}
 
-	@include respond-to(SMALL) {
+	@include respond-to(MEDIUM) {
 		@include pos(0, 0, auto, 0);
-		@include size(100%, $sizeGrid * 4);
+		@include size(100%, $sizeGrid * 2);
 		background: $colorWhite;
 		transform: none;
+
+		.logo {
+			left: $sizeGrid;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		@include size(100%, $sizeGrid * 4);
 
 		.logo {
 			left: $sizeGrid * 2;

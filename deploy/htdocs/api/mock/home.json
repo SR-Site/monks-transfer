@@ -15,8 +15,8 @@
 							"link": {
 								"label": "Find out more",
 								"title": "Find out more",
-								"target": "/home",
-								"type": 2
+								"target": "home#map",
+								"type": 0
 							},
 							"background": {
 								"normal": "data/image/hero-main/slide-4.jpg",
@@ -24,7 +24,7 @@
 								"alt": "Background image alt text"
 							},
 							"backgroundVideo": {
-								"url": "https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/1193/8/205968496/701598450.mp4?token=58b8724d_0xf6c1c49167fbc131d63923b0d0b4d4f4ae6c1fa7",
+								"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
 								"type": 0
 							},
 							"statistics": null
@@ -35,7 +35,7 @@
 							"link": {
 								"label": "Find out more",
 								"title": "Find out more",
-								"target": "/home",
+								"target": "home",
 								"type": 2
 							},
 							"background": {
@@ -43,7 +43,26 @@
 								"small": "data/image/hero-main/slide-2.jpg",
 								"alt": "Background image alt text"
 							},
-							"statistics": null
+							"statistics": {
+								"heading": "Who's watching?",
+								"stats": [
+									{
+										"heading": "Etnicity",
+										"description": "Hispanic",
+										"value": 44
+									},
+									{
+										"heading": "Demographics",
+										"description": "Man 18-32",
+										"value": 30
+									},
+									{
+										"heading": "Income",
+										"description": "$55k or more",
+										"value": 77
+									}
+								]
+							}
 						}
 					]
 				}
@@ -52,6 +71,7 @@
 				"id": "smallHeading",
 				"data": {
 					"windowed": false,
+					"scrollSection": "map",
 					"marginTop": 2,
 					"heading": "The Three Essentials for Marketing Success"
 				}
@@ -113,7 +133,7 @@
 					"link": {
 						"label": "Learn more",
 						"title": "Learn more",
-						"target": "advertising-solutions",
+						"target": "advertising-solutions#path-to-purchase",
 						"type": 0
 					}
 				}
@@ -161,6 +181,7 @@
 				"id": "map",
 				"data": {
 					"windowed": true,
+					"scrollSection": "map",
 					"steps": [
 						{
 							"label": "Scale",

@@ -6,3 +6,4 @@ package: MediaMonks
 dependencies:
   - mm_rest
   - search_api
+  - facets

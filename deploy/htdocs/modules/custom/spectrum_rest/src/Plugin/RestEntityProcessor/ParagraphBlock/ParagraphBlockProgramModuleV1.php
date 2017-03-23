@@ -27,7 +27,9 @@ class ParagraphBlockProgramModuleV1 extends SpectrumRestEntityProcessorBase {
 
     $data = [
       "id" => 'programModule',
-      "data" => $data,
+      "data" => $data + [
+        "items" => $this->getItems($entity->get('field_programs')),
+      ],
     ];
 
     return $data;

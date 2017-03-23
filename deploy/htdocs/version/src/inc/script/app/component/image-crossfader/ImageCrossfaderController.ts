@@ -63,13 +63,15 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 	private _maskCanvas: HTMLCanvasElement;
 	private _maskCtx: CanvasRenderingContext2D;
 
+	private _overlayCanvas: HTMLCanvasElement;
+	private _overlayCtx: CanvasRenderingContext2D;
+
 	private _trianglePattern: TrianglePattern;
 	private _triangleProgress: number = 0;
 
 	private _images: {[index: string]: HTMLImageElement;} = {};
 	private _animation: TweenLite;
 
-	private _overlayColor?: string;
 	private _videoInterval?: number;
 
 	/**
@@ -84,13 +86,15 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 	 */
 	public init(): void
 	{
-		super.init();
-
 		this._debug.log('Init');
 
 		this.transitionController = new ImageCrossfaderTransitionController(this.element, this);
 
 		this.destructibles.add(new NativeEventListener(window, 'resize', ThrottleDebounce.debounce(this.handleResize, 200, this)));
+
+		// Overlay canvas
+		this._overlayCanvas = document.createElement('canvas');
+		this._overlayCtx = this._overlayCanvas.getContext('2d');
 
 		// Main display canvas
 		this._canvas = this.element.querySelector('canvas');
@@ -105,6 +109,8 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 
 		// Trigger resize manually
 		this.handleResize();
+
+		super.init();
 	}
 
 	/**
@@ -113,11 +119,19 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 	 * @param overlayColor
 	 * @description if set a mask will be drawn on top of the image
 	 */
-	public setOverlay(overlayColor: string = 'rgba(0,48,87,0.5)')
+	public setOverlay(overlayColor: string = 'rgba(0,48,87,0.5)'): void
 	{
-		this._overlayColor = overlayColor;
-	}
+		this._overlayCanvas.width = 50;
+		this._overlayCanvas.height = 50;
 
+		// Clear the old mask
+		this._overlayCtx.clearRect(0, 0, this._overlayCanvas.width, this._overlayCanvas.height);
+
+		// Change the fill style
+		this._overlayCtx.fillStyle = overlayColor;
+		this._overlayCtx.rect(0, 0, this._overlayCanvas.width, this._overlayCanvas.height);
+		this._overlayCtx.fill();
+	}
 
 	/**
 	 * @public
@@ -253,6 +267,7 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 
 						resolve(image);
 					})
+					.catch((reason) => console.log('[Unable to load image', reason));
 			}
 		});
 	}
@@ -309,7 +324,10 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 	 * @param ctx
 	 * @param canvas
 	 */
-	private drawImageFrame(source: HTMLImageElement|HTMLVideoElement, imageOffset: IRectangle, ctx: CanvasRenderingContext2D = this._ctx, canvas: HTMLCanvasElement = this._canvas): void
+	private drawImageFrame(source: HTMLImageElement|HTMLVideoElement,
+	                       imageOffset: IRectangle,
+	                       ctx: CanvasRenderingContext2D = this._ctx,
+	                       canvas: HTMLCanvasElement = this._canvas): void
 	{
 		if(source)
 		{
@@ -321,12 +339,8 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 				imageOffset.height
 			);
 
-			if(this._overlayColor)
-			{
-				ctx.fillStyle = this._overlayColor;
-				ctx.rect(0, 0, canvas.width, canvas.height);
-				ctx.fill();
-			}
+			// Draw the overlay if required
+			ctx.drawImage(this._overlayCanvas, 0, 0, canvas.width, canvas.height);
 		}
 	}
 
@@ -450,6 +464,8 @@ class ImageCrossfaderController extends AbstractTransitionComponentController<Im
 		this._canvas = null;
 		this._ctx = null;
 
+		this._overlayCanvas = null;
+		this._overlayCtx = null;
 		this._maskCanvas = null;
 		this._maskCtx = null;
 		this._activeImage = null;

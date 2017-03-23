@@ -11,11 +11,10 @@ abstract class TagsRestEntityProcessorBase extends RestEntityProcessorBase {
    * {@inheritdoc}
    */
   protected function getItemData($entity) {
-
     $data = [
       "label" => $entity->label(),
       "title" => $entity->label(),
-      "target" => Url::fromUri("base:knowledge-center", ["fragment" => $entity->label(), "absolute" => TRUE])->toString(),
+      "target" => Url::fromUri(\Drupal::service('state')->get('article_overview_page'), ["query" => ['filters' => $entity->label()], "absolute" => FALSE])->toString(),
       "type" => 0,
     ];
 

@@ -1,0 +1,23 @@
+uuid: 7e9d140f-8850-49fa-8f25-ed1996b6c3e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_list
+    - paragraphs.paragraphs_type.step
+  module:
+    - options
+id: paragraph.step.field_icon_list
+field_name: field_icon_list
+entity_type: paragraph
+bundle: step
+label: Icon
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: triangle-advertise-icon-1
+default_value_callback: ''
+settings: {  }
+field_type: list_string

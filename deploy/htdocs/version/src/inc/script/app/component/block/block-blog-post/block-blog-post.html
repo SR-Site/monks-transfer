@@ -21,13 +21,13 @@
 			</div>
 
 			<ul class="blog-details">
-				<li>
+				<li data-bind="attr: {title: localeManager.getString('global.title.reading_time')}">
 					<span class="icon" data-bind="icon: 'time'"></span>
-					<!-- ko text: time --><!-- /ko -->
+					<!-- ko text: $data.time --><!-- /ko -->
 				</li>
-				<li>
+				<li data-bind="attr: {title: localeManager.getString('global.title.view_count')}">
 					<span class="icon" data-bind="icon: 'views'"></span>
-					<!-- ko text: views --><!-- /ko -->
+					<!-- ko text: $root.viewCount() --><!-- /ko -->
 				</li>
 
 				<!-- ko foreach: social -->
@@ -50,8 +50,8 @@
 		</div>
 
 		<div class="description">
-			<h3 class="heading-07 heading" data-bind="html: subHeading"></h3>
-			<p class="copy-01 copy" data-bind="html: paragraph"></p>
+			<h3 class="heading-07 heading" data-bind="html: $data.subHeading"></h3>
+			<p class="copy-01 copy" data-bind="html: $data.paragraph"></p>
 		</div>
 	</div>
 </div>

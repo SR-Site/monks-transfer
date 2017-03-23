@@ -121,10 +121,6 @@
 								"ageRange": "Women 18-49",
 								"demographic": "33% Parents"
 							},
-							"video": {
-								"url": "data/video/video.mp4",
-								"type": 0
-							},
 							"tags": [
 								{
 									"label": "Comedy",
