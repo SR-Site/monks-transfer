@@ -29,6 +29,10 @@
 	}
 
 	@include respond-to(MEDIUM) {
+		.slide-heading {
+			padding: 0 $sizeGrid;
+		}
+
 		.slide-title {
 			width: $sizeGrid * 5;
 

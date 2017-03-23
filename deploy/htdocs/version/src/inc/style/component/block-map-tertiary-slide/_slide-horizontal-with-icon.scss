@@ -66,6 +66,12 @@
 		stroke-width: 2px;
 	}
 
+	@include respond-to(MEDIUM) {
+		.slide-statistics {
+			@include pos(60%, $sizeGrid * 3, auto, $sizeGrid * 3);
+		}
+	}
+
 	@include respond-to(SMALL) {
 		.slide-statistics {
 			@include pos(auto, auto, auto, auto);
