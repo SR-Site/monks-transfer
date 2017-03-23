@@ -53,7 +53,7 @@ class ParagraphBlockFilterContentV1 extends SpectrumRestEntityProcessorBase {
    */
   protected function getFilterOptions() {
     $filters = [];
-    $vocabularies = ['category', 'document_type', 'market', 'platform'];
+    $vocabularies = ['category', 'thought_leadership', 'platform', 'document_type'];
 
     foreach ($vocabularies as $index => $vid) {
       /** @var \Drupal\taxonomy\Entity\Vocabulary $vocabulary */
