@@ -316,10 +316,13 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 			const marketId = features[0].properties.id;
 			const market = this.viewModel.marketList().find((market) => market.marketId === marketId);
 
-			this.viewModel.selectedMarket(market);
-			this._marketSearchController.setMarket(market);
+			if(market)
+			{
+				this.viewModel.selectedMarket(market);
+				this._marketSearchController.setMarket(market);
 
-			this.updateDataLayer();
+				this.updateDataLayer();
+			}
 		}
 
 		// Phase 2 needs something like a popup
