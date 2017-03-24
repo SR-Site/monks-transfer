@@ -114,13 +114,11 @@ export default class GaiaMain
 
 				const element = <HTMLElement>event.currentTarget;
 				const parentElement = $(element).parent('[class^="component-block"]')[0];
-				const link = <ILink>{
-					title: element.innerHTML,
-					target: element.getAttribute('href'),
-					type: parseInt(element.getAttribute('data-gaia-open-link'))
-				}
 
-				LinkHelper.openLink(link, parentElement);
+				LinkHelper.openLink(
+					LinkHelper.getLinkDataFromElement(element),
+					parentElement
+				);
 			})
 			.on(MouseEventHelper.CLICK, '[data-gaia-popup-close]', (event: JQueryEventObject) =>
 			{

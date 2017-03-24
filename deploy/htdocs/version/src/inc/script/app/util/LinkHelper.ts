@@ -11,15 +11,32 @@ class LinkHelper
 	static documentBase: string = $('meta[name="document-base"]').attr('content');
 
 	/**
+	 * @public static
+	 * @method getLinkDataFromElement
+	 * @param element
+	 * @returns {ILink}
+	 * @description Fetch the link data from an element if an inline link is used, see GaiaMain.ts for an example
+	 */
+	public static getLinkDataFromElement(element:HTMLElement): ILink
+	{
+		return {
+			label: element.innerHTML,
+			title: element.innerHTML,
+			target: element.getAttribute('href'),
+			type: parseInt(element.getAttribute('data-gaia-open-link'))
+		}
+	}
+
+	/**
 	 * @public
 	 * @method checkAndSetHref
 	 * @param link
 	 * @param element
 	 * @returns {void}
+	 * @description Check the element type and set a absolute url so the user can ctrl + click the link and it will still open the correct page
 	 */
 	public static checkAndSetHref(link: ILink, element: HTMLElement): void
 	{
-		// Only Set HREF if valid element.
 		if(element.tagName === 'A' && link.target !== void 0)
 		{
 			if(link.type == LinkType.INTERNAL)
@@ -33,12 +50,12 @@ class LinkHelper
 		}
 	}
 
-
 	/**
 	 * @public static
 	 * @method openLink
 	 * @param link
 	 * @param sectionElement
+	 * @description Trigger the correct action for a link
 	 */
 	public static openLink(link: ILink, sectionElement: HTMLElement): void
 	{
