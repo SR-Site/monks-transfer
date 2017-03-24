@@ -19,6 +19,7 @@ import Loader from "../../../util/Loader";
 
 class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions, BlockMarketMapTransitionController>
 {
+	private static DETAIL_ZOOM_LEVEL: number = 6;
 	/**
 	 *    Instance of Log debug utility for debug logging
 	 *    @property _debug
@@ -27,7 +28,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	private _debug: Log = new Log('app.component.BlockMarketMap');
 
 	private _featureCollection: GeoJSON.FeatureCollection;
-	private _marketFeatureCollection: {[id: string]: GeoJSON.FeatureCollection} = {};
+	private _marketFeatureCollection: { [id: string]: GeoJSON.FeatureCollection } = {};
 
 	private _marketSearchController: MarketSearchController;
 
@@ -126,7 +127,7 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 				if(data)
 				{
 					// Zoom to the correct position
-					this.resetMapZoom(state.coordinates.lat, state.coordinates.lng, 6);
+					this.resetMapZoom(state.coordinates.lat, state.coordinates.lng, BlockMarketMapController.DETAIL_ZOOM_LEVEL);
 				}
 				else
 				{
@@ -305,7 +306,21 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 			return;
 		}
 
-		this.openContactPanel();
+		// Check if we have zoomed in enough to open the contact panel
+		if(this._map.getZoom() >= BlockMarketMapController.DETAIL_ZOOM_LEVEL)
+		{
+			this.openContactPanel();
+		}
+		else
+		{
+			const marketId = features[0].properties.id;
+			const market = this.viewModel.marketList().find((market) => market.marketId === marketId);
+
+			this.viewModel.selectedMarket(market);
+			this._marketSearchController.setMarket(market);
+
+			this.updateDataLayer();
+		}
 
 		// Phase 2 needs something like a popup
 		// let feature = features[0];
