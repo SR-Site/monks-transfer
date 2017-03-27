@@ -114,7 +114,9 @@
 		}
 
 		.call-to-actions-image {
-			object-fit: cover;
+			img {
+				object-fit: cover;
+			}
 		}
 
 		.call-to-actions-content {

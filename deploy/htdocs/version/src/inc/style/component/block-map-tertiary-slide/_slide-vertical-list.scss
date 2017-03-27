@@ -36,6 +36,7 @@
 		}
 
 		.statistic {
+
 			.copy {
 				display: none;
 			}
@@ -44,6 +45,20 @@
 
 	@include respond-to(SMALL) {
 		display: block;
+
+		.step {
+			@include size($sizeGrid * 2);
+			line-height: $sizeGrid * 2;
+			font-size: 2.5rem;
+		}
+
+		.description {
+			width: calc(100% - #{$sizeGrid * 3})
+		}
+
+		.statistic:not(:last-child) {
+			margin-bottom: $sizeGrid * 2;
+		}
 
 		.statistics-wrapper {
 			padding: 0 $sizeGrid * 2;

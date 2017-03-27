@@ -144,7 +144,7 @@
 
 		&.right-aligned {
 			.content {
-				margin-left: $sizeGrid;
+				margin-left: $sizeGrid * 2;
 			}
 		}
 	}
