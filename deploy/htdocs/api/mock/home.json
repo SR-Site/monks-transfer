@@ -181,6 +181,7 @@
 				"id": "map",
 				"data": {
 					"windowed": true,
+					"marginTop": 2,
 					"scrollSection": "map",
 					"steps": [
 						{
