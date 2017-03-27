@@ -3,7 +3,7 @@
 		@extend %reset-list;
 	}
 
-	.statistic:not(:last-child){
+	.statistic:not(:last-child) {
 		margin-bottom: $sizeGrid;
 	}
 
@@ -31,13 +31,14 @@
 	}
 
 	@include respond-to(MEDIUM) {
-		.statistic {
+		.statistic:not(:last-child) {
 			margin-bottom: $sizeGrid / 2;
 		}
 
-		.step,
-		.description {
-			vertical-align: middle;
+		.statistic {
+			.copy {
+				display: none;
+			}
 		}
 	}
 

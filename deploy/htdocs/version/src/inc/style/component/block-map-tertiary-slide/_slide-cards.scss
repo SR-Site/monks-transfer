@@ -55,14 +55,14 @@
 		}
 
 		.card-label {
-			@include size(calc(100% - 120px), auto);
+			@include size(calc(100% - 100px), auto);
 			order: 1;
 			padding: 0 $sizeGrid / 2 0;
 			text-align: left;
 		}
 
 		.card-value {
-			@include size(120px, auto);
+			@include size(100px, auto);
 			order: 0;
 		}
 	}
@@ -76,6 +76,14 @@
 
 		.statistics-wrapper {
 			padding: 0 $sizeGrid * 2;
+		}
+
+		.card-label {
+			@include size(calc(100% - 120px), auto);
+		}
+
+		.card-value {
+			@include size(120px, auto);
 		}
 	}
 }
