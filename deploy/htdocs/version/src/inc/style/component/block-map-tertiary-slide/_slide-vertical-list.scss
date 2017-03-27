@@ -30,21 +30,7 @@
 		vertical-align: top;
 	}
 
-	@include respond-to(LARGE) {
-		.slide-statistics {
-			top: 60%;
-			left: $sizeGrid  * 4;
-			right: $sizeGrid * 4;
-		}
-	}
-
 	@include respond-to(MEDIUM) {
-		.slide-statistics {
-			top: auto;
-			left: auto;
-			right: auto;
-		}
-
 		.statistic {
 			margin-bottom: $sizeGrid / 2;
 		}

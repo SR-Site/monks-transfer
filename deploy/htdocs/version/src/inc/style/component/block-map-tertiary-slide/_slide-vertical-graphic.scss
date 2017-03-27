@@ -1,6 +1,4 @@
 .component-slide-vertical-graphic {
-	display: flex;
-	justify-content: space-between;
 
 	.slide-statistics {
 		display: flex;
@@ -54,7 +52,7 @@
 		}
 
 		.statistic {
-			@include size(33%, auto);
+			@include size(75%, auto);
 		}
 	}
 }
