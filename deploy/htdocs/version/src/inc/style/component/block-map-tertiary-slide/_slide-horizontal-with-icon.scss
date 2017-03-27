@@ -1,10 +1,4 @@
 .component-slide-horizontal-with-icon {
-	.slide-statistics {
-		@include pos(50%, $sizeGrid * 3, auto, $sizeGrid * 6);
-		position: absolute;
-		transform: translateY(-50%);
-	}
-
 	.full-line {
 		@include size(100%, 1px);
 		position: absolute;
@@ -66,19 +60,7 @@
 		stroke-width: 2px;
 	}
 
-	@include respond-to(MEDIUM) {
-		.slide-statistics {
-			@include pos(60%, $sizeGrid * 3, auto, $sizeGrid * 3);
-		}
-	}
-
 	@include respond-to(SMALL) {
-		.slide-statistics {
-			@include pos(auto, auto, auto, auto);
-			position: relative;
-			transform: none
-		}
-
 		.statistics-wrapper {
 			display: block;
 

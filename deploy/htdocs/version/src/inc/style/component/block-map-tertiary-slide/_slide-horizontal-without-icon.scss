@@ -1,10 +1,4 @@
 .component-slide-horizontal-without-icon {
-	.slide-statistics {
-		@include pos(50%, $sizeGrid * 3, auto, $sizeGrid * 6);
-		position: absolute;
-		transform: translateY(-50%);
-	}
-
 	.statistics-wrapper {
 		@extend %reset-list;
 		display: flex;
@@ -101,18 +95,6 @@
 	}
 
 	@include respond-to(SMALL) {
-		.slide-heading {
-			.copy {
-				display: none;
-			}
-		}
-
-		.slide-statistics {
-			@include pos(auto, auto, auto, auto);
-			position: relative;
-			transform: none;
-		}
-
 		.statistics-wrapper {
 			flex-direction: column;
 		}

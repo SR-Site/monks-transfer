@@ -4,6 +4,10 @@
 		@include pos(50%, auto, auto, -$sizeGrid * 3);
 		transform: translateY(-50%);
 		position: absolute;
+
+		.heading-01 {
+			margin-bottom: $sizeGrid / 2;
+		}
 	}
 
 	@include respond-to(SMALL) {

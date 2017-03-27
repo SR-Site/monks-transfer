@@ -3,9 +3,6 @@
 	justify-content: space-between;
 
 	.slide-statistics {
-		@include pos(50%, $sizeGrid * 6, auto, $sizeGrid * 6);
-		position: absolute;
-		transform: translateY(-50%);
 		display: flex;
 		justify-content: space-around;
 	}
@@ -18,7 +15,7 @@
 	}
 
 	.statistic-label {
-		color: $colorLocalMedia;
+		color: currentColor;
 		margin-top: $sizeGrid / 4;
 	}
 
@@ -54,14 +51,6 @@
 
 		.copy {
 			display: none;
-		}
-
-		.slide-statistics {
-			@include pos(auto, auto, auto, auto);
-			@include size(100%, 270px);
-			position: relative;
-			transform: none;
-			margin-top: $sizeGrid;
 		}
 
 		.statistic {

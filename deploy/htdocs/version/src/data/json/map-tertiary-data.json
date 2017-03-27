@@ -4,7 +4,7 @@
 		"slides": [
 			{
 				"type": 6,
-				"heading": "Men 25-54",
+				"heading": "Men <br/>25-54",
 				"subHeading": "How to reach Men 25-54",
 				"paragraph": "In the past 30 days 30% of men 25-54 went online for sports information and updates.",
 				"background": {
@@ -56,7 +56,7 @@
 			},
 			{
 				"type": 6,
-				"heading": "Reach Millennials",
+				"heading": "Reach <br/>Millennials",
 				"subHeading": "How to reach Millennials",
 				"paragraph": "35% of millennials agree that the ability to watch a program whenever they want is very important",
 				"background": {
@@ -108,7 +108,7 @@
 			},
 			{
 				"type": 6,
-				"heading": "Women 25-54",
+				"heading": "Women <br/>25-54",
 				"subHeading": "How to reach Women 25-54",
 				"paragraph": "41% of women 25-54 agree that the quality of the programs they watch is important",
 				"background": {
@@ -160,7 +160,7 @@
 			},
 			{
 				"type": 6,
-				"heading": "Baby Boomers",
+				"heading": "Baby <br/>Boomers",
 				"subHeading": "How to reach Boomers",
 				"paragraph": "93% of Adults 50+ use television to watch video.",
 				"background": {

@@ -122,6 +122,7 @@ switch(host.split(':').shift())
 	case 'spectrum.dev':
 	case 'localhost':
 	case 'spectrum.dev':
+	case 'lars.local':
 	{
 		environment = EnvironmentNames.LOCAL;
 		break;

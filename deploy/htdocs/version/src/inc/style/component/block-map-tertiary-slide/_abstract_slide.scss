@@ -1,5 +1,5 @@
 .map-tertiary-slide {
-	color: $colorLocalMedia;
+	color: $colorPrimary;
 
 	.slide-heading {
 		@include size(100%, auto);
@@ -7,10 +7,23 @@
 		padding: 0 $sizeGrid * 2;
 		position: absolute;
 		text-align: center;
+
+		strong {
+			color: currentColor;
+		}
+
+		.heading {
+			margin-bottom: $sizeGrid / 2;
+		}
 	}
 
 	.slide-statistics {
+		top: 50%;
+		left: $sizeGrid * 6;
+		right: $sizeGrid * 6;
 		font-size: 0;
+		position: absolute;
+		transform: translateY(-50%);
 	}
 
 	.slide-title {
@@ -28,29 +41,76 @@
 		background-position: center center;
 	}
 
+	@include respond-to(LARGE) {
+		.slide-title {
+			width: $sizeGrid * 5;
+
+			.heading-01 {
+				font-size: 4rem;
+			}
+		}
+
+		.slide-statistics {
+			left: $sizeGrid * 4;
+			right: $sizeGrid * 4;
+		}
+	}
+
 	@include respond-to(MEDIUM) {
 		.slide-heading {
 			padding: 0 $sizeGrid;
+
+			.copy-03 {
+				display: none;
+			}
+		}
+
+		.slide-statistics {
+			left: $sizeGrid * 3;
+			right: $sizeGrid * 3;
 		}
 
 		.slide-title {
 			width: $sizeGrid * 5;
 
 			.heading-01 {
-				font-size: 3rem;
+				font-size: 4rem;
 			}
 		}
 	}
 
 	@include respond-to(SMALL) {
-
 		.slide-heading {
+			@include text-overflow();
+			@include size(100%, 40px);
 			@include pos(auto, auto, auto, auto);
-			padding: $sizeGrid $sizeGrid 0 $sizeGrid;
+			padding: 0 $sizeGrid;
+			line-height: 40px;
 			position: relative;
+
+			.heading {
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0;
+			}
 
 			.copy-03 {
 				display: none;
+			}
+		}
+
+		.slide-statistics {
+			@include pos(auto, auto, auto, auto);
+			@include size(100%, 300px);
+			position: relative;
+			transform: none;
+
+			.heading-08 {
+				font-size: 3rem;
+			}
+
+			.copy-03 {
+				display: block;
 			}
 		}
 
@@ -59,12 +119,11 @@
 		}
 
 		.slide-title {
-			@include size(100%, auto);
+			@include size(100%, 150px);
 			@include pos(auto, auto, auto, auto);
 			position: relative;
 			transform: none;
-			padding: 0 $sizeGrid * 2;
-			margin-top: $sizeGrid;
+			padding: $sizeGrid $sizeGrid * 2 0;
 
 			.heading-01 {
 				font-size: mobile-size(9.5rem);

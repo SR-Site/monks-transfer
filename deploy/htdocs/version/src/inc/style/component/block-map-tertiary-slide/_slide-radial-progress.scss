@@ -1,10 +1,4 @@
 .component-slide-radial-progress {
-
-	.slide-statistics {
-		@include size($sizeGrid * 15, auto);
-		text-align: center;
-	}
-
 	.statistic {
 		@include size($sizeGrid * 4);
 		display: inline-block;
@@ -45,13 +39,6 @@
 		}
 
 		.slide-statistics {
-			@include pos(auto, auto, auto, auto);
-			@include size(100%, 270px);
-			position: relative;
-			transform: none;
-			margin-top: $sizeGrid;
-			text-align: center;
-
 			&.single-column {
 				display: flex;
 				flex-direction: column;
