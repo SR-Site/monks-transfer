@@ -36,7 +36,7 @@ $config['system.performance']['response']['gzip'] = true;         // true|false
 $settings['file_public_path'] = 'data';
 
 // File system.
-$settings['file_public_path'] = 'assets';
+//$settings['file_public_path'] = 'assets';
 $settings['file_private_path'] = '';
 $config['system.file']['path']['temporary'] = '/tmp';
 
