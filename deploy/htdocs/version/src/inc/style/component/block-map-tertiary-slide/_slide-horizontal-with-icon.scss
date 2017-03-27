@@ -105,7 +105,7 @@
 		}
 
 		.full-line {
-			@include pos(7rem, auto, 7rem, $sizeGrid * 6);
+			@include pos(7rem, auto, 14rem, $sizeGrid * 6);
 			@include size(1px, auto);
 			position: absolute;
 			transform: none;

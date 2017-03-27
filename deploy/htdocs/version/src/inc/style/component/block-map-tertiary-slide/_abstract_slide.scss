@@ -82,18 +82,19 @@
 
 	@include respond-to(SMALL) {
 		.slide-heading {
-			@include size(100%, 40px);
+			@include size(100%, 60px);
 			@include pos(auto, auto, auto, auto);
 			padding: 0 $sizeGrid;
-			line-height: 40px;
+			padding: 5px 0;
+			line-height: 60px;
 			position: relative;
 
 			.heading {
-				@include text-overflow();
 				width: 100%;
 				display: inline-block;
 				vertical-align: middle;
 				margin: 0;
+				line-height: 1;
 			}
 
 			.copy-03 {
@@ -103,7 +104,7 @@
 
 		.slide-statistics {
 			@include pos(auto, auto, auto, auto);
-			@include size(100%, 300px);
+			@include size(100%, 280px);
 			position: relative;
 			transform: none;
 

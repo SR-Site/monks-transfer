@@ -8,8 +8,8 @@
 				"subHeading": "How to reach Men 25-54",
 				"paragraph": "In the past 30 days 30% of men 25-54 went online for sports information and updates.",
 				"background": {
-					"normal": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
-					"small": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
+					"normal": "inc/image/map-tertiary-backgrounds/background-men.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-men.jpg",
 					"alt": "Empty"
 				},
 				"statistics": [
@@ -60,8 +60,8 @@
 				"subHeading": "How to reach Millennials",
 				"paragraph": "35% of millennials agree that the ability to watch a program whenever they want is very important",
 				"background": {
-					"normal": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
-					"small": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
+					"normal": "inc/image/map-tertiary-backgrounds/background-millenials.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-millenials.jpg",
 					"alt": "Empty"
 				},
 				"statistics": [
@@ -289,8 +289,8 @@
 				"subHeading": "Audience focused networks deliver a growing audience",
 				"paragraph": "Our targeted networks continue to increase their reach while broadcast declines.",
 				"background": {
-					"normal": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
-					"small": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
+					"normal": "inc/image/map-tertiary-backgrounds/background-rightaudience.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-rightaudience.jpg",
 					"alt": "Empty"
 				},
 				"statistics": [
@@ -341,8 +341,8 @@
 				"subHeading": "Better than ratings",
 				"paragraph": "Cable’s targeted networks deliver viewers that are engaged, loyal, influential and tune in live. <br/>AND, 62% of people correctly recalled half or more of the ads they had seen on TV. That’s over 15 percentage points higher than the next media vehicle.",
 				"background": {
-					"normal": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
-					"small": "inc/image/map-tertiary-backgrounds/background-empty.jpg",
+					"normal": "inc/image/map-tertiary-backgrounds/background-liveviewers.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-liveviewers.jpg",
 					"alt": "Empty"
 				},
 				"statistics": [
