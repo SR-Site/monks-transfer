@@ -41,6 +41,17 @@
 	}
 
 	/**
+	 * Footer theme
+	 */
+	.theme-footer & {
+		.arrow,
+		.text-top,
+		.text-bottom {
+			color: $colorWhite;
+		}
+	}
+
+	/**
 	 * Theme used on a solid background
 	 */
 	.enable-solid-background & {
