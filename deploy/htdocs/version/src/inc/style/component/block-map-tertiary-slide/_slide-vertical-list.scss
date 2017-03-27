@@ -49,11 +49,12 @@
 		.step {
 			@include size($sizeGrid * 2);
 			line-height: $sizeGrid * 2;
-			font-size: 2.5rem;
+			font-size: 3rem;
 		}
 
 		.description {
-			width: calc(100% - #{$sizeGrid * 3})
+			width: calc(100% - #{$sizeGrid * 3});
+			vertical-align: middle;
 		}
 
 		.statistic:not(:last-child) {
@@ -61,7 +62,7 @@
 		}
 
 		.statistics-wrapper {
-			padding: 0 $sizeGrid * 2;
+			padding: $sizeGrid $sizeGrid * 2;
 		}
 	}
 }

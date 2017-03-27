@@ -82,7 +82,6 @@
 
 	@include respond-to(SMALL) {
 		.slide-heading {
-			@include text-overflow();
 			@include size(100%, 40px);
 			@include pos(auto, auto, auto, auto);
 			padding: 0 $sizeGrid;
@@ -90,6 +89,8 @@
 			position: relative;
 
 			.heading {
+				@include text-overflow();
+				width: 100%;
 				display: inline-block;
 				vertical-align: middle;
 				margin: 0;
