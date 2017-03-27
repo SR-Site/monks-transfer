@@ -32,6 +32,11 @@ $settings['mm_deployment_version'] = 'src'; // [deploytool]
  * credentials.
  *
  */
+
 require DRUPAL_ROOT . '/../var/drupal-settings/environment.local.php';
+
 require DRUPAL_ROOT . '/../var/drupal-settings/settings.' . $settings['mm_dtap_environment'] . '.php';
+if(is_file(DRUPAL_ROOT . '/../var/drupal-settings/settings.local.php'))
+    require DRUPAL_ROOT . '/../var/drupal-settings/settings.local.php';
+
 

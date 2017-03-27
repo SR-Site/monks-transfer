@@ -34,6 +34,8 @@ unset($settings['trusted_host_patterns']);
 // Configuration directories.
 $config_directories[CONFIG_SYNC_DIRECTORY] = DRUPAL_ROOT . '/../var/drupal-config/sync';
 
+$settings['file_public_path'] = 'data';
+
 $settings['flysystem'] = [
   's3' => [
     'driver' => 's3',
