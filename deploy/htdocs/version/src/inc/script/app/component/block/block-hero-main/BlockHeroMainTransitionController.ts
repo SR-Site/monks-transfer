@@ -150,7 +150,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 			let statisticsWrapper = element.querySelector('.statistics-wrapper');
 			let heading = element.querySelector('.heading');
 			let copy = element.querySelector('.copy');
-			let buttons = element.querySelectorAll('.component-button-circle-arrow');
+			let buttons = Array.prototype.slice.call(element.querySelectorAll('.component-button-circle-arrow'));
 
 			let timeline = new TimelineLite({
 				paused: true,
