@@ -52,6 +52,12 @@
 		padding-left: $sizeGrid * 3;
 		color: $colorWhite;
 
+		a {
+			@extend %link;
+			@extend %link-secondary;
+			color: $colorSecondary;
+		}
+
 		.heading {
 			margin-bottom: $sizeGrid;
 		}

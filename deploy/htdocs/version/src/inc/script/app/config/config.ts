@@ -75,7 +75,6 @@ let config: IConfig = {
 			}
 		},
 		[EnvironmentNames.MONK_APPS]: {
-			extends: EnvironmentNames.PRODUCTION,
 			variables: {},
 			urls: {},
 			properties: {
@@ -83,7 +82,6 @@ let config: IConfig = {
 			}
 		},
 		[EnvironmentNames.LOCAL]: {
-			extends: EnvironmentNames.PRODUCTION,
 			variables: {},
 			urls: {},
 			properties: {}
@@ -123,6 +121,7 @@ switch(host.split(':').shift())
 {
 	case 'localhost':
 	case 'spectrum.dev':
+	case 'lars.local':
 	{
 		environment = EnvironmentNames.LOCAL;
 		break;

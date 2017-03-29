@@ -11,7 +11,7 @@
 					"slides": [
 						{
 							"heading": "Never Stop Reaching",
-							"paragraph": "It’s time to stop doing business as usual and start doing business as exceptional.<br>Welcome to the new Spectrum Reach.",
+							"paragraph": "It’s time to stop doing <a href='map' data-gaia-open-link='0' >business</a> as usual and start doing business as exceptional.<br>Welcome to the new Spectrum Reach.",
 							"link": {
 								"label": "Find out more",
 								"title": "Find out more",
@@ -24,7 +24,7 @@
 								"alt": "Background image alt text"
 							},
 							"backgroundVideo": {
-								"url": "https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/1193/8/205968496/701598463.mp4?token=58c6e7aa_0x32045a91109e78c38011869eeac0c21ee9cd2eae",
+								"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
 								"type": 0
 							},
 							"statistics": null

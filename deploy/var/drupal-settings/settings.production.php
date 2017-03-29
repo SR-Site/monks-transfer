@@ -32,8 +32,11 @@ $config['system.performance']['css']['gzip'] = true;              // true|false
 $config['system.performance']['js']['gzip'] = true;               // true|false
 $config['system.performance']['response']['gzip'] = true;         // true|false
 
+
+$settings['file_public_path'] = 'data';
+
 // File system.
-$settings['file_public_path'] = 'assets';
+//$settings['file_public_path'] = 'assets';
 $settings['file_private_path'] = '';
 $config['system.file']['path']['temporary'] = '/tmp';
 
@@ -49,3 +52,26 @@ unset($settings['trusted_host_patterns']);
 // Configuration directories.
 $config_directories[CONFIG_SYNC_DIRECTORY] = DRUPAL_ROOT . '/../var/drupal-config/sync';
 
+
+
+$settings['flysystem'] = [
+    's3' => [
+        'driver' => 's3',
+        'config' => [
+            'key'    => 'AKIAJT7JCXZCJPQVNC2Q',      // 'key' and 'secret' do not need to be
+            'secret' => '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',   // provided if using IAM roles.
+            'region' => 'us-east-1',
+            'bucket' => 'spectrum-reach-uat-s3bucket-1xj81upt79499',
+            'cname' => 'spectrum-reach-uat-s3bucket-1xj81upt79499.s3.amazonaws.com',         // A CNAME that resolves to your bucket. Used for URL generation.
+        ],
+
+        'cache' => FALSE, // Creates a metadata cache to speed up lookups.
+    ],
+    'local' => [           				// The name of the stream wrapper.
+        'driver' => 'local',         	// The plugin key.
+        'config' => [
+            'root' => './assets',
+            'public' => TRUE,		// In order for the public setting to work, the path must be relative to the root of the Drupal install.
+        ]
+    ]
+];
