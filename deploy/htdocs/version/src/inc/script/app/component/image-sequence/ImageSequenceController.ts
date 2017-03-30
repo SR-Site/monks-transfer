@@ -210,6 +210,9 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	{
 		this._canvas.width = this.element.offsetWidth;
 		this._canvas.height = this.element.offsetHeight;
+
+		// Redraw the last frame
+		this.drawFrame();
 	}
 
 	/**
@@ -220,7 +223,7 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	{
 		const currentState = this._dataManager.deviceStateTracker.currentState();
 
-		return currentState <= DeviceState.MEDIUM ? DeviceState.SMALL : DeviceState.MEDIUM
+		return currentState < DeviceState.MEDIUM ? DeviceState.SMALL : DeviceState.MEDIUM
 	}
 
 	/**

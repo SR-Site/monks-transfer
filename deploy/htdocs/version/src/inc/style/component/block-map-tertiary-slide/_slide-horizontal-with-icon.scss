@@ -82,7 +82,7 @@
 			.description {
 				@include size(100%, auto);
 				text-align: left;
-				padding: $sizeGrid $sizeGrid * 2;
+				padding: $sizeGrid / 2 $sizeGrid * 2;
 
 				.separator {
 					@include size($sizeGrid, 1px);
@@ -105,10 +105,14 @@
 		}
 
 		.full-line {
-			@include pos(7rem, auto, 14rem, $sizeGrid * 6);
+			@include pos($sizeGrid, auto, $sizeGrid, $sizeGrid * 6);
 			@include size(1px, auto);
 			position: absolute;
 			transform: none;
+		}
+
+		.slide-statistics-wrapper {
+			position: relative;
 		}
 
 		.dashed-line {
