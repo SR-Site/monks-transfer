@@ -1,4 +1,4 @@
-diff --git a/SqlContentEntityStorage.php b/SqlContentEntityStorage.php
+diff --git a/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php b/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php
 index d4945cf3..e96b71d6 100644
 --- a/SqlContentEntityStorage.php
 +++ b/SqlContentEntityStorage.php
