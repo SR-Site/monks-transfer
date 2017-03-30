@@ -1,8 +1,8 @@
-diff --git a/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php b/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php
-index d4945cf3..957c70fb 100644
+diff --git a/SqlContentEntityStorage.php b/SqlContentEntityStorage.php
+index d4945cf3..e96b71d6 100644
 --- a/SqlContentEntityStorage.php
 +++ b/SqlContentEntityStorage.php
-@@ -808,11 +808,15 @@ class SqlContentEntityStorage extends ContentEntityStorageBase implements SqlEnt
+@@ -808,11 +808,14 @@ class SqlContentEntityStorage extends ContentEntityStorageBase implements SqlEnt
        if ($update) {
          $default_revision = $entity->isDefaultRevision();
          if ($default_revision) {
@@ -11,50 +11,43 @@ index d4945cf3..957c70fb 100644
 -            ->fields((array) $record)
 -            ->condition($this->idKey, $record->{$this->idKey})
 -            ->execute();
-+		  $idValue = $record->{$this->idKey};
-+		  $record = (array)$record;
-+		  unset($record[$this->idKey]);
++		  $fields = (array)$record;
++		  unset($fields[$this->idKey]);
 +
 +		  $this->database
 +			->update($this->baseTable)
-+			->fields($record)
-+			->condition($this->idKey, $idValue)
++			->fields($fields)
++			->condition($this->idKey, $record->{$this->idKey})
 +			->execute();
          }
          if ($this->revisionTable) {
            if ($full_save) {
-@@ -821,10 +825,15 @@ class SqlContentEntityStorage extends ContentEntityStorageBase implements SqlEnt
+@@ -821,9 +824,13 @@ class SqlContentEntityStorage extends ContentEntityStorageBase implements SqlEnt
            else {
              $record = $this->mapToStorageRecord($entity->getUntranslated(), $this->revisionTable);
              $entity->preSaveRevision($this, $record);
 +			
-+            $idValue = $record->{$this->revisionKey};
-+            $record = (array)$record;
-+            unset($record[$this->revisionKey]);
++            $fields = (array)$record;
++            unset($fields[$this->revisionKey]);
 +
              $this->database
                ->update($this->revisionTable)
 -              ->fields((array) $record)
--              ->condition($this->revisionKey, $record->{$this->revisionKey})
 +              ->fields($record)
-+              ->condition($this->revisionKey, $idValue)
+               ->condition($this->revisionKey, $record->{$this->revisionKey})
                ->execute();
            }
-         }
-@@ -1053,10 +1062,14 @@ class SqlContentEntityStorage extends ContentEntityStorageBase implements SqlEnt
+@@ -1053,9 +1060,12 @@ class SqlContentEntityStorage extends ContentEntityStorageBase implements SqlEnt
        }
      }
      else {
-+      $idValue = $record->{$this->revisionKey};
-+      $record = (array)$record;
-+      unset($record[$this->revisionKey]);
++      $fields = (array)$record;
++      unset($fields[$this->revisionKey]);
 +
        $this->database
          ->update($this->revisionTable)
 -        ->fields((array) $record)
--        ->condition($this->revisionKey, $record->{$this->revisionKey})
-+        ->fields($record)
-+        ->condition($this->revisionKey, $idValue)
++        ->fields($fields)
+         ->condition($this->revisionKey, $record->{$this->revisionKey})
          ->execute();
      }
- 
