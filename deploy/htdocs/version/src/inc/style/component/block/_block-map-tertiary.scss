@@ -8,7 +8,7 @@
 
 	.slides {
 		@include aspect-ratio(1100px, 550px);
-		background: $colorLightGrey;
+		background: image('map-tertiary-backgrounds/background-empty.jpg');
 	}
 
 	.solid-background {
