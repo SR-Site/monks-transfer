@@ -1778,9 +1778,18 @@
                     "description": "the amount of margin to be applied to the top (marginTop * gridSize)",
                     "placeholder": "0",
                     "properties": []
+                },
+                {
+                    "name": "tertiaryMapData",
+                    "type": "MapTertiaryData",
+                    "required": true,
+                    "defaultValue": "null",
+                    "description": "There are a couple of predefined tertiary map carousels, the avialable options are defined in the enum",
+                    "placeholder": "",
+                    "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"mapTertiary\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"mapTertiary\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"tertiaryMapData\": 0\n    }\n}"
         },
         {
             "blockId": "marketMap",
@@ -3297,6 +3306,23 @@
                 {
                     "name": "VIMEO",
                     "value": 1
+                }
+            ]
+        },
+        {
+            "name": "MapTertiaryData",
+            "properties": [
+                {
+                    "name": "AUDIENCES_2016",
+                    "value": 0
+                },
+                {
+                    "name": "DIGITAL_2016",
+                    "value": 1
+                },
+                {
+                    "name": "TELEVISION_2016",
+                    "value": 2
                 }
             ]
         },

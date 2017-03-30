@@ -1,5 +1,4 @@
 import IAbstractBlockComponentOptions from "../IAbstractBlockComponentOptions";
-import IImage from "../../../data/interface/media/IImage";
 import MapTertiaryData from "./enum/MapTertiaryData";
 
 interface IBlockMapTertiaryOptions extends IAbstractBlockComponentOptions
