@@ -2,28 +2,15 @@
 
 	.slide-statistics {
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 	}
 
 	.statistic {
-		@include size($sizeGrid * 6);
+		@include size($sizeGrid * 4, auto);
 		display: inline-block;
 		vertical-align: top;
 		text-align: center;
-	}
-
-	.statistic-label {
-		color: currentColor;
-		margin-top: $sizeGrid / 4;
-	}
-
-	.graphics {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.graphic {
-		display: inline-block;
+		margin: $sizeGrid / 2;
 
 		&:nth-child(odd) {
 			.component-vertical-graphic {
@@ -36,10 +23,25 @@
 				color: $colorPrimary;
 			}
 		}
+	}
+
+	.statistic-label {
+		color: currentColor;
+		margin-top: $sizeGrid / 4;
+	}
+
+	.graphics {
+		display: flex;
+		justify-content: space-around;
+		align-item: center;
+	}
+
+	.graphic {
+		display: inline-block;
 
 		.label {
 			display: block;
-			color: $colorSecondary;
+			color: currentColor;
 			margin-top: $sizeGrid / 4;
 		}
 	}

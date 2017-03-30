@@ -3,7 +3,7 @@
 	display: inline-block;
 
 	.bar-wrapper {
-		@include size(100%, $sizeGrid * 5);
+		@include size(100%, $sizeGrid * 8);
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -24,7 +24,6 @@
 	}
 
 	@include respond-to(SMALL) {
-
 		.bar-wrapper {
 			height: $sizeGrid * 10;
 		}
