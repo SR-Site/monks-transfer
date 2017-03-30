@@ -4,16 +4,16 @@ import ContentPagePageController from "../../page/content-page/ContentPagePageCo
 import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import Promise = require("bluebird");
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
+import LinkHelper from "../../util/LinkHelper";
 
 /**
  * @class AbstractBlockComponentController
  * @description This is the default class used for all the block components in the application
  */
-abstract class AbstractBlockComponentController<
-	TViewModel extends AbstractBlockComponentViewModel<any, any>,
+abstract class AbstractBlockComponentController<TViewModel extends AbstractBlockComponentViewModel<any, any>,
 	TOptions extends IAbstractBlockComponentOptions,
 	TTransitionController extends AbstractTransitionController<any>>
-extends AbstractTransitionComponentController<TViewModel, TOptions, TTransitionController>
+	extends AbstractTransitionComponentController<TViewModel, TOptions, TTransitionController>
 {
 	/**
 	 * @property transitionComplete
@@ -103,6 +103,14 @@ extends AbstractTransitionComponentController<TViewModel, TOptions, TTransitionC
 
 		// Add the class names to the element
 		this.viewModel.elementClassNames.forEach((className) => this.element.classList.add(className));
+
+		// Find inline anchors
+		Array.prototype.slice.call(this.element.querySelectorAll('[data-gaia-open-link]')).forEach((element) =>
+		{
+			LinkHelper.checkAndSetHref(
+				LinkHelper.getLinkDataFromElement(element), element
+			)
+		})
 
 		super.init();
 

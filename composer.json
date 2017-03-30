@@ -50,7 +50,9 @@
         "drupal/entity_browser": "1.0-rc2",
         "drupal/inline_entity_form": "1.0-beta1",
         "drupal/media_entity": "1.6",
-        "drupal/media_entity_video": "1.0-beta1"
+        "drupal/media_entity_video": "1.0-beta1",
+        "drupal/flysystem_s3": "^1.0@alpha",
+        "drupal/cdn": "^3.0"
     },
     "repositories": {
         "mediamonks-drupal-decoupled": {
