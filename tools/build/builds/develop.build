@@ -20,6 +20,9 @@ function build_frontend(){
     gruntCommand copy:versioning
     gruntCommand usemin:html
 
+    copyDir "${WEBROOT}/version/src" "${WEBROOT}/version/${BUILD_NUMBER}"
+
+
     gruntCommand generate-block-documentation
     blockDocumentation ../block-documentation/
 }
