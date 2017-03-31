@@ -57,11 +57,11 @@
     "repositories": {
         "mediamonks-drupal-decoupled": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks-drupal.mm_decoupled.git"
+            "url": "git@git.assembla.com:mediamonks-drupal.mm_decoupled.git"
         },
         "mediamonks-drupal-gaia": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks-drupal.mm_gaia.git"
+            "url": "git@git.assembla.com:mediamonks-drupal.mm_gaia.git"
         },
         "mediamonks-drupal-prerender": {
             "type": "git",
