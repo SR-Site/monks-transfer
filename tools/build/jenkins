@@ -1,35 +1,11 @@
 #!/bin/bash
 
-# executables
-DRUSH_BIN="$(which drush)"
-GRUNT_BIN="$(which grunt)"
-NPM_BIN="$(which npm)"
-RSYNC_BIN="$(which rsync)"
-TSD_BIN="$(which tsd)"
-GIT_BIN="$(which git)"
-SED_BIN="$(which sed)"
-COMPOSER_BIN="$(which composer)"
-
-#config
 ROOTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}")/../../" && pwd )"
-DRUSH_DIR="${ROOTDIR}/deploy/htdocs"
-GRUNT_DIR="${ROOTDIR}/tools/build"
-COMPOSER_DIR="${ROOTDIR}/"
-NPM_DIR="${ROOTDIR}/tools/build"
-TSD_DIR="${ROOTDIR}/tools/build"
-ASSETDIR="${ROOTDIR}docroot/sites/default/files"
-FRONTEND_BUILDROOT="${ROOTDIR}/tools/build"
-BACKEND_BUILDROOT="${ROOTDIR}/"
-BLOCKDOCS="/var/www/block-docs/"
-JOB_NAME="Spectrum-Reach"
-
-#bootrap scripts
-
 GIT_BRANCH_CURRENT=""
+SCRIPTROOT="$( cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
 
-SCRIPTROOT=$( cd $(dirname "${BASH_SOURCE[0]}") && pwd)
-
-source "${SCRIPTROOT}/jenkins-commands"
+source "${SCRIPTROOT}/jenkins.config"
+source "${SCRIPTROOT}/jenkins.commands"
 
 if [ "${1}" == "self-update" ]; then
 	selfUpdate
@@ -47,12 +23,12 @@ fi
 BUILDFILE="${GIT_BRANCH_CURRENT//origin\//}"
 BUILDFILE="${BUILDFILE//\//_}"
 
-if [ ! -e "${SCRIPTROOT}/builds/${BUILDFILE}" ]; then
-	echo "No Build found for: ${GIT_BRANCH_CURRENT} - ${SCRIPTROOT}/builds/${BUILDFILE}"
+if [ ! -e "${SCRIPTROOT}/builds/${BUILDFILE}.build" ]; then
+	echo "No Build found for: ${GIT_BRANCH_CURRENT} - ${SCRIPTROOT}/builds/${BUILDFILE}.build"
 	exit 1
 fi
 
-source ${SCRIPTROOT}/builds/${BUILDFILE}
+source "${SCRIPTROOT}/builds/${BUILDFILE}.build"
 
 changeDir "${ROOTDIR}"
 echo ""	
