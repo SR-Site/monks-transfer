@@ -65,23 +65,23 @@
         },
         "mediamonks-drupal-prerender": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks-drupal.mm_prerender.git"
+            "url": "git@git.assembla.com:mediamonks-drupal.mm_prerender.git"
         },
         "mediamonks-drupal-release_tracker": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks-drupal.mm_release_tracker.git"
+            "url": "git@git.assembla.com:mediamonks-drupal.mm_release_tracker.git"
         },
         "mediamonks-drupal-rest": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks-drupal.mm_rest.git"
+            "url": "git@git.assembla.com:mediamonks-drupal.mm_rest.git"
         },
         "mediamonks-drupal-domainmenu": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks^mediamonks-drupal.mm_domainmenu.git"
+            "url": "git@git.assembla.com:mediamonks^mediamonks-drupal.mm_domainmenu.git"
         },
         "mediamonks-drupal-slug": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks-drupal.mm_slug.git"
+            "url": "git@git.assembla.com:mediamonks-drupal.mm_slug.git"
         },
         "composer": {
             "type": "composer",
