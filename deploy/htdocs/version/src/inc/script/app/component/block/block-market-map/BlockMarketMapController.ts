@@ -15,6 +15,7 @@ import Promise = require("bluebird");
 import MarketSearchController from "../../market-search/MarketSearchController";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 import Loader from "../../../util/Loader";
+import {trackEvent} from "../../../util/Analytics";
 
 
 class BlockMarketMapController extends AbstractBlockComponentController<BlockMarketMapViewModel, IBlockMarketMapOptions, BlockMarketMapTransitionController>
@@ -309,6 +310,8 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 		// Check if we have zoomed in enough to open the contact panel
 		if(this._map.getZoom() >= BlockMarketMapController.DETAIL_ZOOM_LEVEL)
 		{
+			trackEvent('startAdvertising', 'click', features[0].properties.id);
+
 			this.openContactPanel();
 		}
 		else

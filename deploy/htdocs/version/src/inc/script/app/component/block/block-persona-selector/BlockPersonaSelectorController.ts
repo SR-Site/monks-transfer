@@ -8,6 +8,7 @@ import DataEvent from "../../../../lib/temple/event/DataEvent";
 import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
 import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedController";
 import Promise = require("bluebird");
+import {trackEvent} from "../../../util/Analytics";
 
 class BlockPersonaSelectorController extends AbstractBlockComponentController<BlockPersonaSelectorViewModel, IBlockPersonaSelectorOptions, BlockPersonaSelectorTransitionController>
 {
@@ -58,7 +59,7 @@ class BlockPersonaSelectorController extends AbstractBlockComponentController<Bl
 	{
 		this._paginatorDashedController = controller;
 
-		controller.addEventListener(CarouselEvent.OPEN, (event: DataEvent<{index: number}>) => this.openIndex(event.data.index));
+		controller.addEventListener(CarouselEvent.OPEN, (event: DataEvent<{ index: number }>) => this.openIndex(event.data.index));
 	}
 
 	/**
@@ -78,6 +79,8 @@ class BlockPersonaSelectorController extends AbstractBlockComponentController<Bl
 	public transitionInSlideContent(index: number): Promise<any>
 	{
 		const oldIndex = this.viewModel.activeIndex();
+
+		trackEvent('personaSelector', 'click', this.options.personas[index].heading, index);
 
 		// Do some transitioning
 		return this.transitionController.transitionOutStep(oldIndex)
@@ -99,7 +102,7 @@ class BlockPersonaSelectorController extends AbstractBlockComponentController<Bl
 	 * @private
 	 * @method handleImageCarouselChange
 	 */
-	private handleImageCarouselChange(event: DataEvent<{index: number}>): void
+	private handleImageCarouselChange(event: DataEvent<{ index: number }>): void
 	{
 		this._infiniteImageCarousel.disableInteraction();
 

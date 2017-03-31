@@ -7,6 +7,7 @@ import ImageSequenceController from "../../image-sequence/ImageSequenceControlle
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 import AbstractTransitionComponentController from "../../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import MapPaginationController from "../../map-pagination/MapPaginationController";
+import {trackEvent} from "../../../util/Analytics";
 
 class BlockMapController extends AbstractBlockComponentController<BlockMapViewModel, IBlockMapOptions, BlockMapTransitionController>
 {
@@ -17,7 +18,7 @@ class BlockMapController extends AbstractBlockComponentController<BlockMapViewMo
 	 */
 	private _debug: Log = new Log('app.component.BlockMap');
 
-	private _slides: {[index: string]: AbstractTransitionComponentController<any, any, any>} = {};
+	private _slides: { [index: string]: AbstractTransitionComponentController<any, any, any> } = {};
 	private _pagination: MapPaginationController;
 	private _imageSequence: ImageSequenceController;
 
@@ -79,7 +80,7 @@ class BlockMapController extends AbstractBlockComponentController<BlockMapViewMo
 		this._pagination = controller;
 		this._pagination.addEventListener(
 			MapPaginationController.SELECT_INDEX,
-			(event: DataEvent<{index: number}>) => this.openSlide(event.data.index)
+			(event: DataEvent<{ index: number }>) => this.openSlide(event.data.index)
 		);
 	}
 
@@ -102,6 +103,8 @@ class BlockMapController extends AbstractBlockComponentController<BlockMapViewMo
 		const stepCount = this.options.steps.length - 1;
 		const currentProgress = this.viewModel.activeSlide() / stepCount;
 		const targetProgress = index / stepCount;
+
+		trackEvent('map', 'click', this.options.steps[index].heading, index);
 
 		this._slides[this.viewModel.activeSlide()].transitionOut()
 			.then(() => this._imageSequence.playFromTo(
@@ -126,7 +129,7 @@ class BlockMapController extends AbstractBlockComponentController<BlockMapViewMo
 	 * @private
 	 * @method handleMapSliderProgressChange
 	 */
-	private handleMapSliderProgressChange(event: DataEvent<{progress: number}>): void
+	private handleMapSliderProgressChange(event: DataEvent<{ progress: number }>): void
 	{
 		this._imageSequence.seek(
 			this.progressToFrameNumber(event.data.progress)

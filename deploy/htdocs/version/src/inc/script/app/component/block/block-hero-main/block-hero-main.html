@@ -10,7 +10,7 @@
 		<div class="tertiary-background-triangle" data-bind="visible: !$data.hasStatistics()"></div>
 		<div class="slides" data-bind="foreach: data.slides">
 			<div class="slide">
-				<div class="slide-content" >
+				<div class="slide-content">
 					<h2 class="heading heading-01" data-bind="html: $data.heading"></h2>
 
 					<!-- ko if: $data.paragraph -->
@@ -18,16 +18,21 @@
 					<!-- /ko -->
 
 					<!-- ko if: $data.link -->
-						<!-- ko component: {
-							name: 'button/button-circle-arrow',
-							onComplete: $root.controller.callbackCounter.get(),
-							options: {
-								action: link,
-								arrowDirection: $root.Direction.DOWN,
-								arrowPosition: $root.Alignment.LEFT,
-								size: $root.ButtonSize.LARGE
-							}
-						} --><!-- /ko -->
+					<!-- ko component: {
+						name: 'button/button-circle-arrow',
+						onComplete: $root.controller.callbackCounter.get(),
+						options: {
+							gaTracking: {
+								category: 'heroMain',
+								action: 'click',
+								label: $data.heading + '|' + $data.link.title
+							},
+							action: link,
+							arrowDirection: $root.Direction.DOWN,
+							arrowPosition: $root.Alignment.LEFT,
+							size: $root.ButtonSize.LARGE
+						}
+					} --><!-- /ko -->
 					<!-- /ko -->
 
 					<!-- ko if: $parent.data.slides.length > 1 -->
@@ -35,6 +40,11 @@
 							name: 'button/button-circle-arrow',
 							onComplete: $root.controller.callbackCounter.get(),
 							options: {
+							gaTracking: {
+									category: 'heroMain',
+									action: 'click',
+									label: 'nextSlide'
+								},
 								action: {
 									title: localeManager.getString('global.cta.next'),
 									label: localeManager.getString('global.cta.next'),

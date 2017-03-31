@@ -5,10 +5,37 @@ import Branches from "../data/enum/gaia/Branches";
 import ScrollUtils from "./ScrollUtils";
 import DataManager from "../data/DataManager";
 import PanelBlocks from "../data/enum/block/PanelBlocks";
+import StringUtils from "../../lib/temple/util/type/StringUtils";
+import PageType from "../../lib/gaia/interface/PageType";
 
 class LinkHelper
 {
 	static documentBase: string = $('meta[name="document-base"]').attr('content');
+
+	/**
+	 * @public
+	 * @static
+	 * @method getRoute
+	 * @description Get the route from the url and take landing routes in account
+	 */
+	public static getRoute(): string
+	{
+		let route = Gaia.api.getRoute().split('#')[0];
+		let initDataModel = DataManager.getInstance().settingsModel.initDataModel;
+
+		// If the route is a popup, strip the route for fetching the page content.
+		if(Gaia.api.getPage(Gaia.api.getCurrentBranch()).type == PageType.POPUP)
+		{
+			route = initDataModel.landingRoute;
+		}
+		else
+		{
+			// We want to fetch this from the backend!
+			route = route === '/' ? initDataModel.landingRoute : route;
+		}
+
+		return StringUtils.startsWith(route, '/') ? route.substr(1) : route;
+	}
 
 	/**
 	 * @public static
@@ -17,7 +44,7 @@ class LinkHelper
 	 * @returns {ILink}
 	 * @description Fetch the link data from an element if an inline link is used, see GaiaMain.ts for an example
 	 */
-	public static getLinkDataFromElement(element:HTMLElement): ILink
+	public static getLinkDataFromElement(element: HTMLElement): ILink
 	{
 		return {
 			label: element.innerHTML,

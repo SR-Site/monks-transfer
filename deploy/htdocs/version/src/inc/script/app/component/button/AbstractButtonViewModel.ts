@@ -5,11 +5,11 @@ import IMethod from "../../data/interface/action/IMethod";
 import ILink from "../../data/interface/action/ILink";
 import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import Type from "../../../lib/temple/util/Type";
+import {trackEvent} from "../../util/Analytics";
+import {GaTrackEvent} from "../../../lib/knockout/knockout.ga";
 
-abstract class AbstractButtonViewModel<
-	TController extends AbstractButtonController<any, any, any>,
-	TOptions extends IAbstractButtonOptions
-	> extends DefaultComponentTransitionViewModel<TController, TOptions>
+abstract class AbstractButtonViewModel<TController extends AbstractButtonController<any, any, any>,
+	TOptions extends IAbstractButtonOptions> extends DefaultComponentTransitionViewModel<TController, TOptions>
 {
 	public disabled: KnockoutObservable<boolean> = ko.observable(false);
 	public css: KnockoutComputed<string>;
@@ -29,6 +29,13 @@ abstract class AbstractButtonViewModel<
 		if(this.controller.element.classList.contains('is-disabled'))
 		{
 			return;
+		}
+
+		if(this.data.gaTracking !== void 0)
+		{
+			const data = GaTrackEvent.processData(this.data.gaTracking);
+
+			trackEvent(data.category, data.action, <string>data.label);
 		}
 
 		if((<IMethod>this.data.action).event !== void 0)

@@ -15,9 +15,11 @@
 
 		<div class="slider-viewport infinite-carousel js-image-carousel">
 			<ul class="steps site-frame js-slides" data-bind="foreach: data.steps">
-				<li class="step-wrapper js-slide" data-bind="css: {'is-active': $root.activeIndex() === $index()}, events: [
+				<li class="step-wrapper js-slide" data-bind="
+					css: {'is-active': $root.activeIndex() === $index()},
+					events: [
 						[$root.MouseEventHelper.CLICK, $root.handleClick.bind($root, $index())]
-				]">
+					]">
 					<div class="step">
 						<div class="step-content">
 							<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>

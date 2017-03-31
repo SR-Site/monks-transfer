@@ -57,7 +57,7 @@ export default class GaiaMain
 
 	public onInit(): void
 	{
-		ga.enableGaiaTracking(Gaia.api, Gaia.router);
+		// ga.enableGaiaTracking(Gaia.api, Gaia.router);
 
 		var hq = GaiaHQ.getInstance();
 

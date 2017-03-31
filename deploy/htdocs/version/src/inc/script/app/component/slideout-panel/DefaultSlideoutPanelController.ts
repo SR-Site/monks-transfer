@@ -15,7 +15,7 @@ class DefaultSlideoutPanelController<
 extends AbstractTransitionComponentController<TViewModel, TOptions, TTransitionController>
 {
 	protected panelComponents: {[id: string]: AbstractTransitionComponentController<any, any, any>} = {};
-	protected activePanel: string = '';
+	public activePanel: string = '';
 
 	/**
 	 *    Overrides AbstractPageController.init()

@@ -35,6 +35,12 @@
 						name: 'button/button-main',
 						onComplete: $root.controller.callbackCounter.get(),
 						options: {
+							gaTracking: {
+								category: 'personaSelector',
+								action: 'click',
+								label: $data.heading + '|' + $data.link.title,
+								value: $index()
+							},
 							action: $data.link,
 							size: $root.ButtonSize.LARGE
 						}
@@ -44,7 +50,11 @@
 	</div>
 	<ul class="persona-options" data-bind="foreach: data.personas">
 		<li class="persona-option" data-bind="css: {'is-active': $root.activeIndex() === $index()}">
-			<a class="persona-button button" data-bind="css: $root.PersonaType[personaType].toLowerCase(), tap: $root.handleClick.bind($root, $index())">
+			<a class="persona-button button" data-bind="
+				css: $root.PersonaType[personaType].toLowerCase(),
+				tap: $root.handleClick.bind($root, $index()),
+				gaTrackEvent: {category: 'personaSelector', action:'click', label:  $data.heading, value: $index() + 1}
+			">
 				<span class="label-wrapper">
 					<span class="label">
 						<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')"></span>
