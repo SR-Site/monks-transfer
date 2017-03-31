@@ -10,26 +10,29 @@ import GaiaEvent from "lib/gaia/event/GaiaEvent";
 /**
  * @method ga
  */
-declare var ga:(...rest:Array<any>) => any;
+declare var ga: (...rest: Array<any>) => any;
 
 /**
  * @method _gaq
  */
-declare var _gaq:any;
+declare var _gaq: any;
 
 
 /**
  * @method trackPage
  */
-export function trackPage(page:string)
+export function trackPage(page: string)
 {
-//	console.log("trackPage::trackPage(" + page + ")");
+	if(DEBUG)
+	{
+		console.info("[Analytics] Track page: ['" + page + "']");
+	}
 
-	if (typeof ga !== 'undefined')
+	if(typeof ga !== 'undefined')
 	{
 		ga('send', 'pageview', page);
 	}
-	else if (typeof _gaq !== 'undefined')
+	else if(typeof _gaq !== 'undefined')
 	{
 		_gaq.push(['_trackPageview', page]);
 	}
@@ -39,17 +42,20 @@ export function trackPage(page:string)
 /**
  * @method trackEvent
  */
-export function trackEvent(category:string, action:string, label?:string, value?:number):void
+export function trackEvent(category: string, action: string, label?: string, value?: number): void
 {
-//	console.log("trackPage::trackPage(" + category + ',' + action + ',' + label + ',' + value + ")");
-
-	if (typeof ga !== 'undefined')
+	if(DEBUG)
 	{
-		if (!isNaN(value) && label)
+		console.info("[Analytics] Track event: [category: '" + category + "'] [action: '" + action + "'] [label: '" + label + "'] [value: '" + value + "']");
+	}
+
+	if(typeof ga !== 'undefined')
+	{
+		if(!isNaN(value) && label)
 		{
 			ga('send', 'event', category, action, label, value);
 		}
-		else if (label)
+		else if(label)
 		{
 			ga('send', 'event', category, action, label);
 		}
@@ -58,13 +64,13 @@ export function trackEvent(category:string, action:string, label?:string, value?
 			ga('send', 'event', category, action);
 		}
 	}
-	else if (typeof _gaq !== 'undefined')
+	else if(typeof _gaq !== 'undefined')
 	{
-		if (!isNaN(value) && label)
+		if(!isNaN(value) && label)
 		{
 			_gaq.push(<Array<any>>['_trackEvent', category, action, label, value]);
 		}
-		else if (label)
+		else if(label)
 		{
 			_gaq.push(<Array<any>>['_trackEvent', category, action, label]);
 		}
@@ -107,17 +113,17 @@ export function trackEvent(category:string, action:string, label?:string, value?
  *
  * @param enableGaiaTracking
  */
-export function enableGaiaTracking(gaia:IGaia, router:GaiaRouter)
+export function enableGaiaTracking(gaia: IGaia, router: GaiaRouter)
 {
-	gaia.afterGoto((event:GaiaEvent) =>
+	gaia.afterGoto((event: GaiaEvent) =>
 	{
 		try
 		{
 			trackPage(gaia.getPage(gaia.getCurrentBranch()).getData('track') || event.routeResult.route);
 		}
-		catch (error)
+		catch(error)
 		{
-//			console.log('error: ', error);
+			//			console.log('error: ', error);
 		}
 	});
 }

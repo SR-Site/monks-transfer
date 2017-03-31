@@ -52,8 +52,10 @@
 			<div class="scroll-content" data-scroll-content>
 				<div class="scroll-content-inner" data-content-inner>
 					<ul class="filter-list" data-bind="foreach: $root.marketList()">
-						<li class="filter-list-item copy-03"
-						    data-bind="css: {'is-active': $root.selectedMarket() === $data }, tap: $root.handleSelectMarket.bind($root, $data)">
+						<li class="filter-list-item copy-03" data-bind="
+							css: {'is-active': $root.selectedMarket() === $data }, tap: $root.handleSelectMarket.bind($root, $data),
+							gaTrackEvent: {category: 'marketSelector', action:'click', label:  $data.marketId}
+						">
 							{{$data.city}}, {{$data.statePostalCode}}
 						</li>
 					</ul>

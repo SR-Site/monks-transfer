@@ -13,7 +13,7 @@ class BeforeGotoPool extends EventDispatcher
 	private static UNIQUE_ID: number = 0;
 
 	private _releaseBeforeGoto: (removeHijack?: boolean) => void;
-	private _pool: {[id: string]: IBeforeGotoPoolItem} = {};
+	private _pool: { [id: string]: IBeforeGotoPoolItem } = {};
 	private _count: number = 0;
 
 	constructor()
@@ -84,7 +84,10 @@ class BeforeGotoPool extends EventDispatcher
 		// No more items left, so release it
 		if(this._count === 0)
 		{
-			console.info('[BeforeGotoPool] No more items left, release the entire beforeGoto');
+			if(DEBUG)
+			{
+				console.info('[BeforeGotoPool] No more items left, release the entire beforeGoto');
+			}
 
 			this._releaseBeforeGoto();
 		}

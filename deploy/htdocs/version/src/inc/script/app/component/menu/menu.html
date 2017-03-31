@@ -10,11 +10,14 @@
 						<li class="menu-item">
 
 							<!-- ko if: $data.link.target !== '/' + $root.Routes.CONTACT_US -->
-								<!-- ko with: $data.link -->
-								<a class="main-link" data-bind="gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: $data.target}]">
-									<span class="label" data-bind="html: $data.label"></span>
-								</a>
-								<!-- /ko -->
+							<!-- ko with: $data.link -->
+							<a class="main-link" data-bind="
+								gaiaGoto: [Branches.CONTENT_PAGE, {deeplink: $data.target}],
+								gaTrackEvent: {category: 'menuItem', action: 'click', label:  '/' + target}
+							">
+								<span class="label" data-bind="html: $data.label"></span>
+							</a>
+							<!-- /ko -->
 							<!-- /ko -->
 
 							<!-- ko if: $data.link.target == '/' + $root.Routes.CONTACT_US -->

@@ -3,9 +3,9 @@ import DefaultSlideoutPanelController from "./DefaultSlideoutPanelController";
 import PanelBlocks from "../../data/enum/block/PanelBlocks";
 import DefaultComponentTransitionViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
 import Promise = require("bluebird");
+import {trackEvent} from "../../util/Analytics";
 
-class DefaultSlideoutPanelViewModel<
-	TController extends DefaultSlideoutPanelController<any, any, any>,
+class DefaultSlideoutPanelViewModel<TController extends DefaultSlideoutPanelController<any, any, any>,
 	TOptions extends IDefaultSlideoutPanelOptions>
 	extends DefaultComponentTransitionViewModel<TController, TOptions>
 {
@@ -18,7 +18,9 @@ class DefaultSlideoutPanelViewModel<
 	 */
 	public handleCloseClick(): Promise<any>
 	{
-		return this.controller.transitionOut();
+		const analyticsLabel = PanelBlocks.ANALYTICS_LABEL[this.controller.activePanel];
+		return this.controller.transitionOut()
+			.then(() => trackEvent(analyticsLabel, 'click', 'close' + analyticsLabel))
 	}
 
 	/**

@@ -1,6 +1,6 @@
 <div class="component-button-start-advertising">
 	<span class="background"></span>
-	<button class="start-advertising button" data-bind="tap: handleClick, attr: { title: title }">
+	<button class="start-advertising button" data-bind="tap: handleClick, attr: { title: title }, gaTrackEvent: {category: 'startAdvertising', action:'click', label: '-'}">
 		<span class="icon" data-bind="icon: 'circle-arrow-right'"></span>
 		<span class="label">{{label}}</span>
 	</button>
