@@ -21,7 +21,7 @@
 							<!-- /ko -->
 
 							<!-- ko if: $data.link.target == '/' + $root.Routes.CONTACT_US -->
-							<button class="button main-link" data-bind="tap: $root.handleClickContact.bind($root), gaTrackEvent: {category: 'menuItem', action: 'click', label:  '/' + target}">
+							<button class="button main-link" data-bind="tap: $root.handleClickContact.bind($root), gaTrackEvent: {category: 'menuItem', action: 'click', label:  '/' + $data.link.target}">
 								<span class="label" data-bind="html: $data.link.label"></span>
 							</button>
 							<!-- /ko -->
