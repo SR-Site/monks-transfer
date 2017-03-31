@@ -8,6 +8,7 @@ import BlockMapTertiaryTransitionController from "./BlockMapTertiaryTransitionCo
 import Log from "../../../../lib/temple/util/Log";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 import AbstractTransitionComponentController from "../../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
+import {trackEvent} from "../../../util/Analytics";
 
 class BlockMapTertiaryController extends AbstractBlockComponentController<BlockMapTertiaryViewModel, IBlockMapTertiaryOptions, BlockMapTertiaryTransitionController>
 {
@@ -89,6 +90,8 @@ class BlockMapTertiaryController extends AbstractBlockComponentController<BlockM
 	 */
 	private openSlide(index: number): void
 	{
+		trackEvent('map', 'click', this.viewModel.slides()[index].heading, index);
+
 		this._slides[this.viewModel.activeSlide()].transitionOut()
 			.then(() => this._slides[index].transitionIn())
 			.then(() => this.viewModel.activeSlide(index))

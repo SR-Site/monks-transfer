@@ -1,11 +1,12 @@
 import * as Analytics from 'app/util/Analytics';
 import ko = require('knockout');
 
-interface ITrackingData
+export interface ITrackingData
 {
 	category: string;
 	action: string;
 	label: string | ILabel;
+	value:number;
 	toggle?: KnockoutObservable<boolean>;
 }
 
@@ -18,7 +19,7 @@ interface ILabel
  * gaTrackEvent binding
  * Usage: data-bind="gaTrackEvent: {category:string, action:string, label:string}"
  */
-class GaTrackEvent
+export class GaTrackEvent
 {
 	static init(element, valueAccessor: () => any, allBindings, vm, bindingContext): any
 	{
@@ -28,7 +29,7 @@ class GaTrackEvent
 		{
 			let trackingData: ITrackingData = GaTrackEvent.processData(koData);
 
-			Analytics.trackEvent(trackingData.category, trackingData.action, <string> trackingData.label);
+			Analytics.trackEvent(trackingData.category, trackingData.action, <string> trackingData.label, trackingData.value);
 		});
 
 		return {};
@@ -40,17 +41,19 @@ class GaTrackEvent
 	 * @param trackingData
 	 * @returns {ITrackingData}
 	 */
-	static processData(trackingData: ITrackingData): ITrackingData
+	public static processData(trackingData: ITrackingData): ITrackingData
 	{
 		var trackingObject: ITrackingData = {
 			action: null,
 			label: null,
-			category: null
+			category: null,
+			value:null
 		};
 
 		trackingObject.action = trackingData.action;
 		trackingObject.label = trackingData.label;
 		trackingObject.category = trackingData.category;
+		trackingObject.value = trackingData.value;
 
 		return trackingObject;
 	}

@@ -22,6 +22,7 @@
 		<div class="call-to-actions-content abs-fill" data-bind="foreach: data.callToActions">
 			<a data-bind="
 				gaiaOpenLink: $data.link,
+				gaTrackEvent: {category: 'imageCallToActions', action:'click', label: heading, value: $index() + 1},
 				style: {
 					width: (100 / $parent.data.callToActions.length) + '%'
 				},

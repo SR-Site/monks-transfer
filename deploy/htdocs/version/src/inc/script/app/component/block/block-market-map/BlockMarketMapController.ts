@@ -84,8 +84,6 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 */
 	public zoomIn(): void
 	{
-		trackEvent('zoomSelector', 'click', 'zoomIN');
-
 		this._map.zoomIn()
 	}
 
@@ -95,8 +93,6 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	 */
 	public zoomOut(): void
 	{
-		trackEvent('zoomSelector', 'click', 'zoomOUT');
-
 		this._map.zoomOut()
 	}
 

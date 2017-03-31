@@ -2,6 +2,7 @@ import IAbstractBlockComponentOptions from "./IAbstractBlockComponentOptions";
 import AbstractBlockComponentController from "./AbstractBlockComponentController";
 import BlockType from "../../data/enum/type/BlockType";
 import AbstractTransitionComponentViewModel from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentViewModel";
+import StringUtils from "../../../lib/temple/util/type/StringUtils";
 
 /**
  * @class AbstractBlockComponentViewModel
@@ -10,6 +11,8 @@ import AbstractTransitionComponentViewModel from "../../util/component-transitio
 abstract class AbstractBlockComponentViewModel<TController extends AbstractBlockComponentController<any, any, any>, TOptions extends IAbstractBlockComponentOptions>
 	extends AbstractTransitionComponentViewModel<TController, TOptions>
 {
+	public StringUtils:Class = StringUtils;
+
 	/**
 	 * @property BlockTYpe
 	 * @type {BlockType}

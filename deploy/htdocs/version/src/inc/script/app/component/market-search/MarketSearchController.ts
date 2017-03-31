@@ -168,7 +168,7 @@ class MarketSearchController extends AbstractTransitionComponentController<Marke
 		this.viewModel.hasSuggestions(suggestions.length > 0);
 		this.viewModel.suggestions([]);
 
-		trackEvent('search', suggestions.length > 1 ? 'success' : 'failure', term);
+		trackEvent('marketMap', 'search', term, suggestions.length > 1 ? 1 : 0);
 
 		suggestions.forEach((suggestion: Array<string>) =>
 		{

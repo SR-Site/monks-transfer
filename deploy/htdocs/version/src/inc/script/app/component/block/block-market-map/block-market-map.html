@@ -7,8 +7,13 @@
 			<!-- ko component: {
 				name: 'button/button-circle-icon',
 				options: {
-					'icon': 'plus',
-					'action': {
+					icon: 'plus',
+					gaTracking: {
+						category: 'marketMap',
+						action: 'click',
+						label: 'zoomIn'
+					},
+					action: {
 						event: $root.handleZoomInClick.bind($root),
 						label: 'Zoom in',
 						title: 'Zoom in'
@@ -18,11 +23,16 @@
 			<!-- ko component: {
 				name: 'button/button-circle-icon',
 				options: {
-					'icon': 'minus',
-					'action': {
+					icon: 'minus',
+					gaTracking: {
+						category: 'marketMap',
+						action: 'click',
+						label: 'zoomOut'
+					},
+					action: {
 						event: $root.handleZoomOutClick.bind($root),
-						label: 'Zoom in',
-						title: 'Zoom in'
+						label: 'Zoom out',
+						title: 'Zoom out'
 					}
 				}
 			} --><!-- /ko -->
@@ -54,7 +64,7 @@
 					<ul class="filter-list" data-bind="foreach: $root.marketList()">
 						<li class="filter-list-item copy-03" data-bind="
 							css: {'is-active': $root.selectedMarket() === $data }, tap: $root.handleSelectMarket.bind($root, $data),
-							gaTrackEvent: {category: 'marketSelector', action:'click', label:  $data.marketId}
+							gaTrackEvent: {category: 'marketMap', action:'click', label:  'marketSelector|' + $data.marketId}
 						">
 							{{$data.city}}, {{$data.statePostalCode}}
 						</li>

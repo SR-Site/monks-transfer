@@ -1,6 +1,7 @@
 import IGaia from "lib/gaia/api/IGaia";
 import GaiaRouter from "lib/gaia/router/GaiaRouter";
 import GaiaEvent from "lib/gaia/event/GaiaEvent";
+import StringUtils from "../../lib/temple/util/type/StringUtils";
 
 /**
  * @namespace app.util
@@ -44,6 +45,12 @@ export function trackPage(page: string)
  */
 export function trackEvent(category: string, action: string, label?: string, value?: number): void
 {
+	if(label !== void 0)
+	{
+		// Strip out all html tags + white space
+		label = StringUtils.replace(StringUtils.stripTags(label), ' ', '-');
+	}
+
 	if(DEBUG)
 	{
 		console.info("[Analytics] Track event: [category: '" + category + "'] [action: '" + action + "'] [label: '" + label + "'] [value: '" + value + "']");
