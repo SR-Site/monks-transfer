@@ -28,10 +28,10 @@ function build_backend(){
     changeDir ${BACKEND_BUILDROOT}
     runComposer install    
 
-    copyFile "${BACKEND_BUILDROOT}deploy/var/drupal-settings/jenkins.environment.local.php" "${BACKEND_BUILDROOT}/var/drupal-settings/environment.local.php"
+    copyFile "${BACKEND_BUILDROOT}deploy/var/drupal-settings/jenkins.environment.local.php" "${BACKEND_BUILDROOT}deploy/var/drupal-settings/environment.local.php"
     replaceVarInline "${BACKEND_BUILDROOT}deploy/var/drupal-settings/environment.local.php" "DRUPAL_ENVIRONMENT" "${DRUPAL_ENVIRONMENT}"
 
-    copyFile "${BACKEND_BUILDROOT}deploy/var/drupal-settings/jenkins.settings.local.php" "${BACKEND_BUILDROOT}/var/drupal-settings/settings.local.php"
+    copyFile "${BACKEND_BUILDROOT}deploy/var/drupal-settings/jenkins.settings.local.php" "${BACKEND_BUILDROOT}deploy/var/drupal-settings/settings.local.php"
     replaceVarInline "${BACKEND_BUILDROOT}deploy/var/drupal-settings/settings.local.php" "DATABASE_USERNAME" "${DATABASE_USERNAME}"
     replaceVarInline "${BACKEND_BUILDROOT}deploy/var/drupal-settings/settings.local.php" "DATABASE_PASSWORD" "${DATABASE_PASSWORD}"
     replaceVarInline "${BACKEND_BUILDROOT}deploy/var/drupal-settings/settings.local.php" "DATABASE_HOSTNAME" "${DATABASE_HOSTNAME}"
