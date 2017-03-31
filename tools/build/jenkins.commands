@@ -1,0 +1,212 @@
+#!/bin/bash
+
+function replaceVarInline() {
+	echo "replacing [${2}] with ${3} in ${1}"
+	sed -i "s/\[${2}\]/${3}/g" ${1}
+	 if [ "$?" -ne 0 ]; then
+	 	echo "replacing [${2}] with ${3} in ${1} failed."
+    	exit 1
+	fi	
+}
+
+function copyFile() {
+	echo "Copying file ${1} -> ${2}"
+	cp -f "${1}" "${2}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Copy failed! - ${1} -> ${2}"
+    	exit 1
+ 	fi 
+}
+
+function deleteFile(){
+	echo "Remove file ${1}"
+	rm -f "${1}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Delete failed! - ${1}"
+    	exit 1
+ 	fi 	
+}
+
+function deleteCopyFile(){
+	deleteFile "${2}"
+	copyFile "${1}" "${2}"
+}
+
+function cleanFrontendVersions(){
+	echo "Cleaing frontenddir: ${1}"
+	cd ${1}
+	rm -rf $(ls . | grep -v src)
+	if [ "$?" -ne 0 ]; then
+	 	echo "Clean failed!"
+    	exit 1
+	fi		
+}
+
+function copyFileIfNotExists() {
+	echo "Copying file ${1} -> ${2}"	
+	if [ ! -e ${2} ]; then
+		cp -f "${1}" "${2}"
+		 if [ "$?" -ne 0 ]; then
+		 	echo "Copy failed! - ${1} -> ${2}"
+	    	exit 1
+	 	fi 
+	else
+		echo "File ${2} exists skipping..."		
+	fi
+}
+
+function createDir(){
+	echo "Creating directory ${1}"
+	mkdir -p "${1}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Create dir failed! - ${1}"
+    	exit 1
+ 	fi 	
+}
+
+function copyDir(){
+	echo "Copying directory ${1} -> ${2}"
+	cp -rf "${1}" "${2}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Copy failed! - '${1}' -> '${2}'"
+    	exit 1
+ 	fi 
+}
+
+function moveDir(){
+	echo "Moving directory ${1} -> ${2}"
+	mv  "${1}" "${2}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Move failed! - '${1}' -> '${2}'"
+    	exit 1
+ 	fi 
+}
+
+function changeDir(){
+	echo "Changing to directory ${1}"
+	cd  "${1}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Changing to directory '${1}' failed"
+    	exit 1
+ 	fi 
+}
+
+function deleteDir(){
+	echo "Deleting directory ${1}"
+	cd  "${1}"
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Deleting directory '${1}' failed"
+    	exit 1
+ 	fi 
+}
+
+
+function runComposer(){
+	echo "Running composer install"
+	${COMPOSER_BIN} $@
+	 if [ "$?" -ne 0 ]; then
+	 	echo "Composer install failed args: $@"
+    	exit 1
+ 	fi 	
+}
+
+function createSymlink(){
+	echo "Creating symlink '${1}' -> '${2}'"
+	ln -s "${1}" "${2}" 
+	if [ "$?" -ne 0 ]; then
+	 	echo "Symlink failed! - '${1}' -> '${2}'"
+    	exit 1
+ 	fi 	
+}
+
+function chmodFile(){
+	echo "chmod file '${2}' -> '${1}'"
+	chmod ${1} ${2}
+	if [ "$?" -ne 0 ]; then
+	 	echo "chmod file failed '${2}' -> '${1}'"
+    	exit 1
+ 	fi 	
+}
+
+function npmCommand(){
+	echo "Running NPM command with args: $@"
+	${NPM_BIN} $@
+	if [ "$?" -ne 0 ]; then
+	 	echo "NPM Failed"
+    	exit 1
+ 	fi
+}
+
+
+function drushCommand(){
+	echo "Running drush command with args: $@"
+	${DRUSH_BIN} -y $@
+	if [ "$?" -ne 0 ]; then
+	 	echo "Drush Failed"
+    	exit 1
+ 	fi
+}
+
+function tsdCommand(){
+	echo "Running tsd command with args: $@"
+	${TSD_BIN} $@
+	if [ "$?" -ne 0 ]; then
+	 	echo "tsd Failed"
+    	exit 1
+ 	fi
+}
+
+function gruntCommand(){
+	echo "Running grunt command with args: $@"
+	${GRUNT_BIN} $@
+	if [ "$?" -ne 0 ]; then
+	 	echo "Grunt Failed"
+    	exit 1
+ 	fi
+}
+
+function gitCommand(){
+	${GIT_BIN} $@
+	if [ "$?" -ne 0 ]; then
+	 	echo "Git command failed: $@"
+    	exit 1
+ 	fi
+
+}
+
+function syncDirectoryCommand(){
+	echo "Syncing ${1} -> ${2}"
+	${RSYNC_BIN} --delete --force --recursive --times --verbose --exclude=".git" ${@:3} "${1}" "${2}"
+
+	if [ "$?" -ne 0 ]; then
+	 	echo "Syncing Filed: --delete --force --recursive --times --verbose --exclude=\".git\" ${@:3} \"${1}\" -> \"${2}\""
+    	exit 1
+ 	fi				 
+}
+
+function selfUpdate(){
+	ROOTSCRIPTDIR=$(cd "$( dirname "${BASH_SOURCE[0]}")" && pwd)
+	if [ ! -w "${ROOTSCRIPTDIR}" ]; then
+		echo "Cannot update: Could not write to ${ROOTSCRIPTDIR}"
+		exit 1
+	fi
+	if [ ! -w "${ROOTSCRIPTDIR}/jenkins-commands" ]; then
+		echo "Cannot update: Could not write to ${ROOTSCRIPTDIR}/jenkins-commands"
+		exit 1
+	fi
+}
+
+function runSed(){
+	echo "Running sed ${@}"
+	${SED_BIN} ${@}
+	if [ "$?" -ne 0 ]; then
+		echo "sed failed! - sed ${@}"
+		exit 1
+	fi 	
+}
+
+function blockDocumentation(){
+	if [ -e "${BLOCKDOCS}" ]; then
+		copyDir ${1} "${BLOCKDOCS}/${JOB_NAME}/"
+	fi
+}
