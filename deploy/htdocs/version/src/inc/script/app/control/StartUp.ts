@@ -17,6 +17,7 @@ import LoadJSONTask from "../../lib/temple/control/sequence/task/loader/LoadJSON
 import IState from "../data/interface/IState";
 import ITertiaryMapData from "../data/interface/ITertiaryMapData";
 import BrowserUtil from "../util/BrowserUtil";
+import LoadGoogleAnalytics from "./LoadGoogleAnalytics";
 
 // localization
 //import InitLocaleTask from "app/control/InitLocaleTask";
@@ -72,6 +73,8 @@ class StartUp
 			}
 
 			sequence.add(new LoadInitTask());
+			sequence.add(new LoadGoogleAnalytics());
+
 			/**
 			 * See the "MapTertiaryData.ts" file for the id's of each of the data set
 			 */
