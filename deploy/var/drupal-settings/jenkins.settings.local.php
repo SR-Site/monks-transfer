@@ -12,7 +12,7 @@
 $settings['hash_salt'] = 'SALT-SALT-SALT';
 
 // Drupal database credentials.
-/*
+
 $databases['default']['default'] = array (
   'database' => '[DATABASE_SCHEMA]',
   'username' => '[DATABASE_USERNAME]',
@@ -23,7 +23,6 @@ $databases['default']['default'] = array (
   'prefix' => '',
   'collation' => 'utf8mb4_general_ci',
 );
-*/
 $settings['mm_deployment_version'] = '[FRONTEND_VERSION]'; // [deploytool]
 
 unset($settings['trusted_host_patterns']);
