@@ -85,7 +85,7 @@ function moveDir(){
 function changeDir(){
 	echo "Changing to directory ${1}"
 	cd  "${1}"
-	 if [ "$?" -ne 0 ]; then
+	if [ "$?" -ne 0 ]; then
 	 	echo "Changing to directory '${1}' failed"
     	exit 1
  	fi 

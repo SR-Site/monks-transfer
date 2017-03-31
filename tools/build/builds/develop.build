@@ -37,9 +37,6 @@ function build_backend(){
     replaceVarInline "${BACKEND_BUILDROOT}deploy/var/drupal-settings/settings.local.php" "DATABASE_HOSTNAME" "${DATABASE_HOSTNAME}"
     replaceVarInline "${BACKEND_BUILDROOT}deploy/var/drupal-settings/settings.local.php" "DATABASE_SCHEMA" "${DATABASE_SCHEMA}"
     replaceVarInline "${BACKEND_BUILDROOT}deploy/var/drupal-settings/settings.local.php" "FRONTEND_VERSION" "${BUILD_NUMBER}"
-    replaceVarInline "${BACKEND_BUILDROOT}deploy/var/drupal-settings/settings.local.php" "FRONTEND_VERSION" "${BUILD_NUMBER}"
-
-
 
     changeDir ${DRUSH_DIR}        
     drushCommand cr
