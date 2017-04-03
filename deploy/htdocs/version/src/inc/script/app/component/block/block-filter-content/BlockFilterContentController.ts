@@ -17,6 +17,7 @@ import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedCon
 import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
 import IGatewayResult from "../../../net/gateway/result/IGatewayResult";
 import URLUtils from "../../../../lib/temple/util/URLUtils";
+import {trackEvent} from "../../../util/Analytics";
 
 class BlockFilterContentController extends AbstractBlockComponentController<BlockFilterContentViewModel, IBlockFilterContentOptions, BlockFilterContentTransitionController>
 {
@@ -167,6 +168,8 @@ class BlockFilterContentController extends AbstractBlockComponentController<Bloc
 	public loadPage(index: number = this.viewModel.activePageIndex()): void
 	{
 		this.viewModel.offset = index * this.viewModel.limit;
+
+		trackEvent('filterContent', 'click', 'loadMore', index);
 
 		this.beforeContentLoad().then(() =>
 		{

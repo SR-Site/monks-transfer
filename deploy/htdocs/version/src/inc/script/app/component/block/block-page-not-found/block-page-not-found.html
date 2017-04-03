@@ -11,6 +11,11 @@
 				name: 'button/button-main',
 				onComplete: $root.controller.callbackCounter.get(),
 				options: {
+					gaTracking: {
+						category: 'pageNotFound',
+						action: 'click',
+						label: data.link..title
+					},
 					action: data.link,
 					theme: $root.Theme.LIGHT,
 					size: $root.ButtonSize.LARGE

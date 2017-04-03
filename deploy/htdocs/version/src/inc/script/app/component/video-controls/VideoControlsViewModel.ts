@@ -9,7 +9,6 @@ class VideoControlsViewModel extends AbstractTransitionComponentViewModel<VideoC
 	public isPlaying: KnockoutObservable<boolean> = ko.observable(false);
 	public isMuted: KnockoutObservable<boolean> = ko.observable(false);
 	public isActive: KnockoutObservable<boolean> = ko.observable(false);
-
 	public progress: KnockoutObservable<number> = ko.observable(0);
 
 	/**
@@ -18,16 +17,7 @@ class VideoControlsViewModel extends AbstractTransitionComponentViewModel<VideoC
 	 */
 	public handlePlayClick(): void
 	{
-		if(this.isPlaying())
-		{
-			this.controller.dispatch(VideoControlsController.PAUSE);
-		}
-		else
-		{
-			this.controller.dispatch(VideoControlsController.PLAY);
-		}
-
-		this.isPlaying(!this.isPlaying())
+		this.controller.dispatch(this.isPlaying() ? VideoControlsController.PAUSE : VideoControlsController.PLAY);
 	}
 
 	/**
@@ -36,14 +26,7 @@ class VideoControlsViewModel extends AbstractTransitionComponentViewModel<VideoC
 	 */
 	public handleMuteClick(): void
 	{
-		if(this.isMuted())
-		{
-			this.controller.dispatch(VideoControlsController.UNMUTE);
-		}
-		else
-		{
-			this.controller.dispatch(VideoControlsController.MUTE);
-		}
+		this.controller.dispatch(this.isMuted() ? VideoControlsController.UNMUTE : VideoControlsController.MUTE);
 
 		this.isMuted(!this.isMuted())
 	}
