@@ -1,0 +1,21 @@
+uuid: b8e1de19-aedc-476d-9805-08a6ab95c191
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_margin_top
+    - paragraphs.paragraphs_type.block_map_tertiary
+  module:
+    - options
+id: paragraph.block_map_tertiary.field_margin_top
+field_name: field_margin_top
+entity_type: paragraph
+bundle: block_map_tertiary
+label: 'Margin top'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
