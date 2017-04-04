@@ -72,7 +72,7 @@ let config: IConfig = {
 			urls: {},
 			properties: {
 				[PropertyNames.MOCK_CONTENT]: false,
-				[PropertyNames.GOOGLE_ANALYTICS]: '123456789'
+				[PropertyNames.GOOGLE_ANALYTICS]: 'UA-67197200-1'
 			}
 		},
 		[EnvironmentNames.MONK_APPS]: {
