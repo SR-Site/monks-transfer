@@ -1,0 +1,24 @@
+uuid: 63b70478-06c2-4420-9dae-1d1b0c057d61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_pdf.field_pdf
+    - paragraphs.paragraphs_type.block_pdf
+  module:
+    - file
+id: paragraph.block_pdf.default
+targetEntityType: paragraph
+bundle: block_pdf
+mode: default
+content:
+  field_pdf:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+hidden:
+  created: true
+  status: true
+  uid: true

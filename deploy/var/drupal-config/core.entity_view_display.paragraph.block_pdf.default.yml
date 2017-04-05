@@ -1,0 +1,21 @@
+uuid: 9b83a726-fee5-4ead-913f-a71bae234484
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_pdf.field_pdf
+    - paragraphs.paragraphs_type.block_pdf
+  module:
+    - file
+id: paragraph.block_pdf.default
+targetEntityType: paragraph
+bundle: block_pdf
+mode: default
+content:
+  field_pdf:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+hidden: {  }
