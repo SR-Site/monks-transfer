@@ -1,0 +1,23 @@
+uuid: f3c51f23-4a33-4687-8fca-ce144fdf4c90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlap
+    - paragraphs.paragraphs_type.block_map_tertiary
+id: paragraph.block_map_tertiary.field_overlap
+field_name: field_overlap
+entity_type: paragraph
+bundle: block_map_tertiary
+label: Overlap
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -118,6 +118,7 @@
     "extra": {
         "patches": {
             "drupal/core": {
+				"MSSQL cannot update identity field for nodes": "patches/core-mssql-cannot-update-identity-field.patch",
                 "Allow text field to enforce a specific text format": "https://www.drupal.org/files/issues/allow_text_field_to-784672-111.patch"
             },
             "drupal/menu_admin_per_menu": {

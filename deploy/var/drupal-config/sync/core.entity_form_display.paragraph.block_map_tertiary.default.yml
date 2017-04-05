@@ -1,0 +1,35 @@
+uuid: 0e2949ed-ae3a-4b5c-b206-3616cd642da5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_map_tertiary.field_margin_top
+    - field.field.paragraph.block_map_tertiary.field_overlap
+    - field.field.paragraph.block_map_tertiary.field_windowed
+    - paragraphs.paragraphs_type.block_map_tertiary
+id: paragraph.block_map_tertiary.default
+targetEntityType: paragraph
+bundle: block_map_tertiary
+mode: default
+content:
+  field_margin_top:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_overlap:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_windowed:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+hidden:
+  created: true
+  status: true
+  uid: true
