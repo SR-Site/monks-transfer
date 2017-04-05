@@ -88,7 +88,7 @@
     "camelcase": "^4.0.0",
     "json-schema-ref-parser": "^3.1.2",
     "jsonfile": "^2.4.0",
-    "typhen": "^1.0.1",
+    "typhen": "1.0.1",
     "typhen-json-schema": "^0.4.0",
     "uppercamelcase": "^1.1.0"
   }
