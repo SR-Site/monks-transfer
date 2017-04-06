@@ -38,6 +38,7 @@ interface IAbstractBlockComponentOptions extends IAbstractTransitionComponentOpt
 	 */
 	overlap?:boolean;
 	/**
+	 * @ignore IGNORE FOR NOW, it's phase 2!
 	 * @property
 	 * @description The id of the section so that we can scroll to this component with a gaiaGoto
 	 * @defaultValue uniqueSectionName
