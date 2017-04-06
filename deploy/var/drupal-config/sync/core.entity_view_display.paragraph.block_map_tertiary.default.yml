@@ -1,10 +1,11 @@
-uuid: 9fc2f8d9-ca24-4ac6-a6db-2638778c6b6b
+uuid: aa99b6a4-2991-43e2-a91b-cc1f8d0a6f5c
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.paragraph.block_map_tertiary.field_margin_top
     - field.field.paragraph.block_map_tertiary.field_overlap
+    - field.field.paragraph.block_map_tertiary.field_tertiary_data
     - field.field.paragraph.block_map_tertiary.field_windowed
     - paragraphs.paragraphs_type.block_map_tertiary
   module:
@@ -29,6 +30,12 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+  field_tertiary_data:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_windowed:
     weight: 0
     label: above

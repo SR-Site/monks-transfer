@@ -1,0 +1,21 @@
+uuid: a0065f78-df69-424a-9458-4ad35b152c94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map_tertiary_data.field_tertiary_data
+    - paragraphs.paragraphs_type.map_tertiary_data
+  module:
+    - options
+id: paragraph.map_tertiary_data.default
+targetEntityType: paragraph
+bundle: map_tertiary_data
+mode: default
+content:
+  field_tertiary_data:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+hidden: {  }

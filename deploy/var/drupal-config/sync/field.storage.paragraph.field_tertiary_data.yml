@@ -1,0 +1,30 @@
+uuid: 5ba34eeb-7730-40ee-aaa5-7dffa1190fd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_tertiary_data
+field_name: field_tertiary_data
+entity_type: paragraph
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: 'AUDIENCES 2016'
+    -
+      value: 1
+      label: 'DIGITAL 2016'
+    -
+      value: 2
+      label: 'TELEVISION 2016'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 251f32f7-3f69-492c-8766-c7e6de24cbcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tertiary_data
+    - paragraphs.paragraphs_type.block_map_tertiary
+  module:
+    - options
+id: paragraph.block_map_tertiary.field_tertiary_data
+field_name: field_tertiary_data
+entity_type: paragraph
+bundle: block_map_tertiary
+label: 'Tertiary data'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer
