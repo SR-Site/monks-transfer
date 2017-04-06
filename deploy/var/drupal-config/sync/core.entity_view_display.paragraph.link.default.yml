@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.link.field_file
     - field.field.paragraph.link.field_label
     - field.field.paragraph.link.field_target
     - field.field.paragraph.link.field_title
     - field.field.paragraph.link.field_type
     - paragraphs.paragraphs_type.link
   module:
+    - file
     - link
     - options
 id: paragraph.link.default
@@ -16,6 +18,12 @@ targetEntityType: paragraph
 bundle: link
 mode: default
 content:
+  field_file:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
   field_label:
     weight: 0
     label: above
