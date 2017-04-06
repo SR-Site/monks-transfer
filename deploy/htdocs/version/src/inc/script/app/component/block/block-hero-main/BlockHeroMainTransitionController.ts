@@ -48,14 +48,17 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 	 */
 	private handleSlideTransitionComplete(index: number): void
 	{
-		let transitionObject = this._slideTransitions[index];
-
-		if(transitionObject && transitionObject.completeMethod)
+		if(!this.isDestructed())
 		{
-			transitionObject.completeMethod();
+			let transitionObject = this._slideTransitions[index];
 
-			// Reset the complete method
-			this._slideTransitions[index].completeMethod = null;
+			if(transitionObject && transitionObject.completeMethod)
+			{
+				transitionObject.completeMethod();
+
+				// Reset the complete method
+				this._slideTransitions[index].completeMethod = null;
+			}
 		}
 	}
 
@@ -150,7 +153,7 @@ class BlockHeroMainTransitionController extends AbstractTransitionController<Blo
 			let statisticsWrapper = element.querySelector('.statistics-wrapper');
 			let heading = element.querySelector('.heading');
 			let copy = element.querySelector('.copy');
-			let buttons = element.querySelectorAll('.component-button-circle-arrow');
+			let buttons = Array.prototype.slice.call(element.querySelectorAll('.component-button-circle-arrow'));
 
 			let timeline = new TimelineLite({
 				paused: true,

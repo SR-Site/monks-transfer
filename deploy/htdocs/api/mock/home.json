@@ -139,9 +139,49 @@
 				}
 			},
 			{
+				"id": "mapTertiary",
+				"data": {
+					"windowed": false,
+					"tertiaryMapData": 0,
+					"marginTop": 1,
+					"background": {
+						"normal": "data/image/map-tertiary/map-background.png",
+						"small": "data/image/map-tertiary/map-background.png",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "mapTertiary",
+				"data": {
+					"windowed": false,
+					"marginTop": 1,
+					"tertiaryMapData": 1,
+					"background": {
+						"normal": "data/image/map-tertiary/map-background.png",
+						"small": "data/image/map-tertiary/map-background.png",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
+				"id": "mapTertiary",
+				"data": {
+					"windowed": false,
+					"marginTop": 1,
+					"tertiaryMapData": 2,
+					"background": {
+						"normal": "data/image/map-tertiary/map-background.png",
+						"small": "data/image/map-tertiary/map-background.png",
+						"alt": "Background image alt text"
+					}
+				}
+			},
+			{
 				"id": "map",
 				"data": {
 					"windowed": true,
+					"marginTop": 2,
 					"scrollSection": "map",
 					"steps": [
 						{

@@ -35,8 +35,7 @@
 				<div class="filter-dropdown">
 					<div class="inner-content" data-bind="foreach: $root.filters()[$data.type]">
 						<label class="tag-checkbox custom-checkbox" data-bind="attr: {'for': value}">
-							<input class="abs-fill" type="checkbox" name="{{value}}" id="{{value}}" value=""
-							       data-bind="checked: checked"/>
+							<input class="abs-fill" type="checkbox" name="{{value}}" id="{{value}}" value="" data-bind="checked: checked"/>
 							<div class="element">{{label}}</div>
 						</label>
 					</div>
@@ -56,17 +55,18 @@
 			<!-- /ko -->
 		</ul>
 
-		<button class="filter-label button"
-		        data-bind="css: {'is-disabled': !$root.filterChanged()}, tap: ($root.filterChanged() ? $root.applyFilter.bind($root) : $root.handleFilterClick.bind($root))">
-
+		<button class="filter-label button" data-bind="
+			css: {'is-disabled': !$root.filterChanged()},
+			tap: ($root.filterChanged() ? $root.applyFilter.bind($root) : $root.handleFilterClick.bind($root))
+		">
 			<!-- ko ifnot: $root.filterChanged() -->
-				<!-- ko text: label --><!-- /ko -->
-				<span class="icon" data-bind="icon: 'filter'"></span>
+			<!-- ko text: label --><!-- /ko -->
+			<span class="icon" data-bind="icon: 'filter'"></span>
 
 			<!-- /ko -->
 
 			<!-- ko if: $root.filterChanged() -->
-				<!-- ko text: applyLabel --><!-- /ko -->
+			<!-- ko text: applyLabel --><!-- /ko -->
 			<!-- /ko -->
 		</button>
 	</div>
@@ -109,24 +109,24 @@
 
 		<div class="filter-footer">
 			<!-- ko ifnot: $root.filterOverlayIsOpen() -->
-				<button class="filter-label button" data-bind="tap: $root.toggleFilterOverlay.bind($root)">
-					<!-- ko text: label --><!-- /ko -->
-					<span class="icon" data-bind="icon: 'filter'"></span>
-				</button>
+			<button class="filter-label button" data-bind="tap: $root.toggleFilterOverlay.bind($root)">
+				<!-- ko text: label --><!-- /ko -->
+				<span class="icon" data-bind="icon: 'filter'"></span>
+			</button>
 			<!-- /ko -->
 
 			<!-- ko if: $root.filterOverlayIsOpen() -->
-				<div class="filter-actions">
-					<button class="button-close button" data-bind="tap: $root.toggleFilterOverlay.bind($root)">
-						<span class="icon abs-center" data-bind="icon: 'cross'"></span>
-					</button>
-					<button class="button-apply button" data-bind="tap: $root.handleFilterOverlayLabelClick.bind($root)">
-						<!-- ko text: applyLabel --><!-- /ko -->
-					</button>
-					<button class="button-reset button" data-bind="tap: $root.resetFilter.bind($root)">
-						<span class="icon abs-center" data-bind="icon: 'reset'"></span>
-					</button>
-				</div>
+			<div class="filter-actions">
+				<button class="button-close button" data-bind="tap: $root.toggleFilterOverlay.bind($root)">
+					<span class="icon abs-center" data-bind="icon: 'cross'"></span>
+				</button>
+				<button class="button-apply button" data-bind="tap: $root.handleFilterOverlayLabelClick.bind($root)">
+					<!-- ko text: applyLabel --><!-- /ko -->
+				</button>
+				<button class="button-reset button" data-bind="tap: $root.resetFilter.bind($root)">
+					<span class="icon abs-center" data-bind="icon: 'reset'"></span>
+				</button>
+			</div>
 			<!-- /ko -->
 		</div>
 

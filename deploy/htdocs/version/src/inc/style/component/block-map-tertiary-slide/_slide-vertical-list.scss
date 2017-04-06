@@ -1,0 +1,68 @@
+.component-slide-vertical-list {
+	.statistics-wrapper {
+		@extend %reset-list;
+	}
+
+	.statistic:not(:last-child) {
+		margin-bottom: $sizeGrid;
+	}
+
+	.step {
+		@include size($sizeGrid);
+		border: 1px dashed $colorLocalMedia;
+		display: inline-block;
+		border-radius: 100%;
+		vertical-align: middle;
+		font: 400 1.5rem / #{$sizeGrid } $fontOpenSans;
+		text-align: center;
+	}
+
+	.heading {
+		strong {
+			color: currentColor;
+		}
+	}
+
+	.description {
+		@include size(calc(100% - #{$sizeGrid * 2}), auto);
+		margin-left: $sizeGrid;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	@include respond-to(MEDIUM) {
+		.statistic:not(:last-child) {
+			margin-bottom: $sizeGrid / 2;
+		}
+
+		.statistic {
+
+			.copy {
+				display: none;
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		display: block;
+
+		.step {
+			@include size($sizeGrid * 2);
+			line-height: $sizeGrid * 2;
+			font-size: 3rem;
+		}
+
+		.description {
+			width: calc(100% - #{$sizeGrid * 3});
+			vertical-align: middle;
+		}
+
+		.statistic:not(:last-child) {
+			margin-bottom: $sizeGrid * 2;
+		}
+
+		.statistics-wrapper {
+			padding: $sizeGrid $sizeGrid * 2;
+		}
+	}
+}

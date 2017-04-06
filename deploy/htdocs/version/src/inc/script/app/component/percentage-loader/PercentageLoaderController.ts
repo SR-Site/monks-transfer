@@ -4,6 +4,7 @@ import IPercentageLoaderOptions from 'app/component/percentage-loader/IPercentag
 import PercentageLoaderViewModel from 'app/component/percentage-loader/PercentageLoaderViewModel';
 
 import Log from "lib/temple/util/Log";
+import Type from "../../../lib/temple/util/Type";
 
 class PercentageLoaderController extends AbstractTransitionComponentController<PercentageLoaderViewModel, IPercentageLoaderOptions, PercentageLoaderTransitionController>
 {
@@ -36,19 +37,19 @@ class PercentageLoaderController extends AbstractTransitionComponentController<P
 		this._animatedLine = <HTMLElement>this.element.querySelector('.animated-line');
 		this._amountInfo = <HTMLElement>this.element.querySelector('.amount-info');
 
-		this.animateLine(this.options.percentage);
+		this.animateLine(this.options.value);
 	}
 
 	/**
 	 * @Public
 	 * @method animateLine
-	 * @param amount
+	 * @param value
+	 * @param total
 	 */
-	public animateLine(amount: number): void
+	public animateLine(value: number | string, total: number = 100): void
 	{
-		let percentage = (amount / this._fullPercentage) * 100;
-
-		this.viewModel.amount(amount);
+		let targetValue: number = Type.isNumber(value) ? <number>value : 100;
+		let percentage = Math.round((targetValue / total) * 100);
 
 		TweenLite.fromTo(this._animatedLine, PercentageLoaderController._DURATION,
 			{
@@ -67,6 +68,8 @@ class PercentageLoaderController extends AbstractTransitionComponentController<P
 				drawSVG: '0 ' + percentage + '%',
 				ease: Power2.easeIn
 			});
+
+		this.viewModel.label(Type.isNumber(value) ? percentage + '%' : <string>value);
 
 	}
 

@@ -11,12 +11,14 @@
 		} --><!-- /ko -->
 
 		<div class="content-items" data-bind="foreach: $root.visibleItems">
-			<!-- ko if: type == $root.BlockType.COMPONENT -->
-				<!-- ko component: {name: 'block/' + id, options: data, onComplete: $root.controller.callbackCounter.get($root.controller.handleDynamicComponentLoaded.bind($root.controller))} --><!-- /ko -->
-			<!-- /ko -->
-			<!-- ko if: type == $root.BlockType.PARTIAL -->
-				<!-- ko template: {name: id, options: data} --><!-- /ko -->
-			<!-- /ko -->
+			<div data-bind="tap: $root.handleItemClick.bind($root, $data)">
+				<!-- ko if: type == $root.BlockType.COMPONENT -->
+					<!-- ko component: {name: 'block/' + id, options: data, onComplete: $root.controller.callbackCounter.get($root.controller.handleDynamicComponentLoaded.bind($root.controller))} --><!-- /ko -->
+				<!-- /ko -->
+				<!-- ko if: type == $root.BlockType.PARTIAL -->
+					<!-- ko template: {name: id, options: data} --><!-- /ko -->
+				<!-- /ko -->
+			</div>
 		</div>
 
 		<div class="pagiantor-wrapper" data-bind="visible: dataManager.deviceStateTracker.currentState() > $root.DeviceState.SMALL">

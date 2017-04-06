@@ -8,6 +8,8 @@ declare class WaveSurfer
 
 	public getCurrentTime(): number;
 
+	public getDuration(): number;
+
 	public isPlaying(): boolean;
 
 	public load(url: string): void;

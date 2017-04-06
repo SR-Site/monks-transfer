@@ -45,7 +45,7 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	private _ctx: CanvasRenderingContext2D;
 	private _playAnimation: TweenLite;
 
-	private _loopTimeout:number;
+	private _loopTimeout: number;
 	private _stopped: boolean = false;
 
 	/**
@@ -73,37 +73,61 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 
 	/**
 	 * @public
-	 * @method play
+	 * @method playFromTo
+	 * @param from
+	 * @param to
 	 */
-	public play(loop: boolean = false, loopDelay: number = 0): void
+	public playFromTo(from: number, to: number): Promise<any>
 	{
-		if(this.isDestructed()) return;
+		return this.play(false, 0, from, to);
+	}
 
-		this._stopped = false;
-
-		// Animate the frame count
-		let frameCounter = {frame: 0};
-		let totalDuration = this.options.imageSequence.total / ImageSequenceController.FPS;
-
-		this._playAnimation = TweenLite.to(frameCounter, totalDuration, {
-			ease: Linear.easeNone,
-			frame: this.options.imageSequence.total - 1,
-			onUpdate: () =>
+	/**
+	 * @public
+	 * @method play
+	 * @param loop
+	 * @param loopDelay
+	 * @param startFrame
+	 * @param endFrame
+	 */
+	public play(loop: boolean = false, loopDelay: number = 0, startFrame: number = 0, endFrame: number = this.options.imageSequence.total): Promise<any>
+	{
+		return new Promise((resolve: () => void, reject: () => void) =>
+		{
+			if(this.isDestructed())
 			{
-				this.seek(Math.round(frameCounter.frame));
-			},
-			onComplete: () =>
-			{
-				if(loop && !this._stopped)
-				{
-					clearTimeout(this._loopTimeout);
-
-					this._loopTimeout = setTimeout(() =>
-					{
-						this.play(loop, loopDelay);
-					}, loopDelay)
-				}
+				return;
 			}
+
+			this._stopped = false;
+
+			// Animate the frame count
+			let frameCounter = {frame: startFrame};
+			let totalDuration = Math.abs(endFrame - startFrame) / ImageSequenceController.FPS;
+
+			this._playAnimation = TweenLite.to(frameCounter, totalDuration, {
+				ease: Linear.easeNone,
+				frame: endFrame - 1,
+				onUpdate: () =>
+				{
+					this.seek(Math.round(frameCounter.frame));
+				},
+				onComplete: () =>
+				{
+					resolve();
+
+					if(loop && !this._stopped)
+					{
+						clearTimeout(this._loopTimeout);
+
+						this._loopTimeout = setTimeout(() =>
+						{
+							this.play(loop, loopDelay);
+						}, loopDelay);
+
+					}
+				}
+			})
 		})
 	}
 
@@ -115,7 +139,7 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	{
 		this._stopped = true;
 
-		clearTimeout(this._loopTimeout)
+		clearTimeout(this._loopTimeout);
 
 		if(this._playAnimation)
 		{
@@ -186,6 +210,9 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	{
 		this._canvas.width = this.element.offsetWidth;
 		this._canvas.height = this.element.offsetHeight;
+
+		// Redraw the last frame
+		this.drawFrame();
 	}
 
 	/**
@@ -196,7 +223,7 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	{
 		const currentState = this._dataManager.deviceStateTracker.currentState();
 
-		return currentState <= DeviceState.MEDIUM ? DeviceState.SMALL : DeviceState.MEDIUM
+		return currentState < DeviceState.MEDIUM ? DeviceState.SMALL : DeviceState.MEDIUM
 	}
 
 	/**

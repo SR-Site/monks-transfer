@@ -70,7 +70,7 @@ function spectrum_page_attachments_alter(array &$page) {
 	  'content' => '/favicon.ico',
 	  'type' => "image/x-icon",
 	  'title' => 'favicon',
-	  'href' => ''
+      'href' => ''
   );
   $page['#attached']['html_head_link'][] = [$favicon, 'document-base'];
 }

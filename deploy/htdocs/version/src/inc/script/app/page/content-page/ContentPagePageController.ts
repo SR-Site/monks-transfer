@@ -16,6 +16,8 @@ import IPageLayout from "../../data/interface/layout/IPageLayout";
 
 import ko = require("knockout");
 import Promise = require("bluebird");
+import {trackPage} from "../../util/Analytics";
+import LinkHelper from "../../util/LinkHelper";
 
 class ContentPagePageController extends DefaultPageController<ContentPagePageViewModel>
 {
@@ -30,7 +32,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 * @property _currentRoute
 	 * @type {string}
 	 */
-	private _currentRoute:string;
+	private _currentRoute: string;
 	/**
 	 * @property _currentDeeplink
 	 * @type {Object}
@@ -50,7 +52,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 * @property _components
 	 * @type {Object}
 	 */
-	private _components: {[id: string]: AbstractBlockComponentController<any, any, any>} = {};
+	private _components: { [id: string]: AbstractBlockComponentController<any, any, any> } = {};
 	/**
 	 * @property _scrollTracker
 	 * @type {ScrollTracker}
@@ -60,7 +62,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 * @property _scrollTrackerPoints
 	 * @type {Object}
 	 */
-	private _scrollTrackerPoints: {[id: string]: ScrollTrackerPoint} = {};
+	private _scrollTrackerPoints: { [id: string]: ScrollTrackerPoint } = {};
 	/**
 	 * @property _dataManager
 	 * @type {DataManager}
@@ -191,7 +193,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 		{
 			const scrollId: string = route.split('#')[1];
 			const scrollToComponentElement: HTMLElement = <HTMLElement>this.element.querySelector(`[data-scroll-section="${scrollId}"]`);
-			const headerHeight:number = (<HTMLElement>document.body.querySelector('.component-header')).offsetHeight;
+			const headerHeight: number = (<HTMLElement>document.body.querySelector('.component-header')).offsetHeight;
 
 			if(scrollToComponentElement)
 			{
@@ -277,7 +279,9 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 			const controller = this._components[key];
 			const scrollTrackerPoint = this._scrollTrackerPoints[key];
 			const element = controller.element;
-			const parent = <AbstractBlockComponentController<any, any, any>|ContentPagePageController>controller.parent;
+			const parent = <
+				AbstractBlockComponentController<any, any, any>
+				| ContentPagePageController>controller.parent;
 			const threshold = element.offsetHeight * controller.transitionInThreshold;
 			const elementHeight = element.offsetHeight - threshold;
 
@@ -290,7 +294,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 * @public
 	 * @method removeComponentsFromScrollTracker
 	 */
-	public removeComponentsFromScrollTracker(components: {[id: string]: AbstractBlockComponentController<any, any, any>}): void
+	public removeComponentsFromScrollTracker(components: { [id: string]: AbstractBlockComponentController<any, any, any> }): void
 	{
 		Object.keys(components).forEach((key, index) =>
 		{
@@ -325,7 +329,7 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	 * @public
 	 * @method addScrollTrackerPoints
 	 */
-	public addComponentsToScrollTracker(components: {[id: string]: AbstractBlockComponentController<any, any, any>}): void
+	public addComponentsToScrollTracker(components: { [id: string]: AbstractBlockComponentController<any, any, any> }): void
 	{
 		Object.keys(components).forEach((key, index) =>
 		{
@@ -335,7 +339,9 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 			{
 				const element = controller.element;
 				const threshold = window.innerHeight * controller.transitionInThreshold;
-				const parent = <AbstractBlockComponentController<any, any, any>|ContentPagePageController>controller.parent;
+				const parent = <
+					AbstractBlockComponentController<any, any, any>
+					| ContentPagePageController>controller.parent;
 				const yPosition = Math.round(parent.element.offsetTop + element.offsetTop + threshold);
 				const elementHeight = element.offsetHeight - threshold;
 				const scrollTrackerPoint = this._scrollTracker.addPoint(yPosition, elementHeight);
@@ -421,43 +427,31 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	private getPageLayout(): Promise<any>
 	{
 		// Filter out the hash tags
-		let route = Gaia.api.getRoute().split('#')[0];
-
-		// If the route is a popup, strip the route for fetching the page content.
-		if(Gaia.api.getPage(Gaia.api.getCurrentBranch()).type == PageType.POPUP)
-		{
-			route = this._dataManager.settingsModel.initDataModel.landingRoute;
-		}
-		else
-		{
-			// We want to fetch this from the backend!
-			route = route === '/' ? this._dataManager.settingsModel.initDataModel.landingRoute : route;
-		}
-
-		route = StringUtils.startsWith(route, '/') ? route.substr(1) : route;
+		let route = LinkHelper.getRoute();
 
 		// Store the route for updating the header logo
 		DataManager.getInstance().currentRoute(route);
 
-		return DataManager.getInstance().settingsModel.pageLayoutModel.getLayout(
-			route
-		).then((result: IPageLayout) =>
-		{
-			this.viewModel.pageLayout(result.blocks);
+		return DataManager.getInstance().settingsModel.pageLayoutModel.getLayout(route)
+			.then((result: IPageLayout) =>
+			{
+				this.viewModel.pageLayout(result.blocks);
 
-			// Set the header theme if available
-			this._dataManager.headerTheme(result.headerTheme);
+				// Set the header theme if available
+				this._dataManager.headerTheme(result.headerTheme);
 
-			// Set the header theme if available
-			this._dataManager.hideContactButton(result.hideContactButton || false);
+				// Set the header theme if available
+				this._dataManager.hideContactButton(result.hideContactButton || false);
 
-			// Set the page title
-			document.title = result.pageTitle;
+				// Set the page title
+				document.title = result.pageTitle;
 
-		}).catch((result) =>
-		{
-			console.error('[DefaultContentPageController]  went wrong binding the page, either the route (' + Gaia.api.getRoute() + ') does not exist or there is a knockout binding error. Result: ', result);
-		});
+			})
+			.then(() => trackPage('/' + route))
+			.catch((result) =>
+			{
+				console.error('[DefaultContentPageController]  went wrong binding the page, either the route (' + Gaia.api.getRoute() + ') does not exist or there is a knockout binding error. Result: ', result);
+			});
 	}
 
 	/**

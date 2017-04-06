@@ -7,6 +7,7 @@ import {IDraggableEventData} from "../../../util/DraggableInstance";
 import ScrollBarController from "../../scroll-bar/ScrollBarController";
 import CommonEvent from "../../../../lib/temple/event/CommonEvent";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
+import {trackEvent} from "../../../util/Analytics";
 
 class BlockHowToAdvertiseController extends AbstractBlockComponentController<BlockHowToAdvertiseViewModel, IBlockHowToAdvertiseOptions, BlockHowToAdvertiseTransitionController>
 {
@@ -54,6 +55,8 @@ class BlockHowToAdvertiseController extends AbstractBlockComponentController<Blo
 	 */
 	public openStep(index: number): void
 	{
+		trackEvent('howToAdvertise', 'click', 'open|' + this.options.steps[index].heading, index + 1);
+		
 		TweenLite.fromTo(this, 0.8,
 			{
 				_openStepAnimationProgress: this.transitionController.getHowToAdvertiseProgress()

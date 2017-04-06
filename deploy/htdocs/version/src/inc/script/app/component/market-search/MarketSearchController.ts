@@ -9,6 +9,7 @@ import DataManager from "../../data/DataManager";
 import StateModel from "../../data/model/StateModel";
 import ThrottleDebounce from "../../../lib/temple/util/ThrottleDebounce";
 import Scrollbar from "../../../lib/temple/component/Scrollbar";
+import {trackEvent} from "../../util/Analytics";
 
 class MarketSearchController extends AbstractTransitionComponentController<MarketSearchViewModel, IMarketSearchOptions, MarketSearchTransitionController>
 {
@@ -27,7 +28,7 @@ class MarketSearchController extends AbstractTransitionComponentController<Marke
 	private _choices: Array<Array<any>> = [];
 
 	private _markets: Array<IMarketDetail>;
-	private _scrollbar:Scrollbar;
+	private _scrollbar: Scrollbar;
 
 	/**
 	 *    Overrides AbstractPageController.init()
@@ -166,6 +167,8 @@ class MarketSearchController extends AbstractTransitionComponentController<Marke
 
 		this.viewModel.hasSuggestions(suggestions.length > 0);
 		this.viewModel.suggestions([]);
+
+		trackEvent('marketMap', 'search', term, suggestions.length > 1 ? 1 : 0);
 
 		suggestions.forEach((suggestion: Array<string>) =>
 		{

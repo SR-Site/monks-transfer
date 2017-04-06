@@ -9,17 +9,24 @@
 						onComplete: $root.controller.callbackCounter.get(),
 						options: {
 							action: $data,
+							gaTracking: {
+								category: 'latest',
+								action: 'click',
+								label: $data.title
+							},
 							size: $root.ButtonSize.LARGE
 						}
 					} --><!-- /ko -->
 				</div>
 			</header>
 			<div class="latest-articles" data-bind="foreach: data.articles">
-				<!-- ko component: {
-					name: 'block/block-article-teaser',
-					onComplete: $root.controller.callbackCounter.get(),
-					options: $data
-				} --><!-- /ko -->
+				<div data-bind="gaTrackEvent: {category: 'latest', action:'click', label:  'articleTeaser|' + $data.heading}">
+					<!-- ko component: {
+						name: 'block/block-article-teaser',
+						onComplete: $root.controller.callbackCounter.get(),
+						options: $data
+					} --><!-- /ko -->
+				</div>
 			</div>
 		</div>
 	</div>

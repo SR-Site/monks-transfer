@@ -8,6 +8,11 @@
 					name: 'button/button-main',
 					onComplete: $root.controller.callbackCounter.get(),
 					options: {
+						gaTracking: {
+							category: 'button',
+							action: 'click',
+							label: data.title
+						},
 						action: data.link,
 						size: $root.ButtonSize.LARGE,
 						disabled: $root.findOutMoreDisabled

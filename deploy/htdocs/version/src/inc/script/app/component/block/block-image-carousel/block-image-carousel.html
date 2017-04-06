@@ -12,26 +12,33 @@
 							}"/>
 
 							<!-- ko if: $data.video -->
-								<!-- ko component: {
-									name: 'button/button-play-circle',
-									onComplete: $root.controller.callbackCounter.get(),
-									options: {
-										action: {
-											event: dataManager.videoOverlay.show.bind(dataManager.videoOverlay, {
-												video: video,
-												poster: image,
-												loop: false,
-												controls: $root.Bowser.mobile || $root.Bowser.tablet
-											})
-										}
+							<!-- ko component: {
+								name: 'button/button-play-circle',
+								onComplete: $root.controller.callbackCounter.get(),
+								options: {
+									gaTracking: {
+										category: 'imageCarousel',
+										action: 'click',
+										label: 'play|' + $data.heading,
+										value: $index() + 1
+									},
+									action: {
+										event: dataManager.videoOverlay.show.bind(dataManager.videoOverlay, {
+											title: $data.heading,
+											video: video,
+											poster: image,
+											loop: false,
+											controls: $root.Bowser.mobile || $root.Bowser.tablet
+										})
 									}
-								} --><!-- /ko -->
+								}
+							} --><!-- /ko -->
 							<!-- /ko -->
 
 							<!-- ko if: heading -->
-								<figcaption>
-									<p class="copy copy-01" data-bind="html: heading"></p>
-								</figcaption>
+							<figcaption>
+								<p class="copy copy-01" data-bind="html: heading"></p>
+							</figcaption>
 							<!-- /ko -->
 						</figure>
 					</div>

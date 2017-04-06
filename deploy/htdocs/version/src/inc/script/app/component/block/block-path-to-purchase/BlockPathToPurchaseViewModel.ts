@@ -6,6 +6,7 @@ import ko = require('knockout');
 import StringUtils from "../../../../lib/temple/util/type/StringUtils";
 import MouseEventHelper from "../../../util/MouseEventHelper";
 import Promise = require("bluebird");
+import {trackEvent} from "../../../util/Analytics";
 
 class BlockPathToPurchaseViewModel extends AbstractBlockComponentViewModel<BlockPathToPurchaseController, IBlockPathToPurchaseOptions>
 {
@@ -19,6 +20,8 @@ class BlockPathToPurchaseViewModel extends AbstractBlockComponentViewModel<Block
 	 */
 	private handleClick(index: number): void
 	{
+		trackEvent('pathToPurchase', 'click', this.data.steps[index].heading, index + 1)
+
 		this.activeIndex(index);
 	}
 

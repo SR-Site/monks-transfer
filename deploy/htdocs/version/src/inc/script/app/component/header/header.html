@@ -15,6 +15,10 @@
 			onComplete: $root.controller.callbackCounter.get(),
 			options: {
 				icon: 'contact',
+				gaTracking: {
+					category: 'callToReach',
+					action: 'click'
+				},
 				action: {
 					label: dataManager.settingsModel.initDataModel.contactOptions.phone.phoneNumber,
 					title: dataManager.settingsModel.initDataModel.contactOptions.phone.phoneNumber,

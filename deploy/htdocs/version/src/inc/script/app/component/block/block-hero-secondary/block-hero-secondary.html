@@ -18,6 +18,11 @@
 					name: 'button/button-circle-arrow',
 					onComplete: $root.controller.callbackCounter.get(),
 					options: {
+						gaTracking: {
+							category: 'heroSecondary',
+							action: 'click',
+							label: data.heading + '|' + data.link.title
+						},
 						action: data.link,
 						arrowDirection: $root.Direction.DOWN,
 						arrowPosition: $root.Alignment.LEFT,

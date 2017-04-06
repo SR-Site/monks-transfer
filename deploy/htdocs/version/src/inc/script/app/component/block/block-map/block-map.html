@@ -1,17 +1,12 @@
-<div class="component-block-map" data-bind="css: {'windowed': data.windowed}">
+<div class="component-block-map">
 	<div class="site-frame">
-		<div class="aspect-ratio-wrapper overrule-overlap">
-			<div class="map-content" data-bind="with: data.steps[$root.activeIndex()]">
-				<div class="bottom-alignment">
-					<span class="pagination-number" data-bind="html: $root.StringUtils.padLeft(($root.activeIndex() + 1).toString(), 2, '0')"></span>
-					<h3 class="heading heading-01" data-bind="html: heading"></h3>
-					<p class="copy copy-01" data-bind="html: paragraph"></p>
-				</div>
-			</div>
-			<div class="map-image-wrapper">
-				<div class="map-image">
+		<div class="slide-wrapper">
+			<div class="solid-background"></div>
+			<div class="slides">
+				<div class="sequence-wrapper">
 					<!-- ko if: data.sequenceBackground -->
-						<img class="sequence-background" data-bind="image: {
+						<img class="sequence-background abs-fill" data-bind="image:
+						{
 							image: data.sequenceBackground,
 							state: $root.deviceState()
 						}">
@@ -24,12 +19,23 @@
 						}
 					} --><!-- /ko -->
 				</div>
+				<!-- ko foreach: data.steps -->
+					<!-- ko component: {
+						name: 'block/block-map/slide/slide-text',
+						onComplete: $root.controller.callbackCounter.get($root.controller.handleSlideReady.bind($root.controller, $index())),
+						options:{
+							index: $index(),
+							slideData: $data
+						}
+					} --><!-- /ko -->
+				<!-- /ko -->
+
 			</div>
 			<!-- ko component: {
-				name: 'map-slider',
-				onComplete: $root.controller.callbackCounter.get($root.controller.handleMapSliderReady.bind($root.controller)),
+				name: 'map-pagination',
+				onComplete: $root.controller.callbackCounter.get($root.controller.handleMapPaginationReady.bind($root.controller)),
 				options: {
-					steps: data.steps
+					slides: $root.slides
 				}
 			} --><!-- /ko -->
 		</div>

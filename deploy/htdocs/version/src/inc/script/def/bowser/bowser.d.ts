@@ -4,7 +4,7 @@ declare class bowser
 	 * Browser flags
 	 */
 	public static name: string;
-	public static version: number;
+	public static version: string;
 	public static chrome: boolean;
 	public static firefox: boolean;
 	public static msie: boolean;

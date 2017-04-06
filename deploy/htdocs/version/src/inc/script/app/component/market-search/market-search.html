@@ -24,8 +24,11 @@
 				<div class="scroll-content" data-scroll-content>
 					<div class="scroll-content-inner" data-content-inner>
 						<!-- ko foreach: $root.suggestions -->
-						<button class="button suggestion-button"
-						        data-bind="html: $data.label, tap: $root.handleSelectMarket.bind($root, $data.value)"></button>
+						<button class="button suggestion-button" data-bind="
+							html: $data.label,
+							tap: $root.handleSelectMarket.bind($root, $data.value),
+							gaTrackEvent: {category: 'marketMap', action:'click', label:  'marketSearch|' + $data.value}
+						"></button>
 						<!-- /ko -->
 
 						<!-- ko if: $root.suggestions().length === 0 -->

@@ -16,7 +16,7 @@ interface IFilterMenuOptions extends IAbstractTransitionComponentOptions
 		 * @property
 		 * @description The type of the filter
 		 */
-			type: number;
+		type: number;
 		/**
 		 * @property
 		 * @description The options available after selecting a filter

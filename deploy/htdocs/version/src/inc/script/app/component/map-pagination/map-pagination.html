@@ -1,0 +1,27 @@
+<div class="component-map-pagination">
+	<button class="button navigation-button" data-bind="tap: $root.handlePreviousClick.bind($root), css: {'is-active' : $root.activeIndex() > 0}">
+		<span class="icon abs-center" data-bind="icon: 'circle-arrow-left'"></span>
+	</button>
+	<div class="pagination-steps">
+		<!-- ko if: $root.deviceState() > $root.DeviceState.SMALL -->
+		<span class="progress" data-bind="style: {width: progress()}"></span>
+		<ul data-bind="foreach: data.slides">
+			<li class="step" data-bind="
+					tap: $root.handleSelectClick.bind($root, $index()),
+					css: {'is-active': $index() == $root.activeIndex()},
+					html: $root.StringUtils.padLeft(($index() + 1).toString(), 2, '0')
+				"></li>
+		</ul>
+		<!-- /ko -->
+		<!-- ko if: $root.deviceState() <= $root.DeviceState.SMALL -->
+			<span class="progress"></span>
+			<ul>
+				<li class="step is-active" data-bind="html: $root.StringUtils.padLeft(($root.activeIndex() + 1).toString(), 2, '0')
+					"></li>
+			</ul>
+		<!-- /ko -->
+	</div>
+	<button class="button navigation-button" data-bind="tap: $root.handleNextClick.bind($root), css: {'is-active' : $root.activeIndex() < data.slides().length - 1}">
+		<span class="icon" data-bind="icon: 'circle-arrow-right'"></span>
+	</button>
+</div>

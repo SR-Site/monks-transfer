@@ -9,6 +9,7 @@ import FixedElementHelper from "../../../../util/FixedElementHelper";
 import LocaleManager from "../../../../../lib/temple/locale/LocaleManager";
 import {IContactData} from "../../../../data/service/UserService";
 import IGatewayError from "../../../../net/gateway/result/IGatewayError";
+import {trackEvent} from "../../../../util/Analytics";
 
 class ContactController extends AbstractTransitionComponentController<ContactViewModel, IContactOptions, ContactTransitionController>
 {
@@ -52,6 +53,7 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 		{
 			// Show loader
 			this._loader.show()
+				.then(()=> trackEvent('startAdvertising', 'click', 'submitStartAdvertising'))
 				.then(() => DataManager.getInstance().serviceModel.userService.contact(
 					<IContactData>this.viewModel.myValidator.getValues()
 				))

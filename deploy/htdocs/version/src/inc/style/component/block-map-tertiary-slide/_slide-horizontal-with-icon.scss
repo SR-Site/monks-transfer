@@ -1,0 +1,124 @@
+.component-slide-horizontal-with-icon {
+	.full-line {
+		@include size(100%, 1px);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.statistics-wrapper {
+		@extend %reset-list;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		li {
+			@include size($sizeGrid * 2, $sizeGrid * 5);
+			display: inline-block;
+
+			&:first-child {
+				transform: translateX(-50%);
+			}
+
+			&:last-child {
+				transform: translateX(50%);
+			}
+		}
+
+		.icon {
+			@include size($sizeGrid * 2);
+			display: block;
+		}
+
+		.separator {
+			@include size(1px, $sizeGrid * 0.75);
+			@include center-block();
+			position: relative;
+			margin-top: $sizeGrid / 4;
+			margin-bottom: $sizeGrid / 4;
+
+			svg {
+				stroke: currentColor;
+			}
+		}
+
+		.description {
+			@include size($sizeGrid * 2, auto);
+			display: block;
+			text-align: center;
+
+			.label,
+			.value {
+				display: block;
+			}
+		}
+	}
+
+	.dashed-line {
+		stroke: currentColor;
+		stroke-dasharray: 4, 4;
+		stroke-width: 2px;
+	}
+
+	@include respond-to(SMALL) {
+		.statistics-wrapper {
+			display: block;
+
+			li {
+				@include size(100%, auto);
+				display: block;
+				transform: none;
+
+				&:last-child,
+				&:first-child {
+					transform: none;
+				}
+			}
+
+			.icon {
+				display: none;
+			}
+
+			.description {
+				@include size(100%, auto);
+				text-align: left;
+				padding: $sizeGrid / 2 $sizeGrid * 2;
+
+				.separator {
+					@include size($sizeGrid, 1px);
+					display: inline-block;
+					vertical-align: middle;
+					margin: 0 $sizeGrid * .5;
+				}
+
+				.label {
+					width: $sizeGrid * 3;
+					text-align: center;
+				}
+
+				.value,
+				.label {
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+		}
+
+		.full-line {
+			@include pos($sizeGrid, auto, $sizeGrid, $sizeGrid * 6);
+			@include size(1px, auto);
+			position: absolute;
+			transform: none;
+		}
+
+		.slide-statistics-wrapper {
+			position: relative;
+		}
+
+		.dashed-line {
+			stroke: currentColor;
+			stroke-dasharray: 3, 3;
+			stroke-width: 1px;
+		}
+	}
+}

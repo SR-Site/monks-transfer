@@ -12,8 +12,14 @@
 					name: 'button/button-play-circle',
 					onComplete: $root.controller.callbackCounter.get(),
 					options: {
+						gaTracking: {
+							category: 'programModule',
+							action: 'click',
+							label: 'play|' + $data.heading
+						},
 						action: {
 							event: dataManager.videoOverlay.show.bind(dataManager.videoOverlay, {
+								title: $data.heading,
 								video: video,
 								poster: image,
 								loop: false,
@@ -59,6 +65,11 @@
 							name: 'button/button-tag',
 							onComplete: $root.controller.callbackCounter.get(),
 							options: {
+								gaTracking: {
+									category: 'programModule',
+									action: 'click',
+									label: 'tag|' + $data.title
+								},
 								action: $data
 							}
 						} --><!-- /ko -->

@@ -1,0 +1,34 @@
+<div class="map-tertiary-slide abs-fill component-slide-cards">
+	<!-- ko if: data.slideData.background -->
+		<div class="background abs-fill" data-bind="image: { image: data.slideData.background, state: $root.deviceState()}"></div>
+	<!-- /ko -->
+
+	<header class="slide-heading">
+		<h2 class="heading heading-07"><strong data-bind="html: data.slideData.subHeading"></strong></h2>
+		<p class="copy copy-03" data-bind="html: data.slideData.paragraph"></p>
+	</header>
+
+	<div class="slide-statistics">
+		<ul class="statistics-wrapper" data-bind="foreach: data.slideData.statistics">
+			<li class="statistic">
+				<figure class="card-image">
+					<img data-bind=" image: { image: $data.image, state: $root.deviceState() }"/>
+				</figure>
+				<div class="card-label">
+					<p class="copy copy-03" >
+						<strong data-bind="html: $data.label"></strong>
+					</p>
+				</div>
+				<figure class="card-value">
+					<img data-bind=" image: { image: $data.value, state: $root.deviceState() }"/>
+				</figure>
+			</li>
+		</ul>
+	</div>
+
+	<div class="slide-title">
+		<span class="pagination-number"
+		      data-bind="html: $root.StringUtils.padLeft((data.index + 1).toString(), 2, '0')"></span>
+		<h3 class="heading heading-01" data-bind="html: data.slideData.heading"></h3>
+	</div>
+</div>

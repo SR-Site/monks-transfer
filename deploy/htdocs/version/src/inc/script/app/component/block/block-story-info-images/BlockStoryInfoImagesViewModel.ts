@@ -6,21 +6,24 @@ import ko = require('knockout');
 import MouseEventHelper from "../../../util/MouseEventHelper";
 import StringUtils from "../../../../lib/temple/util/type/StringUtils";
 import ThemeHelper from "../../../util/ThemeHelper";
+import {trackEvent} from "../../../util/Analytics";
 
 class BlockStoryInfoImagesViewModel extends AbstractBlockComponentViewModel<BlockStoryInfoImagesController, IBlockStoryInfoImagesOptions>
 {
-	public ThemeHelper:Class = ThemeHelper;
-	public MouseEventHelper:Class = MouseEventHelper;
-	public StringUtils:Class = StringUtils;
+	public ThemeHelper: Class = ThemeHelper;
+	public MouseEventHelper: Class = MouseEventHelper;
+	public StringUtils: Class = StringUtils;
 
-	public activeStory:KnockoutObservable<number> = ko.observable(0);
+	public activeStory: KnockoutObservable<number> = ko.observable(0);
 
 	/**
 	 * @public
 	 * @method handleMouseEnter
 	 */
-	public handleMouseEnter(index:number):void
+	public handleMouseEnter(index: number): void
 	{
+		trackEvent('storyInfoImages', 'click', 'open|' + this.data.stories[index].heading);
+
 		this.activeStory(index);
 	}
 
@@ -28,7 +31,7 @@ class BlockStoryInfoImagesViewModel extends AbstractBlockComponentViewModel<Bloc
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 		this.ThemeHelper = null;
 		this.MouseEventHelper = null;

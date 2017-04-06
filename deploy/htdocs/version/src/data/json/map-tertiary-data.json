@@ -1,0 +1,369 @@
+[
+	{
+		"id": 0,
+		"slides": [
+			{
+				"type": 6,
+				"heading": "Men <br/>25-54",
+				"subHeading": "How to reach Men 25-54",
+				"paragraph": "In the past 30 days 30% of men 25-54 went online for sports information and updates.",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/background-men.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-men.jpg",
+					"alt": "Empty"
+				},
+				"statistics": [
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-nca-football.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-nca-football.jpg",
+							"alt": "Yard Crashers"
+						},
+						"label": "Yard Crashers",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-espn2.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-espn2.jpg",
+							"alt": "Program"
+						}
+					},
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-legion.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-legion.jpg",
+							"alt": "Critics Choice Awards"
+						},
+						"label": "Critics Choice Awards",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-fox.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-fox.jpg",
+							"alt": "Program"
+						}
+					},
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-pga-tour.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-pga-tour.jpg",
+							"alt": "Critics Choice Awards"
+						},
+						"label": "Vikings",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-nbc-golf.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-nbc-golf.jpg",
+							"alt": "Program"
+						}
+					}
+				]
+			},
+			{
+				"type": 6,
+				"heading": "Reach <br/>Millennials",
+				"subHeading": "How to reach Millennials",
+				"paragraph": "35% of millennials agree that the ability to watch a program whenever they want is very important",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/background-millenials.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-millenials.jpg",
+					"alt": "Empty"
+				},
+				"statistics": [
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-wags.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-wags.jpg",
+							"alt": "Yard Crashers"
+						},
+						"label": "Odd Mom Out",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-e.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-e.jpg",
+							"alt": "Program"
+						}
+					},
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-scream.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-scream.jpg",
+							"alt": "Teachers"
+						},
+						"label": "Critics Choice Awards",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-mtv.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-mtv.jpg",
+							"alt": "Program"
+						}
+					},
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-another-period.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-another-period.jpg",
+							"alt": "SAG Awards"
+						},
+						"label": "SAG Awards",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-comedy-central.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-comedy-central.jpg",
+							"alt": "Program"
+						}
+					}
+				]
+			},
+			{
+				"type": 6,
+				"heading": "Women <br/>25-54",
+				"subHeading": "How to reach Women 25-54",
+				"paragraph": "41% of women 25-54 agree that the quality of the programs they watch is important",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/background-women.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-women.jpg",
+					"alt": "How to reach Women"
+				},
+				"statistics": [
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-yard-crashers.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-yard-crashers.jpg",
+							"alt": "Yard Crashers"
+						},
+						"label": "Yard Crashers",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-diy.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-diy.jpg",
+							"alt": "Program"
+						}
+					},
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-critics-choice-awards.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-critics-choice-awards.jpg",
+							"alt": "Critics Choice Awards"
+						},
+						"label": "Critics Choice Awards",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-ae.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-ae.jpg",
+							"alt": "Program"
+						}
+					},
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-vikings.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-vikings.jpg",
+							"alt": "Critics Choice Awards"
+						},
+						"label": "Vikings",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-history.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-history.jpg",
+							"alt": "Program"
+						}
+					}
+				]
+			},
+			{
+				"type": 6,
+				"heading": "Baby <br/>Boomers",
+				"subHeading": "How to reach Boomers",
+				"paragraph": "93% of Adults 50+ use television to watch video.",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/background-baby-boomers.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-baby-boomers.jpg",
+					"alt": "How to reach baby boomers"
+				},
+				"statistics": [
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-odd-mom-out.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-odd-mom-out.jpg",
+							"alt": "Yard Crashers"
+						},
+						"label": "Odd Mom Out",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-bravo.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-bravo.jpg",
+							"alt": "Program"
+						}
+					},
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-teachers.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-teachers.jpg",
+							"alt": "Teachers"
+						},
+						"label": "Critics Choice Awards",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-tv-land.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-tv-land.jpg",
+							"alt": "Program"
+						}
+					},
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-programs/2016-sag-awards.jpg",
+							"small": "inc/image/map-tertiary-programs/2016-sag-awards.jpg",
+							"alt": "SAG Awards"
+						},
+						"label": "SAG Awards",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-tbs-tnt.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-tbs-tnt.jpg",
+							"alt": "Program"
+						}
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 1,
+		"slides": [
+			{
+				"type": 2,
+				"heading": "All Day Reach",
+				"subHeading": "Multi-screen Campaigns are essential",
+				"paragraph": "Multi-screen advertising engages that right customer with your message. <br/>82% of daily media consumption occurs across TV, Online and Mobile.",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/background-all-day-reach.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-all-day-reach.jpg",
+					"alt": "How to reach families"
+				},
+				"statistics": [
+					{
+						"icon": "map-tertiary-1",
+						"label": "7am",
+						"value": "Smartphones Cable tv"
+					},
+					{
+						"icon": "map-tertiary-2",
+						"label": "11am",
+						"value": "online"
+					},
+					{
+						"icon": "map-tertiary-3",
+						"label": "3pm",
+						"value": "All Devices"
+					},
+					{
+						"icon": "map-tertiary-4",
+						"label": "7pm",
+						"value": "Cable TV - Tablets"
+					},
+					{
+						"icon": "map-tertiary-5",
+						"label": "11pm",
+						"value": "Cable TV"
+					}
+				]
+			},
+			{
+				"type": 5,
+				"heading": "Multi-Screen",
+				"subHeading": "Welcome to the new media landscape",
+				"paragraph": "Multi-screen is now the norm",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/background-multi-screen.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-multi-screen.jpg",
+					"alt": "How to reach families"
+				},
+				"statistics": [
+					{
+						"label": "Television drives digital engagement",
+						"value": "66% of smartphone users reach for their device to learn more about a product they saw advertised on TV."
+					},
+					{
+						"label": "Ad recall doubles when TV and Online are combined",
+						"value": "Brand recall is 27% when viewing TV ad alone, and increases to 50% when ad is seen on TV and Online. Message recall is doubled when seen on TV and Online."
+					},
+					{
+						"label": "TV ads drive action",
+						"value": "62% of adults 18-49 shop online or purchase something they have seen on a show or ad they are currently watching."
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 2,
+		"slides": [
+			{
+				"type": 6,
+				"heading": "The Right Audience",
+				"subHeading": "Audience focused networks deliver a growing audience",
+				"paragraph": "Our targeted networks continue to increase their reach while broadcast declines.",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/background-rightaudience.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-rightaudience.jpg",
+					"alt": "Empty"
+				},
+				"statistics": [
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-audiences/2016-sport-lovers.jpg",
+							"small": "inc/image/map-tertiary-audiences/2016-sport-lovers.jpg",
+							"alt": "Yard Crashers"
+						},
+						"label": "Sport Lovers",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-sport-lovers.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-sport-lovers.jpg",
+							"alt": "Program"
+						}
+					},
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-audiences/2016-hispanics.jpg",
+							"small": "inc/image/map-tertiary-audiences/2016-hispanics.jpg",
+							"alt": "Teachers"
+						},
+						"label": "Hispanics",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-hispanics.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-hispanics.jpg",
+							"alt": "Program"
+						}
+					},
+					{
+						"image": {
+							"normal": "inc/image/map-tertiary-audiences/2016-families.jpg",
+							"small": "inc/image/map-tertiary-audiences/2016-families.jpg",
+							"alt": "SAG Awards"
+						},
+						"label": "Families",
+						"value": {
+							"normal": "inc/image/map-tertiary-logos/2016-logo-families.jpg",
+							"small": "inc/image/map-tertiary-logos/2016-logo-families.jpg",
+							"alt": "Program"
+						}
+					}
+				]
+			},
+			{
+				"type": 1,
+				"heading": "Live TV Viewers",
+				"subHeading": "Better than ratings",
+				"paragraph": "Cable’s targeted networks deliver viewers that are engaged, loyal, influential and tune in live. <br/>AND, 62% of people correctly recalled half or more of the ads they had seen on TV. That’s over 15 percentage points higher than the next media vehicle.",
+				"background": {
+					"normal": "inc/image/map-tertiary-backgrounds/background-liveviewers.jpg",
+					"small": "inc/image/map-tertiary-backgrounds/background-liveviewers.jpg",
+					"alt": "Empty"
+				},
+				"statistics": [
+					{
+						"values": [
+							{
+								"label": "Cable Targeted Networks",
+								"value": 71
+							}
+						]
+					},
+					{
+						"values": [
+							{
+								"label": "Broadcast Networks",
+								"value": 56
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
