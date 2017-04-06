@@ -45,7 +45,7 @@ export function trackPage(page: string)
  */
 export function trackEvent(category: string, action: string, label?: string, value?: number): void
 {
-	if(label !== void 0)
+	if(label !== void 0 && label !== null)
 	{
 		// Strip out all html tags + white space
 		label = StringUtils.replace(StringUtils.stripTags(label), ' ', '-');
