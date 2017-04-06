@@ -1,7 +1,7 @@
 {
     "blocks": [
         {
-            "blockId": "articleTeaser",
+            "name": "articleTeaser",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -9,7 +9,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -131,10 +131,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"articleTeaser\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"theme\": 0,\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"target\": \"Lorem ipsum dolor sit amet\",\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"articleTeaser\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"theme\": 0,\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"target\": \"Lorem ipsum dolor sit amet\",\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
-            "blockId": "audioFragment",
+            "name": "audioFragment",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -142,7 +142,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -209,10 +209,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"audioFragment\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"file\": \"Lorem ipsum dolor sit amet\",\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"name\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"audioFragment\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"file\": \"Lorem ipsum dolor sit amet\",\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"name\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
-            "blockId": "blogPost",
+            "name": "blogPost",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -220,7 +220,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -434,10 +434,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"blogPost\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"social\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"author\": {\n            \"name\": \"Lorem ipsum dolor sit amet\",\n            \"role\": \"Lorem ipsum dolor sit amet\",\n            \"image\": {\n                \"normal\": \"path/to/image.jpg\",\n                \"small\": \"path/to/image.jpg\",\n                \"alt\": \"Lorem ipsum dolor sit amet\"\n            }\n        },\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"views\": 1,\n        \"time\": \"24:00\",\n        \"date\": \"01/01/2017\",\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"subHeading\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"blogPost\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"social\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"author\": {\n            \"name\": \"Lorem ipsum dolor sit amet\",\n            \"role\": \"Lorem ipsum dolor sit amet\",\n            \"image\": {\n                \"normal\": \"path/to/image.jpg\",\n                \"small\": \"path/to/image.jpg\",\n                \"alt\": \"Lorem ipsum dolor sit amet\"\n            }\n        },\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"views\": 1,\n        \"time\": \"24:00\",\n        \"date\": \"01/01/2017\",\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"subHeading\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
-            "blockId": "button",
+            "name": "button",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -445,7 +445,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -494,10 +494,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"button\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"alignment\": 0,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"button\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"alignment\": 0,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
         },
         {
-            "blockId": "filterContent",
+            "name": "filterContent",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -505,7 +505,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -628,10 +628,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"filterContent\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"loadMoreLabel\": \"Lorem ipsum dolor sit amet\",\n        \"filters\": [\n            {\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"type\": 1,\n                \"options\": [\n                    {\n                        \"value\": \"Lorem ipsum dolor sit amet\",\n                        \"label\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ]\n            }\n        ],\n        \"applyLabel\": \"Lorem ipsum dolor sit amet\",\n        \"filterLabel\": \"Lorem ipsum dolor sit amet\",\n        \"endpoint\": \"api/v1/path/to/endpoint\"\n    }\n}"
+            "example": "{\n    \"id\": \"filterContent\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"loadMoreLabel\": \"Lorem ipsum dolor sit amet\",\n        \"filters\": [\n            {\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"type\": 1,\n                \"options\": [\n                    {\n                        \"value\": \"Lorem ipsum dolor sit amet\",\n                        \"label\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ]\n            }\n        ],\n        \"applyLabel\": \"Lorem ipsum dolor sit amet\",\n        \"filterLabel\": \"Lorem ipsum dolor sit amet\",\n        \"endpoint\": \"api/v1/path/to/endpoint\"\n    }\n}"
         },
         {
-            "blockId": "heroMain",
+            "name": "heroMain",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -639,7 +639,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -781,10 +781,10 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"heroMain\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"backgroundVideo\": {\n                    \"url\": \"path/to/video.mp4\",\n                    \"type\": 0\n                },\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"statistics\": {\n                    \"heading\": \"Lorem ipsum dolor sit amet\",\n                    \"stats\": [\n                        {\n                            \"heading\": \"Lorem ipsum dolor sit amet\",\n                            \"description\": \"Lorem ipsum dolor sit amet\",\n                            \"value\": 1\n                        }\n                    ]\n                }\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"heroMain\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"backgroundVideo\": {\n                    \"url\": \"path/to/video.mp4\",\n                    \"type\": 0\n                },\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"statistics\": {\n                    \"heading\": \"Lorem ipsum dolor sit amet\",\n                    \"stats\": [\n                        {\n                            \"heading\": \"Lorem ipsum dolor sit amet\",\n                            \"description\": \"Lorem ipsum dolor sit amet\",\n                            \"value\": 1\n                        }\n                    ]\n                }\n            }\n        ]\n    }\n}"
         },
         {
-            "blockId": "heroSecondary",
+            "name": "heroSecondary",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -792,7 +792,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -877,10 +877,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"heroSecondary\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"backgroundVideo\": {\n            \"url\": \"path/to/video.mp4\",\n            \"type\": 0\n        },\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"backgroundColor\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"heroSecondary\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"backgroundVideo\": {\n            \"url\": \"path/to/video.mp4\",\n            \"type\": 0\n        },\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"backgroundColor\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
-            "blockId": "heroTertiary",
+            "name": "heroTertiary",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -888,7 +888,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -937,10 +937,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"heroTertiary\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"backgroundVideo\": {\n            \"url\": \"path/to/video.mp4\",\n            \"type\": 0\n        },\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"heroTertiary\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"backgroundVideo\": {\n            \"url\": \"path/to/video.mp4\",\n            \"type\": 0\n        },\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
         },
         {
-            "blockId": "howToAdvertise",
+            "name": "howToAdvertise",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -948,7 +948,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -1034,10 +1034,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"howToAdvertise\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"icon\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"howToAdvertise\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"icon\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
-            "blockId": "imageCallToActions",
+            "name": "imageCallToActions",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -1045,7 +1045,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -1140,10 +1140,10 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"imageCallToActions\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"callToActions\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"theme\": 0\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"imageCallToActions\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"callToActions\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"theme\": 0\n            }\n        ]\n    }\n}"
         },
         {
-            "blockId": "imageCarousel",
+            "name": "imageCarousel",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -1151,7 +1151,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -1228,10 +1228,10 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"imageCarousel\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"video\": {\n                    \"url\": \"path/to/video.mp4\",\n                    \"type\": 0\n                },\n                \"theme\": 0\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"imageCarousel\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"slides\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"video\": {\n                    \"url\": \"path/to/video.mp4\",\n                    \"type\": 0\n                },\n                \"theme\": 0\n            }\n        ]\n    }\n}"
         },
         {
-            "blockId": "imageWithContent",
+            "name": "imageWithContent",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -1239,7 +1239,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -1324,10 +1324,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"imageWithContent\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"croppedImage\": true,\n        \"alignment\": 0\n    }\n}"
+            "example": "{\n    \"id\": \"imageWithContent\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"background\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"croppedImage\": true,\n        \"alignment\": 0\n    }\n}"
         },
         {
-            "blockId": "info",
+            "name": "info",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -1335,7 +1335,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -1393,10 +1393,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"info\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"info\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
-            "blockId": "latest",
+            "name": "latest",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -1404,7 +1404,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -1554,10 +1554,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"latest\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"articles\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"target\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"tags\": [\n                    {\n                        \"target\": \"path/to/page\",\n                        \"type\": 0,\n                        \"label\": \"Lorem ipsum dolor sit amet\",\n                        \"title\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ],\n                \"theme\": 0\n            }\n        ],\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"latest\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"articles\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"target\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"tags\": [\n                    {\n                        \"target\": \"path/to/page\",\n                        \"type\": 0,\n                        \"label\": \"Lorem ipsum dolor sit amet\",\n                        \"title\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ],\n                \"theme\": 0\n            }\n        ],\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
-            "blockId": "map",
+            "name": "map",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -1565,7 +1565,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -1651,10 +1651,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"map\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"sequenceBackground\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"path/to/image.jpg\",\n                \"small\": \"path/to/image.jpg\",\n                \"alt\": \"Lorem ipsum dolor sit amet\"\n            },\n            \"total\": 1,\n            \"extension\": \"Lorem ipsum dolor sit amet\",\n            \"autoplay\": true\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"map\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"sequenceBackground\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"path/to/image.jpg\",\n                \"small\": \"path/to/image.jpg\",\n                \"alt\": \"Lorem ipsum dolor sit amet\"\n            },\n            \"total\": 1,\n            \"extension\": \"Lorem ipsum dolor sit amet\",\n            \"autoplay\": true\n        }\n    }\n}"
         },
         {
-            "blockId": "mapSecondary",
+            "name": "mapSecondary",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -1662,7 +1662,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -1738,10 +1738,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"mapSecondary\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"path/to/image.jpg\",\n                \"small\": \"path/to/image.jpg\",\n                \"alt\": \"Lorem ipsum dolor sit amet\"\n            },\n            \"total\": 1,\n            \"extension\": \"Lorem ipsum dolor sit amet\",\n            \"autoplay\": true\n        },\n        \"sequenceBackground\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"subHeading\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"mapSecondary\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"imageSequence\": {\n            \"image\": {\n                \"normal\": \"path/to/image.jpg\",\n                \"small\": \"path/to/image.jpg\",\n                \"alt\": \"Lorem ipsum dolor sit amet\"\n            },\n            \"total\": 1,\n            \"extension\": \"Lorem ipsum dolor sit amet\",\n            \"autoplay\": true\n        },\n        \"sequenceBackground\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"subHeading\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
-            "blockId": "mapTertiary",
+            "name": "mapTertiary",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -1749,7 +1749,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -1789,10 +1789,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"mapTertiary\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"tertiaryMapData\": 0\n    }\n}"
+            "example": "{\n    \"id\": \"mapTertiary\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"tertiaryMapData\": 0\n    }\n}"
         },
         {
-            "blockId": "marketMap",
+            "name": "marketMap",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -1800,7 +1800,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -1877,10 +1877,10 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"marketMap\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"notFoundMessage\": \"Lorem ipsum dolor sit amet\",\n        \"searchPlaceholder\": \"Lorem ipsum dolor sit amet\",\n        \"searchlabel\": \"Lorem ipsum dolor sit amet\",\n        \"service\": {\n            \"heading\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"marketMap\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"notFoundMessage\": \"Lorem ipsum dolor sit amet\",\n        \"searchPlaceholder\": \"Lorem ipsum dolor sit amet\",\n        \"searchlabel\": \"Lorem ipsum dolor sit amet\",\n        \"service\": {\n            \"heading\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
         },
         {
-            "blockId": "more",
+            "name": "more",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -1888,7 +1888,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -2075,10 +2075,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"more\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"articles\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"target\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"tags\": [\n                    {\n                        \"target\": \"path/to/page\",\n                        \"type\": 0,\n                        \"label\": \"Lorem ipsum dolor sit amet\",\n                        \"title\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ],\n                \"theme\": 0\n            }\n        ],\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"more\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"articles\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"target\": \"Lorem ipsum dolor sit amet\",\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"tags\": [\n                    {\n                        \"target\": \"path/to/page\",\n                        \"type\": 0,\n                        \"label\": \"Lorem ipsum dolor sit amet\",\n                        \"title\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ],\n                \"theme\": 0\n            }\n        ],\n        \"tags\": [\n            {\n                \"target\": \"path/to/page\",\n                \"type\": 0,\n                \"label\": \"Lorem ipsum dolor sit amet\",\n                \"title\": \"Lorem ipsum dolor sit amet\"\n            }\n        ],\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
-            "blockId": "networkOverview",
+            "name": "networkOverview",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -2086,7 +2086,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -2145,10 +2145,10 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"networkOverview\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"items\": [\n            {\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"networkOverview\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"items\": [\n            {\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
-            "blockId": "pageNotFound",
+            "name": "pageNotFound",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -2156,7 +2156,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -2232,10 +2232,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"pageNotFound\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"errorCode\": 1\n    }\n}"
+            "example": "{\n    \"id\": \"pageNotFound\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\",\n        \"errorCode\": 1\n    }\n}"
         },
         {
-            "blockId": "pathToPurchase",
+            "name": "pathToPurchase",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -2243,7 +2243,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -2320,10 +2320,10 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"pathToPurchase\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"secondaryParagraph\": \"Lorem ipsum dolor sit amet\"\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"pathToPurchase\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"steps\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"secondaryParagraph\": \"Lorem ipsum dolor sit amet\"\n            }\n        ]\n    }\n}"
         },
         {
-            "blockId": "personaSelector",
+            "name": "personaSelector",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -2331,7 +2331,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -2417,10 +2417,10 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"personaSelector\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"personas\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"personaType\": 0,\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"personaSelector\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"personas\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"personaType\": 0,\n                \"link\": {\n                    \"target\": \"path/to/page\",\n                    \"type\": 0,\n                    \"label\": \"Lorem ipsum dolor sit amet\",\n                    \"title\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                }\n            }\n        ]\n    }\n}"
         },
         {
-            "blockId": "programModule",
+            "name": "programModule",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -2428,7 +2428,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -2579,10 +2579,10 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"programModule\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"items\": [\n            {\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"stats\": {\n                    \"ageRange\": \"Lorem ipsum dolor sit amet\",\n                    \"demographic\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"video\": {\n                    \"url\": \"path/to/video.mp4\",\n                    \"type\": 0\n                },\n                \"tags\": [\n                    {\n                        \"target\": \"path/to/page\",\n                        \"type\": 0,\n                        \"label\": \"Lorem ipsum dolor sit amet\",\n                        \"title\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ]\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"programModule\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"items\": [\n            {\n                \"image\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"stats\": {\n                    \"ageRange\": \"Lorem ipsum dolor sit amet\",\n                    \"demographic\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"video\": {\n                    \"url\": \"path/to/video.mp4\",\n                    \"type\": 0\n                },\n                \"tags\": [\n                    {\n                        \"target\": \"path/to/page\",\n                        \"type\": 0,\n                        \"label\": \"Lorem ipsum dolor sit amet\",\n                        \"title\": \"Lorem ipsum dolor sit amet\"\n                    }\n                ]\n            }\n        ]\n    }\n}"
         },
         {
-            "blockId": "quote",
+            "name": "quote",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -2590,7 +2590,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -2657,10 +2657,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"quote\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"name\": \"Lorem ipsum dolor sit amet\",\n        \"quote\": \"Lorem ipsum dolor sit amet\",\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
+            "example": "{\n    \"id\": \"quote\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"description\": \"Lorem ipsum dolor sit amet\",\n        \"name\": \"Lorem ipsum dolor sit amet\",\n        \"quote\": \"Lorem ipsum dolor sit amet\",\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        }\n    }\n}"
         },
         {
-            "blockId": "quoteSecondary",
+            "name": "quoteSecondary",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -2668,7 +2668,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -2717,10 +2717,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"quoteSecondary\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"author\": \"Lorem ipsum dolor sit amet\",\n        \"quote\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"quoteSecondary\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"author\": \"Lorem ipsum dolor sit amet\",\n        \"quote\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
-            "blockId": "smallHeading",
+            "name": "smallHeading",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -2728,7 +2728,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -2768,10 +2768,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"smallHeading\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"smallHeading\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
-            "blockId": "smallImage",
+            "name": "smallImage",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -2779,7 +2779,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -2828,10 +2828,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"smallImage\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"alignment\": 0\n    }\n}"
+            "example": "{\n    \"id\": \"smallImage\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"image\": {\n            \"normal\": \"path/to/image.jpg\",\n            \"small\": \"path/to/image.jpg\",\n            \"alt\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"alignment\": 0\n    }\n}"
         },
         {
-            "blockId": "smallInfo",
+            "name": "smallInfo",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -2839,7 +2839,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -2897,10 +2897,10 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"smallInfo\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"smallInfo\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"link\": {\n            \"target\": \"path/to/page\",\n            \"type\": 0,\n            \"label\": \"Lorem ipsum dolor sit amet\",\n            \"title\": \"Lorem ipsum dolor sit amet\"\n        },\n        \"paragraph\": \"Lorem ipsum dolor sit amet\",\n        \"heading\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         },
         {
-            "blockId": "storyInfoImages",
+            "name": "storyInfoImages",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -2908,7 +2908,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -2994,10 +2994,10 @@
                     ]
                 }
             ],
-            "example": "{\n    \"id\": \"storyInfoImages\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"stories\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"theme\": 0\n            }\n        ]\n    }\n}"
+            "example": "{\n    \"id\": \"storyInfoImages\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"stories\": [\n            {\n                \"heading\": \"Lorem ipsum dolor sit amet\",\n                \"paragraph\": \"Lorem ipsum dolor sit amet\",\n                \"background\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"backgroundBlurred\": {\n                    \"normal\": \"path/to/image.jpg\",\n                    \"small\": \"path/to/image.jpg\",\n                    \"alt\": \"Lorem ipsum dolor sit amet\"\n                },\n                \"theme\": 0\n            }\n        ]\n    }\n}"
         },
         {
-            "blockId": "text",
+            "name": "text",
             "properties": [
                 {
                     "name": "scrollSection",
@@ -3005,7 +3005,7 @@
                     "required": false,
                     "defaultValue": "uniqueSectionName",
                     "description": "The id of the section so that we can scroll to this component with a gaiaGoto",
-                    "placeholder": "",
+                    "placeholder": "uniqueSectionName",
                     "properties": []
                 },
                 {
@@ -3045,7 +3045,7 @@
                     "properties": []
                 }
             ],
-            "example": "{\n    \"id\": \"text\",\n    \"data\": {\n        \"scrollSection\": \"Lorem ipsum dolor sit amet\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"html\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
+            "example": "{\n    \"id\": \"text\",\n    \"data\": {\n        \"scrollSection\": \"uniqueSectionName\",\n        \"overlap\": true,\n        \"windowed\": true,\n        \"marginTop\": 1,\n        \"html\": \"Lorem ipsum dolor sit amet\"\n    }\n}"
         }
     ],
     "references": [
@@ -3348,6 +3348,7 @@
             ]
         }
     ],
+    "stringLiterals": [],
     "files": [
         {
             "name": "IInitData",

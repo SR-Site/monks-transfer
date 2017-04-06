@@ -37,7 +37,6 @@ interface IBlockArticleTeaserOptions extends IAbstractBlockComponentOptions
 	 * @defaultValue 0
 	 */
 	theme:Theme;
-	ga
 }
 
 export default IBlockArticleTeaserOptions;
