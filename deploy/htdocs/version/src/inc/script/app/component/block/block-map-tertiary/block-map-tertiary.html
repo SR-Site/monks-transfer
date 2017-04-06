@@ -1,7 +1,29 @@
 <div class="component-block-map-tertiary" data-bind="css: {'windowed': data.windowed}">
 	<div class="site-frame">
-		<div class="slides">
-			<div class="slide abs-fill"></div>
+		<div class="slide-wrapper">
+			<div class="solid-background"></div>
+			<div class="slides">
+
+				<!-- ko foreach: $root.slides() -->
+
+					<!-- ko component: {
+						name: $root.slideTypeMap[$data.type],
+						onComplete: $root.controller.callbackCounter.get($root.controller.handleSlideReady.bind($root.controller, $index())),
+						options:{
+							index: $index(),
+							slideData: $data
+						}
+					} --><!-- /ko -->
+
+				<!-- /ko -->
+			</div>
+			<!-- ko component: {
+				name: 'map-pagination',
+				onComplete: $root.controller.callbackCounter.get($root.controller.handleMapPaginationReady.bind($root.controller)),
+				options: {
+					slides: $root.slides
+				}
+			} --><!-- /ko -->
 		</div>
 	</div>
 </div>

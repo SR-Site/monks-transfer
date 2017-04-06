@@ -69,7 +69,8 @@ function spectrum_page_attachments_alter(array &$page) {
 	  'rel' => 'shortcut icon',
 	  'content' => '/favicon.ico',
 	  'type' => "image/x-icon",
-	  'title' => 'favicon'
+	  'title' => 'favicon',
+      'href' => ''
   );
   $page['#attached']['html_head_link'][] = [$favicon, 'document-base'];
 }

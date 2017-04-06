@@ -1,0 +1,7 @@
+uuid: bfc2db25-2563-42ab-8022-a771a4d44844
+langcode: en
+status: true
+dependencies: {  }
+id: block_pdf
+label: 'Block Pdf'
+behavior_plugins: {  }

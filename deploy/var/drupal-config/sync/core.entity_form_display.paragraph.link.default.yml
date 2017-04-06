@@ -3,41 +3,49 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.link.field_file
     - field.field.paragraph.link.field_label
     - field.field.paragraph.link.field_target
     - field.field.paragraph.link.field_title
     - field.field.paragraph.link.field_type
     - paragraphs.paragraphs_type.link
   module:
+    - file
     - link
 id: paragraph.link.default
 targetEntityType: paragraph
 bundle: link
 mode: default
 content:
-  field_label:
+  field_file:
     weight: 0
     settings:
-      size: 60
-      placeholder: ''
+      progress_indicator: throbber
     third_party_settings: {  }
-    type: string_textfield
-  field_target:
-    weight: 3
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-  field_title:
+    type: file_generic
+  field_label:
     weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_type:
+  field_target:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_title:
     weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_type:
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select

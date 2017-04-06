@@ -1,13 +1,52 @@
 .component-block-map-tertiary {
 	position: relative;
 
-	.slides {
-		@include aspect-ratio(1100px, 550px);
+	.slide-wrapper {
 		width: calc(100% - #{$sizeGrid * 3});
 		margin-left: $sizeGrid * 3;
 	}
 
-	.slide {
-		background: $colorLightGrey
+	.slides {
+		@include aspect-ratio(1100px, 550px);
+		background: image('map-tertiary-backgrounds/background-empty.jpg');
+	}
+
+	.solid-background {
+		@include offset(0, 0);
+		@include aspect-ratio(1100px, 550px, false);
+		@include size(100%, auto);
+		position: absolute;
+		background: transparent;
+	}
+
+	.component-map-pagination {
+		margin-top: $sizeGrid;
+	}
+
+	@include respond-to('SMALL') {
+		.slide-wrapper {
+			width: 100%;
+			margin: 0;
+		}
+
+		.slides {
+			@include size(100%, 430px);
+			background: transparent;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.solid-background {
+			@include offset(0, 0);
+			@include size(100%, 340px);
+			background: $colorLightGrey;
+			position: absolute;
+
+			&:before {
+				display: none;
+			}
+		}
 	}
 }

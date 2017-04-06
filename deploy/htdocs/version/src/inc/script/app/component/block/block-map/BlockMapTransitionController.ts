@@ -13,7 +13,10 @@ class BlockMapTransitionController extends AbstractTransitionController<BlockMap
 		this.transitionInTimeline.from(this.element, 0.8, {
 			opacity: 0,
 			ease: Linear.easeNone
-		})
+		});
+
+		this.transitionInTimeline.add(() => this.parentController.activeSlide.transitionIn());
+		this.transitionInTimeline.add(this.getSubTimeline('.component-map-pagination'));
 	}
 }
 

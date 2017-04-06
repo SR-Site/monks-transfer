@@ -37,4 +37,5 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
-hidden: {  }
+hidden:
+  field_video: true

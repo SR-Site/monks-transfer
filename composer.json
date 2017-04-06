@@ -57,31 +57,31 @@
     "repositories": {
         "mediamonks-drupal-decoupled": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks-drupal.mm_decoupled.git"
+            "url": "git@git.assembla.com:mediamonks-drupal.mm_decoupled.git"
         },
         "mediamonks-drupal-gaia": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks-drupal.mm_gaia.git"
+            "url": "git@git.assembla.com:mediamonks-drupal.mm_gaia.git"
         },
         "mediamonks-drupal-prerender": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks-drupal.mm_prerender.git"
+            "url": "git@git.assembla.com:mediamonks-drupal.mm_prerender.git"
         },
         "mediamonks-drupal-release_tracker": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks-drupal.mm_release_tracker.git"
+            "url": "git@git.assembla.com:mediamonks-drupal.mm_release_tracker.git"
         },
         "mediamonks-drupal-rest": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks-drupal.mm_rest.git"
+            "url": "git@git.assembla.com:mediamonks-drupal.mm_rest.git"
         },
         "mediamonks-drupal-domainmenu": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks^mediamonks-drupal.mm_domainmenu.git"
+            "url": "git@git.assembla.com:mediamonks^mediamonks-drupal.mm_domainmenu.git"
         },
         "mediamonks-drupal-slug": {
             "type": "git",
-            "url": "https://git.assembla.com/mediamonks-drupal.mm_slug.git"
+            "url": "git@git.assembla.com:mediamonks-drupal.mm_slug.git"
         },
         "composer": {
             "type": "composer",
@@ -118,6 +118,7 @@
     "extra": {
         "patches": {
             "drupal/core": {
+				"MSSQL cannot update identity field for nodes": "patches/core-mssql-cannot-update-identity-field.patch",
                 "Allow text field to enforce a specific text format": "https://www.drupal.org/files/issues/allow_text_field_to-784672-111.patch"
             },
             "drupal/menu_admin_per_menu": {

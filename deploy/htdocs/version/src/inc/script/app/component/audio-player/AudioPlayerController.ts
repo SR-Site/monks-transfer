@@ -7,6 +7,7 @@ import Log from "lib/temple/util/Log";
 import ButtonPlayCircleController from "../button/button-play-circle/ButtonPlayCircleController";
 import AudioElement from "../../../lib/temple/util/AudioElement";
 import MediaElement from "../../../lib/temple/util/MediaElement";
+import {trackEvent} from "../../util/Analytics";
 
 class AudioPlayerController extends AbstractTransitionComponentController<AudioPlayerViewModel, IAudioPlayerOptions, AudioPlayerTransitionController>
 {
@@ -69,6 +70,8 @@ class AudioPlayerController extends AbstractTransitionComponentController<AudioP
 		if(this.viewModel.hasWebAudioSupport)
 		{
 			this._wavesurfer.playPause();
+
+			this.viewModel.isPlaying(this._wavesurfer.isPlaying());
 		}
 		else
 		{
@@ -82,6 +85,19 @@ class AudioPlayerController extends AbstractTransitionComponentController<AudioP
 				this._fallbackPlayer.play();
 				this.viewModel.isPlaying(true);
 			}
+		}
+
+		if(this.viewModel.isPlaying())
+		{
+			trackEvent('audioFragment', 'click', 'play|' + this.options.title);
+		}
+		else
+		{
+			const webAudioSupport = this.viewModel.hasWebAudioSupport;
+			const currentTime = webAudioSupport ? this._wavesurfer.getCurrentTime() : this._fallbackPlayer.currentTime;
+			const duration = webAudioSupport ? this._wavesurfer.getDuration() : this._fallbackPlayer.duration;
+
+			trackEvent('audioFragment', 'click', 'pause|' + this.options.title, Math.round(currentTime / duration * 100));
 		}
 	}
 

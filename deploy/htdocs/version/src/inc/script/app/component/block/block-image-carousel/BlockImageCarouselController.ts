@@ -8,24 +8,25 @@ import InfiniteImageCarousel from "../../../util/infinite-carousel/InfiniteImage
 import PaginatorDashedController from "../../paginator-dashed/PaginatorDashedController";
 import DataEvent from "../../../../lib/temple/event/DataEvent";
 import CarouselEvent from "../../../util/infinite-carousel/event/CarouselEvent";
+import {trackEvent} from "../../../util/Analytics";
 
 class BlockImageCarouselController extends AbstractBlockComponentController<BlockImageCarouselViewModel, IBlockImageCarouselOptions, BlockImageCarouselTransitionController>
 {
-	private _infiniteImageCarousel:InfiniteImageCarousel;
-	private _paginatorDashedController:PaginatorDashedController;
+	private _infiniteImageCarousel: InfiniteImageCarousel;
+	private _paginatorDashedController: PaginatorDashedController;
 
 	/**
-	 *	Instance of Log debug utility for debug logging
-	 *	@property _debug
-	 *	@private
+	 *    Instance of Log debug utility for debug logging
+	 *    @property _debug
+	 *    @private
 	 */
-	private _debug:Log = new Log('app.component.BlockImageCarousel');
+	private _debug: Log = new Log('app.component.BlockImageCarousel');
 
 	/**
-	 *	Overrides AbstractPageController.init()
-	 *	@method init
+	 *    Overrides AbstractPageController.init()
+	 *    @method init
 	 */
-	public init():void
+	public init(): void
 	{
 		super.init();
 
@@ -34,6 +35,10 @@ class BlockImageCarouselController extends AbstractBlockComponentController<Bloc
 		);
 
 		this.applyThreeWayBinding(this._infiniteImageCarousel.realCurrentPage, this.viewModel.currentPage);
+		this.destructibles.addKOSubscription(this._infiniteImageCarousel.realCurrentPage.subscribe((index) =>
+		{
+			trackEvent('imageCarousel', 'click', 'open|' + this.options.slides[index].heading, index + 1);
+		}))
 
 		this._debug.log('Init');
 	}
@@ -43,7 +48,7 @@ class BlockImageCarouselController extends AbstractBlockComponentController<Bloc
 	 * @method openIndex
 	 * @param index
 	 */
-	public openIndex(index:number):void
+	public openIndex(index: number): void
 	{
 		this._infiniteImageCarousel.open(index);
 	}
@@ -52,17 +57,17 @@ class BlockImageCarouselController extends AbstractBlockComponentController<Bloc
 	 * @public
 	 * @method handlePaginatorReady
 	 */
-	public handlePaginatorReady(controller:PaginatorDashedController):void
+	public handlePaginatorReady(controller: PaginatorDashedController): void
 	{
 		this._paginatorDashedController = controller;
-		controller.addEventListener(CarouselEvent.OPEN, (event:DataEvent<{index:number}>)=> this.openIndex(event.data.index));
+		controller.addEventListener(CarouselEvent.OPEN, (event: DataEvent<{ index: number }>) => this.openIndex(event.data.index));
 	}
 
 	/**
-	* @protected
-	* @method allComponentsLoaded
-	*/
-	protected allComponentsLoaded():void
+	 * @protected
+	 * @method allComponentsLoaded
+	 */
+	protected allComponentsLoaded(): void
 	{
 		this.transitionController = new BlockImageCarouselTransitionController(this.element, this);
 
@@ -73,7 +78,7 @@ class BlockImageCarouselController extends AbstractBlockComponentController<Bloc
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 		if(this._infiniteImageCarousel)
 		{

@@ -1,0 +1,23 @@
+uuid: 970730ce-21f4-4138-a9de-693b25cb448b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_windowed
+    - paragraphs.paragraphs_type.block_map_tertiary
+id: paragraph.block_map_tertiary.field_windowed
+field_name: field_windowed
+entity_type: paragraph
+bundle: block_map_tertiary
+label: Windowed
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

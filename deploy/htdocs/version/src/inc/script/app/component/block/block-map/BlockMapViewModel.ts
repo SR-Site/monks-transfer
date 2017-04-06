@@ -7,17 +7,18 @@ import StringUtils from "../../../../lib/temple/util/type/StringUtils";
 
 class BlockMapViewModel extends AbstractBlockComponentViewModel<BlockMapController, IBlockMapOptions>
 {
-	public StringUtils:Class= StringUtils;
-	public activeIndex:KnockoutObservable<number> = ko.observable(0);
+	public StringUtils: Class = StringUtils;
+	public slides: KnockoutObservableArray<{label: string; heading: string; paragraph: string;}> = ko.observableArray([]);
+	public activeSlide:KnockoutObservable<number> = ko.observable(0);
 
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 		this.StringUtils = null;
-		this.activeIndex = null;
+		this.activeSlide = null;
 
 		// always call this last
 		super.destruct();

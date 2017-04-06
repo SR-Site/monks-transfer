@@ -5,6 +5,7 @@ import FilterMenuViewModel from 'app/component/filter-menu/FilterMenuViewModel';
 
 import Log from "lib/temple/util/Log";
 import Scrollbar from "../../../lib/temple/component/Scrollbar";
+import {trackEvent} from "../../util/Analytics";
 
 class FilterMenuController extends AbstractTransitionComponentController<FilterMenuViewModel, IFilterMenuOptions, FilterMenuTransitionController>
 {
@@ -42,7 +43,7 @@ class FilterMenuController extends AbstractTransitionComponentController<FilterM
 	 * @method setFilters
 	 * @param tags
 	 */
-	public setFilters(targetFilters: {[type: string]: Array<{label: string;value: string;}>}): void
+	public setFilters(targetFilters: { [type: string]: Array<{ label: string; value: string; }> }): void
 	{
 		const filters = this.viewModel.filters();
 
@@ -102,17 +103,29 @@ class FilterMenuController extends AbstractTransitionComponentController<FilterM
 	private setupFilters(): void
 	{
 		let filters = {};
-		this.viewModel.data.filters.forEach((filter: {type: number;options: Array<{value: string;label: string;}>}) =>
+		this.viewModel.data.filters.forEach((filter: { type: number; label:string; options: Array<{ value: string; label: string; }> }) =>
 		{
 			filters[filter.type] = [];
 
-			filter.options.forEach((option: {value: string;label: string;}) =>
+			filter.options.forEach((option: { value: string; label: string; }) =>
 			{
-				filters[filter.type].push({
+				const newFilter = {
 					label: option.label,
 					value: option.value,
 					checked: ko.observable(false)
-				});
+				};
+
+				// Listen to the change
+				this.destructibles.addKOSubscription(newFilter.checked.subscribe((checked) =>
+				{
+					if(checked)
+					{
+						trackEvent('filterContent', 'click', 'filter|' + filter.label + '|' + option.label)
+					}
+				}))
+
+				// Save the new filter
+				filters[filter.type].push(newFilter);
 			});
 		});
 

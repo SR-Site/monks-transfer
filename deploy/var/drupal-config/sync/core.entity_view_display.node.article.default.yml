@@ -127,3 +127,4 @@ content:
     weight: 100
 hidden:
   field_image: true
+  field_thought_leadership: true

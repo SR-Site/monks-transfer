@@ -7,28 +7,33 @@ import IBlock from "../../../data/interface/block/IBlock";
 import BlockType from "../../../data/enum/type/BlockType";
 import DataManager from "../../../data/DataManager";
 import {DeviceState} from "../../../data/scss-shared/MediaQueries";
+import INewsArticle from "../../../data/interface/INewsArticle";
+import Blocks from "../../../data/enum/block/Blocks";
+import {trackEvent} from "../../../util/Analytics";
+import StringUtils from "../../../../lib/temple/util/type/StringUtils";
 
 class BlockFilterContentViewModel extends AbstractBlockComponentViewModel<BlockFilterContentController, IBlockFilterContentOptions>
 {
-	public BlockType:Enum = BlockType;
+	public BlockType: Enum = BlockType;
 
-	public items:KnockoutObservableArray<IBlock> = ko.observableArray([]);
-	public activePageIndex:KnockoutObservable<number> = ko.observable(0);
-	public totalPages:KnockoutObservableArray<number> = ko.observableArray([]);
-	public limit:number = 4;
+	public items: KnockoutObservableArray<IBlock> = ko.observableArray([]);
+	public activePageIndex: KnockoutObservable<number> = ko.observable(0);
+	public totalPages: KnockoutObservableArray<number> = ko.observableArray([]);
+	public limit: number = 4;
 	public offset: number = 0;
 
 	/**
 	 *  KnockoutObersvableArray pages
 	 *  @description Store loaded items in pages and memory, to avoid duplicate request.
 	 */
-	public pages:KnockoutObservableArray<{items:Array<IBlock>;pageIndex:number;}> = ko.observableArray([]);
+	public pages: KnockoutObservableArray<{ items: Array<IBlock>; pageIndex: number; }> = ko.observableArray([]);
 
 	/**
 	 *  KnockoutComputed showInPages
 	 *  @description Determines wether we want to show the items in pages or not (based on deviceState)
 	 */
-	public showInPages:KnockoutComputed<boolean> = ko.computed(() =>{
+	public showInPages: KnockoutComputed<boolean> = ko.computed(() =>
+	{
 		return DataManager.getInstance().deviceStateTracker.currentState() > DeviceState.SMALL
 	});
 
@@ -36,29 +41,47 @@ class BlockFilterContentViewModel extends AbstractBlockComponentViewModel<BlockF
 	 *  KnockoutComputed visibleItems
 	 *  @description for desktop we want to show in it pages, on mobile we want to load all items underneath eachother
 	 */
-	public visibleItems:KnockoutComputed<Array<IBlock>> = ko.computed(() =>{
+	public visibleItems: KnockoutComputed<Array<IBlock>> = ko.computed(() =>
+	{
 		let items = [];
 
-		if(this.showInPages()) {
+		if(this.showInPages())
+		{
 			let pageFound = this.pages().find((page) => page.pageIndex == this.activePageIndex());
 
-			if(pageFound) {
+			if(pageFound)
+			{
 				items = pageFound.items;
 			}
 		}
-		else {
+		else
+		{
 			items = this.items();
 		}
 
 		return items;
 	});
 
+	/**
+	 * @public
+	 * @method handleItemClick
+	 */
+	public handleItemClick(data: { id: string; data: INewsArticle }): boolean
+	{
+		if(data.id !== Blocks.INFO)
+		{
+			trackEvent('filterContent', 'click', StringUtils.camelCase(StringUtils.replace(data.id, 'block-', ''), false) + '|' + data.data.heading)
+		}
+
+		return true;
+	}
+
 
 	/**
 	 *  Overrides AbstractComponentViewModel.destruct()
 	 *  @method destruct
 	 */
-	public destruct():void
+	public destruct(): void
 	{
 
 		this.BlockType = null;

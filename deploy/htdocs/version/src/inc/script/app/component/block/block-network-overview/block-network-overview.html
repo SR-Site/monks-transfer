@@ -4,7 +4,7 @@
 			<div class="network-list js-draggable-element" data-bind="foreach: $root.rows">
 				<div class="network-row" data-bind="foreach: $data">
 					<!-- ko if: $data.link -->
-						<a class="network-list-item bg-contain" href="" data-bind="gaiaOpenLink: $data.link">
+						<a class="network-list-item bg-contain" href="" data-bind="gaiaOpenLink: $data.link, gaTrackEvent: {category:'networkOverview', action:'click', label:$data.image.alt}">
 							<span class="network-logo abs-fill bg-contain" data-bind="image: { image: $data.image, state: $root.deviceState() }"></span>
 						</a>
 					<!-- /ko -->

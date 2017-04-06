@@ -4,6 +4,7 @@ import IFilterMenuOptions from "app/component/filter-menu/IFilterMenuOptions";
 import CommonEvent from "../../../lib/temple/event/CommonEvent";
 
 import ko = require('knockout');
+import {trackEvent} from "../../util/Analytics";
 
 class FilterMenuViewModel extends AbstractTransitionComponentViewModel<FilterMenuController, IFilterMenuOptions>
 {
@@ -40,7 +41,6 @@ class FilterMenuViewModel extends AbstractTransitionComponentViewModel<FilterMen
 		// Loop through all filterTypes
 		Object.keys(this.filters()).forEach((key, index) =>
 		{
-
 			// Find CHECKED options per filter type
 			let chosenOptions = this.filters()[key].filter((option) => option.checked());
 
@@ -125,7 +125,10 @@ class FilterMenuViewModel extends AbstractTransitionComponentViewModel<FilterMen
 	 */
 	public applyFilter(): void
 	{
+		trackEvent('filterContent', 'click', 'apply');
+
 		this.controller.dispatch(CommonEvent.CHANGE, this.getFilterData());
+
 		this.filterChanged(false);
 	}
 
@@ -138,6 +141,8 @@ class FilterMenuViewModel extends AbstractTransitionComponentViewModel<FilterMen
 		// Only apply reset if any filter is set.
 		if(Object.keys(this.getFilterData()).length > 0)
 		{
+			trackEvent('filterContent', 'click', 'filter|clear');
+
 			Object.keys(this.filters()).forEach((key, index) =>
 			{
 				this.filters()[key].map((option) => option.checked(false));
