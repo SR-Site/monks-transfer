@@ -27,7 +27,8 @@ class ParagraphBlockMapTertiaryV1 extends SpectrumRestEntityProcessorBase {
         "data" => [
             "overlap" => $this->fieldProcessor->getFieldData($entity->get('field_overlap')),
             "windowed" => $this->fieldProcessor->getFieldData($entity->get('field_windowed')),
-            "marginTop" => (int) $entity->get('field_margin_top')->value
+            "marginTop" => (int) $entity->get('field_margin_top')->value,
+            "tertiaryMapData" => (int) $entity->field_tertiary_data->value
         ]
     ];
 
