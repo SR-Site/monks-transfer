@@ -23,12 +23,17 @@ class ParagraphLinkV1 extends RestEntityProcessorBase {
    */
   protected function getItemData($entity) {
     $link = $this->fieldProcessor->getFieldData($entity->get('field_target'));
+    $file = $this->fieldProcessor->getFieldData($entity->field_file);
+    $target = !empty($file) ? $file['relativePath'] : NULL;
 
+    if(!$target && isset($link['target']))
+        $target = $link['target'];
+      
     $data = [
       "label" => $this->fieldProcessor->getFieldData($entity->get('field_label')),
       "title" => $this->fieldProcessor->getFieldData($entity->get('field_title')),
-      "target" => isset($link['target']) ? $link['target'] : NULL,
-      "type" => isset($entity->get('field_type')->value) ? (int)$entity->get('field_type')->value : NULL,
+      "target" => $target,
+      "type" => isset($entity->get('field_type')->value) ? (int)$entity->get('field_type')->value : NULL
     ];
 
     return $data;
