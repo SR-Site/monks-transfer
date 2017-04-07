@@ -10,7 +10,6 @@ import LocaleManager from "../../../../../lib/temple/locale/LocaleManager";
 import {IContactData} from "../../../../data/service/UserService";
 import IGatewayError from "../../../../net/gateway/result/IGatewayError";
 import {trackEvent} from "../../../../util/Analytics";
-import Browser from "../../../../../lib/temple/util/Browser";
 
 class ContactController extends AbstractTransitionComponentController<ContactViewModel, IContactOptions, ContactTransitionController>
 {
