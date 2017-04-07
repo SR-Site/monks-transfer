@@ -10,6 +10,7 @@ import LocaleManager from "../../../../../lib/temple/locale/LocaleManager";
 import {IContactData} from "../../../../data/service/UserService";
 import IGatewayError from "../../../../net/gateway/result/IGatewayError";
 import {trackEvent} from "../../../../util/Analytics";
+import Browser from "../../../../../lib/temple/util/Browser";
 
 class ContactController extends AbstractTransitionComponentController<ContactViewModel, IContactOptions, ContactTransitionController>
 {
@@ -18,18 +19,17 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 	 *    @property _debug
 	 *    @private
 	 */
-	private _debug: Log = new Log('app.component.Contact');
+	private _debug:Log = new Log('app.component.Contact');
 
-	private _loader: Loader;
-	private _dataManager: DataManager = DataManager.getInstance();
-	private _fixedInputElementHelper: FixedElementHelper;
-
+	private _loader:Loader;
+	private _dataManager:DataManager = DataManager.getInstance();
+	private _fixedInputElementHelper:FixedElementHelper;
 
 	/**
 	 *    Overrides AbstractPageController.init()
 	 *    @method init
 	 */
-	public init(): void
+	public init():void
 	{
 		super.init();
 
@@ -41,19 +41,36 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 		this.transitionController = new ContactTransitionController(this.element, this);
 
 		this._fixedInputElementHelper = new FixedElementHelper(this.element);
+
+		// TODO: FIX this hack
+		// https://mediamonks.assembla.com/spaces/spectrum-reach-corporate-website/tickets/406-contact-us-form-(on-ipad)/details
+		// this hides all input fields but the currently focused one
+		if (Browser.ios === true && Browser.isTablet === true)
+		{
+			$('input[type=text]', this.element)
+				.on('focus', (ev) =>
+					$('input[type=text]', this.element)
+						.filter((i, item) => ev.target !== item)
+						.parents('.text-input-holder')
+						.css({'display': 'none'}))
+				.on('blur', (ev) =>
+					$('input[type=text]', this.element)
+						.parents('.text-input-holder')
+						.css({'display': 'block'}));
+		}
 	}
 
 	/**
 	 * @public
 	 * @method onSubmit
 	 */
-	public onSubmit(): void
+	public onSubmit():void
 	{
 		if(this.viewModel.myValidator.validate())
 		{
 			// Show loader
 			this._loader.show()
-				.then(()=> trackEvent('startAdvertising', 'click', 'submitStartAdvertising'))
+				.then(() => trackEvent('startAdvertising', 'click', 'submitStartAdvertising'))
 				.then(() => DataManager.getInstance().serviceModel.userService.contact(
 					<IContactData>this.viewModel.myValidator.getValues()
 				))
@@ -64,7 +81,7 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 					LocaleManager.getInstance().getString('notification.alert.contact_success.paragraph')
 				))
 				.then(() => this.resetForm())
-				.catch((result: IGatewayError) =>
+				.catch((result:IGatewayError) =>
 				{
 					this._loader.hide()
 						.then(() => this._dataManager.notification.showServerError(result.error.code))
@@ -73,12 +90,11 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 	}
 
 
-
 	/**
 	 * @private
 	 * @method resetForm
 	 */
-	private resetForm(): void
+	private resetForm():void
 	{
 		// Reset all the values
 		this.viewModel.fields.forEach((field) =>
@@ -95,7 +111,7 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 	 *  Overrides AbstractComponentController.destruct()
 	 *  @method destruct
 	 */
-	public destruct(): void
+	public destruct():void
 	{
 		if(this._loader)
 		{
