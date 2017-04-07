@@ -121,7 +121,7 @@ extends AbstractTransitionComponentController<TViewModel, TOptions, TTransitionC
 		{
 			const scrollWrapper = this.getCustomScrollElement();
 
-			if(scrollWrapper)
+			if(scrollWrapper && !bowser.ios)
 			{
 				const scrollContent = <HTMLElement>scrollWrapper.querySelector('.scroll-content');
 

@@ -41,23 +41,6 @@ class ContactController extends AbstractTransitionComponentController<ContactVie
 		this.transitionController = new ContactTransitionController(this.element, this);
 
 		this._fixedInputElementHelper = new FixedElementHelper(this.element);
-
-		// TODO: FIX this hack
-		// https://mediamonks.assembla.com/spaces/spectrum-reach-corporate-website/tickets/406-contact-us-form-(on-ipad)/details
-		// this hides all input fields but the currently focused one
-		if (Browser.ios === true && Browser.isTablet === true)
-		{
-			$('input[type=text]', this.element)
-				.on('focus', (ev) =>
-					$('input[type=text]', this.element)
-						.filter((i, item) => ev.target !== item)
-						.parents('.text-input-holder')
-						.css({'display': 'none'}))
-				.on('blur', (ev) =>
-					$('input[type=text]', this.element)
-						.parents('.text-input-holder')
-						.css({'display': 'block'}));
-		}
 	}
 
 	/**
