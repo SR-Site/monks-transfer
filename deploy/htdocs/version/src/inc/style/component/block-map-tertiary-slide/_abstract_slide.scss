@@ -1,4 +1,4 @@
-.map-tertiary-slide {
+	.map-tertiary-slide {
 	color: $colorPrimary;
 
 	.slide-heading {
@@ -18,7 +18,7 @@
 	}
 
 	.slide-statistics {
-		top: 60%;
+		top: 50%;
 		left: $sizeGrid * 6;
 		right: $sizeGrid * 6;
 		font-size: 0;
@@ -51,6 +51,7 @@
 		}
 
 		.slide-statistics {
+			top: 60%;
 			left: $sizeGrid * 4;
 			right: $sizeGrid * 4;
 		}
@@ -66,7 +67,6 @@
 		}
 
 		.slide-statistics {
-			top: 40%;
 			left: $sizeGrid * 3;
 			right: $sizeGrid * 3;
 		}

@@ -2,14 +2,8 @@ import AbstractButtonViewModel from "./AbstractButtonViewModel";
 import IAbstractButtonOptions from "./IAbstractButtonOptions";
 import IMethod from "../../data/interface/action/IMethod";
 import ILink from "../../data/interface/action/ILink";
-import * as Gaia from "../../../lib/gaia/api/Gaia";
-import LinkType from "../../data/enum/type/LinkType";
-import ScrollUtils from "../../util/ScrollUtils";
 import AbstractTransitionComponentController from "../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
-import Branches from "../../data/enum/gaia/Branches";
 import AbstractTransitionController from "../../util/component-transition/AbstractTransitionController";
-import DataManager from "../../data/DataManager";
-import PanelBlocks from "../../data/enum/block/PanelBlocks";
 import LinkHelper from "../../util/LinkHelper";
 
 abstract class AbstractButtonController<TViewModel extends AbstractButtonViewModel<any, any>,

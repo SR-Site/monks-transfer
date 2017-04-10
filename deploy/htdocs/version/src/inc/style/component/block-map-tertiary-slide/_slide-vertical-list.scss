@@ -30,11 +30,13 @@
 		vertical-align: top;
 	}
 
-	@include respond-to(MEDIUM) {
+	@include respond-to(LARGE) {
 		.statistic:not(:last-child) {
 			margin-bottom: $sizeGrid / 2;
 		}
+	}
 
+	@include respond-to(MEDIUM) {
 		.statistic {
 
 			.copy {
