@@ -35,6 +35,12 @@
 		transform: translate(0, 0);
 	}
 
+	.is-ipad & {
+		.input-focussed & {
+			position: absolute;
+		}
+	}
+
 	@include respond-to(SMALL) {
 		max-width: 100%;
 

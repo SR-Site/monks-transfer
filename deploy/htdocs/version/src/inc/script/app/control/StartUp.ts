@@ -54,6 +54,10 @@ class StartUp
 				document.getElementsByTagName('html')[0].className += ' is-desktop';
 			}
 
+			if(bowser.ipad) {
+				document.getElementsByTagName('html')[0].className += ' is-ipad';
+			}
+
 			configManagerInstance.init(config.config, config.environment);
 
 			// just because we need it here!

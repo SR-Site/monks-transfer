@@ -34,6 +34,7 @@ declare class bowser
 	 */
 	public static mobile:boolean;
 	public static tablet:boolean;
+	public static ipad:boolean;
 
 	/**
 	 * Shared Browser/OS Flags

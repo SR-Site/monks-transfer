@@ -7,6 +7,7 @@ import AbstractTransitionComponentController from "../../util/component-transiti
 import NativeEventListener from "../../../lib/temple/event/NativeEventListener";
 import ThrottleDebounce from "../../../lib/temple/util/ThrottleDebounce";
 import DefaultSlideoutPanelTransitionController from "./DefaultSlideoutPanelTransitionController";
+import bowser = require('bowser');
 
 class DefaultSlideoutPanelController<
 	TViewModel extends DefaultSlideoutPanelViewModel<any, any>,
@@ -121,7 +122,7 @@ extends AbstractTransitionComponentController<TViewModel, TOptions, TTransitionC
 		{
 			const scrollWrapper = this.getCustomScrollElement();
 
-			if(scrollWrapper)
+			if(scrollWrapper && !bowser.ios)
 			{
 				const scrollContent = <HTMLElement>scrollWrapper.querySelector('.scroll-content');
 

@@ -5,6 +5,7 @@ import NativeEventListener from "../../lib/temple/event/NativeEventListener";
 class FixedElementHelper extends Destructible
 {
 	public static inputFocussed: KnockoutObservable<boolean> = ko.observable(false);
+	public static FOCUS_CLASS:string = 'input-focussed';
 
 	private _destructibles: DestructibleHelper = new DestructibleHelper();
 
@@ -27,6 +28,8 @@ class FixedElementHelper extends Destructible
 	 */
 	private handleInputFocus(): void
 	{
+		document.body.classList.add(FixedElementHelper.FOCUS_CLASS);
+
 		FixedElementHelper.inputFocussed(true);
 	}
 
@@ -36,6 +39,8 @@ class FixedElementHelper extends Destructible
 	 */
 	private handleInputBlur(): void
 	{
+		document.body.classList.remove(FixedElementHelper.FOCUS_CLASS);
+
 		FixedElementHelper.inputFocussed(false);
 	}
 

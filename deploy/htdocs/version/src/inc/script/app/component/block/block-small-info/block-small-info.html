@@ -1,28 +1,29 @@
 <div class="component-block-small-info">
-
 	<div class="site-frame">
-		<div class="introduction">
-			<h4 class="heading heading-04" data-bind="html: data.heading"></h4>
-		</div>
-		<div class="description">
-			<p class="copy copy-01" data-bind="html: data.paragraph"></p>
+		<div class="overrule-overlap">
+			<div class="introduction">
+				<h4 class="heading heading-04" data-bind="html: data.heading"></h4>
+			</div>
+			<div class="description">
+				<p class="copy copy-01" data-bind="html: data.paragraph"></p>
 
-			<!-- ko if: data.link -->
-				<!-- ko component: {
-					name: 'button/button-main',
-					onComplete: $root.controller.callbackCounter.get(),
-					options: {
-						gaTracking: {
-							category: 'smallInfo',
-							action: 'click',
-							label: data.heading + '|' + data.link.title
-						},
-						action: data.link,
-						size: $root.ButtonSize.LARGE,
-						disabled: $root.findOutMoreDisabled
-					}
-				} --><!-- /ko -->
-			<!-- /ko -->
+				<!-- ko if: data.link -->
+					<!-- ko component: {
+						name: 'button/button-main',
+						onComplete: $root.controller.callbackCounter.get(),
+						options: {
+							gaTracking: {
+								category: 'smallInfo',
+								action: 'click',
+								label: data.heading + '|' + data.link.title
+							},
+							action: data.link,
+							size: $root.ButtonSize.LARGE,
+							disabled: $root.findOutMoreDisabled
+						}
+					} --><!-- /ko -->
+				<!-- /ko -->
+			</div>
 		</div>
 	</div>
 </div>
