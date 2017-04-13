@@ -10,7 +10,7 @@ class BlockTextTransitionController extends AbstractTransitionController<BlockTe
 	 * */
 	protected setupTransitionInTimeline(): void
 	{
-		this.transitionInTimeline.from(this.element, 0.8, {y: 50, autoAlpha: 0, ease: Expo.easeOut});
+		this.transitionInTimeline.from(this.element.querySelector('.html-content'), 0.8, {opacity: 0, ease: Expo.easeOut});
 	}
 }
 

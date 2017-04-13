@@ -72,6 +72,12 @@
 		}
 	}
 
+	@include respond-to(LARGE) {
+		.site-frame {
+			padding-left: $sizeGrid * 2;
+			padding-right: $sizeGrid * 2;
+		}
+	}
 	@include respond-to(SMALL) {
 
 		.date {
