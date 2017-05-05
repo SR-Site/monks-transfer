@@ -1,0 +1,12 @@
+.component-button-tertiary {
+	font: 1.6rem / 1 $fontOpenSans;
+	font-weight: 600;
+	padding: 1rem;
+	color: $colorValidationError;
+	border: 2px solid currentColor;
+
+	@include respond-to(SMALL) {
+		font-size: 2.4rem;
+		padding: 2rem;
+	}
+}

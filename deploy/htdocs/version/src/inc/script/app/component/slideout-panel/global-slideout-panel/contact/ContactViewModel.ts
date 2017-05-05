@@ -5,6 +5,7 @@ import KnockoutValidator from "../../../../../lib/temple/util/knockoutvalidator/
 import ValidationRules from "../../../../../lib/temple/util/knockoutvalidator/ValidationRules";
 
 import ko = require('knockout');
+import DataManager from 'app/data/DataManager';
 
 class ContactViewModel extends DefaultComponentTransitionViewModel<ContactController, IContactOptions>
 {
@@ -74,6 +75,15 @@ class ContactViewModel extends DefaultComponentTransitionViewModel<ContactContro
 	public onSubmit(): void
 	{
 		this.controller.onSubmit();
+	}
+
+	/**
+	 * @public
+	 * @method handleCallClick
+	 */
+	public handleCallClick(): void
+	{
+		window.open('tel:' + DataManager.getInstance().settingsModel.initDataModel.contactOptions.phone.phoneNumber);
 	}
 
 	/**

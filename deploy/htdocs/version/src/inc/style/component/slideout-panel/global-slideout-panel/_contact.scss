@@ -1,4 +1,5 @@
 .component-slideout-panel_contact {
+	position: relative;
 
 	.sub-title {
 		padding-bottom: $sizeGrid/2;
@@ -7,6 +8,11 @@
 
 	.form-fields {
 		margin-top: $sizeGrid;
+	}
+
+	.component-button-tertiary {
+		@include pos(0, 0, auto, auto);
+		position: absolute;
 	}
 
 	.component-button-secondary {
