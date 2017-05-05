@@ -102,7 +102,10 @@ let config: IConfig = {
 		[PropertyNames.MOCK_CONTENT]: true,
 		[PropertyNames.MAPBOX_ACCESS_TOKEN]: 'pk.eyJ1IjoibGFyc3ZhbmJyYWFtIiwiYSI6ImNpeW8zNXV2NjAwNjAzM3FsMnV1Z3E4Z2QifQ.UdtOqQiB6YK_lDBthfL6oA',
 		[PropertyNames.MAPBOX_MAP_STYLE]: 'mapbox://styles/larsvanbraam/ciyodzuy800ds2sla6tuazga1',
-		[PropertyNames.GOOGLE_ANALYTICS]: '123456789'
+		[PropertyNames.GOOGLE_ANALYTICS]: '123456789',
+		[PropertyNames.FACEBOOK_PIXEL_ID]: '1499374196803695',
+		[PropertyNames.TWITTER_PIXEL_ID]: 'nx7ko',
+		[PropertyNames.LINKED_IN_PIXEL_ID]: '41619'
 	}
 };
 

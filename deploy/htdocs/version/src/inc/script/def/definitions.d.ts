@@ -61,3 +61,6 @@ declare type int = number;
 declare type uint = number;
 declare type float = number;
 declare type URI = string;
+
+declare var fbq:any;
+declare var twq:any;

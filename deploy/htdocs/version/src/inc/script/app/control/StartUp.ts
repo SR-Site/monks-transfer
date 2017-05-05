@@ -18,6 +18,9 @@ import IState from "../data/interface/IState";
 import ITertiaryMapData from "../data/interface/ITertiaryMapData";
 import BrowserUtil from "../util/BrowserUtil";
 import LoadGoogleAnalytics from "./LoadGoogleAnalytics";
+import LoadFacebookPixel from 'app/control/LoadFacebookPixel';
+import LoadTwitterPixel from 'app/control/LoadTwitterPixel';
+import LoadLinkedInPixel from 'app/control/LoadLinkedInPixel';
 
 // localization
 //import InitLocaleTask from "app/control/InitLocaleTask";
@@ -78,6 +81,9 @@ class StartUp
 
 			sequence.add(new LoadInitTask());
 			sequence.add(new LoadGoogleAnalytics());
+			sequence.add(new LoadFacebookPixel());
+			sequence.add(new LoadTwitterPixel());
+			sequence.add(new LoadLinkedInPixel());
 
 			/**
 			 * See the "MapTertiaryData.ts" file for the id's of each of the data set

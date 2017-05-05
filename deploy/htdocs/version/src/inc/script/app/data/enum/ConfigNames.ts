@@ -29,4 +29,7 @@ export class PropertyNames
 	public static MAPBOX_ACCESS_TOKEN:string = 'mapboxAccessToken';
 	public static MAPBOX_MAP_STYLE:string = 'mapboxMapStyle';
 	public static GOOGLE_ANALYTICS:string = 'googleAnalytics';
+	public static FACEBOOK_PIXEL_ID:string = 'facebookPixelId';
+	public static TWITTER_PIXEL_ID:string = 'twitterPixelId';
+	public static LINKED_IN_PIXEL_ID:string = 'linkedinPixelId';
 }

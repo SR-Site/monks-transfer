@@ -432,6 +432,8 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 		// Store the route for updating the header logo
 		DataManager.getInstance().currentRoute(route);
 
+		this.trackPageView();
+
 		return DataManager.getInstance().settingsModel.pageLayoutModel.getLayout(route)
 			.then((result: IPageLayout) =>
 			{
@@ -452,6 +454,20 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 			{
 				console.error('[DefaultContentPageController]  went wrong binding the page, either the route (' + Gaia.api.getRoute() + ') does not exist or there is a knockout binding error. Result: ', result);
 			});
+	}
+
+	/**
+	 * @private
+	 * @method trackPageView
+	 * @description Multiple 3rd party page views can be tracked here
+	 */
+	private trackPageView():void
+	{
+		// Facebook pixel code
+		if(fbq) fbq('track', 'PageView');
+
+		// Twitter pixel code
+		if(twq) twq('track', 'PageView');
 	}
 
 	/**
