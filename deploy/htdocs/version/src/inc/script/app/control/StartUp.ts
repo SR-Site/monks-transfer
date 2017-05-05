@@ -21,6 +21,7 @@ import LoadGoogleAnalytics from "./LoadGoogleAnalytics";
 import LoadFacebookPixel from 'app/control/LoadFacebookPixel';
 import LoadTwitterPixel from 'app/control/LoadTwitterPixel';
 import LoadLinkedInPixel from 'app/control/LoadLinkedInPixel';
+import LoadHotjar from 'app/control/LoadHotjar';
 
 // localization
 //import InitLocaleTask from "app/control/InitLocaleTask";
@@ -84,6 +85,7 @@ class StartUp
 			sequence.add(new LoadFacebookPixel());
 			sequence.add(new LoadTwitterPixel());
 			sequence.add(new LoadLinkedInPixel());
+			sequence.add(new LoadHotjar());
 
 			/**
 			 * See the "MapTertiaryData.ts" file for the id's of each of the data set

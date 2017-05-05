@@ -32,4 +32,5 @@ export class PropertyNames
 	public static FACEBOOK_PIXEL_ID:string = 'facebookPixelId';
 	public static TWITTER_PIXEL_ID:string = 'twitterPixelId';
 	public static LINKED_IN_PIXEL_ID:string = 'linkedinPixelId';
+	public static HOTJAR_ID:string = 'hotjarId';
 }

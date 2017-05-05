@@ -105,7 +105,8 @@ let config: IConfig = {
 		[PropertyNames.GOOGLE_ANALYTICS]: '123456789',
 		[PropertyNames.FACEBOOK_PIXEL_ID]: '1499374196803695',
 		[PropertyNames.TWITTER_PIXEL_ID]: 'nx7ko',
-		[PropertyNames.LINKED_IN_PIXEL_ID]: '41619'
+		[PropertyNames.LINKED_IN_PIXEL_ID]: '41619',
+		[PropertyNames.HOTJAR_ID]: '481416'
 	}
 };
 

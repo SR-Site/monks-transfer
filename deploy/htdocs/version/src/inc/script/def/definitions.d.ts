@@ -64,3 +64,4 @@ declare type URI = string;
 
 declare var fbq:any;
 declare var twq:any;
+declare var hj:any;
