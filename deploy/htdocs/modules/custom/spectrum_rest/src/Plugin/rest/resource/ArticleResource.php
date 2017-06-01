@@ -93,7 +93,7 @@ class ArticleResource extends ResourceBase {
 
     $this->requestData = $entity;
 
-    $this->validateRequest();
+    //$this->validateRequest();
     $this->validateAccess();
 
     $this->addCacheableDependency();
