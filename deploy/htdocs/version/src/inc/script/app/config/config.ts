@@ -72,7 +72,7 @@ let config: IConfig = {
 			urls: {},
 			properties: {
 				[PropertyNames.MOCK_CONTENT]: false,
-				[PropertyNames.GOOGLE_ANALYTICS]: 'UA-67197200-1'
+				[PropertyNames.GOOGLE_ANALYTICS]: 'UA-67197200-2'
 			}
 		},
 		[EnvironmentNames.MONK_APPS]: {
@@ -121,7 +121,7 @@ let environment: string = EnvironmentNames.PRODUCTION;
 let host: string = document.location.host;
 if(host.indexOf('mediamonks.local') != -1)
 {
-	host = 'localhost';
+	host = 'localhost';z
 }
 
 switch(host.split(':').shift())
