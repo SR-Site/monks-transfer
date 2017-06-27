@@ -3,7 +3,7 @@ class ValidationRules {
 
 	public static emailRegex:RegExp = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 	public static nonEmpty:RegExp = /^.+$/;
-	public static isValidPhone:RegExp = /^[\+]?(\d\-?){8,12}\d$/;
+	public static isValidPhone:RegExp = /^[\+]?(\d?){8,12}\d$/;
 
 	public static isValidEmail(value:string, name:string):string
 	{
