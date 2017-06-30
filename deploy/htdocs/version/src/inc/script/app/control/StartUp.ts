@@ -23,6 +23,7 @@ import LoadTwitterPixel from 'app/control/LoadTwitterPixel';
 import LoadLinkedInPixel from 'app/control/LoadLinkedInPixel';
 import LoadHotjar from 'app/control/LoadHotjar';
 import LoadPardotTracking from 'app/control/LoadPardotTracking';
+import LoadForensics from 'app/control/LoadForensics';
 
 // localization
 //import InitLocaleTask from "app/control/InitLocaleTask";
@@ -82,12 +83,14 @@ class StartUp
 			}
 
 			sequence.add(new LoadInitTask());
+
 			sequence.add(new LoadGoogleAnalytics());
 			sequence.add(new LoadFacebookPixel());
 			sequence.add(new LoadTwitterPixel());
 			sequence.add(new LoadLinkedInPixel());
 			sequence.add(new LoadHotjar());
 			sequence.add(new LoadPardotTracking());
+			sequence.add(new LoadForensics());
 
 			/**
 			 * See the "MapTertiaryData.ts" file for the id's of each of the data set

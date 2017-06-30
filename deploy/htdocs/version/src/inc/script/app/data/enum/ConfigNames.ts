@@ -35,4 +35,5 @@ export class PropertyNames
 	public static HOTJAR_ID:string = 'hotjarId';
 	public static PARDOT_APPLICATION_ID:string = 'pardotApplicationId';
 	public static PARDOT_CLIENT_ID:string = 'pardotClientId';
+	public static FORENSICS_ID:string = 'pardotClientId';
 }

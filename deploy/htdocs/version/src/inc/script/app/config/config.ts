@@ -108,7 +108,8 @@ let config: IConfig = {
 		[PropertyNames.LINKED_IN_PIXEL_ID]: '41619',
 		[PropertyNames.HOTJAR_ID]: '481416',
 		[PropertyNames.PARDOT_APPLICATION_ID]: '85712',
-		[PropertyNames.PARDOT_CLIENT_ID]: '13314'
+		[PropertyNames.PARDOT_CLIENT_ID]: '13314',
+		[PropertyNames.FORENSICS_ID]: '103509'
 	}
 };
 
