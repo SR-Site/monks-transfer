@@ -106,10 +106,11 @@ let config: IConfig = {
 		[PropertyNames.FACEBOOK_PIXEL_ID]: '1499374196803695',
 		[PropertyNames.TWITTER_PIXEL_ID]: 'nx7ko',
 		[PropertyNames.LINKED_IN_PIXEL_ID]: '41619',
-		[PropertyNames.HOTJAR_ID]: '481416'
+		[PropertyNames.HOTJAR_ID]: '481416',
+		[PropertyNames.PARDOT_APPLICATION_ID]: '85712',
+		[PropertyNames.PARDOT_CLIENT_ID]: '13314'
 	}
 };
-
 
 /**
  *
