@@ -77,13 +77,12 @@ class MarketSearchViewModel extends AbstractTransitionComponentViewModel<MarketS
 	 */
 	public handleSubmit(): void
 	{
-		// const suggestion = this.suggestions();
-		//
-		// if(suggestion)
-		// {
-		// 	// Select the market
-		// 	this.handleSelectMarket(suggestion.value);
-		// }
+		const suggestions = this.suggestions();
+
+		if(suggestions.length)
+		{
+			this.handleSelectMarket(suggestions[0].value);
+		}
 	}
 
 	/**
