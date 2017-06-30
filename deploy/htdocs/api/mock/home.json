@@ -79,7 +79,7 @@
 			{
 				"id": "videoWithContent",
 				"data": {
-					"alignment": 1,
+					"alignment": 0,
 					"windowed": true,
 					"scrollSection": "videoWithContent",
 					"marginTop": 2,

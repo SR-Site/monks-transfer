@@ -39,7 +39,7 @@
 	}
 
 	.copy {
-		margin-bottom: $sizeGrid / 2;
+		margin-bottom: $sizeGrid;
 	}
 
 	.component-button-main {
@@ -73,15 +73,26 @@
 			flex-direction: column;
 		}
 
-		.video-wrapper {
-			order: 1;
-			width: 100%;
+		.heading {
+			margin-bottom: $sizeGrid * 1.5;
 		}
 
-		.video-description {
-			order: 2;
-			width: 100%;
-			padding: $sizeGrid;
+		.copy {
+			margin-bottom: $sizeGrid * 2;
+		}
+
+		&.left-aligned,
+		&.right-aligned {
+			.video-wrapper {
+				order: 1;
+				width: 100%;
+			}
+
+			.video-description {
+				order: 2;
+				width: 100%;
+				padding: $sizeGrid * 1.5 $sizeGrid 0;
+			}
 		}
 	}
 }
