@@ -8,7 +8,7 @@
 			{
 				"id": "marketMap",
 				"data": {
-					"marginTop": 0,
+					"marginTop": 2,
 					"service": {
 						"heading": "Start advertising today"
 					},
