@@ -64,6 +64,9 @@ class BlockMarketMapViewModel extends AbstractBlockComponentViewModel<BlockMarke
 	public toggleSidePanel(): void
 	{
 		this.sidePanelIsOpen(!this.sidePanelIsOpen());
+
+		console.log('update scrollbar');
+		setTimeout(() => this.controller.updateScrollBar(), 300)
 	}
 
 	/**
