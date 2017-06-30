@@ -14,9 +14,6 @@ class LoadForensics extends AbstractTask {
 	 * @inheritDoc
 	 */
 	public executeTaskHook(): void {
-		window['piAId'] = configManagerInstance.getProperty(PropertyNames.PARDOT_APPLICATION_ID);
-		window['piCId'] = configManagerInstance.getProperty(PropertyNames.PARDOT_CLIENT_ID);
-
 		AssetLoader.loadScript(
 			`https://secure.leadforensics.com/js/${configManagerInstance.getProperty(PropertyNames.FORENSICS_ID)}.js`)
 
