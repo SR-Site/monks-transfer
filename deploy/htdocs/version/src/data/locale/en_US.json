@@ -28,7 +28,8 @@
 			"label": {
 			},
 			"select": {
-				"state": "Select a State"
+				"state": "Select a State",
+				"city": "Select a City"
 			}
 		}
 	},

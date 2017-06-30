@@ -121,7 +121,7 @@ let environment: string = EnvironmentNames.PRODUCTION;
 let host: string = document.location.host;
 if(host.indexOf('mediamonks.local') != -1)
 {
-	host = 'localhost';z
+	host = 'localhost';
 }
 
 switch(host.split(':').shift())
