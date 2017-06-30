@@ -1,0 +1,60 @@
+<div class="component-block-video-with-content">
+	<div class="site-frame">
+		<div class="overrule-overlap">
+
+			<div class="video-wrapper">
+				<div class="video">
+					<figure class="video-poster abs-fill">
+						<img data-bind="
+						image: {
+							image: data.poster,
+							state: $root.deviceState()
+						}"/>
+
+						<!-- ko component: {
+							name: 'button/button-play-circle',
+							onComplete: $root.controller.callbackCounter.get(),
+							options: {
+								gaTracking: {
+									category: 'videoWithContent',
+									action: 'click',
+									label: 'play|' + data.heading
+								},
+								action: {
+									event: dataManager.videoOverlay.show.bind(dataManager.videoOverlay, {
+										title: data.heading,
+										video: data.video,
+										poster: data.poster,
+										loop: false,
+										controls: $root.Bowser.mobile || $root.Bowser.tablet
+									})
+								}
+							}
+						} --><!-- /ko -->
+					</figure>
+				</div>
+			</div>
+
+			<aside class="video-description">
+				<h4 class="heading heading-04" data-bind="html: data.heading"></h4>
+				<p class="copy copy-01" data-bind="html: data.paragraph"></p>
+				<!-- ko if: data.link -->
+					<!-- ko component: {
+						name: 'button/button-main',
+						onComplete: $root.controller.callbackCounter.get(),
+						options: {
+							gaTracking: {
+								category: 'imageWithContent',
+								action: 'click',
+								label: data.heading + '|' + data.link.title,
+							},
+							action: data.link,
+							size: $root.ButtonSize.LARGE,
+							disabled: $root.findOutMoreDisabled
+						}
+					} --><!-- /ko -->
+				<!-- /ko -->
+			</aside>
+		</div>
+	</div>
+</div>

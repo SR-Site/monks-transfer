@@ -137,5 +137,9 @@ export const blockConfig:IBlockConfig = {
 	mapTertiary: {
 		id: Blocks.MAP_TERTIARY,
 		type: BlockType.COMPONENT
+	},
+	videoWithContent: {
+		id: Blocks.VIDEO_WITH_CONTENT,
+		type: BlockType.COMPONENT
 	}
 };
