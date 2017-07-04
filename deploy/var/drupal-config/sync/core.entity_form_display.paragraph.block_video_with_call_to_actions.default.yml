@@ -1,0 +1,100 @@
+uuid: 82d98a10-abd8-4e8d-a250-cf6aff730991
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_video_with_call_to_actions.field_alignment
+    - field.field.paragraph.block_video_with_call_to_actions.field_call_to_action_file
+    - field.field.paragraph.block_video_with_call_to_actions.field_call_to_action_heading
+    - field.field.paragraph.block_video_with_call_to_actions.field_heading
+    - field.field.paragraph.block_video_with_call_to_actions.field_image
+    - field.field.paragraph.block_video_with_call_to_actions.field_paragraph
+    - field.field.paragraph.block_video_with_call_to_actions.field_styles
+    - field.field.paragraph.block_video_with_call_to_actions.field_top_heading
+    - field.field.paragraph.block_video_with_call_to_actions.field_top_paragraph
+    - field.field.paragraph.block_video_with_call_to_actions.field_video
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.block_video_with_call_to_actions
+  module:
+    - entity_reference_revisions
+    - file
+    - image
+    - text
+id: paragraph.block_video_with_call_to_actions.default
+targetEntityType: paragraph
+bundle: block_video_with_call_to_actions
+mode: default
+content:
+  field_alignment:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_call_to_action_file:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+  field_call_to_action_heading:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_heading:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_paragraph:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_styles:
+    weight: 9
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+  field_top_heading:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_top_paragraph:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_video:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,7 @@
+uuid: 7415d43d-d34c-49b7-b9bf-1b7fb6e071b9
+langcode: en
+status: true
+dependencies: {  }
+id: block_video_with_call_to_actions
+label: 'Block video with call to actions'
+behavior_plugins: {  }

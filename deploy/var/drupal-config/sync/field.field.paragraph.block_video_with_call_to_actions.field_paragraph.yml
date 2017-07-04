@@ -1,0 +1,27 @@
+uuid: 23f1b92d-2118-4eef-98c7-976ffde601bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.block_video_with_call_to_actions
+  module:
+    - text
+id: paragraph.block_video_with_call_to_actions.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: block_video_with_call_to_actions
+label: Paragraph
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    basic_html: '0'
+    bold_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

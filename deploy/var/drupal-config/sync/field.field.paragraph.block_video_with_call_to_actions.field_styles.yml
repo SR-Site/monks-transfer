@@ -1,0 +1,174 @@
+uuid: 8ecd0916-a2ea-43a7-bf79-6ae505183910
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_styles
+    - paragraphs.paragraphs_type.block_video_with_call_to_actions
+    - paragraphs.paragraphs_type.styles
+  module:
+    - entity_reference_revisions
+id: paragraph.block_video_with_call_to_actions.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: block_video_with_call_to_actions
+label: Styles
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styles: styles
+    target_bundles_drag_drop:
+      block_map_tertiary:
+        weight: 50
+        enabled: false
+      block_video_with_call_to_actions:
+        weight: 51
+        enabled: false
+      blockarticleteaser:
+        weight: 52
+        enabled: false
+      blockaudiofragment:
+        weight: 53
+        enabled: false
+      blockblogpost:
+        weight: 54
+        enabled: false
+      blockbutton:
+        weight: 55
+        enabled: false
+      blockfiltercontent:
+        weight: 56
+        enabled: false
+      blockheromain:
+        weight: 57
+        enabled: false
+      blockherosecondary:
+        weight: 58
+        enabled: false
+      blockherotertiary:
+        weight: 59
+        enabled: false
+      blockhowtoadvertise:
+        weight: 60
+        enabled: false
+      blockimagecalltoactions:
+        weight: 61
+        enabled: false
+      blockimagecarousel:
+        weight: 62
+        enabled: false
+      blockimagewithcontent:
+        weight: 63
+        enabled: false
+      blockinfo:
+        weight: 64
+        enabled: false
+      blocklatest:
+        weight: 65
+        enabled: false
+      blockmap:
+        weight: 66
+        enabled: false
+      blockmapsecondary:
+        weight: 67
+        enabled: false
+      blockmarketmap:
+        weight: 68
+        enabled: false
+      blockmore:
+        weight: 69
+        enabled: false
+      blocknetworkoverview:
+        weight: 70
+        enabled: false
+      blockpagenotfound:
+        weight: 71
+        enabled: false
+      blockpathtopurchase:
+        weight: 72
+        enabled: false
+      blockpersonaselector:
+        weight: 73
+        enabled: false
+      blockprogrammodule:
+        weight: 74
+        enabled: false
+      blockquote:
+        weight: 75
+        enabled: false
+      blockquotesecondary:
+        weight: 76
+        enabled: false
+      blocksmallheading:
+        weight: 77
+        enabled: false
+      blocksmallimage:
+        weight: 78
+        enabled: false
+      blocksmallinfo:
+        weight: 79
+        enabled: false
+      blockstoryinfoimages:
+        weight: 80
+        enabled: false
+      blocktext:
+        weight: 81
+        enabled: false
+      broadcastschedule:
+        weight: 82
+        enabled: false
+      calltoaction:
+        weight: 83
+        enabled: false
+      link:
+        weight: 84
+        enabled: false
+      map_tertiary_data:
+        weight: 85
+        enabled: false
+      networkoverviewitem:
+        weight: 86
+        enabled: false
+      personas:
+        weight: 87
+        enabled: false
+      program:
+        weight: 88
+        enabled: false
+      showmetric:
+        weight: 89
+        enabled: false
+      slide:
+        weight: 90
+        enabled: false
+      slideheromain:
+        weight: 91
+        enabled: false
+      stat:
+        weight: 92
+        enabled: false
+      statistic:
+        weight: 93
+        enabled: false
+      step:
+        weight: 94
+        enabled: false
+      stepmap:
+        weight: 95
+        enabled: false
+      steppurchase:
+        weight: 96
+        enabled: false
+      stories:
+        weight: 97
+        enabled: false
+      styles:
+        enabled: true
+        weight: 98
+field_type: entity_reference_revisions
