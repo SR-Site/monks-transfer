@@ -10,8 +10,8 @@ Vagrant.configure(2) do |config|
   config.vm.communicator = "winrm"
   config.vm.boot_timeout = 600
   config.vm.graceful_halt_timeout = 600
-  #config.vm.box = "./spectrumreach.box"
-  config.vm.box_url = "box.jl.monkapps.com/spectrumreach.box"
+  config.vm.box = "./spectrumreach.box"
+  config.vm.box_url = "http://box.jl.monkapps.com/spectrumreach.box"
   config.vm.synced_folder ".", "/mediamonks"
 
   # Create a forwarded port mapping which allows access to a specific port
