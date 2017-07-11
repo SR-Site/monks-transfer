@@ -17,7 +17,7 @@ dependencies:
     - field.field.node.article.field_subheading
     - field.field.node.article.field_theme
     - field.field.node.article.field_thought_leadership
-    - image.style.thumbnail
+    - image.style.article_preview_size
     - node.type.article
   module:
     - field_group
@@ -141,8 +141,8 @@ content:
     type: image_image
     weight: 20
     settings:
+      preview_image_style: article_preview_size
       progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
   field_links:
     type: entity_reference_paragraphs

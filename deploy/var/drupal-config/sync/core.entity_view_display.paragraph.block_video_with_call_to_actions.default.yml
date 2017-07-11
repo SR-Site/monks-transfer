@@ -1,0 +1,94 @@
+uuid: 39f12544-0089-440f-b97f-e344201089ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_video_with_call_to_actions.field_alignment
+    - field.field.paragraph.block_video_with_call_to_actions.field_call_to_action_file
+    - field.field.paragraph.block_video_with_call_to_actions.field_call_to_action_heading
+    - field.field.paragraph.block_video_with_call_to_actions.field_heading
+    - field.field.paragraph.block_video_with_call_to_actions.field_image
+    - field.field.paragraph.block_video_with_call_to_actions.field_paragraph
+    - field.field.paragraph.block_video_with_call_to_actions.field_styles
+    - field.field.paragraph.block_video_with_call_to_actions.field_top_heading
+    - field.field.paragraph.block_video_with_call_to_actions.field_top_paragraph
+    - field.field.paragraph.block_video_with_call_to_actions.field_video
+    - paragraphs.paragraphs_type.block_video_with_call_to_actions
+  module:
+    - entity_reference_revisions
+    - file
+    - image
+    - options
+    - text
+id: paragraph.block_video_with_call_to_actions.default
+targetEntityType: paragraph
+bundle: block_video_with_call_to_actions
+mode: default
+content:
+  field_alignment:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_call_to_action_file:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_url_plain
+  field_call_to_action_heading:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_heading:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_image:
+    weight: 5
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_paragraph:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_styles:
+    weight: 9
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+  field_top_heading:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_top_paragraph:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_video:
+    weight: 6
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+hidden: {  }

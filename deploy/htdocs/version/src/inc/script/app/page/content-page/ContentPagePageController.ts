@@ -262,10 +262,11 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 			.then(() => this.setScrollSections())
 			.then(() => this.scrollToComponentFromURL())
 			.then(() => this._dataManager.pageLoader.transitionOut())
+			.then(() => window['hj']('stateChange', window.location.href))
 			.catch((result) =>
 			{
 				throw result;
-			})
+			});
 	}
 
 	/**

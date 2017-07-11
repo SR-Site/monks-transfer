@@ -13,13 +13,13 @@ class ContactViewModel extends DefaultComponentTransitionViewModel<ContactContro
 
 	public fields: Array<{name: string; localeKey: string, observable: KnockoutObservable<string>, validationRules: Array<RegExp>|RegExp}> = [
 		{
-			name: 'firstName',
+			name: 'firstname',
 			localeKey: 'firstName',
 			validationRules: ValidationRules.nonEmpty,
 			observable: ko.observable('')
 		},
 		{
-			name: 'lastName',
+			name: 'lastname',
 			localeKey: 'lastName',
 			validationRules: ValidationRules.nonEmpty,
 			observable: ko.observable('')
@@ -37,7 +37,7 @@ class ContactViewModel extends DefaultComponentTransitionViewModel<ContactContro
 			observable: ko.observable('')
 		},
 		{
-			name: 'state',
+			name: 'State you would like to advertise in',
 			localeKey: 'state',
 			validationRules: ValidationRules.nonEmpty,
 			observable: ko.observable('')
@@ -55,7 +55,7 @@ class ContactViewModel extends DefaultComponentTransitionViewModel<ContactContro
 			observable: ko.observable('')
 		},
 		{
-			name: 'zipCode',
+			name: 'zipcode',
 			localeKey: 'zipcode',
 			validationRules: ValidationRules.nonEmpty,
 			observable: ko.observable('')

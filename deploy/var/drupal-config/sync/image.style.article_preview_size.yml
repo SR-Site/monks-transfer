@@ -1,0 +1,15 @@
+uuid: c994300b-666a-4677-bf8d-14d123537b15
+langcode: en
+status: true
+dependencies: {  }
+name: article_preview_size
+label: 'Article preview size'
+effects:
+  3183e534-980b-4585-833b-ff1c8cd0b1c2:
+    uuid: 3183e534-980b-4585-833b-ff1c8cd0b1c2
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 320
+      upscale: false

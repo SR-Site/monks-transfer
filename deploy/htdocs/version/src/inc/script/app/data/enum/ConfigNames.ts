@@ -33,4 +33,7 @@ export class PropertyNames
 	public static TWITTER_PIXEL_ID:string = 'twitterPixelId';
 	public static LINKED_IN_PIXEL_ID:string = 'linkedinPixelId';
 	public static HOTJAR_ID:string = 'hotjarId';
+	public static PARDOT_APPLICATION_ID:string = 'pardotApplicationId';
+	public static PARDOT_CLIENT_ID:string = 'pardotClientId';
+	public static FORENSICS_ID:string = 'pardotClientId';
 }

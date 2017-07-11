@@ -13,14 +13,14 @@ class SpectrumContact implements SpectrumContactInterface {
    */
   public function __construct($data) {
     $this->properties = [
-      'firstName' => NULL,
-      'lastName' => NULL,
+      'firstname' => NULL,
+      'lastname' => NULL,
       'company' => NULL,
       'city' => NULL,
-      'state' => NULL,
+      'State you would like to advertise in' => NULL,
       'email' => NULL,
       'phone' => NULL,
-      'zipCode' => NULL,
+      'zipcode' => NULL,
       'comments' => NULL,
     ];
 

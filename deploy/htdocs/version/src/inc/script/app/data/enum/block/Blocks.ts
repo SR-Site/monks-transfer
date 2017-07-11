@@ -35,6 +35,7 @@ class Blocks
 	public static AUDIO_FRAGMENT:string = 'block-audio-fragment';
 	public static BUTTON:string = 'block-button';
 	public static MAP_TERTIARY:string = 'block-map-tertiary';
+	public static VIDEO_WITH_CONTENT:string = 'block-video-with-content';
 }
 
 
