@@ -86,7 +86,10 @@ let config: IConfig = {
 		[EnvironmentNames.LOCAL]: {
 			variables: {},
 			urls: {},
-			properties: {}
+			properties: {
+				// [PropertyNames.MAPBOX_ACCESS_TOKEN]: 'pk.eyJ1IjoibGFyc3ZhbmJyYWFtIiwiYSI6ImNpeW8zNXV2NjAwNjAzM3FsMnV1Z3E4Z2QifQ.UdtOqQiB6YK_lDBthfL6oA',
+				// [PropertyNames.MAPBOX_MAP_STYLE]: 'mapbox://styles/larsvanbraam/ciyodzuy800ds2sla6tuazga1',
+			}
 		}
 	},
 	variables: {
@@ -100,8 +103,8 @@ let config: IConfig = {
 	properties: {
 		[PropertyNames.DEFAULT_LOCALE]: 'en_US',
 		[PropertyNames.MOCK_CONTENT]: true,
-		[PropertyNames.MAPBOX_ACCESS_TOKEN]: 'pk.eyJ1IjoibGFyc3ZhbmJyYWFtIiwiYSI6ImNpeW8zNXV2NjAwNjAzM3FsMnV1Z3E4Z2QifQ.UdtOqQiB6YK_lDBthfL6oA',
-		[PropertyNames.MAPBOX_MAP_STYLE]: 'mapbox://styles/larsvanbraam/ciyodzuy800ds2sla6tuazga1',
+		[PropertyNames.MAPBOX_ACCESS_TOKEN]: 'pk.eyJ1IjoibWVkaWFzb2x1dGlvbnMiLCJhIjoiY2owNDY5bTF2MGVpNzJxcDNoM2tvMXRoOCJ9.huElzhuVhxP52X6okUoB-w',
+		[PropertyNames.MAPBOX_MAP_STYLE]: 'mapbox://styles/mediasolutions/cj1a5z3td003e2rpauzcq162n',
 		[PropertyNames.GOOGLE_ANALYTICS]: '123456789',
 		[PropertyNames.FACEBOOK_PIXEL_ID]: '1499374196803695',
 		[PropertyNames.TWITTER_PIXEL_ID]: 'nx7ko',
