@@ -9,14 +9,14 @@ label: Article
 type: 'canonical_entities:node'
 pattern: 'articles/[node:title]'
 selection_criteria:
-  ecb23306-8ed5-404a-9c29-3e90d1470cc2:
+  17774ba7-8bd4-43d6-b6c9-b9b27f006c78:
     id: node_type
     bundles:
       article: article
     negate: false
     context_mapping:
       node: node
-    uuid: ecb23306-8ed5-404a-9c29-3e90d1470cc2
+    uuid: 17774ba7-8bd4-43d6-b6c9-b9b27f006c78
 selection_logic: and
 weight: -5
 relationships: {  }

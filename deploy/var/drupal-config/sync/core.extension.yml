@@ -41,9 +41,6 @@ module:
   options: 0
   page_cache: 0
   path: 0
-  purge: 0
-  purge_tokens: 0
-  purge_ui: 0
   rest: 0
   restui: 0
   search: 0
@@ -54,7 +51,6 @@ module:
   spectrum_settings: 0
   sqlsrv: 0
   statistics: 0
-  supercache: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -63,12 +59,9 @@ module:
   toolbar_menu: 0
   update: 0
   user: 0
-  varnish_purge_tags: 0
-  varnish_purger: 0
   video_embed_field: 0
   video_embed_media: 0
   views_ui: 0
-  wincachedrupal: 0
   menu_admin_per_menu: 1
   menu_link_content: 1
   pathauto: 1
