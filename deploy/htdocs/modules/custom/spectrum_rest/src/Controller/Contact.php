@@ -85,6 +85,12 @@ class Contact extends ControllerBase {
     $content = $request->getBody()->getContents();
     $response = json_decode($content, TRUE);
 
+    if(isset($response['data']['errors'])){
+      header("Content-Type: application/json");
+      print '{error:{"code": "send.failed", "message": "send failed."}}';
+      die();
+    }
+
     return ['status' => !isset($response['data']['errors'])];
   }
 
