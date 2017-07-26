@@ -68,7 +68,9 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 
 		this.destructibles.add(new NativeEventListener(window, 'resize', ThrottleDebounce.debounce(this.handleResize, 200, this)));
 
-		this.setup();
+		if( !this.options.initializeManually) {
+			this.setup();
+		}
 	}
 
 	/**
@@ -179,16 +181,16 @@ class ImageSequenceController extends AbstractComponentController<ImageSequenceV
 	}
 
 	/**
-	 * @private
+	 * @public
 	 * @method setup
 	 */
-	private setup(): void
+	public setup(): Promise<void>
 	{
 		// Trigger one manually
 		this.handleResize();
 
 		// Load the default images
-		this.loadAllCurrentDeviceStateImages()
+		return this.loadAllCurrentDeviceStateImages()
 			.then(() =>
 			{
 				// Let the parent class know we are ready for interaction

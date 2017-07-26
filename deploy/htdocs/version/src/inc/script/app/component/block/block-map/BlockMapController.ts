@@ -8,6 +8,7 @@ import DataEvent from "../../../../lib/temple/event/DataEvent";
 import AbstractTransitionComponentController from "../../../util/component-transition/abstract-transition-component/AbstractTransitionComponentController";
 import MapPaginationController from "../../map-pagination/MapPaginationController";
 import {trackEvent} from "../../../util/Analytics";
+import Promise = require("bluebird");
 
 class BlockMapController extends AbstractBlockComponentController<BlockMapViewModel, IBlockMapOptions, BlockMapTransitionController>
 {
@@ -60,6 +61,17 @@ class BlockMapController extends AbstractBlockComponentController<BlockMapViewMo
 	public get activeSlide(): AbstractTransitionComponentController<any, any, any>
 	{
 		return this._slides[this.viewModel.activeSlide()];
+	}
+
+	/**
+	 * @public
+	 * @method transitionIn
+	 * @returns {PromiseBluebird<U>}
+	 */
+	public transitionIn():Promise<void>
+	{
+		return this._imageSequence.setup()
+			.then(() => super.transitionIn());
 	}
 
 	/**
