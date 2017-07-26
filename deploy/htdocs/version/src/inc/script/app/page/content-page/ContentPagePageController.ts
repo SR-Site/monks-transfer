@@ -465,10 +465,10 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	private trackPageView():void
 	{
 		// Facebook pixel code
-		if(fbq) fbq('track', 'PageView');
+		if(window['fbq']) fbq('track', 'PageView');
 
 		// Twitter pixel code
-		if(twq) twq('track', 'PageView');
+		if(window['twq']) twq('track', 'PageView');
 	}
 
 	/**
