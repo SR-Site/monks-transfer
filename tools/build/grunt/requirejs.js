@@ -57,7 +57,7 @@ module.exports = function(grunt, options)
 
 
 	// enable when needed...
-	if(true)
+	if(false)
 	{
 		// find all html templates and add them to the modules array
 		// this will compile all html templates into the main build so it doesn't need additional HTTP requests for
