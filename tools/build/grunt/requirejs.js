@@ -21,6 +21,9 @@ module.exports = function(grunt, options)
 
 				"lib/temple/component/AbstractComponentController",
 				"lib/temple/component/AbstractComponentViewModel"
+			],
+			exclude: [
+				"inc/script/vendor/mapbox/mapbox-gl.js"
 			]
 		}
 	];
@@ -54,7 +57,7 @@ module.exports = function(grunt, options)
 
 
 	// enable when needed...
-	if(false)
+	if(true)
 	{
 		// find all html templates and add them to the modules array
 		// this will compile all html templates into the main build so it doesn't need additional HTTP requests for
