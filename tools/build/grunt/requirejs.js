@@ -19,6 +19,9 @@ module.exports = function(grunt, options)
 				"app/page/index/IndexPageViewModel",
 				"app/page/index/IndexPageController",
 
+				"app/component/block/AbstractBlockComponentController",
+				"app/component/block/AbstractBlockComponentViewModel",
+
 				"lib/temple/component/AbstractComponentController",
 				"lib/temple/component/AbstractComponentViewModel"
 			],
@@ -57,7 +60,7 @@ module.exports = function(grunt, options)
 
 
 	// enable when needed...
-	if(false)
+	if(true)
 	{
 		// find all html templates and add them to the modules array
 		// this will compile all html templates into the main build so it doesn't need additional HTTP requests for
