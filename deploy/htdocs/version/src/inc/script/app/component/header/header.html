@@ -28,7 +28,24 @@
 				disabled: $root.callButtonDisabled
 			}
 		} --><!-- /ko -->
-
+		<!-- ko component: {
+				name: 'button/button-header',
+				onComplete: $root.controller.callbackCounter.get(),
+				options: {
+					gaTracking: {
+						category: 'login',
+						action: 'click'
+					},
+					action: {
+						label: 'Log in AudienceTrak',
+						title: 'Log in AudienceTrak',
+						target: 'https://spectrumreach.brandcdn.com',
+						type: $root.LinkType.EXTERNAL
+					},
+					size: $root.ButtonSize.LARGE,
+					disabled: $root.callButtonDisabled
+				}
+			} --><!-- /ko -->
 		<!-- ko component: {
 			name: 'button/button-menu',
 			onComplete: $root.controller.callbackCounter.get(),
