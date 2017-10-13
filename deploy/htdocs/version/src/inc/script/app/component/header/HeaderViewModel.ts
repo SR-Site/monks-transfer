@@ -5,6 +5,7 @@ import DataManager from "../../data/DataManager";
 
 import ko = require('knockout');
 import ThemeHelper from "../../util/ThemeHelper";
+import LinkType from 'app/data/enum/type/LinkType';
 
 class HeaderViewModel extends DefaultComponentTransitionViewModel<HeaderController, IHeaderOptions>
 {
@@ -13,6 +14,7 @@ class HeaderViewModel extends DefaultComponentTransitionViewModel<HeaderControll
 	public callButtonDisabled: KnockoutObservable<boolean> = ko.observable(false);
 	public enableSolidBackground: KnockoutObservable<boolean> = ko.observable(false);
 	public classNames: KnockoutComputed<string>;
+	public LinkType:any = LinkType;
 
 	constructor()
 	{
