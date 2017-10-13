@@ -32,7 +32,7 @@
         "mediamonks/mm_rest": "1.0-alpha4",
         "mediamonks/mm_slug": "1.0-alpha4",
         "mediamonks/mm_decoupled": "^1.0",
-        "mediamonks/mm_prerender": "1.0-beta1",
+        "mediamonks/mm_prerender": "dev-develop",
         "mediamonks/mm_release_tracker": "^1.0",
         "mediamonks/mm_gaia": "^1.0",
         "drupal/facets": "1.0-alpha7",
