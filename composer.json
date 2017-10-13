@@ -128,6 +128,9 @@
                 "Do not override some parent methods": "patches/mm_rest-use_parent_methods.patch",
                 "Do not match dynamic page cache responses": "patches/mm_rest-do_not_match_dynamicpagecache.patch"
             },
+            "mediamonks/mm_prerender": {
+                "Create node alias before creating prerender entity": "patches/mm_prerender-create_node_alias.patch"
+            },
             "mediamonks/mm_gaia": {
                 "Fix wrong version path. Remove when the MR get merged.": "patches/mm_gaia-fix_wrong_version_path.patch",
                 "Remove font.css": "patches/mm_gaia-remove_font_css.patch"

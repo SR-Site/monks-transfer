@@ -1,0 +1,20 @@
+diff --git a/prerender.module b/prerender.module
+index e639852..391e692 100644
+--- a/prerender.module
++++ b/prerender.module
+@@ -50,6 +50,7 @@ function prerender_preprocess_page(&$variables) {
+  */
+ function prerender_entity_insert(EntityInterface $entity) {
+   if ($entity->getEntityType()->id() == 'node') {
++    \Drupal::service('pathauto.generator')->updateEntityAlias($entity, 'insert');
+     /** @var \Drupal\prerender\PrerenderService $prerenderService */
+     $prerenderService = \Drupal::service('prerender.prerender');
+ 
+@@ -103,4 +104,5 @@ function prerender_cron() {
+       $queue->createItem($item);
+     }
+   }
+-}
+\ No newline at end of file
++}
++

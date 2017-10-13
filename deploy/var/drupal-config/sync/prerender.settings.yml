@@ -1,6 +1,6 @@
 prerender_endpoint: 'http://service.prerender.io/'
 token: fdooT42jSO8pWtKXznjL
-css_selector: body
+css_selector: '[data-gaia-container="main"]'
 expire_time: '86400'
 crawl: 1
 _core:
