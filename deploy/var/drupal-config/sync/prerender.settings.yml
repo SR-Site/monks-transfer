@@ -1,0 +1,9 @@
+prerender_endpoint: 'http://service.prerender.io/'
+token: fdooT42jSO8pWtKXznjL
+css_selector: body
+expire_time: '86400'
+crawl: 1
+_core:
+  default_config_hash: GtkmvtsThV3NPNu4wNEAGYK1eQL0DywAM3n7rMjZK1c
+prerender_base_url: 'https://www.spectrumreach.com'
+blacklisted: "/admin/*\r\n/*/*/admin/*\r\n/user/*\r\n/*/*/user/*\r\n/version/*\r\n/mock*\r\n/*/*/node/*/edit\r\n"
