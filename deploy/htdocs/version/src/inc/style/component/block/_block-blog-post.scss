@@ -35,6 +35,7 @@
 
 	.blog-details {
 		@extend %reset-list;
+		flex-shrink: 0;
 
 		li {
 			font: 700 1rem / 1.3rem $fontOpenSans;
@@ -53,8 +54,9 @@
 	}
 
 	.tags {
-		margin-top: $sizeGrid/2;
 		font-size: 0;
+		padding-right: $sizeGrid;
+
 
 		.component-button-tag {
 
