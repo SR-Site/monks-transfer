@@ -211,6 +211,7 @@
 				@include size(100%);
 				position: absolute;
 				transform: none;
+				object-fit: cover;
 			}
 
 			&:after {
