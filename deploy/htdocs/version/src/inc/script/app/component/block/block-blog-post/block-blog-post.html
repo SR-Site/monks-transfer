@@ -7,13 +7,20 @@
 
 		<div class="blog-post-bar">
 
-			<div class="profile-info">
-
-				<p class="author copy-03 copy">
-					<strong data-bind="html: author.name"></strong>
-					|
-					<span data-bind="html: author.role"></span>
-				</p>
+			<div class="tags" data-bind="foreach: tags">
+				<!-- ko component: {
+					name: 'button/button-tag',
+					onComplete: $root.controller.callbackCounter.get(),
+					options: {
+						gaTracking: {
+							category: 'blogPost',
+							action: 'click',
+							label: 'tag|' + $data.title
+						},
+						action: $data,
+						size: $root.ButtonSize.LARGE
+					}
+				} --><!-- /ko -->
 			</div>
 
 			<ul class="blog-details">
@@ -32,22 +39,6 @@
 					</li>
 				<!-- /ko -->
 			</ul>
-		</div>
-
-		<div class="tags" data-bind="foreach: tags">
-			<!-- ko component: {
-				name: 'button/button-tag',
-				onComplete: $root.controller.callbackCounter.get(),
-				options: {
-					gaTracking: {
-						category: 'blogPost',
-						action: 'click',
-						label: 'tag|' + $data.title
-					},
-					action: $data,
-					size: $root.ButtonSize.LARGE
-				}
-			} --><!-- /ko -->
 		</div>
 
 		<div class="description">
