@@ -478,5 +478,14 @@
 				display: none;
 			}
 		}
+
+		// Active state
+		.is-active {
+			@include hover() {
+				.step {
+					color: $colorWhite;
+				}
+			}
+		}
 	}
 }
