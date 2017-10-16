@@ -1,6 +1,4 @@
-import BrowserName from "../data/enum/BrowserName";
 import Promise = require("bluebird");
-import bowser = require('bowser');
 
 /**
  * @class ScrollUtils
@@ -90,9 +88,7 @@ class ScrollUtils
 	 */
 	public static get scrollElement():Element
 	{
-		const browserName = bowser.name.toLowerCase();
-
-		return browserName == BrowserName.FIREFOX || browserName == BrowserName.INTERNET_EXPLORER ? document.documentElement : document.body;
+		return document.documentElement;
 	}
 }
 
