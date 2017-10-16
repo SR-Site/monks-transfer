@@ -51,6 +51,14 @@
 	}
 
 	@include respond-to(SMALL) {
+		.content-items {
+			display: block;
+			padding: 0 $sizeGrid;
+			max-width: $sizeGrid * 36;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 		.load-more-button-wrapper {
 			padding-left: $sizeGrid;
 			padding-right: $sizeGrid;
