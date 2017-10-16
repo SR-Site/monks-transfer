@@ -1,13 +1,13 @@
 <header class="component-header" data-bind="css: $root.classNames()">
 
-	<h1 class="logo" data-bind="
+	<h2 class="logo" data-bind="
 		gaiaGoto: [Branches.CONTENT_PAGE, 'home'],
 		css: {
 			'is-disabled': dataManager.currentRoute() === dataManager.settingsModel.initDataModel.data.routes.landing,
 			'enable-solid-background': $root.enableSolidBackground()
 		}"> <!-- 'primary' or 'inverted' -->
 		<span class="icon" data-bind="icon: 'logo'"></span>
-	</h1>
+	</h2>
 
 	<div class="call-to-actions">
 		<!-- ko component: {
