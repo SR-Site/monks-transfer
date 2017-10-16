@@ -16,13 +16,10 @@
 	 * Light theme
 	 */
 	.theme-light & {
+		.arrow,
 		.text-top,
 		.text-bottom {
 			color: $colorWhite;
-		}
-
-		.arrow {
-			color: #0177bc;
 		}
 	}
 
@@ -30,13 +27,10 @@
 	 * Dark theme
 	 */
 	.theme-dark & {
-		.text-top {
-			color: #808285;
-		}
-
 		.arrow,
-		.text-bottom {
-			color: #00629b;
+		.text-bottom,
+		.text-top {
+			color: $colorPrimary;
 		}
 	}
 
@@ -55,13 +49,10 @@
 	 * Theme used on a solid background
 	 */
 	.enable-solid-background & {
-		.text-top {
-			color: #808285;
-		}
-
 		.arrow,
-		.text-bottom {
-			color: #00629b;
+		.text-bottom,
+		.text-top {
+			color: $colorPrimary;
 		}
 	}
 
@@ -83,13 +74,10 @@
 		 */
 		.theme-light &,
 		.theme-dark & {
-			.text-top {
-				color: #808285;
-			}
-
 			.arrow,
-			.text-bottom {
-				color: #00629b;
+			.text-bottom,
+			.text-top {
+				color: $colorPrimary;
 			}
 		}
 	}
