@@ -22,24 +22,11 @@
 		&:not(:first-child) {
 			margin-top: $sizeGrid;
 		}
-	}
 
-	.align-left,
-	.align-right,
-	.align-center {
-		display: inline-block;
-	}
-
-	.align-left {
-		text-align: left;
-	}
-
-	.align-center {
-		text-align: center;
-	}
-
-	.align-right {
-		text-align: right;
+		img	{
+			display: inline-block;
+			vertical-align: middle;
+		}
 	}
 
 	@include respond-to(LARGE) {
