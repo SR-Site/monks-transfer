@@ -77,6 +77,32 @@
 				}
 			},
 			{
+				"id": "videoWithContent",
+				"data": {
+					"alignment": 0,
+					"windowed": true,
+					"scrollSection": "videoWithContent",
+					"marginTop": 2,
+					"heading": "Tv Everywhere continues to grow",
+					"paragraph": "Live and on-demand viewership across screens continues to grow as consumers replicate the tv experience in the new living room.",
+					"link": {
+						"label": "Find out more",
+						"title": "Find out more",
+						"target": "advertising-solutions",
+						"type": 0
+					},
+					"poster": {
+						"normal": "data/image/video-with-content/poster.jpg",
+						"small": "data/image/video-with-content/poster.jpg",
+						"alt": "Background image alt text"
+					},
+					"video": {
+						"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+						"type": 0
+					}
+				}
+			},
+			{
 				"id": "imageWithContent",
 				"data": {
 					"alignment": 0,

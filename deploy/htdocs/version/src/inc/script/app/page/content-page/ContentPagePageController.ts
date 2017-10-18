@@ -262,10 +262,11 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 			.then(() => this.setScrollSections())
 			.then(() => this.scrollToComponentFromURL())
 			.then(() => this._dataManager.pageLoader.transitionOut())
+			.then(() => window['hj']('stateChange', window.location.href))
 			.catch((result) =>
 			{
 				throw result;
-			})
+			});
 	}
 
 	/**
@@ -464,10 +465,10 @@ class ContentPagePageController extends DefaultPageController<ContentPagePageVie
 	private trackPageView():void
 	{
 		// Facebook pixel code
-		if(fbq) fbq('track', 'PageView');
+		if(window['fbq']) fbq('track', 'PageView');
 
 		// Twitter pixel code
-		if(twq) twq('track', 'PageView');
+		if(window['twq']) twq('track', 'PageView');
 	}
 
 	/**

@@ -379,10 +379,10 @@ class BlockMarketMapController extends AbstractBlockComponentController<BlockMar
 	}
 
 	/**
-	 * @private
+	 * @public
 	 * @method updateScrollBar
 	 */
-	private updateScrollBar(): void
+	public updateScrollBar(): void
 	{
 		const scrollElement = <HTMLElement>this.element.querySelector('.js-scroll-wrapper');
 

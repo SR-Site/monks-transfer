@@ -15,7 +15,8 @@
 						name: 'image-sequence',
 						onComplete: $root.controller.callbackCounter.get($root.controller.handleImageSequenceReady.bind($root.controller)),
 						options: {
-							imageSequence: data.imageSequence
+							imageSequence: data.imageSequence,
+							initializeManually: true
 						}
 					} --><!-- /ko -->
 				</div>

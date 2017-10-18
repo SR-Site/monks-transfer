@@ -18,6 +18,10 @@ body {
 	font-size: $baseFontSize;
 }
 
+#prerender-content {
+	display: none;
+}
+
 .view {
 	height: 100%;
 }

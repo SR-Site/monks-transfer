@@ -32,7 +32,7 @@
         "mediamonks/mm_rest": "1.0-alpha4",
         "mediamonks/mm_slug": "1.0-alpha4",
         "mediamonks/mm_decoupled": "^1.0",
-        "mediamonks/mm_prerender": "1.0-beta1",
+        "mediamonks/mm_prerender": "dev-develop",
         "mediamonks/mm_release_tracker": "^1.0",
         "mediamonks/mm_gaia": "^1.0",
         "drupal/facets": "1.0-alpha7",
@@ -127,6 +127,9 @@
             "mediamonks/mm_rest": {
                 "Do not override some parent methods": "patches/mm_rest-use_parent_methods.patch",
                 "Do not match dynamic page cache responses": "patches/mm_rest-do_not_match_dynamicpagecache.patch"
+            },
+            "mediamonks/mm_prerender": {
+                "Create node alias before creating prerender entity": "patches/mm_prerender-create_node_alias.patch"
             },
             "mediamonks/mm_gaia": {
                 "Fix wrong version path. Remove when the MR get merged.": "patches/mm_gaia-fix_wrong_version_path.patch",

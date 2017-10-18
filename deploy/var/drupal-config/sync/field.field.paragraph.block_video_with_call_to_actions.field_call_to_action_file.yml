@@ -1,0 +1,27 @@
+uuid: cc062d5e-ebab-4d1f-ac8c-e62961a3af6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_call_to_action_file
+    - paragraphs.paragraphs_type.block_video_with_call_to_actions
+  module:
+    - file
+id: paragraph.block_video_with_call_to_actions.field_call_to_action_file
+field_name: field_call_to_action_file
+entity_type: paragraph
+bundle: block_video_with_call_to_actions
+label: 'Call to action file'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

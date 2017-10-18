@@ -1,0 +1,27 @@
+uuid: f9bca072-c7b8-4447-a9d1-c3d86e59e62a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_top_heading
+    - paragraphs.paragraphs_type.block_video_with_call_to_actions
+  module:
+    - text
+id: paragraph.block_video_with_call_to_actions.field_top_heading
+field_name: field_top_heading
+entity_type: paragraph
+bundle: block_video_with_call_to_actions
+label: 'Top heading'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    basic_html: '0'
+    bold_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

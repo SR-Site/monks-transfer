@@ -24,6 +24,7 @@ class FieldFile extends RestFieldProcessorBase {
     $data = [
       'type' => 'file',
       'url' => file_create_url($field->entity->uri->value),
+        'description' => $field->description,
     ];
     return $data;
   }

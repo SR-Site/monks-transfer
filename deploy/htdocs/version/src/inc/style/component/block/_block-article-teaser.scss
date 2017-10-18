@@ -177,7 +177,6 @@
 		}
 	}
 
-
 	@include respond-to(ARTICLE_TEASER_MEDIUM) {
 		width: 9 * $sizeGrid;
 
@@ -212,6 +211,7 @@
 				@include size(100%);
 				position: absolute;
 				transform: none;
+				object-fit: cover;
 			}
 
 			&:after {
@@ -229,5 +229,28 @@
 				margin-bottom: $sizeGrid*2;
 			}
 		}
+
+		&.transition-in-complete {
+			@include hover() {
+
+				figure {
+					clip: auto;
+
+					img {
+						transform: translateX(0);
+					}
+
+					.hover-heading,
+					.hover-icon {
+						opacity: 0;
+					}
+				}
+
+				aside {
+					transform: none;
+				}
+			}
+		}
+
 	}
 }

@@ -1,0 +1,98 @@
+.component-block-video-with-content {
+	@include size(100%, auto);
+	position: relative;
+
+	.overrule-overlap {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.video-description {
+		@include size(50%, auto);
+		order: 1;
+		padding-right: 10%;
+	}
+
+	.video-wrapper {
+		@include size(50%, auto);
+		order: 2;
+
+		.video {
+			@include aspect-ratio(16px, 9px);
+		}
+
+		img {
+			@include size(100%);
+		}
+	}
+
+	.component-button-play-circle {
+		@include abs-center($sizeGrid * 2);
+		color: $colorWhite;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 4;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid;
+	}
+
+	.component-button-main {
+		margin-bottom: 2px;
+	}
+
+	&.left-aligned {
+		.video-description {
+			order: 1;
+			padding-right: 10%;
+		}
+
+		.video-wrapper {
+			order: 2;
+		}
+	}
+
+	&.right-aligned {
+		.video-description {
+			order: 2;
+			padding-left: 10%;
+		}
+
+		.video-wrapper {
+			order: 1;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.overrule-overlap {
+			flex-direction: column;
+		}
+
+		.heading {
+			margin-bottom: $sizeGrid * 1.5;
+		}
+
+		.copy {
+			margin-bottom: $sizeGrid * 2;
+		}
+
+		&.left-aligned,
+		&.right-aligned {
+			.video-wrapper {
+				order: 1;
+				width: 100%;
+			}
+
+			.video-description {
+				order: 2;
+				width: 100%;
+				padding: $sizeGrid * 1.5 $sizeGrid 0;
+			}
+		}
+	}
+}

@@ -75,10 +75,10 @@ class PageResource extends ResourceBase {
 
     if (empty($entity)) {
       // @TODO: improve this, implement something like \Drupal\Core\EventSubscriber\ExceptionJsonSubscriber
-      if ($notFound = $this->state->get('site_404')) {
+      if ($notFound = $this->config->get('system.site')->get('page.404')) {
         $this->disableCache();
+        $nid = end(explode('/', $notFound));
 
-        list(, $nid) = explode('/', $notFound);
         /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
         $entity = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
       }

@@ -1,0 +1,27 @@
+uuid: 690589e2-c9de-4327-845d-711bf4666ddb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.block_video_with_call_to_actions
+  module:
+    - text
+id: paragraph.block_video_with_call_to_actions.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: block_video_with_call_to_actions
+label: Heading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    basic_html: '0'
+    bold_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

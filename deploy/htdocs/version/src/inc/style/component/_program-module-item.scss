@@ -121,6 +121,25 @@
 		}
 	}
 
+	@include respond-to(MEDIUM) {
+		.index-1 &,
+		.index-3 & {
+			.hover-container {
+				transform: none;
+				left: 0;
+			}
+		}
+
+		.index-2 &,
+		.index-4 & {
+			.hover-container {
+				left: auto;
+				right: 0;
+				transform: none;
+			}
+		}
+	}
+
 	@include respond-to(SMALL) {
 		.placeholder {
 			height: 9.5 * $sizeGrid;

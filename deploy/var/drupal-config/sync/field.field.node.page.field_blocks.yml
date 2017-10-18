@@ -6,7 +6,7 @@ dependencies:
     - field.storage.node.field_blocks
     - node.type.page
     - paragraphs.paragraphs_type.block_map_tertiary
-    - paragraphs.paragraphs_type.block_pdf
+    - paragraphs.paragraphs_type.block_video_with_call_to_actions
     - paragraphs.paragraphs_type.blockarticleteaser
     - paragraphs.paragraphs_type.blockaudiofragment
     - paragraphs.paragraphs_type.blockblogpost
@@ -83,7 +83,7 @@ settings:
       blocktext: blocktext
       blockfiltercontent: blockfiltercontent
       block_map_tertiary: block_map_tertiary
-      block_pdf: block_pdf
+      block_video_with_call_to_actions: block_video_with_call_to_actions
       blockpersonaselector: blockpersonaselector
     target_bundles_drag_drop:
       blockhowtoadvertise:
@@ -209,9 +209,9 @@ settings:
       block_map_tertiary:
         enabled: true
         weight: 48
-      block_pdf:
+      block_video_with_call_to_actions:
         enabled: true
-        weight: 50
+        weight: 51
       blockpersonaselector:
         enabled: true
         weight: 54
@@ -226,6 +226,9 @@ settings:
         enabled: false
       steppurchase:
         weight: 84
+        enabled: false
+      map_tertiary_data:
+        weight: 85
         enabled: false
       stepmap:
         weight: 91

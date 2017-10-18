@@ -18,3 +18,6 @@ content:
     weight: 101
 hidden:
   field_blocks: true
+  field_header_theme: true
+  field_hide_contact_button: true
+  field_metatags: true

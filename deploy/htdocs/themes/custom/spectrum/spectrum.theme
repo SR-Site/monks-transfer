@@ -24,6 +24,16 @@ function spectrum_page_attachments_alter(array &$page) {
     ),
   );
   $page['#attached']['html_head'][] = [$viewport, 'viewport'];
+  
+  $google_verification_tag = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'google-site-verification',
+      'content' => '4TsMyjp-08sQ6e1p7Rowuo3gIz91GVf3CMD263F5dLs',
+    ),
+  );
+  $page['#attached']['html_head'][] = [$google_verification_tag, 'google_verification_tag'];
 
   // Add document-base tag.
   $docbase = array(

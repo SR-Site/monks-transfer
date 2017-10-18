@@ -1,0 +1,23 @@
+uuid: 8a0ecbcc-5d03-4dd8-ab05-cf9f13f44cba
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - paragraphs
+id: paragraph.field_call_to_action_file
+field_name: field_call_to_action_file
+entity_type: paragraph
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
