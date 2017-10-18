@@ -17,10 +17,29 @@
 
 	p {
 		@extend %copy-01;
+		display: block;
 
 		&:not(:first-child) {
 			margin-top: $sizeGrid;
 		}
+	}
+
+	.align-left,
+	.align-right,
+	.align-center {
+		display: inline-block;
+	}
+
+	.align-left {
+		text-align: left;
+	}
+
+	.align-center {
+		text-align: center;
+	}
+
+	.align-right {
+		text-align: right;
 	}
 
 	@include respond-to(LARGE) {
