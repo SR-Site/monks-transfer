@@ -8,6 +8,7 @@ export default {
 	marginTop: VueTypes.number.isRequired,
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
+	scrollId: VueTypes.string,
 	slides: VueTypes.arrayOf(
 		VueTypes.shape(
 			{

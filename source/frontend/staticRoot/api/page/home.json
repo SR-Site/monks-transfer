@@ -110,6 +110,7 @@
 		  "windowed": false,
 		  "marginTop": 0,
 		  "alignment": 1,
+		  "scrollId": "foo",
 		  "link": {
 			"label": "Get Started",
 			"title": "Get Started",
@@ -146,8 +147,7 @@
 				"role": "Author",
 				"image": {
 				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
-				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
-				  "alt": ""
+				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
 				}
 			  },
 			  "image": {
@@ -155,7 +155,6 @@
 				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/ROI-Article-BlockHeader_0.jpg",
 				"alt": "Find your true ROI"
 			  },
-			  "tags": [],
 			  "views": 0,
 			  "time": 5,
 			  "date": "09\/10\/2017",
@@ -179,8 +178,7 @@
 				"role": "Author",
 				"image": {
 				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png",
-				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png",
-				  "alt": ""
+				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png"
 				}
 			  },
 			  "image": {
@@ -218,8 +216,7 @@
 				"role": "Author",
 				"image": {
 				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
-				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
-				  "alt": ""
+				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
 				}
 			  },
 			  "image": {
@@ -244,8 +241,7 @@
 				"role": "Author",
 				"image": {
 				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
-				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
-				  "alt": ""
+				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
 				}
 			  },
 			  "image": {
@@ -283,8 +279,7 @@
 				"role": "Author",
 				"image": {
 				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
-				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
-				  "alt": ""
+				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
 				}
 			  },
 			  "image": {
@@ -322,8 +317,7 @@
 				"role": "Author",
 				"image": {
 				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png",
-				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png",
-				  "alt": ""
+				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png"
 				}
 			  },
 			  "image": {

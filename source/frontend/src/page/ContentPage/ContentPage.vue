@@ -7,11 +7,12 @@
 			v-for="(block, index) in blocks"
 			@isReady="handleBlockComponentReady"
 			:class="getBlockClassNames(block.data)"
+			:data-scroll-id="block.data.scrollId || null"
 			:scrollId="block.scrollId"
 			:data="block.data"
 			:debugLabel="true"
 			:is="block.id"
 			:componentId="block.id + '.' + block.blockIndex"
-			:key="index"></component>
+			:key="index" />
 	</div>
 </template>
