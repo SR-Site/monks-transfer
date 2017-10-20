@@ -1,5 +1,77 @@
 :local {
 	.latest {
-		@include aspect-ratio(16px, 9px);
+		background: $colorLightGrey;
+	}
+
+	.site-frame {
+		padding: $sizeGrid * 3 0 $sizeGrid * 1;
+	}
+
+	.header {
+		.heading {
+			margin-bottom: $sizeGrid;
+		}
+
+		.button {
+			margin-bottom: $sizeGrid;
+		}
+	}
+
+	.latest-articles {
+		@include size(100%, auto);
+		font-size: 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.article-teaser {
+		display: inline-block;
+		margin-bottom: $sizeGrid * 2;
+	}
+
+	//Breakpoints
+	@include respond-to(X_LARGE) {
+		.latest-articles {
+			justify-content: space-around;
+		}
+	}
+
+	@include respond-to(LARGE) {
+		.info,
+		.article-teaser {
+			margin: 0 $sizeGrid / 2 $sizeGrid $sizeGrid / 2;
+		}
+	}
+
+	@include respond-to(ARTICLE_TEASER_MEDIUM) {
+		.info,
+		.article-teaser {
+			margin: 0 $sizeGrid / 4 $sizeGrid $sizeGrid / 4;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.latest-articles {
+			padding-left: $sizeGrid;
+			padding-right: $sizeGrid;
+		}
+
+		.article-teaser:not(:nth-child(-n+2) ) {
+			display: none;
+		}
+
+		.header {
+			padding-left: $sizeGrid*2;
+			padding-right: $sizeGrid*2;
+
+			.heading {
+				margin-bottom: $sizeGrid*2;
+			}
+
+			.button {
+				margin-bottom: $sizeGrid*2;
+			}
+		}
 	}
 }

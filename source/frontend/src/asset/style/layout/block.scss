@@ -1,0 +1,54 @@
+.block-component {
+	position: relative;
+	overflow: hidden;
+
+	/**
+	 * This means a block can overlap with another block therefore it get's overflow visible
+	 */
+	&.overlap {
+		z-index: 1;
+		overflow: visible;
+
+		~ .block-component {
+
+			// Sometimes we want to overrule the z-index of the next block to be on top of the overlapping area
+			.overrule-overlap {
+				position: relative;
+				z-index: 2;
+			}
+		}
+	}
+
+	/**
+	 * This means a block will have a border on both sides
+	 */
+	&.windowed {
+		border-right: $sizeGrid * 2 solid $colorWhite;
+		border-left: $sizeGrid * 2 solid $colorWhite;
+	}
+
+	/**
+	 * This is used for generating the spacing classes between the blocks
+	 */
+	@for $i from 0 through 5 {
+		&.margin-top-#{$i} {
+			margin-top: $sizeGrid * $i;
+
+			&:last-child {
+
+				// Add all the blocks that need extra margin when they are the last block on the page
+				&.component-block-map,
+				&.component-block-info {
+					margin-bottom: $sizeGrid * $i;
+				}
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		&.windowed {
+			border-left: none;
+			border-right: none;
+		}
+	}
+}

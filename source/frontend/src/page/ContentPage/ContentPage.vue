@@ -6,6 +6,7 @@
 		<component
 			v-for="(block, index) in blocks"
 			@isReady="handleBlockComponentReady"
+			:class="getBlockClassNames(block.data)"
 			:scrollId="block.scrollId"
 			:data="block.data"
 			:debugLabel="true"
