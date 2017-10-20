@@ -1,0 +1,7 @@
+.link {
+	@extend %link;
+}
+
+@import 'link/link-icon';
+@import 'link/link-main';
+@import 'link/link-secondary';

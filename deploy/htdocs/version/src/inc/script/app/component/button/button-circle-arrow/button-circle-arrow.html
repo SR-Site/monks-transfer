@@ -1,9 +1,0 @@
-<button class="component-button-circle-arrow button" data-bind="css: size, tap: handleClick, attr: { title: title }">
-	<div class="order-container" data-bind="css: {
-		'align-left': data.arrowPosition === $root.Alignment.LEFT,
-		'align-right': data.arrowPosition === $root.Alignment.RIGHT
-	}">
-		<span class="icon"data-bind="icon: 'circle-arrow-' + $root.Direction[data.arrowDirection].toLowerCase()"></span>
-		<span class="label">{{label}}</span>
-	</div>
-</button>

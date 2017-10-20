@@ -1,9 +1,0 @@
-URL: https://github.com/millermedeiros/requirejs-plugins/blob/fd716c72bcb8c3a5d65af30a2b58be5dcd73af13/src/json.js
-Version: 0.4.0
-License: MIT
-
-Description:
-A RequireJS/AMD loader plugin for loading json resources.
-
-Local Modifications:
-none

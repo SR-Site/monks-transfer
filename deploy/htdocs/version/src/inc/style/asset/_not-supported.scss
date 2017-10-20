@@ -1,7 +1,0 @@
-.not-supported {
-	@include size(100%, auto);
-
-	text-align: center;
-	padding: $sizeGrid * 5 $sizeGrid;
-	font: 14px / 1 $fontArial;
-}

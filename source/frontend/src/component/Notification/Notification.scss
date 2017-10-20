@@ -1,0 +1,48 @@
+:local {
+	.notification {
+		@include size(100%);
+		@include offset(0, 0);
+		min-height: 100vh;
+		background: rgba(0, 0, 0, 0.5);
+		position: absolute;
+		text-align: center;
+		z-index: zindex($layout, notification);
+	}
+
+	.content-wrapper {
+		@include size(80%, auto);
+		@include position(50%, auto, auto, 50%);
+		max-width: $sizeGridSecondary * 20;
+		transform: translate(-50%, -50%);
+		position: absolute;
+	}
+
+	.content {
+		background: white;
+		color: black;
+		text-align: center;
+		border-radius: 5px;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, .75);
+		padding: 25px;
+	}
+
+	.icon {
+		@include size(129px, 90px);
+		fill: $colorPrimary;
+		margin-bottom: $sizeGrid * 2;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid;
+	}
+
+	.confirmationActions {
+		@include size(100%, auto);
+		text-align: center;
+		font-size: 0;
+	}
+}

@@ -1,9 +1,0 @@
-.link-icon {
-	position: relative;
-	display: inline-block;
-	color: currentColor;
-
-	.icon {
-		@include size($sizeGrid);
-	}
-}

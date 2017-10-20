@@ -1,0 +1,22 @@
+.button {
+	@extend %reset-bmp;
+	position: relative;
+	display: inline-block;
+	background: transparent;
+	border: 0;
+	outline: 0;
+	text-decoration: none;
+	color: currentColor;
+	cursor: pointer;
+	overflow: visible;
+	text-align: center;
+	border-radius: 0;
+
+	&.is-disabled {
+		cursor: default;
+	}
+
+	svg {
+		overflow: visible;
+	}
+}
