@@ -1,0 +1,19 @@
+:local {
+	.wrapper {
+		@include coverer();
+		@include size(100%);
+
+		canvas {
+			@include coverer();
+			@include size(100%);
+		}
+	}
+
+	.grid-size {
+		@include size($sizeGrid);
+		@include offset(0, 0);
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+	}
+}

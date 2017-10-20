@@ -1,0 +1,6 @@
+.abs-fill-center {
+	@include offset(50%, 50%);
+	@include size(100%);
+	position: absolute;
+	transform: translateX(-50%) translateY(-50%);
+}

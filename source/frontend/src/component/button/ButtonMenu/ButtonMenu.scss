@@ -1,0 +1,39 @@
+:local {
+	.button {
+		@include size(auto, $sizeGrid * 2);
+		text-transform: uppercase;
+		text-align: left;
+		background: $colorPrimary;
+		color: $colorWhite;
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.label {
+			font: 700 1.2rem / 1 $fontOpenSans;
+			margin-left: $sizeGrid;
+		}
+
+		.icon {
+			margin-left: $sizeGrid / 4;
+			margin-right: $sizeGrid / 4;
+		}
+
+		@include respond-to(SMALL) {
+			@include size($sizeGrid * 4);
+			text-align: center;
+
+			.icon {
+				@include size($sizeGrid);
+				margin: 0;
+			}
+
+			.label {
+				display: none;
+			}
+		}
+	}
+
+}

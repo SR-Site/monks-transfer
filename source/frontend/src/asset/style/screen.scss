@@ -1,0 +1,63 @@
+@import '~normalize.css';
+@import 'type/font';
+@import 'type/copy';
+@import 'type/heading';
+
+@import 'asset/button';
+@import 'asset/hamburger/hamburger';
+@import 'asset/link';
+
+@import 'asset/sizing/abs-center';
+@import 'asset/sizing/abs-fill';
+@import 'asset/sizing/abs-fill-center';
+@import 'asset/sizing/bg-contain';
+@import 'asset/sizing/bg-cover';
+@import 'asset/sizing/fill-image';
+@import 'asset/sizing/fit-cover';
+@import 'asset/position/position';
+
+html,
+body {
+	padding-top: 0;
+	height: auto;
+	color: $colorPrimary;
+}
+
+html {
+	overflow: visible;
+}
+
+	body {
+	width: 100%;
+	overflow-y: scroll;
+}
+
+:root {
+	font-size: $baseFontSize;
+
+	@include respond-to(X_LARGE) {
+		font-size: $baseFontSize * 0.9;
+	}
+
+	@include respond-to(LARGE) {
+		font-size: $baseFontSize * 0.9;
+	}
+
+	@include respond-to(SMALL) {
+		font-size: $baseFontSize * 0.4;
+	}
+}
+
+#prerender-content {
+	display: none;
+}
+
+.seng-state-indicator {
+	bottom: 0;
+	right: 0;
+	background: red;
+	color: white;
+	padding: 10px;
+	position: fixed;
+	z-index: 99999;
+}

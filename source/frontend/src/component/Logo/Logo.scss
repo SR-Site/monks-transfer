@@ -1,0 +1,41 @@
+:local {
+	.wrapper {
+		@include size(135px, 45px);
+
+		@include respond-to(XX_LARGE) {
+			@include size(120px, 40px);
+		}
+
+		@include respond-to(X_LARGE) {
+			@include size(110px, 35px);
+		}
+
+		@include respond-to(LARGE) {
+			@include size(90px, 30px);
+		}
+
+		@include respond-to(SMALL) {
+			@include size(60px, 19px);
+		}
+
+	}
+}
+
+:global {
+	.logo-theme-light {
+		.text-top,
+		.text-bottom,
+		.arrow {
+			fill: white;
+		}
+	}
+
+	.logo-theme-dark {
+		.text-top,
+		.text-bottom,
+		.arrow {
+			fill: $colorPrimary;
+		}
+	}
+
+}

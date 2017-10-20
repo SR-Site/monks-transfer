@@ -1,0 +1,63 @@
+{
+  "global": {
+	"cta": {
+	  "ok": "Ok",
+	  "yes": "Yes",
+	  "no": "No",
+	  "start_advertising_today": "Start advertising today",
+	  "menu": "Menu",
+	  "customer_login": "Customer Login",
+	  "to_reach": "1-844-to-reach",
+	  "next": "Next"
+	},
+	"notification": {
+	  "cta": {
+		"yesLabel": "Ok",
+		"noLabel": "Cancel",
+		"okLabel": "Ok",
+		"copyLabel": "Copy"
+	  }
+	},
+	"title": {
+	  "view_count": "View count",
+	  "reading_time": "Reading time"
+	},
+	"form": {
+	  "placeholder": {
+		"email": "Email Address",
+		"firstName": "First Name",
+		"lastName": "Last name",
+		"phone_number": "Phone Number (numbers only)",
+		"state": "State",
+		"city": "City",
+		"zipcode": "ZIP Code you want to advertise in",
+		"comments": "Comments",
+		"company": "Company Name"
+	  },
+	  "label": {
+	  },
+	  "select": {
+		"state": "Select a State",
+		"city": "Select a City"
+	  }
+	}
+  },
+  "notification": {
+	"alert": {
+	  "something_went_wrong": {
+		"heading": "Oops",
+		"paragraph": "Something went wrong."
+	  },
+	  "contact_success": {
+		"heading": "Thank you!",
+		"paragraph": "We’re excited to have a chance to meet you. Your request is being directed to your personal media consultant. Expect to hear from us soon!"
+	  },
+	  "server_message": {
+	  }
+	},
+	"confirmation": {
+	}
+  },
+  "block": {
+  }
+}

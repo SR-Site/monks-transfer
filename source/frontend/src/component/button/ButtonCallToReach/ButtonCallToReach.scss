@@ -1,0 +1,41 @@
+:local {
+	.button {
+		@include size(auto, $sizeGrid * 2);
+		text-transform: uppercase;
+		color: $colorWhite;
+		padding: 0 $sizeGrid / 2;
+		transition: color .3s $easeInOutCubic;
+
+		@include hover() {
+			.text:before {
+				width: 100%;
+			}
+		}
+	}
+
+	.icon {
+		@include size($sizeGrid);
+		margin-right: $sizeGrid / 2;
+		transform: translate3d(0, 0, 0);
+
+		path {
+			fill: currentColor;
+		}
+	}
+
+	.label {
+		font: 700 1.2rem / 1 $fontOpenSans;
+		vertical-align: middle;
+		display: inline-block;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			@include position(auto, 0, -1px, 0%);
+			@include size(0%, 1px);
+			content: "";
+			background-color: currentColor;
+			transition: width 150ms $easeInOutExpo;
+		}
+	}
+}

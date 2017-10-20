@@ -1,0 +1,5 @@
+@mixin hover($extraSelector: null) {
+	html.no-touchevents &:hover#{', '$extraSelector} {
+		@content;
+	}
+}

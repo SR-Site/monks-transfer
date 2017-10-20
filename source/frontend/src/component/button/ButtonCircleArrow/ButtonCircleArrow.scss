@@ -1,0 +1,84 @@
+:local {
+	.button {
+		display: flex;
+		align-items: center;
+
+		&.align-left {
+			.label {
+				order: 1;
+				margin-left: $sizeGrid / 2;
+			}
+			.icon { order: 0; }
+		}
+
+		&.align-right {
+			.label {
+				order: 0;
+				margin-right: $sizeGrid / 2;
+			}
+			.icon { order: 1; }
+		}
+
+		@include hover() {
+			.icon {
+				svg {
+					circle {
+						stroke-width: 0.5rem;
+						stroke: $colorSecondary;
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+	.icon {
+		@include size(50px); // Design wants it to be fixed 50px
+
+		svg {
+			backface-visibility: hidden;
+
+			path {
+				fill: currentColor;
+			}
+
+			circle {
+				fill: transparent;
+				stroke: $colorWhite;
+				stroke-width: 1px;
+				transition: stroke .2s $easeInOut, stroke-width .2s $easeInOut, opacity .2s $easeInOut;
+			}
+		}
+	}
+
+	.label {
+		font: 800 1.2rem / 1 $fontOpenSans;
+		text-transform: uppercase;
+		color: $colorWhite;
+	}
+
+	@include respond-to(SMALL) {
+		.icon {
+			@include size($sizeGrid*3);
+		}
+
+		.label {
+			font-size: mobile-size(2.2rem);
+		}
+
+		.button {
+			&.align-left {
+				.label {
+					margin-left: $sizeGrid;
+				}
+
+			}
+
+			&.align-right {
+				.label {
+					margin-right: $sizeGrid;
+				}
+			}
+		}
+	}
+}

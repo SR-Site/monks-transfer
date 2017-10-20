@@ -1,0 +1,57 @@
+:local {
+	.percentage-loader {
+		text-align: center;
+		display: inline-block;
+	}
+
+	.svg-holder {
+		@include size($sizeGrid * 2);
+		position: relative;
+		margin: 0 auto;
+
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+
+		&.is-dashed {
+			.animated-line-track {
+				stroke-dasharray: 4, 4;
+			}
+		}
+	}
+
+	.animated-line-track {
+		stroke: rgba($colorWhite, .5);
+	}
+
+	.animated-line {
+		stroke: $colorWhite;
+	}
+
+	.amount-info {
+		font: 400 1.8rem / 1 $fontOpenSans;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@include respond-to(SMALL) {
+		.svg-holder {
+			@include size($sizeGrid * 4);
+		}
+
+		.animated-line-track {
+			stroke-width: 4px;
+		}
+
+		.animated-line {
+			stroke-width: 20px;
+		}
+
+		.amount-info {
+			font-size: mobile-size(3.5rem);
+		}
+	}
+}

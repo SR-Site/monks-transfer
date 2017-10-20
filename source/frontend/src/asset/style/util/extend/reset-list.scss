@@ -1,0 +1,6 @@
+
+// List items without the list item styles
+%reset-list {
+	@extend %reset-bmp;
+	list-style: none;
+}

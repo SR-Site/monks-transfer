@@ -1,0 +1,135 @@
+:local {
+	.hero-main-slide {
+		@include coverer();
+	}
+
+	.content {
+		@include size($sizeGrid * 13, auto);
+		@include position(50%, auto, auto, 0);
+		transform: translateY(-50%);
+		position: absolute;
+		z-index: 1;
+		padding-left: $sizeGrid * 3;
+		color: $colorWhite;
+		overflow: visible;
+
+		a {
+			@extend %link;
+			@extend %link-secondary;
+			color: $colorSecondary;
+		}
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid * 2;
+	}
+
+	.button {
+		display: block;
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.statistics-wrapper {
+		@include position(auto, auto, $sizeGrid * 2, $sizeGrid * 22);
+		position: absolute;
+		color: $colorWhite;
+		vertical-align: top;
+		font-size: 0;
+
+		.statistics-heading {
+			margin-bottom: $sizeGrid / 2;
+		}
+	}
+
+	.statistic {
+		display: inline-block;
+		margin-left: $sizeGrid;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	@include respond-to(XX_LARGE) {
+		.statistics-wrapper {
+			left: $sizeGrid * 21;
+		}
+	}
+
+	@include respond-to(LARGE) {
+		.statistics-wrapper {
+			width: $sizeGrid * 2.5;
+		}
+
+		.statistic {
+			margin-top: $sizeGrid / 2;
+			margin-left: 0;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.content {
+			padding-left: $sizeGrid;
+			padding-right: $sizeGrid;
+		}
+
+		.statistics-wrapper {
+			left: $sizeGrid * 15;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.has-statistics {
+			.content {
+				top: calc(50% - #{$statisticsHeight / 2});
+			}
+		}
+
+		.slide-content {
+			@include size($sizeGrid * 16, auto);
+			padding-left: $sizeGrid * 2;
+			padding-right: 0;
+		}
+
+		.statistics-wrapper {
+			@include position(auto, 0, $sizeGrid * 6, 0);
+			padding: 0 $sizeGrid * 2;
+
+			.heading {
+				text-align: center;
+				margin-bottom: $sizeGrid;
+			}
+		}
+
+		.statistics {
+			text-align: left;
+		}
+
+		.statistic {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			margin: $sizeGrid 0 0;
+
+			.heading {
+				font-size: mobile-size(3.5rem);
+				text-align: left;
+				margin-bottom: 0;
+				order: 2;
+				margin-left: $sizeGrid * 2;
+			}
+
+			.percentage-loader {
+				order: 1;
+			}
+		}
+	}
+}
