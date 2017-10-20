@@ -55,6 +55,7 @@ import VideoWithContentB from './VideoWithContentB/VideoWithContentB';
 import SmallInfo from './SmallInfo/SmallInfo';
 import MapSecondary from './MapSecondary/MapSecondary';
 import MapTertiary from './MapTertiary/MapTertiary';
+import FreeText from './FreeText/FreeText';
 
 export default {
 	AudienceNetworks,
@@ -72,6 +73,7 @@ export default {
 	DownloadFileB,
 	FilterContent,
 	FindContact,
+	FreeText,
 	GlossaryA,
 	GlossaryB,
 	HeroMain,
@@ -109,7 +111,6 @@ export default {
 	SuccessStoriesA,
 	SuccessStoriesB,
 	TargetAudience,
-	Text,
 	TripleContent,
 	VideoWithContent,
 	VideoWithContentB,

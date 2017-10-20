@@ -1,0 +1,56 @@
+:local {
+	.free-text {
+		padding-left: $sizeGrid * 7;
+		padding-right: $sizeGrid * 7;
+
+		h1, h2, h3, h4 {
+			padding-bottom: $sizeGrid/2;
+			font: 600 1.8rem / 1.16 $fontOpenSans;
+
+			strong {
+				font-weight: 600;
+			}
+		}
+
+		p {
+			display: block;
+			font: 400 1.8rem / 1.625 $fontOpenSans;
+
+			&:not(:first-child) {
+				margin-top: $sizeGrid;
+			}
+
+			img {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.html-content {
+		background: $colorWhite;
+		padding: $sizeGrid;
+	}
+
+	@include respond-to(LARGE) {
+		.free-text {
+			padding-left: $sizeGrid;
+			padding-right: $sizeGrid;
+		}
+	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+
+		.free-text {
+			h1, h2, h3, h4 {
+				font-size: mobile-size(3.5rem);
+				padding-bottom: $sizeGrid;
+			}
+
+			p {
+				font-size: mobile-size(2.8rem);
+			}
+		}
+	}
+}

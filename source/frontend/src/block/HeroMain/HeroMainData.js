@@ -2,10 +2,12 @@ import VueTypes from 'vue-types';
 import PropImage from '../../data/prop-type/media/PropImage';
 import PropVideo from '../../data/prop-type/media/PropVideo';
 import PropLink from '../../data/prop-type/action/PropLink';
-import AbstractBlockComponentData from '../../data/prop-type/AbstractBlockComponentData';
 import PropStatistic from '../../data/prop-type/hero-main/PropStatistic';
 
-export default Object.assign(AbstractBlockComponentData, {
+export default {
+	marginTop: VueTypes.number.isRequired,
+	overlap: VueTypes.bool.isRequired,
+	windowed: VueTypes.bool.isRequired,
 	slides: VueTypes.arrayOf(
 		VueTypes.shape(
 			{
@@ -18,4 +20,4 @@ export default Object.assign(AbstractBlockComponentData, {
 			},
 		),
 	),
-});
+};

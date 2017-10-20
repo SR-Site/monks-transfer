@@ -1,7 +1,7 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 import { Expo } from 'gsap';
 
-class SmallHeadingTransitionController extends AbstractTransitionController {
+class FreeTextTransitionController extends AbstractTransitionController {
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
@@ -9,7 +9,7 @@ class SmallHeadingTransitionController extends AbstractTransitionController {
 	 * */
 	protected setupTransitionInTimeline(): void {
 		this.transitionInTimeline.from(
-			this.viewModel.$refs.heading,
+			this.viewModel.$refs.htmlContent,
 			0.8,
 			{
 				y: 50,
@@ -28,4 +28,4 @@ class SmallHeadingTransitionController extends AbstractTransitionController {
 	}
 }
 
-export default SmallHeadingTransitionController;
+export default FreeTextTransitionController;

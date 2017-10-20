@@ -1,0 +1,8 @@
+/**
+ * Set an element to display block and center margin
+ */
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

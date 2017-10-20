@@ -1,5 +1,5 @@
 :local {
-	.button {
+	.button-secondary {
 		@include size(auto, 5rem);
 		font: 800 1rem / calc(5rem - 2px) $fontOpenSans;
 		color: $colorPrimary;
@@ -32,7 +32,7 @@
 	}
 
 	@include respond-to(SMALL) {
-		.button {
+		.button-secondary {
 			@include size(auto, mobile-size(10rem));
 			font-size: mobile-size(1.8rem);
 			line-height: mobile-size(10rem);

@@ -19,6 +19,7 @@ import Alignment from '../data/enum/Alignment';
 import { buttonTypeMap } from '../data/enum/BackendButtonType';
 import { linkTypeMap } from '../data/enum/BackendLinkType';
 import { DEVICE_STATE_TRACKER } from '../data/Injectables';
+import Theme from '../data/enum/Theme';
 
 const initPlugins = () => {
 	const configManager = getValue(CONFIG_MANAGER);
@@ -44,6 +45,7 @@ const initPlugins = () => {
 		NotificationTypes,
 		Direction,
 		Alignment,
+		Theme,
 		createPath,
 	});
 

@@ -2,7 +2,19 @@
 <script src="./Button.js"></script>
 
 <template>
-	<div>
-		<h2>Button</h2>
+	<div :class="[$style.button, $style[mappedAlignment]]" class="site-frame">
+		<div class="overrule-overlap">
+			<ButtonPrimary
+				componentId="ButtonPrimary"
+				:title="data.link.title"
+				:label="data.link.label"
+				:type="ButtonType.LINK"
+				:theme="Theme.DARK"
+				:link="{
+					type: linkTypeMap[data.link.type],
+					target: data.link.target,
+				}"
+				:class="$style.button"/>
+		</div>
 	</div>
 </template>

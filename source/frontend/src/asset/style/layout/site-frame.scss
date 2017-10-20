@@ -1,0 +1,19 @@
+.site-frame {
+	@include center-block();
+	@include size(100%, auto);
+	position: relative;
+	overflow: hidden;
+	max-width: $largeSiteFrame;
+
+	&.windowed {
+		padding: 0 $sizeGrid * 2;
+	}
+	
+	@include respond-to(X_LARGE) {
+		max-width: calc(100vw - #{$sizeGrid * 2});
+	}
+
+	@include respond-to(SMALL) {
+		max-width: 100%;
+	}
+}

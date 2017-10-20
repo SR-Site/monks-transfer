@@ -5,7 +5,8 @@
 	<button
 		@click="handleClick"
 		class="button"
-		:class="[$style.button, { [$style[`theme-${theme}`]]: theme !== void 0 }]">
+		:title="title"
+		:class="[$style.buttonSecondary, { [$style[`theme-${theme}`]]: theme !== void 0 }]">
 		<span :class="$style.label">{{label}}</span>
 	</button>
 </template>

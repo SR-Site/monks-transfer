@@ -1,3 +1,93 @@
 :local {
+	.button-primary {
+		@include size(auto, 5rem);
+		font: 800 1rem / calc(5rem - 2px) $fontOpenSans;
 
+		text-transform: uppercase;
+		padding: 0 $sizeGridSecondary;
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+		margin-left: $sizeGridSecondary / 2;
+		z-index: 0;
+
+		svg {
+			overflow: visible;
+		}
+
+		rect {
+			@include size(100%);
+			fill: transparent;
+			stroke: rgba(0, 0, 0, .3);
+			stroke-width: 1px;
+		}
+	}
+
+	.stripe {
+		@include size($sizeGridSecondary, .4rem);
+		@include position(calc(50% - .2rem), auto, auto, -$sizeGridSecondary / 2);
+		transform: scale(1);
+		position: absolute;
+
+	}
+
+	.label {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	// Themes
+	.theme-dark {
+		color: $colorPrimary;
+
+		.stripe {
+			background: $colorSecondary;
+		}
+
+		rect {
+			&.background-stroke {
+				stroke: rgba(0, 0, 0, .3);
+			}
+
+			&.hover-stroke {
+				stroke: $colorSecondary;
+			}
+		}
+	}
+
+	.theme-light {
+		color: $colorWhite;
+
+		.stripe {
+			background: $colorWhite;
+		}
+
+		rect {
+			&.background-stroke {
+				stroke: rgba(255, 255, 255, .3);
+			}
+
+			&.hover-stroke {
+				stroke: $colorWhite
+			}
+		}
+	}
+
+	@include respond-to(X_LARGE) {
+		height: 4.5rem;
+	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+		@include size(auto, mobile-size(10rem));
+		font-size: mobile-size(1.8rem);
+		line-height: mobile-size(10rem);
+		padding: 0 $sizeGrid * 2;
+		margin-left: $sizeGrid;
+
+		.stripe {
+			@include size($sizeGrid*2, 1rem);
+			left: -$sizeGrid;
+		}
+	}
 }

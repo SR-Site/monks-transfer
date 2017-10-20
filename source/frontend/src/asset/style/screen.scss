@@ -1,12 +1,11 @@
 @import '~normalize.css';
+@import 'layout/site-frame';
 @import 'type/font';
 @import 'type/copy';
 @import 'type/heading';
-
 @import 'asset/button';
 @import 'asset/hamburger/hamburger';
 @import 'asset/link';
-
 @import 'asset/sizing/abs-center';
 @import 'asset/sizing/abs-fill';
 @import 'asset/sizing/abs-fill-center';
@@ -27,9 +26,13 @@ html {
 	overflow: visible;
 }
 
-	body {
+body {
 	width: 100%;
 	overflow-y: scroll;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 :root {

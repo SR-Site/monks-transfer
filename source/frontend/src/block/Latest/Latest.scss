@@ -1,3 +1,5 @@
 :local {
-
+	.latest {
+		@include aspect-ratio(16px, 9px);
+	}
 }

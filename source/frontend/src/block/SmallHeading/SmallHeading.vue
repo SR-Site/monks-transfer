@@ -2,7 +2,9 @@
 <script src="./SmallHeading.js"></script>
 
 <template>
-	<div>
-		<h2>SmallHeading</h2>
+	<div :class="$style.smallHeading" class="site-frame">
+		<div :class="$style.overruleOverlap" class="overrule-overlap">
+			<h2 class="heading heading-04" v-html="data.heading" ref="heading"></h2>
+		</div>
 	</div>
 </template>
