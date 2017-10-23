@@ -2,7 +2,12 @@
 <script src="./HeroMainSlide.js"></script>
 
 <template>
-	<div :class="$style.heroMainSlide">
+	<div :class="[
+			$style.heroMainSlide,
+			{
+				[$style.hasStatistics]: hasStatistics,
+			}
+		]">
 		<div :class="$style.content">
 			<h1 :class="$style.heading" class="heading heading-01" v-html="heading" ref="heading"></h1>
 			<p :class="$style.copy" class="copy copy-01" v-html="paragraph" ref="copy"></p>
@@ -36,8 +41,8 @@
 		</div>
 		<div :class="$style.statisticsWrapper" v-if="statistics">
 			<h3
-			    class="heading heading-07"
-			    ref="statisticHeading"
+				class="heading heading-07"
+				ref="statisticHeading"
 				:class="$style.statisticsHeading"
 				v-html="statistics.heading"
 			></h3>

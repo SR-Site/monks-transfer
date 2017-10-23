@@ -7,7 +7,7 @@ import { URLNames } from 'data/enum/configNames';
 
 import { setValue } from './injector';
 import { responseFormatter, errorFormatter } from './gatewayFormatter';
-import { mediaQueries, deviceState } from '../config/deviceStateConfig';
+import { mediaQueries, DeviceState } from '../config/deviceStateConfig';
 
 const setupInjects = () => {
 	const configManager = new ConfigManager();
@@ -28,9 +28,9 @@ const setupInjects = () => {
 
 	const deviceStateTracker = new DeviceStateTracker({
 		mediaQueries,
-		deviceState,
+		deviceState: DeviceState,
 		showStateIndicator: true,
-		reverseDeviceStateOrder: false,
+		reverseDeviceStateOrder: true,
 	});
 
 	setValue(CONFIG_MANAGER, configManager);

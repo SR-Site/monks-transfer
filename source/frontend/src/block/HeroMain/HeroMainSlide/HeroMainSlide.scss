@@ -87,13 +87,15 @@
 	}
 
 	@include respond-to(SMALL) {
+		$statisticsHeight: $sizeGrid  * 30;
+
 		.has-statistics {
 			.content {
 				top: calc(50% - #{$statisticsHeight / 2});
 			}
 		}
 
-		.slide-content {
+		.content {
 			@include size($sizeGrid * 16, auto);
 			padding-left: $sizeGrid * 2;
 			padding-right: 0;
@@ -102,6 +104,7 @@
 		.statistics-wrapper {
 			@include position(auto, 0, $sizeGrid * 6, 0);
 			padding: 0 $sizeGrid * 2;
+			width: 100%;
 
 			.heading {
 				text-align: center;

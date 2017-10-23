@@ -18,6 +18,7 @@ class TertiaryTriangleTransitionController extends AbstractTransitionController 
 			{
 				x: 0,
 				y: 0,
+				clearProps: 'x, y',
 				ease: Expo.easeOut,
 			},
 		);

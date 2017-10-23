@@ -14,6 +14,7 @@ export default {
 		});
 	},
 	unbind: () => {
+		console.log(this);
 		this.eventListener.dispose();
 		this.eventListener = null;
 	},

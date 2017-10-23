@@ -1,2 +1,150 @@
 :local {
+	.image-call-to-actions {
+		@include aspect-ratio(1600px, 640px);
+		position: relative;
+	}
+
+	.call-to-actions-content {
+		font-size: 0;
+
+		a {
+			cursor: pointer;
+			text-decoration: none;
+			position: relative;
+			height: 100%;
+			display: inline-block;
+		}
+
+		.theme-dark {
+			color: $colorPrimary;
+		}
+
+		.theme-light {
+			color: $colorWhite;
+		}
+
+		.heading {
+			margin: $sizeGrid / 2 auto $sizeGrid / 2 $sizeGrid / 2;
+		}
+
+		.copy {
+			margin-left: $sizeGrid / 2;
+			transform: translateY(100%);
+			opacity: 0;
+			transition: transform .2s $easeOut, opacity .2s $easeOut;
+		}
+	}
+
+	.clip-mask {
+		@include size(100%);
+		position: absolute;
+		left: 0;
+		top: 0;
+		background: $colorWhite;
+		z-index: 2;
+	}
+
+	.triangle {
+		@include size(0);
+		position: absolute;
+		border-top: 0;
+		border-right: 0;
+		border-bottom-style: solid;
+		border-bottom-color: $colorWhite;
+		border-left-style: solid;
+		border-left-color: transparent;
+	}
+
+	.text-wrapper {
+		@include position($sizeGrid * 3, 0, auto, 0);
+		padding: 0 $sizeGrid * 2;
+		position: absolute;
+	}
+
+	.background-blurred {
+		opacity: 0;
+		transition: opacity .2s $easeInOut;
+	}
+
+	.call-to-action-image {
+		&.is-active {
+			.background-blurred {
+				opacity: 1;
+			}
+		}
+	}
+
+	.transition-in-complete {
+		.call-to-actions-content {
+			font-size: 0;
+
+			a {
+				@include hover() {
+					.copy {
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+			}
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.text-wrapper {
+			top: $sizeGridSecondary;
+			padding: 0 $sizeGridSecondary;
+		}
+	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+		.image-call-to-actions {
+			&:before {
+				padding-top: 0;
+			}
+		}
+
+		.text-wrapper {
+			top: 5rem;
+		}
+
+		.clip-mask {
+			display: none;
+		}
+
+		.call-to-actions-wrapper {
+			position: relative;
+			height: auto;
+		}
+
+		.call-to-action-image {
+			img {
+				object-fit: cover;
+			}
+		}
+
+		.call-to-actions-content {
+			position: relative;
+			height: auto;
+
+			.copy {
+				display: none;
+			}
+
+			.heading {
+				font-size: mobile-size(5rem);
+				margin-left: $sizeGrid;
+			}
+
+			a {
+				width: 100% !important;
+				@include aspect-ratio(640px, 370px);
+			}
+		}
+
+		.call-to-action-image {
+			@include aspect-ratio(640px, 370px);
+			height: auto;
+		}
+	}
 }

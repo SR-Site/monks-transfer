@@ -1,6 +1,6 @@
 import { DEVICE_STATE_TRACKER } from 'data/Injectables';
 import { getValue } from 'util/injector';
-import { deviceState } from 'config/deviceStateConfig';
+import { DeviceState } from 'config/deviceStateConfig';
 import IImage from 'data/interface/media/IImage';
 
 export default class ImageHelper {
@@ -14,7 +14,7 @@ export default class ImageHelper {
 		image: IImage,
 		currentState: number = getValue(DEVICE_STATE_TRACKER).currentState,
 	): string {
-		if (currentState > deviceState.SMALL) {
+		if (currentState > DeviceState.SMALL) {
 			return image.normal;
 		} else {
 			return image.small;

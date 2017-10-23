@@ -2,7 +2,7 @@
 <script src="./PageNotFound.js"></script>
 
 <template>
-	<div :class="$style.blockPageNotFound">
+	<div :class="$style.pageNotFound">
 		<ResponsiveImage :image="data.image" :class="$style.background" class="fit-cover"/>
 		<div :class="$style.message" class="abs-center">
 			<h2 :class="$style.heading" class="heading heading-01" v-html="data.heading"></h2>

@@ -2,8 +2,16 @@
 <script src="./HeroMain.js"></script>
 
 <template>
-	<div :class="$style.heroMain">
-		<MediaCrossFader componentId="MediaCrossFader" class="abs-fill" :class="$style.mediaCrossFader"/>
+	<div :class="[
+		$style.heroMain,
+		{
+			[$style.hasStatistics]: hasStatistics,
+		}
+	]">
+		<MediaCrossFader
+			componentId="MediaCrossFader"
+			class="abs-fill"
+			:class="$style.mediaCrossFader"/>
 		<div :class="$style.imageCrossFader" class="abs-fill"></div>
 		<div :class="$style.slideContentWrapper" class="abs-fill">
 			<PrimaryTriangle componentId="PrimaryTriangle" :class="$style.primaryBackgroundTriangle"/>
@@ -25,6 +33,7 @@
 					:link="slide.link"
 					:statistics="slide.statistics"
 					:slideCount="data.slides.length"
+					:hasStatistics="hasStatistics"
 				/>
 			</div>
 		</div>

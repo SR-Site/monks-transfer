@@ -46,4 +46,26 @@
 	.theme-dark {
 		color: $colorPrimary;
 	}
+
+	@include respond-to(MEDIUM) {
+		.button {
+			@include size(auto, $sizeGrid * 2);
+			padding: 0 $sizeGrid;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.button {
+			height: $sizeGrid * 4;
+		}
+
+		.text {
+			font-size: mobile-size(2.2rem);
+		}
+
+		.icon {
+			@include size($sizeGrid * 1.5);
+			margin-right: $sizeGrid;
+		}
+	}
 }

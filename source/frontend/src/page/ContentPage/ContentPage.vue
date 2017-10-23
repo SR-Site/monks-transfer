@@ -2,7 +2,7 @@
 <script src="./ContentPage.js"></script>
 
 <template>
-	<div>
+	<div :class="$style.blockWrapper">
 		<component
 			v-for="(block, index) in blocks"
 			@isReady="handleBlockComponentReady"

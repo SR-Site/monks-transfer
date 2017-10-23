@@ -5,5 +5,9 @@
 		transform: translateY(-50%);
 		position: absolute;
 		pointer-events: none;
+
+		@include respond-to(SMALL) {
+			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 48);
+		}
 	}
 }

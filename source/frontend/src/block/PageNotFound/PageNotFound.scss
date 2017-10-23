@@ -1,5 +1,5 @@
 :local {
-	.block-page-not-found {
+	.page-not-found {
 		@include aspect-ratio(16px, 8px);
 		background: #000;
 	}
@@ -50,7 +50,9 @@
 	}
 
 	@include respond-to(SMALL) {
-		@include aspect-ratio(4px, 3px);
+		.page-not-found {
+			@include aspect-ratio(4px, 3px);
+		}
 
 		.message {
 			width: 100%;

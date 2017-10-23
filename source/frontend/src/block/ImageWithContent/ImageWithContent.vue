@@ -5,7 +5,9 @@
 	<div :class="[$style.imageWithContent, $style[ClassNameHelper.parseAlignment(data.alignment)]]">
 		<div class="site-frame" :class="$style.siteFrame" ref="siteFrame">
 			<div class="overrule-overlap" :class="$style.overruleOverlap">
-				<ResponsiveImage :image="data.background" :class="$style.image" ref="image"/>
+				<div :class="$style.image" ref="image">
+					<ResponsiveImage :image="data.background" class="fit-cover" />
+				</div>
 				<div :class="$style.content" ref="content">
 					<h4 class="heading heading-06" :class="$style.heading" v-html="data.heading" ref="heading"></h4>
 					<p class="copy copy-01" :class="$style.copy" v-html="data.paragraph" ref="copy"></p>

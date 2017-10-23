@@ -5,7 +5,7 @@
 		background: $colorPrimary;
 		color: $colorWhite;
 		text-align: center;
-		padding: 0 $sizeGrid;
+		padding: 0 $sizeGrid / 2;
 	}
 
 	.label {
@@ -25,11 +25,11 @@
 
 	@include respond-to(SMALL) {
 		.button {
-			@include size($sizeGrid * 8, $sizeGrid * 4);
+			@include size($sizeGrid * 6, $sizeGrid * 4);
 			text-align: center;
 		}
 
-		.text {
+		.label {
 			margin-left: 0;
 			font-size: 1.8rem;
 		}

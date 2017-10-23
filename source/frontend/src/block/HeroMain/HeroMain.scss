@@ -4,16 +4,14 @@
 		min-height: $sizeGrid * 24; // Make sure the secondary triangle fit's in the block
 		overflow: hidden;
 
-		&.has-statistics {
-			// Always apply a dark blue layer on top of the crossfader
-			.component-image-crossfader {
-				.mask {
-					@include coverer();
-					@include size(100%);
-					position: absolute;
-					content: '';
-					background: rgba($colorPrimary, 0.5);
-				}
+		// Always apply a dark blue layer on top of the crossfader
+		.has-statistics {
+			.mask {
+				@include coverer();
+				@include size(100%);
+				position: absolute;
+				content: '';
+				background: rgba($colorPrimary, 0.5);
 			}
 		}
 	}
@@ -28,8 +26,8 @@
 	}
 
 	.component-paginator-dashed {
-		position: absolute;
 		@include position(50%, $sizeGrid, auto, auto);
+		position: absolute;
 		transform: translateY(-50%);
 		z-index: 2;
 	}
@@ -54,32 +52,30 @@
 			height: calc(100vh - #{$sizeGrid * 2});
 		}
 
+		.primary-background-triangle {
+			left: 0;
+		}
+
+		.secondary-background-triangle {
+			left: $sizeGrid * 14;
+		}
+
+		.tertiary-background-triangle {
+			display: none;
+		}
+
 		.has-statistics {
 			$statisticsHeight: $sizeGrid * 30;
 			height: calc(100vh - #{$sizeGrid * 4} + #{$statisticsHeight});
 			max-height: none;
 
-			.background-triangle {
+			.primary-background-triangle {
 				top: calc(50% - #{$statisticsHeight / 2});
 			}
 
 			.secondary-background-triangle {
 				top: calc(50% - #{$statisticsHeight / 2});
 			}
-		}
-
-		.primary-background-triangle {
-			@include arrow(right, rgba($colorPrimary, 0.95), $sizeGrid * 48);
-			left: 0;
-		}
-
-		.secondary-background-triangle {
-			@include arrow(left, rgba($colorSecondary, 0.95), $sizeGrid * 20);
-			left: $sizeGrid * 14;
-		}
-
-		.tertiary-background-triangle {
-			display: none;
 		}
 	}
 }

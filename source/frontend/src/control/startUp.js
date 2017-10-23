@@ -20,6 +20,7 @@ import { buttonTypeMap } from '../data/enum/BackendButtonType';
 import { linkTypeMap } from '../data/enum/BackendLinkType';
 import Theme from '../data/enum/Theme';
 import ClassNameHelper from '../util/ClassNameHelper';
+import { DeviceState } from '../config/deviceStateConfig';
 
 const initPlugins = () => {
 	const configManager = getValue(CONFIG_MANAGER);
@@ -45,6 +46,7 @@ const initPlugins = () => {
 		NotificationTypes,
 		Direction,
 		Alignment,
+		DeviceState,
 		Theme,
 		ClassNameHelper,
 		createPath,
@@ -100,9 +102,9 @@ const startUp = store => {
 
 	// Add async methods to the Promise.all array
 	return Promise.all([
-		Vue.blockSystemReady,
-		configManager.getVariable(VariableNames.LOCALE_ENABLED) ? waitForLocale(store) : Promise.resolve(),
-	]);
+						   Vue.blockSystemReady,
+						   configManager.getVariable(VariableNames.LOCALE_ENABLED) ? waitForLocale(store) : Promise.resolve(),
+					   ]);
 };
 
 export default startUp;

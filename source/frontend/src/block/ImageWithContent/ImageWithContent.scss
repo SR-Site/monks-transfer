@@ -97,8 +97,10 @@
 	}
 
 	@include respond-to(SMALL) {
-		height: auto;
-		margin-left: 0 !important;
+		.image-with-content {
+			height: auto;
+			margin-left: 0 !important;
+		}
 
 		.image {
 			@include aspect-ratio(640px, 580px);

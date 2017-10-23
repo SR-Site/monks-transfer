@@ -1,5 +1,6 @@
 import { mapGetters } from 'vuex';
 import { debounce } from 'lodash';
+import { DeviceStateEvent } from 'seng-device-state-tracker';
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import SiteHeaderTransitionController from './SiteHeaderTransitionController';
 import Logo from '../../Logo/Logo';
@@ -10,18 +11,24 @@ export default {
 	name: 'SiteHeader',
 	extends: AbstractTransitionComponent,
 	computed: {
-		...mapGetters({
-			contactOptionGetter: 'initData/contactOption',
-		}),
-		scrolled() {
-			return this.scrollTop > this.scrollOffset;
-		},
+		...mapGetters(
+			{
+				contactOptionGetter: 'initData/contactOption',
+			},
+		),
 		phoneNumber() {
 			return this.contactOptionGetter('phone').phoneNumber || 'no-phone-number';
+		},
+		isScrolled() {
+			return this.scrollTop > this.scrollOffset;
+		},
+		isMedium() {
+			return this.deviceState <= this.DeviceState.MEDIUM;
 		},
 	},
 	data() {
 		return {
+			deviceState: this.$deviceState.currentState,
 			scrollTop: 0,
 			scrollOffset: 0,
 		};
@@ -29,6 +36,13 @@ export default {
 	mounted() {
 		this.scrollOffset = this.$el.offsetHeight;
 		this.scrollListener = new NativeEventListener(window, 'scroll', debounce(this.handleScroll, 100));
+		this.deviceStateListener = new NativeEventListener(
+			this.$deviceState,
+			DeviceStateEvent.STATE_UPDATE,
+			(event) => {
+				this.deviceState = event.data.state;
+			}
+		)
 		this.handleScroll();
 	},
 	components: {
@@ -54,5 +68,8 @@ export default {
 	beforeDestroy() {
 		this.scrollListener.dispose();
 		this.scrollListener = null;
+
+		this.deviceStateListener.dispose();
+		this.deviceStateListener = null;
 	},
 };

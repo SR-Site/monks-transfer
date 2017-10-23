@@ -1,4 +1,3 @@
-import { deviceState } from 'config/deviceStateConfig';
 import { DeviceStateEvent } from 'seng-device-state-tracker';
 import VueTypes from 'vue-types';
 import PropImage from '../../data/prop-type/media/PropImage';
@@ -18,7 +17,7 @@ export default {
 	},
 	computed: {
 		src() {
-			return this.deviceState > deviceState.SMALL ? this.image.large : this.image.small;
+			return this.DeviceState > this.DeviceState.SMALL ? this.image.large : this.image.small;
 		},
 	},
 	methods: {

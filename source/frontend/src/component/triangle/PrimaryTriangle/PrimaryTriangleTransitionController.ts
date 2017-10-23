@@ -18,6 +18,7 @@ class PrimaryTriangleTransitionController extends AbstractTransitionController {
 			{
 				xPercent: 0,
 				yPercent: 0,
+				clearProps: 'x, y',
 				ease: Expo.easeOut,
 			},
 		);

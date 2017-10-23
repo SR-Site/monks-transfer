@@ -18,6 +18,7 @@ export default {
 		link: VueTypes.shape(PropLink),
 		statistics: VueTypes.shape(PropStatistic),
 		slideCount: VueTypes.number.isRequired,
+		hasStatistics: VueTypes.bool.isRequired,
 	},
 	beforeCreate() {
 		this.PercentageLoaderBorderType = PercentageLoaderBorderType;
