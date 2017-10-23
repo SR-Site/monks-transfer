@@ -25,7 +25,7 @@ class ImageWithContentTransitionController extends AbstractTransitionController 
 		);
 
 		this.transitionInTimeline.fromTo(
-			(<any>this.viewModel.$refs.image).$el,
+			this.viewModel.$refs.image,
 			2,
 			{
 				clip: `rect(0, 0, ${height}, 0)`,

@@ -5,7 +5,7 @@
 	<div :class="[$style.imageWithContent, $style[ClassNameHelper.parseAlignment(data.alignment)]]">
 		<div class="site-frame" :class="$style.siteFrame" ref="siteFrame">
 			<div class="overrule-overlap" :class="$style.overruleOverlap">
-				<div :class="$style.image" ref="image">
+				<div class="abs-center" :class="$style.image" ref="image">
 					<ResponsiveImage :image="data.background" class="fit-cover" />
 				</div>
 				<div :class="$style.content" ref="content">
