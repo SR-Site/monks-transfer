@@ -2,6 +2,6 @@
 <script src="./Logo.js"></script>
 
 <template>
-	<Icon name="logo" :class="[$style.wrapper, $style[ThemeHelper.parse(theme)]]"/>
+	<Icon name="logo" :class="[$style.wrapper, $style[ClassNameHelper.parseTheme(theme)]]"/>
 </template>
 

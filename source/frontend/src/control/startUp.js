@@ -19,7 +19,7 @@ import Alignment from '../data/enum/Alignment';
 import { buttonTypeMap } from '../data/enum/BackendButtonType';
 import { linkTypeMap } from '../data/enum/BackendLinkType';
 import Theme from '../data/enum/Theme';
-import ThemeHelper from '../util/ThemeHelper';
+import ClassNameHelper from '../util/ClassNameHelper';
 
 const initPlugins = () => {
 	const configManager = getValue(CONFIG_MANAGER);
@@ -46,7 +46,7 @@ const initPlugins = () => {
 		Direction,
 		Alignment,
 		Theme,
-		ThemeHelper,
+		ClassNameHelper,
 		createPath,
 	});
 

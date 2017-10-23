@@ -2,7 +2,7 @@
 <script src="./ButtonCallToReach.js"></script>
 
 <template>
-	<button @click="handleClick" class="button" :class="[$style.button, $style[ThemeHelper.parse(theme)]]" :title="title">
+	<button @click="handleClick" class="button" :class="[$style.button, $style[ClassNameHelper.parseTheme(theme)]]" :title="title">
 		<Icon :class="$style.icon" :name="icon"/>
 		<span :class="$style.label">{{label}}</span>
 	</button>

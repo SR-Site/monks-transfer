@@ -4,7 +4,7 @@
 <template>
 	<article :class="[
 		$style.articleTeaser,
-		$style[ThemeHelper.parse(data.theme)],
+		$style[ClassNameHelper.parseTheme(data.theme)],
 		{
 			[$style.transitionInComplete]: transitionInComplete
 		}]">

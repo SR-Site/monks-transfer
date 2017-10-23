@@ -1,2 +1,131 @@
 :local {
+	.image-with-content {
+		@include size(100%, $sizeGrid*12);
+		position: relative;
+	}
+
+	.site-frame,
+	.overrule-overlap {
+		height: 100%;
+	}
+
+	.image {
+		@include size(100%);
+		position: absolute;
+	}
+
+	.content {
+		@include position(auto, auto, 0, $sizeGrid * 2);
+		height: auto;
+		position: absolute;
+		background: #fff;
+		padding: $sizeGrid * 2 $sizeGrid * 2.5;
+
+		@include respond-to(X_LARGE) {
+			padding: $sizeGrid * 2;
+		}
+
+		@include respond-to(LARGE) {
+			padding: $sizeGrid * 1.5;
+		}
+
+		@include respond-to(MEDIUM) {
+			padding: $sizeGrid;
+		}
+
+		&:after {
+			position: absolute;
+			bottom: 0;
+			content: '';
+		}
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid;
+	}
+
+	/**
+	 * Alignment changes
+	 */
+	.alignment-left {
+		.content {
+			@include position(auto, auto, 0, $sizeGrid * 2);
+			width: $sizeGrid * 18;
+
+			&:after {
+				@include triangle(left, bottom, $colorWhite, $sizeGrid);
+				right: -$sizeGrid;
+			}
+		}
+	}
+
+	.alignment-right {
+		.content {
+			@include position(auto, $sizeGrid * 2, 0, auto);
+			width: $sizeGrid * 18;
+
+			&:after {
+				@include triangle(right, bottom, $colorWhite, $sizeGrid);
+				left: -$sizeGrid;
+			}
+		}
+	}
+
+	/**
+	 * Do we want to mask out the image or not
+	 */
+	.cropped-image {
+		.content {
+			width: $sizeGrid * 20;
+		}
+
+		&.alignment-left {
+			.content {
+				@include position(0, auto, 0, 0);
+			}
+		}
+
+		&.alignment-right {
+			.content {
+				@include position(0, 0, 0, auto);
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		height: auto;
+		margin-left: 0 !important;
+
+		.image {
+			@include aspect-ratio(640px, 580px);
+		}
+
+		.content {
+			position: relative;
+			margin-top: -$sizeGrid*8;
+			@include position(auto, auto !important, auto !important, auto !important);
+			width: calc(100% - #{$sizeGrid}) !important;
+
+			&:after {
+				bottom: auto;
+				top: $sizeGrid*7;
+			}
+		}
+
+		.copy {
+			margin-bottom: $sizeGrid*3;
+		}
+
+		.alignment-left { }
+
+		.alignment-right {
+			.content {
+				margin-left: $sizeGrid * 2;
+			}
+		}
+	}
 }
