@@ -5,7 +5,6 @@
 		overflow: hidden;
 
 		&.has-statistics {
-
 			// Always apply a dark blue layer on top of the crossfader
 			.component-image-crossfader {
 				.mask {
@@ -13,7 +12,7 @@
 					@include size(100%);
 					position: absolute;
 					content: '';
-					background: rgba($colorPrimary, .5);
+					background: rgba($colorPrimary, 0.5);
 				}
 			}
 		}
@@ -35,10 +34,9 @@
 		z-index: 2;
 	}
 
-
 	@include respond-to(MEDIUM) {
 		.primary-background-triangle {
-			left: -$sizeGrid * 6
+			left: -$sizeGrid * 6;
 		}
 
 		.secondary-background-triangle {
@@ -57,7 +55,7 @@
 		}
 
 		.has-statistics {
-			$statisticsHeight: $sizeGrid  * 30;
+			$statisticsHeight: $sizeGrid * 30;
 			height: calc(100vh - #{$sizeGrid * 4} + #{$statisticsHeight});
 			max-height: none;
 
@@ -71,12 +69,12 @@
 		}
 
 		.primary-background-triangle {
-			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 48);
+			@include arrow(right, rgba($colorPrimary, 0.95), $sizeGrid * 48);
 			left: 0;
 		}
 
 		.secondary-background-triangle {
-			@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 20);
+			@include arrow(left, rgba($colorSecondary, 0.95), $sizeGrid * 20);
 			left: $sizeGrid * 14;
 		}
 

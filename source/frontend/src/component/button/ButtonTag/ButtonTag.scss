@@ -1,3 +1,31 @@
 :local {
+	.button-tag {
+		@include size(auto, 2rem);
+		background: $colorTertiary;
+		border-radius: 2rem;
+		font: 600 1.2rem / 2rem $fontOpenSans;
+		color: $colorWhite;
+		text-transform: uppercase;
+		padding: 0 $sizeGrid / 4;
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
 
+		.label {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		&.is-inactive {
+			background-color: $colorLightGrey;
+			color: $colorQuaternary;
+		}
+
+		@include respond-to(SMALL) {
+			font-size: mobile-size(1.8rem);
+			height: $sizeGrid;
+			line-height: $sizeGrid;
+			padding: 0 $sizeGrid/2;
+		}
+	}
 }

@@ -7,7 +7,7 @@
 	transition-property: opacity, filter;
 	transition-duration: $hamburger-hover-transition-duration;
 	transition-timing-function: $hamburger-hover-transition-timing-function;
-	transform: translate3d(0,0,0);
+	transform: translate3d(0, 0, 0);
 
 	// Normalize (<button>)
 	font: inherit;
@@ -54,7 +54,7 @@
 
 	&::before,
 	&::after {
-		content: "";
+		content: '';
 		display: block;
 	}
 

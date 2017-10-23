@@ -1,6 +1,5 @@
 import { AbstractContentPageComponent } from 'vue-block-system';
 import ContentPageTransitionController from './ContentPageTransitionController';
-import { kebabCase } from 'lodash';
 
 export default {
 	name: 'ContentPage',

@@ -1,16 +1,13 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 
-class ButtonTransitionController extends AbstractTransitionController
-{
+class ButtonTransitionController extends AbstractTransitionController {
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
 	 * @description Use this method to setup your transition in timeline
 	 * */
 	protected setupTransitionInTimeline(): void {
-		this.transitionInTimeline.add(
-			this.getSubTimeline('ButtonPrimary')
-		);
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'));
 	}
 
 	/**
@@ -18,8 +15,7 @@ class ButtonTransitionController extends AbstractTransitionController
 	* @method setupTransitionOutTimeline
 	* @description Use this method to setup your transition out timeline
 	* */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default ButtonTransitionController;

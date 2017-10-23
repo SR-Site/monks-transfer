@@ -2,7 +2,11 @@
 <script src="./ButtonTag.js"></script>
 
 <template>
-	<button @click="handleClick">
-		ButtonTag
+	<button
+		@click="handleClick"
+		class="button"
+		:class="[$style.buttonTag, {[$style.isInactive]: isInactive}]"
+		:title="title">
+		<span class="label">{{label}}</span>
 	</button>
 </template>

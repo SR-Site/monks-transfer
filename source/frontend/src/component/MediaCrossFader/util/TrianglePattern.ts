@@ -111,7 +111,7 @@ class TrianglePattern extends Disposable {
 		// Draw the mask
 		this._ctx.beginPath();
 		this._ctx.moveTo(this.xPos(0, inverted), this.yPos(0 - yTranslate, inverted));
-		this._ctx.lineTo(this.xPos(0, inverted), this.yPos((this._triangleSize * 2) - yTranslate, inverted));
+		this._ctx.lineTo(this.xPos(0, inverted), this.yPos(this._triangleSize * 2 - yTranslate, inverted));
 		this._ctx.lineTo(this.xPos(this._triangleSize, inverted), this.yPos(this._triangleSize - yTranslate, inverted));
 		this._ctx.lineTo(this.xPos(this._triangleSize, inverted), this.yPos(0 - yTranslate, inverted));
 		this._ctx.lineTo(this.xPos(0, inverted), this.yPos(0 - yTranslate, inverted));

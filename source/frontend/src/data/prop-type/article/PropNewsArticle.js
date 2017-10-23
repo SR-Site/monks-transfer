@@ -9,13 +9,11 @@ export default {
 	image: VueTypes.shape(PropImage),
 	tags: VueTypes.arrayOf(PropLink),
 	theme: VueTypes.number.isRequired,
-	author: VueTypes.shape(
-		{
-			name: VueTypes.string.isRequired,
-			role: VueTypes.string.isRequired,
-			image: VueTypes.shape(PropImage),
-		},
-	),
+	author: VueTypes.shape({
+		name: VueTypes.string.isRequired,
+		role: VueTypes.string.isRequired,
+		image: VueTypes.shape(PropImage),
+	}),
 	link: VueTypes.shape(PropLink),
 	social: VueTypes.arrayOf(PropLink),
 	views: VueTypes.number.isRequired,

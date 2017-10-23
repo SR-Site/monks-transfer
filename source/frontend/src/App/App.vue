@@ -2,7 +2,7 @@
 <script src="./App.js"></script>
 
 <template>
-	<div>
+	<div :class="$style.appWrapper">
 		<SiteHeader componentId="Header" />
 		<router-view></router-view>
 		<SiteFooter componentId="Footer" />

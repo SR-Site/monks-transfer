@@ -8,15 +8,11 @@ class FreeTextTransitionController extends AbstractTransitionController {
 	 * @description Use this method to setup your transition in timeline
 	 * */
 	protected setupTransitionInTimeline(): void {
-		this.transitionInTimeline.from(
-			this.viewModel.$refs.htmlContent,
-			0.8,
-			{
-				y: 50,
-				autoAlpha: 0,
-				ease: Expo.easeOut,
-			},
-		);
+		this.transitionInTimeline.from(this.viewModel.$refs.htmlContent, 0.8, {
+			y: 50,
+			autoAlpha: 0,
+			ease: Expo.easeOut,
+		});
 	}
 
 	/**
@@ -24,8 +20,7 @@ class FreeTextTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default FreeTextTransitionController;

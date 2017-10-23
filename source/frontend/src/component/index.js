@@ -11,6 +11,7 @@ import ButtonTag from './button/ButtonTag/ButtonTag';
 import ButtonTertiary from './button/ButtonTertiary/ButtonTertiary';
 import ButtonMenu from './button/ButtonMenu/ButtonMenu';
 import ButtonHeader from './button/ButtonHeader/ButtonHeader';
+import ResponsiveImage from './ResponsiveImage/ResponsiveImage';
 
 // add components you want to register globally
 export default {
@@ -27,4 +28,5 @@ export default {
 	ButtonStartAdvertising,
 	ButtonTag,
 	ButtonTertiary,
+	ResponsiveImage,
 };

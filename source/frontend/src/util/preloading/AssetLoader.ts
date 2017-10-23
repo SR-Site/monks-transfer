@@ -26,32 +26,32 @@ class AssetLoader {
 	 * @param sources
 	 * @returns {Promise}
 	 */
-	public static loadImages(sources: Array<string>): Promise<Array<{ image: HTMLImageElement; index: number; }>> {
+	public static loadImages(sources: Array<string>): Promise<Array<{ image: HTMLImageElement; index: number }>> {
 		let loadedCount: number = 0;
 		const totalImages: number = sources.length;
-		let images: Array<{ image: HTMLImageElement; index: number; }> = [];
+		let images: Array<{ image: HTMLImageElement; index: number }> = [];
 
 		return new Promise((resolve: (images: Array<any>) => void, reject: (error: string) => void) => {
 			sources.forEach((source: string, index: number) => {
 				AssetLoader.loadImage(source)
-				.then((image: HTMLImageElement) => {
-					++loadedCount;
+					.then((image: HTMLImageElement) => {
+						++loadedCount;
 
-					images.push({
-									image: image,
-									index: index,
-								});
-
-					if (totalImages == loadedCount) {
-						// Sort image in same order as they were sent.
-						images.sort((a, b) => {
-							return a.index - b.index;
+						images.push({
+							image: image,
+							index: index,
 						});
 
-						resolve(images);
-					}
-				})
-				.catch((reason) => console.log('[Unable to load image', reason));
+						if (totalImages == loadedCount) {
+							// Sort image in same order as they were sent.
+							images.sort((a, b) => {
+								return a.index - b.index;
+							});
+
+							resolve(images);
+						}
+					})
+					.catch(reason => console.log('[Unable to load image', reason));
 			});
 		});
 	}
@@ -67,7 +67,7 @@ class AssetLoader {
 			let r = false;
 			s.type = 'text/javascript';
 			s.src = src;
-			s.onload = s['onreadystatechange'] = function () {
+			s.onload = s['onreadystatechange'] = function() {
 				if (!r && (!this.readyState || this.readyState === 'complete')) {
 					r = true;
 					resolve();

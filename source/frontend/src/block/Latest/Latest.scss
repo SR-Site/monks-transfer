@@ -57,7 +57,7 @@
 			padding-right: $sizeGrid;
 		}
 
-		.article-teaser:not(:nth-child(-n+2) ) {
+		.article-teaser:not(:nth-child(-n + 2)) {
 			display: none;
 		}
 

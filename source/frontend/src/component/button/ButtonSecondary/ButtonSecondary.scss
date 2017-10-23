@@ -10,15 +10,15 @@
 		vertical-align: middle;
 		z-index: 0;
 		border: 1px solid $colorSecondary;
-		transition: border-color .2s $easeLinear;
+		transition: border-color 0.2s $easeLinear;
 
 		@include hover() {
-			border-color: rgba(0, 0, 0, .2);
+			border-color: rgba(0, 0, 0, 0.2);
 		}
 
 		// Light Theme
 		&.theme-light {
-			border-color: rgba(255, 255, 255, .3);
+			border-color: rgba(255, 255, 255, 0.3);
 
 			@include hover() {
 				border-color: #fff;

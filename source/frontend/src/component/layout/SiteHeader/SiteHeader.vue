@@ -2,14 +2,15 @@
 <script src="./SiteHeader.js"></script>
 
 <template>
-	<header :class="$style.wrapper">
+	<header :class="[$style.wrapper, {[$style['is-scrolled']]: scrolled}]">
 		<h2 :class="$style.logo">
-			<Logo theme="light"/>
+			<Logo :theme="scrolled ? Theme.DARK : Theme.LIGHT"/>
 		</h2>
 		<div :class="$style.callToActions">
 			<ButtonCallToReach
 				componentId="ButtonCallToReach"
 				icon="contact"
+				:theme="scrolled ? Theme.DARK : Theme.LIGHT"
 				:title="phoneNumber"
 				:label="phoneNumber"
 				:type="ButtonType.LINK"

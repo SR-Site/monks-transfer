@@ -8,7 +8,7 @@
 		position: absolute;
 		@include position(auto, 0, -1px, 0%);
 		@include size(0%, 1px);
-		content: "";
+		content: '';
 		background-color: currentColor;
 		transition: width 150ms $easeInOutExpo;
 	}

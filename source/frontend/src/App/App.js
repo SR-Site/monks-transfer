@@ -11,7 +11,7 @@ export default {
 		Notification,
 	},
 	mounted() {
-		this.$deviceState.addEventListener(DeviceStateEvent.STATE_UPDATE, (event) => {
+		this.$deviceState.addEventListener(DeviceStateEvent.STATE_UPDATE, event => {
 			console.log(event);
 		});
 	},

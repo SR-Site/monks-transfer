@@ -36,6 +36,10 @@ body {
 	box-sizing: border-box;
 }
 
+figure {
+	margin: 0;
+}
+
 :root {
 	font-size: $baseFontSize;
 

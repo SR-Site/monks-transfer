@@ -31,8 +31,8 @@ export default {
 		};
 	},
 	computed: {
-		hasStatistics(value) {
-			return this.data.slides.map((slide) => slide.statistics !== null).indexOf(true) > -1;
+		hasStatistics() {
+			return this.data.slides.map(slide => slide.statistics !== null).indexOf(true) > -1;
 		},
 	},
 	props: {
@@ -42,13 +42,10 @@ export default {
 		this._slides = {};
 
 		if (!bowser.ios && !bowser.android) {
-			this._activeVideoElement;
-			this._videoElements = [
-				new VideoElement(),
-				new VideoElement(),
-			];
+			this._activeVideoElement; // eslint-disable-line
+			this._videoElements = [new VideoElement(), new VideoElement()];
 
-			this._videoElements.forEach((videoElement) => {
+			this._videoElements.forEach(videoElement => {
 				videoElement.setWidth(1280);
 				videoElement.setHeight(720);
 				videoElement.setVolume(0);
@@ -83,8 +80,10 @@ export default {
 		handleNextClick() {
 			if (this.switchComplete) {
 				this.switchComplete = false;
-				let newIndex = this.activeIndex + 1 < this.data.slides.length ? this.activeIndex + 1 : 0;
-				this.openNextStep(newIndex).then(() => this.switchComplete = true);
+				const newIndex = this.activeIndex + 1 < this.data.slides.length ? this.activeIndex + 1 : 0;
+				this.openNextStep(newIndex).then(() => {
+					this.switchComplete = true;
+				});
 			}
 		},
 		openNextStep(index) {
@@ -98,19 +97,11 @@ export default {
 			oldSlide.transitionController.transitionInTimeline.timeScale(2);
 			newSlide.transitionController.transitionInTimeline.timeScale(1);
 
-			return Promise.all(
-				[
-					primaryTriangle.transitionOut(),
-					oldSlide.transitionOut(),
-				],
-			)
-			.then(() => Promise.all(
-				[
-					primaryTriangle.transitionIn(),
-					newSlide.transitionIn(),
-				],
-			))
-			.then(() => this.activeIndex = index);
+			return Promise.all([primaryTriangle.transitionOut(), oldSlide.transitionOut()])
+				.then(() => Promise.all([primaryTriangle.transitionIn(), newSlide.transitionIn()]))
+				.then(() => {
+					this.activeIndex = index;
+				});
 		},
 		changeBackgroundImage(index) {
 			const crossFader = this.getChild('MediaCrossFader');
@@ -119,16 +110,16 @@ export default {
 				if (
 					this.data.slides[index].backgroundVideo &&
 					this.data.slides[index].backgroundVideo.type === VideoType.INTERNAL &&
-					(!bowser.android && !bowser.ios)) {
+					(!bowser.android && !bowser.ios)
+				) {
 					// Get an available video element.
-					let videoElement = this.getVideoElement();
+					const videoElement = this.getVideoElement();
 
 					// Update the source to start playing the new backgroundVideo
 					videoElement.setSrc(this.data.slides[index].backgroundVideo.url);
 
 					// Open the new video
-					return crossFader.openVideo(videoElement.element)
-					.then(() => {
+					return crossFader.openVideo(videoElement.element).then(() => {
 						// Push the old active video element back into the re-usable array
 						if (this._activeVideoElement) {
 							// Push the active on back into the video elements array
@@ -139,17 +130,9 @@ export default {
 						this._activeVideoElement = videoElement;
 					});
 				}
-				else {
-					return crossFader.openImage(
-						ImageHelper.getImageForMediaQuery(
-							this.data.slides[index].background,
-						),
-					);
-				}
+				return crossFader.openImage(ImageHelper.getImageForMediaQuery(this.data.slides[index].background));
 			}
-			else {
-				return Promise.resolve();
-			}
+			return Promise.resolve();
 		},
 	},
 };

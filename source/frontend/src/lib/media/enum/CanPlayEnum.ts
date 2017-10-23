@@ -8,7 +8,7 @@
 const enum CanPlayEnum {
 	PROBABLY = 0,
 	MAYBE = 1,
-	NO = 2
+	NO = 2,
 }
 
 export default CanPlayEnum;

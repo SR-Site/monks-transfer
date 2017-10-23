@@ -6,7 +6,7 @@
 		<div :class="$style.siteFrame" class="site-frame">
 			<div class="overrule-overlap">
 				<header :class="$style.header">
-					<h2 class="heading heading-03" v-html="data.heading"></h2>
+					<h2 :class="$style.heading" class="heading heading-03" v-html="data.heading"></h2>
 					<ButtonPrimary
 						componentId="ButtonPrimary"
 						:title="data.link.title"
@@ -20,7 +20,14 @@
 						:class="$style.button"/>
 				</header>
 				<div :class="$style.latestArticles">
-					TODO:
+					<ArticleTeaser
+						v-for="(article, index) in data.articles"
+						:componentId="`ArticleTeaser${index}`"
+						:key="index"
+						:data="article"
+						:class="$style.articleTeaser"
+						ref="article"
+					/>
 				</div>
 			</div>
 		</div>

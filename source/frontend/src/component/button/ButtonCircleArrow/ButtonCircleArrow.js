@@ -17,7 +17,7 @@ export default {
 		},
 		mappedArrowPosition() {
 			return Alignment[this.arrowPosition].toLowerCase();
-		}
+		},
 	},
 	methods: {
 		handleAllComponentsReady() {

@@ -16,8 +16,7 @@ export default class ImageHelper {
 	): string {
 		if (currentState > deviceState.SMALL) {
 			return image.normal;
-		}
-		else {
+		} else {
 			return image.small;
 		}
 	}

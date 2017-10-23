@@ -39,5 +39,6 @@ module.exports = {
 			'error',
 			{ singleQuote: true, trailingComma: 'all', printWidth: 120, tabWidth: 1, useTabs: true },
 		],
+		'no-underscore-dangle': 0,
 	},
 };

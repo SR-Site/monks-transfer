@@ -54,7 +54,7 @@ export default class CrossFader extends Disposable {
 	private _trianglePattern: TrianglePattern;
 	private _triangleProgress: number = 0;
 
-	private _images: { [index: string]: HTMLImageElement; } = {};
+	private _images: { [index: string]: HTMLImageElement } = {};
 	private _animation: TweenLite;
 
 	private _videoInterval?: number;
@@ -65,7 +65,7 @@ export default class CrossFader extends Disposable {
 	 */
 	private _oldWidth: number = 0;
 
-	constructor(private _wrapper: HTMLElement, private _canvas: HTMLCanvasElement, private _gridSizeElement:HTMLElement) {
+	constructor(private _wrapper: HTMLElement, private _canvas: HTMLCanvasElement, private _gridSizeElement: HTMLElement) {
 		super();
 
 		// Overlay canvas
@@ -113,15 +113,11 @@ export default class CrossFader extends Disposable {
 	 * @param ease
 	 * @returns {PromiseBluebird<U>}
 	 */
-	public openImage(
-		path: string,
-		duration: number = CrossFader.DURATION,
-		ease: Ease = Quad.easeInOut,
-	): Promise<any> {
+	public openImage(path: string, duration: number = CrossFader.DURATION, ease: Ease = Quad.easeInOut): Promise<any> {
 		return this.getImage(path)
-		.then((image: HTMLImageElement) => this._newImage = image)
-		.then(() => this.calculateDimensions())
-		.then(() => this.open(duration, ease));
+			.then((image: HTMLImageElement) => (this._newImage = image))
+			.then(() => this.calculateDimensions())
+			.then(() => this.open(duration, ease));
 	}
 
 	/**
@@ -143,15 +139,15 @@ export default class CrossFader extends Disposable {
 
 		// Keep playing the video until we start a new animation
 		return this.open(duration, ease)
-		.then(() => {
-			if (CrossFader.PAUSE_VIDEO_ON_CROSS) {
-				(<HTMLVideoElement>this._activeImage).play();
-			}
-		})
-		.then(() => {
-			// Start the loop of the video
-			this._videoInterval = setInterval(() => this.draw(), 1000 / 60);
-		});
+			.then(() => {
+				if (CrossFader.PAUSE_VIDEO_ON_CROSS) {
+					(<HTMLVideoElement>this._activeImage).play();
+				}
+			})
+			.then(() => {
+				// Start the loop of the video
+				this._videoInterval = setInterval(() => this.draw(), 1000 / 60);
+			});
 	}
 
 	/**
@@ -163,7 +159,8 @@ export default class CrossFader extends Disposable {
 	public open(duration: number = CrossFader.DURATION, ease: Ease = Quad.easeInOut): Promise<any> {
 		return new Promise((resolve: () => void) => {
 			this._animation = TweenLite.fromTo(
-				this, duration,
+				this,
+				duration,
 				{
 					_triangleProgress: 0,
 				},
@@ -224,16 +221,15 @@ export default class CrossFader extends Disposable {
 		return new Promise((resolve: (image: HTMLImageElement) => void) => {
 			if (this._images[path]) {
 				resolve(this._images[path]);
-			}
-			else {
+			} else {
 				AssetLoader.loadImage(path)
-				.then((image) => {
-					// Store for later usage
-					this._images[path] = image;
+					.then(image => {
+						// Store for later usage
+						this._images[path] = image;
 
-					resolve(image);
-				})
-				.catch((reason) => console.log('[Unable to load image', reason));
+						resolve(image);
+					})
+					.catch(reason => console.log('[Unable to load image', reason));
 			}
 		});
 	}
@@ -263,15 +259,8 @@ export default class CrossFader extends Disposable {
 			this.updateMaskCanvas();
 
 			// Draw the new image behind the active image
-			this._ctx.drawImage(
-				this._maskCanvas,
-				0,
-				0,
-				this._canvas.width,
-				this._canvas.height,
-			);
-		}
-		else {
+			this._ctx.drawImage(this._maskCanvas, 0, 0, this._canvas.width, this._canvas.height);
+		} else {
 			this.drawImageFrame(this._activeImage, this._activeImageOffset);
 		}
 	}
@@ -291,13 +280,7 @@ export default class CrossFader extends Disposable {
 		canvas: HTMLCanvasElement = this._canvas,
 	): void {
 		if (source) {
-			ctx.drawImage(
-				source,
-				imageOffset.x,
-				imageOffset.y,
-				imageOffset.width,
-				imageOffset.height,
-			);
+			ctx.drawImage(source, imageOffset.x, imageOffset.y, imageOffset.width, imageOffset.height);
 
 			// Draw the overlay if required
 			ctx.drawImage(this._overlayCanvas, 0, 0, canvas.width, canvas.height);
@@ -352,8 +335,7 @@ export default class CrossFader extends Disposable {
 
 		if (this._activeImage) {
 			this.drawImageFrame(this._activeImage, this._activeImageOffset, this._maskCtx, this._maskCanvas);
-		}
-		else {
+		} else {
 			this._maskCtx.rect(0, 0, this._maskCanvas.width, this._maskCanvas.height);
 			this._maskCtx.fillStyle = CrossFader.BACKGROUND_COLOR;
 			this._maskCtx.fill();
@@ -375,17 +357,12 @@ export default class CrossFader extends Disposable {
 	 * @method getOffset
 	 */
 	private getOffset(image: HTMLImageElement | HTMLVideoElement): IRectangle {
-		return ElementResizer.getRect(
-			image.width,
-			image.height,
-			ScaleMode.COVER,
-			{
-				x: 0,
-				y: 0,
-				width: this._canvas.width,
-				height: this._canvas.height,
-			},
-		);
+		return ElementResizer.getRect(image.width, image.height, ScaleMode.COVER, {
+			x: 0,
+			y: 0,
+			width: this._canvas.width,
+			height: this._canvas.height,
+		});
 	}
 
 	/**

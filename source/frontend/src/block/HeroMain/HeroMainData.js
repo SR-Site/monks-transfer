@@ -10,15 +10,13 @@ export default {
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
 	slides: VueTypes.arrayOf(
-		VueTypes.shape(
-			{
-				heading: VueTypes.string.isRequired,
-				paragraph: VueTypes.string,
-				background: VueTypes.shape(PropImage),
-				backgroundVideo: VueTypes.shape(PropVideo),
-				link: VueTypes.shape(PropLink),
-				statistics: VueTypes.shape(PropStatistic),
-			},
-		),
+		VueTypes.shape({
+			heading: VueTypes.string.isRequired,
+			paragraph: VueTypes.string,
+			background: VueTypes.shape(PropImage),
+			backgroundVideo: VueTypes.shape(PropVideo),
+			link: VueTypes.shape(PropLink),
+			statistics: VueTypes.shape(PropStatistic),
+		}),
 	),
 };

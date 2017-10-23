@@ -16,9 +16,8 @@ import Disposable from 'seng-disposable/lib/Disposable';
  * @class NativeEventListener
  */
 
-export default class NativeEventListener extends Disposable
-{
-	private _isDestructed:boolean = false;
+export default class NativeEventListener extends Disposable {
+	private _isDestructed: boolean = false;
 
 	/**
 	 * Add an event listener on a HTML element.
@@ -33,12 +32,11 @@ export default class NativeEventListener extends Disposable
 	 * not trigger a listener designated to use capture.
 	 */
 	constructor(
-		public eventDispatcher:EventTarget,
-		public type:string,
-		public listener:EventListenerOrEventListenerObject,
-		public useCapture?:boolean,
-	)
-	{
+		public eventDispatcher: EventTarget,
+		public type: string,
+		public listener: EventListenerOrEventListenerObject,
+		public useCapture?: boolean,
+	) {
 		super();
 
 		eventDispatcher.addEventListener(type, listener, useCapture);
@@ -47,13 +45,11 @@ export default class NativeEventListener extends Disposable
 	/**
 	 * Removes the event listener on the HTML element
 	 */
-	public dispose():void
-	{
-		if (this.eventDispatcher && this.type && this.listener)
-		{
+	public dispose(): void {
+		if (this.eventDispatcher && this.type && this.listener) {
 			this.eventDispatcher.removeEventListener(this.type, this.listener, this.useCapture);
 		}
-		this.eventDispatcher  = null;
+		this.eventDispatcher = null;
 		this.type = null;
 		this.listener = null;
 

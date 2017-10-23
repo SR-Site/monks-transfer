@@ -1,7 +1,6 @@
 import { AbstractButtonComponent } from 'vue-block-system';
-import ButtonPrimaryTransitionController from './ButtonPrimaryTransitionController';
 import VueTypes from 'vue-types';
-import Theme from '../../../data/enum/Theme';
+import ButtonPrimaryTransitionController from './ButtonPrimaryTransitionController';
 
 export default {
 	name: 'ButtonPrimary',
@@ -18,10 +17,7 @@ export default {
 	},
 	computed: {
 		fullPath() {
-			return (this.width * 2) + (this.height * 2);
-		},
-		mappedTheme() {
-			return `theme-${Theme[this.theme].toLowerCase()}`;
+			return this.width * 2 + this.height * 2;
 		},
 	},
 	mounted() {
@@ -40,20 +36,20 @@ export default {
 		},
 		setSize() {
 			if (this.$el.offsetWidth > 0 && this.$el.offsetHeight > 0) {
-				this.$refs.hoverStroke.style.strokeWidth = this.borderWidth + 'px';
+				this.$refs.hoverStroke.style.strokeWidth = `${this.borderWidth}px`;
 
 				this.width = this.$el.offsetWidth;
 				this.height = this.$el.offsetHeight;
 
-				this.$refs.hoverStroke.setAttribute('width', this.width + 'px');
-				this.$refs.hoverStroke.setAttribute('height', this.height + 'px');
+				this.$refs.hoverStroke.setAttribute('width', `${this.width}px`);
+				this.$refs.hoverStroke.setAttribute('height', `${this.height}px`);
 
-				this.$refs.backgroundStroke.setAttribute('width', this.width + 'px');
-				this.$refs.backgroundStroke.setAttribute('height', this.height + 'px');
+				this.$refs.backgroundStroke.setAttribute('width', `${this.width}px`);
+				this.$refs.backgroundStroke.setAttribute('height', `${this.height}px`);
 
 				// Calculate the dash array value's
-				this.$refs.hoverStroke.style.strokeDasharray = '0px ' + this.fullPath + 'px';
-				this.$refs.hoverStroke.style.strokeDashoffset = this.height / 2 + 'px';
+				this.$refs.hoverStroke.style.strokeDasharray = `0px ${this.fullPath}px`;
+				this.$refs.hoverStroke.style.strokeDashoffset = `${this.height / 2}px`;
 			}
 		},
 	},

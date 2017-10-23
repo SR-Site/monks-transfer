@@ -7,7 +7,7 @@ import PagePaths from 'data/enum/PagePaths';
 import { createPath } from 'util/routeUtils';
 import Params from 'data/enum/Params';
 import { getValue } from 'util/injector';
-import { CONFIG_MANAGER, GATEWAY } from 'data/Injectables';
+import { CONFIG_MANAGER, GATEWAY, DEVICE_STATE_TRACKER } from 'data/Injectables';
 import localeLoader from 'util/localeLoader';
 import BlockSystem, { ButtonType, LinkType } from 'vue-block-system';
 import block from 'block';
@@ -18,8 +18,8 @@ import Direction from '../data/enum/Direction';
 import Alignment from '../data/enum/Alignment';
 import { buttonTypeMap } from '../data/enum/BackendButtonType';
 import { linkTypeMap } from '../data/enum/BackendLinkType';
-import { DEVICE_STATE_TRACKER } from '../data/Injectables';
 import Theme from '../data/enum/Theme';
+import ThemeHelper from '../util/ThemeHelper';
 
 const initPlugins = () => {
 	const configManager = getValue(CONFIG_MANAGER);
@@ -46,6 +46,7 @@ const initPlugins = () => {
 		Direction,
 		Alignment,
 		Theme,
+		ThemeHelper,
 		createPath,
 	});
 
@@ -86,7 +87,7 @@ const startUp = store => {
 
 	const configManager = getValue(CONFIG_MANAGER);
 
-	const unSubscribe = store.subscribe((mutation) => {
+	const unSubscribe = store.subscribe(mutation => {
 		if (mutation.type === 'init/setData') {
 			// un-subscribe after we received the setData mutation
 			unSubscribe();
@@ -98,12 +99,10 @@ const startUp = store => {
 	});
 
 	// Add async methods to the Promise.all array
-	return Promise.all(
-		[
-			Vue.blockSystemReady,
-			configManager.getVariable(VariableNames.LOCALE_ENABLED) ? waitForLocale(store) : Promise.resolve(),
-		],
-	);
+	return Promise.all([
+		Vue.blockSystemReady,
+		configManager.getVariable(VariableNames.LOCALE_ENABLED) ? waitForLocale(store) : Promise.resolve(),
+	]);
 };
 
 export default startUp;

@@ -8,7 +8,7 @@
 		@mouseleave="handleMouseLeave"
 		class="button"
 		:title="title"
-		:class="[$style.buttonPrimary, $style[mappedTheme]]">
+		:class="[$style.buttonPrimary, $style[ThemeHelper.parse(theme)]]">
 		<span ref="label" :class="$style.label">{{label}}</span>
 		<svg width="100%" height="100%" class="abs-fill" preserveAspectRatio="none">
 			<rect

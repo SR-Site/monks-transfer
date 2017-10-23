@@ -10,7 +10,6 @@
 		overflow: visible;
 
 		~ .block-component {
-
 			// Sometimes we want to overrule the z-index of the next block to be on top of the overlapping area
 			.overrule-overlap {
 				position: relative;
@@ -35,7 +34,6 @@
 			margin-top: $sizeGrid * $i;
 
 			&:last-child {
-
 				// Add all the blocks that need extra margin when they are the last block on the page
 				&.component-block-map,
 				&.component-block-info {

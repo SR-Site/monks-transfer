@@ -29,15 +29,11 @@ class PrimaryTriangleTransitionController extends AbstractTransitionController {
 	 * @description Use this method to setup your transition out timeline
 	 * */
 	protected setupTransitionOutTimeline(): void {
-		this.transitionOutTimeline.to(
-			this.viewModel.$el,
-			1,
-			{
-				xPercent: 200,
-				yPercent: -100,
-				ease: Expo.easeIn,
-			},
-		);
+		this.transitionOutTimeline.to(this.viewModel.$el, 1, {
+			xPercent: 200,
+			yPercent: -100,
+			ease: Expo.easeIn,
+		});
 	}
 }
 

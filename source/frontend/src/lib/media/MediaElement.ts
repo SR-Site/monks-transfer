@@ -11,7 +11,6 @@ import ReadyStateEnum from 'lib/media/enum/ReadyStateEnum';
 import CanPlayEnum from 'lib/media/enum/CanPlayEnum';
 
 class MediaElement {
-
 	/**
 	 * @event ontime
 	 * @param {string}
@@ -279,7 +278,6 @@ class MediaElement {
 	 * @property crossOrigin {string}
 	 */
 	public get crossOrigin(): string {
-
 		return this.getCrossOrigin();
 	}
 
@@ -290,7 +288,7 @@ class MediaElement {
 	 * @return temple.utils.video.NetworkStateEnum
 	 */
 	public getNetworkState(): NetworkStateEnum {
-		return <NetworkStateEnum> this.element.networkState;
+		return <NetworkStateEnum>this.element.networkState;
 	}
 
 	/**
@@ -355,7 +353,7 @@ class MediaElement {
 	 * @return temple.utils.video.ReadyStateEnum
 	 */
 	public getReadyState(): ReadyStateEnum {
-		return <ReadyStateEnum> this.element.readyState;
+		return <ReadyStateEnum>this.element.readyState;
 	}
 
 	/**
@@ -967,7 +965,6 @@ class MediaElement {
 				return CanPlayEnum.NO;
 			}
 		}
-
 	}
 
 	/**

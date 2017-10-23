@@ -1,7 +1,7 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import PercentageLoaderTransitionController from './PercentageLoaderTransitionController';
 import VueTypes from 'vue-types';
 import { TweenLite, Power2 } from 'gsap';
+import PercentageLoaderTransitionController from './PercentageLoaderTransitionController';
 
 export default {
 	name: 'PercentageLoader',
@@ -25,8 +25,8 @@ export default {
 			this.animateLine(this.value, this.total);
 		},
 		animateLine(value, total) {
-			let targetValue = isFinite(value) ? value : 100;
-			let percentage = Math.round((targetValue / total) * 100);
+			const targetValue = isFinite(value) ? value : 100; // eslint-disable-line
+			const percentage = Math.round(targetValue / total * 100);
 
 			TweenLite.fromTo(
 				this.$refs.animatedLine,
@@ -47,12 +47,12 @@ export default {
 					drawSVG: '0%',
 				},
 				{
-					drawSVG: '0 ' + percentage + '%',
+					drawSVG: `0 ${percentage}%`,
 					ease: Power2.easeIn,
 				},
 			);
 
-			this.label = isFinite(value) ? `${percentage}%` : value;
+			this.label = isFinite(value) ? `${percentage}%` : value; // eslint-disable-line
 		},
 	},
 };
