@@ -149,7 +149,7 @@
 			clip: rect(0, $sizeGrid * 15, $sizeGrid * 8, $sizeGrid * 7.5);
 		}
 
-		&.transition-in-complete {
+		.transition-in-complete {
 			@include hover() {
 				.image {
 					clip: rect(0, $sizeGrid * 15, $sizeGrid * 8, 0);
@@ -172,7 +172,7 @@
 			clip: rect(0, $sizeGrid * 12, $sizeGrid * 8, $sizeGrid * 6);
 		}
 
-		&.transition-in-complete {
+		.transition-in-complete {
 			@include hover() {
 				.image {
 					clip: rect(0, $sizeGrid * 12, $sizeGrid * 8, 0);
@@ -195,7 +195,7 @@
 			clip: rect(0, $sizeGrid * 9, $sizeGrid * 8, $sizeGrid * 6);
 		}
 
-		&.transition-in-complete {
+		.transition-in-complete {
 			@include hover() {
 				.image {
 					clip: rect(0, $sizeGrid * 9, $sizeGrid * 8, 0);
@@ -238,7 +238,7 @@
 			}
 		}
 
-		&.transition-in-complete {
+		.transition-in-complete {
 			@include hover() {
 				.image {
 					clip: auto;

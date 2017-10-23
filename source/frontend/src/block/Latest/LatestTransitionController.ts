@@ -12,15 +12,17 @@ class LatestTransitionController extends AbstractTransitionController {
 		this.transitionInTimeline.from(this.viewModel.$el.querySelector('.heading'), 0.8, {
 			opacity: 0,
 		});
+
 		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '=-0.2');
 
 		if (articles) {
 			articles.forEach((article, index) => {
 				const componentId = `ArticleTeaser${index}`;
-				const duration = this.getSubTimelineDuration(componentId);
-				const offset = `=-${duration * (index > 0 ? 0.9 : 0.25)}`;
 
-				this.transitionInTimeline.add(this.getSubTimeline(componentId), offset);
+				this.transitionInTimeline.add(
+					this.getSubTimeline(componentId),
+					index * 0.25,
+				);
 			});
 		}
 	}

@@ -11,6 +11,7 @@ class ArticleTeaserTransitionController extends AbstractTransitionController {
 	protected setupTransitionInTimeline(): void {
 		const el = this.viewModel.$el;
 		const clipSize = (<HTMLElement>this.viewModel.$refs.description).offsetWidth;
+
 		this.transitionInTimeline.fromTo(
 			el,
 			0.5,
@@ -20,6 +21,7 @@ class ArticleTeaserTransitionController extends AbstractTransitionController {
 			{
 				opacity: 1,
 			},
+			0
 		);
 
 		this.transitionInTimeline.fromTo(
