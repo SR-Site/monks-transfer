@@ -2,7 +2,7 @@
 <script src="./ImageCallToActions.js"></script>
 
 <template>
-	<div>
-		<h2>ImageCallToActions</h2>
+	<div :class="$style.imageCallToActions">
+
 	</div>
 </template>

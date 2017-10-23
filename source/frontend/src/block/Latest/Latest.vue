@@ -24,7 +24,7 @@
 						v-for="(article, index) in data.articles"
 						:componentId="`ArticleTeaser${index}`"
 						:key="index"
-						:data="article"
+						:data="getArticleData(article)"
 						:class="$style.articleTeaser"
 						ref="article"
 					/>
