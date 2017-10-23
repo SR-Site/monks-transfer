@@ -1,5 +1,5 @@
 .component-button-menu {
-	@include size($sizeGrid * 5, $sizeGrid * 2);
+	@include size(auto, $sizeGrid * 2);
 	text-transform: uppercase;
 	text-align: left;
 	background: $colorPrimary;
@@ -10,13 +10,6 @@
 		vertical-align: middle;
 	}
 
-	.seperator {
-		@include size(1px, 4rem);
-		background: rgba(#fff, .2);
-		display: inline-block;
-		margin-left: $sizeGrid;
-	}
-
 	.text {
 		font: 700 1.2rem / 1 $fontOpenSans;
 		margin-left: $sizeGrid;
@@ -24,6 +17,7 @@
 
 	.hamburger {
 		margin-left: $sizeGrid / 4;
+		margin-right: $sizeGrid / 4;
 	}
 
 	@include respond-to(SMALL) {

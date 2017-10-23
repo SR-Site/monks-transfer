@@ -1,9 +1,10 @@
 .component-button-header {
-	@include size($sizeGrid * 5.5, $sizeGrid * 2);
+	@include size(auto, $sizeGrid * 2);
 	text-transform: uppercase;
-	text-align: left;
 	background: $colorPrimary;
 	color: $colorWhite;
+	text-align: center;
+	padding: 0 $sizeGrid;
 
 	span {
 		display: inline-block;
@@ -12,13 +13,15 @@
 
 	.seperator {
 		@include size(1px, 4rem);
-		background: rgba(#fff, .2);
-		margin-left: $sizeGrid;
+		background: #fff;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
 	.text {
 		font: 700 1.2rem / 1 $fontOpenSans;
-		margin-left: $sizeGrid;
 	}
 
 	@include respond-to(SMALL) {
@@ -28,10 +31,6 @@
 		.text {
 			margin-left: 0;
 			font-size: 1.8rem;
-		}
-
-		.seperator {
-			display: none;
 		}
 	}
 }

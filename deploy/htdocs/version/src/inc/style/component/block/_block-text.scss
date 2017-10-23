@@ -17,9 +17,15 @@
 
 	p {
 		@extend %copy-01;
+		display: block;
 
 		&:not(:first-child) {
 			margin-top: $sizeGrid;
+		}
+
+		img	{
+			display: inline-block;
+			vertical-align: middle;
 		}
 	}
 
