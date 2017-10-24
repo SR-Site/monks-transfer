@@ -18,7 +18,7 @@
 		<PersonaSelectorMobileCarousel
 			componentId="PersonaSelectorMobileCarousel"
 			@carouselChange="handleMobileCarouselChange"
-			v-if="deviceState <= DeviceState.SMALL"
+			v-if="isSmall"
 			:data="data.personas"
 		/>
 		<div :class="$style.personaContentWrapper" class="abs-fill">
@@ -39,11 +39,10 @@
 			:data="data.personas"/>
 		<DashedPaginator
 			componentId="DashedPaginator"
-			v-if="deviceState <= DeviceState.SMALL"
+			v-if="isSmall"
 			@paginatorClick="handleMobilePaginatorClick"
 			:activeIndex="activeIndex"
 			:orientation="Orientation.HORIZONTAL"
-			:items="data.personas"
-		/>
+			:items="data.personas" />
 	</div>
 </template>

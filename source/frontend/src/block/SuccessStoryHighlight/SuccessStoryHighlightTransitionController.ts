@@ -1,19 +1,22 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 
-class QuoteSecondaryTransitionController extends AbstractTransitionController {
+class SuccessStoryHighlightTransitionController extends AbstractTransitionController
+{
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
 	 * @description Use this method to setup your transition in timeline
 	 * */
-	protected setupTransitionInTimeline(): void {}
+	protected setupTransitionInTimeline(): void {
+	}
 
 	/**
 	* @public
 	* @method setupTransitionOutTimeline
 	* @description Use this method to setup your transition out timeline
 	* */
-	protected setupTransitionOutTimeline(): void {}
+	protected setupTransitionOutTimeline(): void {
+	}
 }
 
-export default QuoteSecondaryTransitionController;
+export default SuccessStoryHighlightTransitionController;

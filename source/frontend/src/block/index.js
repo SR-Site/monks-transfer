@@ -44,7 +44,6 @@ import PersonaSelector from './PersonaSelector/PersonaSelector';
 import ProductList from './ProductList/ProductList';
 import ProgramModule from './ProgramModule/ProgramModule';
 import Quote from './Quote/Quote';
-import QuoteSecondary from './QuoteSecondary/QuoteSecondary';
 import RelatedShows from './RelatedShows/RelatedShows';
 import ShowDetail from './ShowDetail/ShowDetail';
 import SmallHeading from './SmallHeading/SmallHeading';
@@ -57,6 +56,9 @@ import TargetAudience from './TargetAudience/TargetAudience';
 import TripleContent from './TripleContent/TripleContent';
 import VideoWithContent from './VideoWithContent/VideoWithContent';
 import VideoWithContentB from './VideoWithContentB/VideoWithContentB';
+import AudioFragment from './AudioFragment/AudioFragment';
+import SuccessStoryPost from './SuccessStoryPost/SuccessStoryPost';
+import SuccessStoryHighlight from './SuccessStoryHighlight/SuccessStoryHighlight';
 
 export default {
 	ArticleTeaser,
@@ -67,6 +69,7 @@ export default {
 	AudienceReach,
 	AudienceStatistics,
 	AudienceTopProgramming,
+	AudioFragment,
 	BlogPost,
 	BlogPostB,
 	Button,
@@ -103,7 +106,6 @@ export default {
 	ProductList,
 	ProgramModule,
 	Quote,
-	QuoteSecondary,
 	RelatedShows,
 	ShowDetail,
 	SmallHeading,
@@ -112,6 +114,8 @@ export default {
 	StoryInfoImages,
 	SuccessStoriesA,
 	SuccessStoriesB,
+	SuccessStoryHighlight,
+	SuccessStoryPost,
 	TargetAudience,
 	TripleContent,
 	VideoWithContent,
