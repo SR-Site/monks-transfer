@@ -18,13 +18,13 @@
     "prettify": "prettier --write --print-width 120 --tab-width 1 --use-tabs --single-quote --trailing-comma all \"src/**/*.{js,scss,ts}\""
   },
   "lint-staged": {
-	"gitDir": "../../",
-	"linters": {
-	  "src/**/*.{js,ts,scss}": [
-		"prettier --write --print-width 120 --tab-width 1 --use-tabs --single-quote --trailing-comma all",
-		"git add"
-	  ]
-	}
+    "gitDir": "../../",
+    "linters": {
+      "src/**/*.{js,ts,scss}": [
+        "prettier --write --print-width 120 --tab-width 1 --use-tabs --single-quote --trailing-comma all",
+        "git add"
+      ]
+    }
   },
   "dependencies": {
     "axios": "^0.16.0",
@@ -34,6 +34,7 @@
     "classlist-polyfill": "^1.0.3",
     "core-js": "^2.4.1",
     "detect-port": "^1.2.1",
+    "favicons-webpack-plugin": "^0.0.7",
     "fetch-polyfill": "^0.8.2",
     "gsap": "^1.19.1",
     "key-code": "^0.0.1",

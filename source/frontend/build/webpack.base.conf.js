@@ -4,6 +4,7 @@ const webpackHelpers = require('./webpackHelpers');
 
 const projectRoot = path.resolve(__dirname, '../');
 const isDevelopment = process.env.NODE_ENV == 'development';
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const eslintLoaderEnabled = isDevelopment ? config.dev.enableESLintLoader : config.build.enableESLintLoader;
 const tslintLoaderEnabled = isDevelopment ? config.dev.enableTSLintLoader : config.build.enableTSLintLoader;
 
@@ -15,7 +16,7 @@ module.exports = {
 		path: path.join(projectRoot, 'dist'),
 		publicPath: '/',
 		filename: '[name].js',
-		chunkFilename : '[id].js',
+		chunkFilename: '[id].js',
 	},
 	resolve: {
 		extensions: ['.vue', '.js', '.ts', '.scss'],
@@ -59,7 +60,7 @@ module.exports = {
 							configFileName: path.resolve(__dirname, '../tsconfig.json'),
 						},
 					},
-				]
+				],
 			},
 			webpackHelpers.getTSLintLoader(tslintLoaderEnabled, projectRoot),
 			{
@@ -79,7 +80,12 @@ module.exports = {
 								{ removeTitle: true, },
 								{ removeMetadata: true, },
 								{ removeComments: true, },
-								{ cleanupIDs: { remove: true, prefix: '' } },
+								{
+									cleanupIDs: {
+										remove: true,
+										prefix: '',
+									},
+								},
 								{ convertColors: { shorthex: false } },
 							],
 						},
@@ -88,6 +94,32 @@ module.exports = {
 			},
 		],
 	},
+	plugins: [
+		new FaviconsWebpackPlugin(
+			{
+				logo: path.resolve(__dirname, '../static/image/favicon.jpg'),
+				prefix: config.build.versionPath + 'static/favicons/icon-[hash]',
+				emitStats: false,
+				statsFilename: 'iconstats-[hash].json',
+				persistentCache: false,
+				inject: true,
+				background: '#fff',
+				title: 'Spectrum Reach',
+				icons: {
+					android: true,
+					appleIcon: true,
+					appleStartup: false,
+					coast: false,
+					favicons: true,
+					firefox: false,
+					opengraph: false,
+					twitter: false,
+					yandex: false,
+					windows: false,
+				},
+			}
+		),
+	],
 };
 
 
