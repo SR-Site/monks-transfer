@@ -45,7 +45,6 @@ export default {
 			},
 		);
 		this.handleScroll();
-		console.log(this.landingRoute);
 	},
 	components: {
 		Logo,

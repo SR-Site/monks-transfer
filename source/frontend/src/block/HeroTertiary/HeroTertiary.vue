@@ -2,7 +2,10 @@
 <script src="./HeroTertiary.js"></script>
 
 <template>
-	<div>
-		<h2>HeroTertiary</h2>
+	<div :class="$style.heroTertiary">
+		<MediaCrossFader
+			componentId="MediaCrossFader"
+			class="fit-cover"
+			:class="$style.mediaCrossFader"/>
 	</div>
 </template>

@@ -1,2 +1,11 @@
 :local {
+	.hero-tertiary {
+		@include aspect-ratio(1440px, 360px);
+	}
+
+	@include respond-to(SMALL) {
+		.hero-tertiary {
+			@include aspect-ratio(640px, 360px);
+		}
+	}
 }

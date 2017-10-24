@@ -1,7 +1,6 @@
 // add components you want to register globally
 
 import ArticleTeaser from './ArticleTeaser/ArticleTeaser';
-import AudienceNetworks from './AudienceNetworks/AudienceNetworks';
 import AudienceProducts from './AudienceProducts/AudienceProducts';
 import AudienceProductTop from './AudienceProductTop/AudienceProductTop';
 import AudienceQuote from './AudienceQuote/AudienceQuote';
@@ -62,7 +61,6 @@ import SuccessStoryHighlight from './SuccessStoryHighlight/SuccessStoryHighlight
 
 export default {
 	ArticleTeaser,
-	AudienceNetworks,
 	AudienceProducts,
 	AudienceProductTop,
 	AudienceQuote,

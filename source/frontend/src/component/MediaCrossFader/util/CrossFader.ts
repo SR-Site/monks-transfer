@@ -1,3 +1,4 @@
+import { debounce } from 'lodash';
 import Disposable from 'seng-disposable';
 import { TweenLite, Ease, Quad } from 'gsap';
 import IRectangle from 'lib/geom/IRectangle';
@@ -5,9 +6,9 @@ import TrianglePattern from 'component/MediaCrossFader/util/TrianglePattern';
 import bowser from 'bowser';
 import ElementResizer, { ScaleMode } from 'lib/temple/ElementResizer';
 import { getValue } from 'util/injector';
-import { TASK_LOADER } from 'data/Injectables';
 import LoadImageTask from 'util/preloading/task/LoadImageTask';
 import cacheManager from 'util/preloading/CacheManager';
+import NativeEventListener from 'util/event/NativeEventListener';
 
 export default class CrossFader extends Disposable {
 	/**
@@ -50,6 +51,8 @@ export default class CrossFader extends Disposable {
 
 	private _newImage: HTMLImageElement | HTMLVideoElement;
 	private _newImageOffset: IRectangle;
+
+	private _resizeListener: NativeEventListener;
 
 	private _ctx: CanvasRenderingContext2D;
 
@@ -95,6 +98,9 @@ export default class CrossFader extends Disposable {
 
 		// Create the triangle pattern
 		this._trianglePattern = new TrianglePattern();
+
+		// Listen to the resize
+		this._resizeListener = new NativeEventListener(window, 'resize', debounce(this.handleResize.bind(this), 100));
 
 		// Trigger resize manually
 		this.handleResize();
@@ -232,25 +238,25 @@ export default class CrossFader extends Disposable {
 	 * @method getImage
 	 */
 	private getImage(path: string): Promise<HTMLImageElement> {
-		const taskLoader = getValue(TASK_LOADER);
 		let image;
+		let loadImageTask = new LoadImageTask(
+			{
+				assets: path,
+				cached: true,
+				cacheNameSpace: `CrossFader.${CrossFader.NAME_SPACE}`,
+				onAssetLoaded: (result) => {
+					console.log('asset loaded');
+					image = result.asset;
+				},
+			},
+		);
 
-		console.log('getImage', path);
-		return taskLoader.loadTasks(
-			[
-				new LoadImageTask(
-					{
-						assets: path,
-						cached: true,
-						cacheNameSpace: `CrossFader.${CrossFader.NAME_SPACE}`,
-						onAssetLoaded: (result) => {
-							console.log('asset loaded');
-							image = result.asset;
-						},
-					},
-				),
-			],
-		).then(() => image);
+		return loadImageTask.load().then(() => {
+			loadImageTask.dispose();
+			loadImageTask = null;
+
+			return image;
+		});
 	}
 
 	/**
@@ -418,8 +424,11 @@ export default class CrossFader extends Disposable {
 		this._newImageOffset = null;
 		this._triangleProgress = null;
 
+		this._resizeListener.dispose();
+		this._resizeListener = null;
+
 		// Remove all assets from cache
-		cacheManager.remove(`CrossFader${CrossFader.NAME_SPACE}`)
+		cacheManager.remove(`CrossFader${CrossFader.NAME_SPACE}`);
 
 		if (this._trianglePattern) {
 			this._trianglePattern.dispose();

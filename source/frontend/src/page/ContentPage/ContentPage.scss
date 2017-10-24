@@ -3,7 +3,14 @@
 		position: relative;
 	}
 
+
 	@include respond-to(MEDIUM) {
+		.blockWrapper {
+			padding-top: $sizeHeader;
+		}
+	}
+
+	@include respond-to(SMALL) {
 		.blockWrapper {
 			padding-top: $sizeHeaderMobile;
 		}
