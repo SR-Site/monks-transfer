@@ -78,8 +78,6 @@ class ButtonPrimaryTransitionController extends AbstractTransitionController {
 	public setupHoverTimeline(): void {
 		const buttonPrimaryComponent: any = this.viewModel;
 
-		console.log('setup hover timeline');
-
 		this.hoverTimeline = new TimelineLite({
 			paused: true,
 			onReverseComplete: () => {

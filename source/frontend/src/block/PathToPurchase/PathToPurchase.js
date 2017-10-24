@@ -65,7 +65,6 @@ export default {
 				this.carousel,
 				CarouselEvent.CHANGE,
 				event => {
-					console.log('carousel change');
 					this.activeIndex = event.data.index;
 				},
 			);
