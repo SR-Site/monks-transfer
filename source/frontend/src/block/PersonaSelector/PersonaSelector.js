@@ -6,6 +6,7 @@ import PersonaSelectorData from './PersonaSelectorData';
 import PersonaSelectorSlide from './PersonaSelectorSlide/PersonaSelectorSlide';
 import PersonaSelectorTransitionController from './PersonaSelectorTransitionController';
 import PersonaSelectorOptions from './PersonaSelectorOptions/PersonaSelectorOptions';
+import PersonaSelectorMobileCarousel from './PersonaSelectorMobileCarousel/PersonaSelectorMobileCarousel';
 
 export default {
 	name: 'PersonaSelector',
@@ -13,6 +14,7 @@ export default {
 	components: {
 		PersonaSelectorSlide,
 		PersonaSelectorOptions,
+		PersonaSelectorMobileCarousel,
 	},
 	beforeCreate() {
 		this._slides = {};
@@ -47,6 +49,15 @@ export default {
 		handleSlideReady(component, index) {
 			console.log('slide ready');
 			this._slides[index] = component;
+		},
+		handleMobileCarouselChange(index) {
+			const mobileCarousel = this.getChild('PersonaSelectorMobileCarousel');
+			console.log(mobileCarousel);
+			// Temporary disable interaction
+			mobileCarousel.disableInteraction();
+			// Open the persona
+			this.openPersona(index).then(() => mobileCarousel.enableInteraction());
+
 		},
 		openPersona(index) {
 			const oldPersona = this._slides[this.activeIndex];
