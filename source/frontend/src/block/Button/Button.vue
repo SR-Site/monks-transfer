@@ -13,8 +13,7 @@
 				:link="{
 					type: linkTypeMap[data.link.type],
 					target: data.link.target,
-				}"
-				:class="$style.button"/>
+				}" />
 		</div>
 	</div>
 </template>
