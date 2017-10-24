@@ -5,45 +5,40 @@
 /docs
 /tools/build/.sass-cache
 /tools/build/node_modules
-/deploy/htdocs/coverage
+/source/drupal/docroot/coverage
 .DS_Store
 npm-debug.log
-/deploy/vendor
-/deploy/var/cache/*
-/deploy/var/logs/*
+/source/drupal/vendor
+/source/drupal/var/cache/*
+/source/drupal/var/logs/*
 
 
 # Ignore compiled files
-/deploy/htdocs/version/src/inc/script/app/**/*.js
-/deploy/htdocs/version/src/inc/script/def/**/*.js
-/deploy/htdocs/version/src/inc/script/lib/**/*.js
-/deploy/htdocs/version/src/inc/script/test/**/*.js
-
-# Exceptions
-!/deploy/htdocs/version/src/inc/script/lib/polyfill/*.js
-!/deploy/htdocs/version/src/inc/script/app/bundle.js
-!/deploy/htdocs/version/src/inc/script/app/component/**/*Bundle.js
-!/deploy/htdocs/version/src/inc/script/test/test-main.js
+/source/drupal/docroot/version/src/inc/script/app/**/*.js
+/source/drupal/docroot/version/src/inc/script/def/**/*.js
+/source/drupal/docroot/version/src/inc/script/lib/**/*.js
+/source/drupal/docroot/version/src/inc/script/test/**/*.js
+/source/drupal/docroot/version
 
 # Compiled styles
-/deploy/htdocs/version/src/inc/style/screen.css
+/source/drupal/docroot/version/src/inc/style/screen.css
 
 #Drupal public file path
-deploy/htdocs/assets
+source/drupal/docroot/assets
 
 #Binaire files are generated with composer
-deploy/bin
+source/drupal/bin
 
 #Ignore core and contrib files, use composer
-deploy/htdocs/drivers
-deploy/htdocs/core
-deploy/htdocs/modules/contrib
-deploy/htdocs/modules/mediamonks
-deploy/htdocs/themes/contrib
-deploy/htdocs/themes/mediamonks
-deploy/htdocs/library/contrib
-deploy/htdocs/profiles/contrib
-deploy/htdocs/sites/default/files
+source/drupal/docroot/drivers
+source/drupal/docroot/core
+source/drupal/docroot/modules/contrib
+source/drupal/docroot/modules/mediamonks
+source/drupal/docroot/themes/contrib
+source/drupal/docroot/themes/mediamonks
+source/drupal/docroot/library/contrib
+source/drupal/docroot/profiles/contrib
+source/drupal/docroot/sites/default/files
 drush/contrib
 /composer.lock
-/deploy/var/drupal-settings/example.settings.local.php
+/source/drupal/var/drupal-settings/example.settings.local.php

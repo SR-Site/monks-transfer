@@ -9,7 +9,7 @@ use Symfony\Component\Filesystem\Filesystem;
 class DrupalScriptHandler {
 
   protected static function getDrupalRoot($project_root) {
-    return $project_root .  '/deploy/htdocs';
+    return $project_root .  '/source/drupal/docroot';
   }
 
   public static function copySqlSrvDrivers(Event $event) {
