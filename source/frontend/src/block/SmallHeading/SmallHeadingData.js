@@ -1,5 +1,4 @@
 import VueTypes from 'vue-types';
-import AbstractBlockComponentData from '../../data/prop-type/AbstractBlockComponentData';
 
 export default {
 	marginTop: VueTypes.number.isRequired,

@@ -1,6 +1,6 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 
-class QuoteSecondaryTransitionController extends AbstractTransitionController
+class SuccessStoryHighlightTransitionController extends AbstractTransitionController
 {
 	/**
 	 * @public
@@ -19,4 +19,4 @@ class QuoteSecondaryTransitionController extends AbstractTransitionController
 	}
 }
 
-export default QuoteSecondaryTransitionController;
+export default SuccessStoryHighlightTransitionController;

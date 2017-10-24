@@ -104,7 +104,7 @@ class HeroMainSlideTransitionController extends AbstractTransitionController {
 		}
 
 		if (this.viewModel.$refs.statistic) {
-			(<Array<HTMLElement>>this.viewModel.$refs.statistic).forEach((statistic) => {
+			(<Array<HTMLElement>>this.viewModel.$refs.statistic).forEach(statistic => {
 				this.transitionInTimeline.fromTo(
 					statistic,
 					0.6,
@@ -128,8 +128,7 @@ class HeroMainSlideTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default HeroMainSlideTransitionController;

@@ -1,6 +1,6 @@
+import VueTypes from 'vue-types';
 import { AbstractButtonComponent } from 'vue-block-system';
 import ButtonSecondaryTransitionController from './ButtonSecondaryTransitionController';
-import VueTypes from 'vue-types';
 
 export default {
 	name: 'ButtonSecondary',

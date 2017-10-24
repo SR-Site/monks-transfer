@@ -1,5 +1,3 @@
-import { IDeviceStateConfig } from 'seng-device-state-tracker';
-
 export const mediaQueries = {
 	// Really small mobile devices
 	X_SMALL: '(max-width: 480px)',
@@ -24,17 +22,13 @@ export const mediaQueries = {
 	ARTICLE_TEASER_LARGE: '(max-width: 1225px)',
 };
 
-export const deviceState = {
+export const DeviceState = {
 	X_SMALL: 0,
 	SMALL: 1,
 	MEDIUM: 2,
 	LARGE: 3,
+	X_LARGE: 4,
+	XX_LARGE: 5,
+	XXX_LARGE: 6,
+	MEDIUM_ISOLATE: 7,
 };
-
-// const config: IDeviceStateConfig = {
-// 	// When the keys below aren't set it will default to false for these options
-// 	showStateIndicator: true,
-// 	reverseDeviceStateOrder: true,
-// };
-//
-// export default config;

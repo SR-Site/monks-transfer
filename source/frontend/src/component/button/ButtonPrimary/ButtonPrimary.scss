@@ -18,17 +18,16 @@
 		rect {
 			@include size(100%);
 			fill: transparent;
-			stroke: rgba(0, 0, 0, .3);
+			stroke: rgba(0, 0, 0, 0.3);
 			stroke-width: 1px;
 		}
 	}
 
 	.stripe {
-		@include size($sizeGridSecondary, .4rem);
-		@include position(calc(50% - .2rem), auto, auto, -$sizeGridSecondary / 2);
+		@include size($sizeGridSecondary, 0.4rem);
+		@include position(calc(50% - 0.2rem), auto, auto, -$sizeGridSecondary / 2);
 		transform: scale(1);
 		position: absolute;
-
 	}
 
 	.label {
@@ -46,7 +45,7 @@
 
 		rect {
 			&.background-stroke {
-				stroke: rgba(0, 0, 0, .3);
+				stroke: rgba(0, 0, 0, 0.3);
 			}
 
 			&.hover-stroke {
@@ -64,26 +63,30 @@
 
 		rect {
 			&.background-stroke {
-				stroke: rgba(255, 255, 255, .3);
+				stroke: rgba(255, 255, 255, 0.3);
 			}
 
 			&.hover-stroke {
-				stroke: $colorWhite
+				stroke: $colorWhite;
 			}
 		}
 	}
 
 	@include respond-to(X_LARGE) {
-		height: 4.5rem;
+		.button-primary {
+			height: 4.5rem;
+		}
 	}
 
 	// Breakpoints
 	@include respond-to(SMALL) {
-		@include size(auto, mobile-size(10rem));
-		font-size: mobile-size(1.8rem);
-		line-height: mobile-size(10rem);
-		padding: 0 $sizeGrid * 2;
-		margin-left: $sizeGrid;
+		.button-primary {
+			@include size(auto, mobile-size(10rem));
+			font-size: mobile-size(1.8rem);
+			line-height: mobile-size(10rem);
+			padding: 0 $sizeGrid * 2;
+			margin-left: $sizeGrid;
+		}
 
 		.stripe {
 			@include size($sizeGrid*2, 1rem);

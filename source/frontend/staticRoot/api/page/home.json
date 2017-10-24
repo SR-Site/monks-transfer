@@ -146,6 +146,7 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
+				  "alt": "",
 				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
 				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
 				}
@@ -177,6 +178,7 @@
 				"name": "Fred Bucher",
 				"role": "Author",
 				"image": {
+				  "alt": "",
 				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png",
 				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png"
 				}
@@ -215,6 +217,7 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
+				  "alt": "",
 				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
 				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
 				}
@@ -240,6 +243,7 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
+				  "alt": "",
 				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
 				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
 				}
@@ -278,6 +282,7 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
+				  "alt": "",
 				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
 				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
 				}
@@ -316,6 +321,7 @@
 				"name": "Fred Bucher",
 				"role": "Author",
 				"image": {
+				  "alt": "",
 				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png",
 				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png"
 				}
@@ -535,7 +541,7 @@
 		  "link": {
 			"label": "GET STARTED",
 			"title": "GET STARTED",
-			"target": null,
+			"target": "",
 			"type": 3
 		  }
 		}
@@ -554,7 +560,7 @@
 			  "link": {
 				"label": "Grow your business",
 				"title": "Grow your business",
-				"target": null,
+				"target": "",
 				"type": 3
 			  },
 			  "image": {
@@ -570,7 +576,7 @@
 			  "link": {
 				"label": "Grow your Business",
 				"title": "Grow your Business",
-				"target": null,
+				"target": "",
 				"type": 3
 			  },
 			  "image": {
@@ -586,7 +592,7 @@
 			  "link": {
 				"label": "Grow your Business",
 				"title": "Grow your Business",
-				"target": null,
+				"target": "",
 				"type": 3
 			  },
 			  "image": {
@@ -602,7 +608,7 @@
 			  "link": {
 				"label": "Grow your business",
 				"title": "Grow your business",
-				"target": null,
+				"target": "",
 				"type": 3
 			  },
 			  "image": {

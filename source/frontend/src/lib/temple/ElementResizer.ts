@@ -23,7 +23,7 @@ export enum ScaleMode {
 	 * Only applies alignment, does not scale the rectangle
 	 * @property ALIGN_ONLY
 	 */
-	ALIGN_ONLY
+	ALIGN_ONLY,
 }
 
 /**
@@ -392,8 +392,7 @@ export default class ElementResizer extends Disposable {
 		if (duration == void 0 || duration == 0) {
 			// register listener without debounce
 			this._handleResize = (event: UIEvent) => this.handleResize(event);
-		}
-		else {
+		} else {
 			this._handleResize = debounce(this.handleResize, duration, this);
 		}
 

@@ -1,0 +1,266 @@
+:local {
+	.article-teaser {
+		@include size(16 * $sizeGrid, 8 * $sizeGrid);
+		font-size: 0;
+		display: inline-block;
+		position: relative;
+		background: $colorWhite;
+		overflow: hidden;
+		backface-visibility: hidden;
+		transform: translate3d(0, 0, 0);
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.image {
+		clip: rect(0, $sizeGrid * 16, $sizeGrid * 8, $sizeGrid * 8);
+
+		.responsive-image {
+			height: 100%;
+			transform: translateX(10%);
+		}
+
+		.hover-heading {
+			@include position($sizeGrid * 1.5, auto, auto, $sizeGrid);
+			font: 600 2rem/1 $fontOpenSans;
+			width: 50%;
+			transform: translateX($sizeGrid * 2);
+			opacity: 0;
+			position: absolute;
+			color: $colorWhite;
+		}
+
+		.hover-icon {
+			@include size($sizeGrid);
+			@include position(auto, auto, $sizeGrid * 1.5, $sizeGrid);
+			transform: translateX($sizeGrid * 2);
+			opacity: 0;
+			position: absolute;
+
+			svg {
+				overflow: visible;
+			}
+
+			path {
+				fill: $colorWhite;
+			}
+
+			circle {
+				fill: transparent;
+				stroke: $colorWhite;
+				stroke-width: 5px;
+			}
+		}
+	}
+
+	.description {
+		@include size(8 * $sizeGrid, 100%);
+		@include position(0, auto, 0, 0);
+		position: absolute;
+		padding: $sizeGrid * 1.5;
+		color: $colorPrimary;
+
+		&:after {
+			@include triangle(left, bottom, $colorWhite, $sizeGrid);
+			@include position(auto, -$sizeGrid, 0, auto);
+			position: absolute;
+			content: '';
+		}
+
+		.heading {
+			margin-bottom: $sizeGrid / 2;
+		}
+
+		.copy {
+			margin-bottom: $sizeGrid;
+			overflow: hidden;
+		}
+
+		.tag {
+			margin: 2px;
+		}
+	}
+
+	.theme-dark {
+		.image {
+			.hover-heading {
+				color: $colorPrimary;
+			}
+
+			.hover-icon {
+				path {
+					fill: $colorPrimary;
+				}
+
+				circle {
+					stroke: $colorPrimary;
+				}
+			}
+		}
+	}
+
+	.transition-in-complete {
+		.image {
+			transition: clip 0.8s $easeOutExpo;
+
+			.hover-heading,
+			.hover-icon {
+				transition: all 0.8s $easeOutExpo;
+			}
+		}
+
+		.description {
+			transition: transform 0.8s $easeOutExpo;
+		}
+
+		img {
+			transition: transform 0.8s $easeOutExpo;
+		}
+
+		@include hover() {
+			.image {
+				clip: rect(0, $sizeGrid * 16, $sizeGrid * 8, 0);
+
+				img {
+					transform: translateX(0);
+				}
+
+				.hover-heading,
+				.hover-icon {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+
+			.description {
+				transform: translateX(-100%) translateX(-$sizeGrid);
+			}
+		}
+	}
+
+	@include respond-to(X_LARGE) {
+		.article-teaser {
+			width: 15 * $sizeGrid;
+		}
+
+		.description {
+			width: 7.5 * $sizeGrid;
+		}
+
+		.image {
+			clip: rect(0, $sizeGrid * 15, $sizeGrid * 8, $sizeGrid * 7.5);
+		}
+
+		.transition-in-complete {
+			@include hover() {
+				.image {
+					clip: rect(0, $sizeGrid * 15, $sizeGrid * 8, 0);
+				}
+			}
+		}
+	}
+
+	@include respond-to(ARTICLE_TEASER_LARGE) {
+		.article-teaser {
+			width: 12 * $sizeGrid;
+		}
+
+		.description {
+			width: 6 * $sizeGrid;
+			padding: $sizeGrid;
+		}
+
+		.image {
+			clip: rect(0, $sizeGrid * 12, $sizeGrid * 8, $sizeGrid * 6);
+		}
+
+		.transition-in-complete {
+			@include hover() {
+				.image {
+					clip: rect(0, $sizeGrid * 12, $sizeGrid * 8, 0);
+				}
+			}
+		}
+	}
+
+	@include respond-to(ARTICLE_TEASER_MEDIUM) {
+		.article-teaser {
+			width: 9 * $sizeGrid;
+		}
+
+		.description {
+			width: 6 * $sizeGrid;
+			padding: $sizeGrid;
+		}
+
+		.image {
+			clip: rect(0, $sizeGrid * 9, $sizeGrid * 8, $sizeGrid * 6);
+		}
+
+		.transition-in-complete {
+			@include hover() {
+				.image {
+					clip: rect(0, $sizeGrid * 9, $sizeGrid * 8, 0);
+				}
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.article-teaser {
+			@include size(100%, auto);
+			text-decoration: none;
+		}
+
+		.image {
+			@include aspect-ratio(576px, 390px);
+			height: auto;
+
+			img {
+				@include offset(0, 0);
+				@include size(100%);
+				position: absolute;
+				transform: none;
+				object-fit: cover;
+			}
+
+			&:after {
+				right: auto;
+				left: 0;
+			}
+		}
+
+		.description {
+			position: relative;
+			width: 100%;
+			padding: $sizeGrid*2;
+
+			.copy {
+				margin-bottom: $sizeGrid*2;
+			}
+		}
+
+		.transition-in-complete {
+			@include hover() {
+				.image {
+					clip: auto;
+
+					img {
+						transform: translateX(0);
+					}
+
+					.hover-heading,
+					.hover-icon {
+						opacity: 0;
+					}
+				}
+
+				.description {
+					transform: none;
+				}
+			}
+		}
+	}
+}

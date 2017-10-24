@@ -1,3 +1,66 @@
 :local {
+	.page-not-found {
+		@include aspect-ratio(16px, 8px);
+		background: #000;
+	}
 
+	.background {
+		@include offset(0, 0);
+		position: absolute;
+		opacity: 0.5;
+		z-index: 0;
+	}
+
+	.error-code {
+		font: 800 80rem/1 $fontOpenSans;
+		position: absolute;
+		color: rgba($colorWhite, 0.05);
+		text-align: center;
+		z-index: 1;
+		user-select: none;
+	}
+
+	.message {
+		color: $colorWhite;
+		text-transform: uppercase;
+		text-align: center;
+		z-index: 2;
+
+		.button {
+			margin-top: $sizeGrid;
+		}
+	}
+
+	@include respond-to(X_LARGE) {
+		.error-code {
+			font-size: 60rem;
+		}
+	}
+
+	@include respond-to(LARGE) {
+		.error-code {
+			font-size: 50rem;
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.error-code {
+			font-size: 40rem;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.page-not-found {
+			@include aspect-ratio(4px, 3px);
+		}
+
+		.message {
+			width: 100%;
+			padding: 0 $sizeGrid;
+		}
+
+		.error-code {
+			font-size: mobile-size(40rem);
+		}
+	}
 }

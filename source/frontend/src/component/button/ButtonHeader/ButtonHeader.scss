@@ -25,14 +25,13 @@
 
 	@include respond-to(SMALL) {
 		.button {
-			@include size($sizeGrid * 8, $sizeGrid * 4);
+			@include size(auto, $sizeGrid * 4);
 			text-align: center;
 		}
 
-		.text {
+		.label {
 			margin-left: 0;
 			font-size: 1.8rem;
 		}
 	}
 }
-

@@ -33,7 +33,8 @@ class ButtonPrimaryTransitionController extends AbstractTransitionController {
 				width: stripeWidth,
 				ease: Expo.easeOut,
 				clearProps: 'all',
-			}, 0,
+			},
+			0,
 		);
 
 		this.transitionInTimeline.fromTo(
@@ -67,8 +68,7 @@ class ButtonPrimaryTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 
 	/**
 	 * @public
@@ -80,17 +80,15 @@ class ButtonPrimaryTransitionController extends AbstractTransitionController {
 
 		console.log('setup hover timeline');
 
-		this.hoverTimeline = new TimelineLite(
-			{
-				paused: true,
-				onReverseComplete: () => {
-					if (this.hoverResolveMethod) {
-						this.hoverResolveMethod();
-						this.hoverResolveMethod = null;
-					}
-				},
+		this.hoverTimeline = new TimelineLite({
+			paused: true,
+			onReverseComplete: () => {
+				if (this.hoverResolveMethod) {
+					this.hoverResolveMethod();
+					this.hoverResolveMethod = null;
+				}
 			},
-		);
+		});
 
 		this.hoverTimeline.fromTo(
 			this.viewModel.$refs.stripe,
@@ -113,9 +111,10 @@ class ButtonPrimaryTransitionController extends AbstractTransitionController {
 			},
 			{
 				strokeDasharray: buttonPrimaryComponent.fullPath + 'px 0px',
-				strokeDashoffset: (buttonPrimaryComponent.fullPath / 2) + (buttonPrimaryComponent.height / 2),
+				strokeDashoffset: buttonPrimaryComponent.fullPath / 2 + buttonPrimaryComponent.height / 2,
 				ease: Power3.easeInOut,
-			}, '=-0.2',
+			},
+			'=-0.2',
 		);
 	}
 

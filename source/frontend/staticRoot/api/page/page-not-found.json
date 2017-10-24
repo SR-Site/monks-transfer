@@ -1,0 +1,32 @@
+{
+  "statusCode": 200,
+  "data": {
+	"headerTheme": 0,
+	"pageTitle": "Page not found",
+	"hideContactButton": 0,
+	"blocks": [
+	  {
+		"id": "pageNotFound",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "link": {
+			"label": "Back to Home",
+			"title": "Back to Home",
+			"target": "\/spectrum-reach-advertising-home",
+			"type": 0
+		  },
+		  "image": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/background_0.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/background_0.jpg",
+			"alt": "404 Page Not Found"
+		  },
+		  "paragraph": "<p><span>We are sorry, this page is currently not available.<\/span><\/p>",
+		  "heading": "\u00a0 \u00a0<br \/>",
+		  "errorCode": 404
+		}
+	  }
+	]
+  }
+}

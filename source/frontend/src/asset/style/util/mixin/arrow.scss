@@ -7,7 +7,6 @@
  * @param {boolean} $exclude-base (false) - Remove the default arrow styling (usefull if you want to modify the direction of the arrow on rollover
  */
 @mixin arrow($direction: up, $color: #000, $size: 10px, $half: false, $stretch: 1, $excludeBase: false) {
-
 	@if $excludeBase == false {
 		display: inline-block;
 		vertical-align: middle;
@@ -48,6 +47,4 @@
 		border-right: $size solid transparent;
 		border-bottom: $longSize solid #{$color};
 	}
-
 }
-

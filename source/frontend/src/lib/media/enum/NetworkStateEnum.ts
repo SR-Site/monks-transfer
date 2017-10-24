@@ -10,8 +10,7 @@ const enum NetworkStateEnum {
 	EMPTY = 0,
 	IDLE = 1,
 	LOADING = 2,
-	NO_SOURCE = 3
-
+	NO_SOURCE = 3,
 }
 
 export default NetworkStateEnum;

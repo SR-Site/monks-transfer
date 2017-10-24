@@ -8,15 +8,11 @@ class SmallHeadingTransitionController extends AbstractTransitionController {
 	 * @description Use this method to setup your transition in timeline
 	 * */
 	protected setupTransitionInTimeline(): void {
-		this.transitionInTimeline.from(
-			this.viewModel.$refs.heading,
-			0.8,
-			{
-				y: 50,
-				autoAlpha: 0,
-				ease: Expo.easeOut,
-			},
-		);
+		this.transitionInTimeline.from(this.viewModel.$refs.heading, 0.8, {
+			y: 50,
+			autoAlpha: 0,
+			ease: Expo.easeOut,
+		});
 	}
 
 	/**
@@ -24,8 +20,7 @@ class SmallHeadingTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default SmallHeadingTransitionController;

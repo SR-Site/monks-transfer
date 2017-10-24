@@ -3,7 +3,10 @@
 		padding-left: $sizeGrid * 7;
 		padding-right: $sizeGrid * 7;
 
-		h1, h2, h3, h4 {
+		h1,
+		h2,
+		h3,
+		h4 {
 			padding-bottom: $sizeGrid/2;
 			font: 600 1.8rem / 1.16 $fontOpenSans;
 
@@ -41,9 +44,11 @@
 
 	// Breakpoints
 	@include respond-to(SMALL) {
-
 		.free-text {
-			h1, h2, h3, h4 {
+			h1,
+			h2,
+			h3,
+			h4 {
 				font-size: mobile-size(3.5rem);
 				padding-bottom: $sizeGrid;
 			}

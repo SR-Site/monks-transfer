@@ -1,3 +1,499 @@
 :local {
+	$stepWidth: 6.5 * $sizeGrid;
 
+	.path-to-purchase {
+		@include size(100%, ($stepWidth * 2) + $sizeGrid * 4);
+	}
+
+	.background-image {
+		.image {
+			background-size: cover;
+			opacity: 0;
+			transition: opacity .8s $easeLinear;
+		}
+
+		.is-active {
+			opacity: 1;
+		}
+	}
+
+	.slider-viewport {
+		@include size(100%, $stepWidth);
+		@include position(auto, auto, $sizeGrid * 2, 0);
+		position: absolute;
+		overflow: visible;
+	}
+
+	.steps {
+		@extend %reset-list;
+		@include size(100%);
+		@include center-block();
+		font-size: 0;
+		text-align: center;
+		overflow: visible;
+	}
+
+	.step-wrapper:last-child {
+		.step:after {
+			display: none;
+		}
+	}
+
+	.step {
+		@include size(100%);
+		@include position(auto, 0, 0, 0);
+		position: absolute;
+		display: flex;
+		color: $colorWhite;
+		transition: color .2s $easeLinear, height .5s $easeInOutCubic;
+		cursor: pointer;
+		overflow: hidden;
+
+		@include hover() {
+			color: $colorBorder;
+		}
+
+		&:after {
+			@include size(1px, auto);
+			right: 0;
+			position: absolute;
+			background: $colorBorder;
+			content: '';
+			transition: opacity .5s $easeLinear;
+		}
+	}
+
+	.step-content {
+		@include size(calc(100% - #{$sizeGrid}), 100%);
+		background: currentColor;
+		display: inline-block;
+		vertical-align: bottom;
+		padding-top: $sizeGrid;
+		padding-bottom: $sizeGrid;
+		text-align: left;
+
+		.heading,
+		.copy {
+			margin-left: $sizeGrid / 2;
+			color: $colorPrimary;
+		}
+
+		.heading {
+			margin-bottom: $sizeGrid / 2;
+		}
+
+		.secondary-content {
+			margin-top: $sizeGrid / 2;
+			opacity: 0;
+			transition: opacity .5s $easeLinear;
+		}
+	}
+
+	.step-edge {
+		@include size($sizeGrid, calc(100% - #{$sizeGrid}));
+		background: currentColor;
+		display: inline-block;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+		}
+	}
+
+	// Active state
+	.is-active {
+		.step {
+			color: $colorPrimary;
+			height: 200%;
+
+			@include hover() {
+				color: $colorPrimary;
+			}
+
+			&:after {
+				opacity: 0;
+			}
+
+			.heading,
+			.copy {
+				color: $colorWhite;
+			}
+
+			.secondary-content {
+				opacity: 1;
+			}
+		}
+	}
+
+	// Up/down pattern
+	.step-wrapper {
+		@include size($stepWidth, $stepWidth);
+		display: inline-block;
+		vertical-align: bottom;
+		position: relative;
+		/**
+		 * Every 1st block
+		 */
+		&:nth-child(1n + 0) {
+
+			.step:after {
+				top: 0;
+				bottom: $sizeGrid;
+			}
+
+			.step-content {
+				order: 1;
+				padding-right: 0;
+				padding-left: $sizeGrid;
+			}
+
+			.step-edge {
+				order: 2;
+				align-self: flex-start;
+
+				&:after {
+					@include triangle(left, top, currentColor, $sizeGrid);
+					@include position(auto, 0, -$sizeGrid, auto);
+				}
+			}
+		}
+
+		/**
+		 * Every 2nd block
+		 */
+		&:nth-child(2n + 0) {
+			transform: translateY(-$sizeGrid);
+
+			.step:after {
+				top: $sizeGrid;
+				bottom: 0;
+			}
+
+			.step-content {
+				order: 2;
+				padding-left: 0;
+				padding-right: $sizeGrid;
+			}
+
+			.step-edge {
+				order: 1;
+				align-self: flex-end;
+
+				&:after {
+					@include triangle(right, bottom, currentColor, $sizeGrid);
+					@include position(-$sizeGrid, 0, auto, auto);
+				}
+			}
+		}
+
+		/**
+		 * Every 3rd block
+		 */
+		&:nth-child(3n + 0) {
+
+			.step:after {
+				top: 0;
+				bottom: $sizeGrid;
+			}
+
+			.step-content {
+				order: 1;
+				padding-right: 0;
+				padding-left: $sizeGrid;
+			}
+
+			.step-edge {
+				order: 2;
+				align-self: flex-start;
+			}
+
+		}
+
+		/**
+		 * Every 4th block
+		 */
+		&:nth-child(4n + 0) {
+			transform: translateY(-$sizeGrid);
+
+			.step:after {
+				top: $sizeGrid;
+				bottom: 0;
+			}
+
+			.step-content {
+				order: 1;
+				padding-left: $sizeGrid;
+				padding-right: 0;
+			}
+
+			.step-edge {
+				order: 2;
+				align-self: flex-end;
+
+				&:after {
+					@include triangle(left, bottom, currentColor, $sizeGrid);
+					@include position(-$sizeGrid, 0, auto, auto);
+				}
+			}
+		}
+	}
+
+	.dashed-paginator {
+		display: none;
+	}
+
+	@include respond-to('X_LARGE') {
+		$stepWidth: 5 * $sizeGrid;
+
+		.path-to-purchase {
+			@include size(100%, ($stepWidth * 2) + $sizeGrid * 4);
+		}
+
+		.slider-viewport {
+			@include size(100%, $stepWidth);
+		}
+
+		.step-content {
+			@include size(calc(100% - #{$sizeGrid / 2}), 100%);
+			padding-top: $sizeGrid / 2;
+			padding-bottom: $sizeGrid / 2;
+
+			.copy,
+			.heading {
+				margin-left: $sizeGrid / 4;
+			}
+
+			.copy-01 {
+				font-size: 1.4rem;
+			}
+		}
+
+		.step-edge {
+			@include size($sizeGrid / 2, calc(100% - #{$sizeGrid / 2}));
+		}
+
+		// Up/down pattern
+		.step-wrapper {
+			@include size($stepWidth, $stepWidth);
+			/**
+			 * Every 1st block
+			 */
+			&:nth-child(1n + 0) {
+				.step:after {
+					bottom: $sizeGrid / 2;
+					top: 0;
+				}
+
+				.step-content {
+					padding-left: $sizeGrid  / 2;
+				}
+
+				.step-edge {
+					&:after {
+						@include triangle(left, top, currentColor, $sizeGrid / 2);
+						@include position(auto, 0, -$sizeGrid / 2, auto);
+					}
+				}
+			}
+
+			/**
+			 * Every 2nd block
+			 */
+			&:nth-child(2n + 0) {
+				transform: translateY(-$sizeGrid / 2);
+
+				.step:after {
+					top: $sizeGrid / 2;
+					bottom: 0;
+				}
+
+				.step-content {
+					padding-right: $sizeGrid / 2;
+				}
+
+				.step-edge {
+
+					&:after {
+						@include triangle(right, bottom, currentColor, $sizeGrid / 2);
+						@include position(-$sizeGrid / 2, 0, auto, auto);
+					}
+				}
+			}
+
+			/**
+			 * Every 3rd block
+			 */
+			&:nth-child(3n + 0) {
+				.step:after {
+					bottom: $sizeGrid / 2;
+					top: 0;
+				}
+
+				.step-content {
+					padding-left: $sizeGrid / 2;
+				}
+			}
+
+			/**
+			 * Every 4th block
+			 */
+			&:nth-child(4n + 0) {
+				transform: translateY(-$sizeGrid / 2);
+
+				.step:after {
+					top: $sizeGrid / 2;
+					bottom: 0;
+				}
+
+				.step-content {
+					padding-left: $sizeGrid / 2;
+				}
+
+				.step-edge {
+					&:after {
+						@include triangle(left, bottom, currentColor, $sizeGrid / 2);
+						@include position(-$sizeGrid / 2, 0, auto, auto);
+					}
+				}
+			}
+		}
+	}
+
+	// Breakpoints
+	@include respond-to(MEDIUM) {
+		.path-to-purchase {
+			@include size(100%, auto);
+		}
+
+		.background-image {
+			display: none;
+		}
+
+		.inner-wrapper {
+			position: relative;
+			height: auto;
+			overflow: hidden;
+		}
+
+		.slider-viewport {
+			@include position(auto, auto, auto, auto);
+			@include size(calc(100% - #{$sizeGrid * 4}), $sizeGrid * 12);
+			@include center-block();
+			overflow: visible;
+			position: relative;
+		}
+
+		.step-wrapper {
+			@include coverer();
+			@include size(100%);
+			padding: 0 $sizeGrid / 2;
+
+			&:nth-child(2n + 0) {
+				transform: none;
+			}
+
+			&:nth-child(4n + 0) {
+				transform: none;
+			}
+
+			@include hover() {
+				color: $colorWhite;
+			}
+		}
+
+		.step {
+			@include position(auto, auto, auto, auto);
+			position: relative;
+		}
+
+		// On mobile there is no pattern so ignore all the super detailed NTH-child selectors with importants!
+		.step-content {
+			border-top: 1px solid $colorBorder;
+			border-bottom: 1px solid $colorBorder;
+			border-left: 1px solid $colorBorder;
+			padding-left: $sizeGrid !important;
+			padding-right: $sizeGrid !important;
+			padding-top: $sizeGrid * 2;
+			order: 1 !important;
+
+			.heading,
+			.copy {
+				margin-left: $sizeGrid * 2;
+			}
+
+			.copy-01 {
+				font-size: 1.8rem;
+			}
+
+			.secondary-content {
+				opacity: 1;
+			}
+		}
+
+		// On mobile there is no pattern so ignore all the super detailed NTH-child selectors with importants!
+		.step-edge {
+			border-top: 1px solid $colorBorder;
+			border-right: 1px solid $colorBorder;
+			order: 2 !important;
+			align-self: flex-start !important;
+
+			&:after {
+				bottom: -$sizeGrid * 1.5 !important;
+				top: auto !important;
+				right: -1px !important;
+				width: 1px !important;
+				height: $sizeGrid * 1.5 !important;
+				border: none !important;
+				transform: rotate(45deg);
+				transform-origin: right top;
+				background: $colorBorder;
+			}
+		}
+
+		.step {
+			&:after {
+				display: none;
+			}
+		}
+
+		.dashed-paginator {
+			margin-top: $sizeGrid;
+			display: block;
+		}
+
+		// Active state
+		.is-active {
+			.step {
+				color: $colorWhite;
+				height: 100%;
+
+				.heading,
+				.copy {
+					color: $colorPrimary;
+				}
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.step-content {
+			.copy-01 {
+				font-size: mobile-size(2.8rem);
+			}
+
+			.secondary-content {
+				display: none;
+			}
+		}
+
+		// Active state
+		.is-active {
+			@include hover() {
+				.step {
+					color: $colorWhite;
+				}
+			}
+		}
+	}
 }

@@ -1,8 +1,12 @@
 :local {
 	.triangle {
-		@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 12);
+		@include arrow(left, rgba($colorSecondary, 0.95), $sizeGrid * 12);
 		@include position(50%, auto, auto, $sizeGrid * 14);
 		position: absolute;
 		pointer-events: none;
+
+		@include respond-to(SMALL) {
+			@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 20);
+		}
 	}
 }

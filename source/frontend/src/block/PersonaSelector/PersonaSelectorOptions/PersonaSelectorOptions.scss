@@ -1,0 +1,224 @@
+:local {
+	$animationDuration: .3s;
+	$ease: $easeInOut;
+	$buttonWidth: $sizeGrid * 8;
+	$buttonHeight: $sizeGrid * 3.5;
+
+	.persona-selector-options {
+		@extend %reset-list;
+		@include size(auto, $sizeGrid * 4);
+		@include position(auto, $sizeGrid * 2, $sizeGrid * 2, $sizeGrid * 2);
+		font-size: 0;
+		position: absolute;
+		z-index: 2;
+	}
+
+	.persona-selector-option {
+		@include size(25%, $buttonHeight);
+		display: inline-block;
+		vertical-align: top;
+
+		@include hover() {
+			.persona-button {
+				color: $colorSmallBusinesses;
+
+				&:before {
+					background: transparent;
+				}
+
+				.label {
+					color: $colorWhite;
+				}
+
+				.pagination-number {
+					color: $colorWhite;
+
+					&:after {
+						opacity: 0;
+					}
+				}
+			}
+
+			.small_business {
+				color: $colorSmallBusinesses;
+			}
+
+			.automotive {
+				color: $colorAutomotive;
+			}
+
+			.enterprise {
+				color: $colorEnterprise;
+			}
+
+			.local_media_buying {
+				color: $colorLocalMedia;
+			}
+		}
+
+		&.is-active {
+			border: none;
+
+			.persona-button {
+				color: $colorSmallBusinesses;
+
+				&:before {
+					background: transparent;
+				}
+
+				.label {
+					color: $colorWhite;
+				}
+
+				.pagination-number {
+					color: $colorWhite;
+
+					&:after {
+						opacity: 0;
+					}
+				}
+			}
+
+			.small_business {
+				color: $colorSmallBusinesses;
+			}
+
+			.automotive {
+				color: $colorAutomotive;
+			}
+
+			.enterprise {
+				color: $colorEnterprise;
+			}
+
+			.local_media_buying {
+				color: $colorLocalMedia;
+			}
+		}
+	}
+
+	.persona-button {
+		@include size(calc(100% - #{$sizeGrid}), $buttonHeight);
+		color: $colorBorder;
+		transition: background #{$animationDuration} #{$ease};
+		text-align: left;
+		margin-right: $sizeGrid;
+		overflow: visible; // Dafuq, without this IE does not show pseudo elements
+
+		&:after {
+			@include size($sizeGrid, $buttonHeight - $sizeGrid);
+			@include position(0, -$sizeGrid, auto, auto);
+			position: absolute;
+			content: '';
+			background: currentColor;
+			transition: all #{$animationDuration} #{$ease};
+		}
+
+		&:before {
+			@include triangle(left, top, currentColor, $sizeGrid);
+			@include position(auto, -$sizeGrid, 0, auto);
+			transition: all #{$animationDuration} #{$ease};
+			position: absolute;
+			content: '';
+			background: currentColor;
+		}
+
+		.label-wrapper {
+			@include size(100%);
+			line-height: $buttonHeight;
+			background: currentColor;
+			transition: all #{$animationDuration} #{$ease};
+			display: block;
+			position: relative;
+			padding-left: $sizeGrid;
+		}
+
+		.label {
+			display: inline-block;
+			vertical-align: middle;
+			color: $colorPrimary;
+			line-height: 1rem;
+			position: relative;
+			padding-left: $sizeGrid / 2;
+			position: relative;
+		}
+
+		.copy-01 {
+			font-weight: 600;
+		}
+
+		.pagination-number {
+			@include position(0, auto, auto, 0);
+			transform: translateY(-50%);
+			position: absolute;
+			transition: color #{$animationDuration} #{$ease};
+
+			&:after {
+				transition: opacity #{$animationDuration} #{$ease};
+			}
+		}
+	}
+
+	@include respond-to(XX_LARGE) {
+		$buttonHeight: $sizeGrid * 2.5;
+
+		.persona-button,
+		.persona-options,
+		.persona-option {
+			height: $buttonHeight;
+		}
+
+		.persona-button {
+			&:after {
+				height: $buttonHeight - $sizeGrid;
+			}
+
+			.label-wrapper {
+				line-height: $buttonHeight;
+			}
+		}
+	}
+
+	@include respond-to(LARGE) {
+		$buttonHeight: $sizeGrid * 2;
+
+		.persona-selector-options {
+			height: $buttonHeight;
+		}
+
+		.persona-button,
+		.persona-selector-option {
+			height: $buttonHeight;
+		}
+
+		.pagination-number {
+			display: none;
+		}
+
+		.persona-button {
+			&:after {
+				height: $buttonHeight - $sizeGrid;
+			}
+
+			.label-wrapper {
+				line-height: $buttonHeight;
+			}
+
+			.label {
+				padding-left: 0;
+			}
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.persona-selector-options {
+			bottom: $sizeGrid;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.persona-selector-options {
+			display: none;
+		}
+	}
+}

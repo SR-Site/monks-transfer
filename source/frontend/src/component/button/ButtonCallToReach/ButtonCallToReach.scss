@@ -4,7 +4,7 @@
 		text-transform: uppercase;
 		color: $colorWhite;
 		padding: 0 $sizeGrid / 2;
-		transition: color .3s $easeInOutCubic;
+		transition: color 0.3s $easeInOutCubic;
 
 		@include hover() {
 			.text:before {
@@ -33,9 +33,39 @@
 			position: absolute;
 			@include position(auto, 0, -1px, 0%);
 			@include size(0%, 1px);
-			content: "";
+			content: '';
 			background-color: currentColor;
 			transition: width 150ms $easeInOutExpo;
+		}
+	}
+
+	.theme-light {
+		color: white;
+	}
+
+	.theme-dark {
+		color: $colorPrimary;
+	}
+
+	@include respond-to(MEDIUM) {
+		.button {
+			@include size(auto, $sizeGrid * 2);
+			padding: 0 $sizeGrid;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.button {
+			height: $sizeGrid * 4;
+		}
+
+		.text {
+			font-size: mobile-size(2.2rem);
+		}
+
+		.icon {
+			@include size($sizeGrid * 1.5);
+			margin-right: $sizeGrid;
 		}
 	}
 }

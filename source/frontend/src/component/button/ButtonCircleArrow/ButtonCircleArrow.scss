@@ -2,13 +2,16 @@
 	.button {
 		display: flex;
 		align-items: center;
+		white-space: nowrap;
 
 		&.align-left {
 			.label {
 				order: 1;
 				margin-left: $sizeGrid / 2;
 			}
-			.icon { order: 0; }
+			.icon {
+				order: 0;
+			}
 		}
 
 		&.align-right {
@@ -16,7 +19,9 @@
 				order: 0;
 				margin-right: $sizeGrid / 2;
 			}
-			.icon { order: 1; }
+			.icon {
+				order: 1;
+			}
 		}
 
 		@include hover() {
@@ -46,7 +51,7 @@
 				fill: transparent;
 				stroke: $colorWhite;
 				stroke-width: 1px;
-				transition: stroke .2s $easeInOut, stroke-width .2s $easeInOut, opacity .2s $easeInOut;
+				transition: stroke 0.2s $easeInOut, stroke-width 0.2s $easeInOut, opacity 0.2s $easeInOut;
 			}
 		}
 	}
@@ -71,7 +76,6 @@
 				.label {
 					margin-left: $sizeGrid;
 				}
-
 			}
 
 			&.align-right {

@@ -2,10 +2,14 @@ import VueTypes from 'vue-types';
 import { AbstractBlockComponent } from 'vue-block-system';
 import LatestTransitionController from './LatestTransitionController';
 import LatestData from './LatestData';
+import ArticleTeaser from '../ArticleTeaser/ArticleTeaser';
 
 export default {
 	name: 'Latest',
 	extends: AbstractBlockComponent,
+	components: {
+		ArticleTeaser,
+	},
 	props: {
 		data: VueTypes.shape(LatestData).isRequired,
 	},
@@ -13,6 +17,16 @@ export default {
 		handleAllComponentsReady() {
 			this.transitionController = new LatestTransitionController(this);
 			this.isReady();
+		},
+		getArticleData(article) {
+			const clone = JSON.parse(JSON.stringify(article));
+
+			// Add the required props
+			return Object.assign(clone, {
+				marginTop: 0,
+				windowed: false,
+				overlap: false,
+			});
 		},
 	},
 };

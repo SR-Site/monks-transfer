@@ -1,5 +1,6 @@
 // add components you want to register globally
 
+import ArticleTeaser from './ArticleTeaser/ArticleTeaser';
 import AudienceNetworks from './AudienceNetworks/AudienceNetworks';
 import AudienceProducts from './AudienceProducts/AudienceProducts';
 import AudienceProductTop from './AudienceProductTop/AudienceProductTop';
@@ -15,6 +16,7 @@ import DownloadFileA from './DownloadFileA/DownloadFileA';
 import DownloadFileB from './DownloadFileB/DownloadFileB';
 import FilterContent from './FilterContent/FilterContent';
 import FindContact from './FindContact/FindContact';
+import FreeText from './FreeText/FreeText';
 import GlossaryA from './GlossaryA/GlossaryA';
 import GlossaryB from './GlossaryB/GlossaryB';
 import HeroMain from './HeroMain/HeroMain';
@@ -29,6 +31,8 @@ import Info from './Info/Info';
 import Infographic from './Infographic/Infographic';
 import Latest from './Latest/Latest';
 import Map from './Map/Map';
+import MapSecondary from './MapSecondary/MapSecondary';
+import MapTertiary from './MapTertiary/MapTertiary';
 import MarketMap from './MarketMap/MarketMap';
 import More from './More/More';
 import MultipleImages from './MultipleImages/MultipleImages';
@@ -40,11 +44,11 @@ import PersonaSelector from './PersonaSelector/PersonaSelector';
 import ProductList from './ProductList/ProductList';
 import ProgramModule from './ProgramModule/ProgramModule';
 import Quote from './Quote/Quote';
-import QuoteSecondary from './QuoteSecondary/QuoteSecondary';
 import RelatedShows from './RelatedShows/RelatedShows';
 import ShowDetail from './ShowDetail/ShowDetail';
 import SmallHeading from './SmallHeading/SmallHeading';
 import SmallImage from './SmallImage/SmallImage';
+import SmallInfo from './SmallInfo/SmallInfo';
 import StoryInfoImages from './StoryInfoImages/StoryInfoImages';
 import SuccessStoriesA from './SuccessStoriesA/SuccessStoriesA';
 import SuccessStoriesB from './SuccessStoriesB/SuccessStoriesB';
@@ -52,12 +56,12 @@ import TargetAudience from './TargetAudience/TargetAudience';
 import TripleContent from './TripleContent/TripleContent';
 import VideoWithContent from './VideoWithContent/VideoWithContent';
 import VideoWithContentB from './VideoWithContentB/VideoWithContentB';
-import SmallInfo from './SmallInfo/SmallInfo';
-import MapSecondary from './MapSecondary/MapSecondary';
-import MapTertiary from './MapTertiary/MapTertiary';
-import FreeText from './FreeText/FreeText';
+import AudioFragment from './AudioFragment/AudioFragment';
+import SuccessStoryPost from './SuccessStoryPost/SuccessStoryPost';
+import SuccessStoryHighlight from './SuccessStoryHighlight/SuccessStoryHighlight';
 
 export default {
+	ArticleTeaser,
 	AudienceNetworks,
 	AudienceProducts,
 	AudienceProductTop,
@@ -65,6 +69,7 @@ export default {
 	AudienceReach,
 	AudienceStatistics,
 	AudienceTopProgramming,
+	AudioFragment,
 	BlogPost,
 	BlogPostB,
 	Button,
@@ -101,7 +106,6 @@ export default {
 	ProductList,
 	ProgramModule,
 	Quote,
-	QuoteSecondary,
 	RelatedShows,
 	ShowDetail,
 	SmallHeading,
@@ -110,6 +114,8 @@ export default {
 	StoryInfoImages,
 	SuccessStoriesA,
 	SuccessStoriesB,
+	SuccessStoryHighlight,
+	SuccessStoryPost,
 	TargetAudience,
 	TripleContent,
 	VideoWithContent,

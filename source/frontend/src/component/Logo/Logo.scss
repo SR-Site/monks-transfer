@@ -17,25 +17,17 @@
 		@include respond-to(SMALL) {
 			@include size(60px, 19px);
 		}
-
 	}
-}
 
-:global {
-	.logo-theme-light {
-		.text-top,
-		.text-bottom,
-		.arrow {
+	.theme-light {
+		path {
 			fill: white;
 		}
 	}
 
-	.logo-theme-dark {
-		.text-top,
-		.text-bottom,
-		.arrow {
+	.theme-dark {
+		path {
 			fill: $colorPrimary;
 		}
 	}
-
 }

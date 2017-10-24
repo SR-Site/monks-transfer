@@ -5,8 +5,11 @@
 		position: fixed;
 		transform: translateX(-50%);
 		z-index: zindex($layout, header);
-		transition: background .2s $easeInOut;
-		background: rgba(0, 0, 0, .1);
+		transition: background 0.2s $easeInOut;
+
+		&.is-scrolled {
+			background: white;
+		}
 	}
 
 	.logo {
@@ -32,7 +35,7 @@
 
 	@include respond-to(MEDIUM) {
 		.wrapper {
-			@include pos(0, 0, auto, 0);
+			@include position(0, 0, auto, 0);
 			@include size(100%, $sizeGrid * 2);
 			background: $colorWhite;
 			transform: none;
@@ -50,6 +53,10 @@
 			.logo {
 				left: $sizeGrid * 2;
 			}
+		}
+
+		.callToReach {
+			display: none;
 		}
 	}
 }

@@ -9,7 +9,6 @@ import MediaElement from './MediaElement';
  * @author Mient-jan Stelling
  */
 class VideoElement extends MediaElement {
-
 	public element: HTMLVideoElement;
 
 	/**
@@ -179,8 +178,7 @@ class VideoElement extends MediaElement {
 	 * @returns {VideoPlaybackQuality}
 	 */
 	public getVideoPlaybackQuality(): VideoPlaybackQuality {
-
-		return <VideoPlaybackQuality> this.element['getVideoPlaybackQuality']();
+		return <VideoPlaybackQuality>this.element['getVideoPlaybackQuality']();
 	}
 }
 

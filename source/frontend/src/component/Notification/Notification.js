@@ -56,5 +56,5 @@ export default {
 	beforeDestroy() {
 		this.clipboard.destroy();
 		this.clipboard = null;
-	}
+	},
 };

@@ -15,6 +15,9 @@
 @import 'asset/sizing/fill-image';
 @import 'asset/sizing/fit-cover';
 @import 'asset/position/position';
+@import 'asset/pagination-number';
+@import 'asset/infinite-carousel';
+
 
 html,
 body {
@@ -34,6 +37,10 @@ body {
 
 * {
 	box-sizing: border-box;
+}
+
+figure {
+	margin: 0;
 }
 
 :root {
@@ -57,6 +64,7 @@ body {
 }
 
 .seng-state-indicator {
+	font: $fontOpenSans;
 	bottom: 0;
 	right: 0;
 	background: red;
