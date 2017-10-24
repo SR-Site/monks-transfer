@@ -3,3 +3,8 @@ services:
     class: Drupal\spectrum_rest\Normalizer\SpectrumContactDenormalizer
     tags:
       - { name: normalizer }
+  spectrum_rest.io_event_subscriber:
+    class: Drupal\spectrum_rest\EventSubscriber\IOEventSubscriber
+    arguments: [ '@mm_rest.request_matcher' ]
+    tags:
+      - { name: event_subscriber }
