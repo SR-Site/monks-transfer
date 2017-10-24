@@ -14,6 +14,7 @@ export default {
 		...mapGetters(
 			{
 				contactOptionGetter: 'initData/contactOption',
+				landingRoute:  'init/landingRoute'
 			},
 		),
 		phoneNumber() {
@@ -41,9 +42,10 @@ export default {
 			DeviceStateEvent.STATE_UPDATE,
 			(event) => {
 				this.deviceState = event.data.state;
-			}
-		)
+			},
+		);
 		this.handleScroll();
+		console.log(this.landingRoute);
 	},
 	components: {
 		Logo,

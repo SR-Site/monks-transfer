@@ -7437,9 +7437,9 @@ vrsource-tslint-rules@^5.1.0:
   dependencies:
     tslint "~5.1.0"
 
-vue-block-system@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/vue-block-system/-/vue-block-system-0.3.1.tgz#1e6e77a973888b36a487b3791618fd5f4b5fab7f"
+vue-block-system@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/vue-block-system/-/vue-block-system-0.3.2.tgz#819d9977ebb84c2d87e67428c4d5c6ba7ff036a8"
   dependencies:
     axios "^0.16.2"
     es6-promise "^4.1.1"

@@ -4,7 +4,9 @@
 <template>
 	<header :class="[$style.wrapper, {[$style['is-scrolled']]: isScrolled}]">
 		<h2 :class="$style.logo">
-			<Logo :theme="isScrolled || isMedium ? Theme.DARK : Theme.LIGHT"/>
+			<a v-link="{ path: `/${landingRoute}`}">
+				<Logo :theme="isScrolled || isMedium ? Theme.DARK : Theme.LIGHT"/>
+			</a>
 		</h2>
 		<div :class="$style.callToActions">
 			<ButtonCallToReach

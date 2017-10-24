@@ -70,6 +70,7 @@ const initPlugins = () => {
 			debugLabelStyling: {
 				backgroundColor: 'blue',
 			},
+			enablePageTransitionOut: false,
 		},
 	});
 };
