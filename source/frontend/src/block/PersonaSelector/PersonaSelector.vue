@@ -37,5 +37,13 @@
 			@personaClick="openPersona"
 			:enableInteraction="enableInteraction"
 			:data="data.personas"/>
+		<DashedPaginator
+			componentId="DashedPaginator"
+			v-if="deviceState <= DeviceState.SMALL"
+			@paginatorClick="handleMobilePaginatorClick"
+			:activeIndex="activeIndex"
+			:orientation="Orientation.HORIZONTAL"
+			:items="data.personas"
+		/>
 	</div>
 </template>

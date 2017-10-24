@@ -28,6 +28,11 @@ export default {
 				event => this.$emit('carouselChange', event.data.index),
 			);
 		},
+		openIndex(index) {
+			if (this.carousel) {
+				this.carousel.open(index);
+			}
+		},
 		disableInteraction() {
 			if (this.carousel) {
 				this.carousel.disableInteraction();

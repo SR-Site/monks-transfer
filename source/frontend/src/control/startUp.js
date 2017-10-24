@@ -21,6 +21,7 @@ import { linkTypeMap } from '../data/enum/BackendLinkType';
 import Theme from '../data/enum/Theme';
 import ClassNameHelper from '../util/ClassNameHelper';
 import { DeviceState } from '../config/deviceStateConfig';
+import Orientation from '../data/enum/Orientation';
 
 const initPlugins = () => {
 	const configManager = getValue(CONFIG_MANAGER);
@@ -46,6 +47,7 @@ const initPlugins = () => {
 		NotificationTypes,
 		Direction,
 		Alignment,
+		Orientation,
 		DeviceState,
 		Theme,
 		ClassNameHelper,

@@ -1,6 +1,7 @@
 import Theme from 'data/enum/Theme';
 import Alignment from 'data/enum/Alignment';
 import PersonaType from 'data/enum/PersonaType';
+import Orientation from 'data/enum/Orientation';
 
 class ClassNameHelper {
 	/**
@@ -49,7 +50,16 @@ class ClassNameHelper {
 		}
 
 		return personaLabel ? personaLabel.toLowerCase() : '';
+	}
 
+	public static parseOrientation(orientation: Orientation): string {
+		const orientationLabel = Orientation[orientation];
+
+		if (!orientationLabel) {
+			console.warn('[ClassNameHelper] Unknown orientation type: ' + orientationLabel);
+		}
+
+		return orientationLabel ? orientationLabel.toLowerCase() : '';
 	}
 }
 

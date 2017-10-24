@@ -47,17 +47,22 @@ export default {
 			this.isReady();
 		},
 		handleSlideReady(component, index) {
-			console.log('slide ready');
 			this._slides[index] = component;
+		},
+		handleMobilePaginatorClick(index) {
+			this.getChild('PersonaSelectorMobileCarousel').openIndex(index);
 		},
 		handleMobileCarouselChange(index) {
 			const mobileCarousel = this.getChild('PersonaSelectorMobileCarousel');
-			console.log(mobileCarousel);
+			const mobilePagination = this.getChild('DashedPaginator');
 			// Temporary disable interaction
 			mobileCarousel.disableInteraction();
+			mobilePagination.disableInteraction();
 			// Open the persona
-			this.openPersona(index).then(() => mobileCarousel.enableInteraction());
-
+			this.openPersona(index).then(() => {
+				mobileCarousel.enableInteraction()
+				mobilePagination.enableInteraction();
+			});
 		},
 		openPersona(index) {
 			const oldPersona = this._slides[this.activeIndex];
