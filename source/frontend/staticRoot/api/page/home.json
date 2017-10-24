@@ -541,7 +541,7 @@
 		  "link": {
 			"label": "GET STARTED",
 			"title": "GET STARTED",
-			"target": null,
+			"target": "",
 			"type": 3
 		  }
 		}

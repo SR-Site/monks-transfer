@@ -1,5 +1,6 @@
 import Theme from 'data/enum/Theme';
 import Alignment from 'data/enum/Alignment';
+import PersonaType from 'data/enum/PersonaType';
 
 class ClassNameHelper {
 	/**
@@ -32,6 +33,23 @@ class ClassNameHelper {
 		}
 
 		return alignmentLabel ? 'alignment-' + alignmentLabel.toLowerCase() : '';
+	}
+
+	/**
+	 * @Public
+	 * @method parsePersonaType
+	 * @param {PersonaType} personaType
+	 * @returns {string}
+	 */
+	public static parsePersonaType(personaType: PersonaType): string {
+		const personaLabel = PersonaType[personaType];
+
+		if (!personaLabel) {
+			console.warn('[ClassNameHelper] Unknown persona type: ' + personaLabel);
+		}
+
+		return personaLabel ? personaLabel.toLowerCase() : '';
+
 	}
 }
 

@@ -1,0 +1,28 @@
+:local {
+	.persona-selector-slide {
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid;
+	}
+
+	@include respond-to(XX_LARGE) {
+		.persona-selector-slide {
+			width: 100%;
+			padding-left: $sizeGrid * 2;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.persona-selector-slide {
+			@include offset(0, $sizeGrid);
+			width: 100%;
+			padding: 0 $sizeGrid * 2;
+			transform: none;
+		}
+	}
+}
