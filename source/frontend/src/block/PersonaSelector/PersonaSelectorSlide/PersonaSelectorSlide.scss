@@ -17,6 +17,12 @@
 		}
 	}
 
+	@include respond-to(MEDIUM) {
+		.persona-selector-slide {
+			top: 40%;
+		}
+	}
+
 	@include respond-to(SMALL) {
 		.persona-selector-slide {
 			@include offset(0, $sizeGrid);

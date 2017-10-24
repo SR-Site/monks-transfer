@@ -85,12 +85,6 @@
 		display: none;
 	}
 
-	@include respond-to(MEDIUM) {
-		.persona-content {
-			top: 40%;
-		}
-	}
-
 	@include respond-to(SMALL) {
 		.persona-selector {
 			&:before {

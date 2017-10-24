@@ -182,9 +182,12 @@
 	@include respond-to(LARGE) {
 		$buttonHeight: $sizeGrid * 2;
 
+		.persona-selector-options {
+			height: $buttonHeight;
+		}
+
 		.persona-button,
-		.persona-options,
-		.persona-option {
+		.persona-selector-option {
 			height: $buttonHeight;
 		}
 
@@ -208,7 +211,7 @@
 	}
 
 	@include respond-to(MEDIUM) {
-		.persona-options {
+		.persona-selector-options {
 			bottom: $sizeGrid;
 		}
 	}
