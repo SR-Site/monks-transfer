@@ -4,9 +4,17 @@ import IRectangle from 'lib/geom/IRectangle';
 import TrianglePattern from 'component/MediaCrossFader/util/TrianglePattern';
 import bowser from 'bowser';
 import ElementResizer, { ScaleMode } from 'lib/temple/ElementResizer';
-import AssetLoader from 'util/preloading/AssetLoader';
+import { getValue } from 'util/injector';
+import { TASK_LOADER } from 'data/Injectables';
+import LoadImageTask from 'util/preloading/task/LoadImageTask';
+import cacheManager from 'util/preloading/CacheManager';
 
 export default class CrossFader extends Disposable {
+	/**
+	 * @private name space used for asset caching
+	 * @type {number}
+	 */
+	private static NAME_SPACE: number = 0;
 	/**
 	 * @description Not sure if we want to crossfade playing video's it could be a performance issue
 	 * @type {boolean}
@@ -65,8 +73,14 @@ export default class CrossFader extends Disposable {
 	 */
 	private _oldWidth: number = 0;
 
-	constructor(private _wrapper: HTMLElement, private _canvas: HTMLCanvasElement, private _gridSizeElement: HTMLElement) {
+	constructor(
+		private _wrapper: HTMLElement,
+		private _canvas: HTMLCanvasElement,
+		private _gridSizeElement: HTMLElement,
+	) {
 		super();
+
+		CrossFader.NAME_SPACE += 1;
 
 		// Overlay canvas
 		this._overlayCanvas = document.createElement('canvas');
@@ -115,9 +129,9 @@ export default class CrossFader extends Disposable {
 	 */
 	public openImage(path: string, duration: number = CrossFader.DURATION, ease: Ease = Quad.easeInOut): Promise<any> {
 		return this.getImage(path)
-			.then((image: HTMLImageElement) => (this._newImage = image))
-			.then(() => this.calculateDimensions())
-			.then(() => this.open(duration, ease));
+		.then((image: HTMLImageElement) => (this._newImage = image))
+		.then(() => this.calculateDimensions())
+		.then(() => this.open(duration, ease));
 	}
 
 	/**
@@ -139,15 +153,15 @@ export default class CrossFader extends Disposable {
 
 		// Keep playing the video until we start a new animation
 		return this.open(duration, ease)
-			.then(() => {
-				if (CrossFader.PAUSE_VIDEO_ON_CROSS) {
-					(<HTMLVideoElement>this._activeImage).play();
-				}
-			})
-			.then(() => {
-				// Start the loop of the video
-				this._videoInterval = setInterval(() => this.draw(), 1000 / 60);
-			});
+		.then(() => {
+			if (CrossFader.PAUSE_VIDEO_ON_CROSS) {
+				(<HTMLVideoElement>this._activeImage).play();
+			}
+		})
+		.then(() => {
+			// Start the loop of the video
+			this._videoInterval = setInterval(() => this.draw(), 1000 / 60);
+		});
 	}
 
 	/**
@@ -217,21 +231,26 @@ export default class CrossFader extends Disposable {
 	 * @private
 	 * @method getImage
 	 */
-	private getImage(path: string): Promise<any> {
-		return new Promise((resolve: (image: HTMLImageElement) => void) => {
-			if (this._images[path]) {
-				resolve(this._images[path]);
-			} else {
-				AssetLoader.loadImage(path)
-					.then(image => {
-						// Store for later usage
-						this._images[path] = image;
+	private getImage(path: string): Promise<HTMLImageElement> {
+		const taskLoader = getValue(TASK_LOADER);
+		let image;
 
-						resolve(image);
-					})
-					.catch(reason => console.log('[Unable to load image', reason));
-			}
-		});
+		console.log('getImage', path);
+		return taskLoader.loadTasks(
+			[
+				new LoadImageTask(
+					{
+						assets: path,
+						cached: true,
+						cacheNameSpace: `CrossFader.${CrossFader.NAME_SPACE}`,
+						onAssetLoaded: (result) => {
+							console.log('asset loaded');
+							image = result.asset;
+						},
+					},
+				),
+			],
+		).then(() => image);
 	}
 
 	/**
@@ -398,6 +417,9 @@ export default class CrossFader extends Disposable {
 		this._activeImageOffset = null;
 		this._newImageOffset = null;
 		this._triangleProgress = null;
+
+		// Remove all assets from cache
+		cacheManager.remove(`CrossFader${CrossFader.NAME_SPACE}`)
 
 		if (this._trianglePattern) {
 			this._trianglePattern.dispose();

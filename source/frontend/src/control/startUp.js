@@ -7,7 +7,7 @@ import PagePaths from 'data/enum/PagePaths';
 import { createPath } from 'util/routeUtils';
 import Params from 'data/enum/Params';
 import { getValue } from 'util/injector';
-import { CONFIG_MANAGER, GATEWAY, DEVICE_STATE_TRACKER } from 'data/Injectables';
+import { CONFIG_MANAGER, GATEWAY, DEVICE_STATE_TRACKER, TASK_LOADER } from 'data/Injectables';
 import localeLoader from 'util/localeLoader';
 import BlockSystem, { ButtonType, LinkType } from 'vue-block-system';
 import block from 'block';
@@ -22,6 +22,7 @@ import Theme from '../data/enum/Theme';
 import ClassNameHelper from '../util/ClassNameHelper';
 import { DeviceState } from '../config/deviceStateConfig';
 import Orientation from '../data/enum/Orientation';
+import sequentialPromises from '../util/sequentialPromises';
 
 const initPlugins = () => {
 	const configManager = getValue(CONFIG_MANAGER);
@@ -34,6 +35,7 @@ const initPlugins = () => {
 		$versionRoot: configManager.getVariable(VariableNames.VERSIONED_STATIC_ROOT),
 		$staticRoot: configManager.getVariable(VariableNames.STATIC_ROOT),
 		$deviceState: getValue(DEVICE_STATE_TRACKER),
+		$taskLoader: getValue(TASK_LOADER),
 		URLNames,
 		PropertyNames,
 		VariableNames,
@@ -103,10 +105,12 @@ const startUp = store => {
 	});
 
 	// Add async methods to the Promise.all array
-	return Promise.all([
-						   Vue.blockSystemReady,
-						   configManager.getVariable(VariableNames.LOCALE_ENABLED) ? waitForLocale(store) : Promise.resolve(),
-					   ]);
+	return sequentialPromises(
+		[
+			() => Vue.blockSystemReady,
+			() => configManager.getVariable(VariableNames.LOCALE_ENABLED) ? waitForLocale(store) : Promise.resolve(),
+		],
+	);
 };
 
 export default startUp;

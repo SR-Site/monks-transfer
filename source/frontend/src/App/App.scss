@@ -2,4 +2,12 @@
 	.app-wrapper {
 		overflow: hidden;
 	}
+
+	.site-wrapper {
+		visibility: hidden;
+
+		&.is-active {
+			visibility: visible;
+		}
+	}
 }

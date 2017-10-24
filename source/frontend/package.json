@@ -29,6 +29,7 @@
   "dependencies": {
     "axios": "^0.16.0",
     "babel-polyfill": "^6.23.0",
+    "bows": "^1.7.0",
     "bowser": "^1.8.0",
     "classlist-polyfill": "^1.0.3",
     "core-js": "^2.4.1",
@@ -43,6 +44,7 @@
     "seng-device-state-tracker": "^1.0.6",
     "seng-disposable": "^1.1.2",
     "seng-scss": "^1.0.0",
+    "sha1": "^1.1.1",
     "vue": "^2.2.5",
     "vue-block-system": "^0.3.1",
     "vue-i18n-manager": "^3.2.2",

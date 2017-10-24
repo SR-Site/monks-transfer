@@ -5,6 +5,9 @@ export default {
 	name: 'ContentPage',
 	extends: AbstractContentPageComponent,
 	methods: {
+		handleRouteChangeComplete() {
+			this.pageLoader.transitionOut();
+		},
 		handleAllComponentsReady() {
 			this.transitionController = new ContentPageTransitionController(this);
 			this.isReady();
@@ -26,5 +29,8 @@ export default {
 
 			return classNames.join(' ');
 		},
+	},
+	beforeRouteUpdate(to, from, next) {
+		this.pageLoader.transitionIn().then(() => next());
 	},
 };

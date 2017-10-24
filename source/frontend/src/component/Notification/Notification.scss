@@ -1,6 +1,6 @@
 :local {
 	.notification {
-		@include size(100%);
+		@include size(100%, 100vh);
 		@include offset(0, 0);
 		min-height: 100vh;
 		background: rgba(0, 0, 0, 0.5);
