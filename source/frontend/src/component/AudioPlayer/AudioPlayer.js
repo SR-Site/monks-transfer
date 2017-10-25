@@ -17,7 +17,7 @@ export default {
 			isPlaying: false,
 			progress: 0,
 			hasWebAudioSupport:
-				(window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext) !== undefined,
+			(window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext) !== undefined,
 		};
 	},
 	beforeCreate() {},
@@ -36,38 +36,60 @@ export default {
 			if (this.hasWebAudioSupport) {
 				this.waveSurfer.playPause();
 				this.isPlaying = this.waveSurfer.isPlaying();
-			} else if (this.isPlaying) {
-				this.fallbackPlayer.pause();
-				this.isPlaying = false;
 			} else {
-				this.fallbackPlayer.play();
-				this.isPlaying = true;
+				if (this.isPlaying) {
+					this.fallbackPlayer.pause();
+					this.isPlaying = false;
+				} else {
+					this.fallbackPlayer.play();
+					this.isPlaying = true;
+				}
 			}
 
 			// Tracking
 			if (this.isPlaying) {
-				// trackEvent('audioFragment', 'click', 'play|' + this.options.title);
+				// category: string;
+				// action: string;
+				// label?: string;
+				// value?: number;
+				this.$tracking.trackEvent(
+					{
+						[this.TrackingProvider.GOOGLE_ANALYTICS]: {
+							category: 'audioFragment',
+							action: 'click',
+							label: `play|${this.data.title}`,
+						},
+					},
+				);
 			} else {
-				// const webAudioSupport = this.viewModel.hasWebAudioSupport;
-				// const currentTime = webAudioSupport ? this._wavesurfer.getCurrentTime() :
-				// this._fallbackPlayer.currentTime; const duration = webAudioSupport ? this._wavesurfer.getDuration()
-				// : this._fallbackPlayer.duration;  trackEvent( 'audioFragment', 'click', 'pause|' +
-				// this.options.title, Math.round(currentTime / duration * 100), );
+				const currentTime = this.hasWebAudioSupport ? this.waveSurfer.getCurrentTime() : this.fallbackPlayer.currentTime;
+				const duration = this.hasWebAudioSupport ? this.waveSurfer.getDuration() : this.fallbackPlayer.duration;
+
+				this.$tracking.trackEvent(
+					{
+						[this.TrackingProvider.GOOGLE_ANALYTICS]: {
+							category: 'audioFragment',
+							action: 'click',
+							label: `pause|${this.data.title}`,
+							value: Math.round(currentTime / duration * 100),
+						},
+					},
+				);
 			}
 		},
 		createWaveSurfer() {
 			const height = this.getChild('ButtonCirclePlay').$el.offsetHeight;
 
 			this.waveSurfer = WaveSurfer.create({
-				height,
-				container: this.$refs.waveForm,
-				waveColor: '#003057',
-				progressColor: '#009bdb',
-				barWidth: 1,
-				cursorWidth: 0,
-				interact: false,
-				normalize: true,
-			});
+													height,
+													container: this.$refs.waveForm,
+													waveColor: '#003057',
+													progressColor: '#009bdb',
+													barWidth: 1,
+													cursorWidth: 0,
+													interact: false,
+													normalize: true,
+												});
 
 			this.waveSurfer.load(this.file);
 		},
