@@ -58,6 +58,7 @@ import VideoWithContentB from './VideoWithContentB/VideoWithContentB';
 import AudioFragment from './AudioFragment/AudioFragment';
 import SuccessStoryPost from './SuccessStoryPost/SuccessStoryPost';
 import SuccessStoryHighlight from './SuccessStoryHighlight/SuccessStoryHighlight';
+import QuoteSecondary from './QuoteSecondary/QuoteSecondary';
 
 export default {
 	ArticleTeaser,
@@ -104,6 +105,7 @@ export default {
 	ProductList,
 	ProgramModule,
 	Quote,
+	QuoteSecondary,
 	RelatedShows,
 	ShowDetail,
 	SmallHeading,

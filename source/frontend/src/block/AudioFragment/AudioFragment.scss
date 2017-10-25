@@ -1,3 +1,50 @@
 :local {
+	.audio-fragment {
+		.details {
+			margin-top: $sizeGrid / 2;
+			vertical-align: middle;
+		}
+	}
 
+	.profile-image,
+	.copy {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.profile-image {
+		@include size($sizeGrid);
+		border-radius: 100%;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			@include offset(0, 0);
+			position: absolute;
+			object-fit: cover;
+		}
+	}
+
+	.copy {
+		margin-left: $sizeGrid / 2;
+	}
+
+	.component-audio-player {
+		margin-top: $sizeGrid * 2;
+	}
+
+	@include respond-to(SMALL) {
+		.audio-fragment {
+			padding: 0 $sizeGrid * 2;
+		}
+
+		.profile-image {
+			@include size($sizeGrid * 2);
+		}
+
+		.copy {
+			margin-left: $sizeGrid;
+		}
+
+	}
 }

@@ -1,4 +1,5 @@
 import { AbstractTransitionController } from 'vue-transition-component';
+import { Cubic } from 'gsap';
 
 class ButtonCirclePlayTransitionController extends AbstractTransitionController {
 	/**
@@ -6,13 +7,25 @@ class ButtonCirclePlayTransitionController extends AbstractTransitionController 
 	 * @method setupTransitionInTimeline
 	 * @description Use this method to setup your transition in timeline
 	 * */
-	protected setupTransitionInTimeline(): void {}
+	protected setupTransitionInTimeline(): void {
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$el,
+			1,
+			{
+				scale: 0,
+			},
+			{
+				scale: 1,
+				ease: Cubic.easeOut,
+			},
+		);
+	}
 
 	/**
-	* @public
-	* @method setupTransitionOutTimeline
-	* @description Use this method to setup your transition out timeline
-	* */
+	 * @public
+	 * @method setupTransitionOutTimeline
+	 * @description Use this method to setup your transition out timeline
+	 * */
 	protected setupTransitionOutTimeline(): void {}
 }
 

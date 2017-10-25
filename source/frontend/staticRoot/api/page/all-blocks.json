@@ -97,6 +97,175 @@
 			"alt": "Background image alt text"
 		  }
 		}
+	  },
+	  {
+		"id": "audioFragment",
+		"data": {
+		  "overlap": false,
+		  "windowed": true,
+		  "marginTop": 2,
+		  "heading": "Best way to <span class='highlight'>Advertise</span> on <span class='highlight'>TV</span>",
+		  "name": "John Doe",
+		  "description": "Foo bar",
+		  "image": {
+			"normal": "https://www.spectrumreach.com/assets/images/user/2017-09/Spectrum_Reach_RGB.png",
+			"small": "https://www.spectrumreach.com/assets/images/user/2017-09/Spectrum_Reach_RGB.png",
+			"alt": "Background image alt text"
+		  },
+		  "file": "/static/mock-assets/audio/audio.mp3"
+		}
+	  },
+	  {
+		"id": "smallHeading",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Spectrum Reach is the marketing platform of choice for a reason.<br \/>"
+		}
+	  },
+	  {
+		"id": "freeText",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "html": "<p>Television is alive and thriving. Spectrum Reach is committed to helping you reach your perfect customer, with innovations that empower you to digitally plan and monitor your success in real-time. We make sure you do more than keep up in the advertising space. Our clients are always one step ahead.<\/p>\n\n<p>It's time to stop doing business as usual and start doing business as exceptional.<\/p>"
+		}
+	  },
+	  {
+		"id": "personaSelector",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "personas": [
+			{
+			  "heading": "Local Advertising<br \/>",
+			  "paragraph": "<p>Spectrum Reach has markets across the country, with teams that know your neighborhood inside and out.<\/p>",
+			  "personaType": 0,
+			  "link": {
+				"label": "Grow your business",
+				"title": "Grow your business",
+				"target": "",
+				"type": 3
+			  },
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Persona-homepage-bg-5_0.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Persona-homepage-bg-5_0.jpg",
+				"alt": "Local"
+			  }
+			},
+			{
+			  "heading": "National\u00a0<br \/>Advertising<br \/>",
+			  "paragraph": "<p>Spectrum Reach puts your message in front of targeted customers across the country and across all screens.<\/p>",
+			  "personaType": 3,
+			  "link": {
+				"label": "Grow your Business",
+				"title": "Grow your Business",
+				"target": "",
+				"type": 3
+			  },
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Persona-homepage-bg-national.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Persona-homepage-bg-national.jpg",
+				"alt": "National"
+			  }
+			},
+			{
+			  "heading": "Agency Solutions<br \/>",
+			  "paragraph": "<p>Your clients trust you to help them navigate the complicated, ever-evolving media landscape. You can count on Spectrum Reach.<\/p>",
+			  "personaType": 2,
+			  "link": {
+				"label": "Grow your Business",
+				"title": "Grow your Business",
+				"target": "",
+				"type": 3
+			  },
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Persona-homepage-bg-agency.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Persona-homepage-bg-agency.jpg",
+				"alt": "Agencies"
+			  }
+			},
+			{
+			  "heading": "Automotive Advertising<br \/>",
+			  "paragraph": "<p>The automotive industry is saturated with ads. Break through the clutter with Spectrum Reach.<\/p>",
+			  "personaType": 1,
+			  "link": {
+				"label": "Grow your business",
+				"title": "Grow your business",
+				"target": "",
+				"type": 3
+			  },
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/persona-background-image-8.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/persona-background-image-8.jpg",
+				"alt": "Automotive"
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "pathToPurchase",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "steps": [
+			{
+			  "heading": "Connected to Content<br />",
+			  "paragraph": "<p>Align your brand with top programming.</p>",
+			  "background": {
+				"normal": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_01-OPT.jpg",
+				"small": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_01-OPT.jpg",
+				"alt": "Connected to Content"
+			  },
+			  "secondaryParagraph": "<p>Share the stage and align your brand with over 400 of the most-watched and most-loved programs across 50+ networks.</p>"
+			},
+			{
+			  "heading": "Zero In<br />",
+			  "paragraph": "<p>Target the right audience on TV.</p>",
+			  "background": {
+				"normal": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_03-OPT.jpg",
+				"small": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_03-OPT.jpg",
+				"alt": "Zero In"
+			  },
+			  "secondaryParagraph": "<p>Reach the right customers on TV with our state-of-the-art audience targeting and interactive capabilities.</p>"
+			},
+			{
+			  "heading": "Measurability Without Measure<br />",
+			  "paragraph": "<p>Build the right media plan.</p>",
+			  "background": {
+				"normal": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_05b-OPT.jpg",
+				"small": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_05b-OPT.jpg",
+				"alt": "Measurability Without Measure"
+			  },
+			  "secondaryParagraph": "<p>Use our unique data and insights to access your best customers across 30 million households.</p>"
+			},
+			{
+			  "heading": "We Are Your Neighbors<br />",
+			  "paragraph": "<p>Partner with an expert local team.</p>",
+			  "background": {
+				"normal": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_04-OPT.jpg",
+				"small": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_04-OPT.jpg",
+				"alt": "We Are Your Neighbors"
+			  },
+			  "secondaryParagraph": "<p>Collaborate with a dedicated team in your community to develop a custom marketing strategy.</p>"
+			},
+			{
+			  "heading": "Lights. Camera. Action. Sales.<br />",
+			  "paragraph": "<p>Create a memorable campaign.</p>",
+			  "background": {
+				"normal": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Purchase-06-OPT.jpg",
+				"small": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Purchase-06-OPT.jpg",
+				"alt": "Lights. Camera. Action. Sales."
+			  },
+			  "secondaryParagraph": "<p>Tell a story that resonates with your audience with help from our award-winning in-house agency, Kernel.</p>"
+			}
+		  ]
+		}
 	  }
 	],
 	"#cache": {

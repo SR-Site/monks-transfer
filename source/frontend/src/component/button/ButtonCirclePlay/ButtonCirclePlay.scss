@@ -1,2 +1,40 @@
 :local {
+	.button {
+		@include size($sizeGrid*2.5);
+
+		@include hover() {
+			svg {
+				circle {
+					stroke-width: 0.5rem;
+					stroke: $colorSecondary;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.icon {
+		@include offset(50%, 50%);
+		@include size(calc(#{$sizeGrid * 2.5} - 20px));
+		transform: translate(-50%, -50%);
+		position: absolute;
+	}
+
+	svg {
+		backface-visibility: hidden;
+		overflow: visible;
+
+		path {
+			fill: currentColor;
+			transform-origin: center center;
+		}
+
+		circle {
+			fill: transparent;
+			stroke: $colorWhite;
+			stroke-width: 1px;
+			transition: stroke .2s $easeInOut, stroke-width .2s $easeInOut, opacity .2s $easeInOut;
+			transform-origin: center center;
+		}
+	}
 }
