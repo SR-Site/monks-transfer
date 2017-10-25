@@ -21,7 +21,7 @@
 	/**
 	 * This means a block will have a border on both sides
 	 */
-	&.windowed {
+	&.is-windowed {
 		border-right: $sizeGrid * 2 solid $colorWhite;
 		border-left: $sizeGrid * 2 solid $colorWhite;
 	}
@@ -44,7 +44,7 @@
 	}
 
 	@include respond-to(SMALL) {
-		&.windowed {
+		&.is-windowed {
 			border-left: none;
 			border-right: none;
 		}

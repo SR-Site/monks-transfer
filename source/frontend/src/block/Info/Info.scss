@@ -1,2 +1,136 @@
 :local {
+	.info {
+		position: relative;
+		width: 100%;
+		color: white;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: $largeSiteFrame;
+
+		&:global {
+			&.is-windowed {
+				border-color: transparent;
+				border-left-width: $sizeGrid*4;
+				border-right-width: $sizeGrid*4;
+			}
+		}
+	}
+
+	.clip-mask {
+		@include size(100%);
+		@include offset(0, 0);
+		background: $colorWhite;
+		position: absolute;
+		transform-origin: right center;
+	}
+
+	.inner-content {
+		padding: $sizeGrid*2.5;
+		width: calc(100% - #{$sizeGrid});
+		background-color: $colorSecondary;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: flex-end;
+
+		&:before {
+			@include triangle(left, top, $colorSecondary, $sizeGrid);
+			@include position(auto, -$sizeGrid, 0, auto);
+			position: absolute;
+			content: '';
+		}
+
+		&:after {
+			@include position(0, -$sizeGrid, $sizeGrid, auto);
+			position: absolute;
+			content: "";
+			width: $sizeGrid;
+			background-color: $colorSecondary
+		}
+	}
+
+	.description {
+		width: calc(100% - #{$sizeGrid*5});
+	}
+
+	.copy {
+		margin-top: $sizeGrid;
+	}
+
+	.button {
+		align-self: flex-end;
+	}
+
+	@include respond-to(SMALL) {
+		.info {
+			@include size(100% !important, auto !important);
+			padding-left: $sizeGrid;
+			padding-right: $sizeGrid;
+			max-width: 100%;
+
+			&:global {
+				&.is-windowed {
+					border: none;
+				}
+			}
+		}
+
+		.inner-content {
+			position: relative;
+			display: block;
+			padding: $sizeGrid*3 !important;
+
+			&:before,
+			&:after {
+				right: -$sizeGrid;
+			}
+		}
+
+		.description {
+			width: 100% !important;
+		}
+
+		.component-button-main {
+			margin-top: $sizeGrid*2;
+		}
+	}
+
+	// This means nested within another component
+	.is-nested {
+		@include size(16 * $sizeGrid, 8 * $sizeGrid);
+
+		.inner-content {
+			padding: $sizeGrid * 1.5 $sizeGrid * 2;
+			height: 100%;
+			flex-direction: column;
+
+			.copy {
+				display: none;
+			}
+		}
+
+		.component-button-main {
+			align-self: flex-start
+		}
+
+		.description {
+			width: 100%;
+		}
+
+		@include respond-to(X_LARGE) {
+			width: 15 * $sizeGrid;
+		}
+
+		@include respond-to(ARTICLE_TEASER_LARGE) {
+			width: 12 * $sizeGrid;
+		}
+
+		@include respond-to(ARTICLE_TEASER_MEDIUM) {
+			width: 9 * $sizeGrid;
+
+			.inner-content {
+				padding: $sizeGrid;
+			}
+		}
+	}
 }

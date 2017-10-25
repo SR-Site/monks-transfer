@@ -2,7 +2,6 @@
 	.image-carousel {
 		@include size(100%, auto);
 		overflow: hidden;
-		padding: 0 $sizeGrid * 3 0 $sizeGrid * 4;
 		margin-bottom: $sizeGrid;
 	}
 
@@ -17,6 +16,8 @@
 	}
 
 	.slide {
+		z-index: 0;
+
 		figure {
 			position: relative;
 
@@ -25,24 +26,28 @@
 				@include triangle(right, bottom, $colorWhite, $sizeGrid);
 				position: absolute;
 				content: '';
+				z-index: 3;
 			}
 
 			&:before {
 				@include position(auto, 0, 0, 0);
 				@include size(100%, 25%);
-				background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .25) 100%);
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
 				content: '';
 				position: absolute;
+				z-index: 2;
 			}
 		}
 
 		img {
 			@include size(100%);
+			z-index: 1;
 		}
 
 		figcaption {
 			@include position(auto, auto, $sizeGrid * 2, $sizeGrid * 2);
 			position: absolute;
+			z-index: 4;
 		}
 
 		.theme-light {
