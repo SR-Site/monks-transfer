@@ -3,8 +3,8 @@
     "description": "Standard MediaMonks decoupled Drupal project template.",
     "type": "project",
     "config" : {
-        "bin-dir": "deploy/bin",
-        "vendor-dir": "deploy/vendor"
+        "bin-dir": "source/drupal/bin",
+        "vendor-dir": "source/drupal/vendor"
     },
     "authors": [
         {
@@ -137,13 +137,13 @@
             }
         },
         "installer-paths": {
-            "deploy/htdocs/core": ["type:drupal-core"],
-            "deploy/htdocs/modules/contrib/{$name}": ["type:drupal-module"],
-            "deploy/htdocs/modules/mediamonks/{$name}": ["type:mediamonks-drupal-module"],
-            "deploy/htdocs/themes/contrib/{$name}": ["type:drupal-theme"],
-            "deploy/htdocs/themes/mediamonks/{$name}": ["type:mediamonks-drupal-theme"],
-            "deploy/htdocs/library/contrib/{$name}": ["type:drupal-library"],
-            "deploy/htdocs/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "source/drupal/docroot/core": ["type:drupal-core"],
+            "source/drupal/docroot/modules/contrib/{$name}": ["type:drupal-module"],
+            "source/drupal/docroot/modules/mediamonks/{$name}": ["type:mediamonks-drupal-module"],
+            "source/drupal/docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+            "source/drupal/docroot/themes/mediamonks/{$name}": ["type:mediamonks-drupal-theme"],
+            "source/drupal/docroot/library/contrib/{$name}": ["type:drupal-library"],
+            "source/drupal/docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
         }
     }
