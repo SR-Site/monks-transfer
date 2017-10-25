@@ -245,7 +245,6 @@ export default class CrossFader extends Disposable {
 				cached: true,
 				cacheNameSpace: `CrossFader.${CrossFader.NAME_SPACE}`,
 				onAssetLoaded: (result) => {
-					console.log('asset loaded');
 					image = result.asset;
 				},
 			},

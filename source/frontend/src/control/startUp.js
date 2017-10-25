@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import bows from 'bows';
 import axios from 'axios';
 import VueExposePlugin from 'util/VueExposePlugin';
 import { URLNames, PropertyNames, VariableNames } from 'data/enum/configNames';
@@ -7,7 +8,7 @@ import PagePaths from 'data/enum/PagePaths';
 import { createPath } from 'util/routeUtils';
 import Params from 'data/enum/Params';
 import { getValue } from 'util/injector';
-import { CONFIG_MANAGER, GATEWAY, DEVICE_STATE_TRACKER, TASK_LOADER } from 'data/Injectables';
+import { CONFIG_MANAGER, GATEWAY, DEVICE_STATE_TRACKER, TASK_LOADER, TRACKING_MANAGER } from 'data/Injectables';
 import localeLoader from 'util/localeLoader';
 import BlockSystem, { ButtonType, LinkType } from 'vue-block-system';
 import block from 'block';
@@ -36,6 +37,7 @@ const initPlugins = () => {
 		$staticRoot: configManager.getVariable(VariableNames.STATIC_ROOT),
 		$deviceState: getValue(DEVICE_STATE_TRACKER),
 		$taskLoader: getValue(TASK_LOADER),
+		$tracking: getValue(TRACKING_MANAGER),
 		URLNames,
 		PropertyNames,
 		VariableNames,
