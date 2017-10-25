@@ -9,7 +9,7 @@
 		@include size(20px);
 		color: white;
 		display: block;
-		transition: all 250ms ease(easeOutExpo);
+		transition: all 250ms $easeOutExpo;
 		counter-increment: item;
 
 		&:not(:first-child) {
@@ -24,13 +24,13 @@
 			@include size(20px, 1px);
 			background-color: currentColor;
 			transform-origin: bottom left;
-			transition: all 250ms ease(easeOutExpo);
+			transition: all 250ms $easeOutExpo;
 		}
 
 		.nr {
 			opacity: 1;
 			transform: translateY(50%);
-			transition: transform 250ms ease(easeOutExpo);
+			transition: transform 250ms $easeOutExpo;
 
 			&:before {
 				content: counter(item, decimal-leading-zero) '';
@@ -65,13 +65,13 @@
 		color: currentColor;
 		opacity: 0;
 		margin-top: -28px;
-		transition: all 250ms ease(easeOutExpo);
+		transition: all 250ms $easeOutExpo;
 		display: block;
 	}
 
 	// Horizontal Style
 	.horizontal {
-		padding-top: 0.5rem;
+		padding-top: 2rem;
 		font-size: 0;
 		text-align: center;
 

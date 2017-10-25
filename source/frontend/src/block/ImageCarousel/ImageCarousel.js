@@ -39,6 +39,9 @@ export default {
 				poster: slide.image,
 			});
 		},
+		handlePaginatorClick(index) {
+			this.carousel.open(index);
+		},
 	},
 	beforeDestroy() {
 		this.carousel.dispose();

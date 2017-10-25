@@ -19,8 +19,8 @@ class ImageCarouselTransitionController extends AbstractTransitionController {
 			},
 		);
 
-		if (this.viewModel.hasChild('MobilePagination')) {
-			this.transitionInTimeline.add(this.getSubTimeline('MobilePagination'), 0);
+		if (this.viewModel.hasChild('DashedPaginator')) {
+			this.transitionInTimeline.add(this.getSubTimeline('DashedPaginator'), 0);
 		}
 
 		if (this.viewModel.$refs.playButton) {

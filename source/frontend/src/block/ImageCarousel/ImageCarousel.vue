@@ -35,5 +35,13 @@
 				</ul>
 			</div>
 		</div>
+		<div :class="$style.pagination "class="site-frame">
+			<DashedPaginator
+				componentId="DashedPaginator"
+				@paginatorClick="handlePaginatorClick"
+				:activeIndex="activeIndex"
+				:orientation="Orientation.HORIZONTAL"
+				:items="data.slides" />
+		</div>
 	</div>
 </template>
