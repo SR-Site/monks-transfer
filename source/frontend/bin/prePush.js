@@ -48,38 +48,38 @@ const prePush = {
 	 * Add tasks here you probably want to run before pushing your code to a repo.
 	 */
 	tasks: [
-		{
-			name: 'esLintCheck',
-			run: (options) => {
-				const linter = 'eslint';
-				const linterBinary = path.resolve(__dirname, `../node_modules/.bin/${linter}`);
-				const outputPath = path.resolve(__dirname, `../${linter}error.txt`);
-				const sourceDir = path.resolve(__dirname, `../src`);
-
-				return pify(shell.exec)(`${linterBinary} ${sourceDir} --ext .js -o ${outputPath} --cache`)
-					.catch((error, stdout, stderr) => prePush.errorHandler(error, stdout, stderr, linter, outputPath))
-			}
-		},
-		{
-			name: 'tsLintCheck',
-			run: (options) => {
-				let excludeArgument = '';
-
-				if (options && prePush.hasOption(options, 'exclude') && options.exclude instanceof Array) {
-					excludeArgument = options.exclude.map(item => `--exclude "${item}"`).join(' ');
-				}
-
-				const linter = 'tslint';
-				const linterBinary = path.resolve(__dirname, `../node_modules/.bin/${linter}`);
-				const outputPath = path.resolve(__dirname, `../${linter}error.txt`);
-				const sourceDir = './src/**/*.ts';
-				const tsConfig = path.resolve(__dirname, '../tsconfig.json');
-				const lintingRules = path.resolve(__dirname, '../.tslintrc.js');
-
-				return pify(shell.exec)(`${linterBinary} "${sourceDir}" ${excludeArgument} -o ${outputPath} -p ${tsConfig} -c ${lintingRules}`)
-					.catch((error, stdout, stderr) => prePush.errorHandler(error, stdout, stderr, linter, outputPath));
-			}
-		}
+		// {
+		// 	name: 'esLintCheck',
+		// 	run: (options) => {
+		// 		const linter = 'eslint';
+		// 		const linterBinary = path.resolve(__dirname, `../node_modules/.bin/${linter}`);
+		// 		const outputPath = path.resolve(__dirname, `../${linter}error.txt`);
+		// 		const sourceDir = path.resolve(__dirname, `../src`);
+		//
+		// 		return pify(shell.exec)(`${linterBinary} ${sourceDir} --ext .js -o ${outputPath} --cache`)
+		// 			.catch((error, stdout, stderr) => prePush.errorHandler(error, stdout, stderr, linter, outputPath))
+		// 	}
+		// },
+		// {
+		// 	name: 'tsLintCheck',
+		// 	run: (options) => {
+		// 		let excludeArgument = '';
+		//
+		// 		if (options && prePush.hasOption(options, 'exclude') && options.exclude instanceof Array) {
+		// 			excludeArgument = options.exclude.map(item => `--exclude "${item}"`).join(' ');
+		// 		}
+		//
+		// 		const linter = 'tslint';
+		// 		const linterBinary = path.resolve(__dirname, `../node_modules/.bin/${linter}`);
+		// 		const outputPath = path.resolve(__dirname, `../${linter}error.txt`);
+		// 		const sourceDir = './src/**/*.ts';
+		// 		const tsConfig = path.resolve(__dirname, '../tsconfig.json');
+		// 		const lintingRules = path.resolve(__dirname, '../.tslintrc.js');
+		//
+		// 		return pify(shell.exec)(`${linterBinary} "${sourceDir}" ${excludeArgument} -o ${outputPath} -p ${tsConfig} -c ${lintingRules}`)
+		// 			.catch((error, stdout, stderr) => prePush.errorHandler(error, stdout, stderr, linter, outputPath));
+		// 	}
+		// }
 	],
 
 	hasOption: (options, optionName) => {

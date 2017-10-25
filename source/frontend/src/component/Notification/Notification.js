@@ -45,7 +45,11 @@ export default {
 			return this.transitionOut().then(this.resolve.bind(this, { accept: true }));
 		},
 		decline() {
-			return this.transitionOut().then(this.resolve.bind(this, { accept: false }));
+			return this.transitionOut().then(
+				this.resolve.bind(this, {
+					accept: false,
+				}),
+			);
 		},
 		handleKeyUp(event) {
 			if (this.isActive && event.keyCode === keyCode.ESC) {

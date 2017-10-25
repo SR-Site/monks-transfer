@@ -15,11 +15,16 @@ export default {
 	},
 	getTranslation(locale) {
 		return axios
-			.get(getValue(CONFIG_MANAGER).getURL(URLNames.LOCALE, { locale: locale.translationKey }), {
-				headers: {
-					Accept: 'application/json',
+			.get(
+				getValue(CONFIG_MANAGER).getURL(URLNames.LOCALE, {
+					locale: locale.translationKey,
+				}),
+				{
+					headers: {
+						Accept: 'application/json',
+					},
 				},
-			})
+			)
 			.then(response => {
 				loadedLanguages.push(locale.code);
 

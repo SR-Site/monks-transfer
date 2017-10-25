@@ -65,7 +65,9 @@ export default class CrossFader extends Disposable {
 	private _trianglePattern: TrianglePattern;
 	private _triangleProgress: number = 0;
 
-	private _images: { [index: string]: HTMLImageElement } = {};
+	private _images: {
+		[index: string]: HTMLImageElement;
+	} = {};
 	private _animation: TweenLite;
 
 	private _videoInterval?: number;

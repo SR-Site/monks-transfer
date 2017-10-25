@@ -1,6 +1,6 @@
 import { AbstractButtonComponent } from 'vue-block-system';
-import ButtonCirclePlayTransitionController from './ButtonCirclePlayTransitionController';
 import VueTypes from 'vue-types';
+import ButtonCirclePlayTransitionController from './ButtonCirclePlayTransitionController';
 
 export default {
 	name: 'ButtonCirclePlay',

@@ -1,6 +1,6 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import PersonaSelectorMobileCarouselTransitionController from './PersonaSelectorMobileCarouselTransitionController';
 import VueTypes from 'vue-types';
+import PersonaSelectorMobileCarouselTransitionController from './PersonaSelectorMobileCarouselTransitionController';
 import InfiniteCarousel from '../../../util/carousel/InfiniteCarousel';
 import CarouselEvent from '../../../util/carousel/event/CarouselEvent';
 import NativeEventListener from '../../../util/event/NativeEventListener';

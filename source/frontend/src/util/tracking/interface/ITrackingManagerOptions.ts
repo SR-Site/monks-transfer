@@ -2,7 +2,9 @@ import AbstractTrackingProvider from '../tracking-provider/AbstractTrackingProvi
 import IAbstractTrackingProviderOptions from '../tracking-provider/IAbstractTrackingProviderOptions';
 
 interface ITrackingManagerOptions {
-	providers: { [id: string]: AbstractTrackingProvider<IAbstractTrackingProviderOptions> };
+	providers: {
+		[id: string]: AbstractTrackingProvider<IAbstractTrackingProviderOptions>;
+	};
 }
 
 export default ITrackingManagerOptions;

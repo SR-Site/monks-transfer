@@ -1,6 +1,6 @@
 import { AbstractContentPageComponent } from 'vue-block-system';
-import ContentPageTransitionController from './ContentPageTransitionController';
 import TrackingProvider from 'util/tracking/TrackingProvider';
+import ContentPageTransitionController from './ContentPageTransitionController';
 
 export default {
 	name: 'ContentPage',

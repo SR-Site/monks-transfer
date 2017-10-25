@@ -50,7 +50,9 @@ import IAbstractTrackPageViewData from './tracking-provider/IAbstractTrackPageVi
  */
 export default class TrackingManager extends Disposable {
 	private _options: ITrackingManagerOptions;
-	private _providers: { [id: string]: AbstractTrackingProvider<IAbstractTrackingProviderOptions> } = {};
+	private _providers: {
+		[id: string]: AbstractTrackingProvider<IAbstractTrackingProviderOptions>;
+	} = {};
 
 	constructor(options: ITrackingManagerOptions) {
 		super();

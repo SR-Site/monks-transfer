@@ -1,6 +1,6 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import DashedPaginatorTransitionController from './DashedPaginatorTransitionController';
 import VueTypes from 'vue-types';
+import DashedPaginatorTransitionController from './DashedPaginatorTransitionController';
 
 export default {
 	name: 'DashedPaginator',

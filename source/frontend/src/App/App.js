@@ -26,7 +26,7 @@ export default {
 	methods: {
 		handlePageLoaderReady(component) {
 			// Attach the pre-loader to all vue components
-			Vue.prototype['pageLoader'] = component;
+			Vue.prototype.pageLoader = component;
 			// Show the page loader when it's ready
 			component.transitionIn().then(() => {
 				this.pageLoaderReady = true;

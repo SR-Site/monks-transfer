@@ -111,7 +111,10 @@ export default abstract class LoadTask<T> extends Disposable {
 			}
 
 			// Push into the new batch
-			this.batches[this.batches.length - 1].push({ src, index });
+			this.batches[this.batches.length - 1].push({
+				src,
+				index,
+			});
 		});
 	}
 

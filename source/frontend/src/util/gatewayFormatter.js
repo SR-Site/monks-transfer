@@ -1,6 +1,10 @@
 export const errorFormatter = error => {
 	if (error && error.response.data.error) {
-		const response = { config: error.config, ...error.response, ...error.response.data };
+		const response = {
+			config: error.config,
+			...error.response,
+			...error.response.data,
+		};
 		// delete data to avoid confusion
 		delete response.data;
 		return response;

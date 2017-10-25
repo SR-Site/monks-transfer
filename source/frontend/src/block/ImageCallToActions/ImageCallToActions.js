@@ -78,7 +78,7 @@ export default {
 		},
 		clipImages(duration) {
 			let left = 0;
-			let height = this.$el.offsetHeight;
+			const height = this.$el.offsetHeight;
 			let width = this.$el.offsetWidth / this.data.callToActions.length;
 
 			this.$refs.image.forEach((image, index) => {
@@ -86,7 +86,7 @@ export default {
 					width = this.$el.offsetWidth * this.hoverSizes[this.activeImage][index];
 				}
 
-				let right = left + width;
+				const right = left + width;
 
 				TweenLite.to(image, duration, {
 					clip: `rect(0px, ${right}px, ${height}px, ${left}px)`,

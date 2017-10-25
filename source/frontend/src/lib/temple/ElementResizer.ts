@@ -105,7 +105,12 @@ export default class ElementResizer extends Disposable {
 			elementWidth,
 			elementHeight,
 			scaleMode,
-			{ x: 0, y: 0, width: boundsContainer.clientWidth, height: boundsContainer.clientHeight },
+			{
+				x: 0,
+				y: 0,
+				width: boundsContainer.clientWidth,
+				height: boundsContainer.clientHeight,
+			},
 			alignmentX,
 			alignmentY,
 			maxWidth,

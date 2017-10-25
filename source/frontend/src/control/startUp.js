@@ -1,5 +1,4 @@
 import Vue from 'vue';
-import bows from 'bows';
 import axios from 'axios';
 import VueExposePlugin from 'util/VueExposePlugin';
 import { URLNames, PropertyNames, VariableNames } from 'data/enum/configNames';

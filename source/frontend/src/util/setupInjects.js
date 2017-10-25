@@ -3,21 +3,22 @@ import { CONFIG_MANAGER, GATEWAY, DEVICE_STATE_TRACKER, TASK_LOADER, TRACKING_MA
 import config from 'config/config';
 import ConfigManager from 'seng-config';
 import * as axios from 'axios';
-import { URLNames } from 'data/enum/configNames';
+import { URLNames, PropertyNames } from 'data/enum/configNames';
 
 import { setValue } from './injector';
 import { responseFormatter, errorFormatter } from './gatewayFormatter';
 import { mediaQueries, DeviceState } from '../config/deviceStateConfig';
 import TaskLoader from './preloading/TaskLoader';
 import TrackingManager from './tracking/TrackingManager';
+/* eslint-disable */
+import TrackingProvider from './tracking/TrackingProvider';
 import GoogleAnalyticsProvider from './tracking/tracking-provider/google-analytics/GoogleAnalyticsProvider';
 import FacebookTrackingPixelProvider from './tracking/tracking-provider/facebook-tracking-pixel/FacebookTrackingPixelProvider';
 import TwitterTrackingPixelProvider from './tracking/tracking-provider/twitter-tracking-pixel/TwitterTrackingPixelProvider';
-import TrackingProvider from 'util/tracking/TrackingProvider';
-import { PropertyNames } from '../data/enum/configNames';
 import HotjarProvider from './tracking/tracking-provider/hotjar/HotjarProvider';
 import LinkedInTrackingPixelProvider from './tracking/tracking-provider/linkedin-tracking-pixel/LinkedInTrackingPixelProvider';
 import ForensicsProvider from './tracking/tracking-provider/forensics/ForensicsProvider';
+/* eslint-enable */
 
 const setupInjects = () => {
 	const configManager = new ConfigManager();

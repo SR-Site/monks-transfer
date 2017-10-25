@@ -1,10 +1,10 @@
+import VueTypes from 'vue-types';
 import WaveSurfer from 'wavesurfer';
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import AudioPlayerTransitionController from './AudioPlayerTransitionController';
 import AudioElement from '../../lib/media/enum/AudioElement';
 import MediaElement from '../../lib/media/MediaElement';
 import NativeEventListener from '../../util/event/NativeEventListener';
-import VueTypes from 'vue-types';
 
 export default {
 	name: 'AudioPlayer',
@@ -17,10 +17,7 @@ export default {
 			isPlaying: false,
 			progress: 0,
 			hasWebAudioSupport:
-				(window['AudioContext'] ||
-					window['webkitAudioContext'] ||
-					window['mozAudioContext'] ||
-					window['msAudioContext']) !== undefined,
+				(window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext) !== undefined,
 		};
 	},
 	beforeCreate() {},
@@ -39,14 +36,12 @@ export default {
 			if (this.hasWebAudioSupport) {
 				this.waveSurfer.playPause();
 				this.isPlaying = this.waveSurfer.isPlaying();
+			} else if (this.isPlaying) {
+				this.fallbackPlayer.pause();
+				this.isPlaying = false;
 			} else {
-				if (this.isPlaying) {
-					this.fallbackPlayer.pause();
-					this.isPlaying = false;
-				} else {
-					this.fallbackPlayer.play();
-					this.isPlaying = true;
-				}
+				this.fallbackPlayer.play();
+				this.isPlaying = true;
 			}
 
 			// Tracking
@@ -63,12 +58,11 @@ export default {
 		createWaveSurfer() {
 			const height = this.getChild('ButtonCirclePlay').$el.offsetHeight;
 
-			console.log('create wavesurfer', this.file);
 			this.waveSurfer = WaveSurfer.create({
+				height,
 				container: this.$refs.waveForm,
 				waveColor: '#003057',
 				progressColor: '#009bdb',
-				height: height,
 				barWidth: 1,
 				cursorWidth: 0,
 				interact: false,

@@ -218,14 +218,19 @@ abstract class AbstractInfiniteCarousel extends sengEvent {
 			this._activated = false;
 
 			this.disableInteraction();
-			TweenLite.set(this._options.sliderWrapper, { height: 'auto', clearProps: 'all' });
+			TweenLite.set(this._options.sliderWrapper, {
+				height: 'auto',
+				clearProps: 'all',
+			});
 			this._positions = [];
 			this.setCurrentPage(null);
 			this._nextPage = 0;
 			this._previousPage = 0;
 
 			this._options.slides.forEach((item: HTMLElement) => {
-				TweenLite.set(item, { clearProps: 'all' });
+				TweenLite.set(item, {
+					clearProps: 'all',
+				});
 			});
 		}
 	}
@@ -242,13 +247,17 @@ abstract class AbstractInfiniteCarousel extends sengEvent {
 		let newHeight: number = 0;
 
 		if (!this._isFixedHeight) {
-			TweenLite.set(this._options.slides, { height: 'auto' });
+			TweenLite.set(this._options.slides, {
+				height: 'auto',
+			});
 
 			this._options.slides.forEach((item: HTMLElement) => {
 				newHeight = Math.max(newHeight, item.offsetHeight);
 			});
 
-			TweenLite.set(this._options.sliderWrapper, { height: newHeight });
+			TweenLite.set(this._options.sliderWrapper, {
+				height: newHeight,
+			});
 		} else {
 			this._options.slides.forEach((slide: HTMLElement) => {
 				slide.style.removeProperty('height');
@@ -292,7 +301,9 @@ abstract class AbstractInfiniteCarousel extends sengEvent {
 			const position = index * 100;
 			this._positions.push(position);
 
-			TweenLite.set(slide, { x: position + '%' });
+			TweenLite.set(slide, {
+				x: position + '%',
+			});
 		});
 	}
 
@@ -361,7 +372,9 @@ abstract class AbstractInfiniteCarousel extends sengEvent {
 		const nextElementPosition: number = this._positions[nextElementKey];
 
 		if (this.needsReposition(position, nextElementPosition)) {
-			TweenLite.set(nextElement, { x: position + '%' });
+			TweenLite.set(nextElement, {
+				x: position + '%',
+			});
 
 			this._positions[nextElementKey] = position;
 		}
@@ -434,7 +447,11 @@ abstract class AbstractInfiniteCarousel extends sengEvent {
 		this.setSliderPosition();
 
 		// Notify parent classes about the change
-		this.dispatchEvent(new CarouselEvent(CarouselEvent.CHANGE, { index: this._realCurrentPage }));
+		this.dispatchEvent(
+			new CarouselEvent(CarouselEvent.CHANGE, {
+				index: this._realCurrentPage,
+			}),
+		);
 	}
 
 	/**
@@ -476,11 +493,15 @@ abstract class AbstractInfiniteCarousel extends sengEvent {
 		}
 
 		if (this._options.sliderWrapper) {
-			TweenLite.set(this._options.sliderWrapper, { clearProps: 'height, x' });
+			TweenLite.set(this._options.sliderWrapper, {
+				clearProps: 'height, x',
+			});
 		}
 
 		if (this._options.slides) {
-			TweenLite.set(this._options.slides, { clearProps: 'height, x' });
+			TweenLite.set(this._options.slides, {
+				clearProps: 'height, x',
+			});
 		}
 
 		this._realCurrentPage = null;

@@ -1,7 +1,7 @@
 import NativeEventListener from '../../util/event/NativeEventListener';
 import getRouter from '../../router';
 // Object for storing all the link listeners
-let listeners = {};
+const listeners = {};
 
 export default {
 	bind(element, binding) {

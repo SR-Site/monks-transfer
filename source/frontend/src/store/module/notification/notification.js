@@ -29,7 +29,14 @@ export default {
 	actions: {
 		show(context, payload) {
 			let notificationResult = null;
-			return new Promise(resolve => context.commit(SHOW, Object.assign({ isActive: true }, payload, { resolve })))
+			return new Promise(resolve =>
+				context.commit(
+					SHOW,
+					Object.assign({ isActive: true }, payload, {
+						resolve,
+					}),
+				),
+			)
 				.then(result => {
 					notificationResult = result;
 				})
