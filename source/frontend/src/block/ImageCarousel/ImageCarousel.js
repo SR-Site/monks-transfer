@@ -33,13 +33,10 @@ export default {
 			});
 		},
 		handleVideoClick(slide) {
-			console.log('video click', slide);
 			this.$store.dispatch(VideoOverlayMutationTypes.SHOW, {
 				video: slide.video,
 				title: slide.heading,
 				poster: slide.image,
-			}).then(() => {
-				console.log('video closed');
 			});
 		},
 	},

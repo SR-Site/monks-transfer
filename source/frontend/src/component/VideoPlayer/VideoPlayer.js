@@ -109,6 +109,7 @@ export default {
 		},
 		createInternalVideoPlayer() {
 			this.enableCustomControls = true;
+			this.videoControls.setActiveState(true);
 			this.videoPlayer = new InternalVideoPlayer(
 				this.$el,
 				{
@@ -126,6 +127,7 @@ export default {
 		},
 		createVimeoVideoPlayer() {
 			this.enableCustomControls = false;
+			this.videoControls.setActiveState(false);
 			const id = this.vimeoUrlToVimeoId(this.options.video.url);
 			this.videoPlayer = new Player(
 				this.$el,
