@@ -7,7 +7,7 @@
 		pointer-events: none;
 
 		@include respond-to(SMALL) {
-			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 48);
+			@include arrow(right, rgba($colorPrimary, 0.95), $sizeGrid * 48);
 		}
 	}
 }

@@ -4,7 +4,9 @@ import ITwitterTrackingPixelProviderOptions from './ITwitterTrackingPixelProvide
 import bows from 'bows';
 import { ITrackEventData } from './ITwitterTrackingPixelTrackingData';
 
-export default class TwitterTrackingPixelProvider extends AbstractTrackingProvider<ITwitterTrackingPixelProviderOptions> {
+export default class TwitterTrackingPixelProvider extends AbstractTrackingProvider<
+	ITwitterTrackingPixelProviderOptions
+> {
 	/**
 	 * @description Namespace in which the google tag manager is loaded
 	 * @type {string}
@@ -19,12 +21,19 @@ export default class TwitterTrackingPixelProvider extends AbstractTrackingProvid
 	protected init(): void {
 		this.logger = bows('TwitterTrackingPixel');
 
-		!function (e, t, n, s, u, a) {
-			e[TwitterTrackingPixelProvider._NAMESPACE] || (s = e[TwitterTrackingPixelProvider._NAMESPACE] = () => {
-				s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
-			}, s.version = '1.1', s.queue = [], u = t.createElement(n), u.async = !0, u.src = '//static.ads-twitter.com/uwt.js',
-				a = t.getElementsByTagName(n)[0], a.parentNode.insertBefore(u, a));
-		}(window, document, 'script');
+		!(function(e, t, n, s, u, a) {
+			e[TwitterTrackingPixelProvider._NAMESPACE] ||
+				((s = e[TwitterTrackingPixelProvider._NAMESPACE] = () => {
+					s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
+				}),
+				(s.version = '1.1'),
+				(s.queue = []),
+				(u = t.createElement(n)),
+				(u.async = !0),
+				(u.src = '//static.ads-twitter.com/uwt.js'),
+				(a = t.getElementsByTagName(n)[0]),
+				a.parentNode.insertBefore(u, a));
+		})(window, document, 'script');
 
 		window[TwitterTrackingPixelProvider._NAMESPACE]('init', this.providerOptions.trackingPixelId);
 		// Log the status

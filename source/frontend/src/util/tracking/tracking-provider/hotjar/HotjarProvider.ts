@@ -19,9 +19,11 @@ export default class HotjarProvider extends AbstractTrackingProvider<IHotjarProv
 		this.logger = bows('Hotjar');
 
 		((h, o, t, j, a, r) => {
-			h[HotjarProvider._NAMESPACE] = h[HotjarProvider._NAMESPACE] || function () {
-				(h[HotjarProvider._NAMESPACE].q = h[HotjarProvider._NAMESPACE]['q'] || []).push(arguments);
-			};
+			h[HotjarProvider._NAMESPACE] =
+				h[HotjarProvider._NAMESPACE] ||
+				function() {
+					(h[HotjarProvider._NAMESPACE].q = h[HotjarProvider._NAMESPACE]['q'] || []).push(arguments);
+				};
 			h['_hjSettings'] = {
 				hjid: this.providerOptions.trackingId,
 				hjsv: 5,

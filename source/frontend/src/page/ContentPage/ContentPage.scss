@@ -3,7 +3,6 @@
 		position: relative;
 	}
 
-
 	@include respond-to(MEDIUM) {
 		.blockWrapper {
 			padding-top: $sizeHeader;

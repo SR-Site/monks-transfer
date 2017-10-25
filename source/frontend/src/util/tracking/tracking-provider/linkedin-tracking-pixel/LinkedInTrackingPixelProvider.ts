@@ -4,7 +4,9 @@ import ILinkedInTrackingPixelProviderOptions from './ILinkedInTrackingPixelProvi
 import bows from 'bows';
 import LoadScriptTask from 'util/preloading/task/LoadScriptTask';
 
-export default class LinkedInTrackingPixelProvider extends AbstractTrackingProvider<ILinkedInTrackingPixelProviderOptions> {
+export default class LinkedInTrackingPixelProvider extends AbstractTrackingProvider<
+	ILinkedInTrackingPixelProviderOptions
+> {
 	/**
 	 * @description Namespace in which the google tag manager is loaded
 	 * @type {string}
@@ -21,12 +23,10 @@ export default class LinkedInTrackingPixelProvider extends AbstractTrackingProvi
 
 		window[LinkedInTrackingPixelProvider._NAMESPACE] = this.providerOptions.trackingPixelId;
 
-		const loadScriptTask = new LoadScriptTask(
-			{
-				assets: 'https://snap.licdn.com/li.lms-analytics/insight.min.js',
-				cached: false,
-			},
-		);
+		const loadScriptTask = new LoadScriptTask({
+			assets: 'https://snap.licdn.com/li.lms-analytics/insight.min.js',
+			cached: false,
+		});
 
 		loadScriptTask.load(() => {
 			// Clean the task

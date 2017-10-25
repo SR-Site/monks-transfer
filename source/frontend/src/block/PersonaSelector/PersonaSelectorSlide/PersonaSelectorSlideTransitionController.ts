@@ -45,7 +45,7 @@ class PersonaSelectorSlideTransitionController extends AbstractTransitionControl
 				autoAlpha: 1,
 				ease: Quad.easeOut,
 			},
-			'=-0.3'
+			'=-0.3',
 		);
 
 		if (this.viewModel.hasChild('ButtonPrimary')) {
@@ -58,8 +58,7 @@ class PersonaSelectorSlideTransitionController extends AbstractTransitionControl
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default PersonaSelectorSlideTransitionController;

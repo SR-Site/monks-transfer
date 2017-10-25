@@ -16,16 +16,12 @@ export default {
 			this.transitionController = new PersonaSelectorMobileCarouselTransitionController(this);
 			this.isReady();
 
-			this.carousel = new InfiniteCarousel(
-				{
-					sliderWrapper: this.$refs.slides,
-					slides: this.$refs.slide,
-				},
-			);
-			this.carouselEventListener = new NativeEventListener(
-				this.carousel,
-				CarouselEvent.CHANGE,
-				event => this.$emit('carouselChange', event.data.index),
+			this.carousel = new InfiniteCarousel({
+				sliderWrapper: this.$refs.slides,
+				slides: this.$refs.slide,
+			});
+			this.carouselEventListener = new NativeEventListener(this.carousel, CarouselEvent.CHANGE, event =>
+				this.$emit('carouselChange', event.data.index),
 			);
 		},
 		openIndex(index) {

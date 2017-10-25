@@ -58,7 +58,8 @@ export default abstract class LoadTask<T> extends Disposable {
 						update(batchProgress.reduce((a, b) => a + b) / batchProgress.length);
 					}
 				});
-			}), progress => {
+			}),
+			progress => {
 				if (update) {
 					update(progress);
 				}
@@ -80,8 +81,8 @@ export default abstract class LoadTask<T> extends Disposable {
 		return new Promise((resolve, reject) => {
 			const batchProgress = batch.map(batch => 0);
 			Promise.all(
-				batch.map(item => this.loadBatch(item, batchProgress, update)
-					.then(asset => {
+				batch.map(item =>
+					this.loadBatch(item, batchProgress, update).then(asset => {
 						// Return the asset through the asset loaded callback method
 						if (this.options.onAssetLoaded) {
 							this.options.onAssetLoaded({
@@ -133,17 +134,15 @@ export default abstract class LoadTask<T> extends Disposable {
 				if (update) {
 					update(batchProgress.reduce((a, b) => a + b) / batchProgress.length);
 				}
-			})
-				.then(asset => {
-					// Add to the cache manager if enabled
-					if (this.options.cached) {
-						cacheManager.add(item.src, asset, this.options.cacheNameSpace);
-					}
-					return asset;
-				});
+			}).then(asset => {
+				// Add to the cache manager if enabled
+				if (this.options.cached) {
+					cacheManager.add(item.src, asset, this.options.cacheNameSpace);
+				}
+				return asset;
+			});
 		}
 	}
-
 
 	/**
 	 * @public
@@ -155,7 +154,7 @@ export default abstract class LoadTask<T> extends Disposable {
 }
 
 export interface onAssetLoadedResponse<T> {
-	asset: T,
+	asset: T;
 	index: number;
 }
 
@@ -165,7 +164,7 @@ interface IBatch {
 }
 
 export interface ILoadTaskOptions<T> {
-	assets: Array<string> | string,
+	assets: Array<string> | string;
 	batchSize?: number;
 	cached?: boolean;
 	cacheNameSpace?: string;

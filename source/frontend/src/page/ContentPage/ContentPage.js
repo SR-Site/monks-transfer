@@ -9,16 +9,14 @@ export default {
 		handleRouteChangeComplete() {
 			this.pageLoader.transitionOut();
 			this.$nextTick(() => {
-				this.$tracking.trackPageView(
-					{
-						[TrackingProvider.GOOGLE_ANALYTICS]: {
-							page: this.$router.currentRoute.path,
-						},
-						[TrackingProvider.TWITTER_PIXEL]: {},
-						[TrackingProvider.FACEBOOK_PIXEL]: {},
+				this.$tracking.trackPageView({
+					[TrackingProvider.GOOGLE_ANALYTICS]: {
+						page: this.$router.currentRoute.path,
 					},
-				);
-			})
+					[TrackingProvider.TWITTER_PIXEL]: {},
+					[TrackingProvider.FACEBOOK_PIXEL]: {},
+				});
+			});
 		},
 		handleAllComponentsReady() {
 			this.transitionController = new ContentPageTransitionController(this);

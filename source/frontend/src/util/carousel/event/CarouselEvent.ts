@@ -7,11 +7,13 @@ class CarouselEvent extends AbstractEvent {
 	public static CHANGE: string = EVENT_TYPE_PLACEHOLDER;
 	public static OPEN: string = EVENT_TYPE_PLACEHOLDER;
 
-	constructor(type: string,
-	            public data?: { index: number },
-	            bubbles?: boolean,
-	            cancelable?: boolean,
-	            setTimeStamp?: boolean,) {
+	constructor(
+		type: string,
+		public data?: { index: number },
+		bubbles?: boolean,
+		cancelable?: boolean,
+		setTimeStamp?: boolean,
+	) {
 		super(type, bubbles, cancelable, setTimeStamp);
 	}
 
@@ -23,4 +25,3 @@ class CarouselEvent extends AbstractEvent {
 generateEventTypes({ CarouselEvent });
 
 export default CarouselEvent;
-

@@ -11,7 +11,7 @@
 		.image {
 			background-size: cover;
 			opacity: 0;
-			transition: opacity .8s $easeLinear;
+			transition: opacity 0.8s $easeLinear;
 		}
 
 		.is-active {

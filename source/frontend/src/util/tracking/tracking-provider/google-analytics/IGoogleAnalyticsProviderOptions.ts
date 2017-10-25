@@ -5,4 +5,3 @@ interface IGoogleAnalyticsProviderOptions extends IAbstractTrackingProviderOptio
 }
 
 export default IGoogleAnalyticsProviderOptions;
-

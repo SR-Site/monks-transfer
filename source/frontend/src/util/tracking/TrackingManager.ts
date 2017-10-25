@@ -59,8 +59,7 @@ export default class TrackingManager extends Disposable {
 		this._options = assign({}, options);
 
 		// Add the providers that were provided when creating the tracking manager
-		Object.keys(this._options.providers || {})
-			.forEach((id: string) => this.addProvider(id, this._options.providers[id]));
+		Object.keys(this._options.providers || {}).forEach((id: string) => this.addProvider(id, this._options.providers[id]));
 	}
 
 	/**
@@ -91,8 +90,7 @@ export default class TrackingManager extends Disposable {
 	 * @description Loop through all the providers and trigger an event
 	 */
 	public trackEvent(data: { [provider: string]: IAbstractTrackPageViewData }): void {
-		Object.keys(data)
-			.forEach(id => this._providers[id].trackEvent(data[id]));
+		Object.keys(data).forEach(id => this._providers[id].trackEvent(data[id]));
 	}
 
 	/**
@@ -101,8 +99,7 @@ export default class TrackingManager extends Disposable {
 	 * @description Loop through all the providers and trigger a page view
 	 */
 	public trackPageView(data: { [provider: string]: IAbstractTrackPageViewData }): void {
-		Object.keys(data)
-			.forEach((id: string) => this._providers[id].trackPageView(data[id]));
+		Object.keys(data).forEach((id: string) => this._providers[id].trackPageView(data[id]));
 	}
 
 	/**

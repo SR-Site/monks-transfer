@@ -1,6 +1,3 @@
-interface IAbstractTrackEventData {
-
-}
+interface IAbstractTrackEventData {}
 
 export default IAbstractTrackEventData;
-

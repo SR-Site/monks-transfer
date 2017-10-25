@@ -31,7 +31,7 @@
 			margin-left: $sizeGrid / 2;
 			transform: translateY(100%);
 			opacity: 0;
-			transition: transform .2s $easeOut, opacity .2s $easeOut;
+			transition: transform 0.2s $easeOut, opacity 0.2s $easeOut;
 		}
 	}
 
@@ -63,7 +63,7 @@
 
 	.background-blurred {
 		opacity: 0;
-		transition: opacity .2s $easeInOut;
+		transition: opacity 0.2s $easeInOut;
 	}
 
 	.call-to-action-image {

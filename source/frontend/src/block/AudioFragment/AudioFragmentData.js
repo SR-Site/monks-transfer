@@ -6,7 +6,7 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	heading:VueTypes.string.isRequired,
+	heading: VueTypes.string.isRequired,
 	name: VueTypes.string.isRequired,
 	description: VueTypes.string.isRequired,
 	image: VueTypes.shape(PropImage).isRequired,

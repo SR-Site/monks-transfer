@@ -19,7 +19,7 @@ export default class LoadScriptTask extends AbstractLoadTask<HTMLScriptElement> 
 	 * @returns {Promise<void>}
 	 */
 	public loadAsset(src: string): Promise<HTMLScriptElement> {
-		return new Promise((resolve: (image: HTMLScriptElement) => void, reject: (reason:string) => void) => {
+		return new Promise((resolve: (image: HTMLScriptElement) => void, reject: (reason: string) => void) => {
 			const s = document.createElement('script');
 			let r = false;
 			s.type = 'text/javascript';
@@ -31,7 +31,7 @@ export default class LoadScriptTask extends AbstractLoadTask<HTMLScriptElement> 
 				}
 			};
 			s.onload = onload;
-			s.onerror = () => reject('Failed to load the script: ' + src)
+			s.onerror = () => reject('Failed to load the script: ' + src);
 			s['onreadystatechange'] = onload;
 			const t = document.getElementsByTagName('script')[0];
 			t.parentNode.insertBefore(s, t);

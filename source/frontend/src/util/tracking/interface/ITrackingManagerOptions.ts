@@ -6,4 +6,3 @@ interface ITrackingManagerOptions {
 }
 
 export default ITrackingManagerOptions;
-

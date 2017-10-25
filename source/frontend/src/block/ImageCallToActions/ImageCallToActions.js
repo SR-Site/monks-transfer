@@ -22,8 +22,7 @@ export default {
 	props: {
 		data: VueTypes.shape(ImageCallToActionsData).isRequired,
 	},
-	mounted() {
-	},
+	mounted() {},
 	methods: {
 		handleAllComponentsReady() {
 			this.resizeHandler = new NativeEventListener(window, 'resize', debounce(this.handleResize, 100));
@@ -41,7 +40,7 @@ export default {
 			this.isReady();
 		},
 		handleResize() {
-			this.triangleSize = (1 / this.data.callToActions.length) * document.body.offsetWidth;
+			this.triangleSize = 1 / this.data.callToActions.length * document.body.offsetWidth;
 
 			if (this.$deviceState.currentState > this.DeviceState.SMALL) {
 				this.clipImages(0);

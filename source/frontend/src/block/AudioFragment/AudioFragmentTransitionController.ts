@@ -37,10 +37,7 @@ class AudioFragmentTransitionController extends AbstractTransitionController {
 			'=-0.8',
 		);
 
-		this.transitionInTimeline.add(
-			this.getSubTimeline('AudioPlayer'),
-			'=-0.8',
-		);
+		this.transitionInTimeline.add(this.getSubTimeline('AudioPlayer'), '=-0.8');
 	}
 
 	/**
@@ -48,8 +45,7 @@ class AudioFragmentTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default AudioFragmentTransitionController;

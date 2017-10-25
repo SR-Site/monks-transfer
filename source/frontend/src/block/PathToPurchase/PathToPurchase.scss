@@ -9,7 +9,7 @@
 		.image {
 			background-size: cover;
 			opacity: 0;
-			transition: opacity .8s $easeLinear;
+			transition: opacity 0.8s $easeLinear;
 		}
 
 		.is-active {
@@ -45,7 +45,7 @@
 		position: absolute;
 		display: flex;
 		color: $colorWhite;
-		transition: color .2s $easeLinear, height .5s $easeInOutCubic;
+		transition: color 0.2s $easeLinear, height 0.5s $easeInOutCubic;
 		cursor: pointer;
 		overflow: hidden;
 
@@ -59,7 +59,7 @@
 			position: absolute;
 			background: $colorBorder;
 			content: '';
-			transition: opacity .5s $easeLinear;
+			transition: opacity 0.5s $easeLinear;
 		}
 	}
 
@@ -85,7 +85,7 @@
 		.secondary-content {
 			margin-top: $sizeGrid / 2;
 			opacity: 0;
-			transition: opacity .5s $easeLinear;
+			transition: opacity 0.5s $easeLinear;
 		}
 	}
 
@@ -136,7 +136,6 @@
 		 * Every 1st block
 		 */
 		&:nth-child(1n + 0) {
-
 			.step:after {
 				top: 0;
 				bottom: $sizeGrid;
@@ -191,7 +190,6 @@
 		 * Every 3rd block
 		 */
 		&:nth-child(3n + 0) {
-
 			.step:after {
 				top: 0;
 				bottom: $sizeGrid;
@@ -207,7 +205,6 @@
 				order: 2;
 				align-self: flex-start;
 			}
-
 		}
 
 		/**
@@ -286,7 +283,7 @@
 				}
 
 				.step-content {
-					padding-left: $sizeGrid  / 2;
+					padding-left: $sizeGrid / 2;
 				}
 
 				.step-edge {
@@ -313,7 +310,6 @@
 				}
 
 				.step-edge {
-
 					&:after {
 						@include triangle(right, bottom, currentColor, $sizeGrid / 2);
 						@include position(-$sizeGrid / 2, 0, auto, auto);

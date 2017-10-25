@@ -76,11 +76,7 @@ export default class CrossFader extends Disposable {
 	 */
 	private _oldWidth: number = 0;
 
-	constructor(
-		private _wrapper: HTMLElement,
-		private _canvas: HTMLCanvasElement,
-		private _gridSizeElement: HTMLElement,
-	) {
+	constructor(private _wrapper: HTMLElement, private _canvas: HTMLCanvasElement, private _gridSizeElement: HTMLElement) {
 		super();
 
 		CrossFader.NAME_SPACE += 1;
@@ -135,9 +131,9 @@ export default class CrossFader extends Disposable {
 	 */
 	public openImage(path: string, duration: number = CrossFader.DURATION, ease: Ease = Quad.easeInOut): Promise<any> {
 		return this.getImage(path)
-		.then((image: HTMLImageElement) => (this._newImage = image))
-		.then(() => this.calculateDimensions())
-		.then(() => this.open(duration, ease));
+			.then((image: HTMLImageElement) => (this._newImage = image))
+			.then(() => this.calculateDimensions())
+			.then(() => this.open(duration, ease));
 	}
 
 	/**
@@ -159,15 +155,15 @@ export default class CrossFader extends Disposable {
 
 		// Keep playing the video until we start a new animation
 		return this.open(duration, ease)
-		.then(() => {
-			if (CrossFader.PAUSE_VIDEO_ON_CROSS) {
-				(<HTMLVideoElement>this._activeImage).play();
-			}
-		})
-		.then(() => {
-			// Start the loop of the video
-			this._videoInterval = setInterval(() => this.draw(), 1000 / 60);
-		});
+			.then(() => {
+				if (CrossFader.PAUSE_VIDEO_ON_CROSS) {
+					(<HTMLVideoElement>this._activeImage).play();
+				}
+			})
+			.then(() => {
+				// Start the loop of the video
+				this._videoInterval = setInterval(() => this.draw(), 1000 / 60);
+			});
 	}
 
 	/**
@@ -239,16 +235,14 @@ export default class CrossFader extends Disposable {
 	 */
 	private getImage(path: string): Promise<HTMLImageElement> {
 		let image;
-		let loadImageTask = new LoadImageTask(
-			{
-				assets: path,
-				cached: true,
-				cacheNameSpace: `CrossFader.${CrossFader.NAME_SPACE}`,
-				onAssetLoaded: (result) => {
-					image = result.asset;
-				},
+		let loadImageTask = new LoadImageTask({
+			assets: path,
+			cached: true,
+			cacheNameSpace: `CrossFader.${CrossFader.NAME_SPACE}`,
+			onAssetLoaded: result => {
+				image = result.asset;
 			},
-		);
+		});
 
 		return loadImageTask.load().then(() => {
 			loadImageTask.dispose();

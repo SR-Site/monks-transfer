@@ -16,12 +16,14 @@ export default {
 		return {
 			isPlaying: false,
 			progress: 0,
-			hasWebAudioSupport: (window['AudioContext'] || window['webkitAudioContext'] || window['mozAudioContext'] || window['msAudioContext']) !== undefined,
+			hasWebAudioSupport:
+				(window['AudioContext'] ||
+					window['webkitAudioContext'] ||
+					window['mozAudioContext'] ||
+					window['msAudioContext']) !== undefined,
 		};
 	},
-	beforeCreate() {
-
-	},
+	beforeCreate() {},
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new AudioPlayerTransitionController(this);
@@ -52,28 +54,26 @@ export default {
 				// trackEvent('audioFragment', 'click', 'play|' + this.options.title);
 			} else {
 				// const webAudioSupport = this.viewModel.hasWebAudioSupport;
-                // const currentTime = webAudioSupport ? this._wavesurfer.getCurrentTime() :
-                // this._fallbackPlayer.currentTime; const duration = webAudioSupport ? this._wavesurfer.getDuration()
-                // : this._fallbackPlayer.duration;  trackEvent( 'audioFragment', 'click', 'pause|' +
-                // this.options.title, Math.round(currentTime / duration * 100), );
+				// const currentTime = webAudioSupport ? this._wavesurfer.getCurrentTime() :
+				// this._fallbackPlayer.currentTime; const duration = webAudioSupport ? this._wavesurfer.getDuration()
+				// : this._fallbackPlayer.duration;  trackEvent( 'audioFragment', 'click', 'pause|' +
+				// this.options.title, Math.round(currentTime / duration * 100), );
 			}
 		},
 		createWaveSurfer() {
 			const height = this.getChild('ButtonCirclePlay').$el.offsetHeight;
 
 			console.log('create wavesurfer', this.file);
-			this.waveSurfer = WaveSurfer.create(
-				{
-					container: this.$refs.waveForm,
-					waveColor: '#003057',
-					progressColor: '#009bdb',
-					height: height,
-					barWidth: 1,
-					cursorWidth: 0,
-					interact: false,
-					normalize: true,
-				},
-			);
+			this.waveSurfer = WaveSurfer.create({
+				container: this.$refs.waveForm,
+				waveColor: '#003057',
+				progressColor: '#009bdb',
+				height: height,
+				barWidth: 1,
+				cursorWidth: 0,
+				interact: false,
+				normalize: true,
+			});
 
 			this.waveSurfer.load(this.file);
 		},

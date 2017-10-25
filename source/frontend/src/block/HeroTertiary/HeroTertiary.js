@@ -15,7 +15,7 @@ export default {
 		data: VueTypes.shape(HeroTertiaryData).isRequired,
 	},
 	components: {
-		MediaCrossFader
+		MediaCrossFader,
 	},
 	created() {
 		this.canPlayVideo = !bowser.ios && !bowser.android;

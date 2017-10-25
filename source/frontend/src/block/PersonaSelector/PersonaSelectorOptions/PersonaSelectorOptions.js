@@ -24,7 +24,7 @@ export default {
 			return padStart(value, 2, '0');
 		},
 		handlePersonaClick(index) {
-			if(this.enableInteraction) {
+			if (this.enableInteraction) {
 				this.activeIndex = index;
 				this.$emit('personaClick', index);
 			}

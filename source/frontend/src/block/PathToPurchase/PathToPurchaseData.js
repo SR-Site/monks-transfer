@@ -7,13 +7,11 @@ export default {
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
 	steps: VueTypes.arrayOf(
-		VueTypes.shape(
-			{
-				heading: VueTypes.string.isRequired,
-				paragraph: VueTypes.string.isRequired,
-				background: VueTypes.shape(PropImage),
-				secondaryParagraph: VueTypes.string.isRequired,
-			},
-		),
+		VueTypes.shape({
+			heading: VueTypes.string.isRequired,
+			paragraph: VueTypes.string.isRequired,
+			background: VueTypes.shape(PropImage),
+			secondaryParagraph: VueTypes.string.isRequired,
+		}),
 	).isRequired,
 };

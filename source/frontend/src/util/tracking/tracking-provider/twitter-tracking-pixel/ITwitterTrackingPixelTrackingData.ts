@@ -1,7 +1,16 @@
 import IAbstractTrackEventData from 'util/tracking/tracking-provider/IAbstractTrackEventData';
 
 export interface ITrackEventData extends IAbstractTrackEventData {
-	event?: 'ViewContent' | 'Search' | 'AddToCart' | 'AddToWishlist' | 'InitiateCheckout' | 'AddPaymentInfo' | 'Purchase' | 'CompleteRegistration' | string;
+	event?:
+		| 'ViewContent'
+		| 'Search'
+		| 'AddToCart'
+		| 'AddToWishlist'
+		| 'InitiateCheckout'
+		| 'AddPaymentInfo'
+		| 'Purchase'
+		| 'CompleteRegistration'
+		| string;
 	parameters?: {
 		value?: string;
 		currency?: string;

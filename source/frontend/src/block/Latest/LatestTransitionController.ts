@@ -19,10 +19,7 @@ class LatestTransitionController extends AbstractTransitionController {
 			articles.forEach((article, index) => {
 				const componentId = `ArticleTeaser${index}`;
 
-				this.transitionInTimeline.add(
-					this.getSubTimeline(componentId),
-					index * 0.25,
-				);
+				this.transitionInTimeline.add(this.getSubTimeline(componentId), index * 0.25);
 			});
 		}
 	}

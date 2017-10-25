@@ -10,7 +10,7 @@ import { trackingApartments } from 'data/enum/Apartments';
  * @description Method that actually triggers the page view on the tracking manager
  * @param page
  */
-const handlePageChange = (pageData) => {
+const handlePageChange = pageData => {
 	let page = pageData.meta.trackingName;
 	// Only track if a label is provided
 	if (page) {

@@ -41,10 +41,7 @@ class SmallInfoTransitionController extends AbstractTransitionController {
 		}
 
 		if (this.viewModel.hasChild('ButtonPrimary')) {
-			this.transitionInTimeline.add(
-				this.getSubTimeline('ButtonPrimary'),
-				'=-0.7',
-			);
+			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '=-0.7');
 		}
 	}
 

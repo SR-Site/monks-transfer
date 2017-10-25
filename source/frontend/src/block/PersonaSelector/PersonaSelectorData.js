@@ -8,14 +8,12 @@ export default {
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
 	personas: VueTypes.arrayOf(
-		VueTypes.shape(
-			{
-				heading: VueTypes.string.isRequired,
-				paragraph: VueTypes.string.isRequired,
-				personaType: VueTypes.number.isRequired,
-				link: VueTypes.shape(PropLink).isRequired,
-				image: VueTypes.shape(PropImage).isRequired,
-			},
-		),
+		VueTypes.shape({
+			heading: VueTypes.string.isRequired,
+			paragraph: VueTypes.string.isRequired,
+			personaType: VueTypes.number.isRequired,
+			link: VueTypes.shape(PropLink).isRequired,
+			image: VueTypes.shape(PropImage).isRequired,
+		}),
 	),
 };

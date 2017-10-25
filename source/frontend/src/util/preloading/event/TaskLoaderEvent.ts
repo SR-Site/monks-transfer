@@ -6,11 +6,13 @@ class TaskLoaderEvent extends AbstractEvent {
 	public static UPDATE: string = EVENT_TYPE_PLACEHOLDER;
 	public static COMPLETE: string = EVENT_TYPE_PLACEHOLDER;
 
-	constructor(type: string,
-	            public data?: { progress: number },
-	            bubbles?: boolean,
-	            cancelable?: boolean,
-	            setTimeStamp?: boolean,) {
+	constructor(
+		type: string,
+		public data?: { progress: number },
+		bubbles?: boolean,
+		cancelable?: boolean,
+		setTimeStamp?: boolean,
+	) {
 		super(type, bubbles, cancelable, setTimeStamp);
 	}
 
@@ -21,4 +23,4 @@ class TaskLoaderEvent extends AbstractEvent {
 
 generateEventTypes({ TaskLoaderEvent });
 
-export default TaskLoaderEvent
+export default TaskLoaderEvent;

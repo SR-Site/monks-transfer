@@ -33,7 +33,7 @@
 			fill: transparent;
 			stroke: $colorWhite;
 			stroke-width: 1px;
-			transition: stroke .2s $easeInOut, stroke-width .2s $easeInOut, opacity .2s $easeInOut;
+			transition: stroke 0.2s $easeInOut, stroke-width 0.2s $easeInOut, opacity 0.2s $easeInOut;
 			transform-origin: center center;
 		}
 	}

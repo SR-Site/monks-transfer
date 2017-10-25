@@ -10,7 +10,6 @@
 import MediaElement from 'lib/media/MediaElement';
 
 class AudioElement extends MediaElement {
-
 	public element: HTMLAudioElement;
 
 	/**
@@ -28,7 +27,6 @@ class AudioElement extends MediaElement {
 
 		super(element);
 	}
-
 }
 
 export default AudioElement;

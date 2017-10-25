@@ -11,4 +11,3 @@ export interface ITrackEventData extends IAbstractTrackEventData {
 	label?: string;
 	value?: number;
 }
-

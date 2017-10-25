@@ -1,6 +1,3 @@
-interface IAbstractTrackingProviderOptions {
-
-}
+interface IAbstractTrackingProviderOptions {}
 
 export default IAbstractTrackingProviderOptions;
-

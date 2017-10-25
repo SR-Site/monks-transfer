@@ -11,12 +11,10 @@ export default {
 	name: 'SiteHeader',
 	extends: AbstractTransitionComponent,
 	computed: {
-		...mapGetters(
-			{
-				contactOptionGetter: 'initData/contactOption',
-				landingRoute:  'init/landingRoute'
-			},
-		),
+		...mapGetters({
+			contactOptionGetter: 'initData/contactOption',
+			landingRoute: 'init/landingRoute',
+		}),
 		phoneNumber() {
 			return this.contactOptionGetter('phone').phoneNumber || 'no-phone-number';
 		},
@@ -37,13 +35,9 @@ export default {
 	mounted() {
 		this.scrollOffset = this.$el.offsetHeight;
 		this.scrollListener = new NativeEventListener(window, 'scroll', debounce(this.handleScroll, 100));
-		this.deviceStateListener = new NativeEventListener(
-			this.$deviceState,
-			DeviceStateEvent.STATE_UPDATE,
-			(event) => {
-				this.deviceState = event.data.state;
-			},
-		);
+		this.deviceStateListener = new NativeEventListener(this.$deviceState, DeviceStateEvent.STATE_UPDATE, event => {
+			this.deviceState = event.data.state;
+		});
 		this.handleScroll();
 	},
 	components: {

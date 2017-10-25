@@ -12,11 +12,9 @@ export default {
 			// Cancel the click
 			event.preventDefault();
 			// Update the route
-			getRouter().push(
-				{
-					path: binding.value.path,
-				},
-			);
+			getRouter().push({
+				path: binding.value.path,
+			});
 		});
 	},
 	unbind(element) {

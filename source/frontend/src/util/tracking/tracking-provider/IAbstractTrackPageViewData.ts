@@ -1,6 +1,3 @@
-interface IAbstractTrackPageViewData {
-
-}
+interface IAbstractTrackPageViewData {}
 
 export default IAbstractTrackPageViewData;
-

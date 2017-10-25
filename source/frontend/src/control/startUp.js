@@ -108,12 +108,10 @@ const startUp = store => {
 	});
 
 	// Add async methods to the Promise.all array
-	return sequentialPromises(
-		[
-			() => Vue.blockSystemReady,
-			() => configManager.getVariable(VariableNames.LOCALE_ENABLED) ? waitForLocale(store) : Promise.resolve(),
-		],
-	);
+	return sequentialPromises([
+		() => Vue.blockSystemReady,
+		() => (configManager.getVariable(VariableNames.LOCALE_ENABLED) ? waitForLocale(store) : Promise.resolve()),
+	]);
 };
 
 export default startUp;

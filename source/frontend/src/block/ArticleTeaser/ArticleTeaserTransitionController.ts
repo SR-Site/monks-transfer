@@ -21,7 +21,7 @@ class ArticleTeaserTransitionController extends AbstractTransitionController {
 			{
 				opacity: 1,
 			},
-			0
+			0,
 		);
 
 		this.transitionInTimeline.fromTo(

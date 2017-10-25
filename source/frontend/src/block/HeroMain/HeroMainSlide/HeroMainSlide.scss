@@ -87,7 +87,7 @@
 	}
 
 	@include respond-to(SMALL) {
-		$statisticsHeight: $sizeGrid  * 30;
+		$statisticsHeight: $sizeGrid * 30;
 
 		.has-statistics {
 			.content {

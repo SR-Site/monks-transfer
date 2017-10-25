@@ -14,7 +14,7 @@ class ImageCallToActionsTransitionController extends AbstractTransitionControlle
 		const targetY = this.viewModel.$el.offsetHeight + triangleSize;
 
 		if (imageCallToActionsComponent.$deviceState.currentState > DeviceState.SMALL) {
-			(imageCallToActionsComponent.$refs.clipMask).forEach((element, index) => {
+			imageCallToActionsComponent.$refs.clipMask.forEach((element, index) => {
 				this.transitionInTimeline.fromTo(
 					element,
 					2,
@@ -25,12 +25,9 @@ class ImageCallToActionsTransitionController extends AbstractTransitionControlle
 						y: targetY,
 						ease: Expo.easeOut,
 						onComplete: () => {
-							TweenLite.set(
-								element,
-								{
-									display: 'none',
-								},
-							);
+							TweenLite.set(element, {
+								display: 'none',
+							});
 						},
 					},
 					index === 0 ? 0 : '=-1.6',

@@ -19,12 +19,10 @@ export default class ForensicsProvider extends AbstractTrackingProvider<IForensi
 	protected init(): void {
 		this.logger = bows('Forensics');
 
-		const loadScriptTask = new LoadScriptTask(
-			{
-				assets: `https://secure.leadforensics.com/js/${this.providerOptions.trackingId}.js`,
-				cached: false,
-			},
-		);
+		const loadScriptTask = new LoadScriptTask({
+			assets: `https://secure.leadforensics.com/js/${this.providerOptions.trackingId}.js`,
+			cached: false,
+		});
 
 		loadScriptTask.load(() => {
 			// Clean the task

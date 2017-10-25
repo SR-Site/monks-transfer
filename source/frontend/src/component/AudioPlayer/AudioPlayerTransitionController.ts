@@ -8,11 +8,9 @@ class AudioPlayerTransitionController extends AbstractTransitionController {
 	 * @description Use this method to setup your transition in timeline
 	 * */
 	protected setupTransitionInTimeline(): void {
-		this.transitionInTimeline.add(
-			this.getSubTimeline('ButtonCirclePlay'),
-		);
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonCirclePlay'));
 
-		const element = (<HTMLElement>this.viewModel.$refs.waveForm);
+		const element = <HTMLElement>this.viewModel.$refs.waveForm;
 		const width = element.offsetWidth;
 		const height = element.offsetHeight;
 
@@ -36,8 +34,7 @@ class AudioPlayerTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default AudioPlayerTransitionController;

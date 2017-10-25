@@ -60,7 +60,7 @@ export default class TaskLoader extends EventDispatcher {
 	 * @public
 	 * @description Attach a pre loader to the task loader
 	 */
-	public preLoader:IAbstractTransitionComponent;
+	public preLoader: IAbstractTransitionComponent;
 
 	/**
 	 * @description This method starts loading the tasks. You can provide an array of tasks which all contain their

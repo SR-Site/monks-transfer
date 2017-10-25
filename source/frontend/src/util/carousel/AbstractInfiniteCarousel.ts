@@ -207,7 +207,6 @@ abstract class AbstractInfiniteCarousel extends sengEvent {
 		this.setCurrentPage(0);
 		this.handleResize();
 		this.setActivateOrDeactivate();
-
 	}
 
 	/**
@@ -278,8 +277,7 @@ abstract class AbstractInfiniteCarousel extends sengEvent {
 		if (this._options.slides.length === 1) {
 			// One slide is not enough!
 			this.deactivate();
-		}
-		else {
+		} else {
 			this.activate();
 		}
 	}
@@ -336,9 +334,7 @@ abstract class AbstractInfiniteCarousel extends sengEvent {
 		const elementWidth = this._options.sliderWrapper.offsetWidth;
 		const currentX = this._currentPage * elementWidth;
 
-		if (
-			this._draggableInstance.x > -elementWidth / 8 &&
-			this._draggableInstance.x < elementWidth / 8) {
+		if (this._draggableInstance.x > -elementWidth / 8 && this._draggableInstance.x < elementWidth / 8) {
 			this.setSliderPosition();
 			return;
 		}
@@ -358,7 +354,7 @@ abstract class AbstractInfiniteCarousel extends sengEvent {
 	 * @description Method that checks a page needs to be re-positioned to make the slider "infinte"
 	 */
 	private checkPageReposition(): void {
-		const position: number = (this._nextPage * 100);
+		const position: number = this._nextPage * 100;
 		const nextElementKey = (this.getCurrentPageIndex() + this._options.slides.length) % this._options.slides.length;
 
 		const nextElement: HTMLElement = this._options.slides[nextElementKey];
@@ -380,8 +376,10 @@ abstract class AbstractInfiniteCarousel extends sengEvent {
 	 * @returns {boolean} True if the next element needs to be repositioned
 	 */
 	private needsReposition(position: number, nextElementPosition: number): boolean {
-		return (this._nextPage > this._previousPage && nextElementPosition < position) ||
-			(this._nextPage < this._previousPage && nextElementPosition > position);
+		return (
+			(this._nextPage > this._previousPage && nextElementPosition < position) ||
+			(this._nextPage < this._previousPage && nextElementPosition > position)
+		);
 	}
 
 	/**
@@ -409,20 +407,16 @@ abstract class AbstractInfiniteCarousel extends sengEvent {
 	private setSliderPosition(): void {
 		const updateOnDrag = this._isDragging;
 
-		TweenLite.to(
-			this._options.sliderWrapper,
-			1,
-			{
-				x: ((this._currentPage * 100) * -1) + '%',
-				onUpdate: () => {
-					// if(updateOnDrag)
-					// {
-					// 	this.setCurrentPageOnDrag();
-					// }
-				},
-				ease: Expo.easeOut,
+		TweenLite.to(this._options.sliderWrapper, 1, {
+			x: this._currentPage * 100 * -1 + '%',
+			onUpdate: () => {
+				// if(updateOnDrag)
+				// {
+				// 	this.setCurrentPageOnDrag();
+				// }
 			},
-		);
+			ease: Expo.easeOut,
+		});
 
 		this._previousPage = this._currentPage;
 		this._nextPage = this._currentPage;

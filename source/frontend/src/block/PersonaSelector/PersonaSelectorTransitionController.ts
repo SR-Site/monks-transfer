@@ -24,9 +24,7 @@ class PersonaSelectorTransitionController extends AbstractTransitionController {
 		this.transitionInTimeline.add(() => personaSelectorComponent.openPersona(personaSelectorComponent.activeIndex));
 
 		if (this.viewModel.hasChild('DashedPaginator')) {
-			this.transitionInTimeline.add(
-				this.getSubTimeline('DashedPaginator'),
-			);
+			this.transitionInTimeline.add(this.getSubTimeline('DashedPaginator'));
 		}
 	}
 

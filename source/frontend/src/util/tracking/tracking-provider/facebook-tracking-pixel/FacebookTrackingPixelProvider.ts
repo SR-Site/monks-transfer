@@ -4,7 +4,9 @@ import IFacebookTrackingPixelProviderOptions from './IFacebookTrackingPixelProvi
 import bows from 'bows';
 import { ITrackEventData } from 'util/tracking/tracking-provider/facebook-tracking-pixel/IFacebookTrackingPixelTrackingData';
 
-export default class FacebookTrackingPixelProvider extends AbstractTrackingProvider<IFacebookTrackingPixelProviderOptions> {
+export default class FacebookTrackingPixelProvider extends AbstractTrackingProvider<
+	IFacebookTrackingPixelProviderOptions
+> {
 	/**
 	 * @description Namespace in which the google tag manager is loaded
 	 * @type {string}
@@ -21,7 +23,7 @@ export default class FacebookTrackingPixelProvider extends AbstractTrackingProvi
 
 		let n;
 
-		n = window[FacebookTrackingPixelProvider._NAMESPACE] = function () {
+		n = window[FacebookTrackingPixelProvider._NAMESPACE] = function() {
 			n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
 		};
 
