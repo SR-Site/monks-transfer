@@ -1,2 +1,42 @@
 :local {
+	.button-circle-close {
+		@include size($sizeGrid);
+		border-radius: 100%;
+		border: 1px solid rgba($colorPrimary, .3);
+		transition: background-color 250ms $easeLinear;
+
+		.icon {
+			@include size(8px);
+			color: currentColor;
+			transition: color 250ms $easeLinear;
+		}
+
+		&.large {
+			@include size($sizeGrid);
+
+			.icon {
+				@include size(10px);
+			}
+		}
+
+		// Hover State
+		@include hover() {
+			background-color: $colorPrimary;
+
+			.icon {
+				color: white;
+			}
+		}
+
+		@include respond-to(SMALL) {
+
+			&.large {
+				@include size($sizeGrid*1.5);
+
+				.icon {
+					@include size(6px);
+				}
+			}
+		}
+	}
 }

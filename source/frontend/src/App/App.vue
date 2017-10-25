@@ -6,6 +6,7 @@
 			<SiteHeader componentId="Header" />
 			<router-view></router-view>
 			<SiteFooter componentId="Footer" />
+			<VideoOverlay componentId="VideoOverlay" />
 			<Notification componentId="Notification" />
 		</div>
 		<PageLoader componentId="PageLoader" @isReady="handlePageLoaderReady"/>

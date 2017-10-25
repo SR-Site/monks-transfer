@@ -2,6 +2,7 @@ import Theme from 'data/enum/Theme';
 import Alignment from 'data/enum/Alignment';
 import PersonaType from 'data/enum/PersonaType';
 import Orientation from 'data/enum/Orientation';
+import Size from 'data/enum/Size';
 
 class ClassNameHelper {
 	/**
@@ -46,20 +47,43 @@ class ClassNameHelper {
 		const personaLabel = PersonaType[personaType];
 
 		if (!personaLabel) {
-			console.warn('[ClassNameHelper] Unknown persona type: ' + personaLabel);
+			console.warn('[ClassNameHelper] Unknown persona type: ' + personaType);
 		}
 
 		return personaLabel ? personaLabel.toLowerCase() : '';
 	}
 
+	/**
+	 * @public
+	 * @Method parseOrientation
+	 * @param {Orientation} orientation
+	 * @returns {string}
+	 */
 	public static parseOrientation(orientation: Orientation): string {
 		const orientationLabel = Orientation[orientation];
 
 		if (!orientationLabel) {
-			console.warn('[ClassNameHelper] Unknown orientation type: ' + orientationLabel);
+			console.warn('[ClassNameHelper] Unknown orientation type: ' + orientation);
 		}
 
 		return orientationLabel ? orientationLabel.toLowerCase() : '';
+	}
+
+	/**
+	 * @public
+	 * @Method parseSize
+	 * @param {Size} size
+	 * @returns {string}
+	 */
+	public static parseSize(size: Size): string {
+		const sizeLabel = Size[size];
+
+		if (!sizeLabel) {
+			console.warn('[ClassNameHelper] Unknown orientation size: ' + size);
+		}
+
+		return sizeLabel ? sizeLabel.toLowerCase() : '';
+
 	}
 }
 

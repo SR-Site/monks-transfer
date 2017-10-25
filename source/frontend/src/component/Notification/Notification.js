@@ -1,5 +1,5 @@
 import keyCode from 'key-code';
-import { AbstractTransitionComponent } from 'vue-transition-component';
+import { AbstractTransitionComponent, TransitionEvent } from 'vue-transition-component';
 import { mapState } from 'vuex';
 import NotificationTypes from '../../data/enum/NotificationTypes';
 import NativeEventListener from '../../util/event/NativeEventListener';

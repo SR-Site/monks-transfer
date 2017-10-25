@@ -6,6 +6,13 @@
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/@types/gsap/-/gsap-1.19.1.tgz#ee93590b1ef7dc86b0b779e94e38b5bad6e8c678"
 
+"@vimeo/player@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@vimeo/player/-/player-2.2.0.tgz#4aef6ddf6e9794bd7d57d0134e21c96e494a0e4d"
+  dependencies:
+    es6-collections "0.5.6"
+    native-promise-only "0.8.1"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
@@ -2458,6 +2465,10 @@ es5-ext@^0.10.14, es5-ext@^0.10.9, es5-ext@~0.10.14:
   dependencies:
     es6-iterator "2"
     es6-symbol "~3.1"
+
+es6-collections@0.5.6:
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/es6-collections/-/es6-collections-0.5.6.tgz#5552e800ad12c1820cda2bd4a79ae7dbb03d89a2"
 
 es6-iterator@2, es6-iterator@^2.0.1, es6-iterator@~2.0.1:
   version "2.0.1"
@@ -5162,6 +5173,10 @@ nanomatch@^1.2.0:
     regex-not "^1.0.0"
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
+
+native-promise-only@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/native-promise-only/-/native-promise-only-0.8.1.tgz#20a318c30cb45f71fe7adfbf7b21c99c1472ef11"
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -7929,9 +7944,9 @@ vrsource-tslint-rules@^5.1.0:
   dependencies:
     tslint "~5.1.0"
 
-vue-block-system@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/vue-block-system/-/vue-block-system-0.3.2.tgz#819d9977ebb84c2d87e67428c4d5c6ba7ff036a8"
+vue-block-system@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/vue-block-system/-/vue-block-system-0.3.4.tgz#c2cfa016cfcc8b2dfc8e28eae08f7475096aa7f5"
   dependencies:
     axios "^0.16.2"
     es6-promise "^4.1.1"

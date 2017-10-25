@@ -37,7 +37,6 @@ export default {
 		},
 		setCrossFaderBackground() {
 			const crossFader = this.getChild('MediaCrossFader');
-			console.log('setcrossfader background', crossFader);
 
 			if (crossFader) {
 				if (this.canPlayVideo && this.hasVideo) {

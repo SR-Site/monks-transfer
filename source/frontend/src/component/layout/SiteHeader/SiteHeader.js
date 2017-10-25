@@ -54,7 +54,6 @@ export default {
 				heading: 'Oops',
 				paragraph: 'Open the menu',
 			});
-			console.log('menu clicked');
 		},
 		handleScroll() {
 			this.scrollTop = document.documentElement.scrollTop;

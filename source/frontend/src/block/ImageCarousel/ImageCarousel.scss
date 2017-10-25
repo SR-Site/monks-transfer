@@ -1,2 +1,71 @@
 :local {
+	.image-carousel {
+		@include size(100%, auto);
+		overflow: hidden;
+		padding: 0 $sizeGrid * 3 0 $sizeGrid * 4;
+		margin-bottom: $sizeGrid;
+	}
+
+	.slider-viewport {
+		@include aspect-ratio(1160px, 600px);
+		white-space: nowrap;
+	}
+
+	.slides {
+		@extend %reset-list;
+		font-size: 0;
+	}
+
+	.slide {
+		figure {
+			position: relative;
+
+			&:after {
+				@include position(auto, 0, 0, auto);
+				@include triangle(right, bottom, $colorWhite, $sizeGrid);
+				position: absolute;
+				content: '';
+			}
+
+			&:before {
+				@include position(auto, 0, 0, 0);
+				@include size(100%, 25%);
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .25) 100%);
+				content: '';
+				position: absolute;
+			}
+		}
+
+		img {
+			@include size(100%);
+		}
+
+		figcaption {
+			@include position(auto, auto, $sizeGrid * 2, $sizeGrid * 2);
+			position: absolute;
+		}
+
+		.theme-light {
+			color: $colorWhite;
+		}
+
+		.theme-dark {
+			color: $colorPrimary;
+		}
+	}
+
+	.dashed-paginator {
+		margin-top: $sizeGrid*2;
+	}
+
+	.button {
+		@include abs-center($sizeGrid * 2);
+		color: white;
+	}
+
+	@include respond-to(SMALL) {
+		.slider-viewport {
+			padding: 0 $sizeGrid 0 0;
+		}
+	}
 }

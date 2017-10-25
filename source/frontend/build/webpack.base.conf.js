@@ -73,7 +73,7 @@ module.exports = {
 						loader: 'svgo-loader',
 						options: {
 							plugins: [
-								{ removeStyleElement: true },
+								{ removeStyleElement: false },
 								{ removeComments: true },
 								{ removeDesc: true },
 								{ removeUselessDefs: true },

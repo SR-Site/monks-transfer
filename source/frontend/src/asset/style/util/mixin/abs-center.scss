@@ -1,0 +1,12 @@
+/**
+ * Positioning an element absolute in the center
+ * @param {number} $width - Width of the element
+ * @param {number} $height - Height of the element
+ */
+@mixin abs-center($width, $height: $width) {
+	@include offset(50%, 50%);
+	@include size($width, $height);
+	position: absolute;
+	margin-top: -($height / 2);
+	margin-left: -($width / 2);
+}

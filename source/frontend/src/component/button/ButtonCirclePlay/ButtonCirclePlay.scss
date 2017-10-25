@@ -31,7 +31,7 @@
 
 		circle {
 			fill: transparent;
-			stroke: $colorWhite;
+			stroke: currentColor;
 			stroke-width: 1px;
 			transition: stroke 0.2s $easeInOut, stroke-width 0.2s $easeInOut, opacity 0.2s $easeInOut;
 			transform-origin: center center;

@@ -23,6 +23,8 @@ import ClassNameHelper from '../util/ClassNameHelper';
 import { DeviceState } from '../config/deviceStateConfig';
 import Orientation from '../data/enum/Orientation';
 import sequentialPromises from '../util/sequentialPromises';
+import TrackingProvider from '../util/tracking/TrackingProvider';
+import Size from '../data/enum/Size';
 
 const initPlugins = () => {
 	const configManager = getValue(CONFIG_MANAGER);
@@ -37,6 +39,7 @@ const initPlugins = () => {
 		$deviceState: getValue(DEVICE_STATE_TRACKER),
 		$taskLoader: getValue(TASK_LOADER),
 		$tracking: getValue(TRACKING_MANAGER),
+		TrackingProvider,
 		URLNames,
 		PropertyNames,
 		VariableNames,
@@ -53,6 +56,7 @@ const initPlugins = () => {
 		Orientation,
 		DeviceState,
 		Theme,
+		Size,
 		ClassNameHelper,
 		createPath,
 	});

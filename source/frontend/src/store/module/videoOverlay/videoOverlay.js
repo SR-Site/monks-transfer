@@ -2,13 +2,11 @@ export const SHOW = 'show';
 
 const defaultState = {
 	isActive: false,
-	type: null,
-	icon: null,
-	heading: null,
-	paragraph: null,
-	yes: null,
-	no: null,
-	ok: null,
+	video: null,
+	title: null,
+	poster: null,
+	loop: false,
+	controls: false,
 	resolve: null,
 };
 
@@ -17,7 +15,6 @@ const defaultState = {
  * Example:
  *
  * this.$store.dispatch(NotificationMutationTypes.SHOW, {
- * 		type: NotificationTypes.CONFIRMATION,
  * 		heading: 'Title goes here',
  * 		paragraph: 'message goes here',
  * 	}).then(result => console.log(result));
@@ -28,20 +25,27 @@ export default {
 	state: Object.assign({}, defaultState),
 	actions: {
 		[SHOW](context, payload) {
-			let notificationResult = null;
-			return new Promise(resolve =>
-				context.commit(
-					SHOW,
-					Object.assign({ isActive: true }, payload, {
-						resolve,
-					}),
-				),
+			let videoOverlayResult = null;
+			return new Promise(
+				resolve =>
+					context.commit(
+						SHOW,
+						Object.assign(
+							{
+								isActive: true,
+							},
+							payload,
+							{
+								resolve,
+							},
+						),
+					),
 			)
-				.then(result => {
-					notificationResult = result;
-				})
-				.then(() => context.commit(SHOW, Object.assign({}, defaultState)))
-				.then(() => Promise.resolve(notificationResult));
+			.then(result => {
+				videoOverlayResult = result;
+			})
+			.then(() => context.commit(SHOW, Object.assign({}, defaultState)))
+			.then(() => Promise.resolve(videoOverlayResult));
 		},
 	},
 	mutations: {

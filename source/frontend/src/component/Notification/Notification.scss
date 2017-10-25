@@ -4,9 +4,9 @@
 		@include offset(0, 0);
 		min-height: 100vh;
 		background: rgba(0, 0, 0, 0.5);
-		position: absolute;
 		text-align: center;
 		z-index: zindex($layout, notification);
+		position: fixed;
 	}
 
 	.content-wrapper {

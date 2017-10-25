@@ -99,6 +99,86 @@
 		}
 	  },
 	  {
+		"id": "imageCarousel",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "slides": [
+			{
+			  "heading": "Restivo Laser Vision - \u201cHomeless Valet\u201d<br \/>",
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https://www.w3schools.com/html/mov_bbb.mp4",
+				"id": "154767863",
+				"type": 0
+			  }
+			},
+			{
+			  "heading": "North Carolina Zoo - \u201cAwaken\"<br \/>",
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.25.20%20-%20ss.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.25.20%20-%20ss.png",
+				"alt": "North Carolina Zoo - \u201cAwaken\""
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https:\/\/vimeo.com\/98576814",
+				"id": "98576814",
+				"type": 1
+			  }
+			},
+			{
+			  "heading": "Sunmark Federal Credit Union \u2013 \u201cFirst Time Homebuyers\u201d<br \/>",
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.26.15%20-%20ss.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.26.15%20-%20ss.png",
+				"alt": "Sunmark Federal Credit Union \u2013 \u201cFirst Time Homebuyers\u201d"
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https:\/\/vimeo.com\/126610168",
+				"id": "126610168",
+				"type": 1
+			  }
+			},
+			{
+			  "heading": "Flat Rate - \u201cHappy Moving Day\u201d<br \/>",
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.27.06%20-%20ss.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.27.06%20-%20ss.png",
+				"alt": "Flat Rate - \u201cHappy Moving Day\u201d"
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https:\/\/vimeo.com\/116183821",
+				"id": "116183821",
+				"type": 1
+			  }
+			},
+			{
+			  "heading": "Farmer Boys - \u201cFresh Fish\u201d<br \/>",
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.27.23%20-ss.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.27.23%20-ss.png",
+				"alt": "Farmer Boys - \u201cFresh Fish\u201d"
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https:\/\/vimeo.com\/102055305",
+				"id": "102055305",
+				"type": 1
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
 		"id": "audioFragment",
 		"data": {
 		  "overlap": false,

@@ -1,7 +1,7 @@
 import { AbstractTransitionController } from 'vue-transition-component';
-import { Bounce } from 'gsap';
+import { Expo } from 'gsap';
 
-class NotificationTransitionController extends AbstractTransitionController {
+class VideoOverlayTransitionController extends AbstractTransitionController {
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
@@ -13,15 +13,15 @@ class NotificationTransitionController extends AbstractTransitionController {
 		});
 
 		this.transitionInTimeline.from(this.viewModel.$refs.content, 0.4, {
-			scale: 0,
-			ease: Bounce.easeOut,
+			height: 0,
+			ease: Expo.easeOut,
 		});
 	}
 
 	/**
 	 * @public
 	 * @method setupTransitionOutTimeline
-	 * @description Use this method to setup your transition in timeline
+	 * @description Use this method to setup your transition out timeline
 	 * */
 	protected setupTransitionOutTimeline(): void {
 		this.transitionOutTimeline.to(
@@ -35,4 +35,4 @@ class NotificationTransitionController extends AbstractTransitionController {
 	}
 }
 
-export default NotificationTransitionController;
+export default VideoOverlayTransitionController;

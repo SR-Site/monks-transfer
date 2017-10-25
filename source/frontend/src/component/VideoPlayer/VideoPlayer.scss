@@ -1,0 +1,20 @@
+:local {
+	.video-player {
+		@include size(100%, 100%);
+		background: #000;
+		overflow: hidden;
+
+		iframe,
+		video {
+			@include coverer();
+			@include size(100%);
+			position: absolute;
+		}
+	}
+
+	.controls {
+		@include position(auto, 0, 0, 0);
+		position: absolute;
+		z-index: 1;
+	}
+}
