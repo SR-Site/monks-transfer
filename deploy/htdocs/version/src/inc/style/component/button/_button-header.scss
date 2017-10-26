@@ -25,7 +25,7 @@
 	}
 
 	@include respond-to(SMALL) {
-		@include size($sizeGrid * 8, $sizeGrid * 4);
+		@include size($sizeGrid * 4, $sizeGrid * 4);
 		text-align: center;
 
 		.text {

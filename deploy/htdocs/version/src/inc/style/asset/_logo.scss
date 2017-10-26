@@ -27,10 +27,12 @@
 	 * Dark theme
 	 */
 	.theme-dark & {
-		.arrow,
 		.text-bottom,
 		.text-top {
 			color: $colorPrimary;
+		}
+		.arrow {
+			color: $colorSecondary;
 		}
 	}
 
@@ -49,10 +51,12 @@
 	 * Theme used on a solid background
 	 */
 	.enable-solid-background & {
-		.arrow,
 		.text-bottom,
 		.text-top {
 			color: $colorPrimary;
+		}
+		.arrow {
+			color: $colorSecondary;
 		}
 	}
 
@@ -74,10 +78,12 @@
 		 */
 		.theme-light &,
 		.theme-dark & {
-			.arrow,
 			.text-bottom,
 			.text-top {
 				color: $colorPrimary;
+			}
+			.arrow {
+				color: $colorSecondary;
 			}
 		}
 	}
