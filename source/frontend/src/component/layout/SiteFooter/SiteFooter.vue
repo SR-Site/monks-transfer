@@ -2,7 +2,7 @@
 <script src="./SiteFooter.js"></script>
 
 <template>
-	<footer :class="$style.siteFooter">
+	<footer :class="$style.siteFooter" class="site-footer">
 		<h2>TODO: UPDATE FOR PHASE 2</h2>
 	</footer>
 </template>

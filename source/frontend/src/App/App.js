@@ -33,7 +33,7 @@ export default {
 			customButtonEventDispatcher,
 			CustomButtonEvent.FIRE,
 			event => this.handleCustomButtonEvent(event.data),
-		)
+		);
 	},
 	methods: {
 		handlePageLoaderReady(component) {
@@ -58,9 +58,16 @@ export default {
 					break;
 			}
 		},
+		handleStartAdvertisingClick() {
+			this.$store.dispatch(NotificationMutationTypes.SHOW, {
+				type: this.NotificationTypes.ALERT,
+				heading: 'TODO',
+				paragraph: 'OPEN THE CONTACT PANEL',
+			});
+		},
 	},
 	beforeDestroy() {
 		this.customButtonEventListener.dispose();
 		this.customButtonEventListener = null;
-	}
+	},
 };

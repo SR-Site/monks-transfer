@@ -5,6 +5,13 @@
 		<div :class="[$style.siteWrapper, {[$style.isActive]: pageLoaderReady}]">
 			<SiteHeader componentId="Header" />
 			<router-view></router-view>
+			<ButtonStartAdvertising
+				@click="handleStartAdvertisingClick"
+				componentId="ButtonStartAdvertising"
+				:title="$t('global.cta.start_advertising_today')"
+				:label="$t('global.cta.start_advertising_today')"
+				:type="ButtonType.ACTION"
+			/>
 			<SiteFooter componentId="Footer" />
 			<VideoOverlay componentId="VideoOverlay" />
 			<Notification componentId="Notification" />

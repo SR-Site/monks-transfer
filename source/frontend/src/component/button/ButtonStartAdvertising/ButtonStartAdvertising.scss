@@ -1,2 +1,67 @@
 :local {
+	$size: $sizeGrid * 10;
+
+	.start-advertising {
+		@include position(0, -$sizeGrid * 3, auto, auto);
+		@include size($size / 2, $size);
+		position: absolute;
+		color: #fff;
+		text-align: right;
+		pointer-events: none;
+		transition: right .8s $easeOutExpo;
+		z-index: zindex($layout, content);
+
+		@include hover() {
+			right: 0;
+
+			.icon {
+				transform: rotate(0);
+				color: $colorWhite;
+			}
+		}
+	}
+
+	.background {
+		@include arrow(left, $colorPrimary, $size);
+		@include position(0, 0, auto, auto);
+		content: '';
+		position: absolute;
+		z-index: -1;
+	}
+
+	.button {
+		@include position(50%, 0, auto, auto);
+		transform: translate(0, -50%);
+		pointer-events: all;
+		position: absolute;
+	}
+
+	.icon {
+		@include size($sizeGrid);
+		transform: rotate(180deg);
+		transition: transform .2s $easeInOut;
+
+		path {
+			fill: currentColor;
+		}
+
+		circle {
+			fill: $colorSecondary;
+			stroke: $colorSecondary;
+			opacity: 1;
+			stroke-width: 1px;
+			transition: stroke .2s $easeInOut, stroke-width .2s $easeInOut opacity .2s $easeInOut;
+		}
+	}
+
+	.label {
+		@include size($sizeGrid * 2, auto);
+		font: 800 1.2rem / 1.2 $fontOpenSans;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: left;
+		margin-left: 1rem;
+		margin-right: $sizeGrid;
+		text-transform: uppercase;
+	}
 }
