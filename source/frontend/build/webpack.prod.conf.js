@@ -11,6 +11,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpackHelpers = require('./webpackHelpers');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const CircularDependencyPlugin = require('circular-dependency-plugin')
 
 const env = config.build.env;
 
@@ -60,8 +61,15 @@ const webpackConfig = merge(baseWebpackConfig, {
 		publicPath: config.build.publicPath
 	},
 	plugins: [
+		new CircularDependencyPlugin({
+			 onDetected({ module: webpackModuleRecord, paths, compilation }) {
+				 console.log('\n Detected circular dependency:')
+				 console.log(paths.join(' -> '))
+				 process.exit();
+			 }
+		 }),
 		new WebpackCleanupPlugin(),
-		new webpack.optimize.ModuleConcatenationPlugin(),
+		// new webpack.optimize.ModuleConcatenationPlugin(), TODO: FIX THIS
 		new webpack.DefinePlugin({
 			'process.env': env,
 		}),

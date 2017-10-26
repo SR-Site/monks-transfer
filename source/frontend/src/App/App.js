@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import { customButtonEventDispatcher, CustomButtonEvent } from 'vue-block-system';
-import { DeviceStateEvent } from 'seng-device-state-tracker';
 import SiteHeader from '../component/layout/SiteHeader/SiteHeader';
 import SiteFooter from '../component/layout/SiteFooter/SiteFooter';
 import Notification from '../component/Notification/Notification';

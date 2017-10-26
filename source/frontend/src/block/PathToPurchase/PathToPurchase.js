@@ -60,7 +60,7 @@ export default {
 			});
 		},
 		padStart(value) {
-			return padStart(value, 2, '0');
+			return padStart(value.toString(), 2, '0');
 		},
 		truncate(value, length) {
 			return truncate(value, {

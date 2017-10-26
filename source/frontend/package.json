@@ -22,6 +22,7 @@
     "babel-polyfill": "^6.23.0",
     "bows": "^1.7.0",
     "bowser": "^1.8.0",
+    "circular-dependency-plugin": "^4.2.1",
     "classlist-polyfill": "^1.0.3",
     "core-js": "^2.4.1",
     "detect-port": "^1.2.1",

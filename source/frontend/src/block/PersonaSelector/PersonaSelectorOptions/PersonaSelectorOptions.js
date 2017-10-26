@@ -21,7 +21,7 @@ export default {
 			this.isReady();
 		},
 		padStart(value) {
-			return padStart(value, 2, '0');
+			return padStart(value.toString(), 2, '0');
 		},
 		handlePersonaClick(index) {
 			if (this.enableInteraction) {

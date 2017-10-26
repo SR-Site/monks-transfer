@@ -59,7 +59,7 @@ export default {
 			}
 		},
 		getPaginationNumber(index) {
-			return padStart(index, 2, '0');
+			return padStart(index.toString(), 2, '0');
 		},
 		calculateSizes() {
 			const callToActions = this.data.callToActions;

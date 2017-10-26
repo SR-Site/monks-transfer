@@ -37,7 +37,7 @@ export default {
 			this.enabled = false;
 		},
 		padStart(value) {
-			return padStart(value, 2, '0');
+			return padStart(value.toString(), 2, '0');
 		},
 		handlePaginatorClick(index) {
 			if (this.enabled) {

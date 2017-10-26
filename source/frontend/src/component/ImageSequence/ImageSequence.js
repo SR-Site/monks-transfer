@@ -71,10 +71,10 @@ export default {
 		prepareSources() {
 			for (let i = 0; i < this.imageSequence.total; i += 1) {
 				this.sources[this.DeviceState.SMALL].push(
-					this.imageSequence.image.small + padStart(i, 3, '0') + this.imageSequence.extension,
+					this.imageSequence.image.small + padStart(i.toString(), 3, '0') + this.imageSequence.extension,
 				);
 				this.sources[this.DeviceState.MEDIUM].push(
-					this.imageSequence.image.normal + padStart(i, 3, '0') + this.imageSequence.extension,
+					this.imageSequence.image.normal + padStart(i.toString(), 3, '0') + this.imageSequence.extension,
 				);
 			}
 		},
