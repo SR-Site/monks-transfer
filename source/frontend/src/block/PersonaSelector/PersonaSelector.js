@@ -37,9 +37,13 @@ export default {
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new PersonaSelectorTransitionController(this);
-			this.deviceStateListener = new NativeEventListener(this.$deviceState, DeviceStateEvent.STATE_UPDATE, event => {
-				this.deviceState = event.data.state;
-			});
+			this.deviceStateListener = new NativeEventListener(
+				this.$deviceState,
+				DeviceStateEvent.STATE_UPDATE,
+				event => {
+					this.deviceState = event.data.state;
+				},
+			);
 			this.isReady();
 		},
 		handleSlideReady(component, index) {
@@ -67,15 +71,18 @@ export default {
 			this.enableInteraction = false;
 			this.activeIndex = index;
 
-			oldPersona.transitionController.transitionInTimeline.timeScale(2);
+			if (oldPersona) {
+				oldPersona.transitionController.transitionInTimeline.timeScale(2);
+			}
+
 			newPersona.transitionController.transitionInTimeline.timeScale(1);
 
 			return oldPersona
-				.transitionOut()
-				.then(() => newPersona.transitionIn())
-				.then(() => {
-					this.enableInteraction = true;
-				});
+			.transitionOut()
+			.then(() => newPersona.transitionIn())
+			.then(() => {
+				this.enableInteraction = true;
+			});
 		},
 	},
 };

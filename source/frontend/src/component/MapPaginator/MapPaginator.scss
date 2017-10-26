@@ -1,0 +1,121 @@
+:local {
+	$borderColor: #cdd4df;
+
+	.map-paginator {
+		@include size(100%, $sizeGrid * 2);
+		font-size: 0;
+	}
+
+	.navigation-button {
+		@include size($sizeGrid * 2);
+		display: inline-block;
+		vertical-align: top;
+
+		.icon {
+			@include size($sizeGrid);
+		}
+
+		circle {
+			fill: transparent;
+			stroke: rgba($colorPrimary, 0.3);
+		}
+
+		path {
+			fill: $borderColor;
+		}
+
+		&.is-active {
+			path {
+				fill: $colorSecondary;
+			}
+		}
+	}
+
+	.wrapper {
+		@include size(calc(100% - #{$sizeGrid * 4}), $sizeGrid * 2);
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+
+		&:before {
+			@include size(100%, 1px);
+			@include position(50%, auto, auto, 0);
+			transform: translateY(-50%);
+			background: $borderColor;
+			position: absolute;
+			content: '';
+		}
+
+		.progress {
+			@include size(0, 3px);
+			@include position(50%, auto, auto, 0);
+			position: absolute;
+			transform: translateY(-50%);
+			background: $colorPrimary;
+			transition: width .8s $easeInOutCubic;
+		}
+	}
+
+	.slides {
+		@extend %reset-list;
+		@include size(auto, $sizeGrid * 1.5);
+		@include position(50%, 0, auto, 0);
+		transform: translateY(-50%);
+		display: flex;
+		position: absolute;
+		justify-content: space-around;
+	}
+
+	.slide {
+		@include size($sizeGrid * 1.5);
+		border: 1px solid transparent;
+		border-radius: 100%;
+		display: inline-block;
+		background: $colorWhite;
+		font: 700 1.2rem / #{$sizeGrid * 1.5} $fontOpenSans;
+		text-align: center;
+		color: $colorPrimary;
+		transition: border-color .8s $easeInOutCubic;
+		cursor: pointer;
+
+		@include hover() {
+			text-decoration: underline;
+		}
+
+		&.is-active {
+			border-color: $colorBorder;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.map-paginator {
+			height: $sizeGrid * 4;
+		}
+
+		.navigation-button {
+			@include size($sizeGrid * 4);
+
+			.icon {
+				@include size($sizeGrid * 3);
+			}
+		}
+
+		.slide {
+			@include size($sizeGrid * 3);
+			line-height: $sizeGrid * 3;
+			font-size: mobile-size(2rem);
+		}
+
+		.wrapper {
+			@include size(calc(100% - #{$sizeGrid * 8}), $sizeGrid * 4);
+
+			.progress {
+				width: 50%;
+			}
+		}
+
+		.slides {
+			@include size(100%, $sizeGrid * 3);
+		}
+	}
+}

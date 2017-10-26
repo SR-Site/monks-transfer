@@ -1,0 +1,4 @@
+.fit-contain {
+	@include size(100%);
+	object-fit: contain;
+}

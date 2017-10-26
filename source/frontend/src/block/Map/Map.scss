@@ -1,2 +1,85 @@
 :local {
+	.map {
+		user-select: none;
+	}
+
+	.wrapper {
+		@include size(100%, auto);
+	}
+
+	.slide-background,
+	.paginator {
+		width: calc(100% - #{$sizeGrid * 3});
+		margin-left: $sizeGrid * 3;
+	}
+
+	.slide-background {
+		@include aspect-ratio(1100px, 550px);
+		background: $colorLightGrey;
+	}
+
+	.slides {
+		@include offset(0, 0);
+		height: 100%;
+		position: absolute;
+	}
+
+	.solid-background {
+		@include offset(0, 0);
+		@include aspect-ratio(1100px, 550px, false);
+		@include size(100%, auto);
+		position: absolute;
+		background: transparent;
+	}
+
+	.paginator {
+		margin-top: $sizeGrid;
+		z-index: 1;
+	}
+
+	@include respond-to('SMALL') {
+		.slide-wrapper {
+			width: 100%;
+			margin: 0;
+		}
+
+		.wrapper {
+			//@include aspect-ratio(640px, 448px, false);
+			//@include size(100%, auto);
+			//@include position(0, 0, auto, 0);
+		}
+
+		.slides {
+			@include offset(auto, auto);
+			@include size(100%, 160px);
+			position: relative;
+		}
+
+		.slide-background {
+			@include size(100%, auto);
+			@include aspect-ratio(640px, 455px);
+			margin-left: 0;
+			background: transparent;
+		}
+
+		.paginator {
+			@include size(100%, auto);
+			margin-left: 0;
+		}
+
+		.solid-background {
+			@include offset(0, 0);
+			@include size(100%, auto);
+			@include aspect-ratio(640px, 455px);
+			background: $colorLightGrey;
+			position: absolute;
+		}
+	}
+
+	@include respond-to(X_SMALL) {
+		.slides {
+			@include size(100%, 320px);
+			position: relative;
+		}
+	}
 }

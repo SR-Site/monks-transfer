@@ -25,9 +25,9 @@ export default {
 		};
 	},
 	mounted() {
-		this.$deviceState.addEventListener(DeviceStateEvent.STATE_UPDATE, event => {
-			console.log(event);
-		});
+		// this.$deviceState.addEventListener(DeviceStateEvent.STATE_UPDATE, event => {
+		// 	console.log(event);
+		// });
 
 		this.customButtonEventListener = new NativeEventListener(
 			customButtonEventDispatcher,

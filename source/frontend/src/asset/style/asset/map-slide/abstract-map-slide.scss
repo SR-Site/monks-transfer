@@ -1,0 +1,137 @@
+.abstract-map-slide {
+	color: $colorPrimary;
+
+	.slide-heading {
+		@include size(100%, auto);
+		@include position($sizeGrid, auto, auto, 0);
+		padding: 0 $sizeGrid * 2;
+		position: absolute;
+		text-align: center;
+
+		strong {
+			color: currentColor;
+		}
+
+		.heading {
+			margin-bottom: $sizeGrid / 2;
+		}
+	}
+
+	.slide-statistics {
+		top: 50%;
+		left: $sizeGrid * 6;
+		right: $sizeGrid * 6;
+		font-size: 0;
+		position: absolute;
+		transform: translateY(-50%);
+	}
+
+	.slide-title {
+		@include size($sizeGrid * 7, auto);
+		@include offset(0, 50%);
+		transform: translateY(-50%);
+		position: absolute;
+	}
+
+	.background {
+		@include size(100%);
+		@include offset(0, 0);
+		background-size: cover;
+		position: absolute;
+		background-position: center center;
+	}
+
+	@include respond-to(LARGE) {
+		.slide-title {
+			width: $sizeGrid * 5;
+
+			.heading-01 {
+				font-size: 4rem;
+			}
+		}
+
+		.slide-statistics {
+			top: 60%;
+			left: $sizeGrid * 4;
+			right: $sizeGrid * 4;
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.slide-heading {
+			padding: 0 $sizeGrid;
+
+			.copy-03 {
+				display: none;
+			}
+		}
+
+		.slide-statistics {
+			left: $sizeGrid * 3;
+			right: $sizeGrid * 3;
+		}
+
+		.slide-title {
+			width: $sizeGrid * 5;
+
+			.heading-01 {
+				font-size: 4rem;
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.slide-heading {
+			@include size(100%, 60px);
+			@include position(auto, auto, auto, auto);
+			padding: 0 $sizeGrid;
+			padding: 5px 0;
+			line-height: 60px;
+			position: relative;
+
+			.heading {
+				width: 100%;
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0;
+				line-height: 1;
+			}
+
+			.copy-03 {
+				display: none;
+			}
+		}
+
+		.slide-statistics {
+			@include position(auto, auto, auto, auto);
+			@include size(100%, 280px);
+			position: relative;
+			transform: none;
+
+			.heading-08 {
+				font-size: 3rem;
+			}
+
+			.copy-03 {
+				display: block;
+			}
+		}
+
+		.background {
+			@include size(100%, 340px);
+		}
+
+		.slide-title {
+			@include size(100%, 150px);
+			@include position(auto, auto, auto, auto);
+			position: relative;
+			transform: none;
+			padding: $sizeGrid $sizeGrid * 2 0;
+			margin-top: -40px;
+
+			.heading-01 {
+				font-size: mobile-size(9.5rem);
+			}
+		}
+	}
+}
