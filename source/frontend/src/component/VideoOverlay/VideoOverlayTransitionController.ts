@@ -14,6 +14,7 @@ class VideoOverlayTransitionController extends AbstractTransitionController {
 
 		this.transitionInTimeline.from(this.viewModel.$refs.content, 0.4, {
 			height: 0,
+			clearProps: 'all',
 			ease: Expo.easeOut,
 		});
 	}

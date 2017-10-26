@@ -59,7 +59,6 @@ export default {
 			this.slides[index] = component;
 		},
 		handlePaginatorClick(index) {
-			console.log('click on paginator');
 			this.paginator.disableInteraction();
 			this.openSlide(index).then(() => this.paginator.enableInteraction());
 		},

@@ -17,7 +17,7 @@ export default {
 		PersonaSelectorMobileCarousel,
 	},
 	beforeCreate() {
-		this._slides = {};
+		this.slides = {};
 	},
 	data() {
 		return {
@@ -47,7 +47,7 @@ export default {
 			this.isReady();
 		},
 		handleSlideReady(component, index) {
-			this._slides[index] = component;
+			this.slides[index] = component;
 		},
 		handleMobilePaginatorClick(index) {
 			this.getChild('PersonaSelectorMobileCarousel').openIndex(index);
@@ -65,8 +65,8 @@ export default {
 			});
 		},
 		openPersona(index) {
-			const oldPersona = this._slides[this.activeIndex];
-			const newPersona = this._slides[index];
+			const oldPersona = this.slides[this.activeIndex];
+			const newPersona = this.slides[index];
 
 			this.enableInteraction = false;
 			this.activeIndex = index;

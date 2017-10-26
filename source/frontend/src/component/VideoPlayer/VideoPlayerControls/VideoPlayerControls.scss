@@ -75,7 +75,6 @@
 		}
 
 		@include hover() {
-
 			.progress-bar-wrapper {
 				background: rgba(255, 255, 255, .3);
 				height: 0.6rem;
@@ -83,6 +82,14 @@
 
 			.knob {
 				opacity: 1;
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.video-player-button {
+			.icon {
+				@include size(10px);
 			}
 		}
 	}

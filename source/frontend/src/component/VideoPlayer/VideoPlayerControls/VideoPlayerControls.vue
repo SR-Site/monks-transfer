@@ -31,6 +31,7 @@
 		<button
 			class="button"
 			@click="handleMuteClick"
+			v-if="displayMuteButton"
 			:class="[$style.videoPlayerButton, $style.buttonMute, {[$style.isMuted]: isMuted}]">
 			<Icon
 				name="video-volume-off"

@@ -505,7 +505,7 @@ abstract class AbstractInfiniteCarousel extends sengEvent {
 		}
 
 		this._realCurrentPage = null;
-		this.setCurrentPage(null);
+		this._currentPage = null;
 		this._nextPage = null;
 		this._previousPage = null;
 		this._positions = null;

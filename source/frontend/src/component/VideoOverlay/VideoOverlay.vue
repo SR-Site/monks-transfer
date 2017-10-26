@@ -4,7 +4,7 @@
 <template>
 	<div :class="$style.videoOverlay">
 		<div :class="$style.contentWrapper" ref="content">
-			<VideoPlayer :class="$style.videoPlayer "componentId="VideoPlayer" />
+			<VideoPlayer :class="$style.videoPlayer "componentId="VideoPlayer" class="abs-fill" />
 			<ButtonCircleClose
 				componentId="ButtonCircleClose"
 				title="Close"

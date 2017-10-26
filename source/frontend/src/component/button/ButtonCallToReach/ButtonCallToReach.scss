@@ -59,13 +59,12 @@
 			height: $sizeGrid * 4;
 		}
 
-		.text {
-			font-size: mobile-size(2.2rem);
+		.label {
+			display: none;
 		}
 
 		.icon {
 			@include size($sizeGrid * 1.5);
-			margin-right: $sizeGrid;
 		}
 	}
 }

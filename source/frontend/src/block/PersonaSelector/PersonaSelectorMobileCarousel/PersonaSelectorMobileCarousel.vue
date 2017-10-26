@@ -12,7 +12,10 @@
 					class="slide"
 					ref="slide">
 					<figure class="abs-fill">
-						<ResponsiveImage :componentId="`CarouselResponsiveImage${index}`" :image="persona.image"/>
+						<ResponsiveImage
+							:componentId="`CarouselResponsiveImage${index}`"
+							:image="persona.image"
+							class="fit-cover"/>
 					</figure>
 				</li>
 			</ul>

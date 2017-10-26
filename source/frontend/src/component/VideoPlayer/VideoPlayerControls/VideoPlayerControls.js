@@ -1,4 +1,5 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
+import bowser from 'bowser';
 import Draggable from 'gsap/Draggable';
 import { TweenLite } from 'gsap';
 import VideoPlayerControlsTransitionController from './VideoPlayerControlsTransitionController';
@@ -11,6 +12,7 @@ export default {
 		isMuted: VueTypes.bool.isRequired,
 		isPlaying: VueTypes.bool.isRequired,
 		progress: VueTypes.number.isRequired,
+		displayMuteButton: !bowser.android && !bowser.ios,
 	},
 	computed: {},
 	data() {
