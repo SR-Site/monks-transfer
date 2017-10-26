@@ -23,10 +23,11 @@ module.exports = {
 			PUBLIC_PATH: JSON.stringify(publicPath),
 		},
 		index: path.resolve(__dirname, '../dist/index.html'),
+		drupalVersion: path.resolve(__dirname, '../../drupal/docroot/version'),
 		versionPath: versionPath,
 		publicPath: publicPath,
-		enableESLintLoader: true,
-		enableTSLintLoader: true,
+		enableESLintLoader: false,
+		enableTSLintLoader: false,
 		enableImageOptimization: true,
 		enablePNGQuant: true, // Best PNG optimizer but PNGQuant crashes on some images so use with caution.
 	},

@@ -3232,7 +3232,7 @@ fs-extra@^0.26.4:
     path-is-absolute "^1.0.0"
     rimraf "^2.2.8"
 
-fs-extra@^4.0.1:
+fs-extra@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-4.0.2.tgz#f91704c53d1b461f893452b0c307d9997647ab6b"
   dependencies:
@@ -5192,6 +5192,10 @@ ncname@1.0.x:
   dependencies:
     xml-char-classes "^1.0.0"
 
+ncp@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ncp/-/ncp-2.0.0.tgz#195a21d6c46e361d2fb1281ba38b91e9df7bdbb3"
+
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
@@ -6630,6 +6634,12 @@ rimraf@2, rimraf@^2.2.6, rimraf@^2.2.8, rimraf@^2.4.4, rimraf@^2.5.1, rimraf@^2.
   dependencies:
     glob "^7.0.5"
 
+rimraf@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
+  dependencies:
+    glob "^7.0.5"
+
 ripemd160@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/ripemd160/-/ripemd160-0.2.0.tgz#2bf198bde167cacfa51c0a928e84b68bbe171fce"
@@ -7948,9 +7958,9 @@ vrsource-tslint-rules@^5.1.0:
   dependencies:
     tslint "~5.1.0"
 
-vue-block-system@^0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/vue-block-system/-/vue-block-system-0.3.4.tgz#c2cfa016cfcc8b2dfc8e28eae08f7475096aa7f5"
+vue-block-system@^0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/vue-block-system/-/vue-block-system-0.3.5.tgz#71c30d3a50ef9171b036594cfa12f165fd853a5b"
   dependencies:
     axios "^0.16.2"
     es6-promise "^4.1.1"
