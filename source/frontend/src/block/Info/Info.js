@@ -8,7 +8,7 @@ export default {
 	extends: AbstractBlockComponent,
 	props: {
 		data: VueTypes.shape(InfoData).isRequired,
-		nested: VueTypes.bool,
+		isNested: VueTypes.bool,
 	},
 	methods: {
 		handleAllComponentsReady() {
