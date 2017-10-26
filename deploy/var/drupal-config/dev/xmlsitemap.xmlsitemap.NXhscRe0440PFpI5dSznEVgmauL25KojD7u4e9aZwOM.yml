@@ -1,0 +1,11 @@
+uuid: 2f88e2a9-0207-4db6-bf6e-8e2bea5d824f
+langcode: en
+status: true
+dependencies: {  }
+id: NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM
+label: 'http://stage.example.com/'
+chunks: 1
+links: 27
+max_filesize: 3448
+context: {  }
+updated: 1509019010

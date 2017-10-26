@@ -1,0 +1,17 @@
+uuid: c9ebd62e-7b34-4802-be4a-64291f8de527
+langcode: en
+status: true
+dependencies: {  }
+id: ignore_config
+label: 'Ignore Config'
+folder: ../var/drupal-config/dev
+module: {  }
+theme: {  }
+blacklist:
+  - prerender.settings
+  - system.file
+  - xmlsitemap.xmlsitemap.NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
