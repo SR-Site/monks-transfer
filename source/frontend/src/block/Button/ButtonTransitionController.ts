@@ -7,7 +7,19 @@ class ButtonTransitionController extends AbstractTransitionController {
 	 * @description Use this method to setup your transition in timeline
 	 * */
 	protected setupTransitionInTimeline(): void {
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'));
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$el,
+			1,
+			{
+				autoAlpha: 0,
+			},
+			{
+				autoAlpha: 1,
+			}
+		)
+		this.transitionInTimeline.add(
+			this.getSubTimeline('ButtonPrimary')
+		);
 	}
 
 	/**

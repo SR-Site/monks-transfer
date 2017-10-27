@@ -28,6 +28,12 @@
 	.theme-dark {
 		path {
 			fill: $colorPrimary;
+
+			&:global {
+				&.arrow {
+					fill: $colorSecondary;
+				}
+			}
 		}
 	}
 }
