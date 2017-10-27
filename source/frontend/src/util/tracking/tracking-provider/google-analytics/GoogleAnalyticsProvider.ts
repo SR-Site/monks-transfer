@@ -1,8 +1,10 @@
 import { Promise } from 'es6-promise';
+import { replace } from 'lodash';
 import AbstractTrackingProvider from '../AbstractTrackingProvider';
 import IGoogleAnalyticsProviderOptions from './IGoogleAnalyticsProviderOptions';
 import { ITrackEventData, IPageViewData } from './IGoogleAnalyticsTrackingData';
 import bows from 'bows';
+import strip from 'strip';
 
 export default class GoogleAnalyticsProvider extends AbstractTrackingProvider<IGoogleAnalyticsProviderOptions> {
 	/**
@@ -23,7 +25,7 @@ export default class GoogleAnalyticsProvider extends AbstractTrackingProvider<IG
 			i['GoogleAnalyticsObject'] = r;
 			(i[r] =
 				i[r] ||
-				function() {
+				function () {
 					(i[r].q = i[r].q || []).push(arguments);
 				}),
 				(i[r].l = 1 * new Date().getTime());
@@ -48,18 +50,27 @@ export default class GoogleAnalyticsProvider extends AbstractTrackingProvider<IG
 	 * @returns { Promise<void> }
 	 */
 	public trackEvent(data: ITrackEventData): Promise<void> {
+		if (data.label !== void 0 && data.label !== null) {
+			// Strip out all html tags
+			data.label = strip(data.label);
+			// Strip out all white space
+			data.label = replace(data.label, ' ', '-');
+		}
+
 		return this.providerReady
-			.then(() => {
-				const ga = window[GoogleAnalyticsProvider._NAMESPACE];
-				if (isNaN(data.value) && data.value) {
-					ga('send', 'event', data.category, data.action, data.label, data.value);
-				} else if (data.label) {
+		.then(() => {
+			const ga = window[GoogleAnalyticsProvider._NAMESPACE];
+			if (isNaN(data.value) && data.value) {
+				ga('send', 'event', data.category, data.action, data.label, data.value);
+			} else {
+				if (data.label) {
 					ga('send', 'event', data.category, data.action, data.label);
 				} else {
 					ga('send', 'event', data.category, data.action);
 				}
-			})
-			.then(() => this.logger(`trackEvent: ${JSON.stringify(data)}`));
+			}
+		})
+		.then(() => this.logger(`trackEvent: ${JSON.stringify(data)}`));
 	}
 
 	/**
@@ -70,7 +81,7 @@ export default class GoogleAnalyticsProvider extends AbstractTrackingProvider<IG
 	 */
 	public trackPageView(data: IPageViewData): Promise<void> {
 		return this.providerReady
-			.then(() => window[GoogleAnalyticsProvider._NAMESPACE]('send', 'pageview', data.page))
-			.then(() => this.logger(`trackPageView: ${JSON.stringify(data)}`));
+		.then(() => window[GoogleAnalyticsProvider._NAMESPACE]('send', 'pageview', data.page))
+		.then(() => this.logger(`trackPageView: ${JSON.stringify(data)}`));
 	}
 }

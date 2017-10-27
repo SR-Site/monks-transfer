@@ -65,6 +65,17 @@ export default {
 			});
 		},
 		openPersona(index) {
+			this.$tracking.trackEvent(
+				{
+					[this.TrackingProvider.GOOGLE_ANALYTICS]: {
+						category: 'personaSelector',
+						action: 'click',
+						label: this.data.personas[index].heading,
+						value: index + 1,
+					},
+				},
+			);
+
 			const oldPersona = this.slides[this.activeIndex];
 			const newPersona = this.slides[index];
 

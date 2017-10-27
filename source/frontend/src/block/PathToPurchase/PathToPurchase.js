@@ -35,9 +35,13 @@ export default {
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new PathToPurchaseTransitionController(this);
-			this.deviceStateListener = new NativeEventListener(this.$deviceState, DeviceStateEvent.STATE_UPDATE, event => {
-				this.deviceState = event.data.state;
-			});
+			this.deviceStateListener = new NativeEventListener(
+				this.$deviceState,
+				DeviceStateEvent.STATE_UPDATE,
+				event => {
+					this.deviceState = event.data.state;
+				},
+			);
 			this.isReady();
 			this.createCarousel();
 			this.handleDeviceStateChange(this.deviceState);
@@ -51,9 +55,9 @@ export default {
 		},
 		createCarousel() {
 			this.carousel = new InfiniteCarousel({
-				sliderWrapper: this.$refs.slides,
-				slides: this.$refs.slide,
-			});
+													 sliderWrapper: this.$refs.slides,
+													 slides: this.$refs.slide,
+												 });
 
 			this.carouselEventListener = new NativeEventListener(this.carousel, CarouselEvent.CHANGE, event => {
 				this.activeIndex = event.data.index;
@@ -69,6 +73,16 @@ export default {
 			});
 		},
 		handleStepClick(index) {
+			this.$tracking.trackEvent(
+				{
+					[this.TrackingProvider.GOOGLE_ANALYTICS]: {
+						category: 'pathToPurchase',
+						action: 'click',
+						label: this.data.steps[index].heading,
+						value: index + 1,
+					},
+				},
+			);
 			this.activeIndex = index;
 		},
 		handleMobilePaginatorClick(index) {

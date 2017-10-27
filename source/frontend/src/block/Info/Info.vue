@@ -11,6 +11,13 @@
 			<ButtonPrimary
 				componentId="ButtonPrimary"
 				v-if="data.link"
+				v-track="{
+					[TrackingProvider.GOOGLE_ANALYTICS]: {
+						category: 'info',
+						action: 'click',
+						label: `${data.heading}|${data.link.title}`
+					}
+				}"
 				:title="data.link.title"
 				:label="data.link.label"
 				:type="ButtonType.LINK"
@@ -18,7 +25,7 @@
 				:link="{
 					type: linkTypeMap[data.link.type],
 					target: data.link.target,
-				}" />
+				}"/>
 		</div>
 		<div :class="$style.clipMask" ref="clipMask"></div>
 	</div>
