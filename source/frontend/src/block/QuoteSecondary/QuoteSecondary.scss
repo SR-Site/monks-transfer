@@ -1,2 +1,38 @@
 :local {
+	.site-frame {
+		padding-left: $sizeGrid * 7;
+		padding-right: $sizeGrid * 7;
+	}
+
+	.content {
+		border-left: 5px solid $colorSecondary;
+		padding-left: $sizeGrid;
+	}
+
+	.heading {
+		padding-bottom: $sizeGrid;
+	}
+
+	.copy {
+		font-weight: 600;
+	}
+
+	// Breakpoints
+	@include respond-to(SMALL) {
+		.site-frame {
+			padding-left: $sizeGrid;
+			padding-right: $sizeGrid;
+		}
+
+		.content {
+			border-left-width: 3px;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		.heading {
+			font-size: mobile-size(3.4rem);
+		}
+	}
 }

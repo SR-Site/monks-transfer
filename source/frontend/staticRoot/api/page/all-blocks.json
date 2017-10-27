@@ -101,35 +101,6 @@
 		}
 	  },
 	  {
-		"id": "smallImage",
-		"data": {
-		  "overlap": false,
-		  "windowed": false,
-		  "marginTop": 2,
-		  "alignment": 0,
-		  "image": {
-			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
-			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
-			"alt": "Image"
-		  }
-		}
-	  },
-	  {
-		"id": "button",
-		"data": {
-		  "overlap": false,
-		  "windowed": false,
-		  "marginTop": 2,
-		  "alignment": 1,
-		  "scrollId": "foo",
-		  "link": {
-			"label": "Next section",
-			"title": "Next section",
-			"type": 2
-		  }
-		}
-	  },
-	  {
 		"id": "map",
 		"data": {
 		  "overlap": false,
@@ -296,12 +267,52 @@
 		}
 	  },
 	  {
+		"id": "button",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 1,
+		  "scrollId": "foo",
+		  "link": {
+			"label": "Next section",
+			"title": "Next section",
+			"type": 2
+		  }
+		}
+	  },
+	  {
 		"id": "freeText",
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
 		  "marginTop": 2,
 		  "html": "<p>Television is alive and thriving. Spectrum Reach is committed to helping you reach your perfect customer, with innovations that empower you to digitally plan and monitor your success in real-time. We make sure you do more than keep up in the advertising space. Our clients are always one step ahead.<\/p>\n\n<p>It's time to stop doing business as usual and start doing business as exceptional.<\/p>"
+		}
+	  },
+	  {
+		"id": "quoteSecondary",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "scrollId": "foo",
+		  "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris libero eros, consectetur at interdum et, sagittis ut eros.",
+		  "author": "John Doe"
+		}
+	  },
+	  {
+		"id": "smallImage",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 0,
+		  "image": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+			"alt": "Image"
+		  }
 		}
 	  },
 	  {
