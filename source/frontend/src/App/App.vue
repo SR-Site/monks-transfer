@@ -13,6 +13,7 @@
 				:label="$t('global.cta.start_advertising_today')"
 				:type="ButtonType.ACTION"
 			/>
+			<SlideoutPanel componentId="SlideoutPanel" />
 			<SiteFooter componentId="Footer" />
 			<VideoOverlay componentId="VideoOverlay" />
 			<Notification componentId="Notification" />

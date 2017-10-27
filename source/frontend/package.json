@@ -41,6 +41,7 @@
     "seng-scss": "^1.0.0",
     "sha1": "^1.1.1",
     "strip": "^3.0.0",
+    "vee-validate": "^2.0.0-rc.19",
     "vue": "^2.2.5",
     "vue-block-system": "^0.3.5",
     "vue-i18n-manager": "^3.2.2",

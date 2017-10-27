@@ -25,6 +25,7 @@ import Orientation from '../data/enum/Orientation';
 import sequentialPromises from '../util/sequentialPromises';
 import TrackingProvider from '../util/tracking/TrackingProvider';
 import Size from '../data/enum/Size';
+import VeeValidate from 'vee-validate';
 
 const initPlugins = () => {
 	const configManager = getValue(CONFIG_MANAGER);
@@ -60,6 +61,8 @@ const initPlugins = () => {
 		ClassNameHelper,
 		createPath,
 	});
+
+	Vue.use(VeeValidate);
 
 	const mockEnabled = configManager.getVariable(VariableNames.MOCK_ENABLED);
 	const base = mockEnabled ? 'static/api/' : 'api/v1/';
@@ -107,14 +110,17 @@ const startUp = store => {
 			store.commit(InitDataMutationTypes.SET_LANGUAGE_DATA, mutation.payload.language);
 			store.commit(InitDataMutationTypes.SET_CONTACT_OPTIONS_DATA, mutation.payload.contactOptions);
 			store.commit(InitDataMutationTypes.SET_LAYOUT_DATA, mutation.payload.layout);
+			store.commit(InitDataMutationTypes.SET_CSRF_TOKEN, mutation.payload.csrfToken);
 		}
 	});
 
 	// Add async methods to the Promise.all array
-	return sequentialPromises([
-		() => Vue.blockSystemReady,
-		() => (configManager.getVariable(VariableNames.LOCALE_ENABLED) ? waitForLocale(store) : Promise.resolve()),
-	]);
+	return sequentialPromises(
+		[
+			() => Vue.blockSystemReady,
+			() => (configManager.getVariable(VariableNames.LOCALE_ENABLED) ? waitForLocale(store) : Promise.resolve()),
+		],
+	);
 };
 
 export default startUp;

@@ -1,0 +1,55 @@
+:local {
+	.slideout-panel {
+		@include size(100%, 100%);
+		@include position(0, 0, auto, auto);
+		position: fixed;
+		background-color: white;
+		max-width: $sizeGrid*18;
+		z-index: zindex($layout, panel);
+
+		&.is-ipad {
+			.input-focussed & {
+				position: absolute;
+			}
+		}
+	}
+
+	.button {
+		@include position($sizeGrid, $sizeGrid, auto, auto);
+		position: absolute;
+		z-index: 1;
+	}
+
+	// Panel body
+	.panel-body {
+		height: 100%;
+
+		.scroll-wrapper {
+			&.has-scroll { }
+		}
+
+		> * {
+			height: 100%;
+		}
+
+		.panel-inner-content {
+			padding: $sizeGrid*2 $sizeGrid * 3 $sizeGrid;
+		}
+	}
+
+	.mask {
+		position: fixed;
+		background-color: rgba(#000, 0.3);
+		z-index: zindex($layout, panel);
+	}
+
+	@include respond-to(SMALL) {
+		.slideout-panel {
+			max-width: 100%;
+		}
+
+		.input-focussed & {
+			position: absolute;
+		}
+	}
+}

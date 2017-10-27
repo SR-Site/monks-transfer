@@ -16,6 +16,7 @@ import { sync } from 'vuex-router-sync';
 import setupInjects from 'util/setupInjects';
 import localeLoader from 'util/localeLoader';
 import App from 'App';
+import { COMPONENT_ID } from 'vue-transition-component';
 
 // register filters globally
 Object.keys(filter).forEach(key => Vue.filter(key, filter[key]));
@@ -47,11 +48,13 @@ if (localeConfig.localeEnabled) {
 sync(store, router);
 
 // Init new vue app
-const app = new Vue({
-	router,
-	store,
-	render: createElement => createElement(App),
-});
+const app = new Vue(
+	{
+		router,
+		store,
+		render: createElement => createElement(App, { props: { [COMPONENT_ID]: 'app' } }),
+	},
+);
 
 // Mount the app after startUp
 startUp(store).then(() => app.$mount('#app'));

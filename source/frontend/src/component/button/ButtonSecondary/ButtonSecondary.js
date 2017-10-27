@@ -6,7 +6,7 @@ export default {
 	name: 'ButtonSecondary',
 	extends: AbstractButtonComponent,
 	props: {
-		theme: VueTypes.string,
+		theme: VueTypes.number.isRequired,
 	},
 	methods: {
 		handleAllComponentsReady() {

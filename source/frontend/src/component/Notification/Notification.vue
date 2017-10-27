@@ -13,6 +13,7 @@
 					<ButtonSecondary
 						componentId="ButtonNo"
 						@click="decline"
+						:theme="Theme.DARK"
 						:class="[$style.buttonNo, $style.button]"
 						:title="noLabel"
 						:label="noLabel"
@@ -22,6 +23,7 @@
 						componentId="ButtonYes"
 						@click="accept"
 						:class="[$style.buttonYes, $style.button]"
+						:theme="Theme.DARK"
 						:title="yesLabel"
 						:label="yesLabel"
 						:type="ButtonType.ACTION"
@@ -32,6 +34,7 @@
 						componentId="ButtonOk"
 						@click="accept"
 						:class="[$style.buttonOk, $style.button]"
+						:theme="Theme.DARK"
 						:title="okLabel"
 						:label="okLabel"
 						:type="ButtonType.ACTION"

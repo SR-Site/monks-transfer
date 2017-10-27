@@ -2,7 +2,7 @@
 <script src="./ButtonTertiary.js"></script>
 
 <template>
-	<button @click="handleClick">
-		ButtonTertiary
+	<button @click="handleClick" class="button" :class="$style.buttonTertiary" :title="title">
+		<span>{{label}}!</span>
 	</button>
 </template>

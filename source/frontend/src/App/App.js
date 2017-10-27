@@ -9,15 +9,19 @@ import backendLinkType from '../data/enum/BackendLinkType';
 import { NotificationMutationTypes } from '../store/module/notification';
 import NativeEventListener from '../util/event/NativeEventListener';
 import VideoOverlay from '../component/VideoOverlay/VideoOverlay';
+import SlideoutPanel from '../component/SlideoutPanel/SlideoutPanel';
+import { AbstractRegistrableComponent } from 'vue-transition-component';
 
 export default {
 	name: 'App',
+	extends: AbstractRegistrableComponent,
 	components: {
 		PageLoader,
 		SiteHeader,
 		SiteFooter,
 		VideoOverlay,
 		Notification,
+		SlideoutPanel,
 	},
 	computed: {
 		...mapGetters(
@@ -26,8 +30,8 @@ export default {
 			},
 		),
 		hideContactButton() {
-			return this.pageData.hideContactButton
-		}
+			return this.pageData.hideContactButton;
+		},
 	},
 	data() {
 		return {
@@ -57,11 +61,7 @@ export default {
 		handleCustomButtonEvent(data) {
 			switch (data.event) {
 				case backendLinkType.CONTACT_US:
-					this.$store.dispatch(NotificationMutationTypes.SHOW, {
-						type: this.NotificationTypes.ALERT,
-						heading: 'TODO',
-						paragraph: 'OPEN THE CONTACT PANEL',
-					});
+					this.getChild('SlideoutPanel').transitionIn(SlideoutPanel.CONTACT);
 					break;
 				default:
 					// No default;
@@ -69,11 +69,7 @@ export default {
 			}
 		},
 		handleStartAdvertisingClick() {
-			this.$store.dispatch(NotificationMutationTypes.SHOW, {
-				type: this.NotificationTypes.ALERT,
-				heading: 'TODO',
-				paragraph: 'OPEN THE CONTACT PANEL',
-			});
+			this.getChild('SlideoutPanel').transitionIn(SlideoutPanel.CONTACT);
 		},
 	},
 	beforeDestroy() {
