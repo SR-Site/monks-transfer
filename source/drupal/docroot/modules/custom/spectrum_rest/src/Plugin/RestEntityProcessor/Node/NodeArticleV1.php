@@ -43,7 +43,7 @@ class NodeArticleV1 extends SpectrumRestEntityProcessorBase {
 
     $data = [
       'headerTheme' => (int) $entity->get('field_header_theme')->value,
-      'pageTitle' => $entity->label(),
+      'title' => $entity->label(),
       'blocks' => $blocks,
     ];
 
