@@ -84,3 +84,12 @@ function spectrum_page_attachments_alter(array &$page) {
   );
   $page['#attached']['html_head_link'][] = [$favicon, 'document-base'];
 }
+
+/**
+ * Implements hook_preprocess_html().
+ *
+ * @see hook_preprocess_html().
+ */
+function spectrum_preprocess_html(&$vars) {
+  $vars['frontend_version_int'] = Settings::get('mm_deployment_version', 'src');
+}
