@@ -55,7 +55,7 @@ export default {
 		handleMenuClick() {
 			this.$store.dispatch(NotificationMutationTypes.SHOW, {
 				type: this.NotificationTypes.ALERT,
-				heading: 'Oops',
+				heading: 'TODO:',
 				paragraph: 'Open the menu',
 			});
 		},

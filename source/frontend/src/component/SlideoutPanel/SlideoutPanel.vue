@@ -3,7 +3,7 @@
 
 <template>
 	<div>
-		<div :class="$style.mask" class="abs-fill" ref="mask"></div>
+		<div :class="$style.mask" class="abs-fill" ref="mask" @click="close"></div>
 		<div :class="[$style.slideoutPanel]" ref="panel">
 			<ButtonCircleClose
 				componentId="ButtonCircleClose"
