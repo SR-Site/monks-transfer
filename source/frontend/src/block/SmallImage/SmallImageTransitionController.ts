@@ -6,7 +6,19 @@ class SmallImageTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionInTimeline
 	 * @description Use this method to setup your transition in timeline
 	 * */
-	protected setupTransitionInTimeline(): void {}
+	protected setupTransitionInTimeline(): void {
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$el,
+			2,
+			{
+				autoAlpha: 0,
+			},
+			{
+				autoAlpha: 1,
+				clearProps: 'all',
+			}
+		)
+	}
 
 	/**
 	* @public

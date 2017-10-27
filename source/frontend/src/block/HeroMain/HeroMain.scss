@@ -14,15 +14,15 @@
 				background: rgba($colorPrimary, 0.5);
 			}
 		}
+
+		img {
+			@include coverer();
+			@include size(100%);
+		}
 	}
 
 	.slides {
 		@include coverer();
-	}
-
-	img {
-		@include coverer();
-		@include size(100%);
 	}
 
 	.component-paginator-dashed {

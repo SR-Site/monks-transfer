@@ -1,2 +1,32 @@
 :local {
+	.small-image {
+		margin-left: $sizeGrid * 7;
+		margin-right: $sizeGrid * 7;
+
+		img {
+			display: inline-block;
+			max-width: $sizeGrid * 11;
+		}
+
+		&.alignment-left {
+			text-align: left;
+		}
+
+		&.alignment-right {
+			text-align: right;
+		}
+
+	}
+	// Breakpoints
+	@include respond-to(SMALL) {
+		.small-image {
+			margin-left: 0;
+			margin-right: 0;
+
+			img {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+	}
 }

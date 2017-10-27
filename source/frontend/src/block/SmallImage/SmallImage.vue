@@ -2,7 +2,7 @@
 <script src="./SmallImage.js"></script>
 
 <template>
-	<div>
-		<h2>SmallImage</h2>
+	<div :class="[$style.smallImage, $style[ClassNameHelper.parseAlignment(data.alignment)]]">
+		<ResponsiveImage :image="data.image"/>
 	</div>
 </template>

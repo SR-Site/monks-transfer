@@ -99,6 +99,35 @@
 		}
 	  },
 	  {
+		"id": "smallImage",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 0,
+		  "image": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+			"alt": "Image"
+		  }
+		}
+	  },
+	  {
+		"id": "button",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 1,
+		  "scrollId": "foo",
+		  "link": {
+			"label": "Next section",
+			"title": "Next section",
+			"type": 2
+		  }
+		}
+	  },
+	  {
 		"id": "map",
 		"data": {
 		  "overlap": false,

@@ -162,7 +162,6 @@ export default {
 
 				// Run the loader
 				return loadImageTask.load().then(() => {
-					console.log('all assets loaded');
 					loadImageTask.dispose();
 				});
 			}

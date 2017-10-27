@@ -47,7 +47,6 @@ export default {
 				() => {
 					transitionInEventListener.dispose();
 					transitionInEventListener = null;
-					console.log(this.slides[this.activeIndex]);
 					this.slides[this.activeIndex].transitionIn();
 				},
 			);

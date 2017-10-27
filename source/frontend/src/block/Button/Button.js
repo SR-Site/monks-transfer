@@ -11,8 +11,16 @@ export default {
 		data: VueTypes.shape(ButtonData).isRequired,
 	},
 	computed: {
-		mappedAlignment() {
-			return `align-${Alignment[this.data.alignment].toLowerCase()}`;
+		mappedLink() {
+			const link = {
+				type: this.linkTypeMap[this.data.link.type],
+			};
+
+			if (this.data.link.target) {
+				link[target] = this.data.link.target;
+			}
+
+			return link;
 		},
 	},
 	methods: {
