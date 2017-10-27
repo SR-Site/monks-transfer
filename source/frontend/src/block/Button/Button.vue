@@ -6,6 +6,13 @@
 		<div class="overrule-overlap">
 			<ButtonPrimary
 				componentId="ButtonPrimary"
+				v-track="{
+					[TrackingProvider.GOOGLE_ANALYTICS]: {
+						category: 'button',
+						action: 'click',
+						label: data.link.title
+					}
+				}"
 				:title="data.link.title"
 				:label="data.link.label"
 				:type="ButtonType.LINK"
