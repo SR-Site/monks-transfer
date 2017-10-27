@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import { mapGetters } from 'vuex';
 import { customButtonEventDispatcher, CustomButtonEvent } from 'vue-block-system';
 import SiteHeader from '../component/layout/SiteHeader/SiteHeader';
 import SiteFooter from '../component/layout/SiteFooter/SiteFooter';
@@ -17,6 +18,16 @@ export default {
 		SiteFooter,
 		VideoOverlay,
 		Notification,
+	},
+	computed: {
+		...mapGetters(
+			{
+				pageData: 'layout/pageData',
+			},
+		),
+		hideContactButton() {
+			return this.pageData.hideContactButton
+		}
 	},
 	data() {
 		return {

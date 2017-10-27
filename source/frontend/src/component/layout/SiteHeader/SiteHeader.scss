@@ -7,6 +7,14 @@
 		z-index: zindex($layout, header);
 		transition: background 0.2s $easeInOut;
 
+		&.theme-light {
+			display: block;
+		}
+
+		&.theme-dark {
+			display: block;
+		}
+
 		&.is-scrolled {
 			background: white;
 		}

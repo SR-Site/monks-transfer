@@ -12,9 +12,13 @@ export default {
 	extends: AbstractTransitionComponent,
 	computed: {
 		...mapGetters({
+			pageData: 'layout/pageData',
 			contactOptionGetter: 'initData/contactOption',
 			landingRoute: 'init/landingRoute',
 		}),
+		headerTheme() {
+			return this.pageData.headerTheme || this.Theme.LIGHT;
+		},
 		phoneNumber() {
 			return this.contactOptionGetter('phone').phoneNumber || 'no-phone-number';
 		},

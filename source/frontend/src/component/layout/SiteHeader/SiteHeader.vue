@@ -2,17 +2,21 @@
 <script src="./SiteHeader.js"></script>
 
 <template>
-	<header :class="[$style.wrapper, {[$style['is-scrolled']]: isScrolled}]">
+	<header
+		:class="[
+			$style.wrapper,
+			{[$style['is-scrolled']]: isScrolled},
+		]">
 		<h2 :class="$style.logo">
 			<a v-link="{ path: `/${landingRoute}`}">
-				<Logo :theme="isScrolled || isMedium ? Theme.DARK : Theme.LIGHT"/>
+				<Logo :theme="isScrolled || isMedium ? Theme.DARK : headerTheme"/>
 			</a>
 		</h2>
 		<div :class="$style.callToActions">
 			<ButtonCallToReach
 				componentId="ButtonCallToReach"
 				icon="contact"
-				:theme="isScrolled || isMedium ? Theme.DARK : Theme.LIGHT"
+				:theme="isScrolled || isMedium ? Theme.DARK : headerTheme"
 				:title="phoneNumber"
 				:label="phoneNumber"
 				:type="ButtonType.LINK"

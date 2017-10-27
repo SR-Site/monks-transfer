@@ -7,6 +7,7 @@
 			<router-view></router-view>
 			<ButtonStartAdvertising
 				@click="handleStartAdvertisingClick"
+				v-show="!hideContactButton"
 				componentId="ButtonStartAdvertising"
 				:title="$t('global.cta.start_advertising_today')"
 				:label="$t('global.cta.start_advertising_today')"

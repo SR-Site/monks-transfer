@@ -1,9 +1,11 @@
 {
   "statusCode": 200,
   "data": {
-	"headerTheme": 0,
-	"pageTitle": "Spectrum Reach Advertising - Home",
-	"hideContactButton": 0,
+	"title": "Spectrum Reach Advertising - Home",
+	"pageData": {
+		"headerTheme": 0,
+		"hideContactButton": 0
+	},
 	"blocks": [
 	  {
 		"id": "heroMain",
