@@ -22,7 +22,6 @@ export default {
 	props: {
 		data: VueTypes.shape(ImageCallToActionsData).isRequired,
 	},
-	mounted() {},
 	methods: {
 		handleAllComponentsReady() {
 			this.resizeHandler = new NativeEventListener(window, 'resize', debounce(this.handleResize, 100));

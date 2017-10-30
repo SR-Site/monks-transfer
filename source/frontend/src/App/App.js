@@ -6,7 +6,6 @@ import SiteFooter from '../component/layout/SiteFooter/SiteFooter';
 import Notification from '../component/Notification/Notification';
 import PageLoader from '../component/PageLoader/PageLoader';
 import backendLinkType from '../data/enum/BackendLinkType';
-import { NotificationMutationTypes } from '../store/module/notification';
 import NativeEventListener from '../util/event/NativeEventListener';
 import VideoOverlay from '../component/VideoOverlay/VideoOverlay';
 import SlideoutPanel from '../component/SlideoutPanel/SlideoutPanel';
@@ -39,10 +38,6 @@ export default {
 		};
 	},
 	mounted() {
-		// this.$deviceState.addEventListener(DeviceStateEvent.STATE_UPDATE, event => {
-		// 	console.log(event);
-		// });
-
 		this.customButtonEventListener = new NativeEventListener(
 			customButtonEventDispatcher,
 			CustomButtonEvent.FIRE,
