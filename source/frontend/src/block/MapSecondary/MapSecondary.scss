@@ -1,2 +1,92 @@
 :local {
+	.map-secondary {
+		user-select: none;
+	}
+
+	.aspect-ratio-wrapper {
+		position: relative;
+		background: $colorLightGrey;
+		padding: $sizeGrid * 2;
+		font-size: 0;
+	}
+
+	.map-content {
+		@include size($sizeGrid * 9, auto);
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.map-image-wrapper {
+		@include size(calc(100% - #{$sizeGrid * 9}), auto);
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.map-image {
+		@include size(100%, auto);
+		@include aspect-ratio(800px, 560px);
+
+		.sequence-background,
+		.component-image-sequence {
+			@include coverer();
+			@include size(100%);
+		}
+	}
+
+	.main-title {
+		margin-bottom: $sizeGrid;
+	}
+
+	.sub-title {
+		margin-bottom: $sizeGrid  / 2;
+	}
+
+	.description {
+		p {
+			margin-bottom: $sizeGrid / 2;
+		}
+	}
+
+	.component-button-main {
+		margin-top: $sizeGrid;
+	}
+
+	.progress-bar {
+		@include size(100%, 1px);
+		@include position(auto, 0, 0, auto);
+		background: $colorBorder;
+		position: absolute;
+
+		.progress {
+			@include size(0, 0.4rem);
+			@include position(50%, auto, auto, 0);
+			transform: translateY(-50%);
+			background: $colorSecondary;
+			position: absolute;
+		}
+	}
+
+	@include respond-to(LARGE) {
+		.map-content {
+			padding-right: $sizeGrid;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.aspect-ratio-wrapper {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.map-image-wrapper {
+			width: 100%;
+			order: 0;
+		}
+
+		.map-content {
+			order: 1;
+			width: 100%;
+			margin-top: $sizeGrid * 2;
+		}
+	}
 }

@@ -31,7 +31,7 @@ export default {
 				image: {
 					normal: `${this.$versionRoot}data/sequence/map/desktop/map_lines_`,
 					small: `${this.$versionRoot}data/sequence/map/mobile/map_lines_mobile_`,
-					alt: 'Alt text',
+					alt: 'Image sequence',
 				},
 				total: 75,
 				extension: '.png',

@@ -22,7 +22,7 @@ export default {
 			this.isReady();
 		},
 		handleMouseEnter(index) {
-			if (this.$deviceState > DeviceState.SMALL) {
+			if (this.$deviceState.currentDeviceState.state > DeviceState.SMALL) {
 				this.$tracking.trackEvent(
 					{
 						[this.TrackingProvider.GOOGLE_ANALYTICS]: {

@@ -36,7 +36,7 @@
     "ncp": "^2.0.0",
     "normalize.css": "^7.0.0",
     "seng-config": "^1.1.0",
-    "seng-device-state-tracker": "^1.0.6",
+    "seng-device-state-tracker": "^1.1.2",
     "seng-disposable": "^1.1.2",
     "seng-scss": "^1.0.0",
     "sha1": "^1.1.1",

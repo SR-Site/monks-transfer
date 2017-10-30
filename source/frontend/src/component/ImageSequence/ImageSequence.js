@@ -32,7 +32,9 @@ export default {
 	watch: {
 		validDeviceState(value) {
 			this.stop();
-			this.loadAllCurrentDeviceStateImages().then(() => this.drawFrame(this.currentFrame));
+			this.loadAllCurrentDeviceStateImages()
+				.then(() => this.drawFrame(this.currentFrame))
+				.then(() => this.$emit('loaded'));
 		},
 	},
 	created() {
@@ -93,7 +95,8 @@ export default {
 		},
 		play(options) {
 			return new Promise(resolve => {
-				Object.assign(
+				this.stopped = false;
+				const mergedOptions = Object.assign(
 					{
 						loop: false,
 						loopDelay: 0,
@@ -103,22 +106,22 @@ export default {
 					options,
 				);
 
-				const frameCounter = { frame: options.startFrame };
-				const totalDuration = Math.abs(options.endFrame - options.startFrame) / FPS;
+				const frameCounter = { frame: mergedOptions.startFrame };
+				const totalDuration = Math.abs(mergedOptions.endFrame - mergedOptions.startFrame) / FPS;
 
 				this.playAnimation = TweenLite.to(
 					frameCounter,
 					totalDuration,
 					{
-						frame: options.endFrame - 1,
+						frame: mergedOptions.endFrame - 1,
 						ease: Linear.easeNone,
 						onUpdate: () => this.drawFrame(Math.round(frameCounter.frame)),
 						onComplete: () => {
 							resolve();
 
-							if (options.loop && !this.stopped) {
+							if (mergedOptions.loop && !this.stopped) {
 								clearTimeout(this.loopTimeout);
-								this.loopTimeout = setTimeout(() => this.play(options), options.loopDelay);
+								this.loopTimeout = setTimeout(() => this.play(mergedOptions), mergedOptions.loopDelay);
 							}
 						},
 					},

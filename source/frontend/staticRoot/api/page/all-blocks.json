@@ -101,6 +101,37 @@
 		}
 	  },
 	  {
+		"id": "mapSecondary",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Measurability without <span class='highlight'>measure</span>",
+		  "subHeading": "You want a choice of highly-targeted geographic zones.",
+		  "paragraph": "<p>You want data, insights and back-end reporting so you know you’ve made the right decisions. You want a marketing partner who gets it.</p>",
+		  "link": {
+			"label": "Explore the market",
+			"title": "Explore the market",
+			"target": "map",
+			"type": 2
+		  },
+		  "sequenceBackground": {
+			"normal": "data/sequence/map-secondary/desktop/map_bg.png",
+			"small": "data/sequence/map-secondary/mobile/map_bg_mobile.png",
+			"alt": "Alt text"
+		  },
+		  "imageSequence": {
+			"image": {
+			  "normal": "data/sequence/map-secondary/desktop/map_lines_",
+			  "small": "data/sequence/map-secondary/desktop/map_lines_mobile_",
+			  "alt": "Alt text"
+			},
+			"extension": ".png",
+			"total": 75
+		  }
+		}
+	  },
+	  {
 		"id": "videoWithContent",
 		"data": {
 		  "overlap": false,
