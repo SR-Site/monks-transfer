@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Block documentation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+
+	<style>
+		body {
+			padding-top: 10px;
+		}
+
+		td .table {
+			margin-left: 50px;
+			width: calc(100% - 50px);
+			margin-bottom: 0;
+		}
+
+		.capitalize {
+			text-transform: capitalize;
+		}
+
+		.overflow-ellipsis {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		.sticky {
+			position: sticky;
+			top: 0;
+		}
+	</style>
+</head>
+
+<body>
+<div id="app" class="container-fluid">
+	<div class="row">
+		<!-- Column with the navigation -->
+		<div class="col-md-3 hidden-xs hidden-sm sticky">
+			<h4 class="capitalize">Documentation</h4>
+			<div class="list-group" v-for="section in sections">
+				<div class="list-group-item active">
+					<span class="badge">{{ section.data.length }}</span>
+					<span class="list-group-item-heading">
+							<h5 class="list-group-item-heading capitalize">{{ section.id }}</h5>
+						</span>
+				</div>
+				<a v-for="data in section.data" :href="`#${data.name}`" class="list-group-item overflow-ellipsis">{{
+					data.name }}</a>
+				</ul>
+			</div>
+		</div>
+		<!-- Column with all the data -->
+		<div class="col-md-9">
+			<div v-for="section in sections">
+				<h4 class="capitalize" :id="section.id">{{ section.id }}</h4>
+				<div class="blocks" v-for="block in section.data">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title" :id="block.name">{{ block.name }}</h3>
+						</div>
+						<div class="panel-body table-responsive">
+							<data-table :properties="block.properties"></data-table>
+						</div>
+						<div class="panel-body panel-responsive" v-if="block.example">
+							<h5>Example JSON</h5>
+							<pre><code class="json-example" data-bind="html: example">{{block.example}}</code></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.4.4/vue.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>
+	Vue.component('data-table', {
+		props: ['properties'],
+		data: () => {
+			return {
+				skippedCategories: ['placeholder', 'properties'],
+				categories: [
+					'name',
+					'type',
+					'required',
+					'description',
+					'placeholder',
+					'properties',
+				],
+			};
+		},
+		template: `
+				<table class="table">
+					<thead>
+						<tr>
+							<th v-for="category in categories" v-if="skippedCategories.indexOf(category) === -1" >{{category}}</th>
+						</tr>
+					</thead>
+					<tbody v-for="property in properties">
+						<tr>
+							<td v-for="category in categories" v-if="skippedCategories.indexOf(category) === -1">
+								<code v-if="category === 'type'">{{property[category]}}</code>
+								<span v-if="category === 'required'" class="btn btn-sm disabled" :class="[property[category] ? 'btn-danger' : 'btn-default']">{{property[category]}}</span>
+								<span v-if="category !== 'type' && category !== 'required'">{{property[category]}}</span>
+							</td>
+						</tr>
+						<tr v-if="property.properties.length">
+							<td :colspan="categories.length - skippedCategories.length">
+								<data-table :properties="property.properties"></data-table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			`,
+	});
+
+	const app = new Vue({
+							el: '#app',
+							data: {
+								sections: [],
+							},
+							methods: {
+								getData() {
+									return axios.get('./data.json').then(result => result.data);
+								},
+								storeSectionData(data) {
+									Object.keys(data).forEach(key => {
+										if (data[key].length) {
+											this.sections.push({
+																   id: key,
+																   data: data[key],
+															   });
+										}
+									});
+								},
+								applyHighlight() {
+									this.$el.querySelectorAll('.json-example').forEach(block => {
+										hljs.highlightBlock(block);
+									});
+								},
+							},
+							mounted() {
+								this.getData()
+								.then(result => this.storeSectionData(result))
+								.then(() => this.applyHighlight());
+							},
+						});
+</script>
+</body>
+
+
+</html>

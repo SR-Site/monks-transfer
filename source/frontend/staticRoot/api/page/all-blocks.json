@@ -101,6 +101,130 @@
 		}
 	  },
 	  {
+		"id": "videoWithContent",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "scrollId": "videoWithContent",
+		  "alignment": 0,
+		  "heading": "Tv Everywhere continues to grow",
+		  "paragraph": "Live and on-demand viewership across screens continues to grow as consumers replicate the tv experience in the new living room.",
+		  "link": {
+			"label": "Find out more",
+			"title": "Find out more",
+			"target": "advertising-solutions",
+			"type": 0
+		  },
+		  "poster": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+		  },
+		  "video": {
+			"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+			"type": 0
+		  }
+		}
+	  },
+	  {
+		"id": "storyInfoImages",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "stories": [
+			{
+			  "heading": "Start with Television<br \/>",
+			  "paragraph": "<p>Be\u00a0seen by your most valuable customers by advertising on the top 50+ cable networks, with the best in sports, news, and entertainment.<\/p>",
+			  "background": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Stories-AdobeStock_118304039.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Stories-AdobeStock_118304039.jpg",
+				"alt": "Start with Television"
+			  },
+			  "backgroundBlurred": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/styles\/blur\/public\/images\/2017-05\/Stories-AdobeStock_118304039.jpg?itok=Ax6X8h_n",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/styles\/blur\/public\/images\/2017-05\/Stories-AdobeStock_118304039.jpg?itok=Ax6X8h_n",
+				"alt": "Start with Television"
+			  },
+			  "theme": 1
+			},
+			{
+			  "heading": "Expand on multiple screens<br \/>",
+			  "paragraph": "<p>Reach your customer wherever they\u2019re watching with targeted ads on TV, online, and on mobile.<\/p>",
+			  "background": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/story-4-background---opt.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/story-4-background---opt.jpg",
+				"alt": "Expand on multiple screens"
+			  },
+			  "backgroundBlurred": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/styles\/blur\/public\/images\/2017-05\/story-4-background---opt.jpg?itok=iVibDs8N",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/styles\/blur\/public\/images\/2017-05\/story-4-background---opt.jpg?itok=iVibDs8N",
+				"alt": "Expand on multiple screens"
+			  },
+			  "theme": 0
+			},
+			{
+			  "heading": "Reach even more<br \/>",
+			  "paragraph": "<p>With exclusive, interactive products created for businesses who want to build deeper relationships with customers.<\/p>",
+			  "background": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/story-5-background_opt.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/story-5-background_opt.jpg",
+				"alt": "Reach even more"
+			  },
+			  "backgroundBlurred": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/styles\/blur\/public\/images\/2017-05\/story-5-background_opt.jpg?itok=zuu1DXYM",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/styles\/blur\/public\/images\/2017-05\/story-5-background_opt.jpg?itok=zuu1DXYM",
+				"alt": "Reach even more"
+			  },
+			  "theme": 0
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "howToAdvertise",
+		"data": {
+		  "overlap": false,
+		  "windowed": true,
+		  "marginTop": 2,
+		  "heading": "How to <span class='highlight'>Advertise</span> on Television",
+		  "link": {
+			"label": "Find out more",
+			"title": "Find out more",
+			"target": "home",
+			"type": 0
+		  },
+		  "steps": [
+			{
+			  "heading": "Create your message",
+			  "paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+			  "icon": "triangle-advertise-icon-1"
+			},
+			{
+			  "heading": "Create your message",
+			  "paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+			  "icon": "triangle-advertise-icon-2"
+			},
+			{
+			  "heading": "Create your message",
+			  "paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+			  "icon": "triangle-advertise-icon-3"
+			},
+			{
+			  "heading": "Create your message",
+			  "paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+			  "icon": "triangle-advertise-icon-4"
+			},
+			{
+			  "heading": "Create your message",
+			  "paragraph": "If you don't have the skills, our creative services team, Kernel, is on hand to help.",
+			  "icon": "triangle-advertise-icon-5"
+			}
+		  ]
+		}
+	  },
+	  {
 		"id": "map",
 		"data": {
 		  "overlap": false,

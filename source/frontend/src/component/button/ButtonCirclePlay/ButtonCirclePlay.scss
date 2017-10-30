@@ -11,6 +11,24 @@
 				}
 			}
 		}
+
+		svg {
+			backface-visibility: hidden;
+			overflow: visible;
+
+			path {
+				fill: currentColor;
+				transform-origin: center center;
+			}
+
+			circle {
+				fill: transparent;
+				stroke: currentColor;
+				stroke-width: 1px;
+				transition: stroke 0.2s $easeInOut, stroke-width 0.2s $easeInOut, opacity 0.2s $easeInOut;
+				transform-origin: center center;
+			}
+		}
 	}
 
 	.icon {
@@ -18,23 +36,5 @@
 		@include size(calc(#{$sizeGrid * 2.5} - 20px));
 		transform: translate(-50%, -50%);
 		position: absolute;
-	}
-
-	svg {
-		backface-visibility: hidden;
-		overflow: visible;
-
-		path {
-			fill: currentColor;
-			transform-origin: center center;
-		}
-
-		circle {
-			fill: transparent;
-			stroke: currentColor;
-			stroke-width: 1px;
-			transition: stroke 0.2s $easeInOut, stroke-width 0.2s $easeInOut, opacity 0.2s $easeInOut;
-			transform-origin: center center;
-		}
 	}
 }

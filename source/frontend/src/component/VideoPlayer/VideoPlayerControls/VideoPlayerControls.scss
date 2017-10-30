@@ -20,6 +20,10 @@
 
 		.icon {
 			@include size(20px);
+
+			path {
+				fill: currentColor;
+			}
 		}
 	}
 

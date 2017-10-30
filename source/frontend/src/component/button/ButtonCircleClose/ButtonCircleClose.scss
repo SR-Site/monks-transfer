@@ -9,6 +9,10 @@
 			@include size(8px);
 			color: currentColor;
 			transition: color 250ms $easeLinear;
+
+			path {
+				fill: currentColor;
+			}
 		}
 
 		&.large {

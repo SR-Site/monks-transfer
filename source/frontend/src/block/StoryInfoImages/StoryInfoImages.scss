@@ -1,2 +1,158 @@
 :local {
+	.story-info-images {
+		@include aspect-ratio(1440, 760);
+
+		.story-content {
+			@include size(50%, 100%);
+			@include position(0, auto, 0, 0);
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+
+			.story {
+				@include size(100%, auto);
+				background: $colorWhite;
+				padding: $sizeGrid $sizeGrid * 2;
+				flex-grow: 1;
+				transition: background .4s $easeLinear;
+				color: $colorPrimary;
+
+				.copy {
+					transition: opacity .4s $easeLinear, transform .4s $easeInOutCubic;
+					opacity: 0;
+					transform: translateX(50px);
+				}
+
+				.heading,
+				.copy {
+					margin-left: $sizeGrid / 2;
+				}
+
+				&.is-active {
+					background: transparent;
+
+					.copy {
+						opacity: 1;
+						transform: translateX(0);
+					}
+
+					&.theme-dark {
+						color: $colorPrimary;
+					}
+
+					&.theme-light {
+						color: $colorWhite;
+					}
+				}
+			}
+		}
+
+		.story-images {
+			@include size(100%);
+		}
+
+		.image-wrapper {
+			opacity: 0;
+			transition: opacity .2s $easeInOut;
+
+			&.is-active {
+				opacity: 1;
+			}
+		}
+
+		.blurred-image,
+		.default-image {
+			@include size(50%, 100%);
+			position: absolute;
+			overflow: hidden;
+
+			.image {
+				@include size(200%, 100%);
+				top: 0;
+				position: absolute;
+			}
+		}
+
+		.default-image {
+			@include position(0, 0, 0, auto);
+
+			.image {
+				right: 0;
+			}
+
+		}
+
+		.blurred-image {
+			@include position(0, auto, 0, 0);
+
+			.image {
+				left: 0;
+			}
+		}
+
+		// Breakpoints
+		@include respond-to(LARGE) {
+			.story-content {
+				width: 75%;
+
+				.story {
+					padding: $sizeGrid / 2;
+				}
+			}
+
+			.blurred-image,
+			.default-image {
+				width: 75%;
+
+				.image {
+					width: (100 / 75) * 100%;
+				}
+			}
+		}
+
+		@include respond-to(MEDIUM) {
+
+			// Overwrite all the borders because otherwise it does not fit in the screen
+			border-left: none !important;
+			border-right: none !important;
+
+			&:before {
+				display: none;
+			}
+
+			.story-wrapper {
+				position: relative;
+				height: auto;
+			}
+
+			.story-images {
+				display: none;
+			}
+
+			.story-content {
+				@include size(100%, auto);
+				position: relative;
+
+				.story {
+					padding: $sizeGrid*2 $sizeGrid*3 $sizeGrid*4;
+					border-top: 1px solid $colorBorder;
+					background: $colorWhite;
+
+					.copy,
+					.heading {
+						margin-left: $sizeGrid;
+						opacity: 1;
+						transform: translateX(0);
+						color: $colorPrimary;
+					}
+
+					.copy {
+						margin-top: $sizeGrid/2;
+						opacity: 1;
+						transform: translateX(0);
+					}
+				}
+			}
+		}
+	}
 }

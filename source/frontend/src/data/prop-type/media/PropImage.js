@@ -10,7 +10,6 @@ import VueTypes from 'vue-types';
  * @param {description} alt This is the Alt Text of an image.
  * @param {placeholder} alt Alt text here
  */
-
 export default {
 	normal: VueTypes.string.isRequired,
 	small: VueTypes.string.isRequired,

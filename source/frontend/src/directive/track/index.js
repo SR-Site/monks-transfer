@@ -6,8 +6,6 @@ const namespace = 'TrackDirective';
 
 export default {
 	bind(element, binding) {
-		// Set the href
-		element.setAttribute('href', binding.value.path);
 		// Store the listener based on the element node
 		element[namespace] = new NativeEventListener(element, 'click', event => {
 			// Cancel the click

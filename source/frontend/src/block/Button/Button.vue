@@ -17,7 +17,10 @@
 				:label="data.link.label"
 				:type="ButtonType.LINK"
 				:theme="Theme.DARK"
-				:link="mappedLink" />
+				:link="{
+					type: linkTypeMap[data.link.type],
+					target: data.link.target,
+				}"  />
 		</div>
 	</div>
 </template>

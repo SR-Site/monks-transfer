@@ -12,13 +12,12 @@ export default {
 		isMuted: VueTypes.bool.isRequired,
 		isPlaying: VueTypes.bool.isRequired,
 		progress: VueTypes.number.isRequired,
-		displayMuteButton: !bowser.android && !bowser.ios,
 	},
-	computed: {},
 	data() {
 		return {
 			isActive: false,
 			internalProgress: 0,
+			displayMuteButton: (!bowser.android && !bowser.ios),
 		};
 	},
 	watch: {

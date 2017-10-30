@@ -1,0 +1,38 @@
+:local {
+	.scroll-bar {
+		@include size(auto, 2px);
+		@include position(auto, 0, 14px, 0);
+		background: #e4e5e5;
+		position: absolute;
+	}
+
+	.knob {
+		@include size(20%, 28px);
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+
+		&:after {
+			@include size(100%, 8px);
+			@include position(50%, 0, auto, 0);
+			background: $colorSecondary;
+			position: absolute;
+			content: '';
+			transform: translateY(-50%);
+			transition: background-color 150ms ease-in, height 100ms ease-in;
+		}
+
+		&:hover {
+			&:after {
+				background-color: $colorPrimary;
+				height: 12px;
+			}
+		}
+	}
+
+	.theme-dark & {
+		background-color: #000;
+	}
+}
