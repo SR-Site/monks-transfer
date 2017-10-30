@@ -2,7 +2,7 @@
 <script src="./VideoWithContent.js"></script>
 
 <template>
-	<div :class="$style.videoWithContent">
+	<div :class="[$style.videoWithContent, $style[ClassNameHelper.parseAlignment(data.alignment)]]">
 		<div class="site-frame">
 			<div class="overrule-overlap" :class="$style.overruleOverlap">
 				<div :class="$style.videoWrapper" ref="videoWrapper">
