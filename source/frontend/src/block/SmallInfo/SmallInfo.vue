@@ -13,6 +13,13 @@
 					<ButtonPrimary
 						componentId="ButtonPrimary"
 						v-if="data.link"
+						v-track="{
+							[TrackingProvider.GOOGLE_ANALYTICS]: {
+								category: 'smallInfo',
+								action: 'click',
+								label: `${data.heading}|${data.link.title}`
+							}
+						}"
 						:title="data.link.title"
 						:label="data.link.label"
 						:type="ButtonType.LINK"
