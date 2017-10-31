@@ -32,7 +32,7 @@
 					@mouseleave="handleMouseLeave"
 					:key="index"
 					:style="{width: `${100 / data.callToActions.length}%`}"
-					:class="$style[ClassNameHelper.parseTheme(callToAction.theme)]">
+					:class="[$style.callToActionsLink ,$style[ClassNameHelper.parseTheme(callToAction.theme)]]">
 
 					<span :class="$style.textWrapper">
 						<span :class="$style.paginationNumber" v-html="getPaginationNumber(index + 1)"></span>

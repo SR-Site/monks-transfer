@@ -1,9 +1,8 @@
 :local {
-	.scroll-bar {
-		@include size(auto, 2px);
-		@include position(auto, 0, 14px, 0);
+	.scroll-bar-inner {
+		@include size(100%, 2px);
+		margin: 14px 0;
 		background: #e4e5e5;
-		position: absolute;
 	}
 
 	.knob {

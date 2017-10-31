@@ -1,2 +1,72 @@
 :local {
+	.blog-post {
+		padding-top: $sizeGrid * 2;
+	}
+
+	.header {
+		margin-bottom: $sizeGrid;
+
+		.date {
+			margin-bottom: $sizeGridSecondary;
+			font-weight: 800;
+		}
+	}
+
+	.footer {
+		@include size(100%, auto);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-bottom: $sizeGrid;
+		border-bottom: 1px solid $colorBorder;
+		margin-bottom: $sizeGrid;
+
+		.stats {
+			@extend %reset-list;
+			display: inline-block;
+			font-size: 0;
+			margin-bottom: $sizeGridSecondary / 2;
+		}
+
+		.stat {
+			display: inline-block;
+			vertical-align: middle;
+
+			&:not(:first-child) {
+				margin-left: $sizeGridSecondary;
+			}
+		}
+
+		.tag {
+			&:not(:first-child) {
+				margin-left: $sizeGridSecondary / 2;
+			}
+		}
+
+		.author {
+			font-weight: 800;
+		}
+	}
+
+	.content {
+		.heading {
+			margin-bottom: $sizeGridSecondary;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.header {
+			margin-bottom: $sizeGrid * 2;
+		}
+
+		.footer {
+			.author {
+				display: none;
+			}
+
+			.stats {
+				margin-bottom: $sizeGrid;
+			}
+		}
+	}
 }

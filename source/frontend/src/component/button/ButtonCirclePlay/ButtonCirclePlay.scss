@@ -1,16 +1,6 @@
 :local {
-	.button {
+	.button-circle-play {
 		@include size($sizeGrid*2.5);
-
-		@include hover() {
-			svg {
-				circle {
-					stroke-width: 0.5rem;
-					stroke: $colorSecondary;
-					opacity: 1;
-				}
-			}
-		}
 
 		svg {
 			backface-visibility: hidden;
@@ -36,5 +26,15 @@
 		@include size(calc(#{$sizeGrid * 2.5} - 20px));
 		transform: translate(-50%, -50%);
 		position: absolute;
+	}
+}
+
+@include hover('.button-circle-play') {
+	svg {
+		circle {
+			stroke-width: 0.5rem;
+			stroke: $colorSecondary;
+			opacity: 1;
+		}
 	}
 }

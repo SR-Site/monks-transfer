@@ -65,7 +65,7 @@ const initPlugins = () => {
 	Vue.use(VeeValidate);
 
 	const mockEnabled = configManager.getVariable(VariableNames.MOCK_ENABLED);
-	const base = mockEnabled ? 'static/api/' : 'api/v1/';
+	const base = mockEnabled ? '/static/api/' : '/api/v1/';
 
 	Vue.use(BlockSystem, {
 		store: getStore(),
@@ -76,7 +76,8 @@ const initPlugins = () => {
 				initCall: `${base}init${mockEnabled ? '.json' : '?_format=json'}`,
 			},
 			debugLabelStyling: {
-				backgroundColor: 'blue',
+				backgroundColor: 'rgba(0,0,255,0.8)',
+				zIndex: 999,
 			},
 			enablePageTransitionOut: false,
 		},

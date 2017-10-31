@@ -1,0 +1,68 @@
+:local {
+	.button-quaternary {
+		@include size(auto, 5rem);
+		font: 800 1rem / calc(5rem - 2px) $fontOpenSans;
+		text-transform: uppercase;
+		padding-left: $sizeGridSecondary;
+		position: relative;
+
+		&.theme-dark {
+			.label {
+				color: $colorPrimary;
+			}
+
+			.stripe {
+				background: $colorSecondary;
+			}
+		}
+
+		&.theme-light {
+			.label {
+				color: $colorWhite;
+			}
+
+			.stripe {
+				background: $colorWhite;
+			}
+		}
+	}
+
+	.stripe {
+		@include size($sizeGrid / 2, 0.4rem);
+		@include position(calc(50% - 0.2rem), auto, auto, 0);
+		transform: scaleX(0);
+		position: absolute;
+		transform-origin: left center;
+		transition: transform .2s $easeInOutCubic;
+		transition-delay: 0s;
+	}
+
+	.label {
+		display: inline-block;
+		vertical-align: top;
+		transform: translateX(-$sizeGridSecondary);
+		transition: transform .2s $easeInOutCubic;
+	}
+
+	@include respond-to(SMALL) {
+		.button-quaternary {
+			font-size: 2rem;
+		}
+	}
+}
+
+@include hover('.button-quaternary', '.is-hover') {
+	.stripe {
+		transform: scaleX(1);
+		transition-delay: .1s;
+	}
+
+	.label {
+		transform: translateX(0);
+	}
+}
+
+//
+//@include hoverBla('.button-quaternary', '.is-hover') {
+//	background: blue;
+//}

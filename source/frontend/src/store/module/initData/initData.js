@@ -15,7 +15,7 @@ export default {
 	},
 	getters: {
 		contactOption: state => contactOption => state.contactOptions[contactOption] || {},
-		slideOutData: state => panel => state.layout.slideOutPanel[panel],
+		slideOutData: state => panel => state.layout.slideOutPanel[panel] || {},
 		csrfToken: state => state.csrfToken,
 	},
 	mutations: {

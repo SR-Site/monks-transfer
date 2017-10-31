@@ -1,6 +1,7 @@
 import VueTypes from 'vue-types';
 import PropLink from '../../data/prop-type/action/PropLink';
 import PropImage from '../../data/prop-type/media/PropImage';
+import PropAuthor from '../../data/prop-type/article/PropAuthor';
 
 /**
  * @param {description} marginTop This defines the amount of spacing at the top of the block
@@ -40,11 +41,7 @@ export default {
 		VueTypes.shape(PropLink)
 	),
 	theme: VueTypes.number.isRequired,
-	author: VueTypes.shape({
-		name: VueTypes.string.isRequired,
-		role: VueTypes.string.isRequired,
-		image: VueTypes.shape(PropImage),
-	}),
+	author: VueTypes.shape(PropAuthor),
 	link: VueTypes.shape(PropLink),
 	social: VueTypes.arrayOf(
 		VueTypes.shape(PropLink)

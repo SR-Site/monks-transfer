@@ -29,7 +29,7 @@ export default {
 			},
 		),
 		hideContactButton() {
-			return this.pageData.hideContactButton;
+			return this.pageData ? this.pageData.hideContactButton : true;
 		},
 	},
 	data() {

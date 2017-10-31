@@ -18,44 +18,6 @@
 		display: inline-block;
 		vertical-align: top;
 
-		@include hover() {
-			.persona-button {
-				color: $colorSmallBusinesses;
-
-				&:before {
-					background: transparent;
-				}
-
-				.label {
-					color: $colorWhite;
-				}
-
-				.pagination-number {
-					color: $colorWhite;
-
-					&:after {
-						opacity: 0;
-					}
-				}
-			}
-
-			.small_business {
-				color: $colorSmallBusinesses;
-			}
-
-			.automotive {
-				color: $colorAutomotive;
-			}
-
-			.enterprise {
-				color: $colorEnterprise;
-			}
-
-			.local_media_buying {
-				color: $colorLocalMedia;
-			}
-		}
-
 		&.is-active {
 			border: none;
 
@@ -220,5 +182,43 @@
 		.persona-selector-options {
 			display: none;
 		}
+	}
+}
+
+@include hover('.persona-selector-option') {
+	.persona-button {
+		color: $colorSmallBusinesses;
+
+		&:before {
+			background: transparent;
+		}
+
+		.label {
+			color: $colorWhite;
+		}
+
+		.pagination-number {
+			color: $colorWhite;
+
+			&:after {
+				opacity: 0;
+			}
+		}
+	}
+
+	.small_business {
+		color: $colorSmallBusinesses;
+	}
+
+	.automotive {
+		color: $colorAutomotive;
+	}
+
+	.enterprise {
+		color: $colorEnterprise;
+	}
+
+	.local_media_buying {
+		color: $colorLocalMedia;
 	}
 }

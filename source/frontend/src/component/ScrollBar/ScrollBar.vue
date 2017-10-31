@@ -3,8 +3,10 @@
 
 <template>
 	<div :class="$style.scrollBar">
-		<div :class="$style.knob" class="js-draggable-element">
-			<span></span>
+		<div :class="$style.scrollBarInner">
+			<div :class="$style.knob" class="js-draggable-element">
+				<span></span>
+			</div>
 		</div>
 	</div>
 </template>

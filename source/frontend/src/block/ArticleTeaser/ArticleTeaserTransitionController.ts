@@ -1,6 +1,5 @@
 import { AbstractTransitionController } from 'vue-transition-component';
-import { Expo } from 'gsap';
-import IAbstractTransitionComponent from 'vue-transition-component/lib/interface/IAbstractTransitionComponent';
+import { Expo, Linear } from 'gsap';
 
 class ArticleTeaserTransitionController extends AbstractTransitionController {
 	/**
@@ -10,7 +9,6 @@ class ArticleTeaserTransitionController extends AbstractTransitionController {
 	 * */
 	protected setupTransitionInTimeline(): void {
 		const el = this.viewModel.$el;
-		const clipSize = (<HTMLElement>this.viewModel.$refs.description).offsetWidth;
 
 		this.transitionInTimeline.fromTo(
 			el,
@@ -21,35 +19,52 @@ class ArticleTeaserTransitionController extends AbstractTransitionController {
 			{
 				opacity: 1,
 			},
-			0,
 		);
 
 		this.transitionInTimeline.fromTo(
-			this.viewModel.$refs.image,
+			this.viewModel.$refs.description,
 			1.6,
 			{
-				clip: `rect(0, ${el.offsetWidth}, ${el.offsetHeight}, ${el.offsetWidth})`,
-				opacity: 0,
+				xPercent: -100,
 			},
 			{
-				clip: `rect(0, ${el.offsetWidth}, ${el.offsetHeight}, ${clipSize})`,
-				opacity: 1,
-				clearProps: 'clip, opacity',
+				xPercent: 0,
+				clearProps: 'xPercent',
 				ease: Expo.easeOut,
 			},
 		);
+
+		if (this.viewModel.$refs.tags) {
+			this.transitionInTimeline.fromTo(
+				this.viewModel.$refs.tags,
+				1,
+				{
+					autoAlpha: 0,
+					x: -25,
+				},
+				{
+					autoAlpha: 1,
+					x: 0,
+					ease: Expo.easeOut,
+				},
+				0.2,
+			);
+		}
 
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.heading,
 			1,
 			{
 				opacity: 0,
+				x: -25,
 			},
 			{
 				opacity: 1,
+				x: 0,
+				ease: Expo.easeOut,
 				clearProps: 'opacity',
 			},
-			'=-0.8',
+			0.2,
 		);
 
 		this.transitionInTimeline.fromTo(
@@ -57,24 +72,21 @@ class ArticleTeaserTransitionController extends AbstractTransitionController {
 			1,
 			{
 				opacity: 0,
+				x: -25,
 			},
 			{
 				opacity: 1,
+				x: 0,
+				ease: Expo.easeOut,
 				clearProps: 'opacity',
 			},
-			'=-0.8',
+			0.2,
 		);
 
-		if (this.viewModel.$refs.tag) {
-			(<Array<IAbstractTransitionComponent>>this.viewModel.$refs.tag).forEach((tag, index) => {
-				const componentId = `ButtonTag${index}`;
-
-				this.transitionInTimeline.add(
-					this.getSubTimeline(componentId),
-					`=-${this.getSubTimelineDuration(componentId) * 0.8}`,
-				);
-			});
-		}
+		this.transitionInTimeline.add(
+			this.getSubTimeline('ButtonQuaternary'),
+			0.2,
+		);
 	}
 
 	/**

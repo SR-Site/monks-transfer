@@ -17,7 +17,7 @@ export default {
 			landingRoute: 'init/landingRoute',
 		}),
 		headerTheme() {
-			return this.pageData.headerTheme || this.Theme.LIGHT;
+			return this.pageData ? (this.pageData.headerTheme || this.Theme.LIGHT) : this.Theme.LIGHT;
 		},
 		phoneNumber() {
 			return this.contactOptionGetter('phone').phoneNumber || 'no-phone-number';

@@ -9,6 +9,17 @@ export default {
 	props: {
 		data: VueTypes.shape(BlogPostData).isRequired,
 	},
+	computed: {
+		readTimeLabel() {
+			return this.$t(`global.article.stats.read_time`);
+		},
+		viewCountLabel() {
+			return this.$t(`global.article.stats.${this.data.count === 1 ? 'view' : 'views'}`);
+		},
+		shareCountLabel() {
+			return this.$t(`global.article.stats.${this.data.shares === 1 ? 'share' : 'shares'}`);
+		},
+	},
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new BlogPostTransitionController(this);

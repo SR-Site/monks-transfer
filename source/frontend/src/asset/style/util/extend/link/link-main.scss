@@ -14,11 +14,13 @@
 	}
 
 	// Hover State
-	@include hover() {
-		&:before {
-			width: 100%;
-		}
-	}
+	//&:global .no-touchevents {
+	//	&:local &:hover {
+	//		&:before {
+	//			width: 100%;
+	//		}
+	//	}
+	//}
 
 	@include respond-to(SMALL) {
 		font-size: mobile-size(1.83rem);

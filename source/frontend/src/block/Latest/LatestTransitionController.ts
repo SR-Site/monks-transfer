@@ -13,15 +13,15 @@ class LatestTransitionController extends AbstractTransitionController {
 			opacity: 0,
 		});
 
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '=-0.2');
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonQuaternary'), 0.2);
 
 		if (articles) {
 			articles.forEach((article, index) => {
-				const componentId = `ArticleTeaser${index}`;
-
-				this.transitionInTimeline.add(this.getSubTimeline(componentId), index * 0.25);
+				this.transitionInTimeline.add(this.getSubTimeline(`ArticleTeaser${index}`), 0.2);
 			});
 		}
+
+		this.transitionInTimeline.add(this.getSubTimeline('ScrollBar'), 0.2);
 	}
 
 	/**

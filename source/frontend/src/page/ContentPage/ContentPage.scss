@@ -3,6 +3,10 @@
 		position: relative;
 	}
 
+	.blockWrapper {
+		z-index: zindex($layout, content);
+	}
+
 	@include respond-to(MEDIUM) {
 		.blockWrapper {
 			padding-top: $sizeHeader;

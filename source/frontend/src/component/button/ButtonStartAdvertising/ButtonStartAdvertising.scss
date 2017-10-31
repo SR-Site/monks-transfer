@@ -10,15 +10,6 @@
 		pointer-events: none;
 		transition: right .8s $easeOutExpo;
 		z-index: zindex($layout, content);
-
-		@include hover() {
-			right: 0;
-
-			.icon {
-				transform: rotate(0);
-				color: $colorWhite;
-			}
-		}
 	}
 
 	.background {
@@ -63,5 +54,14 @@
 		margin-left: 1rem;
 		margin-right: $sizeGrid;
 		text-transform: uppercase;
+	}
+}
+
+@include hover('.start-advertising') {
+	right: 0;
+
+	.icon {
+		transform: rotate(0);
+		color: $colorWhite;
 	}
 }

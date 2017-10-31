@@ -1,0 +1,296 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - Phase 1 (changed)",
+	"data": {
+	  "headerTheme": 0,
+	  "hideContactButton": 0
+	},
+	"blocks": [
+	  {
+		"id": "blogPost",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "social": [
+			{
+			  "label": "Get the Full Report",
+			  "title": "Get the Full Report",
+			  "target": "http:\/\/go.spectrumreach.com\/2018TVPredictions",
+			  "type": 1
+			}
+		  ],
+		  "author": {
+			"name": "Spectrum Reach",
+			"role": "Author",
+			"image": {
+			  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
+			  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
+			  "alt": ""
+			}
+		  },
+		  "image": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/2018Predictions-Article-BlockHeader_7.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/2018Predictions-Article-BlockHeader_7.jpg",
+			"alt": "2018 TV Predictions"
+		  },
+		  "tags": [
+			{
+			  "label": "Marketing",
+			  "title": "Marketing",
+			  "target": "\/spectrum-reach-advertising-home?filters=Marketing",
+			  "type": 0
+			},
+			{
+			  "label": "Media",
+			  "title": "Media",
+			  "target": "\/spectrum-reach-advertising-home?filters=Media",
+			  "type": 0
+			}
+		  ],
+		  "views": 0,
+		  "shares": 0,
+		  "time": 10,
+		  "date": "10\/10\/2017",
+		  "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam massa id volutpat convallis. Proin vehicula mi magna, at placerat mauris lobortis tempor. Ut aliquet neque vitae pharetra porttitor. Nam ac varius lectus. Vestibulum at nibh massa. Nullam pellentesque ligula nulla, ac venenatis mi auctor molestie. Aenean at mauris sed lectus aliquet eleifend sed a ipsum. Donec elementum nulla nunc, vitae lacinia felis ullamcorper non.<\/p>",
+		  "subHeading": "TV Marketing Trends to Look Out For",
+		  "heading": "2018 TV Predictions",
+		  "theme": 0,
+		  "target": "\/articles\/2018-tv-predictions"
+		}
+	  },
+	  {
+		"id": "latest",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 3,
+		  "heading": "Spectrum Reach Insights",
+		  "link": {
+			"label": "See all articles",
+			"title": "See all articles",
+			"target": "\/knowledge-center",
+			"type": 0
+		  },
+		  "articles": [
+			{
+			  "social": [
+				{
+				  "label": "Find Your True ROI - Download",
+				  "title": "Find Your True ROI - Download",
+				  "target": "http:\/\/go.spectrumreach.com\/ROI",
+				  "type": 1
+				}
+			  ],
+			  "author": {
+				"name": "Spectrum Reach",
+				"role": "Author",
+				"image": {
+				  "alt": "",
+				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
+				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
+				}
+			  },
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/ROI-Article-BlockHeader_0.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/ROI-Article-BlockHeader_0.jpg",
+				"alt": "Find your true ROI"
+			  },
+			  "views": 0,
+			  "time": 5,
+			  "date": "09\/10\/2017",
+			  "paragraph": "If you\u2019re still relying solely on your gross rating point (GRP) and your customer relationship management (CRM) to measure television and digital campaigns, you\u2019re not getting the full story.",
+			  "subHeading": "What\u2019s the REAL Return on Investment for Your Marketing Plan?",
+			  "heading": " How Do You Know if Your Advertising Campaign is Working?",
+			  "theme": 1,
+			  "target": "\/articles\/how-do-you-know-if-your-advertising-campaign-working"
+			},
+			{
+			  "social": [
+				{
+				  "label": "Read More",
+				  "title": "Read More",
+				  "target": "\/articles\/most-effective-media-buy-and-campaign-match",
+				  "type": 0
+				}
+			  ],
+			  "author": {
+				"name": "Fred Bucher",
+				"role": "Author",
+				"image": {
+				  "alt": "",
+				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png",
+				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png"
+				}
+			  },
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/Reach365-2017-10-09_HERO_18.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/Reach365-2017-10-09_HERO_18.jpg",
+				"alt": "Small, Small Business"
+			  },
+			  "tags": [
+				{
+				  "label": "Marketing",
+				  "title": "Marketing",
+				  "target": "\/spectrum-reach-advertising-home?filters=Marketing",
+				  "type": 0
+				},
+				{
+				  "label": "Media",
+				  "title": "Media",
+				  "target": "\/spectrum-reach-advertising-home?filters=Media",
+				  "type": 0
+				}
+			  ],
+			  "views": 0,
+			  "time": 10,
+			  "date": "03\/10\/2017",
+			  "paragraph": "Our solutions come from our unparalleled data. Our compelling creative content. Our local expertise. That\u2019s why we\u2019re the Marketing Platform of Choice.",
+			  "subHeading": "This is for the dreamers, the entrepreneurs, the innovators.",
+			  "heading": "#Reach365: Small, Small Business",
+			  "theme": 0,
+			  "target": "\/articles\/reach365-small-small-business"
+			},
+			{
+			  "social": [],
+			  "author": {
+				"name": "Spectrum Reach",
+				"role": "Author",
+				"image": {
+				  "alt": "",
+				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
+				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
+				}
+			  },
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/LAUpfront-2017-2-BlockHeader.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/LAUpfront-2017-2-BlockHeader.jpg",
+				"alt": "Spectrum Reach Los Angeles Adlink Upfront"
+			  },
+			  "tags": [],
+			  "views": 0,
+			  "time": 5,
+			  "date": "02\/10\/2017",
+			  "paragraph": "Los Angeles\u2019 most influential media buyers and industry experts joined Spectrum Reach leadership at one of our first Upfronts of the season in Hollywood, California.",
+			  "subHeading": "Los Angeles Adlink Upfront",
+			  "heading": "Television, reInvented",
+			  "theme": 0,
+			  "target": "\/articles\/television-reinvented"
+			},
+			{
+			  "social": [],
+			  "author": {
+				"name": "Spectrum Reach",
+				"role": "Author",
+				"image": {
+				  "alt": "",
+				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
+				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
+				}
+			  },
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-09\/TV-Social-BlockHeader_2.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-09\/TV-Social-BlockHeader_2.jpg",
+				"alt": "TV is Social"
+			  },
+			  "tags": [
+				{
+				  "label": "Marketing",
+				  "title": "Marketing",
+				  "target": "\/spectrum-reach-advertising-home?filters=Marketing",
+				  "type": 0
+				},
+				{
+				  "label": "Media",
+				  "title": "Media",
+				  "target": "\/spectrum-reach-advertising-home?filters=Media",
+				  "type": 0
+				}
+			  ],
+			  "views": 0,
+			  "time": 5,
+			  "date": "22\/09\/2017",
+			  "paragraph": "TV is still the ultimate brand-builder. In any given minute, an average of 50,349,713 viewers 18+ are watching their favorite content on TV across the US",
+			  "subHeading": "Ad-Supported live TV sparks social engagement",
+			  "heading": "TV is Social",
+			  "theme": 1,
+			  "target": "\/articles\/tv-social"
+			},
+			{
+			  "social": [],
+			  "author": {
+				"name": "Spectrum Reach",
+				"role": "Author",
+				"image": {
+				  "alt": "",
+				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
+				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
+				}
+			  },
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-09\/StayingPowerofTV-02_block.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-09\/StayingPowerofTV-02_block.jpg",
+				"alt": "Television is Still Strong for Advertisers"
+			  },
+			  "tags": [
+				{
+				  "label": "Marketing",
+				  "title": "Marketing",
+				  "target": "\/spectrum-reach-advertising-home?filters=Marketing",
+				  "type": 0
+				},
+				{
+				  "label": "Media",
+				  "title": "Media",
+				  "target": "\/spectrum-reach-advertising-home?filters=Media",
+				  "type": 0
+				}
+			  ],
+			  "views": 0,
+			  "time": 5,
+			  "date": "19\/09\/2017",
+			  "paragraph": "Media sales organizations need to move beyond the elite. Television advertising is attainable for businesses of any size.  Television remains the best way to build brands and reach customers. ",
+			  "subHeading": "Television is Still Strong for Advertisers",
+			  "heading": "TV Advertising Isn\u2019t Just for the Elite",
+			  "theme": 0,
+			  "target": "\/articles\/tv-advertising-isnt-just-elite"
+			},
+			{
+			  "social": [],
+			  "author": {
+				"name": "Fred Bucher",
+				"role": "Author",
+				"image": {
+				  "alt": "",
+				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png",
+				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png"
+				}
+			  },
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-09\/Atlanta_4.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-09\/Atlanta_4.jpg",
+				"alt": "Emmy Award Winning TV Programming"
+			  },
+			  "tags": [],
+			  "views": 0,
+			  "time": 5,
+			  "date": "18\/09\/2017",
+			  "paragraph": "Cable\u2019s innovative and diverse programming continues to gain critical-acclaim with a historic win at this year\u2019s Primetime Emmy Awards. It\u2019s the Golden Age of TV \u2013 and cable continues to deliver buzzworthy (and award-winning) audience-favorites.",
+			  "subHeading": "2017 Emmys award and nominate dozens of the best shows on TV",
+			  "heading": "A Historic Win and Critical-Acclaim for Cable Programming",
+			  "theme": 0,
+			  "target": "\/articles\/historic-win-and-critical-acclaim-cable-programming"
+			}
+		  ]
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}

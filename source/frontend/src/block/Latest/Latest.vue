@@ -7,8 +7,8 @@
 			<div class="overrule-overlap">
 				<header :class="$style.header">
 					<h2 :class="$style.heading" class="heading heading-03" v-html="data.heading"></h2>
-					<ButtonPrimary
-						componentId="ButtonPrimary"
+					<ButtonQuaternary
+						componentId="ButtonQuaternary"
 						:title="data.link.title"
 						:label="data.link.label"
 						:type="ButtonType.LINK"
@@ -19,16 +19,19 @@
 						}"
 						:class="$style.button"/>
 				</header>
-				<div :class="$style.latestArticles">
-					<ArticleTeaser
-						v-for="(article, index) in data.articles"
-						:componentId="`ArticleTeaser${index}`"
-						:key="index"
-						:data="getArticleData(article)"
-						:class="$style.articleTeaser"
-						ref="article"
-					/>
+				<div :class="$style.draggableContainer" ref="draggableContainer">
+					<div :class="$style.latestArticles" ref="draggableElement" class="js-draggable-element">
+						<ArticleTeaser
+							v-for="(article, index) in data.articles"
+							:componentId="`ArticleTeaser${index}`"
+							:key="index"
+							:data="getArticleData(article)"
+							:class="$style.articleTeaser"
+							ref="article"
+						/>
+					</div>
 				</div>
+				<ScrollBar componentId="ScrollBar" @update="handleScrollBarUpdate" :class="$style.scrollBar"/>
 			</div>
 		</div>
 	</div>

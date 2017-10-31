@@ -23,15 +23,6 @@
 			}
 		}
 
-		// Hover State
-		@include hover() {
-			background-color: $colorPrimary;
-
-			.icon {
-				color: white;
-			}
-		}
-
 		@include respond-to(SMALL) {
 
 			&.large {
@@ -42,5 +33,13 @@
 				}
 			}
 		}
+	}
+}
+
+@include hover('.button-circle-close') {
+	background-color: $colorPrimary;
+
+	.icon {
+		color: white;
 	}
 }

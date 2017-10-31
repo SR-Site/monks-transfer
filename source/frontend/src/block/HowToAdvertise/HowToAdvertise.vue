@@ -6,7 +6,7 @@
 		<div class="overrule-overlap">
 			<div class="site-frame">
 				<header :class="$style.header">
-					<h2 class="heading heading-04" v-html="data.heading"></h2>
+					<h2 :class="$style.heading" class="heading heading-04" v-html="data.heading"></h2>
 					<ButtonPrimary
 						componentId="ButtonPrimary"
 						v-track="{
@@ -20,6 +20,7 @@
 						:label="data.link.label"
 						:type="ButtonType.LINK"
 						:theme="Theme.DARK"
+						:class="$style.button"
 						:link="{
 							type: linkTypeMap[data.link.type],
 							target: data.link.target,
