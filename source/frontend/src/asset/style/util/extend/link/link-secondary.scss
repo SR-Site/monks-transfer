@@ -1,8 +1,0 @@
-%link-secondary {
-	@extend %link-main;
-	font: 400 1.8rem / 1.625 $fontOpenSans;
-
-	@include respond-to(SMALL) {
-		font-size: mobile-size(2.8rem);
-	}
-}

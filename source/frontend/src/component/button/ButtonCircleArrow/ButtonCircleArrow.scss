@@ -4,7 +4,7 @@
 		align-items: center;
 		white-space: nowrap;
 
-		&.align-left {
+		&.alignment-left {
 			.label {
 				order: 1;
 				margin-left: $sizeGrid / 2;
@@ -14,7 +14,7 @@
 			}
 		}
 
-		&.align-right {
+		&.alignment-right {
 			.label {
 				order: 0;
 				margin-right: $sizeGrid / 2;
@@ -60,13 +60,13 @@
 		}
 
 		.button {
-			&.align-left {
+			&.alignment-left {
 				.label {
 					margin-left: $sizeGrid;
 				}
 			}
 
-			&.align-right {
+			&.alignment-right {
 				.label {
 					margin-right: $sizeGrid;
 				}

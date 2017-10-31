@@ -1,7 +1,119 @@
 :local {
 	.site-footer {
+		@include size(100%, auto);
+		min-height: 400px;
 		background: $colorPrimary;
-		padding: $sizeGrid * 2;
 		color: white;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.logo {
+		@include offset($sizeGrid * -2.5, $sizeGrid * -7.5);
+		position: absolute;
+	}
+
+	.logo-icon {
+		@include position(50%, $sizeGrid * 2, auto, auto);
+		transform: translateY(-50%);
+		position: absolute;
+	}
+
+	.logo-arrow {
+		@include arrow(right, $colorSecondary, $sizeGrid * 20);
+	}
+
+	.secondary-arrow {
+		@include position(auto, 0, $sizeGrid * -2, auto);
+		@include arrow(left, $colorSecondary, $sizeGrid * 8);
+		position: absolute;
+	}
+
+	.content {
+		@include size(100%, auto);
+		padding-top: $sizeGrid * 2;
+		padding-left: $sizeGrid * 9.5; // half the arrow size + 2 extra grid sizes
+		padding-right: $sizeGrid * 5;
+
+		.top,
+		.middle,
+		.bottom {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.middle {
+			@extend %reset-list;
+			margin-bottom: $sizeGrid;
+			flex-direction: column;
+		}
+
+		.middle-link {
+			width: 100%;
+			color: white;
+
+			&:not(:last-child) {
+				margin-bottom: $sizeGrid / 2;
+			}
+		}
+
+		.bottom {
+			flex-direction: row;
+			justify-content: flex-start;
+			color: #017eba;
+		}
+
+		.legal-links {
+			@extend %reset-list;
+			font-size: 0;
+			margin-left: $sizeGrid * 4;
+		}
+
+		.legal-link {
+			display: inline-block;
+
+			&:not(:first-child) {
+				margin-left: $sizeGrid /2;
+			}
+		}
+	}
+
+	@include respond-to(LARGE) {
+		.logo {
+			left: $sizeGrid * -4.5;
+		}
+
+		.content {
+			padding-left: $sizeGrid * 7;
+			padding-right: $sizeGrid * 7;
+
+			.legal-links {
+				margin-left: $sizeGrid;
+			}
+		}
+	}
+	@include respond-to(MEDIUM) {
+		.content {
+			padding-top: $sizeGrid * 4;
+			padding-left: $sizeGrid * 4.5;
+			padding-right: $sizeGrid * 3;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.content {
+			padding-top: $sizeGrid * 4;
+			padding-left: $sizeGrid;
+			padding-right: $sizeGrid;
+
+			.top,
+			.middle,
+			.bottom {
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+			}
+		}
 	}
 }

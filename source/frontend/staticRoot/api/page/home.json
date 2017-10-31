@@ -72,16 +72,6 @@
 				"title": "See Featured Programming",
 				"target": "\/featured-programs",
 				"type": 0
-			  },
-			  "statistics": {
-				"heading": "Viewing for All Sports on TV<br \/>",
-				"stats": [
-				  {
-					"heading": "Sports Programming<br \/>",
-					"description": "<p>available on cable<\/p>",
-					"value": 96
-				  }
-				]
 			  }
 			}
 		  ]

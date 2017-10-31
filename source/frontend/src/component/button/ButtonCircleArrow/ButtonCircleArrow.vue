@@ -3,7 +3,7 @@
 
 <template>
 	<button @click="handleClick"
-	        :class="[$style.buttonCircleArrow, $style[`align-${(mappedArrowPosition)}`]]"
+	        :class="[$style.buttonCircleArrow, $style[ClassNameHelper.parseAlignment(arrowPosition)]]"
 	        class="button">
 		<Icon :class="$style.icon" :name="`circle-arrow-${mappedDirection}`"/>
 		<span :class="$style.label">{{label}}</span>

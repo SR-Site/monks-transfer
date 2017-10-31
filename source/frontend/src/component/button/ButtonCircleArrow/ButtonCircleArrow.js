@@ -15,9 +15,6 @@ export default {
 		mappedDirection() {
 			return Direction[this.direction].toLowerCase();
 		},
-		mappedArrowPosition() {
-			return Alignment[this.arrowPosition].toLowerCase();
-		},
 	},
 	methods: {
 		handleAllComponentsReady() {

@@ -32,7 +32,8 @@ export default {
 	},
 	computed: {
 		hasStatistics() {
-			return this.data.slides.map(slide => slide.statistics !== null).indexOf(true) > -1;
+			console.log(this.data.slides);
+			return this.data.slides.map(slide => slide.statistics !== void 0).indexOf(true) > -1;
 		},
 	},
 	props: {

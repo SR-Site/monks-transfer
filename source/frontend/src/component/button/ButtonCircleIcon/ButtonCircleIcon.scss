@@ -1,2 +1,106 @@
 :local {
+	.button-circle-icon {
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+
+		&.alignment-left {
+			.label {
+				order: 1;
+				margin-left: $sizeGrid / 2;
+			}
+			.icon {
+				order: 0;
+			}
+		}
+
+		&.alignment-right {
+			.label {
+				order: 0;
+				margin-right: $sizeGrid / 2;
+			}
+			.icon {
+				order: 1;
+			}
+		}
+	}
+
+	.icon {
+		@include size(50px); // Design wants it to be fixed 50px
+
+		svg {
+			backface-visibility: hidden;
+
+			path {
+				fill: currentColor;
+			}
+
+			circle {
+				fill: transparent;
+				stroke: $colorWhite;
+				stroke-width: 1px;
+				transition: stroke 0.2s $easeInOut, stroke-width 0.2s $easeInOut, opacity 0.2s $easeInOut;
+			}
+		}
+	}
+
+	.label {
+		font: 600 1.2rem / 1 $fontOpenSans;
+		text-transform: uppercase;
+		color: $colorWhite;
+		position: relative;
+
+		&:before {
+			@include size(100%, 1px);
+			transform: scaleX(0);
+			transform-origin: left center;
+			transition: transform 0.2s $easeInOutCubic;
+			background: currentColor;
+			bottom: -2px;
+			left: 0;
+			position: absolute;
+			content: '';
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.icon {
+			@include size($sizeGrid*3);
+		}
+
+		.label {
+			font-size: mobile-size(2.2rem);
+		}
+
+		.button {
+			&.alignment-left {
+				.label {
+					margin-left: $sizeGrid;
+				}
+			}
+
+			&.alignment-right {
+				.label {
+					margin-right: $sizeGrid;
+				}
+			}
+		}
+	}
+}
+
+@include hover('.button-circle-icon') {
+	.label {
+		&:before {
+			transform: scaleX(1);
+		}
+	}
+	.icon {
+		svg {
+			circle {
+				stroke-width: 0.5rem;
+				stroke: $colorSecondary;
+				opacity: 1;
+			}
+		}
+	}
 }
