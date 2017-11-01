@@ -5,7 +5,7 @@
 	<div :class="$style.scrollBar">
 		<div :class="$style.scrollBarInner">
 			<div :class="$style.knob" class="js-draggable-element">
-				<span></span>
+				<Icon name="arrows" :class="$style.icon" class="abs-center"></Icon>
 			</div>
 		</div>
 	</div>

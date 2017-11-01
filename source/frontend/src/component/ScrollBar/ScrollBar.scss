@@ -1,32 +1,38 @@
 :local {
 	.scroll-bar-inner {
 		@include size(100%, 2px);
-		margin: 14px 0;
+		margin: 19px 0;
 		background: #e4e5e5;
 	}
 
 	.knob {
-		@include size(20%, 28px);
+		@include size(40px);
 		position: absolute;
 		left: 0;
 		top: 50%;
 		transform: translateY(-50%);
 		text-align: center;
+		background: $colorSecondary;
+		border-radius: 40px;
 
-		&:after {
-			@include size(100%, 8px);
-			@include position(50%, 0, auto, 0);
-			background: $colorSecondary;
-			position: absolute;
-			content: '';
-			transform: translateY(-50%);
-			transition: background-color 150ms ease-in, height 100ms ease-in;
+		.icon {
+			width: 15px;
+
+			svg {
+				transition: transform 1s $easeInOutBack;
+				transform-origin: center center;
+			}
+
+			path {
+				fill: $colorWhite;
+			}
 		}
 
 		&:hover {
-			&:after {
-				background-color: $colorPrimary;
-				height: 12px;
+			.icon {
+				svg {
+					transform: scale(1.1);
+				}
 			}
 		}
 	}
