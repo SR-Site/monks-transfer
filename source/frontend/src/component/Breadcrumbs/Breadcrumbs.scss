@@ -41,6 +41,11 @@
 		position: relative;
 		display: block;
 
+		&.is-active {
+			pointer-events: none;
+			opacity: 0.5;
+		}
+
 		&:before {
 			@include size(100%, 1px);
 			transform: scaleX(0);

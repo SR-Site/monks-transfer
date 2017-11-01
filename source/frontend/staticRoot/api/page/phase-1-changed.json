@@ -9,19 +9,19 @@
 		{
 		  "label": "Home",
 		  "title": "Home",
-		  "target": "home",
+		  "target": "/home",
 		  "type": 0
 		},
 		{
 		  "label": "Advertising Solutions",
 		  "title": "Advertising Solutions",
-		  "target": "advertising-solutions",
+		  "target": "/advertising-solutions",
 		  "type": 0
 		},
 		{
-		  "label": "Lorem ipsum",
-		  "title": "Lorem ipsum",
-		  "target": "all-blocks",
+		  "label": "Phase 1 (changed)",
+		  "title": "Phase 1 (changed)",
+		  "target": "/phase-1-changed",
 		  "type": 0
 		}
 	  ]
