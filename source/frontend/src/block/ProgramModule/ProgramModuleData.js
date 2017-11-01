@@ -22,6 +22,7 @@ export default {
 	items: VueTypes.arrayOf(
 		VueTypes.shape(
 			{
+				target: VueTypes.string.isRequired,
 				heading: VueTypes.string.isRequired,
 				paragraph: VueTypes.string.isRequired,
 				stats: VueTypes.shape(

@@ -13,6 +13,7 @@ export default {
 	props: {
 		data: VueTypes.shape(
 			{
+				target: VueTypes.string.isRequired,
 				heading: VueTypes.string.isRequired,
 				paragraph: VueTypes.string.isRequired,
 				stats: VueTypes.shape(

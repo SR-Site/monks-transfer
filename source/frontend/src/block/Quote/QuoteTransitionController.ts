@@ -13,7 +13,7 @@ class QuoteTransitionController extends AbstractTransitionController {
 			0.8,
 			{
 				autoAlpha: 0,
-				y: 50,
+				y: 20,
 			},
 			{
 				autoAlpha: 1,
@@ -26,7 +26,7 @@ class QuoteTransitionController extends AbstractTransitionController {
 			0.8,
 			{
 				autoAlpha: 0,
-				y: 50,
+				y: 20,
 			},
 			{
 				autoAlpha: 1,
@@ -40,7 +40,7 @@ class QuoteTransitionController extends AbstractTransitionController {
 			0.8,
 			{
 				autoAlpha: 0,
-				y: 50,
+				y: 20,
 			},
 			{
 				autoAlpha: 1,
