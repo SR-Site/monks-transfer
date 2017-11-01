@@ -1,11 +1,12 @@
 :local {
 	.image-call-to-actions {
-		@include aspect-ratio(1600px, 640px);
+		@include aspect-ratio(1440px, 480px);
 		position: relative;
 	}
 
 	.call-to-actions-content {
 		font-size: 0;
+		color: white;
 
 		a {
 			cursor: pointer;
@@ -13,18 +14,15 @@
 			position: relative;
 			height: 100%;
 			display: inline-block;
+			color: currentColor;
 		}
 
-		.theme-dark {
-			color: $colorPrimary;
-		}
-
-		.theme-light {
-			color: $colorWhite;
+		.pagination-number {
+			color: currentColor;
 		}
 
 		.heading {
-			margin: $sizeGrid / 2 auto $sizeGrid / 2 $sizeGrid / 2;
+			margin: 0 auto $sizeGrid / 2 $sizeGrid / 2;
 		}
 
 		.copy {
@@ -109,6 +107,7 @@
 		}
 
 		.call-to-action-image {
+
 			img {
 				object-fit: cover;
 			}

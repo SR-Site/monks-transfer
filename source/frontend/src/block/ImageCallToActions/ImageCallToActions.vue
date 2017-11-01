@@ -13,15 +13,16 @@
 					ref="image"
 				>
 					<ResponsiveImage
-						class="abs-fill"
+						class="abs-fill fit-cover"
 						:componentId="`ResponsiveImageNormal${index}`"
 						:class="$style.background"
 						:image="callToAction.background"/>
 					<ResponsiveImage
-						class="abs-fill"
+						class="abs-fill fit-cover"
 						:componentId="`ResponsiveImageBlurred${index}`"
 						:class="$style.backgroundBlurred"
 						:image="callToAction.backgroundBlurred"/>
+					<div class="primary-gradient-overlay"></div>
 				</div>
 			</div>
 			<div :class="$style.callToActionsContent" class="abs-fill">
@@ -32,10 +33,13 @@
 					@mouseleave="handleMouseLeave"
 					:key="index"
 					:style="{width: `${100 / data.callToActions.length}%`}"
-					:class="[$style.callToActionsLink ,$style[ClassNameHelper.parseTheme(callToAction.theme)]]">
+					:class="$style.callToActionsLink">
 
 					<span :class="$style.textWrapper">
-						<span :class="$style.paginationNumber" v-html="getPaginationNumber(index + 1)"></span>
+						<span
+							:class="$style.paginationNumber"
+							class="pagination-number"
+							v-html="getPaginationNumber(index + 1)"></span>
 						<h3 :class="$style.heading" class="heading heading-03" v-html="callToAction.heading"></h3>
 						<p :class="$style.copy" class="copy copy-01" v-html="callToAction.paragraph"></p>
 					</span>

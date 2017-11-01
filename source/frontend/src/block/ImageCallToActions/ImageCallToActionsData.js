@@ -14,7 +14,6 @@ export default {
 			background: VueTypes.shape(PropImage).isRequired,
 			backgroundBlurred: VueTypes.shape(PropImage).isRequired,
 			link: VueTypes.shape(PropLink).isRequired,
-			theme: VueTypes.number.isRequired,
 		}),
 	).isRequired,
 };
