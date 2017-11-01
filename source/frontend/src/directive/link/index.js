@@ -1,5 +1,6 @@
 import NativeEventListener from '../../util/event/NativeEventListener';
 import getRouter from '../../router';
+import LinkType from '../../data/enum/BackendLinkType';
 
 const namespace = 'LinkDirective';
 
@@ -11,10 +12,23 @@ export default {
 		element[namespace] = new NativeEventListener(element, 'click', event => {
 			// Cancel the click
 			event.preventDefault();
-			// Update the route
-			getRouter().push({
-				path: binding.value.path,
-			});
+			console.log(binding.value);
+
+			switch (binding.value.type) {
+				case LinkType.INTERNAL:
+					getRouter().push(
+						{
+							path: binding.value.path,
+						},
+					);
+					break;
+				case LinkType.EXTERNAL:
+					window.location.href = binding.value.path;
+					break;
+				case LinkType.EXTERNAL_BLANK:
+					window.open(binding.value.path);
+					break;
+			}
 		});
 	},
 	unbind(element) {

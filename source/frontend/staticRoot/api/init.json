@@ -91,48 +91,25 @@
 		  }
 		],
 		"secondaryLinks": [
-		  [
-			{
-			  "label": "Privacy policy",
-			  "title": "Privacy policy",
-			  "target": "\/privacy-policy",
-			  "type": 0
-			},
-			{
-			  "label": "Spectrum Reach Terms",
-			  "title": "Spectrum Reach Terms",
-			  "target": "\/terms-conditions",
-			  "type": 0
-			},
-			{
-			  "label": "Careers",
-			  "title": "Careers",
-			  "target": "http:\/\/www.spectrumreachjobs.com\/",
-			  "type": 1
-			}
-		  ],
-		  []
-		],
-		"social": {
-		  "twitter": {
-			"label": "Twitter @Spectrum Reach",
-			"title": "Twitter @Spectrum Reach",
-			"target": "https:\/\/twitter.com\/SpectrumReach",
-			"type": 1
+		  {
+			"label": "Privacy policy",
+			"title": "Privacy policy",
+			"target": "\/privacy-policy",
+			"type": 0
 		  },
-		  "vimeo": {
-			"label": "Spectrum Reach",
-			"title": "Spectrum Reach",
-			"target": "https:\/\/vimeo.com\/spectrumreach",
-			"type": 1
+		  {
+			"label": "Spectrum Reach Terms",
+			"title": "Spectrum Reach Terms",
+			"target": "\/terms-conditions",
+			"type": 0
 		  },
-		  "linkedin": {
-			"label": "Spectrum Reach",
-			"title": "Spectrum Reach",
-			"target": "https:\/\/www.linkedin.com\/company\/162999?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A162999%2Cidx%3A1-1-1%2CtarId%3A1442594635072%2Ctas%3Aspectrum%20reach",
+		  {
+			"label": "Careers",
+			"title": "Careers",
+			"target": "http:\/\/www.spectrumreachjobs.com\/",
 			"type": 1
 		  }
-		}
+		]
 	  },
 	  "slideOutPanel": {
 		"contact": {

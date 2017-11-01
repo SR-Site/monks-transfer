@@ -22,7 +22,7 @@
 				:type="ButtonType.LINK"
 				:link="{
 					type: LinkType.EXTERNAL_BLANK,
-					target: phoneNumber,
+					target: `tel:${phoneNumber}`,
 				}"
 				:class="[$style.button, $style.callToReach]"/>
 			<ButtonHeader

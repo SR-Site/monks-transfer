@@ -13,11 +13,18 @@ export default {
 		...mapGetters(
 			{
 				contactOptionGetter: 'initData/contactOption',
+				footerData: 'initData/footerData',
 			},
 		),
 		phoneNumber() {
 			return this.contactOptionGetter('phone').phoneNumber || 'no-phone-number';
 		},
+		email() {
+			return this.contactOptionGetter('email') || {};
+		},
+		mailTo() {
+			return `mailto:${this.email.emailAddress}?subject=${this.email.emailSubject}&body=${this.email.emailBody}`
+		}
 	},
 	methods: {
 		handleAllComponentsReady() {
