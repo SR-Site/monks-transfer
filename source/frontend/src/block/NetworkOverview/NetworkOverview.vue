@@ -5,7 +5,7 @@
 	<div :class="$style.networkOverview">
 		<div :class="$style.siteFrame" class="site-frame">
 			<div class="overrule-overlap">
-				<header :class="$style.header">
+				<header :class="$style.header" ref="heading">
 					<h2 :class="$style.heading" class="heading heading-06" v-html="data.heading"></h2>
 				</header>
 				<div :class="$style.draggableContainer" ref="draggableContainer">

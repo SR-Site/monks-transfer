@@ -5,7 +5,7 @@
 	<div :class="$style.latest">
 		<div :class="$style.siteFrame" class="site-frame">
 			<div class="overrule-overlap">
-				<header :class="$style.header">
+				<header :class="$style.header" ref="heading">
 					<h2 :class="$style.heading" class="heading heading-03" v-html="data.heading"></h2>
 					<ButtonQuaternary
 						componentId="ButtonQuaternary"

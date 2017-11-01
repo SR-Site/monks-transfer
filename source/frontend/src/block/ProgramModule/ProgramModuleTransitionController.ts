@@ -27,6 +27,8 @@ class ProgramModuleTransitionController extends AbstractTransitionController {
 				this.transitionInTimeline.add(this.getSubTimeline(`ProgramTeaser${index}`), 1)
 			});
 		}
+
+		this.transitionInTimeline.add(this.getSubTimeline('ScrollBar'), 1);
 	}
 
 	/**
