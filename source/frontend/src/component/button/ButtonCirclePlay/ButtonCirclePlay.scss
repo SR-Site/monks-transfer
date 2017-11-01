@@ -1,7 +1,5 @@
 :local {
 	.button-circle-play {
-		@include size($sizeGrid*2.5);
-
 		svg {
 			backface-visibility: hidden;
 			overflow: visible;
@@ -23,9 +21,32 @@
 
 	.icon {
 		@include offset(50%, 50%);
-		@include size(calc(#{$sizeGrid * 2.5} - 20px));
 		transform: translate(-50%, -50%);
 		position: absolute;
+	}
+
+	.large {
+		@include size($sizeGrid*2.5);
+		.icon {
+
+			@include size(calc(#{$sizeGrid * 2.5} - 20px));
+		}
+	}
+
+	.small {
+		@include size($sizeGrid*2);
+
+		.icon {
+			@include size(calc(#{$sizeGrid * 2} - 20px));
+		}
+	}
+
+	.small {
+		@include size($sizeGrid*1.5);
+
+		.icon {
+			@include size(calc(#{$sizeGrid * 1.5} - 20px));
+		}
 	}
 }
 

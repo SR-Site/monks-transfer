@@ -92,6 +92,7 @@
 
 		.steps {
 			text-align: center;
+			margin-bottom: $sizeGrid * 2;
 		}
 
 		.step {
@@ -114,6 +115,7 @@
 
 			.image {
 				@include size($sizeGrid * 8 !important);
+				margin-bottom: $sizeGrid * 2;
 			}
 		}
 	}

@@ -107,6 +107,136 @@
 		}
 	  },
 	  {
+		"id": "programModule",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "items": [
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-08\/bravo-flipping%20out-keyart-800-x-445.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-08\/bravo-flipping%20out-keyart-800-x-445.jpg",
+				"alt": "Bravo  Flipping Out"
+			  },
+			  "heading": "Bravo<br \/>Flipping Out<br \/>",
+			  "paragraph": "<p>Just when America\u2019s favorite house flipper thinks his life could not be any more chaotic, Jeff Lewis embarks on the most unpredictable challenge yet \u2013 fatherhood. With no shortage of design work, tight deadlines and outrageous clients, tempers flare and antics commence as his two very different worlds collide.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Thursdays, 9-10pm ET\/PT, 8\/17-10\/19\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6><strong>\u00a0<\/strong><\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "video": {
+				"url": "https:\/\/vimeo.com\/98576814",
+				"type": 1
+			  },
+			  "tags": []
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-09\/program_image-MNF_2017-09.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-09\/program_image-MNF_2017-09.jpg",
+				"alt": "ESPN\/ESPN2 \u200b\u200b\u200b\u200b\u200b\u200b\u200bMonday Night Football"
+			  },
+			  "heading": "ESPN<br \/>Monday Night Football<br \/>",
+			  "paragraph": "<p>Monday returns as football\u2019s favorite day of the week capping off each Fantasy Football round. Monday Night Football was the #1 telecast of the night 15 of 16 weeks among all key adult and male demographics last season.*<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Now through 12\/25<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6><strong>Source: Scarborough USA+ 201<\/strong><strong>7<\/strong><strong>\u00a0Release\u00a0<\/strong><strong>1<\/strong><strong>\u00a0(<\/strong><strong>De<\/strong><strong>15-<\/strong><strong>Ap<\/strong><strong>16) Adults 18+ who watch Monday Night Football. *ESPN MediaZone, 12\/29\/16.<\/strong><\/h6>",
+			  "stats": {
+				"percentage": 56,
+				"demographic": "of the Asian Americans earn $42k+"
+			  },
+			  "tags": []
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-07\/program_LowesFiles.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-07\/program_LowesFiles.jpg",
+				"alt": "A&E  The Lowe Files"
+			  },
+			  "heading": "A&amp;E<br \/>The Lowe Files<br \/>",
+			  "paragraph": "<p><em>The Lowe Files<\/em>\u00a0follows Rob Lowe and his two sons, Matthew and John Owen, as they travel through the country to explore infamous unsolved mysteries, a curiosity that Rob has had since his early childhood days and has now been passed down to his boys.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Wednesdays, 10-11pm ET\/PT, 8\/2-9\/20\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6>Source: Scarborough USA+ 2016 Release 2 Total (Aug 2015 - Nov 2016); Base: Total Adults 18+<\/h6>",
+			  "stats": {
+				"percentage": 64,
+				"demographic": "Men"
+			  },
+			  "tags": []
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-06\/usa-network-the-sinner-1-keyart-OPT.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-06\/usa-network-the-sinner-1-keyart-OPT.jpg",
+				"alt": "USA \u2013 The Sinner"
+			  },
+			  "heading": "USA<br \/>The Sinner<br \/>",
+			  "paragraph": "<p><em>The Sinner<\/em>\u00a0follows a young mother (Jessica Biel) who, when overcome by an inexplicable fit of rage, commits a startling act of violence and to her horror has no idea why.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Wednesdays, 10-11pm ET\/PT, 8\/2-9\/20\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6>Source: Scarborough USA+ 2016 Release 2 Total (Aug 2015 - Nov 2016); Base: Total Adults 18+<\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "tags": []
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-08\/bravo-flipping%20out-keyart-800-x-445.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-08\/bravo-flipping%20out-keyart-800-x-445.jpg",
+				"alt": "Bravo  Flipping Out"
+			  },
+			  "heading": "Bravo<br \/>Flipping Out<br \/>",
+			  "paragraph": "<p>Just when America\u2019s favorite house flipper thinks his life could not be any more chaotic, Jeff Lewis embarks on the most unpredictable challenge yet \u2013 fatherhood. With no shortage of design work, tight deadlines and outrageous clients, tempers flare and antics commence as his two very different worlds collide.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Thursdays, 9-10pm ET\/PT, 8\/17-10\/19\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6><strong>\u00a0<\/strong><\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "video": {
+				"url": "https:\/\/vimeo.com\/98576814",
+				"type": 1
+			  },
+			  "tags": []
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-09\/program_image-MNF_2017-09.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-09\/program_image-MNF_2017-09.jpg",
+				"alt": "ESPN\/ESPN2 \u200b\u200b\u200b\u200b\u200b\u200b\u200bMonday Night Football"
+			  },
+			  "heading": "ESPN<br \/>Monday Night Football<br \/>",
+			  "paragraph": "<p>Monday returns as football\u2019s favorite day of the week capping off each Fantasy Football round. Monday Night Football was the #1 telecast of the night 15 of 16 weeks among all key adult and male demographics last season.*<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Now through 12\/25<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6><strong>Source: Scarborough USA+ 201<\/strong><strong>7<\/strong><strong>\u00a0Release\u00a0<\/strong><strong>1<\/strong><strong>\u00a0(<\/strong><strong>De<\/strong><strong>15-<\/strong><strong>Ap<\/strong><strong>16) Adults 18+ who watch Monday Night Football. *ESPN MediaZone, 12\/29\/16.<\/strong><\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "tags": []
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-07\/program_LowesFiles.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-07\/program_LowesFiles.jpg",
+				"alt": "A&E  The Lowe Files"
+			  },
+			  "heading": "A&amp;E<br \/>The Lowe Files<br \/>",
+			  "paragraph": "<p><em>The Lowe Files<\/em>\u00a0follows Rob Lowe and his two sons, Matthew and John Owen, as they travel through the country to explore infamous unsolved mysteries, a curiosity that Rob has had since his early childhood days and has now been passed down to his boys.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Wednesdays, 10-11pm ET\/PT, 8\/2-9\/20\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6>Source: Scarborough USA+ 2016 Release 2 Total (Aug 2015 - Nov 2016); Base: Total Adults 18+<\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "tags": []
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-06\/usa-network-the-sinner-1-keyart-OPT.jpg",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-06\/usa-network-the-sinner-1-keyart-OPT.jpg",
+				"alt": "USA \u2013 The Sinner"
+			  },
+			  "heading": "USA<br \/>The Sinner<br \/>",
+			  "paragraph": "<p><em>The Sinner<\/em>\u00a0follows a young mother (Jessica Biel) who, when overcome by an inexplicable fit of rage, commits a startling act of violence and to her horror has no idea why.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Wednesdays, 10-11pm ET\/PT, 8\/2-9\/20\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6>Source: Scarborough USA+ 2016 Release 2 Total (Aug 2015 - Nov 2016); Base: Total Adults 18+<\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "tags": []
+			}
+		  ]
+		}
+	  },
+	  {
 		"id": "quote",
 		"data": {
 		  "overlap": true,
@@ -275,7 +405,6 @@
 				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/LAUpfront-2017-2-BlockHeader.jpg",
 				"alt": "Spectrum Reach Los Angeles Adlink Upfront"
 			  },
-			  "tags": [],
 			  "views": 0,
 			  "time": 5,
 			  "date": "02\/10\/2017",
@@ -379,7 +508,6 @@
 				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-09\/Atlanta_4.jpg",
 				"alt": "Emmy Award Winning TV Programming"
 			  },
-			  "tags": [],
 			  "views": 0,
 			  "time": 5,
 			  "date": "18\/09\/2017",

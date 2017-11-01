@@ -47,7 +47,7 @@
 
 	@include respond-to(SMALL) {
 		.site-frame {
-			padding: 0 $sizeGrid;
+			padding: 0 $sizeGridMobile * 2;
 		}
 
 		.button {

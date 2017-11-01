@@ -118,7 +118,8 @@
 			height: auto;
 
 			.copy {
-				display: none;
+				opacity: 1;
+				transform: translateY(0);
 			}
 
 			.heading {

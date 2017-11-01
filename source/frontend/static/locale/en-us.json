@@ -11,6 +11,9 @@
 	  "next": "Next",
 	  "read_more": "Read more"
 	},
+	"show": {
+	  "percent": "Percent"
+	},
 	"article": {
 	  "stats": {
 		"read_time": "min. read",

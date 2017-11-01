@@ -1,2 +1,61 @@
 :local {
+	.site-frame {
+		overflow: visible;
+	}
+
+	.header {
+		@include size(100%, auto);
+		justify-content: flex-start;
+		display: flex;
+		align-items: center;
+		margin-bottom: $sizeGrid;
+	}
+
+	.draggable-container {
+		padding: 0;
+	}
+
+	.button {
+		margin-left: $sizeGrid * 2;
+	}
+
+	.programs {
+		width: auto;
+		margin-bottom: $sizeGrid;
+		white-space: nowrap;
+		font-size: 0;
+		display: inline-block;
+		margin-left: -$sizeGrid;
+	}
+
+	.program-teaser {
+		@include size($sizeGrid * 10, $sizeGrid * 12);
+		display: inline-block;
+		vertical-align: top;
+		margin-left: $sizeGrid;
+
+		&:not(:last-child) {
+			border-right: 1px solid $colorBorder;
+		}
+	}
+
+	.scroll-bar {
+		margin: $sizeGridSecondary 0;
+	}
+
+	@include respond-to(SMALL) {
+		.site-frame {
+			padding: 0 $sizeGridMobile * 2;
+		}
+
+		.program-teaser {
+			@include size(320px, 400px);
+		}
+	}
+
+	@include respond-to(X_SMALL) {
+		.program-teaser {
+			width: 310px
+		}
+	}
 }

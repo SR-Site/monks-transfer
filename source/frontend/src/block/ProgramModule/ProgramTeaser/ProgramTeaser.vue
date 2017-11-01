@@ -1,0 +1,37 @@
+<style src="./ProgramTeaser.scss" module lang="scss"></style>
+<script src="./ProgramTeaser.js"></script>
+
+<template>
+	<article :class="$style.programTeaser">
+		<div :class="$style.content">
+			<figure :class="$style.image" ref="image">
+				<ResponsiveImage componentId="ResponsiveImage" :image="data.image" class="abs-fill fit-cover"/>
+				<div class="primary-gradient-overlay" :class="$style.gradientOverlay"></div>
+				<ButtonCirclePlay
+					v-if="data.video"
+					componentId="ButtonCirclePlay"
+					title="play"
+					:type="ButtonType.ACTION"
+					:theme="Theme.DARK"
+					:isPlaying="false"
+					:class="$style.playButton"
+					:size="Size.SMALL"
+					ref="playButton"
+					@click="handleVideoClick"/>
+			</figure>
+			<a :class="$style.description" v-link="{path: data.target, type: 0}">
+				<div>
+					<h2 :class="$style.heading" class="heading-07" v-html="data.heading" ref="header"></h2>
+					<p :class="$style.copy" class="copy copy-03" v-html="truncatedParagraph" ref="paragraph"></p>
+				</div>
+				<div ref="statistics">
+					<div :class="$style.percentage">
+						<span :class="$style.value" v-html="data.stats.percentage"></span>
+						<span :class="$style.label" class="copy">{{ $t('global.show.percent') }}</span>
+					</div>
+					<p :class="$style.demographic" class="copy copy-06" v-html="data.stats.demographic"></p>
+				</div>
+			</a>
+		</div>
+	</article>
+</template>

@@ -55,6 +55,12 @@
 		margin-right: $sizeGrid;
 		text-transform: uppercase;
 	}
+
+	@include respond-to(SMALL) {
+		.start-advertising {
+			display: none;
+		}
+	}
 }
 
 @include hover('.start-advertising') {

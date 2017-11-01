@@ -2,7 +2,23 @@
 <script src="./ProgramModule.js"></script>
 
 <template>
-	<div>
-		<h2>ProgramModule</h2>
+	<div :class="$style.programModule">
+		<div :class="$style.siteFrame" class="site-frame">
+			<div class="overrule-overlap">
+				<div :class="$style.draggableContainer" ref="draggableContainer">
+					<div :class="$style.programs" ref="draggableElement" class="js-draggable-element">
+						<ProgramTeaser
+							v-for="(item, index) in data.items"
+							:componentId="`ProgramTeaser${index}`"
+							:key="index"
+							:data="item"
+							:class="$style.programTeaser"
+							ref="program"
+						/>
+					</div>
+				</div>
+				<ScrollBar componentId="ScrollBar" @update="handleScrollBarUpdate" :class="$style.scrollBar"/>
+			</div>
+		</div>
 	</div>
 </template>

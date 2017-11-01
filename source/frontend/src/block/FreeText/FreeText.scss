@@ -32,13 +32,6 @@
 		padding: $sizeGrid;
 	}
 
-	@include respond-to(LARGE) {
-		.free-text {
-			padding-left: $sizeGrid;
-			padding-right: $sizeGrid;
-		}
-	}
-
 	// Breakpoints
 	@include respond-to(SMALL) {
 		.free-text {
