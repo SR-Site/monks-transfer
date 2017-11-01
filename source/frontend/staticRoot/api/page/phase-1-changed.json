@@ -107,6 +107,479 @@
 		}
 	  },
 	  {
+		"id": "networkOverview",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Networks with similar content to ESPN",
+		  "items": [
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/fox-news_1.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/fox-news_1.png",
+				"alt": "Fox News"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_02_nickolodeon.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_02_nickolodeon.png",
+				"alt": "Nickolodeon"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_03_AdultSwim_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_03_AdultSwim_0.png",
+				"alt": "Adult Swim"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_04_HGTV.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_04_HGTV.png",
+				"alt": "HGTV"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/USA-Red_400.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/USA-Red_400.png",
+				"alt": "USA Network"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_06_CNN_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_06_CNN_0.png",
+				"alt": "CNN"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_07_nickatnite_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_07_nickatnite_0.png",
+				"alt": "Nick at Night"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_08_TNT_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_08_TNT_0.png",
+				"alt": "TNT"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/ESPN_wordmark-400.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/ESPN_wordmark-400.png",
+				"alt": "ESPN"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_10_CartoonNetwork_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_10_CartoonNetwork_0.png",
+				"alt": "Cartoon Network"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_11_ID_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_11_ID_0.png",
+				"alt": "Investigation Discovery"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_12_msnbc_new.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_12_msnbc_new.png",
+				"alt": "MSNBC"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_13_hallmark_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_13_hallmark_0.png",
+				"alt": "Hallmark Channel"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_14_tbs_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_14_tbs_0.png",
+				"alt": "TBS"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/history_logo_2015_4c_black_type.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/history_logo_2015_4c_black_type.png",
+				"alt": "History Channel"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_16_foodnetwork_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_16_foodnetwork_0.png",
+				"alt": "Food Network"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Discovery%20Logo-Black.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Discovery%20Logo-Black.png",
+				"alt": "Discovery"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_19_tvland_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_19_tvland_0.png",
+				"alt": "TV Land"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/AMC_logo_2013-400.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/AMC_logo_2013-400.png",
+				"alt": "AMC"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_21_fx_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_21_fx_0.png",
+				"alt": "FX"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_22_AE_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_22_AE_0.png",
+				"alt": "A&E"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Lifetime%20Red%20Logo%202017-SM_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Lifetime%20Red%20Logo%202017-SM_0.png",
+				"alt": "Lifetime"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_24_HallmarkMovies_600.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_24_HallmarkMovies_600.png",
+				"alt": "Hallmark Movies"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_25_tlc_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_25_tlc_0.png",
+				"alt": "TLC"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/spike_logo_black_2015-400w_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/spike_logo_black_2015-400w_0.png",
+				"alt": "Spike"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_27_freeform.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_27_freeform.png",
+				"alt": "Freeform"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_30_LMN.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_30_LMN.png",
+				"alt": "LMN"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_31_Syfy.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_31_Syfy.png",
+				"alt": "Syfy"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_32_HLN.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_32_HLN.png",
+				"alt": "HLN"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_33_GSN.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_33_GSN.png",
+				"alt": "Game Show Network"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_34_we.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_34_we.png",
+				"alt": "WeTV"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_35_ComedyCentral.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_35_ComedyCentral.png",
+				"alt": "Comedy Central"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Bravo%20logo_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Bravo%20logo_0.png",
+				"alt": "Bravo"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_37_BET.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_37_BET.png",
+				"alt": "BET"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_38_MTV.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_38_MTV.png",
+				"alt": "MTV"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_39_E.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_39_E.png",
+				"alt": "E!"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_40_vh1.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_40_vh1.png",
+				"alt": "VH1"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_41_travelchannel.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_41_travelchannel.png",
+				"alt": "Travel Channel"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/NG_logo_black-400.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/NG_logo_black-400.png",
+				"alt": "National Geographic Channel"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_43_inspiration.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_43_inspiration.png",
+				"alt": "Inspiration Network"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_44_ESPN2.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_44_ESPN2.png",
+				"alt": "ESPN2"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_45_wgnamerica.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_45_wgnamerica.png",
+				"alt": "WGN America"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_46_own_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_46_own_0.png",
+				"alt": "OWN"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_47_TruTV.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_47_TruTV.png",
+				"alt": "truTV"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_48_Science.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_48_Science.png",
+				"alt": "Science Channel"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_49_TheWeatherChannel.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_49_TheWeatherChannel.png",
+				"alt": "The Weather Channel"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_50_FXX.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_50_FXX.png",
+				"alt": "FXX"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_50_DisneyXD.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_50_DisneyXD.png",
+				"alt": "Disney XD"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/FS1.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/FS1.png",
+				"alt": "FS1"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/NBCSN.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/NBCSN.png",
+				"alt": "NBCSN"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Fox%20Sports.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Fox%20Sports.png",
+				"alt": "FOX SPORTS"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Fox%20Deportes.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Fox%20Deportes.png",
+				"alt": "FOX DEPORTES"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN-Deportes.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN-Deportes.png",
+				"alt": "ESPN DEPORTES"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPNU.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPNU.png",
+				"alt": "ESPNU"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN-News.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN-News.png",
+				"alt": "ESPN NEWS"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN%20Classic.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN%20Classic.png",
+				"alt": "ESPN CLASSIC"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Golf.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Golf.png",
+				"alt": "GOLF"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/NFL%20Network.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/NFL%20Network.png",
+				"alt": "NFL NETWORK"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/MLB%20Network.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/MLB%20Network.png",
+				"alt": "MLB NETWORK"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/NHL%20Network.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/NHL%20Network.png",
+				"alt": "NHL NETWORK"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Spectrum%20Sports.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Spectrum%20Sports.png",
+				"alt": "SPECTRUM SPORTS"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Universo_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Universo_0.png",
+				"alt": "UNIVERSO"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/BTN_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/BTN_0.png",
+				"alt": "BTN"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/LHN_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/LHN_0.png",
+				"alt": "LHN"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/PAC%2012_0.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/PAC%2012_0.png",
+				"alt": "PAC 12"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN%20-%20SEC.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN%20-%20SEC.png",
+				"alt": "SEC ESPN"
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
 		"id": "programModule",
 		"data": {
 		  "overlap": false,

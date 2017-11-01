@@ -2,6 +2,15 @@
 	.breadcrumbs {
 		@extend %reset-list;
 		font-size: 0;
+
+		&:before {
+			@include size(1px, 200%);
+			@include offset(-$sizeGrid / 2, 50%);
+			transform: translateY(-50%);
+			position: absolute;
+			content: '';
+			background: $colorBorder;
+		}
 	}
 
 	.breadcrumb {

@@ -17,6 +17,7 @@ class ButtonCircleArrowTransitionController extends AbstractTransitionController
 			{
 				autoAlpha: 1,
 				ease: Linear.easeNone,
+				clearProps: 'all',
 			},
 		);
 	}

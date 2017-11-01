@@ -3,6 +3,7 @@
 		display: flex;
 		align-items: center;
 		white-space: nowrap;
+		justify-content: center;
 
 		&.alignment-left {
 			.label {
@@ -48,6 +49,7 @@
 		font: 800 1.2rem / 1 $fontOpenSans;
 		text-transform: uppercase;
 		color: $colorWhite;
+		align-self: center;
 	}
 
 	@include respond-to(SMALL) {
