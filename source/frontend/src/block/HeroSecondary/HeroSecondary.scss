@@ -1,2 +1,76 @@
 :local {
+	.hero-secondary {
+		@include aspect-ratio(40*$sizeGrid, $sizeGrid * 16);
+		min-height: $sizeGrid * 16;
+	}
+	.slide-content-wrapper {
+		overflow: visible;
+	}
+
+	.primary-background-triangle {
+	}
+
+	.secondary-background-triangle {
+	}
+	//.background-triangle {
+	//	@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 34);
+	//	@include position(calc(50% - #{$sizeGrid * 2}), auto, auto, 0);
+	//	transform: translateY(-50%);
+	//	position: absolute;
+	//	pointer-events: none;
+	//}
+	//
+	//.secondary-background-triangle {
+	//	@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 10);
+	//	@include position(calc(50% - #{$sizeGrid * 2}), auto, auto, $sizeGrid * 12);
+	//	position: absolute;
+	//	pointer-events: none;
+	//}
+
+	.slide-content {
+		@include size($sizeGrid * 13, auto);
+		@include position(50%, auto, auto, 0);
+		transform: translateY(-50%);
+		position: absolute;
+		z-index: 1;
+		padding-left: $sizeGrid * 3;
+		color: $colorWhite;
+
+		.sub-heading,
+		.heading {
+			margin-bottom: $sizeGrid;
+		}
+
+		.copy {
+			margin-bottom: $sizeGrid * 2;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.hero-secondary {
+			min-height: 0;
+			height: calc(100vh - #{$sizeGrid * 2});
+
+			&:before {
+				display: none;
+			}
+
+			img {
+				object-fit: cover;
+			}
+		}
+
+		.background-triangle {
+			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 48);
+		}
+
+		.secondary-background-triangle {
+			display: none;
+		}
+
+		.slide-content {
+			@include size($sizeGrid * 18, auto);
+			padding-left: $sizeGrid * 2;
+		}
+	}
 }

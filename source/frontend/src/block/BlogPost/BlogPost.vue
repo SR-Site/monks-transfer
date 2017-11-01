@@ -16,10 +16,10 @@
 							{{ data.time }} {{ readTimeLabel }}
 						</li>
 						<li :class="$style.stat" class="copy copy-01">
-							{{ data.views }} {{ viewCountLabel }}
+							{{ viewCount }} {{ viewCountLabel }}
 						</li>
 						<li :class="$style.stat" class="copy copy-01">
-							{{ data.shares }} {{ viewCountLabel }}
+							{{ data.shares }} {{ shareCountLabel }}
 						</li>
 					</ul>
 					<div :class="$style.tags">

@@ -5,18 +5,23 @@
 	<header
 		:class="[
 			$style.wrapper,
-			{[$style['is-scrolled']]: isScrolled},
+			{[$style['is-scrolled']]: isScrolled || breadcrumbs.length || isMedium},
 		]">
 		<h2 :class="$style.logo">
-			<a v-link="{ path: `/${landingRoute}`}">
-				<Logo :theme="isScrolled || isMedium ? Theme.DARK : headerTheme"/>
+			<a v-link="{ path: `/${landingRoute}`, type: 0}">
+				<Logo :theme="isScrolled || breadcrumbs.length || isMedium ? Theme.DARK : headerTheme"/>
 			</a>
 		</h2>
+		<Breadcrumbs
+			componentId="Breadcrumbs"
+			v-if="breadcrumbs.length"
+			:class="$style.breadcrumbs"
+			:breadcrumbs="breadcrumbs"/>
 		<div :class="$style.callToActions">
 			<ButtonCallToReach
 				componentId="ButtonCallToReach"
 				icon="contact"
-				:theme="isScrolled || isMedium ? Theme.DARK : headerTheme"
+				:theme="isScrolled || breadcrumbs.length || isMedium ? Theme.DARK : headerTheme"
 				:title="phoneNumber"
 				:label="phoneNumber"
 				:type="ButtonType.LINK"

@@ -16,11 +16,6 @@
 		<div :class="$style.slideContentWrapper" class="abs-fill">
 			<PrimaryTriangle componentId="PrimaryTriangle" :class="$style.primaryBackgroundTriangle"/>
 			<SecondaryTriangle componentId="SecondaryTriangle" :class="$style.secondaryBackgroundTriangle"/>
-			<TertiaryTriangle
-				componentId="TertiaryTriangle"
-				:class="$style.tertiaryBackgroundTriangle"
-				v-if="!hasStatistics"
-			/>
 			<div :class="$style.slides">
 				<HeroMainSlide
 					@isReady="component => handleSlideReady(component, index)"

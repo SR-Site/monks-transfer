@@ -1,8 +1,0 @@
-:local {
-	.triangle {
-		@include arrow(right, rgba($colorWhite, 0.95), $sizeGrid * 6);
-		@include position(calc(50% + #{$sizeGrid * 6}), auto, auto, $sizeGrid * 20);
-		position: absolute;
-		pointer-events: none;
-	}
-}

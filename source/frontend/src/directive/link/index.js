@@ -12,7 +12,6 @@ export default {
 		element[namespace] = new NativeEventListener(element, 'click', event => {
 			// Cancel the click
 			event.preventDefault();
-			console.log(binding.value);
 
 			switch (binding.value.type) {
 				case LinkType.INTERNAL:
@@ -27,6 +26,9 @@ export default {
 					break;
 				case LinkType.EXTERNAL_BLANK:
 					window.open(binding.value.path);
+					break;
+				default:
+					console.error('Unknown link type', binding.value);
 					break;
 			}
 		});

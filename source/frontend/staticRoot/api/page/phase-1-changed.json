@@ -4,9 +4,55 @@
 	"title": "Spectrum Reach Advertising - Phase 1 (changed)",
 	"data": {
 	  "headerTheme": 0,
-	  "hideContactButton": 0
+	  "hideContactButton": 0,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "home",
+		  "type": 0
+		},
+		{
+		  "label": "Advertising Solutions",
+		  "title": "Advertising Solutions",
+		  "target": "advertising-solutions",
+		  "type": 0
+		},
+		{
+		  "label": "Lorem ipsum",
+		  "title": "Lorem ipsum",
+		  "target": "all-blocks",
+		  "type": 0
+		}
+	  ]
 	},
 	"blocks": [
+	  {
+		"id": "heroSecondary",
+		"data": {
+		  "overlap": true,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "backgroundVideo": {
+			"url": "https:\/\/www.spectrumreach.com\/assets\/videos\/2017-04\/SRwebsite_Homepage%20hero_V1_40617_1.mp4",
+			"type": 0
+		  },
+		  "background": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/AdobeStock_110417474%20-%20SS.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/AdobeStock_110417474%20-%20SS.jpg",
+			"alt": "Advertising Solutions"
+		  },
+		  "link": {
+			"label": "Find out more",
+			"title": "Find out more",
+			"type": 2
+		  },
+		  "paragraph": "<p>Spectrum Reach is the marketing platform of choice to help your business reach new heights, without breaking your budget.\u00a0<\/p>",
+		  "heading": "Powered By Your Potential<br \/>",
+		  "subHeading": "<strong>Lorem ipsum dolor sit amet</strong>",
+		  "backgroundColor": "rgba(0, 48, 87, 0.95)"
+		}
+	  },
 	  {
 		"id": "blogPost",
 		"data": {
