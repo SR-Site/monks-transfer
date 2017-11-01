@@ -43,6 +43,10 @@
 			align-items: center;
 		}
 
+		.top {
+			margin-bottom: $sizeGrid;
+		}
+
 		.middle {
 			@extend %reset-list;
 			margin-bottom: $sizeGrid;
@@ -102,10 +106,12 @@
 	}
 
 	@include respond-to(SMALL) {
+		.logo {
+			left: $sizeGrid * -3.5;
+		}
+
 		.content {
-			padding-top: $sizeGrid * 4;
-			padding-left: $sizeGrid;
-			padding-right: $sizeGrid;
+			padding: $sizeGrid * 10 $sizeGridMobile $sizeGrid * 2;
 
 			.top,
 			.middle,
@@ -114,6 +120,40 @@
 				align-items: flex-start;
 				justify-content: flex-start;
 			}
+
+			.top {
+				border-bottom: 1px solid #093962;
+				padding-bottom: $sizeGrid;
+				margin-bottom: $sizeGrid * 2;
+			}
+
+			.middle {
+				margin-bottom: $sizeGrid * 2;
+			}
+
+			.copyright {
+				order: 2;
+				margin-top: $sizeGrid / 2;
+			}
+
+			.legal-links {
+				order: 1;
+				margin-left: 0;
+			}
+
+			.legal-link {
+				display: block;
+
+				&:not(:first-child) {
+					margin-left: 0;
+					margin-top: $sizeGrid / 2;
+				}
+			}
+		}
+
+		.email,
+		.button {
+			margin-bottom: $sizeGrid;
 		}
 	}
 }

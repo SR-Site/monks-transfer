@@ -9,7 +9,7 @@
 		</div>
 		<div :class="$style.content">
 			<div :class="$style.top">
-				<a class="copy copy-06 link-primary" href="#">Spectrumreach@spectrum.com</a>
+				<a :class="$style.email" class="copy copy-06 link-primary" href="#">Spectrumreach@spectrum.com</a>
 				<ButtonCircleIcon
 					componentId="ButtonCircleArrowLink"
 					icon="contact"
@@ -52,7 +52,7 @@
 				</li>
 			</ul>
 			<div :class="$style.bottom">
-				<p class="copy copy-06">Charter Communications &copy;2017</p>
+				<p :class="$style.copyright" class="copy copy-06">Charter Communications &copy;2017</p>
 				<ul :class="$style.legalLinks">
 					<li :class="$style.legalLink">
 						<a class="copy copy-06 link-secondary" href="#">Privacy Policy</a>
