@@ -107,6 +107,17 @@
 		}
 	  },
 	  {
+		"id": "quote",
+		"data": {
+		  "overlap": true,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "quote": "Spectrum Reach helps us light us our stage!",
+		  "author": "John Doe",
+		  "position": "Flagler Auditorion Director"
+		}
+	  },
+	  {
 		"id": "imageCallToActions",
 		"data": {
 		  "overlap": false,

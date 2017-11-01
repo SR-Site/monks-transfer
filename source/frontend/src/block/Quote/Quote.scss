@@ -1,2 +1,19 @@
 :local {
+	.quote {
+		text-align: center;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid;
+		color: $colorSecondary;
+		font-style: italic;
+	}
+
+	.author {
+
+	}
+
+	.name {
+		font-weight: 600;
+	}
 }

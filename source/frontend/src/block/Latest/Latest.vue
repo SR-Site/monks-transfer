@@ -9,6 +9,13 @@
 					<h2 :class="$style.heading" class="heading heading-03" v-html="data.heading"></h2>
 					<ButtonQuaternary
 						componentId="ButtonQuaternary"
+						v-track="{
+							[TrackingProvider.GOOGLE_ANALYTICS]: {
+								category: 'latest',
+								action: 'click',
+								label: data.link.title
+							}
+						}"
 						:title="data.link.title"
 						:label="data.link.label"
 						:type="ButtonType.LINK"

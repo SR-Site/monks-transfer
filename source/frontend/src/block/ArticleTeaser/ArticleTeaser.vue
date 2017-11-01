@@ -5,6 +5,13 @@
 	<article :class="[$style.articleTeaser, $style[ClassNameHelper.parseTheme(data.theme)]]">
 		<a
 			v-link="{path: data.target}"
+			v-track="{
+				[TrackingProvider.GOOGLE_ANALYTICS]: {
+					category: 'articleTeaser',
+					action: 'click',
+					label: data.heading,
+				}
+			}"
 		   :class="[$style.link, {'is-hover': isHover}]"
 		   @mouseenter="handleMouseEnter"
 		   @mouseleave="handleMouseLeave">
