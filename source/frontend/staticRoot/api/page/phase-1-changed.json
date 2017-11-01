@@ -105,6 +105,29 @@
 		  "theme": 0,
 		  "target": "\/articles\/2018-tv-predictions"
 		}
+	  },e
+	  {
+		"id": "imageWithContent",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "link": {
+			"label": "Featured Programs",
+			"title": "Featured Programs",
+			"target": "\/featured-programs",
+			"type": 0
+		  },
+		  "background": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/sportsBlock_FeaturedProgram-OPT_0.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/sportsBlock_FeaturedProgram-OPT_0.jpg",
+			"alt": "networks and programming"
+		  },
+		  "paragraph": "<p>Your customers are watching, and they\u2019re paying attention. On their TVs, their phones \u2013 sometimes at the same time. Align your brand with the high-performing shows your customers are already glued to.<\/p>",
+		  "heading": "Recent Top Cable Television Programming<br \/>",
+		  "croppedImage": false,
+		  "alignment": 0
+		}
 	  },
 	  {
 		"id": "networkOverview",

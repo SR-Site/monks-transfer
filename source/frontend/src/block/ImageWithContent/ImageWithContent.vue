@@ -3,12 +3,9 @@
 
 <template>
 	<div :class="[$style.imageWithContent, $style[ClassNameHelper.parseAlignment(data.alignment)]]">
-		<div class="site-frame" :class="$style.siteFrame" ref="siteFrame">
-			<div class="overrule-overlap" :class="$style.overruleOverlap">
-				<div class="abs-center" :class="$style.image" ref="image">
-					<ResponsiveImage :image="data.background" class="fit-cover" />
-				</div>
-				<div :class="$style.content" ref="content">
+		<div class="site-frame" ref="siteFrame">
+			<div class="overrule-overlap" :class="$style.row">
+				<div :class="$style.content">
 					<h4 class="heading heading-06" :class="$style.heading" v-html="data.heading" ref="heading"></h4>
 					<p class="copy copy-01" :class="$style.copy" v-html="data.paragraph" ref="copy"></p>
 					<ButtonPrimary
@@ -24,6 +21,17 @@
 						}"
 						:class="$style.button"/>
 				</div>
+				<div :class="$style.image">
+					<ResponsiveImage :image="data.background" class="fit-cover" />
+				</div>
+
+
+				<!--<div class="abs-center" :class="$style.image" ref="image">-->
+					<!--<ResponsiveImage :image="data.background" class="fit-cover" />-->
+				<!--</div>-->
+				<!--<div :class="$style.content" ref="content">-->
+
+				<!--</div>-->
 			</div>
 		</div>
 	</div>
