@@ -1,5 +1,6 @@
 :local {
 	.how-to-advertise {
+		padding-bottom: $sizeGrid;
 	}
 
 	.header {
@@ -17,7 +18,6 @@
 	.advertisement-steps {
 		@include size(100%, $sizeGrid * 8);
 		display: block;
-		padding-bottom: $sizeGrid;
 	}
 
 	.steps {
@@ -96,7 +96,7 @@
 		}
 
 		.step {
-			width: calc(100vw - 16rem);
+			width: calc(100vw - #{$sizeGrid * 8});
 			height: auto;
 			white-space: normal;
 

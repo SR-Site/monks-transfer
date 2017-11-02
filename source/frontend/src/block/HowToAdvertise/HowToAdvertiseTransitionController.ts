@@ -23,6 +23,7 @@ class HowToAdvertiseTransitionController extends AbstractTransitionController {
 			},
 		);
 		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'));
+		this.transitionInTimeline.add(this.getSubTimeline('ScrollBar'));
 	}
 
 	/**

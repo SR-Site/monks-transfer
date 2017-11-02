@@ -8,37 +8,38 @@ class ImageWithContentTransitionController extends AbstractTransitionController 
 	 * @description Use this method to setup your transition in timeline
 	 * */
 	protected setupTransitionInTimeline(): void {
-		// const width = (<HTMLElement>this.viewModel.$refs.siteFrame).offsetWidth;
-		// const height = (<HTMLElement>this.viewModel.$refs.siteFrame).offsetHeight;
-		//
-		// this.transitionInTimeline.fromTo(
-		// 	this.viewModel.$refs.content,
-		// 	2,
-		// 	{
-		// 		xPercent: -100,
-		// 	},
-		// 	{
-		// 		xPercent: 0,
-		// 		clearProps: 'all',
-		// 		ease: Expo.easeOut,
-		// 	},
-		// );
-		//
-		// this.transitionInTimeline.fromTo(
-		// 	this.viewModel.$refs.image,
-		// 	2,
-		// 	{
-		// 		clip: `rect(0, 0, ${height}, 0)`,
-		// 		opacity: 0,
-		// 	},
-		// 	{
-		// 		clip: `rect(0, ${width}, ${height}, 0)`,
-		// 		opacity: 1,
-		// 		clearProps: 'clip',
-		// 		ease: Expo.easeOut,
-		// 	},
-		// 	0,
-		// );
+		const image = <HTMLElement>this.viewModel.$refs.image;
+		const width = image.offsetWidth;
+		const height = image.offsetHeight;
+
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.content,
+			2,
+			{
+				xPercent: -100,
+			},
+			{
+				xPercent: 0,
+				clearProps: 'all',
+				ease: Expo.easeOut,
+			},
+		);
+
+		this.transitionInTimeline.fromTo(
+			image,
+			2,
+			{
+				clip: `rect(0, 0, ${height}, 0)`,
+				opacity: 0,
+			},
+			{
+				clip: `rect(0, ${width}, ${height}, 0)`,
+				opacity: 1,
+				clearProps: 'clip',
+				ease: Expo.easeOut,
+			},
+			0,
+		);
 		//
 		// this.transitionInTimeline.from(
 		// 	this.viewModel.$refs.heading,

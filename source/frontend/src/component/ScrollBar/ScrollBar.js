@@ -29,6 +29,9 @@ export default {
 		setProgress(progress) {
 			this.draggableInstance.progress = progress;
 		},
+		getMaxX() {
+			return this.draggableInstance.maxX;
+		}
 	},
 	beforeDestroy() {
 		this.draggableInstance.dispose();

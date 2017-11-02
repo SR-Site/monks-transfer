@@ -39,13 +39,14 @@ export default {
 			this.resizeListener = new NativeEventListener(
 				window,
 				'resize',
-				debounce(this.handleResize.bind(this), 500),
+				debounce(this.handleResize, 500),
 			);
 			this.scrollBar = this.getChild('ScrollBar');
 			this.setScrollBarSnapPositions();
 			this.isReady();
 		},
 		handleScrollBarUpdate(progress) {
+			console.log('scrollbar update', progress);
 			this.transitionController.seekHowToAdvertiseTimeline(progress);
 		},
 		handleOpenStep(index) {
@@ -77,7 +78,7 @@ export default {
 		},
 		setScrollBarSnapPositions() {
 			this.scrollBar.setSnapPosition(
-				this.$refs.stepsViewport.offsetWidth / this.data.steps.length,
+				this.scrollBar.getMaxX() / (this.data.steps.length - 1),
 			);
 		},
 		handleResize() {
