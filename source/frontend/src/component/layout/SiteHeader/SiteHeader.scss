@@ -7,16 +7,9 @@
 		z-index: zindex($layout, header);
 		transition: background 0.2s $easeInOut;
 
-		&.theme-light {
-			display: block;
-		}
-
-		&.theme-dark {
-			display: block;
-		}
-
 		&.is-scrolled {
 			background: white;
+			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
 		}
 	}
 
@@ -31,6 +24,13 @@
 		}
 	}
 
+	.breadcrumbs {
+		@include position(50%, auto, auto, calc(#{$sizeHeader} + 135px + #{$sizeGrid}));
+		transform: translateY(-50%);
+		position: absolute;
+		cursor: pointer;
+	}
+
 	.call-to-actions {
 		@include position(0, 0, auto, auto);
 		position: absolute;
@@ -39,6 +39,24 @@
 
 	.button {
 		vertical-align: top;
+	}
+
+	@include respond-to(XX_LARGE) {
+		.breadcrumbs {
+			left: calc(#{$sizeHeader} + 120px + #{$sizeGrid});
+		}
+	}
+
+	@include respond-to(XX_LARGE) {
+		.breadcrumbs {
+			left: calc(#{$sizeHeader} + 110px + #{$sizeGrid});
+		}
+	}
+
+	@include respond-to(LARGE) {
+		.breadcrumbs {
+			left: calc(#{$sizeHeader} + 90px + #{$sizeGrid});
+		}
 	}
 
 	@include respond-to(MEDIUM) {
@@ -51,6 +69,10 @@
 			.logo {
 				left: $sizeGrid;
 			}
+		}
+
+		.breadcrumbs {
+			display: none;
 		}
 	}
 

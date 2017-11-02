@@ -15,7 +15,7 @@
     "prepush": "node bin/prePush.js",
     "analyze": "webpack-bundle-analyzer stats.json ./dist",
     "postcommit": "git reset",
-    "prettify": "prettier --write --print-width 120 --tab-width 1 --use-tabs --single-quote --trailing-comma all \"src/**/*.{js,scss,ts}\""
+    "prettify": "prettier --write --print-width 120 --tab-width 4 --use-tabs --single-quote --trailing-comma all \"src/**/*.{js,scss,ts}\""
   },
   "dependencies": {
     "@vimeo/player": "^2.2.0",
@@ -36,11 +36,12 @@
     "ncp": "^2.0.0",
     "normalize.css": "^7.0.0",
     "seng-config": "^1.1.0",
-    "seng-device-state-tracker": "^1.0.6",
+    "seng-device-state-tracker": "^1.1.2",
     "seng-disposable": "^1.1.2",
     "seng-scss": "^1.0.0",
     "sha1": "^1.1.1",
     "strip": "^3.0.0",
+    "vee-validate": "^2.0.0-rc.19",
     "vue": "^2.2.5",
     "vue-block-system": "^0.3.5",
     "vue-i18n-manager": "^3.2.2",

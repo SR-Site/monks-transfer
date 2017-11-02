@@ -20,6 +20,10 @@
 
 		.icon {
 			@include size(20px);
+
+			path {
+				fill: currentColor;
+			}
 		}
 	}
 
@@ -73,17 +77,6 @@
 			opacity: 0;
 			border-radius: 100%;
 		}
-
-		@include hover() {
-			.progress-bar-wrapper {
-				background: rgba(255, 255, 255, .3);
-				height: 0.6rem;
-			}
-
-			.knob {
-				opacity: 1;
-			}
-		}
 	}
 
 	@include respond-to(SMALL) {
@@ -92,5 +85,16 @@
 				@include size(10px);
 			}
 		}
+	}
+}
+
+@include hover('.progress') {
+	.progress-bar-wrapper {
+		background: rgba(255, 255, 255, .3);
+		height: 0.6rem;
+	}
+
+	.knob {
+		opacity: 1;
 	}
 }

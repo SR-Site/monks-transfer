@@ -1,8 +1,5 @@
 :local {
 	.free-text {
-		padding-left: $sizeGrid * 7;
-		padding-right: $sizeGrid * 7;
-
 		h1,
 		h2,
 		h3,
@@ -33,13 +30,6 @@
 	.html-content {
 		background: $colorWhite;
 		padding: $sizeGrid;
-	}
-
-	@include respond-to(LARGE) {
-		.free-text {
-			padding-left: $sizeGrid;
-			padding-right: $sizeGrid;
-		}
 	}
 
 	// Breakpoints

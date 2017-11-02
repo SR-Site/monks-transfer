@@ -1,0 +1,118 @@
+.input-text {
+	position: relative;
+	overflow: hidden;
+
+	.shadow-element,
+	input {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		border: none;
+		padding: 0;
+		margin: 0;
+		background-color: transparent;
+		font: 400 1.5rem/1 $fontOpenSans;
+		text-indent: 0;
+		outline: none;
+	}
+
+	.shadow-element {
+		@include offset(0, 0);
+		opacity: 0;
+		position: absolute;
+		pointer-events: none;
+	}
+
+	input {
+		width: 100%;
+	}
+
+	input::-ms-clear {
+		display: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&.invalid { }
+}
+
+.input-text-main {
+	border-bottom: 1px solid rgba(#323232, 0.2);
+	@include size(100%, $sizeGrid);
+	background-color: white;
+
+	.placeholder-label {
+		position: absolute;
+		@include offset(0, 0);
+		transform: translate(0, 0);
+		font: 400 1.4rem / #{$sizeGrid} $fontOpenSans;
+		white-space: nowrap;
+		transition: transform 250ms $easeOutExpo, font-size 250ms $easeOutExpo;
+		pointer-events: none;
+	}
+
+	// Input
+	.shadow-element,
+	input {
+		font: 400 1.6rem / #{$sizeGrid} $fontOpenSans;
+
+		// Focus State
+		&.is-invalid,
+		&.has-value,
+		&:focus {
+			+ .placeholder-label {
+				left: calc(100% - #{$sizeGrid / 2});
+				transform: translate(-100%, 0);
+				opacity: 0.5;
+			}
+		}
+	}
+
+	.focus-border {
+		@include size(0, 5px);
+		background-color: $colorSecondary;
+		position: absolute;
+		@include position(auto, auto, -2px, 0);
+		//transition: width 250ms ease(easeOutExpo);
+	}
+
+	// Invalid State
+	&.is-invalid,
+	&.has-value {
+		.focus-border {
+			width: 100%;
+			background-color: $colorValidationError;
+		}
+	}
+
+	// Breakpoint
+	@include respond-to(SMALL) {
+		height: $sizeGrid*2;
+
+		input,
+		.shadow-element,
+		.placeholder-label {
+			font-size: mobile-size(2.4rem);
+			line-height: $sizeGrid*2;
+		}
+
+		input {
+			// Focus State
+			&:valid,
+			&:focus {
+				+ .placeholder-label {
+					font-size: mobile-size(2rem);
+				}
+			}
+		}
+	}
+}
+
+// Input Text Holder
+.text-input-holder {
+	&:not(:first-child) {
+		margin-top: $sizeGrid/2;
+	}
+}

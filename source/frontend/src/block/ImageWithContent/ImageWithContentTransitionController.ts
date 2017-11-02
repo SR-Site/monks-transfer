@@ -8,8 +8,9 @@ class ImageWithContentTransitionController extends AbstractTransitionController 
 	 * @description Use this method to setup your transition in timeline
 	 * */
 	protected setupTransitionInTimeline(): void {
-		const width = (<HTMLElement>this.viewModel.$refs.siteFrame).offsetWidth;
-		const height = (<HTMLElement>this.viewModel.$refs.siteFrame).offsetHeight;
+		const image = <HTMLElement>this.viewModel.$refs.image;
+		const width = image.offsetWidth;
+		const height = image.offsetHeight;
 
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.content,
@@ -25,7 +26,7 @@ class ImageWithContentTransitionController extends AbstractTransitionController 
 		);
 
 		this.transitionInTimeline.fromTo(
-			this.viewModel.$refs.image,
+			image,
 			2,
 			{
 				clip: `rect(0, 0, ${height}, 0)`,
@@ -39,27 +40,27 @@ class ImageWithContentTransitionController extends AbstractTransitionController 
 			},
 			0,
 		);
-
-		this.transitionInTimeline.from(
-			this.viewModel.$refs.heading,
-			0.8,
-			{
-				opacity: 0,
-				ease: Linear.easeNone,
-			},
-			1.1,
-		);
-
-		this.transitionInTimeline.from(
-			this.viewModel.$refs.copy,
-			0.8,
-			{
-				opacity: 0,
-				ease: Linear.easeNone,
-			},
-			1.3,
-		);
-
+		//
+		// this.transitionInTimeline.from(
+		// 	this.viewModel.$refs.heading,
+		// 	0.8,
+		// 	{
+		// 		opacity: 0,
+		// 		ease: Linear.easeNone,
+		// 	},
+		// 	1.1,
+		// );
+		//
+		// this.transitionInTimeline.from(
+		// 	this.viewModel.$refs.copy,
+		// 	0.8,
+		// 	{
+		// 		opacity: 0,
+		// 		ease: Linear.easeNone,
+		// 	},
+		// 	1.3,
+		// );
+		//
 		if (this.viewModel.hasChild('ButtonPrimary')) {
 			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), 1.5);
 		}

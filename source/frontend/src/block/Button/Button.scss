@@ -1,7 +1,5 @@
 :local {
 	.button {
-		padding: 0.5rem $sizeGrid * 7;
-
 		&.align-left {
 			text-align: left;
 		}
@@ -9,5 +7,10 @@
 		&.align-right {
 			text-align: right;
 		}
+	}
+
+	.padding-wrapper {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
 	}
 }

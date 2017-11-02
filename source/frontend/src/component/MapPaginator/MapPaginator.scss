@@ -78,10 +78,6 @@
 		transition: border-color .8s $easeInOutCubic;
 		cursor: pointer;
 
-		@include hover() {
-			text-decoration: underline;
-		}
-
 		&.is-active {
 			border-color: $colorBorder;
 		}
@@ -118,4 +114,8 @@
 			@include size(100%, $sizeGrid * 3);
 		}
 	}
+}
+
+@include hover('.slide') {
+	text-decoration: underline;
 }

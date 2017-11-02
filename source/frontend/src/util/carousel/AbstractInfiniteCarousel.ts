@@ -1,8 +1,8 @@
-import CarouselEvent from './event/CarouselEvent';
 import sengEvent from 'seng-event';
 import debounce from 'lodash/debounce';
 import { Expo, TweenLite } from 'gsap';
 import Draggable from 'gsap/Draggable';
+import CarouselEvent from './event/CarouselEvent';
 
 /**
  * @class DefaultInfiniteCarousel

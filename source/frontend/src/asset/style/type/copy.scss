@@ -25,6 +25,10 @@ p {
 	font: 600 2rem / 1.5 $fontOpenSans;
 }
 
+.copy-06 {
+	font: 400 1.2rem / 1.5 $fontOpenSans;
+}
+
 // Breakpoints
 @include respond-to(XX_LARGE) {
 	.copy-01 {
@@ -46,6 +50,9 @@ p {
 		font-size: mobile-size(2.2rem);
 	}
 	.copy-03 {
+		font-size: mobile-size(2.8rem);
+	}
+	.copy-06 {
 		font-size: mobile-size(2.8rem);
 	}
 }

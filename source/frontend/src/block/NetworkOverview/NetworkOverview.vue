@@ -2,7 +2,29 @@
 <script src="./NetworkOverview.js"></script>
 
 <template>
-	<div>
-		<h2>NetworkOverview</h2>
+	<div :class="$style.networkOverview">
+		<div :class="$style.siteFrame" class="site-frame">
+			<div class="overrule-overlap">
+				<header :class="$style.header" ref="heading">
+					<h2 :class="$style.heading" class="heading heading-06" v-html="data.heading"></h2>
+				</header>
+				<div :class="$style.draggableContainer" ref="draggableContainer">
+					<div :class="$style.networks" ref="draggableElement" class="js-draggable-element">
+						<div
+							v-for="(network, index) in data.items"
+							:class="$style.network">
+							<figure class="abs-center" :class="$style.image">
+								<ResponsiveImage :image="network.image" class="abs-fill fit-contain"/>
+							</figure>
+						</div>
+					</div>
+				</div>
+				<ScrollBar
+					componentId="ScrollBar"
+					@update="handleScrollBarUpdate"
+					@end="handleScrollBarEnd"
+					:class="$style.scrollBar"/>
+			</div>
+		</div>
 	</div>
 </template>

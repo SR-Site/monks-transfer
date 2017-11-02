@@ -72,16 +72,6 @@
 				"title": "See Featured Programming",
 				"target": "\/featured-programs",
 				"type": 0
-			  },
-			  "statistics": {
-				"heading": "Viewing for All Sports on TV<br \/>",
-				"stats": [
-				  {
-					"heading": "Sports Programming<br \/>",
-					"description": "<p>available on cable<\/p>",
-					"value": 96
-				  }
-				]
 			  }
 			}
 		  ]
@@ -571,7 +561,7 @@
 			  }
 			},
 			{
-			  "heading": "National\u00a0<br \/>Advertising<br \/>",
+			  "heading": "National Advertising",
 			  "paragraph": "<p>Spectrum Reach puts your message in front of targeted customers across the country and across all screens.<\/p>",
 			  "personaType": 3,
 			  "link": {

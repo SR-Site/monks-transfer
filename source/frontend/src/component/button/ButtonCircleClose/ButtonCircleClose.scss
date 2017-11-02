@@ -9,6 +9,10 @@
 			@include size(8px);
 			color: currentColor;
 			transition: color 250ms $easeLinear;
+
+			path {
+				fill: currentColor;
+			}
 		}
 
 		&.large {
@@ -16,15 +20,6 @@
 
 			.icon {
 				@include size(10px);
-			}
-		}
-
-		// Hover State
-		@include hover() {
-			background-color: $colorPrimary;
-
-			.icon {
-				color: white;
 			}
 		}
 
@@ -38,5 +33,13 @@
 				}
 			}
 		}
+	}
+}
+
+@include hover('.button-circle-close') {
+	background-color: $colorPrimary;
+
+	.icon {
+		color: white;
 	}
 }

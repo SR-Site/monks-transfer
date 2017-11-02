@@ -12,10 +12,6 @@
 		border: 1px solid $colorSecondary;
 		transition: border-color 0.2s $easeLinear;
 
-		@include hover() {
-			border-color: rgba(0, 0, 0, 0.2);
-		}
-
 		// Light Theme
 		&.theme-light {
 			border-color: rgba(255, 255, 255, 0.3);
@@ -39,4 +35,8 @@
 			padding: 0 $sizeGrid * 2;
 		}
 	}
+}
+
+@include hover('.button-secondary') {
+	border-color: rgba(0, 0, 0, 0.2);
 }

@@ -18,6 +18,7 @@ class HeroMainSlideTransitionController extends AbstractTransitionController {
 			},
 			{
 				autoAlpha: 1,
+				clearProps: 'all',
 			},
 		);
 
@@ -27,11 +28,12 @@ class HeroMainSlideTransitionController extends AbstractTransitionController {
 			{
 				y: 30,
 				autoAlpha: 0,
-				ease: Quad.easeOut,
 			},
 			{
 				y: 0,
 				autoAlpha: 1,
+				clearProps: 'all',
+				ease: Quad.easeOut,
 			},
 		);
 
@@ -46,6 +48,7 @@ class HeroMainSlideTransitionController extends AbstractTransitionController {
 				{
 					y: 0,
 					autoAlpha: 1,
+					clearProps: 'all',
 					ease: Quad.easeOut,
 				},
 				'=-0.5',
@@ -63,6 +66,7 @@ class HeroMainSlideTransitionController extends AbstractTransitionController {
 				{
 					y: 0,
 					autoAlpha: 1,
+					clearProps: 'all',
 					ease: Quad.easeOut,
 				},
 				'=-0.5',
@@ -80,6 +84,7 @@ class HeroMainSlideTransitionController extends AbstractTransitionController {
 				{
 					y: 0,
 					autoAlpha: 1,
+					clearProps: 'all',
 					ease: Quad.easeOut,
 				},
 				'=-0.5',

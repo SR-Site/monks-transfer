@@ -1,0 +1,49 @@
+.link-chevron {
+	color: currentColor;
+	text-decoration: none;
+
+	.chevron {
+		@include size(4px);
+		position: relative;
+
+		&:before {
+			@include size(4px);
+			//@include offset(2px, 2px);
+			@include offset(0);
+			position: absolute;
+			border-style: solid;
+			border-width: 1px 1px 0 0;
+			content: '';
+			display: inline-block;
+			position: relative;
+			transform: rotate(45deg);
+			vertical-align: middle;
+		}
+	}
+
+	.label {
+		color: currentColor;
+		position: relative;
+		margin-left: $sizeGridSecondary / 2;
+
+		&:before {
+			@include size(100%, 1px);
+			transform: scaleX(0);
+			transform-origin: left center;
+			transition: transform 0.2s $easeInOutCubic;
+			background: currentColor;
+			bottom: -2px;
+			left: 0;
+			position: absolute;
+			content: '';
+		}
+	}
+
+	&:hover {
+		.no-touchevents & {
+			.label:before {
+				transform: scaleX(1);
+			}
+		}
+	}
+}

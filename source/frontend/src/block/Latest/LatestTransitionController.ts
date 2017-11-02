@@ -1,4 +1,5 @@
 import { AbstractTransitionController } from 'vue-transition-component';
+import { Expo } from 'gsap';
 import IAbstractTransitionComponent from 'vue-transition-component/lib/interface/IAbstractTransitionComponent';
 
 class LatestTransitionController extends AbstractTransitionController {
@@ -9,19 +10,29 @@ class LatestTransitionController extends AbstractTransitionController {
 	 * */
 	protected setupTransitionInTimeline(): void {
 		const articles = <Array<IAbstractTransitionComponent>>this.viewModel.$refs.article;
-		this.transitionInTimeline.from(this.viewModel.$el.querySelector('.heading'), 0.8, {
-			opacity: 0,
-		});
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.heading,
+			0.8,
+			{
+				y: 50,
+				autoAlpha: 0,
+			},
+			{
+				y: 0,
+				autoAlpha: 1,
+				ease: Expo.easeOut,
+			},
+		);
 
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '=-0.2');
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonQuaternary'), 0.2);
 
 		if (articles) {
 			articles.forEach((article, index) => {
-				const componentId = `ArticleTeaser${index}`;
-
-				this.transitionInTimeline.add(this.getSubTimeline(componentId), index * 0.25);
+				this.transitionInTimeline.add(this.getSubTimeline(`ArticleTeaser${index}`), 0.2);
 			});
 		}
+
+		this.transitionInTimeline.add(this.getSubTimeline('ScrollBar'), 0.2);
 	}
 
 	/**

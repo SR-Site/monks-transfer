@@ -1,23 +1,28 @@
 import { mapGetters } from 'vuex';
-import { debounce } from 'lodash';
 import { DeviceStateEvent } from 'seng-device-state-tracker';
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import SiteHeaderTransitionController from './SiteHeaderTransitionController';
 import Logo from '../../Logo/Logo';
 import { NotificationMutationTypes } from '../../../store/module/notification';
 import NativeEventListener from '../../../util/event/NativeEventListener';
+import Breadcrumbs from '../../Breadcrumbs/Breadcrumbs';
 
 export default {
 	name: 'SiteHeader',
 	extends: AbstractTransitionComponent,
 	computed: {
-		...mapGetters({
-			pageData: 'layout/pageData',
-			contactOptionGetter: 'initData/contactOption',
-			landingRoute: 'init/landingRoute',
-		}),
+		...mapGetters(
+			{
+				pageData: 'layout/pageData',
+				contactOptionGetter: 'initData/contactOption',
+				landingRoute: 'init/landingRoute',
+			},
+		),
 		headerTheme() {
-			return this.pageData.headerTheme || this.Theme.LIGHT;
+			return this.pageData ? (this.pageData.headerTheme || this.Theme.LIGHT) : this.Theme.LIGHT;
+		},
+		breadcrumbs() {
+			return this.pageData && this.pageData.breadcrumbs ? this.pageData.breadcrumbs : [];
 		},
 		phoneNumber() {
 			return this.contactOptionGetter('phone').phoneNumber || 'no-phone-number';
@@ -37,8 +42,8 @@ export default {
 		};
 	},
 	mounted() {
-		this.scrollOffset = this.$el.offsetHeight;
-		this.scrollListener = new NativeEventListener(window, 'scroll', debounce(this.handleScroll, 100));
+		this.scrollOffset = this.$el.offsetHeight / 2;
+		this.scrollListener = new NativeEventListener(window, 'scroll', this.handleScroll);
 		this.deviceStateListener = new NativeEventListener(this.$deviceState, DeviceStateEvent.STATE_UPDATE, event => {
 			this.deviceState = event.data.state;
 		});
@@ -46,6 +51,7 @@ export default {
 	},
 	components: {
 		Logo,
+		Breadcrumbs
 	},
 	methods: {
 		handleAllComponentsReady() {
@@ -55,7 +61,7 @@ export default {
 		handleMenuClick() {
 			this.$store.dispatch(NotificationMutationTypes.SHOW, {
 				type: this.NotificationTypes.ALERT,
-				heading: 'Oops',
+				heading: 'TODO:',
 				paragraph: 'Open the menu',
 			});
 		},

@@ -1,20 +1,20 @@
 {
   "statusCode": 200,
   "data": {
-	"csrfToken": "prbKicQquloL27qzm-Esh3i-rzuQ5jUuiuZc_uwlwx0",
+	"csrfToken": "7QWDvii8eITuFc9Hk457YSYKMVj2XuoA1e3dRdlMXBU",
 	"routes": {
 	  "landing": "home",
 	  "notFound": "page-not-found",
-	  "articleOverviewPage": null
+	  "articleOverviewPage": "spectrum-reach-advertising-home"
 	},
 	"contactOptions": {
 	  "phone": {
-		"phoneNumber": null
+		"phoneNumber": "1-844-TO-REACH"
 	  },
 	  "email": {
-		"emailAddress": null,
-		"emailSubject": null,
-		"emailBody": null
+		"emailAddress": "spectrumreach@spectrum.com",
+		"emailSubject": "Email subject goes here",
+		"emailBody": "Email body goes here"
 	  }
 	},
 	"layout": {
@@ -23,7 +23,7 @@
 		  "link": {
 			"label": "Home",
 			"title": "Home",
-			"target": "/",
+			"target": "\/",
 			"type": 0
 		  }
 		},
@@ -31,7 +31,7 @@
 		  "link": {
 			"label": "Advertising Solutions",
 			"title": "Advertising Solutions",
-			"target": "/advertising-solutions",
+			"target": "\/advertising-solutions",
 			"type": 0
 		  }
 		},
@@ -39,7 +39,7 @@
 		  "link": {
 			"label": "Featured Programs",
 			"title": "Featured Programs",
-			"target": "/featured-programs",
+			"target": "\/featured-programs",
 			"type": 0
 		  }
 		},
@@ -47,7 +47,7 @@
 		  "link": {
 			"label": "Markets Map",
 			"title": "Markets Map",
-			"target": "/markets-map",
+			"target": "\/markets-map",
 			"type": 0
 		  }
 		},
@@ -55,7 +55,7 @@
 		  "link": {
 			"label": "Resources",
 			"title": "Resources",
-			"target": "/knowledge-center",
+			"target": "\/knowledge-center",
 			"type": 0
 		  }
 		},
@@ -63,106 +63,58 @@
 		  "link": {
 			"label": "Contact us",
 			"title": "Contact us",
-			"target": "/contact-us",
+			"target": "\/contact-us",
 			"type": 0
 		  }
 		}
 	  ],
 	  "footer": {
-		"copyright": null,
+		"copyright": "Charter Communications &copy; 2017",
 		"mainLinks": [
 		  {
-			"label": "Charter",
-			"title": "Charter",
-			"target": "https://www.charter.com/",
+			"label": "Kernel",
+			"title": "Kernel",
+			"target": "http:\/\/hellokernel.com\/",
 			"type": 1
 		  },
 		  {
 			"label": "Spectrum",
 			"title": "Spectrum",
-			"target": "https://spectrumreach.com/",
+			"target": "https:\/\/spectrum.com\/",
 			"type": 1
 		  },
 		  {
 			"label": "Spectrum Business",
 			"title": "Spectrum Business",
-			"target": "https://business.spectrum.com/",
+			"target": "https:\/\/business.spectrum.com\/",
 			"type": 1
 		  }
 		],
 		"secondaryLinks": [
-		  [
-			{
-			  "label": "About Spectrum Reach",
-			  "title": "About Spectrum Reach",
-			  "target": "https://business.spectrum.com/",
-			  "type": 1
-			},
-			{
-			  "label": "Careers Business",
-			  "title": "Careers Business",
-			  "target": "http://www.spectrumreachjobs.com/",
-			  "type": 1
-			},
-			{
-			  "label": "Careers",
-			  "title": "Careers",
-			  "target": "http://www.spectrumreachjobs.com/",
-			  "type": 1
-			},
-			{
-			  "label": "My Bright Rewards",
-			  "title": "My Bright Rewards",
-			  "target": "http://www.mybrightrewards.com/",
-			  "type": 1
-			},
-			{
-			  "label": "Bill Pay",
-			  "title": "Bill Pay",
-			  "target": "http://bhmediastrategies.com/landing-pages/payment-portal.html",
-			  "type": 1
-			}
-		  ],
-		  [
-			{
-			  "label": "Brighthouse Business",
-			  "title": "Brighthouse Business",
-			  "target": "https://www.spectrum.com",
-			  "type": 1
-			},
-			{
-			  "label": "Privacy Policy",
-			  "title": "Privacy Policy",
-			  "target": "https://spectrumreach.com/privacy-policy",
-			  "type": 1
-			},
-			{
-			  "label": "Spectrum Reach Terms",
-			  "title": "Spectrum Reach Terms",
-			  "target": "https://spectrumreach.com/terms-conditions",
-			  "type": 1
-			},
-			{
-			  "label": "Time Warner Terms",
-			  "title": "Time Warner Terms",
-			  "target": "https://help.twcable.com/",
-			  "type": 1
-			}
-		  ]
-		],
-		"social": {
-		  "twitter": {
-			"label": "Twitter @Spectrum Reach",
-			"title": "Twitter @Spectrum Reach",
-			"target": "https://twitter.com/SpectrumReach",
+		  {
+			"label": "Privacy policy",
+			"title": "Privacy policy",
+			"target": "\/privacy-policy",
+			"type": 0
+		  },
+		  {
+			"label": "Spectrum Reach Terms",
+			"title": "Spectrum Reach Terms",
+			"target": "\/terms-conditions",
+			"type": 0
+		  },
+		  {
+			"label": "Careers",
+			"title": "Careers",
+			"target": "http:\/\/www.spectrumreachjobs.com\/",
 			"type": 1
 		  }
-		}
+		]
 	  },
 	  "slideOutPanel": {
 		"contact": {
-		  "subHeading": null,
-		  "heading": null,
+		  "subHeading": "Get Started Today.",
+		  "heading": "Let's talk!<br\/>Tell us how we can help you advertise.",
 		  "submitLabel": "Send"
 		}
 	  }

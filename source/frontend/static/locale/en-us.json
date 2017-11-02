@@ -8,7 +8,20 @@
 	  "menu": "Menu",
 	  "customer_login": "Customer Login",
 	  "to_reach": "1-844-to-reach",
-	  "next": "Next"
+	  "next": "Next",
+	  "read_more": "Read more"
+	},
+	"show": {
+	  "percent": "Percent"
+	},
+	"article": {
+	  "stats": {
+		"read_time": "min. read",
+		"share": "share",
+		"shares": "shares",
+		"view": "view",
+		"views": "views"
+	  }
 	},
 	"notification": {
 	  "cta": {

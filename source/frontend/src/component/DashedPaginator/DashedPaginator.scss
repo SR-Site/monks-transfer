@@ -51,13 +51,6 @@
 				transform: translateY(0);
 			}
 		}
-
-		@include hover() {
-			&:before {
-				height: 4px;
-				margin-top: -2px;
-			}
-		}
 	}
 
 	.nr {
@@ -94,5 +87,12 @@
 		.nr {
 			display: none;
 		}
+	}
+}
+
+@include hover('.pagination-item') {
+	&:before {
+		height: 4px;
+		margin-top: -2px;
 	}
 }

@@ -1,5 +1,21 @@
-@mixin hover($extraSelector: null) {
-	html.no-touchevents &:hover#{', '$extraSelector} {
-		@content;
+@mixin hover($selector: null, $extraSelector: null) {
+	// Add the no-touchevents to the global scope and locally use the provided selector
+	:global .no-touchevents {
+		:local {
+			#{$selector}:hover {
+				@content;
+			}
+		}
+	}
+
+	// When we have an extra selector like 'is-hover' we want to use that in the global selector
+	@if $extraSelector {
+		:global .no-touchevents #{$extraSelector} {
+			:local {
+				#{$selector} {
+					@content;
+				}
+			}
+		}
 	}
 }

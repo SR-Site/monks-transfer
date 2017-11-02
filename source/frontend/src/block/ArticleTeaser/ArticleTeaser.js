@@ -4,7 +4,6 @@ import { AbstractBlockComponent } from 'vue-block-system';
 import VueTypes from 'vue-types';
 import ArticleTeaserData from './ArticleTeaserData';
 import ArticleTeaserTransitionController from './ArticleTeaserTransitionController';
-import NativeEventListener from '../../util/event/NativeEventListener';
 
 export default {
 	name: 'ArticleTeaser',
@@ -14,7 +13,7 @@ export default {
 	},
 	data() {
 		return {
-			transitionInComplete: false,
+			isHover: false,
 		};
 	},
 	computed: {
@@ -28,15 +27,13 @@ export default {
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new ArticleTeaserTransitionController(this);
-			const transitionInCompleteListener = new NativeEventListener(
-				this.transitionController,
-				TransitionEvent.TRANSITION_IN_COMPLETE,
-				() => {
-					transitionInCompleteListener.dispose();
-					this.transitionInComplete = true;
-				},
-			);
 			this.isReady();
+		},
+		handleMouseEnter() {
+			this.isHover = true;
+		},
+		handleMouseLeave() {
+			this.isHover = false;
 		},
 	},
 };

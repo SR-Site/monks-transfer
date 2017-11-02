@@ -16,11 +16,6 @@
 			vertical-align: top;
 		}
 
-		&.is-inactive {
-			background-color: $colorLightGrey;
-			color: $colorQuaternary;
-		}
-
 		@include respond-to(SMALL) {
 			font-size: mobile-size(1.8rem);
 			height: $sizeGrid;

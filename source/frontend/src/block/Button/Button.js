@@ -2,7 +2,6 @@ import VueTypes from 'vue-types';
 import { AbstractBlockComponent } from 'vue-block-system';
 import ButtonTransitionController from './ButtonTransitionController';
 import ButtonData from './ButtonData';
-import Alignment from '../../data/enum/Alignment';
 
 export default {
 	name: 'Button',

@@ -1,0 +1,26 @@
+.link-primary {
+	color: currentColor;
+	text-decoration: none;
+	text-transform: uppercase;
+	position: relative;
+
+	&:before {
+		@include size(100%, 1px);
+		transform: scaleX(0);
+		transform-origin: left center;
+		transition: transform 0.2s $easeInOutCubic;
+		background: currentColor;
+		bottom: -2px;
+		left: 0;
+		position: absolute;
+		content: '';
+	}
+
+	&:hover {
+		.no-touchevents & {
+			&:before {
+				transform: scaleX(1);
+			}
+		}
+	}
+}

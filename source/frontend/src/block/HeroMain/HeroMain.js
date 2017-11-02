@@ -7,7 +7,6 @@ import HeroMainTransitionController from './HeroMainTransitionController';
 import HeroMainData from './HeroMainData';
 import PrimaryTriangle from '../../component/triangle/PrimaryTriangle/PrimaryTriangle';
 import SecondaryTriangle from '../../component/triangle/SecondaryTriangle/SecondaryTriangle';
-import TertiaryTriangle from '../../component/triangle/TertiaryTriangle/TertiaryTriangle';
 import HeroMainSlide from './HeroMainSlide/HeroMainSlide';
 import MediaCrossFader from '../../component/MediaCrossFader/MediaCrossFader';
 import VideoType from '../../data/enum/VideoType';
@@ -20,7 +19,6 @@ export default {
 	components: {
 		PrimaryTriangle,
 		SecondaryTriangle,
-		TertiaryTriangle,
 		HeroMainSlide,
 		MediaCrossFader,
 	},
@@ -32,7 +30,8 @@ export default {
 	},
 	computed: {
 		hasStatistics() {
-			return this.data.slides.map(slide => slide.statistics !== null).indexOf(true) > -1;
+			console.log(this.data.slides);
+			return this.data.slides.map(slide => slide.statistics !== void 0).indexOf(true) > -1;
 		},
 	},
 	props: {
@@ -98,10 +97,10 @@ export default {
 			newSlide.transitionController.transitionInTimeline.timeScale(1);
 
 			return Promise.all([primaryTriangle.transitionOut(), oldSlide.transitionOut()])
-				.then(() => Promise.all([primaryTriangle.transitionIn(), newSlide.transitionIn()]))
-				.then(() => {
-					this.activeIndex = index;
-				});
+			.then(() => Promise.all([primaryTriangle.transitionIn(), newSlide.transitionIn()]))
+			.then(() => {
+				this.activeIndex = index;
+			});
 		},
 		changeBackgroundImage(index) {
 			const crossFader = this.getChild('MediaCrossFader');

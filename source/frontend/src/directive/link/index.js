@@ -1,26 +1,42 @@
 import NativeEventListener from '../../util/event/NativeEventListener';
 import getRouter from '../../router';
-// Object for storing all the link listeners
-const listeners = {};
+import LinkType from '../../data/enum/BackendLinkType';
+
+const namespace = 'LinkDirective';
 
 export default {
 	bind(element, binding) {
 		// Set the href
 		element.setAttribute('href', binding.value.path);
 		// Store the listener based on the element node
-		listeners[element] = new NativeEventListener(element, 'click', event => {
+		element[namespace] = new NativeEventListener(element, 'click', event => {
 			// Cancel the click
 			event.preventDefault();
-			// Update the route
-			getRouter().push({
-				path: binding.value.path,
-			});
+
+			switch (binding.value.type) {
+				case LinkType.INTERNAL:
+					getRouter().push(
+						{
+							path: binding.value.path,
+						},
+					);
+					break;
+				case LinkType.EXTERNAL:
+					window.location.href = binding.value.path;
+					break;
+				case LinkType.EXTERNAL_BLANK:
+					window.open(binding.value.path);
+					break;
+				default:
+					console.error('Unknown link type', binding.value);
+					break;
+			}
 		});
 	},
 	unbind(element) {
 		// Remove the listener
-		listeners[element].dispose();
+		element[namespace].dispose();
 		// delete the reference
-		delete listeners[element];
+		delete element[namespace];
 	},
 };

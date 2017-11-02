@@ -2,10 +2,18 @@
 	@include center-block();
 	@include size(100%, auto);
 	position: relative;
-	overflow: hidden;
+	//overflow: hidden;
 	max-width: $largeSiteFrame;
 
-	&.windowed {
+	&.is-small {
+		max-width: $smallSiteFrame;
+
+		&.include-padding {
+			max-width: $smallSiteFrame + ($sizeGrid * 2);
+		}
+	}
+
+	&.is-windowed {
 		padding: 0 $sizeGrid * 2;
 	}
 
@@ -15,5 +23,14 @@
 
 	@include respond-to(SMALL) {
 		max-width: 100%;
+		padding: 0 $sizeGridMobile * 2;
+
+		&.is-small {
+			max-width: 100%;
+
+			&.include-padding {
+				max-width: 100%;
+			}
+		}
 	}
 }

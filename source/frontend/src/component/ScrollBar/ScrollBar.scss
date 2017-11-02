@@ -1,0 +1,43 @@
+:local {
+	.scroll-bar-inner {
+		@include size(100%, 2px);
+		margin: 19px 0;
+		background: #e4e5e5;
+	}
+
+	.knob {
+		@include size(40px);
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+		background: $colorSecondary;
+		border-radius: 40px;
+
+		.icon {
+			width: 15px;
+
+			svg {
+				transition: transform 1s $easeInOutBack;
+				transform-origin: center center;
+			}
+
+			path {
+				fill: $colorWhite;
+			}
+		}
+
+		&:hover {
+			.icon {
+				svg {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+
+	.theme-dark & {
+		background-color: #000;
+	}
+}

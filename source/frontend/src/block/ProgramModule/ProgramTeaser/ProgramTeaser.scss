@@ -1,0 +1,89 @@
+:local {
+	.program-teaser {
+		white-space: normal;
+		padding-right: $sizeGrid;
+	}
+
+	.content {
+		@include size(100%);
+		display: flex;
+		flex-direction: column;
+	}
+
+	.image {
+		@include size(100%, auto);
+		@include aspect-ratio(16px, 9px);
+	}
+
+	.gradient-overlay {
+		transition: opacity .2s $easeInOut;
+	}
+
+	.play-button {
+		@include position(auto, auto, 0, 0);
+		position: absolute;
+		color: white;
+	}
+
+	.description {
+		height: 100%;
+		padding: $sizeGrid 0 0;
+		color: $colorPrimary;
+		transition: color .2s $easeInOut;
+		text-decoration: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.percentage {
+		display: block;
+		margin-bottom: $sizeGrid / 2;
+
+		.value {
+			font: 600 2.8rem / 1 $fontOpenSans;
+			display: inline-block;
+			vertical-align: middle;
+			color: $colorPrimary;
+		}
+
+		.label {
+			font: 600 1rem / 1 $fontOpenSans;
+			display: inline-block;
+			vertical-align: middle;
+			text-transform: uppercase;
+			color: $colorQuaternary;
+			margin-left: $sizeGrid / 4;
+		}
+	}
+
+	.demographic {
+		color: $colorQuaternary;
+	}
+
+	@include respond-to(SMALL) {
+		.percentage {
+			.value {
+				font-size: mobile-size(4rem);
+			}
+
+			.label {
+				font-size: mobile-size(2rem);
+			}
+		}
+	}
+}
+
+@include hover('.program-teaser') {
+	.gradient-overlay {
+		opacity: 0;
+	}
+
+	.description {
+		color: $colorSecondary;
+	}
+}

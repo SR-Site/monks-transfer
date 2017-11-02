@@ -1,77 +1,61 @@
 :local {
 	.latest {
-		background: $colorLightGrey;
 	}
 
 	.site-frame {
-		padding: $sizeGrid * 3 0 $sizeGrid * 1;
+		overflow: visible;
 	}
 
 	.header {
-		.heading {
-			margin-bottom: $sizeGrid;
-		}
+		@include size(100%, auto);
+		justify-content: flex-start;
+		display: flex;
+		align-items: center;
+		margin-bottom: $sizeGrid;
+	}
 
-		.button {
-			margin-bottom: $sizeGrid;
-		}
+	.draggable-container {
+		padding: 0;
+	}
+
+	.button {
+		margin-left: $sizeGrid * 2;
 	}
 
 	.latest-articles {
-		@include size(100%, auto);
+		width: auto;
+		margin-bottom: $sizeGrid;
+		white-space: nowrap;
 		font-size: 0;
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
+		display: inline-block;
+		margin-left: -$sizeGrid;
 	}
 
 	.article-teaser {
+		@include size($sizeGrid * 14, auto);
 		display: inline-block;
-		margin-bottom: $sizeGrid * 2;
+		margin-left: $sizeGrid;
+
+		//&:not(:first-child) {
+		//	margin-left: $sizeGrid;
+		//}
 	}
 
-	//Breakpoints
-	@include respond-to(X_LARGE) {
-		.latest-articles {
-			justify-content: space-around;
-		}
-	}
-
-	@include respond-to(LARGE) {
-		.info,
-		.article-teaser {
-			margin: 0 $sizeGrid / 2 $sizeGrid $sizeGrid / 2;
-		}
-	}
-
-	@include respond-to(ARTICLE_TEASER_MEDIUM) {
-		.info,
-		.article-teaser {
-			margin: 0 $sizeGrid / 4 $sizeGrid $sizeGrid / 4;
-		}
+	.scroll-bar {
+		margin: $sizeGridSecondary 0;
 	}
 
 	@include respond-to(SMALL) {
-		.latest-articles {
-			padding-left: $sizeGrid;
-			padding-right: $sizeGrid;
+		.site-frame {
+			padding: 0 $sizeGridMobile * 2;
 		}
 
-		.article-teaser:not(:nth-child(-n + 2)) {
+		.button {
 			display: none;
 		}
 
-		.header {
-			padding-left: $sizeGrid*2;
-			padding-right: $sizeGrid*2;
-
-			.heading {
-				margin-bottom: $sizeGrid*2;
-			}
-
-			.button {
-				margin-bottom: $sizeGrid*2;
-			}
+		.article-teaser {
+			@include size(320px, auto);
 		}
 	}
 }

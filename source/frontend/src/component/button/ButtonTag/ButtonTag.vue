@@ -7,6 +7,6 @@
 		class="button"
 		:class="[$style.buttonTag, {[$style.isInactive]: isInactive}]"
 		:title="title">
-		<span class="label">{{label}}</span>
+		<span :class="$style.label">{{label}}</span>
 	</button>
 </template>

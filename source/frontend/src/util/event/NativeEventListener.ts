@@ -1,4 +1,4 @@
-import Disposable from 'seng-disposable/lib/Disposable';
+import sengDisposable from 'seng-disposable';
 
 /**
  * The NativeEventListener is a wrapper around the native addEventListener method of an HTML element and makes it easier
@@ -16,7 +16,7 @@ import Disposable from 'seng-disposable/lib/Disposable';
  * @class NativeEventListener
  */
 
-export default class NativeEventListener extends Disposable {
+export default class NativeEventListener extends sengDisposable {
 	private _isDestructed: boolean = false;
 
 	/**

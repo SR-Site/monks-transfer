@@ -7,16 +7,7 @@ class ButtonTagTransitionController extends AbstractTransitionController {
 	 * @description Use this method to setup your transition in timeline
 	 * */
 	protected setupTransitionInTimeline(): void {
-		this.transitionInTimeline.fromTo(
-			this.viewModel.$el,
-			1,
-			{
-				autoAlpha: 0,
-			},
-			{
-				autoAlpha: 1,
-			},
-		);
+
 	}
 
 	/**

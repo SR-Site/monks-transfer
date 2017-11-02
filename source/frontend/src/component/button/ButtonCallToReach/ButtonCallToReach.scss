@@ -1,16 +1,10 @@
 :local {
-	.button {
+	.button-call-to-reach {
 		@include size(auto, $sizeGrid * 2);
 		text-transform: uppercase;
 		color: $colorWhite;
 		padding: 0 $sizeGrid / 2;
 		transition: color 0.3s $easeInOutCubic;
-
-		@include hover() {
-			.label:before {
-				width: 100%;
-			}
-		}
 	}
 
 	.icon {
@@ -48,14 +42,14 @@
 	}
 
 	@include respond-to(MEDIUM) {
-		.button {
+		.button-call-to-reach {
 			@include size(auto, $sizeGrid * 2);
 			padding: 0 $sizeGrid;
 		}
 	}
 
 	@include respond-to(SMALL) {
-		.button {
+		.button-call-to-reach {
 			height: $sizeGrid * 4;
 		}
 
@@ -66,5 +60,11 @@
 		.icon {
 			@include size($sizeGrid * 1.5);
 		}
+	}
+}
+
+@include hover('.button-call-to-reach') {
+	.label:before {
+		width: 100%;
 	}
 }

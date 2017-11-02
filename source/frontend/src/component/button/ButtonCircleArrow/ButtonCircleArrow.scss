@@ -1,10 +1,11 @@
 :local {
-	.button {
+	.button-circle-arrow {
 		display: flex;
 		align-items: center;
 		white-space: nowrap;
+		justify-content: center;
 
-		&.align-left {
+		&.alignment-left {
 			.label {
 				order: 1;
 				margin-left: $sizeGrid / 2;
@@ -14,25 +15,13 @@
 			}
 		}
 
-		&.align-right {
+		&.alignment-right {
 			.label {
 				order: 0;
 				margin-right: $sizeGrid / 2;
 			}
 			.icon {
 				order: 1;
-			}
-		}
-
-		@include hover() {
-			.icon {
-				svg {
-					circle {
-						stroke-width: 0.5rem;
-						stroke: $colorSecondary;
-						opacity: 1;
-					}
-				}
 			}
 		}
 	}
@@ -60,6 +49,7 @@
 		font: 800 1.2rem / 1 $fontOpenSans;
 		text-transform: uppercase;
 		color: $colorWhite;
+		align-self: center;
 	}
 
 	@include respond-to(SMALL) {
@@ -72,16 +62,28 @@
 		}
 
 		.button {
-			&.align-left {
+			&.alignment-left {
 				.label {
 					margin-left: $sizeGrid;
 				}
 			}
 
-			&.align-right {
+			&.alignment-right {
 				.label {
 					margin-right: $sizeGrid;
 				}
+			}
+		}
+	}
+}
+
+@include hover('.button-circle-arrow') {
+	.icon {
+		svg {
+			circle {
+				stroke-width: 0.5rem;
+				stroke: $colorSecondary;
+				opacity: 1;
 			}
 		}
 	}

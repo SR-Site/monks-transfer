@@ -1,6 +1,6 @@
 :local {
 	.button-primary {
-		@include size(auto, 5rem);
+		height: 5rem;
 		font: 800 1rem / calc(5rem - 2px) $fontOpenSans;
 
 		text-transform: uppercase;
@@ -81,7 +81,7 @@
 	// Breakpoints
 	@include respond-to(SMALL) {
 		.button-primary {
-			@include size(auto, mobile-size(10rem));
+			height: mobile-size(10rem);
 			font-size: mobile-size(1.8rem);
 			line-height: mobile-size(10rem);
 			padding: 0 $sizeGrid * 2;

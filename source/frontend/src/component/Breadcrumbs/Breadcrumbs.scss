@@ -1,0 +1,76 @@
+:local {
+	.breadcrumbs {
+		@extend %reset-list;
+		font-size: 0;
+
+		&:before {
+			@include size(1px, 200%);
+			@include offset(-$sizeGrid / 2, 50%);
+			transform: translateY(-50%);
+			position: absolute;
+			content: '';
+			background: $colorBorder;
+		}
+	}
+
+	.breadcrumb {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		color: #808285;
+
+		&:after {
+			@include size(4px);
+			@include position(50%, 0, auto, auto);
+			display: none;
+			position: absolute;
+			border-style: solid;
+			border-width: 1px 1px 0 0;
+			border-color: currentColor;
+			content: '';
+			transform: rotate(45deg) translateY(-50%);
+			vertical-align: middle;
+		}
+
+		&:not(:last-child) {
+			margin-right: $sizeGrid / 2;
+			padding-right: $sizeGrid / 2;
+
+			&:after {
+				display: block;
+			}
+		}
+	}
+
+	.link {
+		font: 800 1rem / 1 $fontOpenSans;
+		color: currentColor;
+		text-decoration: none;
+		text-transform: uppercase;
+		position: relative;
+		display: block;
+
+		&.is-active {
+			pointer-events: none;
+			opacity: 0.5;
+		}
+
+		&:before {
+			@include size(100%, 1px);
+			transform: scaleX(0);
+			transform-origin: left center;
+			transition: transform 0.2s $easeInOutCubic;
+			background: currentColor;
+			bottom: -2px;
+			left: 0;
+			position: absolute;
+			content: '';
+		}
+	}
+}
+
+@include hover('.link') {
+	&:before {
+		transform: scaleX(1);
+	}
+}

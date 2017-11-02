@@ -1,5 +1,6 @@
 import { AbstractButtonComponent } from 'vue-block-system';
 import VueTypes from 'vue-types';
+import Size from 'data/enum/Size';
 import ButtonCirclePlayTransitionController from './ButtonCirclePlayTransitionController';
 
 export default {
@@ -7,6 +8,7 @@ export default {
 	extends: AbstractButtonComponent,
 	props: {
 		isPlaying: VueTypes.bool.isRequired,
+		size: VueTypes.number.def(Size.LARGE),
 	},
 	methods: {
 		handleAllComponentsReady() {

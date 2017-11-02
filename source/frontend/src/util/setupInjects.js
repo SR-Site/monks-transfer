@@ -18,6 +18,7 @@ import TwitterTrackingPixelProvider from './tracking/tracking-provider/twitter-t
 import HotjarProvider from './tracking/tracking-provider/hotjar/HotjarProvider';
 import LinkedInTrackingPixelProvider from './tracking/tracking-provider/linkedin-tracking-pixel/LinkedInTrackingPixelProvider';
 import ForensicsProvider from './tracking/tracking-provider/forensics/ForensicsProvider';
+import { VariableNames } from '../data/enum/configNames';
 /* eslint-enable */
 
 const setupInjects = () => {
@@ -25,7 +26,7 @@ const setupInjects = () => {
 	configManager.init(config.config, config.environment);
 
 	const gateway = axios.create({
-		baseURL: configManager.getURL(URLNames.API),
+		baseURL: (configManager.getVariable(VariableNames.MOCK_ENABLED) ? 'static' : '') + configManager.getURL(URLNames.API),
 		headers: {
 			Accept: 'application/json',
 		},

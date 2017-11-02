@@ -27,10 +27,6 @@ class HeroMainTransitionController extends AbstractTransitionController {
 		this.transitionInTimeline.add(this.getSubTimeline('PrimaryTriangle'), 1);
 		this.transitionInTimeline.add(this.getSubTimeline('SecondaryTriangle'), 1);
 
-		if (this.viewModel.hasChild('TertiaryTriangle')) {
-			this.transitionInTimeline.add(this.getSubTimeline('TertiaryTriangle'), 1.4);
-		}
-
 		// Transition in the slide content
 		this.transitionInTimeline.add(this.getSubTimeline(`HeroMainSlide${heroMainComponent.activeIndex}`));
 	}

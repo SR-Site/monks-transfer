@@ -1,5 +1,4 @@
-import { AbstractTransitionController } from 'vue-transition-component';
-import IAbstractTransitionComponent from 'vue-transition-component/lib/interface/IAbstractTransitionComponent';
+import { AbstractTransitionController, IAbstractTransitionComponent } from 'vue-transition-component';
 
 class ImageCarouselTransitionController extends AbstractTransitionController {
 	/**

@@ -12,6 +12,7 @@ const webpackHelpers = require('./webpackHelpers');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const CircularDependencyPlugin = require('circular-dependency-plugin')
+const LimitChunkCountPlugin = require('webpack').optimize.LimitChunkCountPlugin;
 
 const env = config.build.env;
 
@@ -69,7 +70,7 @@ const webpackConfig = merge(baseWebpackConfig, {
 			 }
 		 }),
 		new WebpackCleanupPlugin(),
-		// new webpack.optimize.ModuleConcatenationPlugin(), TODO: FIX THIS
+		new webpack.optimize.ModuleConcatenationPlugin(),
 		new webpack.DefinePlugin({
 			'process.env': env,
 		}),
@@ -144,9 +145,14 @@ const webpackConfig = merge(baseWebpackConfig, {
 			}]),
 		new BundleAnalyzerPlugin({
 			analyzerMode: 'disabled',
-			generateStatsFile: true,
+			generateStatsFile: true, // Disable otherwise the building breaks on the massive blocks object
 			statsFilename: '../stats.json',
-		})
+		}),
+		new LimitChunkCountPlugin(
+			{
+				maxChunks: 5,
+			}
+		),
 	]
 });
 

@@ -31,19 +31,19 @@
 		<button
 			class="button"
 			@click="handleMuteClick"
-			v-if="displayMuteButton"
+			v-show="displayMuteButton"
 			:class="[$style.videoPlayerButton, $style.buttonMute, {[$style.isMuted]: isMuted}]">
 			<Icon
 				name="video-volume-off"
 				class="abs-center"
 				:class="[$style.icon, $style.volumeOffIcon]"
-				v-if="!isMuted"
+				v-if="isMuted"
 			/>
 			<Icon
 				name="video-volume-on"
 				class="abs-center"
 				:class="[$style.icon, $style.volumeOnIcon]"
-				v-if="isMuted"
+				v-if="!isMuted"
 			/>
 		</button>
 	</div>

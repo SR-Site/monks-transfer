@@ -2,7 +2,10 @@
 <script src="./ButtonCircleIcon.js"></script>
 
 <template>
-	<button @click="handleClick">
-		ButtonCircleIcon
+	<button @click="handleClick"
+	        :class="[$style.buttonCircleIcon, $style[(ClassNameHelper.parseAlignment(iconPosition))]]"
+	        class="button">
+		<Icon :class="$style.icon" :name="icon"/>
+		<span :class="$style.label">{{label}}</span>
 	</button>
 </template>

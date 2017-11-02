@@ -1,7 +1,6 @@
 .block-component {
 	position: relative;
 	overflow: hidden;
-
 	/**
 	 * This means a block can overlap with another block therefore it get's overflow visible
 	 */
@@ -14,6 +13,11 @@
 			.overrule-overlap {
 				position: relative;
 				z-index: 2;
+
+				&.is-solid {
+					background: white;
+					padding: $sizeGrid;
+				}
 			}
 		}
 	}
@@ -47,6 +51,16 @@
 		&.is-windowed {
 			border-left: none;
 			border-right: none;
+		}
+
+		&.overlap {
+			~ .block-component {
+				.overrule-overlap {
+					&.is-solid {
+						padding: 0;
+					}
+				}
+			}
 		}
 	}
 }

@@ -2,7 +2,9 @@
 <script src="./FreeText.js"></script>
 
 <template>
-	<div :class="$style.freeText" class="site-frame" data-component="fdkjadsfjk">
-		<div :class="$style.htmlContent" class="overrule-overlap" v-html="data.html" ref="htmlContent"></div>
+	<div :class="$style.freeText">
+		<div class="site-frame is-small include-padding">
+			<div :class="$style.htmlContent" class="overrule-overlap" v-html="data.html" ref="htmlContent"></div>
+		</div>
 	</div>
 </template>
