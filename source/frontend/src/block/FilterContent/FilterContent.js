@@ -12,9 +12,6 @@ export default {
 	components: {
 		FilterContentMenu,
 	},
-	created() {
-		this.BlockHelper = BlockHelper;
-	},
 	data() {
 		return {
 			blocks: {},
@@ -38,6 +35,11 @@ export default {
 		handleAllComponentsReady() {
 			this.transitionController = new FilterContentTransitionController(this);
 			this.spinner = this.getChild('Spinner');
+			console.log(this.$refs.filterContentMenu.$el);
+			console.log(this.$el);
+
+
+
 			this.loadPage(0);
 			this.isReady();
 		},

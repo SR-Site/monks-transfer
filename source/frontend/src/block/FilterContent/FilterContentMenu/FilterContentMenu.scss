@@ -72,7 +72,7 @@
 
 		&:before {
 			@include size(100%, 1px);
-			@include position(auto, 0 ,0, 0);
+			@include position(auto, 0, 0, 0);
 			transition: transform .2s $easeInOut;
 			transform-origin: center center;
 			position: absolute;
@@ -128,5 +128,38 @@
 		background: $colorTertiary;
 		color: $colorWhite;
 		font: 600 1rem / 20px $fontOpenSans;
+	}
+
+	@include respond-to(SMALL) {
+		$height: mobile-size($sizeGrid * 3);
+
+		.filter-content-menu {
+			@include size(100%, $height);
+			@include offset(0, -$height);
+			position: absolute;
+		}
+
+		.button {
+			.label {
+				font-size: mobile-size(3rem);
+			}
+		}
+
+		.menu {
+			display: block;
+		}
+
+		.filters {
+			display: none;
+		}
+
+		.main-button {
+			@include size(100%, $height);
+			justify-content: center;
+
+			.icon {
+				margin-left: $sizeGrid
+			}
+		}
 	}
 }

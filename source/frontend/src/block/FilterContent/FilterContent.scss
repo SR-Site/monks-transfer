@@ -34,6 +34,11 @@
 	}
 
 	@include respond-to(SMALL) {
+		.filter-content {
+			margin-top: 0;
+			padding-top: mobile-size($sizeGrid * 3);
+		}
+
 		.filter-result {
 			width: 100%;
 		}

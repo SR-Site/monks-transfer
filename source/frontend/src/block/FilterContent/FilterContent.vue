@@ -7,6 +7,7 @@
 			<FilterContentMenu
 				componentId="FilterContentMenu"
 				@update="handleFilterMenuUpdate"
+				ref="filterContentMenu"
 				:class="$style.filterMenu"
 				:filters="data.filters"/>
 			<div :class="$style.filterResult">
