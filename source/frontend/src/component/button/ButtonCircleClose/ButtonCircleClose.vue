@@ -5,7 +5,7 @@
 	<button
 		@click="handleClick"
 		class="button"
-		:class="[$style.buttonCircleClose, $style[ClassNameHelper.parseSize(Size.LARGE)]]">
+		:class="[$style.buttonCircleClose, $style[ClassNameHelper.parseSize(size)]]">
 		<Icon name="cross" :class="$style.icon"/>
 	</button>
 </template>

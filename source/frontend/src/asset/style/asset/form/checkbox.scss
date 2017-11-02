@@ -35,37 +35,3 @@
 		}
 	}
 }
-
-// Tag CheckBox
-.tag-checkbox {
-	display: inline-block;
-	position: relative;
-	vertical-align: middle;
-
-	.element {
-		@include size(auto, 2rem);
-		border-radius: 2rem;
-		font: 600 1.2rem / 2rem $fontOpenSans;
-		text-transform: uppercase;
-		padding: 0 $sizeGrid / 4;
-		color: $colorLightGrey;
-		background-color: $colorQuaternary;
-	}
-
-	input {
-		&:checked {
-			~ .element {
-				background: $colorTertiary;
-				color: $colorWhite;
-			}
-		}
-	}
-
-	@include respond-to(SMALL) {
-		.element {
-			height: 4rem;
-			font-size: mobile-size(2rem);
-			line-height: 4rem;
-		}
-	}
-}

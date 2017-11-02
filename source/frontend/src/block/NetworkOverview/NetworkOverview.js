@@ -47,8 +47,6 @@ export default {
 			this.isReady();
 		},
 		handleResize() {
-			console.log(this.$refs.draggableElement.offsetWidth / this.data.items.length);
-
 			this.draggableInstance.setSnapPosition(
 				this.$refs.draggableElement.offsetWidth / this.data.items.length,
 			);

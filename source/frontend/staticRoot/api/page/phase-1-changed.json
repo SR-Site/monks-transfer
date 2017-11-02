@@ -30,7 +30,7 @@
 	  {
 		"id": "heroSecondary",
 		"data": {
-		  "overlap": true,
+		  "overlap": false,
 		  "windowed": false,
 		  "marginTop": 0,
 		  "backgroundVideo": {
@@ -51,6 +51,108 @@
 		  "heading": "Powered By Your Potential<br \/>",
 		  "subHeading": "<strong>Lorem ipsum dolor sit amet</strong>",
 		  "backgroundColor": "rgba(0, 48, 87, 0.95)"
+		}
+	  },
+	  {
+		"id": "filterContent",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "loadMoreLabel": "Load more",
+		  "filters": [
+			{
+			  "type": 0,
+			  "label": "Category",
+			  "options": [
+				{
+				  "value": "Auto",
+				  "label": "Auto"
+				},
+				{
+				  "value": "Event",
+				  "label": "Event"
+				},
+				{
+				  "value": "Home Improvement",
+				  "label": "Home Improvement"
+				},
+				{
+				  "value": "Marketing",
+				  "label": "Marketing"
+				},
+				{
+				  "value": "Retail",
+				  "label": "Retail"
+				}
+			  ]
+			},
+			{
+			  "type": 1,
+			  "label": "Thought Leadership",
+			  "options": [
+				{
+				  "value": "Demographics",
+				  "label": "Demographics"
+				},
+				{
+				  "value": "Holidays",
+				  "label": "Holidays"
+				},
+				{
+				  "value": "Media",
+				  "label": "Media"
+				},
+				{
+				  "value": "Sports",
+				  "label": "Sports"
+				}
+			  ]
+			},
+			{
+			  "type": 2,
+			  "label": "Product",
+			  "options": [
+				{
+				  "value": "Creative Services",
+				  "label": "Creative Services"
+				},
+				{
+				  "value": "Digital",
+				  "label": "Digital"
+				},
+				{
+				  "value": "Television",
+				  "label": "Television"
+				}
+			  ]
+			},
+			{
+			  "type": 3,
+			  "label": "Document Type",
+			  "options": [
+				{
+				  "value": "3rd party research",
+				  "label": "3rd party research"
+				},
+				{
+				  "value": "Articles",
+				  "label": "Articles"
+				},
+				{
+				  "value": "Infographic",
+				  "label": "Infographic"
+				},
+				{
+				  "value": "White papers",
+				  "label": "White papers"
+				}
+			  ]
+			}
+		  ],
+		  "applyLabel": "Apply",
+		  "filterLabel": "Filters",
+		  "endpoint": "/search/article.json"
 		}
 	  },
 	  {

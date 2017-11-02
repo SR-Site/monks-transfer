@@ -1,0 +1,164 @@
+{
+  "statusCode": 200,
+  "data": {
+	"blocks": [
+	  {
+		"id": "articleTeaser",
+		"data": {
+		  "marginTop": 0,
+		  "windowed": false,
+		  "overlap": false,
+		  "social": [
+			{
+			  "label": "Find Your True ROI - Download",
+			  "title": "Find Your True ROI - Download",
+			  "target": "http:\/\/go.spectrumreach.com\/ROI",
+			  "type": 1
+			}
+		  ],
+		  "author": {
+			"name": "Spectrum Reach",
+			"role": "Author",
+			"image": {
+			  "alt": "",
+			  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
+			  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
+			}
+		  },
+		  "image": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/ROI-Article-BlockHeader_0.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/ROI-Article-BlockHeader_0.jpg",
+			"alt": "Find your true ROI"
+		  },
+		  "views": 0,
+		  "time": 5,
+		  "date": "09\/10\/2017",
+		  "paragraph": "If you\u2019re still relying solely on your gross rating point (GRP) and your customer relationship management (CRM) to measure television and digital campaigns, you\u2019re not getting the full story.",
+		  "subHeading": "What\u2019s the REAL Return on Investment for Your Marketing Plan?",
+		  "heading": " How Do You Know if Your Advertising Campaign is Working?",
+		  "theme": 1,
+		  "target": "\/articles\/how-do-you-know-if-your-advertising-campaign-working"
+		}
+	  },
+	  {
+		"id": "articleTeaser",
+		"data": {
+		  "marginTop": 0,
+		  "windowed": false,
+		  "overlap": false,
+		  "social": [
+			{
+			  "label": "Find Your True ROI - Download",
+			  "title": "Find Your True ROI - Download",
+			  "target": "http:\/\/go.spectrumreach.com\/ROI",
+			  "type": 1
+			}
+		  ],
+		  "author": {
+			"name": "Spectrum Reach",
+			"role": "Author",
+			"image": {
+			  "alt": "",
+			  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
+			  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
+			}
+		  },
+		  "image": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-05\/iStock_577661210-Boomers-header_11.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-05\/iStock_577661210-Boomers-header_11.jpg",
+			"alt": "Baby Boomers: Are you connecting with this valuable audience?"
+		  },
+		  "views": 0,
+		  "time": 5,
+		  "date": "09\/10\/2017",
+		  "paragraph": "If you\u2019re still relying solely on your gross rating point (GRP) and your customer relationship management (CRM) to measure television and digital campaigns, you\u2019re not getting the full story.",
+		  "subHeading": "What\u2019s the REAL Return on Investment for Your Marketing Plan?",
+		  "heading": " How Do You Know if Your Advertising Campaign is Working?",
+		  "theme": 1,
+		  "target": "\/articles\/how-do-you-know-if-your-advertising-campaign-working"
+		}
+	  },
+	  {
+		"id": "articleTeaser",
+		"data": {
+		  "marginTop": 0,
+		  "windowed": false,
+		  "overlap": false,
+		  "social": [
+			{
+			  "label": "Find Your True ROI - Download",
+			  "title": "Find Your True ROI - Download",
+			  "target": "http:\/\/go.spectrumreach.com\/ROI",
+			  "type": 1
+			}
+		  ],
+		  "author": {
+			"name": "Spectrum Reach",
+			"role": "Author",
+			"image": {
+			  "alt": "",
+			  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
+			  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
+			}
+		  },
+		  "image": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-05\/SR17_OneSheet_NewFront_4TweetableTruths_AR_4.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-05\/SR17_OneSheet_NewFront_4TweetableTruths_AR_4.jpg",
+			"alt": "4 Tweetable Truths from NewFront 2017"
+		  },
+		  "views": 0,
+		  "time": 5,
+		  "date": "09\/10\/2017",
+		  "paragraph": "If you\u2019re still relying solely on your gross rating point (GRP) and your customer relationship management (CRM) to measure television and digital campaigns, you\u2019re not getting the full story.",
+		  "subHeading": "What\u2019s the REAL Return on Investment for Your Marketing Plan?",
+		  "heading": " How Do You Know if Your Advertising Campaign is Working?",
+		  "theme": 1,
+		  "target": "\/articles\/how-do-you-know-if-your-advertising-campaign-working"
+		}
+	  },
+	  {
+		"id": "articleTeaser",
+		"data": {
+		  "marginTop": 0,
+		  "windowed": false,
+		  "overlap": false,
+		  "social": [
+			{
+			  "label": "Find Your True ROI - Download",
+			  "title": "Find Your True ROI - Download",
+			  "target": "http:\/\/go.spectrumreach.com\/ROI",
+			  "type": 1
+			}
+		  ],
+		  "author": {
+			"name": "Spectrum Reach",
+			"role": "Author",
+			"image": {
+			  "alt": "",
+			  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
+			  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
+			}
+		  },
+		  "image": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-05\/Audience-Focused-Networks_opt.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-05\/Audience-Focused-Networks_opt.jpg",
+			"alt": "Audience-Focused Networks"
+		  },
+		  "views": 0,
+		  "time": 5,
+		  "date": "09\/10\/2017",
+		  "paragraph": "If you\u2019re still relying solely on your gross rating point (GRP) and your customer relationship management (CRM) to measure television and digital campaigns, you\u2019re not getting the full story.",
+		  "subHeading": "What\u2019s the REAL Return on Investment for Your Marketing Plan?",
+		  "heading": " How Do You Know if Your Advertising Campaign is Working?",
+		  "theme": 1,
+		  "target": "\/articles\/how-do-you-know-if-your-advertising-campaign-working"
+		}
+	  }
+	]
+  },
+  "pagination": {
+	"offset": 0,
+	"limit": 4,
+	"total": 33
+  }
+}

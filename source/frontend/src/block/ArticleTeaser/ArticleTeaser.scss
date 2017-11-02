@@ -53,14 +53,22 @@
 		position: absolute;
 	}
 
-	@include respond-to(SMALL) {
-		.link {
-			@include aspect-ratio(1px, 1px);
+	@include respond-to(MEDIUM) {
+		.description {
+			width: 80%;
 		}
+	}
 
+	@include respond-to(SMALL) {
 		.description {
 			padding: $sizeGrid *2;
 			width: 90%;
+		}
+	}
+
+	@include respond-to(X_SMALL) {
+		.link {
+			@include aspect-ratio(1px, 1px);
 		}
 	}
 
