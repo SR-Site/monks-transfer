@@ -70,3 +70,31 @@ function spectrum_settings_preprocess_page(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_entity_update().
+ */
+function spectrum_settings_node_update(\Drupal\node\NodeInterface $node) {
+  \Drupal::service('pathauto.generator')->updateEntityAlias($node, 'update');
+  /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager */
+  $entityTypeManager = \Drupal::service('entity_type.manager');
+  /** @var \Drupal\prerender\PrerenderService $prerenderService */
+  $prerenderService = \Drupal::service('prerender.prerender');
+
+  // Get node url.
+  $url = $node->toUrl();
+  $requestedPath = $url->toString();
+
+  // Load prerender entity and update to the queue.
+  $prerenderedDatas = $entityTypeManager->getStorage('prerendered_html_entity')
+    ->loadByProperties([
+      'target_uuid' => $node->uuid(),
+      'entity_type' => $node->getEntityType()->id(),
+    ]);
+  foreach ($prerenderedDatas as $prerenderedData) {
+    /** @var \Drupal\prerender\Entity\PrerenderedDataInterface $prerenderedData */
+    $prerenderedData->setRequestPath($requestedPath);
+    $prerenderedData->save();
+    $prerenderService->queueData($prerenderedData, TRUE);
+  }
+}

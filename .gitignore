@@ -40,5 +40,4 @@ source/drupal/docroot/library/contrib
 source/drupal/docroot/profiles/contrib
 source/drupal/docroot/sites/default/files
 drush/contrib
-/composer.lock
 /source/drupal/var/drupal-settings/example.settings.local.php

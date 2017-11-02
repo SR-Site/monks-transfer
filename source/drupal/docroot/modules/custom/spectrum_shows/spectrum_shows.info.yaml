@@ -1,0 +1,11 @@
+name: Spectrum shows
+type: module
+description: Spectrum shows.
+core: 8.x
+package: Spectrum
+dependencies:
+  - mm_rest
+  - mm_rest_search
+  - mm_slug
+  - paragraphs
+  - statistics
