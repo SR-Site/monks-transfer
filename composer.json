@@ -152,5 +152,8 @@
             "source/drupal/docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
         }
+    },
+    "require-dev": {
+        "drupal/coder": "^8.2"
     }
 }
