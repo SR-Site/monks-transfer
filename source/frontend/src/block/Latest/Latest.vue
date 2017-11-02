@@ -38,7 +38,11 @@
 						/>
 					</div>
 				</div>
-				<ScrollBar componentId="ScrollBar" @update="handleScrollBarUpdate" :class="$style.scrollBar"/>
+				<ScrollBar
+					componentId="ScrollBar"
+					@update="handleScrollBarUpdate"
+					@end="handleScrollBarEnd"
+					:class="$style.scrollBar"/>
 			</div>
 		</div>
 	</div>

@@ -47,6 +47,8 @@ export default {
 			this.isReady();
 		},
 		handleResize() {
+			console.log(this.$refs.draggableElement.offsetWidth / this.data.items.length);
+
 			this.draggableInstance.setSnapPosition(
 				this.$refs.draggableElement.offsetWidth / this.data.items.length,
 			);
@@ -55,7 +57,12 @@ export default {
 			this.scrollBar.setProgress(event.data.progress);
 		},
 		handleScrollBarUpdate(progress) {
+			clearTimeout(this.scrollBarEndTimeout);
 			this.draggableInstance.update(progress);
+		},
+		handleScrollBarEnd() {
+			clearTimeout(this.scrollBarEndTimeout);
+			this.scrollBarEndTimeout = setTimeout(() => this.draggableInstance.snapToNearestPoint(), 50);
 		},
 	},
 };

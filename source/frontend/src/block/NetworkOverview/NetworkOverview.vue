@@ -12,14 +12,18 @@
 					<div :class="$style.networks" ref="draggableElement" class="js-draggable-element">
 						<div
 							v-for="(network, index) in data.items"
-							:class="$style.network" >
+							:class="$style.network">
 							<figure class="abs-center" :class="$style.image">
 								<ResponsiveImage :image="network.image" class="abs-fill fit-contain"/>
 							</figure>
 						</div>
 					</div>
 				</div>
-				<ScrollBar componentId="ScrollBar" @update="handleScrollBarUpdate" :class="$style.scrollBar"/>
+				<ScrollBar
+					componentId="ScrollBar"
+					@update="handleScrollBarUpdate"
+					@end="handleScrollBarEnd"
+					:class="$style.scrollBar"/>
 			</div>
 		</div>
 	</div>

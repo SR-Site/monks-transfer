@@ -35,14 +35,6 @@
 						<ResponsiveImage :image="data.background" class="fit-cover"/>
 					</figure>
 				</div>
-
-
-				<!--<div class="abs-center" :class="$style.image" ref="image">-->
-				<!--<ResponsiveImage :image="data.background" class="fit-cover" />-->
-				<!--</div>-->
-				<!--<div :class="$style.content" ref="content">-->
-
-				<!--</div>-->
 			</div>
 		</div>
 	</div>

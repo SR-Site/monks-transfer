@@ -34,10 +34,6 @@
 	}
 
 	@include respond-to(SMALL) {
-		.audio-fragment {
-			padding: 0 $sizeGrid * 2;
-		}
-
 		.profile-image {
 			@include size($sizeGrid * 2);
 		}

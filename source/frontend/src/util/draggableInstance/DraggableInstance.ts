@@ -1,5 +1,5 @@
 import sengEvent from 'seng-event';
-import { Linear, TweenLite } from 'gsap';
+import { Linear, Expo, TweenLite } from 'gsap';
 import Draggable from 'gsap/Draggable';
 import { debounce } from 'lodash';
 import NativeEventListener from 'util/event/NativeEventListener';
@@ -125,7 +125,6 @@ class DraggableInstance extends sengEvent {
 		}
 
 		this.checkDragging();
-
 		this.handleResize();
 	}
 
@@ -142,6 +141,18 @@ class DraggableInstance extends sengEvent {
 				this._draggableInstance.update();
 			},
 		});
+	}
+
+	/**
+	 * @public
+	 * @method snapToNearestPoint
+	 */
+	public snapToNearestPoint(): void {
+		const snapPosition = this.getSnapPosition(this._draggableInstance.x);
+		const maxX = this.maxX;
+
+		// Snap to the nearest snap point
+		this.animateProgress(snapPosition / maxX, this._options.maxDuration, Expo.easeOut);
 	}
 
 	/**
@@ -294,8 +305,8 @@ class DraggableInstance extends sengEvent {
 				onDragStart: this.handleDragStart.bind(this),
 				allowNativeTouchScrolling: (bowser.mobile || bowser.tablet) ? true : false,
 				onThrowComplete: () => {
-					this.handleThrowComplete();
 					this.handleDrag();
+					this.handleThrowComplete();
 				},
 			},
 		)[0];
@@ -307,7 +318,7 @@ class DraggableInstance extends sengEvent {
 	 * @param position
 	 * @returns {number}
 	 */
-	private getSnapPosition(position: number): number {
+	public getSnapPosition(position: number): number {
 		let snapX = this._options.snap.x;
 
 		if (this._options.snap.element) {
@@ -394,6 +405,9 @@ class DraggableInstance extends sengEvent {
 		this.dispatchEvent(
 			new DraggableInstanceEvent(
 				DraggableInstanceEvent.DRAG_END,
+				{
+					progress: this._progress,
+				},
 			),
 		);
 	}
@@ -406,6 +420,9 @@ class DraggableInstance extends sengEvent {
 		this.dispatchEvent(
 			new DraggableInstanceEvent(
 				DraggableInstanceEvent.DRAG_START,
+				{
+					progress: this._progress,
+				},
 			),
 		);
 	}

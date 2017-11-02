@@ -69,10 +69,6 @@
 
 	// Breakpoints
 	@include respond-to(SMALL) {
-		.how-to-advertise {
-			padding: 0 $sizeGrid*2;
-		}
-
 		.header {
 			padding: 0 0 $sizeGrid*4;
 
@@ -97,7 +93,7 @@
 		}
 
 		.step {
-			width: calc(100vw - #{$sizeGrid * 8});
+			width: calc(100vw - #{$sizeGrid * 4});
 			height: auto;
 			white-space: normal;
 

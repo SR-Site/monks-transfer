@@ -18,6 +18,12 @@ export default {
 			this.draggableInstance.addEventListener(DraggableInstanceEvent.UPDATE, event => {
 				this.$emit('update', event.data.progress);
 			});
+			this.draggableInstance.addEventListener(DraggableInstanceEvent.THROW_COMPLETE, event => {
+				this.$emit('end', event.data.progress);
+			});
+			this.draggableInstance.addEventListener(DraggableInstanceEvent.DRAG_END, event => {
+				this.$emit('end', event.data.progress);
+			});
 			this.isReady();
 		},
 		setSnapPosition(x) {

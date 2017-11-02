@@ -57,7 +57,12 @@ export default {
 			this.scrollBar.setProgress(event.data.progress);
 		},
 		handleScrollBarUpdate(progress) {
+			clearTimeout(this.scrollBarEndTimeout);
 			this.draggableInstance.update(progress);
+		},
+		handleScrollBarEnd() {
+			clearTimeout(this.scrollBarEndTimeout);
+			this.scrollBarEndTimeout = setTimeout(() => this.draggableInstance.snapToNearestPoint(), 50);
 		},
 		getArticleData(article) {
 			const clone = JSON.parse(JSON.stringify(article));

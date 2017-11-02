@@ -63,10 +63,9 @@
 
 	@include respond-to(SMALL) {
 		.info {
-			@include size(100% !important, auto !important);
-			padding-left: $sizeGrid;
-			padding-right: $sizeGrid;
-			max-width: 100%;
+			padding: 0 $sizeGridMobile * 2;
+			//@include size(100% !important, auto !important);
+			//max-width: 100%;
 
 			&:global {
 				&.is-windowed {
@@ -88,6 +87,7 @@
 
 		.description {
 			width: 100% !important;
+			margin-bottom: $sizeGrid * 2;
 		}
 
 		.component-button-main {

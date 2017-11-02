@@ -82,5 +82,9 @@
 				padding: $sizeGrid $sizeGridMobile * 2;
 			}
 		}
+
+		.button {
+			width: calc(100% - #{$sizeGrid});
+		}
 	}
 }
