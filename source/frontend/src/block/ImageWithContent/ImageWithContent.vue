@@ -12,6 +12,13 @@
 						<ButtonPrimary
 							componentId="ButtonPrimary"
 							v-if="data.link"
+							v-track="{
+								[TrackingProvider.GOOGLE_ANALYTICS]: {
+									category: 'imageWithContent',
+									action: 'click',
+									label: `${data.heading}|${data.link.title}`,
+								}
+							}"
 							:title="data.link.title"
 							:label="data.link.label"
 							:type="ButtonType.LINK"
@@ -25,7 +32,7 @@
 				</div>
 				<div :class="$style.image">
 					<figure class="abs-fill" ref="image">
-						<ResponsiveImage :image="data.background" class="fit-cover" />
+						<ResponsiveImage :image="data.background" class="fit-cover"/>
 					</figure>
 				</div>
 
