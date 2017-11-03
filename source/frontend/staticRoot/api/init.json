@@ -19,54 +19,157 @@
 	},
 	"layout": {
 	  "navigation": [
-		{
-		  "link": {
+		  {
 			"label": "Home",
 			"title": "Home",
-			"target": "\/",
+			"target": "/",
 			"type": 0
-		  }
-		},
-		{
-		  "link": {
-			"label": "Advertising Solutions",
-			"title": "Advertising Solutions",
-			"target": "\/advertising-solutions",
-			"type": 0
-		  }
-		},
-		{
-		  "link": {
-			"label": "Featured Programs",
-			"title": "Featured Programs",
-			"target": "\/featured-programs",
-			"type": 0
-		  }
-		},
-		{
-		  "link": {
+		  },
+		  {
+			"section": "Advertising Solutions",
+			"links": [
+			  {
+				"label": "Advertising Solutions",
+				"title": "Advertising Solutions",
+				"target": "/advertising-solutions",
+				"type": 0
+			  },
+			  {
+				"section": "Television",
+				"links": [
+				  {
+					"label": "Television",
+					"title": "Television",
+					"target": "/television",
+					"type": 0
+				  },
+				  {
+					"label": "Ads Everywhere",
+					"title": "Ads Everywhere",
+					"target": "/ads-everywhere",
+					"type": 0
+				  },
+				  {
+					"label": "Audience Finder",
+					"title": "Audience Finder",
+					"target": "/audience-finder",
+					"type": 0
+				  },
+				  {
+					"label": "Ad tag & Ad Copy",
+					"title": "Ad tag & Ad Copy",
+					"target": "/ad-tag-and-ad-copy",
+					"type": 0
+				  },
+				  {
+					"label": "Engage Me Tv",
+					"title": "Engage Me Tv",
+					"target": "/engage-me-tv",
+					"type": 0
+				  }
+				]
+			  },
+			  {
+				"section": "Digital",
+				"links": [
+				  {
+					"label": "Digital",
+					"title": "Digital",
+					"target": "/digital",
+					"type": 0
+				  },
+				  {
+					"label": "Online Display Video",
+					"title": "Online Display Video",
+					"target": "/online-display-video",
+					"type": 0
+				  },
+				  {
+					"label": "Social Media",
+					"title": "Social Media",
+					"target": "/social-media",
+					"type": 0
+				  },
+				  {
+					"label": "Search",
+					"title": "Search",
+					"target": "/search",
+					"type": 0
+				  }
+				]
+			  },
+			  {
+				"label": "Creative Services",
+				"title": "Creative Services",
+				"target": "/creative-services",
+				"type": 0
+			  }
+			]
+		  },
+		  {
+			"section": "Featured Programs",
+			"links": [
+			  {
+				"label": "Featured Programs",
+				"title": "Featured Programs",
+				"target": "/featured-programs",
+				"type": 0
+			  },
+			  {
+				"label": "Networks",
+				"title": "Networks",
+				"target": "/networks",
+				"type": 0
+			  },
+			  {
+				"label": "Shows",
+				"title": "Shows",
+				"target": "/shows",
+				"type": 0
+			  }
+			]
+		  },
+		  {
 			"label": "Markets Map",
 			"title": "Markets Map",
 			"target": "\/markets-map",
 			"type": 0
-		  }
-		},
-		{
-		  "link": {
-			"label": "Resources",
-			"title": "Resources",
-			"target": "\/knowledge-center",
-			"type": 0
-		  }
-		},
-		{
-		  "link": {
+		  },
+		  {
+			"section": "Resources",
+			"links": [
+			  {
+				"label": "Resources",
+				"title": "Resources",
+				"target": "/knowledge-center",
+				"type": 0
+			  },
+			  {
+				"label": "Success Stories",
+				"title": "Success Stories",
+				"target": "/success-stories",
+				"type": 0
+			  },
+			  {
+				"label": "Knowledge Center",
+				"title": "Knowledge Center",
+				"target": "/knowledge-center",
+				"type": 0
+			  },
+			  {
+				"label": "Glossary",
+				"title": "Glossary",
+				"target": "/glossary",
+				"type": 0
+			  }
+			]
+		  },
+		  {
 			"label": "Contact us",
 			"title": "Contact us",
 			"target": "\/contact-us",
 			"type": 0
 		  }
-		}
 	  ],
 	  "footer": {
 		"copyright": "Charter Communications &copy; 2017",

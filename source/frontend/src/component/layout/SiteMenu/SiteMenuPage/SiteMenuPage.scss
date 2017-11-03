@@ -1,0 +1,96 @@
+:local {
+	.site-menu-page {
+		@include size(100%, auto);
+		@include offset(0, 0);
+		@extend %reset-list;
+		padding: $sizeGrid * 2;
+		position: absolute;
+		transition: transform .5s $easeInOutExpo;
+
+		&.left {
+			transform: translateX(-100%);
+		}
+
+		&.center {
+			transform: translateX(0);
+		}
+
+		&.right {
+			transform: translateX(100%);
+		}
+	}
+
+	.menu-item {
+		display: block;
+	}
+
+	.button {
+		font: 2.4rem / 1 $fontOpenSans;
+		border: 0;
+		background: transparent;
+		padding: $sizeGrid / 2 0;
+		display: block;
+		width: 100%;
+		text-align: left;
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		.icon {
+			@include size($sizeGridSecondary / 2);
+			position: relative;
+
+			svg {
+				@include offset(0, 0);
+				@include size(100%);
+				position: absolute;
+			}
+
+			path {
+				fill: currentColor;
+			}
+		}
+	}
+
+	.back-button {
+		.label {
+			margin-left: $sizeGrid / 2;
+		}
+	}
+
+	.action-button {
+		justify-content: space-between;
+
+		&:before {
+			@include size($sizeGridSecondary, 2px);
+			@include offset(0, 50%);
+			transform: translateY(-50%) scaleX(0);
+			transition: transform .2s $easeInOutExpo;
+			transform-origin: left center;
+			background: $colorSecondary;
+			content: '';
+			position: absolute;
+		}
+
+		.label {
+			transition: transform .2s $easeInOutExpo;
+		}
+	}
+
+	.offset {
+		.action-button {
+			width: calc(100% - #{$sizeGrid});
+			margin-left: $sizeGrid;
+		}
+	}
+}
+
+@include hover('.action-button') {
+	.label {
+		transform: translateX($sizeGridSecondary * 1.5);
+	}
+
+	&:before {
+		transform: translateY(-50%) scaleX(1);
+	}
+}

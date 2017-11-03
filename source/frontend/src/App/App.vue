@@ -3,7 +3,7 @@
 <template>
 	<div :class="$style.appWrapper">
 		<div :class="[$style.siteWrapper, {[$style.isActive]: pageLoaderReady}]">
-			<SiteHeader componentId="Header" />
+			<SiteHeader componentId="Header" @toggleMenu="handleToggleMenu" :menuActive="menuActive"/>
 			<router-view></router-view>
 			<ButtonStartAdvertising
 				@click="handleStartAdvertisingClick"
@@ -14,6 +14,7 @@
 				:type="ButtonType.ACTION"
 			/>
 			<SlideoutPanel componentId="SlideoutPanel" />
+			<SiteMenu componentId="Menu" :menuActive="menuActive"/>
 			<SiteFooter componentId="Footer" />
 			<VideoOverlay componentId="VideoOverlay" />
 			<Notification componentId="Notification" />

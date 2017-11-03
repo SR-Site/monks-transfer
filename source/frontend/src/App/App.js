@@ -11,6 +11,7 @@ import NativeEventListener from '../util/event/NativeEventListener';
 import VideoOverlay from '../component/VideoOverlay/VideoOverlay';
 import SlideoutPanel from '../component/SlideoutPanel/SlideoutPanel';
 import { AbstractRegistrableComponent } from 'vue-transition-component';
+import SiteMenu from '../component/layout/SiteMenu';
 
 export default {
 	name: 'App',
@@ -22,6 +23,7 @@ export default {
 		VideoOverlay,
 		Notification,
 		SlideoutPanel,
+		SiteMenu,
 	},
 	computed: {
 		...mapGetters(
@@ -36,6 +38,7 @@ export default {
 	data() {
 		return {
 			pageLoaderReady: false,
+			menuActive: false,
 		};
 	},
 	mounted() {
@@ -70,6 +73,9 @@ export default {
 		},
 		handleStartAdvertisingClick() {
 			this.getChild('SlideoutPanel').transitionIn(SlideoutPanelType.CONTACT);
+		},
+		handleToggleMenu() {
+			this.menuActive = !this.menuActive;
 		},
 	},
 	beforeDestroy() {

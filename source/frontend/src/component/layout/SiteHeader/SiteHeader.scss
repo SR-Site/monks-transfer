@@ -7,7 +7,7 @@
 		z-index: zindex($layout, header);
 		transition: background 0.2s $easeInOut;
 
-		&.is-scrolled {
+		&.solid-background {
 			background: white;
 			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
 		}
