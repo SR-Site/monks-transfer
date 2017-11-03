@@ -71,7 +71,7 @@ export default {
 		},
 		transitionOut() {
 			this.transitionController.transitionInTimeline.timeScale(2.5);
-			return this.transitionController.transitionOut()
+			return this.transitionController.transitionOut(true)
 		},
 		handleSelectSection(section) {
 			// Add the latest page to the history array

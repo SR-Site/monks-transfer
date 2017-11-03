@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import { debounce } from 'lodash';
 import { mapGetters } from 'vuex';
 import { customButtonEventDispatcher, CustomButtonEvent } from 'vue-block-system';
 import SlideoutPanelType from 'data/enum/SlideoutPanelType';
@@ -47,6 +48,12 @@ export default {
 			CustomButtonEvent.FIRE,
 			event => this.handleCustomButtonEvent(event.data),
 		);
+
+		this.scrollListener = new NativeEventListener(
+			window,
+			'scroll',
+			debounce(this.handleScroll, 50),
+		);
 	},
 	methods: {
 		handlePageLoaderReady(component) {
@@ -77,9 +84,14 @@ export default {
 		handleToggleMenu() {
 			this.menuActive = !this.menuActive;
 		},
+		handleScroll() {
+			this.menuActive = false;
+		},
 	},
 	beforeDestroy() {
 		this.customButtonEventListener.dispose();
 		this.customButtonEventListener = null;
+		this.scrollListener.dispose();
+		this.scrollListener = null;
 	},
 };
