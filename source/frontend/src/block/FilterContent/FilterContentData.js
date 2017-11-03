@@ -20,8 +20,7 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	loadMoreLabel: VueTypes.string.isRequired,
-	applyLabel: VueTypes.string.isRequired,
+	closeLabel: VueTypes.string.isRequired,
 	filterLabel: VueTypes.string.isRequired,
 	endpoint: VueTypes.string.isRequired,
 	filters: VueTypes.arrayOf(

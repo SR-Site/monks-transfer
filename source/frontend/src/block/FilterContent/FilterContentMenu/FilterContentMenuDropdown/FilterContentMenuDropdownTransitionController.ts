@@ -8,17 +8,19 @@ class FilterContentMenuDropdownTransitionController extends AbstractTransitionCo
 	 * @description Use this method to setup your transition in timeline
 	 * */
 	protected setupTransitionInTimeline(): void {
-		this.transitionInTimeline.fromTo(
-			this.viewModel.$el,
-			0.7,
-			{
-				yPercent: -100,
-			},
-			{
-				yPercent: 0,
-				ease: Expo.easeInOut,
-			},
-		);
+		if (!(<any>this.viewModel).disableTransitionIn) {
+			this.transitionInTimeline.fromTo(
+				this.viewModel.$el,
+				0.7,
+				{
+					yPercent: -100,
+				},
+				{
+					yPercent: 0,
+					ease: Expo.easeInOut,
+				},
+			);
+		}
 	}
 
 	/**

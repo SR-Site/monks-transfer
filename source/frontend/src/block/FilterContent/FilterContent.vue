@@ -8,6 +8,8 @@
 				componentId="FilterContentMenu"
 				@update="handleFilterMenuUpdate"
 				ref="filterContentMenu"
+				:closeLabel="data.closeLabel"
+				:filterLabel="data.filterLabel"
 				:class="$style.filterMenu"
 				:filters="data.filters"/>
 			<div :class="$style.filterResult">

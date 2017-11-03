@@ -64,10 +64,24 @@
 		}
 	}
 
-	.filter-button {
-		height: $height;
-		color: $colorPrimary;
+	.filter {
 		flex-grow: 1;
+
+		&:not(:last-child) {
+			&:after {
+				@include size(1px, 50%);
+				@include position(50%, 0, auto, auto);
+				transform: translateY(-50%);
+				position: absolute;
+				content: '';
+				background: $colorBorder;
+			}
+		}
+	}
+
+	.filter-button {
+		@include size(100%, $height);
+		color: $colorPrimary;
 		position: relative;
 
 		&:before {
@@ -85,17 +99,6 @@
 			@include size(20px);
 			color: $colorTertiary;
 			margin-left: 10px;
-		}
-
-		&:not(:last-child) {
-			&:after {
-				@include size(1px, 100%);
-				@include position(50%, 0, auto, auto);
-				transform: translateY(-50%);
-				position: absolute;
-				content: '';
-				background: $colorBorder;
-			}
 		}
 
 		&.is-active {
@@ -134,9 +137,16 @@
 		$height: mobile-size($sizeGrid * 3);
 
 		.filter-content-menu {
-			@include size(100%, $height);
+			@include size(100%, auto);
 			@include offset(0, -$height);
 			position: absolute;
+			max-height: $height;
+			transition: max-height 0.8s $easeInOutQuart;
+			overflow: hidden;
+
+			&.is-active {
+				max-height: 480px;
+			}
 		}
 
 		.button {
@@ -147,10 +157,8 @@
 
 		.menu {
 			display: block;
-		}
-
-		.filters {
-			display: none;
+			height: auto;
+			padding-bottom: $sizeGrid;
 		}
 
 		.main-button {
@@ -160,6 +168,32 @@
 			.icon {
 				margin-left: $sizeGrid
 			}
+		}
+
+		.badge {
+			font-size: 2rem;
+		}
+
+		.filter {
+			&:not(:last-child) {
+				&:after {
+					display: none;
+				}
+			}
+		}
+
+		.filter-button {
+			@include size(100%, $height);
+		}
+
+		.filters {
+			@include size(100%, auto);
+			@include position(auto, auto, auto, auto);
+			//@include offset(0, $height);
+			//position: absolute;
+			position: relative;
+			flex-direction: column;
+			background: white;
 		}
 	}
 }

@@ -59,7 +59,6 @@
 		  "overlap": false,
 		  "windowed": false,
 		  "marginTop": 0,
-		  "loadMoreLabel": "Load more",
 		  "filters": [
 			{
 			  "type": 0,
@@ -150,8 +149,8 @@
 			  ]
 			}
 		  ],
-		  "applyLabel": "Apply",
 		  "filterLabel": "Filters",
+		  "closeLabel": "Close",
 		  "endpoint": "/search/article.json"
 		}
 	  },

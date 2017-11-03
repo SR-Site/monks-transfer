@@ -1,8 +1,11 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
+import { DeviceStateEvent } from 'seng-device-state-tracker';
 import FilterContentMenuTransitionController from './FilterContentMenuTransitionController';
 import VueTypes from 'vue-types';
 import PropFilter from '../../../data/prop-type/action/PropFilter';
 import FilterContentMenuDropdown from './FilterContentMenuDropdown/FilterContentMenuDropdown';
+import NativeEventListener from '../../../util/event/NativeEventListener';
+import { DeviceState } from '../../../config/deviceStateConfig';
 
 export default {
 	name: 'FilterContentMenu',
@@ -13,6 +16,8 @@ export default {
 	data() {
 		return {
 			activeIndex: -1,
+			mobileMenuActive: false,
+			deviceState: this.$deviceState.currentState,
 			chosenOptions: {},
 		};
 	},
@@ -23,6 +28,12 @@ export default {
 		activeFilter() {
 			return this.filters[this.activeIndex] ? this.filters[this.activeIndex].type : null;
 		},
+		activeFilterLabel() {
+			return this.mobileMenuActive && this.deviceState <= DeviceState.SMALL ? this.closeLabel : this.filterLabel;
+		},
+		activeFilterIcon() {
+			return this.mobileMenuActive && this.deviceState <= DeviceState.SMALL ? 'cross' : 'filter';
+		}
 	},
 	watch: {
 		chosenOptions(value) {
@@ -37,6 +48,8 @@ export default {
 		},
 	},
 	props: {
+		closeLabel: VueTypes.string.isRequired,
+		filterLabel: VueTypes.string.isRequired,
 		filters: VueTypes.arrayOf(
 			VueTypes.shape(PropFilter).isRequired,
 		).isRequired,
@@ -44,6 +57,13 @@ export default {
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new FilterContentMenuTransitionController(this);
+			this.deviceStateListener = new NativeEventListener(
+				this.$deviceState,
+				DeviceStateEvent.STATE_UPDATE,
+				event => {
+					this.deviceState = event.data.state;
+				},
+			);
 			this.dropdown = this.getChild('FilterContentMenuDropdown');
 			this.isReady();
 		},
@@ -66,19 +86,30 @@ export default {
 
 			// Force an update
 			this.chosenOptions = Object.assign({}, this.chosenOptions);
+
+			if(this.deviceState <= DeviceState.SMALL) {
+				this.handleFilterToggleClick();
+			}
+		},
+		handleFilterToggleClick() {
+			if (this.deviceState <= DeviceState.SMALL) {
+				this.mobileMenuActive = !this.mobileMenuActive;
+			}
 		},
 		handleFilterClick(index) {
-			if (this.activeIndex === index) {
-				this.dropdown.transitionOut()
-				.then(() => this.activeIndex = -1);
-			} else {
-				if (this.activeIndex === -1) {
-					this.activeIndex = index;
-					this.dropdown.transitionIn();
-				} else {
+			if (this.deviceState > DeviceState.SMALL) {
+				if (this.activeIndex === index) {
 					this.dropdown.transitionOut()
-					.then(() => this.activeIndex = index)
-					.then(() => this.dropdown.transitionIn());
+					.then(() => this.activeIndex = -1);
+				} else {
+					if (this.activeIndex === -1) {
+						this.activeIndex = index;
+						this.dropdown.transitionIn();
+					} else {
+						this.dropdown.transitionOut()
+						.then(() => this.activeIndex = index)
+						.then(() => this.dropdown.transitionIn());
+					}
 				}
 			}
 		},

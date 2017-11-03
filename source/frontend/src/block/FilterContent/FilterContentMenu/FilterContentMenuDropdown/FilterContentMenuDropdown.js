@@ -8,6 +8,7 @@ export default {
 	props: {
 		chosenOptions: VueTypes.any.def({}),
 		filter: VueTypes.number,
+		disableTransitionIn: VueTypes.bool.def(false),
 		options: VueTypes.arrayOf(
 			VueTypes.shape(
 				{

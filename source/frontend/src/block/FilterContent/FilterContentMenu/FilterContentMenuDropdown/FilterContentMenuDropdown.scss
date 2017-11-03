@@ -41,17 +41,33 @@
 		}
 	}
 
-	.button {
+	.close {
 		@include position(50%, $sizeGrid / 2, auto, auto);
 		position: absolute;
 		transform: translateY(-50%);
 	}
 
 	@include respond-to(SMALL) {
+		.filter-content-menu-dropdown {
+			@include position(auto, auto, auto, auto);
+			height: auto;
+			position: relative;
+			box-shadow: none;
+		}
+
+		.wrapper {
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+
 		.filter {
 			height: 4rem;
 			font-size: mobile-size(2rem);
 			line-height: 4rem;
+		}
+
+		.close {
+			display: none;
 		}
 	}
 }

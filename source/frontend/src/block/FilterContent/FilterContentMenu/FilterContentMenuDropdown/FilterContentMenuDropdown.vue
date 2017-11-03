@@ -17,7 +17,7 @@
 				title="Close"
 				:size="Size.SMALL"
 				:type="ButtonType.ACTION"
-				:class="$style.button"
+				:class="$style.close"
 				@click="handleClose"/>
 		</div>
 	</div>
