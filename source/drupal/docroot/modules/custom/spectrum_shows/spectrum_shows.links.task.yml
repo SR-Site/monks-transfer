@@ -1,0 +1,16 @@
+# genre routing definition
+entity.genre.canonical:
+  route_name: entity.genre.canonical
+  base_route: entity.genre.canonical
+  title: 'View'
+
+entity.genre.edit_form:
+  route_name: entity.genre.edit_form
+  base_route: entity.genre.canonical
+  title: Edit
+
+entity.genre.delete_form:
+  route_name:  entity.genre.delete_form
+  base_route:  entity.genre.canonical
+  title: Delete
+  weight: 10

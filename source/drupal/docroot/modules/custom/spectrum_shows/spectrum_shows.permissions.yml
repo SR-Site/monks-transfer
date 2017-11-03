@@ -1,0 +1,16 @@
+administer genre entities:
+  title: 'Administer Genre entities'
+  description: 'Allow to access the administration form to configure Genre entities.'
+  restrict access: true
+
+add category entities:
+  title: 'Create new Category entities'
+
+delete genre entities:
+  title: 'Delete Genre entities'
+
+edit genre entities:
+  title: 'Edit Genre entities'
+
+view genre entities:
+  title: 'View Genre entities'

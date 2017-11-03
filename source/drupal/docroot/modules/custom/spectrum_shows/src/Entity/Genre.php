@@ -18,15 +18,19 @@ use Drupal\spectrum_shows\GenreInterface;
  *   bundle_label = @Translation("Category type"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\Core\Entity\EntityListbuilder",
+ *     "list_builder" = "Drupal\spectrum_shows\GenreListBuilder",
  *     "views_data" = "Drupal\spectrum_shows\Entity\GenreViewsData",
  *
  *     "form" = {
- *       "default" = "Drupal\spectrum_shows\GenreForm",
- *       "add" = "Drupal\spectrum_shows\GenreForm",
- *       "edit" = "Drupal\spectrum_shows\GenreForm",
+ *       "default" = "Drupal\spectrum_shows\Form\GenreForm",
+ *       "add" = "Drupal\spectrum_shows\Form\GenreForm",
+ *       "edit" = "Drupal\spectrum_shows\Form\GenreForm",
  *       "delete" = "Drupal\spectrum_shows\Form\GenreDeleteForm",
  *     },
+ *     "access" = "Drupal\spectrum_shows\GenreAccessControlHandler",
+ *     "route_provider" = {
+ *       "html" = "Drupal\Core\Entity\Routing\AdminHtmlRouteProvider"
+ *     }
  *   },
  *   base_table = "genre",
  *   admin_permission = "administer genre entities",

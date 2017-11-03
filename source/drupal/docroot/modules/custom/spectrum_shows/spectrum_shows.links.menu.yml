@@ -1,0 +1,6 @@
+# Product menu items definition
+system.admin.shows:
+  title: 'Shows'
+  route_name: entity.genre.collection
+  description: 'List Shows entities'
+  parent: system.admin
