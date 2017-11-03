@@ -1,8 +1,6 @@
 import VueTypes from 'vue-types';
 import PropImage from '../../data/prop-type/media/PropImage';
-import PropVideo from '../../data/prop-type/media/PropVideo';
 import PropLink from '../../data/prop-type/action/PropLink';
-import PropStatistic from '../../data/prop-type/hero-main/PropStatistic';
 import PropAuthor from '../../data/prop-type/article/PropAuthor';
 
 /**
