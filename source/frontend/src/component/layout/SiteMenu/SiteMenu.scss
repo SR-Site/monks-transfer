@@ -4,7 +4,7 @@
 		@include position($sizeGrid * 2, 0, 0, auto);
 		position: fixed;
 		overflow: hidden;
-		//transform: translateX(100%);
+		transform: translateX(100%);
 		z-index: zindex($layout, menu);
 	}
 
@@ -25,5 +25,13 @@
 		@include size(100%, auto);
 		color: $colorWhite;
 		position: relative;
+	}
+
+	@include respond-to(SMALL) {
+		.menu {
+			height: calc(100vh - #{$sizeHeaderMobile});
+			width: 100%;
+			top: $sizeHeaderMobile;
+		}
 	}
 }

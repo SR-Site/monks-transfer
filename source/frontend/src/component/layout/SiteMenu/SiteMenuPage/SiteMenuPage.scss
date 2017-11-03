@@ -3,7 +3,7 @@
 		@include size(100%, auto);
 		@include offset(0, 0);
 		@extend %reset-list;
-		padding: $sizeGrid * 2;
+		padding: $sizeGrid * 2 $sizeGrid * 3;
 		position: absolute;
 		transition: transform .5s $easeInOutExpo;
 
@@ -53,6 +53,8 @@
 	}
 
 	.back-button {
+		transform: translateX(-$sizeGrid);
+
 		.label {
 			margin-left: $sizeGrid / 2;
 		}
@@ -81,6 +83,21 @@
 		.action-button {
 			width: calc(100% - #{$sizeGrid});
 			margin-left: $sizeGrid;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.site-menu-page {
+			padding: mobile-size($sizeGrid * 2);
+		}
+
+		.button {
+			font-size: mobile-size(3.2rem);
+			padding: mobile-size($sizeGrid / 2) 0;
+
+			.icon {
+				@include size(mobile-size($sizeGridSecondary / 2));
+			}
 		}
 	}
 }
