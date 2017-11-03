@@ -36,8 +36,6 @@ export default class UserService {
 			endpoint = endpoint.substring(1);
 		}
 
-		console.log(endpoint, offset, limit, filter);
-
 		return getValue(GATEWAY).get(
 			endpoint,
 			{
