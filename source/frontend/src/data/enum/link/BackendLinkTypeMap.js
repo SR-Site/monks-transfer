@@ -1,5 +1,5 @@
 import { LinkType } from 'vue-block-system';
-import BackendLinkType from '../BackendLinkType';
+import BackendLinkType from './BackendLinkType';
 
 export default {
 	[BackendLinkType.INTERNAL]: LinkType.INTERNAL,

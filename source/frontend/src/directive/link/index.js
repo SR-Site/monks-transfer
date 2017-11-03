@@ -1,6 +1,6 @@
 import NativeEventListener from '../../util/event/NativeEventListener';
 import getRouter from '../../router';
-import LinkType from '../../data/enum/BackendLinkType';
+import LinkType from '../../data/enum/link/BackendLinkType';
 
 const namespace = 'LinkDirective';
 

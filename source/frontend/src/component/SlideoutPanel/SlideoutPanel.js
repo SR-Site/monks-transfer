@@ -59,7 +59,6 @@ export default {
 			}
 		},
 		handlePanelReady(component, id) {
-			console.log('panel ready', id);
 			this.panels[id] = component;
 		},
 		handleShowSpinner() {
