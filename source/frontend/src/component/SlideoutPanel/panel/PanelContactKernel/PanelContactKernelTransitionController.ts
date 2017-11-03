@@ -1,7 +1,7 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 import { Linear } from 'gsap';
 
-class PanelContactTransitionController extends AbstractTransitionController {
+class PanelContactKernelTransitionController extends AbstractTransitionController {
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
@@ -32,4 +32,4 @@ class PanelContactTransitionController extends AbstractTransitionController {
 	}
 }
 
-export default PanelContactTransitionController;
+export default PanelContactKernelTransitionController;

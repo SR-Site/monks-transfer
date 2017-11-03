@@ -116,6 +116,11 @@
 		  "subHeading": "Get Started Today.",
 		  "heading": "Let's talk!<br\/>Tell us how we can help you advertise.",
 		  "submitLabel": "Send"
+		},
+		"contactKernel": {
+		  "subHeading": "Contact Kernel.",
+		  "heading": "Tell us which creative service you need",
+		  "submitLabel": "Send"
 		}
 	  }
 	},

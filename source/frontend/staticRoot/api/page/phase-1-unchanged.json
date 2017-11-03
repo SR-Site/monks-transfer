@@ -23,10 +23,9 @@
 				"alt": "the dreamers, the entrepreneurs, the innovators"
 			  },
 			  "link": {
-				"label": "Follow the Story",
-				"title": "Follow the Story",
-				"target": "/advertising-solutions",
-				"type": 0
+				"label": "Contact Kernel",
+				"title": "Contact Kernel",
+				"type": 5
 			  }
 			},
 			{

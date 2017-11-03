@@ -22,10 +22,15 @@ class Endpoints {
 	private static _API: string = 'api';
 
 	public static CONTACT: string = 'contact';
+	public static CONTACT_KERNEL: string = 'contactKernel';
 	public static VIEW_COUNT: string = 'viewCount';
 
 	private static _ENDPOINTS = {
 		[Endpoints.CONTACT]: {
+			[Endpoints._MOCK]: 'contact.json',
+			[Endpoints._API]: 'contact',
+		},
+		[Endpoints.CONTACT_KERNEL]: {
 			[Endpoints._MOCK]: 'contact.json',
 			[Endpoints._API]: 'contact',
 		},

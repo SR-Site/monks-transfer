@@ -1,16 +1,18 @@
 import { AbstractTransitionComponent, TransitionEvent } from 'vue-transition-component';
 import SlideoutPanelTransitionController from './SlideoutPanelTransitionController';
 import PanelContact from './panel/PanelContact/PanelContact';
-import SlideoutPanel from 'data/enum/SlideOutPanel';
+import SlideoutPanelType from 'data/enum/SlideoutPanelType';
 import keyCode from 'key-code';
 import NativeEventListener from '../../util/event/NativeEventListener';
 import Scrollbar from '../../util/ScrollBar';
+import PanelContactKernel from './panel/PanelContactKernel/PanelContactKernel';
 
 export default {
 	name: 'SlideoutPanel',
 	extends: AbstractTransitionComponent,
 	components: {
 		PanelContact,
+		PanelContactKernel,
 	},
 	data() {
 		return {
@@ -18,7 +20,7 @@ export default {
 		};
 	},
 	created() {
-		this.SlideoutPanel = SlideoutPanel;
+		this.type = SlideoutPanelType;
 		this.panels = {};
 		this.activePanel = null;
 	},
@@ -57,6 +59,7 @@ export default {
 			}
 		},
 		handlePanelReady(component, id) {
+			console.log('panel ready', id);
 			this.panels[id] = component;
 		},
 		handleShowSpinner() {

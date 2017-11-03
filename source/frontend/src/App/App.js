@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import { mapGetters } from 'vuex';
 import { customButtonEventDispatcher, CustomButtonEvent } from 'vue-block-system';
+import SlideoutPanelType from 'data/enum/SlideoutPanelType';
 import SiteHeader from '../component/layout/SiteHeader/SiteHeader';
 import SiteFooter from '../component/layout/SiteFooter/SiteFooter';
 import Notification from '../component/Notification/Notification';
@@ -54,9 +55,13 @@ export default {
 			});
 		},
 		handleCustomButtonEvent(data) {
+			const slideoutPanel = this.getChild('SlideoutPanel');
 			switch (data.event) {
 				case backendLinkType.CONTACT_US:
-					this.getChild('SlideoutPanel').transitionIn(SlideoutPanel.CONTACT);
+					slideOutPanel.transitionIn(SlideoutPanelType.CONTACT);
+					break;
+				case backendLinkType.CONTACT_KERNEL:
+					slideoutPanel.transitionIn(SlideoutPanelType.CONTACT_KERNEL);
 					break;
 				default:
 					// No default;
@@ -64,7 +69,7 @@ export default {
 			}
 		},
 		handleStartAdvertisingClick() {
-			this.getChild('SlideoutPanel').transitionIn(SlideoutPanel.CONTACT);
+			this.getChild('SlideoutPanel').transitionIn(SlideoutPanelType.CONTACT);
 		},
 	},
 	beforeDestroy() {

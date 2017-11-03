@@ -1,4 +1,4 @@
-export interface IContactData {
+interface IContactData {
 	firstName: string;
 	lastName: string;
 	company: string;
@@ -9,3 +9,5 @@ export interface IContactData {
 	zipCode: string;
 	comments: string;
 }
+
+export default IContactData

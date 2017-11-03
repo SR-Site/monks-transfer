@@ -1,20 +1,8 @@
-<style src="./PanelContact.scss" module lang="scss"></style>
-<script src="./PanelContact.js"></script>
+<style src="./PanelContactKernel.scss" module lang="scss"></style>
+<script src="./PanelContactKernel.js"></script>
 
 <template>
-	<form class="form" :class="$style.panelContact" novalidate @submit.prevent="submit">
-		<ButtonTertiary
-			componentId="ButtonPrimary"
-			:class="$style.phoneButton"
-			:title="phoneNumber"
-			:label="phoneNumber"
-			:type="ButtonType.LINK"
-			:theme="Theme.DARK"
-			:link="{
-				target: `tel:${phoneNumber}`,
-				type: LinkType.EXTERNAL_BLANK
-			}"/>
-
+	<form class="form" :class="$style.panelContactKernel" novalidate @submit.prevent="submit">
 		<h3 :class="$style.subTitle" class="copy copy-03" v-html="subHeading"></h3>
 		<h2 :class="$style.heading" class="heading-06 heading" v-html="heading"></h2>
 

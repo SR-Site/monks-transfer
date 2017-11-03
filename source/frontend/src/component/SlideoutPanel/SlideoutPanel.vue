@@ -20,7 +20,12 @@
 								componentId="PanelContact"
 								@showSpinner="handleShowSpinner"
 								@hideSpinner="handleHideSpinner"
-								@isReady="component => handlePanelReady(component, SlideoutPanel.CONACT)"/>
+								@isReady="component => handlePanelReady(component, type.CONTACT)"/>
+							<PanelContactKernel
+								componentId="PanelContactKernel"
+								@showSpinner="handleShowSpinner"
+								@hideSpinner="handleHideSpinner"
+								@isReady="component => handlePanelReady(component, type.CONTACT_KERNEL)"/>
 						</div>
 					</div>
 					<div class="scroll-bar" data-scroll-bar>

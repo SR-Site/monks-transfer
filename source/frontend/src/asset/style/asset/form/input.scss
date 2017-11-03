@@ -41,7 +41,7 @@
 .input-text-main {
 	border-bottom: 1px solid rgba(#323232, 0.2);
 	@include size(100%, $sizeGrid);
-	background-color: white;
+	background-color: $colorLightGrey;
 
 	.placeholder-label {
 		position: absolute;

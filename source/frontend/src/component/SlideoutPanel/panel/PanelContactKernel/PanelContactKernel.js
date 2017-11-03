@@ -1,33 +1,19 @@
-import { mapGetters } from 'vuex';
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import SlideoutPanelType from 'data/enum/SlideoutPanelType';
-import PanelContactTransitionController from './PanelContactTransitionController';
+import { mapGetters } from 'vuex';
 import UserService from '../../../../net/service/UserService';
+import PanelContactKernelTransitionController from './PanelContactKernelTransitionController';
 import { NotificationMutationTypes } from '../../../../store/module/notification';
+import SlideoutPanelType from '../../../../data/enum/SlideoutPanelType';
 
 export default {
-	name: 'PanelContact',
+	name: 'PanelContactKernel',
 	extends: AbstractTransitionComponent,
 	data() {
 		return {
 			fieldData: [
 				{
-					name: 'firstname',
-					localeKey: 'firstName',
-					type: 'text',
-					value: '',
-					validationRules: 'required',
-				},
-				{
-					name: 'lastname',
-					localeKey: 'lastName',
-					type: 'text',
-					validationRules: 'required',
-					value: '',
-				},
-				{
-					name: 'company',
-					localeKey: 'company',
+					name: 'name',
+					localeKey: 'name',
 					type: 'text',
 					value: '',
 					validationRules: 'required',
@@ -40,7 +26,7 @@ export default {
 					validationRules: 'required',
 				},
 				{
-					name: 'State you would like to advertise in',
+					name: 'state',
 					localeKey: 'state',
 					type: 'text',
 					value: '',
@@ -61,13 +47,6 @@ export default {
 					value: '',
 				},
 				{
-					name: 'zipcode',
-					localeKey: 'zipcode',
-					type: 'text',
-					validationRules: 'required',
-					value: '',
-				},
-				{
 					name: 'comments',
 					localeKey: 'comments',
 					validationRules: 'required',
@@ -84,13 +63,13 @@ export default {
 			},
 		),
 		submitLabel() {
-			return this.slideOutData(SlideoutPanelType.CONTACT).submitLabel;
+			return this.slideOutData(SlideoutPanelType.CONTACT_KERNEL).submitLabel;
 		},
 		heading() {
-			return this.slideOutData(SlideoutPanelType.CONTACT).heading;
+			return this.slideOutData(SlideoutPanelType.CONTACT_KERNEL).heading;
 		},
 		subHeading() {
-			return this.slideOutData(SlideoutPanelType.CONTACT).subHeading;
+			return this.slideOutData(SlideoutPanelType.CONTACT_KERNEL).subHeading;
 		},
 		phoneNumber() {
 			return this.contactOptionGetter('phone').phoneNumber || 'no-phone-number';
@@ -98,7 +77,7 @@ export default {
 	},
 	methods: {
 		handleAllComponentsReady() {
-			this.transitionController = new PanelContactTransitionController(this);
+			this.transitionController = new PanelContactKernelTransitionController(this);
 			this.isReady();
 		},
 		handleSubmit() {
@@ -108,7 +87,7 @@ export default {
 					// Show the spinner
 					this.$emit('showSpinner');
 					// Submit the form
-					UserService.contact(this.getFormData())
+					UserService.contactKernel(this.getFormData())
 					.then(() => this.$tracking.trackEvent(
 						{
 							[this.TrackingProvider.GOOGLE_ANALYTICS]: {

@@ -6,6 +6,7 @@ const backendLinkType = {
 	SCROLL_TO_NEXT_BLOCK: 2,
 	CONTACT_US: 3,
 	EXTERNAL_BLANK: 4,
+	CONTACT_KERNEL: 5,
 };
 
 /**
@@ -18,6 +19,7 @@ export const linkTypeMap = {
 	[backendLinkType.SCROLL_TO_NEXT_BLOCK]: LinkType.SCROLL_TO_NEXT_BLOCK,
 	// Custom events for this project so map to it self
 	[backendLinkType.CONTACT_US]: backendLinkType.CONTACT_US,
+	[backendLinkType.CONTACT_KERNEL]: backendLinkType.CONTACT_KERNEL,
 };
 
 export default backendLinkType;
