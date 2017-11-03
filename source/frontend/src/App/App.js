@@ -7,12 +7,12 @@ import SiteHeader from '../component/layout/SiteHeader/SiteHeader';
 import SiteFooter from '../component/layout/SiteFooter/SiteFooter';
 import Notification from '../component/Notification/Notification';
 import PageLoader from '../component/PageLoader/PageLoader';
-import backendLinkType from '../data/enum/BackendLinkType';
 import NativeEventListener from '../util/event/NativeEventListener';
 import VideoOverlay from '../component/VideoOverlay/VideoOverlay';
 import SlideoutPanel from '../component/SlideoutPanel/SlideoutPanel';
 import { AbstractRegistrableComponent } from 'vue-transition-component';
 import SiteMenu from '../component/layout/SiteMenu';
+import BackendLinkType from '../data/enum/link/BackendLinkType';
 
 export default {
 	name: 'App',
@@ -67,10 +67,10 @@ export default {
 		handleCustomButtonEvent(data) {
 			const slideoutPanel = this.getChild('SlideoutPanel');
 			switch (data.event) {
-				case backendLinkType.CONTACT_US:
+				case BackendLinkType.CONTACT_US:
 					slideOutPanel.transitionIn(SlideoutPanelType.CONTACT);
 					break;
-				case backendLinkType.CONTACT_KERNEL:
+				case BackendLinkType.CONTACT_KERNEL:
 					slideoutPanel.transitionIn(SlideoutPanelType.CONTACT_KERNEL);
 					break;
 				default:

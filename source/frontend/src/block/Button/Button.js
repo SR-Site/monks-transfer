@@ -12,7 +12,7 @@ export default {
 	computed: {
 		mappedLink() {
 			const link = {
-				type: this.linkTypeMap[this.data.link.type],
+				type: this.BackendLinkTypeMap[this.data.link.type],
 			};
 
 			if (this.data.link.target) {

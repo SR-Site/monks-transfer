@@ -17,7 +17,6 @@ import NotificationTypes from '../data/enum/NotificationTypes';
 import Direction from '../data/enum/Direction';
 import Alignment from '../data/enum/Alignment';
 import { buttonTypeMap } from '../data/enum/BackendButtonType';
-import { linkTypeMap } from '../data/enum/BackendLinkType';
 import Theme from '../data/enum/Theme';
 import ClassNameHelper from '../util/ClassNameHelper';
 import { DeviceState } from '../config/deviceStateConfig';
@@ -26,6 +25,7 @@ import sequentialPromises from '../util/sequentialPromises';
 import TrackingProvider from '../util/tracking/TrackingProvider';
 import Size from '../data/enum/Size';
 import VeeValidate from 'vee-validate';
+import BackendLinkTypeMap from '../data/enum/link/BackendLinkTypeMap';
 
 const initPlugins = () => {
 	const configManager = getValue(CONFIG_MANAGER);
@@ -50,7 +50,7 @@ const initPlugins = () => {
 		LinkType,
 		ButtonType,
 		buttonTypeMap,
-		linkTypeMap,
+		BackendLinkTypeMap,
 		NotificationTypes,
 		Direction,
 		Alignment,

@@ -23,9 +23,10 @@ import PropAuthor from '../../data/prop-type/article/PropAuthor';
  * @param {description} author The author of the article
  * @param {description} link The link attached to the article
  * @param {description} social The list of social links attached to the article
- * @param {description} view The view count of the article
+ * @param {description} views The view count of the article
  * @param {description} time The reading duration of the article
  * @param {description} date The publish date of the article
+ * @param {placeholder} date 27/05/1990
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

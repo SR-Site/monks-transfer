@@ -24,7 +24,7 @@
 						:type="ButtonType.LINK"
 						:theme="Theme.DARK"
 						:link="{
-							type: linkTypeMap[data.link.type],
+							type: BackendLinkTypeMap[data.link.type],
 							target: data.link.target,
 						}"/>
 				</div>

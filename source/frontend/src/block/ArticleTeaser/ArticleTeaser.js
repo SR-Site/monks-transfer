@@ -1,4 +1,3 @@
-import { TransitionEvent } from 'vue-transition-component';
 import { truncate } from 'lodash';
 import { AbstractBlockComponent } from 'vue-block-system';
 import VueTypes from 'vue-types';
