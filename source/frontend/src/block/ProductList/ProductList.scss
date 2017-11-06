@@ -1,17 +1,32 @@
 :local {
-	.product-list {
+	.header {
+		@include size(100%, auto);
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: $sizeGrid;
+	}
+
+	.alignment-left {
+		.header {
+			text-align: left;
+		}
+	}
+
+	.alignment-center {
+		.header {
+			text-align: center;
+		}
+	}
+
+	.alignment-right {
+		.header {
+			text-align: right;
+		}
 	}
 
 	.site-frame {
 		overflow: visible;
-	}
-
-	.header {
-		@include size(100%, auto);
-		justify-content: flex-start;
-		display: flex;
-		align-items: center;
-		margin-bottom: $sizeGrid;
 	}
 
 	.draggable-container {
@@ -32,7 +47,7 @@
 	}
 
 	.product-teaser {
-		@include size($sizeGrid * 14, auto);
+		@include size($sizeGrid * 9, $sizeGrid * 11);
 		display: inline-block;
 		margin-left: $sizeGrid;
 	}
@@ -51,7 +66,7 @@
 		}
 
 		.product-teaser {
-			@include size(320px, auto);
+			@include size(320px, 380px);
 		}
 	}
 }

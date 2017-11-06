@@ -31,8 +31,9 @@
 		"id": "ProductList",
 		"data": {
 		  "overlap": false,
-		  "windowed": true,
+		  "windowed": false,
 		  "marginTop": 2,
+		  "alignment": 0,
 		  "heading": "TV delivers",
 		  "paragraph": "We are continuously innovating and adding to our range of advertising products for Television.",
 		  "products": [
@@ -42,6 +43,67 @@
 				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet."
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
 			}

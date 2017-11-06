@@ -7,6 +7,8 @@ import ProductTeaserData from './ProductTeaser/ProductTeaserData';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} heading The heading of the block
+ * @param {description} paragraph The paragraph of the block
  * @param {description} products The array of products displayed in the block
  */
 export default {
@@ -14,6 +16,11 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
+	alignment: VueTypes.oneOf(
+		[0,1,2],
+	).isRequired,
+	heading: VueTypes.string.isRequired,
+	paragraph: VueTypes.string.isRequired,
 	products: VueTypes.arrayOf(
 		VueTypes.shape(ProductTeaserData),
 	),

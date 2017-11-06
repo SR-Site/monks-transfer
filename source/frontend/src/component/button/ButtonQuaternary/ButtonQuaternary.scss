@@ -5,6 +5,7 @@
 		text-transform: uppercase;
 		padding-left: $sizeGridSecondary;
 		position: relative;
+		align-self: flex-start;
 
 		&.theme-dark {
 			.label {
