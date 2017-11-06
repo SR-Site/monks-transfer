@@ -1,5 +1,4 @@
 import VueTypes from 'vue-types';
-import BackendLinkType from '../../enum/link/BackendLinkType';
 
 /**
  * @param {description} label The label for the link
@@ -14,12 +13,12 @@ export default {
 	target: VueTypes.string,
 	type: VueTypes.oneOf(
 		[
-			BackendLinkType.INTERNAL,
-			BackendLinkType.EXTERNAL,
-			BackendLinkType.SCROLL_TO_NEXT_BLOCK,
-			BackendLinkType.CONTACT_US,
-			BackendLinkType.EXTERNAL_BLANK,
-			BackendLinkType.CONTACT_KERNEL,
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
 		],
 	),
 };

@@ -442,7 +442,10 @@
 		  "marginTop": 2,
 		  "scrollId": "foo",
 		  "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris libero eros, consectetur at interdum et, sagittis ut eros.",
-		  "author": "John Doe"
+		  "author": {
+			"name": "John Doe",
+			"role": "Lorem ipsum"
+		  }
 		}
 	  },
 	  {

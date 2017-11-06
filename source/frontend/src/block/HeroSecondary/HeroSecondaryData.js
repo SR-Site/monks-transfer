@@ -5,13 +5,17 @@ import PropLink from '../../data/prop-type/action/PropLink';
 
 /**
  * @param {description} marginTop This defines the amount of spacing at the top of the block
- * @param {placeholder} marginTop 1
  * @param {description} overlap This defines if a block overlaps the next block on the layout
- * @param {placeholder} overlap true
  * @param {description} windowed This defines if a block has extra padding left and right
- * @param {placeholder} windowed true
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} backgroundVideo The background video for the block
+ * @param {description} background The background image for the block
+ * @param {description} link The link for the block
+ * @param {description} heading The heading for the block
+ * @param {description} subHeading The sub heading for the block
+ * @param {description} paragraph The paragraph for the block
+ * @param {description} backgroundColor The background color for the block
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

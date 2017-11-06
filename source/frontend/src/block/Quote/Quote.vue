@@ -9,8 +9,8 @@
 					“<span v-html="data.quote"></span>”
 				</h2>
 				<div :class="$style.author">
-					<p :class="$style.name" class="copy copy-03" v-html="data.author" ref="name"></p>
-					<p :class="$style.position" class="copy copy-03" v-html="data.position" ref="position"></p>
+					<p :class="$style.name" class="copy copy-03" v-html="data.author.name" ref="name"></p>
+					<p :class="$style.position" class="copy copy-03" v-html="data.author.position" ref="position"></p>
 				</div>
 			</div>
 		</div>

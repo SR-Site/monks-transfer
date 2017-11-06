@@ -844,7 +844,10 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "quote": "Spectrum Reach helps us light us our stage!",
-		  "author": "John Doe",
+		  "author": {
+		  	"name": "John Doe",
+			"role": "Lorem ipsum"
+		  },
 		  "position": "Flagler Auditorion Director"
 		}
 	  },

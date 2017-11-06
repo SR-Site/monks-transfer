@@ -12,7 +12,7 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {description} description the description on the audio fragment
  * @param {description} image The image for the audio fragment
  * @param {description} file The audio file
- * @param {placeholder} path/to/file.mp3
+ * @param {placeholder} file path/to/file.mp3
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

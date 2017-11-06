@@ -1,5 +1,5 @@
 import VueTypes from 'vue-types';
-import PropImage from '../../data/prop-type/media/PropImage';
+import StoryInfoImagesStoryData from './StoryInfoImagesStoryData';
 
 /**
  * @param {description} marginTop This defines the amount of spacing at the top of the block
@@ -13,6 +13,7 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {description} stories.theme The theme for the story
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} stories The stories displayed in the block
  */
 export default {
 	marginTop: VueTypes.number.isRequired,
@@ -20,14 +21,6 @@ export default {
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
 	stories: VueTypes.arrayOf(
-		VueTypes.shape(
-			{
-				heading: VueTypes.string.isRequired,
-				paragraph: VueTypes.string.isRequired,
-				background: VueTypes.shape(PropImage),
-				backgroundBlurred: VueTypes.shape(PropImage),
-				theme: VueTypes.number.isRequired,
-			},
-		),
+		VueTypes.shape(StoryInfoImagesStoryData),
 	),
 };

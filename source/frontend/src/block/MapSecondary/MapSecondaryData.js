@@ -5,13 +5,16 @@ import PropImageSequence from '../../data/prop-type/media/PropImageSequence';
 
 /**
  * @param {description} marginTop This defines the amount of spacing at the top of the block
- * @param {placeholder} marginTop 1
  * @param {description} overlap This defines if a block overlaps the next block on the layout
- * @param {placeholder} overlap true
  * @param {description} windowed This defines if a block has extra padding left and right
- * @param {placeholder} windowed true
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} heading The heading linked to the map
+ * @param {description} subHeading The sub heading linked to the map
+ * @param {description} paragraph The paragraph linked to the map
+ * @param {description} link The link linked to the map
+ * @param {description} sequenceBackground The sequence background image linked to the map
+ * @param {description} imageSequence The image sequence linked to the map
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

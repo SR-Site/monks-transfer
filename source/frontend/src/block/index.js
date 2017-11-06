@@ -35,7 +35,6 @@ export default {
 	MapSecondary: () => import('./MapSecondary'),
 	MapTertiary: () => import('./MapTertiary'),
 	MarketMap: () => import('./MarketMap'),
-	More: () => import('./More'),
 	MultipleImages: () => import('./MultipleImages'),
 	NetworkDescription: () => import('./NetworkDescription'),
 	NetworkOverview: () => import('./NetworkOverview'),

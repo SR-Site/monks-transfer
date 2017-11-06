@@ -1,6 +1,6 @@
 import VueTypes from 'vue-types';
-import PropImage from '../../data/prop-type/media/PropImage';
 import PropLink from '../../data/prop-type/action/PropLink';
+import PropImage from '../../data/prop-type/media/PropImage';
 import PropVideo from '../../data/prop-type/media/PropVideo';
 
 /**
