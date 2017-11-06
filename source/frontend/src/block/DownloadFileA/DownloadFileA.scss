@@ -26,13 +26,17 @@
 		margin-bottom: $sizeGrid / 2;
 	}
 
-	.paragraph {
-	}
-
 	.bottom {
 		@include size(100%, auto);
 		margin-top: $sizeGrid * 3;
 		display: flex;
 		justify-content: space-between;
+	}
+
+	@include respond-to(SMALL) {
+		.file-description,
+		.copy {
+			display: none;
+		}
 	}
 }
