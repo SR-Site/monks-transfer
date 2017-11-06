@@ -1,6 +1,22 @@
-# Product menu items definition
+# Genre menu items definition
 system.admin.shows:
   title: 'Shows'
   route_name: entity.genre.collection
   description: 'List Shows entities'
   parent: system.admin
+
+# Media Types menu items definition
+entity.media_type.collection:
+  title: 'Media Type list'
+  route_name: entity.media_type.collection
+  description: 'List Media Type entities'
+  parent: system.admin.shows
+  weight: 100
+
+# Network menu items definition
+entity.network.collection:
+  title: 'Network list'
+  route_name: entity.network.collection
+  description: 'List Network entities'
+  parent: system.admin.shows
+  weight: 100

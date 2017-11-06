@@ -1,0 +1,17 @@
+entity.genre.add_form:
+  route_name: 'entity.genre.add_form'
+  title: 'Add Genre'
+  appears_on:
+    - entity.genre.collection
+
+entity.media_type.add_form:
+  route_name: 'entity.media_type.add_form'
+  title: 'Add Media Type'
+  appears_on:
+    - entity.media_type.collection
+
+entity.network.add_form:
+  route_name: 'entity.network.add_form'
+  title: 'Add Network'
+  appears_on:
+    - entity.network.collection

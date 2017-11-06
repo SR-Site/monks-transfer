@@ -8,11 +8,11 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
 
 /**
- * Access controller for the Genre entity.
+ * Access controller for the Network entity.
  *
- * @see \Drupal\spectrum_shows\Entity\Genre.
+ * @see \Drupal\spectrum_shows\Entity\Network.
  */
-class GenreAccessControlHandler extends EntityAccessControlHandler {
+class NetworkAccessControlHandler extends EntityAccessControlHandler {
 
   /**
    * {@inheritdoc}
@@ -21,13 +21,13 @@ class GenreAccessControlHandler extends EntityAccessControlHandler {
     /** @var \Drupal\spectrum_shows\GenreInterface $entity */
     switch ($operation) {
       case 'view':
-        return AccessResult::allowedIfHasPermission($account, 'view genre entities');
+        return AccessResult::allowedIfHasPermission($account, 'view network entities');
 
       case 'update':
-        return AccessResult::allowedIfHasPermission($account, 'edit genre entities');
+        return AccessResult::allowedIfHasPermission($account, 'edit network entities');
 
       case 'delete':
-        return AccessResult::allowedIfHasPermission($account, 'delete genre entities');
+        return AccessResult::allowedIfHasPermission($account, 'delete network entities');
     }
 
     // Unknown operation, no opinion.
@@ -38,7 +38,7 @@ class GenreAccessControlHandler extends EntityAccessControlHandler {
    * {@inheritdoc}
    */
   protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL) {
-    return AccessResult::allowedIfHasPermission($account, 'add genre entities');
+    return AccessResult::allowedIfHasPermission($account, 'add network entities');
   }
 
 }

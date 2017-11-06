@@ -1,10 +1,11 @@
+# Genre
 administer genre entities:
   title: 'Administer Genre entities'
   description: 'Allow to access the administration form to configure Genre entities.'
   restrict access: true
 
-add category entities:
-  title: 'Create new Category entities'
+add genre entities:
+  title: 'Create new Genre entities'
 
 delete genre entities:
   title: 'Delete Genre entities'
@@ -14,3 +15,39 @@ edit genre entities:
 
 view genre entities:
   title: 'View Genre entities'
+
+# MediaType
+administer media type entities:
+  title: 'Administer MediaType entities'
+  description: 'Allow to access the administration form to configure MediaType entities.'
+  restrict access: true
+
+add media type entities:
+  title: 'Create new MediaType entities'
+
+delete media type entities:
+  title: 'Delete MediaType entities'
+
+edit media type entities:
+  title: 'Edit MediaType entities'
+
+view media type entities:
+  title: 'View MediaType entities'
+
+# Network
+administer network entities:
+  title: 'Administer Network entities'
+  description: 'Allow to access the administration form to configure Network entities.'
+  restrict access: true
+
+add network entities:
+  title: 'Create new Network entities'
+
+delete network entities:
+  title: 'Delete Network entities'
+
+edit network entities:
+  title: 'Edit Network entities'
+
+view network entities:
+  title: 'View Network entities'
