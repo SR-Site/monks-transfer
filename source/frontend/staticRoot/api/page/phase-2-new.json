@@ -28,6 +28,27 @@
 	},
 	"blocks": [
 	  {
+		"id": "ProductList",
+		"data": {
+		  "overlap": false,
+		  "windowed": true,
+		  "marginTop": 2,
+		  "heading": "TV delivers",
+		  "paragraph": "We are continuously innovating and adding to our range of advertising products for Television.",
+		  "products": [
+			{
+			  "image": {
+				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			}
+		  ]
+		}
+	  },
+	  {
 		"id": "DownloadFileA",
 		"data": {
 		  "overlap": false,

@@ -10,7 +10,7 @@
 				</h2>
 				<div :class="$style.author">
 					<p :class="$style.name" class="copy copy-03" v-html="data.author.name" ref="name"></p>
-					<p :class="$style.position" class="copy copy-03" v-html="data.author.position" ref="position"></p>
+					<p :class="$style.position" class="copy copy-03" v-html="data.author.role" ref="position"></p>
 				</div>
 			</div>
 		</div>

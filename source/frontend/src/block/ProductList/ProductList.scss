@@ -1,2 +1,57 @@
 :local {
+	.product-list {
+	}
+
+	.site-frame {
+		overflow: visible;
+	}
+
+	.header {
+		@include size(100%, auto);
+		justify-content: flex-start;
+		display: flex;
+		align-items: center;
+		margin-bottom: $sizeGrid;
+	}
+
+	.draggable-container {
+		padding: 0;
+	}
+
+	.button {
+		margin-left: $sizeGrid * 2;
+	}
+
+	.products {
+		width: auto;
+		margin-bottom: $sizeGrid;
+		white-space: nowrap;
+		font-size: 0;
+		display: inline-block;
+		margin-left: -$sizeGrid;
+	}
+
+	.product-teaser {
+		@include size($sizeGrid * 14, auto);
+		display: inline-block;
+		margin-left: $sizeGrid;
+	}
+
+	.scroll-bar {
+		margin: $sizeGridSecondary 0;
+	}
+
+	@include respond-to(SMALL) {
+		.site-frame {
+			padding: 0 $sizeGridMobile * 2;
+		}
+
+		.button {
+			display: none;
+		}
+
+		.product-teaser {
+			@include size(320px, auto);
+		}
+	}
 }

@@ -226,7 +226,6 @@
 		  },
 		  "paragraph": "<p>Your customers are watching, and they\u2019re paying attention. On their TVs, their phones \u2013 sometimes at the same time. Align your brand with the high-performing shows your customers are already glued to.<\/p>",
 		  "heading": "Recent Top Cable Television Programming<br \/>",
-		  "croppedImage": false,
 		  "alignment": 0
 		}
 	  },
@@ -845,10 +844,9 @@
 		  "marginTop": 2,
 		  "quote": "Spectrum Reach helps us light us our stage!",
 		  "author": {
-		  	"name": "John Doe",
-			"role": "Lorem ipsum"
-		  },
-		  "position": "Flagler Auditorion Director"
+			"name": "John Doe",
+			"role": "Flagler Auditorion Director"
+		  }
 		}
 	  },
 	  {

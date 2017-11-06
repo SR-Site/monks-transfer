@@ -321,7 +321,6 @@
 			  "theme": 0,
 			  "video": {
 				"url": "https://www.w3schools.com/html/mov_bbb.mp4",
-				"id": "154767863",
 				"type": 0
 			  }
 			},
@@ -335,7 +334,6 @@
 			  "theme": 0,
 			  "video": {
 				"url": "https:\/\/vimeo.com\/98576814",
-				"id": "98576814",
 				"type": 1
 			  }
 			},
@@ -349,7 +347,6 @@
 			  "theme": 0,
 			  "video": {
 				"url": "https:\/\/vimeo.com\/126610168",
-				"id": "126610168",
 				"type": 1
 			  }
 			},
@@ -363,7 +360,6 @@
 			  "theme": 0,
 			  "video": {
 				"url": "https:\/\/vimeo.com\/116183821",
-				"id": "116183821",
 				"type": 1
 			  }
 			},
@@ -377,7 +373,6 @@
 			  "theme": 0,
 			  "video": {
 				"url": "https:\/\/vimeo.com\/102055305",
-				"id": "102055305",
 				"type": 1
 			  }
 			}
