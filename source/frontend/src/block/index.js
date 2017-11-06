@@ -13,7 +13,6 @@ export default {
 	Button: () => import('./Button'),
 	CoreProductMessage: () => import('./CoreProductMessage'),
 	DownloadFileA: () => import('./DownloadFileA'),
-	DownloadFileB: () => import('./DownloadFileB'),
 	FilterContent: () => import('./FilterContent'),
 	FindContact: () => import('./FindContact'),
 	FindContactB: () => import('./FindContactB'),

@@ -21,7 +21,7 @@ export default {
 						percentage: VueTypes.number.isRequired,
 						demographic: VueTypes.string.isRequired,
 					},
-				).isRequired,
+				),
 				image: VueTypes.shape(PropImage).isRequired,
 				video: VueTypes.shape(PropVideo),
 				tags: VueTypes.arrayOf(

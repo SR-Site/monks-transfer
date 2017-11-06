@@ -7,7 +7,6 @@ export default {
 	extends: AbstractContentPageComponent,
 	methods: {
 		handleRouteChangeComplete() {
-			console.log('route change complete');
 			this.pageLoader.transitionOut();
 			this.$nextTick(() => {
 				this.$tracking.trackPageView({

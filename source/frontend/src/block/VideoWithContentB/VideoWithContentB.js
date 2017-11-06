@@ -14,7 +14,6 @@ export default {
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new VideoWithContentBTransitionController(this);
-			console.log(this.Theme.DARK);
 			this.isReady();
 		},
 		handleVideoClick() {
