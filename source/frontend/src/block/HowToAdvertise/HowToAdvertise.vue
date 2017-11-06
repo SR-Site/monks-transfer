@@ -4,7 +4,7 @@
 <template>
 	<div :class="$style.howToAdvertise">
 		<div class="overrule-overlap">
-			<div class="site-frame">
+			<div class="site-frame" :class="$style.viewport">
 				<header :class="$style.header">
 					<h2 :class="$style.heading" class="heading heading-04" v-html="data.heading"></h2>
 					<ButtonPrimary

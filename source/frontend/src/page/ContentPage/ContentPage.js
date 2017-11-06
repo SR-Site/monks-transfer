@@ -7,6 +7,7 @@ export default {
 	extends: AbstractContentPageComponent,
 	methods: {
 		handleRouteChangeComplete() {
+			console.log('route change complete');
 			this.pageLoader.transitionOut();
 			this.$nextTick(() => {
 				this.$tracking.trackPageView({
@@ -41,6 +42,8 @@ export default {
 		},
 	},
 	beforeRouteUpdate(to, from, next) {
+		console.log('beforeRouteupdate', to, from);
+		this.$emit('beforePageChange');
 		this.pageLoader.transitionIn().then(() => next());
 	},
 };

@@ -4,6 +4,7 @@
 		h2,
 		h3,
 		h4 {
+			@extend %reset-bmp;
 			padding-bottom: $sizeGrid/2;
 			font: 600 1.8rem / 1.16 $fontOpenSans;
 
@@ -15,10 +16,7 @@
 		p {
 			display: block;
 			font: 400 1.8rem / 1.625 $fontOpenSans;
-
-			&:not(:first-child) {
-				margin-top: $sizeGrid;
-			}
+			margin-bottom: $sizeGrid;
 
 			img {
 				display: inline-block;

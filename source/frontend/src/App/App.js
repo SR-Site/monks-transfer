@@ -52,7 +52,7 @@ export default {
 		this.scrollListener = new NativeEventListener(
 			window,
 			'scroll',
-			debounce(this.handleScroll, 50),
+			debounce(this.closeMenu, 50),
 		);
 	},
 	methods: {
@@ -68,9 +68,11 @@ export default {
 			const slideoutPanel = this.getChild('SlideoutPanel');
 			switch (data.event) {
 				case BackendLinkType.CONTACT_US:
-					slideOutPanel.transitionIn(SlideoutPanelType.CONTACT);
+					this.closeMenu();
+					slideoutPanel.transitionIn(SlideoutPanelType.CONTACT);
 					break;
 				case BackendLinkType.CONTACT_KERNEL:
+					this.closeMenu();
 					slideoutPanel.transitionIn(SlideoutPanelType.CONTACT_KERNEL);
 					break;
 				default:
@@ -79,12 +81,13 @@ export default {
 			}
 		},
 		handleStartAdvertisingClick() {
+			this.closeMenu();
 			this.getChild('SlideoutPanel').transitionIn(SlideoutPanelType.CONTACT);
 		},
 		handleToggleMenu() {
 			this.menuActive = !this.menuActive;
 		},
-		handleScroll() {
+		closeMenu() {
 			this.menuActive = false;
 		},
 	},

@@ -3,8 +3,8 @@
   "data": {
 	"csrfToken": "7QWDvii8eITuFc9Hk457YSYKMVj2XuoA1e3dRdlMXBU",
 	"routes": {
-	  "landing": "home",
-	  "notFound": "page-not-found",
+	  "landing": "/home",
+	  "notFound": "/page-not-found",
 	  "articleOverviewPage": "spectrum-reach-advertising-home"
 	},
 	"contactOptions": {
@@ -167,8 +167,7 @@
 		  {
 			"label": "Contact us",
 			"title": "Contact us",
-			"target": "\/contact-us",
-			"type": 0
+			"type": 3
 		  }
 	  ],
 	  "footer": {

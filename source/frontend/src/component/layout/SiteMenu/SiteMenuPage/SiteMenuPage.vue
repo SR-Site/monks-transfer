@@ -30,7 +30,6 @@
 			</button>
 
 			<a
-				@click="selectLink(link)"
 				class="button"
 				:class="[$style.button, $style.actionButton]"
 				v-if="!link.section"

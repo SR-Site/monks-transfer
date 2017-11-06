@@ -4,7 +4,7 @@
 	<div :class="$style.appWrapper">
 		<div :class="[$style.siteWrapper, {[$style.isActive]: pageLoaderReady}]">
 			<SiteHeader componentId="Header" @toggleMenu="handleToggleMenu" :menuActive="menuActive"/>
-			<router-view></router-view>
+			<router-view @beforePageChange="closeMenu"></router-view>
 			<ButtonStartAdvertising
 				@click="handleStartAdvertisingClick"
 				v-show="!hideContactButton"
