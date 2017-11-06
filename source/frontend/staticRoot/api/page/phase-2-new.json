@@ -1,7 +1,7 @@
 {
   "statusCode": 200,
   "data": {
-	"title": "Spectrum Reach Advertising - Phase 1 (new)",
+	"title": "Spectrum Reach Advertising - Phase 2 (new)",
 	"data": {
 	  "headerTheme": 0,
 	  "hideContactButton": 0,
@@ -19,9 +19,9 @@
 		  "type": 0
 		},
 		{
-		  "label": "Phase 1 (changed)",
-		  "title": "Phase 1 (changed)",
-		  "target": "/phase-1-changed",
+		  "label": "Phase 2 (new)",
+		  "title": "Phase 2 (new)",
+		  "target": "/phase-2-new",
 		  "type": 0
 		}
 	  ]

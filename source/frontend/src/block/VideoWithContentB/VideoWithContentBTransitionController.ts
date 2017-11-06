@@ -13,8 +13,10 @@ class VideoWithContentBTransitionController extends AbstractTransitionController
 		const width = wrapper.offsetWidth;
 		const height = wrapper.offsetHeight;
 
+		console.log(this.viewModel.$refs.videoPoster);
+
 		this.transitionInTimeline.fromTo(
-			this.viewModel.$refs.videoPoster,
+			(<any>this.viewModel.$refs.videoPoster).$el,
 			2,
 			{
 				clip: 'rect(0, 0,' + height + ', 0)',

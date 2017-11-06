@@ -8,7 +8,7 @@
 				<div :class="$style.videoWrapper" ref="videoWrapper">
 					<div :class="$style.video">
 						<figure class="abs-fill" :class="$style.videoPoster">
-							<ResponsiveImage :image="data.poster" ref="videoPoster"/>
+							<ResponsiveImage :image="data.poster" ref="videoPoster" class="abs-fill"/>
 							<ButtonCirclePlay
 								componentId="ButtonCirclePlay"
 								class="abs-center"
