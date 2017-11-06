@@ -41,7 +41,6 @@ export default {
 		},
 	},
 	beforeRouteUpdate(to, from, next) {
-		console.log('beforeRouteupdate', to, from);
 		this.$emit('beforePageChange');
 		this.pageLoader.transitionIn().then(() => next());
 	},

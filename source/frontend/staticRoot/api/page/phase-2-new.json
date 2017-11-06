@@ -28,6 +28,38 @@
 	},
 	"blocks": [
 	  {
+		"id": "Infographic",
+		"data": {
+		  "overlap": false,
+		  "windowed": true,
+		  "marginTop": 2,
+		  "heading": "Download information sheet to get more information on how to reach Millenials with Spectrum Reach",
+		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. Lore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		  "primaryLink": {
+			"label": "All advertising solutions",
+			"title": "All advertising solutions",
+			"target": "/advertising-solutions",
+			"type": 0
+		  },
+		  "secondaryLink": {
+			"label": "Dashboard",
+			"title": "Dashboard",
+			"target": "/advertising-solutions",
+			"type": 0
+		  },
+		  "backgroundImage": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+		  },
+		  "image": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+		  }
+		}
+	  },
+	  {
 		"id": "ProductList",
 		"data": {
 		  "overlap": false,
