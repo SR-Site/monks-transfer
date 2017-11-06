@@ -54,7 +54,6 @@
 	}
 
 	.play-button {
-		@include abs-center($sizeGrid * 2);
 		color: $colorWhite;
 	}
 

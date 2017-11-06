@@ -64,7 +64,6 @@
 	}
 
 	.play-button {
-		@include abs-center($sizeGrid * 2);
 		color: $colorWhite;
 	}
 
@@ -83,6 +82,7 @@
 	@include respond-to(SMALL) {
 		.overrule-overlap {
 			flex-direction: column;
+			text-align: center;
 		}
 
 		.heading {
@@ -90,19 +90,34 @@
 		}
 
 		.copy {
-			margin-bottom: $sizeGrid * 2;
+			margin-bottom: $sizeGrid;
+		}
+
+		.size-frame {
+			padding: 0;
+		}
+
+		.button {
+			margin-bottom: $sizeGrid;
 		}
 
 		.video-with-content-b {
+			padding-top: 0;
+			padding-bottom: 0;
+
+			&:before {
+				display: none;
+			}
+
 			&.alignment-left,
 			&.alignment-right {
 				.video-wrapper {
-					order: 1;
+					order: 2;
 					width: 100%;
 				}
 
 				.video-description {
-					order: 2;
+					order: 1;
 					width: 100%;
 					padding: $sizeGrid * 1.5 $sizeGrid 0;
 				}

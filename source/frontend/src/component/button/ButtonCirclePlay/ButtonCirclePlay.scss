@@ -23,29 +23,26 @@
 		@include offset(50%, 50%);
 		transform: translate(-50%, -50%);
 		position: absolute;
+		@include size(calc(100%  - 20px))
 	}
 
 	.large {
 		@include size($sizeGrid*2.5);
-		.icon {
-
-			@include size(calc(#{$sizeGrid * 2.5} - 20px));
-		}
 	}
 
-	.small {
+	.medium {
 		@include size($sizeGrid*2);
-
-		.icon {
-			@include size(calc(#{$sizeGrid * 2} - 20px));
-		}
 	}
 
 	.small {
 		@include size($sizeGrid*1.5);
+	}
 
-		.icon {
-			@include size(calc(#{$sizeGrid * 1.5} - 20px));
+	@include respond-to(SMALL) {
+		.small,
+		.medium,
+		.large {
+			@include size(mobile-size($sizeGrid * 4));
 		}
 	}
 }

@@ -11,6 +11,7 @@
 							<ResponsiveImage :image="data.poster" ref="videoPoster"/>
 							<ButtonCirclePlay
 								componentId="ButtonCirclePlay"
+								class="abs-center"
 								v-track="{
 									[TrackingProvider.GOOGLE_ANALYTICS]: {
 										category: 'videoWithContent',

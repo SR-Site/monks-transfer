@@ -3,7 +3,7 @@
 
 <template>
 	<div :class="[$style.videoWithContentB, $style[ClassNameHelper.parseAlignment(data.alignment)]]">
-		<div class="site-frame">
+		<div class="site-frame" :class="$style.sizeFrame">
 			<div class="overrule-overlap" :class="$style.overruleOverlap">
 				<div :class="$style.videoWrapper" ref="videoWrapper">
 					<div :class="$style.video">
@@ -11,6 +11,7 @@
 							<ResponsiveImage :image="data.poster" ref="videoPoster"/>
 							<ButtonCirclePlay
 								componentId="ButtonCirclePlay"
+								class="abs-center"
 								v-track="{
 									[TrackingProvider.GOOGLE_ANALYTICS]: {
 										category: 'videoWithContent',
