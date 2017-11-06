@@ -33,8 +33,26 @@
 		justify-content: space-between;
 	}
 
+	@include respond-to(MEDIUM) {
+		.download-file-a {
+			&:global {
+				&.is-windowed {
+					border-left-width: $sizeGrid*2;
+					border-right-width: $sizeGrid*2;
+				}
+			}
+		}
+
+		.bottom {
+			margin-top: $sizeGrid * 2;
+		}
+
+		.file-description {
+			display: none;
+		}
+	}
+
 	@include respond-to(SMALL) {
-		.file-description,
 		.copy {
 			display: none;
 		}

@@ -69,4 +69,10 @@
 			@include size(320px, 380px);
 		}
 	}
+
+	@include respond-to(X_SMALL) {
+		.product-teaser {
+			width: calc(100vw - #{$sizeGridMobile * 4});
+		}
+	}
 }

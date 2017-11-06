@@ -55,7 +55,8 @@
 		}
 
 		.article-teaser {
-			@include size(320px, auto);
+			width: calc(100vw - #{$sizeGridMobile * 4});
+			height: auto;
 		}
 	}
 }

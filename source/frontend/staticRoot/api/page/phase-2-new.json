@@ -120,8 +120,8 @@
 		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. Lore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		  "fileDescription": "Lorem ipsum dolor sit .PDF of 659 KB",
 		  "link": {
-			"label": "See all featured programs",
-			"title": "See all featured programs",
+			"label": "Download",
+			"title": "Download",
 			"target": "/advertising-solutions",
 			"type": 0
 		  }

@@ -55,7 +55,7 @@
 
 	@include respond-to(X_SMALL) {
 		.program-teaser {
-			width: 310px
+			width: calc(100vw - #{$sizeGridMobile * 4});
 		}
 	}
 }
