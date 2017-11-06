@@ -60,7 +60,7 @@ export default {
 		},
 		handleScrollBarEnd() {
 			clearTimeout(this.scrollBarEndTimeout);
-			this.scrollBarEndTimeout = setTimeout(() => this.draggableInstance.snapToNearestPoint(), 50);
+			this.scrollBarEndTimeout = setTimeout(() => this.draggableInstance.snapToNearestPoint(), 10);
 		},
 	},
 };

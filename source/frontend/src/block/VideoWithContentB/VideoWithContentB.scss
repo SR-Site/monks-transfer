@@ -1,2 +1,112 @@
 :local {
+	.video-with-content-b {
+		@include size(100%, auto);
+		position: relative;
+		background: $colorLightGrey;
+		padding-top: $sizeGrid * 2;
+		padding-bottom: $sizeGrid * 2;
+
+		&:before {
+			@include triangle(right, bottom, $colorWhite, $sizeGrid * 9);
+			@include position(auto, 0, 0, auto);
+			position: absolute;
+			content: '';
+		}
+
+		&.alignment-left {
+			.video-description {
+				order: 1;
+				padding-right: $sizeGrid * 2;
+			}
+
+			.video-wrapper {
+				order: 2;
+			}
+		}
+
+		&.alignment-right {
+			.video-description {
+				order: 2;
+				padding-left: $sizeGrid * 2;
+			}
+
+			.video-wrapper {
+				order: 1;
+			}
+		}
+	}
+
+	.overrule-overlap {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.video-description {
+		@include size(35%, auto);
+		order: 1;
+		z-index: 1;
+	}
+
+	.video-wrapper {
+		@include size(65%, auto);
+		order: 2;
+
+		.video {
+			@include aspect-ratio(16px, 9px);
+		}
+
+		img {
+			@include size(100%);
+		}
+	}
+
+	.play-button {
+		@include abs-center($sizeGrid * 2);
+		color: $colorWhite;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 4;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid;
+	}
+
+	.button {
+		margin-bottom: 2px;
+	}
+
+	@include respond-to(SMALL) {
+		.overrule-overlap {
+			flex-direction: column;
+		}
+
+		.heading {
+			margin-bottom: $sizeGrid * 1.5;
+		}
+
+		.copy {
+			margin-bottom: $sizeGrid * 2;
+		}
+
+		.video-with-content-b {
+			&.alignment-left,
+			&.alignment-right {
+				.video-wrapper {
+					order: 1;
+					width: 100%;
+				}
+
+				.video-description {
+					order: 2;
+					width: 100%;
+					padding: $sizeGrid * 1.5 $sizeGrid 0;
+				}
+			}
+		}
+	}
 }

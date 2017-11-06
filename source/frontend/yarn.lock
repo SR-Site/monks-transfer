@@ -8057,8 +8057,8 @@ vue-transition-component@^0.10.5:
     tslib "^1.2.0"
 
 vue-transition-component@^1.1.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/vue-transition-component/-/vue-transition-component-1.1.1.tgz#7cd7e758527795eb11259850e1df3ddd5a0687e5"
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/vue-transition-component/-/vue-transition-component-1.1.6.tgz#594ba18e7e23e845e5c4d25ba1e0668bc9dff46c"
   dependencies:
     "@types/gsap" "^1.19.1"
     bowser "^1.8.0"

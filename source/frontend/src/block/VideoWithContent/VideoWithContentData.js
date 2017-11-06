@@ -12,6 +12,11 @@ import PropVideo from '../../data/prop-type/media/PropVideo';
  * @param {placeholder} windowed true
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} heading The heading of the the block
+ * @param {description} paragraph The paragraph of the the block
+ * @param {description} link The link attached to the block
+ * @param {description} poster The poster image for the block
+ * @param {description} video The video for the block
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

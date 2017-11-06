@@ -13,7 +13,7 @@
 								componentId="ButtonCirclePlay"
 								v-track="{
 									[TrackingProvider.GOOGLE_ANALYTICS]: {
-										category: 'imageWithContent',
+										category: 'videoWithContent',
 										action: 'click',
 										label: `play|${data.heading}`
 									}
@@ -37,7 +37,7 @@
 						componentId="ButtonPrimary"
 						v-track="{
 							[TrackingProvider.GOOGLE_ANALYTICS]: {
-								category: 'imageWithContent',
+								category: 'videoWithContent',
 								action: 'click',
 								label: `${data.heading}|${data.link.title}`
 							}
