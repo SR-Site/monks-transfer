@@ -15,3 +15,15 @@ entity.network.add_form:
   title: 'Add Network'
   appears_on:
     - entity.network.collection
+
+entity.recommend.add_form:
+  route_name: 'entity.recommend.add_form'
+  title: 'Add Recommend'
+  appears_on:
+    - entity.recommend.collection
+
+entity.schedule.add_form:
+  route_name: 'entity.schedule.add_form'
+  title: 'Add Schedule'
+  appears_on:
+    - entity.schedule.collection

@@ -51,3 +51,39 @@ edit network entities:
 
 view network entities:
   title: 'View Network entities'
+
+# Recommend
+administer recommend entities:
+  title: 'Administer Recommend entities'
+  description: 'Allow to access the administration form to configure Recommend entities.'
+  restrict access: true
+
+add recommend entities:
+  title: 'Create new Recommend entities'
+
+delete recommend entities:
+  title: 'Delete Recommend entities'
+
+edit recommend entities:
+  title: 'Edit Recommend entities'
+
+view recommend entities:
+  title: 'View Recommend entities'
+
+# Schedule
+administer schedule entities:
+  title: 'Administer Schedule entities'
+  description: 'Allow to access the administration form to configure Schedule entities.'
+  restrict access: true
+
+add schedule entities:
+  title: 'Create new Schedule entities'
+
+delete schedule entities:
+  title: 'Delete Schedule entities'
+
+edit schedule entities:
+  title: 'Edit Schedule entities'
+
+view schedule entities:
+  title: 'View Schedule entities'

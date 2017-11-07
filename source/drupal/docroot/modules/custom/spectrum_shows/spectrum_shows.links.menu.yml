@@ -6,6 +6,14 @@ system.admin.shows:
   parent: system.admin
 
 # Media Types menu items definition
+entity.genre.collection:
+  title: 'Genre list'
+  route_name: entity.genre.collection
+  description: 'List genre entities'
+  parent: system.admin.shows
+  weight: 100
+
+# Media Types menu items definition
 entity.media_type.collection:
   title: 'Media Type list'
   route_name: entity.media_type.collection
@@ -18,5 +26,21 @@ entity.network.collection:
   title: 'Network list'
   route_name: entity.network.collection
   description: 'List Network entities'
+  parent: system.admin.shows
+  weight: 100
+
+# Recommend menu items definition
+entity.recommend.collection:
+  title: 'Recommend list'
+  route_name: entity.recommend.collection
+  description: 'List recommend entities'
+  parent: system.admin.shows
+  weight: 100
+
+# Schedule menu items definition
+entity.schedule.collection:
+  title: 'Schedule list'
+  route_name: entity.schedule.collection
+  description: 'List schedule entities'
   parent: system.admin.shows
   weight: 100

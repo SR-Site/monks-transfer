@@ -48,3 +48,37 @@ entity.network.delete_form:
   base_route:  entity.network.canonical
   title: Delete
   weight: 10
+
+# Recommend routing definition
+entity.recommend.canonical:
+  route_name: entity.recommend.canonical
+  base_route: entity.recommend.canonical
+  title: 'View'
+
+entity.recommend.edit_form:
+  route_name: entity.recommend.edit_form
+  base_route: entity.recommend.canonical
+  title: Edit
+
+entity.recommend.delete_form:
+  route_name:  entity.recommend.delete_form
+  base_route:  entity.recommend.canonical
+  title: Delete
+  weight: 10
+
+# Schedule routing definition
+entity.schedule.canonical:
+  route_name: entity.schedule.canonical
+  base_route: entity.schedule.canonical
+  title: 'View'
+
+entity.schedule.edit_form:
+  route_name: entity.schedule.edit_form
+  base_route: entity.schedule.canonical
+  title: Edit
+
+entity.schedule.delete_form:
+  route_name:  entity.schedule.delete_form
+  base_route:  entity.schedule.canonical
+  title: Delete
+  weight: 10
