@@ -31,10 +31,11 @@
 		"id": "Infographic",
 		"data": {
 		  "overlap": false,
-		  "windowed": true,
+		  "windowed": false,
 		  "marginTop": 2,
-		  "heading": "Download information sheet to get more information on how to reach Millenials with Spectrum Reach",
-		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. Lore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		  "alignment": 0,
+		  "heading": "Ads Everywhere",
+		  "paragraph": "Drive brand awareness beyond traditional TV across all viewing platforms. Dynamically insert your message on Live Cable Programming, Video On Demand and Network Apps.",
 		  "primaryLink": {
 			"label": "All advertising solutions",
 			"title": "All advertising solutions",

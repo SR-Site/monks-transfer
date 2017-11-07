@@ -7,6 +7,7 @@ export default {
 	extends: AbstractButtonComponent,
 	props: {
 		theme: VueTypes.number.isRequired,
+		solid: VueTypes.bool.def(false),
 	},
 	data() {
 		return {
