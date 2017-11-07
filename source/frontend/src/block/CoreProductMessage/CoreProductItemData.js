@@ -1,12 +1,9 @@
 import VueTypes from 'vue-types';
 
 /**
- * @param {description} marginTop This defines the amount of spacing at the top of the block
- * @param {description} overlap This defines if a block overlaps the next block on the layout
- * @param {description} windowed This defines if a block has extra padding left and right
- * @param {description} scrollId This unique id is used for scrolling to blocks
- * @param {placeholder} scrollId unique-block-id
- * @param {description} items The array of items displayed in the block
+ * @param {description} value The value for the item
+ * @param {description} label The label for the item
+ * @param {description} paragraph The paragraph for the item
  */
 export default {
 	value: VueTypes.string.isRequired,
