@@ -1,5 +1,4 @@
 import VueTypes from 'vue-types';
-import CoreProductItemData from './CoreProductItemData';
 
 /**
  * @param {description} marginTop This defines the amount of spacing at the top of the block
@@ -10,10 +9,7 @@ import CoreProductItemData from './CoreProductItemData';
  * @param {description} items The array of items displayed in the block
  */
 export default {
-	marginTop: VueTypes.number.isRequired,
-	overlap: VueTypes.bool.isRequired,
-	windowed: VueTypes.bool.isRequired,
-	scrollId: VueTypes.string,
-	heading: VueTypes.string.isRequired,
-	items: VueTypes.arrayOf(CoreProductItemData),
+	value: VueTypes.string.isRequired,
+	label: VueTypes.string.isRequired,
+	paragraph: VueTypes.string.isRequired,
 };

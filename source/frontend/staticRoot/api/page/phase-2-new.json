@@ -28,6 +28,32 @@
 	},
 	"blocks": [
 	  {
+		"id": "CoreProductMessage",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Advertising is a multi-screen landscape <br/>Consumers rank TV as the",
+		  "items": [
+			{
+			  "value": "#1",
+			  "label": "source",
+			  "paragraph": "for the <strong>useful information</strong> about new products and services"
+			},
+			{
+			  "value": "75",
+			  "label": "percent",
+			  "paragraph": "of people who use <strong>their desktop/laptop</strong> while watching TV were shopping or browsing online stores"
+			},
+			{
+			  "value": "15",
+			  "label": "percent",
+			  "paragraph": "of people who <strong>use their tablet</strong> while watching TV used it to shop or browse online"
+			}
+		  ]
+		}
+	  },
+	  {
 		"id": "Infographic",
 		"data": {
 		  "overlap": false,
