@@ -53,6 +53,10 @@
 	}
 
 	@include respond-to(MEDIUM) {
+		.target-audience {
+			@include aspect-ratio(4px, 3px);
+		}
+
 		.header,
 		.devices,
 		.device-image,
