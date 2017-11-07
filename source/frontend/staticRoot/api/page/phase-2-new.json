@@ -115,6 +115,45 @@
 		}
 	  },
 	  {
+		"id": "SuccessStoryHighlight",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Chrysler success story",
+		  "subHeading": "Chrysler increased their leads by 40% by advertising during the <span>NBA Playoffs.</span>",
+		  "paragraph": "Reaching different audiences for multiple performances created a short messaging window for Flagler Auditorium. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+		  "link": {
+			"label": "Read success story",
+			"title": "Read success story",
+			"target": "/advertising-solutions",
+			"type": 0
+		  },
+		  "image": {
+			"normal": "http://via.placeholder.com/520x520",
+			"small": "http://via.placeholder.com/520x520",
+			"alt": "Lorem ipsum dolor sit amet"
+		  }
+		}
+	  },
+	  {
+		"id": "SuccessStoriesA",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Succes story",
+		  "subHeading": "Chrysler increased their leads by  40% by advertising during the NBA Playoffs.",
+		  "paragraph": "Reaching different audiences for multiple performances created a short messaging window for Flagler Auditorium. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+		  "link": {
+			"label": "Read success story",
+			"title": "Read success story",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
 		"id": "CoreProductMessage",
 		"data": {
 		  "overlap": false,

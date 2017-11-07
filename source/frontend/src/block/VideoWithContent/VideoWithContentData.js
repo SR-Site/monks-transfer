@@ -23,9 +23,6 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	alignment: VueTypes.oneOf(
-		[0,1,2],
-	).isRequired,
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
 	link: VueTypes.shape(PropLink),

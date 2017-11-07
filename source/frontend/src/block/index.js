@@ -45,7 +45,6 @@ export default {
 	ProgramModule: () => import('./ProgramModule'),
 	Quote: () => import('./Quote'),
 	QuoteSecondary: () => import('./QuoteSecondary'),
-	RelatedShows: () => import('./RelatedShows'),
 	ShowDetail: () => import('./ShowDetail'),
 	SmallHeading: () => import('./SmallHeading'),
 	SmallImage: () => import('./SmallImage'),

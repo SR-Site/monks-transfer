@@ -101,7 +101,7 @@
 
 		rect {
 			&.background-stroke {
-				stroke: $colorWhite;
+				stroke: rgba(0, 0, 0, 0.3);
 			}
 
 			&.hover-stroke {

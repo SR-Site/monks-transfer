@@ -1,2 +1,74 @@
 :local {
+	.success-story-highlight {
+		padding: $sizeGrid 0;
+	}
+	.content {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.image {
+		@include size(40%, auto);
+		@include aspect-ratio(1px, 1px);
+	}
+
+	.description {
+		@include size(60%, auto);
+		padding-left: $sizeGrid * 2;
+	}
+
+	.sub-heading {
+		@include size(100%, auto);
+		@include offset(0, 0);
+		padding: $sizeGrid * 2;
+		position: absolute;
+		color: white;
+
+		span {
+			color: $colorSecondary;
+		}
+	}
+
+	.heading,
+	.copy {
+		margin-bottom: $sizeGrid;
+	}
+
+	@include respond-to(MEDIUM) {
+		.image {
+			width: 50%;
+		}
+
+		.description {
+			width: 50%;
+		}
+
+		.sub-heading {
+			padding: $sizeGrid;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.content {
+			flex-direction: column;
+		}
+
+		.image,
+		.description {
+			width: 100%;
+		}
+
+		.image {
+			margin-bottom: mobile-size($sizeGrid);
+		}
+
+		.description {
+			padding: 0;
+		}
+
+		.sub-heading {
+			padding: mobile-size($sizeGrid * 2);
+		}
+	}
 }
