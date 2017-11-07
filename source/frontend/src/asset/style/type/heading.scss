@@ -8,27 +8,17 @@ h5 {
 
 // Default Heading Styles.
 .heading {
-	strong {
-		color: $colorSecondary;
-	}
+	@extend %heading;
 }
 
 // Open sans extra bold
 .heading-01 {
-	font: 800 7rem / 1.07 $fontOpenSans;
-
-	strong {
-		font-weight: 800;
-	}
+	@extend %heading-01;
 }
 
 // Open sans extra bold
 .heading-02 {
-	font: 800 4.5rem / 1.11 $fontOpenSans;
-
-	strong {
-		font-weight: 800;
-	}
+	@extend %heading-02;
 }
 
 // Open sans bold
@@ -42,11 +32,7 @@ h5 {
 
 // Open sans bold
 .heading-04 {
-	font: 700 4rem / 1.25 $fontOpenSans;
-
-	strong {
-		font-weight: 700;
-	}
+	@extend %heading-04;
 }
 
 // Open sans regular
@@ -92,45 +78,20 @@ h5 {
 
 // Breakpoints
 @include respond-to(XX_LARGE) {
-	.heading-01 {
-		font-size: 6.5rem;
-	}
-
-	.heading-04 {
-		font-size: 3.6rem;
-	}
-
 	.heading-06 {
 		font-size: 2.6rem;
 	}
 }
 
 @include respond-to(X_LARGE) {
-	.heading-01 {
-		font-size: 5.5rem;
-	}
-
-	.heading-04 {
-		font-size: 3.2rem;
-	}
-
 	.heading-06 {
 		font-size: 2.4rem;
 	}
 }
 
 @include respond-to(SMALL) {
-	.heading-01 {
-		font-size: mobile-size(8rem);
-	}
-	.heading-02 {
-		font-size: mobile-size(4.5rem);
-	}
 	.heading-03 {
 		font-size: mobile-size(5rem);
-	}
-	.heading-04 {
-		font-size: mobile-size(4.5rem);
 	}
 	.heading-05 {
 		font-size: mobile-size(4.5rem);

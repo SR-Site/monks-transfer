@@ -9,7 +9,7 @@
 			}
 		]">
 		<div :class="$style.content">
-			<h1 :class="$style.heading" class="heading heading-01" v-html="heading" ref="heading"></h1>
+			<div class="heading heading-01" :class="$style.heading" v-html="heading" ref="heading"></div>
 			<p :class="$style.copy" class="copy copy-01" v-html="paragraph" ref="copy"></p>
 
 			<ButtonCircleArrow

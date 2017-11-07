@@ -15,7 +15,7 @@
 		  "marginTop": 0,
 		  "slides": [
 			{
-			  "heading": "Data, Targeting, Creative<br \/>",
+			  "heading": "<h1>Data, Targeting, Creative</h1>",
 			  "paragraph": "<p>Our #Reach365 video campaign is a living case study on our differentiators. This is for the dreamers, the entrepreneurs, the innovators. If that's you, catch up with the campaign.<\/p>",
 			  "background": {
 				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/Reach365-Entrepreneur_Hero_0.jpg",
@@ -29,7 +29,7 @@
 			  }
 			},
 			{
-			  "heading": "2018 TV Predictions<br \/>",
+			  "heading": "<h2>2018 TV Predictions</h2>",
 			  "paragraph": "<p>Our industry experts weigh in on what to expect for the television advertising industry in 2018.<\/p>",
 			  "background": {
 				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/2018Predictions_Hero-03.jpg",
@@ -44,7 +44,7 @@
 			  }
 			},
 			{
-			  "heading": "What's Your True ROI?<br \/>",
+			  "heading": "<h2>What's Your True ROI?</h2>",
 			  "paragraph": "<p>Why guess when it comes to measuring the return on your marketing investment? Get on the road to full transparency now.<\/p>",
 			  "background": {
 				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/ROI_Hero.jpg",
@@ -55,21 +55,6 @@
 				"label": "Read More",
 				"title": "Read More",
 				"target": "\/articles\/how-do-you-know-if-your-advertising-campaign-working",
-				"type": 0
-			  }
-			},
-			{
-			  "heading": "Summer<br \/>Sports<br \/><strong>No Time Outs<\/strong><br \/>",
-			  "paragraph": "<p>Sports fans don\u2019t take time outs.<\/p>\n\n<p>\u00a0<\/p>\n\n<p>Cable airs the majority of all sports events: preseason, season and postseason. Connect to passionate sports fans with thousands of hours of live sports on cable.<\/p>",
-			  "background": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/hero-sports.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/hero-sports.jpg",
-				"alt": "Connect with Sports Fans"
-			  },
-			  "link": {
-				"label": "See Featured Programming",
-				"title": "See Featured Programming",
-				"target": "\/featured-programs",
 				"type": 0
 			  }
 			}
@@ -402,7 +387,7 @@
 		  "overlap": false,
 		  "windowed": false,
 		  "marginTop": 2,
-		  "heading": "Spectrum Reach is the marketing platform of choice for a reason.<br \/>"
+		  "heading": "<h2>Spectrum Reach is the marketing platform of choice for a reason.</h2>"
 		}
 	  },
 	  {

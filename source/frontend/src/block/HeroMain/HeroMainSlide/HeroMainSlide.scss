@@ -35,6 +35,13 @@
 
 	.heading {
 		margin-bottom: $sizeGrid;
+
+		h1,
+		h2,
+		h3 {
+			@extend %heading;
+			@extend %heading-01;
+		}
 	}
 
 	.copy {
