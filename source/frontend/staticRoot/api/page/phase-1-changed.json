@@ -172,8 +172,8 @@
 			"name": "Spectrum Reach",
 			"role": "Author",
 			"image": {
-			  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
-			  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
+			  "normal": "http://via.placeholder.com/240x240",
+			  "small": "http://via.placeholder.com/240x240",
 			  "alt": ""
 			}
 		  },
@@ -220,8 +220,8 @@
 			"type": 0
 		  },
 		  "background": {
-			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/sportsBlock_FeaturedProgram-OPT_0.jpg",
-			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/sportsBlock_FeaturedProgram-OPT_0.jpg",
+			"normal": "http://via.placeholder.com/1280x720",
+			"small": "http://via.placeholder.com/1280x720",
 			"alt": "networks and programming"
 		  },
 		  "paragraph": "<p>Your customers are watching, and they\u2019re paying attention. On their TVs, their phones \u2013 sometimes at the same time. Align your brand with the high-performing shows your customers are already glued to.<\/p>",
@@ -239,464 +239,100 @@
 		  "items": [
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/fox-news_1.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/fox-news_1.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "Fox News"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_02_nickolodeon.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_02_nickolodeon.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "Nickolodeon"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_03_AdultSwim_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_03_AdultSwim_0.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "Adult Swim"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_04_HGTV.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_04_HGTV.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "HGTV"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/USA-Red_400.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/USA-Red_400.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "USA Network"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_06_CNN_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_06_CNN_0.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "CNN"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_07_nickatnite_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_07_nickatnite_0.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "Nick at Night"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_08_TNT_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_08_TNT_0.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "TNT"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/ESPN_wordmark-400.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/ESPN_wordmark-400.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "ESPN"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_10_CartoonNetwork_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_10_CartoonNetwork_0.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "Cartoon Network"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_11_ID_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_11_ID_0.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "Investigation Discovery"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_12_msnbc_new.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_12_msnbc_new.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "MSNBC"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_13_hallmark_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_13_hallmark_0.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "Hallmark Channel"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_14_tbs_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_14_tbs_0.png",
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
 				"alt": "TBS"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/history_logo_2015_4c_black_type.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/history_logo_2015_4c_black_type.png",
-				"alt": "History Channel"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_16_foodnetwork_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_16_foodnetwork_0.png",
-				"alt": "Food Network"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Discovery%20Logo-Black.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Discovery%20Logo-Black.png",
-				"alt": "Discovery"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_19_tvland_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_19_tvland_0.png",
-				"alt": "TV Land"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/AMC_logo_2013-400.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/AMC_logo_2013-400.png",
-				"alt": "AMC"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_21_fx_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_21_fx_0.png",
-				"alt": "FX"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_22_AE_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_22_AE_0.png",
-				"alt": "A&E"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Lifetime%20Red%20Logo%202017-SM_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Lifetime%20Red%20Logo%202017-SM_0.png",
-				"alt": "Lifetime"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_24_HallmarkMovies_600.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_24_HallmarkMovies_600.png",
-				"alt": "Hallmark Movies"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_25_tlc_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_25_tlc_0.png",
-				"alt": "TLC"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/spike_logo_black_2015-400w_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/spike_logo_black_2015-400w_0.png",
-				"alt": "Spike"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_27_freeform.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_27_freeform.png",
-				"alt": "Freeform"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_30_LMN.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_30_LMN.png",
-				"alt": "LMN"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_31_Syfy.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_31_Syfy.png",
-				"alt": "Syfy"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_32_HLN.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_32_HLN.png",
-				"alt": "HLN"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_33_GSN.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_33_GSN.png",
-				"alt": "Game Show Network"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_34_we.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_34_we.png",
-				"alt": "WeTV"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_35_ComedyCentral.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_35_ComedyCentral.png",
-				"alt": "Comedy Central"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Bravo%20logo_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Bravo%20logo_0.png",
-				"alt": "Bravo"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_37_BET.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_37_BET.png",
-				"alt": "BET"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_38_MTV.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_38_MTV.png",
-				"alt": "MTV"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_39_E.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/logo_39_E.png",
-				"alt": "E!"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_40_vh1.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_40_vh1.png",
-				"alt": "VH1"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_41_travelchannel.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_41_travelchannel.png",
-				"alt": "Travel Channel"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/NG_logo_black-400.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/NG_logo_black-400.png",
-				"alt": "National Geographic Channel"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_43_inspiration.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_43_inspiration.png",
-				"alt": "Inspiration Network"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_44_ESPN2.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_44_ESPN2.png",
-				"alt": "ESPN2"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_45_wgnamerica.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_45_wgnamerica.png",
-				"alt": "WGN America"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_46_own_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_46_own_0.png",
-				"alt": "OWN"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_47_TruTV.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_47_TruTV.png",
-				"alt": "truTV"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_48_Science.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_48_Science.png",
-				"alt": "Science Channel"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_49_TheWeatherChannel.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_49_TheWeatherChannel.png",
-				"alt": "The Weather Channel"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_50_FXX.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_50_FXX.png",
-				"alt": "FXX"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_50_DisneyXD.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/logo_50_DisneyXD.png",
-				"alt": "Disney XD"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/FS1.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/FS1.png",
-				"alt": "FS1"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/NBCSN.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/NBCSN.png",
-				"alt": "NBCSN"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Fox%20Sports.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Fox%20Sports.png",
-				"alt": "FOX SPORTS"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Fox%20Deportes.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Fox%20Deportes.png",
-				"alt": "FOX DEPORTES"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN-Deportes.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN-Deportes.png",
-				"alt": "ESPN DEPORTES"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPNU.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPNU.png",
-				"alt": "ESPNU"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN-News.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN-News.png",
-				"alt": "ESPN NEWS"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN%20Classic.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN%20Classic.png",
-				"alt": "ESPN CLASSIC"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Golf.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Golf.png",
-				"alt": "GOLF"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/NFL%20Network.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/NFL%20Network.png",
-				"alt": "NFL NETWORK"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/MLB%20Network.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/MLB%20Network.png",
-				"alt": "MLB NETWORK"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/NHL%20Network.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/NHL%20Network.png",
-				"alt": "NHL NETWORK"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Spectrum%20Sports.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Spectrum%20Sports.png",
-				"alt": "SPECTRUM SPORTS"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Universo_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/Universo_0.png",
-				"alt": "UNIVERSO"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/BTN_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/BTN_0.png",
-				"alt": "BTN"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/LHN_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/LHN_0.png",
-				"alt": "LHN"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/PAC%2012_0.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/PAC%2012_0.png",
-				"alt": "PAC 12"
-			  }
-			},
-			{
-			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN%20-%20SEC.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/ESPN%20-%20SEC.png",
-				"alt": "SEC ESPN"
 			  }
 			}
 		  ]
@@ -712,8 +348,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-08\/bravo-flipping%20out-keyart-800-x-445.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-08\/bravo-flipping%20out-keyart-800-x-445.jpg",
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Bravo  Flipping Out"
 			  },
 			  "heading": "Bravo<br \/>Flipping Out<br \/>",
@@ -731,8 +367,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-09\/program_image-MNF_2017-09.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-09\/program_image-MNF_2017-09.jpg",
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
 				"alt": "ESPN\/ESPN2 \u200b\u200b\u200b\u200b\u200b\u200b\u200bMonday Night Football"
 			  },
 			  "heading": "ESPN<br \/>Monday Night Football<br \/>",
@@ -746,8 +382,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-07\/program_LowesFiles.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-07\/program_LowesFiles.jpg",
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
 				"alt": "A&E  The Lowe Files"
 			  },
 			  "heading": "A&amp;E<br \/>The Lowe Files<br \/>",
@@ -757,8 +393,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-06\/usa-network-the-sinner-1-keyart-OPT.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-06\/usa-network-the-sinner-1-keyart-OPT.jpg",
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
 				"alt": "USA \u2013 The Sinner"
 			  },
 			  "heading": "USA<br \/>The Sinner<br \/>",
@@ -772,8 +408,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-08\/bravo-flipping%20out-keyart-800-x-445.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-08\/bravo-flipping%20out-keyart-800-x-445.jpg",
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Bravo  Flipping Out"
 			  },
 			  "heading": "Bravo<br \/>Flipping Out<br \/>",
@@ -791,8 +427,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-09\/program_image-MNF_2017-09.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-09\/program_image-MNF_2017-09.jpg",
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
 				"alt": "ESPN\/ESPN2 \u200b\u200b\u200b\u200b\u200b\u200b\u200bMonday Night Football"
 			  },
 			  "heading": "ESPN<br \/>Monday Night Football<br \/>",
@@ -806,8 +442,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-07\/program_LowesFiles.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-07\/program_LowesFiles.jpg",
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
 				"alt": "A&E  The Lowe Files"
 			  },
 			  "heading": "A&amp;E<br \/>The Lowe Files<br \/>",
@@ -821,8 +457,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-06\/usa-network-the-sinner-1-keyart-OPT.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/image\/2017-06\/usa-network-the-sinner-1-keyart-OPT.jpg",
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
 				"alt": "USA \u2013 The Sinner"
 			  },
 			  "heading": "USA<br \/>The Sinner<br \/>",
@@ -876,14 +512,14 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
-				  "alt": "",
-				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
-				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
+				  "small": "http://via.placeholder.com/240x240",
+				  "normal": "http://via.placeholder.com/240x240",
+				  "alt": ""
 				}
 			  },
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/ROI-Article-BlockHeader_0.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/ROI-Article-BlockHeader_0.jpg",
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
 				"alt": "Find your true ROI"
 			  },
 			  "views": 0,
@@ -908,14 +544,14 @@
 				"name": "Fred Bucher",
 				"role": "Author",
 				"image": {
-				  "alt": "",
-				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png",
-				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png"
+				  "small": "http://via.placeholder.com/240x240",
+				  "normal": "http://via.placeholder.com/240x240",
+				  "alt": ""
 				}
 			  },
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/Reach365-2017-10-09_HERO_18.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/Reach365-2017-10-09_HERO_18.jpg",
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
 				"alt": "Small, Small Business"
 			  },
 			  "tags": [
@@ -947,14 +583,14 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
-				  "alt": "",
-				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
-				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
+				  "small": "http://via.placeholder.com/240x240",
+				  "normal": "http://via.placeholder.com/240x240",
+				  "alt": ""
 				}
 			  },
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/LAUpfront-2017-2-BlockHeader.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/LAUpfront-2017-2-BlockHeader.jpg",
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
 				"alt": "Spectrum Reach Los Angeles Adlink Upfront"
 			  },
 			  "views": 0,
@@ -972,14 +608,14 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
-				  "alt": "",
-				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
-				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
+				  "small": "http://via.placeholder.com/240x240",
+				  "normal": "http://via.placeholder.com/240x240",
+				  "alt": ""
 				}
 			  },
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-09\/TV-Social-BlockHeader_2.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-09\/TV-Social-BlockHeader_2.jpg",
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
 				"alt": "TV is Social"
 			  },
 			  "tags": [
@@ -1011,14 +647,14 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
-				  "alt": "",
-				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png",
-				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Spectrum_Reach_RGB.png"
+				  "small": "http://via.placeholder.com/240x240",
+				  "normal": "http://via.placeholder.com/240x240",
+				  "alt": ""
 				}
 			  },
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-09\/StayingPowerofTV-02_block.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-09\/StayingPowerofTV-02_block.jpg",
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
 				"alt": "Television is Still Strong for Advertisers"
 			  },
 			  "tags": [
@@ -1050,14 +686,14 @@
 				"name": "Fred Bucher",
 				"role": "Author",
 				"image": {
-				  "alt": "",
-				  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png",
-				  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/user\/2017-09\/Fred_Bucher.png"
+				  "small": "http://via.placeholder.com/240x240",
+				  "normal": "http://via.placeholder.com/240x240",
+				  "alt": ""
 				}
 			  },
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-09\/Atlanta_4.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-09\/Atlanta_4.jpg",
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
 				"alt": "Emmy Award Winning TV Programming"
 			  },
 			  "views": 0,

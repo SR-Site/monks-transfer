@@ -20,6 +20,7 @@
 
 		img {
 			@include offset(0, 0);
+			@include size(100%);
 			position: absolute;
 			object-fit: cover;
 		}

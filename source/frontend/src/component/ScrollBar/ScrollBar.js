@@ -1,11 +1,16 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import ScrollBarTransitionController from './ScrollBarTransitionController';
+import Theme from 'data/enum/Theme';
 import DraggableInstance from '../../util/draggableInstance/DraggableInstance';
 import DraggableInstanceEvent from '../../util/draggableInstance/DraggableInstanceEvent';
+import VueTypes from 'vue-types';
 
 export default {
 	name: 'ScrollBar',
 	extends: AbstractTransitionComponent,
+	props: {
+		theme: VueTypes.number.def(Theme.DARK),
+	},
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new ScrollBarTransitionController(this);
