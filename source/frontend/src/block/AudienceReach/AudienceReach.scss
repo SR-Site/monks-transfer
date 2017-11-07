@@ -1,2 +1,84 @@
 :local {
+	.audience-reach {
+		padding: $sizeGrid 0;
+		position: relative;
+
+		&:before {
+			@include arrow(right, $colorLightGrey, $sizeGrid * 30);
+			@include offset(0, 50%);
+			transform: translateY(-50%);
+			content: '';
+			position: absolute;
+		}
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid;
+	}
+
+	.channels {
+		@extend %reset-list;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.channel {
+		@include size(calc(25% - #{$sizeGrid * 1.5}), auto);
+
+		&:not(:first-child) {
+			margin-left: $sizeGrid * 2;
+		}
+	}
+
+	.image {
+		@include size(100%, auto);
+		@include aspect-ratio(1px, 1px);
+		border: 1px solid #dcdee2;
+		margin-bottom: $sizeGrid;
+
+		img {
+			@include size(50%);
+		}
+	}
+
+	.description-heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.statistics {
+		@extend %reset-list;
+	}
+
+	.statistic {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	@include respond-to(MEDIUM) {
+		.channel {
+			@include size(calc(25% - #{$sizeGrid * 0.5}), auto);
+
+			&:not(:first-child) {
+				margin-left: $sizeGrid;
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.audience-reach {
+			&:before {
+				@include arrow(right, $colorLightGrey, $sizeGrid * 60);
+			}
+		}
+		.channels {
+			flex-direction: column;
+		}
+
+		.channel {
+			width: 100%;
+
+			&:not(:first-child) {
+				margin-left: 0;
+			}
+		}
+	}
 }
