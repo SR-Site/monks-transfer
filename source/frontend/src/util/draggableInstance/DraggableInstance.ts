@@ -335,7 +335,7 @@ class DraggableInstance extends sengEvent {
 	 * @method handleResize
 	 */
 	private handleResize(): void {
-		if (!this.isDisposed) {
+		if (!this.isDisposed()) {
 			this._draggableInstance.update(true);
 		}
 	}

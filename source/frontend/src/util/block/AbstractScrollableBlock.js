@@ -17,7 +17,6 @@ export default {
 	},
 	data() {
 		return {
-			activeIndex: 0,
 			itemCount: 0,
 			showScrollBar: true,
 		};
@@ -36,6 +35,12 @@ export default {
 					invert: true,
 				},
 			);
+
+			if (this.draggable.enabled) {
+				this.handleDraggableEnable();
+			} else {
+				this.handleDraggableDisable();
+			}
 		},
 		createEventListeners() {
 			this.disposables.add(
@@ -56,8 +61,11 @@ export default {
 		},
 		handleDraggableDisable() {
 			this.showScrollBar = false;
+			// Reset the progress back to 0
+			this.draggable.progress = 0;
 		},
 		handleResize() {
+			this.draggable.update();
 			this.draggable.setSnapPosition(
 				this.$refs.draggableElement.offsetWidth / this.itemCount,
 			);
