@@ -25,8 +25,11 @@ export default {
 		};
 	},
 	computed: {
+		inViewPort() {
+			return this.deviceState <= this.DeviceState.SMALL ? 1 : 3;
+		},
 		showScrollBar() {
-			return this.deviceState <= this.DeviceState.SMALL || this.data.devices.length > 3
+			return this.deviceState <= this.DeviceState.SMALL || this.data.devices.length > this.inViewPort;
 		},
 	},
 	methods: {
@@ -59,19 +62,20 @@ export default {
 					debounce(this.handleResize, 250),
 				);
 				this.scrollBar = this.getChild('ScrollBar');
-				this.handleResize()
+				this.handleResize();
 			});
 			this.isReady();
 		},
 		setDeviceWidth() {
-			this.width = this.$refs.draggableContainer.offsetWidth / 3;
+			this.width = this.$refs.draggableContainer.offsetWidth / this.inViewPort;
 		},
 		handleResize() {
 			this.setDeviceWidth();
-			console.log(this.draggableInstance.disabled);
-			this.draggableInstance.setSnapPosition(
-				this.$refs.draggableElement.offsetWidth / this.data.devices.length,
-			);
+			this.$nextTick(() => {
+				this.draggableInstance.setSnapPosition(
+					this.$refs.draggableElement.offsetWidth / this.data.devices.length,
+				);
+			});
 		},
 		handleDraggableUpdate(event) {
 			this.scrollBar.setProgress(event.data.progress);

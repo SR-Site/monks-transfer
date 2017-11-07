@@ -28,7 +28,6 @@
 		white-space: nowrap;
 		font-size: 0;
 		display: inline-block;
-		//margin-left: -$sizeGrid;
 	}
 
 	.device {
@@ -40,7 +39,7 @@
 		vertical-align: top;
 	}
 
-	.device-image{
+	.device-image {
 		margin-bottom: $sizeGrid / 2;
 	}
 
@@ -51,5 +50,28 @@
 	.device-image {
 		@include size(100%, auto);
 		@include aspect-ratio(16px, 9px);
+	}
+
+	@include respond-to(MEDIUM) {
+		.header,
+		.devices,
+		.device-image,
+		.device-heading {
+			margin-bottom: $sizeGrid / 2;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.abs-fill {
+			padding: 0;
+		}
+
+		.target-audience {
+			@include aspect-ratio(1px, 1px);
+		}
+
+		.device {
+			padding: 0 $sizeGridMobile * 2;
+		}
 	}
 }
