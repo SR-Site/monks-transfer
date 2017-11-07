@@ -9,6 +9,10 @@ class DraggableInstanceEvent extends AbstractEvent {
 	public static DRAG_END: string = EVENT_TYPE_PLACEHOLDER;
 	public static SNAP_END: string = EVENT_TYPE_PLACEHOLDER;
 
+	public static DISABLE: string = EVENT_TYPE_PLACEHOLDER;
+	public static ENABLE: string = EVENT_TYPE_PLACEHOLDER;
+
+
 	constructor(
 		type: string,
 		public data?: { progress: number },

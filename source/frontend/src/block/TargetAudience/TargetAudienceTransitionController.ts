@@ -33,7 +33,7 @@ class TargetAudienceTransitionController extends AbstractTransitionController {
 					autoAlpha: 1,
 					ease: Expo.easeOut,
 				},
-				'=-0.5'
+				'=-0.7'
 			);
 		});
 

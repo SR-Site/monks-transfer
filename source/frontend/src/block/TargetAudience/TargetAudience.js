@@ -1,17 +1,15 @@
-import VueTypes from 'vue-types';
-import { DeviceStateEvent } from 'seng-device-state-tracker';
-import { AbstractBlockComponent } from 'vue-block-system';
-import TargetAudienceTransitionController from './TargetAudienceTransitionController';
-import TargetAudienceData from './TargetAudienceData';
-import DraggableInstance from '../../util/draggableInstance/DraggableInstance';
-import DraggableInstanceEvent from '../../util/draggableInstance/DraggableInstanceEvent';
-import NativeEventListener from '../../util/event/NativeEventListener';
-import ScrollBar from '../../component/ScrollBar/ScrollBar';
 import { debounce } from 'lodash';
+import { DeviceStateEvent } from 'seng-device-state-tracker';
+import VueTypes from 'vue-types';
+import ScrollBar from '../../component/ScrollBar/ScrollBar';
+import AbstractScrollableBlock from '../../util/block/AbstractScrollableBlock';
+import NativeEventListener from '../../util/event/NativeEventListener';
+import TargetAudienceData from './TargetAudienceData';
+import TargetAudienceTransitionController from './TargetAudienceTransitionController';
 
 export default {
 	name: 'TargetAudience',
-	extends: AbstractBlockComponent,
+	extends: AbstractScrollableBlock,
 	components: {
 		ScrollBar,
 	},
@@ -20,6 +18,7 @@ export default {
 	},
 	data() {
 		return {
+			itemCount: this.data.devices.length,
 			width: 0,
 			deviceState: this.$deviceState.currentState,
 		};
@@ -28,83 +27,28 @@ export default {
 		inViewPort() {
 			return this.deviceState <= this.DeviceState.SMALL ? 1 : 3;
 		},
-		showScrollBar() {
-			return this.deviceState <= this.DeviceState.SMALL || this.data.devices.length > this.inViewPort;
-		},
 	},
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new TargetAudienceTransitionController(this);
-			this.deviceStateListener = new NativeEventListener(
-				this.$deviceState,
-				DeviceStateEvent.STATE_UPDATE,
-				event => {
-					this.deviceState = event.data.state;
-				},
-			);
 			this.setDeviceWidth();
-			this.$nextTick(() => {
-				this.draggableInstance = new DraggableInstance(
-					this.$refs.draggableContainer,
-					{
-						maxDuration: 0.5,
-						invert: true,
-					},
-				);
-				this.draggableCompleteListener = new NativeEventListener(
-					this.draggableInstance,
-					DraggableInstanceEvent.UPDATE,
-					this.handleDraggableUpdate,
-				);
-				this.resizeListener = new NativeEventListener(
-					window,
-					'resize',
-					debounce(this.handleResize, 250),
-				);
-				this.scrollBar = this.getChild('ScrollBar');
-				this.handleResize();
-			});
+
+			this.disposables.add(
+				new NativeEventListener(this.$deviceState, DeviceStateEvent.STATE_UPDATE, this.handleDeviceStateChange)
+			)
+
+			this.disposables.add(
+				new NativeEventListener(window, 'resize', debounce(this.setDeviceWidth, 100)),
+			);
+
+			this.$nextTick(() => this.setupScrollableBlock());
 			this.isReady();
+		},
+		handleDeviceStateChange(event) {
+			this.deviceState = event.data.state;
 		},
 		setDeviceWidth() {
 			this.width = this.$refs.draggableContainer.offsetWidth / this.inViewPort;
 		},
-		handleResize() {
-			this.setDeviceWidth();
-			this.$nextTick(() => {
-				this.draggableInstance.setSnapPosition(
-					this.$refs.draggableElement.offsetWidth / this.data.devices.length,
-				);
-			});
-		},
-		handleDraggableUpdate(event) {
-			this.scrollBar.setProgress(event.data.progress);
-		},
-		handleScrollBarUpdate(progress) {
-			clearTimeout(this.scrollBarEndTimeout);
-			this.draggableInstance.update(progress);
-		},
-		handleScrollBarEnd() {
-			clearTimeout(this.scrollBarEndTimeout);
-			this.scrollBarEndTimeout = setTimeout(() => this.draggableInstance.snapToNearestPoint(), 10);
-		},
-		getArticleData(article) {
-			const clone = JSON.parse(JSON.stringify(article));
-
-			// Add the required props
-			return Object.assign(clone, {
-				marginTop: 0,
-				windowed: false,
-				overlap: false,
-			});
-		},
-	},
-	beforeDestroy() {
-		this.resizeListener.dispose();
-		this.resizeListener = null;
-		this.draggableInstance.dispose();
-		this.draggableInstance = null;
-		this.draggableCompleteListener.dispose();
-		this.draggableCompleteListener = null;
 	},
 };
