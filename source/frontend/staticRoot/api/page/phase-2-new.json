@@ -28,6 +28,82 @@
 	},
 	"blocks": [
 	  {
+		"id": "SuccessStoriesB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 0,
+		  "heading": "TV delivers",
+		  "paragraph": "We are continuously innovating and adding to our range of advertising products for Television.",
+		  "stories": [
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			}
+		  ]
+		}
+	  },
+	  {
 		"id": "AudienceReach",
 		"data": {
 		  "overlap": true,
