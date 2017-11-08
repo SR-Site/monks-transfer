@@ -84,5 +84,8 @@
 			@include aspect-ratio(1px, 1.5px);
 		}
 
+		.header {
+			margin-bottom: mobile-size($sizeGrid * 2);
+		}
 	}
 }

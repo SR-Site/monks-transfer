@@ -74,6 +74,14 @@
 			align-items: center;
 		}
 
+		.image {
+			@include aspect-ratio(16px, 9px);
+
+			img {
+				@include size(50%, auto);
+			}
+		}
+
 		.channel {
 			width: 100%;
 			max-width: 375px;

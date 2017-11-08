@@ -59,10 +59,13 @@
 		}
 
 		.value {
-			font-size: mobile-size(12rem);
+			font-size: mobile-size(10rem);
+			margin-bottom: mobile-size($sizeGrid);
 		}
+
 		.label {
-			font-size: mobile-size(2.4rem);
+			font-size: mobile-size(2rem);
+			margin-bottom: mobile-size($sizeGrid * 2);
 		}
 	}
 }
