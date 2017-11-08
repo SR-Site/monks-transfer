@@ -8,26 +8,26 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
 
 /**
- * Access controller for the Genre entity.
+ * Access controller for the MediaType entity.
  *
- * @see \Drupal\spectrum_shows\Entity\Genre.
+ * @see \Drupal\spectrum_shows\Entity\MediaType.
  */
-class GenreAccessControlHandler extends EntityAccessControlHandler {
+class MediaTypeAccessControlHandler extends EntityAccessControlHandler {
 
   /**
    * {@inheritdoc}
    */
   protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
-    /** @var \Drupal\spectrum_shows\GenreInterface $entity */
+    /** @var \Drupal\spectrum_shows\MediaTypeInterface $entity */
     switch ($operation) {
       case 'view':
-        return AccessResult::allowedIfHasPermission($account, 'view genre entities');
+        return AccessResult::allowedIfHasPermission($account, 'view media type entities');
 
       case 'update':
-        return AccessResult::allowedIfHasPermission($account, 'edit genre entities');
+        return AccessResult::allowedIfHasPermission($account, 'edit media type entities');
 
       case 'delete':
-        return AccessResult::allowedIfHasPermission($account, 'delete genre entities');
+        return AccessResult::allowedIfHasPermission($account, 'delete media type entities');
     }
 
     // Unknown operation, no opinion.
@@ -38,7 +38,7 @@ class GenreAccessControlHandler extends EntityAccessControlHandler {
    * {@inheritdoc}
    */
   protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL) {
-    return AccessResult::allowedIfHasPermission($account, 'add genre entities');
+    return AccessResult::allowedIfHasPermission($account, 'add media type entities');
   }
 
 }

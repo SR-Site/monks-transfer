@@ -1,0 +1,20 @@
+uuid: a8cd33d7-d1be-4a17-a2c3-20dafd2689ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - spectrum_shows
+id: node.field_show_schedules
+field_name: field_show_schedules
+entity_type: node
+type: entity_reference
+settings:
+  target_type: schedule
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

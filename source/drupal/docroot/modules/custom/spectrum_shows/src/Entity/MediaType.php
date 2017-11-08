@@ -5,7 +5,7 @@ namespace Drupal\spectrum_shows\Entity;
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
-use Drupal\spectrum_shows\GenreInterface;
+use Drupal\spectrum_shows\MediaTypeInterface;
 
 /**
  * Defines the Genre entity.
@@ -13,26 +13,26 @@ use Drupal\spectrum_shows\GenreInterface;
  * @ingroup spectrum_shows
  *
  * @ContentEntityType(
- *   id = "genre",
- *   label = @Translation("Genre"),
+ *   id = "media_type",
+ *   label = @Translation("Media Type"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\spectrum_shows\GenreListBuilder",
- *     "views_data" = "Drupal\spectrum_shows\Entity\GenreViewsData",
+ *     "list_builder" = "Drupal\spectrum_shows\MediaTypeListBuilder",
+ *     "views_data" = "Drupal\spectrum_shows\Entity\MediaTypeViewsData",
  *
  *     "form" = {
- *       "default" = "Drupal\spectrum_shows\Form\GenreForm",
- *       "add" = "Drupal\spectrum_shows\Form\GenreForm",
- *       "edit" = "Drupal\spectrum_shows\Form\GenreForm",
- *       "delete" = "Drupal\spectrum_shows\Form\GenreDeleteForm",
+ *       "default" = "Drupal\spectrum_shows\Form\MediaTypeForm",
+ *       "add" = "Drupal\spectrum_shows\Form\MediaTypeForm",
+ *       "edit" = "Drupal\spectrum_shows\Form\MediaTypeForm",
+ *       "delete" = "Drupal\spectrum_shows\Form\MediaTypeDeleteForm",
  *     },
- *     "access" = "Drupal\spectrum_shows\GenreAccessControlHandler",
+ *     "access" = "Drupal\spectrum_shows\MediaTypeAccessControlHandler",
  *     "route_provider" = {
  *       "html" = "Drupal\Core\Entity\Routing\AdminHtmlRouteProvider"
  *     }
  *   },
- *   base_table = "genre",
- *   admin_permission = "administer genre entities",
+ *   base_table = "media_type",
+ *   admin_permission = "administer media type entities",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
@@ -40,15 +40,15 @@ use Drupal\spectrum_shows\GenreInterface;
  *     "langcode" = "langcode",
  *   },
  *   links = {
- *     "canonical" = "/admin/shows/genre/{genre}",
- *     "add-form" = "/admin/shows/genre/add",
- *     "edit-form" = "/admin/shows/genre/{genre}/edit",
- *     "delete-form" = "/admin/shows/genre/{genre}/delete",
- *     "collection" = "/admin/shows/genres",
+ *     "canonical" = "/admin/shows/media_type/{media_type}",
+ *     "add-form" = "/admin/shows/media_type/add",
+ *     "edit-form" = "/admin/shows/media_type/{media_type}/edit",
+ *     "delete-form" = "/admin/shows/media_type/{media_type}/delete",
+ *     "collection" = "/admin/shows/media_types",
  *   },
  * )
  */
-class Genre extends ContentEntityBase implements GenreInterface {
+class MediaType extends ContentEntityBase implements MediaTypeInterface {
 
   /**
    * {@inheritdoc}
@@ -58,7 +58,7 @@ class Genre extends ContentEntityBase implements GenreInterface {
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Genre entity.'))
+      ->setDescription(t('The name of the MediaType entity.'))
       ->setSettings([
         'max_length' => 500,
         'text_processing' => 0,

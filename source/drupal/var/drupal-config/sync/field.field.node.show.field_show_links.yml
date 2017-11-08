@@ -1,0 +1,23 @@
+uuid: 6306d1d9-5043-4baa-ba70-41614651d4b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_links
+    - node.type.show
+  module:
+    - link
+id: node.show.field_show_links
+field_name: field_show_links
+entity_type: node
+bundle: show
+label: Links
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
