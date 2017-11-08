@@ -157,6 +157,7 @@ export default {
 				const loadImageTask = new LoadImageTask(
 					{
 						assets: this.sources[this.validDeviceState],
+						batchSize: 10,
 						onAssetLoaded: result => {
 							this.images[this.validDeviceState][result.index] = result.asset;
 						},
