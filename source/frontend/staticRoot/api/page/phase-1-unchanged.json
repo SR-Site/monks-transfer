@@ -3,14 +3,28 @@
   "data": {
 	"title": "Spectrum Reach Advertising - Phase 1 (unchanged)",
 	"data": {
-	  "headerTheme": 0,
+	  "headerTheme": 1,
 	  "hideContactButton": 0
 	},
 	"blocks": [
 	  {
+		"id": "marketMap",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "service": {
+			"heading": "Start advertising today"
+		  },
+		  "searchLabel": "Search",
+		  "searchPlaceholder": "Which region do you want to advertise in?",
+		  "notFoundMessage": "Sorry, this is not currently in our coverage area, contact us to for more information."
+		}
+	  },
+	  {
 		"id": "heroMain",
 		"data": {
-		  "overlap": true,
+		  "overlap": false,
 		  "windowed": false,
 		  "marginTop": 0,
 		  "slides": [
@@ -59,6 +73,19 @@
 			  }
 			}
 		  ]
+		}
+	  },
+	  {
+		"id": "heroTertiary",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "background": {
+			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"alt": "Background image alt text"
+		  }
 		}
 	  },
 	  {

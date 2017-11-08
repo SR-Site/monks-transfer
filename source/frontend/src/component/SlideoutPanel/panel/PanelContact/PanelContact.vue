@@ -21,7 +21,7 @@
 		<fieldset class="form-fieldset" :class="$style.fields">
 			<div class="text-input-holder" v-for="(field, index) in fieldData" :key="index">
 				<div class="input-text input-text-main" :class="{'is-invalid': errors.has(field.name) }"
-				     v-focus-border="">
+				     v-focus-border>
 					<input
 						v-validate="field.validationRules"
 						autocomplete="off"

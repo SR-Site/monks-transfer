@@ -1,0 +1,46 @@
+:local {
+	.market-search-result {
+		@include position(auto, auto, $sizeGrid * 2, 0);
+		position: absolute;
+		overflow: hidden;
+		height: $sizeGrid * 6;
+
+		.scroll-wrapper {
+			@include position(auto, 0, 0, 0);
+			max-height: $sizeGrid * 6;
+			transform: translateY(100%);
+			position: absolute;
+			background: rgba($colorPrimary, 0.9);
+			color: white;
+			transition: transform .5s $easeInOutExpo;
+
+			:global .knob {
+				background: $colorWhite;
+			}
+		}
+
+		&.is-active {
+			.scroll-wrapper {
+				transform: translateY(0);
+			}
+		}
+	}
+
+	.result-button {
+		@include size(100%, $sizeGrid * 2);
+		display: block;
+		font: 600 1.6rem/#{$sizeGrid * 2} $fontOpenSans;
+		text-align: left;
+		padding: 0 $sizeGrid;
+		transition: background .2s $easeInOutCubic;
+	}
+
+	.no-result-message {
+		line-height: $sizeGrid * 2;
+		padding: 0 $sizeGrid;
+	}
+}
+
+@include hover('.result-button') {
+	background: $colorPrimary;
+}

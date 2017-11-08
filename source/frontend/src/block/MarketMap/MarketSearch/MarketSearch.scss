@@ -1,0 +1,39 @@
+:local {
+	.market-search {
+		@include size(auto, $sizeGrid * 2);
+	}
+
+	.market-search-form {
+		@include size(100%);
+		display: flex;
+		flex-direction: row;
+		position: relative;
+	}
+
+	.market-search-result {
+		@include size(calc(100% - #{$sizeGrid * 5.5}), $sizeGrid * 2)
+	}
+
+	.query {
+		width: 100%;
+		padding: $sizeGrid / 2 $sizeGrid;
+		background: $colorLightGrey;
+		display: flex;
+	}
+
+	.clear-button {
+		flex-shrink: 0;
+		margin-right: 10px;
+	}
+
+	.submit-button {
+		@include size($sizeGrid * 5.5, $sizeGrid * 2);
+		background: $colorPrimary;
+		flex-shrink: 0;
+		color: $colorWhite;
+		font: 700 1rem/1 $fontOpenSans;
+		border-radius: 0;
+		text-transform: uppercase;
+		cursor: default;
+	}
+}

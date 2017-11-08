@@ -1,0 +1,43 @@
+:local {
+	.service-button {
+		@include size(100%, $sizeGrid*4);
+		position: relative;
+		background-color: $colorLightGrey;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 $sizeGrid*1.5 0 $sizeGrid;
+		text-decoration: none;
+		color: $colorPrimary;
+		text-align: left;
+
+		.contact-heading {
+			text-transform: uppercase;
+		}
+
+		.contact-option {
+			font: 400 1.2rem / 1 $fontOpenSans;
+			padding: 5px 0;
+		}
+
+		.contact-icon {
+			@include size(16px);
+		}
+
+		.arrow-icon {
+			@include size(20px);
+			@include position(50%, $sizeGrid/2, auto, auto);
+			position: absolute;
+			transform: translateY(-50%);
+			color: $colorTertiary;
+
+			circle {
+				stroke: currentColor;
+				fill: transparent;
+			}
+			path {
+				fill: currentColor;
+			}
+		}
+	}
+}

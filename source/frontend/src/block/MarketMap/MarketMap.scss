@@ -1,2 +1,18 @@
 :local {
+	.market-map {
+		@include aspect-ratio($sizeGrid*36, $sizeGrid*22);
+		max-height: calc(100vh - #{$sizeHeader});
+	}
+
+	.market-search {
+		@include position(auto, $sizeGrid * 9, $sizeGrid * 2, $sizeGrid * 2);
+		position: absolute;
+	}
+
+	.side-panel {
+		@include size($sizeGrid * 7, auto);
+		@include position(0, 0, 0, auto);
+		position: absolute;
+		background-color: white;
+	}
 }

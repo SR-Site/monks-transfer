@@ -26,6 +26,7 @@ import TrackingProvider from '../util/tracking/TrackingProvider';
 import Size from '../data/enum/Size';
 import VeeValidate from 'vee-validate';
 import BackendLinkTypeMap from '../data/enum/link/BackendLinkTypeMap';
+import BackendLinkType from '../data/enum/link/BackendLinkType';
 
 const initPlugins = () => {
 	const configManager = getValue(CONFIG_MANAGER);
@@ -50,6 +51,7 @@ const initPlugins = () => {
 		LinkType,
 		ButtonType,
 		buttonTypeMap,
+		BackendLinkType,
 		BackendLinkTypeMap,
 		NotificationTypes,
 		Direction,
