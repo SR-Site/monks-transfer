@@ -40,11 +40,18 @@ export default {
 		};
 		this.marketsFillLayer = null;
 	},
+	computed: {
+		selectValueLabel() {
+			const market = this.selectedMarket;
+			return market ? `${market.city}, ${market.statePostalCode}` : this.$t('global.form.select.city');
+		},
+	},
 	data() {
 		return {
 			states,
 			markets,
 			selectedMarket: null,
+			mobileSidePanelOpen: false,
 		};
 	},
 	methods: {
@@ -245,6 +252,9 @@ export default {
 					},
 				),
 			);
+		},
+		handleToggleMobileSidePanel() {
+			this.mobileSidePanelOpen = !this.mobileSidePanelOpen;
 		},
 	},
 };

@@ -9,6 +9,12 @@ export default {
 	props: {
 		markets: VueTypes.any.isRequired,
 		selectedMarket: VueTypes.any.isRequired,
+		mobileSidePanelOpen: VueTypes.bool.isRequired,
+	},
+	watch: {
+		mobileSidePanelOpen(value) {
+			setTimeout(() => this.updateScrollBar(), 100);
+		},
 	},
 	methods: {
 		handleAllComponentsReady() {
@@ -24,6 +30,6 @@ export default {
 		},
 		handleSelectMarket(market) {
 			this.$emit('selectMarket', market);
-		}
+		},
 	},
 };

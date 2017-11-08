@@ -18,12 +18,21 @@
 		}
 
 		.icon {
-			@include size(12px);
+			@include size(12px, auto);
+			@include offset(50%, 50%);
+			transform: translate(-50%, -50%);
+			position: absolute;
 
 			path {
 				fill: $colorPrimary;
 				transition: path 250ms $easeLinear;
 			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.zoom-button {
+			@include size($sizeGrid * 2);
 		}
 	}
 }

@@ -19,6 +19,7 @@
 		padding: $sizeGrid / 2 $sizeGrid;
 		background: $colorLightGrey;
 		display: flex;
+		align-items: center;
 	}
 
 	.clear-button {
@@ -35,5 +36,29 @@
 		border-radius: 0;
 		text-transform: uppercase;
 		cursor: default;
+	}
+
+	@include respond-to(SMALL) {
+		.market-search {
+			@include position(auto, 0, 0, 0);
+			@include size(100%, $sizeGrid * 8);
+		}
+
+		.market-search-form {
+			flex-direction: column;
+		}
+
+		.query {
+			@include size(100%, $sizeGrid * 4);
+		}
+
+		.submit-button {
+			@include size(100%, $sizeGrid * 4);
+			font-size: 3.2rem;
+		}
+
+		.market-search-result {
+			@include size(100%, $sizeGrid * 4)
+		}
 	}
 }

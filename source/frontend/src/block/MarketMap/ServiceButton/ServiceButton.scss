@@ -40,4 +40,10 @@
 			}
 		}
 	}
+
+	@include respond-to(SMALL) {
+		.service-button {
+			display: none;
+		}
+	}
 }

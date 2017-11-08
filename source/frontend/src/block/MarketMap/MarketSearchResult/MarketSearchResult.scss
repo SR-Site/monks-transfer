@@ -4,25 +4,27 @@
 		position: absolute;
 		overflow: hidden;
 		height: $sizeGrid * 6;
-
-		.scroll-wrapper {
-			@include position(auto, 0, 0, 0);
-			max-height: $sizeGrid * 6;
-			transform: translateY(100%);
-			position: absolute;
-			background: rgba($colorPrimary, 0.9);
-			color: white;
-			transition: transform .5s $easeInOutExpo;
-
-			:global .knob {
-				background: $colorWhite;
-			}
-		}
+		pointer-events: none;
 
 		&.is-active {
 			.scroll-wrapper {
 				transform: translateY(0);
 			}
+		}
+	}
+
+	.scroll-wrapper {
+		@include position(auto, 0, 0, 0);
+		max-height: $sizeGrid * 6;
+		transform: translateY(100%);
+		position: absolute;
+		background: rgba($colorPrimary, 0.9);
+		color: white;
+		pointer-events: all;
+		transition: transform .5s $easeInOutExpo;
+
+		:global .knob {
+			background: $colorWhite;
 		}
 	}
 
@@ -38,6 +40,23 @@
 	.no-result-message {
 		line-height: $sizeGrid * 2;
 		padding: 0 $sizeGrid;
+	}
+
+	@include respond-to(SMALL) {
+		.market-search-result {
+			bottom: $sizeGrid * 8;
+			height: $sizeGrid * 16;
+		}
+
+		.result-button {
+			height: $sizeGrid * 4;
+			line-height: $sizeGrid * 4;
+			font-size: 3.2rem;
+		}
+
+		.scroll-wrapper {
+			max-height: $sizeGrid * 16;
+		}
 	}
 }
 

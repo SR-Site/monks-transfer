@@ -33,7 +33,7 @@ export default {
 			return this.selectedMarket === null && (this.clonedResults.length > 0 || this.query.length > 0);
 		},
 		height() {
-			const rowHeight = 8;
+			const rowHeight = this.$deviceState.currentState <= this.DeviceState.SMALL ? 16 : 8;
 			return `${Math.max(this.clonedResults.length * rowHeight, rowHeight)}rem`;
 		},
 	},

@@ -8,9 +8,21 @@
 			<ZoomActions componentId="MarketZoomActions" @zoomIn="handleZoomIn" @zoomOut="handleZoomOut"/>
 		</div>
 		<div :class="$style.sidePanel">
+			<button
+				@click="handleToggleMobileSidePanel"
+				:class="[
+					$style.selectedValue,
+					{[$style.hasValue]: selectedMarket},
+					{[$style.isOpen]: mobileSidePanelOpen}
+				]"
+				class="button copy copy-03"
+				v-html="selectValueLabel">
+
+			</button>
 			<MarketList
 				@selectMarket="handleSelectMarket"
 				componentId="MarketList"
+				:mobileSidePanelOpen="mobileSidePanelOpen"
 				:markets="markets"
 				:selectedMarket="selectedMarket"/>
 			<ServiceButton @click="handleContactUs" componentId="ServiceButton" :data="data.service"/>

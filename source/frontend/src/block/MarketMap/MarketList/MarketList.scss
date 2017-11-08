@@ -34,4 +34,26 @@
 			}
 		}
 	}
+
+	@include respond-to(SMALL) {
+		.market-list {
+			@include size(calc(100% - #{$sizeGrid}), 0);
+			@include offset($sizeGrid/2, ($sizeGrid/2) + $sizeGrid*4);
+			transition: height 250ms $easeOutExpo;
+			background: $colorWhite;
+
+			&.is-open {
+				height: calc(100vh - #{$sizeGrid*20});
+			}
+		}
+
+		.filter-list-item {
+			padding: $sizeGrid;
+			border-bottom: 1px solid rgba(#dadada, 0.6);
+
+			&:after {
+				display: none;
+			}
+		}
+	}
 }

@@ -2,7 +2,7 @@
 <script src="./MarketList.js"></script>
 
 <template>
-	<div :class="$style.marketList">
+	<div :class="[$style.marketList, {[$style.isOpen]: mobileSidePanelOpen}]">
 		<div :class="$style.scrollWrapper" ref="scrollWrapper" class="scroll-wrapper">
 			<div :class="$style.scrollContent" data-scroll-content class="scroll-content">
 				<div :class="$style.panelInnerContent" data-content-inner>
