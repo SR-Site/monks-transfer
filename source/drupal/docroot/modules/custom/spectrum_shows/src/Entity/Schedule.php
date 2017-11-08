@@ -2,6 +2,7 @@
 
 namespace Drupal\spectrum_shows\Entity;
 
+use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
@@ -286,7 +287,7 @@ class Schedule extends ContentEntityBase implements ScheduleInterface {
   /**
    * {@inheritdoc}
    */
-  public function setStartTime($startTime) {
+  public function setStartTime(DrupalDateTime $startTime) {
     $this->set('start_time', $startTime);
     return $this;
   }

@@ -27,3 +27,9 @@ entity.schedule.add_form:
   title: 'Add Schedule'
   appears_on:
     - entity.schedule.collection
+
+entity.success_story.add_form:
+  route_name: entity.success_story.add_form
+  title: 'Add Success story'
+  appears_on:
+    - entity.success_story.collection

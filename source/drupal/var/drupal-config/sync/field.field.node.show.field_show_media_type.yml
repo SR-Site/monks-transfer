@@ -1,0 +1,25 @@
+uuid: 7dd4bc09-28df-462f-b9ec-17a1129df523
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_media_type
+    - node.type.show
+id: node.show.field_show_media_type
+field_name: field_show_media_type
+entity_type: node
+bundle: show
+label: 'Media type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media_type'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

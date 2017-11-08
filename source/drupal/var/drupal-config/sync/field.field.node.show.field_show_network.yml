@@ -1,0 +1,25 @@
+uuid: d435f1b1-68b3-4768-a345-eb48c13af255
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_network
+    - node.type.show
+id: node.show.field_show_network
+field_name: field_show_network
+entity_type: node
+bundle: show
+label: Network
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:network'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

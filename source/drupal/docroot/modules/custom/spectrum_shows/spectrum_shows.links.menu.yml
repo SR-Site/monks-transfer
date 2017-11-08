@@ -44,3 +44,11 @@ entity.schedule.collection:
   description: 'List schedule entities'
   parent: system.admin.shows
   weight: 100
+
+# Success story menu items definition
+entity.success_story.collection:
+  title: 'Success story list'
+  route_name: entity.success_story.collection
+  description: 'List Success story entities'
+  parent: system.admin
+  weight: 100

@@ -1,29 +1,29 @@
-uuid: 9a9a687b-2137-4877-b755-d27dd5b74131
+uuid: 44b034ba-637e-476d-9d5a-069878554190
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
+    - field.storage.node.field_show_image_300
     - node.type.show
   module:
     - image
-id: node.show.field_image
-field_name: field_image
+id: node.show.field_show_image_300
+field_name: field_show_image_300
 entity_type: node
 bundle: show
-label: 'Featured image'
+label: 'Image 300'
 description: ''
-required: true
-translatable: true
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: 'images/show/[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'png jpg jpeg'
+  file_directory: 'shows/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: false
+  alt_field: true
   alt_field_required: false
   title_field: false
   title_field_required: false
