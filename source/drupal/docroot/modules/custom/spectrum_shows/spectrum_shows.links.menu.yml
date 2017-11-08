@@ -1,0 +1,54 @@
+# Genre menu items definition
+system.admin.shows:
+  title: 'Shows'
+  route_name: entity.genre.collection
+  description: 'List Shows entities'
+  parent: system.admin
+
+# Media Types menu items definition
+entity.genre.collection:
+  title: 'Genre list'
+  route_name: entity.genre.collection
+  description: 'List genre entities'
+  parent: system.admin.shows
+  weight: 100
+
+# Media Types menu items definition
+entity.media_type.collection:
+  title: 'Media Type list'
+  route_name: entity.media_type.collection
+  description: 'List Media Type entities'
+  parent: system.admin.shows
+  weight: 100
+
+# Network menu items definition
+entity.network.collection:
+  title: 'Network list'
+  route_name: entity.network.collection
+  description: 'List Network entities'
+  parent: system.admin.shows
+  weight: 100
+
+# Recommend menu items definition
+entity.recommend.collection:
+  title: 'Recommend list'
+  route_name: entity.recommend.collection
+  description: 'List recommend entities'
+  parent: system.admin.shows
+  weight: 100
+
+# Schedule menu items definition
+entity.schedule.collection:
+  title: 'Schedule list'
+  route_name: entity.schedule.collection
+  description: 'List schedule entities'
+  parent: system.admin.shows
+  weight: 100
+
+# Success story menu items definition
+entity.success_story.collection:
+  title: 'Success story list'
+  route_name: entity.success_story.collection
+  description: 'List Success story entities'
+  parent: system.admin
+  weight: 100

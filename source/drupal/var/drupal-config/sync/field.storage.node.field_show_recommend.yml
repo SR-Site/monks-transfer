@@ -1,18 +1,16 @@
-uuid: f4a76c62-57fb-439a-8fa5-9cd4e9946910
+uuid: 37064200-3bef-47b5-958f-dbc89105ea34
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-_core:
-  default_config_hash: WpOE_bs8Bs_HY2ns7n2r__de-xno0-Bxkqep5-MsHAs
-id: node.field_tags
-field_name: field_tags
+    - spectrum_shows
+id: node.field_show_recommend
+field_name: field_show_recommend
 entity_type: node
 type: entity_reference
 settings:
-  target_type: taxonomy_term
+  target_type: recommend
 module: core
 locked: false
 cardinality: -1

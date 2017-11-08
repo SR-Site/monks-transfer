@@ -1,0 +1,107 @@
+# Genre
+administer genre entities:
+  title: 'Administer Genre entities'
+  description: 'Allow to access the administration form to configure Genre entities.'
+  restrict access: true
+
+add genre entities:
+  title: 'Create new Genre entities'
+
+delete genre entities:
+  title: 'Delete Genre entities'
+
+edit genre entities:
+  title: 'Edit Genre entities'
+
+view genre entities:
+  title: 'View Genre entities'
+
+# MediaType
+administer media type entities:
+  title: 'Administer MediaType entities'
+  description: 'Allow to access the administration form to configure MediaType entities.'
+  restrict access: true
+
+add media type entities:
+  title: 'Create new MediaType entities'
+
+delete media type entities:
+  title: 'Delete MediaType entities'
+
+edit media type entities:
+  title: 'Edit MediaType entities'
+
+view media type entities:
+  title: 'View MediaType entities'
+
+# Network
+administer network entities:
+  title: 'Administer Network entities'
+  description: 'Allow to access the administration form to configure Network entities.'
+  restrict access: true
+
+add network entities:
+  title: 'Create new Network entities'
+
+delete network entities:
+  title: 'Delete Network entities'
+
+edit network entities:
+  title: 'Edit Network entities'
+
+view network entities:
+  title: 'View Network entities'
+
+# Recommend
+administer recommend entities:
+  title: 'Administer Recommend entities'
+  description: 'Allow to access the administration form to configure Recommend entities.'
+  restrict access: true
+
+add recommend entities:
+  title: 'Create new Recommend entities'
+
+delete recommend entities:
+  title: 'Delete Recommend entities'
+
+edit recommend entities:
+  title: 'Edit Recommend entities'
+
+view recommend entities:
+  title: 'View Recommend entities'
+
+# Schedule
+administer schedule entities:
+  title: 'Administer Schedule entities'
+  description: 'Allow to access the administration form to configure Schedule entities.'
+  restrict access: true
+
+add schedule entities:
+  title: 'Create new Schedule entities'
+
+delete schedule entities:
+  title: 'Delete Schedule entities'
+
+edit schedule entities:
+  title: 'Edit Schedule entities'
+
+view schedule entities:
+  title: 'View Schedule entities'
+
+# Success story
+add success story entities:
+  title: 'Create new Success story entities'
+
+administer success story entities:
+  title: 'Administer Success story entities'
+  description: 'Allow to access the administration form to configure Success story entities.'
+  restrict access: true
+
+delete success story entities:
+  title: 'Delete Success story entities'
+
+edit success story entities:
+  title: 'Edit Success story entities'
+
+view success story entities:
+  title: 'View published Success story entities'

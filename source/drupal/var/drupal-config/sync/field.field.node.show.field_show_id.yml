@@ -1,17 +1,18 @@
-uuid: bda3ccd4-888d-4b1a-a412-7e3cd3ae27e5
+uuid: ad99185f-b9a3-4db1-ab8a-43d7909e5f74
 langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_show_id
     - node.type.show
-id: node.show.title
-field_name: title
+id: node.show.field_show_id
+field_name: field_show_id
 entity_type: node
 bundle: show
-label: Title
+label: 'Show ID'
 description: ''
-required: true
-translatable: true
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

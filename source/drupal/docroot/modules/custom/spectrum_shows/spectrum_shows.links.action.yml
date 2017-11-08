@@ -1,0 +1,35 @@
+entity.genre.add_form:
+  route_name: 'entity.genre.add_form'
+  title: 'Add Genre'
+  appears_on:
+    - entity.genre.collection
+
+entity.media_type.add_form:
+  route_name: 'entity.media_type.add_form'
+  title: 'Add Media Type'
+  appears_on:
+    - entity.media_type.collection
+
+entity.network.add_form:
+  route_name: 'entity.network.add_form'
+  title: 'Add Network'
+  appears_on:
+    - entity.network.collection
+
+entity.recommend.add_form:
+  route_name: 'entity.recommend.add_form'
+  title: 'Add Recommend'
+  appears_on:
+    - entity.recommend.collection
+
+entity.schedule.add_form:
+  route_name: 'entity.schedule.add_form'
+  title: 'Add Schedule'
+  appears_on:
+    - entity.schedule.collection
+
+entity.success_story.add_form:
+  route_name: entity.success_story.add_form
+  title: 'Add Success story'
+  appears_on:
+    - entity.success_story.collection
