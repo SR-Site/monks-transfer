@@ -172,8 +172,12 @@ export default {
 		},
 	},
 	beforeDestroy() {
+		if(this.playAnimation){
+			this.playAnimation.kill();
+			this.playAnimation = null;
+		}
+
 		this.ctx = null;
-		this.playAnimation = null;
 		this.images = null;
 		this.sources = null;
 
