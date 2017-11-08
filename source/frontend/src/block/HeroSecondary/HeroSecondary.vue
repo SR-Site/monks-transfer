@@ -17,11 +17,7 @@
 					v-if="data.subHeading"
 					v-html="data.subHeading"
 				    ref="subHeading"></h3>
-				<h2
-					:class="$style.heading"
-					class="heading heading-02"
-					ref="heading"
-					v-html="data.heading"></h2>
+				<div :class="$style.heading" ref="heading" v-html="data.heading"></div>
 				<p
 					:class="$style.copy"
 					class="copy copy-01"
@@ -45,7 +41,7 @@
 					:type="ButtonType.LINK"
 					:class="$style.button"
 					:link="{
-						type: linkTypeMap[data.link.type],
+						type: BackendLinkTypeMap[data.link.type],
 						target: data.link.target,
 					}"
 					ref="buttonLink"/>

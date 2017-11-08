@@ -151,6 +151,9 @@
 						opacity: 1;
 						transform: translateX(0);
 					}
+					.heading {
+						margin-top: $sizeGrid / 2;
+					}
 				}
 			}
 		}

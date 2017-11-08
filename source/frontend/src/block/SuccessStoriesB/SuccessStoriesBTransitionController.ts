@@ -1,4 +1,5 @@
-import { AbstractTransitionController } from 'vue-transition-component';
+import { AbstractTransitionController, IAbstractTransitionComponent } from 'vue-transition-component';
+import { Expo } from 'gsap';
 
 class SuccessStoriesBTransitionController extends AbstractTransitionController {
 	/**
@@ -6,13 +7,36 @@ class SuccessStoriesBTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionInTimeline
 	 * @description Use this method to setup your transition in timeline
 	 * */
-	protected setupTransitionInTimeline(): void {}
+	protected setupTransitionInTimeline(): void {
+		const stories = <Array<IAbstractTransitionComponent>>this.viewModel.$refs.story;
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.heading,
+			0.8,
+			{
+				y: 50,
+				autoAlpha: 0,
+			},
+			{
+				y: 0,
+				autoAlpha: 1,
+				ease: Expo.easeOut,
+			},
+		);
+
+		if (stories) {
+			stories.forEach((article, index) => {
+				this.transitionInTimeline.add(this.getSubTimeline(`SuccessStoryTeaser${index}`), 0.2);
+			});
+		}
+
+		this.transitionInTimeline.add(this.getSubTimeline('ScrollBar'), 0.2);
+	}
 
 	/**
-	* @public
-	* @method setupTransitionOutTimeline
-	* @description Use this method to setup your transition out timeline
-	* */
+	 * @public
+	 * @method setupTransitionOutTimeline
+	 * @description Use this method to setup your transition out timeline
+	 * */
 	protected setupTransitionOutTimeline(): void {}
 }
 

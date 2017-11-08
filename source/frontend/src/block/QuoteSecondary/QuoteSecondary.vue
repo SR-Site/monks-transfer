@@ -6,7 +6,7 @@
 		<div class="site-frame is-small">
 			<div :class="$style.content">
 				<h2 :class="$style.heading" class="heading heading-06" v-html="data.quote"></h2>
-				<p :class="$style.copy" class="copy copy-03" v-html="data.author"></p>
+				<p :class="$style.copy" class="copy copy-03" v-html="data.author.name"></p>
 			</div>
 		</div>
 	</div>

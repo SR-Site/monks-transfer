@@ -1,2 +1,78 @@
 :local {
+	.header {
+		@include size(100%, auto);
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: $sizeGrid;
+	}
+
+	.alignment-left {
+		.header {
+			text-align: left;
+		}
+	}
+
+	.alignment-center {
+		.header {
+			text-align: center;
+		}
+	}
+
+	.alignment-right {
+		.header {
+			text-align: right;
+		}
+	}
+
+	.site-frame {
+		overflow: visible;
+	}
+
+	.draggable-container {
+		padding: 0;
+	}
+
+	.button {
+		margin-left: $sizeGrid * 2;
+	}
+
+	.products {
+		width: auto;
+		margin-bottom: $sizeGrid;
+		white-space: nowrap;
+		font-size: 0;
+		display: inline-block;
+		margin-left: -$sizeGrid;
+	}
+
+	.product-teaser {
+		@include size($sizeGrid * 9, $sizeGrid * 11);
+		display: inline-block;
+		margin-left: $sizeGrid;
+	}
+
+	.scroll-bar {
+		margin: $sizeGridSecondary 0;
+	}
+
+	@include respond-to(SMALL) {
+		.site-frame {
+			padding: 0 $sizeGridMobile * 2;
+		}
+
+		.button {
+			display: none;
+		}
+
+		.product-teaser {
+			@include size(320px, 380px);
+		}
+	}
+
+	@include respond-to(X_SMALL) {
+		.product-teaser {
+			width: calc(100vw - #{$sizeGridMobile * 4});
+		}
+	}
 }

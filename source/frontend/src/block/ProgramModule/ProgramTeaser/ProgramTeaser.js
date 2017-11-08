@@ -1,34 +1,15 @@
-import { AbstractTransitionComponent } from 'vue-transition-component';
-import ProgramTeaserTransitionController from './ProgramTeaserTransitionController';
-import VueTypes from 'vue-types';
-import PropImage from '../../../data/prop-type/media/PropImage';
-import PropLink from '../../../data/prop-type/action/PropLink';
-import PropVideo from '../../../data/prop-type/media/PropVideo';
-import { VideoOverlayMutationTypes } from '../../../store/module/videoOverlay';
 import { truncate } from 'lodash';
+import { AbstractTransitionComponent } from 'vue-transition-component';
+import VueTypes from 'vue-types';
+import { VideoOverlayMutationTypes } from '../../../store/module/videoOverlay';
+import ProgramTeaserData from './ProgramTeaserData';
+import ProgramTeaserTransitionController from './ProgramTeaserTransitionController';
 
 export default {
 	name: 'ProgramTeaser',
 	extends: AbstractTransitionComponent,
 	props: {
-		data: VueTypes.shape(
-			{
-				target: VueTypes.string.isRequired,
-				heading: VueTypes.string.isRequired,
-				paragraph: VueTypes.string.isRequired,
-				stats: VueTypes.shape(
-					{
-						percentage: VueTypes.number.isRequired,
-						demographic: VueTypes.string.isRequired,
-					},
-				).isRequired,
-				image: VueTypes.shape(PropImage).isRequired,
-				video: VueTypes.shape(PropVideo),
-				tags: VueTypes.arrayOf(
-					VueTypes.shape(PropLink),
-				),
-			},
-		),
+		data: VueTypes.shape(ProgramTeaserData),
 	},
 	computed: {
 		truncatedParagraph() {

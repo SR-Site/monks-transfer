@@ -3,6 +3,10 @@
 		padding-bottom: $sizeGrid;
 	}
 
+	.viewport {
+		overflow: hidden;
+	}
+
 	.header {
 		padding: $sizeGrid * 3 0 $sizeGrid * 1;
 
@@ -16,7 +20,7 @@
 	}
 
 	.advertisement-steps {
-		@include size(100%, $sizeGrid * 8);
+		@include size(100%, $sizeGrid * 9);
 		display: block;
 	}
 

@@ -157,6 +157,7 @@ export default {
 				const loadImageTask = new LoadImageTask(
 					{
 						assets: this.sources[this.validDeviceState],
+						batchSize: 10,
 						onAssetLoaded: result => {
 							this.images[this.validDeviceState][result.index] = result.asset;
 						},
@@ -171,8 +172,12 @@ export default {
 		},
 	},
 	beforeDestroy() {
+		if(this.playAnimation){
+			this.playAnimation.kill();
+			this.playAnimation = null;
+		}
+
 		this.ctx = null;
-		this.playAnimation = null;
 		this.images = null;
 		this.sources = null;
 

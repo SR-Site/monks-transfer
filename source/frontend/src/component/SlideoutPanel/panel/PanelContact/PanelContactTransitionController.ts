@@ -13,9 +13,11 @@ class PanelContactTransitionController extends AbstractTransitionController {
 			1,
 			{
 				autoAlpha: 0,
+				display: 'none',
 			},
 			{
 				autoAlpha: 1,
+				display: 'block',
 				ease: Linear.easeNone,
 			},
 		);

@@ -1,19 +1,27 @@
 import VueTypes from 'vue-types';
 import PropImage from '../../data/prop-type/media/PropImage';
-import PropVideo from '../../data/prop-type/media/PropVideo';
 import PropLink from '../../data/prop-type/action/PropLink';
-import PropStatistic from '../../data/prop-type/hero-main/PropStatistic';
 import PropAuthor from '../../data/prop-type/article/PropAuthor';
 
 /**
  * @param {description} marginTop This defines the amount of spacing at the top of the block
- * @param {placeholder} marginTop 1
  * @param {description} overlap This defines if a block overlaps the next block on the layout
- * @param {placeholder} overlap true
  * @param {description} windowed This defines if a block has extra padding left and right
- * @param {placeholder} windowed true
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} social The array of social links
+ * @param {description} author The author of the article
+ * @param {description} image The image attached to the article
+ * @param {description} tags The tags linked to the article
+ * @param {description} views The views of the article
+ * @param {description} shares The shares of the article
+ * @param {description} time The reading time of the article
+ * @param {description} date The publish date of the article
+ * @param {description} heading The heading of the article
+ * @param {description} subHeading The sub heading of the article
+ * @param {description} paragraph The paragraph of the article
+ * @param {description} theme The theme of the article
+ * @param {description} target The target link of the article
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

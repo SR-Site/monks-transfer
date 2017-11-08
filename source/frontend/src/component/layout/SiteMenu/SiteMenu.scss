@@ -1,0 +1,37 @@
+:local {
+	.menu {
+		@include size($sizeGrid * 14, calc(100vh - #{$sizeGrid * 2}));
+		@include position($sizeGrid * 2, 0, 0, auto);
+		position: fixed;
+		overflow: hidden;
+		transform: translateX(100%);
+		z-index: zindex($layout, menu);
+	}
+
+	.menu-content,
+	.menu-background {
+		@include coverer();
+		@include size(100%, 100%);
+		position: absolute;
+	}
+
+	.menu-background {
+		box-sizing: content-box;
+		background: $colorPrimary;
+		border-bottom: 100vh solid $colorPrimary;
+	}
+
+	.menu-content {
+		@include size(100%, auto);
+		color: $colorWhite;
+		position: relative;
+	}
+
+	@include respond-to(SMALL) {
+		.menu {
+			height: calc(100vh - #{$sizeHeaderMobile});
+			width: 100%;
+			top: $sizeHeaderMobile;
+		}
+	}
+}

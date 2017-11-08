@@ -31,7 +31,7 @@ class ClassNameHelper {
 		const alignmentLabel = Alignment[alignment];
 
 		if (!alignmentLabel) {
-			console.warn('[ClassNameHelper] Unknown theme: ' + alignment);
+			console.warn('[ClassNameHelper] Unknown alignment: ' + alignment);
 		}
 
 		return alignmentLabel ? 'alignment-' + alignmentLabel.toLowerCase() : '';

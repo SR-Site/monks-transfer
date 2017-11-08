@@ -6,10 +6,14 @@ import Logo from '../../Logo/Logo';
 import { NotificationMutationTypes } from '../../../store/module/notification';
 import NativeEventListener from '../../../util/event/NativeEventListener';
 import Breadcrumbs from '../../Breadcrumbs/Breadcrumbs';
+import VueTypes from 'vue-types';
 
 export default {
 	name: 'SiteHeader',
 	extends: AbstractTransitionComponent,
+	props: {
+		menuActive: VueTypes.bool.isRequired,
+	},
 	computed: {
 		...mapGetters(
 			{
@@ -18,8 +22,17 @@ export default {
 				landingRoute: 'init/landingRoute',
 			},
 		),
+		solidHeader() {
+			return this.isScrolled || this.breadcrumbs.length || this.isMedium || this.menuActive;
+		},
 		headerTheme() {
 			return this.pageData ? (this.pageData.headerTheme || this.Theme.LIGHT) : this.Theme.LIGHT;
+		},
+		logoTheme() {
+			return this.solidHeader ? this.Theme.DARK : this.headerTheme;
+		},
+		callToReachTheme() {
+			return this.solidHeader ? this.Theme.DARK : this.headerTheme;
 		},
 		breadcrumbs() {
 			return this.pageData && this.pageData.breadcrumbs ? this.pageData.breadcrumbs : [];
@@ -51,7 +64,7 @@ export default {
 	},
 	components: {
 		Logo,
-		Breadcrumbs
+		Breadcrumbs,
 	},
 	methods: {
 		handleAllComponentsReady() {
@@ -59,11 +72,7 @@ export default {
 			this.isReady();
 		},
 		handleMenuClick() {
-			this.$store.dispatch(NotificationMutationTypes.SHOW, {
-				type: this.NotificationTypes.ALERT,
-				heading: 'TODO:',
-				paragraph: 'Open the menu',
-			});
+			this.$emit('toggleMenu');
 		},
 		handleScroll() {
 			this.scrollTop = document.documentElement.scrollTop;

@@ -1,17 +1,27 @@
 import VueTypes from 'vue-types';
-import { AbstractBlockComponent } from 'vue-block-system';
-import ProductListTransitionController from './ProductListTransitionController';
+import AbstractScrollableBlock from '../../util/block/AbstractScrollableBlock';
 import ProductListData from './ProductListData';
+import ProductListTransitionController from './ProductListTransitionController';
+import ProductTeaser from './ProductTeaser/ProductTeaser';
 
 export default {
 	name: 'ProductList',
-	extends: AbstractBlockComponent,
+	extends: AbstractScrollableBlock,
+	components: {
+		ProductTeaser,
+	},
+	data() {
+		return {
+			itemCount: this.data.products.length,
+		};
+	},
 	props: {
 		data: VueTypes.shape(ProductListData).isRequired,
 	},
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new ProductListTransitionController(this);
+			this.setupScrollableBlock();
 			this.isReady();
 		},
 	},

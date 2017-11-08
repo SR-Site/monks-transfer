@@ -22,7 +22,7 @@
 				:type="ButtonType.LINK"
 				:theme="Theme.LIGHT"
 				:link="{
-					type: linkTypeMap[data.link.type],
+					type: BackendLinkTypeMap[data.link.type],
 					target: data.link.target,
 				}"
 				:class="$style.button"/>

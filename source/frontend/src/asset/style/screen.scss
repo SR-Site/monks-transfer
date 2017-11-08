@@ -1,4 +1,5 @@
 @import '~normalize.css';
+@import '~mapbox-gl/dist/mapbox-gl.css';
 @import 'layout/block';
 @import 'layout/site-frame';
 @import 'type/font';
@@ -25,6 +26,7 @@
 @import 'asset/form/checkbox';
 @import 'asset/scroll-bar';
 @import 'asset/gradient-overlay';
+
 
 html,
 body {
@@ -71,10 +73,9 @@ figure {
 }
 
 .seng-state-indicator {
+	@include position(auto, auto, 0 ,0);
 	font-family: $fontOpenSans;
 	border: 0;
-	top: auto;
-	bottom: 0;
 	background: red;
 	color: white;
 	padding: 10px;

@@ -3,7 +3,7 @@
 		@include size(100%, 100%);
 		@include position(0, 0, auto, auto);
 		position: fixed;
-		background-color: white;
+		background-color: $colorLightGrey;
 		max-width: $sizeGrid*18;
 		z-index: zindex($layout, panel);
 

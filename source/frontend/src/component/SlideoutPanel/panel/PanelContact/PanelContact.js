@@ -1,7 +1,7 @@
 import { mapGetters } from 'vuex';
 import { AbstractTransitionComponent } from 'vue-transition-component';
+import SlideoutPanelType from 'data/enum/SlideoutPanelType';
 import PanelContactTransitionController from './PanelContactTransitionController';
-import SlideOutPanel from '../../../../data/enum/SlideOutPanel';
 import UserService from '../../../../net/service/UserService';
 import { NotificationMutationTypes } from '../../../../store/module/notification';
 
@@ -84,13 +84,13 @@ export default {
 			},
 		),
 		submitLabel() {
-			return this.slideOutData(SlideOutPanel.CONTACT).submitLabel;
+			return this.slideOutData(SlideoutPanelType.CONTACT).submitLabel;
 		},
 		heading() {
-			return this.slideOutData(SlideOutPanel.CONTACT).heading;
+			return this.slideOutData(SlideoutPanelType.CONTACT).heading;
 		},
 		subHeading() {
-			return this.slideOutData(SlideOutPanel.CONTACT).subHeading;
+			return this.slideOutData(SlideoutPanelType.CONTACT).subHeading;
 		},
 		phoneNumber() {
 			return this.contactOptionGetter('phone').phoneNumber || 'no-phone-number';

@@ -7,11 +7,30 @@
 
 		.icon {
 			@include size(8px);
+			@include offset(50%, 50%);
+			transform: translate(-50%, -50%);
+			position: absolute;
 			color: currentColor;
 			transition: color 250ms $easeLinear;
 
 			path {
 				fill: currentColor;
+			}
+		}
+
+		&.small {
+			@include size($sizeGrid * 0.5);
+
+			.icon {
+				@include size(8px);
+			}
+		}
+
+		&.medium {
+			@include size($sizeGrid * 0.75);
+
+			.icon {
+				@include size(9px);
 			}
 		}
 
@@ -24,7 +43,6 @@
 		}
 
 		@include respond-to(SMALL) {
-
 			&.large {
 				@include size($sizeGrid*1.5);
 

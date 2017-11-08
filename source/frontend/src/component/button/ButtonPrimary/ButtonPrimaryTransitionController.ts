@@ -24,6 +24,19 @@ class ButtonPrimaryTransitionController extends AbstractTransitionController {
 		);
 
 		this.transitionInTimeline.fromTo(
+			this.viewModel.$el,
+			0.8,
+			{
+				autoAlpha: 0,
+			},
+			{
+				autoAlpha: 1,
+				clearProps: 'all',
+			},
+			0,
+		);
+
+		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.stripe,
 			0.8,
 			{

@@ -5,11 +5,13 @@
 	<header
 		:class="[
 			$style.wrapper,
-			{[$style['is-scrolled']]: isScrolled || breadcrumbs.length || isMedium},
+			{
+				[$style.solidBackground]: solidHeader,
+			},
 		]">
 		<h2 :class="$style.logo">
 			<a v-link="{ path: `/${landingRoute}`, type: 0}">
-				<Logo :theme="isScrolled || breadcrumbs.length || isMedium ? Theme.DARK : headerTheme"/>
+				<Logo :theme="logoTheme"/>
 			</a>
 		</h2>
 		<Breadcrumbs
@@ -21,7 +23,7 @@
 			<ButtonCallToReach
 				componentId="ButtonCallToReach"
 				icon="contact"
-				:theme="isScrolled || breadcrumbs.length || isMedium ? Theme.DARK : headerTheme"
+				:theme="callToReachTheme"
 				:title="phoneNumber"
 				:label="phoneNumber"
 				:type="ButtonType.LINK"
@@ -44,6 +46,7 @@
 			<ButtonMenu
 				componentId="ButtonMenu"
 				@click="handleMenuClick"
+				:isActive="menuActive"
 				:class="$style.button"
 				:title="$t('global.cta.menu')"
 				:label="$t('global.cta.menu')"

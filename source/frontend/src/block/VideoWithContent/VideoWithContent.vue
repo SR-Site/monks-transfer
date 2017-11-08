@@ -8,12 +8,13 @@
 				<div :class="$style.videoWrapper" ref="videoWrapper">
 					<div :class="$style.video">
 						<figure class="abs-fill" :class="$style.videoPoster">
-							<ResponsiveImage :image="data.poster" ref="videoPoster"/>
+							<ResponsiveImage :image="data.poster" ref="videoPoster" class="abs-fill"/>
 							<ButtonCirclePlay
 								componentId="ButtonCirclePlay"
+								class="abs-center"
 								v-track="{
 									[TrackingProvider.GOOGLE_ANALYTICS]: {
-										category: 'imageWithContent',
+										category: 'videoWithContent',
 										action: 'click',
 										label: `play|${data.heading}`
 									}
@@ -37,7 +38,7 @@
 						componentId="ButtonPrimary"
 						v-track="{
 							[TrackingProvider.GOOGLE_ANALYTICS]: {
-								category: 'imageWithContent',
+								category: 'videoWithContent',
 								action: 'click',
 								label: `${data.heading}|${data.link.title}`
 							}
@@ -48,7 +49,7 @@
 						:type="ButtonType.LINK"
 						:theme="Theme.DARK"
 						:link="{
-							type: linkTypeMap[data.link.type],
+							type: BackendLinkTypeMap[data.link.type],
 							target: data.link.target,
 						}"  />
 				</div>

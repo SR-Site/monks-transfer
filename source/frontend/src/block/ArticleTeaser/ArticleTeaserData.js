@@ -5,11 +5,8 @@ import PropAuthor from '../../data/prop-type/article/PropAuthor';
 
 /**
  * @param {description} marginTop This defines the amount of spacing at the top of the block
- * @param {placeholder} marginTop 1
  * @param {description} overlap This defines if a block overlaps the next block on the layout
- * @param {placeholder} overlap true
  * @param {description} windowed This defines if a block has extra padding left and right
- * @param {placeholder} windowed true
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
  * @param {description} heading This is the heading for the block
@@ -23,9 +20,10 @@ import PropAuthor from '../../data/prop-type/article/PropAuthor';
  * @param {description} author The author of the article
  * @param {description} link The link attached to the article
  * @param {description} social The list of social links attached to the article
- * @param {description} view The view count of the article
+ * @param {description} views The view count of the article
  * @param {description} time The reading duration of the article
  * @param {description} date The publish date of the article
+ * @param {placeholder} date 27/05/1990
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

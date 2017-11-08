@@ -1,0 +1,496 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - Phase 2 (new)",
+	"data": {
+	  "headerTheme": 0,
+	  "hideContactButton": 0,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "/home",
+		  "type": 0
+		},
+		{
+		  "label": "Advertising Solutions",
+		  "title": "Advertising Solutions",
+		  "target": "/advertising-solutions",
+		  "type": 0
+		},
+		{
+		  "label": "Phase 2 (new)",
+		  "title": "Phase 2 (new)",
+		  "target": "/phase-2-new",
+		  "type": 0
+		}
+	  ]
+	},
+	"blocks": [
+	  {
+		"id": "SuccessStoriesB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 0,
+		  "heading": "TV delivers",
+		  "paragraph": "We are continuously innovating and adding to our range of advertising products for Television.",
+		  "stories": [
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/720x720",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/product/foo",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "AudienceReach",
+		"data": {
+		  "overlap": true,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "For live viewing, Sports is the name of <br/>the game with Media Ads Everywhere",
+		  "channels": [
+			{
+			  "image": {
+				"small": "http://via.placeholder.com/240x240",
+				"normal": "http://via.placeholder.com/240x240",
+				"alt": ""
+			  },
+			  "heading": "2015 NFL Season",
+			  "statistics": [
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				}
+			  ]
+			},
+			{
+			  "image": {
+				"small": "http://via.placeholder.com/240x240",
+				"normal": "http://via.placeholder.com/240x240",
+				"alt": ""
+			  },
+			  "heading": "2015 NFL Season",
+			  "statistics": [
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				}
+			  ]
+			},
+			{
+			  "image": {
+				"small": "http://via.placeholder.com/240x240",
+				"normal": "http://via.placeholder.com/240x240",
+				"alt": ""
+			  },
+			  "heading": "2015 NFL Season",
+			  "statistics": [
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				}
+			  ]
+			},
+			{
+			  "image": {
+				"small": "http://via.placeholder.com/240x240",
+				"normal": "http://via.placeholder.com/240x240",
+				"alt": ""
+			  },
+			  "heading": "2015 NFL Season",
+			  "statistics": [
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				}
+			  ]
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "SuccessStoryHighlight",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Chrysler success story",
+		  "subHeading": "Chrysler increased their leads by 40% by advertising during the <span>NBA Playoffs.</span>",
+		  "paragraph": "Reaching different audiences for multiple performances created a short messaging window for Flagler Auditorium. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+		  "link": {
+			"label": "Read success story",
+			"title": "Read success story",
+			"target": "/advertising-solutions",
+			"type": 0
+		  },
+		  "image": {
+			"normal": "http://via.placeholder.com/520x520",
+			"small": "http://via.placeholder.com/520x520",
+			"alt": "Lorem ipsum dolor sit amet"
+		  }
+		}
+	  },
+	  {
+		"id": "SuccessStoriesA",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Succes story",
+		  "subHeading": "Chrysler increased their leads by  40% by advertising during the NBA Playoffs.",
+		  "paragraph": "Reaching different audiences for multiple performances created a short messaging window for Flagler Auditorium. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+		  "link": {
+			"label": "Read success story",
+			"title": "Read success story",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
+		"id": "CoreProductMessage",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Advertising is a multi-screen landscape <br/>Consumers rank TV as the",
+		  "items": [
+			{
+			  "value": "#1",
+			  "label": "source",
+			  "paragraph": "for the <strong>useful information</strong> about new products and services"
+			},
+			{
+			  "value": "75",
+			  "label": "percent",
+			  "paragraph": "of people who use <strong>their desktop/laptop</strong> while watching TV were shopping or browsing online stores"
+			},
+			{
+			  "value": "15",
+			  "label": "percent",
+			  "paragraph": "of people who <strong>use their tablet</strong> while watching TV used it to shop or browse online"
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "TargetAudience",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "backgroundImage": {
+			"normal": "http://via.placeholder.com/1920x1080",
+			"small": "http://via.placeholder.com/1920x1080",
+			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+		  },
+		  "heading": "Surround your target audience <br/>throughout the day and across devices. ",
+		  "devices": [
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "heading": "iOS Mobile Devices",
+			  "paragraph": "iOS Mobile Devices over  index during the morning as people are waking up"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "heading": "Desktop",
+			  "paragraph": "iOS Mobile Devices over  index during the morning as people are waking up"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "heading": "Smart TV",
+			  "paragraph": "Usage of both Mobile Devices  and Smart TVs over index during prime time"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "heading": "iOS Mobile Devices",
+			  "paragraph": "iOS Mobile Devices over  index during the morning as people are waking up"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "heading": "Desktop",
+			  "paragraph": "iOS Mobile Devices over  index during the morning as people are waking up"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "heading": "Smart TV",
+			  "paragraph": "Usage of both Mobile Devices  and Smart TVs over index during prime time"
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "Infographic",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 0,
+		  "heading": "Ads Everywhere",
+		  "paragraph": "Drive brand awareness beyond traditional TV across all viewing platforms. Dynamically insert your message on Live Cable Programming, Video On Demand and Network Apps.",
+		  "primaryLink": {
+			"label": "All advertising solutions",
+			"title": "All advertising solutions",
+			"target": "/advertising-solutions",
+			"type": 0
+		  },
+		  "secondaryLink": {
+			"label": "Dashboard",
+			"title": "Dashboard",
+			"target": "/advertising-solutions",
+			"type": 0
+		  },
+		  "backgroundImage": {
+			"normal": "http://via.placeholder.com/1440x560",
+			"small": "http://via.placeholder.com/1440x560",
+			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+		  },
+		  "image": {
+			"normal": "http://via.placeholder.com/1280x960",
+			"small": "http://via.placeholder.com/1280x960",
+			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+		  }
+		}
+	  },
+	  {
+		"id": "ProductList",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 0,
+		  "heading": "TV delivers",
+		  "paragraph": "We are continuously innovating and adding to our range of advertising products for Television.",
+		  "products": [
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "DownloadFileA",
+		"data": {
+		  "overlap": false,
+		  "windowed": true,
+		  "marginTop": 2,
+		  "heading": "Download information sheet to get more information on how to reach Millenials with Spectrum Reach",
+		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. Lore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		  "fileDescription": "Lorem ipsum dolor sit .PDF of 659 KB",
+		  "link": {
+			"label": "Download",
+			"title": "Download",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
+		"id": "videoWithContentB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "scrollId": "videoWithContent",
+		  "alignment": 1,
+		  "heading": "Tv Everywhere continues to grow",
+		  "paragraph": "Live and on-demand viewership across screens continues to grow as consumers replicate the tv experience in the new living room.",
+		  "link": {
+			"label": "See all featured programs",
+			"title": "See all featured programs",
+			"target": "/advertising-solutions",
+			"type": 0
+		  },
+		  "poster": {
+			"normal": "http://via.placeholder.com/1280x720",
+			"small": "http://via.placeholder.com/1280x720",
+			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+		  },
+		  "video": {
+			"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+			"type": 0
+		  }
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}

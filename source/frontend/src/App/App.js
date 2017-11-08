@@ -1,15 +1,18 @@
 import Vue from 'vue';
+import { debounce } from 'lodash';
 import { mapGetters } from 'vuex';
 import { customButtonEventDispatcher, CustomButtonEvent } from 'vue-block-system';
+import SlideoutPanelType from 'data/enum/SlideoutPanelType';
 import SiteHeader from '../component/layout/SiteHeader/SiteHeader';
 import SiteFooter from '../component/layout/SiteFooter/SiteFooter';
 import Notification from '../component/Notification/Notification';
 import PageLoader from '../component/PageLoader/PageLoader';
-import backendLinkType from '../data/enum/BackendLinkType';
 import NativeEventListener from '../util/event/NativeEventListener';
 import VideoOverlay from '../component/VideoOverlay/VideoOverlay';
 import SlideoutPanel from '../component/SlideoutPanel/SlideoutPanel';
 import { AbstractRegistrableComponent } from 'vue-transition-component';
+import SiteMenu from '../component/layout/SiteMenu';
+import BackendLinkType from '../data/enum/link/BackendLinkType';
 
 export default {
 	name: 'App',
@@ -21,6 +24,7 @@ export default {
 		VideoOverlay,
 		Notification,
 		SlideoutPanel,
+		SiteMenu,
 	},
 	computed: {
 		...mapGetters(
@@ -35,6 +39,7 @@ export default {
 	data() {
 		return {
 			pageLoaderReady: false,
+			menuActive: false,
 		};
 	},
 	mounted() {
@@ -42,6 +47,12 @@ export default {
 			customButtonEventDispatcher,
 			CustomButtonEvent.FIRE,
 			event => this.handleCustomButtonEvent(event.data),
+		);
+
+		this.scrollListener = new NativeEventListener(
+			window,
+			'scroll',
+			debounce(this.closeMenu, 50),
 		);
 	},
 	methods: {
@@ -54,9 +65,16 @@ export default {
 			});
 		},
 		handleCustomButtonEvent(data) {
+			console.log('custombutton event', data);
+			const slideoutPanel = this.getChild('SlideoutPanel');
 			switch (data.event) {
-				case backendLinkType.CONTACT_US:
-					this.getChild('SlideoutPanel').transitionIn(SlideoutPanel.CONTACT);
+				case BackendLinkType.CONTACT_US:
+					this.closeMenu();
+					slideoutPanel.transitionIn(SlideoutPanelType.CONTACT);
+					break;
+				case BackendLinkType.CONTACT_KERNEL:
+					this.closeMenu();
+					slideoutPanel.transitionIn(SlideoutPanelType.CONTACT_KERNEL);
 					break;
 				default:
 					// No default;
@@ -64,11 +82,20 @@ export default {
 			}
 		},
 		handleStartAdvertisingClick() {
-			this.getChild('SlideoutPanel').transitionIn(SlideoutPanel.CONTACT);
+			this.closeMenu();
+			this.getChild('SlideoutPanel').transitionIn(SlideoutPanelType.CONTACT);
+		},
+		handleToggleMenu() {
+			this.menuActive = !this.menuActive;
+		},
+		closeMenu() {
+			this.menuActive = false;
 		},
 	},
 	beforeDestroy() {
 		this.customButtonEventListener.dispose();
 		this.customButtonEventListener = null;
+		this.scrollListener.dispose();
+		this.scrollListener = null;
 	},
 };

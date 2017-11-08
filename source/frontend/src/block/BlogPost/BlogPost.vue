@@ -32,7 +32,7 @@
 								:label="tag.label"
 								:type="ButtonType.LINK"
 								:link="{
-										type: linkTypeMap[tag.type],
+										type: BackendLinkTypeMap[tag.type],
 										target: tag.target,
 									}"
 								:class="$style.tag"/>

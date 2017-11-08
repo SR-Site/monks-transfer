@@ -1,0 +1,21 @@
+:local {
+	.panel-contact-kernel {
+		position: relative;
+
+		.submit-button {
+			margin-top: $sizeGrid;
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.sub-title {
+		padding-bottom: $sizeGrid/2;
+		text-transform: uppercase;
+		font-weight: 800;
+	}
+
+	.fields {
+		margin-top: $sizeGrid;
+	}
+}

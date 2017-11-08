@@ -56,20 +56,22 @@ class ProgramTeaserTransitionController extends AbstractTransitionController {
 			'=-0.8',
 		);
 
-		this.transitionInTimeline.fromTo(
-			this.viewModel.$refs.statistics,
-			1,
-			{
-				autoAlpha: 0,
-				y: 50,
-			},
-			{
-				autoAlpha: 1,
-				y: 0,
-				ease: Cubic.easeOut,
-			},
-			'=-0.8',
-		);
+		if (this.viewModel.$refs.statistics) {
+			this.transitionInTimeline.fromTo(
+				this.viewModel.$refs.statistics,
+				1,
+				{
+					autoAlpha: 0,
+					y: 50,
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					ease: Cubic.easeOut,
+				},
+				'=-0.8',
+			);
+		}
 	}
 
 	/**

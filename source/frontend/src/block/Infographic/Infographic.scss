@@ -1,3 +1,127 @@
 :local {
+	.infographic {
+		@include aspect-ratio(1440px, 560px);
+	}
 
+	.content {
+		@include size(100%);
+		color: $colorWhite;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.site-frame {
+		height: 100%;
+	}
+
+	.description {
+		@include size(60%, auto);
+
+		.heading {
+			margin-bottom: $sizeGrid / 2;
+		}
+	}
+
+	.call-to-actions {
+		margin-top: $sizeGrid;
+
+		.button:not(:first-child) {
+			margin-left: $sizeGrid;
+		}
+	}
+
+	.image {
+		@include size(40%, auto);
+		@include aspect-ratio(320px, 240px);
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	}
+
+	.alignment-left {
+		.description {
+			order: 0;
+			padding-right: $sizeGrid * 3;
+		}
+		.image {
+			order: 1;
+		}
+	}
+
+	.alignment-right {
+		.description {
+			order: 1;
+			padding-left: mobile-size($sizeGrid * 2);
+		}
+		.image {
+			order: 0;
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.description {
+			width: 65%;
+		}
+
+		.image {
+			width: 35%;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.infographic {
+			padding: mobile-size($sizeGrid * 2) 0;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.abs-fill {
+			position: relative;
+		}
+
+		.button {
+			width: calc(70% - #{$sizeGrid});
+		}
+
+		.content {
+			flex-direction: column;
+			justif-content: center;
+			text-align: center;
+		}
+
+		.heading,
+		.copy {
+			margin-bottom: mobile-size($sizeGrid);
+		}
+
+
+		.button:not(:first-child ){
+			margin-top: mobile-size($sizeGrid);
+		}
+
+		.alignment-right,
+		.alignment-left {
+			.description {
+				width: 100%;
+				padding: 0;
+				order: 0;
+			}
+
+			.image {
+				position: relative;
+				transform: none;
+				width: 100%;
+				order: 1;
+			}
+
+			.call-to-actions {
+				order: 3;
+			}
+		}
+	}
 }
+

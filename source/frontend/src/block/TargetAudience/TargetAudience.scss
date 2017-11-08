@@ -1,2 +1,88 @@
 :local {
+	.target-audience {
+		@include aspect-ratio(1440px, 720px);
+		color: white;
+	}
+
+	.abs-fill {
+		padding: $sizeGrid;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.header {
+		@include size(100%, auto);
+		text-align: center;
+		margin-bottom: $sizeGrid;
+	}
+
+	.draggable-container {
+		padding: 0;
+		//overflow: hidden;
+	}
+
+	.devices {
+		width: auto;
+		margin-bottom: $sizeGrid;
+		white-space: nowrap;
+		font-size: 0;
+		display: inline-block;
+	}
+
+	.device {
+		width: calc(100vw / 3);
+		display: inline-block;
+		text-align: center;
+		white-space: normal;
+		padding: 0 $sizeGrid;
+		vertical-align: top;
+	}
+
+	.device-image {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.device-heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.device-image {
+		@include size(100%, auto);
+		@include aspect-ratio(16px, 9px);
+	}
+
+	@include respond-to(MEDIUM) {
+		.target-audience {
+			@include aspect-ratio(4px, 3px);
+		}
+
+		.header,
+		.devices,
+		.device-image,
+		.device-heading {
+			margin-bottom: $sizeGrid / 2;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.abs-fill {
+			padding: 0;
+		}
+
+		.target-audience {
+			@include aspect-ratio(1px, 1px);
+		}
+
+		.device {
+			padding: 0 $sizeGridMobile * 2;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.target-audience {
+			@include aspect-ratio(1px, 1.5px);
+		}
+
+	}
 }

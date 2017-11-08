@@ -5,7 +5,7 @@
 	<div :class="$style.smallHeading">
 		<div class="site-frame is-small include-padding">
 			<div :class="$style.overruleOverlap" class="overrule-overlap">
-				<h2 class="heading heading-04" v-html="data.heading" ref="heading"></h2>
+				<div :class="$style.heading" v-html="data.heading" ref="heading"></div>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 import VueTypes from 'vue-types';
-import PropImage from '../../data/prop-type/media/PropImage';
 import PropLink from '../../data/prop-type/action/PropLink';
+import PropImage from '../../data/prop-type/media/PropImage';
 import PropVideo from '../../data/prop-type/media/PropVideo';
 
 /**
@@ -12,13 +12,20 @@ import PropVideo from '../../data/prop-type/media/PropVideo';
  * @param {placeholder} windowed true
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} heading The heading of the the block
+ * @param {description} paragraph The paragraph of the the block
+ * @param {description} link The link attached to the block
+ * @param {description} poster The poster image for the block
+ * @param {description} video The video for the block
  */
 export default {
 	marginTop: VueTypes.number.isRequired,
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	alignment: VueTypes.number.isRequired,
+	alignment: VueTypes.oneOf(
+		[0,1,2],
+	).isRequired,
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
 	link: VueTypes.shape(PropLink),

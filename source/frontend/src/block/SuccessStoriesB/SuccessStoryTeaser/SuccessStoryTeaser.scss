@@ -1,0 +1,41 @@
+:local {
+	.success-story-teaser {
+		font-size: 12px;
+		position: relative;
+		box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+		color: $colorPrimary;
+		text-decoration: none;
+		transition: box-shadow .2s $easeInOutCubic;
+		white-space: normal;
+	}
+
+	.image {
+		@include size(100%);
+		position: relative;
+	}
+
+	.gradient-overlay {
+		transition: opacity .2s $easeInOutCubic;
+	}
+
+	.heading {
+		@include offset(0, 0);
+		position: absolute;
+		padding: $sizeGrid $sizeGrid 0 $sizeGrid;
+		color: $colorWhite;
+	}
+
+	.button {
+		@include position(auto, auto, $sizeGrid, $sizeGrid);
+		position: absolute;
+	}
+}
+
+@include hover('.success-story-teaser') {
+	color: $colorSecondary;
+	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+
+	.gradient-overlay {
+		opacity: 0;
+	}
+}

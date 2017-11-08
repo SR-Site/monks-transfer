@@ -6,7 +6,7 @@
 		<div :class="$style.backgroundImage" class="abs-fill" v-if="!isSmall">
 			<ResponsiveImage
 				v-for="(persona, index) in data.personas"
-				class="fit-cover"
+				class="abs-fill fit-cover"
 				:key="index"
 				:class="[
 					$style.image,

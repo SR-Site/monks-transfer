@@ -54,6 +54,25 @@
 		}
 	}
 
+	.theme-dark-solid {
+		color: $colorWhite;
+		background: $colorPrimary;
+
+		.stripe {
+			background: $colorSecondary;
+		}
+
+		rect {
+			&.background-stroke {
+				stroke: $colorPrimary;
+			}
+
+			&.hover-stroke {
+				stroke: $colorSecondary;
+			}
+		}
+	}
+
 	.theme-light {
 		color: $colorWhite;
 
@@ -68,6 +87,25 @@
 
 			&.hover-stroke {
 				stroke: $colorWhite;
+			}
+		}
+	}
+
+	.theme-light-solid {
+		color: $colorPrimary;
+		background: $colorWhite;
+
+		.stripe {
+			background: $colorSecondary;
+		}
+
+		rect {
+			&.background-stroke {
+				stroke: rgba(0, 0, 0, 0.3);
+			}
+
+			&.hover-stroke {
+				stroke: $colorSecondary;
 			}
 		}
 	}

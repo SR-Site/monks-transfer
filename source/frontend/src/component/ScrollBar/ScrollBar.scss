@@ -2,7 +2,6 @@
 	.scroll-bar-inner {
 		@include size(100%, 2px);
 		margin: 19px 0;
-		background: #e4e5e5;
 	}
 
 	.knob {
@@ -37,7 +36,15 @@
 		}
 	}
 
-	.theme-dark & {
-		background-color: #000;
+	.theme-dark {
+		.scroll-bar-inner {
+			background: rgba(0, 0, 0, .1);
+		}
+	}
+
+	.theme-light {
+		.scroll-bar-inner {
+			background: rgba(255, 255, 255, .2);
+		}
 	}
 }

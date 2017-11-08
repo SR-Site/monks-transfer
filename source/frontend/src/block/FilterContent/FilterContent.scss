@@ -1,2 +1,54 @@
 :local {
+	.filter-content {
+		overflow: visible;
+		margin-top: -$sizeGrid * 2;
+	}
+
+	.filter-menu {
+		//padding-bottom: $sizeGrid * 2;
+		z-index: zindex($layout, content) + 1;
+	}
+
+	.filter-result {
+		padding: $sizeGrid * 1 0;
+		font-size: 0;
+		width: calc(100% + #{$sizeGrid * 2});
+		margin-left: -$sizeGrid;
+		position: relative;
+		z-index: zindex($layout, content);
+	}
+
+	.block {
+		@include size(calc(50% - #{$sizeGrid * 2}), auto);
+		display: inline-block;
+		margin: $sizeGrid;
+	}
+
+	@include respond-to(MEDIUM) {
+		.filter-result {
+			width: calc(100% + #{$sizeGrid});
+			margin-left: -$sizeGrid / 2;
+		}
+
+		.block {
+			@include size(calc(50% - #{$sizeGrid}), auto);
+			margin: $sizeGrid / 2;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.filter-content {
+			margin-top: 0;
+			padding-top: mobile-size($sizeGrid * 3);
+		}
+
+		.filter-result {
+			width: 100%;
+		}
+
+		.block {
+			width: 100%;
+			margin-bottom: $sizeGrid
+		}
+	}
 }

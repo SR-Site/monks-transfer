@@ -3,8 +3,8 @@
 <template>
 	<div :class="$style.appWrapper">
 		<div :class="[$style.siteWrapper, {[$style.isActive]: pageLoaderReady}]">
-			<SiteHeader componentId="Header" />
-			<router-view></router-view>
+			<SiteHeader componentId="Header" @toggleMenu="handleToggleMenu" :menuActive="menuActive"/>
+			<router-view @beforePageChange="closeMenu"></router-view>
 			<ButtonStartAdvertising
 				@click="handleStartAdvertisingClick"
 				v-show="!hideContactButton"
@@ -14,6 +14,7 @@
 				:type="ButtonType.ACTION"
 			/>
 			<SlideoutPanel componentId="SlideoutPanel" />
+			<SiteMenu componentId="Menu" :menuActive="menuActive"/>
 			<SiteFooter componentId="Footer" />
 			<VideoOverlay componentId="VideoOverlay" />
 			<Notification componentId="Notification" />

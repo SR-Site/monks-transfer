@@ -1,15 +1,19 @@
 import VueTypes from 'vue-types';
-import PropImage from '../../data/prop-type/media/PropImage';
+import StoryInfoImagesStoryData from './StoryInfoImagesStoryData';
 
 /**
  * @param {description} marginTop This defines the amount of spacing at the top of the block
- * @param {placeholder} marginTop 1
  * @param {description} overlap This defines if a block overlaps the next block on the layout
- * @param {placeholder} overlap true
  * @param {description} windowed This defines if a block has extra padding left and right
- * @param {placeholder} windowed true
+ * @param {description} stories The array of stories used in this block
+ * @param {description} stories.heading The heading for the story
+ * @param {description} stories.paragraph The paragraph for the story
+ * @param {description} stories.background The background image for the story
+ * @param {description} stories.backgroundBlurred The blurred background image for the story
+ * @param {description} stories.theme The theme for the story
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} stories The stories displayed in the block
  */
 export default {
 	marginTop: VueTypes.number.isRequired,
@@ -17,14 +21,6 @@ export default {
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
 	stories: VueTypes.arrayOf(
-		VueTypes.shape(
-			{
-				heading: VueTypes.string.isRequired,
-				paragraph: VueTypes.string.isRequired,
-				background: VueTypes.shape(PropImage),
-				backgroundBlurred: VueTypes.shape(PropImage),
-				theme: VueTypes.number.isRequired,
-			},
-		),
+		VueTypes.shape(StoryInfoImagesStoryData),
 	),
 };

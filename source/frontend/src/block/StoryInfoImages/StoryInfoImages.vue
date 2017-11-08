@@ -30,8 +30,8 @@
 					]
 				">
 					<span class="pagination-number" v-html="padStart(index + 1)"></span>
-					<h2 class="heading heading-06" v-html="story.heading"></h2>
-					<p class="copy copy-01" v-html="truncate(story.paragraph)"></p>
+					<h2 class="heading heading-06" :class="$style.heading" v-html="story.heading"></h2>
+					<p class="copy copy-01" :class="$style.copy" v-html="truncate(story.paragraph)"></p>
 				</article>
 			</div>
 		</div>

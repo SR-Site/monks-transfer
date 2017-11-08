@@ -24,7 +24,7 @@
 					<h2 :class="$style.heading" class="heading-07" v-html="data.heading" ref="header"></h2>
 					<p :class="$style.copy" class="copy copy-03" v-html="truncatedParagraph" ref="paragraph"></p>
 				</div>
-				<div ref="statistics">
+				<div ref="statistics" v-if="data.stats">
 					<div :class="$style.percentage">
 						<span :class="$style.value" v-html="data.stats.percentage"></span>
 						<span :class="$style.label" class="copy">{{ $t('global.show.percent') }}</span>

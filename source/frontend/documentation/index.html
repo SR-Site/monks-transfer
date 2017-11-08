@@ -24,6 +24,45 @@
 			text-transform: capitalize;
 		}
 
+		.block {
+			max-height: 36px;
+			margin-bottom: 4px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.toggle-panel {
+			cursor: pointer;
+		}
+
+		.icon {
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			right: 0;
+			top: 10px;
+		}
+
+		.glyphicon-plus {
+			display: block;
+		}
+
+		.glyphicon-minus {
+			display: block;
+		}
+
+		.is-active {
+			max-height: 9999px;
+		}
+
+		.is-active .glyphicon-plus {
+			display: none;
+		}
+
+		.is-active .glyphicon-minus {
+			display: block;
+		}
+
 		.overflow-ellipsis {
 			overflow: hidden;
 			white-space: nowrap;
@@ -59,10 +98,12 @@
 		<div class="col-md-9">
 			<div v-for="section in sections">
 				<h4 class="capitalize" :id="section.id">{{ section.id }}</h4>
-				<div class="blocks" v-for="block in section.data">
+				<div class="block" v-for="block in section.data">
 					<div class="panel panel-default">
-						<div class="panel-heading">
+						<div class="panel-heading toggle-panel" @click="handleBlockClick">
 							<h3 class="panel-title" :id="block.name">{{ block.name }}</h3>
+							<span class="icon glyphicon glyphicon-plus "></span>
+							<span class="icon glyphicon glyphicon-minus "></span>
 						</div>
 						<div class="panel-body table-responsive">
 							<data-table :properties="block.properties"></data-table>
@@ -121,37 +162,41 @@
 			`,
 	});
 
-	const app = new Vue({
-							el: '#app',
-							data: {
-								sections: [],
-							},
-							methods: {
-								getData() {
-									return axios.get('./data.json').then(result => result.data);
-								},
-								storeSectionData(data) {
-									Object.keys(data).forEach(key => {
-										if (data[key].length) {
-											this.sections.push({
-																   id: key,
-																   data: data[key],
-															   });
-										}
-									});
-								},
-								applyHighlight() {
-									this.$el.querySelectorAll('.json-example').forEach(block => {
-										hljs.highlightBlock(block);
-									});
-								},
-							},
-							mounted() {
-								this.getData()
-								.then(result => this.storeSectionData(result))
-								.then(() => this.applyHighlight());
-							},
-						});
+	const app = new Vue(
+		{
+			el: '#app',
+			data: {
+				sections: [],
+			},
+			methods: {
+				getData() {
+					return axios.get('./data.json').then(result => result.data);
+				},
+				storeSectionData(data) {
+					Object.keys(data).forEach(key => {
+						if (data[key].length) {
+							this.sections.push({
+												   id: key,
+												   data: data[key],
+											   });
+						}
+					});
+				},
+				handleBlockClick(event) {
+					event.currentTarget.parentElement.parentElement.classList.toggle('is-active');
+				},
+				applyHighlight() {
+					this.$el.querySelectorAll('.json-example').forEach(block => {
+						hljs.highlightBlock(block);
+					});
+				},
+			},
+			mounted() {
+				this.getData()
+				.then(result => this.storeSectionData(result))
+				.then(() => this.applyHighlight());
+			},
+		});
 </script>
 </body>
 

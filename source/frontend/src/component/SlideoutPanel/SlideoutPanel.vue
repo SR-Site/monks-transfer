@@ -4,7 +4,7 @@
 <template>
 	<div>
 		<div :class="$style.mask" class="abs-fill" ref="mask" @click="close"></div>
-		<div :class="[$style.slideoutPanel]" ref="panel">
+		<div :class="$style.slideoutPanel" ref="panel">
 			<ButtonCircleClose
 				componentId="ButtonCircleClose"
 				title="Close"
@@ -20,7 +20,12 @@
 								componentId="PanelContact"
 								@showSpinner="handleShowSpinner"
 								@hideSpinner="handleHideSpinner"
-								@isReady="component => handlePanelReady(component, SlideoutPanel.CONACT)"/>
+								@isReady="component => handlePanelReady(component, type.CONTACT)"/>
+							<PanelContactKernel
+								componentId="PanelContactKernel"
+								@showSpinner="handleShowSpinner"
+								@hideSpinner="handleHideSpinner"
+								@isReady="component => handlePanelReady(component, type.CONTACT_KERNEL)"/>
 						</div>
 					</div>
 					<div class="scroll-bar" data-scroll-bar>

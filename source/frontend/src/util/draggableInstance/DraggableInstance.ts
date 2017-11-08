@@ -89,9 +89,11 @@ class DraggableInstance extends sengEvent {
 		this._draggableInstance.enabled(allow);
 
 		if (allow) {
+			this.dispatchEvent(new DraggableInstanceEvent(DraggableInstanceEvent.ENABLE))
 			this._draggableContainer.classList.remove(DraggableInstance._DRAGGABLE_DISABLED_CLASS);
 		}
 		else {
+			this.dispatchEvent(new DraggableInstanceEvent(DraggableInstanceEvent.DISABLE))
 			this._draggableContainer.classList.add(DraggableInstance._DRAGGABLE_DISABLED_CLASS);
 		}
 	}
@@ -333,7 +335,7 @@ class DraggableInstance extends sengEvent {
 	 * @method handleResize
 	 */
 	private handleResize(): void {
-		if (!this.isDisposed) {
+		if (!this.isDisposed()) {
 			this._draggableInstance.update(true);
 		}
 	}

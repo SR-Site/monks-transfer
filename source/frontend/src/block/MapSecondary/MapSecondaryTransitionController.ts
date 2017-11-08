@@ -19,6 +19,9 @@ class MapSecondaryTransitionController extends AbstractTransitionController {
 				ease: Linear.easeNone,
 			},
 		);
+		this.transitionInTimeline.add(
+			this.getSubTimeline('ButtonPrimary'),
+		);
 	}
 
 	/**

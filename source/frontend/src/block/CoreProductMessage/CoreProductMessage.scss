@@ -1,2 +1,68 @@
 :local {
+	.core-product-message {
+		padding: $sizeGrid 0;
+	}
+
+	.heading {
+		@include size(100%, auto);
+		text-align: center;
+		display: block;
+		margin-bottom: $sizeGrid * 2;
+	}
+
+	.messages {
+		@extend %reset-list;
+		@include size(100%, auto);
+		text-align: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	.message {
+		@include size(33%, auto);
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+		padding: 0 $sizeGrid;
+
+		&:not(:first-child) {
+			border-left: 1px solid #e6e6e7;
+		}
+	}
+
+	.value {
+		font: 800 6.4rem / 1 $fontOpenSans;
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.label {
+		font: 400 1.2rem / 1 $fontOpenSans;
+		text-transform: uppercase;
+		margin-bottom: $sizeGrid;
+		color: $colorQuaternary;
+	}
+
+	@include respond-to(SMALL) {
+		.messages {
+			flex-direction: column;
+		}
+
+		.message {
+			@include size(100%);
+			padding: $sizeGrid 0;
+			margin-bottom: mobile-size($sizeGrid);
+
+			&:not(:first-child) {
+				border-left: none;
+				border-top: 1px solid #e6e6e7;
+			}
+		}
+
+		.value {
+			font-size: mobile-size(12rem);
+		}
+		.label {
+			font-size: mobile-size(2.4rem);
+		}
+	}
 }

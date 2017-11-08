@@ -2,7 +2,11 @@
 <script src="./ButtonTertiary.js"></script>
 
 <template>
-	<button @click="handleClick" class="button" :class="$style.buttonTertiary" :title="title">
+	<button
+		@click="handleClick"
+		class="button"
+		:class="[$style.buttonTertiary, $style[ClassNameHelper.parseTheme(theme)]]"
+		:title="title">
 		<span>{{label}}!</span>
 	</button>
 </template>

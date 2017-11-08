@@ -6,7 +6,7 @@ export default {
 	bind(element) {
 		element[namespace] = new FocusBorder(element);
 	},
-	update(element) {
+	componentUpdated(element) {
 		if (element[namespace]) {
 			element[namespace].update(element.querySelector('input').value);
 		}

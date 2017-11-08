@@ -1,0 +1,38 @@
+:local {
+	.zoom-actions {
+		@include offset($sizeGrid, 50%);
+		transform: translateY(-50%);
+		position: absolute;
+		flex-direction: column;
+		display: flex;
+	}
+
+	.zoom-button {
+		@include size($sizeGrid * 1.5);
+		border-radius: 100%;
+		border: 1px solid rgba($colorPrimary, .3);
+		transition: background-color 250ms $easeLinear;
+
+		&:not(:first-child) {
+			margin-top: $sizeGrid / 2;
+		}
+
+		.icon {
+			@include size(12px, auto);
+			@include offset(50%, 50%);
+			transform: translate(-50%, -50%);
+			position: absolute;
+
+			path {
+				fill: $colorPrimary;
+				transition: path 250ms $easeLinear;
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.zoom-button {
+			@include size($sizeGrid * 2);
+		}
+	}
+}

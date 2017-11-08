@@ -30,7 +30,6 @@ export default {
 	},
 	computed: {
 		hasStatistics() {
-			console.log(this.data.slides);
 			return this.data.slides.map(slide => slide.statistics !== void 0).indexOf(true) > -1;
 		},
 	},

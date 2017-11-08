@@ -3,8 +3,18 @@
 		@include aspect-ratio(40*$sizeGrid, $sizeGrid * 16);
 		min-height: $sizeGrid * 16;
 	}
+
 	.slide-content-wrapper {
 		overflow: visible;
+	}
+
+	.heading {
+		h1,
+		h2,
+		h3 {
+			@extend %heading;
+			@extend %heading-02;
+		}
 	}
 
 	.primary-background-triangle {
@@ -12,20 +22,6 @@
 
 	.secondary-background-triangle {
 	}
-	//.background-triangle {
-	//	@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 34);
-	//	@include position(calc(50% - #{$sizeGrid * 2}), auto, auto, 0);
-	//	transform: translateY(-50%);
-	//	position: absolute;
-	//	pointer-events: none;
-	//}
-	//
-	//.secondary-background-triangle {
-	//	@include arrow(left, rgba($colorSecondary, .95), $sizeGrid * 10);
-	//	@include position(calc(50% - #{$sizeGrid * 2}), auto, auto, $sizeGrid * 12);
-	//	position: absolute;
-	//	pointer-events: none;
-	//}
 
 	.slide-content {
 		@include size($sizeGrid * 13, auto);

@@ -15,13 +15,13 @@
 				type: LinkType.EXTERNAL_BLANK
 			}"/>
 
-		<h3 :class="$style.subTitle" class="copy copy-01" v-html="subHeading"></h3>
+		<h3 :class="$style.subTitle" class="copy copy-03" v-html="subHeading"></h3>
 		<h2 :class="$style.heading" class="heading-06 heading" v-html="heading"></h2>
 
 		<fieldset class="form-fieldset" :class="$style.fields">
 			<div class="text-input-holder" v-for="(field, index) in fieldData" :key="index">
 				<div class="input-text input-text-main" :class="{'is-invalid': errors.has(field.name) }"
-				     v-focus-border="">
+				     v-focus-border>
 					<input
 						v-validate="field.validationRules"
 						autocomplete="off"

@@ -1,15 +1,14 @@
 import VueTypes from 'vue-types';
 import PropLink from '../../data/prop-type/action/PropLink';
+import HowToAdvertiseStepData from './HowToAdvertiseStepData';
 
 /**
  * @param {description} marginTop This defines the amount of spacing at the top of the block
- * @param {placeholder} marginTop 1
  * @param {description} overlap This defines if a block overlaps the next block on the layout
- * @param {placeholder} overlap true
  * @param {description} windowed This defines if a block has extra padding left and right
- * @param {placeholder} windowed true
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} steps The array of steps displayed on the block
  */
 
 export default {
@@ -20,12 +19,6 @@ export default {
 	link: VueTypes.shape(PropLink),
 	heading: VueTypes.string.isRequired,
 	steps: VueTypes.arrayOf(
-		VueTypes.shape(
-			{
-				heading: VueTypes.string.isRequired,
-				paragraph: VueTypes.string.isRequired,
-				icon: VueTypes.string.isRequired,
-			}
-		)
+		VueTypes.shape(HowToAdvertiseStepData)
 	)
 };

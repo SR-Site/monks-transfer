@@ -3,19 +3,33 @@
   "data": {
 	"title": "Spectrum Reach Advertising - Phase 1 (unchanged)",
 	"data": {
-	  "headerTheme": 0,
+	  "headerTheme": 1,
 	  "hideContactButton": 0
 	},
 	"blocks": [
 	  {
+		"id": "marketMap",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "service": {
+			"heading": "Start advertising today"
+		  },
+		  "searchLabel": "Search",
+		  "searchPlaceholder": "Which region do you want to advertise in?",
+		  "notFoundMessage": "Sorry, this is not currently in our coverage area, contact us to for more information."
+		}
+	  },
+	  {
 		"id": "heroMain",
 		"data": {
-		  "overlap": true,
+		  "overlap": false,
 		  "windowed": false,
 		  "marginTop": 0,
 		  "slides": [
 			{
-			  "heading": "Data, Targeting, Creative<br \/>",
+			  "heading": "<h1>Data, Targeting, Creative</h1>",
 			  "paragraph": "<p>Our #Reach365 video campaign is a living case study on our differentiators. This is for the dreamers, the entrepreneurs, the innovators. If that's you, catch up with the campaign.<\/p>",
 			  "background": {
 				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/Reach365-Entrepreneur_Hero_0.jpg",
@@ -23,14 +37,13 @@
 				"alt": "the dreamers, the entrepreneurs, the innovators"
 			  },
 			  "link": {
-				"label": "Follow the Story",
-				"title": "Follow the Story",
-				"target": "/advertising-solutions",
-				"type": 0
+				"label": "Contact Kernel",
+				"title": "Contact Kernel",
+				"type": 5
 			  }
 			},
 			{
-			  "heading": "2018 TV Predictions<br \/>",
+			  "heading": "<h2>2018 TV Predictions</h2>",
 			  "paragraph": "<p>Our industry experts weigh in on what to expect for the television advertising industry in 2018.<\/p>",
 			  "background": {
 				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/2018Predictions_Hero-03.jpg",
@@ -45,7 +58,7 @@
 			  }
 			},
 			{
-			  "heading": "What's Your True ROI?<br \/>",
+			  "heading": "<h2>What's Your True ROI?</h2>",
 			  "paragraph": "<p>Why guess when it comes to measuring the return on your marketing investment? Get on the road to full transparency now.<\/p>",
 			  "background": {
 				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/ROI_Hero.jpg",
@@ -58,23 +71,21 @@
 				"target": "\/articles\/how-do-you-know-if-your-advertising-campaign-working",
 				"type": 0
 			  }
-			},
-			{
-			  "heading": "Summer<br \/>Sports<br \/><strong>No Time Outs<\/strong><br \/>",
-			  "paragraph": "<p>Sports fans don\u2019t take time outs.<\/p>\n\n<p>\u00a0<\/p>\n\n<p>Cable airs the majority of all sports events: preseason, season and postseason. Connect to passionate sports fans with thousands of hours of live sports on cable.<\/p>",
-			  "background": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/hero-sports.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-06\/hero-sports.jpg",
-				"alt": "Connect with Sports Fans"
-			  },
-			  "link": {
-				"label": "See Featured Programming",
-				"title": "See Featured Programming",
-				"target": "\/featured-programs",
-				"type": 0
-			  }
 			}
 		  ]
+		}
+	  },
+	  {
+		"id": "heroTertiary",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "background": {
+			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"alt": "Background image alt text"
+		  }
 		}
 	  },
 	  {
@@ -138,8 +149,8 @@
 			"type": 0
 		  },
 		  "poster": {
-			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
-			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+			"small": "http://via.placeholder.com/1280x720",
+			"normal": "http://via.placeholder.com/1280x720",
 			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 		  },
 		  "video": {
@@ -315,70 +326,65 @@
 			{
 			  "heading": "Restivo Laser Vision - \u201cHomeless Valet\u201d<br \/>",
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "theme": 0,
 			  "video": {
 				"url": "https://www.w3schools.com/html/mov_bbb.mp4",
-				"id": "154767863",
 				"type": 0
 			  }
 			},
 			{
 			  "heading": "North Carolina Zoo - \u201cAwaken\"<br \/>",
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.25.20%20-%20ss.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.25.20%20-%20ss.png",
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
 				"alt": "North Carolina Zoo - \u201cAwaken\""
 			  },
 			  "theme": 0,
 			  "video": {
 				"url": "https:\/\/vimeo.com\/98576814",
-				"id": "98576814",
 				"type": 1
 			  }
 			},
 			{
 			  "heading": "Sunmark Federal Credit Union \u2013 \u201cFirst Time Homebuyers\u201d<br \/>",
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.26.15%20-%20ss.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.26.15%20-%20ss.png",
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
 				"alt": "Sunmark Federal Credit Union \u2013 \u201cFirst Time Homebuyers\u201d"
 			  },
 			  "theme": 0,
 			  "video": {
 				"url": "https:\/\/vimeo.com\/126610168",
-				"id": "126610168",
 				"type": 1
 			  }
 			},
 			{
 			  "heading": "Flat Rate - \u201cHappy Moving Day\u201d<br \/>",
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.27.06%20-%20ss.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.27.06%20-%20ss.png",
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
 				"alt": "Flat Rate - \u201cHappy Moving Day\u201d"
 			  },
 			  "theme": 0,
 			  "video": {
 				"url": "https:\/\/vimeo.com\/116183821",
-				"id": "116183821",
 				"type": 1
 			  }
 			},
 			{
 			  "heading": "Farmer Boys - \u201cFresh Fish\u201d<br \/>",
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.27.23%20-ss.png",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.27.23%20-ss.png",
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
 				"alt": "Farmer Boys - \u201cFresh Fish\u201d"
 			  },
 			  "theme": 0,
 			  "video": {
 				"url": "https:\/\/vimeo.com\/102055305",
-				"id": "102055305",
 				"type": 1
 			  }
 			}
@@ -395,9 +401,9 @@
 		  "name": "John Doe",
 		  "description": "Foo bar",
 		  "image": {
-			"normal": "https://www.spectrumreach.com/assets/images/user/2017-09/Spectrum_Reach_RGB.png",
-			"small": "https://www.spectrumreach.com/assets/images/user/2017-09/Spectrum_Reach_RGB.png",
-			"alt": "Background image alt text"
+			"small": "http://via.placeholder.com/240x240",
+			"normal": "http://via.placeholder.com/240x240",
+			"alt": ""
 		  },
 		  "file": "/static/mock-assets/audio/audio.mp3"
 		}
@@ -408,7 +414,7 @@
 		  "overlap": false,
 		  "windowed": false,
 		  "marginTop": 2,
-		  "heading": "Spectrum Reach is the marketing platform of choice for a reason.<br \/>"
+		  "heading": "<h2>Spectrum Reach is the marketing platform of choice for a reason.</h2>"
 		}
 	  },
 	  {
@@ -443,7 +449,10 @@
 		  "marginTop": 2,
 		  "scrollId": "foo",
 		  "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris libero eros, consectetur at interdum et, sagittis ut eros.",
-		  "author": "John Doe"
+		  "author": {
+			"name": "John Doe",
+			"role": "Lorem ipsum"
+		  }
 		}
 	  },
 	  {
@@ -454,8 +463,8 @@
 		  "marginTop": 2,
 		  "alignment": 0,
 		  "image": {
-			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
-			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/Screen%20Shot%202017-03-12%20at%2013.24.09.png",
+			"small": "http://via.placeholder.com/1280x720",
+			"normal": "http://via.placeholder.com/1280x720",
 			"alt": "Image"
 		  }
 		}
@@ -478,8 +487,8 @@
 				"type": 3
 			  },
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Persona-homepage-bg-5_0.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Persona-homepage-bg-5_0.jpg",
+				"small": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"normal": "http://via.placeholder.com/1920x1080/efefef/000000",
 				"alt": "Local"
 			  }
 			},
@@ -494,8 +503,8 @@
 				"type": 3
 			  },
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Persona-homepage-bg-national.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Persona-homepage-bg-national.jpg",
+				"small": "http://via.placeholder.com/1920x1080",
+				"normal": "http://via.placeholder.com/1920x1080",
 				"alt": "National"
 			  }
 			},
@@ -510,8 +519,8 @@
 				"type": 3
 			  },
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Persona-homepage-bg-agency.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/Persona-homepage-bg-agency.jpg",
+				"small": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"normal": "http://via.placeholder.com/1920x1080/efefef/000000",
 				"alt": "Agencies"
 			  }
 			},
@@ -526,8 +535,8 @@
 				"type": 3
 			  },
 			  "image": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/persona-background-image-8.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-05\/persona-background-image-8.jpg",
+				"small": "http://via.placeholder.com/1920x1080",
+				"normal": "http://via.placeholder.com/1920x1080",
 				"alt": "Automotive"
 			  }
 			}
@@ -545,8 +554,8 @@
 			  "heading": "Connected to Content<br />",
 			  "paragraph": "<p>Align your brand with top programming.</p>",
 			  "background": {
-				"normal": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_01-OPT.jpg",
-				"small": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_01-OPT.jpg",
+				"small": "http://via.placeholder.com/1920x1080",
+				"normal": "http://via.placeholder.com/1920x1080",
 				"alt": "Connected to Content"
 			  },
 			  "secondaryParagraph": "<p>Share the stage and align your brand with over 400 of the most-watched and most-loved programs across 50+ networks.</p>"
@@ -555,8 +564,8 @@
 			  "heading": "Zero In<br />",
 			  "paragraph": "<p>Target the right audience on TV.</p>",
 			  "background": {
-				"normal": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_03-OPT.jpg",
-				"small": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_03-OPT.jpg",
+				"small": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"normal": "http://via.placeholder.com/1920x1080/efefef/000000",
 				"alt": "Zero In"
 			  },
 			  "secondaryParagraph": "<p>Reach the right customers on TV with our state-of-the-art audience targeting and interactive capabilities.</p>"
@@ -565,8 +574,8 @@
 			  "heading": "Measurability Without Measure<br />",
 			  "paragraph": "<p>Build the right media plan.</p>",
 			  "background": {
-				"normal": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_05b-OPT.jpg",
-				"small": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_05b-OPT.jpg",
+				"small": "http://via.placeholder.com/1920x1080",
+				"normal": "http://via.placeholder.com/1920x1080",
 				"alt": "Measurability Without Measure"
 			  },
 			  "secondaryParagraph": "<p>Use our unique data and insights to access your best customers across 30 million households.</p>"
@@ -575,8 +584,8 @@
 			  "heading": "We Are Your Neighbors<br />",
 			  "paragraph": "<p>Partner with an expert local team.</p>",
 			  "background": {
-				"normal": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_04-OPT.jpg",
-				"small": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Puchase_04-OPT.jpg",
+				"small": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"normal": "http://via.placeholder.com/1920x1080/efefef/000000",
 				"alt": "We Are Your Neighbors"
 			  },
 			  "secondaryParagraph": "<p>Collaborate with a dedicated team in your community to develop a custom marketing strategy.</p>"
@@ -585,8 +594,8 @@
 			  "heading": "Lights. Camera. Action. Sales.<br />",
 			  "paragraph": "<p>Create a memorable campaign.</p>",
 			  "background": {
-				"normal": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Purchase-06-OPT.jpg",
-				"small": "https://www.spectrumreach.com/assets/images/2017-07/Path-to-Purchase-06-OPT.jpg",
+				"small": "http://via.placeholder.com/1920x1080",
+				"normal": "http://via.placeholder.com/1920x1080",
 				"alt": "Lights. Camera. Action. Sales."
 			  },
 			  "secondaryParagraph": "<p>Tell a story that resonates with your audience with help from our award-winning in-house agency, Kernel.</p>"

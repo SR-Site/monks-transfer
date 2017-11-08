@@ -5,6 +5,7 @@
 		text-transform: uppercase;
 		padding-left: $sizeGridSecondary;
 		position: relative;
+		align-self: flex-start;
 
 		&.theme-dark {
 			.label {
@@ -18,11 +19,11 @@
 
 		&.theme-light {
 			.label {
-				color: $colorWhite;
+				color: white;
 			}
 
 			.stripe {
-				background: $colorWhite;
+				background: $colorSecondary;
 			}
 		}
 	}

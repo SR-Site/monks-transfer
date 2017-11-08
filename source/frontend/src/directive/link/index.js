@@ -1,6 +1,7 @@
 import NativeEventListener from '../../util/event/NativeEventListener';
 import getRouter from '../../router';
-import LinkType from '../../data/enum/BackendLinkType';
+import { customButtonEventDispatcher, CustomButtonEvent } from 'vue-block-system';
+import LinkType from '../../data/enum/link/BackendLinkType';
 
 const namespace = 'LinkDirective';
 
@@ -26,6 +27,17 @@ export default {
 					break;
 				case LinkType.EXTERNAL_BLANK:
 					window.open(binding.value.path);
+					break;
+				case LinkType.CONTACT_KERNEL:
+				case LinkType.CONTACT_US:
+					customButtonEventDispatcher.dispatchEvent(
+						new CustomButtonEvent(
+							CustomButtonEvent.FIRE,
+							{
+								event: binding.value.type,
+							},
+						),
+					);
 					break;
 				default:
 					console.error('Unknown link type', binding.value);

@@ -15,4 +15,39 @@ export default class UserService {
 			replace(Endpoints.getEndpoint(Endpoints.VIEW_COUNT), '{page}', page),
 		);
 	}
+
+	/**
+	 * @public
+	 * @method loadPage
+	 * @description Some blocks might have a load more functionality where it loads more blocks into that block, this
+	 * method can be used for loading more blocks!
+	 * @param {string} endpoint
+	 * @param {number} offset
+	 * @param {number} limit
+	 * @param {{[p: string]: string}} filter
+	 */
+	public static loadPage(
+		endpoint: string,
+		offset: number,
+		limit: number,
+		filter: { [filterType: string]: string },
+	) {
+		if (endpoint.indexOf('/') === 0) {
+			endpoint = endpoint.substring(1);
+		}
+
+		return getValue(GATEWAY).get(
+			endpoint,
+			{
+				params: Object.assign(
+					{
+						limit,
+						offset,
+						_format: 'json',
+					},
+					filter,
+				),
+			},
+		);
+	}
 }
