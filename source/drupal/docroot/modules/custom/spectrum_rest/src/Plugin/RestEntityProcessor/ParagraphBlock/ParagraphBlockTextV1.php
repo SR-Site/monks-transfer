@@ -26,7 +26,7 @@ class ParagraphBlockTextV1 extends SpectrumRestEntityProcessorBase {
     $data = parent::getCommonData($entity);
 
     $data = [
-      "id" => 'text',
+      "id" => 'FreeText',
       "data" => $data + [
         "html" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
       ],
