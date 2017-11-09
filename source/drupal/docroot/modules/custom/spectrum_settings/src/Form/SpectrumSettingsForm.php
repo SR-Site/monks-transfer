@@ -332,7 +332,7 @@ class SpectrumSettingsForm extends ConfigFormBase {
 
     $this->state->set('slideout_panel_subheading', $form_state->getValue('slideout_panel_subheading'));
     $this->state->set('slideout_panel_heading', $form_state->getValue('slideout_panel_heading'));
-    $this->state->set('slideout_panel_subheading_kerne', $form_state->getValue('slideout_panel_subheading_kerne'));
+    $this->state->set('slideout_panel_subheading_kernel', $form_state->getValue('slideout_panel_subheading_kernel'));
     $this->state->set('slideout_panel_heading_kernel', $form_state->getValue('slideout_panel_heading_kernel'));
     $this->state->set('footer_copyright', $form_state->getValue('footer_copyright'));
     $this->state->set('contact_options_email_address', $form_state->getValue('contact_options_email_address'));

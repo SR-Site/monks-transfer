@@ -180,6 +180,11 @@ class InitResource extends ResourceBase {
             'heading' => $this->state->get('slideout_panel_heading'),
             'submitLabel' => 'Send',
           ],
+          'contactKernel' => [
+            'subHeading' => $this->state->get('slideout_panel_subheading_kernel'),
+            'heading' => $this->state->get('slideout_panel_heading_kernel'),
+            'submitLabel' => 'Send',
+          ],
         ],
       ],
       'language' => [
