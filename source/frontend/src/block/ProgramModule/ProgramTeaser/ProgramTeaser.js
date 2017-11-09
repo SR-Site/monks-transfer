@@ -25,13 +25,11 @@ export default {
 			this.isReady();
 		},
 		handleVideoClick() {
-			if (this.data.video) {
-				this.$store.dispatch(VideoOverlayMutationTypes.SHOW, {
-					video: this.data.video,
-					title: this.data.heading,
-					poster: this.data.image,
-				});
-			}
+			this.$store.dispatch(VideoOverlayMutationTypes.SHOW, {
+				video: this.data.video,
+				title: this.data.heading,
+				poster: this.data.image,
+			});
 		},
 	},
 };

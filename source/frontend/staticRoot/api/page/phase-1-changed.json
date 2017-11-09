@@ -346,6 +346,7 @@
 		  "marginTop": 2,
 		  "items": [
 			{
+			  "target": "/program/program-name",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -364,6 +365,7 @@
 			  "tags": []
 			},
 			{
+			  "target": "/program/program-name",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -378,6 +380,7 @@
 			  "tags": []
 			},
 			{
+			  "target": "/program/program-name",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -388,6 +391,7 @@
 			  "tags": []
 			},
 			{
+			  "target": "/program/program-name",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -402,6 +406,7 @@
 			  "tags": []
 			},
 			{
+			  "target": "/program/program-name",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -420,6 +425,7 @@
 			  "tags": []
 			},
 			{
+			  "target": "/program/program-name",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -434,6 +440,7 @@
 			  "tags": []
 			},
 			{
+			  "target": "/program/program-name",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -448,6 +455,7 @@
 			  "tags": []
 			},
 			{
+			  "target": "/program/program-name",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",

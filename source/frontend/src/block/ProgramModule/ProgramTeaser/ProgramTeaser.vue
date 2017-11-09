@@ -19,7 +19,7 @@
 					ref="playButton"
 					@click="handleVideoClick"/>
 			</figure>
-			<a :class="$style.description" @click="handleVideoClick">
+			<a :class="$style.description" v-link="{path: data.target, type: 0}">
 				<div>
 					<h2 :class="$style.heading" class="heading-07" v-html="data.heading" ref="header"></h2>
 					<p :class="$style.copy" class="copy copy-03" v-html="truncatedParagraph" ref="paragraph"></p>
