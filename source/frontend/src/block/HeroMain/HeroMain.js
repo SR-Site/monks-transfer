@@ -84,6 +84,9 @@ export default {
 				});
 			}
 		},
+		getVideoElement() {
+			return this._videoElements.shift();
+		},
 		openNextStep(index) {
 			this.changeBackgroundImage(index);
 
@@ -132,5 +135,9 @@ export default {
 			}
 			return Promise.resolve();
 		},
+	},
+	beforeDestroy() {
+		this._videoElements.length = 0;
+		this._videoElement = null;
 	},
 };
