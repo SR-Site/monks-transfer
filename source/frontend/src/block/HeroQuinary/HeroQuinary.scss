@@ -1,0 +1,102 @@
+:local {
+	.hero-quinary {
+		@include aspect-ratio(1440px, 520px);
+
+		.primary-background-triangle {
+			@include position(25%, auto, auto, $sizeGrid * -15)
+		}
+	}
+
+	.image {
+		@include size(470px, 350px);
+		@include position(50%, $sizeGrid * 2, auto, auto);
+		transform: translateY(-50%);
+		position: absolute;
+	}
+
+	.content {
+		@include size(33%, auto);
+		@include position(25%, auto, $sizeGrid, $sizeGrid * 5);
+		position: absolute;
+		color: $colorWhite;
+		padding: $sizeGrid 0 0 0;
+	}
+
+	.sub-heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	@include respond-to(LARGE) {
+		.image {
+			@include size(235px, 175px);
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.hero-quinary {
+			@include aspect-ratio(1440px, 750px);
+
+			.primary-background-triangle {
+				left: $sizeGrid * -18;
+			}
+		}
+
+		.content {
+			width: 45%;
+			left: $sizeGrid * 2;
+		}
+
+		.image {
+			@include size(235px, 175px);
+			right: $sizeGrid;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.hero-quinary {
+			@include size(100%, auto);
+			padding: mobile-size($sizeGrid * 2);
+
+			&:before {
+				display: none;
+			}
+
+			.primary-background-triangle {
+				display: none;
+			}
+		}
+
+		.image {
+			@include position(auto, auto, auto, auto);
+			@include size(100%, auto);
+			@include aspect-ratio(320px, 240px);
+			position: relative;
+			transform: none;
+			max-width: 320px;
+			margin: 0 auto;
+		}
+
+		.content {
+			@include position(auto, auto, auto, auto);
+			position: relative;
+			transform: none;
+			width: auto;
+			text-align: center;
+			padding: 0 mobile-size($sizeGrid * 2);
+		}
+
+		.image,
+		.heading,
+		.copy {
+			margin-bottom: mobile-size($sizeGrid);
+		}
+	}
+}

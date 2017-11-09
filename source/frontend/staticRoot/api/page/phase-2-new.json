@@ -55,6 +55,32 @@
 		}
 	  },
 	  {
+		"id": "heroQuinary",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "background": {
+			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"alt": "Background image alt text"
+		  },
+		  "image": {
+			"normal": "http://via.placeholder.com/940x700",
+			"small": "http://via.placeholder.com/940x700",
+			"alt": "Background image alt text"
+		  },
+		  "heading": "Ads Everywhere",
+		  "paragraph": "Nearly 90% of the NBA Playoffs leading up to the NBA Finals are on Cable, not including ESPN Deportes, which airs the Finals in Spanish. The Finals begin 6/1 and run through 6/18.",
+		  "link": {
+			"label": "Download product one sheet",
+			"title": "Download product one sheet",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
 		"id": "downloadFileB",
 		"data": {
 		  "overlap": false,

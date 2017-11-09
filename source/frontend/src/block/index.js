@@ -24,6 +24,7 @@ export default {
 	HeroSecondary: () => import('./HeroSecondary'),
 	HeroTertiary: () => import('./HeroTertiary'),
 	HeroQuaternary: () => import('./HeroQuaternary'),
+	HeroQuinary: () => import('./HeroQuinary'),
 	HowToAdvertise: () => import('./HowToAdvertise'),
 	ImageCallToActions: () => import('./ImageCallToActions'),
 	ImageCarousel: () => import('./ImageCarousel'),
