@@ -52,12 +52,15 @@ class InitResource extends ResourceBase {
   protected $menuLinkTree;
 
   /**
-   * @var CacheableMetadata
+   * CacheableMetadata.
+   *
+   * @var \Drupal\Core\Cache\CacheableMetadata
+   *   CacheableMetadata.
    */
   protected $cacheableMetadata;
 
   /**
-   * State service
+   * State service.
    *
    * @var \Drupal\Core\State\StateInterface
    */
@@ -81,18 +84,31 @@ class InitResource extends ResourceBase {
    * InitResource constructor.
    *
    * @param array $configuration
+   *   Configuration.
    * @param string $plugin_id
+   *   Plugin ID.
    * @param mixed $plugin_definition
+   *   Plugin definition.
    * @param array $serializer_formats
+   *   Serializer format.
    * @param \Psr\Log\LoggerInterface $logger
+   *   Logger.
    * @param \Symfony\Component\HttpFoundation\Request $request
+   *   Request.
    * @param \Drupal\mm_rest\Plugin\RestEntityProcessorManager $entity_processor
+   *   Entity processor manager.
    * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
+   *   Configuration factory.
    * @param \Drupal\mm_rest\CacheableMetaDataCollectorInterface $cacheable_metadata_collector
+   *   Cacheable metadata collector.
    * @param \Drupal\Core\Menu\MenuLinkTreeInterface $menu_link_tree
+   *   Menu link tree.
    * @param \Drupal\Core\State\StateInterface $state
+   *   State.
    * @param \Drupal\Core\Access\CsrfTokenGenerator $csrf_token
+   *   CSRF Token.
    * @param \Drupal\Core\Path\AliasManagerInterface $path_alias_manager
+   *   Path alias manager.
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, Request $request, RestEntityProcessorManager $entity_processor, ConfigFactoryInterface $configFactory, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, MenuLinkTreeInterface $menu_link_tree, StateInterface $state, CsrfTokenGenerator $csrf_token, AliasManagerInterface $path_alias_manager) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger, $request, $entity_processor, $configFactory, $cacheable_metadata_collector);
@@ -104,7 +120,7 @@ class InitResource extends ResourceBase {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritdoc}
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static(
@@ -125,7 +141,7 @@ class InitResource extends ResourceBase {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritdoc}
    */
   protected function responseData() {
     // As this endpoint do not return an Entity object, it does not implement
@@ -134,7 +150,7 @@ class InitResource extends ResourceBase {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritdoc}
    */
   public function get() {
     $data = [
@@ -155,10 +171,7 @@ class InitResource extends ResourceBase {
         'footer' => [
           'copyright' => $this->state->get('footer_copyright'),
           'mainLinks' => $this->getMenu('footer'),
-          'secondaryLinks' => [
-            $this->getMenu('footer-secondary-1'),
-            $this->getMenu('footer-secondary-2'),
-          ],
+          'secondaryLinks' => $this->getMenu('footer-secondary-1'),
           'social' => $this->getSocialNetworks(),
         ],
         'slideOutPanel' => [
@@ -188,6 +201,7 @@ class InitResource extends ResourceBase {
    * Returns an array of pre configured routers.
    *
    * @return array
+   *   Routers.
    */
   protected function getRouters() {
     $routers = [
@@ -202,8 +216,11 @@ class InitResource extends ResourceBase {
   /**
    * Helper function for transform internal/external links into URLs.
    *
-   * @param $url
+   * @param string $url
+   *   Url.
+   *
    * @return null|string
+   *   Url.
    */
   protected function urlHelper($url) {
     if (empty($url)) {
@@ -223,15 +240,17 @@ class InitResource extends ResourceBase {
   }
 
   /**
-   * Retrieves Social Networks and Menu links with their children sorted by
-   * weight from the Drupal backend.
+   * Retrieves Social Networks and Menu links with their children sorted by weight from the Drupal backend.
    *
    * @param string $menu
-   * @return array Menus with their children.
+   *   Menu name.
+   *
+   * @return array
+   *   Menus with their children.
    */
   protected function getMenu($menu) {
     $menu_items = [];
-    $menu_tree = $this->menuLinkTree->load($menu,  new MenuTreeParameters());
+    $menu_tree = $this->menuLinkTree->load($menu, new MenuTreeParameters());
 
     // Perform some access check and sorting manipulations on the given menu tree.
     $manipulators = [
@@ -259,25 +278,29 @@ class InitResource extends ResourceBase {
   }
 
   /**
-   * Parses a MenuLinkTreeElement recursively getting the name, route and
-   * children of it and it's subtree. while taking into account cacheableMetatadata
-   * from menu links.
+   * Parses a MenuLinkTreeElement recursively getting the name, route and children of it and it's subtree.
    *
-   * @param MenuLinkTreeElement $menu_item
-   * @param bool $child
+   * While taking into account cacheableMetatadata from menu links.
+   *
+   * @param \Drupal\Core\Menu\MenuLinkTreeElement $menu_item
+   *   Menu item.
+   * @param string $menu
+   *   Menu name.
+   *
    * @return array|null
+   *   Menu items array.
    */
   protected function prepareMenuLink(MenuLinkTreeElement $menu_item, $menu) {
     $parsed_array = NULL;
 
     if ($menu_item->access instanceof AccessResultAllowed && $menu_item->link->isEnabled()) {
       $link = $menu_item->link;
-      $url = $link->getUrlObject(false);
+      $url = $link->getUrlObject(FALSE);
 
       // Stop Language processor. URLs in the main menu shouldn't be translated.
       $url->setOption('language', new Language());
 
-      $url = $url->toString(true)->getGeneratedUrl();
+      $url = $url->toString(TRUE)->getGeneratedUrl();
 
       $parsed_array = [
         "label" => $link->getTitle(),
@@ -301,6 +324,7 @@ class InitResource extends ResourceBase {
    * Returns the Spectrum social networks.
    *
    * @return array
+   *   Array of social networks.
    */
   protected function getSocialNetworks() {
     $items = [];
@@ -323,12 +347,9 @@ class InitResource extends ResourceBase {
   }
 
   /**
-   * Add Cache dependency when a node is created or modified, when FE menu is
-   * edited and Spin settings are updated.
+   * Add Cache dependency when a node is created or modified, when FE menu is edited and Spin settings are updated.
    */
   public function addCacheableDependency() {
-    //$config = $this->config->get('spin_settings.settings');
-
     parent::addCacheableDependency();
 
     $meta_data = new CacheableMetadata();
