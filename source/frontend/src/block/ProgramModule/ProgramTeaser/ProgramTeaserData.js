@@ -6,7 +6,6 @@ import PropVideo from '../../../data/prop-type/media/PropVideo';
 /**
  * @param {description} heading The heading displayed on the persona
  * @param {description} paragraph The paragraph displayed on the persona
- * @param {description} target The url target of the program
  * @param {description} stats The stats for the program
  * @param {description} stats.percentage The percentage level
  * @param {description} stats.demographic The demographic label
@@ -17,7 +16,6 @@ import PropVideo from '../../../data/prop-type/media/PropVideo';
 export default {
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
-	target: VueTypes.string.isRequired,
 	stats: VueTypes.shape(
 		{
 			percentage: VueTypes.number.isRequired,
