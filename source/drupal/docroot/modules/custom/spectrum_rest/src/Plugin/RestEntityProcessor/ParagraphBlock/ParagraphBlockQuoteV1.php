@@ -29,7 +29,7 @@ class ParagraphBlockQuoteV1 extends SpectrumRestEntityProcessorBase {
       "id" => 'quote',
       "data" => $data + [
         "description" => $this->fieldProcessor->getFieldData($entity->get('field_description')),
-        "name" => $this->fieldProcessor->getFieldData($entity->get('field_title')),
+        "author" => $this->fieldProcessor->getFieldData($entity->get('field_title')),
         "quote" => $this->fieldProcessor->getFieldData($entity->get('field_label')),
         "image" => $this->image($entity->get('field_image')),
       ],
