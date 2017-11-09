@@ -1,0 +1,147 @@
+:local {
+	.image-with-content-b {
+		@include size(100%, auto);
+		position: relative;
+	}
+
+	.row {
+		@include aspect-ratio(1200px, 480px);
+	}
+
+	.image {
+		overflow: hidden;
+	}
+
+	.triangle-background {
+		top: 85%;
+		transform: translateY(-50%);
+		position: absolute;
+	}
+
+	.content {
+		@include size(35%, auto);
+		position: absolute;
+		color: $colorWhite;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid;
+		line-height: 1.75
+	}
+
+	.alignment-left {
+		.triangle-background {
+			@include arrow(right, rgba(2, 87, 142, 0.75), $sizeGrid * 60);
+			left: $sizeGrid *  -7;
+		}
+
+		.content {
+			@include position(auto, auto, $sizeGrid * 2, $sizeGrid * 2);
+		}
+	}
+
+	.alignment-right {
+		.triangle-background {
+			@include arrow(left, rgba(2, 87, 142, 0.75), $sizeGrid * 60);
+			right: $sizeGrid * -7;
+		}
+
+		.content {
+			@include position(auto, $sizeGrid * 2, $sizeGrid * 2, auto);
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.content {
+			width: 75%;
+		}
+
+		.alignment-left {
+			.content {
+				left: $sizeGrid;
+				bottom: $sizeGrid;
+			}
+		}
+
+		.alignment-right {
+			.content {
+				right: $sizeGrid;
+				bottom: $sizeGrid;
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.row {
+			@include size(100%, 567px);
+			overflow: hidden;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.content {
+
+			&:before {
+				@include size(100%);
+				@include position(auto, auto, 0, 0);
+				background: rgba(2, 87, 142, 0.75);
+				position: absolute;
+				content: '';
+				transform-origin: bottom center;
+			}
+		}
+
+		.alignment-left,
+		.alignment-right {
+			.content {
+				@include size(100%, auto);
+				@include position(auto, auto, 0, 0);
+				padding: $sizeGrid * 2;
+			}
+
+			.triangle-background {
+				display: none;
+			}
+		}
+
+		.alignment-left {
+			.content:before {
+				transform: rotate(15deg) translate(0%, 80%) scale(2);
+			}
+		}
+
+		.alignment-right {
+			.triangle-background {
+				display: none;
+			}
+
+			.content:before {
+				transform: rotate(-15deg) translate(0%, 80%) scale(2);
+			}
+		}
+	}
+
+	@include respond-to(X_SMALL) {
+		.alignment-left {
+			.content:before {
+				transform: rotate(15deg) translate(0%, 90%) scale(2);
+			}
+		}
+
+		.alignment-right {
+			.triangle-background {
+				display: none;
+			}
+
+			.content:before {
+				transform: rotate(-15deg) translate(0%, 90%) scale(2);
+			}
+		}
+	}
+}

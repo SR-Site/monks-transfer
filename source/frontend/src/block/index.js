@@ -30,6 +30,7 @@ export default {
 	ImageCarousel: () => import('./ImageCarousel'),
 	ImageList: () => import('./ImageList'),
 	ImageWithContent: () => import('./ImageWithContent'),
+	ImageWithContentB: () => import('./ImageWithContentB'),
 	Info: () => import('./Info'),
 	Infographic: () => import('./Infographic'),
 	Latest: () => import('./Latest'),
