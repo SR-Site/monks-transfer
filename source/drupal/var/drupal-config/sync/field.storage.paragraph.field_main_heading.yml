@@ -1,14 +1,17 @@
-uuid: 0bfc5c9f-f368-411b-a07b-92d8bfde45b6
+uuid: e1ef6211-64a0-4859-bdac-470cbe3c8ebb
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_cropped_image
-field_name: field_cropped_image
+id: paragraph.field_main_heading
+field_name: field_main_heading
 entity_type: paragraph
-type: boolean
-settings: {  }
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

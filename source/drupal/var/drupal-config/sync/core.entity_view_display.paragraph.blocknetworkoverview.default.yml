@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.blocknetworkoverview.field_items
+    - field.field.paragraph.blocknetworkoverview.field_main_heading
     - field.field.paragraph.blocknetworkoverview.field_styles
     - paragraphs.paragraphs_type.blocknetworkoverview
   module:
@@ -21,6 +22,13 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+  field_main_heading:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   field_styles:
     weight: 0
     label: above
