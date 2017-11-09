@@ -10,7 +10,7 @@ class HeroTertiaryTransitionController extends AbstractTransitionController {
 		const heroTertiaryComponent: any = this.viewModel;
 
 		this.transitionInTimeline.fromTo(
-			this.viewModel.$el,
+			heroTertiaryComponent.$el,
 			1,
 			{
 				autoAlpha: 0,

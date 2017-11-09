@@ -1,3 +1,42 @@
 :local {
+	.hero-quaternary {
+		@include aspect-ratio(1440px, 480px);
 
+		.primary-background-triangle {
+			@include position(25%, auto, auto, $sizeGrid * -8)
+		}
+	}
+
+	.image {
+		@include size(240px, 240px);
+		@include offset($sizeGrid, 25%);
+		transform: translateY(-50%);
+		position: absolute;
+	}
+
+	.content {
+		@include size(33%, auto);
+		@include position(25%, auto, $sizeGrid, $sizeGrid * 12);
+		position: absolute;
+		color: $colorWhite;
+		padding: $sizeGrid 0 0 0;
+	}
+
+	.sub-heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	@include respond-to(SMALL) {
+		.hero-quaternary {
+			@include aspect-ratio(640px, 360px);
+		}
+	}
 }

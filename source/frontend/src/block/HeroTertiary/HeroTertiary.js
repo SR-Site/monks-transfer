@@ -1,12 +1,12 @@
-import VueTypes from 'vue-types';
 import bowser from 'bowser';
-import { AbstractBlockComponent } from 'vue-block-system';
 import ImageHelper from 'util/media/ImageHelper';
-import HeroTertiaryTransitionController from './HeroTertiaryTransitionController';
-import HeroTertiaryData from './HeroTertiaryData';
-import VideoElement from '../../lib/media/VideoElement';
-import VideoType from '../../data/enum/VideoType';
+import { AbstractBlockComponent } from 'vue-block-system';
+import VueTypes from 'vue-types';
 import MediaCrossFader from '../../component/MediaCrossFader/MediaCrossFader';
+import VideoType from '../../data/enum/VideoType';
+import VideoElement from '../../lib/media/VideoElement';
+import HeroTertiaryData from './HeroTertiaryData';
+import HeroTertiaryTransitionController from './HeroTertiaryTransitionController';
 
 export default {
 	name: 'HeroTertiary',
