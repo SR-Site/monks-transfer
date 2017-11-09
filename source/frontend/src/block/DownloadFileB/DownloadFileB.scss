@@ -51,6 +51,28 @@
 	}
 
 	.copy {
-		color: #d5d6d7;
+		color: $colorQuaternary;
+	}
+
+	@include respond-to(SMALL) {
+		.content {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: mobile-size($sizeGrid * 2) mobile-size($sizeGrid * 2) mobile-size($sizeGrid * 4);
+		}
+
+		.description {
+			border-left: 0;
+			padding: 0;
+		}
+
+		.heading,
+		.copy {
+			margin-bottom: mobile-size($sizeGrid);
+		}
+
+		.image {
+			display: none;
+		}
 	}
 }
