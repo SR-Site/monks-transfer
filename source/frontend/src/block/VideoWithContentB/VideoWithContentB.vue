@@ -47,7 +47,7 @@
 						:label="data.link.label"
 						:class="$style.button"
 						:type="ButtonType.LINK"
-						:theme="Theme.LIGHT"
+						:theme="Theme.DARK"
 						:link="{
 							type: BackendLinkTypeMap[data.link.type],
 							target: data.link.target,

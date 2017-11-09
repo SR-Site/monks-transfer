@@ -1,2 +1,63 @@
 :local {
+
+	.html-content {
+		h1,
+		h2,
+		h3,
+		h4 {
+			@extend %reset-bmp;
+			padding-bottom: $sizeGrid/2;
+			font: 600 1.8rem / 1.16 $fontOpenSans;
+
+			strong {
+				font-weight: 600;
+			}
+		}
+
+		p {
+			display: block;
+			font: 400 1.8rem / 1.625 $fontOpenSans;
+			margin-bottom: $sizeGrid;
+
+			img {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.content {
+		width: 60%;
+		background: $colorWhite;
+		padding: $sizeGrid;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid
+	}
+
+	@include respond-to(MEDIUM) {
+		.content {
+			width: 80%;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.content {
+			width: 100%;
+		}
+		.html-content {
+			h1,
+			h2,
+			h3,
+			h4 {
+				font-size: mobile-size(3.5rem);
+				padding-bottom: $sizeGrid;
+			}
+
+			p {
+				font-size: mobile-size(2.8rem);
+			}
+		}
+	}
 }
