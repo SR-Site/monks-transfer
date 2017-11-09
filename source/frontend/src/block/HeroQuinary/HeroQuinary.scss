@@ -36,7 +36,7 @@
 
 	@include respond-to(LARGE) {
 		.image {
-			@include size(235px, 175px);
+			@include size(376px, 280px);
 		}
 	}
 
