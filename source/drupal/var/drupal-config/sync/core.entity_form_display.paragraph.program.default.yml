@@ -8,8 +8,8 @@ dependencies:
     - field.field.paragraph.program.field_image
     - field.field.paragraph.program.field_label
     - field.field.paragraph.program.field_paragraph
+    - field.field.paragraph.program.field_percentage
     - field.field.paragraph.program.field_tags
-    - field.field.paragraph.program.field_title
     - field.field.paragraph.program.field_video
     - image.style.thumbnail
     - paragraphs.paragraphs_type.program
@@ -50,6 +50,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+  field_percentage:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
   field_tags:
     weight: 6
     settings:
@@ -58,13 +64,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
-  field_title:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   field_video:
     weight: 5
     settings:

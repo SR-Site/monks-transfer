@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.blockimagewithcontent.field_alignment
-    - field.field.paragraph.blockimagewithcontent.field_cropped_image
     - field.field.paragraph.blockimagewithcontent.field_heading
     - field.field.paragraph.blockimagewithcontent.field_image
     - field.field.paragraph.blockimagewithcontent.field_link
@@ -28,15 +27,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
-  field_cropped_image:
-    weight: 0
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
   field_heading:
     weight: 8
     label: above

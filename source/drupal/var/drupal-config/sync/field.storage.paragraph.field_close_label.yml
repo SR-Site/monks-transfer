@@ -1,11 +1,11 @@
-uuid: 3fd1ebd0-4661-4f2e-9382-b41af14fc603
+uuid: 54aeacc2-44d8-4292-9f54-277156418d86
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_apply_label
-field_name: field_apply_label
+id: paragraph.field_close_label
+field_name: field_close_label
 entity_type: paragraph
 type: string
 settings:

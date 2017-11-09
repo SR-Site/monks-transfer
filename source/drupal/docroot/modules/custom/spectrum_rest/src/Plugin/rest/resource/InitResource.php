@@ -180,6 +180,11 @@ class InitResource extends ResourceBase {
             'heading' => $this->state->get('slideout_panel_heading'),
             'submitLabel' => 'Send',
           ],
+          'contactKernel' => [
+            'subHeading' => $this->state->get('slideout_panel_subheading_kernel'),
+            'heading' => $this->state->get('slideout_panel_heading_kernel'),
+            'submitLabel' => 'Send',
+          ],
         ],
       ],
       'language' => [
@@ -309,11 +314,23 @@ class InitResource extends ResourceBase {
         "type" => UrlHelper::isExternal($url) ? self::MENU_LINK_EXTERNAL : self::MENU_LINK_INTERNAL,
       ];
 
-      // Temporally solution.
-      if ($menu == 'main') {
+      // Display child items.
+      if (!empty($menu_item->subtree) && $menu == 'main') {
         $parsed_array = [
-          "link" => $parsed_array,
+          'section' => $link->getTitle(),
+          'links' => [
+            [
+              "label" => $link->getTitle(),
+              "title" => $link->getTitle(),
+              "target" => $url,
+              "type" => UrlHelper::isExternal($url) ? self::MENU_LINK_EXTERNAL : self::MENU_LINK_INTERNAL,
+            ]
+          ]
         ];
+        foreach ($menu_item->subtree as $subItem) {
+          /** @var \Drupal\Core\Menu\MenuLinkTreeElement $subItem */
+          $parsed_array['links'][] = $this->prepareMenuLink($subItem, $menu);
+        }
       }
     }
 

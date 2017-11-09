@@ -35,10 +35,9 @@ class ParagraphBlockFilterContentV1 extends SpectrumRestEntityProcessorBase {
     $data = [
       "id" => 'filterContent',
       "data" => $data + [
-        "loadMoreLabel" => $this->fieldProcessor->getFieldData($entity->get('field_load_more_label')),
         "filters" => $filters,
-        "applyLabel" => $this->fieldProcessor->getFieldData($entity->get('field_apply_label')),
         "filterLabel" => $this->fieldProcessor->getFieldData($entity->get('field_filter_label')),
+        'closeLabel' => $this->fieldProcessor->getFieldData($entity->get('field_close_label')),
         "endpoint" => self::ENDPOINT_SEARCH,
       ],
     ];
@@ -50,15 +49,25 @@ class ParagraphBlockFilterContentV1 extends SpectrumRestEntityProcessorBase {
    * Get Filter's options.
    *
    * @return array
+   *   Filters array.
    */
   protected function getFilterOptions() {
     $filters = [];
-    $vocabularies = ['category', 'thought_leadership', 'product_type', 'document_type'];
+    $vocabularies = [
+      'category',
+      'thought_leadership',
+      'product_type',
+      'document_type',
+    ];
 
     foreach ($vocabularies as $index => $vid) {
       /** @var \Drupal\taxonomy\Entity\Vocabulary $vocabulary */
-      $vocabulary = \Drupal::entityTypeManager()->getStorage('taxonomy_vocabulary')->load($vid);
-      $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
+      $vocabulary = \Drupal::entityTypeManager()
+        ->getStorage('taxonomy_vocabulary')
+        ->load($vid);
+      $terms = \Drupal::entityTypeManager()
+        ->getStorage('taxonomy_term')
+        ->loadTree($vid);
 
       $filter = [
         'type' => $index,

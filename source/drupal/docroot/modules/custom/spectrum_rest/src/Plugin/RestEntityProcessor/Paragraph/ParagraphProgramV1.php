@@ -28,10 +28,10 @@ class ParagraphProgramV1 extends SpectrumRestEntityProcessorBase {
       "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
       "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
       "stats" => [
-        "ageRange" => $this->fieldProcessor->getFieldData($entity->get('field_title')),
+        "percentage" => $this->fieldProcessor->getFieldData($entity->get('field_percentage')),
         "demographic" => $this->fieldProcessor->getFieldData($entity->get('field_label')),
       ],
-      "video" => $entity->get('field_video')->isEmpty() ? null : $this->fieldProcessor->getFieldData($entity->get('field_video')),
+      "video" => $entity->get('field_video')->isEmpty() ? NULL : $this->fieldProcessor->getFieldData($entity->get('field_video')),
       "tags" => $this->getItems($entity->get('field_tags'))
     ];
 

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.blocknetworkoverview.field_items
+    - field.field.paragraph.blocknetworkoverview.field_main_heading
     - field.field.paragraph.blocknetworkoverview.field_styles
     - paragraphs.paragraphs_type.blocknetworkoverview
   module:
@@ -15,7 +16,7 @@ third_party_settings:
       children:
         - field_styles
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: details
       format_settings:
         id: ''
@@ -39,6 +40,13 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+  field_main_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_styles:
     weight: 1
     settings:

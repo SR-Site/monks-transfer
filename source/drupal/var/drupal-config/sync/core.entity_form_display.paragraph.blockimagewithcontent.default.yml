@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.blockimagewithcontent.field_alignment
-    - field.field.paragraph.blockimagewithcontent.field_cropped_image
     - field.field.paragraph.blockimagewithcontent.field_heading
     - field.field.paragraph.blockimagewithcontent.field_image
     - field.field.paragraph.blockimagewithcontent.field_link
@@ -54,12 +53,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-  field_cropped_image:
-    weight: 2
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
   field_heading:
     weight: 0
     settings:
