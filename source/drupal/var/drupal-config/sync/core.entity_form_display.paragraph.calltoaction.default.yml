@@ -7,7 +7,6 @@ dependencies:
     - field.field.paragraph.calltoaction.field_image
     - field.field.paragraph.calltoaction.field_link
     - field.field.paragraph.calltoaction.field_paragraph
-    - field.field.paragraph.calltoaction.field_theme
     - image.style.thumbnail
     - paragraphs.paragraphs_type.calltoaction
   module:
@@ -66,11 +65,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-  field_theme:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
 hidden:
   created: true
   status: true
