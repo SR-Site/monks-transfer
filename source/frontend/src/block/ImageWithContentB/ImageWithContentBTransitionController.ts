@@ -1,7 +1,7 @@
 import { AbstractTransitionController } from 'vue-transition-component';
-import { Expo } from 'gsap';
+import { Expo, Linear } from 'gsap';
 
-class DownloadFileATransitionController extends AbstractTransitionController {
+class ImageWithContentBTransitionController extends AbstractTransitionController {
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
@@ -9,60 +9,59 @@ class DownloadFileATransitionController extends AbstractTransitionController {
 	 * */
 	protected setupTransitionInTimeline(): void {
 		this.transitionInTimeline.fromTo(
-			this.viewModel.$refs.heading,
+			this.viewModel.$refs.image,
 			0.8,
 			{
-				y: 50,
 				autoAlpha: 0,
 			},
 			{
-				y: 0,
+				autoAlpha: 1,
+				ease: Linear.easeNone,
+			},
+		);
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.background,
+			0.8,
+			{
+				autoAlpha: 0,
+			},
+			{
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
+			0
+		);
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.heading,
+			0.8,
+			{
+				autoAlpha: 0,
+				y: 50,
+			},
+			{
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut,
+			},
+			'=-0.5',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.copy,
 			0.8,
 			{
-				y: 50,
 				autoAlpha: 0,
+				y: 50,
 			},
 			{
-				y: 0,
 				autoAlpha: 1,
+				y: 0,
 				ease: Expo.easeOut,
 			},
 			'=-0.5',
 		);
-		this.transitionInTimeline.fromTo(
-			this.viewModel.$refs.fileDescription,
-			0.8,
-			{
-				y: 50,
-				autoAlpha: 0,
-			},
-			{
-				y: 0,
-				autoAlpha: 1,
-				ease: Expo.easeOut,
-			},
-			'=-0.5',
-		);
-		this.transitionInTimeline.fromTo(
-			(<any>this.viewModel.$refs.button).$el,
-			0.8,
-			{
-				y: 50,
-				autoAlpha: 0,
-			},
-			{
-				y: 0,
-				autoAlpha: 1,
-				ease: Expo.easeOut,
-			},
-			'=-0.5',
-		);
+		if (this.viewModel.hasChild('ButtonPrimary')) {
+			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '=-0.5');
+		}
 	}
 
 	/**
@@ -70,7 +69,8 @@ class DownloadFileATransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {}
+	protected setupTransitionOutTimeline(): void {
+	}
 }
 
-export default DownloadFileATransitionController;
+export default ImageWithContentBTransitionController;

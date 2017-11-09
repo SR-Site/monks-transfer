@@ -1,0 +1,53 @@
+:local {
+	.button-quinary {
+		@include size(auto, 5rem);
+		font: 800 1rem / calc(5rem - 2px) $fontOpenSans;
+		color: $colorPrimary;
+		text-transform: uppercase;
+		padding: 0 $sizeGrid;
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+		z-index: 0;
+		transition: background 0.2s $easeLinear;
+
+		// Light Theme
+		&.theme-light {
+			background: $colorWhite;
+			color: $colorPrimary;
+
+			@include hover() {
+				border-color: #fff;
+			}
+		}
+
+		&.theme-dark {
+			background: $colorTertiary;
+			color: $colorWhite;
+		}
+	}
+
+	.label {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	@include respond-to(SMALL) {
+		.button-quinary {
+			@include size(auto, mobile-size(10rem));
+			font-size: mobile-size(1.8rem);
+			line-height: mobile-size(10rem);
+			padding: 0 $sizeGrid * 2;
+		}
+	}
+}
+
+@include hover('.button-quinary') {
+	&.theme-light {
+		background: darken($colorWhite, 5%);
+	}
+
+	&.theme-dark {
+		background: darken($colorTertiary, 5%);
+	}
+}

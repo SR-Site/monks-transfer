@@ -10,8 +10,9 @@
 				<div :class="$style.bottom">
 					<p class="copy copy-02" :class="$style.fileDescription" v-html="data.fileDescription"
 					   ref="fileDescription"></p>
-					<ButtonPrimary
-						componentId="ButtonPrimary"
+					<ButtonQuinary
+						componentId="ButtonQuinary"
+						ref="button"
 						v-track="{
 							[TrackingProvider.GOOGLE_ANALYTICS]: {
 								category: 'downloadFileA',

@@ -40,27 +40,6 @@ class ImageWithContentTransitionController extends AbstractTransitionController 
 			},
 			0,
 		);
-		//
-		// this.transitionInTimeline.from(
-		// 	this.viewModel.$refs.heading,
-		// 	0.8,
-		// 	{
-		// 		opacity: 0,
-		// 		ease: Linear.easeNone,
-		// 	},
-		// 	1.1,
-		// );
-		//
-		// this.transitionInTimeline.from(
-		// 	this.viewModel.$refs.copy,
-		// 	0.8,
-		// 	{
-		// 		opacity: 0,
-		// 		ease: Linear.easeNone,
-		// 	},
-		// 	1.3,
-		// );
-		//
 		if (this.viewModel.hasChild('ButtonPrimary')) {
 			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), 1.5);
 		}
