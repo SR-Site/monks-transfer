@@ -9,8 +9,7 @@
 
 	.image {
 		@include size(240px, 240px);
-		@include offset($sizeGrid, 25%);
-		transform: translateY(-50%);
+		@include offset($sizeGrid, $sizeGrid);
 		position: absolute;
 	}
 
@@ -34,9 +33,59 @@
 		margin-bottom: $sizeGrid / 2;
 	}
 
+	@include respond-to(X_LARGE) {
+
+
+		.image {
+			@include size(200px, 200px);
+		}
+	}
+
+	@include respond-to(LARGE) {
+		.hero-quaternary {
+			@include aspect-ratio(1440px, 600px);
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.hero-quaternary {
+			@include aspect-ratio(1440px, 700px);
+
+			.primary-background-triangle {
+				left: $sizeGrid * -10;
+			}
+		}
+
+		.content {
+			width: 50%;
+			left: $sizeGrid * 10;
+		}
+
+		.image {
+			@include size(180px, 180px);
+		}
+	}
+
 	@include respond-to(SMALL) {
 		.hero-quaternary {
-			@include aspect-ratio(640px, 360px);
+			@include size(100%, 520px);
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.image {
+			@include size(100px, 100px);
+			top: 20%;
+			transform: translateY(-50%);
+		}
+
+		.content {
+			top: 40%;
+			width: auto;
+			left: mobile-size($sizeGridMobile * 2);
+			right: mobile-size($sizeGridMobile * 2);
 		}
 	}
 }
