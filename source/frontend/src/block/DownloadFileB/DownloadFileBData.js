@@ -1,5 +1,6 @@
 import VueTypes from 'vue-types';
 import PropLink from '../../data/prop-type/action/PropLink';
+import PropImage from '../../data/prop-type/media/PropImage';
 
 /**
  * @param {description} marginTop This defines the amount of spacing at the top of the block
@@ -18,7 +19,7 @@ export default {
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
 	heading: VueTypes.string.isRequired,
-	paragraph: VueTypes.string.isRequired,
 	fileDescription: VueTypes.string.isRequired,
 	link: VueTypes.shape(PropLink).isRequired,
+	image: VueTypes.shape(PropImage).isRequired,
 };

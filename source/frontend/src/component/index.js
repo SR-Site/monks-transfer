@@ -15,6 +15,7 @@ import ResponsiveImage from './ResponsiveImage/ResponsiveImage';
 import DashedPaginator from './DashedPaginator/DashedPaginator';
 import Spinner from './Spinner/Spinner';
 import ButtonQuaternary from './button/ButtonQuaternary/ButtonQuaternary';
+import ButtonQuinary from './button/ButtonQuinary/ButtonQuinary';
 
 // add components you want to register globally
 export default {
@@ -32,6 +33,7 @@ export default {
 	ButtonTag,
 	ButtonTertiary,
 	ButtonQuaternary,
+	ButtonQuinary,
 	ResponsiveImage,
 	DashedPaginator,
 	Spinner,

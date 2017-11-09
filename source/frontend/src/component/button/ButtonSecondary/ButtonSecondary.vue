@@ -6,7 +6,7 @@
 		@click="handleClick"
 		class="button"
 		:title="title"
-		:class="[$style.buttonSecondary, { [$style[`theme-${theme}`]]: theme !== void 0 }]">
+		:class="[$style.buttonSecondary, $style[ClassNameHelper.parseTheme(theme)]]">
 		<span :class="$style.label">{{label}}</span>
 	</button>
 </template>

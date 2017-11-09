@@ -55,6 +55,27 @@
 		}
 	  },
 	  {
+		"id": "downloadFileB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Download the Ads Everywhere One Sheet",
+		  "fileDescription": "1.5mb PDF Lorem ipsum dolor sit amet.",
+		  "image": {
+			"normal": "http://via.placeholder.com/240x240",
+			"small": "http://via.placeholder.com/240x240",
+			"alt": "File type image"
+		  },
+		  "link": {
+			"label": "Download",
+			"title": "Download",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
 		"id": "blogPostB",
 		"data": {
 		  "overlap": false,
