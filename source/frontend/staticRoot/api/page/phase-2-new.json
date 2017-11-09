@@ -77,28 +77,6 @@
 		}
 	  },
 	  {
-		"id": "imageWithContentB",
-		"data": {
-		  "overlap": false,
-		  "windowed": false,
-		  "marginTop": 2,
-		  "link": {
-			"label": "Featured Programs",
-			"title": "Featured Programs",
-			"target": "\/featured-programs",
-			"type": 0
-		  },
-		  "background": {
-			"normal": "http://via.placeholder.com/1280x720",
-			"small": "http://via.placeholder.com/1280x720",
-			"alt": "networks and programming"
-		  },
-		  "paragraph": "<p>With the majority of consumers using multiple devices throughout the day, it’s never been more <strong>essential to have</strong> a multi-screen advertising strategy. When combined, TV and Digital work together to make your ads more memorable, even doubling your message recall when the same ad runs on both TV and online.<\/p>",
-		  "heading": "The New Media Landscape",
-		  "alignment": 1
-		}
-	  },
-	  {
 		"id": "heroQuinary",
 		"data": {
 		  "overlap": false,
