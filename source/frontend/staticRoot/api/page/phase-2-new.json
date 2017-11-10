@@ -55,6 +55,105 @@
 		}
 	  },
 	  {
+		"id": "imageWithContentB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "link": {
+			"label": "Featured Programs",
+			"title": "Featured Programs",
+			"target": "\/featured-programs",
+			"type": 0
+		  },
+		  "background": {
+			"normal": "http://via.placeholder.com/1280x720",
+			"small": "http://via.placeholder.com/1280x720",
+			"alt": "networks and programming"
+		  },
+		  "paragraph": "<p>With the majority of consumers using multiple devices throughout the day, it’s never been more <strong>essential to have</strong> a multi-screen advertising strategy. When combined, TV and Digital work together to make your ads more memorable, even doubling your message recall when the same ad runs on both TV and online.<\/p>",
+		  "heading": "The New Media Landscape",
+		  "alignment": 0
+		}
+	  },
+	  {
+		"id": "glossaryA",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Glossary of advertising terms",
+		  "paragraph": "Unlock the language required to gain full control of your advertising. ",
+		  "link": {
+			"label": "Read the full glossary",
+			"title": "Read the full glossary",
+			"target": "/featured-programs",
+			"type": 0
+		  },
+		  "items": [
+			{
+			  "label": "Availability (”<i>avails</i>”)",
+			  "value": "Unsold units of time available for broadcasters to sell to advertisers. Also refers to a station’s submission of programs and rating estimates for advertising planning and buying."
+			},
+			{
+			  "label": "Bonus Spot",
+			  "value": "additional TV or radio spot provided to an advertiser at no charge to raise the overall audience delivery of the schedule."
+			},
+			{
+			  "label": "Cable TV",
+			  "value": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "heroQuinary",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "background": {
+			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"alt": "Background image alt text"
+		  },
+		  "image": {
+			"normal": "http://via.placeholder.com/940x700",
+			"small": "http://via.placeholder.com/940x700",
+			"alt": "Background image alt text"
+		  },
+		  "heading": "Ads Everywhere",
+		  "paragraph": "Nearly 90% of the NBA Playoffs leading up to the NBA Finals are on Cable, not including ESPN Deportes, which airs the Finals in Spanish. The Finals begin 6/1 and run through 6/18.",
+		  "link": {
+			"label": "Download product one sheet",
+			"title": "Download product one sheet",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
+		"id": "downloadFileB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Download the Ads Everywhere One Sheet",
+		  "fileDescription": "1.5mb PDF Lorem ipsum dolor sit amet.",
+		  "image": {
+			"normal": "http://via.placeholder.com/240x240",
+			"small": "http://via.placeholder.com/240x240",
+			"alt": "File type image"
+		  },
+		  "link": {
+			"label": "Download",
+			"title": "Download",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
 		"id": "imageList",
 		"data": {
 		  "overlap": false,
@@ -122,75 +221,6 @@
 			  }
 			}
 		  ]
-		}
-	  },
-	  {
-		"id": "imageWithContentB",
-		"data": {
-		  "overlap": false,
-		  "windowed": false,
-		  "marginTop": 2,
-		  "link": {
-			"label": "Featured Programs",
-			"title": "Featured Programs",
-			"target": "\/featured-programs",
-			"type": 0
-		  },
-		  "background": {
-			"normal": "http://via.placeholder.com/1280x720",
-			"small": "http://via.placeholder.com/1280x720",
-			"alt": "networks and programming"
-		  },
-		  "paragraph": "<p>With the majority of consumers using multiple devices throughout the day, it’s never been more <strong>essential to have</strong> a multi-screen advertising strategy. When combined, TV and Digital work together to make your ads more memorable, even doubling your message recall when the same ad runs on both TV and online.<\/p>",
-		  "heading": "The New Media Landscape",
-		  "alignment": 0
-		}
-	  },
-	  {
-		"id": "heroQuinary",
-		"data": {
-		  "overlap": false,
-		  "windowed": false,
-		  "marginTop": 2,
-		  "background": {
-			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
-			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
-			"alt": "Background image alt text"
-		  },
-		  "image": {
-			"normal": "http://via.placeholder.com/940x700",
-			"small": "http://via.placeholder.com/940x700",
-			"alt": "Background image alt text"
-		  },
-		  "heading": "Ads Everywhere",
-		  "paragraph": "Nearly 90% of the NBA Playoffs leading up to the NBA Finals are on Cable, not including ESPN Deportes, which airs the Finals in Spanish. The Finals begin 6/1 and run through 6/18.",
-		  "link": {
-			"label": "Download product one sheet",
-			"title": "Download product one sheet",
-			"target": "/advertising-solutions",
-			"type": 0
-		  }
-		}
-	  },
-	  {
-		"id": "downloadFileB",
-		"data": {
-		  "overlap": false,
-		  "windowed": false,
-		  "marginTop": 2,
-		  "heading": "Download the Ads Everywhere One Sheet",
-		  "fileDescription": "1.5mb PDF Lorem ipsum dolor sit amet.",
-		  "image": {
-			"normal": "http://via.placeholder.com/240x240",
-			"small": "http://via.placeholder.com/240x240",
-			"alt": "File type image"
-		  },
-		  "link": {
-			"label": "Download",
-			"title": "Download",
-			"target": "/advertising-solutions",
-			"type": 0
-		  }
 		}
 	  },
 	  {

@@ -42,6 +42,7 @@
     "seng-config": "^1.1.0",
     "seng-device-state-tracker": "^1.1.2",
     "seng-disposable": "^1.1.2",
+    "seng-scroll-tracker": "^1.1.1",
     "seng-scss": "^1.0.0",
     "sha1": "^1.1.1",
     "strip": "^3.0.0",
