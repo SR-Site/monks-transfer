@@ -27,7 +27,7 @@ export default {
 		handleAllComponentsReady() {
 			this.transitionController = new ImageListTransitionController(this);
 			this.scrolllistener = new NativeEventListener(document, 'scroll', this.handleScroll);
-			this.mouseWheelListener = new NativeEventListener(this.$refs.row, 'mousewheel', this.handleMouseWheel);
+			this.mouseWheelListener = new NativeEventListener(this.$el, 'mousewheel', this.handleMouseWheel);
 			this.resizeListener = new NativeEventListener(window, 'resize', debounce(this.handleResize, 100));
 			this.hammer = new Hammer(this.$el, {
 				recognizers: [
@@ -138,5 +138,9 @@ export default {
 	beforeDestroy() {
 		this.mouseWheelListener.dispose();
 		this.mouseWheelListener = null;
+		this.scrollListener.dispose();
+		this.scrollListener = null;
+		this.resizeListener.dispose();
+		this.resizeListener = null;
 	},
 };
