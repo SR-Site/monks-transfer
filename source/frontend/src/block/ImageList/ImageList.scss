@@ -1,2 +1,59 @@
 :local {
+	.image-list {
+		@include size(100%, auto);
+		position: relative;
+	}
+
+	.row {
+		@include aspect-ratio(1200px, 600px);
+		overflow: hidden;
+		position: relative;
+	}
+
+	.slides {
+		@include offset(0, 0);
+		@include size(100%, auto);
+		position: absolute;
+	}
+
+	.pagination {
+		@extend %reset-list;
+		@include size(10px, auto);
+		@include position(auto, auto, $sizeGrid * 2, calc(50% - #{$sizeGrid}));
+		transform: translateX(-50%);
+		position: absolute;
+	}
+
+	.pagination-item {
+		@include size(10px);
+		border-radius: 10px;
+		background: #dadadb;
+		display: block;
+		transition: background .2s $easeInOutCubic;
+		cursor: pointer;
+
+		&:not(:first-child) {
+			margin-top: $sizeGrid / 2;
+		}
+
+		&.is-active {
+			background: #808285;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.row {
+			@include aspect-ratio(640px, 900px);
+		}
+
+		.pagination {
+			left: auto;
+			right: mobile-size($sizeGrid);
+			transform: none;
+		}
+	}
+}
+
+@include hover('.pagination-item') {
+	background: darken(#dadadb, 10%);
 }

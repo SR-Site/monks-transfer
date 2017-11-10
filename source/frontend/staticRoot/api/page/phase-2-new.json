@@ -32,7 +32,7 @@
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
-		  "marginTop": 2,
+		  "marginTop": 0,
 		  "background": {
 			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
 			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
@@ -52,6 +52,76 @@
 			"target": "/advertising-solutions",
 			"type": 0
 		  }
+		}
+	  },
+	  {
+		"id": "imageList",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "slides": [
+			{
+			  "heading": "Connected to Content",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			  "image": {
+				"normal": "http://via.placeholder.com/1200x1200",
+				"small": "http://via.placeholder.com/1200x1200",
+				"alt": "Lorem ipsum"
+			  },
+			  "link": {
+				"label": "Read More",
+				"title": "Read More",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "heading": "Connected to Content",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			  "image": {
+				"normal": "http://via.placeholder.com/1200x1200",
+				"small": "http://via.placeholder.com/1200x1200",
+				"alt": "Lorem ipsum"
+			  },
+			  "link": {
+				"label": "Read More",
+				"title": "Read More",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "heading": "Connected to Content",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			  "image": {
+				"normal": "http://via.placeholder.com/1200x1200",
+				"small": "http://via.placeholder.com/1200x1200",
+				"alt": "Lorem ipsum"
+			  },
+			  "link": {
+				"label": "Read More",
+				"title": "Read More",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "heading": "Connected to Content",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			  "image": {
+				"normal": "http://via.placeholder.com/1200x1200",
+				"small": "http://via.placeholder.com/1200x1200",
+				"alt": "Lorem ipsum"
+			  },
+			  "link": {
+				"label": "Read More",
+				"title": "Read More",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			}
+		  ]
 		}
 	  },
 	  {
@@ -212,7 +282,7 @@
 	  {
 		"id": "AudienceReach",
 		"data": {
-		  "overlap": true,
+		  "overlap": false,
 		  "windowed": false,
 		  "marginTop": 2,
 		  "heading": "For live viewing, Sports is the name of <br/>the game with Media Ads Everywhere",
