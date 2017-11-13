@@ -1,2 +1,49 @@
 :local {
+	.triple-content {
+		padding: $sizeGrid 0;
+		text-align: center;
+	}
+
+	.triple-content-items {
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		margin-top: $sizeGrid * 2;
+	}
+
+	.triple-content-item {
+		flex-grow: 1;
+		padding: $sizeGrid;
+
+		.heading {
+			margin-bottom: $sizeGrid / 2;
+		}
+
+		&:not(:first-child) {
+			&:before {
+				@include size(1px, 100%);
+				@include offset(0, 50%);
+				transform: translateY(-50%);
+				content: '';
+				position: absolute;
+				background: #e6e6e7;
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.triple-content-items {
+			flex-direction: column;
+		}
+
+		.triple-content-item {
+			&:not(:first-child){
+				&:before {
+					@include size(100%, 1px);
+					@include position(0, 0, auto, 0);
+					transform: none;
+				}
+			}
+		}
+	}
 }

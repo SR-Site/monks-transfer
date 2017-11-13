@@ -20,5 +20,5 @@ export default {
 	paragraph: VueTypes.string.isRequired,
 	items: VueTypes.arrayOf(
 		VueTypes.shape(AudienceStatisticTeaserData),
-	),
+	).isRequired,
 };
