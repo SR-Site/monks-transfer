@@ -55,6 +55,36 @@
 		}
 	  },
 	  {
+		"id": "showDetail",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "heading": "What are the <strong>NBA Playoffs</strong>",
+		  "paragraph": "The National Basketball Association (NBA) playoffs are a best-of-seven elimination tournament among 16 teams in the Eastern Conference and Western Conference (called divisions, pre-1970), ultimately deciding the league's season champion in the NBA Finals.",
+		  "network": {
+			"label": "Network",
+			"image": {
+			  "small": "http://via.placeholder.com/240x240",
+			  "normal": "http://via.placeholder.com/240x240",
+			  "alt": "Background image alt text"
+			}
+		  },
+		  "airTime": {
+			"label": "Air time",
+			"value": "New Episodes Saturdays at 6PM ET/PT"
+		  },
+		  "ageRestriction": {
+			"label": "Age Restriction",
+			"image": {
+			  "small": "http://via.placeholder.com/240x240",
+			  "normal": "http://via.placeholder.com/240x240",
+			  "alt": "Background image alt text"
+			}
+		  }
+		}
+	  },
+	  {
 		"id": "tripleContent",
 		"data": {
 		  "overlap": false,
