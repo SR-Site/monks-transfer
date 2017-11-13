@@ -1,17 +1,27 @@
 import VueTypes from 'vue-types';
-import { AbstractBlockComponent } from 'vue-block-system';
-import AudienceStatisticsTransitionController from './AudienceStatisticsTransitionController';
+import AbstractScrollableBlock from '../../util/block/AbstractScrollableBlock';
 import AudienceStatisticsData from './AudienceStatisticsData';
+import AudienceStatisticsTransitionController from './AudienceStatisticsTransitionController';
+import AudienceStatisticTeaser from './AudienceStatisticTeaser/AudienceStatisticTeaser';
 
 export default {
 	name: 'AudienceStatistics',
-	extends: AbstractBlockComponent,
+	extends: AbstractScrollableBlock,
+	data() {
+		return {
+			itemCount: this.data.items.length,
+		};
+	},
+	components: {
+		AudienceStatisticTeaser
+	},
 	props: {
 		data: VueTypes.shape(AudienceStatisticsData).isRequired,
 	},
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new AudienceStatisticsTransitionController(this);
+			this.setupScrollableBlock();
 			this.isReady();
 		},
 	},

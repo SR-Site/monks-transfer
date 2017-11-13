@@ -14,6 +14,7 @@
 	.glossary-navigation {
 		@include size(100%, auto);
 		display: flex;
+		border-left: 1px solid $colorBorder;
 	}
 
 	.icon {
@@ -84,10 +85,6 @@
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
-
-		&:first-child {
-			border-left: 1px solid $colorBorder;
-		}
 
 		&:before {
 			@include size(75%, 1px);

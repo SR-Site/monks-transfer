@@ -55,6 +55,113 @@
 		}
 	  },
 	  {
+		"id": "audienceStatistics",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "background": {
+			"normal": "http://via.placeholder.com/1920x1080",
+			"small": "http://via.placeholder.com/1920x1080",
+			"alt": "Background image alt text"
+		  },
+		  "heading": "Learn more about who's watching the NBA Playoffs",
+		  "paragraph": "Nearly 90% of the NBA Playoffs leading up to the NBA Finals are on Cable, not including ESPN Deportes, which airs the Finals in Spanish. The Finals begin 6/1 and run through 6/18.",
+		  "items": [
+			{
+			  "label": "Millenials",
+			  "value": "64%",
+			  "background": {
+				"normal": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/720x560",
+				"alt": "Background image alt text"
+			  },
+			  "link": {
+				"label": "Find out more",
+				"title": "Find out more",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "label": "Asian Americans",
+			  "value": "28%",
+			  "background": {
+				"normal": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/720x560",
+				"alt": "Background image alt text"
+			  },
+			  "link": {
+				"label": "Find out more",
+				"title": "Find out more",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "label": "African American Men",
+			  "value": "96%",
+			  "background": {
+				"normal": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/720x560",
+				"alt": "Background image alt text"
+			  },
+			  "link": {
+				"label": "Find out more",
+				"title": "Find out more",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "label": "Millenials",
+			  "value": "64%",
+			  "background": {
+				"normal": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/720x560",
+				"alt": "Background image alt text"
+			  },
+			  "link": {
+				"label": "Find out more",
+				"title": "Find out more",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "label": "Asian Americans",
+			  "value": "28%",
+			  "background": {
+				"normal": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/720x560",
+				"alt": "Background image alt text"
+			  },
+			  "link": {
+				"label": "Find out more",
+				"title": "Find out more",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "label": "African American Men",
+			  "value": "96%",
+			  "background": {
+				"normal": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/720x560",
+				"alt": "Background image alt text"
+			  },
+			  "link": {
+				"label": "Find out more",
+				"title": "Find out more",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
 		"id": "imageWithContentB",
 		"data": {
 		  "overlap": false,

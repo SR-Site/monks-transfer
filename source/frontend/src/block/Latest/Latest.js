@@ -1,10 +1,5 @@
-import { debounce } from 'lodash';
 import VueTypes from 'vue-types';
-import ScrollBar from '../../component/ScrollBar/ScrollBar';
 import AbstractScrollableBlock from '../../util/block/AbstractScrollableBlock';
-import DraggableInstance from '../../util/draggableInstance/DraggableInstance';
-import DraggableInstanceEvent from '../../util/draggableInstance/DraggableInstanceEvent';
-import NativeEventListener from '../../util/event/NativeEventListener';
 import ArticleTeaser from '../ArticleTeaser/ArticleTeaser';
 import LatestData from './LatestData';
 import LatestTransitionController from './LatestTransitionController';

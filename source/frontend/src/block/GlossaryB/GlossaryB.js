@@ -65,15 +65,16 @@ export default {
 			this.transitionController = new GlossaryBTransitionController(this);
 			// Crete a listener for closing the popup with the escape key
 			this.keyDownEventListener = new NativeEventListener(document, 'keyup', this.handleKeyUp.bind(this));
-
 			this.isReady();
 		},
 		handleCategoryClick(category) {
 			this.activePage = 1;
 			this.activeCategory = category;
+			this.notifyAboutResize();
 		},
 		handleShowMore() {
 			this.activePage = this.activePage + 1;
+			this.notifyAboutResize();
 		},
 		handleKeyUp(event) {
 			if (event.keyCode === keyCode.ESC) {
@@ -84,16 +85,22 @@ export default {
 		handleQueryChange(event) {
 			this.query = event.currentTarget.value;
 			this.activePage = 1;
+			this.notifyAboutResize();
 		},
 		handleToggleSearch() {
 			this.searchActive = !this.searchActive;
 		},
 		handleSelectChange(event) {
 			this.activeCategory = event.currentTarget.value;
+			this.notifyAboutResize();
 		},
 		handleFormSubmit() {
 			// Nothing?
 			console.log('form submit triggered');
 		},
+		notifyAboutResize(){
+			console.log('notify about resize');
+			setTimeout(() => this.$emit('resize'), 1000);
+		}
 	},
 };
