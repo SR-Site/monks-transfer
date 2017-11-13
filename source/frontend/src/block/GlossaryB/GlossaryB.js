@@ -88,5 +88,12 @@ export default {
 		handleToggleSearch() {
 			this.searchActive = !this.searchActive;
 		},
+		handleSelectChange(event) {
+			this.activeCategory = event.currentTarget.value;
+		},
+		handleFormSubmit() {
+			// Nothing?
+			console.log('form submit triggered');
+		},
 	},
 };

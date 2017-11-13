@@ -17,7 +17,7 @@
 	}
 
 	.icon {
-		@include size($sizeGrid * 0.9);
+		@include size($sizeGrid * 0.8);
 
 		path {
 			fill: currentColor;
@@ -34,9 +34,14 @@
 		background: $colorTertiary;
 		color: $colorWhite;
 		padding: 0 $sizeGrid / 2 0 $sizeGrid;
+	}
+
+	.close-button {
+		@include size($sizeGrid * 0.9);
+		margin-left: $sizeGrid / 2;
 
 		.icon {
-			margin-left: $sizeGrid / 2;
+			@include size(50%);
 		}
 	}
 
@@ -123,12 +128,108 @@
 		}
 	}
 
+	.mobile-select {
+		display: none;
+	}
+
 	.glossary-heading {
 		@include size(40%, auto);
 	}
 
 	.glossary-copy {
 		@include size(60%, auto);
+	}
+
+	@include respond-to(SMALL) {
+		.glossary-b {
+			margin-top: mobile-size($sizeGrid * -4);
+		}
+
+		.wrapper {
+			padding-top: mobile-size($sizeGrid);
+		}
+
+		.glossary-item {
+			flex-direction: column;
+		}
+
+		.glossary-heading,
+		.glossary-copy {
+			@include size(100%, auto);
+		}
+
+		.glossary-heading {
+			margin-bottom: mobile-size($sizeGrid);
+		}
+
+		.glossary-navigation {
+			@include size(100%, mobile-size($sizeGrid * 4));
+			transform: translateY(mobile-size($sizeGrid * 2));
+			z-index: 1;
+			position: relative;
+		}
+
+		.navigation-button {
+			display: none;
+		}
+
+		.icon {
+			@include size(mobile-size($sizeGrid));
+		}
+
+		.mobile-select {
+			flex-grow: 1;
+			display: block;
+			background: $colorWhite;
+			border-bottom: 1px solid $colorBorder;
+			border-left: 1px solid $colorBorder;
+			border-right: 1px solid $colorBorder;
+		}
+
+		.select {
+			@include size(100%);
+			@include offset(0, 0);
+			font: 3.5rem/1 $fontOpenSans;
+			opacity: 0;
+			position: absolute;
+		}
+
+		.selected-value {
+			@include size(100%);
+			font: 800 3.5rem/1 $fontOpenSans;
+			text-transform: uppercase;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: flex;
+			align-items: center;
+			padding: 0 mobile-size($sizeGrid);
+			justify-content: space-between;
+
+			.select-icon {
+				circle,
+				path {
+					fill: transparent;
+					stroke: currentColor;
+				}
+			}
+		}
+
+		.search-button {
+			@include size(mobile-size($sizeGrid * 4));
+		}
+
+		.search-form {
+			@include size(100%);
+			@include offset(0, 0);
+			position: absolute;
+			padding: 0 mobile-size($sizeGrid);
+		}
+
+		.close-button {
+			@include size(mobile-size($sizeGrid * 2));
+			margin-left: mobile-size($sizeGrid);
+		}
 	}
 }
 

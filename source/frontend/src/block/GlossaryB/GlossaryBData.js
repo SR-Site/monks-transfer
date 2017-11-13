@@ -9,6 +9,9 @@ import GlossaryBItemData from './GlossaryBItemData';
  * @param {placeholder} scrollId unique-block-id
  * @param {description} showMoreLabel The call to action label for the show more button
  * @param {description} landingCategory The default active category of the tabs
+ * @param {description} noResult The message displayed when there are no results
+ * @param {description} noResult.heading The heading for the no result message
+ * @param {description} noResult.paragraph The paragraph for the no result message
  * @param {description} searchPlaceholder The search placeholder value
  * @param {description} items The array of glossary items displayed in the hero block
  */
@@ -18,6 +21,12 @@ export default {
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
 	showMoreLabel: VueTypes.string.isRequired,
+	noResult: VueTypes.shape(
+		{
+			heading: VueTypes.string.isRequired,
+			paragraph: VueTypes.string.isRequired,
+		},
+	).isRequired,
 	landingCategory: VueTypes.string.isRequired,
 	searchPlaceholder: VueTypes.string.isRequired,
 	items: VueTypes.arrayOf(

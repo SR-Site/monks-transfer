@@ -63,6 +63,10 @@
 		  "showMoreLabel": "Show more",
 		  "landingCategory": "television",
 		  "searchPlaceholder": "I'm searching for...",
+		  "noResult": {
+			"heading": "Oops",
+			"paragraph": "No results for the current search"
+		  },
 		  "items": [
 			{
 			  "label": "Advertising impression",
