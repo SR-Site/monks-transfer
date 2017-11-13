@@ -1,2 +1,141 @@
 :local {
+	$colorBorder: #dfe0e0;
+
+	.glossary-b {
+		overflow: visible;
+		margin-top: -$sizeGrid * 2;
+
+		.show-more {
+			display: block;
+			margin: $sizeGrid * 4 auto 0 auto;
+		}
+	}
+
+	.glossary-navigation {
+		@include size(100%, auto);
+		display: flex;
+	}
+
+	.icon {
+		@include size($sizeGrid * 0.9);
+
+		path {
+			fill: currentColor;
+		}
+	}
+
+	.search-form {
+		@include size(auto, $sizeGrid * 2);
+		flex-grow: 1;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		background: $colorTertiary;
+		color: $colorWhite;
+		padding: 0 $sizeGrid / 2 0 $sizeGrid;
+
+		.icon {
+			margin-left: $sizeGrid / 2;
+		}
+	}
+
+	.query {
+		background: $colorTertiary;
+		border-bottom-color: rgba($colorWhite, 0.2);
+
+		:global {
+			.placeholder-label {
+				color: rgba($colorWhite, .4);
+			}
+			.focus-border {
+				background: $colorWhite;
+			}
+		}
+
+		input {
+			color: $colorWhite;
+		}
+	}
+
+	.search-button {
+		@include size($sizeGrid * 2);
+		background: $colorTertiary;
+		color: white;
+		position: relative;
+		transition: background .5s $easeInOutExpo;
+	}
+
+	.navigation-button {
+		@include size(auto, $sizeGrid  * 2);
+		padding: 0 $sizeGrid * 2;
+		font: 800 1.2rem / 1 $fontOpenSans;
+		text-transform: uppercase;
+		background: white;
+		border-right: 1px solid $colorBorder;
+		border-top: 1px solid $colorBorder;
+		position: relative;
+		transition: background .5s $easeInOutExpo;
+
+		&:first-child {
+			border-left: 1px solid $colorBorder;
+		}
+
+		&:before {
+			@include size(75%, 1px);
+			@include position(auto, auto, 0, 50%);
+			background: $colorSecondary;
+			position: absolute;
+			content: '';
+			transition: transform .5s $easeInOutExpo;
+			transform-origin: center center;
+			transform: translateX(-50%) scaleX(0);
+		}
+
+		&.is-active {
+			&:before {
+				transform: translateX(-50%) scaleX(1);
+			}
+		}
+	}
+
+	.wrapper {
+		background: $colorLightGrey;
+		padding-bottom: $sizeGrid * 2;
+	}
+
+	.glossary-items {
+		@include size(100%, auto);
+		padding: $sizeGrid * 3 $sizeGrid * 2 $sizeGrid * 2;
+		background: $colorWhite;
+		border: 1px solid $colorBorder;
+	}
+
+	.glossary-item {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-bottom: $sizeGrid * 2;
+
+		a {
+			color: $colorSecondary;
+		}
+	}
+
+	.glossary-heading {
+		@include size(40%, auto);
+	}
+
+	.glossary-copy {
+		@include size(60%, auto);
+	}
+}
+
+@include hover('.navigation-button') {
+	background: darken($colorWhite, 2%);
+}
+
+@include hover('.search-button') {
+	background: darken($colorTertiary, 2%);
 }

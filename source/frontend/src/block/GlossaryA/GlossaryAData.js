@@ -10,7 +10,7 @@ import PropLink from '../../data/prop-type/action/PropLink';
  * @param {placeholder} scrollId unique-block-id
  * @param {description} heading The heading of the block
  * @param {description} paragraph The paragraph of the block
- * @param {description} link The link of the block
+ * @param {description} link
  * @param {description} slides The array of slides displayed in the block
  */
 export default {
