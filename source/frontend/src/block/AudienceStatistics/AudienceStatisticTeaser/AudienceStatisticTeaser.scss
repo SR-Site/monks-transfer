@@ -1,0 +1,72 @@
+:local {
+	.audience-statistic-teaser {
+		display: inline-block;
+		margin: 0 $sizeGrid;
+		box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+		cursor: pointer;
+		position: relative;
+		transition: box-shadow .2s $easeInOutCubic;
+
+		.gradient-overlay {
+			transition: opacity .2s $easeInOut;
+		}
+	}
+
+	.item-image {
+		@include size(100%);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.triangle {
+		@include arrow(right, $colorSecondary, $sizeGrid * 12);
+		@include offset(0, 85%);
+		transform: translate(-20%, -50%);
+		position: absolute;
+		transition: transform .2s $easeInOut;
+	}
+
+	.item-description {
+		@include offset(0, 0);
+		@include size(100%);
+		box-sizing: border-box;
+		position: absolute;
+		padding: $sizeGrid;
+		color: white;
+	}
+
+	.button {
+		@include position(auto, auto, $sizeGrid, $sizeGrid);
+		position: absolute;
+	}
+
+	@include respond-to(SMALL) {
+		.heading {
+			font-size: 15rem;
+		}
+
+		.triangle {
+			display: none;
+		}
+
+		.copy {
+			font-size: 5rem;
+		}
+
+		.button {
+			@include position(auto, auto, mobile-size($sizeGrid), mobile-size($sizeGrid));
+		}
+	}
+}
+
+@include hover('.audience-statistic-teaser') {
+	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+
+	.gradient-overlay {
+		opacity: 0;
+	}
+
+	.triangle {
+		transform: translate(-100%, -50%);
+	}
+}

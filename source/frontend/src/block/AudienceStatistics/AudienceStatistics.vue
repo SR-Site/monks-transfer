@@ -3,7 +3,7 @@
 
 <template>
 	<div :class="$style.audienceStatistics">
-		<div class="site-frame">
+		<div class="site-frame" :class="$style.siteFrame">
 			<figure :class="$style.image">
 				<ResponsiveImage :image="data.background" class="abs-fill fit-cover"/>
 				<div class="primary-gradient-overlay"></div>
@@ -12,22 +12,24 @@
 					<p class="copy copy-01" :class="$style.copy" v-html="data.paragraph"></p>
 				</div>
 			</figure>
-			<div :class="$style.draggableContainer" ref="draggableContainer">
-				<div :class="$style.items" ref="draggableElement" class="js-draggable-element">
-					<AudienceStatisticTeaser
-						v-for="(item, index) in data.items"
-						:data="item"
-						:key="index"
-						:class="$style.item"
-						ref="statistic"
-						:componentId="`AudienceStatisticTeaser${index}`"/>
+			<div :class="$style.content">
+				<div :class="$style.draggableContainer" ref="draggableContainer">
+					<div :class="$style.items" ref="draggableElement" class="js-draggable-element">
+						<AudienceStatisticTeaser
+							v-for="(item, index) in data.items"
+							:data="item"
+							:key="index"
+							:class="$style.item"
+							ref="statistic"
+							:componentId="`AudienceStatisticTeaser${index}`"/>
+					</div>
 				</div>
+				<ScrollBar
+					componentId="ScrollBar"
+					@update="handleScrollBarUpdate"
+					@end="handleScrollBarEnd"
+					:class="$style.scrollBar"/>
 			</div>
-			<ScrollBar
-				componentId="ScrollBar"
-				@update="handleScrollBarUpdate"
-				@end="handleScrollBarEnd"
-				:class="$style.scrollBar"/>
 		</div>
 	</div>
 </template>

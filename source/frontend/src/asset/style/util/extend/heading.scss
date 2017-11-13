@@ -20,7 +20,7 @@
 	}
 
 	@include respond-to(SMALL) {
-		font-size: mobile-size(8rem);
+		font-size: 8rem;
 	}
 }
 
@@ -32,7 +32,7 @@
 	}
 
 	@include respond-to(SMALL) {
-		font-size: mobile-size(4.5rem);
+		font-size: 4.5rem;
 	}
 }
 
@@ -52,6 +52,6 @@
 	}
 
 	@include respond-to(SMALL) {
-		font-size: mobile-size(4.5rem);
+		font-size: 4.5rem;
 	}
 }
