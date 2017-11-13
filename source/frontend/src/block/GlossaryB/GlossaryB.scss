@@ -81,6 +81,9 @@
 		border-top: 1px solid $colorBorder;
 		position: relative;
 		transition: background .5s $easeInOutExpo;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 
 		&:first-child {
 			border-left: 1px solid $colorBorder;
@@ -138,6 +141,13 @@
 
 	.glossary-copy {
 		@include size(60%, auto);
+		padding-left: $sizeGrid;
+	}
+
+	@include respond-to(MEDIUM) {
+		.navigation-button {
+			padding: 0 $sizeGrid;
+		}
 	}
 
 	@include respond-to(SMALL) {
