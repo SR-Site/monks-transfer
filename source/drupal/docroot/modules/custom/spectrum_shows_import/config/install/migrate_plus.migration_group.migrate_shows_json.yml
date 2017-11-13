@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - spectrum_shows_import
+  enforced:
+    module:
+      - spectrum_shows_import
+id: migrate_shows_json
+label: 'Migration shows from a JSON resource.'
+description: 'Migration shows from a JSON resource.'
+source_type: 'JSON resource'
+module: null
+shared_configuration:
+  # Specifying 'source' here means that this configuration will be merged into
+  # the 'source' configuration of each migration.
+  source:
+    # A better practice for real-world migrations would be to add a database
+    # connection to your external database in settings.php and reference its
+    # key here.
+    key: default

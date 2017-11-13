@@ -1,0 +1,48 @@
+id: shows
+label: JSON feed of shows
+migration_group: migrate_shows_json
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: 'http://spectrum.loc/resulta.json'
+  item_selector: '/Result/'
+  fields:
+    -
+      name: show_id
+      label: 'Show Id'
+      selector: ShowId
+    -
+      name: title
+      label: 'Title'
+      selector: Title
+    -
+      name: description
+      label: 'Descriptions'
+      selector: Descriptions
+
+  ids:
+    show_id:
+      type: string
+
+process:
+  type:
+    plugin: default_value
+    default_value: show
+  title: title
+  field_show_id: show_id
+#  field_show_description:
+#    plugin: extract
+#    source: description
+#    index:
+#      - Description
+  sticky:
+    plugin: default_value
+    default_value: 0
+  uid:
+    plugin: default_value
+    default_value: 0
+
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null

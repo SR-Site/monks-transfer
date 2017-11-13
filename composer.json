@@ -58,7 +58,9 @@
         "drupal/wincachedrupal": "^1.11",
         "drupal/xmlsitemap": "^1.0@alpha",
         "drupal/config_split": "^1.2",
-        "drupal/console": "~1.0"
+        "drupal/console": "~1.0",
+        "drupal/migrate_plus": "^2.0",
+        "drupal/migrate_tools": "^2.0"
     },
     "repositories": {
         "mediamonks-drupal-decoupled": {
