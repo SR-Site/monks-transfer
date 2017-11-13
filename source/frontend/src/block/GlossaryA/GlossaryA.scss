@@ -1,2 +1,23 @@
 :local {
+	.glossary-a {
+		background: $colorLightGrey;
+		padding: $sizeGrid * 2 0;
+
+		.button {
+			display: block;
+			margin: $sizeGrid auto 0;
+		}
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid;
+	}
+
+	.items {
+		@include size(100%, auto);
+	}
 }

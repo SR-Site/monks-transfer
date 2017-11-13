@@ -48,7 +48,7 @@
 		}
 
 		.message {
-			@include size(100%);
+			@include size(100%, auto);
 			padding: $sizeGrid 0;
 			margin-bottom: mobile-size($sizeGrid);
 

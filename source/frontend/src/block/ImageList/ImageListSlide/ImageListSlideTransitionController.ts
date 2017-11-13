@@ -1,13 +1,13 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 
-class GlossaryATransitionController extends AbstractTransitionController {
+class ImageListSlideTransitionController extends AbstractTransitionController
+{
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
 	 * @description Use this method to setup your transition in timeline
 	 * */
 	protected setupTransitionInTimeline(): void {
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'))
 	}
 
 	/**
@@ -15,7 +15,8 @@ class GlossaryATransitionController extends AbstractTransitionController {
 	* @method setupTransitionOutTimeline
 	* @description Use this method to setup your transition out timeline
 	* */
-	protected setupTransitionOutTimeline(): void {}
+	protected setupTransitionOutTimeline(): void {
+	}
 }
 
-export default GlossaryATransitionController;
+export default ImageListSlideTransitionController;

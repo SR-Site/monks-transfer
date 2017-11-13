@@ -37,18 +37,20 @@
 
 			circle {
 				fill: transparent;
-				stroke: $colorWhite;
+				stroke: currentColor;
 				stroke-width: 1px;
 				transition: stroke 0.2s $easeInOut, stroke-width 0.2s $easeInOut, opacity 0.2s $easeInOut;
 			}
 		}
 	}
 
+
 	.label {
 		font: 600 1.2rem / 1 $fontOpenSans;
 		text-transform: uppercase;
-		color: $colorWhite;
+		color: currentColor;
 		position: relative;
+		align-self: center;
 
 		&:before {
 			@include size(100%, 1px);
@@ -62,6 +64,15 @@
 			content: '';
 		}
 	}
+
+	.theme-light {
+		color: $colorWhite;
+	}
+
+	.theme-dark {
+		color: $colorPrimary;
+	}
+
 	@include respond-to(LARGE) {
 		.icon {
 			@include size(30px);

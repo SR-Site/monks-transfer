@@ -3,7 +3,11 @@
 
 <template>
 	<button @click="handleClick"
-	        :class="[$style.buttonCircleIcon, $style[(ClassNameHelper.parseAlignment(iconPosition))]]"
+	        :class="[
+	        	$style.buttonCircleIcon,
+	        	$style[(ClassNameHelper.parseAlignment(iconPosition))],
+	        	$style[(ClassNameHelper.parseTheme(theme))]
+            ]"
 	        class="button">
 		<Icon :class="$style.icon" :name="icon"/>
 		<span :class="$style.label">{{label}}</span>

@@ -32,7 +32,7 @@
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
-		  "marginTop": 2,
+		  "marginTop": 0,
 		  "background": {
 			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
 			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
@@ -74,6 +74,36 @@
 		  "paragraph": "<p>With the majority of consumers using multiple devices throughout the day, it’s never been more <strong>essential to have</strong> a multi-screen advertising strategy. When combined, TV and Digital work together to make your ads more memorable, even doubling your message recall when the same ad runs on both TV and online.<\/p>",
 		  "heading": "The New Media Landscape",
 		  "alignment": 0
+		}
+	  },
+	  {
+		"id": "glossaryA",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Glossary of advertising terms",
+		  "paragraph": "Unlock the language required to gain full control of your advertising. ",
+		  "link": {
+			"label": "Read the full glossary",
+			"title": "Read the full glossary",
+			"target": "/featured-programs",
+			"type": 0
+		  },
+		  "items": [
+			{
+			  "label": "Availability (”<i>avails</i>”)",
+			  "value": "Unsold units of time available for broadcasters to sell to advertisers. Also refers to a station’s submission of programs and rating estimates for advertising planning and buying."
+			},
+			{
+			  "label": "Bonus Spot",
+			  "value": "additional TV or radio spot provided to an advertiser at no charge to raise the overall audience delivery of the schedule."
+			},
+			{
+			  "label": "Cable TV",
+			  "value": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+			}
+		  ]
 		}
 	  },
 	  {
@@ -121,6 +151,76 @@
 			"target": "/advertising-solutions",
 			"type": 0
 		  }
+		}
+	  },
+	  {
+		"id": "imageList",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "slides": [
+			{
+			  "heading": "Connected to Content",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			  "image": {
+				"normal": "http://via.placeholder.com/1200x1200",
+				"small": "http://via.placeholder.com/1200x1200",
+				"alt": "Lorem ipsum"
+			  },
+			  "link": {
+				"label": "Read More",
+				"title": "Read More",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "heading": "Connected to Content",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			  "image": {
+				"normal": "http://via.placeholder.com/1200x1200",
+				"small": "http://via.placeholder.com/1200x1200",
+				"alt": "Lorem ipsum"
+			  },
+			  "link": {
+				"label": "Read More",
+				"title": "Read More",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "heading": "Connected to Content",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			  "image": {
+				"normal": "http://via.placeholder.com/1200x1200",
+				"small": "http://via.placeholder.com/1200x1200",
+				"alt": "Lorem ipsum"
+			  },
+			  "link": {
+				"label": "Read More",
+				"title": "Read More",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "heading": "Connected to Content",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			  "image": {
+				"normal": "http://via.placeholder.com/1200x1200",
+				"small": "http://via.placeholder.com/1200x1200",
+				"alt": "Lorem ipsum"
+			  },
+			  "link": {
+				"label": "Read More",
+				"title": "Read More",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			}
+		  ]
 		}
 	  },
 	  {
@@ -212,7 +312,7 @@
 	  {
 		"id": "AudienceReach",
 		"data": {
-		  "overlap": true,
+		  "overlap": false,
 		  "windowed": false,
 		  "marginTop": 2,
 		  "heading": "For live viewing, Sports is the name of <br/>the game with Media Ads Everywhere",

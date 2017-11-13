@@ -1,0 +1,79 @@
+:local {
+	.image-list-slide {
+		@include aspect-ratio(1200px, 600px);
+		background: $colorLightGrey;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.image {
+		width: 50%;
+		position: relative;
+	}
+
+	.description {
+		width: 50%;
+		padding: $sizeGrid * 2;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.button {
+		@include position(auto, auto, $sizeGrid * 2, $sizeGrid * 2);
+		position: absolute;
+	}
+
+	@include respond-to(MEDIUM) {
+		.description {
+			padding: $sizeGrid;
+		}
+
+		.button {
+			@include position(auto, auto, $sizeGrid, $sizeGrid);
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.image-list-slide {
+			@include aspect-ratio(640px, 900px);
+		}
+
+		.content {
+			flex-direction: column;
+		}
+
+		.description,
+		.image {
+			width: 100%;
+		}
+
+		.description {
+			height: 100%;
+			padding: mobile-size($sizeGrid);
+			order: 2;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.image {
+			@include aspect-ratio(16px, 9px);
+			order: 1;
+		}
+
+		.heading,
+		.copy {
+			margin-bottom: mobile-size($sizeGrid);
+		}
+
+		.button {
+			@include position(auto, auto, auto, auto);
+			position: relative;
+		}
+	}
+}
