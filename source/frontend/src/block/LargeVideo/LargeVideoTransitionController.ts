@@ -1,19 +1,22 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 
-class AudienceProductsTransitionController extends AbstractTransitionController {
+class LargeVideoTransitionController extends AbstractTransitionController
+{
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
 	 * @description Use this method to setup your transition in timeline
 	 * */
-	protected setupTransitionInTimeline(): void {}
+	protected setupTransitionInTimeline(): void {
+	}
 
 	/**
 	* @public
 	* @method setupTransitionOutTimeline
 	* @description Use this method to setup your transition out timeline
 	* */
-	protected setupTransitionOutTimeline(): void {}
+	protected setupTransitionOutTimeline(): void {
+	}
 }
 
-export default AudienceProductsTransitionController;
+export default LargeVideoTransitionController;

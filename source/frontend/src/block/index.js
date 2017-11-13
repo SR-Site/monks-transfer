@@ -1,7 +1,6 @@
 // add components you want to register globally
 export default {
 	ArticleTeaser: () => import('./ArticleTeaser'),
-	AudienceProducts: () => import('./AudienceProducts'),
 	AudienceProductTop: () => import('./AudienceProductTop'),
 	AudienceQuote: () => import('./AudienceQuote'),
 	AudienceReach: () => import('./AudienceReach'),
@@ -33,7 +32,9 @@ export default {
 	ImageWithContentB: () => import('./ImageWithContentB'),
 	Info: () => import('./Info'),
 	Infographic: () => import('./Infographic'),
+	LargeVideo: () => import('./LargeVideo'),
 	Latest: () => import('./Latest'),
+	MainProductNav: () => import('./MainProductNav'),
 	Map: () => import('./Map'),
 	MapSecondary: () => import('./MapSecondary'),
 	MapTertiary: () => import('./MapTertiary'),

@@ -59,7 +59,7 @@
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
-		  "marginTop": 0,
+		  "marginTop": 2,
 		  "heading": "What are the <strong>NBA Playoffs</strong>",
 		  "paragraph": "The National Basketball Association (NBA) playoffs are a best-of-seven elimination tournament among 16 teams in the Eastern Conference and Western Conference (called divisions, pre-1970), ultimately deciding the league's season champion in the NBA Finals.",
 		  "network": {
@@ -89,7 +89,7 @@
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
-		  "marginTop": 0,
+		  "marginTop": 2,
 		  "heading": "How to grow your brand with Kernel’s creative services",
 		  "items": [
 			{
