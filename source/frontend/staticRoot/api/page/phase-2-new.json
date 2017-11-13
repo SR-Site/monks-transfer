@@ -73,7 +73,7 @@
 			  "value": "64%",
 			  "background": {
 				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/720x720",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
