@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains spectrum_shows_import.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function spectrum_shows_import_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the spectrum_shows_import module.
+    case 'help.page.spectrum_shows_import':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Migrating Shows from external resource into SpectrumReach') . '</p>';
+      return $output;
+
+    default:
+  }
+}
