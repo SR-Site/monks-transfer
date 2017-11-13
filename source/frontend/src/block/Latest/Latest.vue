@@ -40,6 +40,7 @@
 				</div>
 				<ScrollBar
 					componentId="ScrollBar"
+					v-show="showScrollBar"
 					@update="handleScrollBarUpdate"
 					@end="handleScrollBarEnd"
 					:class="$style.scrollBar"/>

@@ -13,9 +13,9 @@
 			<span :class="$style.triangle"></span>
 		</figure>
 		<span :class="$style.itemDescription">
-				<h3 class="heading heading-01" v-html="data.value" :class="$style.heading" ref="heading"></h3>
-				<p class="copy copy-01" v-html="data.label" ref="copy" :class="$style.copy"></p>
-			</span>
+			<h3 class="heading heading-01" v-html="data.value" :class="$style.heading" ref="heading"></h3>
+			<p class="copy copy-01" v-html="data.label" ref="copy" :class="$style.copy"></p>
+		</span>
 		<ButtonQuaternary
 			componentId="ButtonQuaternary"
 			:title="data.link.title"

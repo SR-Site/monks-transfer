@@ -40,6 +40,10 @@
 		position: absolute;
 	}
 
+	.heading {
+		margin-bottom: $sizeGrid / 4;
+	}
+
 	@include respond-to(SMALL) {
 		.heading {
 			font-size: 15rem;
