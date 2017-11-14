@@ -1,5 +1,5 @@
 import VueTypes from 'vue-types';
-import ProductTeaserData from './ProductTeaser/ProductTeaserData';
+import PropImage from '../../data/prop-type/media/PropImage';
 
 /**
  * @param {description} marginTop This defines the amount of spacing at the top of the block
@@ -7,22 +7,18 @@ import ProductTeaserData from './ProductTeaser/ProductTeaserData';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
- * @param {description} alignment The alignment of the heading on the block
- * @param {description} heading The heading of the block
- * @param {description} paragraph The paragraph of the block
- * @param {description} products The array of products displayed in the block
+ * @param {description} slides The array of slides displayed in the hero block
  */
 export default {
 	marginTop: VueTypes.number.isRequired,
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	alignment: VueTypes.oneOf(
-		[0, 1, 2],
+	primaryImage: VueTypes.shape(
+		{
+			footer: VueTypes.string.isRequired,
+			image: VueTypes.shape(PropImage).isRequired,
+		},
 	).isRequired,
-	heading: VueTypes.string,
-	paragraph: VueTypes.string,
-	products: VueTypes.arrayOf(
-		VueTypes.shape(ProductTeaserData),
-	),
+	secondaryImage: VueTypes.shape(PropImage),
 };

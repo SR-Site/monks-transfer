@@ -6,11 +6,19 @@
 		h4 {
 			@extend %reset-bmp;
 			padding-bottom: $sizeGrid/2;
-			font: 600 1.8rem / 1.16 $fontOpenSans;
+			//font: 600 1.8rem / 1.16 $fontOpenSans;
+		}
 
-			strong {
-				font-weight: 600;
-			}
+		h1 {
+			@extend %heading-02;
+		}
+
+		h2 {
+			@extend %heading-03;
+		}
+
+		h3 {
+			@extend %heading-06;
 		}
 
 		p {

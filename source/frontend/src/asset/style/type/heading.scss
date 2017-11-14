@@ -23,11 +23,7 @@ h5 {
 
 // Open sans bold
 .heading-03 {
-	font: 700 3.6rem / 1.25 $fontOpenSans;
-
-	strong {
-		font-weight: 700;
-	}
+	@extend %heading-03;
 }
 
 // Open sans bold
@@ -46,7 +42,7 @@ h5 {
 
 // Open sans regular
 .heading-06 {
-	font: 400 3rem / 1.23 $fontOpenSans;
+	@extend %heading-06;
 }
 
 // Open sans semi-bold
@@ -90,14 +86,8 @@ h5 {
 }
 
 @include respond-to(SMALL) {
-	.heading-03 {
-		font-size: mobile-size(5rem);
-	}
 	.heading-05 {
 		font-size: mobile-size(4.5rem);
-	}
-	.heading-06 {
-		font-size: mobile-size(4rem);
 	}
 	.heading-07 {
 		font-size: mobile-size(3.5rem);

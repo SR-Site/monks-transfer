@@ -7,6 +7,18 @@
 		margin-bottom: $sizeGrid;
 	}
 
+	.variant-2 {
+		.header {
+			max-width: $smallSiteFrame;
+			margin: 0 auto $sizeGrid * 2 auto;
+		}
+
+		.heading {
+			font-weight: 400;
+			margin-bottom: $sizeGrid / 2;
+		}
+	}
+
 	.alignment-left {
 		.header {
 			text-align: left;

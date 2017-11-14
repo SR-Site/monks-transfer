@@ -2,10 +2,13 @@
 <script src="./ProductList.js"></script>
 
 <template>
-	<div :class="[$style.productList, $style[ClassNameHelper.parseAlignment(data.alignment)]]">
+	<div :class="[
+		$style.productList,
+		$style[ClassNameHelper.parseAlignment(data.alignment)],
+	]">
 		<div :class="$style.siteFrame" class="site-frame">
 			<div class="overrule-overlap">
-				<header :class="$style.header" ref="heading">
+				<header :class="$style.header" ref="heading" v-if="data.heading || data.paragraph">
 					<h2 :class="$style.heading" class="heading heading-03" v-html="data.heading"></h2>
 					<h2 :class="$style.copy" class="copy copy-01" v-html="data.paragraph"></h2>
 				</header>

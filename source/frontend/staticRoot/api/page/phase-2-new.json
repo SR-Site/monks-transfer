@@ -55,6 +55,27 @@
 		}
 	  },
 	  {
+		"id": "doubleImage",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "primaryImage": {
+			"footer": "Copyright © 2017 Lorem ipsum dolor sit amet",
+			"image": {
+			  "normal": "http://via.placeholder.com/1280x720",
+			  "small": "http://via.placeholder.com/1280x720",
+			  "alt": "Background image alt text"
+			}
+		  },
+		  "secondaryImage": {
+			"normal": "http://via.placeholder.com/1280x720",
+			"small": "http://via.placeholder.com/1280x720",
+			"alt": "Background image alt text"
+		  }
+		}
+	  },
+	  {
 		"id": "multipleImages",
 		"data": {
 		  "overlap": false,
@@ -566,7 +587,7 @@
 		}
 	  },
 	  {
-		"id": "SuccessStoriesB",
+		"id": "successStoriesB",
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
@@ -642,7 +663,7 @@
 		}
 	  },
 	  {
-		"id": "AudienceReach",
+		"id": "audienceReach",
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
@@ -729,7 +750,7 @@
 		}
 	  },
 	  {
-		"id": "SuccessStoryHighlight",
+		"id": "successStoryHighlight",
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
@@ -751,7 +772,7 @@
 		}
 	  },
 	  {
-		"id": "SuccessStoriesA",
+		"id": "successStoriesA",
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
@@ -768,7 +789,7 @@
 		}
 	  },
 	  {
-		"id": "CoreProductMessage",
+		"id": "coreProductMessage",
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
@@ -794,7 +815,7 @@
 		}
 	  },
 	  {
-		"id": "TargetAudience",
+		"id": "targetAudience",
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
@@ -864,7 +885,7 @@
 		}
 	  },
 	  {
-		"id": "Infographic",
+		"id": "infographic",
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
@@ -897,14 +918,14 @@
 		}
 	  },
 	  {
-		"id": "ProductList",
+		"id": "productList",
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
 		  "marginTop": 2,
 		  "alignment": 0,
 		  "heading": "TV delivers",
-		  "paragraph": "We are continuously innovating and adding to our range of advertising products for Television.",
+		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices tristique odio, sit amet euismod odio commodo nec. Sed pellentesque ullamcorper dui, et dignissim est vehicula ut. Pellentesque eget mauris rutrum, vestibulum arcu sed, ornare ligula. Donec egestas malesuada est. Cras placerat et justo non dictum. Aenean volutpat elit finibus felis mollis, ut elementum urna sagittis. Curabitur dignissim nec nibh in congue. Phasellus lorem sem, dictum eget lacinia eu, efficitur nec dui. Sed eget urna at nisi varius congue ac at mi. Morbi metus orci, auctor imperdiet augue nec, accumsan varius nisi. Aenean bibendum lacus ullamcorper nulla interdum, dictum placerat elit vulputate.",
 		  "products": [
 			{
 			  "image": {
@@ -980,7 +1001,7 @@
 		}
 	  },
 	  {
-		"id": "DownloadFileA",
+		"id": "downloadFileA",
 		"data": {
 		  "overlap": false,
 		  "windowed": true,

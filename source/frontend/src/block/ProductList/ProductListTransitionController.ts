@@ -9,19 +9,21 @@ class ProductListTransitionController extends AbstractTransitionController {
 	 * */
 	protected setupTransitionInTimeline(): void {
 		const products = <Array<IAbstractTransitionComponent>>this.viewModel.$refs.product;
-		this.transitionInTimeline.fromTo(
-			this.viewModel.$refs.heading,
-			0.8,
-			{
-				y: 50,
-				autoAlpha: 0,
-			},
-			{
-				y: 0,
-				autoAlpha: 1,
-				ease: Expo.easeOut,
-			},
-		);
+		if(this.viewModel.$refs.heading) {
+			this.transitionInTimeline.fromTo(
+				this.viewModel.$refs.heading,
+				0.8,
+				{
+					y: 50,
+					autoAlpha: 0,
+				},
+				{
+					y: 0,
+					autoAlpha: 1,
+					ease: Expo.easeOut,
+				},
+			);
+		}
 
 		if (products) {
 			products.forEach((article, index) => {
