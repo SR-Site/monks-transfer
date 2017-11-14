@@ -163,6 +163,7 @@
 		.glossary-heading,
 		.glossary-copy {
 			@include size(100%, auto);
+			padding-left: 0;
 		}
 
 		.glossary-heading {

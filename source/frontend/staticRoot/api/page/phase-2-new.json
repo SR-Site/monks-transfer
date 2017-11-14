@@ -55,6 +55,63 @@
 		}
 	  },
 	  {
+		"id": "mainProductNav",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Ready to reach your customers?",
+		  "paragraph": "Find your format.",
+		  "items": [
+			{
+			  "background": {
+				"normal": "http://via.placeholder.com/500x500",
+				"small": "http://via.placeholder.com/500x500",
+				"alt": "Background image alt text"
+			  },
+			  "heading": "Television",
+			  "paragraph": "TV is now everywhere. Air your targeted advertisement during news, sports, and award winning shows on multiscreen.",
+			  "link": {
+				"label": "Discover Television",
+				"title": "Discover Television",
+				"target": "/television",
+				"type": 0
+			  }
+			},
+			{
+			  "background": {
+				"normal": "http://via.placeholder.com/500x500",
+				"small": "http://via.placeholder.com/500x500",
+				"alt": "Background image alt text"
+			  },
+			  "heading": "Audience Extension",
+			  "paragraph": "TV is now everywhere. Air your targeted advertisement during news, sports, and award winning shows on multiscreen.",
+			  "link": {
+				"label": "Discover Television",
+				"title": "Discover Television",
+				"target": "/television",
+				"type": 0
+			  }
+			},
+			{
+			  "background": {
+				"normal": "http://via.placeholder.com/500x500",
+				"small": "http://via.placeholder.com/500x500",
+				"alt": "Background image alt text"
+			  },
+			  "heading": "Data & Services",
+			  "paragraph": "TV is now everywhere. Air your targeted advertisement during news, sports, and award winning shows on multiscreen.",
+			  "link": {
+				"label": "Discover Television",
+				"title": "Discover Television",
+				"target": "/television",
+				"type": 0
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
 		"id": "largeVideo",
 		"data": {
 		  "overlap": false,

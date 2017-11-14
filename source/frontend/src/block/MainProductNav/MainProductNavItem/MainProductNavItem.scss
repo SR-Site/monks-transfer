@@ -1,0 +1,46 @@
+:local {
+	.main-product-nav-item {
+		background: $colorPrimary;
+		color: $colorWhite;
+	}
+
+	.aspect-ratio-wrapper {
+		@include aspect-ratio(1px, 1px);
+	}
+
+	.description {
+		@include position(auto, auto, 0, 0);
+		padding: $sizeGrid;
+		position: absolute;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	@include respond-to(MEDIUM) {
+		.heading,
+		.copy {
+			margin-bottom: $sizeGrid / 4;
+		}
+
+		.description {
+			padding: $sizeGrid / 2;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.heading,
+		.copy {
+			margin-bottom: $sizeGrid / 2;
+		}
+
+		.description {
+			padding: $sizeGridMobile * 2;
+		}
+	}
+}

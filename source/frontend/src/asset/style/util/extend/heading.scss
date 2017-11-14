@@ -71,6 +71,10 @@
 %heading-06 {
 	font: 400 3rem / 1.23 $fontOpenSans;
 
+	@include respond-to(MEDIUM) {
+		font-size: 2.5rem;
+	}
+
 	@include respond-to(SMALL) {
 		font-size: 4rem;
 	}

@@ -72,19 +72,6 @@ h5 {
 	}
 }
 
-// Breakpoints
-@include respond-to(XX_LARGE) {
-	.heading-06 {
-		font-size: 2.6rem;
-	}
-}
-
-@include respond-to(X_LARGE) {
-	.heading-06 {
-		font-size: 2.4rem;
-	}
-}
-
 @include respond-to(SMALL) {
 	.heading-05 {
 		font-size: mobile-size(4.5rem);
