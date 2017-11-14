@@ -55,6 +55,28 @@
 		}
 	  },
 	  {
+		"id": "successStoryImpact",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "statistics": [
+			{
+			  "label": "Increase in leads",
+			  "value": "40%"
+			},
+			{
+			  "label": "Increase in leads",
+			  "value": "$64K"
+			},
+			{
+			  "label": "Increase in leads",
+			  "value": "2%"
+			}
+		  ]
+		}
+	  },
+	  {
 		"id": "doubleImage",
 		"data": {
 		  "overlap": false,
