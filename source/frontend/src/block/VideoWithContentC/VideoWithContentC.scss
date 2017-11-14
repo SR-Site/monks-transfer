@@ -1,0 +1,54 @@
+:local {
+	.video-with-content-c {
+		padding: $sizeGrid 0;
+	}
+
+	.image {
+		@include size(100%, auto);
+		@include aspect-ratio(16px, 9px);
+		margin-bottom: $sizeGrid;
+	}
+
+	.description {
+		display: flex;
+	}
+
+	.column {
+		@include size(50%, auto);
+	}
+
+	.heading {
+		padding-right: $sizeGrid;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid;
+	}
+
+	.content {
+		padding-left: $sizeGrid;
+	}
+
+	@include respond-to(SMALL) {
+		.description {
+			flex-direction: column;
+			padding: 0 $sizeGridMobile * 2;
+		}
+
+		.content {
+			padding: 0;
+		}
+
+		.site-frame {
+			padding: 0;
+		}
+
+		.heading {
+			margin-bottom: mobile-size($sizeGrid);
+		}
+
+		.column {
+			width: 100%;
+		}
+	}
+}

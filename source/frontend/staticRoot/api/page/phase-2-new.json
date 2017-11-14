@@ -55,6 +55,31 @@
 		}
 	  },
 	  {
+		"id": "videoWithContentC",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "poster": {
+			"normal": "http://via.placeholder.com/1280x720",
+			"small": "http://via.placeholder.com/1280x720",
+			"alt": "Background image alt text"
+		  },
+		  "video": {
+			"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+			"type": 0
+		  },
+		  "heading": "Flagler Auditorium sold the most tickets in their 20-year history",
+		  "paragraph": "Proin commodo lacus id dolor lobortis, non ultricies ex interdum. Sed placerat urna nec condimentum sagittis. Sed consequat eros sed tristique sollicitudin. Mauris eu lorem enim. Sed nec rhoncus tortor.",
+		  "link": {
+			"label": "Flagler Auditorium History",
+			"title": "Flagler Auditorium History",
+			"target": "/featured-programs",
+			"type": 0
+		  }
+		}
+	  },
+	  {
 		"id": "personaSelectorBanner",
 		"data": {
 		  "overlap": false,

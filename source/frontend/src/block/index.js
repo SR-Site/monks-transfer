@@ -15,8 +15,6 @@ export default {
 	DownloadFileA: () => import('./DownloadFileA'),
 	DownloadFileB: () => import('./DownloadFileB'),
 	FilterContent: () => import('./FilterContent'),
-	FindContact: () => import('./FindContact'),
-	FindContactB: () => import('./FindContactB'),
 	FreeText: () => import('./FreeText'),
 	GlossaryA: () => import('./GlossaryA'),
 	GlossaryB: () => import('./GlossaryB'),
@@ -66,4 +64,5 @@ export default {
 	TwitterFeed: () => import('./TwitterFeed'),
 	VideoWithContent: () => import('./VideoWithContent'),
 	VideoWithContentB: () => import('./VideoWithContentB'),
+	VideoWithContentC: () => import('./VideoWithContentC'),
 };
