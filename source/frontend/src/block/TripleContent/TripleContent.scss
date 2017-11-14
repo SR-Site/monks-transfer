@@ -31,19 +31,33 @@
 		}
 	}
 
+	.image {
+		@include size(250px);
+		position: relative;
+		margin: 0 auto $sizeGrid auto;
+
+		img {
+			border-radius: 100%;
+		}
+	}
+
 	@include respond-to(SMALL) {
 		.triple-content-items {
 			flex-direction: column;
 		}
 
 		.triple-content-item {
-			&:not(:first-child){
+			&:not(:first-child) {
 				&:before {
 					@include size(100%, 1px);
 					@include position(0, 0, auto, 0);
 					transform: none;
 				}
 			}
+		}
+
+		.image {
+			@include size(200px);
 		}
 	}
 }
