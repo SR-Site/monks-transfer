@@ -1,3 +1,164 @@
 :local {
+	.twitter-feed {
+		padding-bottom: $sizeGrid * 2;
+	}
 
+	.wrapper {
+		@include aspect-ratio(1120px, 360px);
+	}
+
+	.content {
+		@include offset(0, 0);
+		@include size(100%);
+		position: absolute;
+		background: $colorPrimary;
+		overflow: hidden;
+
+		&:after {
+			@include arrow(left, $colorSecondary, $sizeGrid * 11);
+			@include position(50%, 0, auto, auto);
+			transform: translateY(-50%);
+			position: absolute;
+			content: '';
+		}
+	}
+
+	.viewport {
+		@include size(100%);
+	}
+
+	.tweet {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		padding: $sizeGrid $sizeGrid * 7 $sizeGrid * 1.5 $sizeGrid * 2;
+	}
+
+	.handle {
+		color: $colorSecondary;
+		margin-bottom: $sizeGrid;
+	}
+
+	.text {
+		color: $colorWhite;
+		margin-bottom: $sizeGrid;
+	}
+
+	.date {
+		color: $colorQuaternary;
+	}
+
+	.icon {
+		@include size($sizeGrid * 1.5);
+		@include position(50%, $sizeGrid * 2, auto, auto);
+		transform: translateY(-50%);
+		position: absolute;
+		z-index: 2;
+
+		path {
+			fill: $colorWhite;
+		}
+	}
+
+	.pagination {
+		@extend %reset-list;
+		@include position(auto, 0, -$sizeGrid, auto);
+		position: absolute;
+		white-space: nowrap;
+	}
+
+	.navigation-arrows {
+		@include size(100px, 50px);
+		@include position(auto, auto, -$sizeGrid * 1.5, 0);
+		white-space: nowrap;
+		position: absolute;
+		overflow: visible;
+	}
+
+	.navigation-button {
+		display: inline-block;
+
+		&:not(:first-child) {
+			margin-left: $sizeGrid / 4;
+		}
+	}
+
+	.pagination-bullet {
+		@include size(10px);
+		border-radius: 100%;
+		background: rgba($colorQuaternary, 0.5);
+		transition: background .2s $easeInOutExpo;
+		display: inline-block;
+		cursor: pointer;
+
+		&:not(:first-child) {
+			margin-left: $sizeGrid / 2;
+		}
+
+		&.is-active {
+			background: $colorQuaternary;
+		}
+	}
+
+	@include respond-to(LARGE) {
+		.handle,
+		.text {
+			margin-bottom: $sizeGrid / 2;
+		}
+
+		.text {
+			font-size: 3rem;
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.text {
+			font-size: 2rem;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.twitter-feed {
+			padding-bottom: mobile-size($sizeGrid * 3);
+		}
+
+		.wrapper {
+			@include aspect-ratio(1px, 1px);
+		}
+
+		.content:after {
+			@include arrow(left, $colorSecondary, $sizeGrid * 12);
+			top: 0;
+			transform: translateY(-25%);
+		}
+
+		.icon {
+			@include size($sizeGrid * 2);
+			top: $sizeGrid * 3;
+			right: $sizeGrid
+		}
+
+		.text {
+			font-size: 4rem;
+			z-index: 1;
+		}
+
+		.tweet {
+			padding-right: $sizeGrid * 4;
+		}
+
+		.pagination {
+			bottom: $sizeGrid * -1.5;
+			right: $sizeGridMobile * 2;
+		}
+
+		.navigation-arrows {
+			bottom: -60px;
+			left: $sizeGridMobile * 2;
+		}
+	}
+}
+
+@include hover('.pagination-bullet') {
+	background: $colorQuaternary;
 }

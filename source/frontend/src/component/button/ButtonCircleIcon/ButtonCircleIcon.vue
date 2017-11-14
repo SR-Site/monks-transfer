@@ -10,6 +10,6 @@
             ]"
 	        class="button">
 		<Icon :class="$style.icon" :name="icon"/>
-		<span :class="$style.label">{{label}}</span>
+		<span :class="$style.label" v-if="label">{{label}}</span>
 	</button>
 </template>

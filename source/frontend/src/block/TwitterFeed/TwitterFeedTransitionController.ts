@@ -8,6 +8,8 @@ class TwitterFeedTransitionController extends AbstractTransitionController
 	 * @description Use this method to setup your transition in timeline
 	 * */
 	protected setupTransitionInTimeline(): void {
+		// this.transitionInTimeline.add(this.getSubTimeline('ButtonPrevious'))
+		// this.transitionInTimeline.add(this.getSubTimeline('ButtonNext'))
 	}
 
 	/**

@@ -55,6 +55,30 @@
 		}
 	  },
 	  {
+		"id": "twitterFeed",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "items": [
+			{
+			  "name": "SpectrumReach",
+			  "handle": "@SpectrumReach",
+			  "text": "We're nearly ready to take over the Edison Ballroom for #SpectrumNewFront. Stay tuned for more news. #NewFronts",
+			  "date": "02/05/2017",
+			  "target": "http://www.twitter.com"
+			},
+			{
+			  "name": "SpectrumReach",
+			  "handle": "SpectrumReach",
+			  "text": "We're nearly ready to take over the Edison Ballroom for #SpectrumNewFront. Stay tuned for more news. #NewFronts",
+			  "date": "02/05/2017",
+			  "target": "http://www.twitter.com"
+			}
+		  ]
+		}
+	  },
+	  {
 		"id": "mainProductNav",
 		"data": {
 		  "overlap": false,
