@@ -46,6 +46,7 @@ export default {
 	PageNotFound: () => import('./PageNotFound'),
 	PathToPurchase: () => import('./PathToPurchase'),
 	PersonaSelector: () => import('./PersonaSelector'),
+	PersonaSelectorBanner: () => import('./PersonaSelectorBanner'),
 	ProductList: () => import('./ProductList'),
 	ProgramModule: () => import('./ProgramModule'),
 	Quote: () => import('./Quote'),
