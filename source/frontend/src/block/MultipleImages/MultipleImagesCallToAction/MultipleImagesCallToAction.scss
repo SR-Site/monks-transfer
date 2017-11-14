@@ -1,0 +1,30 @@
+:local {
+	.multiple-images-call-to-action {
+		padding: 0 $sizeGrid * 2;
+		text-align: center;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	@include respond-to(MEDIUM) {
+		.multiple-images-call-to-action {
+			padding: 0 $sizeGrid;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.multiple-images-call-to-action {
+			padding: 0 $sizeGridMobile * 2;
+		}
+
+		.copy {
+			margin-bottom: mobile-size($sizeGrid);
+		}
+	}
+}

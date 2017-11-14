@@ -55,6 +55,76 @@
 		}
 	  },
 	  {
+		"id": "multipleImages",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "primaryItem": {
+			"heading": "Optimizing for every screen they are watching nowadays",
+			"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor aliqua. Sit amet sum lorem... ",
+			"image": {
+			  "normal": "http://via.placeholder.com/1280x720",
+			  "small": "http://via.placeholder.com/1280x720",
+			  "alt": "Background image alt text"
+			},
+			"video": {
+			  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+			  "type": 0
+			}
+		  },
+		  "secondaryItem": {
+			"heading": "Farmer Boys “Fresh Fish”",
+			"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor aliqua. Sit amet sum lorem... ",
+			"image": {
+			  "normal": "http://via.placeholder.com/1280x720",
+			  "small": "http://via.placeholder.com/1280x720",
+			  "alt": "Background image alt text"
+			},
+			"video": {
+			  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+			  "type": 0
+			}
+		  },
+		  "tertiaryItem": {
+			"heading": "Award-winning <strong>skills</strong>",
+			"skills": [
+			  "Scripting",
+			  "Storyboarding",
+			  "Animation",
+			  "Videography",
+			  "Post Production",
+			  "Digital Design",
+			  "Campaign Strategy",
+			  "Development & Execution."
+			]
+		  },
+		  "quaternaryItem": {
+			"heading": "Creativity comes at all price points",
+			"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor aliqua. Sit amet sum lorem... ",
+			"image": {
+			  "normal": "http://via.placeholder.com/1280x720",
+			  "small": "http://via.placeholder.com/1280x720",
+			  "alt": "Background image alt text"
+			},
+			"video": {
+			  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+			  "type": 0
+			}
+		  },
+		  "quinaryItem": {
+			"heading": "Let’s get creative <strong>together</strong>",
+			"paragraph": "Your message can be told by big agency talent who work and live where you do. Kernel delivers a suite of cost-effective creative services for any size business.",
+			"link": {
+			  "label": "Find out more",
+			  "title": "Find out more",
+			  "target": "/featured-programs",
+			  "type": 0
+			}
+		  }
+		}
+	  },
+	  {
 		"id": "showDetail",
 		"data": {
 		  "overlap": false,
