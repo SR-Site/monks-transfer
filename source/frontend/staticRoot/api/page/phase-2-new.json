@@ -55,6 +55,29 @@
 		}
 	  },
 	  {
+		"id": "successStoryPost",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history",
+		  "subHeading": "Success Story",
+		  "paragraph": "Reaching different audiences for multiple performances created a short messaging window for Flagler Auditorium. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+		  "company": {
+			"label": "Company",
+			"value": "Flagger Auditorium"
+		  },
+		  "industry": {
+			"label": "Industry",
+			"value": "Entertainment"
+		  },
+		  "market": {
+			"label": "Market",
+			"value": "Orlando, Fl"
+		  }
+		}
+	  },
+	  {
 		"id": "videoWithContentC",
 		"data": {
 		  "overlap": false,
@@ -1001,7 +1024,7 @@
 		  "marginTop": 2,
 		  "alignment": 0,
 		  "heading": "TV delivers",
-		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices tristique odio, sit amet euismod odio commodo nec. Sed pellentesque ullamcorper dui, et dignissim est vehicula ut. Pellentesque eget mauris rutrum, vestibulum arcu sed, ornare ligula. Donec egestas malesuada est. Cras placerat et justo non dictum. Aenean volutpat elit finibus felis mollis, ut elementum urna sagittis. Curabitur dignissim nec nibh in congue. Phasellus lorem sem, dictum eget lacinia eu, efficitur nec dui. Sed eget urna at nisi varius congue ac at mi. Morbi metus orci, auctor imperdiet augue nec, accumsan varius nisi. Aenean bibendum lacus ullamcorper nulla interdum, dictum placerat elit vulputate.",
+		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices tristique odio, sit amet euismod odio commodo nec.",
 		  "products": [
 			{
 			  "image": {

@@ -1,2 +1,60 @@
 :local {
+	.success-post {
+	}
+
+	.sub-heading {
+		margin-bottom: $sizeGrid / 2;
+		color: $colorSecondary;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+		font-weight: 400;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid * 2;
+	}
+
+	.details {
+		@extend %reset-list;
+		display: flex;
+	}
+
+	.detail {
+		padding: $sizeGrid / 2 $sizeGrid $sizeGrid / 2 0;
+
+		&:not(:first-child) {
+			padding-left: $sizeGrid;
+			border-left: 1px solid #dfe0e0;
+		}
+	}
+
+	.detail-value {
+		color: $colorSecondary;
+	}
+
+	@include respond-to(SMALL) {
+		.copy {
+			margin-bottom: $sizeGrid;
+		}
+
+		.details {
+			flex-wrap: wrap;
+			border-top: 1px solid #dfe0e0;
+			padding-top: mobile-size($sizeGrid);
+		}
+
+		.detail {
+			@include size(50%, auto);
+			display: inline-block;
+			padding: 0;
+			margin-bottom: mobile-size($sizeGrid * 2);
+
+			&:not(:first-child) {
+				padding: 0;
+				border: none;
+			}
+		}
+	}
 }
