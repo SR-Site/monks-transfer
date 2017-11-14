@@ -55,6 +55,23 @@
 		}
 	  },
 	  {
+		"id": "largeVideo",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "poster": {
+			"normal": "http://via.placeholder.com/1920x1080",
+			"small": "http://via.placeholder.com/1920x1080",
+			"alt": "Background image alt text"
+		  },
+		  "video": {
+			"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+			"type": 0
+		  }
+		}
+	  },
+	  {
 		"id": "successStoryPost",
 		"data": {
 		  "overlap": false,

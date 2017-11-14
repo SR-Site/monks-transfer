@@ -1,7 +1,8 @@
-import VueTypes from 'vue-types';
 import { AbstractBlockComponent } from 'vue-block-system';
-import LargeVideoTransitionController from './LargeVideoTransitionController';
+import VueTypes from 'vue-types';
+import { VideoOverlayMutationTypes } from '../../store/module/videoOverlay';
 import LargeVideoData from './LargeVideoData';
+import LargeVideoTransitionController from './LargeVideoTransitionController';
 
 export default {
 	name: 'LargeVideo',
@@ -13,6 +14,12 @@ export default {
 		handleAllComponentsReady() {
 			this.transitionController = new LargeVideoTransitionController(this);
 			this.isReady();
+		},
+		handleVideoClick() {
+			this.$store.dispatch(VideoOverlayMutationTypes.SHOW, {
+				video: this.data.video,
+				poster: this.data.poster,
+			});
 		},
 	},
 };
