@@ -81,6 +81,9 @@ const initPlugins = () => {
 				backgroundColor: 'rgba(0,0,255,0.8)',
 				zIndex: 999,
 			},
+			buttonConfig: {
+				scrollToNextBlockOffset: -75,
+			},
 			enablePageTransitionOut: false,
 		},
 	});

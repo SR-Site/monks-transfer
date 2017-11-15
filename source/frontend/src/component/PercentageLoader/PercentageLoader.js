@@ -2,6 +2,8 @@ import { AbstractTransitionComponent } from 'vue-transition-component';
 import VueTypes from 'vue-types';
 import { TweenLite, Power2 } from 'gsap';
 import PercentageLoaderTransitionController from './PercentageLoaderTransitionController';
+import DrawSVGPlugin from '../../vendor/gsap/plugin/DrawSVGPlugin';
+import Size from 'data/enum/Size';
 
 export default {
 	name: 'PercentageLoader',
@@ -10,6 +12,7 @@ export default {
 		value: VueTypes.number.isRequired,
 		total: VueTypes.number.isRequired,
 		borderType: VueTypes.number.isRequired,
+		labelSize: VueTypes.number.def(Size.SMALL),
 	},
 	data() {
 		return {
@@ -19,6 +22,8 @@ export default {
 	},
 	methods: {
 		handleAllComponentsReady() {
+			DrawSVGPlugin;
+
 			this.transitionController = new PercentageLoaderTransitionController(this);
 			this.isReady();
 
@@ -52,7 +57,7 @@ export default {
 				},
 			);
 
-			this.label = isFinite(value) ? `${percentage}%` : value; // eslint-disable-line
+			this.label = isFinite(value) ? percentage : value; // eslint-disable-line
 		},
 	},
 };

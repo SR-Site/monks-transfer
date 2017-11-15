@@ -55,6 +55,36 @@
 		}
 	  },
 	  {
+		"id": "audienceStatisticsB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "How to reach <strong>Millenials</strong>",
+		  "paragraph": "Half of <strong>Millenials</strong> households own a multimedia device, far more than any onther household.",
+		  "background": {
+			"normal": "http://via.placeholder.com/1280x640",
+			"small": "http://via.placeholder.com/1280x640",
+			"alt": "Background image alt text"
+		  },
+		  "statistics": [
+			{
+			  "label": "Owns a home",
+			  "value": 65
+			},
+			{
+			  "label": "Have kids of age 6-11",
+			  "value": 20
+			},
+			{
+			  "label": "57k Median HHI",
+			  "value": 36
+			}
+		  ],
+		  "cta": "Find out more"
+		}
+	  },
+	  {
 		"id": "audienceProductTop",
 		"data": {
 		  "overlap": false,

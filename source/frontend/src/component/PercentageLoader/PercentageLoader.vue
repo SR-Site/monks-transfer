@@ -33,6 +33,9 @@
 					transform="rotate(-90, 250, 250)"/>
 			</svg>
 		</div>
-		<div :class="$style.amountInfo" v-html="label"></div>
+		<div :class="[$style.amountInfo, $style[ClassNameHelper.parseSize(this.labelSize)]]">
+			<span :class="$style.value" v-html="label" ></span>
+			<span :class="$style.unit">%</span>
+		</div>
 	</div>
 </template>
