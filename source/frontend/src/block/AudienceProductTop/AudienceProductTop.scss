@@ -1,2 +1,97 @@
 :local {
+	.audience-product-top {
+		padding: $sizeGrid 0;
+	}
+
+	.wrapper {
+		display: flex;
+	}
+
+	.column {
+		@include size(50%, auto);
+
+		&.left {
+			padding-right: $sizeGrid * 2;
+		}
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid;
+	}
+
+	.copy {
+		margin-bottom: $sizeGrid * 3;
+	}
+
+	.card {
+		background: $colorSecondary;
+		color: $colorWhite;
+		padding: $sizeGrid * 2;
+		overflow: hidden;
+		width: 100%;
+
+		&:before {
+			@include position(auto, auto, -$sizeGrid, 0);
+			content: '01';
+			font: 400 25rem/1 $fontOpenSans;
+			position: absolute;
+			color: rgba(5, 50, 90, .15);
+		}
+	}
+
+	.card-heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.card-heading,
+	.card-copy {
+		z-index: 1;
+	}
+
+	.image {
+		@include aspect-ratio(960px, 1424px);
+		box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+	}
+
+	@include respond-to(SMALL) {
+		.site-frame {
+			padding: 0;
+		}
+
+		.wrapper {
+			flex-direction: column;
+		}
+
+		.column {
+			width: 100%;
+			&.left {
+				order: 2;
+				padding-right: 0;
+			}
+
+			&.right {
+				order: 1;
+			}
+		}
+
+		.copy {
+			margin-bottom: mobile-size($sizeGridMobile);
+		}
+
+		.box,
+		.content {
+			padding: 0 $sizeGridMobile * 2;
+		}
+
+		.card:before {
+			font-size: mobile-size(40rem);
+			bottom: mobile-size($sizeGridMobile * -3);
+		}
+
+		.image {
+			@include aspect-ratio(640px, 640px);
+			box-shadow: none;
+			margin-bottom: mobile-size($sizeGridMobile * 2);
+		}
+	}
 }

@@ -42,14 +42,14 @@
 		.details {
 			flex-wrap: wrap;
 			border-top: 1px solid #dfe0e0;
-			padding-top: mobile-size($sizeGrid);
+			padding-top: mobile-size($sizeGridMobile);
 		}
 
 		.detail {
 			@include size(50%, auto);
 			display: inline-block;
 			padding: 0;
-			margin-bottom: mobile-size($sizeGrid * 2);
+			margin-bottom: mobile-size($sizeGridMobile * 2);
 
 			&:not(:first-child) {
 				padding: 0;

@@ -17,6 +17,7 @@ class MainProductNavItemTransitionController extends AbstractTransitionControlle
 			{
 				autoAlpha: 1,
 				ease: Linear.easeNone,
+				clearProps: 'all',
 			},
 		);
 		this.transitionInTimeline.fromTo(
@@ -30,6 +31,7 @@ class MainProductNavItemTransitionController extends AbstractTransitionControlle
 				autoAlpha: 1,
 				y: 0,
 				ease: Expo.easeOut,
+				clearProps: 'all',
 			},
 			'=-0.7',
 		);
@@ -44,6 +46,7 @@ class MainProductNavItemTransitionController extends AbstractTransitionControlle
 				autoAlpha: 1,
 				y: 0,
 				ease: Expo.easeOut,
+				clearProps: 'all',
 			},
 			'=-0.7',
 		);

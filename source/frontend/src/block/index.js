@@ -5,6 +5,7 @@ export default {
 	AudienceQuote: () => import('./AudienceQuote'),
 	AudienceReach: () => import('./AudienceReach'),
 	AudienceStatistics: () => import('./AudienceStatistics'),
+	AudienceStatisticsB: () => import('./AudienceStatisticsB'),
 	AudienceTopProgramming: () => import('./AudienceTopProgramming'),
 	AudioFragment: () => import('./AudioFragment'),
 	BlogPost: () => import('./BlogPost'),

@@ -1,2 +1,43 @@
 :local {
+	.audience-quote {
+		padding: $sizeGrid 0;
+	}
+
+	.content {
+		width: 100%;
+		max-width: $largeSiteFrame;
+		margin: 0 auto;
+		padding: $sizeGrid * 4 $sizeGrid * 6;
+		background: $colorPrimary;
+		color: $colorWhite;
+		text-align: center;
+		z-index: 1;
+	}
+
+	.sub-heading {
+		text-transform: uppercase;
+		margin-bottom: $sizeGrid;
+	}
+
+	.image {
+		@include size(100%, auto);
+		@include aspect-ratio(1280px, 560px);
+		margin-top: -$sizeGrid * 2;
+	}
+
+	@include respond-to(LARGE) {
+		.content {
+			padding: $sizeGrid * 2 $sizeGrid * 3;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.content {
+			text-align: left;
+		}
+
+		.image {
+			@include aspect-ratio(640px, 490px);
+		}
+	}
 }

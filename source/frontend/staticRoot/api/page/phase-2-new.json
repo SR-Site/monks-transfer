@@ -55,6 +55,40 @@
 		}
 	  },
 	  {
+		"id": "audienceProductTop",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Applying the effect of your ad by advertising on websites that <strong>Millenials</strong> use every day",
+		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		  "image": {
+			"normal": "http://via.placeholder.com/960x1424",
+			"small": "http://via.placeholder.com/750x750",
+			"alt": "Background image alt text"
+		  },
+		  "card": {
+			"heading": "Disney.com",
+			"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. Et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+		  }
+		}
+	  },
+	  {
+		"id": "audienceQuote",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "subHeading": "Did you know",
+		  "heading": "40% of Millenials agree that the quality of the programs they watch is important",
+		  "image": {
+			"normal": "http://via.placeholder.com/1280x560",
+			"small": "http://via.placeholder.com/1280x560",
+			"alt": "Background image alt text"
+		  }
+		}
+	  },
+	  {
 		"id": "twitterFeed",
 		"data": {
 		  "overlap": false,
@@ -64,6 +98,13 @@
 			{
 			  "name": "SpectrumReach",
 			  "handle": "@SpectrumReach",
+			  "text": "We're nearly ready to take over the Edison Ballroom for #SpectrumNewFront. Stay tuned for more news. #NewFronts",
+			  "date": "02/05/2017",
+			  "target": "http://www.twitter.com"
+			},
+			{
+			  "name": "SpectrumReach",
+			  "handle": "SpectrumReach",
 			  "text": "We're nearly ready to take over the Edison Ballroom for #SpectrumNewFront. Stay tuned for more news. #NewFronts",
 			  "date": "02/05/2017",
 			  "target": "http://www.twitter.com"
