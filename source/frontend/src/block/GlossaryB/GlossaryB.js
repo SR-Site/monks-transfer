@@ -96,10 +96,8 @@ export default {
 		},
 		handleFormSubmit() {
 			// Nothing?
-			console.log('form submit triggered');
 		},
 		notifyAboutResize(){
-			console.log('notify about resize');
 			setTimeout(() => this.$emit('resize'), 1000);
 		}
 	},

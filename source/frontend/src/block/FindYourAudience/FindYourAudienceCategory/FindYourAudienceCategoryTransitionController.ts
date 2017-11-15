@@ -1,7 +1,7 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 import { Linear } from 'gsap';
 
-class TwitterFeedTransitionController extends AbstractTransitionController {
+class FindYourAudienceCategoryTransitionController extends AbstractTransitionController {
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
@@ -20,8 +20,12 @@ class TwitterFeedTransitionController extends AbstractTransitionController {
 				clearProps: 'all',
 			},
 		);
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrevious'));
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonNext'));
+
+		(<Array<any>>this.viewModel.$refs.item).forEach((item, index) => {
+			this.transitionInTimeline.add(
+				() => this.getSubTimeline(`FindYourAudienceTeaser${index}`), 1 + (index * 0.2),
+			);
+		});
 	}
 
 	/**
@@ -33,4 +37,4 @@ class TwitterFeedTransitionController extends AbstractTransitionController {
 	}
 }
 
-export default TwitterFeedTransitionController;
+export default FindYourAudienceCategoryTransitionController;

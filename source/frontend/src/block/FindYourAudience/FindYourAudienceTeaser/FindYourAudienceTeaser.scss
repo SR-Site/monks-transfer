@@ -1,0 +1,65 @@
+:local {
+	.find-your-audience-teaser {
+		display: inline-block;
+		padding-bottom: $sizeGrid * 2;
+	}
+
+	.content {
+		@include size(100%);
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.image {
+		@include size(100%, auto);
+		@include aspect-ratio(16px, 9px);
+	}
+
+	.button {
+		@include position(auto, auto, $sizeGrid / 2, $sizeGrid / 2);
+		position: absolute;
+	}
+
+	.description {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-top: $sizeGrid / 2;
+	}
+
+	.sub-heading {
+		margin-bottom: $sizeGrid / 2;
+		color: $colorTertiary;
+		font-weight: 600;
+	}
+
+	.reach-heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.reaches {
+		@extend %reset-list;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.reach {
+		display: inline-block;
+	}
+
+	@include respond-to(SMALL) {
+		.image {
+			margin-bottom: mobile-size($sizeGridMobile * 2);
+		}
+
+		.description {
+			padding: 0 $sizeGridMobile * 2;
+		}
+
+		.copy {
+			margin-bottom: mobile-size($sizeGridMobile * 2);
+		}
+	}
+}

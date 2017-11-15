@@ -16,6 +16,7 @@ export default {
 	DownloadFileA: () => import('./DownloadFileA'),
 	DownloadFileB: () => import('./DownloadFileB'),
 	FilterContent: () => import('./FilterContent'),
+	FindYourAudience: () => import('./FindYourAudience'),
 	FreeText: () => import('./FreeText'),
 	GlossaryA: () => import('./GlossaryA'),
 	GlossaryB: () => import('./GlossaryB'),
