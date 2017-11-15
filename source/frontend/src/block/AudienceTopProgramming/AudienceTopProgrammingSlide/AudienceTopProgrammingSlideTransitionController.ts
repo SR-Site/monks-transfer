@@ -1,7 +1,7 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 import { Linear, Expo } from 'gsap';
 
-class AudienceTopProgrammingTransitionController extends AbstractTransitionController {
+class AudienceTopProgrammingSlideTransitionController extends AbstractTransitionController {
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
@@ -20,13 +20,8 @@ class AudienceTopProgrammingTransitionController extends AbstractTransitionContr
 				clearProps: 'all',
 			},
 		);
-
-		(<Array<any>>this.viewModel.$refs.slide).forEach((slide, index) => {
-			this.transitionInTimeline.add(this.getSubTimeline(`AudienceTopProgrammingSlide${index}`), 0.7);
-		});
-
 		this.transitionInTimeline.fromTo(
-			this.viewModel.$refs.previous,
+			this.viewModel.$refs.heading,
 			0.8,
 			{
 				autoAlpha: 0,
@@ -38,11 +33,10 @@ class AudienceTopProgrammingTransitionController extends AbstractTransitionContr
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			1,
+			'=-0.7',
 		);
-
 		this.transitionInTimeline.fromTo(
-			this.viewModel.$refs.next,
+			this.viewModel.$refs.copy,
 			0.8,
 			{
 				autoAlpha: 0,
@@ -54,10 +48,24 @@ class AudienceTopProgrammingTransitionController extends AbstractTransitionContr
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			1,
+			'=-0.7',
 		);
-
-		this.transitionInTimeline.add(this.getSubTimeline('DashedPaginator'), 1);
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.network,
+			0.8,
+			{
+				autoAlpha: 0,
+				y: 50,
+			},
+			{
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut,
+				clearProps: 'all',
+			},
+			'=-0.7',
+		);
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonCircleArrowNext'), '=-0.7');
 	}
 
 	/**
@@ -65,7 +73,8 @@ class AudienceTopProgrammingTransitionController extends AbstractTransitionContr
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {}
+	protected setupTransitionOutTimeline(): void {
+	}
 }
 
-export default AudienceTopProgrammingTransitionController;
+export default AudienceTopProgrammingSlideTransitionController;

@@ -26,7 +26,7 @@ class MainProductNavTransitionController extends AbstractTransitionController {
 			this.transitionInTimeline.add(this.getSubTimeline(`MainProductNavItem${index}`), '=-1');
 		});
 
-		this.transitionInTimeline.add(this.getSubTimeline('DashedPaginator'))
+		this.transitionInTimeline.add(this.getSubTimeline('DashedPaginator'), 1);
 	}
 
 	/**

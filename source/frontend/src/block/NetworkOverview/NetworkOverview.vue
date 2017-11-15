@@ -2,7 +2,10 @@
 <script src="./NetworkOverview.js"></script>
 
 <template>
-	<div :class="$style.networkOverview">
+	<div :class="[
+		$style.networkOverview,
+		$style[ClassNameHelper.parseAlignment(data.alignment)],
+	]">
 		<div :class="$style.siteFrame" class="site-frame">
 			<div class="overrule-overlap">
 				<header :class="$style.header" ref="heading">

@@ -1,2 +1,86 @@
 :local {
+	.audience-top-programming {
+		padding: 0 $sizeGrid * 2;
+	}
+
+	.header {
+		margin-bottom: $sizeGrid;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.alignment-left {
+		.header {
+			text-align: left;
+		}
+	}
+
+	.alignment-right {
+		.header {
+			text-align: right;
+		}
+	}
+
+	.alignment-center {
+		.header {
+			text-align: center;
+		}
+	}
+
+	.navigation-button {
+		@include size($sizeGrid, auto);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+
+		.icon {
+			@include size(100%);
+		}
+
+		path {
+			fill: $colorQuaternary;
+		}
+	}
+
+	.navigation-previous {
+		left: $sizeGrid * -1.5
+	}
+
+	.navigation-next {
+		right: $sizeGrid * -1.5;
+	}
+
+	.viewport {
+		@include aspect-ratio(1040px, 580px);
+	}
+
+	.paginator {
+		display: none;
+	}
+
+	@include respond-to(SMALL) {
+		.audience-top-programming {
+			padding: 0;
+		}
+
+		.site-frame {
+			padding: 0;
+		}
+
+		.navigation-button {
+			display: none;
+		}
+
+		.paginator {
+			display: block;
+			margin-top: $sizeGridMobile * 2;
+		}
+
+		.viewport {
+			@include aspect-ratio(640px, 640px);
+		}
+	}
 }
