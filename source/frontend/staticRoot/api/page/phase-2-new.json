@@ -706,12 +706,9 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "primaryImage": {
-			"footer": "Copyright © 2017 Lorem ipsum dolor sit amet",
-			"image": {
-			  "normal": "http://via.placeholder.com/1280x720",
-			  "small": "http://via.placeholder.com/1280x720",
-			  "alt": "Background image alt text"
-			}
+			"normal": "http://via.placeholder.com/1280x720",
+			"small": "http://via.placeholder.com/1280x720",
+			"alt": "Background image alt text"
 		  },
 		  "secondaryImage": {
 			"normal": "http://via.placeholder.com/1280x720",

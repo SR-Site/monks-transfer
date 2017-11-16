@@ -14,11 +14,6 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	primaryImage: VueTypes.shape(
-		{
-			footer: VueTypes.string.isRequired,
-			image: VueTypes.shape(PropImage).isRequired,
-		},
-	).isRequired,
+	primaryImage: VueTypes.shape(PropImage),
 	secondaryImage: VueTypes.shape(PropImage),
 };

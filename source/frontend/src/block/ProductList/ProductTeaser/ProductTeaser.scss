@@ -11,9 +11,9 @@
 	}
 
 	.content {
+		@include size(100%);
 		display: flex;
 		flex-direction: column;
-		height: 100%;
 	}
 
 	.gradient-overlay {
@@ -22,6 +22,7 @@
 
 	.image {
 		@include aspect-ratio(360px, 200px);
+		flex-shrink: 0;
 
 		&:after {
 			@include triangle(right, bottom, $colorWhite, $sizeGrid);

@@ -12,11 +12,6 @@
 		@include aspect-ratio(16px, 9px);
 	}
 
-	.footer {
-		color: $colorQuaternary;
-		margin-top: $sizeGrid;
-	}
-
 	.primary-image {
 		@include size(60%, auto);
 	}
@@ -36,10 +31,6 @@
 		.secondary-image {
 			width: 100%;
 			padding: 0;
-		}
-
-		.footer {
-			padding: 0 $sizeGridMobile * 2;
 		}
 
 		.primary-image {
