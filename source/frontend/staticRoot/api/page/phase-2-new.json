@@ -55,17 +55,6 @@
 		}
 	  },
 	  {
-		"id": "share",
-		"data": {
-		  "overlap": false,
-		  "windowed": false,
-		  "marginTop": 0,
-		  "facebook": true,
-		  "twitter": true,
-		  "linkedIn": true
-		}
-	  },
-	  {
 		"id": "findYourAudience",
 		"data": {
 		  "overlap": false,
@@ -1684,6 +1673,17 @@
 			"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
 			"type": 0
 		  }
+		}
+	  },
+	  {
+		"id": "share",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "facebook": true,
+		  "twitter": true,
+		  "linkedIn": true
 		}
 	  }
 	],
