@@ -55,6 +55,17 @@
 		}
 	  },
 	  {
+		"id": "share",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "facebook": true,
+		  "twitter": true,
+		  "linkedIn": true
+		}
+	  },
+	  {
 		"id": "findYourAudience",
 		"data": {
 		  "overlap": false,

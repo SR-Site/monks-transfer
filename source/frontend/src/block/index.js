@@ -55,6 +55,7 @@ export default {
 	SmallHeading: () => import('./SmallHeading'),
 	SmallImage: () => import('./SmallImage'),
 	SmallInfo: () => import('./SmallInfo'),
+	Share: () => import('./Share'),
 	StoryInfoImages: () => import('./StoryInfoImages'),
 	SuccessStoriesA: () => import('./SuccessStoriesA'),
 	SuccessStoriesB: () => import('./SuccessStoriesB'),
