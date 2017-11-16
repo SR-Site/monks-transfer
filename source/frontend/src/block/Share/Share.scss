@@ -3,7 +3,7 @@
 		padding: $sizeGrid 0;
 
 		svg {
-			@include size($sizeGrid);
+			@include size(100%);
 		}
 
 		path {
@@ -52,6 +52,17 @@
 		:global {
 			.linked-in {
 				display: block;
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.share {
+			:global {
+				li {
+					@include size(mobile-size($sizeGrid * 2));
+					margin: 0 $sizeGrid / 2;
+				}
 			}
 		}
 	}
