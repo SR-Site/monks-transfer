@@ -79,49 +79,9 @@ class Recommend extends ContentEntityBase implements RecommendInterface {
       ->setDisplayConfigurable('form', FALSE)
       ->setDisplayConfigurable('view', FALSE);
 
-    $fields['image_100'] = BaseFieldDefinition::create('image')
-      ->setLabel(t('Image 100'))
-      ->setDescription(t('Image with a width of 100px.'))
-      ->setCardinality(1)
-      ->setSettings([
-        'file_extensions' => 'png gif jpg jpeg',
-        'uri_scheme' => 'public'
-      ])
-      ->setTranslatable(FALSE)
-      ->setDisplayOptions('view', [
-        'label' => 'above',
-        'type' => 'default',
-        'weight' => 0,
-      ])
-      ->setDisplayOptions('form', [
-        'label' => 'hidden',
-        'type' => 'image_image',
-        'weight' => 0,
-      ]);
-
-    $fields['image_300'] = BaseFieldDefinition::create('image')
-      ->setLabel(t('Image 300'))
-      ->setDescription(t('Image with a width of 300px.'))
-      ->setCardinality(1)
-      ->setSettings([
-        'file_extensions' => 'png gif jpg jpeg',
-        'uri_scheme' => 'public'
-      ])
-      ->setTranslatable(FALSE)
-      ->setDisplayOptions('view', [
-        'label' => 'above',
-        'type' => 'default',
-        'weight' => 0,
-      ])
-      ->setDisplayOptions('form', [
-        'label' => 'hidden',
-        'type' => 'image_image',
-        'weight' => 0,
-      ]);
-
-    $fields['image_600'] = BaseFieldDefinition::create('image')
-      ->setLabel(t('Image 600'))
-      ->setDescription(t('Image with a width of 600px.'))
+    $fields['image'] = BaseFieldDefinition::create('image')
+      ->setLabel(t('Image'))
+      ->setDescription(t('Image.'))
       ->setCardinality(1)
       ->setSettings([
         'file_extensions' => 'png gif jpg jpeg',
