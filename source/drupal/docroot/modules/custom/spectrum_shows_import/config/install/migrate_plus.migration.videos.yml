@@ -1,0 +1,39 @@
+id: videos
+label: JSON feed of videos
+migration_group: migrate_shows_json
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json_nested
+  urls: 'http://spectrum.loc/new.json'
+  item_selector: '/Result/'
+  sub_selector: 'Videos'
+  fields:
+    -
+      name: Url
+      label: 'Url'
+      selector: Url
+    -
+      name: Posted
+      label: 'Posted'
+      selector: Posted
+
+  ids:
+    Url:
+      type: string
+
+process:
+  type:
+    plugin: default_value
+    default_value: video
+
+  field_video_url: Url
+
+  created:
+    plugin: created
+    source: Posted
+
+destination:
+  plugin: 'entity:media'
+  default_bundle: video_url
+migration_dependencies: null

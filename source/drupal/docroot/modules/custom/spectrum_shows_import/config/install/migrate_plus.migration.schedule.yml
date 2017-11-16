@@ -1,0 +1,93 @@
+id: schedule
+label: JSON feed of schedule
+migration_group: migrate_shows_json
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json_nested
+  urls: 'http://spectrum.loc/new.json'
+  item_selector: '/Result/'
+  sub_selector: 'Schedule'
+  fields:
+    -
+      name: Title
+      label: 'Title'
+      selector: Title
+    -
+      name: Epititle
+      label: 'Epititle'
+      selector: Epititle
+    -
+      name: Stationnum
+      label: 'Stationnum'
+      selector: Stationnum
+    -
+      name: Duration
+      label: 'Duration'
+      selector: Duration
+    -
+      name: Descembed
+      label: 'Descembed'
+      selector: Descembed
+    -
+      name: Starttime
+      label: 'Starttime'
+      selector: Starttime
+    -
+      name: Genres
+      label: 'Genres'
+      selector: Genres
+    -
+      name: Live
+      label: 'Live'
+      selector: Live
+    -
+      name: uniqueId
+      label: 'uniqueId'
+      selector: uniqueId
+
+  ids:
+    uniqueId:
+      type: string
+
+process:
+  type:
+    plugin: default_value
+    default_value: schedule
+
+  title: Title
+
+  subtitle: Epititle
+
+  network:
+    plugin: migration_lookup
+    no_stub: true
+    migration: network
+    source: Stationnum
+
+  duration: Duration
+
+  description: Descembed
+
+  start_time:
+    plugin: format_date
+    from_format: 'Y-m-d\TH:i:s\Z'
+    to_format: 'Y-m-d\TH:i:s'
+    source: Starttime
+
+  genres:
+    plugin: sub_process
+    source: Genres
+    process:
+      target_id:
+        plugin: migration_lookup
+        migration: genres
+        source: Genre
+  live: Live
+
+destination:
+  plugin: 'entity:schedule'
+migration_dependencies:
+  optional:
+    - genres
+    - network
