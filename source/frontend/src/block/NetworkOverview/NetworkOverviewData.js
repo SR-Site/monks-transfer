@@ -7,7 +7,8 @@ import NetworkOverviewItemData from './NetworkOverviewItemData';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
- * @param {placeholder} alignment THe alignment of the header
+ * @param {description} alignment The alignment of the header
+ * @param {description} heading The heading of the block
  * @param {description} items The array of items in the block
  */
 export default {

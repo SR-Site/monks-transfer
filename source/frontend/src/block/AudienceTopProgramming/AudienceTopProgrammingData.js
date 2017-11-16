@@ -8,6 +8,8 @@ import AudienceTopProgrammingSlideData from './AudienceTopProgrammingSlide/Audie
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
  * @param {description} alignment The alignment of the heading
+ * @param {description} heading The heading of the block
+ * @param {description} paragraph The paragraph of the block
  * @param {description} slides The array of slides displayed in the hero block
  */
 export default {

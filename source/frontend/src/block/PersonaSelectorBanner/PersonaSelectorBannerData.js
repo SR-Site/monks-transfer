@@ -10,6 +10,7 @@ import PropLink from '../../data/prop-type/action/PropLink';
  * @param {placeholder} scrollId unique-block-id
  * @param {description} heading This is the heading for the banner
  * @param {description} paragraph This is the paragraph for the banner
+ * @param {description} image normal: 750x750, small: 750x750
  * @param {description} links This is the array containing the links in the banner
  */
 export default {

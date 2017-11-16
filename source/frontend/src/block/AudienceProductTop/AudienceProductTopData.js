@@ -9,7 +9,7 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {placeholder} scrollId unique-block-id
  * @param {description} heading The heading of the block
  * @param {description} paragraph The paragraph of the block
- * @param {description} image The image of the block
+ * @param {description} image normal: 960x1424, small: 750x750
  * @param {description} card The card displayed in the block
  * @param {description} card.heading The card heading
  * @param {description} card.paragraph The card paragraph

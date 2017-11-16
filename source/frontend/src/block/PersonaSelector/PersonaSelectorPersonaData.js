@@ -7,7 +7,7 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {description} paragraph The paragraph displayed on the persona
  * @param {description} personaType The type of the persona
  * @param {description} link The link displayed on the persona
- * @param {description} image The image displayed on the persona
+ * @param {description} image normal: 1920x1056, small: 750x585
  */
 export default {
 	heading: VueTypes.string.isRequired,

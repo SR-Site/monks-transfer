@@ -11,6 +11,7 @@ import PropLink from '../../data/prop-type/action/PropLink';
  * @param {description} heading The heading of the success story
  * @param {description} subHeading The sub heading of the success story
  * @param {description} paragraph The excerpt of the success story
+ * @param {description} image normal: 750x750, small: 750x750
  * @param {description} link The link to the success story
  */
 export default {

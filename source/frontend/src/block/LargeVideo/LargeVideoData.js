@@ -8,7 +8,7 @@ import PropVideo from '../../data/prop-type/media/PropVideo';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
- * @param {description} poster The poster of the video
+ * @param {description} poster normal: 1920x900, small: 750x350
  * @param {description} video The video
  */
 export default {

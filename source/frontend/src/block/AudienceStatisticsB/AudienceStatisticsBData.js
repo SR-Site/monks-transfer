@@ -11,6 +11,7 @@ import AudienceStatisticData from './AudienceStatisticData';
  * @param {description} heading The heading of the block
  * @param {description} paragraph The paragraph of the block
  * @param {description} cta The cta label of the block
+ * @param {description} background normal: 1920x960, small: 640x1040
  * @param {description} statistics The statistics of the block
  */
 export default {

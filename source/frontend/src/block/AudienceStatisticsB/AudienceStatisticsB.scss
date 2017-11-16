@@ -72,7 +72,7 @@
 
 	@include respond-to(SMALL) {
 		.audience-statistics-b {
-			@include aspect-ratio(640px, 1043px);
+			@include aspect-ratio(640px, 1040px);
 			min-height: 0;
 		}
 

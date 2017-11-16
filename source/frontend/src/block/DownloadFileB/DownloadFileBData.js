@@ -12,6 +12,7 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {description} paragraph The paragraph of the block
  * @param {description} fileDescription The description of the file including the size and type
  * @param {description} link The link to the download of the file
+ * @param {description} image normal: 240x240, small: 240x240
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

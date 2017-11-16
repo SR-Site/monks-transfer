@@ -10,7 +10,7 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {description} heading The heading for the audio fragment
  * @param {description} name The name of the audio fragment
  * @param {description} description the description on the audio fragment
- * @param {description} image The image for the audio fragment
+ * @param {description} image normal: 240x240, small: 240x240
  * @param {description} file The audio file
  * @param {placeholder} file path/to/file.mp3
  */

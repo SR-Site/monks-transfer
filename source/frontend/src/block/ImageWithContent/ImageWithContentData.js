@@ -11,7 +11,7 @@ import PropLink from '../../data/prop-type/action/PropLink';
  * @param {description} alignment The alignment of the image
  * @param {description} heading The heading of the block
  * @param {description} paragraph The paragraph of the block
- * @param {description} background The background image on the block
+ * @param {description} background normal: 1280x830, small: 750x550
  * @param {description} link The link on the block
  */
 export default {

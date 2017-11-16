@@ -9,7 +9,11 @@ import PropVideo from '../../data/prop-type/media/PropVideo';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
- * @param {description} slides The array of slides displayed in the hero block
+ * @param {description} heading The heading of the block
+ * @param {description} paragraph The paragraph of the block
+ * @param {description} link The link of the block
+ * @param {description} poster normal: 1920x720, small: 1280x720
+ * @param {description} video The video that should be played
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

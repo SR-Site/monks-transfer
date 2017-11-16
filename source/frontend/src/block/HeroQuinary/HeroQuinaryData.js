@@ -9,7 +9,7 @@ import PropLink from '../../data/prop-type/action/PropLink';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
- * @param {description} background The background image for the block
+ * @param {description} background normal: 1440x480, small: 750x560
  * @param {description} backgroundVideo The background video for the block
  * @param {description} link The link attached to the hero
  * @param {description} heading The heading displayed on the hero

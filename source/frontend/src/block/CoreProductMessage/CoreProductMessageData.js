@@ -7,6 +7,7 @@ import CoreProductItemData from './CoreProductItemData';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} heading The heading of the block
  * @param {description} items The array of items displayed in the block
  */
 export default {

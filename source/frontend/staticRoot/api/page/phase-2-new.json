@@ -404,7 +404,7 @@
 			  "network": "Nickelodeon",
 			  "background": {
 				"normal": "http://via.placeholder.com/1040x580",
-				"small": "http://via.placeholder.com/1040x580",
+				"small": "http://via.placeholder.com/750x750",
 				"alt": "Background image alt text"
 			  },
 			  "playVideoLabel": "Watch trailer",
@@ -419,7 +419,7 @@
 			  "network": "Nickelodeon",
 			  "background": {
 				"normal": "http://via.placeholder.com/1040x580",
-				"small": "http://via.placeholder.com/1040x580",
+				"small": "http://via.placeholder.com/750x750",
 				"alt": "Background image alt text"
 			  },
 			  "playVideoLabel": "Watch trailer",
@@ -440,8 +440,8 @@
 		  "heading": "How to reach <strong>Millenials</strong>",
 		  "paragraph": "Half of <strong>Millenials</strong> households own a multimedia device, far more than any onther household.",
 		  "background": {
-			"normal": "http://via.placeholder.com/1280x640",
-			"small": "http://via.placeholder.com/1280x640",
+			"normal": "http://via.placeholder.com/1920x960",
+			"small": "http://via.placeholder.com/640x1040",
 			"alt": "Background image alt text"
 		  },
 		  "statistics": [
@@ -490,7 +490,7 @@
 		  "heading": "40% of Millenials agree that the quality of the programs they watch is important",
 		  "image": {
 			"normal": "http://via.placeholder.com/1280x560",
-			"small": "http://via.placeholder.com/1280x560",
+			"small": "http://via.placeholder.com/750x580",
 			"alt": "Background image alt text"
 		  }
 		}
@@ -590,8 +590,8 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "poster": {
-			"normal": "http://via.placeholder.com/1920x1080",
-			"small": "http://via.placeholder.com/1920x1080",
+			"normal": "http://via.placeholder.com/1920x900",
+			"small": "http://via.placeholder.com/1920x900",
 			"alt": "Background image alt text"
 		  },
 		  "video": {
@@ -874,7 +874,7 @@
 			  "value": "64%",
 			  "background": {
 				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/720x720",
+				"small": "http://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -889,7 +889,7 @@
 			  "value": "28%",
 			  "background": {
 				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -904,7 +904,7 @@
 			  "value": "96%",
 			  "background": {
 				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -919,7 +919,7 @@
 			  "value": "64%",
 			  "background": {
 				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -934,7 +934,7 @@
 			  "value": "28%",
 			  "background": {
 				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -949,7 +949,7 @@
 			  "value": "96%",
 			  "background": {
 				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -1160,7 +1160,7 @@
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			  "image": {
 				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/1200x1200",
+				"small": "http://via.placeholder.com/750x420",
 				"alt": "Lorem ipsum"
 			  },
 			  "link": {
@@ -1175,7 +1175,7 @@
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			  "image": {
 				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/1200x1200",
+				"small": "http://via.placeholder.com/750x420",
 				"alt": "Lorem ipsum"
 			  },
 			  "link": {
@@ -1190,7 +1190,7 @@
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			  "image": {
 				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/1200x1200",
+				"small": "http://via.placeholder.com/750x420",
 				"alt": "Lorem ipsum"
 			  },
 			  "link": {
@@ -1205,7 +1205,7 @@
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			  "image": {
 				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/1200x1200",
+				"small": "http://via.placeholder.com/750x420",
 				"alt": "Lorem ipsum"
 			  },
 			  "link": {
@@ -1240,8 +1240,8 @@
 		  "stories": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/720x720",
-				"small": "http://via.placeholder.com/720x720",
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1249,8 +1249,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/720x720",
-				"small": "http://via.placeholder.com/720x720",
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1258,8 +1258,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/720x720",
-				"small": "http://via.placeholder.com/720x720",
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1267,8 +1267,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/720x720",
-				"small": "http://via.placeholder.com/720x720",
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1276,8 +1276,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/720x720",
-				"small": "http://via.placeholder.com/720x720",
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1285,8 +1285,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/720x720",
-				"small": "http://via.placeholder.com/720x720",
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1294,8 +1294,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/720x720",
-				"small": "http://via.placeholder.com/720x720",
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1548,8 +1548,8 @@
 			"type": 0
 		  },
 		  "backgroundImage": {
-			"normal": "http://via.placeholder.com/1440x560",
-			"small": "http://via.placeholder.com/1440x560",
+			"normal": "http://via.placeholder.com/1920x750",
+			"small": "http://via.placeholder.com/750x560",
 			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 		  },
 		  "image": {

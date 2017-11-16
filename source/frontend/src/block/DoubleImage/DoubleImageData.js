@@ -7,7 +7,8 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
- * @param {description} slides The array of slides displayed in the hero block
+ * @param {description} primaryImage normal: 1280x720, small: 1280x720
+ * @param {description} secondaryImage normal: 1280x720, small: 1280x720
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

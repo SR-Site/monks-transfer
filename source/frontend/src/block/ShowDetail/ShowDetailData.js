@@ -7,13 +7,17 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} heading The heading of the block
+ * @param {description} paragraph The paragraph of the block
  * @param {description} network The network value for the show
  * @param {description} network.label The category label
- * @param {description} network.image The network logo
+ * @param {description} network.image normal: 240x240, small: 240x240
+ * @param {description} airTime The airtime value
  * @param {description} airTime.label The category label
- * @param {description} airTime.image The air time value
+ * @param {description} airTime.image normal: 240x240, small: 240x240
+ * @param {description} ageRestriction The age restriction value
  * @param {description} ageRestriction.label The category label
- * @param {description} ageRestriction.image The age restriction label
+ * @param {description} ageRestriction.image normal: 240x240, small: 240x240
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

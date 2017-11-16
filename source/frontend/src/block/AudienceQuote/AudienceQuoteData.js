@@ -9,7 +9,7 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {placeholder} scrollId unique-block-id
  * @param {description} subHeading The sub heading of the block
  * @param {description} heading The heading of the block
- * @param {description} image The image of the block
+ * @param {description} image normal: 1280x560, small: 750x580
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

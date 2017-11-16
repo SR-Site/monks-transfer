@@ -6,7 +6,7 @@ import PropVideo from '../../../data/prop-type/media/PropVideo';
  * @param {description} heading The heading for the slide
  * @param {description} paragraph The paragraph for the slide
  * @param {description} network The network for the slide
- * @param {description} background The background for the slide
+ * @param {description} background 1040x580, small: 750x750
  * @param {description} playVideoLabel The play video label for the slide
  * @param {description} video The video linked to the slide
  */
