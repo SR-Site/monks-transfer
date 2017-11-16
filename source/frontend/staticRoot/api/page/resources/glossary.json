@@ -1,0 +1,140 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - Glossary",
+	"data": {
+	  "headerTheme": 0,
+	  "hideContactButton": 0,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "/home",
+		  "type": 0
+		},
+		{
+		  "label": "Resources",
+		  "title": "Resources",
+		  "target": "/resources",
+		  "type": 0
+		},
+		{
+		  "label": "Glossary",
+		  "title": "Glossary",
+		  "target": "/resources/glossary",
+		  "type": 0
+		}
+	  ]
+	},
+	"blocks": [
+	  {
+		"id": "heroQuaternary",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "background": {
+			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"alt": "Background image alt text"
+		  },
+		  "heading": "NBA Playoffs",
+		  "paragraph": "Nearly 90% of the NBA Playoffs leading up to the NBA Finals are on Cable, not including ESPN Deportes, which airs the Finals in Spanish. The Finals begin 6/1 and run through 6/18."
+		}
+	  },
+	  {
+		"id": "glossaryB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "showMoreLabel": "Show more",
+		  "landingCategory": "television",
+		  "searchPlaceholder": "I'm searching for...",
+		  "noResult": {
+			"heading": "Oops",
+			"paragraph": "No results for the current search"
+		  },
+		  "items": [
+			{
+			  "label": "Advertising impression",
+			  "value": "the audience delivery of media vehicles, <a href='#'>programs</a> or schedules. Usually expressed as thousands (000).",
+			  "category": "television"
+			},
+			{
+			  "label": "Adjacency",
+			  "value": "an advertising pod positioned next to a particular TV or radio program. Also called commercial break positions.",
+			  "category": "television"
+			},
+			{
+			  "label": "Availability (“avails”)",
+			  "value": "unsold units of time available for broadcasters to sell to advertisers. Also refers to a station’s submission of programs and rating estimates for advertising planning and buying.",
+			  "category": "television"
+			},
+			{
+			  "label": "Average Quarter-Hour Rating",
+			  "value": "the audience estimate reported by Nielsen and Arbitron for television and radio. It provides the average number of persons or households who watched/listened for at least 5 minutes of the 15 minute segment being reported.",
+			  "category": "television"
+			},
+			{
+			  "label": "Bonus Spot",
+			  "value": "additional TV or radio spot provided to an advertiser at no charge to raise the overall audience delivery of the schedule.",
+			  "category": "television"
+			},
+			{
+			  "label": "Cable TV",
+			  "value": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+			  "category": "television"
+			},
+			{
+			  "label": "Advertising impression",
+			  "value": "the audience delivery of media vehicles, <a href='#'>programs</a> or schedules. Usually expressed as thousands (000).",
+			  "category": "television"
+			},
+			{
+			  "label": "Adjacency",
+			  "value": "an advertising pod positioned next to a particular TV or radio program. Also called commercial break positions.",
+			  "category": "television"
+			},
+			{
+			  "label": "Availability (“avails”)",
+			  "value": "unsold units of time available for broadcasters to sell to advertisers. Also refers to a station’s submission of programs and rating estimates for advertising planning and buying.",
+			  "category": "television"
+			},
+			{
+			  "label": "Average Quarter-Hour Rating",
+			  "value": "the audience estimate reported by Nielsen and Arbitron for television and radio. It provides the average number of persons or households who watched/listened for at least 5 minutes of the 15 minute segment being reported.",
+			  "category": "television"
+			},
+			{
+			  "label": "Bonus Spot",
+			  "value": "additional TV or radio spot provided to an advertiser at no charge to raise the overall audience delivery of the schedule.",
+			  "category": "television"
+			},
+			{
+			  "label": "Cable TV",
+			  "value": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+			  "category": "television"
+			},
+			{
+			  "label": "Lorem ipsum",
+			  "value": "additional TV or radio spot provided to an advertiser at no charge to raise the overall audience delivery of the schedule.",
+			  "category": "digital"
+			},
+			{
+			  "label": "Dolor sit amet",
+			  "value": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+			  "category": "creative-service"
+			}
+		  ]
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}

@@ -3,7 +3,7 @@
 
 <template>
 	<div :class="$style.findYourAudience">
-		<div class="site-frame" :class="$style.siteFrame">
+		<div class="site-frame include-padding" :class="$style.siteFrame">
 			<div class="overrule-overlap" :class="$style.content">
 				<div :class="$style.navigation" data-sticky-container>
 					<ul :class="$style.navigationItems" class="js-sticky">

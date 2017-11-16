@@ -1,96 +1,36 @@
 {
   "statusCode": 200,
   "data": {
-	"title": "Spectrum Reach Advertising - Home",
+	"title": "Spectrum Reach Advertising - Resources",
 	"data": {
 	  "headerTheme": 0,
 	  "hideContactButton": 0
 	},
 	"blocks": [
 	  {
-		"id": "heroMain",
+		"id": "heroSecondary",
 		"data": {
 		  "overlap": true,
 		  "windowed": false,
 		  "marginTop": 0,
-		  "slides": [
-			{
-			  "heading": "<h1>Data, Targeting, Creative</h1>",
-			  "paragraph": "<p>Our #Reach365 video campaign is a living case study on our differentiators. This is for the dreamers, the entrepreneurs, the innovators. If that's you, catch up with the campaign.<\/p>",
-			  "background": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/Reach365-Entrepreneur_Hero_0.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/Reach365-Entrepreneur_Hero_0.jpg",
-				"alt": "the dreamers, the entrepreneurs, the innovators"
-			  },
-			  "link": {
-				"label": "Contact Kernel",
-				"title": "Contact Kernel",
-				"type": 5
-			  }
-			},
-			{
-			  "heading": "<h2>2018 TV Predictions</h2>",
-			  "paragraph": "<p>Our industry experts weigh in on what to expect for the television advertising industry in 2018.<\/p>",
-			  "background": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/2018Predictions_Hero-03.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/2018Predictions_Hero-03.jpg",
-				"alt": "2018 TV Predictions"
-			  },
-			  "link": {
-				"label": "Read More",
-				"title": "Read More",
-				"target": "\/articles\/2018-tv-predictions",
-				"type": 0
-			  }
-			},
-			{
-			  "heading": "<h2>What's Your True ROI?</h2>",
-			  "paragraph": "<p>Why guess when it comes to measuring the return on your marketing investment? Get on the road to full transparency now.<\/p>",
-			  "background": {
-				"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/ROI_Hero.jpg",
-				"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-10\/ROI_Hero.jpg",
-				"alt": "Find your True ROI"
-			  },
-			  "link": {
-				"label": "Read More",
-				"title": "Read More",
-				"target": "\/articles\/how-do-you-know-if-your-advertising-campaign-working",
-				"type": 0
-			  }
-			}
-		  ]
-		}
-	  },
-	  {
-		"id": "freeText",
-		"data": {
-		  "overlap": false,
-		  "windowed": false,
-		  "marginTop": 2,
-		  "alignment": 2,
-		  "html": "<h2>Spectrum Reach is your marketing platform of choice</h2><p>Access to the right screens, the right shows, and the most advanced advertising products is crucial in engaging customers who are ready to buy. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>"
-		}
-	  },
-	  {
-		"id": "imageWithContent",
-		"data": {
-		  "overlap": false,
-		  "windowed": false,
-		  "marginTop": 2,
-		  "link": {
-			"label": "Advertising solutions",
-			"title": "Advertising solutions",
-			"target": "/featured-programs",
+		  "backgroundVideo": {
+			"url": "https:\/\/www.spectrumreach.com\/assets\/videos\/2017-04\/SRwebsite_Homepage%20hero_V1_40617_1.mp4",
 			"type": 0
 		  },
 		  "background": {
-			"normal": "http://via.placeholder.com/1280x830",
-			"small": "http://via.placeholder.com/750x1135",
-			"alt": "Placeholder image"
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/AdobeStock_110417474%20-%20SS.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/AdobeStock_110417474%20-%20SS.jpg",
+			"alt": "Advertising Solutions"
 		  },
-		  "paragraph": "<p>Access to the right screens, the right shows, and the most advanced advertising products is crucial in engaging customers who are ready to buy. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p>",
-		  "heading": "We have the right adveristing solution for every situation",
-		  "alignment": 0
+		  "link": {
+			"label": "Find out more",
+			"title": "Find out more",
+			"type": 2
+		  },
+		  "paragraph": "<p>Spectrum Reach is the marketing platform of choice to help your business reach new heights, without breaking your budget.\u00a0<\/p>",
+		  "heading": "<h1>Powered By Your Potential</h1>",
+		  "subHeading": "<strong>Lorem ipsum dolor sit amet</strong>",
+		  "backgroundColor": "rgba(0, 48, 87, 0.95)"
 		}
 	  },
 	  {
@@ -98,7 +38,7 @@
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
-		  "marginTop": 3,
+		  "marginTop": 4,
 		  "heading": "Spectrum Reach Insights",
 		  "link": {
 			"label": "See all articles",
@@ -317,172 +257,11 @@
 		}
 	  },
 	  {
-		"id": "videoWithContentB",
-		"data": {
-		  "overlap": false,
-		  "windowed": false,
-		  "marginTop": 2,
-		  "scrollId": "videoWithContent",
-		  "alignment": 1,
-		  "heading": "Tv Everywhere continues to grow",
-		  "paragraph": "Live and on-demand viewership across screens continues to grow as consumers replicate the tv experience in the new living room.",
-		  "link": {
-			"label": "See all featured programs",
-			"title": "See all featured programs",
-			"target": "/advertising-solutions",
-			"type": 0
-		  },
-		  "poster": {
-			"normal": "http://via.placeholder.com/1280x720",
-			"small": "http://via.placeholder.com/1280x720",
-			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
-		  },
-		  "video": {
-			"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
-			"type": 0
-		  }
-		}
-	  },
-	  {
-		"id": "imageList",
-		"data": {
-		  "overlap": false,
-		  "windowed": false,
-		  "marginTop": 2,
-		  "slides": [
-			{
-			  "heading": "Connected to Content",
-			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-			  "image": {
-				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/750x420",
-				"alt": "Lorem ipsum"
-			  },
-			  "link": {
-				"label": "Read More",
-				"title": "Read More",
-				"target": "/featured-programs",
-				"type": 0
-			  }
-			},
-			{
-			  "heading": "Connected to Content",
-			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-			  "image": {
-				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/750x420",
-				"alt": "Lorem ipsum"
-			  },
-			  "link": {
-				"label": "Read More",
-				"title": "Read More",
-				"target": "/featured-programs",
-				"type": 0
-			  }
-			},
-			{
-			  "heading": "Connected to Content",
-			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-			  "image": {
-				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/750x420",
-				"alt": "Lorem ipsum"
-			  },
-			  "link": {
-				"label": "Read More",
-				"title": "Read More",
-				"target": "/featured-programs",
-				"type": 0
-			  }
-			},
-			{
-			  "heading": "Connected to Content",
-			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-			  "image": {
-				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/750x420",
-				"alt": "Lorem ipsum"
-			  },
-			  "link": {
-				"label": "Read More",
-				"title": "Read More",
-				"target": "/featured-programs",
-				"type": 0
-			  }
-			}
-		  ]
-		}
-	  },
-	  {
-		"id": "infographic",
-		"data": {
-		  "overlap": false,
-		  "windowed": false,
-		  "marginTop": 2,
-		  "alignment": 0,
-		  "heading": "Ads Everywhere",
-		  "paragraph": "Drive brand awareness beyond traditional TV across all viewing platforms. Dynamically insert your message on Live Cable Programming, Video On Demand and Network Apps.",
-		  "primaryLink": {
-			"label": "All advertising solutions",
-			"title": "All advertising solutions",
-			"target": "/advertising-solutions",
-			"type": 0
-		  },
-		  "secondaryLink": {
-			"label": "Dashboard",
-			"title": "Dashboard",
-			"target": "/advertising-solutions",
-			"type": 0
-		  },
-		  "backgroundImage": {
-			"normal": "http://via.placeholder.com/1920x750",
-			"small": "http://via.placeholder.com/750x560",
-			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
-		  },
-		  "image": {
-			"normal": "http://via.placeholder.com/1280x960",
-			"small": "http://via.placeholder.com/1280x960",
-			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
-		  }
-		}
-	  },
-	  {
-		"id": "twitterFeed",
-		"data": {
-		  "overlap": false,
-		  "windowed": false,
-		  "marginTop": 2,
-		  "items": [
-			{
-			  "name": "SpectrumReach",
-			  "handle": "@SpectrumReach",
-			  "text": "We're nearly ready to take over the Edison Ballroom for #SpectrumNewFront. Stay tuned for more news. #NewFronts",
-			  "date": "02/05/2017",
-			  "target": "http://www.twitter.com"
-			},
-			{
-			  "name": "SpectrumReach",
-			  "handle": "SpectrumReach",
-			  "text": "We're nearly ready to take over the Edison Ballroom for #SpectrumNewFront. Stay tuned for more news. #NewFronts",
-			  "date": "02/05/2017",
-			  "target": "http://www.twitter.com"
-			},
-			{
-			  "name": "SpectrumReach",
-			  "handle": "SpectrumReach",
-			  "text": "We're nearly ready to take over the Edison Ballroom for #SpectrumNewFront. Stay tuned for more news. #NewFronts",
-			  "date": "02/05/2017",
-			  "target": "http://www.twitter.com"
-			}
-		  ]
-		}
-	  },
-	  {
 		"id": "successStoriesB",
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
-		  "marginTop": 2,
+		  "marginTop": 4,
 		  "alignment": 0,
 		  "heading": "TV delivers",
 		  "paragraph": "We are continuously innovating and adding to our range of advertising products for Television.",
@@ -549,6 +328,36 @@
 			  },
 			  "target": "/product/foo",
 			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "glossaryA",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Glossary of advertising terms",
+		  "paragraph": "Unlock the language required to gain full control of your advertising. ",
+		  "link": {
+			"label": "Read the full glossary",
+			"title": "Read the full glossary",
+			"target": "/featured-programs",
+			"type": 0
+		  },
+		  "items": [
+			{
+			  "label": "Availability (”<i>avails</i>”)",
+			  "value": "Unsold units of time available for broadcasters to sell to advertisers. Also refers to a station’s submission of programs and rating estimates for advertising planning and buying."
+			},
+			{
+			  "label": "Bonus Spot",
+			  "value": "additional TV or radio spot provided to an advertiser at no charge to raise the overall audience delivery of the schedule."
+			},
+			{
+			  "label": "Cable TV",
+			  "value": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
 			}
 		  ]
 		}

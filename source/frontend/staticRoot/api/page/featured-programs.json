@@ -1,0 +1,381 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - Featured Programs",
+	"data": {
+	  "headerTheme": 0,
+	  "hideContactButton": 0,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "/home",
+		  "type": 0
+		},
+		{
+		  "label": "Featured Programs",
+		  "title": "Featured Programs",
+		  "target": "/featured-programs",
+		  "type": 0
+		}
+	  ]
+	},
+	"blocks": [
+	  {
+		"id": "heroSecondary",
+		"data": {
+		  "overlap": true,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "backgroundVideo": {
+			"url": "https:\/\/www.spectrumreach.com\/assets\/videos\/2017-04\/SRwebsite_Homepage%20hero_V1_40617_1.mp4",
+			"type": 0
+		  },
+		  "background": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/AdobeStock_110417474%20-%20SS.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/AdobeStock_110417474%20-%20SS.jpg",
+			"alt": "Advertising Solutions"
+		  },
+		  "link": {
+			"label": "Find out more",
+			"title": "Find out more",
+			"type": 2
+		  },
+		  "paragraph": "<p>Spectrum Reach is the marketing platform of choice to help your business reach new heights, without breaking your budget.\u00a0<\/p>",
+		  "heading": "<h1>Powered By Your Potential</h1>",
+		  "subHeading": "<strong>Lorem ipsum dolor sit amet</strong>",
+		  "backgroundColor": "rgba(0, 48, 87, 0.95)"
+		}
+	  },
+	  {
+		"id": "findYourAudience",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 3,
+		  "topPicks": {
+			"heading": "The power of cable",
+			"paragraph": "Align with top-rated programs airing this May",
+			"items": [
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  },
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  },
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  }
+			]
+		  },
+		  "series": {
+			"heading": "Series",
+			"paragraph": "Lorem ipsum dolor sit amet.",
+			"items": [
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  },
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  },
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  }
+			]
+		  },
+		  "awardsAndSpecials": {
+			"heading": "Awards and Specials",
+			"paragraph": "Lorem ipsum dolor sit amet.",
+			"items": [
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  },
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  },
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  }
+			]
+		  },
+		  "sports": {
+			"heading": "Sports",
+			"paragraph": "Lorem ipsum dolor sit amet.",
+			"items": [
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  },
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  },
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  }
+			]
+		  },
+		  "networks": {
+			"heading": "Networks",
+			"paragraph": "Lorem ipsum dolor sit amet.",
+			"items": [
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  },
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  },
+			  {
+				"image": {
+				  "normal": "http://via.placeholder.com/1280x720",
+				  "small": "http://via.placeholder.com/1280x720",
+				  "alt": "Background image alt text"
+				},
+				"video": {
+				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				  "type": 0
+				},
+				"heading": "Wahlburgers",
+				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"reaches": [
+				  "Millenials",
+				  "Adults 25-54",
+				  "teens"
+				]
+			  }
+			]
+		  }
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}

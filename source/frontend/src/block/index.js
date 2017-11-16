@@ -20,6 +20,7 @@ export default {
 	FreeText: () => import('./FreeText'),
 	GlossaryA: () => import('./GlossaryA'),
 	GlossaryB: () => import('./GlossaryB'),
+	GlossaryBanner: () => import('./GlossaryBanner'),
 	HeroMain: () => import('./HeroMain'),
 	HeroSecondary: () => import('./HeroSecondary'),
 	HeroTertiary: () => import('./HeroTertiary'),

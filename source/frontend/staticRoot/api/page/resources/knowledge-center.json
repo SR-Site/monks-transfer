@@ -1,0 +1,154 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - Knowledge Center",
+	"data": {
+	  "headerTheme": 0,
+	  "hideContactButton": 0,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "/home",
+		  "type": 0
+		},
+		{
+		  "label": "Resources",
+		  "title": "Resources",
+		  "target": "/resources",
+		  "type": 0
+		},
+		{
+		  "label": "Knowledge Center",
+		  "title": "Knowledge Center",
+		  "target": "/resources/knowledge-center",
+		  "type": 0
+		}
+	  ]
+	},
+	"blocks": [
+	  {
+		"id": "heroQuaternary",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "background": {
+			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"alt": "Background image alt text"
+		  },
+		  "heading": "NBA Playoffs",
+		  "paragraph": "Nearly 90% of the NBA Playoffs leading up to the NBA Finals are on Cable, not including ESPN Deportes, which airs the Finals in Spanish. The Finals begin 6/1 and run through 6/18."
+		}
+	  },
+	  {
+		"id": "filterContent",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "filters": [
+			{
+			  "type": 0,
+			  "label": "Category",
+			  "options": [
+				{
+				  "value": "Auto",
+				  "label": "Auto"
+				},
+				{
+				  "value": "Event",
+				  "label": "Event"
+				},
+				{
+				  "value": "Home Improvement",
+				  "label": "Home Improvement"
+				},
+				{
+				  "value": "Marketing",
+				  "label": "Marketing"
+				},
+				{
+				  "value": "Retail",
+				  "label": "Retail"
+				}
+			  ]
+			},
+			{
+			  "type": 1,
+			  "label": "Thought Leadership",
+			  "options": [
+				{
+				  "value": "Demographics",
+				  "label": "Demographics"
+				},
+				{
+				  "value": "Holidays",
+				  "label": "Holidays"
+				},
+				{
+				  "value": "Media",
+				  "label": "Media"
+				},
+				{
+				  "value": "Sports",
+				  "label": "Sports"
+				}
+			  ]
+			},
+			{
+			  "type": 2,
+			  "label": "Product",
+			  "options": [
+				{
+				  "value": "Creative Services",
+				  "label": "Creative Services"
+				},
+				{
+				  "value": "Digital",
+				  "label": "Digital"
+				},
+				{
+				  "value": "Television",
+				  "label": "Television"
+				}
+			  ]
+			},
+			{
+			  "type": 3,
+			  "label": "Document Type",
+			  "options": [
+				{
+				  "value": "3rd party research",
+				  "label": "3rd party research"
+				},
+				{
+				  "value": "Articles",
+				  "label": "Articles"
+				},
+				{
+				  "value": "Infographic",
+				  "label": "Infographic"
+				},
+				{
+				  "value": "White papers",
+				  "label": "White papers"
+				}
+			  ]
+			}
+		  ],
+		  "filterLabel": "Filters",
+		  "closeLabel": "Close",
+		  "endpoint": "search/article.json"
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}
