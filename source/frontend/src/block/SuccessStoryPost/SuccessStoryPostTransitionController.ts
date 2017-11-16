@@ -1,4 +1,5 @@
 import { AbstractTransitionController } from 'vue-transition-component';
+import { Linear, Expo } from 'gsap';
 
 class SuccessStoryPostTransitionController extends AbstractTransitionController {
 	/**
@@ -6,13 +7,81 @@ class SuccessStoryPostTransitionController extends AbstractTransitionController 
 	 * @method setupTransitionInTimeline
 	 * @description Use this method to setup your transition in timeline
 	 * */
-	protected setupTransitionInTimeline(): void {}
+	protected setupTransitionInTimeline(): void {
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$el,
+			1,
+			{
+				autoAlpha: 0,
+			},
+			{
+				autoAlpha: 1,
+				ease: Linear.easeNone,
+			},
+		);
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.subHeading,
+			0.8,
+			{
+				autoAlpha: 0,
+				y: 50,
+			},
+			{
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut,
+			},
+			'=-0.6',
+		);
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.heading,
+			0.8,
+			{
+				autoAlpha: 0,
+				y: 50,
+			},
+			{
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut,
+			},
+			'=-0.6',
+		);
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.copy,
+			0.8,
+			{
+				autoAlpha: 0,
+				y: 50,
+			},
+			{
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut,
+			},
+			'=-0.6',
+		);
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.details,
+			0.8,
+			{
+				autoAlpha: 0,
+				y: 50,
+			},
+			{
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut,
+			},
+			'=-0.6',
+		);
+	}
 
 	/**
-	* @public
-	* @method setupTransitionOutTimeline
-	* @description Use this method to setup your transition out timeline
-	* */
+	 * @public
+	 * @method setupTransitionOutTimeline
+	 * @description Use this method to setup your transition out timeline
+	 * */
 	protected setupTransitionOutTimeline(): void {}
 }
 

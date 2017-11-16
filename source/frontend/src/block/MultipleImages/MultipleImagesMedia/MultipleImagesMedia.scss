@@ -1,0 +1,25 @@
+:local {
+	.multiple-images-media {
+		position: relative;
+		box-sizing: border-box;
+	}
+
+	.image {
+		@include aspect-ratio(16px, 9px);
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.description {
+		padding: 0 $sizeGrid
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	@include respond-to(SMALL) {
+		.description {
+			padding: 0 $sizeGridMobile * 2;
+		}
+	}
+}

@@ -1,0 +1,55 @@
+:local {
+	.find-your-audience {
+		padding: $sizeGrid 0;
+	}
+
+	.content {
+		display: flex;
+	}
+
+	.navigation {
+		@include size(30%, auto);
+	}
+
+	.navigation-items {
+		@extend %reset-list;
+	}
+
+	.navigation-item {
+		display: block;
+		margin-bottom: $sizeGrid;
+	}
+
+	.navigation-link {
+		font: 600 2rem / 1 $fontOpenSans;
+		color: $colorPrimary;
+		cursor: pointer;
+	}
+
+	.items {
+		@include size(70%, auto);
+	}
+
+	@include respond-to(SMALL) {
+		.content {
+			flex-direction: column;
+		}
+
+		.site-frame {
+			padding: 0;
+		}
+
+		.navigation {
+			width: 100%;
+			padding: 0 $sizeGridMobile * 2;
+		}
+
+		.navigation-link {
+			font-size: mobile-size(3.5rem);
+		}
+
+		.items {
+			width: 100%;
+		}
+	}
+}

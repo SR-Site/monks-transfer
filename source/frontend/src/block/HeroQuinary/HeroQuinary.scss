@@ -16,10 +16,14 @@
 
 	.content {
 		@include size(33%, auto);
-		@include position(25%, auto, $sizeGrid, $sizeGrid * 5);
+		@include position(25%, auto, $sizeGrid * 2.5, $sizeGrid * 5);
 		position: absolute;
 		color: $colorWhite;
 		padding: $sizeGrid 0 0 0;
+
+		&.is-large {
+			width: 60%;
+		}
 	}
 
 	.sub-heading {
@@ -35,6 +39,10 @@
 	}
 
 	@include respond-to(LARGE) {
+		//.hero-quinary {
+		//	@include aspect-ratio(1440px, 750px);
+		//}
+
 		.image {
 			@include size(376px, 280px);
 		}
@@ -51,7 +59,7 @@
 
 		.content {
 			width: 45%;
-			left: $sizeGrid * 2;
+			left: $sizeGrid * 3;
 		}
 
 		.image {
@@ -91,6 +99,10 @@
 			width: auto;
 			text-align: center;
 			padding: 0 mobile-size($sizeGrid * 2);
+
+			&.is-large {
+				width: auto;
+			}
 		}
 
 		.image,

@@ -14,7 +14,7 @@ import PropAuthor from '../../data/prop-type/article/PropAuthor';
  * @param {description} paragraph This is the sub heading for the block
  * @param {description} target This is the target for the article
  * @param {placeholder} target link/to/article
- * @param {description} image This is the image linked to the article
+ * @param {description} image normal: 1280x270, small: 1280x720
  * @param {description} tags The tags linked to this article
  * @param {description} theme The theme for this article
  * @param {description} author The author of the article

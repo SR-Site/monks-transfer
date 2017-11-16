@@ -220,8 +220,8 @@
 			"type": 0
 		  },
 		  "background": {
-			"normal": "http://via.placeholder.com/1280x720",
-			"small": "http://via.placeholder.com/1280x720",
+			"normal": "http://via.placeholder.com/1280x830",
+			"small": "http://via.placeholder.com/750x1135",
 			"alt": "networks and programming"
 		  },
 		  "paragraph": "<p>Your customers are watching, and they\u2019re paying attention. On their TVs, their phones \u2013 sometimes at the same time. Align your brand with the high-performing shows your customers are already glued to.<\/p>",
@@ -235,6 +235,7 @@
 		  "overlap": false,
 		  "windowed": false,
 		  "marginTop": 2,
+		  "alignment": 0,
 		  "heading": "Networks with similar content to ESPN",
 		  "items": [
 			{

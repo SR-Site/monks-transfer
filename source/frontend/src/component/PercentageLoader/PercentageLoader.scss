@@ -5,7 +5,7 @@
 	}
 
 	.svg-holder {
-		@include size($sizeGrid * 2);
+		@include size(100%);
 		position: relative;
 		margin: 0 auto;
 
@@ -35,13 +35,19 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&.large {
+			.value {
+				font-weight: 600;
+				font-size: 3.6rem;
+			}
+		}
 	}
 
 	@include respond-to(SMALL) {
-		.svg-holder {
-			@include size($sizeGrid * 4);
-		}
-
 		.animated-line-track {
 			stroke-width: 4px;
 		}
@@ -52,6 +58,12 @@
 
 		.amount-info {
 			font-size: mobile-size(3.5rem);
+
+			&.large {
+				.value {
+					font-size: mobile-size(5rem);
+				}
+			}
 		}
 	}
 }

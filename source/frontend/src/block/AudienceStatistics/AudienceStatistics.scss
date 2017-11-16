@@ -1,2 +1,88 @@
 :local {
+	.audience-statistics {
+		@include size(100%, auto);
+	}
+
+	.image {
+		@include aspect-ratio(16px, 9px);
+		position: relative;
+
+		.description {
+			@include size(75%, auto);
+			@include offset(0, 0);
+			position: absolute;
+			color: $colorWhite;
+			padding: $sizeGrid * 2;
+			box-sizing: border-box;
+		}
+
+		.heading {
+			margin-bottom: $sizeGrid * 0.5;
+		}
+
+		.copy {
+			line-height: 1.7;
+		}
+	}
+
+	.draggable-container {
+		margin-top: $sizeGrid * -7;
+		margin-bottom: $sizeGrid * 2;
+	}
+
+	.items {
+		white-space: nowrap;
+		display: inline-block;
+	}
+
+	.item {
+		@include size(12 * $sizeGrid, 9 * $sizeGrid);
+	}
+
+	@include respond-to(MEDIUM) {
+		.draggable-container {
+			margin-top: $sizeGrid * -5;
+		}
+
+		.item {
+			@include size(9 * $sizeGrid, 7 * $sizeGrid);
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.site-frame {
+			padding: 0;
+		}
+
+		.draggable-container {
+			margin-top: $sizeGrid * -5;
+		}
+
+		.image {
+			@include aspect-ratio(640px, 620px);
+			max-height: 350px;
+
+			.description {
+				width: 100%;
+			}
+		}
+
+		.content {
+			padding: 0 $sizeGridMobile * 2;
+		}
+
+		.items {
+			margin-left: -$sizeGrid;
+		}
+
+		.item {
+			@include size(320px, 320px);
+		}
+	}
+
+	@include respond-to(X_SMALL) {
+		.item {
+			@include size(250px, 250px);
+		}
+	}
 }

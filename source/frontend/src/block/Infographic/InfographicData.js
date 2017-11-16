@@ -12,8 +12,8 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {description} paragraph The paragraph of the block
  * @param {description} primaryLink The primary link of the block
  * @param {description} secondaryLink The secondary link of the block
- * @param {description} backgroundImage The background image of the block
- * @param {description} image The image image of the block
+ * @param {description} backgroundImage normal: 1920x750, small: 750x560
+ * @param {description} image normal: 1280x960, small: 750x560
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

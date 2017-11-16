@@ -8,6 +8,8 @@ import HowToAdvertiseStepData from './HowToAdvertiseStepData';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} link The link for the block
+ * @param {description} heading The heading for the block
  * @param {description} steps The array of steps displayed on the block
  */
 

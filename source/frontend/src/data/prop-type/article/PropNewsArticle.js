@@ -8,8 +8,9 @@ import PropAuthor from './PropAuthor';
  * @param {description} subHeading The subHeading of the article
  * @param {description} paragraph The paragraph of the article
  * @param {description} target The target of the article
- * @param {description} image The image linked to the article
+ * @param {description} image normal: 1280x720, small: 1280x720
  * @param {description} tags The list of tags linked to the article
+ * @param {description} theme The theme of the article, based on the dark / light images
  * @param {description} author The author linked to the article
  * @param {description} link The link on the article
  * @param {description} social The list of social links to the article

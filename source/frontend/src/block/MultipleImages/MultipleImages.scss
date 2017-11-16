@@ -1,2 +1,56 @@
 :local {
+	.multiple-images {
+		padding: $sizeGrid 0;
+	}
+
+	.columns {
+		display: flex;
+	}
+
+	.column {
+		@include size(50%, auto);
+		padding: 0 $sizeGrid;
+	}
+
+	.primary-item {
+		margin-bottom: $sizeGrid * 5;
+	}
+
+	.secondary-item {
+		padding: 0 $sizeGrid;
+	}
+
+	.tertiary-item {
+		margin-bottom: $sizeGrid * 2;
+	}
+
+	.quaternary-item {
+		margin-bottom: $sizeGrid * 5;
+	}
+
+	@include respond-to(SMALL) {
+		.columns {
+			flex-direction: column;
+		}
+
+		.site-frame {
+			padding: 0;
+		}
+
+		.column {
+			width: 100%;
+			padding: 0;
+		}
+
+		.secondary-item {
+			padding: 0;
+		}
+
+		.primary-item,
+		.secondary-item,
+		.tertiary-item,
+		.quaternary-item {
+			margin-bottom: mobile-size($sizeGrid * 3);
+		}
+	}
 }

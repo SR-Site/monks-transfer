@@ -1,0 +1,47 @@
+:local {
+	.multiple-images-skills {
+		position: relative;
+	}
+
+	.content {
+		@include size(50%, auto);
+		background: $colorPrimary;
+		color: $colorWhite;
+		padding: $sizeGrid;
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+
+		&:after {
+			@include triangle(right, bottom, $colorWhite, $sizeGrid);
+			@include position(auto, 0, 0, auto);
+			content: '';
+			position: absolute;
+		}
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.skills {
+		@extend %reset-list;
+	}
+
+	.skill {
+	}
+
+	@include respond-to(MEDIUM) {
+		.content {
+			width: 70%;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.content {
+			width: calc(100% - #{$sizeGridMobile * 4});
+			box-sizing: border-box;
+		}
+	}
+}
+

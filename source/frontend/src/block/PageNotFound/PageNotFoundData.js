@@ -9,7 +9,7 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
  * @param {description} link The link of the not found block
- * @param {description} image The image on the not found block
+ * @param {description} image normal: 1920x960, small: 750x375
  * @param {description} paragraph The paragraph on the not found block
  * @param {description} heading The heading on the not found block
  * @param {description} errorCode The error code displayed on the block

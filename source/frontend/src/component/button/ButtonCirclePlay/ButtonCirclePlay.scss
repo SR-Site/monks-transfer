@@ -38,6 +38,14 @@
 		@include size($sizeGrid*1.5);
 	}
 
+	.theme-dark {
+		color: $colorPrimary;
+	}
+
+	.theme-light {
+		color: $colorWhite;
+	}
+
 	@include respond-to(SMALL) {
 		.small,
 		.medium,

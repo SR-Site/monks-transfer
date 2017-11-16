@@ -11,7 +11,7 @@ import PropAuthor from '../../data/prop-type/article/PropAuthor';
  * @param {placeholder} scrollId unique-block-id
  * @param {description} social The array of social links
  * @param {description} author The author of the article
- * @param {description} image The image attached to the article
+ * @param {description} image normal: 1280x270, small: 1280x720
  * @param {description} tags The tags linked to the article
  * @param {description} views The views of the article
  * @param {description} shares The shares of the article

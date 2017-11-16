@@ -10,7 +10,7 @@ import PropVideo from '../../../data/prop-type/media/PropVideo';
  * @param {description} stats The stats for the program
  * @param {description} stats.percentage The percentage level
  * @param {description} stats.demographic The demographic label
- * @param {description} image The image displayed for the program
+ * @param {description} image normal: 1280x720, small: 1280x720
  * @param {description} video The video linked to the program
  * @param {description} tags The array of tags linked to the program
  */

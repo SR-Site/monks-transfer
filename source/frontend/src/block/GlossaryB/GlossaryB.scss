@@ -1,2 +1,250 @@
 :local {
+	$colorBorder: #dfe0e0;
+
+	.glossary-b {
+		overflow: visible;
+		margin-top: -$sizeGrid * 2;
+
+		.show-more {
+			display: block;
+			margin: $sizeGrid * 4 auto 0 auto;
+		}
+	}
+
+	.glossary-navigation {
+		@include size(100%, auto);
+		display: flex;
+		border-left: 1px solid $colorBorder;
+	}
+
+	.icon {
+		@include size($sizeGrid * 0.8);
+
+		path {
+			fill: currentColor;
+		}
+	}
+
+	.search-form {
+		@include size(auto, $sizeGrid * 2);
+		flex-grow: 1;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		background: $colorTertiary;
+		color: $colorWhite;
+		padding: 0 $sizeGrid / 2 0 $sizeGrid;
+	}
+
+	.close-button {
+		@include size($sizeGrid * 0.9);
+		margin-left: $sizeGrid / 2;
+
+		.icon {
+			@include size(50%);
+		}
+	}
+
+	.query {
+		background: $colorTertiary;
+		border-bottom-color: rgba($colorWhite, 0.2);
+
+		:global {
+			.placeholder-label {
+				color: rgba($colorWhite, .4);
+			}
+			.focus-border {
+				background: $colorWhite;
+			}
+		}
+
+		input {
+			color: $colorWhite;
+		}
+	}
+
+	.search-button {
+		@include size($sizeGrid * 2);
+		background: $colorTertiary;
+		color: white;
+		position: relative;
+		transition: background .5s $easeInOutExpo;
+	}
+
+	.navigation-button {
+		@include size(auto, $sizeGrid  * 2);
+		padding: 0 $sizeGrid * 2;
+		font: 800 1.2rem / 1 $fontOpenSans;
+		text-transform: uppercase;
+		background: white;
+		border-right: 1px solid $colorBorder;
+		border-top: 1px solid $colorBorder;
+		position: relative;
+		transition: background .5s $easeInOutExpo;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		&:before {
+			@include size(75%, 1px);
+			@include position(auto, auto, 0, 50%);
+			background: $colorSecondary;
+			position: absolute;
+			content: '';
+			transition: transform .5s $easeInOutExpo;
+			transform-origin: center center;
+			transform: translateX(-50%) scaleX(0);
+		}
+
+		&.is-active {
+			&:before {
+				transform: translateX(-50%) scaleX(1);
+			}
+		}
+	}
+
+	.wrapper {
+		background: $colorLightGrey;
+		padding-bottom: $sizeGrid * 2;
+	}
+
+	.glossary-items {
+		@include size(100%, auto);
+		padding: $sizeGrid * 3 $sizeGrid * 2 $sizeGrid * 2;
+		background: $colorWhite;
+		border: 1px solid $colorBorder;
+	}
+
+	.glossary-item {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-bottom: $sizeGrid * 2;
+
+		a {
+			color: $colorSecondary;
+		}
+	}
+
+	.mobile-select {
+		display: none;
+	}
+
+	.glossary-heading {
+		@include size(40%, auto);
+	}
+
+	.glossary-copy {
+		@include size(60%, auto);
+		padding-left: $sizeGrid;
+	}
+
+	@include respond-to(MEDIUM) {
+		.navigation-button {
+			padding: 0 $sizeGrid;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.glossary-b {
+			margin-top: mobile-size($sizeGrid * -4);
+		}
+
+		.wrapper {
+			padding-top: mobile-size($sizeGrid);
+		}
+
+		.glossary-item {
+			flex-direction: column;
+		}
+
+		.glossary-heading,
+		.glossary-copy {
+			@include size(100%, auto);
+			padding-left: 0;
+		}
+
+		.glossary-heading {
+			margin-bottom: mobile-size($sizeGrid);
+		}
+
+		.glossary-navigation {
+			@include size(100%, mobile-size($sizeGrid * 4));
+			transform: translateY(mobile-size($sizeGrid * 2));
+			z-index: 1;
+			position: relative;
+		}
+
+		.navigation-button {
+			display: none;
+		}
+
+		.icon {
+			@include size(mobile-size($sizeGrid));
+		}
+
+		.mobile-select {
+			flex-grow: 1;
+			display: block;
+			background: $colorWhite;
+			border-bottom: 1px solid $colorBorder;
+			border-left: 1px solid $colorBorder;
+			border-right: 1px solid $colorBorder;
+		}
+
+		.select {
+			@include size(100%);
+			@include offset(0, 0);
+			font: 3.5rem/1 $fontOpenSans;
+			opacity: 0;
+			position: absolute;
+		}
+
+		.selected-value {
+			@include size(100%);
+			font: 800 3.5rem/1 $fontOpenSans;
+			text-transform: uppercase;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: flex;
+			align-items: center;
+			padding: 0 mobile-size($sizeGrid);
+			justify-content: space-between;
+
+			.select-icon {
+				circle,
+				path {
+					fill: transparent;
+					stroke: currentColor;
+				}
+			}
+		}
+
+		.search-button {
+			@include size(mobile-size($sizeGrid * 4));
+		}
+
+		.search-form {
+			@include size(100%);
+			@include offset(0, 0);
+			position: absolute;
+			padding: 0 mobile-size($sizeGrid);
+		}
+
+		.close-button {
+			@include size(mobile-size($sizeGrid * 2));
+			margin-left: mobile-size($sizeGrid);
+		}
+	}
+}
+
+@include hover('.navigation-button') {
+	background: darken($colorWhite, 2%);
+}
+
+@include hover('.search-button') {
+	background: darken($colorTertiary, 2%);
 }

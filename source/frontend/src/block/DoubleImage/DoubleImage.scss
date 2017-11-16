@@ -1,0 +1,40 @@
+:local {
+	.double-image {
+		padding: $sizeGrid 0;
+	}
+
+	.content {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.image {
+		@include aspect-ratio(16px, 9px);
+	}
+
+	.primary-image {
+		@include size(60%, auto);
+	}
+
+	.secondary-image {
+		@include size(40%, auto);
+		padding-left: $sizeGrid;
+	}
+
+	@include respond-to(SMALL) {
+		.content {
+			flex-direction: column;
+			padding: 0;
+		}
+
+		.primary-image,
+		.secondary-image {
+			width: 100%;
+			padding: 0;
+		}
+
+		.primary-image {
+			margin-bottom: $sizeGrid;
+		}
+	}
+}

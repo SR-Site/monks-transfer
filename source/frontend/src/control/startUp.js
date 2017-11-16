@@ -1,32 +1,33 @@
-import Vue from 'vue';
 import axios from 'axios';
-import VueExposePlugin from 'util/VueExposePlugin';
-import { URLNames, PropertyNames, VariableNames } from 'data/enum/configNames';
+import block from 'block';
+import { PropertyNames, URLNames, VariableNames } from 'data/enum/configNames';
 import PageNames from 'data/enum/PageNames';
 import PagePaths from 'data/enum/PagePaths';
-import { createPath } from 'util/routeUtils';
 import Params from 'data/enum/Params';
-import { getValue } from 'util/injector';
-import { CONFIG_MANAGER, GATEWAY, DEVICE_STATE_TRACKER, TASK_LOADER, TRACKING_MANAGER } from 'data/Injectables';
-import localeLoader from 'util/localeLoader';
-import BlockSystem, { ButtonType, LinkType } from 'vue-block-system';
-import block from 'block';
+import { CONFIG_MANAGER, DEVICE_STATE_TRACKER, GATEWAY, TASK_LOADER, TRACKING_MANAGER } from 'data/Injectables';
 import getStore from 'store';
-import { InitDataMutationTypes } from '../store/module/initData';
-import NotificationTypes from '../data/enum/NotificationTypes';
-import Direction from '../data/enum/Direction';
+import { getValue } from 'util/injector';
+import localeLoader from 'util/localeLoader';
+import { createPath } from 'util/routeUtils';
+import VueExposePlugin from 'util/VueExposePlugin';
+import VeeValidate from 'vee-validate';
+import Vue from 'vue';
+import BlockSystem, { ButtonType, LinkType } from 'vue-block-system';
+import SocialSharing from 'vue-social-sharing';
+import { DeviceState } from '../config/deviceStateConfig';
 import Alignment from '../data/enum/Alignment';
 import { buttonTypeMap } from '../data/enum/BackendButtonType';
-import Theme from '../data/enum/Theme';
-import ClassNameHelper from '../util/ClassNameHelper';
-import { DeviceState } from '../config/deviceStateConfig';
+import Direction from '../data/enum/Direction';
+import BackendLinkType from '../data/enum/link/BackendLinkType';
+import BackendLinkTypeMap from '../data/enum/link/BackendLinkTypeMap';
+import NotificationTypes from '../data/enum/NotificationTypes';
 import Orientation from '../data/enum/Orientation';
+import Size from '../data/enum/Size';
+import Theme from '../data/enum/Theme';
+import { InitDataMutationTypes } from '../store/module/initData';
+import ClassNameHelper from '../util/ClassNameHelper';
 import sequentialPromises from '../util/sequentialPromises';
 import TrackingProvider from '../util/tracking/TrackingProvider';
-import Size from '../data/enum/Size';
-import VeeValidate from 'vee-validate';
-import BackendLinkTypeMap from '../data/enum/link/BackendLinkTypeMap';
-import BackendLinkType from '../data/enum/link/BackendLinkType';
 
 const initPlugins = () => {
 	const configManager = getValue(CONFIG_MANAGER);
@@ -65,6 +66,7 @@ const initPlugins = () => {
 	});
 
 	Vue.use(VeeValidate);
+	Vue.use(SocialSharing);
 
 	const mockEnabled = configManager.getVariable(VariableNames.MOCK_ENABLED);
 	const base = mockEnabled ? '/static/api/' : '/api/v1/';
@@ -80,6 +82,9 @@ const initPlugins = () => {
 			debugLabelStyling: {
 				backgroundColor: 'rgba(0,0,255,0.8)',
 				zIndex: 999,
+			},
+			buttonConfig: {
+				scrollToNextBlockOffset: -75,
 			},
 			enablePageTransitionOut: false,
 		},

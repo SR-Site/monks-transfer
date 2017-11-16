@@ -1,4 +1,5 @@
 import { AbstractTransitionController } from 'vue-transition-component';
+import { Linear, Expo } from 'gsap';
 
 class AudienceProductTopTransitionController extends AbstractTransitionController {
 	/**
@@ -6,7 +7,110 @@ class AudienceProductTopTransitionController extends AbstractTransitionControlle
 	 * @method setupTransitionInTimeline
 	 * @description Use this method to setup your transition in timeline
 	 * */
-	protected setupTransitionInTimeline(): void {}
+	protected setupTransitionInTimeline(): void {
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$el,
+			1,
+			{
+				autoAlpha: 0,
+			},
+			{
+				autoAlpha: 1,
+				ease: Linear.easeNone,
+				clearProps: 'all',
+			},
+		);
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.image,
+			0.8,
+			{
+				autoAlpha: 0,
+				y: 50,
+			},
+			{
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut,
+				clearProps: 'all',
+			},
+			'=-0.7',
+		);
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.heading,
+			0.8,
+			{
+				autoAlpha: 0,
+				y: 50,
+			},
+			{
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut,
+				clearProps: 'all',
+			},
+			'=-0.7',
+		);
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.copy,
+			0.8,
+			{
+				autoAlpha: 0,
+				y: 50,
+			},
+			{
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut,
+				clearProps: 'all',
+			},
+			'=-0.7',
+		);
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.box,
+			0.8,
+			{
+				autoAlpha: 0,
+				y: 50,
+			},
+			{
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut,
+				clearProps: 'all',
+			},
+			'=-0.7',
+		);
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.boxHeading,
+			0.8,
+			{
+				autoAlpha: 0,
+				y: 50,
+			},
+			{
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut,
+				clearProps: 'all',
+			},
+			'=-0.7',
+		);
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$refs.boxCopy,
+			0.8,
+			{
+				autoAlpha: 0,
+				y: 50,
+			},
+			{
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut,
+				clearProps: 'all',
+			},
+			'=-0.7',
+		);
+	}
 
 	/**
 	* @public

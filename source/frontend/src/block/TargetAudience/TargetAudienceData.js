@@ -8,7 +8,7 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
- * @param {description} backgroundImage The background image of the block
+ * @param {description} backgroundImage normal: 1920x1080, small: 1280x720
  * @param {description} devices The array of devices displayed in the block
  */
 export default {
@@ -18,5 +18,7 @@ export default {
 	scrollId: VueTypes.string,
 	heading: VueTypes.string.isRequired,
 	backgroundImage: VueTypes.shape(PropImage),
-	devices: VueTypes.arrayOf(TargetAudienceDeviceData),
+	devices: VueTypes.arrayOf(
+		VueTypes.shape(TargetAudienceDeviceData),
+	),
 };

@@ -20,7 +20,7 @@
 	}
 
 	@include respond-to(SMALL) {
-		font-size: mobile-size(8rem);
+		font-size: 8rem;
 	}
 }
 
@@ -32,7 +32,19 @@
 	}
 
 	@include respond-to(SMALL) {
-		font-size: mobile-size(4.5rem);
+		font-size: 4.5rem;
+	}
+}
+
+%heading-03 {
+	font: 700 3.6rem / 1.25 $fontOpenSans;
+
+	strong {
+		font-weight: 700;
+	}
+
+	@include respond-to(SMALL) {
+		font-size: 5rem;
 	}
 }
 
@@ -52,6 +64,18 @@
 	}
 
 	@include respond-to(SMALL) {
-		font-size: mobile-size(4.5rem);
+		font-size: 4.5rem;
+	}
+}
+
+%heading-06 {
+	font: 400 3rem / 1.23 $fontOpenSans;
+
+	@include respond-to(MEDIUM) {
+		font-size: 2.5rem;
+	}
+
+	@include respond-to(SMALL) {
+		font-size: 4rem;
 	}
 }

@@ -10,7 +10,10 @@
 	  "customer_login": "Customer Login",
 	  "to_reach": "1-844-to-reach",
 	  "next": "Next",
-	  "read_more": "Read more"
+	  "read_more": "Read more",
+	  "share_twitter": "Share on tTwitter",
+	  "share_facebook": "Share on Facebook",
+	  "share_linkedin": "Share on LinkedIn"
 	},
 	"show": {
 	  "percent": "Percent"

@@ -11,12 +11,13 @@
 		<figure v-if="data.image" :class="$style.image" ref="image">
 			<ResponsiveImage :image="data.image" class="abs-fill fit-contain"/>
 		</figure>
-		<div :class="$style.content">
+		<div :class="[$style.content, {[$style.isLarge]: !data.image}]">
 			<h3 class="heading heading-03" :class="$style.heading" v-html="data.heading" ref="heading"></h3>
 			<p class="copy copy-01" :class="$style.copy" v-html="data.paragraph" ref="copy"></p>
 			<ButtonQuinary
 				componentId="ButtonQuinary"
 				ref="button"
+				v-if="data.link"
 				v-track="{
 					[TrackingProvider.GOOGLE_ANALYTICS]: {
 						category: 'HeroQuinary',

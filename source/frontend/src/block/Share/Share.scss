@@ -1,0 +1,73 @@
+:local {
+	.share {
+		padding: $sizeGrid 0;
+
+		svg {
+			@include size($sizeGrid);
+		}
+
+		path {
+			fill: currentColor;
+		}
+
+		:global {
+			.networks {
+				@extend %reset-list;
+				display: flex;
+				justify-content: center;
+			}
+
+			li {
+				@include size($sizeGrid);
+				margin: 0 $sizeGrid / 4;
+				transition: color .5s $easeInOutExpo;
+				color: $colorSecondary;
+				cursor: pointer;
+				display: none;
+
+				&:hover {
+					color: darken($colorSecondary, 5%);
+				}
+			}
+		}
+	}
+
+	.twitter {
+		:global {
+			.twitter {
+				display: block;
+			}
+		}
+	}
+
+	.facebook {
+		:global {
+			.facebook {
+				display: block;
+			}
+		}
+	}
+
+	.linked-in {
+		:global {
+			.linked-in {
+				display: block;
+			}
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.share {
+			svg {
+				@include size(mobile-size($sizeGrid * 2));
+			}
+
+			:global {
+				li {
+					@include size(mobile-size($sizeGrid * 2));
+					margin: 0 $sizeGrid / 2;
+				}
+			}
+		}
+	}
+}

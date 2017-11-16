@@ -9,7 +9,7 @@ export default {
 	extends: AbstractButtonComponent,
 	props: {
 		direction: VueTypes.oneOf([Direction.UP, Direction.DOWN, Direction.LEFT, Direction.RIGHT]),
-		arrowPosition: VueTypes.oneOf([Alignment.LEFT, Alignment.RIGHT]),
+		arrowPosition: VueTypes.oneOf([Alignment.LEFT, Alignment.RIGHT, Alignment.CENTER]),
 	},
 	computed: {
 		mappedDirection() {

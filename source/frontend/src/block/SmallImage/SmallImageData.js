@@ -8,7 +8,7 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
  * @param {description} alignment The alignment of the image
- * @param {description} image The image displayed on the block
+ * @param {description} image normal: 1280x720, small: 1280x720
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

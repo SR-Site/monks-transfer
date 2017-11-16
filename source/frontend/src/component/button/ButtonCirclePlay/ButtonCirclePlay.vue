@@ -7,7 +7,9 @@
 		class="button"
         :class="[
         	$style.buttonCirclePlay,
-			$style[ClassNameHelper.parseSize(size)]
+			$style[ClassNameHelper.parseSize(size)],
+			$style[ClassNameHelper.parseTheme(theme)]
+
 		]"
 	        :title="title">
 		<Icon :class="$style.icon" name="circle-play" v-if="!isPlaying"/>

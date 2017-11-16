@@ -5,17 +5,14 @@ import PropVideo from '../../data/prop-type/media/PropVideo';
 
 /**
  * @param {description} marginTop This defines the amount of spacing at the top of the block
- * @param {placeholder} marginTop 1
  * @param {description} overlap This defines if a block overlaps the next block on the layout
- * @param {placeholder} overlap true
  * @param {description} windowed This defines if a block has extra padding left and right
- * @param {placeholder} windowed true
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
  * @param {description} heading The heading of the the block
  * @param {description} paragraph The paragraph of the the block
  * @param {description} link The link attached to the block
- * @param {description} poster The poster image for the block
+ * @param {description} poster normal: 1920x720, small: 1280x720
  * @param {description} video The video for the block
  */
 export default {

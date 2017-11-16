@@ -4,25 +4,37 @@
 		align-items: center;
 		white-space: nowrap;
 		justify-content: center;
+	}
+	.alignment-left {
+		.label {
+			order: 1;
+			margin-left: $sizeGrid / 2;
+		}
+		.icon {
+			order: 0;
+		}
+	}
 
-		&.alignment-left {
-			.label {
-				order: 1;
-				margin-left: $sizeGrid / 2;
-			}
-			.icon {
-				order: 0;
-			}
+	.alignment-right {
+		.label {
+			order: 0;
+			margin-right: $sizeGrid / 2;
+		}
+		.icon {
+			order: 1;
+		}
+	}
+
+	.alignment-center {
+		flex-direction: column;
+
+		.label {
+			order: 0;
+			margin-bottom: $sizeGrid / 2;
 		}
 
-		&.alignment-right {
-			.label {
-				order: 0;
-				margin-right: $sizeGrid / 2;
-			}
-			.icon {
-				order: 1;
-			}
+		.icon {
+			order: 1;
 		}
 	}
 
@@ -40,6 +52,7 @@
 				fill: transparent;
 				stroke: $colorWhite;
 				stroke-width: 1px;
+				opacity: 0.5;
 				transition: stroke 0.2s $easeInOut, stroke-width 0.2s $easeInOut, opacity 0.2s $easeInOut;
 			}
 		}
@@ -61,17 +74,21 @@
 			font-size: mobile-size(2.2rem);
 		}
 
-		.button {
-			&.alignment-left {
-				.label {
-					margin-left: $sizeGrid;
-				}
+		.alignment-left {
+			.label {
+				margin-left: $sizeGrid;
 			}
+		}
 
-			&.alignment-right {
-				.label {
-					margin-right: $sizeGrid;
-				}
+		.alignment-right {
+			.label {
+				margin-right: $sizeGrid;
+			}
+		}
+
+		.alignment-center {
+			.label {
+				margin-bottom: $sizeGrid;
 			}
 		}
 	}

@@ -1,0 +1,52 @@
+:local {
+	.main-product-nav {
+		@include size(100%, auto);
+		padding: $sizeGrid 0;
+	}
+
+	.header {
+		margin-bottom: $sizeGrid * 2;
+	}
+
+	.heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.items {
+		display: flex;
+	}
+
+	.item {
+		flex-grow: 1;
+	}
+
+	.paginator {
+		display: none;
+	}
+
+	@include respond-to(SMALL) {
+		.site-frame {
+			padding: 0;
+		}
+
+		.header {
+			padding: 0 $sizeGridMobile * 2;
+		}
+
+		.paginator {
+			margin-top:$sizeGrid;
+			display: block;
+		}
+
+		.items {
+			@include size(100%, auto);
+			@include aspect-ratio(1px, 1px);
+		}
+
+		.item {
+			@include size(100%);
+			@include offset(0, 0);
+			position: absolute;
+		}
+	}
+}

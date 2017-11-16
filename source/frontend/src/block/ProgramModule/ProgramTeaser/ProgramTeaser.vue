@@ -12,7 +12,7 @@
 					componentId="ButtonCirclePlay"
 					title="play"
 					:type="ButtonType.ACTION"
-					:theme="Theme.DARK"
+					:theme="Theme.LIGHT"
 					:isPlaying="false"
 					:class="$style.playButton"
 					:size="Size.SMALL"

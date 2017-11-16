@@ -5,7 +5,7 @@ import PropVideo from '../../data/prop-type/media/PropVideo';
 /**
  * @param {description} heading The heading of the slide
  * @param {description} theme The theme of the slide
- * @param {description} image The image of the slide
+ * @param {description} image normal: 1920x640, small: 750x435
  * @param {description} video The video of the slide
  */
 export default {

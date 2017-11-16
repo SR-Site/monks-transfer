@@ -12,12 +12,12 @@ export default {
 	},
 	data() {
 		return {
-			deviceState: null,
+			deviceState: this.$deviceState.currentState,
 		};
 	},
 	computed: {
 		src() {
-			return this.DeviceState > this.DeviceState.SMALL ? this.image.large : this.image.small;
+			return this.deviceState > this.DeviceState.SMALL ? this.image.normal : this.image.small;
 		},
 	},
 	methods: {
