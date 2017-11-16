@@ -3,7 +3,7 @@
 		padding: $sizeGrid 0;
 
 		svg {
-			@include size(100%);
+			@include size($sizeGrid);
 		}
 
 		path {
@@ -58,6 +58,10 @@
 
 	@include respond-to(SMALL) {
 		.share {
+			svg {
+				@include size(mobile-size($sizeGrid * 2));
+			}
+
 			:global {
 				li {
 					@include size(mobile-size($sizeGrid * 2));

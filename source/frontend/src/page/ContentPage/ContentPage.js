@@ -1,6 +1,7 @@
 import { AbstractContentPageComponent } from 'vue-block-system';
 import TrackingProvider from 'util/tracking/TrackingProvider';
 import ContentPageTransitionController from './ContentPageTransitionController';
+import objectFitImages from 'object-fit-images';
 
 export default {
 	name: 'ContentPage',
@@ -9,6 +10,7 @@ export default {
 		handleRouteChangeComplete() {
 			this.pageLoader.transitionOut();
 			this.$nextTick(() => {
+				objectFitImages(); // Polyfill the object-fit to make sure it works on IE
 				this.$tracking.trackPageView({
 					[TrackingProvider.GOOGLE_ANALYTICS]: {
 						page: this.$router.currentRoute.path,
