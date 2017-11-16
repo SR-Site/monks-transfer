@@ -7,7 +7,8 @@ import AudienceReachChannelData from './AudienceReachChannelData';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
- * @param {description} slides The array of slides displayed in the hero block
+ * @param {description} heading The heading of the block
+ * @param {description} channels The channels displayed in the block
  */
 export default {
 	marginTop: VueTypes.number.isRequired,

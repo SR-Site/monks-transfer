@@ -18,5 +18,7 @@ export default {
 	scrollId: VueTypes.string,
 	heading: VueTypes.string.isRequired,
 	backgroundImage: VueTypes.shape(PropImage),
-	devices: VueTypes.arrayOf(TargetAudienceDeviceData),
+	devices: VueTypes.arrayOf(
+		VueTypes.shape(TargetAudienceDeviceData),
+	),
 };

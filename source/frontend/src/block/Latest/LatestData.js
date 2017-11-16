@@ -19,5 +19,7 @@ export default {
 	scrollId: VueTypes.string,
 	heading: VueTypes.string.isRequired,
 	link: VueTypes.shape(PropLink),
-	articles: VueTypes.arrayOf(PropNewsArticle),
+	articles: VueTypes.arrayOf(
+		VueTypes.shape(PropNewsArticle),
+	),
 };

@@ -3,6 +3,7 @@ import { AbstractBlockComponent } from 'vue-block-system';
 import AudienceReachTransitionController from './AudienceReachTransitionController';
 import AudienceReachData from './AudienceReachData';
 
+console.log(AudienceReachData);
 export default {
 	name: 'AudienceReach',
 	extends: AbstractBlockComponent,

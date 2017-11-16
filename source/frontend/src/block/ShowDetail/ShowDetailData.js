@@ -14,6 +14,7 @@ import PropImage from '../../data/prop-type/media/PropImage';
  * @param {description} network.image normal: 240x240, small: 240x240
  * @param {description} airTime The airtime value
  * @param {description} airTime.label The category label
+ * @param {description} airTime.value The category value
  * @param {description} airTime.image normal: 240x240, small: 240x240
  * @param {description} ageRestriction The age restriction value
  * @param {description} ageRestriction.label The category label

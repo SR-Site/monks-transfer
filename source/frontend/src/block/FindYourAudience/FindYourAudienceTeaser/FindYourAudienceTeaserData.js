@@ -16,7 +16,5 @@ export default {
 	heading: VueTypes.string.isRequired,
 	subHeading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
-	reaches: VueTypes.arrayOf(
-		String
-	).isRequired,
+	reaches: VueTypes.array.isRequired,
 };
