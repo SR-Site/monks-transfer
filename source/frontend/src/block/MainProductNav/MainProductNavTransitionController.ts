@@ -23,10 +23,10 @@ class MainProductNavTransitionController extends AbstractTransitionController {
 		);
 
 		(<Array<IAbstractRegistrableComponent>>this.viewModel.$refs.item).forEach((item, index) => {
-			this.transitionInTimeline.add(this.getSubTimeline(`MainProductNavItem${index}`), '=-1');
+			this.transitionInTimeline.add(() => this.getSubTimeline(`MainProductNavItem${index}`), '=-1');
 		});
 
-		this.transitionInTimeline.add(this.getSubTimeline('DashedPaginator'), 1);
+		this.transitionInTimeline.add(() => this.getSubTimeline('DashedPaginator'), 1);
 	}
 
 	/**

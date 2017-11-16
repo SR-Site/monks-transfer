@@ -89,15 +89,18 @@
 		}
 	  },
 	  {
-		"id": "heroTertiary",
+		"id": "smallInfo",
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
 		  "marginTop": 2,
-		  "background": {
-			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
-			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
-			"alt": "Background image alt text"
+		  "heading": "Top programming. Engaged audiences.",
+		  "paragraph": "Get your message in front of the right people, at the right time. We’ll place your business next to the shows.",
+		  "link": {
+			"label": "Find out more",
+			"title": "Find out more",
+			"target": "advertising-solutions",
+			"type": 0
 		  }
 		}
 	  },

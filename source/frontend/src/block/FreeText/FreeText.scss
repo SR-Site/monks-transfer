@@ -38,6 +38,18 @@
 		padding: $sizeGrid;
 	}
 
+	.alignment-left {
+		text-align: left;
+	}
+
+	.alignment-right {
+		text-align: right;
+	}
+
+	.alignment-center {
+		text-align: center;
+	}
+
 	// Breakpoints
 	@include respond-to(SMALL) {
 		.free-text {

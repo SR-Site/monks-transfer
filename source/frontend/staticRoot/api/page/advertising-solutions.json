@@ -1,0 +1,289 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - Advertising Solutions",
+	"pageData": {
+	  "headerTheme": 0,
+	  "hideContactButton": 0
+	},
+	"blocks": [
+	  {
+		"id": "heroSecondary",
+		"data": {
+		  "overlap": true,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "backgroundVideo": {
+			"url": "https:\/\/www.spectrumreach.com\/assets\/videos\/2017-04\/SRwebsite_Homepage%20hero_V1_40617_1.mp4",
+			"type": 0
+		  },
+		  "background": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/AdobeStock_110417474%20-%20SS.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/AdobeStock_110417474%20-%20SS.jpg",
+			"alt": "Advertising Solutions"
+		  },
+		  "link": {
+			"label": "Find out more",
+			"title": "Find out more",
+			"type": 2
+		  },
+		  "paragraph": "<p>Spectrum Reach is the marketing platform of choice to help your business reach new heights, without breaking your budget.\u00a0<\/p>",
+		  "heading": "<h1>Powered By Your Potential</h1>",
+		  "subHeading": "<strong>Lorem ipsum dolor sit amet</strong>",
+		  "backgroundColor": "rgba(0, 48, 87, 0.95)"
+		}
+	  },
+	  {
+		"id": "freeText",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 2,
+		  "html": "<h2>Our Platform is our promise to you</h2><p>Combined with our national scale and resources, only we can deliver. </p>"
+		}
+	  },
+	  {
+		"id": "pathToPurchase",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "steps": [
+			{
+			  "heading": "Connected to Content<br />",
+			  "paragraph": "<p>Align your brand with top programming.</p>",
+			  "background": {
+				"small": "http://via.placeholder.com/1920x1080",
+				"normal": "http://via.placeholder.com/1920x1080",
+				"alt": "Connected to Content"
+			  },
+			  "secondaryParagraph": "<p>Share the stage and align your brand with over 400 of the most-watched and most-loved programs across 50+ networks.</p>"
+			},
+			{
+			  "heading": "Zero In<br />",
+			  "paragraph": "<p>Target the right audience on TV.</p>",
+			  "background": {
+				"small": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"normal": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"alt": "Zero In"
+			  },
+			  "secondaryParagraph": "<p>Reach the right customers on TV with our state-of-the-art audience targeting and interactive capabilities.</p>"
+			},
+			{
+			  "heading": "Measurability Without Measure<br />",
+			  "paragraph": "<p>Build the right media plan.</p>",
+			  "background": {
+				"small": "http://via.placeholder.com/1920x1080",
+				"normal": "http://via.placeholder.com/1920x1080",
+				"alt": "Measurability Without Measure"
+			  },
+			  "secondaryParagraph": "<p>Use our unique data and insights to access your best customers across 30 million households.</p>"
+			},
+			{
+			  "heading": "We Are Your Neighbors<br />",
+			  "paragraph": "<p>Partner with an expert local team.</p>",
+			  "background": {
+				"small": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"normal": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"alt": "We Are Your Neighbors"
+			  },
+			  "secondaryParagraph": "<p>Collaborate with a dedicated team in your community to develop a custom marketing strategy.</p>"
+			},
+			{
+			  "heading": "Lights. Camera. Action. Sales.<br />",
+			  "paragraph": "<p>Create a memorable campaign.</p>",
+			  "background": {
+				"small": "http://via.placeholder.com/1920x1080",
+				"normal": "http://via.placeholder.com/1920x1080",
+				"alt": "Lights. Camera. Action. Sales."
+			  },
+			  "secondaryParagraph": "<p>Tell a story that resonates with your audience with help from our award-winning in-house agency, Kernel.</p>"
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "mainProductNav",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Ready to reach your customers?",
+		  "paragraph": "Find your format.",
+		  "items": [
+			{
+			  "background": {
+				"normal": "http://via.placeholder.com/500x500",
+				"small": "http://via.placeholder.com/500x500",
+				"alt": "Background image alt text"
+			  },
+			  "heading": "Television",
+			  "paragraph": "TV is now everywhere. Air your targeted advertisement during news, sports, and award winning shows on multiscreen.",
+			  "link": {
+				"label": "Discover Television",
+				"title": "Discover Television",
+				"target": "/television",
+				"type": 0
+			  }
+			},
+			{
+			  "background": {
+				"normal": "http://via.placeholder.com/500x500",
+				"small": "http://via.placeholder.com/500x500",
+				"alt": "Background image alt text"
+			  },
+			  "heading": "Audience Extension",
+			  "paragraph": "TV is now everywhere. Air your targeted advertisement during news, sports, and award winning shows on multiscreen.",
+			  "link": {
+				"label": "Discover Television",
+				"title": "Discover Television",
+				"target": "/television",
+				"type": 0
+			  }
+			},
+			{
+			  "background": {
+				"normal": "http://via.placeholder.com/500x500",
+				"small": "http://via.placeholder.com/500x500",
+				"alt": "Background image alt text"
+			  },
+			  "heading": "Data & Services",
+			  "paragraph": "TV is now everywhere. Air your targeted advertisement during news, sports, and award winning shows on multiscreen.",
+			  "link": {
+				"label": "Discover Television",
+				"title": "Discover Television",
+				"target": "/television",
+				"type": 0
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "map",
+		"data": {
+		  "overlap": false,
+		  "windowed": true,
+		  "marginTop": 3,
+		  "steps": [
+			{
+			  "label": "Scale",
+			  "heading": "Scale that works for you<br \/>",
+			  "paragraph": "<p>Spectrum Reach operates in <a>27 states and 94<\/a>\u00a0markets. We\u2019re like your neighbors, who happen to be advertising experts. From reaching 30 million homes to targeting homes within a mile of your business, we have your back.<\/p>"
+			},
+			{
+			  "label": "Regional",
+			  "heading": "Focus on where you need to be<br \/>",
+			  "paragraph": "<p>If your business is invested in only one part of the country, narrow your target for a wiser spend.<\/p>"
+			},
+			{
+			  "label": "Markets",
+			  "heading": "Aim for a smaller target<br \/>",
+			  "paragraph": "<p>Your business only serves one market area. This is so easy.<\/p>"
+			},
+			{
+			  "label": "Local",
+			  "heading": "Where you are is where it's at<br \/>",
+			  "paragraph": "<p>This is your zone, your town, your neighborhood. Get ready with a smile because your customers are going to be dropping by.<\/p>"
+			}
+		  ],
+		  "sequenceBackground": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-04\/map_lines_000_3.png",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-04\/map_lines_000_3.png",
+			"alt": "Spectrum Reach Footprint Map"
+		  },
+		  "imageSequence": {
+			"image": {
+			  "normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-04\/map_lines_000_4.png",
+			  "small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-04\/map_lines_000_4.png",
+			  "alt": "Spectrum Reach Footprint Map"
+			},
+			"total": 75,
+			"extension": "png"
+		  }
+		}
+	  },
+	  {
+		"id": "personaSelector",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "personas": [
+			{
+			  "heading": "Local Advertising<br \/>",
+			  "paragraph": "<p>Spectrum Reach has markets across the country, with teams that know your neighborhood inside and out.<\/p>",
+			  "personaType": 0,
+			  "link": {
+				"label": "Grow your business",
+				"title": "Grow your business",
+				"target": "",
+				"type": 3
+			  },
+			  "image": {
+				"small": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"normal": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"alt": "Local"
+			  }
+			},
+			{
+			  "heading": "National\u00a0<br \/>Advertising<br \/>",
+			  "paragraph": "<p>Spectrum Reach puts your message in front of targeted customers across the country and across all screens.<\/p>",
+			  "personaType": 3,
+			  "link": {
+				"label": "Grow your Business",
+				"title": "Grow your Business",
+				"target": "",
+				"type": 3
+			  },
+			  "image": {
+				"small": "http://via.placeholder.com/1920x1080",
+				"normal": "http://via.placeholder.com/1920x1080",
+				"alt": "National"
+			  }
+			},
+			{
+			  "heading": "Agency Solutions<br \/>",
+			  "paragraph": "<p>Your clients trust you to help them navigate the complicated, ever-evolving media landscape. You can count on Spectrum Reach.<\/p>",
+			  "personaType": 2,
+			  "link": {
+				"label": "Grow your Business",
+				"title": "Grow your Business",
+				"target": "",
+				"type": 3
+			  },
+			  "image": {
+				"small": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"normal": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"alt": "Agencies"
+			  }
+			},
+			{
+			  "heading": "Automotive Advertising<br \/>",
+			  "paragraph": "<p>The automotive industry is saturated with ads. Break through the clutter with Spectrum Reach.<\/p>",
+			  "personaType": 1,
+			  "link": {
+				"label": "Grow your business",
+				"title": "Grow your business",
+				"target": "",
+				"type": 3
+			  },
+			  "image": {
+				"small": "http://via.placeholder.com/1920x1080",
+				"normal": "http://via.placeholder.com/1920x1080",
+				"alt": "Automotive"
+			  }
+			}
+		  ]
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}

@@ -21,7 +21,7 @@
 								}"
 								:title="data.heading"
 								:type="ButtonType.ACTION"
-								:theme="Theme.DARK"
+								:theme="Theme.LIGHT"
 								:isPlaying="false"
 								:class="$style.playButton"
 								ref="playButton"

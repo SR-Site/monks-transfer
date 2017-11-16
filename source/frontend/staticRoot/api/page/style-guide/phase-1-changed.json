@@ -21,7 +21,7 @@
 		{
 		  "label": "Phase 1 (changed)",
 		  "title": "Phase 1 (changed)",
-		  "target": "/phase-1-changed",
+		  "target": "/style-guide/phase-1-changed",
 		  "type": 0
 		}
 	  ]
@@ -151,7 +151,7 @@
 		  ],
 		  "filterLabel": "Filters",
 		  "closeLabel": "Close",
-		  "endpoint": "/search/article.json"
+		  "endpoint": "search/article.json"
 		}
 	  },
 	  {

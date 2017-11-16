@@ -26,7 +26,7 @@ const setupInjects = () => {
 	configManager.init(config.config, config.environment);
 
 	const gateway = axios.create({
-		baseURL: (configManager.getVariable(VariableNames.MOCK_ENABLED) ? 'static' : '') + configManager.getURL(URLNames.API),
+		baseURL: (configManager.getVariable(VariableNames.MOCK_ENABLED) ? '/static' : '') + configManager.getURL(URLNames.API),
 		headers: {
 			Accept: 'application/json',
 		},
