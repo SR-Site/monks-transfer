@@ -14,7 +14,6 @@ import PropAuthor from '../../data/prop-type/article/PropAuthor';
  * @param {description} image normal: 1280x270, small: 1280x720
  * @param {description} tags The tags linked to the article
  * @param {description} views The views of the article
- * @param {description} shares The shares of the article
  * @param {description} time The reading time of the article
  * @param {description} date The publish date of the article
  * @param {description} heading The heading of the article
@@ -37,7 +36,6 @@ export default {
 		VueTypes.shape(PropLink),
 	),
 	views: VueTypes.number.isRequired,
-	shares: VueTypes.number.isRequired,
 	time: VueTypes.number.isRequired,
 	date: VueTypes.string.isRequired,
 	heading: VueTypes.string.isRequired,

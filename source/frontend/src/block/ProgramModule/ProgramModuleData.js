@@ -7,6 +7,8 @@ import ProgramTeaserData from './ProgramTeaser/ProgramTeaserData';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} heading The heading of the block
+ * @param {description} paragraph The paragraph of the block
  * @param {description} items The array of items displayed in the program module
  */
 export default {
@@ -14,6 +16,8 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
+	heading: VueTypes.string,
+	paragraph: VueTypes.string,
 	items: VueTypes.arrayOf(
 		VueTypes.shape(ProgramTeaserData),
 	).isRequired,

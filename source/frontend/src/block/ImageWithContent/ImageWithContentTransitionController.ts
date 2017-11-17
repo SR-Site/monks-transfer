@@ -17,9 +17,11 @@ class ImageWithContentTransitionController extends AbstractTransitionController 
 			2,
 			{
 				xPercent: -100,
+				autoAlpha: 0,
 			},
 			{
 				xPercent: 0,
+				autoAlpha: 1,
 				clearProps: 'all',
 				ease: Expo.easeOut,
 			},

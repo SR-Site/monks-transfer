@@ -21,8 +21,6 @@
 	"article": {
 	  "stats": {
 		"read_time": "min. read",
-		"share": "share",
-		"shares": "shares",
 		"view": "view",
 		"views": "views"
 	  }

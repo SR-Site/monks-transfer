@@ -16,7 +16,7 @@
 		</h2>
 		<Breadcrumbs
 			componentId="Breadcrumbs"
-			v-if="breadcrumbs.length"
+			v-show="breadcrumbs.length"
 			:class="$style.breadcrumbs"
 			:breadcrumbs="breadcrumbs"/>
 		<div :class="$style.callToActions">

@@ -65,7 +65,6 @@ export default {
 			});
 		},
 		handleCustomButtonEvent(data) {
-			console.log('custombutton event', data);
 			const slideoutPanel = this.getChild('SlideoutPanel');
 			switch (data.event) {
 				case BackendLinkType.CONTACT_US:

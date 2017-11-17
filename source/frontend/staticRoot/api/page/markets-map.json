@@ -1,0 +1,32 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - Markets Map",
+	"data": {
+	  "headerTheme": 1,
+	  "hideContactButton": 0
+	},
+	"blocks": [
+	  {
+		"id": "marketMap",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "service": {
+			"heading": "Start advertising today"
+		  },
+		  "searchLabel": "Search",
+		  "searchPlaceholder": "Which region do you want to advertise in?",
+		  "notFoundMessage": "Sorry, this is not currently in our coverage area, contact us to for more information."
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}

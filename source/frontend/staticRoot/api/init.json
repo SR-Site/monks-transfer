@@ -40,31 +40,31 @@
 				  {
 					"label": "Television",
 					"title": "Television",
-					"target": "/television",
+					"target": "/advertising-solutions/television",
 					"type": 0
 				  },
 				  {
 					"label": "Ads Everywhere",
 					"title": "Ads Everywhere",
-					"target": "/ads-everywhere",
+					"target": "/advertising-solutions/television/dummy-product",
 					"type": 0
 				  },
 				  {
 					"label": "Audience Finder",
 					"title": "Audience Finder",
-					"target": "/audience-finder",
+					"target": "/advertising-solutions/television/dummy-product",
 					"type": 0
 				  },
 				  {
 					"label": "Ad tag & Ad Copy",
 					"title": "Ad tag & Ad Copy",
-					"target": "/ad-tag-and-ad-copy",
+					"target": "/advertising-solutions/television/dummy-product",
 					"type": 0
 				  },
 				  {
 					"label": "Engage Me Tv",
 					"title": "Engage Me Tv",
-					"target": "/engage-me-tv",
+					"target": "/advertising-solutions/television/dummy-product",
 					"type": 0
 				  }
 				]
@@ -75,25 +75,19 @@
 				  {
 					"label": "Digital",
 					"title": "Digital",
-					"target": "/digital",
+					"target": "/advertising-solutions/digital",
 					"type": 0
 				  },
 				  {
 					"label": "Online Display Video",
 					"title": "Online Display Video",
-					"target": "/online-display-video",
+					"target": "/advertising-solutions/digital/dummy-product",
 					"type": 0
 				  },
 				  {
 					"label": "Social Media",
 					"title": "Social Media",
-					"target": "/social-media",
-					"type": 0
-				  },
-				  {
-					"label": "Search",
-					"title": "Search",
-					"target": "/search",
+					"target": "/advertising-solutions/digital/dummy-product",
 					"type": 0
 				  }
 				]
@@ -101,7 +95,7 @@
 			  {
 				"label": "Creative Services",
 				"title": "Creative Services",
-				"target": "/creative-services",
+				"target": "/advertising-solutions/creative-services",
 				"type": 0
 			  }
 			]
@@ -118,13 +112,13 @@
 			  {
 				"label": "Networks",
 				"title": "Networks",
-				"target": "/networks",
+				"target": "/featured-programs/networks",
 				"type": 0
 			  },
 			  {
 				"label": "Shows",
 				"title": "Shows",
-				"target": "/shows",
+				"target": "/featured-programs/shows",
 				"type": 0
 			  }
 			]
@@ -141,25 +135,25 @@
 			  {
 				"label": "Resources",
 				"title": "Resources",
-				"target": "/knowledge-center",
+				"target": "/resources",
 				"type": 0
 			  },
 			  {
 				"label": "Success Stories",
 				"title": "Success Stories",
-				"target": "/success-stories",
+				"target": "/resources/success-stories",
 				"type": 0
 			  },
 			  {
 				"label": "Knowledge Center",
 				"title": "Knowledge Center",
-				"target": "/knowledge-center",
+				"target": "/resources/knowledge-center",
 				"type": 0
 			  },
 			  {
 				"label": "Glossary",
 				"title": "Glossary",
-				"target": "/glossary",
+				"target": "/resources/glossary",
 				"type": 0
 			  }
 			]

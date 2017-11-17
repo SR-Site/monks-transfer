@@ -39,18 +39,22 @@ export default {
 				point.height = component.$el.offsetHeight;
 			});
 		},
+		handleComponentEnterView(component) {
+			console.log('component enters the view');
+			component.unlock();
+		},
 		createScrollTrackerPoints() {
 			Object.keys(this.glossaryItems).forEach(key => {
 				const component = this.glossaryItems[key];
 				const element = component.$el;
 				const point = this.scrollTracker.addPoint(this.getYPosition(element), element.offsetHeight);
 
-				point.addEventListener(ScrollTrackerEvent.ENTER_VIEW, () => component.unlock());
-				point.addEventListener(ScrollTrackerEvent.SCROLLED_BEYOND, () => component.unlock());
+				point.addEventListener(ScrollTrackerEvent.ENTER_VIEW, () => this.handleComponentEnterView(component));
+				point.addEventListener(ScrollTrackerEvent.SCROLLED_BEYOND, () => this.handleComponentEnterView(component));
 
 				// Check for the position on init
 				if (point.isInBounds) {
-					component.unlock();
+					this.handleComponentEnterView(component)
 				}
 
 				this.scrollTrackerPoints[component.componentId] = point;

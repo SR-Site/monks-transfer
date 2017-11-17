@@ -1,0 +1,61 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - Success Stories",
+	"data": {
+	  "headerTheme": 0,
+	  "hideContactButton": 0,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "/home",
+		  "type": 0
+		},
+		{
+		  "label": "Resources",
+		  "title": "Resources",
+		  "target": "/resources",
+		  "type": 0
+		},
+		{
+		  "label": "Success Stories",
+		  "title": "Success Stories",
+		  "target": "/resources/success-stories",
+		  "type": 0
+		}
+	  ]
+	},
+	"blocks": [
+	  {
+		"id": "heroTertiary",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "background": {
+			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"alt": "Background image alt text"
+		  }
+		}
+	  },
+	  {
+		"id": "freeText",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 2,
+		  "html": "<h1>Empty page.</h1><p>This page has no PSD so no blocks are added!</p>"
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}

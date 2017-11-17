@@ -1,0 +1,373 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - Resources",
+	"data": {
+	  "headerTheme": 0,
+	  "hideContactButton": 0
+	},
+	"blocks": [
+	  {
+		"id": "heroSecondary",
+		"data": {
+		  "overlap": true,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "backgroundVideo": {
+			"url": "https:\/\/www.spectrumreach.com\/assets\/videos\/2017-04\/SRwebsite_Homepage%20hero_V1_40617_1.mp4",
+			"type": 0
+		  },
+		  "background": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/AdobeStock_110417474%20-%20SS.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/AdobeStock_110417474%20-%20SS.jpg",
+			"alt": "Advertising Solutions"
+		  },
+		  "link": {
+			"label": "Find out more",
+			"title": "Find out more",
+			"type": 2
+		  },
+		  "paragraph": "<p>Spectrum Reach is the marketing platform of choice to help your business reach new heights, without breaking your budget.\u00a0<\/p>",
+		  "heading": "<h1>Powered By Your Potential</h1>",
+		  "subHeading": "<strong>Lorem ipsum dolor sit amet</strong>",
+		  "backgroundColor": "rgba(0, 48, 87, 0.95)"
+		}
+	  },
+	  {
+		"id": "latest",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 4,
+		  "heading": "Spectrum Reach Insights",
+		  "link": {
+			"label": "See all articles",
+			"title": "See all articles",
+			"target": "/resources/knowledge-center",
+			"type": 0
+		  },
+		  "articles": [
+			{
+			  "social": [
+				{
+				  "label": "Find Your True ROI - Download",
+				  "title": "Find Your True ROI - Download",
+				  "target": "http:\/\/go.spectrumreach.com\/ROI",
+				  "type": 1
+				}
+			  ],
+			  "author": {
+				"name": "Spectrum Reach",
+				"role": "Author",
+				"image": {
+				  "small": "http://via.placeholder.com/240x240",
+				  "normal": "http://via.placeholder.com/240x240",
+				  "alt": ""
+				}
+			  },
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "Find your true ROI"
+			  },
+			  "views": 0,
+			  "time": 5,
+			  "date": "09\/10\/2017",
+			  "paragraph": "If you\u2019re still relying solely on your gross rating point (GRP) and your customer relationship management (CRM) to measure television and digital campaigns, you\u2019re not getting the full story.",
+			  "subHeading": "What\u2019s the REAL Return on Investment for Your Marketing Plan?",
+			  "heading": " How Do You Know if Your Advertising Campaign is Working?",
+			  "theme": 1,
+			  "target": "/resources/knowledge-center/dummy-article"
+			},
+			{
+			  "social": [
+				{
+				  "label": "Read More",
+				  "title": "Read More",
+				  "target": "\/articles\/most-effective-media-buy-and-campaign-match",
+				  "type": 0
+				}
+			  ],
+			  "author": {
+				"name": "Fred Bucher",
+				"role": "Author",
+				"image": {
+				  "small": "http://via.placeholder.com/240x240",
+				  "normal": "http://via.placeholder.com/240x240",
+				  "alt": ""
+				}
+			  },
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "Small, Small Business"
+			  },
+			  "tags": [
+				{
+				  "label": "Marketing",
+				  "title": "Marketing",
+				  "target": "\/spectrum-reach-advertising-home?filters=Marketing",
+				  "type": 0
+				},
+				{
+				  "label": "Media",
+				  "title": "Media",
+				  "target": "\/spectrum-reach-advertising-home?filters=Media",
+				  "type": 0
+				}
+			  ],
+			  "views": 0,
+			  "time": 10,
+			  "date": "03\/10\/2017",
+			  "paragraph": "Our solutions come from our unparalleled data. Our compelling creative content. Our local expertise. That\u2019s why we\u2019re the Marketing Platform of Choice.",
+			  "subHeading": "This is for the dreamers, the entrepreneurs, the innovators.",
+			  "heading": "#Reach365: Small, Small Business",
+			  "theme": 0,
+			  "target": "/resources/knowledge-center/dummy-article"
+			},
+			{
+			  "social": [],
+			  "author": {
+				"name": "Spectrum Reach",
+				"role": "Author",
+				"image": {
+				  "small": "http://via.placeholder.com/240x240",
+				  "normal": "http://via.placeholder.com/240x240",
+				  "alt": ""
+				}
+			  },
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "Spectrum Reach Los Angeles Adlink Upfront"
+			  },
+			  "views": 0,
+			  "time": 5,
+			  "date": "02\/10\/2017",
+			  "paragraph": "Los Angeles\u2019 most influential media buyers and industry experts joined Spectrum Reach leadership at one of our first Upfronts of the season in Hollywood, California.",
+			  "subHeading": "Los Angeles Adlink Upfront",
+			  "heading": "Television, reInvented",
+			  "theme": 0,
+			  "target": "/resources/knowledge-center/dummy-article"
+			},
+			{
+			  "social": [],
+			  "author": {
+				"name": "Spectrum Reach",
+				"role": "Author",
+				"image": {
+				  "small": "http://via.placeholder.com/240x240",
+				  "normal": "http://via.placeholder.com/240x240",
+				  "alt": ""
+				}
+			  },
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "TV is Social"
+			  },
+			  "tags": [
+				{
+				  "label": "Marketing",
+				  "title": "Marketing",
+				  "target": "\/spectrum-reach-advertising-home?filters=Marketing",
+				  "type": 0
+				},
+				{
+				  "label": "Media",
+				  "title": "Media",
+				  "target": "\/spectrum-reach-advertising-home?filters=Media",
+				  "type": 0
+				}
+			  ],
+			  "views": 0,
+			  "time": 5,
+			  "date": "22\/09\/2017",
+			  "paragraph": "TV is still the ultimate brand-builder. In any given minute, an average of 50,349,713 viewers 18+ are watching their favorite content on TV across the US",
+			  "subHeading": "Ad-Supported live TV sparks social engagement",
+			  "heading": "TV is Social",
+			  "theme": 1,
+			  "target": "/resources/knowledge-center/dummy-article"
+			},
+			{
+			  "social": [],
+			  "author": {
+				"name": "Spectrum Reach",
+				"role": "Author",
+				"image": {
+				  "small": "http://via.placeholder.com/240x240",
+				  "normal": "http://via.placeholder.com/240x240",
+				  "alt": ""
+				}
+			  },
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "Television is Still Strong for Advertisers"
+			  },
+			  "tags": [
+				{
+				  "label": "Marketing",
+				  "title": "Marketing",
+				  "target": "\/spectrum-reach-advertising-home?filters=Marketing",
+				  "type": 0
+				},
+				{
+				  "label": "Media",
+				  "title": "Media",
+				  "target": "\/spectrum-reach-advertising-home?filters=Media",
+				  "type": 0
+				}
+			  ],
+			  "views": 0,
+			  "time": 5,
+			  "date": "19\/09\/2017",
+			  "paragraph": "Media sales organizations need to move beyond the elite. Television advertising is attainable for businesses of any size.  Television remains the best way to build brands and reach customers. ",
+			  "subHeading": "Television is Still Strong for Advertisers",
+			  "heading": "TV Advertising Isn\u2019t Just for the Elite",
+			  "theme": 0,
+			  "target": "/resources/knowledge-center/dummy-article"
+			},
+			{
+			  "social": [],
+			  "author": {
+				"name": "Fred Bucher",
+				"role": "Author",
+				"image": {
+				  "small": "http://via.placeholder.com/240x240",
+				  "normal": "http://via.placeholder.com/240x240",
+				  "alt": ""
+				}
+			  },
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "Emmy Award Winning TV Programming"
+			  },
+			  "views": 0,
+			  "time": 5,
+			  "date": "18\/09\/2017",
+			  "paragraph": "Cable\u2019s innovative and diverse programming continues to gain critical-acclaim with a historic win at this year\u2019s Primetime Emmy Awards. It\u2019s the Golden Age of TV \u2013 and cable continues to deliver buzzworthy (and award-winning) audience-favorites.",
+			  "subHeading": "2017 Emmys award and nominate dozens of the best shows on TV",
+			  "heading": "A Historic Win and Critical-Acclaim for Cable Programming",
+			  "theme": 0,
+			  "target": "/resources/knowledge-center/dummy-article"
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "successStoriesB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 4,
+		  "alignment": 0,
+		  "heading": "TV delivers",
+		  "paragraph": "We are continuously innovating and adding to our range of advertising products for Television.",
+		  "stories": [
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/advertising-solutions/digital/dummy-product",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/advertising-solutions/digital/dummy-product",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/advertising-solutions/digital/dummy-product",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/advertising-solutions/digital/dummy-product",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/advertising-solutions/digital/dummy-product",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/advertising-solutions/digital/dummy-product",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/750x750",
+				"small": "http://via.placeholder.com/750x750",
+				"alt": "Lorem ipsum"
+			  },
+			  "target": "/advertising-solutions/digital/dummy-product",
+			  "heading": "How Flagler Auditorium sold the most tickets in their 20-year history"
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "glossaryA",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Glossary of advertising terms",
+		  "paragraph": "Unlock the language required to gain full control of your advertising. ",
+		  "link": {
+			"label": "Read the full glossary",
+			"title": "Read the full glossary",
+			"target": "/featured-programs",
+			"type": 0
+		  },
+		  "items": [
+			{
+			  "label": "Availability (”<i>avails</i>”)",
+			  "value": "Unsold units of time available for broadcasters to sell to advertisers. Also refers to a station’s submission of programs and rating estimates for advertising planning and buying."
+			},
+			{
+			  "label": "Bonus Spot",
+			  "value": "additional TV or radio spot provided to an advertiser at no charge to raise the overall audience delivery of the schedule."
+			},
+			{
+			  "label": "Cable TV",
+			  "value": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+			}
+		  ]
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}

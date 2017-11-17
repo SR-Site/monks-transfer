@@ -5,8 +5,8 @@
 
 		&:before {
 			@include arrow(right, $colorLightGrey, $sizeGrid * 30);
-			@include offset(0, 50%);
-			transform: translateY(-50%);
+			@include offset(0, 0);
+			transform: translateY($sizeGrid * -4);
 			content: '';
 			position: absolute;
 		}

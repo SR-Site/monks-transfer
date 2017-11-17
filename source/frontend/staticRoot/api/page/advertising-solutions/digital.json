@@ -1,0 +1,263 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - Digital",
+	"data": {
+	  "headerTheme": 0,
+	  "hideContactButton": 0,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "/home",
+		  "type": 0
+		},
+		{
+		  "label": "Advertising Solutions",
+		  "title": "Advertising Solutions",
+		  "target": "/advertising-solutions",
+		  "type": 0
+		},
+		{
+		  "label": "Digital",
+		  "title": "Digital",
+		  "target": "/advertising-solutions/digital",
+		  "type": 0
+		}
+	  ]
+	},
+	"blocks": [
+	  {
+		"id": "heroSecondary",
+		"data": {
+		  "overlap": true,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "backgroundVideo": {
+			"url": "https:\/\/www.spectrumreach.com\/assets\/videos\/2017-04\/SRwebsite_Homepage%20hero_V1_40617_1.mp4",
+			"type": 0
+		  },
+		  "background": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/AdobeStock_110417474%20-%20SS.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/2017-03\/AdobeStock_110417474%20-%20SS.jpg",
+			"alt": "Advertising Solutions"
+		  },
+		  "link": {
+			"label": "Find out more",
+			"title": "Find out more",
+			"type": 2
+		  },
+		  "paragraph": "<p>Spectrum Reach is the marketing platform of choice to help your business reach new heights, without breaking your budget.\u00a0<\/p>",
+		  "heading": "<h1>Powered By Your Potential</h1>",
+		  "subHeading": "<strong>Lorem ipsum dolor sit amet</strong>",
+		  "backgroundColor": "rgba(0, 48, 87, 0.95)"
+		}
+	  },
+	  {
+		"id": "imageWithContentB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "link": {
+			"label": "Featured Programs",
+			"title": "Featured Programs",
+			"target": "\/featured-programs",
+			"type": 0
+		  },
+		  "background": {
+			"normal": "http://via.placeholder.com/1280x720",
+			"small": "http://via.placeholder.com/1280x720",
+			"alt": "networks and programming"
+		  },
+		  "paragraph": "<p>With the majority of consumers using multiple devices throughout the day, it’s never been more <strong>essential to have</strong> a multi-screen advertising strategy. When combined, TV and Digital work together to make your ads more memorable, even doubling your message recall when the same ad runs on both TV and online.<\/p>",
+		  "heading": "The New Media Landscape",
+		  "alignment": 1
+		}
+	  },
+	  {
+		"id": "imageWithContentB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "link": {
+			"label": "Featured Programs",
+			"title": "Featured Programs",
+			"target": "\/featured-programs",
+			"type": 0
+		  },
+		  "background": {
+			"normal": "http://via.placeholder.com/1280x720",
+			"small": "http://via.placeholder.com/1280x720",
+			"alt": "networks and programming"
+		  },
+		  "paragraph": "<p>With the majority of consumers using multiple devices throughout the day, it’s never been more <strong>essential to have</strong> a multi-screen advertising strategy. When combined, TV and Digital work together to make your ads more memorable, even doubling your message recall when the same ad runs on both TV and online.<\/p>",
+		  "heading": "The New Media Landscape",
+		  "alignment": 0
+		}
+	  },
+	  {
+		"id": "imageWithContentB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "link": {
+			"label": "Featured Programs",
+			"title": "Featured Programs",
+			"target": "\/featured-programs",
+			"type": 0
+		  },
+		  "background": {
+			"normal": "http://via.placeholder.com/1280x720",
+			"small": "http://via.placeholder.com/1280x720",
+			"alt": "networks and programming"
+		  },
+		  "paragraph": "<p>With the majority of consumers using multiple devices throughout the day, it’s never been more <strong>essential to have</strong> a multi-screen advertising strategy. When combined, TV and Digital work together to make your ads more memorable, even doubling your message recall when the same ad runs on both TV and online.<\/p>",
+		  "heading": "The New Media Landscape",
+		  "alignment": 1
+		}
+	  },
+	  {
+		"id": "productList",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 0,
+		  "heading": "TV delivers",
+		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices tristique odio, sit amet euismod odio commodo nec.",
+		  "products": [
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "imageCallToActions",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 4,
+		  "callToActions": [
+			{
+			  "heading": "Television<br />",
+			  "paragraph": "<p>The foundation of a solid brand is built on TV, the most powerful video platform ever created.</p>",
+			  "background": {
+				"normal": "https://www.spectrumreach.com/assets/images/2017-07/Television_products-02b-OPT_0.jpg",
+				"small": "https://www.spectrumreach.com/assets/images/2017-07/Television_products-02b-OPT_0.jpg",
+				"alt": "Television"
+			  },
+			  "backgroundBlurred": {
+				"normal": "https://www.spectrumreach.com/assets/styles/blur/public/images/2017-07/Television_products-02b-OPT_0.jpg?itok=LnonnmnT",
+				"small": "https://www.spectrumreach.com/assets/styles/blur/public/images/2017-07/Television_products-02b-OPT_0.jpg?itok=LnonnmnT",
+				"alt": "Television"
+			  },
+			  "link": {
+				"label": "Television",
+				"title": "Television",
+				"target": "/television-advertising-products-and-programming",
+				"type": 0
+			  }
+			},
+			{
+			  "heading": "Audience Extension<br />",
+			  "paragraph": "<p>Extend your campaign and make your message stronger across every screen, everywhere your customers are, no matter what.</p>",
+			  "background": {
+				"normal": "https://www.spectrumreach.com/assets/images/2017-07/R132-Kernal-Day-4-1420_c1600_v2-opt.jpg",
+				"small": "https://www.spectrumreach.com/assets/images/2017-07/R132-Kernal-Day-4-1420_c1600_v2-opt.jpg",
+				"alt": "Digital Solutions"
+			  },
+			  "backgroundBlurred": {
+				"normal": "https://www.spectrumreach.com/assets/styles/blur/public/images/2017-07/R132-Kernal-Day-4-1420_c1600_v2-opt.jpg?itok=YRnGm_x6",
+				"small": "https://www.spectrumreach.com/assets/styles/blur/public/images/2017-07/R132-Kernal-Day-4-1420_c1600_v2-opt.jpg?itok=YRnGm_x6",
+				"alt": "Digital Solutions"
+			  },
+			  "link": {
+				"label": "Digital",
+				"title": "Digital",
+				"target": "/tv-and-online-digital-advertising",
+				"type": 0
+			  }
+			}
+		  ]
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}
