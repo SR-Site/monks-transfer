@@ -136,11 +136,17 @@ export default {
 		},
 	},
 	beforeDestroy() {
-		this.mouseWheelListener.dispose();
-		this.mouseWheelListener = null;
-		this.scrollListener.dispose();
-		this.scrollListener = null;
-		this.resizeListener.dispose();
-		this.resizeListener = null;
+		if (this.mouseWheelListener) {
+			this.mouseWheelListener.dispose();
+			this.mouseWheelListener = null;
+		}
+		if (this.scrollListener) {
+			this.scrollListener.dispose();
+			this.scrollListener = null;
+		}
+		if (this.resizeListener) {
+			this.resizeListener.dispose();
+			this.resizeListener = null;
+		}
 	},
 };

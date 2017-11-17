@@ -1,0 +1,424 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - Ad Tag & Ad Copy",
+	"data": {
+	  "headerTheme": 0,
+	  "hideContactButton": 0,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "/home",
+		  "type": 0
+		},
+		{
+		  "label": "Advertising Solutions",
+		  "title": "Advertising Solutions",
+		  "target": "/advertising-solutions",
+		  "type": 0
+		},
+		{
+		  "label": "Digital",
+		  "title": "Digital",
+		  "target": "/advertising-solutions/digital",
+		  "type": 0
+		},
+		{
+		  "label": "Dummy Product",
+		  "title": "Dummy Product",
+		  "target": "/advertising-solutions/digital/dummy-product",
+		  "type": 0
+		}
+	  ]
+	},
+	"blocks": [
+	  {
+		"id": "heroQuinary",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "background": {
+			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"alt": "Background image alt text"
+		  },
+		  "image": {
+			"normal": "http://via.placeholder.com/940x700",
+			"small": "http://via.placeholder.com/940x700",
+			"alt": "Background image alt text"
+		  },
+		  "heading": "Ads Everywhere",
+		  "paragraph": "Nearly 90% of the NBA Playoffs leading up to the NBA Finals are on Cable, not including ESPN Deportes, which airs the Finals in Spanish. The Finals begin 6/1 and run through 6/18.",
+		  "link": {
+			"label": "Download product one sheet",
+			"title": "Download product one sheet",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
+		"id": "blogPostB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Messaging across multiple devices and screens increases brand, lift, impact and retention",
+		  "html": "<h3>Greater Reach</h3><p>For your marketing mix by extending your message beyond the traditional linear spot both in and out of the home</p><h3>Greater Reach</h3><p>For your marketing mix by extending your message beyond the traditional linear spot both in and out of the home</p><h3>Greater Reach</h3><p>For your marketing mix by extending your message beyond the traditional linear spot both in and out of the home</p><h3>Greater Reach</h3><p>For your marketing mix by extending your message beyond the traditional linear spot both in and out of the home</p>"
+		}
+	  },
+	  {
+		"id": "videoWithContent",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "scrollId": "videoWithContent",
+		  "alignment": 0,
+		  "heading": "Tv Everywhere continues to grow",
+		  "paragraph": "Live and on-demand viewership across screens continues to grow as consumers replicate the tv experience in the new living room.",
+		  "link": {
+			"label": "Find out more",
+			"title": "Find out more",
+			"target": "advertising-solutions",
+			"type": 0
+		  },
+		  "poster": {
+			"small": "http://via.placeholder.com/1280x720",
+			"normal": "http://via.placeholder.com/1280x720",
+			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+		  },
+		  "video": {
+			"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+			"type": 0
+		  }
+		}
+	  },
+	  {
+		"id": "downloadFileB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Download the Ads Everywhere One Sheet",
+		  "fileDescription": "1.5mb PDF Lorem ipsum dolor sit amet.",
+		  "image": {
+			"normal": "http://via.placeholder.com/240x240",
+			"small": "http://via.placeholder.com/240x240",
+			"alt": "File type image"
+		  },
+		  "link": {
+			"label": "Download",
+			"title": "Download",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
+		"id": "coreProductMessage",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Advertising is a multi-screen landscape <br/>Consumers rank TV as the",
+		  "items": [
+			{
+			  "value": "#1",
+			  "label": "source",
+			  "paragraph": "for the <strong>useful information</strong> about new products and services"
+			},
+			{
+			  "value": "75",
+			  "label": "percent",
+			  "paragraph": "of people who use <strong>their desktop/laptop</strong> while watching TV were shopping or browsing online stores"
+			},
+			{
+			  "value": "15",
+			  "label": "percent",
+			  "paragraph": "of people who <strong>use their tablet</strong> while watching TV used it to shop or browse online"
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "targetAudience",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "backgroundImage": {
+			"normal": "http://via.placeholder.com/1920x1080",
+			"small": "http://via.placeholder.com/1920x1080",
+			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+		  },
+		  "heading": "Surround your target audience <br/>throughout the day and across devices. ",
+		  "devices": [
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "heading": "iOS Mobile Devices",
+			  "paragraph": "iOS Mobile Devices over  index during the morning as people are waking up"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "heading": "Desktop",
+			  "paragraph": "iOS Mobile Devices over  index during the morning as people are waking up"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "heading": "Smart TV",
+			  "paragraph": "Usage of both Mobile Devices  and Smart TVs over index during prime time"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "heading": "iOS Mobile Devices",
+			  "paragraph": "iOS Mobile Devices over  index during the morning as people are waking up"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "heading": "Desktop",
+			  "paragraph": "iOS Mobile Devices over  index during the morning as people are waking up"
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "heading": "Smart TV",
+			  "paragraph": "Usage of both Mobile Devices  and Smart TVs over index during prime time"
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "audienceReach",
+		"data": {
+		  "overlap": true,
+		  "windowed": false,
+		  "marginTop": 4,
+		  "heading": "For live viewing, Sports is the name of <br/>the game with Media Ads Everywhere",
+		  "channels": [
+			{
+			  "image": {
+				"small": "http://via.placeholder.com/240x240",
+				"normal": "http://via.placeholder.com/240x240",
+				"alt": ""
+			  },
+			  "heading": "2015 NFL Season",
+			  "statistics": [
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				}
+			  ]
+			},
+			{
+			  "image": {
+				"small": "http://via.placeholder.com/240x240",
+				"normal": "http://via.placeholder.com/240x240",
+				"alt": ""
+			  },
+			  "heading": "2015 NFL Season",
+			  "statistics": [
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				}
+			  ]
+			},
+			{
+			  "image": {
+				"small": "http://via.placeholder.com/240x240",
+				"normal": "http://via.placeholder.com/240x240",
+				"alt": ""
+			  },
+			  "heading": "2015 NFL Season",
+			  "statistics": [
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				}
+			  ]
+			},
+			{
+			  "image": {
+				"small": "http://via.placeholder.com/240x240",
+				"normal": "http://via.placeholder.com/240x240",
+				"alt": ""
+			  },
+			  "heading": "2015 NFL Season",
+			  "statistics": [
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				},
+				{
+				  "value": "<strong>19%</strong> lift in NFL Regular season TV viewership when including OOH viewing"
+				}
+			  ]
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "successStoryHighlight",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Chrysler success story",
+		  "subHeading": "Chrysler increased their leads by 40% by advertising during the <span>NBA Playoffs.</span>",
+		  "paragraph": "Reaching different audiences for multiple performances created a short messaging window for Flagler Auditorium. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+		  "link": {
+			"label": "Read success story",
+			"title": "Read success story",
+			"target": "/advertising-solutions",
+			"type": 0
+		  },
+		  "image": {
+			"normal": "http://via.placeholder.com/520x520",
+			"small": "http://via.placeholder.com/520x520",
+			"alt": "Lorem ipsum dolor sit amet"
+		  }
+		}
+	  },
+	  {
+		"id": "productList",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 0,
+		  "heading": "TV delivers",
+		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices tristique odio, sit amet euismod odio commodo nec.",
+		  "products": [
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "spacer",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 4
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}

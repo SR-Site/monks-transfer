@@ -3,7 +3,6 @@ import { DeviceStateEvent } from 'seng-device-state-tracker';
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import SiteHeaderTransitionController from './SiteHeaderTransitionController';
 import Logo from '../../Logo/Logo';
-import { NotificationMutationTypes } from '../../../store/module/notification';
 import NativeEventListener from '../../../util/event/NativeEventListener';
 import Breadcrumbs from '../../Breadcrumbs/Breadcrumbs';
 import VueTypes from 'vue-types';
@@ -35,7 +34,7 @@ export default {
 			return this.solidHeader ? this.Theme.DARK : this.headerTheme;
 		},
 		breadcrumbs() {
-			return this.pageData && this.pageData.breadcrumbs ? this.pageData.breadcrumbs : [];
+			return [].concat(this.pageData && this.pageData.breadcrumbs ? this.pageData.breadcrumbs : []);
 		},
 		phoneNumber() {
 			return this.contactOptionGetter('phone').phoneNumber || 'no-phone-number';

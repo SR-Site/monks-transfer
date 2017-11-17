@@ -26,6 +26,6 @@ export default {
 	image: VueTypes.shape(PropImage),
 	link: VueTypes.shape(PropLink),
 	heading: VueTypes.string.isRequired,
-	subHeading: VueTypes.string.isRequired,
+	subHeading: VueTypes.string,
 	paragraph: VueTypes.string.isRequired,
 };
