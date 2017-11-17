@@ -23,7 +23,7 @@
 										:componentId="`ButtonCirclePlay${index}`"
 										title="play"
 										:type="ButtonType.ACTION"
-										:theme="Theme.DARK"
+										:theme="slide.theme"
 										:isPlaying="false"
 										:class="$style.button"
 										ref="playButton"

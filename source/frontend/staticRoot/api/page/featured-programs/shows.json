@@ -4,7 +4,27 @@
 	"title": "Spectrum Reach Advertising - Shows",
 	"data": {
 	  "headerTheme": 0,
-	  "hideContactButton": 0
+	  "hideContactButton": 0,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "/home",
+		  "type": 0
+		},
+		{
+		  "label": "Featured Programs",
+		  "title": "Featured Programs",
+		  "target": "/featured-programs",
+		  "type": 0
+		},
+		{
+		  "label": "Shows",
+		  "title": "Shows",
+		  "target": "/featured-programs/shows",
+		  "type": 0
+		}
+	  ]
 	},
 	"blocks": [],
 	"#cache": {

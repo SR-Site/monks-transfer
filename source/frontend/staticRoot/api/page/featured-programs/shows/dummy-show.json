@@ -1,0 +1,496 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - Dummy Show",
+	"data": {
+	  "headerTheme": 0,
+	  "hideContactButton": 0,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "/home",
+		  "type": 0
+		},
+		{
+		  "label": "Featured Programs",
+		  "title": "Featured Programs",
+		  "target": "/featured-programs",
+		  "type": 0
+		},
+		{
+		  "label": "Shows",
+		  "title": "Shows",
+		  "target": "/featured-programs/shows",
+		  "type": 0
+		},
+		{
+		  "label": "Dummy Show",
+		  "title": "Dummy Show",
+		  "target": "/featured-programs/shows/dummy-show",
+		  "type": 0
+		}
+	  ]
+	},
+	"blocks": [
+	  {
+		"id": "heroQuaternary",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "background": {
+			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"alt": "Background image alt text"
+		  },
+		  "image": {
+			"normal": "http://via.placeholder.com/480x480",
+			"small": "http://via.placeholder.com/480x480",
+			"alt": "Background image alt text"
+		  },
+		  "heading": "NBA Playoffs",
+		  "subHeading": "Shows",
+		  "paragraph": "Nearly 90% of the NBA Playoffs leading up to the NBA Finals are on Cable, not including ESPN Deportes, which airs the Finals in Spanish. The Finals begin 6/1 and run through 6/18.",
+		  "link": {
+			"label": "Watch the trailer",
+			"title": "Watch the trailer",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
+		"id": "showDetail",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "What are the <strong>NBA Playoffs</strong>",
+		  "paragraph": "The National Basketball Association (NBA) playoffs are a best-of-seven elimination tournament among 16 teams in the Eastern Conference and Western Conference (called divisions, pre-1970), ultimately deciding the league's season champion in the NBA Finals.",
+		  "network": {
+			"label": "Network",
+			"image": {
+			  "small": "http://via.placeholder.com/240x240",
+			  "normal": "http://via.placeholder.com/240x240",
+			  "alt": "Background image alt text"
+			}
+		  },
+		  "airTime": {
+			"label": "Air time",
+			"value": "New Episodes Saturdays at 6PM ET/PT"
+		  },
+		  "ageRestriction": {
+			"label": "Age Restriction",
+			"image": {
+			  "small": "http://via.placeholder.com/240x240",
+			  "normal": "http://via.placeholder.com/240x240",
+			  "alt": "Background image alt text"
+			}
+		  }
+		}
+	  },
+	  {
+		"id": "audienceStatistics",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "background": {
+			"normal": "http://via.placeholder.com/1920x1080",
+			"small": "http://via.placeholder.com/1920x1080",
+			"alt": "Background image alt text"
+		  },
+		  "heading": "Learn more about who's watching the NBA Playoffs",
+		  "paragraph": "Nearly 90% of the NBA Playoffs leading up to the NBA Finals are on Cable, not including ESPN Deportes, which airs the Finals in Spanish. The Finals begin 6/1 and run through 6/18.",
+		  "items": [
+			{
+			  "label": "Millenials",
+			  "value": "64%",
+			  "background": {
+				"normal": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/640x640",
+				"alt": "Background image alt text"
+			  },
+			  "link": {
+				"label": "Find out more",
+				"title": "Find out more",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "label": "Asian Americans",
+			  "value": "28%",
+			  "background": {
+				"normal": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/640x640",
+				"alt": "Background image alt text"
+			  },
+			  "link": {
+				"label": "Find out more",
+				"title": "Find out more",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "label": "African American Men",
+			  "value": "96%",
+			  "background": {
+				"normal": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/640x640",
+				"alt": "Background image alt text"
+			  },
+			  "link": {
+				"label": "Find out more",
+				"title": "Find out more",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "label": "Millenials",
+			  "value": "64%",
+			  "background": {
+				"normal": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/640x640",
+				"alt": "Background image alt text"
+			  },
+			  "link": {
+				"label": "Find out more",
+				"title": "Find out more",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "label": "Asian Americans",
+			  "value": "28%",
+			  "background": {
+				"normal": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/640x640",
+				"alt": "Background image alt text"
+			  },
+			  "link": {
+				"label": "Find out more",
+				"title": "Find out more",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			},
+			{
+			  "label": "African American Men",
+			  "value": "96%",
+			  "background": {
+				"normal": "http://via.placeholder.com/720x560",
+				"small": "http://via.placeholder.com/640x640",
+				"alt": "Background image alt text"
+			  },
+			  "link": {
+				"label": "Find out more",
+				"title": "Find out more",
+				"target": "/featured-programs",
+				"type": 0
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "successStoriesA",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Succes story",
+		  "subHeading": "Chrysler increased their leads by  40% by advertising during the NBA Playoffs.",
+		  "paragraph": "Reaching different audiences for multiple performances created a short messaging window for Flagler Auditorium. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+		  "link": {
+			"label": "Read success story",
+			"title": "Read success story",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
+		"id": "programModule",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Find shows simular to NBA playoffs",
+		  "items": [
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Bravo  Flipping Out"
+			  },
+			  "heading": "Bravo<br \/>Flipping Out<br \/>",
+			  "paragraph": "<p>Just when America\u2019s favorite house flipper thinks his life could not be any more chaotic, Jeff Lewis embarks on the most unpredictable challenge yet \u2013 fatherhood. With no shortage of design work, tight deadlines and outrageous clients, tempers flare and antics commence as his two very different worlds collide.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Thursdays, 9-10pm ET\/PT, 8\/17-10\/19\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6><strong>\u00a0<\/strong><\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "video": {
+				"url": "https:\/\/vimeo.com\/98576814",
+				"type": 1
+			  },
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "ESPN\/ESPN2 \u200b\u200b\u200b\u200b\u200b\u200b\u200bMonday Night Football"
+			  },
+			  "heading": "ESPN<br \/>Monday Night Football<br \/>",
+			  "paragraph": "<p>Monday returns as football\u2019s favorite day of the week capping off each Fantasy Football round. Monday Night Football was the #1 telecast of the night 15 of 16 weeks among all key adult and male demographics last season.*<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Now through 12\/25<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6><strong>Source: Scarborough USA+ 201<\/strong><strong>7<\/strong><strong>\u00a0Release\u00a0<\/strong><strong>1<\/strong><strong>\u00a0(<\/strong><strong>De<\/strong><strong>15-<\/strong><strong>Ap<\/strong><strong>16) Adults 18+ who watch Monday Night Football. *ESPN MediaZone, 12\/29\/16.<\/strong><\/h6>",
+			  "stats": {
+				"percentage": 56,
+				"demographic": "of the Asian Americans earn $42k+"
+			  },
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "A&E  The Lowe Files"
+			  },
+			  "heading": "A&amp;E<br \/>The Lowe Files<br \/>",
+			  "paragraph": "<p><em>The Lowe Files<\/em>\u00a0follows Rob Lowe and his two sons, Matthew and John Owen, as they travel through the country to explore infamous unsolved mysteries, a curiosity that Rob has had since his early childhood days and has now been passed down to his boys.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Wednesdays, 10-11pm ET\/PT, 8\/2-9\/20\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6>Source: Scarborough USA+ 2016 Release 2 Total (Aug 2015 - Nov 2016); Base: Total Adults 18+<\/h6>",
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "USA \u2013 The Sinner"
+			  },
+			  "heading": "USA<br \/>The Sinner<br \/>",
+			  "paragraph": "<p><em>The Sinner<\/em>\u00a0follows a young mother (Jessica Biel) who, when overcome by an inexplicable fit of rage, commits a startling act of violence and to her horror has no idea why.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Wednesdays, 10-11pm ET\/PT, 8\/2-9\/20\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6>Source: Scarborough USA+ 2016 Release 2 Total (Aug 2015 - Nov 2016); Base: Total Adults 18+<\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Bravo  Flipping Out"
+			  },
+			  "heading": "Bravo<br \/>Flipping Out<br \/>",
+			  "paragraph": "<p>Just when America\u2019s favorite house flipper thinks his life could not be any more chaotic, Jeff Lewis embarks on the most unpredictable challenge yet \u2013 fatherhood. With no shortage of design work, tight deadlines and outrageous clients, tempers flare and antics commence as his two very different worlds collide.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Thursdays, 9-10pm ET\/PT, 8\/17-10\/19\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6><strong>\u00a0<\/strong><\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "video": {
+				"url": "https:\/\/vimeo.com\/98576814",
+				"type": 1
+			  },
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "ESPN\/ESPN2 \u200b\u200b\u200b\u200b\u200b\u200b\u200bMonday Night Football"
+			  },
+			  "heading": "ESPN<br \/>Monday Night Football<br \/>",
+			  "paragraph": "<p>Monday returns as football\u2019s favorite day of the week capping off each Fantasy Football round. Monday Night Football was the #1 telecast of the night 15 of 16 weeks among all key adult and male demographics last season.*<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Now through 12\/25<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6><strong>Source: Scarborough USA+ 201<\/strong><strong>7<\/strong><strong>\u00a0Release\u00a0<\/strong><strong>1<\/strong><strong>\u00a0(<\/strong><strong>De<\/strong><strong>15-<\/strong><strong>Ap<\/strong><strong>16) Adults 18+ who watch Monday Night Football. *ESPN MediaZone, 12\/29\/16.<\/strong><\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "A&E  The Lowe Files"
+			  },
+			  "heading": "A&amp;E<br \/>The Lowe Files<br \/>",
+			  "paragraph": "<p><em>The Lowe Files<\/em>\u00a0follows Rob Lowe and his two sons, Matthew and John Owen, as they travel through the country to explore infamous unsolved mysteries, a curiosity that Rob has had since his early childhood days and has now been passed down to his boys.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Wednesdays, 10-11pm ET\/PT, 8\/2-9\/20\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6>Source: Scarborough USA+ 2016 Release 2 Total (Aug 2015 - Nov 2016); Base: Total Adults 18+<\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "USA \u2013 The Sinner"
+			  },
+			  "heading": "USA<br \/>The Sinner<br \/>",
+			  "paragraph": "<p><em>The Sinner<\/em>\u00a0follows a young mother (Jessica Biel) who, when overcome by an inexplicable fit of rage, commits a startling act of violence and to her horror has no idea why.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Wednesdays, 10-11pm ET\/PT, 8\/2-9\/20\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6>Source: Scarborough USA+ 2016 Release 2 Total (Aug 2015 - Nov 2016); Base: Total Adults 18+<\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "tags": []
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "programModule",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Find shows simular to NBA playoffs",
+		  "paragraph": "People who watch NBA Playoffs also like",
+		  "items": [
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Bravo  Flipping Out"
+			  },
+			  "heading": "Bravo<br \/>Flipping Out<br \/>",
+			  "paragraph": "<p>Just when America\u2019s favorite house flipper thinks his life could not be any more chaotic, Jeff Lewis embarks on the most unpredictable challenge yet \u2013 fatherhood. With no shortage of design work, tight deadlines and outrageous clients, tempers flare and antics commence as his two very different worlds collide.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Thursdays, 9-10pm ET\/PT, 8\/17-10\/19\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6><strong>\u00a0<\/strong><\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "video": {
+				"url": "https:\/\/vimeo.com\/98576814",
+				"type": 1
+			  },
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "ESPN\/ESPN2 \u200b\u200b\u200b\u200b\u200b\u200b\u200bMonday Night Football"
+			  },
+			  "heading": "ESPN<br \/>Monday Night Football<br \/>",
+			  "paragraph": "<p>Monday returns as football\u2019s favorite day of the week capping off each Fantasy Football round. Monday Night Football was the #1 telecast of the night 15 of 16 weeks among all key adult and male demographics last season.*<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Now through 12\/25<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6><strong>Source: Scarborough USA+ 201<\/strong><strong>7<\/strong><strong>\u00a0Release\u00a0<\/strong><strong>1<\/strong><strong>\u00a0(<\/strong><strong>De<\/strong><strong>15-<\/strong><strong>Ap<\/strong><strong>16) Adults 18+ who watch Monday Night Football. *ESPN MediaZone, 12\/29\/16.<\/strong><\/h6>",
+			  "stats": {
+				"percentage": 56,
+				"demographic": "of the Asian Americans earn $42k+"
+			  },
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "A&E  The Lowe Files"
+			  },
+			  "heading": "A&amp;E<br \/>The Lowe Files<br \/>",
+			  "paragraph": "<p><em>The Lowe Files<\/em>\u00a0follows Rob Lowe and his two sons, Matthew and John Owen, as they travel through the country to explore infamous unsolved mysteries, a curiosity that Rob has had since his early childhood days and has now been passed down to his boys.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Wednesdays, 10-11pm ET\/PT, 8\/2-9\/20\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6>Source: Scarborough USA+ 2016 Release 2 Total (Aug 2015 - Nov 2016); Base: Total Adults 18+<\/h6>",
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "USA \u2013 The Sinner"
+			  },
+			  "heading": "USA<br \/>The Sinner<br \/>",
+			  "paragraph": "<p><em>The Sinner<\/em>\u00a0follows a young mother (Jessica Biel) who, when overcome by an inexplicable fit of rage, commits a startling act of violence and to her horror has no idea why.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Wednesdays, 10-11pm ET\/PT, 8\/2-9\/20\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6>Source: Scarborough USA+ 2016 Release 2 Total (Aug 2015 - Nov 2016); Base: Total Adults 18+<\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Bravo  Flipping Out"
+			  },
+			  "heading": "Bravo<br \/>Flipping Out<br \/>",
+			  "paragraph": "<p>Just when America\u2019s favorite house flipper thinks his life could not be any more chaotic, Jeff Lewis embarks on the most unpredictable challenge yet \u2013 fatherhood. With no shortage of design work, tight deadlines and outrageous clients, tempers flare and antics commence as his two very different worlds collide.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Thursdays, 9-10pm ET\/PT, 8\/17-10\/19\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6><strong>\u00a0<\/strong><\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "video": {
+				"url": "https:\/\/vimeo.com\/98576814",
+				"type": 1
+			  },
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "ESPN\/ESPN2 \u200b\u200b\u200b\u200b\u200b\u200b\u200bMonday Night Football"
+			  },
+			  "heading": "ESPN<br \/>Monday Night Football<br \/>",
+			  "paragraph": "<p>Monday returns as football\u2019s favorite day of the week capping off each Fantasy Football round. Monday Night Football was the #1 telecast of the night 15 of 16 weeks among all key adult and male demographics last season.*<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Now through 12\/25<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6><strong>Source: Scarborough USA+ 201<\/strong><strong>7<\/strong><strong>\u00a0Release\u00a0<\/strong><strong>1<\/strong><strong>\u00a0(<\/strong><strong>De<\/strong><strong>15-<\/strong><strong>Ap<\/strong><strong>16) Adults 18+ who watch Monday Night Football. *ESPN MediaZone, 12\/29\/16.<\/strong><\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "A&E  The Lowe Files"
+			  },
+			  "heading": "A&amp;E<br \/>The Lowe Files<br \/>",
+			  "paragraph": "<p><em>The Lowe Files<\/em>\u00a0follows Rob Lowe and his two sons, Matthew and John Owen, as they travel through the country to explore infamous unsolved mysteries, a curiosity that Rob has had since his early childhood days and has now been passed down to his boys.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Wednesdays, 10-11pm ET\/PT, 8\/2-9\/20\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6>Source: Scarborough USA+ 2016 Release 2 Total (Aug 2015 - Nov 2016); Base: Total Adults 18+<\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "tags": []
+			},
+			{
+			  "target": "/program/program-name",
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "USA \u2013 The Sinner"
+			  },
+			  "heading": "USA<br \/>The Sinner<br \/>",
+			  "paragraph": "<p><em>The Sinner<\/em>\u00a0follows a young mother (Jessica Biel) who, when overcome by an inexplicable fit of rage, commits a startling act of violence and to her horror has no idea why.<\/p>\n\n<p>\u00a0<\/p>\n\n<p><strong>Airs: Wednesdays, 10-11pm ET\/PT, 8\/2-9\/20\/17<\/strong><\/p>\n\n<p>\u00a0<\/p>\n\n<h6>Source: Scarborough USA+ 2016 Release 2 Total (Aug 2015 - Nov 2016); Base: Total Adults 18+<\/h6>",
+			  "stats": {
+				"percentage": 72,
+				"demographic": "Men"
+			  },
+			  "tags": []
+			}
+		  ]
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}

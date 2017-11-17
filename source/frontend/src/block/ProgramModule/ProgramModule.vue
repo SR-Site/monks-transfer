@@ -5,6 +5,10 @@
 	<div :class="$style.programModule">
 		<div :class="$style.siteFrame" class="site-frame">
 			<div class="overrule-overlap">
+				<header :class="$style.header" ref="heading" v-if="data.heading || data.paragraph">
+					<h2 :class="$style.heading" class="heading heading-03" v-html="data.heading"></h2>
+					<p class="copy copy-01" v-html="data.paragraph"></p>
+				</header>
 				<div :class="$style.draggableContainer" ref="draggableContainer">
 					<div :class="$style.programs" ref="draggableElement" class="js-draggable-element">
 						<ProgramTeaser

@@ -4,7 +4,27 @@
 	"title": "Spectrum Reach Advertising - Networks",
 	"data": {
 	  "headerTheme": 0,
-	  "hideContactButton": 0
+	  "hideContactButton": 0,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "/home",
+		  "type": 0
+		},
+		{
+		  "label": "Featured Programs",
+		  "title": "Featured Programs",
+		  "target": "/featured-programs",
+		  "type": 0
+		},
+		{
+		  "label": "Networks",
+		  "title": "Networks",
+		  "target": "/featured-programs/networks",
+		  "type": 0
+		}
+	  ]
 	},
 	"blocks": [],
 	"#cache": {

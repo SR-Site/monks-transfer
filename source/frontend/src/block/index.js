@@ -55,6 +55,7 @@ export default {
 	SmallImage: () => import('./SmallImage'),
 	SmallInfo: () => import('./SmallInfo'),
 	Share: () => import('./Share'),
+	Spacer: () => import('./Spacer'),
 	StoryInfoImages: () => import('./StoryInfoImages'),
 	SuccessStoriesA: () => import('./SuccessStoriesA'),
 	SuccessStoriesB: () => import('./SuccessStoriesB'),

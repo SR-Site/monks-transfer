@@ -5,10 +5,12 @@
 
 	.header {
 		@include size(100%, auto);
-		justify-content: flex-start;
-		display: flex;
-		align-items: center;
 		margin-bottom: $sizeGrid;
+	}
+
+	.heading {
+		display: block;
+		margin-bottom: $sizeGrid / 2;
 	}
 
 	.draggable-container {

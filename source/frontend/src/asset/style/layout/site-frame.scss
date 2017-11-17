@@ -2,8 +2,11 @@
 	@include center-block();
 	@include size(100%, auto);
 	position: relative;
-	//overflow: hidden;
 	max-width: $largeSiteFrame;
+
+	&.include-padding {
+		max-width: $largeSiteFrame + ($sizeGrid * 2);
+	}
 
 	&.is-small {
 		max-width: $smallSiteFrame;

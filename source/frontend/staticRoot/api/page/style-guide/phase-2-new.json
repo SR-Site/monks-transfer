@@ -1685,6 +1685,14 @@
 		  "twitter": true,
 		  "linkedIn": true
 		}
+	  },
+	  {
+		"id": "spacer",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2
+		}
 	  }
 	],
 	"#cache": {

@@ -29,9 +29,6 @@ export default {
 		viewCountLabel() {
 			return this.$t(`global.article.stats.${this.viewCount === 1 ? 'view' : 'views'}`);
 		},
-		shareCountLabel() {
-			return this.$t(`global.article.stats.${this.data.shares === 1 ? 'share' : 'shares'}`);
-		},
 	},
 	methods: {
 		handleAllComponentsReady() {

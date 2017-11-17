@@ -1,0 +1,320 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - Dummy Article",
+	"data": {
+	  "headerTheme": 0,
+	  "hideContactButton": 0,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "/home",
+		  "type": 0
+		},
+		{
+		  "label": "Resources",
+		  "title": "Resources",
+		  "target": "/resources",
+		  "type": 0
+		},
+		{
+		  "label": "Knowledge Center",
+		  "title": "Knowledge Center",
+		  "target": "/resources/knowledge-center",
+		  "type": 0
+		},
+		{
+		  "label": "Dummy Article",
+		  "title": "Dummy Article",
+		  "target": "/resources/knowledge-center/dummy-article",
+		  "type": 0
+		}
+	  ]
+	},
+	"blocks": [
+	  {
+		"id": "heroTertiary",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "background": {
+			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
+			"alt": "Background image alt text"
+		  }
+		}
+	  },
+	  {
+		"id": "blogPost",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "social": [
+			{
+			  "label": "Get the Full Report",
+			  "title": "Get the Full Report",
+			  "target": "http:\/\/go.spectrumreach.com\/2018TVPredictions",
+			  "type": 1
+			}
+		  ],
+		  "author": {
+			"name": "Spectrum Reach",
+			"role": "Author",
+			"image": {
+			  "normal": "http://via.placeholder.com/240x240",
+			  "small": "http://via.placeholder.com/240x240",
+			  "alt": ""
+			}
+		  },
+		  "image": {
+			"normal": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/2018Predictions-Article-BlockHeader_7.jpg",
+			"small": "https:\/\/www.spectrumreach.com\/assets\/images\/article\/2017-10\/2018Predictions-Article-BlockHeader_7.jpg",
+			"alt": "2018 TV Predictions"
+		  },
+		  "tags": [
+			{
+			  "label": "Marketing",
+			  "title": "Marketing",
+			  "target": "\/spectrum-reach-advertising-home?filters=Marketing",
+			  "type": 0
+			},
+			{
+			  "label": "Media",
+			  "title": "Media",
+			  "target": "\/spectrum-reach-advertising-home?filters=Media",
+			  "type": 0
+			}
+		  ],
+		  "views": 0,
+		  "shares": 0,
+		  "time": 10,
+		  "date": "10\/10\/2017",
+		  "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam massa id volutpat convallis. Proin vehicula mi magna, at placerat mauris lobortis tempor. Ut aliquet neque vitae pharetra porttitor. Nam ac varius lectus. Vestibulum at nibh massa. Nullam pellentesque ligula nulla, ac venenatis mi auctor molestie. Aenean at mauris sed lectus aliquet eleifend sed a ipsum. Donec elementum nulla nunc, vitae lacinia felis ullamcorper non.<\/p>",
+		  "subHeading": "TV Marketing Trends to Look Out For",
+		  "heading": "2018 TV Predictions",
+		  "theme": 0,
+		  "target": "\/articles\/2018-tv-predictions"
+		}
+	  },
+	  {
+		"id": "imageCarousel",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "slides": [
+			{
+			  "heading": "Restivo Laser Vision - \u201cHomeless Valet\u201d<br \/>",
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https://www.w3schools.com/html/mov_bbb.mp4",
+				"type": 0
+			  }
+			},
+			{
+			  "heading": "North Carolina Zoo - \u201cAwaken\"<br \/>",
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "North Carolina Zoo - \u201cAwaken\""
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https:\/\/vimeo.com\/98576814",
+				"type": 1
+			  }
+			},
+			{
+			  "heading": "Sunmark Federal Credit Union \u2013 \u201cFirst Time Homebuyers\u201d<br \/>",
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "Sunmark Federal Credit Union \u2013 \u201cFirst Time Homebuyers\u201d"
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https:\/\/vimeo.com\/126610168",
+				"type": 1
+			  }
+			},
+			{
+			  "heading": "Flat Rate - \u201cHappy Moving Day\u201d<br \/>",
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "Flat Rate - \u201cHappy Moving Day\u201d"
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https:\/\/vimeo.com\/116183821",
+				"type": 1
+			  }
+			},
+			{
+			  "heading": "Farmer Boys - \u201cFresh Fish\u201d<br \/>",
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "Farmer Boys - \u201cFresh Fish\u201d"
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https:\/\/vimeo.com\/102055305",
+				"type": 1
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "freeText",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "alignment": 0,
+		  "html": "<p>Spectrum Reach went Live from #NADA100 with streaming celebrity interviews and virtual reality racing.  Fans lined up to meet “The King” Richard Petty, who also gave VR racers driving advice while they were in the drivers seat.</p><p>Verizon IndyCar driver and Dancing With the Stars alum, James Hinchcliffe took the wheel as well. Watch our exclusive interview and see his VR racing skills in action.  Booth visitors were also able to experience firsthand why Spectrum Reach is the Marketing Platform of Choice with our Automotive Emulator, demonstrating how Spectrum Reach’s innovative products can help drive results for their dealership.</p><p>To cap off the event, Spectrum Reach received two AWA Awards presented by PCG</p>"
+		}
+	  },
+	  {
+		"id": "imageCarousel",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "slides": [
+			{
+			  "heading": "Restivo Laser Vision - \u201cHomeless Valet\u201d<br \/>",
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https://www.w3schools.com/html/mov_bbb.mp4",
+				"type": 0
+			  }
+			},
+			{
+			  "heading": "North Carolina Zoo - \u201cAwaken\"<br \/>",
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "North Carolina Zoo - \u201cAwaken\""
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https:\/\/vimeo.com\/98576814",
+				"type": 1
+			  }
+			},
+			{
+			  "heading": "Sunmark Federal Credit Union \u2013 \u201cFirst Time Homebuyers\u201d<br \/>",
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "Sunmark Federal Credit Union \u2013 \u201cFirst Time Homebuyers\u201d"
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https:\/\/vimeo.com\/126610168",
+				"type": 1
+			  }
+			},
+			{
+			  "heading": "Flat Rate - \u201cHappy Moving Day\u201d<br \/>",
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "Flat Rate - \u201cHappy Moving Day\u201d"
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https:\/\/vimeo.com\/116183821",
+				"type": 1
+			  }
+			},
+			{
+			  "heading": "Farmer Boys - \u201cFresh Fish\u201d<br \/>",
+			  "image": {
+				"small": "http://via.placeholder.com/1280x720",
+				"normal": "http://via.placeholder.com/1280x720",
+				"alt": "Farmer Boys - \u201cFresh Fish\u201d"
+			  },
+			  "theme": 0,
+			  "video": {
+				"url": "https:\/\/vimeo.com\/102055305",
+				"type": 1
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "freeText",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 0,
+		  "html": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit.</p>"
+		}
+	  },
+	  {
+		"id": "personaSelectorBanner",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "image": {
+			"normal": "http://via.placeholder.com/520x520",
+			"small": "http://via.placeholder.com/520x520",
+			"alt": "Background image alt text"
+		  },
+		  "heading": "Flagler Auditorium sold the most tickets in their 20-year history",
+		  "paragraph": "Proin commodo lacus id dolor lobortis, non ultricies ex interdum. Sed placerat urna nec condimentum sagittis. Sed consequat eros sed tristique sollicitudin. Mauris eu lorem enim. Sed nec rhoncus tortor.",
+		  "links": [
+			{
+			  "label": "Flagler Auditorium History",
+			  "title": "Flagler Auditorium History",
+			  "target": "/featured-programs",
+			  "type": 0
+			},
+			{
+			  "label": "Do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+			  "title": "Do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+			  "target": "/featured-programs",
+			  "type": 0
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "share",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "facebook": true,
+		  "twitter": true,
+		  "linkedIn": true
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}

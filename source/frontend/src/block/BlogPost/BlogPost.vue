@@ -19,9 +19,6 @@
 							<li :class="$style.stat" class="copy copy-01">
 								{{ viewCount }} {{ viewCountLabel }}
 							</li>
-							<li :class="$style.stat" class="copy copy-01">
-								{{ data.shares }} {{ shareCountLabel }}
-							</li>
 						</ul>
 						<div :class="$style.tags">
 							<ButtonTag

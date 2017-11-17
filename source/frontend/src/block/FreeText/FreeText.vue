@@ -6,7 +6,7 @@
 		$style.freeText,
 		$style[ClassNameHelper.parseAlignment(data.alignment)],
 	]">
-		<div class="site-frame is-small include-padding">
+		<div class="site-frame include-padding" :class="[{'is-small': data.small}]">
 			<div :class="$style.htmlContent" class="overrule-overlap" v-html="data.html" ref="htmlContent"></div>
 		</div>
 	</div>
