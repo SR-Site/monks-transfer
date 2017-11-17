@@ -1,0 +1,68 @@
+:local {
+	.image-with-content {
+		@include size(100%, auto);
+	}
+
+	.image {
+		@include aspect-ratio(1440px, 720px);
+	}
+
+	.description {
+		@include size(50%, auto);
+		position: absolute;
+		color: white;
+	}
+
+	.content {
+		width: 100%;
+		position: absolute;
+		padding: $sizeGrid * 3;
+		bottom: 0;
+	}
+
+	.heading,
+	.copy {
+		margin-bottom: $sizeGrid / 2;
+	}
+
+	.alignment-left {
+		.description {
+			@include position(0, auto, 0, 0);
+		}
+	}
+
+	.alignment-right {
+		.description {
+			@include position(0, 0, 0, auto);
+		}
+	}
+
+	@include respond-to(MEDIUM) {
+		.description {
+			width: 70%;
+		}
+		.content {
+			padding: $sizeGrid;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.image {
+			@include aspect-ratio(640px, 1060px);
+			max-height: 568px;
+		}
+
+		.description {
+			width: 90%;
+		}
+
+		.content {
+			padding: $sizeGridMobile * 2;
+		}
+
+		.heading,
+		.copy {
+			margin-bottom: mobile-size($sizeGridMobile);
+		}
+	}
+}

@@ -142,6 +142,35 @@
 		  "closeLabel": "Close",
 		  "endpoint": "search/article.json"
 		}
+	  },
+	  {
+		"id": "glossaryBanner",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		  "subHeading":"Lorem ipsum dolor sit amet",
+		  "background": {
+			"normal": "http://via.placeholder.com/1200x440",
+			"small": "http://via.placeholder.com/750x1240",
+			"alt": "Background image alt text"
+		  },
+		  "link": {
+			"label": "Watch the trailer",
+			"title": "Watch the trailer",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
+		"id": "spacer",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2
+		}
 	  }
 	],
 	"#cache": {
