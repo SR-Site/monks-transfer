@@ -8,9 +8,10 @@ import PropLink from '../../data/prop-type/action/PropLink';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
+ * @param {description} alignment The alignment of the image
  * @param {description} heading The heading of the block
- * @param {description} subHeading The paragraph of the block
- * @param {description} background normal: 1280x830, small: 750x550
+ * @param {description} paragraph The paragraph of the block
+ * @param {description} background normal: 1440x720, small: 750x1240
  * @param {description} link The link on the block
  */
 export default {
@@ -18,8 +19,9 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	heading: VueTypes.string.isRequired,
-	subHeading: VueTypes.string.isRequired,
+	alignment: VueTypes.number.isRequired,
+	heading: VueTypes.string,
+	paragraph: VueTypes.string.isRequired,
 	background: VueTypes.shape(PropImage).isRequired,
 	link: VueTypes.shape(PropLink),
 };

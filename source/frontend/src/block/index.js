@@ -32,6 +32,7 @@ export default {
 	ImageList: () => import('./ImageList'),
 	ImageWithContent: () => import('./ImageWithContent'),
 	ImageWithContentB: () => import('./ImageWithContentB'),
+	ImageWithContentC: () => import('./ImageWithContentC'),
 	Info: () => import('./Info'),
 	Infographic: () => import('./Infographic'),
 	LargeVideo: () => import('./LargeVideo'),

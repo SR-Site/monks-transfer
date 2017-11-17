@@ -1,7 +1,7 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 import { Linear, Expo } from 'gsap';
 
-class GlossaryBannerTransitionController extends AbstractTransitionController {
+class ImageWithContentCTransitionController extends AbstractTransitionController {
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
@@ -67,4 +67,4 @@ class GlossaryBannerTransitionController extends AbstractTransitionController {
 	}
 }
 
-export default GlossaryBannerTransitionController;
+export default ImageWithContentCTransitionController;

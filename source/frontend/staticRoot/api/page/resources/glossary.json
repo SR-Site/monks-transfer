@@ -128,6 +128,28 @@
 			}
 		  ]
 		}
+	  },
+	  {
+		"id": "imageWithContentC",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 1,
+		  "heading":"Lorem ipsum dolor sit amet",
+		  "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac hendrerit orci. Aenean consectetur, lectus vitae fermentum imperdiet, dolor libero rutrum massa, ut facilisis lectus leo eget mi. Aliquam purus lacus, eleifend nec imperdiet sit amet, hendrerit sit amet nisl. Sed finibus quis mauris at maximus. Mauris imperdiet a quam a tincidunt. Aliquam mattis id risus et convallis. Donec consequat vulputate lectus a accumsan.</p>",
+		  "background": {
+			"normal": "http://via.placeholder.com/1440x720",
+			"small": "http://via.placeholder.com/750x1240",
+			"alt": "Background image alt text"
+		  },
+		  "link": {
+			"label": "Watch the trailer",
+			"title": "Watch the trailer",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
 	  }
 	],
 	"#cache": {
