@@ -2,10 +2,9 @@ id: shows
 label: JSON feed of shows
 migration_group: migrate_shows_json
 source:
-  plugin: url
+  plugin: spectrum_url
   data_fetcher_plugin: http
   data_parser_plugin: json_nested
-  urls: 'http://spectrum.loc/new.json'
   item_selector: '/Result/'
   fields:
     -
