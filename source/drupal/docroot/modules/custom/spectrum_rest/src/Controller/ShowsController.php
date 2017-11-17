@@ -3,6 +3,7 @@
 namespace Drupal\spectrum_rest\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\file\FileInterface;
 use Drupal\mm_rest\Response\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Drupal\Component\Serialization\Json;
@@ -27,9 +28,12 @@ class ShowsController extends ControllerBase {
     try {
       $showsFile = file_get_contents($url);
       if ($showsFile && $this->isValidJson($showsFile)) {
-        $filename = 'temporary://shows';
-        system_retrieve_file($url, $filename, FALSE, FILE_EXISTS_REPLACE);
-        return new JsonResponse(['response' => 200]);
+        $filename = 'public://shows.json';
+        $file = system_retrieve_file($url, $filename, TRUE, FILE_EXISTS_REPLACE);
+        if ($file instanceof FileInterface) {
+          $file->save();
+          return new JsonResponse(['response' => 200]);
+        }
       }
 
       return new JsonResponse(['response' => 500]);

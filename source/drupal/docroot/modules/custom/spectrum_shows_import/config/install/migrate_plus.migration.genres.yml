@@ -2,10 +2,9 @@ id: genres
 label: JSON feed of genres
 migration_group: migrate_shows_json
 source:
-  plugin: url
+  plugin: spectrum_url
   data_fetcher_plugin: http
   data_parser_plugin: json_nested
-  urls: 'http://spectrum.loc/new.json'
   item_selector: '/Result/'
   sub_selector: 'Genres'
   fields:
