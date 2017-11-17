@@ -2,10 +2,14 @@
 
 namespace Drupal\spectrum_shows_import\Plugin\migrate\source;
 
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\file\Entity\File;
 use Drupal\migrate\MigrateException;
 use Drupal\migrate\Plugin\MigrationInterface;
 use Drupal\migrate_plus\Plugin\migrate\source\Url as MigrateUrl;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Source plugin for retrieving data via URLs.
@@ -14,7 +18,7 @@ use Drupal\migrate_plus\Plugin\migrate\source\Url as MigrateUrl;
  *   id = "spectrum_url"
  * )
  */
-class Url extends MigrateUrl {
+class Url extends MigrateUrl implements ContainerFactoryPluginInterface {
 
   /**
    * The source URLs to retrieve.
@@ -31,20 +35,36 @@ class Url extends MigrateUrl {
   protected $dataParserPlugin;
 
   /**
+   * Entity type manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
+   * The request stack.
+   *
+   * @var \Symfony\Component\HttpFoundation\RequestStack
+   */
+  protected $requestStack;
+
+  /**
    * {@inheritdoc}
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration) {
-    // @TODO DI of services.
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration, EntityTypeManagerInterface $entityTypeManager, RequestStack $requestStack) {
+    // Inject entity type manager and request stack services.
+    $this->entityTypeManager = $entityTypeManager;
+    $this->requestStack = $requestStack;
+
     /** @var \Drupal\file\FileStorageInterface $fileStorage */
-    $fileStorage = \Drupal::entityTypeManager()
-      ->getStorage('file');
+    $fileStorage = $this->entityTypeManager->getStorage('file');
     $files = $fileStorage->loadByProperties(['filename' => 'shows.json']);
     $configuration['urls'] = [];
     foreach ($files as $file) {
       /** @var \Drupal\file\Entity\File $file */
       if ($file instanceof File) {
         $fileUrl = file_url_transform_relative(file_create_url($file->getFileUri()));
-        $fileUrl = \Drupal::request()->getSchemeAndHttpHost() . $fileUrl;
+        $fileUrl = $requestStack->getCurrentRequest()->getSchemeAndHttpHost() . $fileUrl;
         if ($fileUrl && file_exists($file->getFileUri())) {
           $configuration['urls'][] = $fileUrl;
         }
@@ -57,6 +77,20 @@ class Url extends MigrateUrl {
       throw new MigrateException(sprintf('The urls array is empty.'));
     }
 
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration = NULL) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $migration,
+      $container->get('entity_type.manager'),
+      $container->get('request_stack')
+    );
   }
 
 }
