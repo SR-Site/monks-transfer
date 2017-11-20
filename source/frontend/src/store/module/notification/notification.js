@@ -1,5 +1,6 @@
 import NotificationTypes from 'data/enum/NotificationTypes';
-import { get, has } from 'lodash';
+import get from 'lodash/get';
+import has from 'lodash/has';
 
 export const SHOW = 'show';
 export const SHOW_SERVER_ERROR = 'showServerError';

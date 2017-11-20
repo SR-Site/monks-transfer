@@ -1,4 +1,4 @@
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce'
 import { DeviceStateEvent } from 'seng-device-state-tracker';
 import VueTypes from 'vue-types';
 import ScrollBar from '../../component/ScrollBar/ScrollBar';

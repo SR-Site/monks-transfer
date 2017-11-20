@@ -1,5 +1,5 @@
 import { Promise } from 'es6-promise';
-import { replace } from 'lodash';
+import replace from 'lodash/replace'
 import AbstractTrackingProvider from '../AbstractTrackingProvider';
 import IGoogleAnalyticsProviderOptions from './IGoogleAnalyticsProviderOptions';
 import { ITrackEventData, IPageViewData } from './IGoogleAnalyticsTrackingData';

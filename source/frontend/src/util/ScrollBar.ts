@@ -1,6 +1,6 @@
 import { TweenLite } from 'gsap';
 import Draggable from 'gsap/Draggable';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce'
 
 interface ScrollbarOptions {
 	inside: boolean;

@@ -1,7 +1,7 @@
 import { AbstractButtonComponent } from 'vue-block-system';
 import ButtonStartAdvertisingTransitionController from './ButtonStartAdvertisingTransitionController';
 import NativeEventListener from '../../../util/event/NativeEventListener';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce'
 import { TweenLite, Expo } from 'gsap';
 
 const CENTER_PERCENTAGE = 0.6;

@@ -1,5 +1,5 @@
 import { TweenLite } from 'gsap';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce'
 import { DeviceStateEvent } from 'seng-device-state-tracker';
 import { AbstractBlockComponent } from 'vue-block-system';
 import VueTypes from 'vue-types';

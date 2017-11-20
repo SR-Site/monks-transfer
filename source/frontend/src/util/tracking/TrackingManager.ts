@@ -1,5 +1,5 @@
 import Disposable from 'seng-disposable';
-import { assign } from 'lodash';
+import assign from 'lodash/assign'
 import ITrackingManagerOptions from './interface/ITrackingManagerOptions';
 import AbstractTrackingProvider from './tracking-provider/AbstractTrackingProvider';
 import IAbstractTrackingProviderOptions from './tracking-provider/IAbstractTrackingProviderOptions';

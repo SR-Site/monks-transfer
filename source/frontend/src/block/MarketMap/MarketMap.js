@@ -1,7 +1,7 @@
 import markets from 'asset/json/markets.json';
 import states from 'asset/json/states.json';
 import bows from 'bows';
-import { isString } from 'lodash';
+import isString from 'lodash/isString'
 import mapboxgl from 'mapbox-gl';
 import { AbstractBlockComponent, CustomButtonEvent, customButtonEventDispatcher } from 'vue-block-system';
 import VueTypes from 'vue-types';

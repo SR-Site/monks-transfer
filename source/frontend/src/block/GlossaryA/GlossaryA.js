@@ -1,5 +1,6 @@
 import VueTypes from 'vue-types';
 import ScrollTracker, { ScrollTrackerEvent } from 'seng-scroll-tracker';
+import { TransitionEvent } from 'vue-transition-component';
 import { AbstractBlockComponent } from 'vue-block-system';
 import GlossaryATransitionController from './GlossaryATransitionController';
 import GlossaryAData from './GlossaryAData';
@@ -24,8 +25,12 @@ export default {
 		handleAllComponentsReady() {
 			this.transitionController = new GlossaryATransitionController(this);
 			this.resizeListener = new NativeEventListener(window, 'resize', this.handleResize);
+			this.transitionInCompleteListener = new NativeEventListener(
+				this.transitionController,
+				TransitionEvent.TRANSITION_IN_START,
+				this.createScrollTrackerPoints,
+			);
 			this.isReady();
-			this.$nextTick(() => this.createScrollTrackerPoints());
 		},
 		handleGlossaryReady(component) {
 			this.glossaryItems[component.componentId] = component;
@@ -44,17 +49,25 @@ export default {
 			component.unlock();
 		},
 		createScrollTrackerPoints() {
+			if (this.transitionInCompleteListener) {
+				this.transitionInCompleteListener.dispose();
+				this.transitionInCompleteListener = null;
+			}
+
 			Object.keys(this.glossaryItems).forEach(key => {
 				const component = this.glossaryItems[key];
 				const element = component.$el;
 				const point = this.scrollTracker.addPoint(this.getYPosition(element), element.offsetHeight);
 
 				point.addEventListener(ScrollTrackerEvent.ENTER_VIEW, () => this.handleComponentEnterView(component));
-				point.addEventListener(ScrollTrackerEvent.SCROLLED_BEYOND, () => this.handleComponentEnterView(component));
+				point.addEventListener(
+					ScrollTrackerEvent.SCROLLED_BEYOND,
+					() => this.handleComponentEnterView(component),
+				);
 
 				// Check for the position on init
 				if (point.isInBounds) {
-					this.handleComponentEnterView(component)
+					this.handleComponentEnterView(component);
 				}
 
 				this.scrollTrackerPoints[component.componentId] = point;

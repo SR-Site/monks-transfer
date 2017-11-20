@@ -1,5 +1,5 @@
 import { getValue } from 'util/injector';
-import { replace } from 'lodash';
+import replace from 'lodash/replace'
 import { GATEWAY } from 'data/Injectables';
 import Endpoints from 'net/Endpoints';
 

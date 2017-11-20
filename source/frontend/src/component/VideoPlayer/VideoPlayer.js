@@ -1,5 +1,5 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce'
 import VideoElement from 'lib/media/VideoElement';
 import ElementResizer, { ScaleMode } from 'lib/temple/ElementResizer';
 import Player from '@vimeo/player';
