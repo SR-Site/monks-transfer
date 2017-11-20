@@ -8536,9 +8536,9 @@ vt-pbf@^3.0.1:
     "@mapbox/vector-tile" "^1.3.0"
     pbf "^3.0.5"
 
-vue-block-system@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/vue-block-system/-/vue-block-system-0.6.1.tgz#adbea0d6cc3fe7bd60fc79a807309875853ffc5e"
+vue-block-system@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/vue-block-system/-/vue-block-system-0.6.2.tgz#05af5f50e6a9efe33e9c92baa42106d36e30a830"
   dependencies:
     axios "^0.16.2"
     es6-promise "^4.1.1"
