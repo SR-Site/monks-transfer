@@ -4,13 +4,17 @@ node {
     stage('Checkout Git') {
         checkout([$class: 'GitSCM', branches: [[name: '*/phase-2']], browser: [$class: 'AssemblaWeb', repoUrl: 'git@git.assembla.com:mediamonks^spectrum-reach-corporate-website.website.git'], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '6d7eee74-9d94-4778-88e9-8f91dab244fc', url: 'git@git.assembla.com:mediamonks^spectrum-reach-corporate-website.website.git']]])
     }
-    
+
     stage('Cleanup') {
         sh "cd ${workspace}/tools/ci && make clean"
     }
 
     stage('Create Container\'s') {
         sh "cd ${workspace}/tools/ci && make build-containers"
+    }
+
+    stage('Install frontend') {
+        sh "cd ${workspace}/tools/ci && make frontend-install"
     }
 
     stage('Build frontend') {

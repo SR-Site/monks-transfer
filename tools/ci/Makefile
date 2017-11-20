@@ -12,5 +12,8 @@ build-containers:
 generate-block-documentation:
 	docker-compose run --rm  -w /app/source/frontend/src frontend generate-block-documentation
 
+frontend-install:
+	docker-compose run --rm  -w /app/source/frontend frontend yarn
+
 frontend-build:
-	docker-compose run --rm  -w /app/source/frontend/src frontend yarn build
+	docker-compose run --rm  -w /app/source/frontend frontend yarn build
