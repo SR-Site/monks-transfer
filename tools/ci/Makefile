@@ -1,0 +1,13 @@
+.PHONY: all
+PROJECT?=no_projectname_set
+
+all: clean generate-block-documentation
+
+clean:
+	-rm -rf ../../source/frontend/documentation/*
+
+generate-block-documentation:
+	docker-compose run --rm  -w /app/source/frontend/src frontend generate-block-documentation
+
+frontend-build:
+	docker-compose run --rm  -w /app/source/frontend/src frontend yarn build

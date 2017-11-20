@@ -1,0 +1,23 @@
+node {
+    def workspace = pwd()
+
+    stage('Cleanup') {
+        sh "cd ${workspace}/tools/ci && make clean"
+    }
+
+    stage('Checkout Git') {
+        git branch: 'develop', credentialsId: '6d7eee74-9d94-4778-88e9-8f91dab244fc', url: 'git@git.assembla.com:mediamonks/weber-frontend-component-library.git'
+    }
+
+    stage('Create Container\'s') {
+        sh "cd ${workspace}/tools/ci && make build-containers"
+    }
+
+    stage('Build frontend') {
+        sh "cd ${workspace}/tools/ci && make frontend-build"
+    }
+
+    stage('Build documentation') {
+        sh "cd ${workspace}/tools/ci && make generate-block-documentation"
+    }
+}
