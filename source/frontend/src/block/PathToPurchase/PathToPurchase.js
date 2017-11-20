@@ -1,7 +1,8 @@
 import { DeviceStateEvent } from 'seng-device-state-tracker';
 import VueTypes from 'vue-types';
 import { AbstractBlockComponent } from 'vue-block-system';
-import { padStart, truncate } from 'lodash';
+import padStart from 'lodash/padStart';
+import truncate from 'lodash/truncate';
 import PathToPurchaseTransitionController from './PathToPurchaseTransitionController';
 import PathToPurchaseData from './PathToPurchaseData';
 import NativeEventListener from '../../util/event/NativeEventListener';

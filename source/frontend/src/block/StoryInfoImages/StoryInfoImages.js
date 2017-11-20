@@ -2,7 +2,8 @@ import VueTypes from 'vue-types';
 import { AbstractBlockComponent } from 'vue-block-system';
 import StoryInfoImagesTransitionController from './StoryInfoImagesTransitionController';
 import StoryInfoImagesData from './StoryInfoImagesData';
-import { padStart, truncate } from 'lodash';
+import padStart from 'lodash/padStart';
+import truncate from 'lodash/truncate';
 import { DeviceState } from '../../config/deviceStateConfig';
 
 export default {

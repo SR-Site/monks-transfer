@@ -4,7 +4,7 @@ import DraggableInstanceEvent from '../../util/draggableInstance/DraggableInstan
 import DraggableInstance from '../draggableInstance/DraggableInstance';
 import DisposableHelper from '../event/DisposableHelper';
 import NativeEventListener from '../event/NativeEventListener';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce'
 
 export default {
 	name: 'AbstractScrollableBlock',

@@ -1,4 +1,4 @@
-import { padStart } from 'lodash';
+import padStart from 'lodash/padStart'
 import VueTypes from 'vue-types';
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import SlideTextTransitionController from './SlideTextTransitionController';

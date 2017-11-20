@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce'
 import { mapGetters } from 'vuex';
 import { customButtonEventDispatcher, CustomButtonEvent } from 'vue-block-system';
 import SlideoutPanelType from 'data/enum/SlideoutPanelType';

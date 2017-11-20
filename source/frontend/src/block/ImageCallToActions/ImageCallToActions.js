@@ -1,11 +1,12 @@
-import VueTypes from 'vue-types';
-import { TransitionEvent } from 'vue-transition-component';
-import { padStart, debounce } from 'lodash';
+import { Expo, TweenLite } from 'gsap';
+import debounce from 'lodash/debounce';
+import padStart from 'lodash/padStart';
 import { AbstractBlockComponent } from 'vue-block-system';
-import { TweenLite, Expo } from 'gsap';
-import ImageCallToActionsTransitionController from './ImageCallToActionsTransitionController';
-import ImageCallToActionsData from './ImageCallToActionsData';
+import { TransitionEvent } from 'vue-transition-component';
+import VueTypes from 'vue-types';
 import NativeEventListener from '../../util/event/NativeEventListener';
+import ImageCallToActionsData from './ImageCallToActionsData';
+import ImageCallToActionsTransitionController from './ImageCallToActionsTransitionController';
 
 export default {
 	name: 'ImageCallToActions',

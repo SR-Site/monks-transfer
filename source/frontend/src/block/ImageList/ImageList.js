@@ -6,7 +6,7 @@ import ImageListSlide from './ImageListSlide/ImageListSlide';
 import { TweenLite, Expo } from 'gsap';
 import normalizeWheel from 'normalize-wheel';
 import NativeEventListener from '../../util/event/NativeEventListener';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce'
 import Hammer from 'hammerjs';
 
 export default {

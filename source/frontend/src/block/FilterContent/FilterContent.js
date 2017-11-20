@@ -4,7 +4,7 @@ import FilterContentTransitionController from './FilterContentTransitionControll
 import FilterContentData from './FilterContentData';
 import FilterContentMenu from './FilterContentMenu/FilterContentMenu';
 import ContentService from 'net/service/ContentService';
-import { shuffle } from 'lodash';
+import shuffle from 'lodash/shuffle'
 
 export default {
 	name: 'FilterContent',

@@ -1,4 +1,4 @@
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce'
 import Disposable from 'seng-disposable';
 import { TweenLite, Ease, Quad } from 'gsap';
 import IRectangle from 'lib/geom/IRectangle';

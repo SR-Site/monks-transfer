@@ -1,7 +1,7 @@
 import sengEvent from 'seng-event';
 import { Linear, Expo, TweenLite } from 'gsap';
 import Draggable from 'gsap/Draggable';
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce'
 import NativeEventListener from 'util/event/NativeEventListener';
 import bowser from 'bowser';
 import DraggableInstanceEvent from 'util/draggableInstance/DraggableInstanceEvent';

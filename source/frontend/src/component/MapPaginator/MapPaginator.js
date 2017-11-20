@@ -3,7 +3,7 @@ import { DeviceStateEvent } from 'seng-device-state-tracker';
 import MapPaginatorTransitionController from './MapPaginatorTransitionController';
 import VueTypes from 'vue-types';
 import NativeEventListener from '../../util/event/NativeEventListener';
-import { padStart } from 'lodash';
+import padStart from 'lodash/padStart'
 
 export default {
 	name: 'MapPaginator',

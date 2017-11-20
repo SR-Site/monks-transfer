@@ -1,4 +1,4 @@
-import { truncate } from 'lodash';
+import truncate from 'lodash/truncate'
 import { AbstractBlockComponent } from 'vue-block-system';
 import VueTypes from 'vue-types';
 import ArticleTeaserData from './ArticleTeaserData';

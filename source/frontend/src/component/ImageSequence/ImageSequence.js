@@ -1,7 +1,8 @@
 import { DeviceStateEvent } from 'seng-device-state-tracker';
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import ImageSequenceTransitionController from './ImageSequenceTransitionController';
-import { debounce, padStart } from 'lodash';
+import padStart from 'lodash/padStart';
+import debounce from 'lodash/debounce';
 import NativeEventListener from '../../util/event/NativeEventListener';
 import LoadImageTask from '../../util/preloading/task/LoadImageTask';
 import { TweenLite, Linear } from 'gsap';
