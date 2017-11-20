@@ -39,7 +39,8 @@
 		  "link": {
 			"label": "Find out more",
 			"title": "Find out more",
-			"type": 2
+			"target": "/advertising-solutions#pathToPurchase",
+			"type": 0
 		  },
 		  "paragraph": "<p>Spectrum Reach is the marketing platform of choice to help your business reach new heights, without breaking your budget.\u00a0<\/p>",
 		  "heading": "<h1>Powered By Your Potential</h1>",
@@ -62,6 +63,7 @@
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
+		  "scrollId": "pathToPurchase",
 		  "marginTop": 0,
 		  "steps": [
 			{

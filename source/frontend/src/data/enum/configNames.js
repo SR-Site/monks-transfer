@@ -14,6 +14,7 @@ export const VariableNames = {
 	LOCALE_ENABLED: 'locale-enabled',
 	LOCALE_ROUTING_ENABLED: 'locale-routing-enabled',
 	MOCK_ENABLED: 'mock-enabled',
+	DEBUG_LABEL_ENABLED: 'debug-label-enabled',
 	STATIC_ROOT: 'static-root',
 	PUBLIC_PATH: 'public-path',
 	VERSIONED_STATIC_ROOT: 'versioned-static-root',

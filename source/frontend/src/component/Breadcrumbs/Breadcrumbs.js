@@ -24,5 +24,8 @@ export default {
 			this.transitionController = new BreadcrumbsTransitionController(this);
 			this.isReady();
 		},
+		stripSlash(target) {
+			return target.replace(/^\/+/g, '');
+		},
 	},
 };

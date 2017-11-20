@@ -8,6 +8,7 @@ export default {
 	extends: AbstractContentPageComponent,
 	methods: {
 		handleRouteChangeComplete() {
+			console.log('route change complete');
 			this.pageLoader.transitionOut();
 			this.$nextTick(() => {
 				objectFitImages(); // Polyfill the object-fit to make sure it works on IE
@@ -43,7 +44,11 @@ export default {
 		},
 	},
 	beforeRouteUpdate(to, from, next) {
-		this.$emit('beforePageChange');
-		this.pageLoader.transitionIn().then(() => next());
+		if (to.path === from.path && from.hash !== to.hash) {
+			next();
+		}else {
+			this.$emit('beforePageChange');
+			this.pageLoader.transitionIn().then(() => next());
+		}
 	},
 };

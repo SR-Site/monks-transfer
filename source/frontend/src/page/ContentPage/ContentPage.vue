@@ -10,7 +10,7 @@
 			:class="getBlockClassNames(block.data)"
 			:data-scroll-id="block.data.scrollId || null"
 			:scrollId="block.scrollId"
-			:debugLabel="true"
+			:debugLabel="$config.getVariable(VariableNames.DEBUG_LABEL_ENABLED)"
 			:data="block.data"
 			:is="block.id"
 			:componentId="block.id + '.' + block.blockIndex"

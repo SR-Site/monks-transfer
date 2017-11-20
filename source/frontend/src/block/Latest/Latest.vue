@@ -31,6 +31,7 @@
 						<ArticleTeaser
 							v-for="(article, index) in data.articles"
 							:componentId="`ArticleTeaser${index}`"
+							:debugLabel="$config.getVariable(VariableNames.DEBUG_LABEL_ENABLED)"
 							:key="index"
 							:data="getArticleData(article)"
 							:class="$style.articleTeaser"
