@@ -22,7 +22,7 @@
 		  {
 			"label": "Home",
 			"title": "Home",
-			"target": "/",
+			"target": "/home",
 			"type": 0
 		  },
 		  {

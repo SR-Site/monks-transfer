@@ -76,7 +76,7 @@ const initPlugins = () => {
 		block,
 		config: {
 			api: {
-				pageCall: `${base}page/{page}${mockEnabled ? '.json' : '?_format=json'}`,
+				pageCall: `${base}page{page}${mockEnabled ? '.json' : '?_format=json'}`,
 				initCall: `${base}init${mockEnabled ? '.json' : '?_format=json'}`,
 			},
 			debugLabelStyling: {
