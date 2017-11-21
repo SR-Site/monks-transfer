@@ -24,6 +24,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: file_default
+    region: content
   field_label:
     weight: 0
     label: above
@@ -31,6 +32,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_target:
     weight: 4
     label: above
@@ -42,6 +44,7 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
   field_title:
     weight: 3
     label: above
@@ -49,10 +52,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_type:
     weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
 hidden: {  }

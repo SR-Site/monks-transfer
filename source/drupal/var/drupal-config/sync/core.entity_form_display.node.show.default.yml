@@ -3,20 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.show.field_image
     - field.field.node.show.field_show_description
     - field.field.node.show.field_show_genres
     - field.field.node.show.field_show_id
-    - field.field.node.show.field_show_image_100
-    - field.field.node.show.field_show_image_300
-    - field.field.node.show.field_show_image_600
     - field.field.node.show.field_show_links
     - field.field.node.show.field_show_media_type
     - field.field.node.show.field_show_network
     - field.field.node.show.field_show_recommend
     - field.field.node.show.field_show_schedules
     - field.field.node.show.field_show_videos
+    - image.style.thumbnail
     - node.type.show
   module:
+    - image
+    - link
     - path
 id: node.show.default
 targetEntityType: node
@@ -28,23 +29,120 @@ content:
     weight: 2
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_show_description:
+    type: string_textarea
+    weight: 16
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_show_genres:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_show_id:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_show_links:
+    type: link_default
+    weight: 15
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_show_media_type:
+    type: entity_reference_autocomplete
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_show_network:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_show_recommend:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_show_schedules:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_show_videos:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   path:
     type: path
     weight: 5
     settings: {  }
     third_party_settings: {  }
+    region: content
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 3
     third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    third_party_settings: {  }
+    region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 4
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 0
@@ -52,6 +150,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 1
@@ -60,16 +159,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  field_show_description: true
-  field_show_genres: true
-  field_show_id: true
-  field_show_image_100: true
-  field_show_image_300: true
-  field_show_image_600: true
-  field_show_links: true
-  field_show_media_type: true
-  field_show_network: true
-  field_show_recommend: true
-  field_show_schedules: true
-  field_show_videos: true
+    region: content
+hidden: {  }

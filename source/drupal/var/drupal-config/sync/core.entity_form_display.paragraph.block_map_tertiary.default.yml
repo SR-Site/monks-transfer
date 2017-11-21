@@ -18,23 +18,27 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_overlap:
     weight: 1
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
   field_tertiary_data:
     weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_windowed:
     weight: 0
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
 hidden:
   created: true
   status: true

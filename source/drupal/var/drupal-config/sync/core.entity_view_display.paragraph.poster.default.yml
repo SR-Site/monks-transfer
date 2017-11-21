@@ -1,0 +1,34 @@
+uuid: b41d6605-7811-4cc3-9211-fb359e13d244
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.poster.field_normal
+    - field.field.paragraph.poster.field_small
+    - paragraphs.paragraphs_type.poster
+  module:
+    - image
+id: paragraph.poster.default
+targetEntityType: paragraph
+bundle: poster
+mode: default
+content:
+  field_normal:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_small:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

@@ -40,6 +40,7 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
   field_main_heading:
     weight: 0
     settings:
@@ -47,6 +48,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_styles:
     weight: 1
     settings:
@@ -58,6 +60,7 @@ content:
       default_paragraph_type: styles
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
 hidden:
   created: true
   status: true

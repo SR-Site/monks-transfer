@@ -4,6 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.page.field_blocks
+    - field.field.node.page.field_header_theme
+    - field.field.node.page.field_hide_contact_button
+    - field.field.node.page.field_metatags
     - node.type.page
   module:
     - user
@@ -16,6 +20,7 @@ mode: teaser
 content:
   links:
     weight: 101
+    region: content
 hidden:
   field_blocks: true
   field_header_theme: true

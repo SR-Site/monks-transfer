@@ -21,6 +21,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_stats:
     weight: 1
     settings:
@@ -32,6 +33,7 @@ content:
       default_paragraph_type: stat
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
 hidden:
   created: true
   status: true

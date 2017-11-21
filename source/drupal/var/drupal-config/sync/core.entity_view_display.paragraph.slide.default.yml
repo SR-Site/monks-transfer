@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.slide.field_heading
     - field.field.paragraph.slide.field_image
     - field.field.paragraph.slide.field_theme
+    - field.field.paragraph.slide.field_video
     - image.style.preview_500xauto
     - paragraphs.paragraphs_type.slide
   module:
@@ -23,6 +24,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_image:
     weight: 1
     label: above
@@ -31,11 +33,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
   field_theme:
     weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
 hidden:
   field_video: true

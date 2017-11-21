@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.field_blocks
     - field.field.node.page.field_header_theme
+    - field.field.node.page.field_hide_contact_button
     - field.field.node.page.field_metatags
     - node.type.page
   module:
@@ -27,18 +28,23 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
   field_header_theme:
     weight: 104
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_metatags:
     weight: 103
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
+    region: content
   links:
     weight: 101
-hidden: {  }
+    region: content
+hidden:
+  field_hide_contact_button: true

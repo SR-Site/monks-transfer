@@ -26,6 +26,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_image:
     weight: 4
     label: above
@@ -34,6 +35,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
   field_link:
     weight: 3
     label: above
@@ -42,16 +44,19 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
   field_paragraph:
     weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_persona_type:
     weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
 hidden: {  }

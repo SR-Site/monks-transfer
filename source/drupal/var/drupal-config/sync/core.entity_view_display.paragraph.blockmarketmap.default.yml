@@ -28,6 +28,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_filter_label:
     weight: 6
     label: above
@@ -35,12 +36,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_heading:
     weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_image:
     weight: 4
     label: above
@@ -49,6 +52,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
   field_label:
     weight: 3
     label: above
@@ -56,6 +60,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_styles:
     weight: 0
     label: above
@@ -64,6 +69,7 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
   field_title:
     weight: 2
     label: above
@@ -71,4 +77,5 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
 hidden: {  }

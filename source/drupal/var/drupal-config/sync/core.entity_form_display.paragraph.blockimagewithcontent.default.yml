@@ -53,6 +53,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_heading:
     weight: 0
     settings:
@@ -60,6 +61,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_image:
     weight: 5
     settings:
@@ -67,6 +69,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_link:
     weight: 5
     settings:
@@ -78,6 +81,7 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
   field_paragraph:
     weight: 3
     settings:
@@ -85,6 +89,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_styles:
     weight: 6
     settings:
@@ -96,6 +101,7 @@ content:
       default_paragraph_type: styles
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
 hidden:
   created: true
   status: true

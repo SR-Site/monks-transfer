@@ -10,7 +10,7 @@ _core:
   default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
 id: spectrum_help
 theme: spectrum
-region: '-1'
+region: sidebar_first
 weight: 0
 provider: null
 plugin: help_block

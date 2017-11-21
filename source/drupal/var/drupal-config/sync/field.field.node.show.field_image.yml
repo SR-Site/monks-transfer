@@ -1,20 +1,20 @@
-uuid: e15952a2-9010-4420-8bf6-cf228fb7a18a
+uuid: e84c6a10-9e71-4415-81ea-01af11c2b075
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_show_image_600
+    - field.storage.node.field_image
     - node.type.show
   module:
     - image
-id: node.show.field_show_image_600
-field_name: field_show_image_600
+id: node.show.field_image
+field_name: field_image
 entity_type: node
 bundle: show
-label: 'Image 600'
+label: 'Show image'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -1,0 +1,21 @@
+uuid: 79d7c375-93cf-4d7a-baf3-ab9c2ec15068
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_tag
+    - paragraphs.paragraphs_type.block_video_with_content_b
+  module:
+    - options
+id: paragraph.block_video_with_content_b.field_heading_tag
+field_name: field_heading_tag
+entity_type: paragraph
+bundle: block_video_with_content_b
+label: 'Heading tag'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

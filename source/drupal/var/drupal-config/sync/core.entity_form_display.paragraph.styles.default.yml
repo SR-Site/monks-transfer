@@ -17,18 +17,21 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_overlap:
     weight: 0
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
   field_windowed:
     weight: 1
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
+    region: content
 hidden:
   created: true
   status: true

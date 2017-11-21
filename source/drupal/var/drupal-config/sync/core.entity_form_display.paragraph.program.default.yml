@@ -29,6 +29,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_image:
     weight: 1
     settings:
@@ -36,6 +37,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_label:
     weight: 4
     settings:
@@ -43,6 +45,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_paragraph:
     weight: 2
     settings:
@@ -50,12 +53,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_percentage:
     weight: 3
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
   field_tags:
     weight: 6
     settings:
@@ -64,6 +69,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
+    region: content
   field_video:
     weight: 5
     settings:
@@ -77,6 +83,7 @@ content:
       open: false
     third_party_settings: {  }
     type: entity_browser_entity_reference
+    region: content
 hidden:
   created: true
   status: true

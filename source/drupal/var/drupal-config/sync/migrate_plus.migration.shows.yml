@@ -1,0 +1,164 @@
+uuid: e3d76a37-d8e5-4661-add0-5ca7b83f2301
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 9n8M9JAjZbNlV2UlBHW8M48aYxlK5aP8_VILeT1MuzY
+id: shows
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: migrate_shows_json
+label: 'JSON feed of shows'
+source:
+  plugin: spectrum_url
+  data_fetcher_plugin: http
+  data_parser_plugin: json_nested
+  item_selector: /Result/
+  fields:
+    -
+      name: title
+      label: Title
+      selector: Title
+    -
+      name: show_id
+      label: 'Show Id'
+      selector: ShowId
+    -
+      name: MediaType
+      label: MediaType
+      selector: MediaType
+    -
+      name: network
+      label: Network
+      selector: Network
+    -
+      name: Descriptions
+      label: Descriptions
+      selector: Descriptions
+    -
+      name: genres
+      label: Genres
+      selector: Genres
+    -
+      name: Images
+      label: Images
+      selector: Images
+    -
+      name: Videos
+      label: Videos
+      selector: Videos
+    -
+      name: Schedule
+      label: Schedule
+      selector: Schedule
+    -
+      name: Links
+      label: Links
+      selector: Links
+    -
+      name: recommend
+      label: Recommends
+      selector: Recommend
+  ids:
+    show_id:
+      type: string
+process:
+  type:
+    plugin: default_value
+    default_value: show
+  title: title
+  field_show_id: show_id
+  field_show_media_type:
+    plugin: entity_generate
+    source: MediaType
+  field_show_network/target_id:
+    -
+      plugin: extract
+      source: network
+      index:
+        - Stationnum
+    -
+      plugin: migration_lookup
+      no_stub: true
+      migration: network
+  field_show_description:
+    plugin: extract
+    source: Descriptions
+    index:
+      - 0
+      - Description
+    default: ''
+  field_show_genres:
+    plugin: sub_process
+    source: genres
+    process:
+      target_id:
+        plugin: migration_lookup
+        no_stub: true
+        migration: genres
+        source: Genre
+  field_image/target_id:
+    -
+      plugin: extract
+      source: Images
+      default: ''
+      index:
+        - 2
+        - Url
+    -
+      plugin: file_json
+      destination: 'public://shows/[date:custom:Y]-[date:custom:m]'
+  field_image/alt: title
+  field_show_videos:
+    plugin: sub_process
+    source: Videos
+    process:
+      target_id:
+        plugin: migration_lookup
+        no_stub: true
+        migration: videos
+        source: Url
+  field_show_schedules:
+    plugin: sub_process
+    source: Schedule
+    process:
+      target_id:
+        plugin: migration_lookup
+        no_stub: true
+        migration: schedule
+        source: uniqueId
+  field_show_links:
+    plugin: sub_process
+    source: Links
+    process:
+      uri: Value
+      title: Name
+  field_show_recommend:
+    plugin: sub_process
+    source: recommend
+    process:
+      target_id:
+        plugin: migration_lookup
+        no_stub: true
+        migration: recommends
+        source: Title
+  sticky:
+    plugin: default_value
+    default_value: 0
+  status:
+    plugin: default_value
+    default_value: 1
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  optional:
+    - genres
+    - recommends
+    - network
+    - videos
+    - schedule
