@@ -1,0 +1,47 @@
+uuid: f999ac47-864d-4147-804d-d7a0f72f27de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.device.field_new_heading
+    - field.field.paragraph.device.field_paragraph
+    - field.field.paragraph.device.field_paragraph_image
+    - paragraphs.paragraphs_type.device
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.device.default
+targetEntityType: paragraph
+bundle: device
+mode: default
+content:
+  field_new_heading:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_paragraph:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_paragraph_image:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

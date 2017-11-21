@@ -1,0 +1,33 @@
+uuid: 1a53eda1-90a5-4167-a1dc-df9e9345203b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.glossary_a_item.field_label
+    - field.field.paragraph.glossary_a_item.field_text_value
+    - paragraphs.paragraphs_type.glossary_a_item
+id: paragraph.glossary_a_item.default
+targetEntityType: paragraph
+bundle: glossary_a_item
+mode: default
+content:
+  field_label:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_value:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

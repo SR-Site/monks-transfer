@@ -1,24 +1,24 @@
-uuid: 2224534f-c177-484a-8e90-dee7c26a23e0
+uuid: 4c3a949e-9502-42ee-8893-57f230a443a6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.block_video_with_content_b.field_alignment
-    - field.field.paragraph.block_video_with_content_b.field_link
-    - field.field.paragraph.block_video_with_content_b.field_new_heading
-    - field.field.paragraph.block_video_with_content_b.field_paragraph
-    - field.field.paragraph.block_video_with_content_b.field_poster
-    - field.field.paragraph.block_video_with_content_b.field_scroll_id
-    - field.field.paragraph.block_video_with_content_b.field_styles
-    - field.field.paragraph.block_video_with_content_b.field_video
-    - paragraphs.paragraphs_type.block_video_with_content_b
+    - field.field.paragraph.block_infographic.field_alignment
+    - field.field.paragraph.block_infographic.field_background_image
+    - field.field.paragraph.block_infographic.field_link
+    - field.field.paragraph.block_infographic.field_new_heading
+    - field.field.paragraph.block_infographic.field_paragraph
+    - field.field.paragraph.block_infographic.field_paragraph_image
+    - field.field.paragraph.block_infographic.field_scroll_id
+    - field.field.paragraph.block_infographic.field_styles
+    - paragraphs.paragraphs_type.block_infographic
   module:
     - entity_reference_revisions
     - options
     - text
-id: paragraph.block_video_with_content_b.default
+id: paragraph.block_infographic.default
 targetEntityType: paragraph
-bundle: block_video_with_content_b
+bundle: block_infographic
 mode: default
 content:
   field_alignment:
@@ -28,8 +28,17 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_background_image:
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_link:
-    weight: 2
+    weight: 7
     label: above
     settings:
       view_mode: default
@@ -38,7 +47,7 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_new_heading:
-    weight: 8
+    weight: 3
     label: above
     settings:
       view_mode: default
@@ -47,23 +56,23 @@ content:
     type: entity_reference_revisions_entity_view
     region: content
   field_paragraph:
-    weight: 3
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_poster:
-    type: entity_reference_revisions_entity_view
-    weight: 7
+  field_paragraph_image:
+    weight: 6
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_scroll_id:
-    weight: 9
+    weight: 2
     label: above
     settings:
       link_to_entity: false
@@ -78,13 +87,5 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
-    region: content
-  field_video:
-    weight: 6
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
 hidden: {  }

@@ -1,0 +1,80 @@
+uuid: e1308dc9-fca6-4cc0-83a8-ddf5fcaed287
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_glossary_a.field_glossary_a_items
+    - field.field.paragraph.block_glossary_a.field_link
+    - field.field.paragraph.block_glossary_a.field_new_heading
+    - field.field.paragraph.block_glossary_a.field_paragraph
+    - field.field.paragraph.block_glossary_a.field_scroll_id
+    - field.field.paragraph.block_glossary_a.field_styles
+    - paragraphs.paragraphs_type.block_glossary_a
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - text
+id: paragraph.block_glossary_a.default
+targetEntityType: paragraph
+bundle: block_glossary_a
+mode: default
+content:
+  field_glossary_a_items:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_link:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_new_heading:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_paragraph:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_scroll_id:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_styles:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

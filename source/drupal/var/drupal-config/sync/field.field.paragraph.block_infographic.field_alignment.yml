@@ -1,0 +1,21 @@
+uuid: 3aa209c0-9ddb-4bfd-93d7-832b4a2c52a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_alignment
+    - paragraphs.paragraphs_type.block_infographic
+  module:
+    - options
+id: paragraph.block_infographic.field_alignment
+field_name: field_alignment
+entity_type: paragraph
+bundle: block_infographic
+label: Alignment
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,0 +1,7 @@
+uuid: 9b563e90-8f05-4353-a743-9de8a131e3ef
+langcode: en
+status: true
+dependencies: {  }
+id: block_core_product_message
+label: 'Block Core Product Message'
+behavior_plugins: {  }

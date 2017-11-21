@@ -1,24 +1,23 @@
-uuid: c02eb0d6-4148-4068-a94b-757edf68dc9a
+uuid: cdc0f757-d4aa-4b8f-b43a-f65b21dbec22
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.block_video_with_content_b.field_alignment
-    - field.field.paragraph.block_video_with_content_b.field_link
-    - field.field.paragraph.block_video_with_content_b.field_new_heading
-    - field.field.paragraph.block_video_with_content_b.field_paragraph
-    - field.field.paragraph.block_video_with_content_b.field_poster
-    - field.field.paragraph.block_video_with_content_b.field_scroll_id
-    - field.field.paragraph.block_video_with_content_b.field_styles
-    - field.field.paragraph.block_video_with_content_b.field_video
-    - paragraphs.paragraphs_type.block_video_with_content_b
+    - field.field.paragraph.block_infographic.field_alignment
+    - field.field.paragraph.block_infographic.field_background_image
+    - field.field.paragraph.block_infographic.field_link
+    - field.field.paragraph.block_infographic.field_new_heading
+    - field.field.paragraph.block_infographic.field_paragraph
+    - field.field.paragraph.block_infographic.field_paragraph_image
+    - field.field.paragraph.block_infographic.field_scroll_id
+    - field.field.paragraph.block_infographic.field_styles
+    - paragraphs.paragraphs_type.block_infographic
   module:
     - entity_reference_revisions
-    - paragraphs
     - text
-id: paragraph.block_video_with_content_b.default
+id: paragraph.block_infographic.default
 targetEntityType: paragraph
-bundle: block_video_with_content_b
+bundle: block_infographic
 mode: default
 content:
   field_alignment:
@@ -27,8 +26,17 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_background_image:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
   field_link:
-    weight: 2
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -37,7 +45,7 @@ content:
     type: entity_reference_revisions_autocomplete
     region: content
   field_new_heading:
-    weight: 8
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
@@ -46,27 +54,24 @@ content:
     type: entity_reference_revisions_autocomplete
     region: content
   field_paragraph:
-    weight: 3
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_poster:
-    type: entity_reference_paragraphs
-    weight: 7
+  field_paragraph_image:
+    weight: 6
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
     region: content
   field_scroll_id:
-    weight: 9
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -81,15 +86,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_revisions_autocomplete
-    region: content
-  field_video:
-    weight: 6
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
 hidden:
   created: true

@@ -1,21 +1,21 @@
-uuid: 45946956-747e-4cdb-9e13-f6e25e2e7923
+uuid: 8981d6d8-632f-4932-9260-b7fdcfcf0452
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_new_heading
-    - paragraphs.paragraphs_type.block_video_with_content_b
+    - paragraphs.paragraphs_type.block_hero_quaternary
     - paragraphs.paragraphs_type.heading
   module:
     - entity_reference_revisions
-id: paragraph.block_video_with_content_b.field_new_heading
+id: paragraph.block_hero_quaternary.field_new_heading
 field_name: field_new_heading
 entity_type: paragraph
-bundle: block_video_with_content_b
+bundle: block_hero_quaternary
 label: Heading
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

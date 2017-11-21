@@ -1,0 +1,19 @@
+uuid: dda7c00f-b58d-496f-a71f-c72dc98bf06a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subheading
+    - paragraphs.paragraphs_type.block_audience_quote
+id: paragraph.block_audience_quote.field_subheading
+field_name: field_subheading
+entity_type: paragraph
+bundle: block_audience_quote
+label: Subheading
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

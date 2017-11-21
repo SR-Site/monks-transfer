@@ -1,0 +1,7 @@
+uuid: 4c5ed043-fa97-4115-bd78-94031f08d53c
+langcode: en
+status: true
+dependencies: {  }
+id: audience_statistics_item
+label: 'Audience Statistics Item'
+behavior_plugins: {  }

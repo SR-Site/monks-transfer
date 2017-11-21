@@ -1,0 +1,44 @@
+uuid: 7d74fb86-2667-4206-9534-2786d0878e34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.core_product_message_item.field_label
+    - field.field.paragraph.core_product_message_item.field_paragraph
+    - field.field.paragraph.core_product_message_item.field_text_value
+    - paragraphs.paragraphs_type.core_product_message_item
+  module:
+    - text
+id: paragraph.core_product_message_item.default
+targetEntityType: paragraph
+bundle: core_product_message_item
+mode: default
+content:
+  field_label:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraph:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_text_value:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

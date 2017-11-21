@@ -1,0 +1,60 @@
+uuid: 466e46be-f589-49f4-bc62-cbd91757cca7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_audience_reach.field_channels
+    - field.field.paragraph.block_audience_reach.field_new_heading
+    - field.field.paragraph.block_audience_reach.field_scroll_id
+    - field.field.paragraph.block_audience_reach.field_styles
+    - paragraphs.paragraphs_type.block_audience_reach
+  module:
+    - entity_reference_revisions
+    - paragraphs
+id: paragraph.block_audience_reach.default
+targetEntityType: paragraph
+bundle: block_audience_reach
+mode: default
+content:
+  field_channels:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_new_heading:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_scroll_id:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_styles:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,19 @@
+uuid: b79ce5ea-0942-43de-a1af-2d28a4ce9d6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_file_description
+    - paragraphs.paragraphs_type.block_download_file_a
+id: paragraph.block_download_file_a.field_file_description
+field_name: field_file_description
+entity_type: paragraph
+bundle: block_download_file_a
+label: 'File description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,7 @@
+uuid: 9d0cf40d-60b9-4d13-93e6-96354e8a669f
+langcode: en
+status: true
+dependencies: {  }
+id: block_audience_quote
+label: 'Block Audience Quote'
+behavior_plugins: {  }

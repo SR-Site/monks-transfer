@@ -1,0 +1,19 @@
+uuid: 828b7493-6bac-46d0-8503-83d025c7395f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_scroll_id
+    - paragraphs.paragraphs_type.block_download_file_b
+id: paragraph.block_download_file_b.field_scroll_id
+field_name: field_scroll_id
+entity_type: paragraph
+bundle: block_download_file_b
+label: 'Scroll ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

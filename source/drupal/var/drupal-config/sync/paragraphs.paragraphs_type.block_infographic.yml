@@ -1,0 +1,7 @@
+uuid: 39f893a1-53a6-49f1-9783-ad41947e4b84
+langcode: en
+status: true
+dependencies: {  }
+id: block_infographic
+label: 'Block Infographic'
+behavior_plugins: {  }

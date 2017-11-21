@@ -1,0 +1,19 @@
+uuid: df8a01cf-d6ed-41a4-801a-03f4866308fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_label
+    - paragraphs.paragraphs_type.glossary_a_item
+id: paragraph.glossary_a_item.field_label
+field_name: field_label
+entity_type: paragraph
+bundle: glossary_a_item
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

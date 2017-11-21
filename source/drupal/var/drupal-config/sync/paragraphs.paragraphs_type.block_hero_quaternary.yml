@@ -1,0 +1,7 @@
+uuid: 90c38ca8-1aa8-4278-897f-bd104fa40620
+langcode: en
+status: true
+dependencies: {  }
+id: block_hero_quaternary
+label: 'Block Hero Quaternary'
+behavior_plugins: {  }

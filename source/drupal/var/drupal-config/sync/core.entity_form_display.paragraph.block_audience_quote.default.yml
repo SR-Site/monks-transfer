@@ -1,0 +1,65 @@
+uuid: de948fa5-f8db-4f03-8cb5-7243a37d9fe9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_audience_quote.field_new_heading
+    - field.field.paragraph.block_audience_quote.field_paragraph_image
+    - field.field.paragraph.block_audience_quote.field_scroll_id
+    - field.field.paragraph.block_audience_quote.field_styles
+    - field.field.paragraph.block_audience_quote.field_subheading
+    - paragraphs.paragraphs_type.block_audience_quote
+  module:
+    - entity_reference_revisions
+id: paragraph.block_audience_quote.default
+targetEntityType: paragraph
+bundle: block_audience_quote
+mode: default
+content:
+  field_new_heading:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_paragraph_image:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_scroll_id:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_styles:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_subheading:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

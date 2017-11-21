@@ -1,12 +1,12 @@
-uuid: f5868b7a-c557-4d3a-9b1d-6882524f13a2
+uuid: 70554ce4-2fd1-42cc-8720-8f8adf786644
 langcode: en
 status: true
 dependencies:
   module:
     - entity_reference_revisions
     - paragraphs
-id: paragraph.field_new_heading
-field_name: field_new_heading
+id: paragraph.field_background_image
+field_name: field_background_image
 entity_type: paragraph
 type: entity_reference_revisions
 settings:
