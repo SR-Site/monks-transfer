@@ -22,7 +22,7 @@ class TargetAudienceTransitionController extends AbstractTransitionController {
 			},
 		);
 
-		(<Array<HTMLElement>>this.viewModel.$refs.device).forEach((element) => {
+		(<Array<HTMLElement>>this.viewModel.$refs.device).forEach(element => {
 			this.transitionInTimeline.fromTo(
 				element,
 				0.8,
@@ -33,7 +33,7 @@ class TargetAudienceTransitionController extends AbstractTransitionController {
 					autoAlpha: 1,
 					ease: Expo.easeOut,
 				},
-				'=-0.7'
+				'=-0.7',
 			);
 		});
 

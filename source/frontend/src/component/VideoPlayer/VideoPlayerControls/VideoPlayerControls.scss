@@ -1,10 +1,10 @@
 :local {
 	.video-player-controls {
 		@include size(100%, $sizeGrid);
-		background: rgba(0, 0, 0, .5);
+		background: rgba(0, 0, 0, 0.5);
 		font-size: 0;
 		transform: translateY(100%);
-		transition: transform .8s $easeOutExpo;
+		transition: transform 0.8s $easeOutExpo;
 
 		&.is-active {
 			transform: translateY(0);
@@ -33,7 +33,7 @@
 		}
 
 		.pause-icon {
-			display: none
+			display: none;
 		}
 
 		&.is-playing {
@@ -42,7 +42,7 @@
 			}
 
 			.pause-icon {
-				display: block
+				display: block;
 			}
 		}
 	}
@@ -55,8 +55,8 @@
 
 		.progress-bar-wrapper {
 			@include size(calc(100% - #{$sizeGrid}), 0.4rem);
-			background: rgba(255, 255, 255, .1);
-			transition: backgroundColor .2s $easeLinear, height .2s $easeLinear;
+			background: rgba(255, 255, 255, 0.1);
+			transition: backgroundColor 0.2s $easeLinear, height 0.2s $easeLinear;
 		}
 
 		.progress {
@@ -90,7 +90,7 @@
 
 @include hover('.progress') {
 	.progress-bar-wrapper {
-		background: rgba(255, 255, 255, .3);
+		background: rgba(255, 255, 255, 0.3);
 		height: 0.6rem;
 	}
 

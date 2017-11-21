@@ -1,7 +1,7 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
+import VueTypes from 'vue-types';
 import SuccessStoryTeaserData from './SuccessStoryTeaserData';
 import SuccessStoryTeaserTransitionController from './SuccessStoryTeaserTransitionController';
-import VueTypes from 'vue-types';
 
 export default {
 	name: 'SuccessStoryTeaser',

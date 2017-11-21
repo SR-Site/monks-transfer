@@ -87,7 +87,7 @@
 		@include size(10px);
 		border-radius: 100%;
 		background: rgba($colorQuaternary, 0.5);
-		transition: background .2s $easeInOutExpo;
+		transition: background 0.2s $easeInOutExpo;
 		display: inline-block;
 		cursor: pointer;
 
@@ -135,7 +135,7 @@
 		.icon {
 			@include size($sizeGrid * 2);
 			top: $sizeGrid * 3;
-			right: $sizeGrid
+			right: $sizeGrid;
 		}
 
 		.text {

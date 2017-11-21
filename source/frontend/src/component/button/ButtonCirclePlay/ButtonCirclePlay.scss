@@ -23,7 +23,7 @@
 		@include offset(50%, 50%);
 		transform: translate(-50%, -50%);
 		position: absolute;
-		@include size(calc(100%  - 20px))
+		@include size(calc(100%  - 20px));
 	}
 
 	.large {

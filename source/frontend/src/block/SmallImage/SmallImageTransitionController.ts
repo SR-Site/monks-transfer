@@ -16,8 +16,8 @@ class SmallImageTransitionController extends AbstractTransitionController {
 			{
 				autoAlpha: 1,
 				clearProps: 'all',
-			}
-		)
+			},
+		);
 	}
 
 	/**

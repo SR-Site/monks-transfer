@@ -1,7 +1,6 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 import { Expo, Linear } from 'gsap';
 
-
 class VideoWithContentBTransitionController extends AbstractTransitionController {
 	/**
 	 * @public
@@ -25,7 +24,8 @@ class VideoWithContentBTransitionController extends AbstractTransitionController
 				opacity: 1,
 				clearProps: 'clip',
 				ease: Expo.easeOut,
-			}, 0,
+			},
+			0,
 		);
 
 		this.transitionInTimeline.add(this.getSubTimeline('ButtonCirclePlay'));

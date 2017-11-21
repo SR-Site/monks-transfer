@@ -14,7 +14,5 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	personas: VueTypes.arrayOf(
-		VueTypes.shape(PersonaSelectorPersonaData),
-	),
+	personas: VueTypes.arrayOf(VueTypes.shape(PersonaSelectorPersonaData)),
 };

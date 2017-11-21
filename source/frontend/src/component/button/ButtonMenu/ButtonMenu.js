@@ -1,6 +1,6 @@
 import { AbstractButtonComponent } from 'vue-block-system';
-import ButtonMenuTransitionController from './ButtonMenuTransitionController';
 import VueTypes from 'vue-types';
+import ButtonMenuTransitionController from './ButtonMenuTransitionController';
 
 export default {
 	name: 'ButtonMenu',

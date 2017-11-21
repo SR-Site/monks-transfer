@@ -60,9 +60,8 @@ export default {
 				const point = this.scrollTracker.addPoint(this.getYPosition(element), element.offsetHeight);
 
 				point.addEventListener(ScrollTrackerEvent.ENTER_VIEW, () => this.handleComponentEnterView(component));
-				point.addEventListener(
-					ScrollTrackerEvent.SCROLLED_BEYOND,
-					() => this.handleComponentEnterView(component),
+				point.addEventListener(ScrollTrackerEvent.SCROLLED_BEYOND, () =>
+					this.handleComponentEnterView(component),
 				);
 
 				// Check for the position on init

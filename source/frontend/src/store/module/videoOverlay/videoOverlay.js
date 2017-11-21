@@ -26,26 +26,25 @@ export default {
 	actions: {
 		[SHOW](context, payload) {
 			let videoOverlayResult = null;
-			return new Promise(
-				resolve =>
-					context.commit(
-						SHOW,
-						Object.assign(
-							{
-								isActive: true,
-							},
-							payload,
-							{
-								resolve,
-							},
-						),
+			return new Promise(resolve =>
+				context.commit(
+					SHOW,
+					Object.assign(
+						{
+							isActive: true,
+						},
+						payload,
+						{
+							resolve,
+						},
 					),
+				),
 			)
-			.then(result => {
-				videoOverlayResult = result;
-			})
-			.then(() => context.commit(SHOW, Object.assign({}, defaultState)))
-			.then(() => Promise.resolve(videoOverlayResult));
+				.then(result => {
+					videoOverlayResult = result;
+				})
+				.then(() => context.commit(SHOW, Object.assign({}, defaultState)))
+				.then(() => Promise.resolve(videoOverlayResult));
 		},
 	},
 	mutations: {

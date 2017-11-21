@@ -56,9 +56,9 @@ export default {
 		},
 		createCarousel() {
 			this.carousel = new InfiniteCarousel({
-													 sliderWrapper: this.$refs.slides,
-													 slides: this.$refs.slide,
-												 });
+				sliderWrapper: this.$refs.slides,
+				slides: this.$refs.slide,
+			});
 
 			this.carouselEventListener = new NativeEventListener(this.carousel, CarouselEvent.CHANGE, event => {
 				this.activeIndex = event.data.index;
@@ -74,16 +74,14 @@ export default {
 			});
 		},
 		handleStepClick(index) {
-			this.$tracking.trackEvent(
-				{
-					[this.TrackingProvider.GOOGLE_ANALYTICS]: {
-						category: 'pathToPurchase',
-						action: 'click',
-						label: this.data.steps[index].heading,
-						value: index + 1,
-					},
+			this.$tracking.trackEvent({
+				[this.TrackingProvider.GOOGLE_ANALYTICS]: {
+					category: 'pathToPurchase',
+					action: 'click',
+					label: this.data.steps[index].heading,
+					value: index + 1,
 				},
-			);
+			});
 			this.activeIndex = index;
 		},
 		handleMobilePaginatorClick(index) {

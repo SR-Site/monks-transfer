@@ -14,7 +14,5 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	statistics: VueTypes.arrayOf(
-		VueTypes.shape(SuccessStoryImpactStatisticData),
-	),
+	statistics: VueTypes.arrayOf(VueTypes.shape(SuccessStoryImpactStatisticData)),
 };

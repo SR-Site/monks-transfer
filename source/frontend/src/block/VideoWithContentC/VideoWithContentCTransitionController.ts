@@ -31,7 +31,7 @@ class VideoWithContentCTransitionController extends AbstractTransitionController
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6'
+			'=-0.6',
 		);
 		this.transitionInTimeline.add(this.getSubTimeline('ButtonCirclePlay'), '=-0.6');
 		this.transitionInTimeline.fromTo(
@@ -46,7 +46,7 @@ class VideoWithContentCTransitionController extends AbstractTransitionController
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6'
+			'=-0.6',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.copy,
@@ -60,7 +60,7 @@ class VideoWithContentCTransitionController extends AbstractTransitionController
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6'
+			'=-0.6',
 		);
 		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '=-0.6');
 	}
@@ -70,8 +70,7 @@ class VideoWithContentCTransitionController extends AbstractTransitionController
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default VideoWithContentCTransitionController;

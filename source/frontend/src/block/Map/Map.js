@@ -63,8 +63,8 @@ export default {
 		},
 		transitionIn(forceTransition) {
 			return this.allComponentsReady
-			.then(() => this.imageSequence.setup())
-			.then(() => this.transitionController.transitionIn(forceTransition));
+				.then(() => this.imageSequence.setup())
+				.then(() => this.transitionController.transitionIn(forceTransition));
 		},
 		progressToFrameNumber(progress) {
 			return Math.round((this.data.imageSequence.total - 1) * progress);
@@ -75,30 +75,29 @@ export default {
 			const currentProgress = this.activeIndex / stepCount;
 			const targetProgress = index / stepCount;
 
-			this.$tracking.trackEvent(
-				{
-					[this.TrackingProvider.GOOGLE_ANALYTICS]: {
-						category: 'map',
-						action: 'click',
-						label: this.data.steps[index].heading,
-						value: index,
-					},
+			this.$tracking.trackEvent({
+				[this.TrackingProvider.GOOGLE_ANALYTICS]: {
+					category: 'map',
+					action: 'click',
+					label: this.data.steps[index].heading,
+					value: index,
 				},
-			);
-
-			return this.slides[this.activeIndex].transitionOut()
-			.then(this.imageSequence.play(
-				{
-					loop: false,
-					startFrame: this.progressToFrameNumber(currentProgress),
-					endFrame: this.progressToFrameNumber(targetProgress),
-				},
-			))
-			.then(() => this.slides[index].transitionIn())
-			.then(() => {
-				this.activeIndex = index;
-				this.transitionInProgress = false;
 			});
+
+			return this.slides[this.activeIndex]
+				.transitionOut()
+				.then(
+					this.imageSequence.play({
+						loop: false,
+						startFrame: this.progressToFrameNumber(currentProgress),
+						endFrame: this.progressToFrameNumber(targetProgress),
+					}),
+				)
+				.then(() => this.slides[index].transitionIn())
+				.then(() => {
+					this.activeIndex = index;
+					this.transitionInProgress = false;
+				});
 		},
 	},
 };

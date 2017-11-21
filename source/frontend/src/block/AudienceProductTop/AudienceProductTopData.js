@@ -22,10 +22,8 @@ export default {
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
 	image: VueTypes.shape(PropImage).isRequired,
-	card: VueTypes.shape(
-		{
-			heading: VueTypes.string.isRequired,
-			paragraph: VueTypes.string.isRequired,
-		},
-	).isRequired,
+	card: VueTypes.shape({
+		heading: VueTypes.string.isRequired,
+		paragraph: VueTypes.string.isRequired,
+	}).isRequired,
 };

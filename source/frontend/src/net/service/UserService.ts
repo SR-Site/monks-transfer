@@ -13,16 +13,12 @@ export default class UserService {
 	 * @returns {AxiosPromise}
 	 */
 	public static contact(data: IContactData) {
-		return getValue(GATEWAY).post(
-			Endpoints.getEndpoint(Endpoints.CONTACT),
-			data,
-			{
-				headers: {
-					'Content-Type': 'application/json',
-					'X-CSRF-Token': getStore().getters['initData/csrfToken'],
-				},
+		return getValue(GATEWAY).post(Endpoints.getEndpoint(Endpoints.CONTACT), data, {
+			headers: {
+				'Content-Type': 'application/json',
+				'X-CSRF-Token': getStore().getters['initData/csrfToken'],
 			},
-		);
+		});
 	}
 
 	/**
@@ -32,15 +28,11 @@ export default class UserService {
 	 * @returns {AxiosPromise}
 	 */
 	public static contactKernel(data: IContactKernelData) {
-		return getValue(GATEWAY).post(
-			Endpoints.getEndpoint(Endpoints.CONTACT_KERNEL),
-			data,
-			{
-				headers: {
-					'Content-Type': 'application/json',
-					'X-CSRF-Token': getStore().getters['initData/csrfToken'],
-				},
+		return getValue(GATEWAY).post(Endpoints.getEndpoint(Endpoints.CONTACT_KERNEL), data, {
+			headers: {
+				'Content-Type': 'application/json',
+				'X-CSRF-Token': getStore().getters['initData/csrfToken'],
 			},
-		);
+		});
 	}
 }

@@ -20,7 +20,7 @@
 			@include position(auto, $sizeGrid, 0, $sizeGrid*0.7);
 			position: absolute;
 			background-color: rgba(#dadada, 0.6);
-			content: "";
+			content: '';
 			height: 1px;
 		}
 

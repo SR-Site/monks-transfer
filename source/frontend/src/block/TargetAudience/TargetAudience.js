@@ -1,4 +1,4 @@
-import debounce from 'lodash/debounce'
+import debounce from 'lodash/debounce';
 import { DeviceStateEvent } from 'seng-device-state-tracker';
 import VueTypes from 'vue-types';
 import ScrollBar from '../../component/ScrollBar/ScrollBar';
@@ -34,12 +34,10 @@ export default {
 			this.setDeviceWidth();
 
 			this.disposables.add(
-				new NativeEventListener(this.$deviceState, DeviceStateEvent.STATE_UPDATE, this.handleDeviceStateChange)
-			)
-
-			this.disposables.add(
-				new NativeEventListener(window, 'resize', debounce(this.setDeviceWidth, 100)),
+				new NativeEventListener(this.$deviceState, DeviceStateEvent.STATE_UPDATE, this.handleDeviceStateChange),
 			);
+
+			this.disposables.add(new NativeEventListener(window, 'resize', debounce(this.setDeviceWidth, 100)));
 
 			this.$nextTick(() => this.setupScrollableBlock());
 			this.isReady();

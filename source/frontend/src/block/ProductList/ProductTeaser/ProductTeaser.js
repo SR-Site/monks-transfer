@@ -1,8 +1,8 @@
+import truncate from 'lodash/truncate';
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import VueTypes from 'vue-types';
-import ProductTeaserTransitionController from './ProductTeaserTransitionController';
 import ProductTeaserData from './ProductTeaserData';
-import truncate from 'lodash/truncate'
+import ProductTeaserTransitionController from './ProductTeaserTransitionController';
 
 export default {
 	name: 'ProductTeaser',

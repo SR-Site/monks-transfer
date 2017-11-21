@@ -1,6 +1,6 @@
 import { AbstractButtonComponent } from 'vue-block-system';
-import ButtonQuinaryTransitionController from './ButtonQuinaryTransitionController';
 import VueTypes from 'vue-types';
+import ButtonQuinaryTransitionController from './ButtonQuinaryTransitionController';
 
 export default {
 	name: 'ButtonQuinary',

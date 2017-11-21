@@ -1,17 +1,17 @@
-import VueTypes from 'vue-types';
-import { AbstractBlockComponent } from 'vue-block-system';
-import { TransitionEvent } from 'vue-transition-component';
 import bowser from 'bowser';
 import ImageHelper from 'util/media/ImageHelper';
-import HeroMainTransitionController from './HeroMainTransitionController';
-import HeroMainData from './HeroMainData';
+import { AbstractBlockComponent } from 'vue-block-system';
+import { TransitionEvent } from 'vue-transition-component';
+import VueTypes from 'vue-types';
+import MediaCrossFader from '../../component/MediaCrossFader/MediaCrossFader';
 import PrimaryTriangle from '../../component/triangle/PrimaryTriangle/PrimaryTriangle';
 import SecondaryTriangle from '../../component/triangle/SecondaryTriangle/SecondaryTriangle';
-import HeroMainSlide from './HeroMainSlide/HeroMainSlide';
-import MediaCrossFader from '../../component/MediaCrossFader/MediaCrossFader';
 import VideoType from '../../data/enum/VideoType';
 import VideoElement from '../../lib/media/VideoElement';
 import NativeEventListener from '../../util/event/NativeEventListener';
+import HeroMainData from './HeroMainData';
+import HeroMainSlide from './HeroMainSlide/HeroMainSlide';
+import HeroMainTransitionController from './HeroMainTransitionController';
 
 export default {
 	name: 'HeroMain',
@@ -30,7 +30,7 @@ export default {
 	},
 	computed: {
 		hasStatistics() {
-			return this.data.slides.map(slide => slide.statistics !== void 0).indexOf(true) > -1;
+			return this.data.slides.map(slide => slide.statistics !== undefined).indexOf(true) > -1;
 		},
 	},
 	props: {
@@ -99,10 +99,10 @@ export default {
 			newSlide.transitionController.transitionInTimeline.timeScale(1);
 
 			return Promise.all([primaryTriangle.transitionOut(), oldSlide.transitionOut()])
-			.then(() => Promise.all([primaryTriangle.transitionIn(), newSlide.transitionIn()]))
-			.then(() => {
-				this.activeIndex = index;
-			});
+				.then(() => Promise.all([primaryTriangle.transitionIn(), newSlide.transitionIn()]))
+				.then(() => {
+					this.activeIndex = index;
+				});
 		},
 		changeBackgroundImage(index) {
 			const crossFader = this.getChild('MediaCrossFader');

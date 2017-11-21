@@ -1,5 +1,5 @@
-import { TweenLite } from 'gsap';
-import debounce from 'lodash/debounce'
+import { TweenLite, Quad } from 'gsap';
+import debounce from 'lodash/debounce';
 import { DeviceStateEvent } from 'seng-device-state-tracker';
 import { AbstractBlockComponent } from 'vue-block-system';
 import VueTypes from 'vue-types';
@@ -36,11 +36,7 @@ export default {
 					this.deviceState = event.data.state;
 				},
 			);
-			this.resizeListener = new NativeEventListener(
-				window,
-				'resize',
-				debounce(this.handleResize, 500),
-			);
+			this.resizeListener = new NativeEventListener(window, 'resize', debounce(this.handleResize, 500));
 			this.scrollBar = this.getChild('ScrollBar');
 			this.setScrollBarSnapPositions();
 			this.isReady();
@@ -49,19 +45,18 @@ export default {
 			this.transitionController.seekHowToAdvertiseTimeline(progress);
 		},
 		handleOpenStep(index) {
-			this.$tracking.trackEvent(
-				{
-					[this.TrackingProvider.GOOGLE_ANALYTICS]: {
-						category: 'howToAdvertise',
-						action: 'click',
-						label: `open|${this.data.steps[index].heading}`,
-						value: index + 1,
-					},
+			this.$tracking.trackEvent({
+				[this.TrackingProvider.GOOGLE_ANALYTICS]: {
+					category: 'howToAdvertise',
+					action: 'click',
+					label: `open|${this.data.steps[index].heading}`,
+					value: index + 1,
 				},
-			);
+			});
 
 			TweenLite.fromTo(
-				this, 0.8,
+				this,
+				0.8,
 				{
 					openStepAnimationProgress: this.transitionController.getHowToAdvertiseProgress(),
 				},
@@ -76,9 +71,7 @@ export default {
 			);
 		},
 		setScrollBarSnapPositions() {
-			this.scrollBar.setSnapPosition(
-				this.scrollBar.getMaxX() / (this.data.steps.length - 1),
-			);
+			this.scrollBar.setSnapPosition(this.scrollBar.getMaxX() / (this.data.steps.length - 1));
 		},
 		handleResize() {
 			this.transitionController.updateHowToAdvertiseTimeline();

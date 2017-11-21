@@ -1,8 +1,8 @@
-import { AbstractButtonComponent } from 'vue-block-system';
-import ButtonTertiaryTransitionController from './ButtonTertiaryTransitionController';
 import Size from 'data/enum/Size';
 import Theme from 'data/enum/Theme';
+import { AbstractButtonComponent } from 'vue-block-system';
 import VueTypes from 'vue-types';
+import ButtonTertiaryTransitionController from './ButtonTertiaryTransitionController';
 
 export default {
 	name: 'ButtonTertiary',

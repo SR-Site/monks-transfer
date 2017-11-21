@@ -8,11 +8,5 @@ import VideoType from '../../enum/VideoType';
  */
 export default {
 	url: VueTypes.string.isRequired,
-	type: VueTypes.oneOf(
-		[
-			VideoType.INTERNAL,
-			VideoType.VIMEO,
-			VideoType.BRIGHTCOVE,
-		],
-	).isRequired,
+	type: VueTypes.oneOf([VideoType.INTERNAL, VideoType.VIMEO, VideoType.BRIGHTCOVE]).isRequired,
 };

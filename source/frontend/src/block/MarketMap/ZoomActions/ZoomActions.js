@@ -14,6 +14,6 @@ export default {
 		},
 		handleZoomOut() {
 			this.$emit('zoomOut');
-		}
+		},
 	},
 };

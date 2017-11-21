@@ -1,6 +1,6 @@
-import NativeEventListener from '../../util/event/NativeEventListener';
 import { getValue } from 'util/injector';
 import { TRACKING_MANAGER } from '../../data/Injectables';
+import NativeEventListener from '../../util/event/NativeEventListener';
 
 const namespace = 'TrackDirective';
 

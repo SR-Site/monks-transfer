@@ -9,4 +9,4 @@ export default {
 	label: VueTypes.string.isRequired,
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
-}
+};

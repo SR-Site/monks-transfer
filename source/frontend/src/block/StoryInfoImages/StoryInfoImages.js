@@ -1,10 +1,10 @@
-import VueTypes from 'vue-types';
-import { AbstractBlockComponent } from 'vue-block-system';
-import StoryInfoImagesTransitionController from './StoryInfoImagesTransitionController';
-import StoryInfoImagesData from './StoryInfoImagesData';
 import padStart from 'lodash/padStart';
 import truncate from 'lodash/truncate';
+import { AbstractBlockComponent } from 'vue-block-system';
+import VueTypes from 'vue-types';
 import { DeviceState } from '../../config/deviceStateConfig';
+import StoryInfoImagesData from './StoryInfoImagesData';
+import StoryInfoImagesTransitionController from './StoryInfoImagesTransitionController';
 
 export default {
 	name: 'StoryInfoImages',
@@ -24,15 +24,13 @@ export default {
 		},
 		handleMouseEnter(index) {
 			if (this.$deviceState.currentDeviceState.state > DeviceState.SMALL) {
-				this.$tracking.trackEvent(
-					{
-						[this.TrackingProvider.GOOGLE_ANALYTICS]: {
-							category: 'storyInfoImage',
-							action: 'click',
-							label: `open|${this.data.stories[index].heading}`,
-						},
+				this.$tracking.trackEvent({
+					[this.TrackingProvider.GOOGLE_ANALYTICS]: {
+						category: 'storyInfoImage',
+						action: 'click',
+						label: `open|${this.data.stories[index].heading}`,
 					},
-				);
+				});
 				this.activeIndex = index;
 			}
 		},

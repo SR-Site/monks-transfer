@@ -1,8 +1,8 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
+import VueTypes from 'vue-types';
 import { mapGetters } from 'vuex';
 import SiteMenuPage from './SiteMenuPage/SiteMenuPage';
 import SiteMenuTransitionController from './SiteMenuTransitionController';
-import VueTypes from 'vue-types';
 
 export default {
 	name: 'SiteMenu',
@@ -33,29 +33,25 @@ export default {
 		SiteMenuPage,
 	},
 	computed: {
-		...mapGetters(
-			{
-				navigationData: 'initData/navigationData',
-			},
-		),
+		...mapGetters({
+			navigationData: 'initData/navigationData',
+		}),
 	},
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new SiteMenuTransitionController(this);
-			this.parsePage(
-				{
-					section: 'root',
-					links: this.navigationData,
-				},
-			);
+			this.parsePage({
+				section: 'root',
+				links: this.navigationData,
+			});
 			this.isReady();
 		},
 		parsePage(data) {
 			this.pages.push(data);
 			// Restart the loop
-			data.links.forEach(data => {
-				if (data.section) {
-					this.parsePage(data);
+			data.links.forEach(page => {
+				if (page.section) {
+					this.parsePage(page);
 				}
 			});
 		},
@@ -63,15 +59,14 @@ export default {
 			this.active = this.history.pop();
 		},
 		transitionIn() {
-			return this.allComponentsReady
-			.then(() => {
+			return this.allComponentsReady.then(() => {
 				this.transitionController.transitionInTimeline.timeScale(1);
-				this.transitionController.transitionIn()
+				this.transitionController.transitionIn();
 			});
 		},
 		transitionOut() {
 			this.transitionController.transitionInTimeline.timeScale(2.5);
-			return this.transitionController.transitionOut(true)
+			return this.transitionController.transitionOut(true);
 		},
 		handleSelectSection(section) {
 			// Add the latest page to the history array

@@ -1,5 +1,5 @@
 import { getValue } from 'util/injector';
-import replace from 'lodash/replace'
+import replace from 'lodash/replace';
 import { GATEWAY } from 'data/Injectables';
 import Endpoints from 'net/Endpoints';
 
@@ -11,9 +11,7 @@ export default class UserService {
 	 * @returns {AxiosPromise}
 	 */
 	public static viewCount(page: string) {
-		return getValue(GATEWAY).get(
-			replace(Endpoints.getEndpoint(Endpoints.VIEW_COUNT), '{page}', page),
-		);
+		return getValue(GATEWAY).get(replace(Endpoints.getEndpoint(Endpoints.VIEW_COUNT), '{page}', page));
 	}
 
 	/**
@@ -26,28 +24,20 @@ export default class UserService {
 	 * @param {number} limit
 	 * @param {{[p: string]: string}} filter
 	 */
-	public static loadPage(
-		endpoint: string,
-		offset: number,
-		limit: number,
-		filter: { [filterType: string]: string },
-	) {
+	public static loadPage(endpoint: string, offset: number, limit: number, filter: { [filterType: string]: string }) {
 		if (endpoint.indexOf('/') === 0) {
 			endpoint = endpoint.substring(1);
 		}
 
-		return getValue(GATEWAY).get(
-			endpoint,
-			{
-				params: Object.assign(
-					{
-						limit,
-						offset,
-						_format: 'json',
-					},
-					filter,
-				),
-			},
-		);
+		return getValue(GATEWAY).get(endpoint, {
+			params: Object.assign(
+				{
+					limit,
+					offset,
+					_format: 'json',
+				},
+				filter,
+			),
+		});
 	}
 }

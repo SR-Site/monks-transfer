@@ -14,11 +14,11 @@
 				background: $colorWhite;
 				padding: $sizeGrid $sizeGrid * 2;
 				flex-grow: 1;
-				transition: background .4s $easeLinear;
+				transition: background 0.4s $easeLinear;
 				color: $colorPrimary;
 
 				.copy {
-					transition: opacity .4s $easeLinear, transform .4s $easeInOutCubic;
+					transition: opacity 0.4s $easeLinear, transform 0.4s $easeInOutCubic;
 					opacity: 0;
 					transform: translateX(50px);
 				}
@@ -53,7 +53,7 @@
 
 		.image-wrapper {
 			opacity: 0;
-			transition: opacity .2s $easeInOut;
+			transition: opacity 0.2s $easeInOut;
 
 			&.is-active {
 				opacity: 1;
@@ -79,7 +79,6 @@
 			.image {
 				right: 0;
 			}
-
 		}
 
 		.blurred-image {
@@ -111,7 +110,6 @@
 		}
 
 		@include respond-to(MEDIUM) {
-
 			// Overwrite all the borders because otherwise it does not fit in the screen
 			border-left: none !important;
 			border-right: none !important;

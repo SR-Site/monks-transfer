@@ -1,9 +1,9 @@
-import { AbstractTransitionComponent } from 'vue-transition-component';
+import padStart from 'lodash/padStart';
 import { DeviceStateEvent } from 'seng-device-state-tracker';
-import MapPaginatorTransitionController from './MapPaginatorTransitionController';
+import { AbstractTransitionComponent } from 'vue-transition-component';
 import VueTypes from 'vue-types';
 import NativeEventListener from '../../util/event/NativeEventListener';
-import padStart from 'lodash/padStart'
+import MapPaginatorTransitionController from './MapPaginatorTransitionController';
 
 export default {
 	name: 'MapPaginator',

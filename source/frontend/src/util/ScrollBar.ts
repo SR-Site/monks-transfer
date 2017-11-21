@@ -1,6 +1,6 @@
 import { TweenLite } from 'gsap';
 import Draggable from 'gsap/Draggable';
-import debounce from 'lodash/debounce'
+import debounce from 'lodash/debounce';
 
 interface ScrollbarOptions {
 	inside: boolean;
@@ -69,7 +69,7 @@ interface ScrollbarOptions {
  */
 
 class Scrollbar {
-	private _options: ScrollbarOptions = {
+	private options: ScrollbarOptions = {
 		inside: false,
 		hidebar: false,
 		hideBarTime: 800,
@@ -77,25 +77,25 @@ class Scrollbar {
 		setContentSize: true,
 	};
 
-	private _isDestructed: boolean = false;
+	private isDestructed: boolean = false;
 
-	private _content: HTMLElement;
-	private _contentInner: HTMLElement;
-	private _bar: HTMLElement;
-	private _knob: HTMLElement;
+	private content: HTMLElement;
+	private contentInner: HTMLElement;
+	private bar: HTMLElement;
+	private knob: HTMLElement;
 
-	private _dragInstance: Draggable;
-	private _hideTimer: number;
-	private _isDragging: boolean = false;
+	private dragInstance: Draggable;
+	private hideTimer: number;
+	private isDragging: boolean = false;
 
-	private _overflowSize: number = 0;
+	private overflowSize: number = 0;
 
-	private _barSize: number = 0;
-	private _barSizeOpposite: number = 0;
-	private _knobSize: number = 0;
+	private barSize: number = 0;
+	private barSizeOpposite: number = 0;
+	private knobSize: number = 0;
 
-	private _resizeEvent: () => void;
-	private _scrollEvent: () => void;
+	private resizeEvent: () => void;
+	private scrollEvent: () => void;
 
 	/**
 	 * @constructor
@@ -103,19 +103,19 @@ class Scrollbar {
 	 * @param {ScrollbarOptions} options
 	 */
 	constructor(public element: HTMLElement, options?: ScrollbarOptions) {
-		Object.assign(this._options, options);
+		Object.assign(this.options, options);
 
-		this._content = <HTMLElement>this.element.querySelector('[data-scroll-content]');
-		this._contentInner = <HTMLElement>this._content.querySelector('[data-content-inner]');
-		this._bar = <HTMLElement>this.element.querySelector('[data-scroll-bar]');
-		this._knob = <HTMLElement>this._bar.querySelector('[data-scroll-knob]');
+		this.content = <HTMLElement>this.element.querySelector('[data-scroll-content]');
+		this.contentInner = <HTMLElement>this.content.querySelector('[data-content-inner]');
+		this.bar = <HTMLElement>this.element.querySelector('[data-scroll-bar]');
+		this.knob = <HTMLElement>this.bar.querySelector('[data-scroll-knob]');
 
-		if (this._options.horizontal) {
+		if (this.options.horizontal) {
 			this.element.classList.add('scroll-x');
 		}
 
-		this._resizeEvent = debounce(this.handleWindowResize, 150, this);
-		this._scrollEvent = this.handleContentScroll;
+		this.resizeEvent = debounce(this.handleWindowResize, 150, this);
+		this.scrollEvent = this.handleContentScroll;
 
 		this.addEvents();
 		this.createDraggable();
@@ -126,7 +126,7 @@ class Scrollbar {
 	}
 
 	private handleWindowResize = (): void => {
-		if (!this._isDestructed) {
+		if (!this.isDestructed) {
 			this.update();
 			this.setContentSize();
 			this.onScroll();
@@ -148,12 +148,12 @@ class Scrollbar {
 	 * @method addEvents
 	 */
 	private addEvents(): void {
-		window.addEventListener('resize', this._resizeEvent);
-		this._content.addEventListener('scroll', this._scrollEvent);
+		window.addEventListener('resize', this.resizeEvent);
+		this.content.addEventListener('scroll', this.scrollEvent);
 
-		this._bar.addEventListener('mouseenter', this.showKnob.bind(this));
-		this._bar.addEventListener('mouseleave', () => {
-			if (!this._isDragging) {
+		this.bar.addEventListener('mouseenter', this.showKnob.bind(this));
+		this.bar.addEventListener('mouseleave', () => {
+			if (!this.isDragging) {
 				this.startHideKnob();
 			}
 		});
@@ -165,18 +165,18 @@ class Scrollbar {
 	 * @method createDraggable
 	 */
 	private createDraggable(): void {
-		this._dragInstance = Draggable.create(this._knob, {
-			bounds: this._bar,
-			type: this._options.horizontal ? 'x' : 'y',
+		this.dragInstance = Draggable.create(this.knob, {
+			bounds: this.bar,
+			type: this.options.horizontal ? 'x' : 'y',
 			zindexBoost: false,
 			cursor: 'default',
 			onDragStart: () => {
-				this._isDragging = true;
-				this._knob.classList.add('dragging');
+				this.isDragging = true;
+				this.knob.classList.add('dragging');
 			},
 			onDragEnd: () => {
-				this._isDragging = false;
-				this._knob.classList.remove('dragging');
+				this.isDragging = false;
+				this.knob.classList.remove('dragging');
 			},
 			onDrag: () => {
 				this.handleDrag();
@@ -190,12 +190,12 @@ class Scrollbar {
 	 * @method update
 	 */
 	public update(): void {
-		this._overflowSize = this.getScrollSize() - this.getWrapperSize();
+		this.overflowSize = this.getScrollSize() - this.getWrapperSize();
 		this.resizeKnob();
 		this.getBarSize();
 		this.getBarSizeOpposite();
 		this.getKnobSize();
-		this._dragInstance.update(true);
+		this.dragInstance.update(true);
 		this.onScroll();
 	}
 
@@ -206,11 +206,11 @@ class Scrollbar {
 	 * @method handleDrag
 	 */
 	private handleDrag(): void {
-		const max = this._barSize - this._knobSize;
-		const pos = this._knob['_gsTransform'][this._options.horizontal ? 'x' : 'y'];
+		const max = this.barSize - this.knobSize;
+		const pos = this.knob['_gsTransform'][this.options.horizontal ? 'x' : 'y'];
 		const percentage = pos / max;
 
-		this.scrollTo(Math.round(this._overflowSize * percentage));
+		this.scrollTo(Math.round(this.overflowSize * percentage));
 	}
 
 	/**
@@ -221,16 +221,16 @@ class Scrollbar {
 	 * @method onScroll
 	 */
 	public onScroll(): void {
-		if (!this._isDragging) {
-			const scrollPos: number = this._content[this._options.horizontal ? 'scrollLeft' : 'scrollTop'];
-			const percentage: number = (scrollPos / this._overflowSize);
-			const max: number = this._barSize - this._knobSize;
+		if (!this.isDragging) {
+			const scrollPos: number = this.content[this.options.horizontal ? 'scrollLeft' : 'scrollTop'];
+			const percentage: number = scrollPos / this.overflowSize;
+			const max: number = this.barSize - this.knobSize;
 
 			const dimensions = {};
 			const dimension = max * percentage;
-			dimensions[this._options.horizontal ? 'x' : 'y'] = (isNaN(dimension)) ? 0 : Math.round(dimension);
+			dimensions[this.options.horizontal ? 'x' : 'y'] = isNaN(dimension) ? 0 : Math.round(dimension);
 
-			TweenLite.set(this._knob, dimensions);
+			TweenLite.set(this.knob, dimensions);
 		}
 
 		this.startHideKnob();
@@ -245,14 +245,16 @@ class Scrollbar {
 	 * @method setContentSize
 	 */
 	public setContentSize(): void {
-		if (!this._options.setContentSize) { return; }
+		if (!this.options.setContentSize) {
+			return;
+		}
 
-		const size: string = (
-			this.getWrapperSizeOpposite() - (!this._options.hidebar && !this._options.inside
-				? this._barSizeOpposite : 0)
-		) + 'px';
+		const size: string =
+			this.getWrapperSizeOpposite() -
+			(!this.options.hidebar && !this.options.inside ? this.barSizeOpposite : 0) +
+			'px';
 
-		this._contentInner.style[(this._options.horizontal) ? 'height' : 'width'] = size;
+		this.contentInner.style[this.options.horizontal ? 'height' : 'width'] = size;
 	}
 
 	/**
@@ -265,15 +267,15 @@ class Scrollbar {
 	private resizeKnob(): void {
 		if (this.getWrapperSize() > 0 && this.getScrollSize() > 0) {
 			this.getBarSize();
-			this._knob.style[this._options.horizontal ? 'width' : 'height'] = Math.round(
-				Math.max(20, this._barSize * (this.getWrapperSize() / this.getScrollSize()))) + 'px';
+			this.knob.style[this.options.horizontal ? 'width' : 'height'] =
+				Math.round(Math.max(20, this.barSize * (this.getWrapperSize() / this.getScrollSize()))) + 'px';
 		}
 
-		if (!this._options.hidebar && this._overflowSize === 0) {
-			TweenLite.to(this._bar, 0.2, { opacity: 0 });
+		if (!this.options.hidebar && this.overflowSize === 0) {
+			TweenLite.to(this.bar, 0.2, { opacity: 0 });
 		} else {
-			if (!this._options.hidebar && this._overflowSize !== 0) {
-				TweenLite.to(this._bar, 0.2, { opacity: 1 });
+			if (!this.options.hidebar && this.overflowSize !== 0) {
+				TweenLite.to(this.bar, 0.2, { opacity: 1 });
 			}
 		}
 	}
@@ -284,11 +286,11 @@ class Scrollbar {
 	 * @method showKnob
 	 */
 	private showKnob(): void {
-		if (this._options.hidebar && this._overflowSize > 0) {
-			clearTimeout(this._hideTimer);
+		if (this.options.hidebar && this.overflowSize > 0) {
+			clearTimeout(this.hideTimer);
 
-			TweenLite.to(this._bar, 0.2, { opacity: 1 });
-			TweenLite.to(this._knob, 0.2, { autoAlpha: 1 });
+			TweenLite.to(this.bar, 0.2, { opacity: 1 });
+			TweenLite.to(this.knob, 0.2, { autoAlpha: 1 });
 		}
 	}
 
@@ -299,9 +301,9 @@ class Scrollbar {
 	 * @param disableTween<boolean> indicating if it should animate or set to opacity 0
 	 */
 	private hideKnob(disableTween: boolean = false): void {
-		if (this._options.hidebar) {
-			TweenLite.to(this._bar, disableTween ? 0 : 0.2, { opacity: 0 });
-			TweenLite.to(this._knob, disableTween ? 0 : 0.2, { autoAlpha: 0 });
+		if (this.options.hidebar) {
+			TweenLite.to(this.bar, disableTween ? 0 : 0.2, { opacity: 0 });
+			TweenLite.to(this.knob, disableTween ? 0 : 0.2, { autoAlpha: 0 });
 		}
 	}
 
@@ -311,12 +313,12 @@ class Scrollbar {
 	 * @method startHideKnob
 	 */
 	private startHideKnob(): void {
-		if (this._options.hidebar) {
-			clearTimeout(this._hideTimer);
+		if (this.options.hidebar) {
+			clearTimeout(this.hideTimer);
 
-			this._hideTimer = setTimeout(() => {
+			this.hideTimer = setTimeout(() => {
 				this.hideKnob();
-			}, this._options.hideBarTime);
+			}, this.options.hideBarTime);
 		}
 	}
 
@@ -327,7 +329,7 @@ class Scrollbar {
 	 * @param value<number> new scroll position
 	 */
 	private scrollTo(value: number = 0): void {
-		this._content[this._options.horizontal ? 'scrollLeft' : 'scrollTop'] = value;
+		this.content[this.options.horizontal ? 'scrollLeft' : 'scrollTop'] = value;
 	}
 
 	/**
@@ -339,7 +341,7 @@ class Scrollbar {
 	 * @returns {number}
 	 */
 	private getWrapperSize(): number {
-		return this.element.getBoundingClientRect()[this._options.horizontal ? 'width' : 'height'];
+		return this.element.getBoundingClientRect()[this.options.horizontal ? 'width' : 'height'];
 	}
 
 	/**
@@ -351,7 +353,7 @@ class Scrollbar {
 	 * @returns {number}
 	 */
 	private getWrapperSizeOpposite(): number {
-		return this.element.getBoundingClientRect()[this._options.horizontal ? 'height' : 'width'];
+		return this.element.getBoundingClientRect()[this.options.horizontal ? 'height' : 'width'];
 	}
 
 	/**
@@ -363,69 +365,69 @@ class Scrollbar {
 	 * @returns {any}
 	 */
 	private getScrollSize(): number {
-		return this._content[this._options.horizontal ? 'scrollWidth' : 'scrollHeight'];
+		return this.content[this.options.horizontal ? 'scrollWidth' : 'scrollHeight'];
 	}
 
 	/**
-	 * Get the size of the bar and safe it to the variable this._barSize
+	 * Get the size of the bar and safe it to the variable this.barSize
 	 * Type scroll horizontal gets width
 	 * Type scroll vertical gets height
 	 *
 	 * @method getBarSize
 	 */
 	private getBarSize(): void {
-		this._barSize = this._bar.getBoundingClientRect()[this._options.horizontal ? 'width' : 'height'];
+		this.barSize = this.bar.getBoundingClientRect()[this.options.horizontal ? 'width' : 'height'];
 	}
 
 	/**
-	 * Get the opposite size of the bar and safe it to the variable this._barSizeOpposite
+	 * Get the opposite size of the bar and safe it to the variable this.barSizeOpposite
 	 * Type scroll horizontal gets height
 	 * Type scroll vertical gets width
 	 *
 	 * @method getBarSizeOpposite
 	 */
 	private getBarSizeOpposite(): void {
-		this._barSizeOpposite = this._bar.getBoundingClientRect()[this._options.horizontal ? 'height' : 'width'];
+		this.barSizeOpposite = this.bar.getBoundingClientRect()[this.options.horizontal ? 'height' : 'width'];
 	}
 
 	/**
-	 * Get the size of the knob and safe it to the variable this._knobSize
+	 * Get the size of the knob and safe it to the variable this.knobSize
 	 * Type scroll horizontal gets width
 	 * Type scroll vertical gets height
 	 *
 	 * @method getKnobSize
 	 */
 	private getKnobSize(): void {
-		this._knobSize = this._knob.getBoundingClientRect()[this._options.horizontal ? 'width' : 'height'];
+		this.knobSize = this.knob.getBoundingClientRect()[this.options.horizontal ? 'width' : 'height'];
 	}
 
 	public destruct(): void {
-		this._isDestructed = true;
+		this.isDestructed = true;
 
-		if (this._dragInstance) {
-			this._dragInstance.disable();
-			this._dragInstance = null;
+		if (this.dragInstance) {
+			this.dragInstance.disable();
+			this.dragInstance = null;
 		}
 
-		if (this._hideTimer) {
-			clearTimeout(this._hideTimer);
-			this._hideTimer = null;
+		if (this.hideTimer !== null) {
+			clearTimeout(this.hideTimer);
+			this.hideTimer = null;
 		}
 
-		window.removeEventListener('resize', this._resizeEvent);
-		this._resizeEvent = null;
+		window.removeEventListener('resize', this.resizeEvent);
+		this.resizeEvent = null;
 
-		this._content.removeEventListener('scroll', this._scrollEvent);
-		this._scrollEvent = null;
+		this.content.removeEventListener('scroll', this.scrollEvent);
+		this.scrollEvent = null;
 
-		this._content = null;
-		this._contentInner = null;
-		this._bar = null;
-		this._knob = null;
-		this._isDragging = null;
-		this._overflowSize = null;
-		this._barSize = null;
-		this._barSizeOpposite = null;
+		this.content = null;
+		this.contentInner = null;
+		this.bar = null;
+		this.knob = null;
+		this.isDragging = null;
+		this.overflowSize = null;
+		this.barSize = null;
+		this.barSizeOpposite = null;
 	}
 }
 

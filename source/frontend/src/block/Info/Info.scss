@@ -43,9 +43,9 @@
 		&:after {
 			@include position(0, -$sizeGrid, $sizeGrid, auto);
 			position: absolute;
-			content: "";
+			content: '';
 			width: $sizeGrid;
-			background-color: $colorSecondary
+			background-color: $colorSecondary;
 		}
 	}
 
@@ -110,7 +110,7 @@
 		}
 
 		.component-button-main {
-			align-self: flex-start
+			align-self: flex-start;
 		}
 
 		.description {

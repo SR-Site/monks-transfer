@@ -9,7 +9,5 @@ import FindYourAudienceTeaserData from '../FindYourAudienceTeaser/FindYourAudien
 export default {
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
-	items: VueTypes.arrayOf(
-		VueTypes.shape(FindYourAudienceTeaserData),
-	).isRequired,
+	items: VueTypes.arrayOf(VueTypes.shape(FindYourAudienceTeaserData)).isRequired,
 };

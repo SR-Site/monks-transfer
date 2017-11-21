@@ -33,7 +33,7 @@ class CoreProductMessageTransitionController extends AbstractTransitionControlle
 				clearProps: 'all',
 				ease: Expo.easeOut,
 			},
-			'=-0.7'
+			'=-0.7',
 		);
 		(<Array<HTMLElement>>this.viewModel.$refs.item).forEach(element => {
 			this.transitionInTimeline.fromTo(
@@ -49,7 +49,7 @@ class CoreProductMessageTransitionController extends AbstractTransitionControlle
 					clearProps: 'all',
 					ease: Expo.easeOut,
 				},
-				'=-0.7'
+				'=-0.7',
 			);
 		});
 	}

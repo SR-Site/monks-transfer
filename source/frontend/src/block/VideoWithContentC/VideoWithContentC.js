@@ -21,6 +21,6 @@ export default {
 				title: this.data.heading,
 				poster: this.data.poster,
 			});
-		}
+		},
 	},
 };

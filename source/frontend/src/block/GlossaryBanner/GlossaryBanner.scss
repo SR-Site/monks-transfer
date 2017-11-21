@@ -27,7 +27,7 @@
 		margin-right: $sizeGrid;
 	}
 
-	@include respond-to(MEDIUM ){
+	@include respond-to(MEDIUM ) {
 		.description {
 			padding: 10%;
 		}

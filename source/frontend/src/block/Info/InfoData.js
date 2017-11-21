@@ -20,4 +20,3 @@ export default {
 	paragraph: VueTypes.string.isRequired,
 	link: VueTypes.shape(PropLink),
 };
-

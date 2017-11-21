@@ -12,10 +12,10 @@ export default {
 	},
 	mounted() {
 		ContentService.viewCount(this.$router.currentRoute.path)
-		.then(result => {
-			this.viewCount = parseInt(result.data.totalcount,10 );
-		})
-		.catch(result => console.error(result))
+			.then(result => {
+				this.viewCount = parseInt(result.data.totalcount, 10);
+			})
+			.catch(result => console.error(result));
 	},
 	data() {
 		return {

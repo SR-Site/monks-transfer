@@ -1,7 +1,7 @@
-import NativeEventListener from '../../util/event/NativeEventListener';
-import getRouter from '../../router';
-import { customButtonEventDispatcher, CustomButtonEvent } from 'vue-block-system';
+import { CustomButtonEvent, customButtonEventDispatcher } from 'vue-block-system';
 import LinkType from '../../data/enum/link/BackendLinkType';
+import getRouter from '../../router';
+import NativeEventListener from '../../util/event/NativeEventListener';
 
 const namespace = 'LinkDirective';
 
@@ -16,11 +16,9 @@ export default {
 
 			switch (binding.value.type) {
 				case LinkType.INTERNAL:
-					getRouter().push(
-						{
-							path: binding.value.path,
-						},
-					);
+					getRouter().push({
+						path: binding.value.path,
+					});
 					break;
 				case LinkType.EXTERNAL:
 					window.location.href = binding.value.path;
@@ -31,12 +29,9 @@ export default {
 				case LinkType.CONTACT_KERNEL:
 				case LinkType.CONTACT_US:
 					customButtonEventDispatcher.dispatchEvent(
-						new CustomButtonEvent(
-							CustomButtonEvent.FIRE,
-							{
-								event: binding.value.type,
-							},
-						),
+						new CustomButtonEvent(CustomButtonEvent.FIRE, {
+							event: binding.value.type,
+						}),
 					);
 					break;
 				default:

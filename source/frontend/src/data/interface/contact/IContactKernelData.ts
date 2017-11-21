@@ -8,4 +8,4 @@ interface IContactKernelData {
 	comments: string;
 }
 
-export default IContactKernelData
+export default IContactKernelData;

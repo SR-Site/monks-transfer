@@ -15,11 +15,9 @@ class ButtonTransitionController extends AbstractTransitionController {
 			},
 			{
 				autoAlpha: 1,
-			}
-		)
-		this.transitionInTimeline.add(
-			this.getSubTimeline('ButtonPrimary')
+			},
 		);
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'));
 	}
 
 	/**

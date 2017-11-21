@@ -9,4 +9,4 @@ export default {
 	value: VueTypes.string.isRequired,
 	label: VueTypes.string.isRequired,
 	category: VueTypes.string.isRequired,
-}
+};

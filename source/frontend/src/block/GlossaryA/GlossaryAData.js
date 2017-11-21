@@ -21,7 +21,5 @@ export default {
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
 	link: VueTypes.shape(PropLink),
-	items: VueTypes.arrayOf(
-		VueTypes.shape(GlossaryItemData),
-	),
+	items: VueTypes.arrayOf(VueTypes.shape(GlossaryItemData)),
 };

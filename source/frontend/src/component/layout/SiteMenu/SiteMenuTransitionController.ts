@@ -34,9 +34,9 @@ class SiteMenuTransitionController extends AbstractTransitionController {
 			{
 				xPercent: 0,
 				autoAlpha: 1,
-				ease: Expo.easeOut
+				ease: Expo.easeOut,
 			},
-			'=-0.8'
+			'=-0.8',
 		);
 	}
 
@@ -45,8 +45,7 @@ class SiteMenuTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default SiteMenuTransitionController;

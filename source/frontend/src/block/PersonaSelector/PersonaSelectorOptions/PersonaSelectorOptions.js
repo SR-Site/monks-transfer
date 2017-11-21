@@ -1,6 +1,6 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import VueTypes from 'vue-types';
-import padStart from 'lodash/padStart'
+import padStart from 'lodash/padStart';
 import PersonaSelectorOptionsTransitionController from './PersonaSelectorOptionsTransitionController';
 
 export default {

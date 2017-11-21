@@ -1,11 +1,11 @@
-import { AbstractTransitionComponent } from 'vue-transition-component';
 import { DeviceStateEvent } from 'seng-device-state-tracker';
-import FilterContentMenuTransitionController from './FilterContentMenuTransitionController';
+import { AbstractTransitionComponent } from 'vue-transition-component';
 import VueTypes from 'vue-types';
-import PropFilter from '../../../data/prop-type/action/PropFilter';
-import FilterContentMenuDropdown from './FilterContentMenuDropdown/FilterContentMenuDropdown';
-import NativeEventListener from '../../../util/event/NativeEventListener';
 import { DeviceState } from '../../../config/deviceStateConfig';
+import PropFilter from '../../../data/prop-type/action/PropFilter';
+import NativeEventListener from '../../../util/event/NativeEventListener';
+import FilterContentMenuDropdown from './FilterContentMenuDropdown/FilterContentMenuDropdown';
+import FilterContentMenuTransitionController from './FilterContentMenuTransitionController';
 
 export default {
 	name: 'FilterContentMenu',
@@ -33,7 +33,7 @@ export default {
 		},
 		activeFilterIcon() {
 			return this.mobileMenuActive && this.deviceState <= DeviceState.SMALL ? 'cross' : 'filter';
-		}
+		},
 	},
 	watch: {
 		chosenOptions(value) {
@@ -50,9 +50,7 @@ export default {
 	props: {
 		closeLabel: VueTypes.string.isRequired,
 		filterLabel: VueTypes.string.isRequired,
-		filters: VueTypes.arrayOf(
-			VueTypes.shape(PropFilter).isRequired,
-		).isRequired,
+		filters: VueTypes.arrayOf(VueTypes.shape(PropFilter).isRequired).isRequired,
 	},
 	methods: {
 		handleAllComponentsReady() {
@@ -76,10 +74,7 @@ export default {
 			}
 
 			if (this.chosenOptions[filter].indexOf(option.value) > -1) {
-				this.chosenOptions[filter].splice(
-					this.chosenOptions[filter].indexOf(option.value),
-					1,
-				);
+				this.chosenOptions[filter].splice(this.chosenOptions[filter].indexOf(option.value), 1);
 			} else {
 				this.chosenOptions[filter].push(option.value);
 			}
@@ -87,7 +82,7 @@ export default {
 			// Force an update
 			this.chosenOptions = Object.assign({}, this.chosenOptions);
 
-			if(this.deviceState <= DeviceState.SMALL) {
+			if (this.deviceState <= DeviceState.SMALL) {
 				this.handleFilterToggleClick();
 			}
 		},
@@ -99,17 +94,19 @@ export default {
 		handleFilterClick(index) {
 			if (this.deviceState > DeviceState.SMALL) {
 				if (this.activeIndex === index) {
-					this.dropdown.transitionOut()
-					.then(() => this.activeIndex = -1);
+					this.dropdown.transitionOut().then(() => {
+						this.activeIndex = -1;
+					});
+				} else if (this.activeIndex === -1) {
+					this.activeIndex = index;
+					this.dropdown.transitionIn();
 				} else {
-					if (this.activeIndex === -1) {
-						this.activeIndex = index;
-						this.dropdown.transitionIn();
-					} else {
-						this.dropdown.transitionOut()
-						.then(() => this.activeIndex = index)
+					this.dropdown
+						.transitionOut()
+						.then(() => {
+							this.activeIndex = index;
+						})
 						.then(() => this.dropdown.transitionIn());
-					}
 				}
 			}
 		},

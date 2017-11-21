@@ -31,7 +31,7 @@ class PersonaSelectorBannerTransitionController extends AbstractTransitionContro
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6'
+			'=-0.6',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.heading,
@@ -45,7 +45,7 @@ class PersonaSelectorBannerTransitionController extends AbstractTransitionContro
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6'
+			'=-0.6',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.copy,
@@ -59,7 +59,7 @@ class PersonaSelectorBannerTransitionController extends AbstractTransitionContro
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6'
+			'=-0.6',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.links,
@@ -73,7 +73,7 @@ class PersonaSelectorBannerTransitionController extends AbstractTransitionContro
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6'
+			'=-0.6',
 		);
 	}
 
@@ -82,8 +82,7 @@ class PersonaSelectorBannerTransitionController extends AbstractTransitionContro
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default PersonaSelectorBannerTransitionController;

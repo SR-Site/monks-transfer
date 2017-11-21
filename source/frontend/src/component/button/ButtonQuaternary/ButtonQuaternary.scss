@@ -33,7 +33,7 @@
 		transform: scaleX(0);
 		position: absolute;
 		transform-origin: left center;
-		transition: transform .2s $easeInOutCubic;
+		transition: transform 0.2s $easeInOutCubic;
 		transition-delay: 0s;
 	}
 
@@ -41,7 +41,7 @@
 		display: inline-block;
 		vertical-align: top;
 		transform: translateX(-$sizeGridSecondary);
-		transition: transform .2s $easeInOutCubic;
+		transition: transform 0.2s $easeInOutCubic;
 	}
 
 	@include respond-to(SMALL) {
@@ -54,7 +54,7 @@
 @include hover('.button-quaternary', '.is-hover') {
 	.stripe {
 		transform: scaleX(1);
-		transition-delay: .1s;
+		transition-delay: 0.1s;
 	}
 
 	.label {

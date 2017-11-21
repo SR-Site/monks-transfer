@@ -21,7 +21,7 @@
 		background: rgba($colorPrimary, 0.9);
 		color: white;
 		pointer-events: all;
-		transition: transform .5s $easeInOutExpo;
+		transition: transform 0.5s $easeInOutExpo;
 
 		:global .knob {
 			background: $colorWhite;
@@ -34,7 +34,7 @@
 		font: 600 1.6rem/#{$sizeGrid * 2} $fontOpenSans;
 		text-align: left;
 		padding: 0 $sizeGrid;
-		transition: background .2s $easeInOutCubic;
+		transition: background 0.2s $easeInOutCubic;
 	}
 
 	.no-result-message {

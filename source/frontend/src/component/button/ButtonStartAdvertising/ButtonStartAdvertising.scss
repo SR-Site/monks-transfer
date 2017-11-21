@@ -8,7 +8,7 @@
 		color: #fff;
 		text-align: right;
 		pointer-events: none;
-		transition: right .8s $easeOutExpo;
+		transition: right 0.8s $easeOutExpo;
 		z-index: zindex($layout, content);
 	}
 
@@ -30,7 +30,7 @@
 	.icon {
 		@include size($sizeGrid);
 		transform: rotate(180deg);
-		transition: transform .2s $easeInOut;
+		transition: transform 0.2s $easeInOut;
 
 		path {
 			fill: currentColor;
@@ -41,7 +41,7 @@
 			stroke: $colorSecondary;
 			opacity: 1;
 			stroke-width: 1px;
-			transition: stroke .2s $easeInOut, stroke-width .2s $easeInOut opacity .2s $easeInOut;
+			transition: stroke 0.2s $easeInOut, stroke-width 0.2s $easeInOut opacity 0.2s $easeInOut;
 		}
 	}
 

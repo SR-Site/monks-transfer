@@ -3,7 +3,7 @@
 		@include size(100%);
 		@include offset(0, 0);
 		position: absolute;
-		background: rgba($colorWhite, .5);
+		background: rgba($colorWhite, 0.5);
 		z-index: zindex($layout, inlineLoader);
 	}
 

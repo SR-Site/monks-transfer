@@ -10,7 +10,7 @@ export default {
 	props: {
 		icon: VueTypes.string.isRequired,
 		iconPosition: VueTypes.oneOf([Alignment.LEFT, Alignment.RIGHT]),
-		theme: VueTypes.oneOf([Theme.LIGHT, Theme.DARK]).def(Theme.LIGHT)
+		theme: VueTypes.oneOf([Theme.LIGHT, Theme.DARK]).def(Theme.LIGHT),
 	},
 	methods: {
 		handleAllComponentsReady() {

@@ -51,7 +51,6 @@ export default {
 
 				return label.indexOf(query) > -1 || value.indexOf(query) > -1;
 			});
-
 		},
 		paginatedGlossaryItems() {
 			return this.activeGlossaryItems.slice(0, this.activePage * this.itemsPerPage);
@@ -97,8 +96,8 @@ export default {
 		handleFormSubmit() {
 			// Nothing?
 		},
-		notifyAboutResize(){
+		notifyAboutResize() {
 			setTimeout(() => this.$emit('resize'), 1000);
-		}
+		},
 	},
 };

@@ -20,7 +20,5 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	stories: VueTypes.arrayOf(
-		VueTypes.shape(StoryInfoImagesStoryData),
-	),
+	stories: VueTypes.arrayOf(VueTypes.shape(StoryInfoImagesStoryData)),
 };

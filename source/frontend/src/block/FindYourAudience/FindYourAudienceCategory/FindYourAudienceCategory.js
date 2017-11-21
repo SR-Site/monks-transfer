@@ -1,8 +1,8 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import FindYourAudienceCategoryTransitionController from './FindYourAudienceCategoryTransitionController';
 import VueTypes from 'vue-types';
-import FindYourAudienceCategoryData from './FindYourAudienceCategoryData';
 import FindYourAudienceTeaser from '../FindYourAudienceTeaser/FindYourAudienceTeaser';
+import FindYourAudienceCategoryData from './FindYourAudienceCategoryData';
+import FindYourAudienceCategoryTransitionController from './FindYourAudienceCategoryTransitionController';
 
 export default {
 	name: 'FindYourAudienceCategory',

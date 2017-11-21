@@ -12,7 +12,6 @@ class DraggableInstanceEvent extends AbstractEvent {
 	public static DISABLE: string = EVENT_TYPE_PLACEHOLDER;
 	public static ENABLE: string = EVENT_TYPE_PLACEHOLDER;
 
-
 	constructor(
 		type: string,
 		public data?: { progress: number },

@@ -12,16 +12,14 @@ export default {
 		mobileSidePanelOpen: VueTypes.bool.isRequired,
 	},
 	watch: {
-		mobileSidePanelOpen(value) {
+		mobileSidePanelOpen() {
 			setTimeout(() => this.updateScrollBar(), 100);
 		},
 	},
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new MarketListTransitionController(this);
-			this.scrollBar = new Scrollbar(
-				this.$refs.scrollWrapper,
-			);
+			this.scrollBar = new Scrollbar(this.$refs.scrollWrapper);
 
 			this.isReady();
 		},
