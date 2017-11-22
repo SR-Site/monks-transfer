@@ -4,7 +4,7 @@
 <template>
 	<div :class="$style.latest">
 		<div :class="$style.siteFrame" class="site-frame">
-			<div class="overrule-overlap">
+			<div class="overrule-overlap is-solid">
 				<header :class="$style.header" ref="heading">
 					<h2 :class="$style.heading" class="heading heading-03" v-html="data.heading"></h2>
 					<ButtonQuaternary
