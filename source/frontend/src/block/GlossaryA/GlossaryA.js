@@ -73,7 +73,7 @@ export default {
 			});
 		},
 		getYPosition(element) {
-			const offset = window.innerHeight * 0.25;
+			const offset = window.innerHeight * 0.5;
 			const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
 			return elementPosition + offset;
 		},
