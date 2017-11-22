@@ -36,7 +36,7 @@ class SiteMenuTransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.8',
+			'-=0.8',
 		);
 	}
 

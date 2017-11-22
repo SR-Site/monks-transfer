@@ -40,7 +40,7 @@ class FindYourAudienceTeaserTransitionController extends AbstractTransitionContr
 				ease: Cubic.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.8',
+			'-=0.8',
 		);
 
 		this.transitionInTimeline.fromTo(
@@ -56,7 +56,7 @@ class FindYourAudienceTeaserTransitionController extends AbstractTransitionContr
 				ease: Cubic.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.8',
+			'-=0.8',
 		);
 
 		this.transitionInTimeline.fromTo(
@@ -72,7 +72,7 @@ class FindYourAudienceTeaserTransitionController extends AbstractTransitionContr
 				ease: Cubic.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.8',
+			'-=0.8',
 		);
 
 		this.transitionInTimeline.fromTo(
@@ -88,7 +88,7 @@ class FindYourAudienceTeaserTransitionController extends AbstractTransitionContr
 				ease: Cubic.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.8',
+			'-=0.8',
 		);
 	}
 

@@ -33,7 +33,7 @@ class QuoteTransitionController extends AbstractTransitionController {
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6',
+			'-=0.6',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.position,
@@ -47,7 +47,7 @@ class QuoteTransitionController extends AbstractTransitionController {
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6',
+			'-=0.6',
 		);
 	}
 

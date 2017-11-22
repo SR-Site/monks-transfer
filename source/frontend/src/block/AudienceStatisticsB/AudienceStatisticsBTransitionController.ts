@@ -33,7 +33,7 @@ class AudienceStatisticsBTransitionController extends AbstractTransitionControll
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.statistics,
@@ -48,7 +48,7 @@ class AudienceStatisticsBTransitionController extends AbstractTransitionControll
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.copy,
@@ -63,7 +63,7 @@ class AudienceStatisticsBTransitionController extends AbstractTransitionControll
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.add(this.getSubTimeline('ButtonCircleArrow'));
 	}

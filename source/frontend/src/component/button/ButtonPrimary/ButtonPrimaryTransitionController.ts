@@ -125,7 +125,7 @@ class ButtonPrimaryTransitionController extends AbstractTransitionController {
 				strokeDashoffset: buttonPrimaryComponent.fullPath / 2 + buttonPrimaryComponent.height / 2,
 				ease: Power3.easeInOut,
 			},
-			'=-0.2',
+			'-=0.2',
 		);
 	}
 

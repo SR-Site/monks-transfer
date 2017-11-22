@@ -32,7 +32,7 @@ class SuccessStoryImpactTransitionController extends AbstractTransitionControlle
 					y: 0,
 					ease: Expo.easeOut,
 				},
-				'=-0.6',
+				'-=0.6',
 			);
 		});
 	}

@@ -43,7 +43,7 @@ class ImageWithContentBTransitionController extends AbstractTransitionController
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.5',
+			'-=0.5',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.copy,
@@ -57,10 +57,10 @@ class ImageWithContentBTransitionController extends AbstractTransitionController
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.5',
+			'-=0.5',
 		);
 		if (this.viewModel.hasChild('ButtonPrimary')) {
-			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '=-0.5');
+			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '-=0.5');
 		}
 	}
 

@@ -34,7 +34,7 @@ class GlossaryBannerTransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.6',
+			'-=0.6',
 		);
 
 		this.transitionInTimeline.fromTo(
@@ -50,7 +50,7 @@ class GlossaryBannerTransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.6',
+			'-=0.6',
 		);
 
 		if (this.viewModel.hasChild('ButtonPrimary')) {

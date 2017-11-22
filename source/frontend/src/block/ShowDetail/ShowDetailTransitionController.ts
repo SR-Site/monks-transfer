@@ -33,7 +33,7 @@ class ShowDetailTransitionController extends AbstractTransitionController {
 				clearProps: 'all',
 				ease: Expo.easeOut,
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.copy,
@@ -48,7 +48,7 @@ class ShowDetailTransitionController extends AbstractTransitionController {
 				clearProps: 'all',
 				ease: Expo.easeOut,
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.network,
@@ -63,7 +63,7 @@ class ShowDetailTransitionController extends AbstractTransitionController {
 				clearProps: 'all',
 				ease: Expo.easeOut,
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.airTime,
@@ -78,7 +78,7 @@ class ShowDetailTransitionController extends AbstractTransitionController {
 				clearProps: 'all',
 				ease: Expo.easeOut,
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.ageRestriction,
@@ -93,7 +93,7 @@ class ShowDetailTransitionController extends AbstractTransitionController {
 				clearProps: 'all',
 				ease: Expo.easeOut,
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 	}
 

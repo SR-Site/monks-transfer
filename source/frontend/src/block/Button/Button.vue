@@ -7,6 +7,8 @@
 			<div class="overrule-overlap">
 				<ButtonPrimary
 					componentId="ButtonPrimary"
+					class="button-primary"
+					ref="button"
 					v-track="{
 						[TrackingProvider.GOOGLE_ANALYTICS]: {
 							category: 'button',

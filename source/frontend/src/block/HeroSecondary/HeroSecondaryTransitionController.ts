@@ -38,7 +38,7 @@ class HeroSecondaryTransitionController extends AbstractTransitionController {
 					y: 0,
 					autoAlpha: 1,
 				},
-				'=-0.4',
+				'-=0.4',
 			);
 		}
 
@@ -54,7 +54,7 @@ class HeroSecondaryTransitionController extends AbstractTransitionController {
 				y: 0,
 				autoAlpha: 1,
 			},
-			'=-0.4',
+			'-=0.4',
 		);
 
 		if (this.viewModel.$refs.copy) {
@@ -70,12 +70,12 @@ class HeroSecondaryTransitionController extends AbstractTransitionController {
 					y: 0,
 					autoAlpha: 1,
 				},
-				'=-0.4',
+				'-=0.4',
 			);
 		}
 
 		if (this.viewModel.hasChild('ButtonCircleArrow')) {
-			this.transitionInTimeline.add(this.getSubTimeline('ButtonCircleArrow'), '=-0.4');
+			this.transitionInTimeline.add(this.getSubTimeline('ButtonCircleArrow'), '-=0.4');
 		}
 	}
 

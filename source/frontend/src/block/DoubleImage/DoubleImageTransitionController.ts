@@ -33,7 +33,7 @@ class DoubleImageTransitionController extends AbstractTransitionController {
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.8',
+			'-=0.8',
 		);
 	}
 

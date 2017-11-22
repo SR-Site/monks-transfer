@@ -25,7 +25,7 @@ class AudioPlayerTransitionController extends AbstractTransitionController {
 				clearProps: 'clip',
 				ease: Expo.easeOut,
 			},
-			'=-0.2',
+			'-=0.2',
 		);
 	}
 

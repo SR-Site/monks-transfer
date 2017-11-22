@@ -33,7 +33,7 @@ class DownloadFileATransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.5',
+			'-=0.5',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.fileDescription,
@@ -47,7 +47,7 @@ class DownloadFileATransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.5',
+			'-=0.5',
 		);
 		this.transitionInTimeline.fromTo(
 			(<any>this.viewModel.$refs.button).$el,
@@ -61,7 +61,7 @@ class DownloadFileATransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.5',
+			'-=0.5',
 		);
 	}
 

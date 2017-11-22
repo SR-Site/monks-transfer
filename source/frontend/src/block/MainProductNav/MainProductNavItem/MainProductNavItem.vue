@@ -14,6 +14,7 @@
 					<p class="copy copy-03" v-html="data.paragraph" ref="copy" :class="$style.copy"></p>
 					<ButtonQuaternary
 						componentId="ButtonQuaternary"
+						ref="button"
 						:title="data.link.title"
 						:label="data.link.label"
 						:type="ButtonType.LINK"

@@ -31,9 +31,9 @@ class VideoWithContentCTransitionController extends AbstractTransitionController
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6',
+			'-=0.6',
 		);
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonCirclePlay'), '=-0.6');
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonCirclePlay'), '-=0.6');
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.heading,
 			0.8,
@@ -46,7 +46,7 @@ class VideoWithContentCTransitionController extends AbstractTransitionController
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6',
+			'-=0.6',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.copy,
@@ -60,9 +60,9 @@ class VideoWithContentCTransitionController extends AbstractTransitionController
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6',
+			'-=0.6',
 		);
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '=-0.6');
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '-=0.6');
 	}
 
 	/**

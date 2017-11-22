@@ -19,7 +19,7 @@ class LargeVideoTransitionController extends AbstractTransitionController {
 				ease: Linear.easeNone,
 			},
 		);
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonCirclePlay'), '=-0.7');
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonCirclePlay'), '-=0.7');
 	}
 
 	/**
