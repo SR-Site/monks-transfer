@@ -50,7 +50,7 @@ class MainProductNavItemTransitionController extends AbstractTransitionControlle
 			'-=0.7',
 		);
 
-		this.transitionInTimeline.add(() => this.getSubTimeline('ButtonQuaternary'), 0.6);
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonQuaternary'), '-=0.6');
 	}
 
 	/**

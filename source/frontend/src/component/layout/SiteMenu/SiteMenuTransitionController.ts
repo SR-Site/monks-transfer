@@ -22,6 +22,7 @@ class SiteMenuTransitionController extends AbstractTransitionController {
 				yPercent: 0,
 				rotation: 0,
 				ease: Power3.easeOut,
+				clearProps: 'all',
 			},
 		);
 		this.transitionInTimeline.fromTo(
@@ -35,6 +36,7 @@ class SiteMenuTransitionController extends AbstractTransitionController {
 				xPercent: 0,
 				autoAlpha: 1,
 				ease: Expo.easeOut,
+				clearProps: 'all',
 			},
 			'-=0.8',
 		);

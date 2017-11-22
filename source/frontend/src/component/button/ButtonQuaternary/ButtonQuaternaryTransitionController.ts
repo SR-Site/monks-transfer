@@ -8,18 +8,18 @@ class ButtonQuaternaryTransitionController extends AbstractTransitionController 
 	 * @description Use this method to setup your transition in timeline
 	 * */
 	protected setupTransitionInTimeline(): void {
-		// this.transitionInTimeline.fromTo(
-		// 	this.viewModel.$el,
-		// 	0.2,
-		// 	{
-		// 		autoAlpha: 0,
-		// 	},
-		// 	{
-		// 		autoAlpha: 1,
-		// 		clearProps: 'all',
-		// 		ease: Linear.easeNone,
-		// 	},
-		// );
+		this.transitionInTimeline.fromTo(
+			this.viewModel.$el,
+			0.2,
+			{
+				autoAlpha: 0,
+			},
+			{
+				autoAlpha: 1,
+				clearProps: 'all',
+				ease: Linear.easeNone,
+			},
+		);
 	}
 
 	/**
