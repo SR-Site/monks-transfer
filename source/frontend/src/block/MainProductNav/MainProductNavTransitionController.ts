@@ -23,7 +23,7 @@ class MainProductNavTransitionController extends AbstractTransitionController {
 		);
 
 		(<Array<IAbstractRegistrableComponent>>this.viewModel.$refs.item).forEach((item, index) => {
-			const componentId = `MainProductNavItem${index}`
+			const componentId = `MainProductNavItem${index}`;
 			const duration = this.getSubTimelineDuration(componentId);
 			const offset = index > 0 ? duration * 0.75 : 0.2;
 			this.transitionInTimeline.add(this.getSubTimeline(componentId), `-=${offset}`);
