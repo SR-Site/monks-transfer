@@ -14,6 +14,9 @@ export default {
 		data: VueTypes.shape(FindYourAudienceCategoryData).isRequired,
 	},
 	methods: {
+		handleBackToTop() {
+			this.$emit('backToTop');
+		},
 		handleAllComponentsReady() {
 			this.transitionController = new FindYourAudienceCategoryTransitionController(this);
 			this.isReady();

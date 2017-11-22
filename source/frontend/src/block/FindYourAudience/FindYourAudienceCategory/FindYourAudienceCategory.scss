@@ -34,6 +34,14 @@
 		}
 	}
 
+	.call-to-actions {
+		display: none;
+		justify-content: center;
+		border-bottom: 1px solid $colorLightGrey;
+		padding-bottom: $sizeGridMobile;
+		margin-top: $sizeGridMobile;
+	}
+
 	@include respond-to(SMALL) {
 		.header {
 			padding: 0 $sizeGridMobile * 2;
@@ -54,6 +62,10 @@
 					display: none;
 				}
 			}
+		}
+
+		.call-to-actions {
+			display: flex;
 		}
 	}
 }

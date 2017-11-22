@@ -5,6 +5,7 @@
 		white-space: nowrap;
 		justify-content: center;
 	}
+
 	.alignment-left {
 		.label {
 			order: 1;
@@ -38,9 +39,49 @@
 		}
 	}
 
-	.icon {
-		@include size(50px); // Design wants it to be fixed 50px
+	.theme-light {
+		.icon {
+			circle {
+				stroke: $colorWhite;
+			}
+		}
 
+		.label {
+			color: $colorWhite;
+		}
+	}
+
+	.theme-dark {
+		.icon {
+			circle {
+				stroke: $colorPrimary;
+			}
+		}
+
+		.label {
+			color: $colorPrimary;
+		}
+	}
+
+	.small {
+		.icon {
+			@include size(25px);
+		}
+	}
+
+	.medium {
+		.icon {
+			@include size(50px); // Design wants it to be fixed 50px
+		}
+	}
+
+	.large {
+		.icon {
+			@include size(75px);
+		}
+	}
+
+	.icon {
 		svg {
 			backface-visibility: hidden;
 
@@ -50,7 +91,6 @@
 
 			circle {
 				fill: transparent;
-				stroke: $colorWhite;
 				stroke-width: 1px;
 				opacity: 0.5;
 				transition: stroke 0.2s $easeInOut, stroke-width 0.2s $easeInOut, opacity 0.2s $easeInOut;
@@ -61,7 +101,6 @@
 	.label {
 		font: 800 1.2rem / 1 $fontOpenSans;
 		text-transform: uppercase;
-		color: $colorWhite;
 		align-self: center;
 	}
 

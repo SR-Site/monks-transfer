@@ -16,5 +16,19 @@
 				:data="item"
 				:componentId="`FindYourAudienceTeaser${index}`"/>
 		</div>
+		<div :class="$style.callToActions">
+			<ButtonCircleArrow
+				@click="handleBackToTop"
+				componentId="ButtonCircleArrow"
+				:direction="Direction.UP"
+				:arrowPosition="Alignment.LEFT"
+				:size="Size.SMALL"
+				:theme="Theme.DARK"
+				:title="$t('global.cta.back_to_top')"
+				:label="$t('global.cta.back_to_top')"
+				:type="ButtonType.ACTION"
+				:class="$style.button"
+				ref="buttonLink"/>
+		</div>
 	</div>
 </template>

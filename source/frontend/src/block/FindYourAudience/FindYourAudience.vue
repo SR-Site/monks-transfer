@@ -45,11 +45,26 @@
 					</ul>
 				</div>
 				<div :class="$style.items">
-					<FindYourAudienceCategory componentId="TopPicks" :data="data.topPicks"/>
-					<FindYourAudienceCategory componentId="Series" :data="data.series"/>
-					<FindYourAudienceCategory componentId="AwardsAndSpecials" :data="data.awardsAndSpecials"/>
-					<FindYourAudienceCategory componentId="Sports" :data="data.sports"/>
-					<FindYourAudienceCategory componentId="Networks" :data="data.networks"/>
+					<FindYourAudienceCategory
+						@backToTop="handleBackToTop"
+						componentId="TopPicks"
+						:data="data.topPicks"/>
+					<FindYourAudienceCategory
+						@backToTop="handleBackToTop"
+						componentId="Series"
+						:data="data.series"/>
+					<FindYourAudienceCategory
+						@backToTop="handleBackToTop"
+						componentId="AwardsAndSpecials"
+						:data="data.awardsAndSpecials"/>
+					<FindYourAudienceCategory
+						@backToTop="handleBackToTop"
+						componentId="Sports"
+						:data="data.sports"/>
+					<FindYourAudienceCategory
+						@backToTop="handleBackToTop"
+						componentId="Networks"
+						:data="data.networks"/>
 				</div>
 			</div>
 		</div>
