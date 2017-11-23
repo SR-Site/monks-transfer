@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.block_map_tertiary
     - paragraphs.paragraphs_type.block_product_list
     - paragraphs.paragraphs_type.block_video_with_call_to_actions
+    - paragraphs.paragraphs_type.block_video_with_content_b
     - paragraphs.paragraphs_type.blockarticleteaser
     - paragraphs.paragraphs_type.blockaudiofragment
     - paragraphs.paragraphs_type.blockblogpost
@@ -89,6 +90,7 @@ settings:
       blockpersonaselector: blockpersonaselector
       block_main_product_nav: block_main_product_nav
       block_product_list: block_product_list
+      block_video_with_content_b: block_video_with_content_b
     target_bundles_drag_drop:
       blockhowtoadvertise:
         enabled: true
@@ -343,8 +345,8 @@ settings:
         weight: 131
         enabled: false
       block_video_with_content_b:
+        enabled: true
         weight: 133
-        enabled: false
       block_video_with_content_c:
         weight: 134
         enabled: false
