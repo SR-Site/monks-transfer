@@ -2,9 +2,10 @@
 <script src="./FilterContent.js"></script>
 
 <template>
-	<div :class="$style.filterContent">
+	<div :class="[$style.filterContent, {[$style.hasFilters]: data.filters}]">
 		<div class="site-frame">
 			<FilterContentMenu
+				v-if="data.filters"
 				componentId="FilterContentMenu"
 				@update="handleFilterMenuUpdate"
 				ref="filterContentMenu"
@@ -31,7 +32,7 @@
 				@paginatorClick="handlePaginatorClick"
 				:activeIndex="index"
 				:orientation="Orientation.HORIZONTAL"
-				:items="paginatorItems" />
+				:items="paginatorItems"/>
 			<Spinner componentId="Spinner"/>
 		</div>
 	</div>

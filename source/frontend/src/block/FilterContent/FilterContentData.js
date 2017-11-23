@@ -20,5 +20,5 @@ export default {
 	closeLabel: VueTypes.string.isRequired,
 	filterLabel: VueTypes.string.isRequired,
 	endpoint: VueTypes.string.isRequired,
-	filters: VueTypes.arrayOf(VueTypes.shape(PropFilter).isRequired).isRequired,
+	filters: VueTypes.arrayOf(VueTypes.shape(PropFilter).isRequired),
 };
