@@ -8,13 +8,15 @@
 			<p class="copy copy-01" v-html="data.paragraph" ref="copy" :class="$style.copy"></p>
 		</header>
 		<div :class="$style.items">
-			<FindYourAudienceTeaser
+			<AudienceTeaser
 				v-for="(item, index) in data.items"
-				ref="item"
+				@isReady="handleComponentReady"
+				ref="audience"
+				:debugLabel="$config.getVariable(VariableNames.DEBUG_LABEL_ENABLED)"
 				:class="$style.item"
 				:key="index"
-				:data="item"
-				:componentId="`FindYourAudienceTeaser${index}`"/>
+				:data="getAudienceData(item)"
+				:componentId="`AudienceTeaser.${index}`" />
 		</div>
 		<div :class="$style.callToActions">
 			<ButtonCircleArrow

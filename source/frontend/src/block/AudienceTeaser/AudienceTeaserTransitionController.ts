@@ -1,7 +1,8 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 import { Cubic } from 'gsap';
 
-class FindYourAudienceTeaserTransitionController extends AbstractTransitionController {
+class AudienceTeaserTransitionController extends AbstractTransitionController
+{
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
@@ -93,11 +94,12 @@ class FindYourAudienceTeaserTransitionController extends AbstractTransitionContr
 	}
 
 	/**
-	 * @public
-	 * @method setupTransitionOutTimeline
-	 * @description Use this method to setup your transition out timeline
-	 * */
-	protected setupTransitionOutTimeline(): void {}
+	* @public
+	* @method setupTransitionOutTimeline
+	* @description Use this method to setup your transition out timeline
+	* */
+	protected setupTransitionOutTimeline(): void {
+	}
 }
 
-export default FindYourAudienceTeaserTransitionController;
+export default AudienceTeaserTransitionController;

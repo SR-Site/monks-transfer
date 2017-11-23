@@ -1,0 +1,116 @@
+{
+  "statusCode": 200,
+  "data": {
+	"blocks": [
+	  {
+		"id": "audienceTeaser",
+		"data": {
+		  "marginTop": 0,
+		  "windowed": false,
+		  "overlap": false,
+		  "target": "/featured-programs/networks/dummy-network",
+		  "image": {
+			"normal": "http://via.placeholder.com/1280x720",
+			"small": "http://via.placeholder.com/1280x720",
+			"alt": "Background image alt text"
+		  },
+		  "video": {
+			"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+			"type": 0
+		  },
+		  "heading": "Wahlburgers",
+		  "subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+		  "paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+		  "reaches": [
+			"Millenials",
+			"Adults 25-54",
+			"teens"
+		  ]
+		}
+	  },
+	  {
+		"id": "audienceTeaser",
+		"data": {
+		  "marginTop": 0,
+		  "windowed": false,
+		  "overlap": false,
+		  "target": "/featured-programs/networks/dummy-network",
+		  "image": {
+			"normal": "http://via.placeholder.com/1280x720",
+			"small": "http://via.placeholder.com/1280x720",
+			"alt": "Background image alt text"
+		  },
+		  "video": {
+			"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+			"type": 0
+		  },
+		  "heading": "Wahlburgers",
+		  "subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+		  "paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+		  "reaches": [
+			"Millenials",
+			"Adults 25-54",
+			"teens"
+		  ]
+		}
+	  },
+	  {
+		"id": "audienceTeaser",
+		"data": {
+		  "marginTop": 0,
+		  "windowed": false,
+		  "overlap": false,
+		  "target": "/featured-programs/networks/dummy-network",
+		  "image": {
+			"normal": "http://via.placeholder.com/1280x720",
+			"small": "http://via.placeholder.com/1280x720",
+			"alt": "Background image alt text"
+		  },
+		  "video": {
+			"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+			"type": 0
+		  },
+		  "heading": "Wahlburgers",
+		  "subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+		  "paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+		  "reaches": [
+			"Millenials",
+			"Adults 25-54",
+			"teens"
+		  ]
+		}
+	  },
+	  {
+		"id": "audienceTeaser",
+		"data": {
+		  "marginTop": 0,
+		  "windowed": false,
+		  "overlap": false,
+		  "target": "/featured-programs/networks/dummy-network",
+		  "image": {
+			"normal": "http://via.placeholder.com/1280x720",
+			"small": "http://via.placeholder.com/1280x720",
+			"alt": "Background image alt text"
+		  },
+		  "video": {
+			"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+			"type": 0
+		  },
+		  "heading": "Wahlburgers",
+		  "subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
+		  "paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+		  "reaches": [
+			"Millenials",
+			"Adults 25-54",
+			"teens"
+		  ]
+		}
+	  }
+	]
+  },
+  "pagination": {
+	"offset": 0,
+	"limit": 4,
+	"total": 33
+  }
+}

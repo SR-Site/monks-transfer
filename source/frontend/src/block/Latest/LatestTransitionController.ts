@@ -28,8 +28,8 @@ class LatestTransitionController extends AbstractTransitionController {
 
 		if (articles) {
 			articles.forEach((article, index) => {
-				const duration = this.getSubTimelineDuration(`ArticleTeaser${index}`);
-				this.transitionInTimeline.add(this.getSubTimeline(`ArticleTeaser${index}`), `-=${duration * 0.75}`);
+				const duration = this.getSubTimelineDuration(`ArticleTeaser.${index}`);
+				this.transitionInTimeline.add(this.getSubTimeline(`ArticleTeaser.${index}`), `-=${duration * 0.75}`);
 			});
 		}
 

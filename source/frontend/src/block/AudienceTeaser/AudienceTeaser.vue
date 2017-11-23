@@ -1,8 +1,8 @@
-<style src="./FindYourAudienceTeaser.scss" module lang="scss"></style>
-<script src="./FindYourAudienceTeaser.js"></script>
+<style src="./AudienceTeaser.scss" module lang="scss"></style>
+<script src="./AudienceTeaser.js"></script>
 
 <template>
-	<article :class="$style.findYourAudienceTeaser">
+	<article :class="$style.audienceTeaser">
 		<div :class="$style.content">
 			<figure :class="$style.image" ref="image">
 				<ResponsiveImage :image="data.image" class="abs-fill fit-cover"/>

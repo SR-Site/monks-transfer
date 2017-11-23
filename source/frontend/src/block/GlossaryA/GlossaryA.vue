@@ -16,25 +16,27 @@
 						:data="item"
 					/>
 				</div>
-				<ButtonPrimary
-					componentId="ButtonPrimary"
-					v-track="{
-						[TrackingProvider.GOOGLE_ANALYTICS]: {
-							category: 'button',
-							action: 'click',
-							label: data.link.title
-						}
-					}"
-					:class="$style.button"
-					:title="data.link.title"
-					:label="data.link.label"
-					:type="ButtonType.LINK"
-					:solid="true"
-					:theme="Theme.LIGHT"
-					:link="{
-						type: BackendLinkTypeMap[data.link.type],
-						target: data.link.target,
-					}"  />
+				<div :class="$style.callToActions">
+					<ButtonPrimary
+						componentId="ButtonPrimary"
+						v-track="{
+							[TrackingProvider.GOOGLE_ANALYTICS]: {
+								category: 'button',
+								action: 'click',
+								label: data.link.title
+							}
+						}"
+						:class="$style.button"
+						:title="data.link.title"
+						:label="data.link.label"
+						:type="ButtonType.LINK"
+						:solid="true"
+						:theme="Theme.LIGHT"
+						:link="{
+							type: BackendLinkTypeMap[data.link.type],
+							target: data.link.target,
+						}"  />
+				</div>
 			</div>
 		</div>
 	</div>

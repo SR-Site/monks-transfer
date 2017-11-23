@@ -1,5 +1,5 @@
 import VueTypes from 'vue-types';
-import FindYourAudienceTeaserData from '../FindYourAudienceTeaser/FindYourAudienceTeaserData';
+import PropAudienceTeaser from '../../../data/prop-type/article/PropAudienceTeaser';
 
 /**
  * @param {description} heading The heading of the category
@@ -9,5 +9,5 @@ import FindYourAudienceTeaserData from '../FindYourAudienceTeaser/FindYourAudien
 export default {
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
-	items: VueTypes.arrayOf(VueTypes.shape(FindYourAudienceTeaserData)).isRequired,
+	items: VueTypes.arrayOf(VueTypes.shape(PropAudienceTeaser)).isRequired,
 };

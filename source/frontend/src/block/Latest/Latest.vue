@@ -30,7 +30,7 @@
 					<div :class="$style.latestArticles" ref="draggableElement" class="js-draggable-element">
 						<ArticleTeaser
 							v-for="(article, index) in data.articles"
-							:componentId="`ArticleTeaser${index}`"
+							:componentId="`ArticleTeaser.${index}`"
 							:debugLabel="$config.getVariable(VariableNames.DEBUG_LABEL_ENABLED)"
 							:key="index"
 							:data="getArticleData(article)"

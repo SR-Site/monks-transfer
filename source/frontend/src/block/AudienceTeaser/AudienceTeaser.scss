@@ -1,7 +1,8 @@
 :local {
-	.find-your-audience-teaser {
+	.audience-teaser {
 		display: inline-block;
 		padding-bottom: $sizeGrid * 2;
+		position: relative;
 	}
 
 	.content {
@@ -71,6 +72,18 @@
 	}
 }
 
+:global .added-padding {
+	:local {
+		.description {
+			padding: $sizeGrid $sizeGrid 0 $sizeGrid;
+		}
+
+		.bottom {
+			margin-top: $sizeGrid;
+		}
+	}
+}
+
 @include hover('.top') {
 	color: $colorSecondary;
 
@@ -78,3 +91,4 @@
 		color: $colorSecondary;
 	}
 }
+
