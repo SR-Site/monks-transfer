@@ -21,7 +21,7 @@ class FindYourAudienceCategoryTransitionController extends AbstractTransitionCon
 			},
 		);
 
-		if(this.viewModel.hasChild('ButtonQuaternary')) {
+		if (this.viewModel.hasChild('ButtonQuaternary')) {
 			this.transitionInTimeline.add(this.getSubTimeline(`ButtonQuaternary`), '-=0.5');
 		}
 

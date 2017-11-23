@@ -1,5 +1,6 @@
 import VueTypes from 'vue-types';
 import { AbstractButtonComponent } from 'vue-block-system';
+import Theme from 'data/enum/Theme';
 import ButtonSecondaryTransitionController from './ButtonSecondaryTransitionController';
 import base from './elementProps/base';
 import label from './elementProps/label';
@@ -8,7 +9,7 @@ export default {
 	name: 'ButtonSecondary',
 	extends: AbstractButtonComponent,
 	props: {
-		theme: VueTypes.number.isRequired,
+		theme: VueTypes.number.def(Theme.DARK),
 	},
 	render(createElement) {
 		const tag = this.type === this.ButtonType.LINK ? 'a' : 'button';
