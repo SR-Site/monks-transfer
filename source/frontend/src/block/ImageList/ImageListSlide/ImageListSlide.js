@@ -1,7 +1,7 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import ImageListSlideTransitionController from './ImageListSlideTransitionController';
-import ImageListSlideData from './ImageListSlideData';
 import VueTypes from 'vue-types';
+import ImageListSlideData from './ImageListSlideData';
+import ImageListSlideTransitionController from './ImageListSlideTransitionController';
 
 export default {
 	name: 'ImageListSlide',

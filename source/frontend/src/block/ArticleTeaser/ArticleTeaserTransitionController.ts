@@ -83,10 +83,7 @@ class ArticleTeaserTransitionController extends AbstractTransitionController {
 			0.2,
 		);
 
-		this.transitionInTimeline.add(
-			this.getSubTimeline('ButtonQuaternary'),
-			0.2,
-		);
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonQuaternary'), 0.2);
 	}
 
 	/**

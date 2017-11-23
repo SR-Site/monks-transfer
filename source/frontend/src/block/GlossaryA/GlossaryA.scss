@@ -2,11 +2,6 @@
 	.glossary-a {
 		background: $colorLightGrey;
 		padding: $sizeGrid * 2 0;
-
-		.button {
-			display: block;
-			margin: $sizeGrid auto 0;
-		}
 	}
 
 	.heading {
@@ -15,6 +10,12 @@
 
 	.copy {
 		margin-bottom: $sizeGrid;
+	}
+
+	.call-to-actions {
+		margin-top: $sizeGrid;
+		display: block;
+		text-align: center;
 	}
 
 	.items {

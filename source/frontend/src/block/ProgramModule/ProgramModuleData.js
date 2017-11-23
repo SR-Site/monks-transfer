@@ -18,7 +18,5 @@ export default {
 	scrollId: VueTypes.string,
 	heading: VueTypes.string,
 	paragraph: VueTypes.string,
-	items: VueTypes.arrayOf(
-		VueTypes.shape(ProgramTeaserData),
-	).isRequired,
+	items: VueTypes.arrayOf(VueTypes.shape(ProgramTeaserData)).isRequired,
 };

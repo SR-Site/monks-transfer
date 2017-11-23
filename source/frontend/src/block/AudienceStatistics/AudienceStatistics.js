@@ -13,7 +13,7 @@ export default {
 		};
 	},
 	components: {
-		AudienceStatisticTeaser
+		AudienceStatisticTeaser,
 	},
 	props: {
 		data: VueTypes.shape(AudienceStatisticsData).isRequired,

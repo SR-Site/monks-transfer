@@ -22,12 +22,10 @@ export default {
 		handleAllComponentsReady() {
 			this.transitionController = new ImageCarouselTransitionController(this);
 			this.isReady();
-			this.carousel = new InfiniteCarousel(
-				{
-					sliderWrapper: this.$refs.slides,
-					slides: this.$refs.slide,
-				},
-			);
+			this.carousel = new InfiniteCarousel({
+				sliderWrapper: this.$refs.slides,
+				slides: this.$refs.slide,
+			});
 			this.carouselEventListener = new NativeEventListener(this.carousel, CarouselEvent.CHANGE, event => {
 				this.activeIndex = event.data.index;
 			});

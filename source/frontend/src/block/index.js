@@ -7,6 +7,7 @@ export default {
 	AudienceStatistics: () => import('./AudienceStatistics'),
 	AudienceStatisticsB: () => import('./AudienceStatisticsB'),
 	AudienceTopProgramming: () => import('./AudienceTopProgramming'),
+	AudienceTeaser: () => import('./AudienceTeaser'),
 	AudioFragment: () => import('./AudioFragment'),
 	BlogPost: () => import('./BlogPost'),
 	BlogPostB: () => import('./BlogPostB'),

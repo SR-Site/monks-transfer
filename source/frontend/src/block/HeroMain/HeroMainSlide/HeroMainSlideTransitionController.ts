@@ -51,7 +51,7 @@ class HeroMainSlideTransitionController extends AbstractTransitionController {
 					clearProps: 'all',
 					ease: Quad.easeOut,
 				},
-				'=-0.5',
+				'-=0.5',
 			);
 		}
 
@@ -69,7 +69,7 @@ class HeroMainSlideTransitionController extends AbstractTransitionController {
 					clearProps: 'all',
 					ease: Quad.easeOut,
 				},
-				'=-0.5',
+				'-=0.5',
 			);
 		}
 
@@ -87,7 +87,7 @@ class HeroMainSlideTransitionController extends AbstractTransitionController {
 					clearProps: 'all',
 					ease: Quad.easeOut,
 				},
-				'=-0.5',
+				'-=0.5',
 			);
 		}
 
@@ -104,7 +104,7 @@ class HeroMainSlideTransitionController extends AbstractTransitionController {
 					autoAlpha: 1,
 					ease: Quad.easeOut,
 				},
-				'=-0.5',
+				'-=0.5',
 			);
 		}
 
@@ -122,7 +122,7 @@ class HeroMainSlideTransitionController extends AbstractTransitionController {
 						autoAlpha: 1,
 						ease: Quad.easeOut,
 					},
-					'=-0.5',
+					'-=0.5',
 				);
 			});
 		}

@@ -2,7 +2,7 @@
 	.button-circle-close {
 		@include size($sizeGrid);
 		border-radius: 100%;
-		border: 1px solid rgba($colorPrimary, .3);
+		border: 1px solid rgba($colorPrimary, 0.3);
 		transition: background-color 250ms $easeLinear;
 
 		.icon {

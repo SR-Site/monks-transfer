@@ -1,7 +1,7 @@
 import sengEvent from 'seng-event';
 import { Linear, Expo, TweenLite } from 'gsap';
 import Draggable from 'gsap/Draggable';
-import debounce from 'lodash/debounce'
+import debounce from 'lodash/debounce';
 import NativeEventListener from 'util/event/NativeEventListener';
 import bowser from 'bowser';
 import DraggableInstanceEvent from 'util/draggableInstance/DraggableInstanceEvent';
@@ -48,23 +48,20 @@ class DraggableInstance extends sengEvent {
 
 		this._options = Object.assign(this._options, options);
 
-		this._disposables.add(new NativeEventListener(
-			window,
-			'resize',
-			debounce(this.handleResize.bind(this), 100, this),
-		));
-		this._disposables.add(new NativeEventListener(
-			window,
-			'orientationchange',
-			debounce(this.handleResize.bind(this), 100, this),
-		));
+		this._disposables.add(
+			new NativeEventListener(window, 'resize', debounce(this.handleResize.bind(this), 100, this)),
+		);
+		this._disposables.add(
+			new NativeEventListener(window, 'orientationchange', debounce(this.handleResize.bind(this), 100, this)),
+		);
 
 		this._draggableContainer = draggableContainer;
-		this._draggableElement = <HTMLElement>draggableContainer.querySelector('.' + DraggableInstance._DRAGGABLE_ELEMENT_CLASS);
+		this._draggableElement = <HTMLElement>draggableContainer.querySelector(
+			'.' + DraggableInstance._DRAGGABLE_ELEMENT_CLASS,
+		);
 
 		if (bowser.mac && this._options.enableTrackPad) {
 			this._draggableContainer.addEventListener('wheel', this.onScrollContainerWheel.bind(this));
-
 		}
 
 		this.createDraggableInstance();
@@ -89,11 +86,10 @@ class DraggableInstance extends sengEvent {
 		this._draggableInstance.enabled(allow);
 
 		if (allow) {
-			this.dispatchEvent(new DraggableInstanceEvent(DraggableInstanceEvent.ENABLE))
+			this.dispatchEvent(new DraggableInstanceEvent(DraggableInstanceEvent.ENABLE));
 			this._draggableContainer.classList.remove(DraggableInstance._DRAGGABLE_DISABLED_CLASS);
-		}
-		else {
-			this.dispatchEvent(new DraggableInstanceEvent(DraggableInstanceEvent.DISABLE))
+		} else {
+			this.dispatchEvent(new DraggableInstanceEvent(DraggableInstanceEvent.DISABLE));
 			this._draggableContainer.classList.add(DraggableInstance._DRAGGABLE_DISABLED_CLASS);
 		}
 	}
@@ -165,42 +161,32 @@ class DraggableInstance extends sengEvent {
 	 * @param ease
 	 */
 	public animateProgress(progress: number, duration: number = 1, ease: any = Linear.easeNone): void {
-		TweenLite.to(
-			this._draggableElement,
-			duration,
-			{
-				x: this.maxX * progress,
-				ease: ease,
-				onStart: () => this.handleDragStart(),
-				onUpdate: () => {
-					// keep track of the progress
-					this._progress = Math.min(1, Math.max(0, this._draggableInstance.x / this.maxX));
+		TweenLite.to(this._draggableElement, duration, {
+			x: this.maxX * progress,
+			ease: ease,
+			onStart: () => this.handleDragStart(),
+			onUpdate: () => {
+				// keep track of the progress
+				this._progress = Math.min(1, Math.max(0, this._draggableInstance.x / this.maxX));
 
-					// Update the instance
-					this._draggableInstance.update();
+				// Update the instance
+				this._draggableInstance.update();
 
-					// Notify the parents
-					this.dispatchEvent(
-						new DraggableInstanceEvent(
-							DraggableInstanceEvent.UPDATE,
-							{
-								progress: this._progress,
-							},
-						),
-					);
-				},
-				onComplete: () => {
-					this.dispatchEvent(
-						new DraggableInstanceEvent(
-							DraggableInstanceEvent.COMPLETE,
-							{
-								progress: this._progress,
-							},
-						),
-					);
-				},
+				// Notify the parents
+				this.dispatchEvent(
+					new DraggableInstanceEvent(DraggableInstanceEvent.UPDATE, {
+						progress: this._progress,
+					}),
+				);
 			},
-		);
+			onComplete: () => {
+				this.dispatchEvent(
+					new DraggableInstanceEvent(DraggableInstanceEvent.COMPLETE, {
+						progress: this._progress,
+					}),
+				);
+			},
+		});
 	}
 
 	/**
@@ -273,8 +259,7 @@ class DraggableInstance extends sengEvent {
 					this.handleThrowComplete();
 				},
 			});
-		}
-		else {
+		} else {
 			this.handleDrag();
 			this.handleDragEnd();
 			this.handleThrowComplete();
@@ -286,32 +271,29 @@ class DraggableInstance extends sengEvent {
 	 * @method createDraggableInstance
 	 */
 	private createDraggableInstance(): void {
-		this._draggableInstance = Draggable.create(
-			this._draggableElement,
-			{
-				type: 'x',
-				throwProps: true,
-				dragClickables: this._options.dragClickables,
-				// edgeResistance: 1,
-				zIndexBoost: false,
-				maxDuration: this._options.maxDuration,
-				minDuration: this._options.minDuration,
-				throwResistance: this._options.throwResistance,
-				dragResistance: this._options.dragResistance,
-				snap: {
-					x: this.getSnapPosition.bind(this),
-				},
-				onDrag: this.handleDrag.bind(this),
-				onDragEnd: this.handleDragEnd.bind(this),
-				onThrowUpdate: this.handleDrag.bind(this),
-				onDragStart: this.handleDragStart.bind(this),
-				allowNativeTouchScrolling: (bowser.mobile || bowser.tablet) ? true : false,
-				onThrowComplete: () => {
-					this.handleDrag();
-					this.handleThrowComplete();
-				},
+		this._draggableInstance = Draggable.create(this._draggableElement, {
+			type: 'x',
+			throwProps: true,
+			dragClickables: this._options.dragClickables,
+			// edgeResistance: 1,
+			zIndexBoost: false,
+			maxDuration: this._options.maxDuration,
+			minDuration: this._options.minDuration,
+			throwResistance: this._options.throwResistance,
+			dragResistance: this._options.dragResistance,
+			snap: {
+				x: this.getSnapPosition.bind(this),
 			},
-		)[0];
+			onDrag: this.handleDrag.bind(this),
+			onDragEnd: this.handleDragEnd.bind(this),
+			onThrowUpdate: this.handleDrag.bind(this),
+			onDragStart: this.handleDragStart.bind(this),
+			allowNativeTouchScrolling: bowser.mobile || bowser.tablet ? true : false,
+			onThrowComplete: () => {
+				this.handleDrag();
+				this.handleThrowComplete();
+			},
+		})[0];
 	}
 
 	/**
@@ -347,16 +329,14 @@ class DraggableInstance extends sengEvent {
 	private handleDrag(): void {
 		// Check for the bounds
 		if (
-			this._options.invert && this._draggableInstance.x > 0 ||
-			!this._options.invert && this._draggableInstance.x < 0
+			(this._options.invert && this._draggableInstance.x > 0) ||
+			(!this._options.invert && this._draggableInstance.x < 0)
 		) {
 			this.progress = 0;
-		}
-		else {
-			if
-			(
-				this._options.invert && this._draggableInstance.x < this.maxX ||
-				!this._options.invert && this._draggableInstance.x > this.maxX
+		} else {
+			if (
+				(this._options.invert && this._draggableInstance.x < this.maxX) ||
+				(!this._options.invert && this._draggableInstance.x > this.maxX)
 			) {
 				this.progress = 1;
 			}
@@ -370,12 +350,9 @@ class DraggableInstance extends sengEvent {
 
 		// Notify the parents
 		this.dispatchEvent(
-			new DraggableInstanceEvent(
-				DraggableInstanceEvent.UPDATE,
-				{
-					progress: this._progress,
-				},
-			),
+			new DraggableInstanceEvent(DraggableInstanceEvent.UPDATE, {
+				progress: this._progress,
+			}),
 		);
 
 		// Dispatch if we reached the end
@@ -390,12 +367,9 @@ class DraggableInstance extends sengEvent {
 	 */
 	private handleThrowComplete(): void {
 		this.dispatchEvent(
-			new DraggableInstanceEvent(
-				DraggableInstanceEvent.THROW_COMPLETE,
-				{
-					progress: this._progress,
-				},
-			),
+			new DraggableInstanceEvent(DraggableInstanceEvent.THROW_COMPLETE, {
+				progress: this._progress,
+			}),
 		);
 	}
 
@@ -405,12 +379,9 @@ class DraggableInstance extends sengEvent {
 	 */
 	private handleDragEnd(): void {
 		this.dispatchEvent(
-			new DraggableInstanceEvent(
-				DraggableInstanceEvent.DRAG_END,
-				{
-					progress: this._progress,
-				},
-			),
+			new DraggableInstanceEvent(DraggableInstanceEvent.DRAG_END, {
+				progress: this._progress,
+			}),
 		);
 	}
 
@@ -420,12 +391,9 @@ class DraggableInstance extends sengEvent {
 	 */
 	private handleDragStart(): void {
 		this.dispatchEvent(
-			new DraggableInstanceEvent(
-				DraggableInstanceEvent.DRAG_START,
-				{
-					progress: this._progress,
-				},
-			),
+			new DraggableInstanceEvent(DraggableInstanceEvent.DRAG_START, {
+				progress: this._progress,
+			}),
 		);
 	}
 
@@ -473,7 +441,7 @@ export interface IDraggableInstanceOptions {
 	throwResistance?: number;
 	dragClickables?: boolean;
 	dragResistance?: number;
-	snap?: { x?: number; element?: HTMLElement; };
+	snap?: { x?: number; element?: HTMLElement };
 }
 
 export interface IDraggableEventData {

@@ -78,25 +78,24 @@
 			{
 			  "label": "Marketing",
 			  "title": "Marketing",
-			  "target": "\/spectrum-reach-advertising-home?filters=Marketing",
+			  "target": "/resources/knowledge-center?filters=Marketing",
 			  "type": 0
 			},
 			{
 			  "label": "Media",
 			  "title": "Media",
-			  "target": "\/spectrum-reach-advertising-home?filters=Media",
+			  "target": "/resources/knowledge-center?filters=Media",
 			  "type": 0
 			}
 		  ],
 		  "views": 0,
-		  "shares": 0,
 		  "time": 10,
 		  "date": "10\/10\/2017",
 		  "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam massa id volutpat convallis. Proin vehicula mi magna, at placerat mauris lobortis tempor. Ut aliquet neque vitae pharetra porttitor. Nam ac varius lectus. Vestibulum at nibh massa. Nullam pellentesque ligula nulla, ac venenatis mi auctor molestie. Aenean at mauris sed lectus aliquet eleifend sed a ipsum. Donec elementum nulla nunc, vitae lacinia felis ullamcorper non.<\/p>",
 		  "subHeading": "TV Marketing Trends to Look Out For",
 		  "heading": "2018 TV Predictions",
 		  "theme": 0,
-		  "target": "\/articles\/2018-tv-predictions"
+		  "target": "/resources/knowledge-center/dummy-article"
 		}
 	  },
 	  {

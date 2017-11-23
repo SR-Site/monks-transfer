@@ -34,7 +34,7 @@ class BlogPostTransitionController extends AbstractTransitionController {
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6'
+			'-=0.6',
 		);
 
 		this.transitionInTimeline.fromTo(
@@ -49,7 +49,7 @@ class BlogPostTransitionController extends AbstractTransitionController {
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.6'
+			'-=0.6',
 		);
 	}
 

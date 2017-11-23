@@ -7,7 +7,7 @@ class GlossaryATransitionController extends AbstractTransitionController {
 	 * @description Use this method to setup your transition in timeline
 	 * */
 	protected setupTransitionInTimeline(): void {
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'))
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'));
 	}
 
 	/**

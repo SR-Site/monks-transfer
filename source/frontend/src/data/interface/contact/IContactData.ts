@@ -10,4 +10,4 @@ interface IContactData {
 	comments: string;
 }
 
-export default IContactData
+export default IContactData;

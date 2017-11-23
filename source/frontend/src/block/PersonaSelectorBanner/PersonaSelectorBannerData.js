@@ -21,7 +21,5 @@ export default {
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
 	image: VueTypes.shape(PropImage).isRequired,
-	links: VueTypes.arrayOf(
-		VueTypes.shape(PropLink),
-	),
+	links: VueTypes.arrayOf(VueTypes.shape(PropLink)),
 };

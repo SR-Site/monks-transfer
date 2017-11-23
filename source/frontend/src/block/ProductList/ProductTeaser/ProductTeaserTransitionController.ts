@@ -53,10 +53,7 @@ class ProductTeaserTransitionController extends AbstractTransitionController {
 			0.2,
 		);
 
-		this.transitionInTimeline.add(
-			this.getSubTimeline('ButtonQuaternary'),
-			0.2,
-		);
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonQuaternary'), 0.2);
 	}
 
 	/**
@@ -64,8 +61,7 @@ class ProductTeaserTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default ProductTeaserTransitionController;

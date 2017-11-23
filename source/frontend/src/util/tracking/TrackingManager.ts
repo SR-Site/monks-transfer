@@ -1,5 +1,5 @@
 import Disposable from 'seng-disposable';
-import assign from 'lodash/assign'
+import assign from 'lodash/assign';
 import ITrackingManagerOptions from './interface/ITrackingManagerOptions';
 import AbstractTrackingProvider from './tracking-provider/AbstractTrackingProvider';
 import IAbstractTrackingProviderOptions from './tracking-provider/IAbstractTrackingProviderOptions';
@@ -61,7 +61,9 @@ export default class TrackingManager extends Disposable {
 		this._options = assign({}, options);
 
 		// Add the providers that were provided when creating the tracking manager
-		Object.keys(this._options.providers || {}).forEach((id: string) => this.addProvider(id, this._options.providers[id]));
+		Object.keys(this._options.providers || {}).forEach((id: string) =>
+			this.addProvider(id, this._options.providers[id]),
+		);
 	}
 
 	/**

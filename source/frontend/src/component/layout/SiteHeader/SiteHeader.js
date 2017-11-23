@@ -1,11 +1,11 @@
-import { mapGetters } from 'vuex';
 import { DeviceStateEvent } from 'seng-device-state-tracker';
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import SiteHeaderTransitionController from './SiteHeaderTransitionController';
-import Logo from '../../Logo/Logo';
+import VueTypes from 'vue-types';
+import { mapGetters } from 'vuex';
 import NativeEventListener from '../../../util/event/NativeEventListener';
 import Breadcrumbs from '../../Breadcrumbs/Breadcrumbs';
-import VueTypes from 'vue-types';
+import Logo from '../../Logo/Logo';
+import SiteHeaderTransitionController from './SiteHeaderTransitionController';
 
 export default {
 	name: 'SiteHeader',
@@ -14,18 +14,16 @@ export default {
 		menuActive: VueTypes.bool.isRequired,
 	},
 	computed: {
-		...mapGetters(
-			{
-				pageData: 'layout/pageData',
-				contactOptionGetter: 'initData/contactOption',
-				landingRoute: 'init/landingRoute',
-			},
-		),
+		...mapGetters({
+			pageData: 'layout/pageData',
+			contactOptionGetter: 'initData/contactOption',
+			landingRoute: 'init/landingRoute',
+		}),
 		solidHeader() {
 			return this.isScrolled || this.breadcrumbs.length || this.isMedium || this.menuActive;
 		},
 		headerTheme() {
-			return this.pageData ? (this.pageData.headerTheme || this.Theme.LIGHT) : this.Theme.LIGHT;
+			return this.pageData ? this.pageData.headerTheme || this.Theme.LIGHT : this.Theme.LIGHT;
 		},
 		logoTheme() {
 			return this.solidHeader ? this.Theme.DARK : this.headerTheme;

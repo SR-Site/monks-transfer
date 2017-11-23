@@ -51,7 +51,7 @@ class HeroQuinaryTransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.6',
+			'-=0.6',
 		);
 
 		this.transitionInTimeline.fromTo(
@@ -67,7 +67,7 @@ class HeroQuinaryTransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.6',
+			'-=0.6',
 		);
 
 		if (this.viewModel.hasChild('ButtonQuinary')) {
@@ -84,7 +84,7 @@ class HeroQuinaryTransitionController extends AbstractTransitionController {
 					autoAlpha: 1,
 					ease: Expo.easeOut,
 				},
-				'=-0.6',
+				'-=0.6',
 			);
 		}
 	}
@@ -94,8 +94,7 @@ class HeroQuinaryTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default HeroQuinaryTransitionController;

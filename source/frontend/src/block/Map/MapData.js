@@ -20,7 +20,5 @@ export default {
 	scrollId: VueTypes.string,
 	imageSequence: VueTypes.shape(PropImageSequence).isRequired,
 	sequenceBackground: VueTypes.shape(PropImage),
-	steps: VueTypes.arrayOf(
-		VueTypes.shape(MapStepData),
-	),
+	steps: VueTypes.arrayOf(VueTypes.shape(MapStepData)),
 };

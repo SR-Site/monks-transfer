@@ -1,5 +1,3 @@
-import Theme from 'data/enum/Theme';
-
 export const SET_LANGUAGE_DATA = 'setLanguageData';
 export const SET_LAYOUT_DATA = 'setLayoutData';
 export const SET_CONTACT_OPTIONS_DATA = 'setContactOptionsData';

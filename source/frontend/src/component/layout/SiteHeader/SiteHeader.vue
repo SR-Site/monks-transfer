@@ -10,7 +10,7 @@
 			},
 		]">
 		<h2 :class="$style.logo">
-			<a v-link="{ path: `/${landingRoute}`, type: 0}">
+			<a v-link="{ path: `${landingRoute}`, type: 0}">
 				<Logo :theme="logoTheme"/>
 			</a>
 		</h2>

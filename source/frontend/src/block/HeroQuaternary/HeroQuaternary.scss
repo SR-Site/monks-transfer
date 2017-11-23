@@ -3,7 +3,7 @@
 		@include aspect-ratio(1440px, 480px);
 
 		.primary-background-triangle {
-			@include position(25%, auto, auto, $sizeGrid * -8)
+			@include position(25%, auto, auto, $sizeGrid * -8);
 		}
 	}
 
@@ -34,8 +34,6 @@
 	}
 
 	@include respond-to(X_LARGE) {
-
-
 		.image {
 			@include size(200px, 200px);
 		}

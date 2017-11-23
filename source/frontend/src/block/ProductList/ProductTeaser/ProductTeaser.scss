@@ -7,7 +7,7 @@
 		overflow: hidden;
 		color: $colorPrimary;
 		text-decoration: none;
-		transition: box-shadow .2s $easeInOutCubic;
+		transition: box-shadow 0.2s $easeInOutCubic;
 	}
 
 	.content {
@@ -17,7 +17,7 @@
 	}
 
 	.gradient-overlay {
-		transition: opacity .2s $easeInOutCubic;
+		transition: opacity 0.2s $easeInOutCubic;
 	}
 
 	.image {
@@ -35,7 +35,7 @@
 	.copy,
 	.heading {
 		color: currentColor;
-		transition: color .2s $easeInOutCubic;
+		transition: color 0.2s $easeInOutCubic;
 	}
 
 	.description {

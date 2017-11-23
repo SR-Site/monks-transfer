@@ -27,14 +27,10 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	social: VueTypes.arrayOf(
-		VueTypes.shape(PropLink),
-	),
+	social: VueTypes.arrayOf(VueTypes.shape(PropLink)),
 	author: VueTypes.shape(PropAuthor),
 	image: VueTypes.shape(PropImage),
-	tags: VueTypes.arrayOf(
-		VueTypes.shape(PropLink),
-	),
+	tags: VueTypes.arrayOf(VueTypes.shape(PropLink)),
 	views: VueTypes.number.isRequired,
 	time: VueTypes.number.isRequired,
 	date: VueTypes.string.isRequired,

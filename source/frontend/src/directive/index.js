@@ -6,5 +6,5 @@ import focusBorder from './focus-border';
 export default {
 	link,
 	track,
-	focusBorder
+	focusBorder,
 };

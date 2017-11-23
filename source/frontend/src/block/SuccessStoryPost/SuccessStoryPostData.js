@@ -27,22 +27,16 @@ export default {
 	heading: VueTypes.string.isRequired,
 	subHeading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
-	company: VueTypes.shape(
-		{
-			label: VueTypes.string.isRequired,
-			value: VueTypes.string.isRequired,
-		},
-	).isRequired,
-	industry: VueTypes.shape(
-		{
-			label: VueTypes.string.isRequired,
-			value: VueTypes.string.isRequired,
-		},
-	).isRequired,
-	market: VueTypes.shape(
-		{
-			label: VueTypes.string.isRequired,
-			value: VueTypes.string.isRequired,
-		},
-	).isRequired,
+	company: VueTypes.shape({
+		label: VueTypes.string.isRequired,
+		value: VueTypes.string.isRequired,
+	}).isRequired,
+	industry: VueTypes.shape({
+		label: VueTypes.string.isRequired,
+		value: VueTypes.string.isRequired,
+	}).isRequired,
+	market: VueTypes.shape({
+		label: VueTypes.string.isRequired,
+		value: VueTypes.string.isRequired,
+	}).isRequired,
 };

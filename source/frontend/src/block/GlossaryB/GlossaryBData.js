@@ -21,15 +21,11 @@ export default {
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
 	showMoreLabel: VueTypes.string.isRequired,
-	noResult: VueTypes.shape(
-		{
-			heading: VueTypes.string.isRequired,
-			paragraph: VueTypes.string.isRequired,
-		},
-	).isRequired,
+	noResult: VueTypes.shape({
+		heading: VueTypes.string.isRequired,
+		paragraph: VueTypes.string.isRequired,
+	}).isRequired,
 	landingCategory: VueTypes.string.isRequired,
 	searchPlaceholder: VueTypes.string.isRequired,
-	items: VueTypes.arrayOf(
-		VueTypes.shape(GlossaryBItemData),
-	),
+	items: VueTypes.arrayOf(VueTypes.shape(GlossaryBItemData)),
 };

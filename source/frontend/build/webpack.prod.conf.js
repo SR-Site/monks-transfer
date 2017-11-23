@@ -77,7 +77,9 @@ const webpackConfig = merge(baseWebpackConfig, {
 		new webpack.NamedChunksPlugin(),
 		new webpack.optimize.UglifyJsPlugin({
 			compress: {
-				warnings: false
+				warnings: false,
+				// don't optimize comparisons, it breaks mapbox-gl https://github.com/mapbox/mapbox-gl-js/issues/4359
+				comparisons: false,
 			},
 			output: {
 				comments: false

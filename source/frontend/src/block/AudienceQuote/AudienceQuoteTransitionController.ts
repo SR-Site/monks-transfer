@@ -33,7 +33,7 @@ class AudienceQuoteTransitionController extends AbstractTransitionController {
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.subHeading,
@@ -48,7 +48,7 @@ class AudienceQuoteTransitionController extends AbstractTransitionController {
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.heading,
@@ -63,7 +63,7 @@ class AudienceQuoteTransitionController extends AbstractTransitionController {
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.image,
@@ -78,7 +78,7 @@ class AudienceQuoteTransitionController extends AbstractTransitionController {
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 	}
 

@@ -38,12 +38,10 @@ export default {
 			this.sequenceProgress = event.progress;
 		},
 		handleImageSequenceLoaded() {
-			this.imageSequence.play(
-				{
-					loop: true,
-					loopDelay: 2000,
-				},
-			);
+			this.imageSequence.play({
+				loop: true,
+				loopDelay: 2000,
+			});
 		},
 	},
 };

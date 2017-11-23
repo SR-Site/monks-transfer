@@ -62,7 +62,7 @@ export default {
 			return padStart(index.toString(), 2, '0');
 		},
 		calculateSizes() {
-			const callToActions = this.data.callToActions;
+			const { callToActions } = this.data;
 			const size = 1 / callToActions.length;
 			const growSize = size * this.hoverScale;
 			const otherSize = (1 - growSize) / (callToActions.length - 1);
@@ -71,7 +71,7 @@ export default {
 			callToActions.forEach((callToAction, rowIndex) => {
 				this.hoverSizes[rowIndex] = [];
 
-				callToActions.forEach((callToAction, index) => {
+				callToActions.forEach((action, index) => {
 					this.hoverSizes[rowIndex].push(index === rowIndex ? growSize : otherSize);
 				});
 			});

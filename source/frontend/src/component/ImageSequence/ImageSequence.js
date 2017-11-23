@@ -1,13 +1,13 @@
+import { Linear, TweenLite } from 'gsap';
+import debounce from 'lodash/debounce';
+import padStart from 'lodash/padStart';
 import { DeviceStateEvent } from 'seng-device-state-tracker';
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import ImageSequenceTransitionController from './ImageSequenceTransitionController';
-import padStart from 'lodash/padStart';
-import debounce from 'lodash/debounce';
-import NativeEventListener from '../../util/event/NativeEventListener';
-import LoadImageTask from '../../util/preloading/task/LoadImageTask';
-import { TweenLite, Linear } from 'gsap';
 import VueTypes from 'vue-types';
 import PropImageSequence from '../../data/prop-type/media/PropImageSequence';
+import NativeEventListener from '../../util/event/NativeEventListener';
+import LoadImageTask from '../../util/preloading/task/LoadImageTask';
+import ImageSequenceTransitionController from './ImageSequenceTransitionController';
 
 const FPS = 24;
 
@@ -31,7 +31,7 @@ export default {
 		},
 	},
 	watch: {
-		validDeviceState(value) {
+		validDeviceState() {
 			this.stop();
 			this.loadAllCurrentDeviceStateImages()
 				.then(() => this.drawFrame(this.currentFrame))
@@ -59,11 +59,7 @@ export default {
 					this.deviceState = event.data.state;
 				},
 			);
-			this.resizeListener = new NativeEventListener(
-				window,
-				'resize',
-				debounce(this.handleResize, 200),
-			);
+			this.resizeListener = new NativeEventListener(window, 'resize', debounce(this.handleResize, 200));
 			this.ctx = this.$el.getContext('2d');
 			this.prepareSources();
 			if (!this.initializeManually) {
@@ -84,8 +80,8 @@ export default {
 		setup() {
 			this.handleResize();
 			return this.loadAllCurrentDeviceStateImages()
-			.then(() => this.drawFrame(this.currentFrame))
-			.then(() => this.$emit('loaded'));
+				.then(() => this.drawFrame(this.currentFrame))
+				.then(() => this.$emit('loaded'));
 		},
 		handleResize() {
 			this.$el.width = this.$el.parentNode.offsetWidth;
@@ -110,23 +106,19 @@ export default {
 				const frameCounter = { frame: mergedOptions.startFrame };
 				const totalDuration = Math.abs(mergedOptions.endFrame - mergedOptions.startFrame) / FPS;
 
-				this.playAnimation = TweenLite.to(
-					frameCounter,
-					totalDuration,
-					{
-						frame: mergedOptions.endFrame - 1,
-						ease: Linear.easeNone,
-						onUpdate: () => this.drawFrame(Math.round(frameCounter.frame)),
-						onComplete: () => {
-							resolve();
+				this.playAnimation = TweenLite.to(frameCounter, totalDuration, {
+					frame: mergedOptions.endFrame - 1,
+					ease: Linear.easeNone,
+					onUpdate: () => this.drawFrame(Math.round(frameCounter.frame)),
+					onComplete: () => {
+						resolve();
 
-							if (mergedOptions.loop && !this.stopped) {
-								clearTimeout(this.loopTimeout);
-								this.loopTimeout = setTimeout(() => this.play(mergedOptions), mergedOptions.loopDelay);
-							}
-						},
+						if (mergedOptions.loop && !this.stopped) {
+							clearTimeout(this.loopTimeout);
+							this.loopTimeout = setTimeout(() => this.play(mergedOptions), mergedOptions.loopDelay);
+						}
 					},
-				);
+				});
 			});
 		},
 		stop() {
@@ -153,27 +145,24 @@ export default {
 		loadAllCurrentDeviceStateImages() {
 			if (this.images[this.validDeviceState][0]) {
 				return Promise.resolve();
-			} else {
-				// Create a new task for loading the assets
-				const loadImageTask = new LoadImageTask(
-					{
-						assets: this.sources[this.validDeviceState],
-						batchSize: 10,
-						onAssetLoaded: result => {
-							this.images[this.validDeviceState][result.index] = result.asset;
-						},
-					},
-				);
-
-				// Run the loader
-				return loadImageTask.load().then(() => {
-					loadImageTask.dispose();
-				});
 			}
+			// Create a new task for loading the assets
+			const loadImageTask = new LoadImageTask({
+				assets: this.sources[this.validDeviceState],
+				batchSize: 10,
+				onAssetLoaded: result => {
+					this.images[this.validDeviceState][result.index] = result.asset;
+				},
+			});
+
+			// Run the loader
+			return loadImageTask.load().then(() => {
+				loadImageTask.dispose();
+			});
 		},
 	},
 	beforeDestroy() {
-		if(this.playAnimation){
+		if (this.playAnimation) {
 			this.playAnimation.kill();
 			this.playAnimation = null;
 		}

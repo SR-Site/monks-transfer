@@ -57,7 +57,7 @@
 		}
 
 		.background-triangle {
-			@include arrow(right, rgba($colorPrimary, .95), $sizeGrid * 48);
+			@include arrow(right, rgba($colorPrimary, 0.95), $sizeGrid * 48);
 		}
 
 		.secondary-background-triangle {

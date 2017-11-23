@@ -16,7 +16,7 @@
 	}
 
 	.gradient-overlay {
-		transition: opacity .2s $easeInOut;
+		transition: opacity 0.2s $easeInOut;
 	}
 
 	.play-button {
@@ -29,7 +29,7 @@
 		height: 100%;
 		padding: $sizeGrid 0 0;
 		color: $colorPrimary;
-		transition: color .2s $easeInOut;
+		transition: color 0.2s $easeInOut;
 		text-decoration: none;
 		display: flex;
 		flex-direction: column;

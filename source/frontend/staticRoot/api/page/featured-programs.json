@@ -58,6 +58,7 @@
 			"paragraph": "Align with top-rated programs airing this May",
 			"items": [
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -77,6 +78,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -96,6 +98,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -121,6 +124,7 @@
 			"paragraph": "Lorem ipsum dolor sit amet.",
 			"items": [
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -140,6 +144,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -159,6 +164,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -184,6 +190,7 @@
 			"paragraph": "Lorem ipsum dolor sit amet.",
 			"items": [
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -203,6 +210,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -222,6 +230,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -247,6 +256,7 @@
 			"paragraph": "Lorem ipsum dolor sit amet.",
 			"items": [
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -266,6 +276,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -285,6 +296,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -310,6 +322,7 @@
 			"paragraph": "Lorem ipsum dolor sit amet.",
 			"items": [
 			  {
+				"target": "/featured-programs/networks/dummy-network",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -329,6 +342,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/networks/dummy-network",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -348,6 +362,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/networks/dummy-network",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",

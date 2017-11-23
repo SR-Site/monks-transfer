@@ -1,4 +1,4 @@
 export default {
 	CONTACT: 'contact',
-	CONTACT_KERNEL: 'contactKernel'
+	CONTACT_KERNEL: 'contactKernel',
 };

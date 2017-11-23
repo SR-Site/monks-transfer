@@ -26,12 +26,10 @@ export default {
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new AudienceTopProgrammingTransitionController(this);
-			this.carousel = new InfiniteImageCarousel(
-				{
-					sliderWrapper: this.$refs.slides,
-					slides: this.$refs.slide,
-				},
-			);
+			this.carousel = new InfiniteImageCarousel({
+				sliderWrapper: this.$refs.slides,
+				slides: this.$refs.slide,
+			});
 			this.carouselEventListener = new NativeEventListener(this.carousel, CarouselEvent.CHANGE, event => {
 				this.activeIndex = event.data.index;
 			});

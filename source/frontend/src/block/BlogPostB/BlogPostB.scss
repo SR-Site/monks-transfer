@@ -1,5 +1,4 @@
 :local {
-
 	.html-content {
 		h1,
 		h2,
@@ -33,7 +32,7 @@
 	}
 
 	.heading {
-		margin-bottom: $sizeGrid
+		margin-bottom: $sizeGrid;
 	}
 
 	@include respond-to(MEDIUM) {

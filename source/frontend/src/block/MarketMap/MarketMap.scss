@@ -21,7 +21,7 @@
 
 	@include respond-to(MEDIUM) {
 		.market-map {
-			margin-top: 0!important; // It's important we get rid of the provided padding since on mobile we do not want it!
+			margin-top: 0 !important; // It's important we get rid of the provided padding since on mobile we do not want it!
 		}
 	}
 
@@ -50,7 +50,7 @@
 			&:after {
 				@include position(50%, $sizeGrid*2, auto, auto);
 				@include arrow(down, $colorSecondary, 2rem);
-				content: "";
+				content: '';
 				position: absolute;
 			}
 

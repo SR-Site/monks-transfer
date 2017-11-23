@@ -14,7 +14,5 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	steps: VueTypes.arrayOf(
-		VueTypes.shape(PathToPurchaseStepData),
-	).isRequired,
+	steps: VueTypes.arrayOf(VueTypes.shape(PathToPurchaseStepData)).isRequired,
 };

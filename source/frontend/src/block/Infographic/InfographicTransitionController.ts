@@ -44,7 +44,7 @@ class InfographicTransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.5',
+			'-=0.5',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.image,
@@ -58,11 +58,11 @@ class InfographicTransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.5',
+			'-=0.5',
 		);
 
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimaryLink'), '=-0.5')
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonSecondaryLink'), '=-0.5')
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimaryLink'), '-=0.5');
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonSecondaryLink'), '-=0.5');
 	}
 
 	/**
@@ -70,8 +70,7 @@ class InfographicTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default InfographicTransitionController;

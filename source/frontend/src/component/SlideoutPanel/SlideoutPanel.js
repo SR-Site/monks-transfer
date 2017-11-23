@@ -1,11 +1,11 @@
-import { AbstractTransitionComponent, TransitionEvent } from 'vue-transition-component';
-import SlideoutPanelTransitionController from './SlideoutPanelTransitionController';
-import PanelContact from './panel/PanelContact/PanelContact';
 import SlideoutPanelType from 'data/enum/SlideoutPanelType';
 import keyCode from 'key-code';
+import { AbstractTransitionComponent, TransitionEvent } from 'vue-transition-component';
 import NativeEventListener from '../../util/event/NativeEventListener';
 import Scrollbar from '../../util/ScrollBar';
+import PanelContact from './panel/PanelContact/PanelContact';
 import PanelContactKernel from './panel/PanelContactKernel/PanelContactKernel';
+import SlideoutPanelTransitionController from './SlideoutPanelTransitionController';
 
 export default {
 	name: 'SlideoutPanel',
@@ -42,9 +42,7 @@ export default {
 					}
 				},
 			);
-			this.scrollBar = new Scrollbar(
-				this.$refs.scrollWrapper,
-			);
+			this.scrollBar = new Scrollbar(this.$refs.scrollWrapper);
 
 			this.isReady();
 		},
@@ -71,23 +69,24 @@ export default {
 		},
 		transitionIn(id) {
 			return this.allComponentsReady
-			.then(() => {
-				if (this.activePanel && this.activePanel !== id) {
-					return this.panels[id].transitionOut();
-				} else {
+				.then(() => {
+					if (this.activePanel && this.activePanel !== id) {
+						return this.panels[id].transitionOut();
+					}
 					return Promise.resolve();
-				}
-			})
-			.then(() => this.transitionController.transitionIn())
-			.then(() => this.panels[id].transitionIn())
-			.then(() => {
-				this.activePanel = id;
-			});
+				})
+				.then(() => this.transitionController.transitionIn())
+				.then(() => this.panels[id].transitionIn())
+				.then(() => {
+					this.activePanel = id;
+				});
 		},
 		close() {
 			this.transitionOut()
-			.then(() => this.panels[this.activePanel].transitionOut())
-			.then(() => this.activePanel = null);
+				.then(() => this.panels[this.activePanel].transitionOut())
+				.then(() => {
+					this.activePanel = null;
+				});
 		},
 	},
 	beforeDestroy() {

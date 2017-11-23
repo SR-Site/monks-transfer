@@ -34,7 +34,7 @@ class ImageWithContentCTransitionController extends AbstractTransitionController
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.6',
+			'-=0.6',
 		);
 
 		this.transitionInTimeline.fromTo(
@@ -50,7 +50,7 @@ class ImageWithContentCTransitionController extends AbstractTransitionController
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.6',
+			'-=0.6',
 		);
 
 		if (this.viewModel.hasChild('ButtonPrimary')) {
@@ -63,8 +63,7 @@ class ImageWithContentCTransitionController extends AbstractTransitionController
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default ImageWithContentCTransitionController;

@@ -10,11 +10,9 @@ export default {
 		data: VueTypes.any.isRequired,
 	},
 	computed: {
-		...mapGetters(
-			{
-				contactOptionGetter: 'initData/contactOption',
-			},
-		),
+		...mapGetters({
+			contactOptionGetter: 'initData/contactOption',
+		}),
 		emailAddress() {
 			return this.contactOptionGetter('email').emailAddress || 'no-phone-number';
 		},

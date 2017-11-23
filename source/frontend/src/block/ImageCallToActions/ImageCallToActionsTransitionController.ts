@@ -30,7 +30,7 @@ class ImageCallToActionsTransitionController extends AbstractTransitionControlle
 							});
 						},
 					},
-					index === 0 ? 0 : '=-1.6',
+					index === 0 ? 0 : '-=1.6',
 				);
 			});
 		} else {

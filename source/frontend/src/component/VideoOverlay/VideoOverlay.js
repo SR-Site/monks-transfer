@@ -28,14 +28,12 @@ export default {
 			this.transitionController = new VideoOverlayTransitionController(this);
 			this.transitionController.addEventListener(TransitionEvent.TRANSITION_IN_COMPLETE, () => {
 				this.videoPlayer = this.getChild('VideoPlayer');
-				this.videoPlayer.initVideo(
-					{
-						video: this.video,
-						poster: this.poster,
-						loop: this.loop,
-						controls: this.controls,
-					},
-				);
+				this.videoPlayer.initVideo({
+					video: this.video,
+					poster: this.poster,
+					loop: this.loop,
+					controls: this.controls,
+				});
 				this.videoPlayer.play();
 			});
 			this.transitionController.addEventListener(TransitionEvent.TRANSITION_OUT_START, () => {
@@ -46,8 +44,8 @@ export default {
 		},
 		close() {
 			return this.transitionOut()
-			.then(() => this.videoPlayer.removePlayer())
-			.then(this.resolve.bind(this));
+				.then(() => this.videoPlayer.removePlayer())
+				.then(this.resolve.bind(this));
 		},
 		handleKeyUp(event) {
 			if (this.isActive && event.keyCode === keyCode.ESC) {

@@ -1,10 +1,10 @@
+import debounce from 'lodash/debounce';
 import { AbstractBlockComponent } from 'vue-block-system';
 import ScrollBar from '../../component/ScrollBar/ScrollBar';
 import DraggableInstanceEvent from '../../util/draggableInstance/DraggableInstanceEvent';
 import DraggableInstance from '../draggableInstance/DraggableInstance';
 import DisposableHelper from '../event/DisposableHelper';
 import NativeEventListener from '../event/NativeEventListener';
-import debounce from 'lodash/debounce'
 
 export default {
 	name: 'AbstractScrollableBlock',
@@ -28,13 +28,10 @@ export default {
 			this.handleResize();
 		},
 		createDraggableInstance() {
-			this.draggable = new DraggableInstance(
-				this.$refs.draggableContainer,
-				{
-					maxDuration: 0.5,
-					invert: true,
-				},
-			);
+			this.draggable = new DraggableInstance(this.$refs.draggableContainer, {
+				maxDuration: 0.5,
+				invert: true,
+			});
 
 			if (this.draggable.enabled) {
 				this.handleDraggableEnable();
@@ -52,9 +49,7 @@ export default {
 			this.disposables.add(
 				new NativeEventListener(this.draggable, DraggableInstanceEvent.DISABLE, this.handleDraggableDisable),
 			);
-			this.disposables.add(
-				new NativeEventListener(window, 'resize', debounce(this.handleResize, 250)),
-			);
+			this.disposables.add(new NativeEventListener(window, 'resize', debounce(this.handleResize, 250)));
 		},
 		handleDraggableEnable() {
 			this.showScrollBar = true;
@@ -66,9 +61,7 @@ export default {
 		},
 		handleResize() {
 			this.draggable.update();
-			this.draggable.setSnapPosition(
-				this.$refs.draggableElement.offsetWidth / this.itemCount,
-			);
+			this.draggable.setSnapPosition(this.$refs.draggableElement.offsetWidth / this.itemCount);
 		},
 		handleDraggableUpdate(event) {
 			this.getChild('ScrollBar').setProgress(event.data.progress);

@@ -5,7 +5,7 @@
 		@extend %reset-list;
 		padding: $sizeGrid * 2 $sizeGrid * 3;
 		position: absolute;
-		transition: transform .5s $easeInOutExpo;
+		transition: transform 0.5s $easeInOutExpo;
 
 		&.left {
 			transform: translateX(-100%);
@@ -25,7 +25,7 @@
 	}
 
 	.button {
-		font: 2.4rem / 1 $fontOpenSans;
+		font: 400 2.4rem / 1 $fontOpenSans;
 		border: 0;
 		background: transparent;
 		padding: $sizeGrid / 2 0;
@@ -67,7 +67,7 @@
 			@include size($sizeGridSecondary, 2px);
 			@include offset(0, 50%);
 			transform: translateY(-50%) scaleX(0);
-			transition: transform .2s $easeInOutExpo;
+			transition: transform 0.2s $easeInOutExpo;
 			transform-origin: left center;
 			background: $colorSecondary;
 			content: '';
@@ -75,7 +75,7 @@
 		}
 
 		.label {
-			transition: transform .2s $easeInOutExpo;
+			transition: transform 0.2s $easeInOutExpo;
 		}
 	}
 

@@ -9,7 +9,5 @@ import PropFilterOption from './PropFilterOption';
 export default {
 	label: VueTypes.string.isRequired,
 	type: VueTypes.number.isRequired,
-	options: VueTypes.arrayOf(
-		VueTypes.shape(PropFilterOption).isRequired,
-	).isRequired,
+	options: VueTypes.arrayOf(VueTypes.shape(PropFilterOption).isRequired).isRequired,
 };

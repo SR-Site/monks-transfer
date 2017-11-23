@@ -34,27 +34,26 @@ export default {
 	actions: {
 		[SHOW](context, payload) {
 			let notificationResult = null;
-			return new Promise(
-				resolve =>
-					context.commit(
-						SHOW,
-						Object.assign({ isActive: true }, payload, {
-							resolve,
-						}),
-					),
+			return new Promise(resolve =>
+				context.commit(
+					SHOW,
+					Object.assign({ isActive: true }, payload, {
+						resolve,
+					}),
+				),
 			)
-			.then(result => {
-				notificationResult = result;
-			})
-			.then(() => context.commit(SHOW, Object.assign({}, defaultState)))
-			.then(() => Promise.resolve(notificationResult));
+				.then(result => {
+					notificationResult = result;
+				})
+				.then(() => context.commit(SHOW, Object.assign({}, defaultState)))
+				.then(() => Promise.resolve(notificationResult));
 		},
 		[SHOW_SERVER_ERROR](context, errorCode) {
 			let heading;
 			let paragraph;
-			let translation = context.rootGetters.translation;
-			let headingPath = `notification.alert.server_message.${errorCode}.heading`;
-			let paragraphPath = `notification.alert.server_message.${errorCode}.paragraph`;
+			const { translation } = context.rootGetters;
+			const headingPath = `notification.alert.server_message.${errorCode}.heading`;
+			const paragraphPath = `notification.alert.server_message.${errorCode}.paragraph`;
 
 			if (has(translation, headingPath) && has(translation, paragraphPath)) {
 				heading = get(translation, headingPath);

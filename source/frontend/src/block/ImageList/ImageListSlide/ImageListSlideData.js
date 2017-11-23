@@ -12,5 +12,5 @@ export default {
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
 	image: VueTypes.shape(PropImage).isRequired,
-	link: VueTypes.shape(PropLink)
-}
+	link: VueTypes.shape(PropLink),
+};

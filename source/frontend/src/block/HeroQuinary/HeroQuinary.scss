@@ -3,7 +3,7 @@
 		@include aspect-ratio(1440px, 520px);
 
 		.primary-background-triangle {
-			@include position(25%, auto, auto, $sizeGrid * -15)
+			@include position(25%, auto, auto, $sizeGrid * -15);
 		}
 	}
 

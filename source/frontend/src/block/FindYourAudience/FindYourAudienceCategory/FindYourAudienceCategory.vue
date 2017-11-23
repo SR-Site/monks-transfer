@@ -8,13 +8,29 @@
 			<p class="copy copy-01" v-html="data.paragraph" ref="copy" :class="$style.copy"></p>
 		</header>
 		<div :class="$style.items">
-			<FindYourAudienceTeaser
+			<AudienceTeaser
 				v-for="(item, index) in data.items"
-				ref="item"
+				@isReady="handleComponentReady"
+				ref="audience"
+				:debugLabel="$config.getVariable(VariableNames.DEBUG_LABEL_ENABLED)"
 				:class="$style.item"
 				:key="index"
-				:data="item"
-				:componentId="`FindYourAudienceTeaser${index}`"/>
+				:data="getAudienceData(item)"
+				:componentId="`AudienceTeaser.${index}`" />
+		</div>
+		<div :class="$style.callToActions">
+			<ButtonCircleArrow
+				@click="handleBackToTop"
+				componentId="ButtonCircleArrow"
+				:direction="Direction.UP"
+				:arrowPosition="Alignment.LEFT"
+				:size="Size.SMALL"
+				:theme="Theme.DARK"
+				:title="$t('global.cta.back_to_top')"
+				:label="$t('global.cta.back_to_top')"
+				:type="ButtonType.ACTION"
+				:class="$style.button"
+				ref="buttonLink"/>
 		</div>
 	</div>
 </template>

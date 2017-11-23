@@ -1,7 +1,7 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import AudienceStatisticTeaserTransitionController from './AudienceStatisticTeaserTransitionController';
-import AudienceStatisticTeaserData from './AudienceStatisticTeaserData';
 import VueTypes from 'vue-types';
+import AudienceStatisticTeaserData from './AudienceStatisticTeaserData';
+import AudienceStatisticTeaserTransitionController from './AudienceStatisticTeaserTransitionController';
 
 export default {
 	name: 'AudienceStatisticTeaser',

@@ -28,8 +28,7 @@ class FilterContentMenuDropdownTransitionController extends AbstractTransitionCo
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default FilterContentMenuDropdownTransitionController;

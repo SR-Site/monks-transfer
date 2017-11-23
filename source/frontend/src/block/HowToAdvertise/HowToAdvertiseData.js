@@ -20,7 +20,5 @@ export default {
 	scrollId: VueTypes.string,
 	link: VueTypes.shape(PropLink),
 	heading: VueTypes.string.isRequired,
-	steps: VueTypes.arrayOf(
-		VueTypes.shape(HowToAdvertiseStepData)
-	)
+	steps: VueTypes.arrayOf(VueTypes.shape(HowToAdvertiseStepData)),
 };

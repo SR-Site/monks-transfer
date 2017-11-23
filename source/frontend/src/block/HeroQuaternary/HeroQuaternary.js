@@ -1,12 +1,13 @@
-import ImageHelper from 'util/media/ImageHelper';
 import bowser from 'bowser';
+import ImageHelper from 'util/media/ImageHelper';
 import { AbstractBlockComponent } from 'vue-block-system';
 import VueTypes from 'vue-types';
 import MediaCrossFader from '../../component/MediaCrossFader/MediaCrossFader';
+import PrimaryTriangle from '../../component/triangle/PrimaryTriangle/PrimaryTriangle';
 import VideoElement from '../../lib/media/VideoElement';
 import HeroQuaternaryData from './HeroQuaternaryData';
 import HeroQuaternaryTransitionController from './HeroQuaternaryTransitionController';
-import PrimaryTriangle from '../../component/triangle/PrimaryTriangle/PrimaryTriangle';
+import VideoType from '../../data/enum/VideoType';
 
 export default {
 	name: 'HeroQuaternary',

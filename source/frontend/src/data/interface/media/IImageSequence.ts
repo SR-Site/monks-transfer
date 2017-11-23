@@ -5,7 +5,7 @@ interface IImageSequence {
 	 * @property
 	 * @description the base paths of the images in the sequences without the extension
 	 */
-	image: IImage
+	image: IImage;
 	/**
 	 * @property
 	 * @description The total amount of frames in the image sequence

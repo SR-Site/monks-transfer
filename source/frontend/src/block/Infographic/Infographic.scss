@@ -98,8 +98,7 @@
 			margin-bottom: mobile-size($sizeGrid);
 		}
 
-
-		.button:not(:first-child ){
+		.button:not(:first-child) {
 			margin-top: mobile-size($sizeGrid);
 		}
 
@@ -124,4 +123,3 @@
 		}
 	}
 }
-

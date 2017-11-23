@@ -1,7 +1,7 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import GlossaryItemTransitionController from './GlossaryItemTransitionController';
-import GlossaryItemData from './GlossaryItemData';
 import VueTypes from 'vue-types';
+import GlossaryItemData from './GlossaryItemData';
+import GlossaryItemTransitionController from './GlossaryItemTransitionController';
 
 export default {
 	name: 'GlossaryItem',
@@ -28,6 +28,6 @@ export default {
 		},
 		unlock() {
 			this.unlocked = true;
-		}
+		},
 	},
 };

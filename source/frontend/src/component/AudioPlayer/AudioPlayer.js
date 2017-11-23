@@ -1,10 +1,10 @@
+import { AbstractTransitionComponent } from 'vue-transition-component';
 import VueTypes from 'vue-types';
 import WaveSurfer from 'wavesurfer';
-import { AbstractTransitionComponent } from 'vue-transition-component';
-import AudioPlayerTransitionController from './AudioPlayerTransitionController';
 import AudioElement from '../../lib/media/enum/AudioElement';
 import MediaElement from '../../lib/media/MediaElement';
 import NativeEventListener from '../../util/event/NativeEventListener';
+import AudioPlayerTransitionController from './AudioPlayerTransitionController';
 
 export default {
 	name: 'AudioPlayer',
@@ -17,7 +17,10 @@ export default {
 			isPlaying: false,
 			progress: 0,
 			hasWebAudioSupport:
-			(window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext) !== undefined,
+				(window.AudioContext ||
+					window.webkitAudioContext ||
+					window.mozAudioContext ||
+					window.msAudioContext) !== undefined,
 		};
 	},
 	beforeCreate() {},
@@ -36,14 +39,12 @@ export default {
 			if (this.hasWebAudioSupport) {
 				this.waveSurfer.playPause();
 				this.isPlaying = this.waveSurfer.isPlaying();
+			} else if (this.isPlaying) {
+				this.fallbackPlayer.pause();
+				this.isPlaying = false;
 			} else {
-				if (this.isPlaying) {
-					this.fallbackPlayer.pause();
-					this.isPlaying = false;
-				} else {
-					this.fallbackPlayer.play();
-					this.isPlaying = true;
-				}
+				this.fallbackPlayer.play();
+				this.isPlaying = true;
 			}
 
 			// Tracking
@@ -52,44 +53,42 @@ export default {
 				// action: string;
 				// label?: string;
 				// value?: number;
-				this.$tracking.trackEvent(
-					{
-						[this.TrackingProvider.GOOGLE_ANALYTICS]: {
-							category: 'audioFragment',
-							action: 'click',
-							label: `play|${this.data.title}`,
-						},
+				this.$tracking.trackEvent({
+					[this.TrackingProvider.GOOGLE_ANALYTICS]: {
+						category: 'audioFragment',
+						action: 'click',
+						label: `play|${this.data.title}`,
 					},
-				);
+				});
 			} else {
-				const currentTime = this.hasWebAudioSupport ? this.waveSurfer.getCurrentTime() : this.fallbackPlayer.currentTime;
+				const currentTime = this.hasWebAudioSupport
+					? this.waveSurfer.getCurrentTime()
+					: this.fallbackPlayer.currentTime;
 				const duration = this.hasWebAudioSupport ? this.waveSurfer.getDuration() : this.fallbackPlayer.duration;
 
-				this.$tracking.trackEvent(
-					{
-						[this.TrackingProvider.GOOGLE_ANALYTICS]: {
-							category: 'audioFragment',
-							action: 'click',
-							label: `pause|${this.data.title}`,
-							value: Math.round(currentTime / duration * 100),
-						},
+				this.$tracking.trackEvent({
+					[this.TrackingProvider.GOOGLE_ANALYTICS]: {
+						category: 'audioFragment',
+						action: 'click',
+						label: `pause|${this.data.title}`,
+						value: Math.round(currentTime / duration * 100),
 					},
-				);
+				});
 			}
 		},
 		createWaveSurfer() {
 			const height = this.getChild('ButtonCirclePlay').$el.offsetHeight;
 
 			this.waveSurfer = WaveSurfer.create({
-													height,
-													container: this.$refs.waveForm,
-													waveColor: '#003057',
-													progressColor: '#009bdb',
-													barWidth: 1,
-													cursorWidth: 0,
-													interact: false,
-													normalize: true,
-												});
+				height,
+				container: this.$refs.waveForm,
+				waveColor: '#003057',
+				progressColor: '#009bdb',
+				barWidth: 1,
+				cursorWidth: 0,
+				interact: false,
+				normalize: true,
+			});
 
 			this.waveSurfer.load(this.file);
 		},

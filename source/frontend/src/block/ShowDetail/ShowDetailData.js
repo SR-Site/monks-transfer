@@ -27,22 +27,16 @@ export default {
 	scrollId: VueTypes.string,
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
-	network: VueTypes.shape(
-		{
-			label: VueTypes.string.isRequired,
-			image: VueTypes.shape(PropImage).isRequired,
-		},
-	).isRequired,
-	airTime: VueTypes.shape(
-		{
-			label: VueTypes.string.isRequired,
-			value: VueTypes.string.isRequired,
-		},
-	).isRequired,
-	ageRestriction: VueTypes.shape(
-		{
-			label: VueTypes.string.isRequired,
-			image: VueTypes.shape(PropImage).isRequired,
-		},
-	).isRequired,
+	network: VueTypes.shape({
+		label: VueTypes.string.isRequired,
+		image: VueTypes.shape(PropImage).isRequired,
+	}).isRequired,
+	airTime: VueTypes.shape({
+		label: VueTypes.string.isRequired,
+		value: VueTypes.string.isRequired,
+	}).isRequired,
+	ageRestriction: VueTypes.shape({
+		label: VueTypes.string.isRequired,
+		image: VueTypes.shape(PropImage).isRequired,
+	}).isRequired,
 };

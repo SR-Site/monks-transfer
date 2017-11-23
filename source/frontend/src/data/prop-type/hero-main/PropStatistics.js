@@ -7,7 +7,5 @@ import PropStatistic from './PropStatistic';
  */
 export default {
 	heading: VueTypes.string.isRequired,
-	stats: VueTypes.arrayOf(
-		VueTypes.shape(PropStatistic),
-	),
+	stats: VueTypes.arrayOf(VueTypes.shape(PropStatistic)),
 };

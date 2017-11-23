@@ -5,7 +5,7 @@
 	"routes": {
 	  "landing": "/home",
 	  "notFound": "/page-not-found",
-	  "articleOverviewPage": "spectrum-reach-advertising-home"
+	  "articleOverviewPage": "/knowledge-center"
 	},
 	"contactOptions": {
 	  "phone": {
@@ -136,12 +136,6 @@
 				"label": "Resources",
 				"title": "Resources",
 				"target": "/resources",
-				"type": 0
-			  },
-			  {
-				"label": "Success Stories",
-				"title": "Success Stories",
-				"target": "/resources/success-stories",
 				"type": 0
 			  },
 			  {

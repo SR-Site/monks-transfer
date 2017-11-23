@@ -4,7 +4,7 @@
 <template>
 	<article :class="[$style.articleTeaser, $style[ClassNameHelper.parseTheme(data.theme)]]">
 		<a
-			v-link="{path: data.target}"
+			v-link="{ path: data.target, type: 0 }"
 			v-track="{
 				[TrackingProvider.GOOGLE_ANALYTICS]: {
 					category: 'articleTeaser',

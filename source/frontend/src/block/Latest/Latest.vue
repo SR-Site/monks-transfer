@@ -4,7 +4,7 @@
 <template>
 	<div :class="$style.latest">
 		<div :class="$style.siteFrame" class="site-frame">
-			<div class="overrule-overlap">
+			<div class="overrule-overlap is-solid">
 				<header :class="$style.header" ref="heading">
 					<h2 :class="$style.heading" class="heading heading-03" v-html="data.heading"></h2>
 					<ButtonQuaternary
@@ -30,7 +30,8 @@
 					<div :class="$style.latestArticles" ref="draggableElement" class="js-draggable-element">
 						<ArticleTeaser
 							v-for="(article, index) in data.articles"
-							:componentId="`ArticleTeaser${index}`"
+							:componentId="`ArticleTeaser.${index}`"
+							:debugLabel="$config.getVariable(VariableNames.DEBUG_LABEL_ENABLED)"
 							:key="index"
 							:data="getArticleData(article)"
 							:class="$style.articleTeaser"
