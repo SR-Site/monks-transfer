@@ -1,6 +1,7 @@
 import { DeviceStateEvent } from 'seng-device-state-tracker';
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import VueTypes from 'vue-types';
+import urlParse from 'url-parse';
 import { DeviceState } from '../../../config/deviceStateConfig';
 import PropFilter from '../../../data/prop-type/action/PropFilter';
 import NativeEventListener from '../../../util/event/NativeEventListener';
@@ -63,12 +64,13 @@ export default {
 				},
 			);
 			this.dropdown = this.getChild('FilterContentMenuDropdown');
+			this.restoreDeeplinkedFilters();
 			this.isReady();
 		},
 		handleClose() {
 			this.handleFilterClick(this.activeIndex);
 		},
-		handleFilterOptionSelect(filter, option) {
+		handleFilterOptionSelect(filter, option, toggleOnSelect) {
 			if (!this.chosenOptions[filter]) {
 				this.chosenOptions[filter] = [];
 			}
@@ -78,11 +80,10 @@ export default {
 			} else {
 				this.chosenOptions[filter].push(option.value);
 			}
-
 			// Force an update
 			this.chosenOptions = Object.assign({}, this.chosenOptions);
 
-			if (this.deviceState <= DeviceState.SMALL) {
+			if (toggleOnSelect && this.deviceState <= DeviceState.SMALL) {
 				this.handleFilterToggleClick();
 			}
 		},
@@ -112,6 +113,22 @@ export default {
 		},
 		chosenOptionCount(filter) {
 			return this.chosenOptions[filter] ? this.chosenOptions[filter].length : 0;
+		},
+		restoreDeeplinkedFilters() {
+			const parsedUrl = urlParse(window.location.href, true);
+			const { filters } = parsedUrl.query;
+
+			if (filters) {
+				filters.split(',').forEach(preSelectedFilter => {
+					this.filters.forEach(category => {
+						category.options.forEach(option => {
+							if (preSelectedFilter === option.value) {
+								this.handleFilterOptionSelect(category.type, option, false);
+							}
+						});
+					});
+				});
+			}
 		},
 	},
 };

@@ -5,7 +5,7 @@
 	"routes": {
 	  "landing": "/home",
 	  "notFound": "/page-not-found",
-	  "articleOverviewPage": "spectrum-reach-advertising-home"
+	  "articleOverviewPage": "/knowledge-center"
 	},
 	"contactOptions": {
 	  "phone": {

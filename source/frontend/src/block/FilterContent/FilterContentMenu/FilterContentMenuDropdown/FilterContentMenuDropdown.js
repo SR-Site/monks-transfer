@@ -25,7 +25,7 @@ export default {
 			this.$emit('close');
 		},
 		handleOptionClick(option) {
-			this.$emit('select', this.filter, option);
+			this.$emit('select', this.filter, option, false);
 		},
 		isActive(option) {
 			const chosenOptions = this.chosenOptions[this.filter] || [];
