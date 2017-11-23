@@ -1,0 +1,7 @@
+uuid: f5d72553-47a7-40c0-9b6d-13b07dce1c90
+langcode: en
+status: true
+dependencies: {  }
+id: block_large_video
+label: 'Block Large Video'
+behavior_plugins: {  }

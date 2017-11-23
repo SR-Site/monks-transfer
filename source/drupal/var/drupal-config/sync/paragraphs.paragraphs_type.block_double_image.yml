@@ -1,0 +1,7 @@
+uuid: e1522543-ded6-48af-902e-4a0da4e8e9b3
+langcode: en
+status: true
+dependencies: {  }
+id: block_double_image
+label: 'Block Double Image'
+behavior_plugins: {  }

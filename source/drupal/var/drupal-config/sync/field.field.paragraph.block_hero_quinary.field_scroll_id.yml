@@ -1,0 +1,19 @@
+uuid: 4a87b1b3-aaca-42a6-84be-bc53f2858c54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_scroll_id
+    - paragraphs.paragraphs_type.block_hero_quinary
+id: paragraph.block_hero_quinary.field_scroll_id
+field_name: field_scroll_id
+entity_type: paragraph
+bundle: block_hero_quinary
+label: 'Scroll ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

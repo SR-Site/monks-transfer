@@ -1,0 +1,29 @@
+uuid: 8eda5105-09dd-45cc-8283-ba5ca5032588
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_styles
+    - paragraphs.paragraphs_type.block_product_list
+    - paragraphs.paragraphs_type.styles
+  module:
+    - entity_reference_revisions
+id: paragraph.block_product_list.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: block_product_list
+label: Styles
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styles: styles
+    target_bundles_drag_drop:
+      styles:
+        enabled: true
+field_type: entity_reference_revisions

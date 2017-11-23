@@ -1,0 +1,7 @@
+uuid: 9647a7e6-16f5-4956-be62-c29209f2c787
+langcode: en
+status: true
+dependencies: {  }
+id: block_blog_post_b
+label: 'Block Blog Post B'
+behavior_plugins: {  }

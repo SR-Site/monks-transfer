@@ -24,7 +24,7 @@ class ShowsController extends ControllerBase {
    */
   public function import(Request $request) {
     // Get file from url and check if is it valid JSON file.
-    $url = $request->getSchemeAndHttpHost() . '/resulta.json';
+    $url = $request->getSchemeAndHttpHost() . '/sample.json';
     try {
       $showsFile = file_get_contents($url);
       if ($showsFile && $this->isValidJson($showsFile)) {

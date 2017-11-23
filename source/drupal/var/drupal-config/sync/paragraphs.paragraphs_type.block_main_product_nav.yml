@@ -1,0 +1,7 @@
+uuid: a4b4f8fa-75b3-4771-b58a-da0e478db48e
+langcode: en
+status: true
+dependencies: {  }
+id: block_main_product_nav
+label: 'Block Main Product Nav'
+behavior_plugins: {  }

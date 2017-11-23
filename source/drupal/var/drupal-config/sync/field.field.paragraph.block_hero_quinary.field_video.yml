@@ -1,0 +1,32 @@
+uuid: 09a1f534-7e08-4a3e-b133-efdb9d1eb964
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video
+    - media_entity.bundle.video_external
+    - media_entity.bundle.video_local
+    - media_entity.bundle.video_url
+    - paragraphs.paragraphs_type.block_hero_quinary
+id: paragraph.block_hero_quinary.field_video
+field_name: field_video
+entity_type: paragraph
+bundle: block_hero_quinary
+label: 'Background video'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video_url: video_url
+      video_external: video_external
+      video_local: video_local
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: video_url
+field_type: entity_reference

@@ -1,0 +1,25 @@
+uuid: 71e77126-62f5-4e05-a643-1bb7dac8070f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_success_story_highlight.field_article
+    - field.field.paragraph.block_success_story_highlight.field_scroll_id
+    - field.field.paragraph.block_success_story_highlight.field_styles
+    - paragraphs.paragraphs_type.block_success_story_highlight
+id: paragraph.block_success_story_highlight.default
+targetEntityType: paragraph
+bundle: block_success_story_highlight
+mode: default
+content:
+  field_article:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_scroll_id: true
+  field_styles: true

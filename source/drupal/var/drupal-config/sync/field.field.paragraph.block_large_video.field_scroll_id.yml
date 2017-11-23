@@ -1,0 +1,19 @@
+uuid: 4b0cef10-4481-4ef3-9270-d2b231bb8400
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_scroll_id
+    - paragraphs.paragraphs_type.block_large_video
+id: paragraph.block_large_video.field_scroll_id
+field_name: field_scroll_id
+entity_type: paragraph
+bundle: block_large_video
+label: 'Scroll ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

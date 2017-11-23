@@ -1,0 +1,28 @@
+uuid: d99585e9-c902-4d81-be9e-055577f01dbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_main_products
+    - node.type.article
+    - paragraphs.paragraphs_type.main_product_item
+id: paragraph.main_product_item.field_main_products
+field_name: field_main_products
+entity_type: paragraph
+bundle: main_product_item
+label: 'Main products'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

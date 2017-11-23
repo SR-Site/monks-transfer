@@ -1,0 +1,37 @@
+uuid: d5fa0cbb-126c-4d5a-b096-b82e12a6f97d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_large_video.field_poster
+    - field.field.paragraph.block_large_video.field_scroll_id
+    - field.field.paragraph.block_large_video.field_styles
+    - field.field.paragraph.block_large_video.field_video
+    - paragraphs.paragraphs_type.block_large_video
+  module:
+    - entity_reference_revisions
+id: paragraph.block_large_video.default
+targetEntityType: paragraph
+bundle: block_large_video
+mode: default
+content:
+  field_poster:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_video:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_scroll_id: true
+  field_styles: true

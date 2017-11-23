@@ -1,0 +1,52 @@
+uuid: 5308bf0d-382a-4509-ae31-4a533ceae5eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_product_list.field_product_items
+    - field.field.paragraph.block_product_list.field_scroll_id
+    - field.field.paragraph.block_product_list.field_styles
+    - paragraphs.paragraphs_type.block_product_list
+  module:
+    - paragraphs
+id: paragraph.block_product_list.default
+targetEntityType: paragraph
+bundle: block_product_list
+mode: default
+content:
+  field_product_items:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_scroll_id:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_styles:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,29 @@
+uuid: faff740a-236d-4648-8a77-f88313abdc7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_styles
+    - paragraphs.paragraphs_type.block_persona_selector_banner
+    - paragraphs.paragraphs_type.styles
+  module:
+    - entity_reference_revisions
+id: paragraph.block_persona_selector_banner.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: block_persona_selector_banner
+label: Styles
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styles: styles
+    target_bundles_drag_drop:
+      styles:
+        enabled: true
+field_type: entity_reference_revisions

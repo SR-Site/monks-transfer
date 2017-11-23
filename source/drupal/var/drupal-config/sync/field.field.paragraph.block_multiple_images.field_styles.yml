@@ -1,0 +1,29 @@
+uuid: 9cd15c2c-a542-47dc-b654-27ee3cffc4a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_styles
+    - paragraphs.paragraphs_type.block_multiple_images
+    - paragraphs.paragraphs_type.styles
+  module:
+    - entity_reference_revisions
+id: paragraph.block_multiple_images.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: block_multiple_images
+label: Styles
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styles: styles
+    target_bundles_drag_drop:
+      styles:
+        enabled: true
+field_type: entity_reference_revisions

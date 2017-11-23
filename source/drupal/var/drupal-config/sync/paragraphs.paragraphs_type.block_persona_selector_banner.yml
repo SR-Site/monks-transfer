@@ -1,0 +1,7 @@
+uuid: 4b079107-b873-4195-afb2-8157831ba1b5
+langcode: en
+status: true
+dependencies: {  }
+id: block_persona_selector_banner
+label: 'Block Persona Selector Banner'
+behavior_plugins: {  }

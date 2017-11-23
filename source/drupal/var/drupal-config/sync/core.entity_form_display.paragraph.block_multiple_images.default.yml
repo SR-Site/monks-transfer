@@ -1,0 +1,39 @@
+uuid: 0a4fbf2f-fda3-4bd8-aa09-49c4dd29190d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_multiple_images.field_scroll_id
+    - field.field.paragraph.block_multiple_images.field_styles
+    - paragraphs.paragraphs_type.block_multiple_images
+  module:
+    - paragraphs
+id: paragraph.block_multiple_images.default
+targetEntityType: paragraph
+bundle: block_multiple_images
+mode: default
+content:
+  field_scroll_id:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_styles:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

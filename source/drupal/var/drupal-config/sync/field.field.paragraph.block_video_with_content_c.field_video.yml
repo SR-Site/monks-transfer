@@ -1,0 +1,32 @@
+uuid: 477aefe1-8e73-45e8-b2f2-defca0a840a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video
+    - media_entity.bundle.video_external
+    - media_entity.bundle.video_local
+    - media_entity.bundle.video_url
+    - paragraphs.paragraphs_type.block_video_with_content_c
+id: paragraph.block_video_with_content_c.field_video
+field_name: field_video
+entity_type: paragraph
+bundle: block_video_with_content_c
+label: Video
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video_url: video_url
+      video_external: video_external
+      video_local: video_local
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: video_url
+field_type: entity_reference

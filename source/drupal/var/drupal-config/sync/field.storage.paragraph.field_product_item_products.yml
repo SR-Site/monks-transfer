@@ -1,0 +1,20 @@
+uuid: 68261cb0-e25b-4de3-b9b7-bb2d770d8988
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_product_item_products
+field_name: field_product_item_products
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

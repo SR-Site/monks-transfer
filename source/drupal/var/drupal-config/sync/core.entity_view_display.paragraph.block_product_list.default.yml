@@ -1,0 +1,28 @@
+uuid: 1c698855-0e7c-47f4-ad92-c282964da08c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_product_list.field_product_items
+    - field.field.paragraph.block_product_list.field_scroll_id
+    - field.field.paragraph.block_product_list.field_styles
+    - paragraphs.paragraphs_type.block_product_list
+  module:
+    - entity_reference_revisions
+id: paragraph.block_product_list.default
+targetEntityType: paragraph
+bundle: block_product_list
+mode: default
+content:
+  field_product_items:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  field_scroll_id: true
+  field_styles: true

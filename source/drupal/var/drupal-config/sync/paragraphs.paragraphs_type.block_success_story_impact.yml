@@ -1,0 +1,7 @@
+uuid: d545d96f-4f6b-4695-8ec0-e0d5af5631ce
+langcode: en
+status: true
+dependencies: {  }
+id: block_success_story_impact
+label: 'Block Success Story Impact'
+behavior_plugins: {  }

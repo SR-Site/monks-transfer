@@ -1,0 +1,7 @@
+uuid: f4cd6b88-d152-45b8-bff2-a20fcf60dab5
+langcode: en
+status: true
+dependencies: {  }
+id: block_show_detail
+label: 'Block Show Detail'
+behavior_plugins: {  }

@@ -1,0 +1,7 @@
+uuid: 7c9a5cac-6cc4-4b60-8a4f-e96cde760670
+langcode: en
+status: true
+dependencies: {  }
+id: block_video_with_content_c
+label: 'Block Video With Content C'
+behavior_plugins: {  }

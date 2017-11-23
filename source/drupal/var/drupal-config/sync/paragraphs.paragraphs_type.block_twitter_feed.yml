@@ -1,0 +1,7 @@
+uuid: ad3d31d1-b7ed-45bd-8d89-fd29f5dfe901
+langcode: en
+status: true
+dependencies: {  }
+id: block_twitter_feed
+label: 'Block Twitter Feed'
+behavior_plugins: {  }

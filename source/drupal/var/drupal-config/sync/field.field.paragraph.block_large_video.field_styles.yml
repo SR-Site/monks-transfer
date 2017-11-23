@@ -1,0 +1,29 @@
+uuid: 576c7c9b-ac54-48dd-bca3-68581688834e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_styles
+    - paragraphs.paragraphs_type.block_large_video
+    - paragraphs.paragraphs_type.styles
+  module:
+    - entity_reference_revisions
+id: paragraph.block_large_video.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: block_large_video
+label: Styles
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styles: styles
+    target_bundles_drag_drop:
+      styles:
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,19 @@
+uuid: ffceadf6-db80-4172-938f-23026bfc8e1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_scroll_id
+    - paragraphs.paragraphs_type.block_find_your_audience
+id: paragraph.block_find_your_audience.field_scroll_id
+field_name: field_scroll_id
+entity_type: paragraph
+bundle: block_find_your_audience
+label: 'Scroll ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

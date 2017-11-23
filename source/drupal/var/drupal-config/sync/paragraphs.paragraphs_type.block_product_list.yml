@@ -1,0 +1,7 @@
+uuid: e730e517-7e9e-4950-8b8f-be6ecc0e8f7a
+langcode: en
+status: true
+dependencies: {  }
+id: block_product_list
+label: 'Block Product List'
+behavior_plugins: {  }

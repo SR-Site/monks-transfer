@@ -1,0 +1,90 @@
+uuid: 746a4352-57c8-497b-9945-a17de24cfba9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_video_with_content_c.field_link
+    - field.field.paragraph.block_video_with_content_c.field_new_heading
+    - field.field.paragraph.block_video_with_content_c.field_paragraph
+    - field.field.paragraph.block_video_with_content_c.field_poster
+    - field.field.paragraph.block_video_with_content_c.field_scroll_id
+    - field.field.paragraph.block_video_with_content_c.field_styles
+    - field.field.paragraph.block_video_with_content_c.field_video
+    - paragraphs.paragraphs_type.block_video_with_content_c
+  module:
+    - entity_reference_revisions
+    - paragraphs
+    - text
+id: paragraph.block_video_with_content_c.default
+targetEntityType: paragraph
+bundle: block_video_with_content_c
+mode: default
+content:
+  field_link:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_new_heading:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_paragraph:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_poster:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+  field_scroll_id:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_styles:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_video:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,55 @@
+uuid: 88d224dc-dbfe-442f-b5d4-9ef7f3e8b954
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_success_stories_b.field_alignment
+    - field.field.paragraph.block_success_stories_b.field_articles
+    - field.field.paragraph.block_success_stories_b.field_new_heading
+    - field.field.paragraph.block_success_stories_b.field_paragraph
+    - field.field.paragraph.block_success_stories_b.field_scroll_id
+    - field.field.paragraph.block_success_stories_b.field_styles
+    - paragraphs.paragraphs_type.block_success_stories_b
+  module:
+    - entity_reference_revisions
+    - options
+    - text
+id: paragraph.block_success_stories_b.default
+targetEntityType: paragraph
+bundle: block_success_stories_b
+mode: default
+content:
+  field_alignment:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_articles:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_new_heading:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_paragraph:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_scroll_id: true
+  field_styles: true

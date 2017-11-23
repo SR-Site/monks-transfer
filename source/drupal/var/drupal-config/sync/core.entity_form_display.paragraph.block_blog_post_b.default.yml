@@ -1,0 +1,39 @@
+uuid: 4a61044e-81a6-4f35-bf36-cd3b6567c0d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_blog_post_b.field_scroll_id
+    - field.field.paragraph.block_blog_post_b.field_styles
+    - paragraphs.paragraphs_type.block_blog_post_b
+  module:
+    - paragraphs
+id: paragraph.block_blog_post_b.default
+targetEntityType: paragraph
+bundle: block_blog_post_b
+mode: default
+content:
+  field_scroll_id:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_styles:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
