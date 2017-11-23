@@ -93,6 +93,22 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
   }
 
   /**
+   * Common properties for all Paragraph blocks.
+   *
+   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *   Content entity.
+   *
+   * @return array|string
+   *   Array of heading and paragraph..
+   */
+  public function getHeadingParagraphData(ContentEntityInterface $entity) {
+    return [
+      'heading' => $this->fieldProcessor->getFieldData($entity->get('field_new_heading')),
+      'paragraph' => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
+    ];
+  }
+
+  /**
    * Make sure that it is always an array.
    *
    * @param \Drupal\Core\Field\FieldItemListInterface $field
