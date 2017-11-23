@@ -29,9 +29,16 @@
 		padding-top: $sizeGrid / 2;
 	}
 
+	.top {
+		color: $colorPrimary;
+		text-decoration: none;
+		transition: color 0.2s $easeInOutCubic;
+	}
+
 	.sub-heading {
 		margin-bottom: $sizeGrid / 2;
 		color: $colorTertiary;
+		transition: color 0.2s $easeInOutCubic;
 		font-weight: 600;
 	}
 
@@ -61,5 +68,13 @@
 		.copy {
 			margin-bottom: mobile-size($sizeGridMobile * 2);
 		}
+	}
+}
+
+@include hover('.top') {
+	color: $colorSecondary;
+
+	.sub-heading {
+		color: $colorSecondary;
 	}
 }

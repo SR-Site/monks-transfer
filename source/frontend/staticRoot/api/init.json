@@ -139,12 +139,6 @@
 				"type": 0
 			  },
 			  {
-				"label": "Success Stories",
-				"title": "Success Stories",
-				"target": "/resources/success-stories",
-				"type": 0
-			  },
-			  {
 				"label": "Knowledge Center",
 				"title": "Knowledge Center",
 				"target": "/resources/knowledge-center",

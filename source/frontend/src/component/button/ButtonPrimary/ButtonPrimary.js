@@ -1,5 +1,11 @@
-import { AbstractButtonComponent } from 'vue-block-system';
+import { AbstractButtonComponent, ButtonType } from 'vue-block-system';
 import VueTypes from 'vue-types';
+import stripe from './elementProps/stripe';
+import label from './elementProps/label';
+import svg from './elementProps/svg';
+import backgroundStroke from './elementProps/backgroundStroke';
+import hoverStroke from './elementProps/hoverStroke';
+import base from './elementProps/base';
 import ButtonPrimaryTransitionController from './ButtonPrimaryTransitionController';
 
 export default {
@@ -8,6 +14,19 @@ export default {
 	props: {
 		theme: VueTypes.number.isRequired,
 		solid: VueTypes.bool.def(false),
+	},
+	render(createElement) {
+		const tag = this.type === ButtonType.LINK ? 'a' : 'button';
+		const tagProps = this.type === ButtonType.LINK ? { domProps: { href: this.link.target } } : {};
+
+		return createElement(tag, Object.assign(base(this), tagProps), [
+			createElement('span', stripe(this)),
+			createElement('svg', svg(this), [
+				createElement('rect', backgroundStroke(this)),
+				createElement('rect', hoverStroke(this)),
+			]),
+			createElement('span', label(this)),
+		]);
 	},
 	data() {
 		return {

@@ -139,7 +139,7 @@
 			  "link": {
 				"label": "Discover Television",
 				"title": "Discover Television",
-				"target": "/television",
+				"target": "/advertising-solutions/television",
 				"type": 0
 			  }
 			},
@@ -154,7 +154,7 @@
 			  "link": {
 				"label": "Discover Television",
 				"title": "Discover Television",
-				"target": "/television",
+				"target": "/advertising-solutions/digital",
 				"type": 0
 			  }
 			},
@@ -169,7 +169,7 @@
 			  "link": {
 				"label": "Discover Television",
 				"title": "Discover Television",
-				"target": "/television",
+				"target": "/advertising-solutions/creative-services",
 				"type": 0
 			  }
 			}

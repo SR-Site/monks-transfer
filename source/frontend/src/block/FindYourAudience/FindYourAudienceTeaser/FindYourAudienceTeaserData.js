@@ -9,6 +9,7 @@ import PropVideo from '../../../data/prop-type/media/PropVideo';
  * @param {description} subHeading The sub heading of the teaser
  * @param {description} paragraph The paragraph of the teaser
  * @param {description} reaches The list of reaches, should be strings
+ * @param {description} target The path to the detail page
  */
 export default {
 	image: VueTypes.shape(PropImage).isRequired,
@@ -17,4 +18,5 @@ export default {
 	subHeading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
 	reaches: VueTypes.array.isRequired,
+	target: VueTypes.string.isRequired,
 };

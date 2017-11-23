@@ -17,10 +17,10 @@
 						ref="button"
 						:title="data.link.title"
 						:label="data.link.label"
-						:type="ButtonType.LINK"
 						:theme="Theme.LIGHT"
+						:type="ButtonType.LINK"
 						:link="{
-							type: data.link.type,
+							type: BackendLinkTypeMap[data.link.type],
 							target: data.link.target,
 						}"
 						:class="$style.button"/>

@@ -29,9 +29,7 @@ class MainProductNavTransitionController extends AbstractTransitionController {
 			this.transitionInTimeline.add(this.getSubTimeline(componentId), `-=${offset}`);
 		});
 
-		// this.transitionInTimeline.add(this.getSubTimeline('DashedPaginator'), '-=0.5');
-
-		console.log(this.transitionInTimeline.getChildren());
+		this.transitionInTimeline.add(this.getSubTimeline('DashedPaginator'), '-=0.5');
 	}
 
 	/**
