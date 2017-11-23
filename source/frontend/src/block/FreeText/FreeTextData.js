@@ -6,7 +6,7 @@ import VueTypes from 'vue-types';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
- * @param {description} html The content of the free text block
+ * @param {description} html The content of the free text block, anchors can contain internal links, js-internal-link
  * @param {description} small A flag to make the content even smaller and align it with the blog post wrapper
  * @param {description} alignment The alignment of the content
  */

@@ -55,7 +55,7 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "alignment": 2,
-		  "html": "<h2>Our Platform is our promise to you</h2><p>Combined with our national scale and resources, only we can deliver. </p>"
+		  "html": "<h2>Our Platform is our promise to you</h2><p>Combined with our national <a href='/home' class='js-internal-link'>scale and resources</a>, only we can deliver. </p>"
 		}
 	  },
 	  {

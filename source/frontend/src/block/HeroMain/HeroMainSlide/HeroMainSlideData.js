@@ -6,7 +6,7 @@ import PropLink from '../../../data/prop-type/action/PropLink';
 
 /**
  * @param {description} heading The heading on the slide
- * @param {description} paragraph The paragraph on the slide
+ * @param {description} paragraph The paragraph on the slide, anchors can contain internal links, js-internal-link
  * @param {description} background normal: 1920x1080, small: 1280x720
  * @param {description} backgroundVideo The background video on the slide
  * @param {description} link The link for the slide
