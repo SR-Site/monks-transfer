@@ -213,7 +213,7 @@
 			  "link": {
 				"label": "Television",
 				"title": "Television",
-				"target": "/television-advertising-products-and-programming",
+				"target": "/advertising-solutions/television",
 				"type": 0
 			  }
 			},
@@ -233,7 +233,7 @@
 			  "link": {
 				"label": "Digital",
 				"title": "Digital",
-				"target": "/tv-and-online-digital-advertising",
+				"target": "/advertising-solutions/digital",
 				"type": 0
 			  }
 			}
