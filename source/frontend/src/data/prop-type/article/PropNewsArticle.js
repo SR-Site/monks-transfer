@@ -28,9 +28,7 @@ export default {
 	theme: VueTypes.number.isRequired,
 	author: VueTypes.shape(PropAuthor),
 	link: VueTypes.shape(PropLink),
-	social: VueTypes.arrayOf(
-		VueTypes.shape(PropLink),
-	),
+	social: VueTypes.arrayOf(VueTypes.shape(PropLink)),
 	views: VueTypes.number.isRequired,
 	time: VueTypes.number.isRequired,
 	date: VueTypes.string.isRequired,

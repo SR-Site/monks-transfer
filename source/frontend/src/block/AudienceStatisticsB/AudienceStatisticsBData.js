@@ -23,7 +23,5 @@ export default {
 	paragraph: VueTypes.string.isRequired,
 	cta: VueTypes.string.isRequired,
 	background: VueTypes.shape(PropImage).isRequired,
-	statistics: VueTypes.arrayOf(
-		VueTypes.shape(AudienceStatisticData)
-	).isRequired,
+	statistics: VueTypes.arrayOf(VueTypes.shape(AudienceStatisticData)).isRequired,
 };

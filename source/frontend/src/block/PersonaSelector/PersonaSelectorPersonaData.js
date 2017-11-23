@@ -12,14 +12,7 @@ import PropImage from '../../data/prop-type/media/PropImage';
 export default {
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
-	personaType: VueTypes.oneOf(
-		[
-			0,
-			1,
-			2,
-			3,
-		],
-	).isRequired,
+	personaType: VueTypes.oneOf([0, 1, 2, 3]).isRequired,
 	link: VueTypes.shape(PropLink).isRequired,
 	image: VueTypes.shape(PropImage).isRequired,
 };

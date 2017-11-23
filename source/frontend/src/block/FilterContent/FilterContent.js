@@ -1,10 +1,10 @@
-import VueTypes from 'vue-types';
+import shuffle from 'lodash/shuffle';
+import ContentService from 'net/service/ContentService';
 import { AbstractBlockComponent, BlockHelper } from 'vue-block-system';
-import FilterContentTransitionController from './FilterContentTransitionController';
+import VueTypes from 'vue-types';
 import FilterContentData from './FilterContentData';
 import FilterContentMenu from './FilterContentMenu/FilterContentMenu';
-import ContentService from 'net/service/ContentService';
-import shuffle from 'lodash/shuffle'
+import FilterContentTransitionController from './FilterContentTransitionController';
 
 export default {
 	name: 'FilterContent',
@@ -52,16 +52,14 @@ export default {
 			return JSON.parse(JSON.stringify(this.filters));
 		},
 		loadPage(index) {
-			this.$tracking.trackEvent(
-				{
-					[this.TrackingProvider.GOOGLE_ANALYTICS]: {
-						category: 'filterContent',
-						action: 'click',
-						label: 'loadMore',
-						value: index,
-					},
+			this.$tracking.trackEvent({
+				[this.TrackingProvider.GOOGLE_ANALYTICS]: {
+					category: 'filterContent',
+					action: 'click',
+					label: 'loadMore',
+					value: index,
 				},
-			);
+			});
 
 			this.spinner.transitionIn();
 			// Set the new offset
@@ -70,19 +68,19 @@ export default {
 			this.index = index;
 			// Fetch the page from the backend
 			ContentService.loadPage(this.data.endpoint, this.offset, this.limit, this.getFilters())
-			.then(result => {
-				// Empty the current block list
-				this.blocks = [];
-				this.$nextTick(() => {
-					// Set the total page count
-					this.totalPages = Math.ceil(result.pagination.total / this.limit);
-					// Store the parsed blocks
-					this.blocks = BlockHelper.parseBlocks({}, shuffle(result.data.blocks));
-					// Trigger a resize on the parent block so they scroll tracker points get updated
-					this.$nextTick(() => this.getParentPage().handleResize());
-				});
-			})
-			.then(() => this.spinner.transitionOut());
+				.then(result => {
+					// Empty the current block list
+					this.blocks = [];
+					this.$nextTick(() => {
+						// Set the total page count
+						this.totalPages = Math.ceil(result.pagination.total / this.limit);
+						// Store the parsed blocks
+						this.blocks = BlockHelper.parseBlocks({}, shuffle(result.data.blocks));
+						// Trigger a resize on the parent block so they scroll tracker points get updated
+						this.$nextTick(() => this.getParentPage().handleResize());
+					});
+				})
+				.then(() => this.spinner.transitionOut());
 		},
 	},
 };

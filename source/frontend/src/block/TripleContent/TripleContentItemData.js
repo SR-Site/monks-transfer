@@ -9,5 +9,5 @@ import PropImage from '../../data/prop-type/media/PropImage';
 export default {
 	image: VueTypes.shape(PropImage),
 	heading: VueTypes.string.isRequired,
-	paragraph: VueTypes.string.isRequired
+	paragraph: VueTypes.string.isRequired,
 };

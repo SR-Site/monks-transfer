@@ -1,6 +1,6 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import FilterContentMenuDropdownTransitionController from './FilterContentMenuDropdownTransitionController';
 import VueTypes from 'vue-types';
+import FilterContentMenuDropdownTransitionController from './FilterContentMenuDropdownTransitionController';
 
 export default {
 	name: 'FilterContentMenuDropdown',
@@ -10,12 +10,10 @@ export default {
 		filter: VueTypes.number,
 		disableTransitionIn: VueTypes.bool.def(false),
 		options: VueTypes.arrayOf(
-			VueTypes.shape(
-				{
-					value: VueTypes.string.isRequired,
-					label: VueTypes.string.isRequired,
-				},
-			).isRequired,
+			VueTypes.shape({
+				value: VueTypes.string.isRequired,
+				label: VueTypes.string.isRequired,
+			}).isRequired,
 		),
 	},
 	methods: {
@@ -27,7 +25,7 @@ export default {
 			this.$emit('close');
 		},
 		handleOptionClick(option) {
-			this.$emit('select', this.filter, option);
+			this.$emit('select', this.filter, option, false);
 		},
 		isActive(option) {
 			const chosenOptions = this.chosenOptions[this.filter] || [];

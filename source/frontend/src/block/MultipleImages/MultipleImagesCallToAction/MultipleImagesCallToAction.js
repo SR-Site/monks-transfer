@@ -1,7 +1,7 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import MultipleImagesCallToActionTransitionController from './MultipleImagesCallToActionTransitionController';
-import MultipleImagesCallToActionData from './MultipleImagesCallToActionData';
 import VueTypes from 'vue-types';
+import MultipleImagesCallToActionData from './MultipleImagesCallToActionData';
+import MultipleImagesCallToActionTransitionController from './MultipleImagesCallToActionTransitionController';
 
 export default {
 	name: 'MultipleImagesCallToAction',

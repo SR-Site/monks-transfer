@@ -1,7 +1,7 @@
-import { AbstractContentPageComponent } from 'vue-block-system';
-import TrackingProvider from 'util/tracking/TrackingProvider';
-import ContentPageTransitionController from './ContentPageTransitionController';
 import objectFitImages from 'object-fit-images';
+import TrackingProvider from 'util/tracking/TrackingProvider';
+import { AbstractContentPageComponent } from 'vue-block-system';
+import ContentPageTransitionController from './ContentPageTransitionController';
 
 export default {
 	name: 'ContentPage',
@@ -43,7 +43,11 @@ export default {
 		},
 	},
 	beforeRouteUpdate(to, from, next) {
-		this.$emit('beforePageChange');
-		this.pageLoader.transitionIn().then(() => next());
+		if (to.path === from.path && from.hash !== to.hash) {
+			next();
+		} else {
+			this.$emit('beforePageChange');
+			this.pageLoader.transitionIn().then(() => next());
+		}
 	},
 };

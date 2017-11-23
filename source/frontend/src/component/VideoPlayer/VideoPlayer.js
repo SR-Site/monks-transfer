@@ -1,13 +1,13 @@
-import { AbstractTransitionComponent } from 'vue-transition-component';
-import debounce from 'lodash/debounce'
+import Player from '@vimeo/player';
 import VideoElement from 'lib/media/VideoElement';
 import ElementResizer, { ScaleMode } from 'lib/temple/ElementResizer';
-import Player from '@vimeo/player';
-import VideoPlayerTransitionController from './VideoPlayerTransitionController';
-import VideoPlayerControls from './VideoPlayerControls/VideoPlayerControls';
+import debounce from 'lodash/debounce';
+import { AbstractTransitionComponent } from 'vue-transition-component';
 import VideoType from '../../data/enum/VideoType';
 import NativeEventListener from '../../util/event/NativeEventListener';
 import InternalVideoPlayer from '../../util/media/InternalVideoPlayer';
+import VideoPlayerControls from './VideoPlayerControls/VideoPlayerControls';
+import VideoPlayerTransitionController from './VideoPlayerTransitionController';
 
 export default {
 	name: 'VideoPlayer',
@@ -30,23 +30,14 @@ export default {
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new VideoPlayerTransitionController(this);
-			this.resizeListener = new NativeEventListener(
-				window,
-				'resize',
-				debounce(this.handleResize, 250),
-			);
+			this.resizeListener = new NativeEventListener(window, 'resize', debounce(this.handleResize, 250));
 
 			this.videoControls = this.getChild('VideoPlayerControls');
 			this.isReady();
 		},
 		handleResize() {
 			if (this.videoType === VideoType.INTERNAL && this.videoPlayer) {
-				ElementResizer.resize(
-					this.videoPlayer.element,
-					16,
-					9,
-					ScaleMode.COVER,
-				);
+				ElementResizer.resize(this.videoPlayer.element, 16, 9, ScaleMode.COVER);
 			}
 		},
 		handleMouseMove() {
@@ -74,7 +65,8 @@ export default {
 			}
 		},
 		handleSeek(data) {
-			this.videoPlayer.getDuration()
+			this.videoPlayer
+				.getDuration()
 				.then(duration => this.videoPlayer.setCurrentTime(data.progress * duration))
 				.then(() => this.play());
 		},
@@ -105,20 +97,16 @@ export default {
 				default:
 					throw new Error(`Unsupported video type, ${options.type}`);
 			}
-
 		},
 		createInternalVideoPlayer() {
 			this.enableCustomControls = true;
 			this.videoControls.setActiveState(true);
-			this.videoPlayer = new InternalVideoPlayer(
-				this.$el,
-				{
-					url: this.options.video.url,
-					poster: this.options.poster,
-					loop: this.options.loop,
-					controls: this.options.controls,
-				},
-			);
+			this.videoPlayer = new InternalVideoPlayer(this.$el, {
+				url: this.options.video.url,
+				poster: this.options.poster,
+				loop: this.options.loop,
+				controls: this.options.controls,
+			});
 
 			this.videoPlayer.addEventListener(VideoElement.EVENT_ENDED, this.handleVideoEnd);
 			this.videoPlayer.addEventListener(VideoElement.EVENT_TIMEUPDATE, this.handleTimeUpdate);
@@ -129,18 +117,15 @@ export default {
 			this.enableCustomControls = false;
 			this.videoControls.setActiveState(false);
 			const id = this.vimeoUrlToVimeoId(this.options.video.url);
-			this.videoPlayer = new Player(
-				this.$el,
-				{
-					id,
-					width: 640,
-					height: 480,
-					loop: this.options.loop,
-					title: false,
-					byline: false,
-					portrait: false,
-				},
-			);
+			this.videoPlayer = new Player(this.$el, {
+				id,
+				width: 640,
+				height: 480,
+				loop: this.options.loop,
+				title: false,
+				byline: false,
+				portrait: false,
+			});
 
 			this.videoPlayer.loadVideo(id);
 			this.videoPlayer.element.style.display = 'block';
@@ -150,21 +135,18 @@ export default {
 			this.videoPlayer.ready().then(() => this.handleVideoPlayerReady());
 		},
 		isAbsoluteUrl(url) {
-			return /^[\w-\.]*:/.test(url);
+			return /^[\w-.]*:/.test(url);
 		},
 		vimeoUrlToVimeoId(url) {
 			if (this.isAbsoluteUrl(url)) {
 				const match = url.match(/(videos|video|channels|\.com)\/([\d]+)/);
 				return match.length ? match[2] : null;
 			}
-			else {
-				return url;
-			}
+			return url;
 		},
 		removePlayer() {
 			if (this.videoPlayer) {
-				this.pause()
-				.then(() => {
+				this.pause().then(() => {
 					this.videoPlayer.unload();
 
 					if (this.options.video.type === VideoType.VIMEO) {
@@ -176,12 +158,9 @@ export default {
 						// https://github.com/vimeo/player.js/issues/126
 						this.videoPlayer.element.style.display = 'none';
 						this.videoPlayer = null;
-
-					} else {
-						if (this.options.video.type === VideoType.INTERNAL) {
-							this.videoPlayer.dispose();
-							this.videoPlayer = null;
-						}
+					} else if (this.options.video.type === VideoType.INTERNAL) {
+						this.videoPlayer.dispose();
+						this.videoPlayer = null;
 					}
 				});
 			}
@@ -189,52 +168,45 @@ export default {
 		updateProgress() {
 			let duration = 0;
 			let currentTime = 0;
-			Promise.all(
-				[
-					this.videoPlayer.getCurrentTime().then(value => currentTime = value),
-					this.videoPlayer.getDuration().then(value => duration = value),
-				],
-			).then(() => {
+			Promise.all([
+				this.videoPlayer.getCurrentTime().then(value => {
+					currentTime = value;
+				}),
+				this.videoPlayer.getDuration().then(value => {
+					duration = value;
+				}),
+			]).then(() => {
 				this.progress = currentTime / duration;
 			});
 		},
 		play() {
 			this.isPlaying = true;
 
-			this.$tracking.trackEvent(
-				{
-					[this.TrackingProvider.GOOGLE_ANALYTICS]: {
-						category: 'videoPlayer',
-						action: 'click',
-						label: `play|${this.options.title}`,
-					},
+			this.$tracking.trackEvent({
+				[this.TrackingProvider.GOOGLE_ANALYTICS]: {
+					category: 'videoPlayer',
+					action: 'click',
+					label: `play|${this.options.title}`,
 				},
-			);
+			});
 
 			return this.videoPlayer.play();
-
 		},
 		pause() {
 			this.isPlaying = false;
-			return this.videoPlayer.pause()
-			.then(() => Promise.all(
-				[
-					this.videoPlayer.getCurrentTime(),
-					this.videoPlayer.getDuration(),
-				],
-			))
-			.then((result) => {
-				this.$tracking.trackEvent(
-					{
+			return this.videoPlayer
+				.pause()
+				.then(() => Promise.all([this.videoPlayer.getCurrentTime(), this.videoPlayer.getDuration()]))
+				.then(result => {
+					this.$tracking.trackEvent({
 						[this.TrackingProvider.GOOGLE_ANALYTICS]: {
 							category: 'videoPlayer',
 							action: 'click',
 							label: 'pause',
 							value: Math.round(result[0] / result[1] * 100),
 						},
-					},
-				);
-			});
+					});
+				});
 		},
 	},
 	beforeDestroy() {

@@ -14,7 +14,5 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	callToActions: VueTypes.arrayOf(
-		VueTypes.shape(ImageCallToActionsItemData),
-	).isRequired,
+	callToActions: VueTypes.arrayOf(VueTypes.shape(ImageCallToActionsItemData)).isRequired,
 };

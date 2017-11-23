@@ -17,7 +17,5 @@ export default {
 	scrollId: VueTypes.string,
 	html: VueTypes.string.isRequired,
 	small: VueTypes.bool,
-	alignment: VueTypes.oneOf(
-		[0, 1, 2],
-	).isRequired,
+	alignment: VueTypes.oneOf([0, 1, 2]).isRequired,
 };

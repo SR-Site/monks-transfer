@@ -11,14 +11,5 @@ export default {
 	label: VueTypes.string.isRequired,
 	title: VueTypes.string.isRequired,
 	target: VueTypes.string,
-	type: VueTypes.oneOf(
-		[
-			0,
-			1,
-			2,
-			3,
-			4,
-			5,
-		],
-	),
+	type: VueTypes.oneOf([0, 1, 2, 3, 4, 5]),
 };

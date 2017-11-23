@@ -29,7 +29,7 @@
 		border-radius: 10px;
 		background: #dadadb;
 		display: block;
-		transition: background .2s $easeInOutCubic;
+		transition: background 0.2s $easeInOutCubic;
 		cursor: pointer;
 
 		&:not(:first-child) {

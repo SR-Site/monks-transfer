@@ -1,8 +1,8 @@
-import VueTypes from 'vue-types';
+import truncate from 'lodash/truncate';
 import { AbstractBlockComponent } from 'vue-block-system';
-import ImageWithContentCTransitionController from './ImageWithContentCTransitionController';
+import VueTypes from 'vue-types';
 import ImageWithContentCData from './ImageWithContentCData';
-import truncate from 'lodash/truncate'
+import ImageWithContentCTransitionController from './ImageWithContentCTransitionController';
 
 export default {
 	name: 'ImageWithContentC',

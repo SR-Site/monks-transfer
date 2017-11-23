@@ -31,7 +31,7 @@ class DownloadFileBTransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.5'
+			'-=0.5',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.fileDescription,
@@ -45,7 +45,7 @@ class DownloadFileBTransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.5',
+			'-=0.5',
 		);
 		this.transitionInTimeline.fromTo(
 			(<any>this.viewModel.$refs.button).$el,
@@ -59,9 +59,8 @@ class DownloadFileBTransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			'=-0.5',
+			'-=0.5',
 		);
-
 	}
 
 	/**
@@ -69,8 +68,7 @@ class DownloadFileBTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default DownloadFileBTransitionController;

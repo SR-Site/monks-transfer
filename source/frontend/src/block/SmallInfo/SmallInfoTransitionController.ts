@@ -36,12 +36,12 @@ class SmallInfoTransitionController extends AbstractTransitionController {
 					autoAlpha: 1,
 					ease: Expo.easeOut,
 				},
-				'=-0.7',
+				'-=0.7',
 			);
 		}
 
 		if (this.viewModel.hasChild('ButtonPrimary')) {
-			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '=-0.7');
+			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '-=0.7');
 		}
 	}
 

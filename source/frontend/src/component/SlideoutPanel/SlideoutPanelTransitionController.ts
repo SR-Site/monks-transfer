@@ -18,7 +18,7 @@ class SlideoutPanelTransitionController extends AbstractTransitionController {
 				autoAlpha: 1,
 				ease: Linear.easeNone,
 			},
-			0
+			0,
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.panel,
@@ -30,7 +30,7 @@ class SlideoutPanelTransitionController extends AbstractTransitionController {
 				xPercent: 0,
 				ease: Expo.easeInOut,
 			},
-			0
+			0,
 		);
 	}
 
@@ -39,8 +39,7 @@ class SlideoutPanelTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default SlideoutPanelTransitionController;

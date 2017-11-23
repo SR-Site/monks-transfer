@@ -18,15 +18,11 @@ export default {
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
 	target: VueTypes.string.isRequired,
-	stats: VueTypes.shape(
-		{
-			percentage: VueTypes.number.isRequired,
-			demographic: VueTypes.string.isRequired,
-		},
-	),
+	stats: VueTypes.shape({
+		percentage: VueTypes.number.isRequired,
+		demographic: VueTypes.string.isRequired,
+	}),
 	image: VueTypes.shape(PropImage).isRequired,
 	video: VueTypes.shape(PropVideo),
-	tags: VueTypes.arrayOf(
-		VueTypes.shape(PropLink),
-	),
+	tags: VueTypes.arrayOf(VueTypes.shape(PropLink)),
 };

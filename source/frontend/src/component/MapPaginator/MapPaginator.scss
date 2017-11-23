@@ -52,7 +52,7 @@
 			position: absolute;
 			transform: translateY(-50%);
 			background: $colorPrimary;
-			transition: width .8s $easeInOutCubic;
+			transition: width 0.8s $easeInOutCubic;
 		}
 	}
 
@@ -75,7 +75,7 @@
 		font: 700 1.2rem / #{$sizeGrid * 1.5} $fontOpenSans;
 		text-align: center;
 		color: $colorPrimary;
-		transition: border-color .8s $easeInOutCubic;
+		transition: border-color 0.8s $easeInOutCubic;
 		cursor: pointer;
 
 		&.is-active {

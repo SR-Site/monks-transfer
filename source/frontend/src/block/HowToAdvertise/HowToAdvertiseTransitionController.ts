@@ -55,23 +55,38 @@ class HowToAdvertiseTransitionController extends AbstractTransitionController {
 			const description = step.querySelector('.content');
 
 			if (index > 0) {
-				this._howToAdvertiseTimeline.from(icon, 1, {
-					scale: 0.8,
-					backgroundColor: '#ffffff',
-					ease: Linear.easeNone,
-				}, index - 1);
+				this._howToAdvertiseTimeline.from(
+					icon,
+					1,
+					{
+						scale: 0.8,
+						backgroundColor: '#ffffff',
+						ease: Linear.easeNone,
+					},
+					index - 1,
+				);
 
 				if ((<any>this.viewModel).deviceState > DeviceState.SMALL) {
-					this._howToAdvertiseTimeline.from(step, 1, {
-						width: iconWidth,
-						ease: Linear.easeNone,
-					}, index - 1);
+					this._howToAdvertiseTimeline.from(
+						step,
+						1,
+						{
+							width: iconWidth,
+							ease: Linear.easeNone,
+						},
+						index - 1,
+					);
 				}
 
-				this._howToAdvertiseTimeline.from(description, 0.25, {
-					opacity: 0,
-					ease: Linear.easeNone,
-				}, index - 0.25);
+				this._howToAdvertiseTimeline.from(
+					description,
+					0.25,
+					{
+						opacity: 0,
+						ease: Linear.easeNone,
+					},
+					index - 0.25,
+				);
 			}
 		});
 	}

@@ -1,7 +1,7 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import MarketSearchTransitionController from './MarketSearchTransitionController';
 import VueTypes from 'vue-types';
 import MarketSearchResult from '../MarketSearchResult/MarketSearchResult';
+import MarketSearchTransitionController from './MarketSearchTransitionController';
 
 export default {
 	name: 'MarketSearch',
@@ -24,7 +24,9 @@ export default {
 			return this.markets.filter(market => {
 				const query = this.query.toLowerCase();
 				const city = market.city.toLowerCase();
-				const state = this.states.find(state => state.id === market.statePostalCode).label.toLowerCase();
+				const state = this.states
+					.find(stateData => stateData.id === market.statePostalCode)
+					.label.toLowerCase();
 				return query.length > 1 && (city.indexOf(query) > -1 || state.indexOf(query) > -1);
 			});
 		},

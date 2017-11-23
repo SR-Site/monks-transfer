@@ -28,26 +28,148 @@
 	},
 	"blocks": [
 	  {
-		"id": "heroTertiary",
+		"id": "heroQuaternary",
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
-		  "marginTop": 2,
+		  "marginTop": 0,
 		  "background": {
 			"normal": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
 			"small": "https://www.spectrumreach.com/assets/images/2017-10/LAUpfront-2017-2-BlockHeader.jpg",
 			"alt": "Background image alt text"
-		  }
+		  },
+		  "heading": "Networks",
+		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus laoreet, risus et facilisis mattis, ipsum leo imperdiet massa, ac euismod orci lorem vel felis. Phasellus pretium, ante eu fringilla dapibus, dolor ex pellentesque neque, mollis hendrerit neque felis in est."
 		}
 	  },
 	  {
-		"id": "freeText",
+		"id": "filterContent",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 0,
+		  "filters": [
+			{
+			  "type": 0,
+			  "label": "Category",
+			  "options": [
+				{
+				  "value": "Auto",
+				  "label": "Auto"
+				},
+				{
+				  "value": "Event",
+				  "label": "Event"
+				},
+				{
+				  "value": "Home Improvement",
+				  "label": "Home Improvement"
+				},
+				{
+				  "value": "Marketing",
+				  "label": "Marketing"
+				},
+				{
+				  "value": "Retail",
+				  "label": "Retail"
+				}
+			  ]
+			},
+			{
+			  "type": 1,
+			  "label": "Thought Leadership",
+			  "options": [
+				{
+				  "value": "Demographics",
+				  "label": "Demographics"
+				},
+				{
+				  "value": "Holidays",
+				  "label": "Holidays"
+				},
+				{
+				  "value": "Media",
+				  "label": "Media"
+				},
+				{
+				  "value": "Sports",
+				  "label": "Sports"
+				}
+			  ]
+			},
+			{
+			  "type": 2,
+			  "label": "Product",
+			  "options": [
+				{
+				  "value": "Creative Services",
+				  "label": "Creative Services"
+				},
+				{
+				  "value": "Digital",
+				  "label": "Digital"
+				},
+				{
+				  "value": "Television",
+				  "label": "Television"
+				}
+			  ]
+			},
+			{
+			  "type": 3,
+			  "label": "Document Type",
+			  "options": [
+				{
+				  "value": "3rd party research",
+				  "label": "3rd party research"
+				},
+				{
+				  "value": "Articles",
+				  "label": "Articles"
+				},
+				{
+				  "value": "Infographic",
+				  "label": "Infographic"
+				},
+				{
+				  "value": "White papers",
+				  "label": "White papers"
+				}
+			  ]
+			}
+		  ],
+		  "filterLabel": "Filters",
+		  "closeLabel": "Close",
+		  "endpoint": "search/network.json"
+		}
+	  },
+	  {
+		"id": "glossaryBanner",
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
 		  "marginTop": 2,
-		  "alignment": 2,
-		  "html": "<h1>Empty page.</h1><p>This page has no PSD so no blocks are added!</p>"
+		  "heading":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		  "subHeading":"Lorem ipsum dolor sit amet",
+		  "background": {
+			"normal": "http://via.placeholder.com/1200x440",
+			"small": "http://via.placeholder.com/750x1240",
+			"alt": "Background image alt text"
+		  },
+		  "link": {
+			"label": "Watch the trailer",
+			"title": "Watch the trailer",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
+		"id": "spacer",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2
 		}
 	  }
 	],

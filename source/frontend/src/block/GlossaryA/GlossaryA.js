@@ -60,9 +60,8 @@ export default {
 				const point = this.scrollTracker.addPoint(this.getYPosition(element), element.offsetHeight);
 
 				point.addEventListener(ScrollTrackerEvent.ENTER_VIEW, () => this.handleComponentEnterView(component));
-				point.addEventListener(
-					ScrollTrackerEvent.SCROLLED_BEYOND,
-					() => this.handleComponentEnterView(component),
+				point.addEventListener(ScrollTrackerEvent.SCROLLED_BEYOND, () =>
+					this.handleComponentEnterView(component),
 				);
 
 				// Check for the position on init
@@ -74,7 +73,7 @@ export default {
 			});
 		},
 		getYPosition(element) {
-			const offset = window.innerHeight * 0.25;
+			const offset = window.innerHeight * 0.5;
 			const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
 			return elementPosition + offset;
 		},

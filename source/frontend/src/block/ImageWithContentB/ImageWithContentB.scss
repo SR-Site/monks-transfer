@@ -30,13 +30,13 @@
 
 	.copy {
 		margin-bottom: $sizeGrid;
-		line-height: 1.75
+		line-height: 1.75;
 	}
 
 	.alignment-left {
 		.triangle-background {
 			@include arrow(right, rgba(2, 87, 142, 0.75), $sizeGrid * 60);
-			left: $sizeGrid *  -7;
+			left: $sizeGrid * -7;
 		}
 
 		.content {
@@ -86,7 +86,6 @@
 		}
 
 		.content {
-
 			&:before {
 				@include size(100%);
 				@include position(auto, auto, 0, 0);

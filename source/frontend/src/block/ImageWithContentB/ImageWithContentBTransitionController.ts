@@ -29,7 +29,7 @@ class ImageWithContentBTransitionController extends AbstractTransitionController
 				autoAlpha: 1,
 				ease: Expo.easeOut,
 			},
-			0
+			0,
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.heading,
@@ -43,7 +43,7 @@ class ImageWithContentBTransitionController extends AbstractTransitionController
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.5',
+			'-=0.5',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.copy,
@@ -57,10 +57,10 @@ class ImageWithContentBTransitionController extends AbstractTransitionController
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.5',
+			'-=0.5',
 		);
 		if (this.viewModel.hasChild('ButtonPrimary')) {
-			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '=-0.5');
+			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '-=0.5');
 		}
 	}
 
@@ -69,8 +69,7 @@ class ImageWithContentBTransitionController extends AbstractTransitionController
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default ImageWithContentBTransitionController;

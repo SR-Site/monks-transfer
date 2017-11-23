@@ -1,4 +1,4 @@
-import truncate from 'lodash/truncate'
+import truncate from 'lodash/truncate';
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import VueTypes from 'vue-types';
 import { VideoOverlayMutationTypes } from '../../../store/module/videoOverlay';

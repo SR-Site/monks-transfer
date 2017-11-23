@@ -21,11 +21,11 @@ class FindYourAudienceCategoryTransitionController extends AbstractTransitionCon
 			},
 		);
 
-		(<Array<any>>this.viewModel.$refs.item).forEach((item, index) => {
-			this.transitionInTimeline.add(
-				() => this.getSubTimeline(`FindYourAudienceTeaser${index}`), 1 + (index * 0.2),
-			);
-		});
+		// (<Array<any>>this.viewModel.$refs.audience).forEach((item, index) => {
+		// 	this.transitionInTimeline.add(this.getSubTimeline(`AudienceTeaser${index}`), 1 + index * 0.2);
+		// });
+
+		this.transitionInTimeline.add(this.getSubTimeline(`ButtonCircleArrow`), '-=0.5');
 	}
 
 	/**
@@ -33,8 +33,7 @@ class FindYourAudienceCategoryTransitionController extends AbstractTransitionCon
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default FindYourAudienceCategoryTransitionController;

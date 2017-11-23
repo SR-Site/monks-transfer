@@ -33,7 +33,7 @@ class AudienceTopProgrammingSlideTransitionController extends AbstractTransition
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.copy,
@@ -48,7 +48,7 @@ class AudienceTopProgrammingSlideTransitionController extends AbstractTransition
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.network,
@@ -63,9 +63,9 @@ class AudienceTopProgrammingSlideTransitionController extends AbstractTransition
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonCircleArrowNext'), '=-0.7');
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonCircleArrowNext'), '-=0.7');
 	}
 
 	/**
@@ -73,8 +73,7 @@ class AudienceTopProgrammingSlideTransitionController extends AbstractTransition
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default AudienceTopProgrammingSlideTransitionController;

@@ -17,12 +17,8 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	alignment: VueTypes.oneOf(
-		[0, 1, 2],
-	).isRequired,
+	alignment: VueTypes.oneOf([0, 1, 2]).isRequired,
 	heading: VueTypes.string,
 	paragraph: VueTypes.string,
-	products: VueTypes.arrayOf(
-		VueTypes.shape(ProductTeaserData),
-	),
+	products: VueTypes.arrayOf(VueTypes.shape(ProductTeaserData)),
 };

@@ -16,7 +16,5 @@ export default {
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
 	heading: VueTypes.string.isRequired,
-	channels: VueTypes.arrayOf(
-		VueTypes.shape(AudienceReachChannelData),
-	),
+	channels: VueTypes.arrayOf(VueTypes.shape(AudienceReachChannelData)),
 };

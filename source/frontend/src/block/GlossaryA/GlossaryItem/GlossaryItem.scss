@@ -32,7 +32,7 @@
 		display: inline-block;
 		position: relative;
 		border-radius: 100%;
-		transition: background .5s $easeInOutExpo;
+		transition: background 0.5s $easeInOutExpo;
 
 		&:after {
 			@include size($sizeGrid * 2);

@@ -27,7 +27,6 @@
 @import 'asset/scroll-bar';
 @import 'asset/gradient-overlay';
 
-
 html,
 body {
 	padding-top: 0;
@@ -37,6 +36,7 @@ body {
 
 html {
 	overflow: visible;
+	-webkit-font-smoothing: antialiased; // Adds text Anti Aliasing for Webkit/OSX
 }
 
 body {

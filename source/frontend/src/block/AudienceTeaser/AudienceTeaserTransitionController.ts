@@ -1,7 +1,8 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 import { Cubic } from 'gsap';
 
-class FindYourAudienceTeaserTransitionController extends AbstractTransitionController {
+class AudienceTeaserTransitionController extends AbstractTransitionController
+{
 	/**
 	 * @public
 	 * @method setupTransitionInTimeline
@@ -40,7 +41,7 @@ class FindYourAudienceTeaserTransitionController extends AbstractTransitionContr
 				ease: Cubic.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.8',
+			'-=0.8',
 		);
 
 		this.transitionInTimeline.fromTo(
@@ -56,7 +57,7 @@ class FindYourAudienceTeaserTransitionController extends AbstractTransitionContr
 				ease: Cubic.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.8',
+			'-=0.8',
 		);
 
 		this.transitionInTimeline.fromTo(
@@ -72,7 +73,7 @@ class FindYourAudienceTeaserTransitionController extends AbstractTransitionContr
 				ease: Cubic.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.8',
+			'-=0.8',
 		);
 
 		this.transitionInTimeline.fromTo(
@@ -88,17 +89,17 @@ class FindYourAudienceTeaserTransitionController extends AbstractTransitionContr
 				ease: Cubic.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.8',
+			'-=0.8',
 		);
 	}
 
 	/**
-	 * @public
-	 * @method setupTransitionOutTimeline
-	 * @description Use this method to setup your transition out timeline
-	 * */
+	* @public
+	* @method setupTransitionOutTimeline
+	* @description Use this method to setup your transition out timeline
+	* */
 	protected setupTransitionOutTimeline(): void {
 	}
 }
 
-export default FindYourAudienceTeaserTransitionController;
+export default AudienceTeaserTransitionController;

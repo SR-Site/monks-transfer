@@ -11,7 +11,7 @@
 	}
 
 	.market-search-result {
-		@include size(calc(100% - #{$sizeGrid * 5.5}), $sizeGrid * 2)
+		@include size(calc(100% - #{$sizeGrid * 5.5}), $sizeGrid * 2);
 	}
 
 	.query {
@@ -58,7 +58,7 @@
 		}
 
 		.market-search-result {
-			@include size(100%, $sizeGrid * 4)
+			@include size(100%, $sizeGrid * 4);
 		}
 	}
 }

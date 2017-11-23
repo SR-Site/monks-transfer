@@ -16,7 +16,5 @@ export default {
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
 	heading: VueTypes.string.isRequired,
-	items: VueTypes.arrayOf(
-		VueTypes.shape(CoreProductItemData),
-	),
+	items: VueTypes.arrayOf(VueTypes.shape(CoreProductItemData)),
 };

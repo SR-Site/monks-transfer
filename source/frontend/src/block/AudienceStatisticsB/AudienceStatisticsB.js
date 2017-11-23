@@ -22,8 +22,6 @@ export default {
 			this.transitionController = new AudienceStatisticsBTransitionController(this);
 			this.isReady();
 		},
-		handleNextSectionClick() {
-
-		},
+		handleNextSectionClick() {},
 	},
 };

@@ -1,9 +1,9 @@
-import { AbstractTransitionComponent } from 'vue-transition-component';
-import ScrollBarTransitionController from './ScrollBarTransitionController';
 import Theme from 'data/enum/Theme';
+import { AbstractTransitionComponent } from 'vue-transition-component';
+import VueTypes from 'vue-types';
 import DraggableInstance from '../../util/draggableInstance/DraggableInstance';
 import DraggableInstanceEvent from '../../util/draggableInstance/DraggableInstanceEvent';
-import VueTypes from 'vue-types';
+import ScrollBarTransitionController from './ScrollBarTransitionController';
 
 export default {
 	name: 'ScrollBar',
@@ -14,12 +14,9 @@ export default {
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new ScrollBarTransitionController(this);
-			this.draggableInstance = new DraggableInstance(
-				this.$el,
-				{
-					maxDuration: 0.5,
-				},
-			);
+			this.draggableInstance = new DraggableInstance(this.$el, {
+				maxDuration: 0.5,
+			});
 			this.draggableInstance.addEventListener(DraggableInstanceEvent.UPDATE, event => {
 				this.$emit('update', event.data.progress);
 			});
@@ -42,7 +39,7 @@ export default {
 		},
 		getMaxX() {
 			return this.draggableInstance.maxX;
-		}
+		},
 	},
 	beforeDestroy() {
 		this.draggableInstance.dispose();

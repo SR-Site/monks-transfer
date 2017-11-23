@@ -26,6 +26,7 @@
 		font: 600 2rem / 1 $fontOpenSans;
 		color: $colorPrimary;
 		cursor: pointer;
+		transition: 0.2s color $easeInOutCubic;
 	}
 
 	.items {
@@ -54,4 +55,8 @@
 			width: 100%;
 		}
 	}
+}
+
+@include hover('.navigation-link') {
+	color: $colorTertiary;
 }

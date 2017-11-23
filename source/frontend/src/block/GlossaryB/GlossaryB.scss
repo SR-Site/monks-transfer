@@ -52,7 +52,7 @@
 
 		:global {
 			.placeholder-label {
-				color: rgba($colorWhite, .4);
+				color: rgba($colorWhite, 0.4);
 			}
 			.focus-border {
 				background: $colorWhite;
@@ -69,7 +69,7 @@
 		background: $colorTertiary;
 		color: white;
 		position: relative;
-		transition: background .5s $easeInOutExpo;
+		transition: background 0.5s $easeInOutExpo;
 	}
 
 	.navigation-button {
@@ -81,7 +81,7 @@
 		border-right: 1px solid $colorBorder;
 		border-top: 1px solid $colorBorder;
 		position: relative;
-		transition: background .5s $easeInOutExpo;
+		transition: background 0.5s $easeInOutExpo;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -92,7 +92,7 @@
 			background: $colorSecondary;
 			position: absolute;
 			content: '';
-			transition: transform .5s $easeInOutExpo;
+			transition: transform 0.5s $easeInOutExpo;
 			transform-origin: center center;
 			transform: translateX(-50%) scaleX(0);
 		}

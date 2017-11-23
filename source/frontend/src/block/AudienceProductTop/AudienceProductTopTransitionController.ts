@@ -33,7 +33,7 @@ class AudienceProductTopTransitionController extends AbstractTransitionControlle
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.heading,
@@ -48,7 +48,7 @@ class AudienceProductTopTransitionController extends AbstractTransitionControlle
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.copy,
@@ -63,7 +63,7 @@ class AudienceProductTopTransitionController extends AbstractTransitionControlle
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.box,
@@ -78,7 +78,7 @@ class AudienceProductTopTransitionController extends AbstractTransitionControlle
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.boxHeading,
@@ -93,7 +93,7 @@ class AudienceProductTopTransitionController extends AbstractTransitionControlle
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.boxCopy,
@@ -108,7 +108,7 @@ class AudienceProductTopTransitionController extends AbstractTransitionControlle
 				ease: Expo.easeOut,
 				clearProps: 'all',
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 	}
 

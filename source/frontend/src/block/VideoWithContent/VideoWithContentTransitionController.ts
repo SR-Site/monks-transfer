@@ -24,7 +24,8 @@ class VideoWithContentTransitionController extends AbstractTransitionController 
 				opacity: 1,
 				clearProps: 'clip',
 				ease: Expo.easeOut,
-			}, 0,
+			},
+			0,
 		);
 
 		this.transitionInTimeline.add(this.getSubTimeline('ButtonCirclePlay'));

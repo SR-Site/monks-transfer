@@ -33,7 +33,7 @@ class SuccessStoriesATransitionController extends AbstractTransitionController {
 				clearProps: 'all',
 				ease: Expo.easeOut,
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.subHeading,
@@ -48,7 +48,7 @@ class SuccessStoriesATransitionController extends AbstractTransitionController {
 				clearProps: 'all',
 				ease: Expo.easeOut,
 			},
-			'=-0.7',
+			'-=0.7',
 		);
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.copy,
@@ -63,9 +63,9 @@ class SuccessStoriesATransitionController extends AbstractTransitionController {
 				clearProps: 'all',
 				ease: Expo.easeOut,
 			},
-			'=-0.7',
+			'-=0.7',
 		);
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '=-0.7');
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '-=0.7');
 	}
 
 	/**

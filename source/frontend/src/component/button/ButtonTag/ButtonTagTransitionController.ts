@@ -6,9 +6,7 @@ class ButtonTagTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionInTimeline
 	 * @description Use this method to setup your transition in timeline
 	 * */
-	protected setupTransitionInTimeline(): void {
-
-	}
+	protected setupTransitionInTimeline(): void {}
 
 	/**
 	 * @public

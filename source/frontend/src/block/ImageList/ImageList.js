@@ -1,13 +1,13 @@
-import VueTypes from 'vue-types';
+import { Expo, TweenLite } from 'gsap';
+import Hammer from 'hammerjs';
+import debounce from 'lodash/debounce';
+import normalizeWheel from 'normalize-wheel';
 import { AbstractBlockComponent } from 'vue-block-system';
-import ImageListTransitionController from './ImageListTransitionController';
+import VueTypes from 'vue-types';
+import NativeEventListener from '../../util/event/NativeEventListener';
 import ImageListData from './ImageListData';
 import ImageListSlide from './ImageListSlide/ImageListSlide';
-import { TweenLite, Expo } from 'gsap';
-import normalizeWheel from 'normalize-wheel';
-import NativeEventListener from '../../util/event/NativeEventListener';
-import debounce from 'lodash/debounce'
-import Hammer from 'hammerjs';
+import ImageListTransitionController from './ImageListTransitionController';
 
 export default {
 	name: 'ImageList',
@@ -31,9 +31,12 @@ export default {
 			this.resizeListener = new NativeEventListener(window, 'resize', debounce(this.handleResize, 100));
 			this.hammer = new Hammer(this.$el, {
 				recognizers: [
-					[Hammer.Swipe, {
-						direction: Hammer.DIRECTION_VERTICAL,
-					}],
+					[
+						Hammer.Swipe,
+						{
+							direction: Hammer.DIRECTION_VERTICAL,
+						},
+					],
 				],
 			});
 			this.hammer.on('swipeup', this.handleSwipeUp);
@@ -58,10 +61,7 @@ export default {
 			}
 		},
 		handleSwipeDown() {
-			if (
-				this.$deviceState.currentState <= this.DeviceState.SMALL &&
-				this.activeIndex - 1 >= 0
-			) {
+			if (this.$deviceState.currentState <= this.DeviceState.SMALL && this.activeIndex - 1 >= 0) {
 				this.previous();
 			}
 		},
@@ -72,11 +72,9 @@ export default {
 				if (normalized.pixelY > 1 && this.activeIndex + 1 < this.data.slides.length) {
 					event.preventDefault();
 					this.next(event);
-				} else {
-					if (normalized.pixelY < -1 && this.activeIndex - 1 >= 0) {
-						event.preventDefault();
-						this.previous(event);
-					}
+				} else if (normalized.pixelY < -1 && this.activeIndex - 1 >= 0) {
+					event.preventDefault();
+					this.previous(event);
 				}
 			}
 		},
@@ -88,8 +86,8 @@ export default {
 		},
 		isCentered() {
 			const offset = 100;
-			const centerPoint = this.$el.offsetTop + (this.$el.offsetHeight / 2);
-			const scrollCenter = window.pageYOffset + (window.innerHeight / 2);
+			const centerPoint = this.$el.offsetTop + this.$el.offsetHeight / 2;
+			const scrollCenter = window.pageYOffset + window.innerHeight / 2;
 
 			// Check if the element is within range
 			return scrollCenter > centerPoint - offset && scrollCenter < centerPoint + 100;
@@ -110,25 +108,21 @@ export default {
 		},
 		openSlide(index) {
 			if (!this.openSlidePromise) {
-				this.openSlidePromise = new Promise((resolve) => {
-					TweenLite.to(
-						this.$refs.slides,
-						0.8,
-						{
-							y: this.$el.offsetHeight * -index,
-							ease: Expo.easeInOut,
-							onComplete: () => {
-								this.openSlidePromise = null;
-								this.activeIndex = index;
+				this.openSlidePromise = new Promise(resolve => {
+					TweenLite.to(this.$refs.slides, 0.8, {
+						y: this.$el.offsetHeight * -index,
+						ease: Expo.easeInOut,
+						onComplete: () => {
+							this.openSlidePromise = null;
+							this.activeIndex = index;
 
-								if (index === 0 || index === this.data.slides.length - 1) {
-									this.enableSwipe(false);
-								}
+							if (index === 0 || index === this.data.slides.length - 1) {
+								this.enableSwipe(false);
+							}
 
-								resolve();
-							},
+							resolve();
 						},
-					);
+					});
 				});
 			}
 

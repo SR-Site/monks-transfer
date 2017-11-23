@@ -17,11 +17,9 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	service: VueTypes.shape(
-		{
-			heading: VueTypes.string.isRequired,
-		},
-	),
+	service: VueTypes.shape({
+		heading: VueTypes.string.isRequired,
+	}),
 	searchLabel: VueTypes.string.isRequired,
 	searchPlaceholder: VueTypes.string.isRequired,
 	notFoundMessage: VueTypes.string.isRequired,

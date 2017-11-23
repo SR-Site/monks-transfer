@@ -20,7 +20,7 @@
 			li {
 				@include size($sizeGrid);
 				margin: 0 $sizeGrid / 4;
-				transition: color .5s $easeInOutExpo;
+				transition: color 0.5s $easeInOutExpo;
 				color: $colorSecondary;
 				cursor: pointer;
 				display: none;

@@ -14,7 +14,5 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	slides: VueTypes.arrayOf(
-		VueTypes.shape(ImageCarouselSlideData),
-	),
+	slides: VueTypes.arrayOf(VueTypes.shape(ImageCarouselSlideData)),
 };

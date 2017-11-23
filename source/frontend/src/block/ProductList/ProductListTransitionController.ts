@@ -1,4 +1,4 @@
-import { AbstractTransitionController, IAbstractTransitionComponent} from 'vue-transition-component';
+import { AbstractTransitionController, IAbstractTransitionComponent } from 'vue-transition-component';
 import { Expo } from 'gsap';
 
 class ProductListTransitionController extends AbstractTransitionController {
@@ -9,7 +9,7 @@ class ProductListTransitionController extends AbstractTransitionController {
 	 * */
 	protected setupTransitionInTimeline(): void {
 		const products = <Array<IAbstractTransitionComponent>>this.viewModel.$refs.product;
-		if(this.viewModel.$refs.heading) {
+		if (this.viewModel.$refs.heading) {
 			this.transitionInTimeline.fromTo(
 				this.viewModel.$refs.heading,
 				0.8,

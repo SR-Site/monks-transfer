@@ -1,4 +1,4 @@
-import debounce from 'lodash/debounce'
+import debounce from 'lodash/debounce';
 import Disposable from 'seng-disposable';
 import { TweenLite, Ease, Quad } from 'gsap';
 import IRectangle from 'lib/geom/IRectangle';
@@ -78,7 +78,11 @@ export default class CrossFader extends Disposable {
 	 */
 	private _oldWidth: number = 0;
 
-	constructor(private _wrapper: HTMLElement, private _canvas: HTMLCanvasElement, private _gridSizeElement: HTMLElement) {
+	constructor(
+		private _wrapper: HTMLElement,
+		private _canvas: HTMLCanvasElement,
+		private _gridSizeElement: HTMLElement,
+	) {
 		super();
 
 		CrossFader.NAME_SPACE += 1;

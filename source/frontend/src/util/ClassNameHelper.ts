@@ -14,11 +14,11 @@ class ClassNameHelper {
 	public static parseTheme(theme: Theme): string {
 		const themeLabel = Theme[theme];
 
-		if (!themeLabel) {
-			console.warn('[ClassNameHelper] Unknown theme: ' + theme);
+		if (themeLabel !== undefined) {
+			return `theme-${themeLabel.toLowerCase()}`;
 		}
 
-		return themeLabel ? 'theme-' + themeLabel.toLowerCase() : '';
+		return '';
 	}
 
 	/**
@@ -30,11 +30,11 @@ class ClassNameHelper {
 	public static parseAlignment(alignment: Alignment): string {
 		const alignmentLabel = Alignment[alignment];
 
-		if (!alignmentLabel) {
-			console.warn('[ClassNameHelper] Unknown alignment: ' + alignment);
+		if (alignmentLabel !== undefined) {
+			return `alignment-${alignmentLabel.toLowerCase()}`;
 		}
 
-		return alignmentLabel ? 'alignment-' + alignmentLabel.toLowerCase() : '';
+		return '';
 	}
 
 	/**
@@ -46,11 +46,11 @@ class ClassNameHelper {
 	public static parsePersonaType(personaType: PersonaType): string {
 		const personaLabel = PersonaType[personaType];
 
-		if (!personaLabel) {
-			console.warn('[ClassNameHelper] Unknown persona type: ' + personaType);
+		if (personaLabel !== undefined) {
+			return personaLabel.toLowerCase();
 		}
 
-		return personaLabel ? personaLabel.toLowerCase() : '';
+		return '';
 	}
 
 	/**
@@ -62,11 +62,11 @@ class ClassNameHelper {
 	public static parseOrientation(orientation: Orientation): string {
 		const orientationLabel = Orientation[orientation];
 
-		if (!orientationLabel) {
-			console.warn('[ClassNameHelper] Unknown orientation type: ' + orientation);
+		if (orientationLabel !== undefined) {
+			return orientationLabel.toLowerCase();
 		}
 
-		return orientationLabel ? orientationLabel.toLowerCase() : '';
+		return '';
 	}
 
 	/**
@@ -78,12 +78,11 @@ class ClassNameHelper {
 	public static parseSize(size: Size): string {
 		const sizeLabel = Size[size];
 
-		if (!sizeLabel) {
-			console.warn('[ClassNameHelper] Unknown orientation size: ' + size);
+		if (sizeLabel !== undefined) {
+			return sizeLabel.toLowerCase();
 		}
 
-		return sizeLabel ? sizeLabel.toLowerCase() : '';
-
+		return '';
 	}
 }
 

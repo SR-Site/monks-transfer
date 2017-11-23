@@ -1,32 +1,33 @@
-import DeviceStateTracker from 'seng-device-state-tracker';
-import { CONFIG_MANAGER, GATEWAY, DEVICE_STATE_TRACKER, TASK_LOADER, TRACKING_MANAGER } from 'data/Injectables';
-import config from 'config/config';
-import ConfigManager from 'seng-config';
 import * as axios from 'axios';
-import { URLNames, PropertyNames } from 'data/enum/configNames';
-
+import config from 'config/config';
+import { PropertyNames, URLNames, VariableNames } from 'data/enum/configNames';
+import { CONFIG_MANAGER, DEVICE_STATE_TRACKER, GATEWAY, TASK_LOADER, TRACKING_MANAGER } from 'data/Injectables';
+import ConfigManager from 'seng-config';
+import DeviceStateTracker from 'seng-device-state-tracker';
+import { DeviceState, mediaQueries } from '../config/deviceStateConfig';
+import { errorFormatter, responseFormatter } from './gatewayFormatter';
 import { setValue } from './injector';
-import { responseFormatter, errorFormatter } from './gatewayFormatter';
-import { mediaQueries, DeviceState } from '../config/deviceStateConfig';
 import TaskLoader from './preloading/TaskLoader';
-import TrackingManager from './tracking/TrackingManager';
-/* eslint-disable */
-import TrackingProvider from './tracking/TrackingProvider';
-import GoogleAnalyticsProvider from './tracking/tracking-provider/google-analytics/GoogleAnalyticsProvider';
+// eslint-disable-next-line
 import FacebookTrackingPixelProvider from './tracking/tracking-provider/facebook-tracking-pixel/FacebookTrackingPixelProvider';
-import TwitterTrackingPixelProvider from './tracking/tracking-provider/twitter-tracking-pixel/TwitterTrackingPixelProvider';
-import HotjarProvider from './tracking/tracking-provider/hotjar/HotjarProvider';
-import LinkedInTrackingPixelProvider from './tracking/tracking-provider/linkedin-tracking-pixel/LinkedInTrackingPixelProvider';
 import ForensicsProvider from './tracking/tracking-provider/forensics/ForensicsProvider';
-import { VariableNames } from '../data/enum/configNames';
-/* eslint-enable */
+import GoogleAnalyticsProvider from './tracking/tracking-provider/google-analytics/GoogleAnalyticsProvider';
+import HotjarProvider from './tracking/tracking-provider/hotjar/HotjarProvider';
+// eslint-disable-next-line
+import LinkedInTrackingPixelProvider from './tracking/tracking-provider/linkedin-tracking-pixel/LinkedInTrackingPixelProvider';
+// eslint-disable-next-line
+import TwitterTrackingPixelProvider from './tracking/tracking-provider/twitter-tracking-pixel/TwitterTrackingPixelProvider';
+import TrackingManager from './tracking/TrackingManager';
+import TrackingProvider from './tracking/TrackingProvider';
 
 const setupInjects = () => {
 	const configManager = new ConfigManager();
 	configManager.init(config.config, config.environment);
 
 	const gateway = axios.create({
-		baseURL: (configManager.getVariable(VariableNames.MOCK_ENABLED) ? '/static' : '') + configManager.getURL(URLNames.API),
+		baseURL:
+			(configManager.getVariable(VariableNames.MOCK_ENABLED) ? '/static' : '') +
+			configManager.getURL(URLNames.API),
 		headers: {
 			Accept: 'application/json',
 		},

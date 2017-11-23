@@ -23,15 +23,15 @@ export default function sequentialPromises(promises: Array<() => Promise<void>>,
 		const promiseCount = promises.length;
 		const resolvePromise = promise =>
 			promise()
-				.then(() => (update ? update((promiseCount - promises.length) / promiseCount) : null))
-				.then(() => (promises.length ? resolvePromise(promises.shift()) : resolve()))
+				.then(() => (update !== undefined ? update((promiseCount - promises.length) / promiseCount) : null))
+				.then(() => (promises.length > 0 ? resolvePromise(promises.shift()) : resolve()))
 				.catch(reason => reject(reason));
 
 		// Start the loop
-		if (promises.length) {
+		if (promises.length > 0) {
 			resolvePromise(promises.shift());
 		} else {
-			if (update) {
+			if (update !== undefined) {
 				update(1);
 			}
 			resolve();

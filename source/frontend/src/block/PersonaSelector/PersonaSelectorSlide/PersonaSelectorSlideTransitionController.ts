@@ -45,11 +45,11 @@ class PersonaSelectorSlideTransitionController extends AbstractTransitionControl
 				autoAlpha: 1,
 				ease: Quad.easeOut,
 			},
-			'=-0.3',
+			'-=0.3',
 		);
 
 		if (this.viewModel.hasChild('ButtonPrimary')) {
-			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '=-0.2');
+			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '-=0.2');
 		}
 	}
 

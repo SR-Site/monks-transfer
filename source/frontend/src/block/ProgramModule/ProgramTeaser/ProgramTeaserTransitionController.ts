@@ -23,7 +23,7 @@ class ProgramTeaserTransitionController extends AbstractTransitionController {
 		);
 
 		if (this.viewModel.hasChild('ButtonCirclePlay')) {
-			this.transitionInTimeline.add(this.getSubTimeline('ButtonCirclePlay'), '=-0.8');
+			this.transitionInTimeline.add(this.getSubTimeline('ButtonCirclePlay'), '-=0.8');
 		}
 
 		this.transitionInTimeline.fromTo(
@@ -38,7 +38,7 @@ class ProgramTeaserTransitionController extends AbstractTransitionController {
 				y: 0,
 				ease: Cubic.easeOut,
 			},
-			'=-0.8',
+			'-=0.8',
 		);
 
 		this.transitionInTimeline.fromTo(
@@ -53,7 +53,7 @@ class ProgramTeaserTransitionController extends AbstractTransitionController {
 				y: 0,
 				ease: Cubic.easeOut,
 			},
-			'=-0.8',
+			'-=0.8',
 		);
 
 		if (this.viewModel.$refs.statistics) {
@@ -69,7 +69,7 @@ class ProgramTeaserTransitionController extends AbstractTransitionController {
 					y: 0,
 					ease: Cubic.easeOut,
 				},
-				'=-0.8',
+				'-=0.8',
 			);
 		}
 	}
@@ -79,8 +79,7 @@ class ProgramTeaserTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default ProgramTeaserTransitionController;

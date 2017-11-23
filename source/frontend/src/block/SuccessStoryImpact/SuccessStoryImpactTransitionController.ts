@@ -32,7 +32,7 @@ class SuccessStoryImpactTransitionController extends AbstractTransitionControlle
 					y: 0,
 					ease: Expo.easeOut,
 				},
-				'=-0.6'
+				'-=0.6',
 			);
 		});
 	}
@@ -42,8 +42,7 @@ class SuccessStoryImpactTransitionController extends AbstractTransitionControlle
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default SuccessStoryImpactTransitionController;

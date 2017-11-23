@@ -19,7 +19,7 @@ class LargeVideoTransitionController extends AbstractTransitionController {
 				ease: Linear.easeNone,
 			},
 		);
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonCirclePlay'), '=-0.7');
+		this.transitionInTimeline.add(this.getSubTimeline('ButtonCirclePlay'), '-=0.7');
 	}
 
 	/**
@@ -27,8 +27,7 @@ class LargeVideoTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default LargeVideoTransitionController;

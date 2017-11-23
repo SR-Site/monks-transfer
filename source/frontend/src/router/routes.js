@@ -1,4 +1,4 @@
-import { COMPONENT_ID } from 'vue-transition-component';
+import { COMPONENT_ID } from 'vue-block-system';
 import ContentPage from 'page/ContentPage';
 import PagePaths from 'data/enum/PagePaths';
 import PageNames from 'data/enum/PageNames';

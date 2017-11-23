@@ -1,4 +1,4 @@
-<style src="./SuccessStoriesB.scss" module lang="scss"></style>
+ <style src="./SuccessStoriesB.scss" module lang="scss"></style>
 <script src="./SuccessStoriesB.js"></script>
 
 <template>

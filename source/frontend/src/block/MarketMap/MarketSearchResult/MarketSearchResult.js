@@ -40,9 +40,7 @@ export default {
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new MarketSearchResultTransitionController(this);
-			this.scrollBar = new Scrollbar(
-				this.$refs.scrollWrapper,
-			);
+			this.scrollBar = new Scrollbar(this.$refs.scrollWrapper);
 			this.isReady();
 		},
 		handleSelectMarket(market) {

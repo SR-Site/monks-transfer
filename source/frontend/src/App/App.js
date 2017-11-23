@@ -1,18 +1,18 @@
-import Vue from 'vue';
-import debounce from 'lodash/debounce'
-import { mapGetters } from 'vuex';
-import { customButtonEventDispatcher, CustomButtonEvent } from 'vue-block-system';
 import SlideoutPanelType from 'data/enum/SlideoutPanelType';
-import SiteHeader from '../component/layout/SiteHeader/SiteHeader';
+import debounce from 'lodash/debounce';
+import Vue from 'vue';
+import { CustomButtonEvent, customButtonEventDispatcher } from 'vue-block-system';
+import { AbstractRegistrableComponent } from 'vue-transition-component';
+import { mapGetters } from 'vuex';
 import SiteFooter from '../component/layout/SiteFooter/SiteFooter';
+import SiteHeader from '../component/layout/SiteHeader/SiteHeader';
+import SiteMenu from '../component/layout/SiteMenu';
 import Notification from '../component/Notification/Notification';
 import PageLoader from '../component/PageLoader/PageLoader';
-import NativeEventListener from '../util/event/NativeEventListener';
-import VideoOverlay from '../component/VideoOverlay/VideoOverlay';
 import SlideoutPanel from '../component/SlideoutPanel/SlideoutPanel';
-import { AbstractRegistrableComponent } from 'vue-transition-component';
-import SiteMenu from '../component/layout/SiteMenu';
+import VideoOverlay from '../component/VideoOverlay/VideoOverlay';
 import BackendLinkType from '../data/enum/link/BackendLinkType';
+import NativeEventListener from '../util/event/NativeEventListener';
 
 export default {
 	name: 'App',
@@ -27,11 +27,9 @@ export default {
 		SiteMenu,
 	},
 	computed: {
-		...mapGetters(
-			{
-				pageData: 'layout/pageData',
-			},
-		),
+		...mapGetters({
+			pageData: 'layout/pageData',
+		}),
 		hideContactButton() {
 			return this.pageData ? this.pageData.hideContactButton : true;
 		},
@@ -49,11 +47,7 @@ export default {
 			event => this.handleCustomButtonEvent(event.data),
 		);
 
-		this.scrollListener = new NativeEventListener(
-			window,
-			'scroll',
-			debounce(this.closeMenu, 50),
-		);
+		this.scrollListener = new NativeEventListener(window, 'scroll', debounce(this.closeMenu, 50));
 	},
 	methods: {
 		handlePageLoaderReady(component) {

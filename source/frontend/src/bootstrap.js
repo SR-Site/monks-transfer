@@ -48,13 +48,11 @@ if (localeConfig.localeEnabled) {
 sync(store, router);
 
 // Init new vue app
-const app = new Vue(
-	{
-		router,
-		store,
-		render: createElement => createElement(App, { props: { [COMPONENT_ID]: 'app' } }),
-	},
-);
+const app = new Vue({
+	router,
+	store,
+	render: createElement => createElement(App, { props: { [COMPONENT_ID]: 'app' } }),
+});
 
 // Mount the app after startUp
 startUp(store).then(() => app.$mount('#app'));

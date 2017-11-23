@@ -34,10 +34,10 @@ class AudioFragmentTransitionController extends AbstractTransitionController {
 				y: 0,
 				ease: Expo.easeOut,
 			},
-			'=-0.8',
+			'-=0.8',
 		);
 
-		this.transitionInTimeline.add(this.getSubTimeline('AudioPlayer'), '=-0.8');
+		this.transitionInTimeline.add(this.getSubTimeline('AudioPlayer'), '-=0.8');
 	}
 
 	/**

@@ -1,4 +1,5 @@
 import { AbstractTransitionController } from 'vue-transition-component';
+import { Linear } from 'gsap';
 
 class ButtonQuaternaryTransitionController extends AbstractTransitionController {
 	/**
@@ -9,12 +10,14 @@ class ButtonQuaternaryTransitionController extends AbstractTransitionController 
 	protected setupTransitionInTimeline(): void {
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$el,
-			1,
+			0.2,
 			{
 				autoAlpha: 0,
 			},
 			{
 				autoAlpha: 1,
+				clearProps: 'all',
+				ease: Linear.easeNone,
 			},
 		);
 	}
@@ -24,8 +27,7 @@ class ButtonQuaternaryTransitionController extends AbstractTransitionController 
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default ButtonQuaternaryTransitionController;

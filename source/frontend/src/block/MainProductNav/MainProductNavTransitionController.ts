@@ -23,10 +23,13 @@ class MainProductNavTransitionController extends AbstractTransitionController {
 		);
 
 		(<Array<IAbstractRegistrableComponent>>this.viewModel.$refs.item).forEach((item, index) => {
-			this.transitionInTimeline.add(() => this.getSubTimeline(`MainProductNavItem${index}`), '=-1');
+			const componentId = `MainProductNavItem${index}`;
+			const duration = this.getSubTimelineDuration(componentId);
+			const offset = index > 0 ? duration * 0.75 : 0.2;
+			this.transitionInTimeline.add(this.getSubTimeline(componentId), `-=${offset}`);
 		});
 
-		this.transitionInTimeline.add(() => this.getSubTimeline('DashedPaginator'), 1);
+		this.transitionInTimeline.add(this.getSubTimeline('DashedPaginator'), '-=0.5');
 	}
 
 	/**
@@ -34,8 +37,7 @@ class MainProductNavTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default MainProductNavTransitionController;

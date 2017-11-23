@@ -4,7 +4,7 @@
 <template>
 	<div :class="$style.smallInfo">
 		<div class="site-frame" :class="$style.siteFrame">
-			<div class="overrule-overlap" :class="$style.overruleOverlap">
+			<div class="overrule-overlap is-solid">
 				<div :class="$style.introduction">
 					<h4 :class="$style.heading" class="heading heading-04" v-html="data.heading" ref="heading"></h4>
 				</div>

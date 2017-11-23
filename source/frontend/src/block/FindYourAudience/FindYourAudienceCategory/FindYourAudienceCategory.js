@@ -1,22 +1,34 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
-import FindYourAudienceCategoryTransitionController from './FindYourAudienceCategoryTransitionController';
 import VueTypes from 'vue-types';
 import FindYourAudienceCategoryData from './FindYourAudienceCategoryData';
-import FindYourAudienceTeaser from '../FindYourAudienceTeaser/FindYourAudienceTeaser';
+import FindYourAudienceCategoryTransitionController from './FindYourAudienceCategoryTransitionController';
 
 export default {
 	name: 'FindYourAudienceCategory',
 	extends: AbstractTransitionComponent,
-	components: {
-		FindYourAudienceTeaser,
-	},
 	props: {
 		data: VueTypes.shape(FindYourAudienceCategoryData).isRequired,
 	},
 	methods: {
+		handleBackToTop() {
+			this.$emit('backToTop');
+		},
 		handleAllComponentsReady() {
 			this.transitionController = new FindYourAudienceCategoryTransitionController(this);
 			this.isReady();
+		},
+		handleComponentReady(component) {
+			component.transitionIn();
+		},
+		getAudienceData(data) {
+			const clone = JSON.parse(JSON.stringify(data));
+
+			// Add the required props
+			return Object.assign(clone, {
+				marginTop: 0,
+				windowed: false,
+				overlap: false,
+			});
 		},
 	},
 };

@@ -16,7 +16,7 @@ export default {
 			};
 
 			if (this.data.link.target) {
-				link[target] = this.data.link.target;
+				link.target = this.data.link.target;
 			}
 
 			return link;

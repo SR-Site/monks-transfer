@@ -24,7 +24,7 @@ class ProgramModuleTransitionController extends AbstractTransitionController {
 		const program = <Array<IAbstractTransitionComponent>>this.viewModel.$refs.program;
 		if (program) {
 			program.forEach((program, index) => {
-				this.transitionInTimeline.add(this.getSubTimeline(`ProgramTeaser${index}`), 1)
+				this.transitionInTimeline.add(this.getSubTimeline(`ProgramTeaser${index}`), 1);
 			});
 		}
 

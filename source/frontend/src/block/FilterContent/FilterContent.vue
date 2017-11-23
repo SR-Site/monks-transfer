@@ -16,13 +16,14 @@
 				<component
 					v-for="(block, index) in blocks"
 					@isReady="handleFilterBlockReady"
+					class="added-padding"
 					:class="$style.block"
+					:debugLabel="$config.getVariable(VariableNames.DEBUG_LABEL_ENABLED)"
 					:data-scroll-id="block.data.scrollId || null"
 					:scrollId="block.scrollId"
 					:data="block.data"
-					:debugLabel="true"
 					:is="block.id"
-					:componentId="`FilterBlock${index}`"
+					:componentId="`FilterBlock.${index}`"
 					:key="index"/>
 			</div>
 			<DashedPaginator

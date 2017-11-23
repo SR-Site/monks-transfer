@@ -52,12 +52,10 @@ export default {
 		},
 		createCarousel() {
 			if (!this.carousel) {
-				this.carousel = new InfiniteImageCarousel(
-					{
-						sliderWrapper: this.$refs.slides,
-						slides: this.$refs.item,
-					},
-				);
+				this.carousel = new InfiniteImageCarousel({
+					sliderWrapper: this.$refs.slides,
+					slides: this.$refs.item,
+				});
 				this.carouselEventListener = new NativeEventListener(this.carousel, CarouselEvent.CHANGE, event => {
 					this.activeIndex = event.data.index;
 				});

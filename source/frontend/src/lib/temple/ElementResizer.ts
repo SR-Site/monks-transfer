@@ -6,7 +6,7 @@
  */
 import Disposable from 'seng-disposable';
 import IRectangle from 'lib/geom/IRectangle';
-import debounce from 'lodash/debounce'
+import debounce from 'lodash/debounce';
 
 export enum ScaleMode {
 	/**

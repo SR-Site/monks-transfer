@@ -8,6 +8,10 @@ import FindYourAudienceCategory from './FindYourAudienceCategory/FindYourAudienc
 import FindYourAudienceData from './FindYourAudienceData';
 import FindYourAudienceTransitionController from './FindYourAudienceTransitionController';
 
+// The sticky-js lib does not allow for element and requires a selector, this will cause issues when we have
+// multiple sticky classes in the page, so add a name space if needed
+const STICKY_CLASS = `.js-sticky`;
+
 export default {
 	name: 'FindYourAudience',
 	extends: AbstractBlockComponent,
@@ -37,21 +41,28 @@ export default {
 				}
 			});
 		},
-		scrollToComponent(componentId) {
-			VueScrollTo.scrollTo(this.getChild(componentId).$el, 1000, {
+		scrollToElement(element) {
+			VueScrollTo.scrollTo(element, 1000, {
 				offset: -100,
 				cancelable: true,
 			});
+		},
+		scrollToComponent(componentId) {
+			this.scrollToElement(this.getChild(componentId).$el);
+		},
+		handleBackToTop() {
+			this.scrollToElement(this.$el);
 		},
 		destroySticky() {
 			if (this.sticky) {
 				this.sticky.destroy();
 				this.sticky = null;
+				this.$el.querySelector(STICKY_CLASS).removeAttribute('style');
 			}
 		},
 		createSticky() {
 			if (!this.sticky) {
-				this.sticky = new Sticky('.js-sticky', {
+				this.sticky = new Sticky(STICKY_CLASS, {
 					marginTop: 125,
 				});
 			}

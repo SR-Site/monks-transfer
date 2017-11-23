@@ -1,9 +1,9 @@
+import Size from 'data/enum/Size';
+import { Power2, TweenLite } from 'gsap';
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import VueTypes from 'vue-types';
-import { TweenLite, Power2 } from 'gsap';
-import PercentageLoaderTransitionController from './PercentageLoaderTransitionController';
 import DrawSVGPlugin from '../../vendor/gsap/plugin/DrawSVGPlugin';
-import Size from 'data/enum/Size';
+import PercentageLoaderTransitionController from './PercentageLoaderTransitionController';
 
 export default {
 	name: 'PercentageLoader',
@@ -22,7 +22,7 @@ export default {
 	},
 	methods: {
 		handleAllComponentsReady() {
-			DrawSVGPlugin;
+			DrawSVGPlugin; // eslint-disable-line no-unused-expressions
 
 			this.transitionController = new PercentageLoaderTransitionController(this);
 			this.isReady();
