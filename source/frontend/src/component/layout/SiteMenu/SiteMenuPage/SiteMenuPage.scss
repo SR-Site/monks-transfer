@@ -50,6 +50,10 @@
 				fill: currentColor;
 			}
 		}
+
+		.label {
+			flex-grow: 1;
+		}
 	}
 
 	.back-button {
@@ -60,8 +64,7 @@
 		}
 	}
 
-	.action-button {
-		justify-content: space-between;
+	.hover-button {
 
 		&:before {
 			@include size($sizeGridSecondary, 2px);
@@ -77,6 +80,10 @@
 		.label {
 			transition: transform 0.2s $easeInOutExpo;
 		}
+	}
+
+	.action-button {
+		justify-content: space-between;
 	}
 
 	.offset {

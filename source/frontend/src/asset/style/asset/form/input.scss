@@ -24,7 +24,7 @@
 	}
 
 	input {
-		width: 100%;
+		@include size(100%);
 	}
 
 	input::-ms-clear {

@@ -23,15 +23,14 @@
 			<button
 				@click="selectSection(link.section)"
 				class="button"
-				:class="[$style.button, $style.actionButton]"
+				:class="[$style.button, $style.hoverButton, $style.actionButton]"
 				v-if="link.section" >
 				<span :class="$style.label" v-html="link.section"></span>
 				<Icon name="arrow-right" :class="$style.icon"></Icon>
 			</button>
-
 			<a
 				class="button"
-				:class="[$style.button, $style.actionButton]"
+				:class="[$style.button, $style.hoverButton]"
 				v-if="!link.section"
 				v-link="{ path: link.target, type: link.type }" >
 				<span :class="$style.label" v-html="link.label"></span>
