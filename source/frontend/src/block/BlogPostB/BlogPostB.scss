@@ -1,30 +1,4 @@
 :local {
-	.html-content {
-		h1,
-		h2,
-		h3,
-		h4 {
-			@extend %reset-bmp;
-			padding-bottom: $sizeGrid/2;
-			font: 600 1.8rem / 1.16 $fontOpenSans;
-
-			strong {
-				font-weight: 600;
-			}
-		}
-
-		p {
-			display: block;
-			font: 400 1.8rem / 1.625 $fontOpenSans;
-			margin-bottom: $sizeGrid;
-
-			img {
-				display: inline-block;
-				vertical-align: middle;
-			}
-		}
-	}
-
 	.content {
 		width: 60%;
 		background: $colorWhite;
@@ -34,6 +8,19 @@
 	.heading {
 		margin-bottom: $sizeGrid;
 	}
+
+	.items {
+		@extend %reset-list;
+	}
+
+	.item {
+		margin-bottom: $sizeGrid;
+	}
+
+	.sub-heading {
+		margin-bottom: $sizeGrid / 2;
+	}
+
 
 	@include respond-to(MEDIUM) {
 		.content {

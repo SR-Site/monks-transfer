@@ -11,7 +11,7 @@
 				</figure>
 				<p class="copy copy-01" :class="$style.copy" v-html="data.description"></p>
 			</div>
-			<AudioPlayer componentId="AudioPlayer" :file="data.file"/>
+			<AudioPlayer componentId="AudioPlayer" :file="data.file" :title="data.heading"/>
 		</div>
 	</div>
 </template>

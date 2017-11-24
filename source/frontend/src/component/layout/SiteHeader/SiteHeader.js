@@ -1,6 +1,7 @@
 import { DeviceStateEvent } from 'seng-device-state-tracker';
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import VueTypes from 'vue-types';
+import ScrollUtil from 'util/ScrollUtil';
 import { mapGetters } from 'vuex';
 import NativeEventListener from '../../../util/event/NativeEventListener';
 import Breadcrumbs from '../../Breadcrumbs/Breadcrumbs';
@@ -72,7 +73,7 @@ export default {
 			this.$emit('toggleMenu');
 		},
 		handleScroll() {
-			this.scrollTop = document.documentElement.scrollTop;
+			this.scrollTop = ScrollUtil.scrollTop();
 		},
 	},
 	beforeDestroy() {

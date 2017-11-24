@@ -19,10 +19,10 @@
 		}
 
 		&.small {
-			@include size($sizeGrid * 0.5);
+			@include size($sizeGrid * 0.6);
 
 			.icon {
-				@include size(8px);
+				@include size(9px);
 			}
 		}
 

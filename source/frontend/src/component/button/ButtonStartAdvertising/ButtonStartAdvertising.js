@@ -3,6 +3,7 @@ import debounce from 'lodash/debounce';
 import { AbstractButtonComponent } from 'vue-block-system';
 import NativeEventListener from '../../../util/event/NativeEventListener';
 import ButtonStartAdvertisingTransitionController from './ButtonStartAdvertisingTransitionController';
+import ScrollUtil from '../../../util/ScrollUtil';
 
 const CENTER_PERCENTAGE = 0.6;
 
@@ -21,10 +22,9 @@ export default {
 			const screenCenter = window.innerHeight * CENTER_PERCENTAGE;
 			const footerHeight = document.body.querySelector('.site-footer').offsetHeight;
 			const maxScrollTop = document.body.offsetHeight - footerHeight - elementHeight;
-			const { scrollTop } = document.documentElement;
 
 			// Calculate the center position based on the scroll position and the page height
-			let yPos = Math.min(maxScrollTop, Math.abs(scrollTop) + screenCenter - elementHeight / 2);
+			let yPos = Math.min(maxScrollTop, Math.abs(ScrollUtil.scrollTop()) + screenCenter - elementHeight / 2);
 
 			// If we are not able to scroll, this is going to happen when the sub-components are not yet loaded we want
 			// to center it in the screen

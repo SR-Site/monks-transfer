@@ -6,9 +6,12 @@
 		<div class="site-frame">
 			<div :class="$style.content" class="overrule-overlap">
 				<h2 class="heading heading-06" :class="$style.heading" v-html="data.heading" ref="heading"></h2>
-				<div :class="$style.htmlContent" ref="htmlContent">
-					<div v-html="data.html" ></div>
-				</div>
+				<ul :class="$style.items" ref="htmlContent">
+					<li :class="$style.item" v-for="(item, index) in data.items" :key="index">
+						<h2 class="heading heading-07" :class="$style.subHeading" v-html="item.heading"></h2>
+						<p class="copy copy-01" v-html="item.paragraph"></p>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
