@@ -13,6 +13,7 @@
 	.image {
 		@include size(100%, auto);
 		@include aspect-ratio(16px, 9px);
+		flex-shrink: 0;
 	}
 
 	.gradient-overlay {
