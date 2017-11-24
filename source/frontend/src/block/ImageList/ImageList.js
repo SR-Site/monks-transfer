@@ -1,5 +1,6 @@
 import { Expo, TweenLite } from 'gsap';
 import Hammer from 'hammerjs';
+import bowser from 'bowser';
 import debounce from 'lodash/debounce';
 import normalizeWheel from 'normalize-wheel';
 import { AbstractBlockComponent } from 'vue-block-system';
@@ -27,7 +28,8 @@ export default {
 		handleAllComponentsReady() {
 			this.transitionController = new ImageListTransitionController(this);
 			this.scrolllistener = new NativeEventListener(document, 'scroll', this.handleScroll);
-			this.mouseWheelListener = new NativeEventListener(this.$el, 'mousewheel', this.handleMouseWheel);
+			const event = bowser.firefox ? 'DOMMouseScroll' : 'mousewheel';
+			this.mouseWheelListener = new NativeEventListener(this.$el, event, this.handleMouseWheel);
 			this.resizeListener = new NativeEventListener(window, 'resize', debounce(this.handleResize, 100));
 			this.hammer = new Hammer(this.$el, {
 				recognizers: [
@@ -66,6 +68,7 @@ export default {
 			}
 		},
 		handleMouseWheel(event) {
+			console.log('handle mouse wheel');
 			const normalized = normalizeWheel(event);
 
 			if (this.isCentered()) {
