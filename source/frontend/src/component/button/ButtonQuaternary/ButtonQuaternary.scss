@@ -38,7 +38,7 @@
 
 	.label {
 		display: inline-block;
-		vertical-align: top;
+		vertical-align: middle;
 		transform: translateX(-$sizeGridSecondary);
 		transition: transform 0.2s $easeInOutCubic;
 	}

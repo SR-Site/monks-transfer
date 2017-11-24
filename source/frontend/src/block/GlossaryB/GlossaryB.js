@@ -43,6 +43,8 @@ export default {
 			const category = this.categories[this.activeCategory] || {};
 			const items = category.items || [];
 
+			console.log(items.map(item => item.label));
+
 			// Apply the filter query
 			return items.filter(item => {
 				const query = this.query.toLowerCase();
@@ -87,6 +89,9 @@ export default {
 			this.notifyAboutResize();
 		},
 		handleToggleSearch() {
+			if (this.searchActive) {
+				this.query = '';
+			}
 			this.searchActive = !this.searchActive;
 		},
 		handleSelectChange(event) {
