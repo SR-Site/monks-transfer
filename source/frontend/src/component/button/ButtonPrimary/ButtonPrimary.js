@@ -20,11 +20,11 @@ export default {
 		const tagProps = this.type === ButtonType.LINK ? { domProps: { href: this.link.target } } : {};
 
 		return createElement(tag, Object.assign(base(this), tagProps), [
-			createElement('span', stripe(this)),
 			createElement('svg', svg(this), [
 				createElement('rect', backgroundStroke(this)),
 				createElement('rect', hoverStroke(this)),
 			]),
+			createElement('span', stripe(this)),
 			createElement('span', label(this)),
 		]);
 	},

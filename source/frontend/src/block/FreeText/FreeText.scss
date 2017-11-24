@@ -89,11 +89,9 @@
 	}
 }
 
-
 // Hover State
 @include hover('.free-text a') {
 	&:before {
 		width: 100%;
 	}
 }
-

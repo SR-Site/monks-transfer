@@ -7,7 +7,9 @@ import VueTypes from 'vue-types';
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
  * @param {description} heading The heading of the block
- * @param {description} html The content of the free text area
+ * @param {description} items The items displayed in the post
+ * @param {description} items.heading The heading for the item
+ * @param {description} items.paragraph The paragraph for the item
  */
 export default {
 	marginTop: VueTypes.number.isRequired,
@@ -15,5 +17,10 @@ export default {
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
 	heading: VueTypes.string.isRequired,
-	html: VueTypes.string.isRequired,
+	items: VueTypes.arrayOf(
+		VueTypes.shape({
+			heading: VueTypes.string.isRequired,
+			paragraph: VueTypes.string.isRequired,
+		}),
+	).isRequired,
 };

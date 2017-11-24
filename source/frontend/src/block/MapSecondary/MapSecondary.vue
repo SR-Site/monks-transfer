@@ -31,9 +31,9 @@
 				<div :class="$style.mapImageWrapper">
 					<div :class="$style.mapImage">
 						<ResponsiveImage
-							v-if="data.sequenceBackground"
+							v-if="hardcodedSequenceBackground"
 							:class="$style.sequenceBackground"
-							:image="data.sequenceBackground"/>
+							:image="hardcodedSequenceBackground"/>
 						<ImageSequence
 							@loaded="handleImageSequenceLoaded"
 							@update="handleImageSequenceUpdate"

@@ -11,6 +11,7 @@ export default {
 	extends: AbstractTransitionComponent,
 	props: {
 		file: VueTypes.string.isRequired,
+		title: VueTypes.string.isRequired,
 	},
 	data() {
 		return {
@@ -28,7 +29,6 @@ export default {
 		handleAllComponentsReady() {
 			this.transitionController = new AudioPlayerTransitionController(this);
 			this.isReady();
-
 			if (this.hasWebAudioSupport) {
 				this.createWaveSurfer();
 			} else {
@@ -49,15 +49,11 @@ export default {
 
 			// Tracking
 			if (this.isPlaying) {
-				// category: string;
-				// action: string;
-				// label?: string;
-				// value?: number;
 				this.$tracking.trackEvent({
 					[this.TrackingProvider.GOOGLE_ANALYTICS]: {
 						category: 'audioFragment',
 						action: 'click',
-						label: `play|${this.data.title}`,
+						label: `play|${this.title}`,
 					},
 				});
 			} else {
@@ -70,7 +66,7 @@ export default {
 					[this.TrackingProvider.GOOGLE_ANALYTICS]: {
 						category: 'audioFragment',
 						action: 'click',
-						label: `pause|${this.data.title}`,
+						label: `pause|${this.title}`,
 						value: Math.round(currentTime / duration * 100),
 					},
 				});
