@@ -4,7 +4,29 @@
 <template>
 	<div :class="$style.findYourAudienceCategory">
 		<header :class="$style.header">
-			<h2 class="heading heading-02" v-html="data.heading" ref="heading" :class="$style.heading"></h2>
+			<div :class="$style.top">
+				<h2 class="heading heading-02" v-html="data.heading" ref="heading" :class="$style.heading"></h2>
+				<ButtonQuaternary
+					componentId="ButtonQuaternary"
+					v-if="data.link"
+					v-track="{
+							[TrackingProvider.GOOGLE_ANALYTICS]: {
+								category: 'FindYourAudience',
+								action: 'click',
+								label: data.link.label
+							}
+						}"
+					:title="data.link.title"
+					:label="data.link.label"
+					:type="ButtonType.LINK"
+					:theme="Theme.DARK"
+					:link="{
+							type: BackendLinkTypeMap[data.link.type],
+							target: data.link.target,
+						}"
+					:class="$style.button"/>
+			</div>
+
 			<p class="copy copy-01" v-html="data.paragraph" ref="copy" :class="$style.copy"></p>
 		</header>
 		<div :class="$style.items">

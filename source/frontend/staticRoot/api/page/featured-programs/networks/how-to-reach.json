@@ -23,6 +23,18 @@
 		  "title": "Networks",
 		  "target": "/featured-programs/networks",
 		  "type": 0
+		},
+		{
+		  "label": "Dummy Network",
+		  "title": "Dummy Network",
+		  "target": "/featured-programs/networks/dummy-network",
+		  "type": 0
+		},
+		{
+		  "label": "How to Reach",
+		  "title": "How to Reach",
+		  "target": "/featured-programs/networks/how-to-reach",
+		  "type": 0
 		}
 	  ]
 	},

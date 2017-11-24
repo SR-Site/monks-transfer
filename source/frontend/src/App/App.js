@@ -47,6 +47,8 @@ export default {
 			event => this.handleCustomButtonEvent(event.data),
 		);
 
+		// We are also able to use internal links in WYSIWYG editors.
+		this.bodyClickListener = new NativeEventListener(document.body, 'click', this.handleBodyClick);
 		this.scrollListener = new NativeEventListener(window, 'scroll', debounce(this.closeMenu, 50));
 	},
 	methods: {
@@ -81,6 +83,12 @@ export default {
 		handleToggleMenu() {
 			this.menuActive = !this.menuActive;
 		},
+		handleBodyClick(event) {
+			if (event.srcElement.classList.contains('js-internal-link')) {
+				event.preventDefault();
+				this.$router.push({ path: event.srcElement.getAttribute('href') });
+			}
+		},
 		closeMenu() {
 			this.menuActive = false;
 		},
@@ -90,5 +98,7 @@ export default {
 		this.customButtonEventListener = null;
 		this.scrollListener.dispose();
 		this.scrollListener = null;
+		this.bodyClickListener.dispose();
+		this.bodyClickListener = null;
 	},
 };

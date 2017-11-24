@@ -135,7 +135,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/digital/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
 			},
@@ -145,7 +145,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/digital/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet."
 			},
@@ -155,7 +155,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/digital/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
 			},
@@ -165,7 +165,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/digital/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
 			},
@@ -175,7 +175,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/digital/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
 			},
@@ -185,7 +185,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/digital/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
 			},
@@ -195,7 +195,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/digital/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
 			}
@@ -225,7 +225,7 @@
 			  "link": {
 				"label": "Television",
 				"title": "Television",
-				"target": "/television-advertising-products-and-programming",
+				"target": "/advertising-solutions/television",
 				"type": 0
 			  }
 			},
@@ -245,7 +245,7 @@
 			  "link": {
 				"label": "Digital",
 				"title": "Digital",
-				"target": "/tv-and-online-digital-advertising",
+				"target": "/advertising-solutions/digital",
 				"type": 0
 			  }
 			}

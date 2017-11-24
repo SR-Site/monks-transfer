@@ -31,6 +31,27 @@
 				vertical-align: middle;
 			}
 		}
+
+		a {
+			font: 400 1.8rem / 1.625 $fontOpenSans;
+			display: inline-block;
+			position: relative;
+			text-decoration: none;
+			color: $colorSecondary;
+
+			&:before {
+				@include position(auto, 0, -1px, 0%);
+				@include size(0%, 1px);
+				position: absolute;
+				content: '';
+				background-color: currentColor;
+				transition: width 150ms $easeInOutExpo;
+			}
+
+			@include respond-to(SMALL) {
+				font-size: mobile-size(2.8rem);
+			}
+		}
 	}
 
 	.html-content {
@@ -67,3 +88,12 @@
 		}
 	}
 }
+
+
+// Hover State
+@include hover('.free-text a') {
+	&:before {
+		width: 100%;
+	}
+}
+

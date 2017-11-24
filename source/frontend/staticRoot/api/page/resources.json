@@ -343,7 +343,7 @@
 		  "link": {
 			"label": "Read the full glossary",
 			"title": "Read the full glossary",
-			"target": "/featured-programs",
+			"target": "/resources/glossary",
 			"type": 0
 		  },
 		  "items": [

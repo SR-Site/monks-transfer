@@ -4,7 +4,6 @@
 		font: 800 1rem / calc(5rem - 2px) $fontOpenSans;
 		text-transform: uppercase;
 		padding-left: $sizeGridSecondary;
-		align-self: flex-start;
 
 		&.theme-dark {
 			.label {

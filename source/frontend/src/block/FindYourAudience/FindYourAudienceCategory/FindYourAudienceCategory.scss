@@ -7,6 +7,16 @@
 		margin-bottom: $sizeGrid * 2;
 	}
 
+	.top {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.button {
+		margin-left: $sizeGrid;
+	}
+
 	.heading {
 		margin-bottom: $sizeGrid / 2;
 	}

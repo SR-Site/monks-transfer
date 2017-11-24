@@ -16,6 +16,8 @@
 		a {
 			font: 400 1.8rem / 1.625 $fontOpenSans;
 			display: inline-block;
+			position: relative;
+			text-decoration: none;
 			color: $colorSecondary;
 
 			&:before {

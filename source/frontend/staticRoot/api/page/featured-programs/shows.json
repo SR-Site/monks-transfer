@@ -51,89 +51,67 @@
 		  "filters": [
 			{
 			  "type": 0,
-			  "label": "Category",
+			  "label": "Genre",
 			  "options": [
 				{
-				  "value": "Auto",
-				  "label": "Auto"
+				  "value": "Sports",
+				  "label": "Sports"
 				},
 				{
-				  "value": "Event",
-				  "label": "Event"
+				  "value": "Action",
+				  "label": "Action"
 				},
 				{
-				  "value": "Home Improvement",
-				  "label": "Home Improvement"
+				  "value": "Adventure",
+				  "label": "Adventure"
 				},
 				{
-				  "value": "Marketing",
-				  "label": "Marketing"
+				  "value": "Comedy",
+				  "label": "Comedy"
 				},
 				{
-				  "value": "Retail",
-				  "label": "Retail"
+				  "value": "Crime",
+				  "label": "Crime"
 				}
 			  ]
 			},
 			{
 			  "type": 1,
-			  "label": "Thought Leadership",
+			  "label": "Networks",
 			  "options": [
 				{
-				  "value": "Demographics",
-				  "label": "Demographics"
+				  "value": "NBC",
+				  "label": "NBC"
 				},
 				{
-				  "value": "Holidays",
-				  "label": "Holidays"
+				  "value": "ABC",
+				  "label": "ABC"
 				},
 				{
-				  "value": "Media",
-				  "label": "Media"
+				  "value": "FOX",
+				  "label": "FOX"
 				},
 				{
-				  "value": "Sports",
-				  "label": "Sports"
+				  "value": "CBS",
+				  "label": "CBS"
 				}
 			  ]
 			},
 			{
 			  "type": 2,
-			  "label": "Product",
+			  "label": "Reaches",
 			  "options": [
 				{
-				  "value": "Creative Services",
-				  "label": "Creative Services"
+				  "value": "Millenials",
+				  "label": "Millenials"
 				},
 				{
-				  "value": "Digital",
-				  "label": "Digital"
+				  "value": "Teens",
+				  "label": "Teens"
 				},
 				{
-				  "value": "Television",
-				  "label": "Television"
-				}
-			  ]
-			},
-			{
-			  "type": 3,
-			  "label": "Document Type",
-			  "options": [
-				{
-				  "value": "3rd party research",
-				  "label": "3rd party research"
-				},
-				{
-				  "value": "Articles",
-				  "label": "Articles"
-				},
-				{
-				  "value": "Infographic",
-				  "label": "Infographic"
-				},
-				{
-				  "value": "White papers",
-				  "label": "White papers"
+				  "value": "Adults 25 - 54",
+				  "label": "Adults 25 - 54"
 				}
 			  ]
 			}

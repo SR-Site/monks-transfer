@@ -122,6 +122,12 @@
 		  "series": {
 			"heading": "Series",
 			"paragraph": "Lorem ipsum dolor sit amet.",
+			"link": {
+			  "label": "All Series",
+			  "title": "All Series",
+			  "target": "featured-programs/shows",
+			  "type": 0
+			},
 			"items": [
 			  {
 				"target": "/featured-programs/shows/dummy-show",
@@ -188,6 +194,12 @@
 		  "awardsAndSpecials": {
 			"heading": "Awards and Specials",
 			"paragraph": "Lorem ipsum dolor sit amet.",
+			"link": {
+			  "label": "All Series",
+			  "title": "All Series",
+			  "target": "featured-programs/shows",
+			  "type": 0
+			},
 			"items": [
 			  {
 				"target": "/featured-programs/shows/dummy-show",
@@ -254,6 +266,12 @@
 		  "sports": {
 			"heading": "Sports",
 			"paragraph": "Lorem ipsum dolor sit amet.",
+			"link": {
+			  "label": "All Series",
+			  "title": "All Series",
+			  "target": "featured-programs/shows?filters=Sports",
+			  "type": 0
+			},
 			"items": [
 			  {
 				"target": "/featured-programs/shows/dummy-show",
@@ -320,6 +338,12 @@
 		  "networks": {
 			"heading": "Networks",
 			"paragraph": "Lorem ipsum dolor sit amet.",
+			"link": {
+			  "label": "All Networks",
+			  "title": "All Networks",
+			  "target": "featured-programs/networks",
+			  "type": 0
+			},
 			"items": [
 			  {
 				"target": "/featured-programs/networks/dummy-network",
