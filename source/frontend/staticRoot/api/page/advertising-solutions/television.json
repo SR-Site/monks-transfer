@@ -99,7 +99,7 @@
 		  "marginTop": 0,
 		  "items": [
 			{
-			  "target": "/program/program-name",
+			  "target": "/featured-programs/shows/dummy-show",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -118,7 +118,7 @@
 			  "tags": []
 			},
 			{
-			  "target": "/program/program-name",
+			  "target": "/featured-programs/shows/dummy-show",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -133,7 +133,7 @@
 			  "tags": []
 			},
 			{
-			  "target": "/program/program-name",
+			  "target": "/featured-programs/shows/dummy-show",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -144,7 +144,7 @@
 			  "tags": []
 			},
 			{
-			  "target": "/program/program-name",
+			  "target": "/featured-programs/shows/dummy-show",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -159,7 +159,7 @@
 			  "tags": []
 			},
 			{
-			  "target": "/program/program-name",
+			  "target": "/featured-programs/shows/dummy-show",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -178,7 +178,7 @@
 			  "tags": []
 			},
 			{
-			  "target": "/program/program-name",
+			  "target": "/featured-programs/shows/dummy-show",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -193,7 +193,7 @@
 			  "tags": []
 			},
 			{
-			  "target": "/program/program-name",
+			  "target": "/featured-programs/shows/dummy-show",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -208,7 +208,7 @@
 			  "tags": []
 			},
 			{
-			  "target": "/program/program-name",
+			  "target": "/featured-programs/shows/dummy-show",
 			  "image": {
 				"normal": "http://via.placeholder.com/1280x720",
 				"small": "http://via.placeholder.com/1280x720",
@@ -263,7 +263,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/television/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
 			},
@@ -273,7 +273,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/television/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet."
 			},
@@ -283,7 +283,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/television/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
 			},
@@ -293,7 +293,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/television/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
 			},
@@ -303,7 +303,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/television/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
 			},
@@ -313,7 +313,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/television/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
 			},
@@ -323,7 +323,7 @@
 				"small": "http://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
-			  "target": "/product/foo",
+			  "target": "advertising-solutions/television/dummy-product",
 			  "heading": "In Banner Video",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
 			}
@@ -338,7 +338,7 @@
 		  "marginTop": 4,
 		  "callToActions": [
 			{
-			  "heading": "Television<br />",
+			  "heading": "Creative Services",
 			  "paragraph": "<p>The foundation of a solid brand is built on TV, the most powerful video platform ever created.</p>",
 			  "background": {
 				"normal": "https://www.spectrumreach.com/assets/images/2017-07/Television_products-02b-OPT_0.jpg",
@@ -351,9 +351,9 @@
 				"alt": "Television"
 			  },
 			  "link": {
-				"label": "Television",
-				"title": "Television",
-				"target": "/television-advertising-products-and-programming",
+				"label": "Creative Services",
+				"title": "Creative Services",
+				"target": "/advertising-solutions/creative-services",
 				"type": 0
 			  }
 			},
@@ -373,7 +373,7 @@
 			  "link": {
 				"label": "Digital",
 				"title": "Digital",
-				"target": "/tv-and-online-digital-advertising",
+				"target": "/advertising-solutions/digital",
 				"type": 0
 			  }
 			}

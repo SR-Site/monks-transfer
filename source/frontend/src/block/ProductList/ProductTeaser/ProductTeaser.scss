@@ -49,6 +49,10 @@
 	.heading {
 		margin-bottom: $sizeGrid / 2;
 	}
+
+	.button {
+		align-self: flex-start;
+	}
 }
 
 @include hover('.product-teaser') {

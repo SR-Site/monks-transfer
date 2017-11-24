@@ -1,0 +1,389 @@
+{
+  "statusCode": 200,
+  "data": {
+	"title": "Spectrum Reach Advertising - How to Reach",
+	"data": {
+	  "headerTheme": 0,
+	  "hideContactButton": 0,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "/home",
+		  "type": 0
+		},
+		{
+		  "label": "Featured Programs",
+		  "title": "Featured Programs",
+		  "target": "/featured-programs",
+		  "type": 0
+		},
+		{
+		  "label": "Shows",
+		  "title": "Shows",
+		  "target": "/featured-programs/shows",
+		  "type": 0
+		},
+		{
+		  "label": "Dummy Show",
+		  "title": "Dummy Show",
+		  "target": "/featured-programs/shows/dummy-show",
+		  "type": 0
+		},
+		{
+		  "label": "How To Reach",
+		  "title": "How To Reach",
+		  "target": "/featured-programs/shows/how-to-reach",
+		  "type": 0
+		}
+	  ]
+	},
+	"blocks": [
+	  {
+		"id": "audienceStatisticsB",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "How to reach <strong>Millenials</strong>",
+		  "paragraph": "Half of <strong>Millenials</strong> households own a multimedia device, far more than any onther household.",
+		  "background": {
+			"normal": "http://via.placeholder.com/1920x960",
+			"small": "http://via.placeholder.com/640x1040",
+			"alt": "Background image alt text"
+		  },
+		  "statistics": [
+			{
+			  "label": "Owns a home",
+			  "value": 65
+			},
+			{
+			  "label": "Have kids of age 6-11",
+			  "value": 20
+			},
+			{
+			  "label": "57k Median HHI",
+			  "value": 36
+			}
+		  ],
+		  "cta": "Find out more"
+		}
+	  },
+	  {
+		"id": "audienceTopProgramming",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 2,
+		  "heading": "How to reach <strong>Millenials</strong>",
+		  "paragraph": "Half of <strong>Millenials</strong> households own a multimedia device, far more than any onther household.",
+		  "slides": [
+			{
+			  "heading": "Kids’ Choice Awards",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.",
+			  "network": "Nickelodeon",
+			  "background": {
+				"normal": "http://via.placeholder.com/1040x580",
+				"small": "http://via.placeholder.com/750x750",
+				"alt": "Background image alt text"
+			  },
+			  "playVideoLabel": "Watch trailer",
+			  "video": {
+				"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				"type": 0
+			  }
+			},
+			{
+			  "heading": "Kids’ Choice Awards",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.",
+			  "network": "Nickelodeon",
+			  "background": {
+				"normal": "http://via.placeholder.com/1040x580",
+				"small": "http://via.placeholder.com/750x750",
+				"alt": "Background image alt text"
+			  },
+			  "playVideoLabel": "Watch trailer",
+			  "video": {
+				"url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
+				"type": 0
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "networkOverview",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 0,
+		  "heading": "Networks with similar content to ESPN",
+		  "items": [
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "Fox News"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "Nickolodeon"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "Adult Swim"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "HGTV"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "USA Network"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "CNN"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "Nick at Night"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "TNT"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "ESPN"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "Cartoon Network"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "Investigation Discovery"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "MSNBC"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "Hallmark Channel"
+			  }
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/240x240",
+				"small": "http://via.placeholder.com/240x240",
+				"alt": "TBS"
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "audienceProductTop",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "heading": "Applying the effect of your ad by advertising on websites that <strong>Millenials</strong> use every day",
+		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		  "image": {
+			"normal": "http://via.placeholder.com/960x1424",
+			"small": "http://via.placeholder.com/750x750",
+			"alt": "Background image alt text"
+		  },
+		  "card": {
+			"heading": "Disney.com",
+			"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. Et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+		  }
+		}
+	  },
+	  {
+		"id": "audienceQuote",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "subHeading": "Did you know",
+		  "heading": "40% of Millenials agree that the quality of the programs they watch is important",
+		  "image": {
+			"normal": "http://via.placeholder.com/1280x560",
+			"small": "http://via.placeholder.com/750x580",
+			"alt": "Background image alt text"
+		  }
+		}
+	  },
+	  {
+		"id": "productList",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 0,
+		  "heading": "TV delivers",
+		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices tristique odio, sit amet euismod odio commodo nec.",
+		  "products": [
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			},
+			{
+			  "image": {
+				"normal": "http://via.placeholder.com/1280x720",
+				"small": "http://via.placeholder.com/1280x720",
+				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
+			  },
+			  "target": "/product/foo",
+			  "heading": "In Banner Video",
+			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... aliqua. Sit amet sum lerom..."
+			}
+		  ]
+		}
+	  },
+	  {
+		"id": "downloadFileA",
+		"data": {
+		  "overlap": false,
+		  "windowed": true,
+		  "marginTop": 2,
+		  "heading": "Download information sheet to get more information on how to reach Millenials with Spectrum Reach",
+		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. Lore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+		  "fileDescription": "Lorem ipsum dolor sit .PDF of 659 KB",
+		  "link": {
+			"label": "Download",
+			"title": "Download",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  },
+	  {
+		"id": "imageWithContentC",
+		"data": {
+		  "overlap": false,
+		  "windowed": false,
+		  "marginTop": 2,
+		  "alignment": 1,
+		  "heading":"Lorem ipsum dolor sit amet",
+		  "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac hendrerit orci. Aenean consectetur, lectus vitae fermentum imperdiet, dolor libero rutrum massa, ut facilisis lectus leo eget mi. Aliquam purus lacus, eleifend nec imperdiet sit amet, hendrerit sit amet nisl. Sed finibus quis mauris at maximus. Mauris imperdiet a quam a tincidunt. Aliquam mattis id risus et convallis. Donec consequat vulputate lectus a accumsan.</p>",
+		  "background": {
+			"normal": "http://via.placeholder.com/1440x720",
+			"small": "http://via.placeholder.com/750x1240",
+			"alt": "Background image alt text"
+		  },
+		  "link": {
+			"label": "Watch the trailer",
+			"title": "Watch the trailer",
+			"target": "/advertising-solutions",
+			"type": 0
+		  }
+		}
+	  }
+	],
+	"#cache": {
+	  "contexts": [],
+	  "tags": [],
+	  "max-age": -1
+	},
+	"#attached": []
+  }
+}

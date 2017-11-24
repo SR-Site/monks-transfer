@@ -9,17 +9,15 @@
 		position: relative;
 		vertical-align: middle;
 		z-index: 0;
-		border: 1px solid $colorSecondary;
 		transition: border-color 0.2s $easeLinear;
+	}
 
-		// Light Theme
-		&.theme-light {
-			border-color: rgba(255, 255, 255, 0.3);
+	.theme-dark {
+		border: 1px solid $colorSecondary;
+	}
 
-			@include hover() {
-				border-color: #fff;
-			}
-		}
+	.theme-light {
+		border-color: rgba(255, 255, 255, 0.3);
 	}
 
 	.label {
@@ -38,5 +36,11 @@
 }
 
 @include hover('.button-secondary') {
-	border-color: rgba(0, 0, 0, 0.2);
+	&.theme-dark {
+		border-color: rgba(0, 0, 0, 0.2);
+	}
+
+	&.theme-light {
+		border-color: white;
+	}
 }

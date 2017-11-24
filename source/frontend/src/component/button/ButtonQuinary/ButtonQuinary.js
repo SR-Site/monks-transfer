@@ -15,9 +15,7 @@ export default {
 		const tag = this.type === this.ButtonType.LINK ? 'a' : 'button';
 		const tagProps = this.type === this.ButtonType.LINK ? { domProps: { href: this.link.target } } : {};
 
-		return createElement(tag, Object.assign(base(this), tagProps), [
-			createElement('span', label(this)),
-		]);
+		return createElement(tag, Object.assign(base(this), tagProps), [createElement('span', label(this))]);
 	},
 	methods: {
 		handleAllComponentsReady() {

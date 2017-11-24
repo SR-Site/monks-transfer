@@ -45,7 +45,6 @@ export default {
 			});
 		},
 		handleComponentEnterView(component) {
-			console.log('component enters the view');
 			component.unlock();
 		},
 		createScrollTrackerPoints() {

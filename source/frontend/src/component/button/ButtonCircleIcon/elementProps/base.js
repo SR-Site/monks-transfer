@@ -1,5 +1,3 @@
-import ClassNameHelper from 'util/ClassNameHelper';
-
 const baseProps = viewModel => ({
 	domProps: {
 		title: viewModel.title,
@@ -10,8 +8,8 @@ const baseProps = viewModel => ({
 	class: {
 		button: true,
 		[viewModel.$style.buttonCircleIcon]: true,
-		[viewModel.$style[ClassNameHelper.parseTheme(viewModel.theme)]]: true,
-		[viewModel.$style[ClassNameHelper.parseAlignment(viewModel.iconPosition)]]: true,
+		[viewModel.$style[viewModel.ClassNameHelper.parseTheme(viewModel.theme)]]: true,
+		[viewModel.$style[viewModel.ClassNameHelper.parseAlignment(viewModel.iconPosition)]]: true,
 	},
 });
 

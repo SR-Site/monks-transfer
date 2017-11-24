@@ -102,12 +102,13 @@
 		"data": {
 		  "overlap": false,
 		  "windowed": false,
-		  "marginTop": 2,
+		  "marginTop": 3,
 		  "topPicks": {
 			"heading": "The power of cable",
 			"paragraph": "Align with top-rated programs airing this May",
 			"items": [
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -127,6 +128,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -146,6 +148,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -169,8 +172,15 @@
 		  "series": {
 			"heading": "Series",
 			"paragraph": "Lorem ipsum dolor sit amet.",
+			"link": {
+			  "label": "All Series",
+			  "title": "All Series",
+			  "target": "featured-programs/shows",
+			  "type": 0
+			},
 			"items": [
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -190,6 +200,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -209,6 +220,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -232,8 +244,15 @@
 		  "awardsAndSpecials": {
 			"heading": "Awards and Specials",
 			"paragraph": "Lorem ipsum dolor sit amet.",
+			"link": {
+			  "label": "All Series",
+			  "title": "All Series",
+			  "target": "featured-programs/shows",
+			  "type": 0
+			},
 			"items": [
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -253,6 +272,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -272,6 +292,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -295,8 +316,15 @@
 		  "sports": {
 			"heading": "Sports",
 			"paragraph": "Lorem ipsum dolor sit amet.",
+			"link": {
+			  "label": "All Series",
+			  "title": "All Series",
+			  "target": "featured-programs/shows?filters=Sports",
+			  "type": 0
+			},
 			"items": [
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -316,6 +344,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -335,6 +364,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/shows/dummy-show",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -358,8 +388,15 @@
 		  "networks": {
 			"heading": "Networks",
 			"paragraph": "Lorem ipsum dolor sit amet.",
+			"link": {
+			  "label": "All Networks",
+			  "title": "All Networks",
+			  "target": "featured-programs/networks",
+			  "type": 0
+			},
 			"items": [
 			  {
+				"target": "/featured-programs/networks/dummy-network",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -379,6 +416,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/networks/dummy-network",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
@@ -398,6 +436,7 @@
 				]
 			  },
 			  {
+				"target": "/featured-programs/networks/dummy-network",
 				"image": {
 				  "normal": "http://via.placeholder.com/1280x720",
 				  "small": "http://via.placeholder.com/1280x720",
