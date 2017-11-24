@@ -1296,7 +1296,28 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "heading": "Messaging across multiple devices and screens increases brand, lift, impact and retention",
-		  "html": "<h3>Greater Reach</h3><p>For your marketing mix by extending your message beyond the traditional linear spot both in and out of the home</p><h3>Greater Reach</h3><p>For your marketing mix by extending your message beyond the traditional linear spot both in and out of the home</p><h3>Greater Reach</h3><p>For your marketing mix by extending your message beyond the traditional linear spot both in and out of the home</p><h3>Greater Reach</h3><p>For your marketing mix by extending your message beyond the traditional linear spot both in and out of the home</p>"
+		  "items": [
+			{
+			  "heading": "Greater Reach",
+			  "paragraph": "For your marketing mix by extending your message beyond the traditional linear spot both in and out of the home"
+			},
+			{
+			  "heading": "Greater Reach",
+			  "paragraph": "For your marketing mix by extending your message beyond the traditional linear spot both in and out of the home"
+			},
+			{
+			  "heading": "Greater Reach",
+			  "paragraph": "For your marketing mix by extending your message beyond the traditional linear spot both in and out of the home"
+			},
+			{
+			  "heading": "Greater Reach",
+			  "paragraph": "For your marketing mix by extending your message beyond the traditional linear spot both in and out of the home"
+			},
+			{
+			  "heading": "Greater Reach",
+			  "paragraph": "For your marketing mix by extending your message beyond the traditional linear spot both in and out of the home"
+			}
+		  ]
 		}
 	  },
 	  {
