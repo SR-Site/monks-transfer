@@ -8,6 +8,14 @@
 	.slider-viewport {
 		@include aspect-ratio(1160px, 600px);
 		white-space: nowrap;
+
+		&:after {
+			@include position(auto, 0, 0, auto);
+			@include triangle(right, bottom, $colorWhite, $sizeGrid);
+			position: absolute;
+			content: '';
+			z-index: 3;
+		}
 	}
 
 	.slides {
@@ -20,14 +28,6 @@
 
 		figure {
 			position: relative;
-
-			&:after {
-				@include position(auto, 0, 0, auto);
-				@include triangle(right, bottom, $colorWhite, $sizeGrid);
-				position: absolute;
-				content: '';
-				z-index: 3;
-			}
 
 			&:before {
 				@include position(auto, 0, 0, 0);
