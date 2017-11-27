@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_blocks
     - node.type.page
+    - paragraphs.paragraphs_type.block_core_product_message
     - paragraphs.paragraphs_type.block_download_file_a
     - paragraphs.paragraphs_type.block_hero_quaternary
     - paragraphs.paragraphs_type.block_infographic
@@ -62,13 +63,13 @@ settings:
       blockhowtoadvertise: blockhowtoadvertise
       blockimagecalltoactions: blockimagecalltoactions
       blockimagewithcontent: blockimagewithcontent
-      blocklatest: blocklatest
       blockimagecarousel: blockimagecarousel
+      blocklatest: blocklatest
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
-      blockblogpost: blockblogpost
       blockmore: blockmore
+      blockblogpost: blockblogpost
       blockherosecondary: blockherosecondary
       blockmap: blockmap
       blockheromain: blockheromain
@@ -80,8 +81,8 @@ settings:
       blockpathtopurchase: blockpathtopurchase
       blockprogrammodule: blockprogrammodule
       blockquote: blockquote
-      blockquotesecondary: blockquotesecondary
       blockinfo: blockinfo
+      blockquotesecondary: blockquotesecondary
       blocksmallheading: blocksmallheading
       blocksmallimage: blocksmallimage
       blocksmallinfo: blocksmallinfo
@@ -91,6 +92,7 @@ settings:
       block_map_tertiary: block_map_tertiary
       block_video_with_call_to_actions: block_video_with_call_to_actions
       blockpersonaselector: blockpersonaselector
+      block_core_product_message: block_core_product_message
       block_download_file_a: block_download_file_a
       block_hero_quaternary: block_hero_quaternary
       block_infographic: block_infographic
@@ -119,15 +121,15 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
+      blockimagecarousel:
+        enabled: true
+        weight: 13
       blocklatest:
         enabled: true
         weight: 13
       link:
         weight: 13
         enabled: false
-      blockimagecarousel:
-        enabled: true
-        weight: 13
       step:
         weight: 15
         enabled: false
@@ -137,16 +139,16 @@ settings:
       blockaudiofragment:
         enabled: true
         weight: 16
-      blockbutton:
-        enabled: true
-        weight: 18
       slide:
         weight: 18
         enabled: false
-      blockblogpost:
+      blockbutton:
+        enabled: true
+        weight: 18
+      blockmore:
         enabled: true
         weight: 19
-      blockmore:
+      blockblogpost:
         enabled: true
         weight: 19
       blockherosecondary:
@@ -185,27 +187,27 @@ settings:
       blockquote:
         enabled: true
         weight: 35
-      blockquotesecondary:
+      blockinfo:
         enabled: true
         weight: 36
-      blockinfo:
+      blockquotesecondary:
         enabled: true
         weight: 36
       blocksmallheading:
         enabled: true
         weight: 37
-      slideheromain:
-        weight: 38
-        enabled: false
       blocksmallimage:
         enabled: true
         weight: 38
-      blocksmallinfo:
-        enabled: true
-        weight: 39
+      slideheromain:
+        weight: 38
+        enabled: false
       stat:
         weight: 39
         enabled: false
+      blocksmallinfo:
+        enabled: true
+        weight: 39
       statistic:
         weight: 40
         enabled: false
@@ -233,10 +235,10 @@ settings:
       networkoverviewitem:
         weight: 82
         enabled: false
-      program:
+      steppurchase:
         weight: 84
         enabled: false
-      steppurchase:
+      program:
         weight: 84
         enabled: false
       map_tertiary_data:
@@ -273,8 +275,8 @@ settings:
         weight: 104
         enabled: false
       block_core_product_message:
+        enabled: true
         weight: 105
-        enabled: false
       block_double_image:
         weight: 106
         enabled: false
@@ -353,10 +355,10 @@ settings:
       block_video_with_content_b:
         enabled: true
         weight: 133
-      block_triple_content:
+      block_video_with_content_c:
         weight: 134
         enabled: false
-      block_video_with_content_c:
+      block_triple_content:
         weight: 134
         enabled: false
       channel:
