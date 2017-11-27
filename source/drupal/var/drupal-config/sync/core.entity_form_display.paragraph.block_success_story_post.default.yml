@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.block_success_story_post.field_article
     - field.field.paragraph.block_success_story_post.field_scroll_id
     - field.field.paragraph.block_success_story_post.field_styles
     - paragraphs.paragraphs_type.block_success_story_post
@@ -13,6 +14,15 @@ targetEntityType: paragraph
 bundle: block_success_story_post
 mode: default
 content:
+  field_article:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_scroll_id:
     type: string_textfield
     weight: 1

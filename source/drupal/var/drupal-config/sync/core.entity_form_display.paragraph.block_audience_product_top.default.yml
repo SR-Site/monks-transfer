@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.block_audience_product_top.field_article
     - field.field.paragraph.block_audience_product_top.field_scroll_id
     - field.field.paragraph.block_audience_product_top.field_styles
     - paragraphs.paragraphs_type.block_audience_product_top
@@ -13,6 +14,15 @@ targetEntityType: paragraph
 bundle: block_audience_product_top
 mode: default
 content:
+  field_article:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_scroll_id:
     type: string_textfield
     weight: 1

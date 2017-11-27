@@ -1,0 +1,7 @@
+uuid: dfc08200-689d-4794-b517-62abd061cfc0
+langcode: en
+status: true
+dependencies: {  }
+id: triple_content_item
+label: 'Triple Content Item'
+behavior_plugins: {  }

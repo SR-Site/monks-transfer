@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.block_blog_post_b.field_blog_post_items
+    - field.field.paragraph.block_blog_post_b.field_new_heading
     - field.field.paragraph.block_blog_post_b.field_scroll_id
     - field.field.paragraph.block_blog_post_b.field_styles
     - paragraphs.paragraphs_type.block_blog_post_b
@@ -13,6 +15,30 @@ targetEntityType: paragraph
 bundle: block_blog_post_b
 mode: default
 content:
+  field_blog_post_items:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_new_heading:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
   field_scroll_id:
     type: string_textfield
     weight: 1

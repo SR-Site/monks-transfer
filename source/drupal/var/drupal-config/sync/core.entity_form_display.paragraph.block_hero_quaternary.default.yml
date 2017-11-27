@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.video
     - field.field.paragraph.block_hero_quaternary.field_background_image
     - field.field.paragraph.block_hero_quaternary.field_link
     - field.field.paragraph.block_hero_quaternary.field_new_heading
@@ -14,7 +15,7 @@ dependencies:
     - field.field.paragraph.block_hero_quaternary.field_video
     - paragraphs.paragraphs_type.block_hero_quaternary
   module:
-    - entity_reference_revisions
+    - entity_browser
     - paragraphs
     - text
 id: paragraph.block_hero_quaternary.default
@@ -37,15 +38,18 @@ content:
   field_link:
     weight: 8
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_new_heading:
     type: entity_reference_paragraphs
-    weight: 9
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -76,7 +80,7 @@ content:
     third_party_settings: {  }
     region: content
   field_scroll_id:
-    weight: 10
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -86,11 +90,14 @@ content:
   field_styles:
     weight: 0
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_subheading:
     weight: 3
@@ -103,11 +110,15 @@ content:
   field_video:
     weight: 5
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      entity_browser: video
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     region: content
 hidden:
   created: true

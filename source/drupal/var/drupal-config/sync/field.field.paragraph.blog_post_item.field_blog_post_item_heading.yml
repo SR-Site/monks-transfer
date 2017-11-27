@@ -1,0 +1,19 @@
+uuid: 4c4f43b1-c390-4a97-a19b-5b8a3bd14a15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_blog_post_item_heading
+    - paragraphs.paragraphs_type.blog_post_item
+id: paragraph.blog_post_item.field_blog_post_item_heading
+field_name: field_blog_post_item_heading
+entity_type: paragraph
+bundle: blog_post_item
+label: Heading
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

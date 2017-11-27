@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.block_double_image.field_scroll_id
     - field.field.paragraph.block_double_image.field_styles
+    - field.field.paragraph.block_double_image.field_two_images
     - paragraphs.paragraphs_type.block_double_image
   module:
     - paragraphs
@@ -24,6 +25,18 @@ content:
   field_styles:
     type: entity_reference_paragraphs
     weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_two_images:
+    type: entity_reference_paragraphs
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
