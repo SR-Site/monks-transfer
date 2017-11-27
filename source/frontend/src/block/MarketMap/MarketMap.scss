@@ -28,7 +28,8 @@
 
 	@include respond-to(SMALL) {
 		.market-map {
-			height: calc(100vh - #{$sizeHeaderMobile});
+			height: calc(100vh - #{$sizeHeaderMobile * 2});
+			min-height: 480px;
 		}
 
 		.side-panel {

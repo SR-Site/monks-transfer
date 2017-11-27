@@ -73,6 +73,7 @@ export default {
 				zoom: 4,
 				minZoom: 4,
 				scrollZoom: false,
+				dragPan: true, // Lars: Do we want to disable this on mobile? It blocks native page scrolling.
 				style: this.$config.getProperty(this.PropertyNames.MAPBOX_MAP_STYLE),
 			});
 			this.map.on('load', this.handleMapLoaded);
@@ -211,6 +212,7 @@ export default {
 		},
 		handleSelectMarket(market) {
 			this.selectedMarket = market;
+			this.mobileSidePanelOpen = false;
 			this.updateDataLayer();
 		},
 		handleMapMouseMove(event) {
