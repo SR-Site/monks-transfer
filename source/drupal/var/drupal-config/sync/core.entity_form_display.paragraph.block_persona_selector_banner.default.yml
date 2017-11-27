@@ -11,7 +11,6 @@ dependencies:
     - field.field.paragraph.block_persona_selector_banner.field_styles
     - paragraphs.paragraphs_type.block_persona_selector_banner
   module:
-    - entity_reference_revisions
     - paragraphs
     - text
 id: paragraph.block_persona_selector_banner.default
@@ -34,11 +33,14 @@ content:
   field_new_heading:
     weight: 2
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_paragraph:
     weight: 3
@@ -51,11 +53,14 @@ content:
   field_paragraph_image:
     weight: 4
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_scroll_id:
     type: string_textfield
