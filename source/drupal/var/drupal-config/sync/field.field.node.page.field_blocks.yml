@@ -16,6 +16,7 @@ dependencies:
     - paragraphs.paragraphs_type.block_glossary_a
     - paragraphs.paragraphs_type.block_glossary_b
     - paragraphs.paragraphs_type.block_hero_quaternary
+    - paragraphs.paragraphs_type.block_image_with_content_b
     - paragraphs.paragraphs_type.block_infographic
     - paragraphs.paragraphs_type.block_main_product_nav
     - paragraphs.paragraphs_type.block_map_tertiary
@@ -85,25 +86,25 @@ settings:
       blockmore: blockmore
       blockblogpost: blockblogpost
       blockherosecondary: blockherosecondary
-      blockmap: blockmap
       blockheromain: blockheromain
+      blockmap: blockmap
       blockmapsecondary: blockmapsecondary
       blockmarketmap: blockmarketmap
       blocknetworkoverview: blocknetworkoverview
-      blockherotertiary: blockherotertiary
       blockpagenotfound: blockpagenotfound
+      blockherotertiary: blockherotertiary
       blockpathtopurchase: blockpathtopurchase
       blockprogrammodule: blockprogrammodule
       blockquote: blockquote
-      blockinfo: blockinfo
       blockquotesecondary: blockquotesecondary
+      blockinfo: blockinfo
       blocksmallheading: blocksmallheading
       blocksmallimage: blocksmallimage
       blocksmallinfo: blocksmallinfo
       blockstoryinfoimages: blockstoryinfoimages
       blocktext: blocktext
-      blockfiltercontent: blockfiltercontent
       block_map_tertiary: block_map_tertiary
+      blockfiltercontent: blockfiltercontent
       block_video_with_call_to_actions: block_video_with_call_to_actions
       blockpersonaselector: blockpersonaselector
       block_audience_product_top: block_audience_product_top
@@ -117,6 +118,7 @@ settings:
       block_glossary_a: block_glossary_a
       block_glossary_b: block_glossary_b
       block_hero_quaternary: block_hero_quaternary
+      block_image_with_content_b: block_image_with_content_b
       block_infographic: block_infographic
       block_main_product_nav: block_main_product_nav
       block_product_list: block_product_list
@@ -152,12 +154,12 @@ settings:
       blockimagecarousel:
         enabled: true
         weight: 13
-      blocklatest:
-        enabled: true
-        weight: 13
       link:
         weight: 13
         enabled: false
+      blocklatest:
+        enabled: true
+        weight: 13
       step:
         weight: 15
         enabled: false
@@ -182,10 +184,10 @@ settings:
       blockherosecondary:
         enabled: true
         weight: 23
-      blockmap:
+      blockheromain:
         enabled: true
         weight: 26
-      blockheromain:
+      blockmap:
         enabled: true
         weight: 26
       blockmapsecondary:
@@ -197,10 +199,10 @@ settings:
       blocknetworkoverview:
         enabled: true
         weight: 29
-      blockherotertiary:
+      blockpagenotfound:
         enabled: true
         weight: 30
-      blockpagenotfound:
+      blockherotertiary:
         enabled: true
         weight: 30
       blockpathtopurchase:
@@ -215,21 +217,21 @@ settings:
       blockquote:
         enabled: true
         weight: 35
-      blockinfo:
+      blockquotesecondary:
         enabled: true
         weight: 36
-      blockquotesecondary:
+      blockinfo:
         enabled: true
         weight: 36
       blocksmallheading:
         enabled: true
         weight: 37
-      blocksmallimage:
-        enabled: true
-        weight: 38
       slideheromain:
         weight: 38
         enabled: false
+      blocksmallimage:
+        enabled: true
+        weight: 38
       stat:
         weight: 39
         enabled: false
@@ -245,10 +247,10 @@ settings:
       blocktext:
         enabled: true
         weight: 42
-      blockfiltercontent:
+      block_map_tertiary:
         enabled: true
         weight: 48
-      block_map_tertiary:
+      blockfiltercontent:
         enabled: true
         weight: 48
       block_video_with_call_to_actions:
@@ -330,8 +332,8 @@ settings:
         weight: 113
         enabled: false
       block_image_with_content_b:
+        enabled: true
         weight: 114
-        enabled: false
       block_image_with_content_c:
         weight: 115
         enabled: false
@@ -395,10 +397,10 @@ settings:
       core_product_message_item:
         weight: 168
         enabled: false
-      device:
+      blog_post_item:
         weight: 169
         enabled: false
-      blog_post_item:
+      device:
         weight: 169
         enabled: false
       glossary_a_item:
