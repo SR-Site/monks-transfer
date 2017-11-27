@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_blocks
     - node.type.page
+    - paragraphs.paragraphs_type.block_audience_reach
     - paragraphs.paragraphs_type.block_core_product_message
     - paragraphs.paragraphs_type.block_download_file_a
     - paragraphs.paragraphs_type.block_hero_quaternary
@@ -93,6 +94,7 @@ settings:
       block_map_tertiary: block_map_tertiary
       block_video_with_call_to_actions: block_video_with_call_to_actions
       blockpersonaselector: blockpersonaselector
+      block_audience_reach: block_audience_reach
       block_core_product_message: block_core_product_message
       block_download_file_a: block_download_file_a
       block_hero_quaternary: block_hero_quaternary
@@ -262,8 +264,8 @@ settings:
         weight: 99
         enabled: false
       block_audience_reach:
+        enabled: true
         weight: 100
-        enabled: false
       block_audience_statistics:
         weight: 101
         enabled: false

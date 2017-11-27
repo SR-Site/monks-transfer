@@ -1,0 +1,19 @@
+uuid: 97158138-e05f-4f66-8cbf-efdb6948a062
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_main_heading
+    - paragraphs.paragraphs_type.channel
+id: paragraph.channel.field_main_heading
+field_name: field_main_heading
+entity_type: paragraph
+bundle: channel
+label: Heading
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
