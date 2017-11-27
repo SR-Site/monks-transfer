@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.device.field_new_heading
+    - field.field.paragraph.device.field_main_heading
     - field.field.paragraph.device.field_paragraph
     - field.field.paragraph.device.field_paragraph_image
     - paragraphs.paragraphs_type.device
@@ -15,14 +15,13 @@ targetEntityType: paragraph
 bundle: device
 mode: default
 content:
-  field_new_heading:
-    weight: 0
+  field_main_heading:
+    weight: 3
     label: above
     settings:
-      view_mode: default
-      link: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    type: string
     region: content
   field_paragraph:
     weight: 1

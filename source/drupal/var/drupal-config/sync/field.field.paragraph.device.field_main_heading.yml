@@ -1,0 +1,19 @@
+uuid: 9b143535-f894-4fcb-8b96-3a891fa1596a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_main_heading
+    - paragraphs.paragraphs_type.device
+id: paragraph.device.field_main_heading
+field_name: field_main_heading
+entity_type: paragraph
+bundle: device
+label: Heading
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -3,26 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.device.field_new_heading
+    - field.field.paragraph.device.field_main_heading
     - field.field.paragraph.device.field_paragraph
     - field.field.paragraph.device.field_paragraph_image
     - paragraphs.paragraphs_type.device
   module:
-    - entity_reference_revisions
+    - paragraphs
     - text
 id: paragraph.device.default
 targetEntityType: paragraph
 bundle: device
 mode: default
 content:
-  field_new_heading:
+  field_main_heading:
     weight: 0
     settings:
-      match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: string_textfield
     region: content
   field_paragraph:
     weight: 1
@@ -35,11 +34,14 @@ content:
   field_paragraph_image:
     weight: 2
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
 hidden:
   created: true

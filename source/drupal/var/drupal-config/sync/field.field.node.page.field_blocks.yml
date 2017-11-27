@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.block_main_product_nav
     - paragraphs.paragraphs_type.block_map_tertiary
     - paragraphs.paragraphs_type.block_product_list
+    - paragraphs.paragraphs_type.block_target_audience
     - paragraphs.paragraphs_type.block_video_with_call_to_actions
     - paragraphs.paragraphs_type.block_video_with_content_b
     - paragraphs.paragraphs_type.blockarticleteaser
@@ -98,6 +99,7 @@ settings:
       block_infographic: block_infographic
       block_main_product_nav: block_main_product_nav
       block_product_list: block_product_list
+      block_target_audience: block_target_audience
       block_video_with_content_b: block_video_with_content_b
     target_bundles_drag_drop:
       blockhowtoadvertise:
@@ -347,8 +349,8 @@ settings:
         weight: 129
         enabled: false
       block_target_audience:
+        enabled: true
         weight: 130
-        enabled: false
       block_twitter_feed:
         weight: 131
         enabled: false
