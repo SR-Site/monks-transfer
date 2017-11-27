@@ -30,7 +30,7 @@
 					<div :class="$style.stepsViewport" ref="stepsViewport">
 						<ul :class="$style.steps" ref="steps">
 							<li :class="$style.step" v-for="(step, index) in data.steps" :key="index" ref="step">
-								<button :class="$style.button" class="button" @click="handleOpenStep(index)">
+								<a :class="$style.button" class="button" @click="handleOpenStep(index)">
 									<figure class="icon" :class="$style.image">
 										<Icon :name="step.icon" class="abs-center" :class="$style.icon"></Icon>
 									</figure>
@@ -38,7 +38,7 @@
 										<h2 class="heading heading-07" v-html="step.heading"></h2>
 										<p class="copy copy-01" v-html="step.paragraph"></p>
 									</div>
-								</button>
+								</a>
 							</li>
 						</ul>
 					</div>

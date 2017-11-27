@@ -17,6 +17,10 @@
 		transition: box-shadow 0.2s $easeInOutCubic;
 	}
 
+	.top {
+		width: 100%;
+	}
+
 	.description {
 		@include offset(0, 0);
 		@include size(60%, 100%);

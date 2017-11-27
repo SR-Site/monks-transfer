@@ -1,6 +1,7 @@
 import { AbstractTransitionController } from 'vue-transition-component';
 import { TimelineLite, Linear } from 'gsap';
 import { DeviceState } from 'config/deviceStateConfig';
+import customButtonEventDispatcher from 'vue-block-system/lib/event/CustomButtonEventDispatcher';
 
 class HowToAdvertiseTransitionController extends AbstractTransitionController {
 	private _howToAdvertiseTimeline: TimelineLite = new TimelineLite({ paused: true });

@@ -44,6 +44,7 @@
 
 			&.is-open {
 				height: calc(100vh - #{$sizeGrid*20});
+				min-height: 200px;
 			}
 		}
 

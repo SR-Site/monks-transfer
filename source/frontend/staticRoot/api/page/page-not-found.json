@@ -16,7 +16,7 @@
 		  "link": {
 			"label": "Back to Home",
 			"title": "Back to Home",
-			"target": "\/spectrum-reach-advertising-home",
+			"target": "/home",
 			"type": 0
 		  },
 		  "image": {

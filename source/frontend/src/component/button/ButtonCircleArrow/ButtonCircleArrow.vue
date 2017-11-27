@@ -10,7 +10,9 @@
 	        	$style[ClassNameHelper.parseSize(size)]
             ]"
 	        class="button">
-		<Icon :class="$style.icon" :name="`circle-arrow-${mappedDirection}`"/>
-		<span :class="$style.label">{{label}}</span>
+		<span :class="$style.centerContent">
+			<Icon :class="$style.icon" :name="`circle-arrow-${mappedDirection}`"/>
+			<span :class="$style.label">{{label}}</span>
+		</span>
 	</button>
 </template>

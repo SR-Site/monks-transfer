@@ -1,9 +1,12 @@
 :local {
 	.button-circle-arrow {
-		display: flex;
-		align-items: center;
 		white-space: nowrap;
-		justify-content: center;
+
+		.center-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 
 	.alignment-left {
@@ -27,7 +30,9 @@
 	}
 
 	.alignment-center {
-		flex-direction: column;
+		.center-content {
+			flex-direction: column;
+		}
 
 		.label {
 			order: 0;
