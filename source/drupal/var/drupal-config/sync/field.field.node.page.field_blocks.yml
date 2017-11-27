@@ -13,6 +13,7 @@ dependencies:
     - paragraphs.paragraphs_type.block_main_product_nav
     - paragraphs.paragraphs_type.block_map_tertiary
     - paragraphs.paragraphs_type.block_product_list
+    - paragraphs.paragraphs_type.block_success_story_highlight
     - paragraphs.paragraphs_type.block_target_audience
     - paragraphs.paragraphs_type.block_video_with_call_to_actions
     - paragraphs.paragraphs_type.block_video_with_content_b
@@ -101,6 +102,7 @@ settings:
       block_infographic: block_infographic
       block_main_product_nav: block_main_product_nav
       block_product_list: block_product_list
+      block_success_story_highlight: block_success_story_highlight
       block_target_audience: block_target_audience
       block_video_with_content_b: block_video_with_content_b
     target_bundles_drag_drop:
@@ -342,8 +344,8 @@ settings:
         weight: 126
         enabled: false
       block_success_story_highlight:
+        enabled: true
         weight: 127
-        enabled: false
       block_success_story_impact:
         weight: 128
         enabled: false
