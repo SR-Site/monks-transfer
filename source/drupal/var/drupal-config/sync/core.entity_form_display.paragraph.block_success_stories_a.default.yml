@@ -6,7 +6,6 @@ dependencies:
     - field.field.paragraph.block_success_stories_a.field_article
     - field.field.paragraph.block_success_stories_a.field_scroll_id
     - field.field.paragraph.block_success_stories_a.field_styles
-    - field.field.paragraph.block_success_stories_a.field_subheading
     - paragraphs.paragraphs_type.block_success_stories_a
   module:
     - paragraphs
@@ -43,14 +42,6 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
-  field_subheading:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
 hidden:
   created: true
