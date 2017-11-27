@@ -60,8 +60,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -80,8 +80,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -100,8 +100,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -132,8 +132,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -152,8 +152,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -172,8 +172,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -204,8 +204,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -224,8 +224,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -244,8 +244,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -276,8 +276,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -296,8 +296,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -316,8 +316,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -348,8 +348,8 @@
 			  {
 				"target": "/featured-programs/networks/dummy-network",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -368,8 +368,8 @@
 			  {
 				"target": "/featured-programs/networks/dummy-network",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -388,8 +388,8 @@
 			  {
 				"target": "/featured-programs/networks/dummy-network",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {

@@ -70,8 +70,8 @@
 			  "heading": "Connected to Content<br />",
 			  "paragraph": "<p>Align your brand with top programming.</p>",
 			  "background": {
-				"small": "http://via.placeholder.com/1920x1080",
-				"normal": "http://via.placeholder.com/1920x1080",
+				"small": "https://via.placeholder.com/1920x1080",
+				"normal": "https://via.placeholder.com/1920x1080",
 				"alt": "Connected to Content"
 			  },
 			  "secondaryParagraph": "<p>Share the stage and align your brand with over 400 of the most-watched and most-loved programs across 50+ networks.</p>"
@@ -80,8 +80,8 @@
 			  "heading": "Zero In<br />",
 			  "paragraph": "<p>Target the right audience on TV.</p>",
 			  "background": {
-				"small": "http://via.placeholder.com/1920x1080/efefef/000000",
-				"normal": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"small": "https://via.placeholder.com/1920x1080/efefef/000000",
+				"normal": "https://via.placeholder.com/1920x1080/efefef/000000",
 				"alt": "Zero In"
 			  },
 			  "secondaryParagraph": "<p>Reach the right customers on TV with our state-of-the-art audience targeting and interactive capabilities.</p>"
@@ -90,8 +90,8 @@
 			  "heading": "Measurability Without Measure<br />",
 			  "paragraph": "<p>Build the right media plan.</p>",
 			  "background": {
-				"small": "http://via.placeholder.com/1920x1080",
-				"normal": "http://via.placeholder.com/1920x1080",
+				"small": "https://via.placeholder.com/1920x1080",
+				"normal": "https://via.placeholder.com/1920x1080",
 				"alt": "Measurability Without Measure"
 			  },
 			  "secondaryParagraph": "<p>Use our unique data and insights to access your best customers across 30 million households.</p>"
@@ -100,8 +100,8 @@
 			  "heading": "We Are Your Neighbors<br />",
 			  "paragraph": "<p>Partner with an expert local team.</p>",
 			  "background": {
-				"small": "http://via.placeholder.com/1920x1080/efefef/000000",
-				"normal": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"small": "https://via.placeholder.com/1920x1080/efefef/000000",
+				"normal": "https://via.placeholder.com/1920x1080/efefef/000000",
 				"alt": "We Are Your Neighbors"
 			  },
 			  "secondaryParagraph": "<p>Collaborate with a dedicated team in your community to develop a custom marketing strategy.</p>"
@@ -110,8 +110,8 @@
 			  "heading": "Lights. Camera. Action. Sales.<br />",
 			  "paragraph": "<p>Create a memorable campaign.</p>",
 			  "background": {
-				"small": "http://via.placeholder.com/1920x1080",
-				"normal": "http://via.placeholder.com/1920x1080",
+				"small": "https://via.placeholder.com/1920x1080",
+				"normal": "https://via.placeholder.com/1920x1080",
 				"alt": "Lights. Camera. Action. Sales."
 			  },
 			  "secondaryParagraph": "<p>Tell a story that resonates with your audience with help from our award-winning in-house agency, Kernel.</p>"
@@ -130,8 +130,8 @@
 		  "items": [
 			{
 			  "background": {
-				"normal": "http://via.placeholder.com/500x500",
-				"small": "http://via.placeholder.com/500x500",
+				"normal": "https://via.placeholder.com/500x500",
+				"small": "https://via.placeholder.com/500x500",
 				"alt": "Background image alt text"
 			  },
 			  "heading": "Television",
@@ -145,8 +145,8 @@
 			},
 			{
 			  "background": {
-				"normal": "http://via.placeholder.com/500x500",
-				"small": "http://via.placeholder.com/500x500",
+				"normal": "https://via.placeholder.com/500x500",
+				"small": "https://via.placeholder.com/500x500",
 				"alt": "Background image alt text"
 			  },
 			  "heading": "Audience Extension",
@@ -160,8 +160,8 @@
 			},
 			{
 			  "background": {
-				"normal": "http://via.placeholder.com/500x500",
-				"small": "http://via.placeholder.com/500x500",
+				"normal": "https://via.placeholder.com/500x500",
+				"small": "https://via.placeholder.com/500x500",
 				"alt": "Background image alt text"
 			  },
 			  "heading": "Data & Services",
@@ -238,8 +238,8 @@
 				"type": 3
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1920x1080/efefef/000000",
-				"normal": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"small": "https://via.placeholder.com/1920x1080/efefef/000000",
+				"normal": "https://via.placeholder.com/1920x1080/efefef/000000",
 				"alt": "Local"
 			  }
 			},
@@ -254,8 +254,8 @@
 				"type": 3
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1920x1080",
-				"normal": "http://via.placeholder.com/1920x1080",
+				"small": "https://via.placeholder.com/1920x1080",
+				"normal": "https://via.placeholder.com/1920x1080",
 				"alt": "National"
 			  }
 			},
@@ -270,8 +270,8 @@
 				"type": 3
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1920x1080/efefef/000000",
-				"normal": "http://via.placeholder.com/1920x1080/efefef/000000",
+				"small": "https://via.placeholder.com/1920x1080/efefef/000000",
+				"normal": "https://via.placeholder.com/1920x1080/efefef/000000",
 				"alt": "Agencies"
 			  }
 			},
@@ -286,8 +286,8 @@
 				"type": 3
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1920x1080",
-				"normal": "http://via.placeholder.com/1920x1080",
+				"small": "https://via.placeholder.com/1920x1080",
+				"normal": "https://via.placeholder.com/1920x1080",
 				"alt": "Automotive"
 			  }
 			}
