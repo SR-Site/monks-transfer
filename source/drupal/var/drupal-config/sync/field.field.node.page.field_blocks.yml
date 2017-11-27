@@ -7,6 +7,7 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.block_download_file_a
     - paragraphs.paragraphs_type.block_hero_quaternary
+    - paragraphs.paragraphs_type.block_infographic
     - paragraphs.paragraphs_type.block_main_product_nav
     - paragraphs.paragraphs_type.block_map_tertiary
     - paragraphs.paragraphs_type.block_product_list
@@ -66,16 +67,16 @@ settings:
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
-      blockmore: blockmore
       blockblogpost: blockblogpost
+      blockmore: blockmore
       blockherosecondary: blockherosecondary
       blockmap: blockmap
       blockheromain: blockheromain
       blockmapsecondary: blockmapsecondary
       blockmarketmap: blockmarketmap
       blocknetworkoverview: blocknetworkoverview
-      blockpagenotfound: blockpagenotfound
       blockherotertiary: blockherotertiary
+      blockpagenotfound: blockpagenotfound
       blockpathtopurchase: blockpathtopurchase
       blockprogrammodule: blockprogrammodule
       blockquote: blockquote
@@ -92,6 +93,7 @@ settings:
       blockpersonaselector: blockpersonaselector
       block_download_file_a: block_download_file_a
       block_hero_quaternary: block_hero_quaternary
+      block_infographic: block_infographic
       block_main_product_nav: block_main_product_nav
       block_product_list: block_product_list
       block_video_with_content_b: block_video_with_content_b
@@ -117,12 +119,12 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
-      link:
-        weight: 13
-        enabled: false
       blocklatest:
         enabled: true
         weight: 13
+      link:
+        weight: 13
+        enabled: false
       blockimagecarousel:
         enabled: true
         weight: 13
@@ -141,10 +143,10 @@ settings:
       slide:
         weight: 18
         enabled: false
-      blockmore:
+      blockblogpost:
         enabled: true
         weight: 19
-      blockblogpost:
+      blockmore:
         enabled: true
         weight: 19
       blockherosecondary:
@@ -165,10 +167,10 @@ settings:
       blocknetworkoverview:
         enabled: true
         weight: 29
-      blockpagenotfound:
+      blockherotertiary:
         enabled: true
         weight: 30
-      blockherotertiary:
+      blockpagenotfound:
         enabled: true
         weight: 30
       blockpathtopurchase:
@@ -192,18 +194,18 @@ settings:
       blocksmallheading:
         enabled: true
         weight: 37
-      blocksmallimage:
-        enabled: true
-        weight: 38
       slideheromain:
         weight: 38
         enabled: false
-      stat:
-        weight: 39
-        enabled: false
+      blocksmallimage:
+        enabled: true
+        weight: 38
       blocksmallinfo:
         enabled: true
         weight: 39
+      stat:
+        weight: 39
+        enabled: false
       statistic:
         weight: 40
         enabled: false
@@ -231,10 +233,10 @@ settings:
       networkoverviewitem:
         weight: 82
         enabled: false
-      steppurchase:
+      program:
         weight: 84
         enabled: false
-      program:
+      steppurchase:
         weight: 84
         enabled: false
       map_tertiary_data:
@@ -304,8 +306,8 @@ settings:
         weight: 115
         enabled: false
       block_infographic:
+        enabled: true
         weight: 116
-        enabled: false
       block_large_video:
         weight: 117
         enabled: false
@@ -383,9 +385,6 @@ settings:
         enabled: false
       poster:
         weight: 178
-        enabled: false
-      product_item:
-        weight: 179
         enabled: false
       triple_content_item:
         weight: 196

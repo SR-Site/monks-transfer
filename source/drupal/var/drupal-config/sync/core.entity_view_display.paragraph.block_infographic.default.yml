@@ -5,11 +5,12 @@ dependencies:
   config:
     - field.field.paragraph.block_infographic.field_alignment
     - field.field.paragraph.block_infographic.field_background_image
-    - field.field.paragraph.block_infographic.field_link
     - field.field.paragraph.block_infographic.field_new_heading
     - field.field.paragraph.block_infographic.field_paragraph
     - field.field.paragraph.block_infographic.field_paragraph_image
+    - field.field.paragraph.block_infographic.field_primary_link
     - field.field.paragraph.block_infographic.field_scroll_id
+    - field.field.paragraph.block_infographic.field_secondary_link
     - field.field.paragraph.block_infographic.field_styles
     - paragraphs.paragraphs_type.block_infographic
   module:
@@ -30,15 +31,6 @@ content:
     region: content
   field_background_image:
     weight: 5
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
-  field_link:
-    weight: 7
     label: above
     settings:
       view_mode: default
@@ -71,6 +63,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
+  field_primary_link:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_scroll_id:
     weight: 2
     label: above
@@ -78,6 +79,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_secondary_link:
+    type: entity_reference_revisions_entity_view
+    weight: 8
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_styles:
     weight: 0
