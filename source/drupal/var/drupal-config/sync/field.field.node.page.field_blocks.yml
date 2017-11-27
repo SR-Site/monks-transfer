@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_blocks
     - node.type.page
+    - paragraphs.paragraphs_type.block_download_file_a
     - paragraphs.paragraphs_type.block_hero_quaternary
     - paragraphs.paragraphs_type.block_main_product_nav
     - paragraphs.paragraphs_type.block_map_tertiary
@@ -65,11 +66,11 @@ settings:
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
-      blockblogpost: blockblogpost
       blockmore: blockmore
+      blockblogpost: blockblogpost
       blockherosecondary: blockherosecondary
-      blockheromain: blockheromain
       blockmap: blockmap
+      blockheromain: blockheromain
       blockmapsecondary: blockmapsecondary
       blockmarketmap: blockmarketmap
       blocknetworkoverview: blocknetworkoverview
@@ -85,10 +86,11 @@ settings:
       blocksmallinfo: blocksmallinfo
       blockstoryinfoimages: blockstoryinfoimages
       blocktext: blocktext
-      block_map_tertiary: block_map_tertiary
       blockfiltercontent: blockfiltercontent
+      block_map_tertiary: block_map_tertiary
       block_video_with_call_to_actions: block_video_with_call_to_actions
       blockpersonaselector: blockpersonaselector
+      block_download_file_a: block_download_file_a
       block_hero_quaternary: block_hero_quaternary
       block_main_product_nav: block_main_product_nav
       block_product_list: block_product_list
@@ -115,43 +117,43 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
+      link:
+        weight: 13
+        enabled: false
       blocklatest:
         enabled: true
         weight: 13
       blockimagecarousel:
         enabled: true
         weight: 13
-      link:
-        weight: 13
+      step:
+        weight: 15
         enabled: false
       blockarticleteaser:
         enabled: true
         weight: 15
-      step:
-        weight: 15
-        enabled: false
       blockaudiofragment:
         enabled: true
         weight: 16
-      slide:
-        weight: 18
-        enabled: false
       blockbutton:
         enabled: true
         weight: 18
-      blockblogpost:
+      slide:
+        weight: 18
+        enabled: false
+      blockmore:
         enabled: true
         weight: 19
-      blockmore:
+      blockblogpost:
         enabled: true
         weight: 19
       blockherosecondary:
         enabled: true
         weight: 23
-      blockheromain:
+      blockmap:
         enabled: true
         weight: 26
-      blockmap:
+      blockheromain:
         enabled: true
         weight: 26
       blockmapsecondary:
@@ -211,10 +213,10 @@ settings:
       blocktext:
         enabled: true
         weight: 42
-      block_map_tertiary:
+      blockfiltercontent:
         enabled: true
         weight: 48
-      blockfiltercontent:
+      block_map_tertiary:
         enabled: true
         weight: 48
       block_video_with_call_to_actions:
@@ -229,10 +231,10 @@ settings:
       networkoverviewitem:
         weight: 82
         enabled: false
-      program:
+      steppurchase:
         weight: 84
         enabled: false
-      steppurchase:
+      program:
         weight: 84
         enabled: false
       map_tertiary_data:
@@ -275,8 +277,8 @@ settings:
         weight: 106
         enabled: false
       block_download_file_a:
+        enabled: true
         weight: 107
-        enabled: false
       block_download_file_b:
         weight: 108
         enabled: false
@@ -361,10 +363,10 @@ settings:
       core_product_message_item:
         weight: 168
         enabled: false
-      blog_post_item:
+      device:
         weight: 169
         enabled: false
-      device:
+      blog_post_item:
         weight: 169
         enabled: false
       glossary_a_item:
