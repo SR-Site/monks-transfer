@@ -96,6 +96,7 @@
 
 		.image {
 			@include size(80px, 100%);
+			display: inline-block;
 		}
 
 		.description {

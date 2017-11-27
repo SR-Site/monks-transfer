@@ -74,6 +74,10 @@
 			display: none;
 		}
 
+		.header {
+				padding: 0 $sizeGridMobile * 2;
+		}
+
 		.paginator {
 			display: block;
 			margin-top: $sizeGridMobile * 2;
