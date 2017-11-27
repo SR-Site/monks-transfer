@@ -1,7 +1,0 @@
-uuid: fd8fae71-5d0a-48ed-9e1d-a48b11e38630
-langcode: en
-status: true
-dependencies: {  }
-id: product_item
-label: 'Product item'
-behavior_plugins: {  }

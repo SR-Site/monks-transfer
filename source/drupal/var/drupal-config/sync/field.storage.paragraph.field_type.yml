@@ -23,6 +23,12 @@ settings:
     -
       value: 3
       label: 'Contact us'
+    -
+      value: 4
+      label: 'External open in new window'
+    -
+      value: 5
+      label: 'Contact Kernel'
   allowed_values_function: ''
 module: options
 locked: false

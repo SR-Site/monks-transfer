@@ -3,18 +3,30 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.block_product_list.field_product_items
+    - field.field.paragraph.block_product_list.field_articles
+    - field.field.paragraph.block_product_list.field_new_heading
+    - field.field.paragraph.block_product_list.field_paragraph
     - field.field.paragraph.block_product_list.field_scroll_id
     - field.field.paragraph.block_product_list.field_styles
     - paragraphs.paragraphs_type.block_product_list
   module:
     - paragraphs
+    - text
 id: paragraph.block_product_list.default
 targetEntityType: paragraph
 bundle: block_product_list
 mode: default
 content:
-  field_product_items:
+  field_articles:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_new_heading:
     weight: 2
     settings:
       title: Paragraph
@@ -25,6 +37,14 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
+  field_paragraph:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_scroll_id:
     type: string_textfield
