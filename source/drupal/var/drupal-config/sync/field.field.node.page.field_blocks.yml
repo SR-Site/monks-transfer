@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.block_blog_post_b
     - paragraphs.paragraphs_type.block_core_product_message
     - paragraphs.paragraphs_type.block_download_file_a
+    - paragraphs.paragraphs_type.block_download_file_b
     - paragraphs.paragraphs_type.block_glossary_a
     - paragraphs.paragraphs_type.block_glossary_b
     - paragraphs.paragraphs_type.block_hero_quaternary
@@ -112,6 +113,7 @@ settings:
       block_blog_post_b: block_blog_post_b
       block_core_product_message: block_core_product_message
       block_download_file_a: block_download_file_a
+      block_download_file_b: block_download_file_b
       block_glossary_a: block_glossary_a
       block_glossary_b: block_glossary_b
       block_hero_quaternary: block_hero_quaternary
@@ -310,8 +312,8 @@ settings:
         enabled: true
         weight: 107
       block_download_file_b:
+        enabled: true
         weight: 108
-        enabled: false
       block_find_your_audience:
         weight: 109
         enabled: false

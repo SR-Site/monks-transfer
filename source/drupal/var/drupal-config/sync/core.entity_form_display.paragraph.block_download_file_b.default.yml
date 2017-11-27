@@ -11,7 +11,7 @@ dependencies:
     - field.field.paragraph.block_download_file_b.field_styles
     - paragraphs.paragraphs_type.block_download_file_b
   module:
-    - entity_reference_revisions
+    - paragraphs
 id: paragraph.block_download_file_b.default
 targetEntityType: paragraph
 bundle: block_download_file_b
@@ -28,29 +28,38 @@ content:
   field_link:
     weight: 4
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_new_heading:
     weight: 2
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_paragraph_image:
     weight: 5
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_scroll_id:
     weight: 1
@@ -63,11 +72,14 @@ content:
   field_styles:
     weight: 0
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
 hidden:
   created: true
