@@ -50,7 +50,7 @@
 		.small,
 		.medium,
 		.large {
-			@include size(mobile-size($sizeGrid * 4));
+			@include size(mobile-size($sizeGrid * 3));
 		}
 	}
 }

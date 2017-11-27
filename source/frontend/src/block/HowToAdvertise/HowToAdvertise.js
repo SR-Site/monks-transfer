@@ -42,6 +42,7 @@ export default {
 			this.isReady();
 		},
 		handleScrollBarUpdate(progress) {
+			console.log('scrollBarUpdate');
 			this.transitionController.seekHowToAdvertiseTimeline(progress);
 		},
 		handleOpenStep(index) {
