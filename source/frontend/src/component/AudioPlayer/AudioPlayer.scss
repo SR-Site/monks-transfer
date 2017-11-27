@@ -64,7 +64,7 @@
 
 	@include respond-to(SMALL) {
 		.wave-form-wrapper {
-			width: calc(100% - #{mobile-size($sizeGrid * 3)})
+			width: calc(100% - #{mobile-size($sizeGrid * 3)});
 		}
 	}
 }

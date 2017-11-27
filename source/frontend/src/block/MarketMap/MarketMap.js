@@ -53,6 +53,7 @@ export default {
 			markets,
 			selectedMarket: null,
 			mobileSidePanelOpen: false,
+			allowMarketSelecting: true,
 		};
 	},
 	methods: {
@@ -73,7 +74,8 @@ export default {
 				zoom: 4,
 				minZoom: 4,
 				scrollZoom: false,
-				dragPan: true, // Lars: Do we want to disable this on mobile? It blocks native page scrolling.
+				dragPan: true, // Lars: Do we want to disable this on mobile? It blocks
+				// native page scrolling.
 				style: this.$config.getProperty(this.PropertyNames.MAPBOX_MAP_STYLE),
 			});
 			this.map.on('load', this.handleMapLoaded);
@@ -87,7 +89,8 @@ export default {
 						result.asset.features.forEach(feature => {
 							const featureId = feature.properties.id;
 
-							// Save in feature collections for faster lookup
+							// Save in feature collections for
+							// faster lookup
 							if (!this.marketFeatureCollection[featureId]) {
 								this.marketFeatureCollection[featureId] = {
 									type: 'FeatureCollection',
@@ -114,9 +117,15 @@ export default {
 				this.config.defaultZoomDuration,
 			);
 		},
-		moveToCoordinates(lat, lng, zoomLevel, duration) {
-			this.map.panTo(new mapboxgl.LngLat(lat, lng), { duration });
-			setTimeout(() => this.map.zoomTo(zoomLevel), duration); // Zoom + pan at the same time causes issues
+		moveToCoordinates(lat, lng, zoom, duration) {
+			return new Promise(resolve => {
+				this.map.once('moveend', resolve);
+				this.map.flyTo({
+					center: new mapboxgl.LngLat(lat, lng),
+					zoom,
+					duration,
+				});
+			});
 		},
 		handleMapClick(event) {
 			const features = this.map.queryRenderedFeatures(event.point, { layers: ['markets-fill'] });
@@ -182,7 +191,9 @@ export default {
 							state.coordinates.lng,
 							this.config.detailZoomLevel,
 							this.config.defaultZoomDuration,
-						);
+						).then(() => {
+							this.allowMarketSelecting = true;
+						});
 					} else {
 						this.log(`State does not exist in the original-markets.json file`);
 					}
@@ -211,9 +222,12 @@ export default {
 			});
 		},
 		handleSelectMarket(market) {
-			this.selectedMarket = market;
-			this.mobileSidePanelOpen = false;
-			this.updateDataLayer();
+			if (this.allowMarketSelecting) {
+				this.selectedMarket = market;
+				this.updateDataLayer();
+				this.mobileSidePanelOpen = false;
+				this.allowMarketSelecting = false;
+			}
 		},
 		handleMapMouseMove(event) {
 			const features = this.map.queryRenderedFeatures(event.point, { layers: ['markets-fill'] });

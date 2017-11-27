@@ -68,7 +68,6 @@
 	}
 
 	.hover-button {
-
 		&:before {
 			@include size($sizeGridSecondary, 2px);
 			@include offset(0, 50%);
