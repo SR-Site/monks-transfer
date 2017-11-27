@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_blocks
     - node.type.page
     - paragraphs.paragraphs_type.block_audience_product_top
+    - paragraphs.paragraphs_type.block_audience_quote
     - paragraphs.paragraphs_type.block_audience_reach
     - paragraphs.paragraphs_type.block_audience_statistics
     - paragraphs.paragraphs_type.block_core_product_message
@@ -104,6 +105,7 @@ settings:
       block_video_with_call_to_actions: block_video_with_call_to_actions
       blockpersonaselector: blockpersonaselector
       block_audience_product_top: block_audience_product_top
+      block_audience_quote: block_audience_quote
       block_audience_reach: block_audience_reach
       block_audience_statistics: block_audience_statistics
       block_core_product_message: block_core_product_message
@@ -279,8 +281,8 @@ settings:
         enabled: true
         weight: 98
       block_audience_quote:
+        enabled: true
         weight: 99
-        enabled: false
       block_audience_reach:
         enabled: true
         weight: 100
