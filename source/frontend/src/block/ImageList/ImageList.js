@@ -68,7 +68,6 @@ export default {
 			}
 		},
 		handleMouseWheel(event) {
-			console.log('handle mouse wheel');
 			const normalized = normalizeWheel(event);
 
 			if (this.isCentered()) {

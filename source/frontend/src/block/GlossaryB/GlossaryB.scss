@@ -187,7 +187,8 @@
 
 		.mobile-select {
 			flex-grow: 1;
-			display: block;
+			display: flex;
+			align-items: center;
 			background: $colorWhite;
 			border-bottom: 1px solid $colorBorder;
 			border-left: 1px solid $colorBorder;

@@ -8,8 +8,10 @@
 				@click="back"
 				class="button"
 				:class="[$style.button, $style.backButton]" >
-				<Icon name="arrow-left" :class="$style.icon"></Icon>
-				<span :class="$style.label" v-html="$t('global.cta.back')"></span>
+				<span :class="$style.centerContent">
+					<Icon name="arrow-left" :class="$style.icon"></Icon>
+					<span :class="$style.label" v-html="$t('global.cta.back')"></span>
+				</span>
 			</button>
 		</li>
 		<li
@@ -25,8 +27,10 @@
 				class="button"
 				:class="[$style.button, $style.hoverButton, $style.actionButton]"
 				v-if="link.section" >
-				<span :class="$style.label" v-html="link.section"></span>
-				<Icon name="arrow-right" :class="$style.icon"></Icon>
+				<span :class="$style.centerContent">
+					<span :class="$style.label" v-html="link.section"></span>
+					<Icon name="arrow-right" :class="$style.icon"></Icon>
+				</span>
 			</button>
 			<a
 				class="button"

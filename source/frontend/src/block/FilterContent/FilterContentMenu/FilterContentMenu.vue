@@ -5,8 +5,10 @@
 	<div :class="[$style.filterContentMenu, {[$style.isActive]: mobileMenuActive}]">
 		<div :class="$style.menu">
 			<button @click="handleFilterToggleClick" class="button" :class="[$style.button, $style.mainButton]">
-				<span :class="$style.label">{{ activeFilterLabel }}</span>
-				<Icon :name="activeFilterIcon" :class="$style.icon"/>
+				<span :class="$style.centerContent">
+					<span :class="$style.label">{{ activeFilterLabel }}</span>
+					<Icon :name="activeFilterIcon" :class="$style.icon"/>
+				</span>
 			</button>
 			<div :class="$style.filters">
 				<div :class="$style.filter" v-for="(filter, index) in filters" :key="index">

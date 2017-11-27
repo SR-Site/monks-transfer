@@ -32,9 +32,12 @@
 		display: block;
 		width: 100%;
 		text-align: left;
-		display: flex;
-		align-items: center;
 		position: relative;
+
+		.center-content {
+			display: flex;
+			align-items: center;
+		}
 
 		.icon {
 			@include size($sizeGridSecondary / 2);
