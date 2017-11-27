@@ -76,6 +76,14 @@
 			background: $colorSecondary;
 			opacity: 0;
 			border-radius: 100%;
+
+			&:before {
+				@include size(3rem);
+				@include offset(50%, 50%);
+				transform: translate(-50%, -50%);
+				position: absolute;
+				content: '';
+			}
 		}
 	}
 
