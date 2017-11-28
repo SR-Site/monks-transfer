@@ -100,3 +100,20 @@ entity.success_story.delete_form:
   title: Delete
   weight: 10
 
+# Advertising item routing definition
+entity.advertising_item.canonical:
+  route_name: entity.advertising_item.canonical
+  base_route: entity.advertising_item.canonical
+  title: 'View'
+
+entity.advertising_item.edit_form:
+  route_name: entity.advertising_item.edit_form
+  base_route: entity.advertising_item.canonical
+  title: 'Edit'
+
+entity.advertising_item.delete_form:
+  route_name:  entity.advertising_item.delete_form
+  base_route:  entity.advertising_item.canonical
+  title: Delete
+  weight: 10
+

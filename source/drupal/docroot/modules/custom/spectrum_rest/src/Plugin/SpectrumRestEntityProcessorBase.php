@@ -11,6 +11,7 @@ use Drupal\mm_rest\CacheableMetaDataCollectorInterface;
 use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
 use Drupal\mm_rest\Plugin\RestEntityProcessorManager;
 use Drupal\mm_rest\Plugin\RestFieldProcessorManager;
+use Drupal\taxonomy\Entity\Term;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -198,6 +199,31 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
     $tags = array_merge($tags, $this->getItems($entity->get('field_thought_leadership')) ?: []);
 
     return $tags;
+  }
+
+  /**
+   * Get Raw Entity Reference Label.
+   *
+   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *   Entity.
+   * @param string $fieldName
+   *   Field name.
+   * @param string|null $rawName
+   *   Default value.
+   *
+   * @return mixed|null|string
+   *   Raw entity label.
+   */
+  protected function getRawEntityReferenceLabel(ContentEntityInterface $entity, $fieldName, $rawName = NULL) {
+    $landingCategoryID = $entity->get($fieldName)->target_id;
+    $landingCategoryEntity = Term::load($landingCategoryID);
+    if ($landingCategoryEntity instanceof ContentEntityInterface) {
+      $landingCategoryFullName = $landingCategoryEntity->label();
+      $rawName = strtolower($landingCategoryFullName);
+      $rawName = preg_replace('/[^a-z0-9_]+/', '-', $rawName);
+    }
+
+    return $rawName;
   }
 
 }

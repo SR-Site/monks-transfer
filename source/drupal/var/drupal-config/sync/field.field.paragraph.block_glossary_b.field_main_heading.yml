@@ -1,0 +1,21 @@
+uuid: 5cf894fa-1bd6-4dbb-9453-f441ea2f3acd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_main_heading
+    - paragraphs.paragraphs_type.block_glossary_b
+id: paragraph.block_glossary_b.field_main_heading
+field_name: field_main_heading
+entity_type: paragraph
+bundle: block_glossary_b
+label: 'No result heading'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: Oops
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -105,3 +105,21 @@ edit success story entities:
 
 view success story entities:
   title: 'View published Success story entities'
+
+# Advertising item
+add advertising item entities:
+  title: 'Create new Advertising item entities'
+
+administer advertising item entities:
+  title: 'Administer SAdvertising item entities'
+  description: 'Allow to access the administration form to configure Advertising item entities.'
+  restrict access: true
+
+delete advertising item entities:
+  title: 'Delete Advertising item entities'
+
+edit advertising item entities:
+  title: 'Edit Advertising item entities'
+
+view advertising item entities:
+  title: 'View published Advertising item entities'

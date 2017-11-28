@@ -19,15 +19,15 @@ bundle: block_multiple_images
 mode: default
 content:
   field_primary_item:
-    type: entity_reference_paragraphs
+    type: paragraphs
     weight: 2
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
+      title: 'Primary Item'
+      title_plural: 'Primary Item'
       edit_mode: open
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: image_with_video_and_text
     third_party_settings: {  }
     region: content
   field_quaternary_item:

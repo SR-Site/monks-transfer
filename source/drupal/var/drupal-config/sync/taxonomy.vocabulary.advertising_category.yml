@@ -1,0 +1,9 @@
+uuid: 29207d0e-47b4-41ad-ad61-75d7ddc956f5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Advertising category'
+vid: advertising_category
+description: ''
+hierarchy: 0
+weight: 0

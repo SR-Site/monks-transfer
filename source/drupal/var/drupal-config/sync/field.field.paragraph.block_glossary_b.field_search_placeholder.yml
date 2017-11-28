@@ -1,0 +1,21 @@
+uuid: a887428c-f7fe-4c98-baa1-56cb72a44439
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_search_placeholder
+    - paragraphs.paragraphs_type.block_glossary_b
+id: paragraph.block_glossary_b.field_search_placeholder
+field_name: field_search_placeholder
+entity_type: paragraph
+bundle: block_glossary_b
+label: 'Search Placeholder'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'I''m searching for...'
+default_value_callback: ''
+settings: {  }
+field_type: string

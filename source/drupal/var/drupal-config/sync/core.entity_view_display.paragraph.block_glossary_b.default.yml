@@ -1,4 +1,4 @@
-uuid: 0d351a6b-31cf-431d-8925-4ec9967c6f76
+uuid: 1b3b4662-4736-4c09-8160-0edab3d00d83
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,6 @@ dependencies:
     - field.field.paragraph.block_glossary_b.field_styles
     - paragraphs.paragraphs_type.block_glossary_b
   module:
-    - paragraphs
     - text
 id: paragraph.block_glossary_b.default
 targetEntityType: paragraph
@@ -20,64 +19,44 @@ bundle: block_glossary_b
 mode: default
 content:
   field_landing_category:
-    weight: 2
-    settings: {  }
+    weight: 0
+    label: above
+    settings:
+      link: true
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_label
     region: content
   field_main_heading:
-    weight: 5
+    weight: 3
+    label: above
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
+    type: string
     region: content
   field_paragraph:
-    weight: 6
-    settings:
-      rows: 5
-      placeholder: ''
+    weight: 4
+    label: above
+    settings: {  }
     third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_scroll_id:
-    type: string_textfield
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
+    type: text_default
     region: content
   field_search_placeholder:
-    weight: 4
+    weight: 2
+    label: above
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
+    type: string
     region: content
   field_show_more_label:
-    weight: 3
+    weight: 1
+    label: above
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_styles:
-    type: entity_reference_paragraphs
-    weight: 0
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
+    type: string
     region: content
 hidden:
-  created: true
-  status: true
-  uid: true
+  field_scroll_id: true
+  field_styles: true
