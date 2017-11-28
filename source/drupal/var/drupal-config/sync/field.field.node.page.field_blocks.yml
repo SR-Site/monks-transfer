@@ -19,6 +19,7 @@ dependencies:
     - paragraphs.paragraphs_type.block_hero_quaternary
     - paragraphs.paragraphs_type.block_image_with_content_b
     - paragraphs.paragraphs_type.block_infographic
+    - paragraphs.paragraphs_type.block_large_video
     - paragraphs.paragraphs_type.block_main_product_nav
     - paragraphs.paragraphs_type.block_map_tertiary
     - paragraphs.paragraphs_type.block_persona_selector_banner
@@ -125,6 +126,7 @@ settings:
       block_hero_quaternary: block_hero_quaternary
       block_image_with_content_b: block_image_with_content_b
       block_infographic: block_infographic
+      block_large_video: block_large_video
       block_main_product_nav: block_main_product_nav
       block_persona_selector_banner: block_persona_selector_banner
       block_product_list: block_product_list
@@ -349,8 +351,8 @@ settings:
         enabled: true
         weight: 116
       block_large_video:
+        enabled: true
         weight: 117
-        enabled: false
       block_main_product_nav:
         enabled: true
         weight: 118

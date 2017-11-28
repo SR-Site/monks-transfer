@@ -29,7 +29,7 @@ class ParagraphBlockVideoWithContentBV1 extends SpectrumRestEntityProcessorBase 
     $data = [
       'id' => 'videoWithContentB',
       'data' => $data + [
-        'scrollId' => 'videoWithContent',
+        'scrollId' => $this->fieldProcessor->getFieldData($entity->get('field_scroll_id')),
         'alignment' => (int) $entity->get('field_alignment')->value,
         'video' => $this->fieldProcessor->getFieldData($entity->get('field_video')) ?: [],
         'poster' => $this->fieldProcessor->getFieldData($entity->get('field_poster')),
