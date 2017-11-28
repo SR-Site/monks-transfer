@@ -19,6 +19,7 @@ dependencies:
     - paragraphs.paragraphs_type.block_hero_quaternary
     - paragraphs.paragraphs_type.block_hero_quinary
     - paragraphs.paragraphs_type.block_image_with_content_b
+    - paragraphs.paragraphs_type.block_image_with_content_c
     - paragraphs.paragraphs_type.block_infographic
     - paragraphs.paragraphs_type.block_large_video
     - paragraphs.paragraphs_type.block_main_product_nav
@@ -127,6 +128,7 @@ settings:
       block_hero_quaternary: block_hero_quaternary
       block_hero_quinary: block_hero_quinary
       block_image_with_content_b: block_image_with_content_b
+      block_image_with_content_c: block_image_with_content_c
       block_infographic: block_infographic
       block_large_video: block_large_video
       block_main_product_nav: block_main_product_nav
@@ -347,8 +349,8 @@ settings:
         enabled: true
         weight: 114
       block_image_with_content_c:
+        enabled: true
         weight: 115
-        enabled: false
       block_infographic:
         enabled: true
         weight: 116
