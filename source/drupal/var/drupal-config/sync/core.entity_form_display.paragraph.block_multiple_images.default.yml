@@ -3,8 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.block_multiple_images.field_primary_item
+    - field.field.paragraph.block_multiple_images.field_quaternary_item
+    - field.field.paragraph.block_multiple_images.field_quinary_item
     - field.field.paragraph.block_multiple_images.field_scroll_id
+    - field.field.paragraph.block_multiple_images.field_secondary_item
     - field.field.paragraph.block_multiple_images.field_styles
+    - field.field.paragraph.block_multiple_images.field_tertiary_item
     - paragraphs.paragraphs_type.block_multiple_images
   module:
     - paragraphs
@@ -13,6 +18,42 @@ targetEntityType: paragraph
 bundle: block_multiple_images
 mode: default
 content:
+  field_primary_item:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_quaternary_item:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_quinary_item:
+    type: entity_reference_paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_scroll_id:
     type: string_textfield
     weight: 1
@@ -21,9 +62,33 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_secondary_item:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_styles:
     type: entity_reference_paragraphs
     weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_tertiary_item:
+    type: entity_reference_paragraphs
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs

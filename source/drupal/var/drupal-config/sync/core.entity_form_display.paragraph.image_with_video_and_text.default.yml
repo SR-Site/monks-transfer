@@ -1,0 +1,65 @@
+uuid: 2db71d9c-7601-4fd9-b606-b6b7fa96a8a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.video
+    - field.field.paragraph.image_with_video_and_text.field_main_heading
+    - field.field.paragraph.image_with_video_and_text.field_paragraph
+    - field.field.paragraph.image_with_video_and_text.field_paragraph_image
+    - field.field.paragraph.image_with_video_and_text.field_video
+    - paragraphs.paragraphs_type.image_with_video_and_text
+  module:
+    - entity_browser
+    - paragraphs
+    - text
+id: paragraph.image_with_video_and_text.default
+targetEntityType: paragraph
+bundle: image_with_video_and_text
+mode: default
+content:
+  field_main_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraph:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_paragraph_image:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_video:
+    weight: 3
+    settings:
+      entity_browser: video
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      open: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
