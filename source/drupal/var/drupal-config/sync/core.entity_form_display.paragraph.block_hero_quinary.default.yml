@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.video
     - field.field.paragraph.block_hero_quinary.field_background_image
     - field.field.paragraph.block_hero_quinary.field_link
     - field.field.paragraph.block_hero_quinary.field_new_heading
@@ -13,7 +14,7 @@ dependencies:
     - field.field.paragraph.block_hero_quinary.field_video
     - paragraphs.paragraphs_type.block_hero_quinary
   module:
-    - entity_reference_revisions
+    - entity_browser
     - paragraphs
     - text
 id: paragraph.block_hero_quinary.default
@@ -24,29 +25,38 @@ content:
   field_background_image:
     weight: 4
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_link:
     weight: 7
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_new_heading:
     weight: 2
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_paragraph:
     weight: 3
@@ -59,11 +69,14 @@ content:
   field_paragraph_image:
     weight: 5
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: entity_reference_paragraphs
     region: content
   field_scroll_id:
     type: string_textfield
@@ -88,11 +101,15 @@ content:
   field_video:
     weight: 6
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      entity_browser: video
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     region: content
 hidden:
   created: true
