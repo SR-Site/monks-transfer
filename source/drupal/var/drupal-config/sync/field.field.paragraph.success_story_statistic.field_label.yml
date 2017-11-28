@@ -1,0 +1,19 @@
+uuid: 94e1dc2c-3e3d-42ad-9263-d0d07506074c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_label
+    - paragraphs.paragraphs_type.success_story_statistic
+id: paragraph.success_story_statistic.field_label
+field_name: field_label
+entity_type: paragraph
+bundle: success_story_statistic
+label: Label
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

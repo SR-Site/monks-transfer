@@ -1,0 +1,7 @@
+uuid: aeeb2358-f03f-4dcf-81c1-10d67a099d4f
+langcode: en
+status: true
+dependencies: {  }
+id: success_story_statistic
+label: 'Success story statistic'
+behavior_plugins: {  }
