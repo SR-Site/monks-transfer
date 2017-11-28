@@ -1,0 +1,43 @@
+uuid: 974d4aad-cea7-4bd5-b96c-a8df9ee05ae0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_image_list.field_image_list_slides
+    - field.field.paragraph.block_image_list.field_scroll_id
+    - field.field.paragraph.block_image_list.field_styles
+    - paragraphs.paragraphs_type.block_image_list
+  module:
+    - entity_reference_revisions
+id: paragraph.block_image_list.default
+targetEntityType: paragraph
+bundle: block_image_list
+mode: default
+content:
+  field_image_list_slides:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_scroll_id:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden: {  }

@@ -1,0 +1,7 @@
+uuid: 8cc1f452-ea15-48f1-ac2f-80434ad0c3f1
+langcode: en
+status: true
+dependencies: {  }
+id: slide_item
+label: 'Slide item'
+behavior_plugins: {  }

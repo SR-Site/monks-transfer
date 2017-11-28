@@ -1,0 +1,7 @@
+uuid: 78d3c8eb-7968-43e4-968e-28e011dced1c
+langcode: en
+status: true
+dependencies: {  }
+id: block_image_list
+label: 'Block Image List'
+behavior_plugins: {  }
