@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.paragraph.field_product_items
     - paragraphs.paragraphs_type.block_main_product_nav
-    - paragraphs.paragraphs_type.main_product_item
+    - paragraphs.paragraphs_type.calltoaction
   module:
     - entity_reference_revisions
 id: paragraph.block_main_product_nav.field_product_items
@@ -22,7 +22,7 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      main_product_item: main_product_item
+      calltoaction: calltoaction
     target_bundles_drag_drop:
       audience_statistics_item:
         weight: 95
@@ -195,6 +195,9 @@ settings:
       blockmore:
         weight: 151
         enabled: false
+      block_image_list:
+        weight: 151
+        enabled: false
       blocknetworkoverview:
         weight: 152
         enabled: false
@@ -235,8 +238,8 @@ settings:
         weight: 164
         enabled: false
       calltoaction:
+        enabled: true
         weight: 165
-        enabled: false
       channel:
         weight: 166
         enabled: false
@@ -245,6 +248,9 @@ settings:
         enabled: false
       device:
         weight: 168
+        enabled: false
+      block_triple_content:
+        weight: 169
         enabled: false
       glossary_a_item:
         weight: 169
@@ -261,10 +267,13 @@ settings:
       map_tertiary_data:
         weight: 173
         enabled: false
-      main_product_item:
-        enabled: true
-        weight: 174
       networkoverviewitem:
+        weight: 174
+        enabled: false
+      blog_post_item:
+        weight: 174
+        enabled: false
+      main_product_item:
         weight: 174
         enabled: false
       personas:
@@ -272,9 +281,6 @@ settings:
         enabled: false
       poster:
         weight: 176
-        enabled: false
-      product_item:
-        weight: 177
         enabled: false
       program:
         weight: 178
@@ -290,6 +296,9 @@ settings:
         enabled: false
       stat:
         weight: 182
+        enabled: false
+      image_with_video_and_text:
+        weight: 183
         enabled: false
       statistic:
         weight: 183
@@ -308,5 +317,17 @@ settings:
         enabled: false
       styles:
         weight: 188
+        enabled: false
+      skills:
+        weight: 192
+        enabled: false
+      slide_item:
+        weight: 195
+        enabled: false
+      text_and_link:
+        weight: 203
+        enabled: false
+      triple_content_item:
+        weight: 204
         enabled: false
 field_type: entity_reference_revisions
