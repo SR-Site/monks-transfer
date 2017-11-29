@@ -45,8 +45,8 @@
 			"alt": "Background image alt text"
 		  },
 		  "image": {
-			"normal": "http://via.placeholder.com/940x700",
-			"small": "http://via.placeholder.com/940x700",
+			"normal": "https://via.placeholder.com/940x700",
+			"small": "https://via.placeholder.com/940x700",
 			"alt": "Background image alt text"
 		  },
 		  "heading": "Ads Everywhere",
@@ -107,8 +107,8 @@
 			"type": 0
 		  },
 		  "poster": {
-			"small": "http://via.placeholder.com/1280x720",
-			"normal": "http://via.placeholder.com/1280x720",
+			"small": "https://via.placeholder.com/1280x720",
+			"normal": "https://via.placeholder.com/1280x720",
 			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 		  },
 		  "video": {
@@ -126,8 +126,8 @@
 		  "heading": "Download the Ads Everywhere One Sheet",
 		  "fileDescription": "1.5mb PDF Lorem ipsum dolor sit amet.",
 		  "image": {
-			"normal": "http://via.placeholder.com/240x240",
-			"small": "http://via.placeholder.com/240x240",
+			"normal": "https://via.placeholder.com/240x240",
+			"small": "https://via.placeholder.com/240x240",
 			"alt": "File type image"
 		  },
 		  "link": {
@@ -171,16 +171,16 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "backgroundImage": {
-			"normal": "http://via.placeholder.com/1920x1080",
-			"small": "http://via.placeholder.com/1920x1080",
+			"normal": "https://via.placeholder.com/1920x1080",
+			"small": "https://via.placeholder.com/1920x1080",
 			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 		  },
 		  "heading": "Surround your target audience <br/>throughout the day and across devices. ",
 		  "devices": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "heading": "iOS Mobile Devices",
@@ -188,8 +188,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "heading": "Desktop",
@@ -197,8 +197,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "heading": "Smart TV",
@@ -206,8 +206,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "heading": "iOS Mobile Devices",
@@ -215,8 +215,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "heading": "Desktop",
@@ -224,8 +224,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "heading": "Smart TV",
@@ -244,8 +244,8 @@
 		  "channels": [
 			{
 			  "image": {
-				"small": "http://via.placeholder.com/240x240",
-				"normal": "http://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
 				"alt": ""
 			  },
 			  "heading": "2015 NFL Season",
@@ -263,8 +263,8 @@
 			},
 			{
 			  "image": {
-				"small": "http://via.placeholder.com/240x240",
-				"normal": "http://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
 				"alt": ""
 			  },
 			  "heading": "2015 NFL Season",
@@ -282,8 +282,8 @@
 			},
 			{
 			  "image": {
-				"small": "http://via.placeholder.com/240x240",
-				"normal": "http://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
 				"alt": ""
 			  },
 			  "heading": "2015 NFL Season",
@@ -301,8 +301,8 @@
 			},
 			{
 			  "image": {
-				"small": "http://via.placeholder.com/240x240",
-				"normal": "http://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
 				"alt": ""
 			  },
 			  "heading": "2015 NFL Season",
@@ -337,8 +337,8 @@
 			"type": 0
 		  },
 		  "image": {
-			"normal": "http://via.placeholder.com/520x520",
-			"small": "http://via.placeholder.com/520x520",
+			"normal": "https://via.placeholder.com/520x520",
+			"small": "https://via.placeholder.com/520x520",
 			"alt": "Lorem ipsum dolor sit amet"
 		  }
 		}
@@ -355,8 +355,8 @@
 		  "products": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/advertising-solutions/digital/dummy-product",
@@ -365,8 +365,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/advertising-solutions/digital/dummy-product",
@@ -375,8 +375,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/advertising-solutions/digital/dummy-product",
@@ -385,8 +385,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/advertising-solutions/digital/dummy-product",
@@ -395,8 +395,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/advertising-solutions/digital/dummy-product",
@@ -405,8 +405,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/advertising-solutions/digital/dummy-product",
@@ -415,8 +415,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/advertising-solutions/digital/dummy-product",

@@ -39,8 +39,8 @@
 			"alt": "Background image alt text"
 		  },
 		  "image": {
-			"normal": "http://via.placeholder.com/480x480",
-			"small": "http://via.placeholder.com/480x480",
+			"normal": "https://via.placeholder.com/480x480",
+			"small": "https://via.placeholder.com/480x480",
 			"alt": "Background image alt text"
 		  },
 		  "heading": "NBA Playoffs",
@@ -63,8 +63,8 @@
 		  "heading":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 		  "subHeading":"Lorem ipsum dolor sit amet",
 		  "background": {
-			"normal": "http://via.placeholder.com/1200x440",
-			"small": "http://via.placeholder.com/750x1240",
+			"normal": "https://via.placeholder.com/1200x440",
+			"small": "https://via.placeholder.com/750x1240",
 			"alt": "Background image alt text"
 		  },
 		  "link": {
@@ -85,8 +85,8 @@
 		  "heading":"Lorem ipsum dolor sit amet",
 		  "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac hendrerit orci. Aenean consectetur, lectus vitae fermentum imperdiet, dolor libero rutrum massa, ut facilisis lectus leo eget mi. Aliquam purus lacus, eleifend nec imperdiet sit amet, hendrerit sit amet nisl. Sed finibus quis mauris at maximus. Mauris imperdiet a quam a tincidunt. Aliquam mattis id risus et convallis. Donec consequat vulputate lectus a accumsan.</p>",
 		  "background": {
-			"normal": "http://via.placeholder.com/1440x720",
-			"small": "http://via.placeholder.com/750x1240",
+			"normal": "https://via.placeholder.com/1440x720",
+			"small": "https://via.placeholder.com/750x1240",
 			"alt": "Background image alt text"
 		  },
 		  "link": {
@@ -110,8 +110,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -130,8 +130,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -150,8 +150,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -182,8 +182,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -202,8 +202,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -222,8 +222,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -254,8 +254,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -274,8 +274,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -294,8 +294,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -326,8 +326,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -346,8 +346,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -366,8 +366,8 @@
 			  {
 				"target": "/featured-programs/shows/dummy-show",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -398,8 +398,8 @@
 			  {
 				"target": "/featured-programs/networks/dummy-network",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -418,8 +418,8 @@
 			  {
 				"target": "/featured-programs/networks/dummy-network",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -438,8 +438,8 @@
 			  {
 				"target": "/featured-programs/networks/dummy-network",
 				"image": {
-				  "normal": "http://via.placeholder.com/1280x720",
-				  "small": "http://via.placeholder.com/1280x720",
+				  "normal": "https://via.placeholder.com/1280x720",
+				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
 				"video": {
@@ -474,8 +474,8 @@
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.",
 			  "network": "Nickelodeon",
 			  "background": {
-				"normal": "http://via.placeholder.com/1040x580",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/1040x580",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Background image alt text"
 			  },
 			  "playVideoLabel": "Watch trailer",
@@ -489,8 +489,8 @@
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.",
 			  "network": "Nickelodeon",
 			  "background": {
-				"normal": "http://via.placeholder.com/1040x580",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/1040x580",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Background image alt text"
 			  },
 			  "playVideoLabel": "Watch trailer",
@@ -511,8 +511,8 @@
 		  "heading": "How to reach <strong>Millenials</strong>",
 		  "paragraph": "Half of <strong>Millenials</strong> households own a multimedia device, far more than any onther household.",
 		  "background": {
-			"normal": "http://via.placeholder.com/1920x960",
-			"small": "http://via.placeholder.com/640x1040",
+			"normal": "https://via.placeholder.com/1920x960",
+			"small": "https://via.placeholder.com/640x1040",
 			"alt": "Background image alt text"
 		  },
 		  "statistics": [
@@ -541,8 +541,8 @@
 		  "heading": "Applying the effect of your ad by advertising on websites that <strong>Millenials</strong> use every day",
 		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		  "image": {
-			"normal": "http://via.placeholder.com/960x1424",
-			"small": "http://via.placeholder.com/750x750",
+			"normal": "https://via.placeholder.com/960x1424",
+			"small": "https://via.placeholder.com/750x750",
 			"alt": "Background image alt text"
 		  },
 		  "card": {
@@ -560,8 +560,8 @@
 		  "subHeading": "Did you know",
 		  "heading": "40% of Millenials agree that the quality of the programs they watch is important",
 		  "image": {
-			"normal": "http://via.placeholder.com/1280x560",
-			"small": "http://via.placeholder.com/750x580",
+			"normal": "https://via.placeholder.com/1280x560",
+			"small": "https://via.placeholder.com/750x580",
 			"alt": "Background image alt text"
 		  }
 		}
@@ -608,8 +608,8 @@
 		  "items": [
 			{
 			  "background": {
-				"normal": "http://via.placeholder.com/500x500",
-				"small": "http://via.placeholder.com/500x500",
+				"normal": "https://via.placeholder.com/500x500",
+				"small": "https://via.placeholder.com/500x500",
 				"alt": "Background image alt text"
 			  },
 			  "heading": "Television",
@@ -623,8 +623,8 @@
 			},
 			{
 			  "background": {
-				"normal": "http://via.placeholder.com/500x500",
-				"small": "http://via.placeholder.com/500x500",
+				"normal": "https://via.placeholder.com/500x500",
+				"small": "https://via.placeholder.com/500x500",
 				"alt": "Background image alt text"
 			  },
 			  "heading": "Audience Extension",
@@ -638,8 +638,8 @@
 			},
 			{
 			  "background": {
-				"normal": "http://via.placeholder.com/500x500",
-				"small": "http://via.placeholder.com/500x500",
+				"normal": "https://via.placeholder.com/500x500",
+				"small": "https://via.placeholder.com/500x500",
 				"alt": "Background image alt text"
 			  },
 			  "heading": "Data & Services",
@@ -661,8 +661,8 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "poster": {
-			"normal": "http://via.placeholder.com/1920x900",
-			"small": "http://via.placeholder.com/1920x900",
+			"normal": "https://via.placeholder.com/1920x900",
+			"small": "https://via.placeholder.com/1920x900",
 			"alt": "Background image alt text"
 		  },
 		  "video": {
@@ -701,8 +701,8 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "poster": {
-			"normal": "http://via.placeholder.com/1280x720",
-			"small": "http://via.placeholder.com/1280x720",
+			"normal": "https://via.placeholder.com/1280x720",
+			"small": "https://via.placeholder.com/1280x720",
 			"alt": "Background image alt text"
 		  },
 		  "video": {
@@ -726,8 +726,8 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "image": {
-			"normal": "http://via.placeholder.com/520x520",
-			"small": "http://via.placeholder.com/520x520",
+			"normal": "https://via.placeholder.com/520x520",
+			"small": "https://via.placeholder.com/520x520",
 			"alt": "Background image alt text"
 		  },
 		  "heading": "Flagler Auditorium sold the most tickets in their 20-year history",
@@ -777,13 +777,13 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "primaryImage": {
-			"normal": "http://via.placeholder.com/1280x720",
-			"small": "http://via.placeholder.com/1280x720",
+			"normal": "https://via.placeholder.com/1280x720",
+			"small": "https://via.placeholder.com/1280x720",
 			"alt": "Background image alt text"
 		  },
 		  "secondaryImage": {
-			"normal": "http://via.placeholder.com/1280x720",
-			"small": "http://via.placeholder.com/1280x720",
+			"normal": "https://via.placeholder.com/1280x720",
+			"small": "https://via.placeholder.com/1280x720",
 			"alt": "Background image alt text"
 		  }
 		}
@@ -798,8 +798,8 @@
 			"heading": "Optimizing for every screen they are watching nowadays",
 			"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor aliqua. Sit amet sum lorem... ",
 			"image": {
-			  "normal": "http://via.placeholder.com/1280x720",
-			  "small": "http://via.placeholder.com/1280x720",
+			  "normal": "https://via.placeholder.com/1280x720",
+			  "small": "https://via.placeholder.com/1280x720",
 			  "alt": "Background image alt text"
 			},
 			"video": {
@@ -811,8 +811,8 @@
 			"heading": "Farmer Boys “Fresh Fish”",
 			"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor aliqua. Sit amet sum lorem... ",
 			"image": {
-			  "normal": "http://via.placeholder.com/1280x720",
-			  "small": "http://via.placeholder.com/1280x720",
+			  "normal": "https://via.placeholder.com/1280x720",
+			  "small": "https://via.placeholder.com/1280x720",
 			  "alt": "Background image alt text"
 			},
 			"video": {
@@ -837,8 +837,8 @@
 			"heading": "Creativity comes at all price points",
 			"paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor aliqua. Sit amet sum lorem... ",
 			"image": {
-			  "normal": "http://via.placeholder.com/1280x720",
-			  "small": "http://via.placeholder.com/1280x720",
+			  "normal": "https://via.placeholder.com/1280x720",
+			  "small": "https://via.placeholder.com/1280x720",
 			  "alt": "Background image alt text"
 			},
 			"video": {
@@ -869,8 +869,8 @@
 		  "network": {
 			"label": "Network",
 			"image": {
-			  "small": "http://via.placeholder.com/240x240",
-			  "normal": "http://via.placeholder.com/240x240",
+			  "small": "https://via.placeholder.com/240x240",
+			  "normal": "https://via.placeholder.com/240x240",
 			  "alt": "Background image alt text"
 			}
 		  },
@@ -881,8 +881,8 @@
 		  "ageRestriction": {
 			"label": "Age Restriction",
 			"image": {
-			  "small": "http://via.placeholder.com/240x240",
-			  "normal": "http://via.placeholder.com/240x240",
+			  "small": "https://via.placeholder.com/240x240",
+			  "normal": "https://via.placeholder.com/240x240",
 			  "alt": "Background image alt text"
 			}
 		  }
@@ -898,8 +898,8 @@
 		  "items": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/500x500",
-				"small": "http://via.placeholder.com/500x500",
+				"normal": "https://via.placeholder.com/500x500",
+				"small": "https://via.placeholder.com/500x500",
 				"alt": "Background image alt text"
 			  },
 			  "heading": "Concept",
@@ -907,8 +907,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/500x500",
-				"small": "http://via.placeholder.com/500x500",
+				"normal": "https://via.placeholder.com/500x500",
+				"small": "https://via.placeholder.com/500x500",
 				"alt": "Background image alt text"
 			  },
 			  "heading": "Design",
@@ -916,8 +916,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/500x500",
-				"small": "http://via.placeholder.com/500x500",
+				"normal": "https://via.placeholder.com/500x500",
+				"small": "https://via.placeholder.com/500x500",
 				"alt": "Background image alt text"
 			  },
 			  "heading": "Post Production",
@@ -933,8 +933,8 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "background": {
-			"normal": "http://via.placeholder.com/1920x1080",
-			"small": "http://via.placeholder.com/1920x1080",
+			"normal": "https://via.placeholder.com/1920x1080",
+			"small": "https://via.placeholder.com/1920x1080",
 			"alt": "Background image alt text"
 		  },
 		  "heading": "Learn more about who's watching the NBA Playoffs",
@@ -944,8 +944,8 @@
 			  "label": "Millenials",
 			  "value": "64%",
 			  "background": {
-				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/640x640",
+				"normal": "https://via.placeholder.com/720x560",
+				"small": "https://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -959,8 +959,8 @@
 			  "label": "Asian Americans",
 			  "value": "28%",
 			  "background": {
-				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/640x640",
+				"normal": "https://via.placeholder.com/720x560",
+				"small": "https://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -974,8 +974,8 @@
 			  "label": "African American Men",
 			  "value": "96%",
 			  "background": {
-				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/640x640",
+				"normal": "https://via.placeholder.com/720x560",
+				"small": "https://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -989,8 +989,8 @@
 			  "label": "Millenials",
 			  "value": "64%",
 			  "background": {
-				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/640x640",
+				"normal": "https://via.placeholder.com/720x560",
+				"small": "https://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -1004,8 +1004,8 @@
 			  "label": "Asian Americans",
 			  "value": "28%",
 			  "background": {
-				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/640x640",
+				"normal": "https://via.placeholder.com/720x560",
+				"small": "https://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -1019,8 +1019,8 @@
 			  "label": "African American Men",
 			  "value": "96%",
 			  "background": {
-				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/640x640",
+				"normal": "https://via.placeholder.com/720x560",
+				"small": "https://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -1046,8 +1046,8 @@
 			"type": 0
 		  },
 		  "background": {
-			"normal": "http://via.placeholder.com/1280x720",
-			"small": "http://via.placeholder.com/1280x720",
+			"normal": "https://via.placeholder.com/1280x720",
+			"small": "https://via.placeholder.com/1280x720",
 			"alt": "networks and programming"
 		  },
 		  "paragraph": "<p>With the majority of consumers using multiple devices throughout the day, it’s never been more <strong>essential to have</strong> a multi-screen advertising strategy. When combined, TV and Digital work together to make your ads more memorable, even doubling your message recall when the same ad runs on both TV and online.<\/p>",
@@ -1097,8 +1097,8 @@
 			"alt": "Background image alt text"
 		  },
 		  "image": {
-			"normal": "http://via.placeholder.com/940x700",
-			"small": "http://via.placeholder.com/940x700",
+			"normal": "https://via.placeholder.com/940x700",
+			"small": "https://via.placeholder.com/940x700",
 			"alt": "Background image alt text"
 		  },
 		  "heading": "Ads Everywhere",
@@ -1207,8 +1207,8 @@
 		  "heading": "Download the Ads Everywhere One Sheet",
 		  "fileDescription": "1.5mb PDF Lorem ipsum dolor sit amet.",
 		  "image": {
-			"normal": "http://via.placeholder.com/240x240",
-			"small": "http://via.placeholder.com/240x240",
+			"normal": "https://via.placeholder.com/240x240",
+			"small": "https://via.placeholder.com/240x240",
 			"alt": "File type image"
 		  },
 		  "link": {
@@ -1230,8 +1230,8 @@
 			  "heading": "Connected to Content",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			  "image": {
-				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/750x420",
+				"normal": "https://via.placeholder.com/1200x1200",
+				"small": "https://via.placeholder.com/750x420",
 				"alt": "Lorem ipsum"
 			  },
 			  "link": {
@@ -1245,8 +1245,8 @@
 			  "heading": "Connected to Content",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			  "image": {
-				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/750x420",
+				"normal": "https://via.placeholder.com/1200x1200",
+				"small": "https://via.placeholder.com/750x420",
 				"alt": "Lorem ipsum"
 			  },
 			  "link": {
@@ -1260,8 +1260,8 @@
 			  "heading": "Connected to Content",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			  "image": {
-				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/750x420",
+				"normal": "https://via.placeholder.com/1200x1200",
+				"small": "https://via.placeholder.com/750x420",
 				"alt": "Lorem ipsum"
 			  },
 			  "link": {
@@ -1275,8 +1275,8 @@
 			  "heading": "Connected to Content",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			  "image": {
-				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/750x420",
+				"normal": "https://via.placeholder.com/1200x1200",
+				"small": "https://via.placeholder.com/750x420",
 				"alt": "Lorem ipsum"
 			  },
 			  "link": {
@@ -1332,8 +1332,8 @@
 		  "stories": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1341,8 +1341,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1350,8 +1350,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1359,8 +1359,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1368,8 +1368,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1377,8 +1377,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1386,8 +1386,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -1406,8 +1406,8 @@
 		  "channels": [
 			{
 			  "image": {
-				"small": "http://via.placeholder.com/240x240",
-				"normal": "http://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
 				"alt": ""
 			  },
 			  "heading": "2015 NFL Season",
@@ -1425,8 +1425,8 @@
 			},
 			{
 			  "image": {
-				"small": "http://via.placeholder.com/240x240",
-				"normal": "http://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
 				"alt": ""
 			  },
 			  "heading": "2015 NFL Season",
@@ -1444,8 +1444,8 @@
 			},
 			{
 			  "image": {
-				"small": "http://via.placeholder.com/240x240",
-				"normal": "http://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
 				"alt": ""
 			  },
 			  "heading": "2015 NFL Season",
@@ -1463,8 +1463,8 @@
 			},
 			{
 			  "image": {
-				"small": "http://via.placeholder.com/240x240",
-				"normal": "http://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
 				"alt": ""
 			  },
 			  "heading": "2015 NFL Season",
@@ -1499,8 +1499,8 @@
 			"type": 0
 		  },
 		  "image": {
-			"normal": "http://via.placeholder.com/520x520",
-			"small": "http://via.placeholder.com/520x520",
+			"normal": "https://via.placeholder.com/520x520",
+			"small": "https://via.placeholder.com/520x520",
 			"alt": "Lorem ipsum dolor sit amet"
 		  }
 		}
@@ -1555,16 +1555,16 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "backgroundImage": {
-			"normal": "http://via.placeholder.com/1920x1080",
-			"small": "http://via.placeholder.com/1920x1080",
+			"normal": "https://via.placeholder.com/1920x1080",
+			"small": "https://via.placeholder.com/1920x1080",
 			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 		  },
 		  "heading": "Surround your target audience <br/>throughout the day and across devices. ",
 		  "devices": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "heading": "iOS Mobile Devices",
@@ -1572,8 +1572,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "heading": "Desktop",
@@ -1581,8 +1581,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "heading": "Smart TV",
@@ -1590,8 +1590,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "heading": "iOS Mobile Devices",
@@ -1599,8 +1599,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "heading": "Desktop",
@@ -1608,8 +1608,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "heading": "Smart TV",
@@ -1640,13 +1640,13 @@
 			"type": 0
 		  },
 		  "backgroundImage": {
-			"normal": "http://via.placeholder.com/1920x750",
-			"small": "http://via.placeholder.com/750x560",
+			"normal": "https://via.placeholder.com/1920x750",
+			"small": "https://via.placeholder.com/750x560",
 			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 		  },
 		  "image": {
-			"normal": "http://via.placeholder.com/1280x960",
-			"small": "http://via.placeholder.com/1280x960",
+			"normal": "https://via.placeholder.com/1280x960",
+			"small": "https://via.placeholder.com/1280x960",
 			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 		  }
 		}
@@ -1663,8 +1663,8 @@
 		  "products": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -1673,8 +1673,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -1683,8 +1683,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -1693,8 +1693,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -1703,8 +1703,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -1713,8 +1713,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -1723,8 +1723,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -1768,8 +1768,8 @@
 			"type": 0
 		  },
 		  "poster": {
-			"normal": "http://via.placeholder.com/1280x720",
-			"small": "http://via.placeholder.com/1280x720",
+			"normal": "https://via.placeholder.com/1280x720",
+			"small": "https://via.placeholder.com/1280x720",
 			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 		  },
 		  "video": {

@@ -85,8 +85,8 @@
 			"type": 0
 		  },
 		  "background": {
-			"normal": "http://via.placeholder.com/1280x830",
-			"small": "http://via.placeholder.com/750x1135",
+			"normal": "https://via.placeholder.com/1280x830",
+			"small": "https://via.placeholder.com/750x1135",
 			"alt": "Placeholder image"
 		  },
 		  "paragraph": "<p>Access to the right screens, the right shows, and the most advanced advertising products is crucial in engaging customers who are ready to buy. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <\/p>",
@@ -121,14 +121,14 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
-				  "small": "http://via.placeholder.com/240x240",
-				  "normal": "http://via.placeholder.com/240x240",
+				  "small": "https://via.placeholder.com/240x240",
+				  "normal": "https://via.placeholder.com/240x240",
 				  "alt": ""
 				}
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Find your true ROI"
 			  },
 			  "views": 0,
@@ -153,14 +153,14 @@
 				"name": "Fred Bucher",
 				"role": "Author",
 				"image": {
-				  "small": "http://via.placeholder.com/240x240",
-				  "normal": "http://via.placeholder.com/240x240",
+				  "small": "https://via.placeholder.com/240x240",
+				  "normal": "https://via.placeholder.com/240x240",
 				  "alt": ""
 				}
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Small, Small Business"
 			  },
 			  "tags": [
@@ -192,14 +192,14 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
-				  "small": "http://via.placeholder.com/240x240",
-				  "normal": "http://via.placeholder.com/240x240",
+				  "small": "https://via.placeholder.com/240x240",
+				  "normal": "https://via.placeholder.com/240x240",
 				  "alt": ""
 				}
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Spectrum Reach Los Angeles Adlink Upfront"
 			  },
 			  "views": 0,
@@ -217,14 +217,14 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
-				  "small": "http://via.placeholder.com/240x240",
-				  "normal": "http://via.placeholder.com/240x240",
+				  "small": "https://via.placeholder.com/240x240",
+				  "normal": "https://via.placeholder.com/240x240",
 				  "alt": ""
 				}
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "TV is Social"
 			  },
 			  "tags": [
@@ -256,14 +256,14 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
-				  "small": "http://via.placeholder.com/240x240",
-				  "normal": "http://via.placeholder.com/240x240",
+				  "small": "https://via.placeholder.com/240x240",
+				  "normal": "https://via.placeholder.com/240x240",
 				  "alt": ""
 				}
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Television is Still Strong for Advertisers"
 			  },
 			  "tags": [
@@ -295,14 +295,14 @@
 				"name": "Fred Bucher",
 				"role": "Author",
 				"image": {
-				  "small": "http://via.placeholder.com/240x240",
-				  "normal": "http://via.placeholder.com/240x240",
+				  "small": "https://via.placeholder.com/240x240",
+				  "normal": "https://via.placeholder.com/240x240",
 				  "alt": ""
 				}
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Emmy Award Winning TV Programming"
 			  },
 			  "views": 0,
@@ -334,8 +334,8 @@
 			"type": 0
 		  },
 		  "poster": {
-			"normal": "http://via.placeholder.com/1280x720",
-			"small": "http://via.placeholder.com/1280x720",
+			"normal": "https://via.placeholder.com/1280x720",
+			"small": "https://via.placeholder.com/1280x720",
 			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 		  },
 		  "video": {
@@ -355,8 +355,8 @@
 			  "heading": "Connected to Content",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			  "image": {
-				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/750x420",
+				"normal": "https://via.placeholder.com/1200x1200",
+				"small": "https://via.placeholder.com/750x420",
 				"alt": "Lorem ipsum"
 			  },
 			  "link": {
@@ -370,8 +370,8 @@
 			  "heading": "Connected to Content",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			  "image": {
-				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/750x420",
+				"normal": "https://via.placeholder.com/1200x1200",
+				"small": "https://via.placeholder.com/750x420",
 				"alt": "Lorem ipsum"
 			  },
 			  "link": {
@@ -385,8 +385,8 @@
 			  "heading": "Connected to Content",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			  "image": {
-				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/750x420",
+				"normal": "https://via.placeholder.com/1200x1200",
+				"small": "https://via.placeholder.com/750x420",
 				"alt": "Lorem ipsum"
 			  },
 			  "link": {
@@ -400,8 +400,8 @@
 			  "heading": "Connected to Content",
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 			  "image": {
-				"normal": "http://via.placeholder.com/1200x1200",
-				"small": "http://via.placeholder.com/750x420",
+				"normal": "https://via.placeholder.com/1200x1200",
+				"small": "https://via.placeholder.com/750x420",
 				"alt": "Lorem ipsum"
 			  },
 			  "link": {
@@ -436,13 +436,13 @@
 			"type": 0
 		  },
 		  "backgroundImage": {
-			"normal": "http://via.placeholder.com/1920x750",
-			"small": "http://via.placeholder.com/750x560",
+			"normal": "https://via.placeholder.com/1920x750",
+			"small": "https://via.placeholder.com/750x560",
 			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 		  },
 		  "image": {
-			"normal": "http://via.placeholder.com/1280x960",
-			"small": "http://via.placeholder.com/1280x960",
+			"normal": "https://via.placeholder.com/1280x960",
+			"small": "https://via.placeholder.com/1280x960",
 			"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 		  }
 		}
@@ -490,8 +490,8 @@
 		  "stories": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -499,8 +499,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -508,8 +508,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -517,8 +517,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -526,8 +526,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -535,8 +535,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",
@@ -544,8 +544,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/750x750",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/750x750",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Lorem ipsum"
 			  },
 			  "target": "/product/foo",

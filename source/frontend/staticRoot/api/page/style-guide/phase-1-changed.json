@@ -172,8 +172,8 @@
 			"name": "Spectrum Reach",
 			"role": "Author",
 			"image": {
-			  "normal": "http://via.placeholder.com/240x240",
-			  "small": "http://via.placeholder.com/240x240",
+			  "normal": "https://via.placeholder.com/240x240",
+			  "small": "https://via.placeholder.com/240x240",
 			  "alt": ""
 			}
 		  },
@@ -219,8 +219,8 @@
 			"type": 0
 		  },
 		  "background": {
-			"normal": "http://via.placeholder.com/1280x830",
-			"small": "http://via.placeholder.com/750x1135",
+			"normal": "https://via.placeholder.com/1280x830",
+			"small": "https://via.placeholder.com/750x1135",
 			"alt": "networks and programming"
 		  },
 		  "paragraph": "<p>Your customers are watching, and they\u2019re paying attention. On their TVs, their phones \u2013 sometimes at the same time. Align your brand with the high-performing shows your customers are already glued to.<\/p>",
@@ -239,99 +239,99 @@
 		  "items": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Fox News"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Nickolodeon"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Adult Swim"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "HGTV"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "USA Network"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "CNN"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Nick at Night"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "TNT"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "ESPN"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Cartoon Network"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Investigation Discovery"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "MSNBC"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Hallmark Channel"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "TBS"
 			  }
 			}
@@ -350,8 +350,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Bravo  Flipping Out"
 			  },
 			  "heading": "Bravo<br \/>Flipping Out<br \/>",
@@ -369,8 +369,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "ESPN\/ESPN2 \u200b\u200b\u200b\u200b\u200b\u200b\u200bMonday Night Football"
 			  },
 			  "heading": "ESPN<br \/>Monday Night Football<br \/>",
@@ -384,8 +384,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "A&E  The Lowe Files"
 			  },
 			  "heading": "A&amp;E<br \/>The Lowe Files<br \/>",
@@ -395,8 +395,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "USA \u2013 The Sinner"
 			  },
 			  "heading": "USA<br \/>The Sinner<br \/>",
@@ -410,8 +410,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Bravo  Flipping Out"
 			  },
 			  "heading": "Bravo<br \/>Flipping Out<br \/>",
@@ -429,8 +429,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "ESPN\/ESPN2 \u200b\u200b\u200b\u200b\u200b\u200b\u200bMonday Night Football"
 			  },
 			  "heading": "ESPN<br \/>Monday Night Football<br \/>",
@@ -444,8 +444,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "A&E  The Lowe Files"
 			  },
 			  "heading": "A&amp;E<br \/>The Lowe Files<br \/>",
@@ -459,8 +459,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "USA \u2013 The Sinner"
 			  },
 			  "heading": "USA<br \/>The Sinner<br \/>",
@@ -514,14 +514,14 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
-				  "small": "http://via.placeholder.com/240x240",
-				  "normal": "http://via.placeholder.com/240x240",
+				  "small": "https://via.placeholder.com/240x240",
+				  "normal": "https://via.placeholder.com/240x240",
 				  "alt": ""
 				}
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Find your true ROI"
 			  },
 			  "views": 0,
@@ -546,14 +546,14 @@
 				"name": "Fred Bucher",
 				"role": "Author",
 				"image": {
-				  "small": "http://via.placeholder.com/240x240",
-				  "normal": "http://via.placeholder.com/240x240",
+				  "small": "https://via.placeholder.com/240x240",
+				  "normal": "https://via.placeholder.com/240x240",
 				  "alt": ""
 				}
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Small, Small Business"
 			  },
 			  "tags": [
@@ -585,14 +585,14 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
-				  "small": "http://via.placeholder.com/240x240",
-				  "normal": "http://via.placeholder.com/240x240",
+				  "small": "https://via.placeholder.com/240x240",
+				  "normal": "https://via.placeholder.com/240x240",
 				  "alt": ""
 				}
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Spectrum Reach Los Angeles Adlink Upfront"
 			  },
 			  "views": 0,
@@ -610,14 +610,14 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
-				  "small": "http://via.placeholder.com/240x240",
-				  "normal": "http://via.placeholder.com/240x240",
+				  "small": "https://via.placeholder.com/240x240",
+				  "normal": "https://via.placeholder.com/240x240",
 				  "alt": ""
 				}
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "TV is Social"
 			  },
 			  "tags": [
@@ -649,14 +649,14 @@
 				"name": "Spectrum Reach",
 				"role": "Author",
 				"image": {
-				  "small": "http://via.placeholder.com/240x240",
-				  "normal": "http://via.placeholder.com/240x240",
+				  "small": "https://via.placeholder.com/240x240",
+				  "normal": "https://via.placeholder.com/240x240",
 				  "alt": ""
 				}
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Television is Still Strong for Advertisers"
 			  },
 			  "tags": [
@@ -688,14 +688,14 @@
 				"name": "Fred Bucher",
 				"role": "Author",
 				"image": {
-				  "small": "http://via.placeholder.com/240x240",
-				  "normal": "http://via.placeholder.com/240x240",
+				  "small": "https://via.placeholder.com/240x240",
+				  "normal": "https://via.placeholder.com/240x240",
 				  "alt": ""
 				}
 			  },
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Emmy Award Winning TV Programming"
 			  },
 			  "views": 0,

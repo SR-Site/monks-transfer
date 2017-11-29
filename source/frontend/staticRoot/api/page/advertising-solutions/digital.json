@@ -66,8 +66,8 @@
 			"type": 0
 		  },
 		  "background": {
-			"normal": "http://via.placeholder.com/1280x720",
-			"small": "http://via.placeholder.com/1280x720",
+			"normal": "https://via.placeholder.com/1280x720",
+			"small": "https://via.placeholder.com/1280x720",
 			"alt": "networks and programming"
 		  },
 		  "paragraph": "<p>With the majority of consumers using multiple devices throughout the day, it’s never been more <strong>essential to have</strong> a multi-screen advertising strategy. When combined, TV and Digital work together to make your ads more memorable, even doubling your message recall when the same ad runs on both TV and online.<\/p>",
@@ -88,8 +88,8 @@
 			"type": 0
 		  },
 		  "background": {
-			"normal": "http://via.placeholder.com/1280x720",
-			"small": "http://via.placeholder.com/1280x720",
+			"normal": "https://via.placeholder.com/1280x720",
+			"small": "https://via.placeholder.com/1280x720",
 			"alt": "networks and programming"
 		  },
 		  "paragraph": "<p>With the majority of consumers using multiple devices throughout the day, it’s never been more <strong>essential to have</strong> a multi-screen advertising strategy. When combined, TV and Digital work together to make your ads more memorable, even doubling your message recall when the same ad runs on both TV and online.<\/p>",
@@ -110,8 +110,8 @@
 			"type": 0
 		  },
 		  "background": {
-			"normal": "http://via.placeholder.com/1280x720",
-			"small": "http://via.placeholder.com/1280x720",
+			"normal": "https://via.placeholder.com/1280x720",
+			"small": "https://via.placeholder.com/1280x720",
 			"alt": "networks and programming"
 		  },
 		  "paragraph": "<p>With the majority of consumers using multiple devices throughout the day, it’s never been more <strong>essential to have</strong> a multi-screen advertising strategy. When combined, TV and Digital work together to make your ads more memorable, even doubling your message recall when the same ad runs on both TV and online.<\/p>",
@@ -131,8 +131,8 @@
 		  "products": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "advertising-solutions/digital/dummy-product",
@@ -141,8 +141,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "advertising-solutions/digital/dummy-product",
@@ -151,8 +151,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "advertising-solutions/digital/dummy-product",
@@ -161,8 +161,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "advertising-solutions/digital/dummy-product",
@@ -171,8 +171,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "advertising-solutions/digital/dummy-product",
@@ -181,8 +181,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "advertising-solutions/digital/dummy-product",
@@ -191,8 +191,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "advertising-solutions/digital/dummy-product",

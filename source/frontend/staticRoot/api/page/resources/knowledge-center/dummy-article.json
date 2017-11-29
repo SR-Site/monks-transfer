@@ -64,8 +64,8 @@
 			"name": "Spectrum Reach",
 			"role": "Author",
 			"image": {
-			  "normal": "http://via.placeholder.com/240x240",
-			  "small": "http://via.placeholder.com/240x240",
+			  "normal": "https://via.placeholder.com/240x240",
+			  "small": "https://via.placeholder.com/240x240",
 			  "alt": ""
 			}
 		  },
@@ -108,8 +108,8 @@
 			{
 			  "heading": "Restivo Laser Vision - \u201cHomeless Valet\u201d<br \/>",
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "theme": 0,
@@ -121,8 +121,8 @@
 			{
 			  "heading": "North Carolina Zoo - \u201cAwaken\"<br \/>",
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "North Carolina Zoo - \u201cAwaken\""
 			  },
 			  "theme": 0,
@@ -134,8 +134,8 @@
 			{
 			  "heading": "Sunmark Federal Credit Union \u2013 \u201cFirst Time Homebuyers\u201d<br \/>",
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Sunmark Federal Credit Union \u2013 \u201cFirst Time Homebuyers\u201d"
 			  },
 			  "theme": 0,
@@ -147,8 +147,8 @@
 			{
 			  "heading": "Flat Rate - \u201cHappy Moving Day\u201d<br \/>",
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Flat Rate - \u201cHappy Moving Day\u201d"
 			  },
 			  "theme": 0,
@@ -160,8 +160,8 @@
 			{
 			  "heading": "Farmer Boys - \u201cFresh Fish\u201d<br \/>",
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Farmer Boys - \u201cFresh Fish\u201d"
 			  },
 			  "theme": 0,
@@ -193,8 +193,8 @@
 			{
 			  "heading": "Restivo Laser Vision - \u201cHomeless Valet\u201d<br \/>",
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "theme": 0,
@@ -206,8 +206,8 @@
 			{
 			  "heading": "North Carolina Zoo - \u201cAwaken\"<br \/>",
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "North Carolina Zoo - \u201cAwaken\""
 			  },
 			  "theme": 0,
@@ -219,8 +219,8 @@
 			{
 			  "heading": "Sunmark Federal Credit Union \u2013 \u201cFirst Time Homebuyers\u201d<br \/>",
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Sunmark Federal Credit Union \u2013 \u201cFirst Time Homebuyers\u201d"
 			  },
 			  "theme": 0,
@@ -232,8 +232,8 @@
 			{
 			  "heading": "Flat Rate - \u201cHappy Moving Day\u201d<br \/>",
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Flat Rate - \u201cHappy Moving Day\u201d"
 			  },
 			  "theme": 0,
@@ -245,8 +245,8 @@
 			{
 			  "heading": "Farmer Boys - \u201cFresh Fish\u201d<br \/>",
 			  "image": {
-				"small": "http://via.placeholder.com/1280x720",
-				"normal": "http://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
 				"alt": "Farmer Boys - \u201cFresh Fish\u201d"
 			  },
 			  "theme": 0,
@@ -275,8 +275,8 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "image": {
-			"normal": "http://via.placeholder.com/520x520",
-			"small": "http://via.placeholder.com/520x520",
+			"normal": "https://via.placeholder.com/520x520",
+			"small": "https://via.placeholder.com/520x520",
 			"alt": "Background image alt text"
 		  },
 		  "heading": "Flagler Auditorium sold the most tickets in their 20-year history",

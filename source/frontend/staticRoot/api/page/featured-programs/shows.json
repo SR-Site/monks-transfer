@@ -130,8 +130,8 @@
 		  "heading":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 		  "subHeading":"Lorem ipsum dolor sit amet",
 		  "background": {
-			"normal": "http://via.placeholder.com/1200x440",
-			"small": "http://via.placeholder.com/750x1240",
+			"normal": "https://via.placeholder.com/1200x440",
+			"small": "https://via.placeholder.com/750x1240",
 			"alt": "Background image alt text"
 		  },
 		  "link": {
