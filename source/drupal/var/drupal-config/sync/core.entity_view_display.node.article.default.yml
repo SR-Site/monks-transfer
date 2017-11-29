@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.field.node.article.field_blocks
     - field.field.node.article.field_category
+    - field.field.node.article.field_company
     - field.field.node.article.field_content
     - field.field.node.article.field_document_type
     - field.field.node.article.field_excerpt
     - field.field.node.article.field_header_theme
     - field.field.node.article.field_image
+    - field.field.node.article.field_industry
     - field.field.node.article.field_links
     - field.field.node.article.field_market
     - field.field.node.article.field_platform
@@ -49,6 +51,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_company:
+    weight: 113
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_content:
     weight: 102
     label: above
@@ -87,6 +97,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     label: hidden
+    region: content
+  field_industry:
+    weight: 114
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_links:
     type: entity_reference_revisions_entity_view
