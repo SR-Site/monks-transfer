@@ -1,0 +1,28 @@
+uuid: 0a6922a8-145b-46d3-9de3-df1fa55e42cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_show
+    - node.type.show
+    - paragraphs.paragraphs_type.block_show_detail
+id: paragraph.block_show_detail.field_show
+field_name: field_show
+entity_type: paragraph
+bundle: block_show_detail
+label: Show
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      show: show
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

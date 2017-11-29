@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.block_show_detail.field_scroll_id
+    - field.field.paragraph.block_show_detail.field_show
     - field.field.paragraph.block_show_detail.field_styles
     - paragraphs.paragraphs_type.block_show_detail
   module:
@@ -20,6 +21,15 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  field_show:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_styles:
     type: entity_reference_paragraphs
