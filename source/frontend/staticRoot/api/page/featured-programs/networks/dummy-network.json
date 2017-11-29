@@ -45,8 +45,8 @@
 			"alt": "Background image alt text"
 		  },
 		  "image": {
-			"normal": "http://via.placeholder.com/480x480",
-			"small": "http://via.placeholder.com/480x480",
+			"normal": "https://via.placeholder.com/480x480",
+			"small": "https://via.placeholder.com/480x480",
 			"alt": "Background image alt text"
 		  },
 		  "heading": "NBA Playoffs",
@@ -78,8 +78,8 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "background": {
-			"normal": "http://via.placeholder.com/1920x1080",
-			"small": "http://via.placeholder.com/1920x1080",
+			"normal": "https://via.placeholder.com/1920x1080",
+			"small": "https://via.placeholder.com/1920x1080",
 			"alt": "Background image alt text"
 		  },
 		  "heading": "Learn more about who's watching the NBA Playoffs",
@@ -89,8 +89,8 @@
 			  "label": "Millenials",
 			  "value": "64%",
 			  "background": {
-				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/640x640",
+				"normal": "https://via.placeholder.com/720x560",
+				"small": "https://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -104,8 +104,8 @@
 			  "label": "Asian Americans",
 			  "value": "28%",
 			  "background": {
-				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/640x640",
+				"normal": "https://via.placeholder.com/720x560",
+				"small": "https://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -119,8 +119,8 @@
 			  "label": "African American Men",
 			  "value": "96%",
 			  "background": {
-				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/640x640",
+				"normal": "https://via.placeholder.com/720x560",
+				"small": "https://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -134,8 +134,8 @@
 			  "label": "Millenials",
 			  "value": "64%",
 			  "background": {
-				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/640x640",
+				"normal": "https://via.placeholder.com/720x560",
+				"small": "https://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -149,8 +149,8 @@
 			  "label": "Asian Americans",
 			  "value": "28%",
 			  "background": {
-				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/640x640",
+				"normal": "https://via.placeholder.com/720x560",
+				"small": "https://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -164,8 +164,8 @@
 			  "label": "African American Men",
 			  "value": "96%",
 			  "background": {
-				"normal": "http://via.placeholder.com/720x560",
-				"small": "http://via.placeholder.com/640x640",
+				"normal": "https://via.placeholder.com/720x560",
+				"small": "https://via.placeholder.com/640x640",
 				"alt": "Background image alt text"
 			  },
 			  "link": {
@@ -189,8 +189,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Bravo  Flipping Out"
 			  },
 			  "heading": "Bravo<br \/>Flipping Out<br \/>",
@@ -208,8 +208,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "ESPN\/ESPN2 \u200b\u200b\u200b\u200b\u200b\u200b\u200bMonday Night Football"
 			  },
 			  "heading": "ESPN<br \/>Monday Night Football<br \/>",
@@ -223,8 +223,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "A&E  The Lowe Files"
 			  },
 			  "heading": "A&amp;E<br \/>The Lowe Files<br \/>",
@@ -234,8 +234,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "USA \u2013 The Sinner"
 			  },
 			  "heading": "USA<br \/>The Sinner<br \/>",
@@ -249,8 +249,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Bravo  Flipping Out"
 			  },
 			  "heading": "Bravo<br \/>Flipping Out<br \/>",
@@ -268,8 +268,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "ESPN\/ESPN2 \u200b\u200b\u200b\u200b\u200b\u200b\u200bMonday Night Football"
 			  },
 			  "heading": "ESPN<br \/>Monday Night Football<br \/>",
@@ -283,8 +283,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "A&E  The Lowe Files"
 			  },
 			  "heading": "A&amp;E<br \/>The Lowe Files<br \/>",
@@ -298,8 +298,8 @@
 			{
 			  "target": "/program/program-name",
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "USA \u2013 The Sinner"
 			  },
 			  "heading": "USA<br \/>The Sinner<br \/>",
@@ -324,99 +324,99 @@
 		  "items": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Fox News"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Nickolodeon"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Adult Swim"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "HGTV"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "USA Network"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "CNN"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Nick at Night"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "TNT"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "ESPN"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Cartoon Network"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Investigation Discovery"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "MSNBC"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Hallmark Channel"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "TBS"
 			  }
 			}
@@ -434,99 +434,99 @@
 		  "items": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Fox News"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Nickolodeon"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Adult Swim"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "HGTV"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "USA Network"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "CNN"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Nick at Night"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "TNT"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "ESPN"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Cartoon Network"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Investigation Discovery"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "MSNBC"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Hallmark Channel"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "TBS"
 			  }
 			}

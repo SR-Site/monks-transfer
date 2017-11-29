@@ -48,8 +48,8 @@
 		  "heading": "How to reach <strong>Millenials</strong>",
 		  "paragraph": "Half of <strong>Millenials</strong> households own a multimedia device, far more than any onther household.",
 		  "background": {
-			"normal": "http://via.placeholder.com/1920x960",
-			"small": "http://via.placeholder.com/640x1040",
+			"normal": "https://via.placeholder.com/1920x960",
+			"small": "https://via.placeholder.com/640x1040",
 			"alt": "Background image alt text"
 		  },
 		  "statistics": [
@@ -84,8 +84,8 @@
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.",
 			  "network": "Nickelodeon",
 			  "background": {
-				"normal": "http://via.placeholder.com/1040x580",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/1040x580",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Background image alt text"
 			  },
 			  "playVideoLabel": "Watch trailer",
@@ -99,8 +99,8 @@
 			  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.",
 			  "network": "Nickelodeon",
 			  "background": {
-				"normal": "http://via.placeholder.com/1040x580",
-				"small": "http://via.placeholder.com/750x750",
+				"normal": "https://via.placeholder.com/1040x580",
+				"small": "https://via.placeholder.com/750x750",
 				"alt": "Background image alt text"
 			  },
 			  "playVideoLabel": "Watch trailer",
@@ -123,99 +123,99 @@
 		  "items": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Fox News"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Nickolodeon"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Adult Swim"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "HGTV"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "USA Network"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "CNN"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Nick at Night"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "TNT"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "ESPN"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Cartoon Network"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Investigation Discovery"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "MSNBC"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "Hallmark Channel"
 			  }
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/240x240",
-				"small": "http://via.placeholder.com/240x240",
+				"normal": "https://via.placeholder.com/240x240",
+				"small": "https://via.placeholder.com/240x240",
 				"alt": "TBS"
 			  }
 			}
@@ -231,8 +231,8 @@
 		  "heading": "Applying the effect of your ad by advertising on websites that <strong>Millenials</strong> use every day",
 		  "paragraph": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 		  "image": {
-			"normal": "http://via.placeholder.com/960x1424",
-			"small": "http://via.placeholder.com/750x750",
+			"normal": "https://via.placeholder.com/960x1424",
+			"small": "https://via.placeholder.com/750x750",
 			"alt": "Background image alt text"
 		  },
 		  "card": {
@@ -250,8 +250,8 @@
 		  "subHeading": "Did you know",
 		  "heading": "40% of Millenials agree that the quality of the programs they watch is important",
 		  "image": {
-			"normal": "http://via.placeholder.com/1280x560",
-			"small": "http://via.placeholder.com/750x580",
+			"normal": "https://via.placeholder.com/1280x560",
+			"small": "https://via.placeholder.com/750x580",
 			"alt": "Background image alt text"
 		  }
 		}
@@ -268,8 +268,8 @@
 		  "products": [
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -278,8 +278,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -288,8 +288,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -298,8 +298,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -308,8 +308,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -318,8 +318,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -328,8 +328,8 @@
 			},
 			{
 			  "image": {
-				"normal": "http://via.placeholder.com/1280x720",
-				"small": "http://via.placeholder.com/1280x720",
+				"normal": "https://via.placeholder.com/1280x720",
+				"small": "https://via.placeholder.com/1280x720",
 				"alt": "Restivo Laser Vision - \u201cHomeless Valet\u201d"
 			  },
 			  "target": "/product/foo",
@@ -366,8 +366,8 @@
 		  "heading":"Lorem ipsum dolor sit amet",
 		  "paragraph": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac hendrerit orci. Aenean consectetur, lectus vitae fermentum imperdiet, dolor libero rutrum massa, ut facilisis lectus leo eget mi. Aliquam purus lacus, eleifend nec imperdiet sit amet, hendrerit sit amet nisl. Sed finibus quis mauris at maximus. Mauris imperdiet a quam a tincidunt. Aliquam mattis id risus et convallis. Donec consequat vulputate lectus a accumsan.</p>",
 		  "background": {
-			"normal": "http://via.placeholder.com/1440x720",
-			"small": "http://via.placeholder.com/750x1240",
+			"normal": "https://via.placeholder.com/1440x720",
+			"small": "https://via.placeholder.com/750x1240",
 			"alt": "Background image alt text"
 		  },
 		  "link": {
