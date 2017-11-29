@@ -1,0 +1,27 @@
+uuid: 6cf0e788-08d4-42cc-b83e-294d936c81ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.block_audience_statistics_b
+  module:
+    - text
+id: paragraph.block_audience_statistics_b.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: block_audience_statistics_b
+label: Paragraph
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    basic_html: basic_html
+    bold_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

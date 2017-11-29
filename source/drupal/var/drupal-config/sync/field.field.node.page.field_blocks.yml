@@ -9,6 +9,8 @@ dependencies:
     - paragraphs.paragraphs_type.block_audience_quote
     - paragraphs.paragraphs_type.block_audience_reach
     - paragraphs.paragraphs_type.block_audience_statistics
+    - paragraphs.paragraphs_type.block_audience_statistics_b
+    - paragraphs.paragraphs_type.block_audience_top_programming
     - paragraphs.paragraphs_type.block_blog_post_b
     - paragraphs.paragraphs_type.block_core_product_message
     - paragraphs.paragraphs_type.block_double_image
@@ -87,21 +89,21 @@ settings:
       blockhowtoadvertise: blockhowtoadvertise
       blockimagecalltoactions: blockimagecalltoactions
       blockimagewithcontent: blockimagewithcontent
-      blocklatest: blocklatest
       blockimagecarousel: blockimagecarousel
+      blocklatest: blocklatest
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
-      blockblogpost: blockblogpost
       blockmore: blockmore
+      blockblogpost: blockblogpost
       blockherosecondary: blockherosecondary
-      blockheromain: blockheromain
       blockmap: blockmap
+      blockheromain: blockheromain
       blockmapsecondary: blockmapsecondary
       blockmarketmap: blockmarketmap
       blocknetworkoverview: blocknetworkoverview
-      blockherotertiary: blockherotertiary
       blockpagenotfound: blockpagenotfound
+      blockherotertiary: blockherotertiary
       blockpathtopurchase: blockpathtopurchase
       blockprogrammodule: blockprogrammodule
       blockquote: blockquote
@@ -120,6 +122,8 @@ settings:
       block_audience_quote: block_audience_quote
       block_audience_reach: block_audience_reach
       block_audience_statistics: block_audience_statistics
+      block_audience_statistics_b: block_audience_statistics_b
+      block_audience_top_programming: block_audience_top_programming
       block_blog_post_b: block_blog_post_b
       block_core_product_message: block_core_product_message
       block_double_image: block_double_image
@@ -145,8 +149,8 @@ settings:
       block_success_story_post: block_success_story_post
       block_target_audience: block_target_audience
       block_video_with_content_b: block_video_with_content_b
-      block_video_with_content_c: block_video_with_content_c
       block_triple_content: block_triple_content
+      block_video_with_content_c: block_video_with_content_c
     target_bundles_drag_drop:
       blockhowtoadvertise:
         enabled: true
@@ -169,21 +173,21 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
-      blocklatest:
-        enabled: true
-        weight: 13
       blockimagecarousel:
         enabled: true
         weight: 13
       link:
         weight: 13
         enabled: false
-      blockarticleteaser:
+      blocklatest:
         enabled: true
-        weight: 15
+        weight: 13
       step:
         weight: 15
         enabled: false
+      blockarticleteaser:
+        enabled: true
+        weight: 15
       blockaudiofragment:
         enabled: true
         weight: 16
@@ -193,19 +197,19 @@ settings:
       blockbutton:
         enabled: true
         weight: 18
-      blockblogpost:
+      blockmore:
         enabled: true
         weight: 19
-      blockmore:
+      blockblogpost:
         enabled: true
         weight: 19
       blockherosecondary:
         enabled: true
         weight: 23
-      blockheromain:
+      blockmap:
         enabled: true
         weight: 26
-      blockmap:
+      blockheromain:
         enabled: true
         weight: 26
       blockmapsecondary:
@@ -217,10 +221,10 @@ settings:
       blocknetworkoverview:
         enabled: true
         weight: 29
-      blockherotertiary:
+      blockpagenotfound:
         enabled: true
         weight: 30
-      blockpagenotfound:
+      blockherotertiary:
         enabled: true
         weight: 30
       blockpathtopurchase:
@@ -244,12 +248,12 @@ settings:
       blocksmallheading:
         enabled: true
         weight: 37
-      slideheromain:
-        weight: 38
-        enabled: false
       blocksmallimage:
         enabled: true
         weight: 38
+      slideheromain:
+        weight: 38
+        enabled: false
       stat:
         weight: 39
         enabled: false
@@ -314,11 +318,11 @@ settings:
         enabled: true
         weight: 101
       block_audience_statistics_b:
+        enabled: true
         weight: 102
-        enabled: false
       block_audience_top_programming:
+        enabled: true
         weight: 103
-        enabled: false
       block_blog_post_b:
         enabled: true
         weight: 104
@@ -367,12 +371,12 @@ settings:
       block_multiple_images:
         enabled: true
         weight: 120
-      block_pdf:
-        weight: 121
-        enabled: false
       block_image_list:
         enabled: true
         weight: 121
+      block_pdf:
+        weight: 121
+        enabled: false
       block_persona_selector_banner:
         enabled: true
         weight: 122
@@ -406,10 +410,10 @@ settings:
       block_video_with_content_b:
         enabled: true
         weight: 133
-      block_video_with_content_c:
+      block_triple_content:
         enabled: true
         weight: 134
-      block_triple_content:
+      block_video_with_content_c:
         enabled: true
         weight: 134
       channel:
@@ -418,10 +422,10 @@ settings:
       core_product_message_item:
         weight: 168
         enabled: false
-      blog_post_item:
+      device:
         weight: 169
         enabled: false
-      device:
+      blog_post_item:
         weight: 169
         enabled: false
       glossary_a_item:
@@ -433,14 +437,14 @@ settings:
       image:
         weight: 172
         enabled: false
-      main_product_item:
-        weight: 174
-        enabled: false
       poster:
         weight: 178
         enabled: false
       image_with_video_and_text:
         weight: 180
+        enabled: false
+      label_and_value:
+        weight: 185
         enabled: false
       skills:
         weight: 189
@@ -453,5 +457,8 @@ settings:
         enabled: false
       text_and_link:
         weight: 199
+        enabled: false
+      success_story_statistic:
+        weight: 204
         enabled: false
 field_type: entity_reference_revisions

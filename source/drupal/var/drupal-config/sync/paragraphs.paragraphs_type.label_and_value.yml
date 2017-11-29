@@ -1,0 +1,7 @@
+uuid: 15e62dd4-5584-48c3-a93e-dd02cea39e08
+langcode: en
+status: true
+dependencies: {  }
+id: label_and_value
+label: 'Label and Value'
+behavior_plugins: {  }
