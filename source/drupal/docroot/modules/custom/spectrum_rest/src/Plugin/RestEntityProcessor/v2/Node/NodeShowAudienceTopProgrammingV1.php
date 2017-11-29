@@ -33,7 +33,7 @@ class NodeShowAudienceTopProgrammingV1 extends SpectrumRestEntityProcessorBase {
       'heading' => $entity->label(),
       'paragraph' => $this->fieldProcessor->getFieldData($entity->get('field_show_description')),
       'background' => $entity->get('field_show_background_image')->count() == 0 ? $defaultBackground : $this->fieldProcessor->getFieldData($entity->get('field_show_background_image')),
-      'network' => "Nickelodeon",
+      'network' => $entity->get('field_show_network')->entity ? $entity->get('field_show_network')->entity->label() : NULL,
       'playVideoLabel' => "Watch trailer",
       'video' => !empty($video) ? $video[0] : [],
     ];
