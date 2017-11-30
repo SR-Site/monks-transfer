@@ -26,8 +26,7 @@
 						}"
 					:class="$style.button"/>
 			</div>
-
-			<p class="copy copy-01" v-html="data.paragraph" ref="copy" :class="$style.copy"></p>
+			<p class="copy copy-01" v-if="data.paragraph" v-html="data.paragraph" ref="copy" :class="$style.copy"></p>
 		</header>
 		<div :class="$style.items">
 			<AudienceTeaser

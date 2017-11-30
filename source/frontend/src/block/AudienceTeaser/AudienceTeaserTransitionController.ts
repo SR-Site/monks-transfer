@@ -43,53 +43,60 @@ class AudienceTeaserTransitionController extends AbstractTransitionController {
 			'-=0.8',
 		);
 
-		this.transitionInTimeline.fromTo(
-			this.viewModel.$refs.subHeading,
-			1,
-			{
-				autoAlpha: 0,
-				y: 50,
-			},
-			{
-				autoAlpha: 1,
-				y: 0,
-				ease: Cubic.easeOut,
-				clearProps: 'all',
-			},
-			'-=0.8',
-		);
+		if (this.viewModel.$refs.subHeading) {
 
-		this.transitionInTimeline.fromTo(
-			this.viewModel.$refs.copy,
-			1,
-			{
-				autoAlpha: 0,
-				y: 50,
-			},
-			{
-				autoAlpha: 1,
-				y: 0,
-				ease: Cubic.easeOut,
-				clearProps: 'all',
-			},
-			'-=0.8',
-		);
+			this.transitionInTimeline.fromTo(
+				this.viewModel.$refs.subHeading,
+				1,
+				{
+					autoAlpha: 0,
+					y: 50,
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					ease: Cubic.easeOut,
+					clearProps: 'all',
+				},
+				'-=0.8',
+			);
+		}
 
-		this.transitionInTimeline.fromTo(
-			this.viewModel.$refs.bottom,
-			1,
-			{
-				autoAlpha: 0,
-				y: 50,
-			},
-			{
-				autoAlpha: 1,
-				y: 0,
-				ease: Cubic.easeOut,
-				clearProps: 'all',
-			},
-			'-=0.8',
-		);
+		if (this.viewModel.$refs.copy) {
+			this.transitionInTimeline.fromTo(
+				this.viewModel.$refs.copy,
+				1,
+				{
+					autoAlpha: 0,
+					y: 50,
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					ease: Cubic.easeOut,
+					clearProps: 'all',
+				},
+				'-=0.8',
+			);
+		}
+
+		if (this.viewModel.$refs.bottom) {
+			this.transitionInTimeline.fromTo(
+				this.viewModel.$refs.bottom,
+				1,
+				{
+					autoAlpha: 0,
+					y: 50,
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					ease: Cubic.easeOut,
+					clearProps: 'all',
+				},
+				'-=0.8',
+			);
+		}
 	}
 
 	/**
