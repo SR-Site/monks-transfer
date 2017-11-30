@@ -29,8 +29,6 @@
 
 	.icon {
 		@include size($sizeGrid);
-		transform: rotate(180deg);
-		transition: transform 0.2s $easeInOut;
 
 		path {
 			fill: currentColor;
@@ -67,7 +65,6 @@
 	right: 0;
 
 	.icon {
-		transform: rotate(0);
 		color: $colorWhite;
 	}
 }
