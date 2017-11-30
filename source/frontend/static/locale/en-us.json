@@ -45,7 +45,7 @@
 		"name": "Name",
 		"firstName": "First Name",
 		"lastName": "Last name",
-		"phone_number": "Phone Number (numbers only)",
+		"phone_number": "Phone Number (e.g. 555-555-5555)",
 		"state": "State",
 		"city": "City",
 		"zipcode": "ZIP Code you want to advertise in",
