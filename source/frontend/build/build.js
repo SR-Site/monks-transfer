@@ -12,11 +12,12 @@ const fs = require('fs-extra');
 const chalk = require('chalk');
 const ncp = require('ncp');
 const rimraf = require('rimraf');
+const cmd = require('node-cmd');
 
 const spinner = ora('building for production...');
 spinner.start();
 
-//empty build folder because webpack-cleanup-plugin doesn't remove folders
+// empty build folder because webpack-cleanup-plugin doesn't remove folders
 fs.emptyDirSync(webpackConfig.output.path);
 
 webpack(webpackConfig, function (err, stats) {
@@ -34,11 +35,29 @@ webpack(webpackConfig, function (err, stats) {
 	if(buildLocal) {
 		const inputPath = path.resolve('dist/version')
 		const outputPath = path.resolve(config.build.drupalVersion);
+		const versionNumber = fs.readdirSync(inputPath).shift();
 
 		// Empty the old version folder and copy the new one
 		rimraf(outputPath, function () {
-			ncp(inputPath, outputPath);
+			// Copy the build code
+			ncp(inputPath, outputPath, function() {
+				// Modify the settings file with the new version
+				const drupalSettings = path.resolve(config.build.drupalSettings);
+				// Read the settings file
+				fs.readFile(drupalSettings, 'utf8', function(error, content) {
+					// Create build the new version line
+					const target = `$settings['mm_deployment_version'] = '${versionNumber}'; // [deploytool]`
+					// Replace the settings line
+					const newContent = content.replace(/\$settings\['mm_deployment_version'](.*?)\[deploytool]/i, target);
+					// Write the new content to the settings file
+					fs.writeFile(drupalSettings, newContent, function() {
+						// Run drush to clear the cache
+						cmd.run('cd ../drupal/docroot && ../vendor/drush/drush/drush cr');
+					});
+				});
+			});
 		});
+
 	}
 	console.log();
 	console.log(chalk.blue('You can preview your build by running:'), chalk.blue.bold('yarn preview'));
