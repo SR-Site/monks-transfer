@@ -25,10 +25,6 @@ class FindYourAudienceCategoryTransitionController extends AbstractTransitionCon
 			this.transitionInTimeline.add(this.getSubTimeline(`ButtonQuaternary`), '-=0.5');
 		}
 
-		// (<Array<any>>this.viewModel.$refs.audience).forEach((item, index) => {
-		// 	this.transitionInTimeline.add(this.getSubTimeline(`AudienceTeaser${index}`), 1 + index * 0.2);
-		// });
-
 		this.transitionInTimeline.add(this.getSubTimeline(`ButtonCircleArrow`), '-=0.5');
 	}
 
