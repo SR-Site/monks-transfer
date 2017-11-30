@@ -2,6 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\v2\Node;
 
+use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 
 /**
@@ -22,14 +23,9 @@ class NodeShowDetailV1 extends SpectrumRestEntityProcessorBase {
    * {@inheritdoc}
    */
   protected function getItemData($entity) {
-
     $data = [
       'heading' => $entity->label(),
       'paragraph' => $this->fieldProcessor->getFieldData($entity->get('field_show_description')),
-      "airTime" => [
-        "label" => "Air time",
-        "value" => "New Episodes Saturdays at 6PM ET/PT",
-      ],
       "ageRestriction" => [
         "label" => "Age Restriction",
         "image" => [
@@ -40,6 +36,18 @@ class NodeShowDetailV1 extends SpectrumRestEntityProcessorBase {
       ],
     ];
 
+    // Get next episode..
+    $airTime = $this->getNextEpisodeTime($entity->get('field_show_schedules'));
+    if (!empty($airTime)) {
+      $data['airTime'] = [
+        'label' => t('Air time'),
+        'value' => t('New Episode :week at :time ET/PT', [
+          ':week' => $airTime['week'],
+          ':time' => $airTime['time'],
+        ]),
+      ];
+    }
+
     if ($entity->get('field_show_network')->entity) {
       $data['network'] = [
         'label' => $entity->get('field_show_network')->entity->label(),
@@ -48,6 +56,33 @@ class NodeShowDetailV1 extends SpectrumRestEntityProcessorBase {
     }
 
     return $data;
+  }
+
+  /**
+   * Get time of next episode.
+   *
+   * @param \Drupal\Core\Field\FieldItemListInterface $schedules
+   *   Schedule field item list.
+   *
+   * @return array
+   *   Week and time of episode.
+   */
+  protected function getNextEpisodeTime(FieldItemListInterface $schedules) {
+    $newDate = [];
+    foreach ($schedules as $schedule) {
+      // @TODO: Check the first next episode. Waiting for real data.
+      /** @var \Drupal\spectrum_shows\Entity\Schedule $scheduleEntity */
+      $scheduleEntity = $schedule->entity;
+      $airTime = $scheduleEntity->get('start_time')->value;
+      $airTimeDateTime = new \DateTime($airTime);
+      $airTimeDateTime->setTimezone(new \DateTimeZone('America/New_York'));
+      $newDate = [
+        'week' => $airTimeDateTime->format('l'),
+        'time' => $airTimeDateTime->format('gA'),
+      ];
+      break;
+    }
+    return $newDate;
   }
 
 }
