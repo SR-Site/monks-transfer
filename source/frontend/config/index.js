@@ -24,6 +24,7 @@ module.exports = {
 		},
 		index: path.resolve(__dirname, '../dist/index.html'),
 		drupalVersion: path.resolve(__dirname, '../../drupal/docroot/version'),
+		drupalSettings: path.resolve(__dirname, '../../drupal/var/drupal-settings/settings.local.php'),
 		versionPath: versionPath,
 		publicPath: publicPath,
 		enableESLintLoader: false,
