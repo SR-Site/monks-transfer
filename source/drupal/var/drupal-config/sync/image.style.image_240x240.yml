@@ -1,0 +1,14 @@
+uuid: eda1bae9-0327-4cd0-8716-987c94cdb388
+langcode: en
+status: true
+dependencies: {  }
+name: image_240x240
+label: 'Image 240x240'
+effects:
+  e225af84-44e3-4fa4-84f7-6bd5dc9ad5f6:
+    uuid: e225af84-44e3-4fa4-84f7-6bd5dc9ad5f6
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 240
+      height: 240

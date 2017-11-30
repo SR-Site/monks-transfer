@@ -63,6 +63,7 @@ module:
   spectrum_settings: 0
   spectrum_shows: 0
   spectrum_shows_import: 0
+  spectrum_twitter_api: 0
   sqlsrv: 0
   statistics: 0
   supercache: 0

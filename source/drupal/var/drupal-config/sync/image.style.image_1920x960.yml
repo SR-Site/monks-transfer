@@ -1,0 +1,14 @@
+uuid: d3127520-c8f6-4a4c-806c-226c00f2e8fb
+langcode: en
+status: true
+dependencies: {  }
+name: image_1920x960
+label: 'Image 1920x960'
+effects:
+  74ddb55c-c71b-4e72-81da-6eec2c6f0835:
+    uuid: 74ddb55c-c71b-4e72-81da-6eec2c6f0835
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 1920
+      height: 960
