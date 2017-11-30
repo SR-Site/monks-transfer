@@ -24,11 +24,23 @@
 				componentId="ButtonCallToReach"
 				icon="contact"
 				:theme="callToReachTheme"
+				:title="phoneNumber"
+				:label="phoneNumber"
+				:type="ButtonType.LINK"
+				:link="{
+					type: LinkType.EXTERNAL_BLANK,
+					target: `tel:${phoneNumber}`,
+				}"
+				:class="[$style.button, $style.callToReach]"/>
+			<ButtonCallToReach
+				componentId="ButtonEmailToReach"
+				icon="email"
+				:theme="callToReachTheme"
 				:title="$t('global.cta.contact_us')"
 				:label="$t('global.cta.contact_us')"
 				:type="ButtonType.LINK"
 				:link="{
-					type: BackendLinkType.CONTACT_KERNEL,
+					type: BackendLinkType.CONTACT_US,
 					target: '',
 				}"
 				:class="[$style.button, $style.callToReach]"/>
