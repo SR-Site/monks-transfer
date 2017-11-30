@@ -18,7 +18,7 @@
 						<h3 class="heading heading-07" v-html="data.airTime.label" :class="$style.detailHeading"></h3>
 						<p class="copy copy-01" :class="$style.detailValue" v-html="data.airTime.value"></p>
 					</li>
-					<li :class="$style.detail" ref="ageRestriction">
+					<li :class="$style.detail" ref="ageRestriction" v-if="data.ageRestriction">
 						<h3 class="heading heading-07" v-html="data.ageRestriction.label" :class="$style.detailHeading"></h3>
 						<figure :class="$style.detailImage">
 							<ResponsiveImage :image="data.ageRestriction.image" class="abs-fill fit-cover" />
