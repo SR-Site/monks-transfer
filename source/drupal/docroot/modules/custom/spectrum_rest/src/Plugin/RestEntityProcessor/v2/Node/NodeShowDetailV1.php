@@ -26,13 +26,15 @@ class NodeShowDetailV1 extends SpectrumRestEntityProcessorBase {
     $data = [
       'heading' => $entity->label(),
       'paragraph' => $this->fieldProcessor->getFieldData($entity->get('field_show_description')),
-      "ageRestriction" => [
-        "label" => "Age Restriction",
-        "image" => [
-          "small" => "https://via.placeholder.com/240x240",
-          "normal" => "https://via.placeholder.com/240x240",
-          "alt" => "Background image alt text",
-        ],
+    ];
+
+    // @TODO: Add age restrictions in backend..
+    $data['ageRestriction'] = [
+      'label' => 'Age Restriction',
+      'image' => [
+        'small' => 'https://via.placeholder.com/240x240',
+        'normal' => 'https://via.placeholder.com/240x240',
+        'alt' => 'Background image alt text',
       ],
     ];
 
