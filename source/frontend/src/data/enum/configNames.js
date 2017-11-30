@@ -2,7 +2,7 @@ export const EnvironmentNames = {
 	PRODUCTION: 'production',
 	DEVELOPMENT: 'development',
 	STAGING: 'staging',
-  LOCAL_DRUPAL: 'localDrupal',
+	LOCAL_DRUPAL: 'localDrupal',
 	LOCAL: 'local',
 };
 

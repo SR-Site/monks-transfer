@@ -22,7 +22,7 @@ const config = {
 		[EnvironmentNames.LOCAL_DRUPAL]: {
 			extends: EnvironmentNames.DEVELOPMENT,
 			variables: {
-        [VariableNames.MOCK_ENABLED]: false,
+				[VariableNames.MOCK_ENABLED]: false,
 			},
 			urls: {},
 		},
@@ -74,10 +74,10 @@ switch (host.split(':').shift()) {
 		environment = EnvironmentNames.LOCAL;
 		break;
 	}
-  case 'spectrum.loc': {
-    environment = EnvironmentNames.LOCAL_DRUPAL;
-    break;
-  }
+	case 'spectrum.loc': {
+		environment = EnvironmentNames.LOCAL_DRUPAL;
+		break;
+	}
 	default: {
 		environment = EnvironmentNames.PRODUCTION;
 		break;

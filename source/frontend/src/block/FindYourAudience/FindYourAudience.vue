@@ -14,26 +14,12 @@
 								:class="$style.navigationLink"
 								v-html="data.topPicks.heading"></button>
 						</li>
-						<li :class="$style.navigationItem">
+						<li :class="$style.navigationItem" v-for="(genre, index) in data.genres" :key="index">
 							<button
 								class="button"
-								@click="scrollToComponent('Series')"
+								@click="scrollToComponent(`Genre.${index}`)"
 								:class="$style.navigationLink"
-								v-html="data.series.heading"></button>
-						</li>
-						<li :class="$style.navigationItem">
-							<button
-								class="button"
-								@click="scrollToComponent('AwardsAndSpecials')"
-								:class="$style.navigationLink"
-								v-html="data.awardsAndSpecials.heading"></button>
-						</li>
-						<li :class="$style.navigationItem">
-							<button
-								class="button"
-								@click="scrollToComponent('Sports')"
-								:class="$style.navigationLink"
-								v-html="data.sports.heading"></button>
+								v-html="genre.heading"></button>
 						</li>
 						<li :class="$style.navigationItem">
 							<button
@@ -50,17 +36,12 @@
 						componentId="TopPicks"
 						:data="data.topPicks"/>
 					<FindYourAudienceCategory
+						v-for="(genre, index) in data.genres"
 						@backToTop="handleBackToTop"
-						componentId="Series"
-						:data="data.series"/>
-					<FindYourAudienceCategory
-						@backToTop="handleBackToTop"
-						componentId="AwardsAndSpecials"
-						:data="data.awardsAndSpecials"/>
-					<FindYourAudienceCategory
-						@backToTop="handleBackToTop"
-						componentId="Sports"
-						:data="data.sports"/>
+						:componentId="`Genre.${index}`"
+						:key="index"
+						ref="genre"
+						:data="genre"/>
 					<FindYourAudienceCategory
 						@backToTop="handleBackToTop"
 						componentId="Networks"
