@@ -71,7 +71,7 @@ export default {
 			return this.allComponentsReady
 				.then(() => {
 					if (this.activePanel && this.activePanel !== id) {
-						return this.panels[id].transitionOut();
+						return this.panels[this.activePanel].transitionOut();
 					}
 					return Promise.resolve();
 				})

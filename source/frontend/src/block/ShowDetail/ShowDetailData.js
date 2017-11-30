@@ -38,5 +38,5 @@ export default {
 	ageRestriction: VueTypes.shape({
 		label: VueTypes.string.isRequired,
 		image: VueTypes.shape(PropImage).isRequired,
-	}).isRequired,
+	}),
 };

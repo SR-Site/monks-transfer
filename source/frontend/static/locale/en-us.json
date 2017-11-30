@@ -14,7 +14,8 @@
 	  "share_twitter": "Share on tTwitter",
 	  "share_facebook": "Share on Facebook",
 	  "share_linkedin": "Share on LinkedIn",
-	  "back_to_top": "Back to top"
+	  "back_to_top": "Back to top",
+	  "contact_us": "Contact us"
 	},
 	"show": {
 	  "percent": "Percent"
@@ -44,7 +45,7 @@
 		"name": "Name",
 		"firstName": "First Name",
 		"lastName": "Last name",
-		"phone_number": "Phone Number (numbers only)",
+		"phone_number": "Phone Number (e.g. 555-555-5555)",
 		"state": "State",
 		"city": "City",
 		"zipcode": "ZIP Code you want to advertise in",
