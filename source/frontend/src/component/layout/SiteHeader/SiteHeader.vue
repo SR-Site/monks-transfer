@@ -24,12 +24,12 @@
 				componentId="ButtonCallToReach"
 				icon="contact"
 				:theme="callToReachTheme"
-				:title="phoneNumber"
-				:label="phoneNumber"
+				:title="$t('global.cta.contact_us')"
+				:label="$t('global.cta.contact_us')"
 				:type="ButtonType.LINK"
 				:link="{
-					type: LinkType.EXTERNAL_BLANK,
-					target: `tel:${phoneNumber}`,
+					type: BackendLinkType.CONTACT_KERNEL,
+					target: '',
 				}"
 				:class="[$style.button, $style.callToReach]"/>
 			<ButtonHeader

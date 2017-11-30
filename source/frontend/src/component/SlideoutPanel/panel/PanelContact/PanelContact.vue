@@ -6,13 +6,13 @@
 		<ButtonTertiary
 			componentId="ButtonPrimary"
 			:class="$style.phoneButton"
-			:title="$t('global.cta.contact_us').toUpperCase()"
-			:label="$t('global.cta.contact_us').toUpperCase()"
+			:title="phoneNumber"
+			:label="phoneNumber"
 			:type="ButtonType.LINK"
 			:theme="Theme.DARK"
 			:link="{
-				type: BackendLinkType.CONTACT_KERNEL,
-				target: '',
+				target: `tel:${phoneNumber}`,
+				type: LinkType.EXTERNAL_BLANK
 			}"/>
 
 		<h3 :class="$style.subTitle" class="copy copy-03" v-html="subHeading"></h3>
