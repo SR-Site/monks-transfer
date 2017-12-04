@@ -3,8 +3,8 @@
     "description": "Standard MediaMonks decoupled Drupal project template.",
     "type": "project",
     "config" : {
-        "bin-dir": "source/drupal/bin",
-        "vendor-dir": "source/drupal/vendor"
+        "bin-dir": "bin",
+        "vendor-dir": "vendor"
     },
     "authors": [
         {
@@ -104,7 +104,7 @@
     "prefer-stable": true,
     "autoload": {
         "classmap": [
-            "tools/composer/DrupalScriptHandler.php"
+            "scripts/composer/DrupalScriptHandler.php"
         ]
     },
     "scripts": {
@@ -145,13 +145,13 @@
             }
         },
         "installer-paths": {
-            "source/drupal/docroot/core": ["type:drupal-core"],
-            "source/drupal/docroot/modules/contrib/{$name}": ["type:drupal-module"],
-            "source/drupal/docroot/modules/mediamonks/{$name}": ["type:mediamonks-drupal-module"],
-            "source/drupal/docroot/themes/contrib/{$name}": ["type:drupal-theme"],
-            "source/drupal/docroot/themes/mediamonks/{$name}": ["type:mediamonks-drupal-theme"],
-            "source/drupal/docroot/library/contrib/{$name}": ["type:drupal-library"],
-            "source/drupal/docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "docroot/core": ["type:drupal-core"],
+            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+            "docroot/modules/mediamonks/{$name}": ["type:mediamonks-drupal-module"],
+            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+            "docroot/themes/mediamonks/{$name}": ["type:mediamonks-drupal-theme"],
+            "docroot/library/contrib/{$name}": ["type:drupal-library"],
+            "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
         }
     },
