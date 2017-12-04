@@ -22,21 +22,21 @@ class NodeShowV1 extends RestEntityProcessorBase {
    * {@inheritdoc}
    */
   protected function getItemData($entity) {
-
-    $show_metric = $this->fieldProcessor->getFieldData($entity->field_show_metric);
-
-    // show_metric needs to be always an array.
-    if (count($entity->field_show_metric) == 1) {
-      $show_metric = [$show_metric];
-    }
+    $blocks = [];
+    // Get show detail.
+    $showDetail = $this->entityProcessor->getEntityData($entity, 'v1', ['view_mode' => 'detail']);
+    $showDetailBlock = [
+      'id' => 'ShowDetail',
+      'data' => $showDetail,
+    ];
+    $blocks[] = $this->fieldProcessor->getFieldData($entity->get('field_hero_quaternary'));
+    $blocks[] = $showDetailBlock;
+    $blocks[] = $this->fieldProcessor->getFieldData($entity->get('field_audience_statistics'));
+    $blocks[] = $this->fieldProcessor->getFieldData($entity->get('field_success_stories_a'));
 
     $data = [
-      "title" => $entity->label(),
-      "image" => $this->fieldProcessor->getFieldData($entity->field_image),
-      "video" => $this->fieldProcessor->getFieldData($entity->field_video_external),
-      "broadcast_schedule" => $this->fieldProcessor->getFieldData($entity->field_broadcast_schedule),
-      "show_metric" => $show_metric,
-      "tags" => $this->fieldProcessor->getFieldData($entity->field_tags),
+      'title' => $entity->label(),
+      'blocks' => $blocks,
     ];
 
     return $data;
