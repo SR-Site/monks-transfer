@@ -7,8 +7,6 @@
  * @see README.md
  */
 
-// The salt.
-//   Always override this value and use the same value for all environments.
 $settings['hash_salt'] = 'SALT-SALT-SALT';
 
 // Drupal database credentials.
@@ -23,6 +21,13 @@ $databases['default']['default'] = array (
   'prefix' => '',
   'collation' => 'utf8mb4_general_ci',
 );
-$settings['mm_deployment_version'] = '[FRONTEND_VERSION]'; // [deploytool]
+$settings['mm_deployment_version'] = '[FRONTEND_VERSION]';
 
-unset($settings['trusted_host_patterns']);
+$settings['trusted_host_patterns'] = [
+  '^spectrumreach\.com$',
+  '^.+\.spectrumreach\.com$',
+  '^neverstopreaching\.com$',
+  '^.+\.neverstopreaching\.com$',
+  '107.189.68.170',
+  '23.92.229.18'
+];

@@ -9,22 +9,36 @@ FTPPASSWORD?=password
 FTPHOSTNAME?=hostname
 
 
-all: clean create-container install-frontend install-backend sync
+all: clean install-frontend install-backend sync
 
 clean:
 	docker-compose rm -f
 
-backend: composer-clean composer
+backend: backend-container backend-clean backend-composer backend-teardown
 
-create-container:
-	docker-compose up
+backend-container:
+	docker-compose up -d backend
 
-composer:
-	docker-compose run --rm -w /app --entrypoint composer backend "-n" install
+backend-clean:
+	-docker-compose exec backend "rm" "-rf" "/app/vendor"
+	-docker-compose exec backend "rm" "-rf" "/app/docroot/core"
 
-composer-clean:
-	-docker-compose run --rm --entrypoint rm backend "-rf" "/app/vendor"
-	-docker-compose run --rm --entrypoint rm backend "-rf" "/app/docroot/core"
+backend-composer:
+	docker-compose exec backend /bin/sh -c 'cd /app && /usr/local/bin/composer install'
+
+backend-set-config:
+	-rm ../../source/drupal/var/settings.local.php
+	cp ../../source/drupal/var/drupal-settings/settings.jenkins.php ../../source/drupal/var/drupal-settings/settings.local.php
+	$(eval frontendversion :=$(find /app/docroot/version/* -maxdepth 0 -type d | sort -r | head -n 1 | cut -d "/" -f5))
+	@echo ${frontendversion} 123
+	#sed -i "s/\[DATABASE_SCHEMA\]/schema/g" ../../source/drupal/var/drupal-settings/settings.local.php
+	#sed -i "s/\[DATABASE_USERNAME\]/username/g" ../../source/drupal/var/drupal-settings/settings.local.php
+	#sed -i "s/\[DATABASE_PASSWORD\]/lastname/g" ../../source/drupal/var/drupal-settings/settings.local.php
+	#sed -i "s/\[DATABASE_HOSTNAME\]/hostname/g" ../../source/drupal/var/drupal-settings/settings.local.php
+	#sed -i "s/\[FRONTEND_VERSION\]/${frontendversion}/g" ../../source/drupal/var/drupal-settings/settings.local.php
+
+backend-teardown:
+	docker-compose stop backend
 
 sync-pre:
 	echo "not needed";
