@@ -1,0 +1,45 @@
+uuid: 461aa94a-af5a-44fc-b120-4be2d580adbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.top_picks.field_main_heading
+    - field.field.paragraph.top_picks.field_paragraph
+    - field.field.paragraph.top_picks.field_top_picks_shows
+    - paragraphs.paragraphs_type.top_picks
+  module:
+    - text
+id: paragraph.top_picks.default
+targetEntityType: paragraph
+bundle: top_picks
+mode: default
+content:
+  field_main_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraph:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_top_picks_shows:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

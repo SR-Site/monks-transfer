@@ -3,10 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.network.field_blocks
     - field.field.node.network.field_image
     - field.field.node.network.field_image2
+    - field.field.node.network.field_network
     - node.type.network
   module:
+    - entity_reference_revisions
     - image
     - user
 id: node.network.default
@@ -14,6 +17,15 @@ targetEntityType: node
 bundle: network
 mode: default
 content:
+  field_blocks:
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_image:
     weight: 101
     label: above
@@ -31,6 +43,14 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_network:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   links:
     weight: 100

@@ -1,0 +1,25 @@
+uuid: cc042993-e0d4-4329-b40f-f1ead31fbd40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_genres
+    - paragraphs.paragraphs_type.block_find_your_audience
+id: paragraph.block_find_your_audience.field_genres
+field_name: field_genres
+entity_type: paragraph
+bundle: block_find_your_audience
+label: Genres
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:genre'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

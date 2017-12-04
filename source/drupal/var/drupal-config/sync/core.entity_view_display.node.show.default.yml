@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.show.field_audience_statistics
+    - field.field.node.show.field_hero_quaternary
     - field.field.node.show.field_image
     - field.field.node.show.field_show_background_image
     - field.field.node.show.field_show_description
@@ -14,6 +16,7 @@ dependencies:
     - field.field.node.show.field_show_recommend
     - field.field.node.show.field_show_schedules
     - field.field.node.show.field_show_videos
+    - field.field.node.show.field_success_stories_a
     - node.type.show
   module:
     - entity_reference_revisions
@@ -25,6 +28,24 @@ targetEntityType: node
 bundle: show
 mode: default
 content:
+  field_audience_statistics:
+    type: entity_reference_revisions_entity_view
+    weight: 117
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_hero_quaternary:
+    type: entity_reference_revisions_entity_view
+    weight: 116
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_image:
     weight: 113
     label: above
@@ -117,6 +138,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_success_stories_a:
+    type: entity_reference_revisions_entity_view
+    weight: 118
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   links:
     weight: 100

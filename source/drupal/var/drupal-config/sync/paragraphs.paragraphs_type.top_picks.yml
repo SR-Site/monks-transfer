@@ -1,0 +1,7 @@
+uuid: 6ac4a675-ef41-4077-8491-16142388acb9
+langcode: en
+status: true
+dependencies: {  }
+id: top_picks
+label: 'Top picks'
+behavior_plugins: {  }

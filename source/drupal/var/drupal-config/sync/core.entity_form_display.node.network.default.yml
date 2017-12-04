@@ -3,12 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.network.field_blocks
     - field.field.node.network.field_image
     - field.field.node.network.field_image2
+    - field.field.node.network.field_network
     - image.style.thumbnail
     - node.type.network
   module:
     - image
+    - paragraphs
     - path
 id: node.network.default
 targetEntityType: node
@@ -20,6 +23,18 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_blocks:
+    weight: 123
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
   field_image:
     weight: 31
@@ -36,6 +51,15 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_network:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   path:
     type: path

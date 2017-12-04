@@ -77,6 +77,8 @@ class ParagraphBlockGlossaryBV1 extends SpectrumRestEntityProcessorBase {
    *
    * @return array|mixed
    *   Array of items data.
+   *
+   * @throws \Exception
    */
   protected function getAdvertisingItemsData(array $advertisingItems) {
     $data = [];

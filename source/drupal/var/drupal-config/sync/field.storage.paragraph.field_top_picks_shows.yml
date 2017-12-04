@@ -1,0 +1,20 @@
+uuid: 0fd10596-0a2d-482e-bb6a-567075aa02df
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_top_picks_shows
+field_name: field_top_picks_shows
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
