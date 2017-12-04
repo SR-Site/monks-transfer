@@ -1,0 +1,35 @@
+uuid: fdec49a3-7c1f-47b3-b194-d831c4c8e5a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.networks.field_main_heading
+    - field.field.paragraph.networks.field_paragraph
+    - paragraphs.paragraphs_type.networks
+  module:
+    - text
+id: paragraph.networks.default
+targetEntityType: paragraph
+bundle: networks
+mode: default
+content:
+  field_main_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraph:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

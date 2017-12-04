@@ -1,10 +1,10 @@
-uuid: 5c9cbbf0-b760-4dc8-9960-d0d7cdff1e23
+uuid: c8e76e28-dd79-49c9-81a8-d3dd5f4d1e42
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: REQN0VgyVo6gHf5wBFnnQbcGpTLIyHFd3PxpYnr2fbk
-id: network
+  default_config_hash: EzdAOXyaL1_15SXz1BULZKV-kUIAw9XUra0ZYNRXdsY
+id: network_node
 class: null
 field_plugin_method: null
 cck_plugin_method: null
@@ -45,15 +45,23 @@ process:
   type:
     plugin: default_value
     default_value: network
-  call_sign: Callsign
-  station_name: Stationname
-  station_number: Stationnum
-  description: Description
-  image/target_id:
-    source: Image
-    plugin: file_json
-    destination: 'public://shows/[date:custom:Y]-[date:custom:m]'
-  image/alt: Stationname
+  title: Stationname
+  field_network/target_id:
+    plugin: migration_lookup
+    no_stub: true
+    migration: network
+    source: Stationnum
+  sticky:
+    plugin: default_value
+    default_value: 0
+  status:
+    plugin: default_value
+    default_value: 1
+  uid:
+    plugin: default_value
+    default_value: 1
 destination:
-  plugin: 'entity:network'
-migration_dependencies: null
+  plugin: 'entity:node'
+migration_dependencies:
+  optional:
+    - network

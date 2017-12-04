@@ -1,0 +1,19 @@
+uuid: cabcb542-37c5-449f-9ac5-cc2dd9fbdcaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_main_heading
+    - paragraphs.paragraphs_type.networks
+id: paragraph.networks.field_main_heading
+field_name: field_main_heading
+entity_type: paragraph
+bundle: networks
+label: Heading
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

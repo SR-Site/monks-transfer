@@ -16,6 +16,7 @@ dependencies:
     - paragraphs.paragraphs_type.block_double_image
     - paragraphs.paragraphs_type.block_download_file_a
     - paragraphs.paragraphs_type.block_download_file_b
+    - paragraphs.paragraphs_type.block_find_your_audience
     - paragraphs.paragraphs_type.block_glossary_a
     - paragraphs.paragraphs_type.block_glossary_b
     - paragraphs.paragraphs_type.block_hero_quaternary
@@ -91,21 +92,21 @@ settings:
       blockhowtoadvertise: blockhowtoadvertise
       blockimagecalltoactions: blockimagecalltoactions
       blockimagewithcontent: blockimagewithcontent
-      blocklatest: blocklatest
       blockimagecarousel: blockimagecarousel
+      blocklatest: blocklatest
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
-      blockmore: blockmore
       blockblogpost: blockblogpost
+      blockmore: blockmore
       blockherosecondary: blockherosecondary
-      blockmap: blockmap
       blockheromain: blockheromain
+      blockmap: blockmap
       blockmapsecondary: blockmapsecondary
       blockmarketmap: blockmarketmap
       blocknetworkoverview: blocknetworkoverview
-      blockpagenotfound: blockpagenotfound
       blockherotertiary: blockherotertiary
+      blockpagenotfound: blockpagenotfound
       blockpathtopurchase: blockpathtopurchase
       blockprogrammodule: blockprogrammodule
       blockquote: blockquote
@@ -116,8 +117,8 @@ settings:
       blocksmallinfo: blocksmallinfo
       blockstoryinfoimages: blockstoryinfoimages
       blocktext: blocktext
-      block_map_tertiary: block_map_tertiary
       blockfiltercontent: blockfiltercontent
+      block_map_tertiary: block_map_tertiary
       block_video_with_call_to_actions: block_video_with_call_to_actions
       blockpersonaselector: blockpersonaselector
       block_audience_product_top: block_audience_product_top
@@ -131,6 +132,7 @@ settings:
       block_double_image: block_double_image
       block_download_file_a: block_download_file_a
       block_download_file_b: block_download_file_b
+      block_find_your_audience: block_find_your_audience
       block_glossary_a: block_glossary_a
       block_glossary_b: block_glossary_b
       block_hero_quaternary: block_hero_quaternary
@@ -153,8 +155,8 @@ settings:
       block_target_audience: block_target_audience
       block_twitter_feed: block_twitter_feed
       block_video_with_content_b: block_video_with_content_b
-      block_video_with_content_c: block_video_with_content_c
       block_triple_content: block_triple_content
+      block_video_with_content_c: block_video_with_content_c
     target_bundles_drag_drop:
       blockhowtoadvertise:
         enabled: true
@@ -177,13 +179,13 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
-      blocklatest:
+      blockimagecarousel:
         enabled: true
         weight: 13
       link:
         weight: 13
         enabled: false
-      blockimagecarousel:
+      blocklatest:
         enabled: true
         weight: 13
       blockarticleteaser:
@@ -195,25 +197,25 @@ settings:
       blockaudiofragment:
         enabled: true
         weight: 16
-      slide:
-        weight: 18
-        enabled: false
       blockbutton:
         enabled: true
         weight: 18
-      blockmore:
+      slide:
+        weight: 18
+        enabled: false
+      blockblogpost:
         enabled: true
         weight: 19
-      blockblogpost:
+      blockmore:
         enabled: true
         weight: 19
       blockherosecondary:
         enabled: true
         weight: 23
-      blockmap:
+      blockheromain:
         enabled: true
         weight: 26
-      blockheromain:
+      blockmap:
         enabled: true
         weight: 26
       blockmapsecondary:
@@ -225,10 +227,10 @@ settings:
       blocknetworkoverview:
         enabled: true
         weight: 29
-      blockpagenotfound:
+      blockherotertiary:
         enabled: true
         weight: 30
-      blockherotertiary:
+      blockpagenotfound:
         enabled: true
         weight: 30
       blockpathtopurchase:
@@ -273,10 +275,10 @@ settings:
       blocktext:
         enabled: true
         weight: 42
-      block_map_tertiary:
+      blockfiltercontent:
         enabled: true
         weight: 48
-      blockfiltercontent:
+      block_map_tertiary:
         enabled: true
         weight: 48
       block_video_with_call_to_actions:
@@ -343,8 +345,8 @@ settings:
         enabled: true
         weight: 108
       block_find_your_audience:
+        enabled: true
         weight: 109
-        enabled: false
       block_glossary_a:
         enabled: true
         weight: 110
@@ -414,10 +416,10 @@ settings:
       block_video_with_content_b:
         enabled: true
         weight: 133
-      block_video_with_content_c:
+      block_triple_content:
         enabled: true
         weight: 134
-      block_triple_content:
+      block_video_with_content_c:
         enabled: true
         weight: 134
       channel:
@@ -453,6 +455,9 @@ settings:
       skills:
         weight: 189
         enabled: false
+      networks:
+        weight: 191
+        enabled: false
       slide_item:
         weight: 194
         enabled: false
@@ -464,5 +469,8 @@ settings:
         enabled: false
       success_story_statistic:
         weight: 204
+        enabled: false
+      top_picks:
+        weight: 209
         enabled: false
 field_type: entity_reference_revisions
