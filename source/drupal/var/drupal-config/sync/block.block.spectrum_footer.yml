@@ -12,7 +12,7 @@ _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: spectrum_footer
 theme: spectrum
-region: '-1'
+region: sidebar_first
 weight: -5
 provider: null
 plugin: 'system_menu_block:footer'

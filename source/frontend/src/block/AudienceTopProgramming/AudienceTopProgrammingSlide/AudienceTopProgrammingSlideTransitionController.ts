@@ -65,7 +65,10 @@ class AudienceTopProgrammingSlideTransitionController extends AbstractTransition
 			},
 			'-=0.7',
 		);
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonCircleArrowNext'), '-=0.7');
+
+		if (this.viewModel.hasChild('ButtonCircleArrowNext')) {
+			this.transitionInTimeline.add(this.getSubTimeline('ButtonCircleArrowNext'), '-=0.7');
+		}
 	}
 
 	/**

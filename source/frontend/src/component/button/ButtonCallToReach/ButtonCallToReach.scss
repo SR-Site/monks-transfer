@@ -3,8 +3,9 @@
 		@include size(auto, $sizeGrid * 2);
 		text-transform: uppercase;
 		color: $colorWhite;
-		padding: 0 $sizeGrid / 2;
+		padding: 0 $sizeGrid / 4;
 		transition: color 0.3s $easeInOutCubic;
+		margin-right: $sizeGrid / 4;
 	}
 
 	.icon {
@@ -41,20 +42,19 @@
 		color: $colorPrimary;
 	}
 
-	@include respond-to(MEDIUM) {
-		.button-call-to-reach {
-			@include size(auto, $sizeGrid * 2);
-			padding: 0 $sizeGrid;
+	@include respond-to(LARGE) {
+		.label {
+			display: none;
+		}
+
+		.icon {
+			margin-right: 0;
 		}
 	}
 
 	@include respond-to(SMALL) {
 		.button-call-to-reach {
 			height: $sizeGrid * 4;
-		}
-
-		.label {
-			display: none;
 		}
 
 		.icon {

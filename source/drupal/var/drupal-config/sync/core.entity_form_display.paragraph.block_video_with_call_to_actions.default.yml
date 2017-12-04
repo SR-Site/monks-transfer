@@ -30,12 +30,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_call_to_action_file:
     weight: 7
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
   field_call_to_action_heading:
     weight: 8
     settings:
@@ -43,6 +45,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_heading:
     weight: 3
     settings:
@@ -50,6 +53,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_image:
     weight: 5
     settings:
@@ -57,6 +61,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_paragraph:
     weight: 4
     settings:
@@ -64,6 +69,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_styles:
     weight: 9
     settings:
@@ -72,6 +78,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_revisions_autocomplete
+    region: content
   field_top_heading:
     weight: 0
     settings:
@@ -79,6 +86,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_top_paragraph:
     weight: 1
     settings:
@@ -86,6 +94,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_video:
     weight: 6
     settings:
@@ -94,6 +103,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
 hidden:
   created: true
   status: true

@@ -1,0 +1,7 @@
+uuid: 475df9b8-c938-45d2-a1b7-dc8477dd9c93
+langcode: en
+status: true
+dependencies: {  }
+id: glossary_a_item
+label: 'Glossary A Item'
+behavior_plugins: {  }

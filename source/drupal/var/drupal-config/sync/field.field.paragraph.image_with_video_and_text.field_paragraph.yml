@@ -1,0 +1,27 @@
+uuid: 091954fc-841c-4c55-b5fd-dbbe883ab6fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.image_with_video_and_text
+  module:
+    - text
+id: paragraph.image_with_video_and_text.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: image_with_video_and_text
+label: Paragraph
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    basic_html: basic_html
+    bold_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

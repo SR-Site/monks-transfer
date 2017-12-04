@@ -1,0 +1,28 @@
+uuid: 381a8f8d-0129-40d4-a0d7-aa6fa9e384cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_article
+    - node.type.article
+    - paragraphs.paragraphs_type.block_audience_product_top
+id: paragraph.block_audience_product_top.field_article
+field_name: field_article
+entity_type: paragraph
+bundle: block_audience_product_top
+label: 'Top product'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

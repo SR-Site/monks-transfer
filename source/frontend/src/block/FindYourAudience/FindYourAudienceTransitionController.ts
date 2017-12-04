@@ -21,11 +21,15 @@ class FindYourAudienceTransitionController extends AbstractTransitionController 
 			},
 		);
 
-		this.transitionInTimeline.add(() => this.getSubTimeline('TopPicks'), 0.8);
-		this.transitionInTimeline.add(() => this.getSubTimeline('Series'), 1);
-		this.transitionInTimeline.add(() => this.getSubTimeline('AwardsAndSpecials'), 1.2);
-		this.transitionInTimeline.add(() => this.getSubTimeline('Sports'), 1.4);
-		this.transitionInTimeline.add(() => this.getSubTimeline('Networks'), 1.6);
+		this.transitionInTimeline.add(this.getSubTimeline('TopPicks'), '-=0.7');
+
+		if (this.viewModel.$refs.genre) {
+			(<any>this.viewModel.$refs.genre).forEach(genre => {
+				this.transitionInTimeline.add(this.getSubTimeline(genre), '-=0.7');
+			})
+		}
+
+		this.transitionInTimeline.add(this.getSubTimeline('Networks'), '-=0.7');
 	}
 
 	/**

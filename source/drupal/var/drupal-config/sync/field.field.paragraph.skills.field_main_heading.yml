@@ -1,0 +1,19 @@
+uuid: 97d5f8e1-8fb4-4bd3-9c36-7b7dd415a5e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_main_heading
+    - paragraphs.paragraphs_type.skills
+id: paragraph.skills.field_main_heading
+field_name: field_main_heading
+entity_type: paragraph
+bundle: skills
+label: Heading
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

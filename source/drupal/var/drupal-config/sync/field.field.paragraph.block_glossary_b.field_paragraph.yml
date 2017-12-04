@@ -1,0 +1,30 @@
+uuid: 77de73e6-852d-4f38-8303-a7804099ea88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.block_glossary_b
+  module:
+    - text
+id: paragraph.block_glossary_b.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: block_glossary_b
+label: 'No result paragraph'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: "<p>No results for the current search</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings:
+  allowed_formats:
+    basic_html: basic_html
+    bold_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

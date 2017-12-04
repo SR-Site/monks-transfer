@@ -1,0 +1,7 @@
+uuid: 5ce4ed31-4697-440f-abe0-43b5a694d1d5
+langcode: en
+status: true
+dependencies: {  }
+id: text_and_link
+label: 'Text and link'
+behavior_plugins: {  }

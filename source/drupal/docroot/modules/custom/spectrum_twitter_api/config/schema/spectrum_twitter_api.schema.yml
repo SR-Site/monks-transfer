@@ -1,0 +1,21 @@
+# Schema for the configuration files of the Spectrum module.
+
+spectrum_twitter_api.settings:
+  type: config_object
+  label: 'Spectrum Twitter API'
+  mapping:
+    tweets_username:
+      type: text
+      label: 'Tweets username'
+    access_token:
+      type: text
+      label: 'Access token'
+    token_secret:
+      type: text
+      label: 'Token secret'
+    consumer_key:
+      type: text
+      label: 'Consumer key'
+    consumer_secret:
+      type: text
+      label: 'Consumer secret'

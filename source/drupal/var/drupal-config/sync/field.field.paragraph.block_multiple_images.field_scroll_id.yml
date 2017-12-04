@@ -1,0 +1,19 @@
+uuid: 57820dfb-c2dc-4c8d-95af-95a42c5c6725
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_scroll_id
+    - paragraphs.paragraphs_type.block_multiple_images
+id: paragraph.block_multiple_images.field_scroll_id
+field_name: field_scroll_id
+entity_type: paragraph
+bundle: block_multiple_images
+label: 'Scroll ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

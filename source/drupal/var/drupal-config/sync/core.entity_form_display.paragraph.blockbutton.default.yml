@@ -47,6 +47,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_link:
     weight: 3
     settings:
@@ -58,6 +59,7 @@ content:
       default_paragraph_type: link
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
   field_styles:
     weight: 1
     settings:
@@ -69,6 +71,7 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
 hidden:
   created: true
   status: true

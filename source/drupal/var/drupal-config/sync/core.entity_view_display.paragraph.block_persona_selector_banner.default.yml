@@ -1,0 +1,57 @@
+uuid: 8a6783d1-2ce1-4ff6-bac7-4c80eba58e92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_persona_selector_banner.field_multiple_links
+    - field.field.paragraph.block_persona_selector_banner.field_new_heading
+    - field.field.paragraph.block_persona_selector_banner.field_paragraph
+    - field.field.paragraph.block_persona_selector_banner.field_paragraph_image
+    - field.field.paragraph.block_persona_selector_banner.field_scroll_id
+    - field.field.paragraph.block_persona_selector_banner.field_styles
+    - paragraphs.paragraphs_type.block_persona_selector_banner
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.block_persona_selector_banner.default
+targetEntityType: paragraph
+bundle: block_persona_selector_banner
+mode: default
+content:
+  field_multiple_links:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_new_heading:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_paragraph:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_paragraph_image:
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  field_scroll_id: true
+  field_styles: true

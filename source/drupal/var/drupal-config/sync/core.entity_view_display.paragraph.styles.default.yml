@@ -20,6 +20,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_overlap:
     weight: 0
     label: above
@@ -29,6 +30,7 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
   field_windowed:
     weight: 1
     label: above
@@ -38,6 +40,7 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
 hidden:
   created: true
   uid: true

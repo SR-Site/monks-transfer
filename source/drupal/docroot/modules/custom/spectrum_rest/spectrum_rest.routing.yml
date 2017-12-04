@@ -18,3 +18,10 @@ spectrum_rest.view_counter:
   methods:  [POST]
   requirements:
     _access: 'TRUE'
+
+spectrum_rest.shows_import:
+  path: 'api/v1/shows/import'
+  defaults: { _controller: '\Drupal\spectrum_rest\Controller\ShowsController::import' }
+  methods:  [POST, GET]
+  requirements:
+    _access: 'TRUE'

@@ -1,0 +1,27 @@
+uuid: 33d5a3aa-51fa-4c0d-a526-5e2b92e5a9f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.block_persona_selector_banner
+  module:
+    - text
+id: paragraph.block_persona_selector_banner.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: block_persona_selector_banner
+label: Paragraph
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    basic_html: basic_html
+    bold_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

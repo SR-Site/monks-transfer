@@ -1,0 +1,121 @@
+uuid: cdc0f757-d4aa-4b8f-b43a-f65b21dbec22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_infographic.field_alignment
+    - field.field.paragraph.block_infographic.field_background_image
+    - field.field.paragraph.block_infographic.field_new_heading
+    - field.field.paragraph.block_infographic.field_paragraph
+    - field.field.paragraph.block_infographic.field_paragraph_image
+    - field.field.paragraph.block_infographic.field_primary_link
+    - field.field.paragraph.block_infographic.field_scroll_id
+    - field.field.paragraph.block_infographic.field_secondary_link
+    - field.field.paragraph.block_infographic.field_styles
+    - paragraphs.paragraphs_type.block_infographic
+  module:
+    - paragraphs
+    - text
+id: paragraph.block_infographic.default
+targetEntityType: paragraph
+bundle: block_infographic
+mode: default
+content:
+  field_alignment:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_background_image:
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_new_heading:
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_paragraph:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_paragraph_image:
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_primary_link:
+    type: entity_reference_paragraphs
+    weight: 7
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_scroll_id:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_secondary_link:
+    type: entity_reference_paragraphs
+    weight: 8
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_styles:
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,33 @@
+uuid: 3197e134-a3d8-40b7-8e5a-b2b1342c6f5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.success_story_statistic.field_label
+    - field.field.paragraph.success_story_statistic.field_text_value
+    - paragraphs.paragraphs_type.success_story_statistic
+id: paragraph.success_story_statistic.default
+targetEntityType: paragraph
+bundle: success_story_statistic
+mode: default
+content:
+  field_label:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_value:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

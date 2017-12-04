@@ -58,6 +58,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_image:
     weight: 5
     settings:
@@ -65,6 +66,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_image2:
     weight: 2
     settings:
@@ -72,6 +74,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_label:
     weight: 7
     settings:
@@ -79,6 +82,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_paragraph:
     weight: 4
     settings:
@@ -86,6 +90,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_styles:
     weight: 1
     settings:
@@ -97,6 +102,7 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
   field_subheading:
     weight: 5
     settings:
@@ -104,12 +110,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_value:
     weight: 6
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
 hidden:
   created: true
   status: true

@@ -1,0 +1,33 @@
+uuid: da701b1c-e999-4318-8c02-a496a68162bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_landing_category
+    - paragraphs.paragraphs_type.block_glossary_b
+    - taxonomy.vocabulary.advertising_category
+  content:
+    - 'taxonomy_term:advertising_category:d036e64b-b21a-43b3-8302-f9d2abdd8074'
+id: paragraph.block_glossary_b.field_landing_category
+field_name: field_landing_category
+entity_type: paragraph
+bundle: block_glossary_b
+label: 'Landing Category'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: d036e64b-b21a-43b3-8302-f9d2abdd8074
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      advertising_category: advertising_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

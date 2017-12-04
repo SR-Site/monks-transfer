@@ -51,6 +51,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_link:
     type: entity_reference_paragraphs
     weight: 3
@@ -62,6 +63,7 @@ content:
       form_display_mode: default
       default_paragraph_type: link
     third_party_settings: {  }
+    region: content
   field_steps:
     type: entity_reference_paragraphs
     weight: 3
@@ -73,6 +75,7 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
+    region: content
   field_styles:
     type: entity_reference_paragraphs
     weight: 2
@@ -84,6 +87,7 @@ content:
       form_display_mode: default
       default_paragraph_type: styles
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   status: true

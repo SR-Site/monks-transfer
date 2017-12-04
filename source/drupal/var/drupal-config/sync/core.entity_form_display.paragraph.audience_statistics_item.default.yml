@@ -1,0 +1,61 @@
+uuid: 325fbb63-5cfa-4f88-9de7-e34a0fd2d385
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.audience_statistics_item.field_background_image
+    - field.field.paragraph.audience_statistics_item.field_label
+    - field.field.paragraph.audience_statistics_item.field_link
+    - field.field.paragraph.audience_statistics_item.field_text_value
+    - paragraphs.paragraphs_type.audience_statistics_item
+  module:
+    - paragraphs
+id: paragraph.audience_statistics_item.default
+targetEntityType: paragraph
+bundle: audience_statistics_item
+mode: default
+content:
+  field_background_image:
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_label:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_link:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_text_value:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

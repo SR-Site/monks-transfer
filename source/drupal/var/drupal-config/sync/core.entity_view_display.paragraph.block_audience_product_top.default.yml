@@ -1,0 +1,56 @@
+uuid: c7c570d9-e876-47b2-bf05-1b503d1d1253
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_audience_product_top.field_article
+    - field.field.paragraph.block_audience_product_top.field_new_heading
+    - field.field.paragraph.block_audience_product_top.field_paragraph
+    - field.field.paragraph.block_audience_product_top.field_paragraph_image
+    - field.field.paragraph.block_audience_product_top.field_scroll_id
+    - field.field.paragraph.block_audience_product_top.field_styles
+    - paragraphs.paragraphs_type.block_audience_product_top
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.block_audience_product_top.default
+targetEntityType: paragraph
+bundle: block_audience_product_top
+mode: default
+content:
+  field_article:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_new_heading:
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_paragraph:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_paragraph_image:
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  field_scroll_id: true
+  field_styles: true

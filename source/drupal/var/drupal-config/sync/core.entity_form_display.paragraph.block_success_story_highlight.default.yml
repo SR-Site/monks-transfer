@@ -1,0 +1,49 @@
+uuid: f7199bd3-fbcc-4847-aa63-f8437e2e4ea3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_success_story_highlight.field_article
+    - field.field.paragraph.block_success_story_highlight.field_scroll_id
+    - field.field.paragraph.block_success_story_highlight.field_styles
+    - paragraphs.paragraphs_type.block_success_story_highlight
+  module:
+    - paragraphs
+id: paragraph.block_success_story_highlight.default
+targetEntityType: paragraph
+bundle: block_success_story_highlight
+mode: default
+content:
+  field_article:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_scroll_id:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_styles:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

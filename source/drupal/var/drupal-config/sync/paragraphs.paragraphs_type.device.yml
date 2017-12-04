@@ -1,0 +1,7 @@
+uuid: 0a62ef62-b4aa-4bc2-8870-b648000f12e2
+langcode: en
+status: true
+dependencies: {  }
+id: device
+label: Device
+behavior_plugins: {  }

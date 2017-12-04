@@ -17,7 +17,7 @@
 				<ul :class="$style.links" ref="links">
 					<li v-for="(link, index) in data.links" :key="index" :class="$style.link">
 						<a
-							v-link="{path: link.path, type: link.type}"
+							v-link="{path: link.target, type: link.type}"
 							v-html="link.label"
 							:title="link.title"
 							class="copy copy-03 link-tertiary"></a>

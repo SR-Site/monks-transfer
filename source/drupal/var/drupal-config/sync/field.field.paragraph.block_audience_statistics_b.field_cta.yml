@@ -1,0 +1,19 @@
+uuid: d11cda8f-3e15-4a86-85cc-626a29561d2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta
+    - paragraphs.paragraphs_type.block_audience_statistics_b
+id: paragraph.block_audience_statistics_b.field_cta
+field_name: field_cta
+entity_type: paragraph
+bundle: block_audience_statistics_b
+label: CTA
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

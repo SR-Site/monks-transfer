@@ -4,6 +4,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.show.field_show_description
+    - field.field.node.show.field_show_genres
+    - field.field.node.show.field_show_id
+    - field.field.node.show.field_show_links
+    - field.field.node.show.field_show_media_type
+    - field.field.node.show.field_show_network
+    - field.field.node.show.field_show_recommend
+    - field.field.node.show.field_show_schedules
+    - field.field.node.show.field_show_videos
     - node.type.show
   module:
     - user
@@ -14,9 +23,19 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
   field_broadcast_schedule: true
   field_image: true
+  field_show_description: true
+  field_show_genres: true
+  field_show_id: true
+  field_show_links: true
+  field_show_media_type: true
   field_show_metric: true
+  field_show_network: true
+  field_show_recommend: true
+  field_show_schedules: true
+  field_show_videos: true
   field_tags: true
   field_video_external: true

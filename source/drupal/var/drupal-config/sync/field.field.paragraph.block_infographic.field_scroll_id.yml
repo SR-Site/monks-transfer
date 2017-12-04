@@ -1,0 +1,19 @@
+uuid: 3768a8ad-8027-42f6-b777-0ba337dd10b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_scroll_id
+    - paragraphs.paragraphs_type.block_infographic
+id: paragraph.block_infographic.field_scroll_id
+field_name: field_scroll_id
+entity_type: paragraph
+bundle: block_infographic
+label: 'Scroll ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

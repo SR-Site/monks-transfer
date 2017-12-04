@@ -4,10 +4,20 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.rss
+    - field.field.node.article.field_blocks
+    - field.field.node.article.field_category
     - field.field.node.article.field_content
+    - field.field.node.article.field_document_type
     - field.field.node.article.field_excerpt
+    - field.field.node.article.field_header_theme
     - field.field.node.article.field_image
+    - field.field.node.article.field_links
+    - field.field.node.article.field_market
+    - field.field.node.article.field_platform
     - field.field.node.article.field_read_time
+    - field.field.node.article.field_subheading
+    - field.field.node.article.field_theme
+    - field.field.node.article.field_thought_leadership
     - node.type.article
   module:
     - user
@@ -20,6 +30,7 @@ mode: rss
 content:
   links:
     weight: 100
+    region: content
 hidden:
   field_blocks: true
   field_category: true
@@ -34,3 +45,4 @@ hidden:
   field_read_time: true
   field_subheading: true
   field_theme: true
+  field_thought_leadership: true

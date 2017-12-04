@@ -1,0 +1,38 @@
+uuid: 0ca99423-891f-47f1-93c3-da9f94698e37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_small
+    - paragraphs.paragraphs_type.poster
+  module:
+    - image
+id: paragraph.poster.field_small
+field_name: field_small
+entity_type: paragraph
+bundle: poster
+label: Small
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 1280x720
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

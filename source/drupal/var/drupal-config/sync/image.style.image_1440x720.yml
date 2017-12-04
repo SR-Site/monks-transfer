@@ -1,0 +1,14 @@
+uuid: 4bd36fa8-e67f-43f7-b14d-f672502767f3
+langcode: en
+status: true
+dependencies: {  }
+name: image_1440x720
+label: 'Image 1440x720'
+effects:
+  2345ff3f-df2b-4403-ac30-afdd2b7dc62c:
+    uuid: 2345ff3f-df2b-4403-ac30-afdd2b7dc62c
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 1440
+      height: 720

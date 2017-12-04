@@ -1,0 +1,23 @@
+uuid: b9913de4-2865-4f61-b301-a58adb54ea98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_percentage
+    - paragraphs.paragraphs_type.program
+id: paragraph.program.field_percentage
+field_name: field_percentage
+entity_type: paragraph
+bundle: program
+label: Percentage
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

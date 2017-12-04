@@ -22,10 +22,12 @@
 			<div :class="$style.description">
 				<a :class="$style.top" v-link="{ path: data.target, type: 0 }">
 					<h2 class="heading heading-07" v-html="data.heading" :class="$style.heading" ref="heading"></h2>
-					<p class="copy copy-01" v-html="data.subHeading" :class="$style.subHeading" ref="subHeading"></p>
-					<p class="copy copy-01" v-html="data.paragraph" :class="$style.copy" ref="copy"></p>
+					<p class="copy copy-01" v-if="data.subHeading" v-html="data.subHeading" :class="$style.subHeading"
+					   ref="subHeading"></p>
+					<p class="copy copy-01" v-if="data.paragraph" v-html="data.paragraph" :class="$style.copy"
+					   ref="copy"></p>
 				</a>
-				<div :class="$style.bottom" ref="bottom">
+				<div :class="$style.bottom" ref="bottom" v-if="data.reaches">
 					<h3 class="heading heading-07" :class="$style.reachHeading">Reaches</h3>
 					<ul :class="$style.reaches">
 						<li

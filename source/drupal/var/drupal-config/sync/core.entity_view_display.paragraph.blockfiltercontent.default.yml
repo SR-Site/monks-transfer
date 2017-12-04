@@ -3,9 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.blockfiltercontent.field_apply_label
+    - field.field.paragraph.blockfiltercontent.field_close_label
     - field.field.paragraph.blockfiltercontent.field_filter_label
-    - field.field.paragraph.blockfiltercontent.field_load_more_label
     - field.field.paragraph.blockfiltercontent.field_styles
     - paragraphs.paragraphs_type.blockfiltercontent
   module:
@@ -15,13 +14,14 @@ targetEntityType: paragraph
 bundle: blockfiltercontent
 mode: default
 content:
-  field_apply_label:
-    weight: 2
+  field_close_label:
+    weight: 4
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_filter_label:
     weight: 3
     label: above
@@ -29,13 +29,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_load_more_label:
-    weight: 1
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
+    region: content
   field_styles:
     weight: 0
     label: above
@@ -44,4 +38,5 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
 hidden: {  }

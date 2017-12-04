@@ -5,7 +5,7 @@
 	<div :class="$style.startAdvertising">
 		<span :class="$style.background"></span>
 		<button @click="handleClick" :class="$style.button" class="button" :title="title">
-			<Icon name="circle-arrow-right" :class="$style.icon" />
+			<Icon name="email" :class="$style.icon" />
 			<span :class="$style.label">{{ label }}</span>
 		</button>
 	</div>

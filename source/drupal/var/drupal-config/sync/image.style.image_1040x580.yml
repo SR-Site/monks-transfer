@@ -1,0 +1,14 @@
+uuid: f175fa3a-5fe7-4547-a904-286d811bbd28
+langcode: en
+status: true
+dependencies: {  }
+name: image_1040x580
+label: 'Image 1040x580'
+effects:
+  076edf91-7083-4647-89fc-deb4ffebbdf7:
+    uuid: 076edf91-7083-4647-89fc-deb4ffebbdf7
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 1040
+      height: 580

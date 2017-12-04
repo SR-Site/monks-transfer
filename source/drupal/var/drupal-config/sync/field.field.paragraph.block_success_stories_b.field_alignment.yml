@@ -1,0 +1,21 @@
+uuid: eeec24ac-f5cb-4f6c-81cf-7ff9ea184338
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_alignment
+    - paragraphs.paragraphs_type.block_success_stories_b
+  module:
+    - options
+id: paragraph.block_success_stories_b.field_alignment
+field_name: field_alignment
+entity_type: paragraph
+bundle: block_success_stories_b
+label: Alignment
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

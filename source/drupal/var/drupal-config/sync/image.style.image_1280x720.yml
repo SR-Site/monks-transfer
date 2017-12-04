@@ -1,0 +1,14 @@
+uuid: f0543b36-613f-42f1-9854-37b301905eee
+langcode: en
+status: true
+dependencies: {  }
+name: image_1280x720
+label: 'Image 1280x720'
+effects:
+  fcd60c9d-123f-40fe-87f6-e8415507e1e9:
+    uuid: fcd60c9d-123f-40fe-87f6-e8415507e1e9
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 1280
+      height: 720

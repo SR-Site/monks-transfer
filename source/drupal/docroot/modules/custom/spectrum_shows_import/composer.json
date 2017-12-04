@@ -1,0 +1,14 @@
+{
+  "name": "drupal/spectrum_shows_import",
+  "type": "drupal-module",
+  "description": "Migrating Shows from external resource into SpectrumReach",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/spectrum_shows_import",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/spectrum_shows_import",
+    "source": "http://cgit.drupalcode.org/spectrum_shows_import"
+  },
+  "require": { }
+}

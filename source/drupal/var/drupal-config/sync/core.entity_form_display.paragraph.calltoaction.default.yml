@@ -7,7 +7,6 @@ dependencies:
     - field.field.paragraph.calltoaction.field_image
     - field.field.paragraph.calltoaction.field_link
     - field.field.paragraph.calltoaction.field_paragraph
-    - field.field.paragraph.calltoaction.field_theme
     - image.style.thumbnail
     - paragraphs.paragraphs_type.calltoaction
   module:
@@ -41,6 +40,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_image:
     weight: 2
     settings:
@@ -48,6 +48,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_link:
     weight: 3
     settings:
@@ -59,6 +60,7 @@ content:
       default_paragraph_type: link
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
   field_paragraph:
     weight: 1
     settings:
@@ -66,11 +68,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-  field_theme:
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
+    region: content
 hidden:
   created: true
   status: true

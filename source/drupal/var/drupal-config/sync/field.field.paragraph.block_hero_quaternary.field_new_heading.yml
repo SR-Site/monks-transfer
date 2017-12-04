@@ -1,0 +1,195 @@
+uuid: 8981d6d8-632f-4932-9260-b7fdcfcf0452
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_new_heading
+    - paragraphs.paragraphs_type.block_hero_quaternary
+    - paragraphs.paragraphs_type.heading
+  module:
+    - entity_reference_revisions
+id: paragraph.block_hero_quaternary.field_new_heading
+field_name: field_new_heading
+entity_type: paragraph
+bundle: block_hero_quaternary
+label: Heading
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      heading: heading
+    target_bundles_drag_drop:
+      background_image:
+        weight: 57
+        enabled: false
+      block_hero_quaternary:
+        weight: 58
+        enabled: false
+      block_map_tertiary:
+        weight: 59
+        enabled: false
+      block_pdf:
+        weight: 60
+        enabled: false
+      block_video_with_call_to_actions:
+        weight: 61
+        enabled: false
+      block_video_with_content_b:
+        weight: 62
+        enabled: false
+      blockarticleteaser:
+        weight: 63
+        enabled: false
+      blockaudiofragment:
+        weight: 64
+        enabled: false
+      blockblogpost:
+        weight: 65
+        enabled: false
+      blockbutton:
+        weight: 66
+        enabled: false
+      blockfiltercontent:
+        weight: 67
+        enabled: false
+      blockheromain:
+        weight: 68
+        enabled: false
+      blockherosecondary:
+        weight: 69
+        enabled: false
+      blockherotertiary:
+        weight: 70
+        enabled: false
+      blockhowtoadvertise:
+        weight: 71
+        enabled: false
+      blockimagecalltoactions:
+        weight: 72
+        enabled: false
+      blockimagecarousel:
+        weight: 73
+        enabled: false
+      blockimagewithcontent:
+        weight: 74
+        enabled: false
+      blockinfo:
+        weight: 75
+        enabled: false
+      blocklatest:
+        weight: 76
+        enabled: false
+      blockmap:
+        weight: 77
+        enabled: false
+      blockmapsecondary:
+        weight: 78
+        enabled: false
+      blockmarketmap:
+        weight: 79
+        enabled: false
+      blockmore:
+        weight: 80
+        enabled: false
+      blocknetworkoverview:
+        weight: 81
+        enabled: false
+      blockpagenotfound:
+        weight: 82
+        enabled: false
+      blockpathtopurchase:
+        weight: 83
+        enabled: false
+      blockpersonaselector:
+        weight: 84
+        enabled: false
+      blockprogrammodule:
+        weight: 85
+        enabled: false
+      blockquote:
+        weight: 86
+        enabled: false
+      blockquotesecondary:
+        weight: 87
+        enabled: false
+      blocksmallheading:
+        weight: 88
+        enabled: false
+      blocksmallimage:
+        weight: 89
+        enabled: false
+      blocksmallinfo:
+        weight: 90
+        enabled: false
+      blockstoryinfoimages:
+        weight: 91
+        enabled: false
+      blocktext:
+        weight: 92
+        enabled: false
+      broadcastschedule:
+        weight: 93
+        enabled: false
+      calltoaction:
+        weight: 94
+        enabled: false
+      heading:
+        enabled: true
+        weight: 95
+      image:
+        weight: 96
+        enabled: false
+      link:
+        weight: 97
+        enabled: false
+      map_tertiary_data:
+        weight: 98
+        enabled: false
+      networkoverviewitem:
+        weight: 99
+        enabled: false
+      personas:
+        weight: 100
+        enabled: false
+      poster:
+        weight: 101
+        enabled: false
+      program:
+        weight: 102
+        enabled: false
+      showmetric:
+        weight: 103
+        enabled: false
+      slide:
+        weight: 104
+        enabled: false
+      slideheromain:
+        weight: 105
+        enabled: false
+      stat:
+        weight: 106
+        enabled: false
+      statistic:
+        weight: 107
+        enabled: false
+      step:
+        weight: 108
+        enabled: false
+      stepmap:
+        weight: 109
+        enabled: false
+      steppurchase:
+        weight: 110
+        enabled: false
+      stories:
+        weight: 111
+        enabled: false
+      styles:
+        weight: 112
+        enabled: false
+field_type: entity_reference_revisions

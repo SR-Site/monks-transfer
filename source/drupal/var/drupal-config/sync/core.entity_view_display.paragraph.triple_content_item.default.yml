@@ -1,0 +1,42 @@
+uuid: 16c5ff9c-9e8c-460e-9610-2b91d3b676c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.triple_content_item.field_main_heading
+    - field.field.paragraph.triple_content_item.field_paragraph
+    - field.field.paragraph.triple_content_item.field_paragraph_image
+    - paragraphs.paragraphs_type.triple_content_item
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.triple_content_item.default
+targetEntityType: paragraph
+bundle: triple_content_item
+mode: default
+content:
+  field_main_heading:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_paragraph:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_paragraph_image:
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden: {  }

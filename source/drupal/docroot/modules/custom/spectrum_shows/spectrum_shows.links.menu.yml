@@ -52,3 +52,11 @@ entity.success_story.collection:
   description: 'List Success story entities'
   parent: system.admin
   weight: 100
+
+# Advertising item menu items definition
+entity.advertising_item.collection:
+  title: 'Advertising item list'
+  route_name: entity.advertising_item.collection
+  description: 'List Advertising item entities'
+  parent: system.admin
+  weight: 100

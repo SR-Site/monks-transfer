@@ -1,0 +1,14 @@
+uuid: 2743c7f1-72c3-46a8-a2d2-71f5baa350b1
+langcode: en
+status: true
+dependencies: {  }
+name: image_1920x1080
+label: 'Image 1920x1080'
+effects:
+  2bb6acab-cb73-451d-8a0e-928f448ceccb:
+    uuid: 2bb6acab-cb73-451d-8a0e-928f448ceccb
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 1920
+      height: 1080

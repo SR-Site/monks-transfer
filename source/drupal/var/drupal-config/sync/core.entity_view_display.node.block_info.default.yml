@@ -26,12 +26,14 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
   field_content:
     weight: 103
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_document_type:
     weight: 105
     label: above
@@ -39,6 +41,7 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
   field_link:
     type: entity_reference_revisions_entity_view
     weight: 102
@@ -47,6 +50,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
   field_market:
     weight: 106
     label: above
@@ -54,6 +58,7 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
   field_platform:
     weight: 107
     label: above
@@ -61,6 +66,8 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
   links:
     weight: 100
+    region: content
 hidden: {  }

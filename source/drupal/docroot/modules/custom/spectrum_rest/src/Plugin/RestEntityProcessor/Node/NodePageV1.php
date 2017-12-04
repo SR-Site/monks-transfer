@@ -41,9 +41,11 @@ class NodePageV1 extends RestEntityProcessorBase {
     }
 
     $data = [
-      'headerTheme' => (int) $entity->get('field_header_theme')->value,
       'title' => $entity->label(),
-      'hideContactButton' => (int) $entity->get('field_hide_contact_button')->value,
+      'pageData' => [
+        'headerTheme' => (int) $entity->get('field_header_theme')->value,
+        'hideContactButton' => (int) $entity->get('field_hide_contact_button')->value,
+      ],
       'blocks' => $blocks,
     ];
 

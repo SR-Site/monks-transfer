@@ -1,0 +1,65 @@
+uuid: def31e78-2f69-4f38-903a-3afd012fb819
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_triple_content.field_new_heading
+    - field.field.paragraph.block_triple_content.field_scroll_id
+    - field.field.paragraph.block_triple_content.field_styles
+    - field.field.paragraph.block_triple_content.field_triple_content_items
+    - paragraphs.paragraphs_type.block_triple_content
+  module:
+    - paragraphs
+id: paragraph.block_triple_content.default
+targetEntityType: paragraph
+bundle: block_triple_content
+mode: default
+content:
+  field_new_heading:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_scroll_id:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_styles:
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_triple_content_items:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

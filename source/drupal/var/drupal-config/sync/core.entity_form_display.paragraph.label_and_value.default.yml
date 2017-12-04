@@ -1,0 +1,33 @@
+uuid: b500f451-33ac-4630-97c4-752211ee80d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.label_and_value.field_label
+    - field.field.paragraph.label_and_value.field_text_value
+    - paragraphs.paragraphs_type.label_and_value
+id: paragraph.label_and_value.default
+targetEntityType: paragraph
+bundle: label_and_value
+mode: default
+content:
+  field_label:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_value:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

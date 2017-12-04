@@ -10,7 +10,7 @@ class PanelContactKernelTransitionController extends AbstractTransitionControlle
 	protected setupTransitionInTimeline(): void {
 		this.transitionInTimeline.fromTo(
 			this.viewModel.$el,
-			1,
+			0.5,
 			{
 				autoAlpha: 0,
 				display: 'none',

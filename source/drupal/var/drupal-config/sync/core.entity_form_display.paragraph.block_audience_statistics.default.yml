@@ -1,0 +1,88 @@
+uuid: c1c60d2c-f2eb-47dd-917a-aeb02ae45846
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_audience_statistics.field_audience_statistics_items
+    - field.field.paragraph.block_audience_statistics.field_background_image
+    - field.field.paragraph.block_audience_statistics.field_new_heading
+    - field.field.paragraph.block_audience_statistics.field_paragraph
+    - field.field.paragraph.block_audience_statistics.field_scroll_id
+    - field.field.paragraph.block_audience_statistics.field_styles
+    - paragraphs.paragraphs_type.block_audience_statistics
+  module:
+    - paragraphs
+    - text
+id: paragraph.block_audience_statistics.default
+targetEntityType: paragraph
+bundle: block_audience_statistics
+mode: default
+content:
+  field_audience_statistics_items:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_background_image:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_new_heading:
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_paragraph:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_scroll_id:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_styles:
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

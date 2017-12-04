@@ -1,0 +1,21 @@
+uuid: d7d362e8-8b0b-4fcc-b72a-86d89cfa123f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_alignment
+    - paragraphs.paragraphs_type.block_video_with_content_b
+  module:
+    - options
+id: paragraph.block_video_with_content_b.field_alignment
+field_name: field_alignment
+entity_type: paragraph
+bundle: block_video_with_content_b
+label: Alignment
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

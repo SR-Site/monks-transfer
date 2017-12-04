@@ -1,0 +1,180 @@
+uuid: fb5020f6-d254-4458-ad17-aa92c78db3d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.block_video_with_content_b
+    - paragraphs.paragraphs_type.link
+  module:
+    - entity_reference_revisions
+id: paragraph.block_video_with_content_b.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: block_video_with_content_b
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      link: link
+    target_bundles_drag_drop:
+      block_map_tertiary:
+        weight: 52
+        enabled: false
+      block_pdf:
+        weight: 53
+        enabled: false
+      block_video_with_call_to_actions:
+        weight: 54
+        enabled: false
+      block_video_with_content_b:
+        weight: 55
+        enabled: false
+      blockarticleteaser:
+        weight: 56
+        enabled: false
+      blockaudiofragment:
+        weight: 57
+        enabled: false
+      blockblogpost:
+        weight: 58
+        enabled: false
+      blockbutton:
+        weight: 59
+        enabled: false
+      blockfiltercontent:
+        weight: 60
+        enabled: false
+      blockheromain:
+        weight: 61
+        enabled: false
+      blockherosecondary:
+        weight: 62
+        enabled: false
+      blockherotertiary:
+        weight: 63
+        enabled: false
+      blockhowtoadvertise:
+        weight: 64
+        enabled: false
+      blockimagecalltoactions:
+        weight: 65
+        enabled: false
+      blockimagecarousel:
+        weight: 66
+        enabled: false
+      blockimagewithcontent:
+        weight: 67
+        enabled: false
+      blockinfo:
+        weight: 68
+        enabled: false
+      blocklatest:
+        weight: 69
+        enabled: false
+      blockmap:
+        weight: 70
+        enabled: false
+      blockmapsecondary:
+        weight: 71
+        enabled: false
+      blockmarketmap:
+        weight: 72
+        enabled: false
+      blockmore:
+        weight: 73
+        enabled: false
+      blocknetworkoverview:
+        weight: 74
+        enabled: false
+      blockpagenotfound:
+        weight: 75
+        enabled: false
+      blockpathtopurchase:
+        weight: 76
+        enabled: false
+      blockpersonaselector:
+        weight: 77
+        enabled: false
+      blockprogrammodule:
+        weight: 78
+        enabled: false
+      blockquote:
+        weight: 79
+        enabled: false
+      blockquotesecondary:
+        weight: 80
+        enabled: false
+      blocksmallheading:
+        weight: 81
+        enabled: false
+      blocksmallimage:
+        weight: 82
+        enabled: false
+      blocksmallinfo:
+        weight: 83
+        enabled: false
+      blockstoryinfoimages:
+        weight: 84
+        enabled: false
+      blocktext:
+        weight: 85
+        enabled: false
+      broadcastschedule:
+        weight: 86
+        enabled: false
+      calltoaction:
+        weight: 87
+        enabled: false
+      link:
+        enabled: true
+        weight: 88
+      map_tertiary_data:
+        weight: 89
+        enabled: false
+      networkoverviewitem:
+        weight: 90
+        enabled: false
+      personas:
+        weight: 91
+        enabled: false
+      program:
+        weight: 92
+        enabled: false
+      showmetric:
+        weight: 93
+        enabled: false
+      slide:
+        weight: 94
+        enabled: false
+      slideheromain:
+        weight: 95
+        enabled: false
+      stat:
+        weight: 96
+        enabled: false
+      statistic:
+        weight: 97
+        enabled: false
+      step:
+        weight: 98
+        enabled: false
+      stepmap:
+        weight: 99
+        enabled: false
+      steppurchase:
+        weight: 100
+        enabled: false
+      stories:
+        weight: 101
+        enabled: false
+      styles:
+        weight: 102
+        enabled: false
+field_type: entity_reference_revisions

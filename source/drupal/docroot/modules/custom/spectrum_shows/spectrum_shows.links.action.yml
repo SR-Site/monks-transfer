@@ -33,3 +33,9 @@ entity.success_story.add_form:
   title: 'Add Success story'
   appears_on:
     - entity.success_story.collection
+
+entity.advertising_item.add_form:
+  route_name: entity.advertising_item.add_form
+  title: 'Add Advertising item'
+  appears_on:
+    - entity.advertising_item.collection

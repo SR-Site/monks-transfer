@@ -1,0 +1,21 @@
+uuid: 4b75a239-395f-4e2b-8497-8d5c50af9291
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_show_more_label
+    - paragraphs.paragraphs_type.block_glossary_b
+id: paragraph.block_glossary_b.field_show_more_label
+field_name: field_show_more_label
+entity_type: paragraph
+bundle: block_glossary_b
+label: 'Show More Label'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Show more'
+default_value_callback: ''
+settings: {  }
+field_type: string

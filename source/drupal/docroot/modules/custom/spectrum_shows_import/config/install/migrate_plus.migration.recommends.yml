@@ -1,0 +1,46 @@
+id: recommends
+label: JSON feed of recommends
+migration_group: migrate_shows_json
+source:
+  plugin: spectrum_url
+  data_fetcher_plugin: http
+  data_parser_plugin: json_nested
+  item_selector: '/Result/'
+  sub_selector: 'Recommend'
+  fields:
+    -
+      name: title
+      label: 'Title'
+      selector: Title
+    -
+      name: Images
+      label: 'Images'
+      selector: Images
+
+  ids:
+    title:
+      type: string
+
+process:
+  type:
+    plugin: default_value
+    default_value: recommend
+  title: title
+
+  image/target_id:
+    -
+      plugin: extract
+      source: Images
+      default: ''
+      index:
+        - 2
+        - Url
+    -
+      plugin: file_json
+      destination: 'public://shows/[date:custom:Y]-[date:custom:m]'
+
+  image/alt: title
+
+destination:
+  plugin: 'entity:recommend'
+migration_dependencies: null

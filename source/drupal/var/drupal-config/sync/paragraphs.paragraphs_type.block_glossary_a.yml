@@ -1,0 +1,7 @@
+uuid: 0e5da724-f6e5-4750-89a0-fb1aa62450a2
+langcode: en
+status: true
+dependencies: {  }
+id: block_glossary_a
+label: 'Block Glossary A'
+behavior_plugins: {  }

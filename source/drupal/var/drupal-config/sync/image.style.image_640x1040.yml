@@ -1,0 +1,14 @@
+uuid: e896861c-ca9d-4c6e-b007-e68d6436aac5
+langcode: en
+status: true
+dependencies: {  }
+name: image_640x1040
+label: 'Image 640x1040'
+effects:
+  65f97c2c-a6af-42df-82ea-73e2811241e3:
+    uuid: 65f97c2c-a6af-42df-82ea-73e2811241e3
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 640
+      height: 1040

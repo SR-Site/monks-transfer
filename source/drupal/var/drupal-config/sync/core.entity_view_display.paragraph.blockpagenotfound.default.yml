@@ -26,6 +26,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_image:
     weight: 2
     label: above
@@ -34,6 +35,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
   field_link:
     weight: 1
     label: above
@@ -42,12 +44,14 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
   field_paragraph:
     weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
   field_styles:
     weight: 0
     label: above
@@ -56,6 +60,7 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
   field_value:
     weight: 5
     label: above
@@ -64,4 +69,5 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
 hidden: {  }

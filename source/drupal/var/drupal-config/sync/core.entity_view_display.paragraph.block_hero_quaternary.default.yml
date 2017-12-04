@@ -1,0 +1,100 @@
+uuid: 57a10bcf-3b32-4faf-a478-3be087f453a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_hero_quaternary.field_background_image
+    - field.field.paragraph.block_hero_quaternary.field_link
+    - field.field.paragraph.block_hero_quaternary.field_new_heading
+    - field.field.paragraph.block_hero_quaternary.field_paragraph
+    - field.field.paragraph.block_hero_quaternary.field_paragraph_image
+    - field.field.paragraph.block_hero_quaternary.field_scroll_id
+    - field.field.paragraph.block_hero_quaternary.field_styles
+    - field.field.paragraph.block_hero_quaternary.field_subheading
+    - field.field.paragraph.block_hero_quaternary.field_video
+    - paragraphs.paragraphs_type.block_hero_quaternary
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.block_hero_quaternary.default
+targetEntityType: paragraph
+bundle: block_hero_quaternary
+mode: default
+content:
+  field_background_image:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_link:
+    weight: 8
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_new_heading:
+    type: entity_reference_revisions_entity_view
+    weight: 9
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_paragraph:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_paragraph_image:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_scroll_id:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_subheading:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_video:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

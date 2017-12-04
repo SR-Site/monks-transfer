@@ -1,0 +1,48 @@
+uuid: bddd8d47-56ba-4b51-bf47-a16702f7f30e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.channel.field_channel_statistics
+    - field.field.paragraph.channel.field_main_heading
+    - field.field.paragraph.channel.field_paragraph_image
+    - paragraphs.paragraphs_type.channel
+  module:
+    - paragraphs
+id: paragraph.channel.default
+targetEntityType: paragraph
+bundle: channel
+mode: default
+content:
+  field_channel_statistics:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_main_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraph_image:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

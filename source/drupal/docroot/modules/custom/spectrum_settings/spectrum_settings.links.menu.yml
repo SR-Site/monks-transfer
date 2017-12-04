@@ -1,6 +1,7 @@
 spectrum_settings.admin_settings_form:
-  title: 'Settings'
+  title: 'Spectrum Settings'
   description: 'Manage Spectrum settings.'
   route_name: spectrum_settings.admin_settings_form
   menu_name: spectrum
+  parent: system.admin_config
   weight: 2

@@ -1,0 +1,14 @@
+uuid: e1038937-673d-43a1-bb85-22ad072ff620
+langcode: en
+status: true
+dependencies: {  }
+name: image_1920x900
+label: 'Image 1920x900'
+effects:
+  51e2c82f-8148-494a-9341-dfbceb29fd71:
+    uuid: 51e2c82f-8148-494a-9341-dfbceb29fd71
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 1920
+      height: 900

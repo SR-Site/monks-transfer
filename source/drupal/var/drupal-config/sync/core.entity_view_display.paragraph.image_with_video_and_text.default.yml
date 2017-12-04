@@ -1,0 +1,51 @@
+uuid: 832e2365-dd8c-4b22-b25f-b8cf8de28932
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_with_video_and_text.field_main_heading
+    - field.field.paragraph.image_with_video_and_text.field_paragraph
+    - field.field.paragraph.image_with_video_and_text.field_paragraph_image
+    - field.field.paragraph.image_with_video_and_text.field_video
+    - paragraphs.paragraphs_type.image_with_video_and_text
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.image_with_video_and_text.default
+targetEntityType: paragraph
+bundle: image_with_video_and_text
+mode: default
+content:
+  field_main_heading:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_paragraph:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_paragraph_image:
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_video:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

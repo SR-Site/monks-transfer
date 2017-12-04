@@ -1,0 +1,7 @@
+uuid: fad178a1-b933-4977-8364-5db2edca169b
+langcode: en
+status: true
+dependencies: {  }
+id: block_triple_content
+label: 'Block Triple Content'
+behavior_plugins: {  }

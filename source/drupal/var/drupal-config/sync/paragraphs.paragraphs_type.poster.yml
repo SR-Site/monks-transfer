@@ -1,0 +1,7 @@
+uuid: b8ce51a4-c8ba-4e78-95b2-59b5359d48ce
+langcode: en
+status: true
+dependencies: {  }
+id: poster
+label: Poster
+behavior_plugins: {  }

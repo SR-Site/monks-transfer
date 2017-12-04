@@ -18,6 +18,7 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
 hidden:
   created: true
   status: true

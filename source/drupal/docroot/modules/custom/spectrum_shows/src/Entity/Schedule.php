@@ -190,9 +190,9 @@ class Schedule extends ContentEntityBase implements ScheduleInterface {
       ->setDisplayConfigurable('form', FALSE)
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['genre'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Genre'))
-      ->setDescription(t('The Genre belongs to'))
+    $fields['genres'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Genres'))
+      ->setDescription(t('The Genres belongs to'))
       ->setSetting('target_type', 'genre')
       ->setTranslatable(FALSE)
       ->setCardinality(FieldStorageDefinitionInterface::CARDINALITY_UNLIMITED)

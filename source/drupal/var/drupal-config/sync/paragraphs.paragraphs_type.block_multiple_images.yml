@@ -1,0 +1,7 @@
+uuid: 6549b9a3-ce72-46a9-9cf1-6439956648a7
+langcode: en
+status: true
+dependencies: {  }
+id: block_multiple_images
+label: 'Block Multiple Images'
+behavior_plugins: {  }

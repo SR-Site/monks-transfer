@@ -1,0 +1,7 @@
+uuid: 5826848d-3e8f-4291-b95a-335e5b47d303
+langcode: en
+status: true
+dependencies: {  }
+id: channel
+label: Channel
+behavior_plugins: {  }

@@ -1,0 +1,27 @@
+uuid: 57a5065c-8f15-439a-a6d6-47e2feb963e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.block_download_file_a
+  module:
+    - text
+id: paragraph.block_download_file_a.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: block_download_file_a
+label: Paragraph
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    basic_html: basic_html
+    bold_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+field_type: text_long

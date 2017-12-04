@@ -1,0 +1,58 @@
+id: network
+label: JSON feed of network
+migration_group: migrate_shows_json
+source:
+  plugin: spectrum_url
+  data_fetcher_plugin: http
+  data_parser_plugin: json_nested
+  item_selector: '/Result/'
+  sub_selector: 'Network'
+  fields:
+    -
+      name: Callsign
+      label: 'Callsign'
+      selector: Callsign
+    -
+      name: Stationname
+      label: 'Stationname'
+      selector: Stationname
+    -
+      name: Stationnum
+      label: 'Stationnum'
+      selector: Stationnum
+    -
+      name: Image
+      label: 'Image'
+      selector: Image
+    -
+      name: Description
+      label: 'Description'
+      selector: Description
+
+  ids:
+    Stationnum:
+      type: integer
+
+process:
+  type:
+    plugin: default_value
+    default_value: network
+
+  call_sign: Callsign
+
+  station_name: Stationname
+
+  station_number: Stationnum
+
+  description: Description
+
+  image/target_id:
+    source: Image
+    plugin: file_json
+    destination: 'public://shows/[date:custom:Y]-[date:custom:m]'
+
+  image/alt: Stationname
+
+destination:
+  plugin: 'entity:network'
+migration_dependencies: null

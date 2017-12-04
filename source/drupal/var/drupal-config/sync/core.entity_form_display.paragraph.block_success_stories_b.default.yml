@@ -1,0 +1,79 @@
+uuid: b2e773b0-5db2-4a08-a781-66c9a4b03891
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_success_stories_b.field_alignment
+    - field.field.paragraph.block_success_stories_b.field_articles
+    - field.field.paragraph.block_success_stories_b.field_new_heading
+    - field.field.paragraph.block_success_stories_b.field_paragraph
+    - field.field.paragraph.block_success_stories_b.field_scroll_id
+    - field.field.paragraph.block_success_stories_b.field_styles
+    - paragraphs.paragraphs_type.block_success_stories_b
+  module:
+    - paragraphs
+    - text
+id: paragraph.block_success_stories_b.default
+targetEntityType: paragraph
+bundle: block_success_stories_b
+mode: default
+content:
+  field_alignment:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_articles:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_new_heading:
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_paragraph:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_scroll_id:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_styles:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

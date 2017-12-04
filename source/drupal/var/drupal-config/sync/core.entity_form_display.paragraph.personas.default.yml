@@ -41,6 +41,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_image:
     weight: 4
     settings:
@@ -48,6 +49,7 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: image_image
+    region: content
   field_link:
     weight: 4
     settings:
@@ -59,6 +61,7 @@ content:
       default_paragraph_type: link
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
   field_paragraph:
     weight: 1
     settings:
@@ -66,11 +69,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_persona_type:
     weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
 hidden:
   created: true
   status: true

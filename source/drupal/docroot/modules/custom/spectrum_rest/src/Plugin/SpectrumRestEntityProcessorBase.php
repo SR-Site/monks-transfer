@@ -11,6 +11,7 @@ use Drupal\mm_rest\CacheableMetaDataCollectorInterface;
 use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
 use Drupal\mm_rest\Plugin\RestEntityProcessorManager;
 use Drupal\mm_rest\Plugin\RestFieldProcessorManager;
+use Drupal\taxonomy\Entity\Term;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -35,13 +36,26 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
   protected $dateFormatter;
 
   /**
+   * Constructs a Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase object.
+   *
    * @param array $configuration
+   *   Configuration.
    * @param string $plugin_id
+   *   Plugin ID.
    * @param mixed $plugin_definition
+   *   Plugin definition.
    * @param \Drupal\mm_rest\Plugin\RestEntityProcessorManager $entity_processor
+   *   Entity processor.
    * @param \Drupal\mm_rest\Plugin\RestFieldProcessorManager $field_processor
+   *   Field processor.
    * @param \Drupal\mm_rest\CacheableMetaDataCollectorInterface $cacheable_metadata_collector
+   *   Cacheable MetaData Collector.
+   * @param \Drupal\Core\Entity\EntityRepositoryInterface $entity_repository
+   *   Entity repository.
+   * @param \Drupal\Core\Path\AliasManagerInterface $alias_manager
+   *   Alias manager.
    * @param \Drupal\Core\Datetime\DateFormatter $date_formatter
+   *   Date format.
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, RestEntityProcessorManager $entity_processor, RestFieldProcessorManager $field_processor, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, EntityRepositoryInterface $entity_repository, AliasManagerInterface $alias_manager, DateFormatter $date_formatter) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $entity_processor, $field_processor, $cacheable_metadata_collector, $entity_repository);
@@ -70,20 +84,59 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
    * Common properties for all Paragraph blocks.
    *
    * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *   Content entity.
+   *
    * @return array|string
+   *   Array of common data.
    */
   public function getCommonData(ContentEntityInterface $entity) {
     return $this->fieldProcessor->getFieldData($entity->get('field_styles'));
   }
 
   /**
+   * Common properties for all Paragraph blocks.
+   *
+   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *   Content entity.
+   *
+   * @return array|string
+   *   Array of heading and paragraph..
+   */
+  public function getHeadingParagraphData(ContentEntityInterface $entity) {
+    return [
+      'heading' => $this->fieldProcessor->getFieldData($entity->get('field_new_heading')),
+      'paragraph' => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
+    ];
+  }
+
+  /**
+   * Common properties for all Paragraph blocks.
+   *
+   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *   Content entity.
+   *
+   * @return array|string
+   *   Array of heading and paragraph..
+   */
+  public function getNormalHeadingParagraphData(ContentEntityInterface $entity) {
+    return [
+      'heading' => $this->fieldProcessor->getFieldData($entity->get('field_main_heading')),
+      'paragraph' => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
+    ];
+  }
+
+  /**
    * Make sure that it is always an array.
    *
    * @param \Drupal\Core\Field\FieldItemListInterface $field
+   *   Field item list.
    * @param array $options
+   *   Options.
+   *
    * @return array|string
+   *   Array of items.
    */
-  public function getItems(FieldItemListInterface $field, $options = []) {
+  public function getItems(FieldItemListInterface $field, array $options = []) {
     // It have to be always an array.
     $items = $this->fieldProcessor->getFieldData($field, $options);
 
@@ -104,8 +157,12 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
    * Returns an image formatted.
    *
    * @param \Drupal\Core\Field\FieldItemListInterface $field
+   *   Field item list.
    * @param array $options
-   * @return array
+   *   Options.
+   *
+   * @return array|string
+   *   Image data..
    */
   public function image(FieldItemListInterface $field, array $options = []) {
     $image = $field->getValue();
@@ -114,10 +171,10 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
       return NULL;
     }
 
-    $data =  [
+    $data = [
       'normal' => $this->fieldProcessor->getFieldData($field, $options),
       'small' => $this->fieldProcessor->getFieldData($field, $options),
-      'alt' => isset($image[0]['alt']) ? $image[0]['alt'] : "",
+      'alt' => isset($image[0]['alt']) && $image[0]['alt'] != NULL ? $image[0]['alt'] : $field->getEntity()->label(),
     ];
 
     return $data;
@@ -127,7 +184,10 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
    * Returns an array of taxonomy terms from all vocabularies.
    *
    * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *   Content entity.
+   *
    * @return array|string
+   *   Array of tags.
    */
   protected function getTags(ContentEntityInterface $entity) {
     $tags = [];
@@ -139,6 +199,31 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
     $tags = array_merge($tags, $this->getItems($entity->get('field_thought_leadership')) ?: []);
 
     return $tags;
+  }
+
+  /**
+   * Get Raw Entity Reference Label.
+   *
+   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *   Entity.
+   * @param string $fieldName
+   *   Field name.
+   * @param string|null $rawName
+   *   Default value.
+   *
+   * @return mixed|null|string
+   *   Raw entity label.
+   */
+  protected function getRawEntityReferenceLabel(ContentEntityInterface $entity, $fieldName, $rawName = NULL) {
+    $landingCategoryID = $entity->get($fieldName)->target_id;
+    $landingCategoryEntity = Term::load($landingCategoryID);
+    if ($landingCategoryEntity instanceof ContentEntityInterface) {
+      $landingCategoryFullName = $landingCategoryEntity->label();
+      $rawName = strtolower($landingCategoryFullName);
+      $rawName = preg_replace('/[^a-z0-9_]+/', '-', $rawName);
+    }
+
+    return $rawName;
   }
 
 }

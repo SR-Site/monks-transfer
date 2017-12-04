@@ -1,0 +1,19 @@
+uuid: 7d467fbf-229c-4eea-bc0c-42ba4b32f5eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_scroll_id
+    - paragraphs.paragraphs_type.block_persona_selector_banner
+id: paragraph.block_persona_selector_banner.field_scroll_id
+field_name: field_scroll_id
+entity_type: paragraph
+bundle: block_persona_selector_banner
+label: 'Scroll ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

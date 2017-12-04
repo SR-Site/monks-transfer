@@ -12,7 +12,7 @@ _core:
   default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
 id: spectrum_tools
 theme: spectrum
-region: '-1'
+region: sidebar_first
 weight: -4
 provider: null
 plugin: 'system_menu_block:tools'

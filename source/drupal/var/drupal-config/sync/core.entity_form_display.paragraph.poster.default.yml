@@ -1,0 +1,36 @@
+uuid: a3987712-958b-4374-a663-44cc0572be75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.poster.field_normal
+    - field.field.paragraph.poster.field_small
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.poster
+  module:
+    - image
+id: paragraph.poster.default
+targetEntityType: paragraph
+bundle: poster
+mode: default
+content:
+  field_normal:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_small:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

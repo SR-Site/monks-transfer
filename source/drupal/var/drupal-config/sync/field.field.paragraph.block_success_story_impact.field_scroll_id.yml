@@ -1,0 +1,19 @@
+uuid: bf47bb11-0338-4c19-b848-d026475c081a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_scroll_id
+    - paragraphs.paragraphs_type.block_success_story_impact
+id: paragraph.block_success_story_impact.field_scroll_id
+field_name: field_scroll_id
+entity_type: paragraph
+bundle: block_success_story_impact
+label: 'Scroll ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

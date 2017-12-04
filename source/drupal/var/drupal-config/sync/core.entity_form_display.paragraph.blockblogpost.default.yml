@@ -36,6 +36,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
   field_styles:
     weight: 1
     settings:
@@ -47,6 +48,7 @@ content:
       default_paragraph_type: styles
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
 hidden:
   created: true
   status: true

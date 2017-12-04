@@ -7,8 +7,11 @@ label: 'Content editor'
 weight: 3
 is_admin: null
 permissions:
+  - 'access site in maintenance mode'
+  - 'access toolbar'
   - 'administer main menu items'
   - 'create page content'
+  - 'create url aliases'
   - 'delete any page content'
   - 'delete own page content'
   - 'delete page revisions'
@@ -16,8 +19,5 @@ permissions:
   - 'edit own page content'
   - 'revert page revisions'
   - 'view page revisions'
-  - 'access site in maintenance mode'
-  - 'view the administration theme'
-  - 'access toolbar'
   - 'view spectrum in toolbar'
-  - 'create url aliases'
+  - 'view the administration theme'

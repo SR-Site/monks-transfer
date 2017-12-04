@@ -1,0 +1,29 @@
+uuid: de40df7c-5548-498a-8609-f97f751aad58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_styles
+    - paragraphs.paragraphs_type.block_find_your_audience
+    - paragraphs.paragraphs_type.styles
+  module:
+    - entity_reference_revisions
+id: paragraph.block_find_your_audience.field_styles
+field_name: field_styles
+entity_type: paragraph
+bundle: block_find_your_audience
+label: Styles
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      styles: styles
+    target_bundles_drag_drop:
+      styles:
+        enabled: true
+field_type: entity_reference_revisions

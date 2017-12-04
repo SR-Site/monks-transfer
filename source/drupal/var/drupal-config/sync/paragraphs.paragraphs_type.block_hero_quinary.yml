@@ -1,0 +1,7 @@
+uuid: 7e48a1a2-d15a-40db-b727-f8cd9c207217
+langcode: en
+status: true
+dependencies: {  }
+id: block_hero_quinary
+label: 'Block Hero Quinary'
+behavior_plugins: {  }

@@ -1,0 +1,7 @@
+uuid: 6af8e52f-9fac-491b-a790-8d17d9498bf2
+langcode: en
+status: true
+dependencies: {  }
+id: block_target_audience
+label: 'Block Target Audience'
+behavior_plugins: {  }

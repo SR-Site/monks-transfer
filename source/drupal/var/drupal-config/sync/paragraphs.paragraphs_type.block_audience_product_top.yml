@@ -1,0 +1,7 @@
+uuid: d2307c1c-9d69-4c7d-bf25-eae644bbe838
+langcode: en
+status: true
+dependencies: {  }
+id: block_audience_product_top
+label: 'Block Audience Product Top'
+behavior_plugins: {  }

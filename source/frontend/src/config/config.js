@@ -19,6 +19,13 @@ const config = {
 			variables: {},
 			urls: {},
 		},
+		[EnvironmentNames.LOCAL_DRUPAL]: {
+			extends: EnvironmentNames.DEVELOPMENT,
+			variables: {
+				[VariableNames.MOCK_ENABLED]: false,
+			},
+			urls: {},
+		},
 		[EnvironmentNames.LOCAL]: {
 			extends: EnvironmentNames.DEVELOPMENT,
 			properties: {
@@ -65,6 +72,10 @@ const { host } = document.location;
 switch (host.split(':').shift()) {
 	case 'localhost': {
 		environment = EnvironmentNames.LOCAL;
+		break;
+	}
+	case 'spectrum.loc': {
+		environment = EnvironmentNames.LOCAL_DRUPAL;
 		break;
 	}
 	default: {

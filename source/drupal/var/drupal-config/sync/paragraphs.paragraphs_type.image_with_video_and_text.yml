@@ -1,0 +1,7 @@
+uuid: 18a45c20-f8ca-490a-a2f3-2604c77a6992
+langcode: en
+status: true
+dependencies: {  }
+id: image_with_video_and_text
+label: 'Image With Video And Text'
+behavior_plugins: {  }

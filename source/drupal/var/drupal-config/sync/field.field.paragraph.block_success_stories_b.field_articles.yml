@@ -1,0 +1,28 @@
+uuid: cbe52287-9f19-4b5f-84e8-a645f77ff2ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_articles
+    - node.type.article
+    - paragraphs.paragraphs_type.block_success_stories_b
+id: paragraph.block_success_stories_b.field_articles
+field_name: field_articles
+entity_type: paragraph
+bundle: block_success_stories_b
+label: Stories
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

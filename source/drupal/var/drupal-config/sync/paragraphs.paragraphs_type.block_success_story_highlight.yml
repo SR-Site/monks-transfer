@@ -1,0 +1,7 @@
+uuid: d0ed1082-69ee-4283-ac81-2a46a207daed
+langcode: en
+status: true
+dependencies: {  }
+id: block_success_story_highlight
+label: 'Block Success Story Highlight'
+behavior_plugins: {  }

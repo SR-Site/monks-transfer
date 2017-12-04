@@ -26,27 +26,6 @@ export default {
 					value: '',
 				},
 				{
-					name: 'company',
-					localeKey: 'company',
-					type: 'text',
-					value: '',
-					validationRules: 'required',
-				},
-				{
-					name: 'city',
-					localeKey: 'city',
-					type: 'text',
-					value: '',
-					validationRules: 'required',
-				},
-				{
-					name: 'State you would like to advertise in',
-					localeKey: 'state',
-					type: 'text',
-					value: '',
-					validationRules: 'required',
-				},
-				{
 					name: 'email',
 					localeKey: 'email',
 					type: 'email',

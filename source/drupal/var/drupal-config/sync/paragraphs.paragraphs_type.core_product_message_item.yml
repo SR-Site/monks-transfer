@@ -1,0 +1,7 @@
+uuid: bdf5b6dd-75a1-439d-aa12-42914ed72f70
+langcode: en
+status: true
+dependencies: {  }
+id: core_product_message_item
+label: 'Core Product Message Item'
+behavior_plugins: {  }

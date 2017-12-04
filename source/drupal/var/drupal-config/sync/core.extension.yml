@@ -34,6 +34,9 @@ module:
   metatag: 0
   metatag_open_graph: 0
   metatag_twitter_cards: 0
+  migrate: 0
+  migrate_plus: 0
+  migrate_tools: 0
   mm_decoupled: 0
   mm_release_tracker: 0
   mm_rest: 0
@@ -59,6 +62,8 @@ module:
   spectrum_rest: 0
   spectrum_settings: 0
   spectrum_shows: 0
+  spectrum_shows_import: 0
+  spectrum_twitter_api: 0
   sqlsrv: 0
   statistics: 0
   supercache: 0
@@ -90,3 +95,4 @@ theme:
   spectrum: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
+profile: standard

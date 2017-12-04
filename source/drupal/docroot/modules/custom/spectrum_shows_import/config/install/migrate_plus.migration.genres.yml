@@ -1,0 +1,28 @@
+id: genres
+label: JSON feed of genres
+migration_group: migrate_shows_json
+source:
+  plugin: spectrum_url
+  data_fetcher_plugin: http
+  data_parser_plugin: json_nested
+  item_selector: '/Result/'
+  sub_selector: 'Genres'
+  fields:
+    -
+      name: genre
+      label: 'Genre name'
+      selector: Genre
+
+  ids:
+    genre:
+      type: string
+
+process:
+  type:
+    plugin: default_value
+    default_value: genre
+  name: genre
+
+destination:
+  plugin: 'entity:genre'
+migration_dependencies: null

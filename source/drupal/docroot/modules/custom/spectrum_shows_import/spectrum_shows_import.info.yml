@@ -1,0 +1,9 @@
+name: Spectrum shows import
+type: module
+description: Migrating Shows from external resource into SpectrumReach
+core: 8.x
+package: Spectrum
+dependencies:
+  - migrate
+  - migrate_plus
+  - migrate_tools

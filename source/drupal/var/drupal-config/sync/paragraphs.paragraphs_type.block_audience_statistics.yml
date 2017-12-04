@@ -1,0 +1,7 @@
+uuid: abe86a8c-fca4-4619-868c-99c3eeec19df
+langcode: en
+status: true
+dependencies: {  }
+id: block_audience_statistics
+label: 'Block Audience Statistics'
+behavior_plugins: {  }

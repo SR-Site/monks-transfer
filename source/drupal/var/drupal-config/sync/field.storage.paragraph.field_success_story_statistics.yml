@@ -1,0 +1,20 @@
+uuid: 60dce0a0-73eb-4c0d-9370-21e532b1b355
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+id: paragraph.field_success_story_statistics
+field_name: field_success_story_statistics
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

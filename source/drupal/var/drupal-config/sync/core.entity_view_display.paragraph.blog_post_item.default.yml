@@ -1,0 +1,29 @@
+uuid: c840e840-7b03-45ae-9c9e-27749bb9ae55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blog_post_item.field_blog_post_item_heading
+    - field.field.paragraph.blog_post_item.field_blog_post_item_paragraph
+    - paragraphs.paragraphs_type.blog_post_item
+id: paragraph.blog_post_item.default
+targetEntityType: paragraph
+bundle: blog_post_item
+mode: default
+content:
+  field_blog_post_item_heading:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_blog_post_item_paragraph:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

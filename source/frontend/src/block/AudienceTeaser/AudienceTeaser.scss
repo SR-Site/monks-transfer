@@ -37,10 +37,13 @@
 	}
 
 	.sub-heading {
-		margin-bottom: $sizeGrid / 2;
 		color: $colorTertiary;
 		transition: color 0.2s $easeInOutCubic;
 		font-weight: 600;
+	}
+
+	.copy {
+		margin-top: $sizeGrid / 2;
 	}
 
 	.reach-heading {

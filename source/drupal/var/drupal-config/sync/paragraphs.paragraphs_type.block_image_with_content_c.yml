@@ -1,0 +1,7 @@
+uuid: 97d2d562-07a1-466a-873c-4d608351e04a
+langcode: en
+status: true
+dependencies: {  }
+id: block_image_with_content_c
+label: 'Block Image With Content C'
+behavior_plugins: {  }

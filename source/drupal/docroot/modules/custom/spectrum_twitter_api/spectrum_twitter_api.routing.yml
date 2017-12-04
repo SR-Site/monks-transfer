@@ -1,0 +1,7 @@
+spectrum_twitter_api.settings:
+  path: 'admin/config/spectrum-twitter-api'
+  defaults:
+    _form: 'Drupal\spectrum_twitter_api\Form\SpectrumTwitterApiForm'
+    _title: 'Spectrum Twitter API settings'
+  requirements:
+    _permission: 'administer spectrum settings'
