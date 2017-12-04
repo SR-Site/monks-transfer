@@ -5,3 +5,8 @@ services:
         image: spectrum/frontend
         volumes:
             - ../../:/app
+    backend:
+        image: wodby/drupal-php:7.1
+        command: sh
+        volumes:
+            - '../../source/drupal:/app'
