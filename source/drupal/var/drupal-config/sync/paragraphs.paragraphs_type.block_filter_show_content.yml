@@ -1,0 +1,7 @@
+uuid: 29c12a0e-94ee-4546-badb-3a070ef0658a
+langcode: en
+status: true
+dependencies: {  }
+id: block_filter_show_content
+label: 'Block Filter Show Content'
+behavior_plugins: {  }

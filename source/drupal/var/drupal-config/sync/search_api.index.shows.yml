@@ -1,0 +1,99 @@
+uuid: baef5a3a-8364-440b-98dc-63e577e1526e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_genres
+    - field.storage.node.field_show_network
+    - search_api.server.database
+  module:
+    - search_api
+    - node
+id: shows
+name: Shows
+description: ''
+read_only: false
+field_settings:
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+  field_show_genres:
+    label: Genres
+    datasource_id: 'entity:node'
+    property_path: field_show_genres
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_show_genres
+  field_show_network:
+    label: Network
+    datasource_id: 'entity:node'
+    property_path: field_show_network
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_show_network
+processor_settings:
+  add_url:
+    plugin_id: add_url
+    settings: {  }
+  rendered_item:
+    plugin_id: rendered_item
+    settings: {  }
+  ignorecase:
+    plugin_id: ignorecase
+    settings:
+      fields:
+        - genres
+        - network
+      weights:
+        preprocess_index: -10
+        preprocess_query: -10
+  aggregated_field:
+    plugin_id: aggregated_field
+    settings: {  }
+  node_status:
+    plugin_id: node_status
+    settings: {  }
+  content_access:
+    plugin_id: content_access
+    settings:
+      weights:
+        preprocess_query: -10
+options:
+  index_directly: true
+  cron_limit: 50
+datasource_settings:
+  'entity:node':
+    plugin_id: 'entity:node'
+    settings:
+      bundles:
+        default: false
+        selected:
+          - show
+      languages:
+        default: true
+        selected: {  }
+tracker_settings:
+  default:
+    plugin_id: default
+    settings: {  }
+server: database

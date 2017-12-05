@@ -1,0 +1,8 @@
+uuid: null
+langcode: en
+status: true
+dependencies: {  }
+id: mm_rest__spectrum_rest_searchshows_v1
+name: 'mm_rest:spectrum_rest_searchshows_v1'
+filter_key: ''
+url_processor: query_string

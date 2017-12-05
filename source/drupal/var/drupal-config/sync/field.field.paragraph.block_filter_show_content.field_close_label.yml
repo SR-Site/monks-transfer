@@ -1,0 +1,21 @@
+uuid: 8cee1965-c991-425b-bc65-4f3efecbca4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_close_label
+    - paragraphs.paragraphs_type.block_filter_show_content
+id: paragraph.block_filter_show_content.field_close_label
+field_name: field_close_label
+entity_type: paragraph
+bundle: block_filter_show_content
+label: 'Close label'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: Close
+default_value_callback: ''
+settings: {  }
+field_type: string
