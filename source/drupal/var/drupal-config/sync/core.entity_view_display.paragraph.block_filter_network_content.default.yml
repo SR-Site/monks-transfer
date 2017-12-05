@@ -1,0 +1,42 @@
+uuid: e5f9bf17-40b8-489f-a098-2f5e620c82e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_filter_network_content.field_close_label
+    - field.field.paragraph.block_filter_network_content.field_filter_label
+    - field.field.paragraph.block_filter_network_content.field_styles
+    - paragraphs.paragraphs_type.block_filter_network_content
+  module:
+    - entity_reference_revisions
+id: paragraph.block_filter_network_content.default
+targetEntityType: paragraph
+bundle: block_filter_network_content
+mode: default
+content:
+  field_close_label:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_filter_label:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_styles:
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden: {  }

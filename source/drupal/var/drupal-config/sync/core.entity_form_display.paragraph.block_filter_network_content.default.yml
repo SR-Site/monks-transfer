@@ -1,0 +1,48 @@
+uuid: ac16552b-da90-4d9f-86b0-69b72224d510
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_filter_network_content.field_close_label
+    - field.field.paragraph.block_filter_network_content.field_filter_label
+    - field.field.paragraph.block_filter_network_content.field_styles
+    - paragraphs.paragraphs_type.block_filter_network_content
+  module:
+    - paragraphs
+id: paragraph.block_filter_network_content.default
+targetEntityType: paragraph
+bundle: block_filter_network_content
+mode: default
+content:
+  field_close_label:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_filter_label:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_styles:
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

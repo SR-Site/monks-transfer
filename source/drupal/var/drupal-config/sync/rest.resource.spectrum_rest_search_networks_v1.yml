@@ -1,0 +1,17 @@
+uuid: ebce796d-5872-48b2-9884-cc530e76874a
+langcode: en
+status: true
+dependencies:
+  module:
+    - serialization
+    - spectrum_rest
+    - user
+id: spectrum_rest_search_networks_v1
+plugin_id: spectrum_rest_search_networks_v1
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - json
+    supported_auth:
+      - cookie

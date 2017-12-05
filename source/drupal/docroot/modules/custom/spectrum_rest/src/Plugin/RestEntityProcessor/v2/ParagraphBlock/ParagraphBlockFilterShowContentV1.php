@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\ParagraphBlock;
+namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\v2\ParagraphBlock;
 
 use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 

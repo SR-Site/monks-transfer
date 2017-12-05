@@ -1,0 +1,7 @@
+uuid: 9b28e121-bd33-4632-aaf0-01a84179ec35
+langcode: en
+status: true
+dependencies: {  }
+id: block_filter_network_content
+label: 'Block Filter Network Content'
+behavior_plugins: {  }
