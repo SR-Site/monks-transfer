@@ -1126,7 +1126,7 @@ bignumber.js@^2.1.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-2.4.0.tgz#838a992da9f9d737e0f4b2db0be62bb09dd0c5e8"
 
-bin-build@^2.0.0:
+bin-build@^2.0.0, bin-build@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/bin-build/-/bin-build-2.2.0.tgz#11f8dd61f70ffcfa2bdcaa5b46f5e8fedd4221cc"
   dependencies:
@@ -5956,6 +5956,14 @@ optipng-bin@^3.0.0:
   resolved "https://registry.yarnpkg.com/optipng-bin/-/optipng-bin-3.1.4.tgz#95d34f2c488704f6fd70606bfea0c659f1d95d84"
   dependencies:
     bin-build "^2.0.0"
+    bin-wrapper "^3.0.0"
+    logalot "^2.0.0"
+
+optipng-bin@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/optipng-bin/-/optipng-bin-4.0.0.tgz#92b937d97ee67fe8a2d29bbcec6b8cee8f1a867e"
+  dependencies:
+    bin-build "^2.2.0"
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 

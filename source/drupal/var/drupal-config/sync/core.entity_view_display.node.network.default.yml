@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.network.field_audience_statistics
     - field.field.node.network.field_blocks
+    - field.field.node.network.field_hero_quaternary
     - field.field.node.network.field_image
     - field.field.node.network.field_image2
     - field.field.node.network.field_network
@@ -17,8 +19,26 @@ targetEntityType: node
 bundle: network
 mode: default
 content:
+  field_audience_statistics:
+    weight: 106
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_blocks:
     weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_hero_quaternary:
+    weight: 105
     label: above
     settings:
       view_mode: default
