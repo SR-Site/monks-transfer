@@ -14,13 +14,15 @@ const config = {
 			variables: {},
 			urls: {},
 		},
-		[EnvironmentNames.DEVELOPMENT]: {
-			extends: EnvironmentNames.STAGING,
-			variables: {},
-			urls: {},
-		},
 		[EnvironmentNames.LOCAL_DRUPAL]: {
 			extends: EnvironmentNames.DEVELOPMENT,
+			variables: {
+				[VariableNames.MOCK_ENABLED]: false,
+			},
+			urls: {},
+		},
+		[EnvironmentNames.DEVELOPMENT]: {
+			extends: EnvironmentNames.PRODUCTION,
 			variables: {
 				[VariableNames.MOCK_ENABLED]: false,
 			},
@@ -76,6 +78,10 @@ switch (host.split(':').shift()) {
 	}
 	case 'spectrum.loc': {
 		environment = EnvironmentNames.LOCAL_DRUPAL;
+		break;
+	}
+	case '107.189.68.170': {
+		environment = EnvironmentNames.DEVELOPMENT;
 		break;
 	}
 	default: {
