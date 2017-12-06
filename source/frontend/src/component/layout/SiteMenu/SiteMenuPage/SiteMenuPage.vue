@@ -37,7 +37,9 @@
 				:class="[$style.button, $style.hoverButton]"
 				v-if="!link.section"
 				v-link="{ path: link.target, type: link.type }" >
-				<span :class="$style.label" v-html="link.label"></span>
+				<span :class="$style.centerContent">
+					<span :class="$style.label" v-html="link.label"></span>
+				</span>
 			</a>
 		</li>
 	</ul>

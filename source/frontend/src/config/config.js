@@ -16,15 +16,13 @@ const config = {
 		},
 		[EnvironmentNames.LOCAL_DRUPAL]: {
 			extends: EnvironmentNames.DEVELOPMENT,
-			variables: {
-				[VariableNames.MOCK_ENABLED]: false,
-			},
+			variables: {},
 			urls: {},
 		},
 		[EnvironmentNames.DEVELOPMENT]: {
 			extends: EnvironmentNames.PRODUCTION,
 			variables: {
-				[VariableNames.MOCK_ENABLED]: false,
+				[VariableNames.DEBUG_LABEL_ENABLED]: true,
 			},
 			urls: {},
 		},
@@ -35,14 +33,18 @@ const config = {
 					'pk.eyJ1IjoibGFyc3ZhbmJyYWFtIiwiYSI6ImNpeW8zNXV2NjAwNjAzM3FsMnV1Z3E4Z2QifQ.UdtOqQiB6YK_lDBthfL6oA',
 				[PropertyNames.MAPBOX_MAP_STYLE]: 'mapbox://styles/larsvanbraam/ciyodzuy800ds2sla6tuazga1',
 			},
+			variables: {
+				[VariableNames.MOCK_ENABLED]: true,
+				[VariableNames.DEBUG_LABEL_ENABLED]: true,
+			},
 			urls: {},
 		},
 	},
 	variables: {
 		[VariableNames.LOCALE_ENABLED]: true,
 		[VariableNames.LOCALE_ROUTING_ENABLED]: false,
-		[VariableNames.MOCK_ENABLED]: true,
-		[VariableNames.DEBUG_LABEL_ENABLED]: true,
+		[VariableNames.MOCK_ENABLED]: false,
+		[VariableNames.DEBUG_LABEL_ENABLED]: false,
 		[VariableNames.VERSIONED_STATIC_ROOT]: process.env.VERSIONED_STATIC_ROOT,
 		[VariableNames.STATIC_ROOT]: process.env.STATIC_ROOT,
 		[VariableNames.PUBLIC_PATH]: process.env.PUBLIC_PATH,
