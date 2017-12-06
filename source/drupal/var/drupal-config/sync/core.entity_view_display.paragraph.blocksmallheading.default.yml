@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.blocksmallheading.field_heading
+    - field.field.paragraph.blocksmallheading.field_new_heading
     - field.field.paragraph.blocksmallheading.field_styles
     - paragraphs.paragraphs_type.blocksmallheading
   module:
@@ -20,6 +21,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_new_heading:
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   field_styles:
     weight: 0

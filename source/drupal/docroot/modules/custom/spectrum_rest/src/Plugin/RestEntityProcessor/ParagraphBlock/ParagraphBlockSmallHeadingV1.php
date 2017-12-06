@@ -28,7 +28,7 @@ class ParagraphBlockSmallHeadingV1 extends SpectrumRestEntityProcessorBase {
     $data = [
       "id" => 'smallHeading',
       "data" => $data + [
-        "heading" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
+        "heading" => $this->fieldProcessor->getFieldData($entity->get('field_new_heading')),
       ],
     ];
 

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blocktext.field_new_heading
     - field.field.paragraph.blocktext.field_paragraph
     - field.field.paragraph.blocktext.field_styles
     - paragraphs.paragraphs_type.blocktext
@@ -14,6 +15,15 @@ targetEntityType: paragraph
 bundle: blocktext
 mode: default
 content:
+  field_new_heading:
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_paragraph:
     weight: 1
     label: above

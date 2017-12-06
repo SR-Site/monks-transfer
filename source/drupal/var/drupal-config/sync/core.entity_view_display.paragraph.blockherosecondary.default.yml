@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.blockherosecondary.field_heading
     - field.field.paragraph.blockherosecondary.field_image
     - field.field.paragraph.blockherosecondary.field_link
+    - field.field.paragraph.blockherosecondary.field_new_heading
     - field.field.paragraph.blockherosecondary.field_paragraph
     - field.field.paragraph.blockherosecondary.field_styles
     - field.field.paragraph.blockherosecondary.field_video
@@ -49,6 +50,15 @@ content:
     region: content
   field_link:
     weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_new_heading:
+    weight: 10
     label: above
     settings:
       view_mode: default

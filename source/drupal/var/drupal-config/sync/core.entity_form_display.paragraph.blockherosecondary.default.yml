@@ -8,6 +8,7 @@ dependencies:
     - field.field.paragraph.blockherosecondary.field_heading
     - field.field.paragraph.blockherosecondary.field_image
     - field.field.paragraph.blockherosecondary.field_link
+    - field.field.paragraph.blockherosecondary.field_new_heading
     - field.field.paragraph.blockherosecondary.field_paragraph
     - field.field.paragraph.blockherosecondary.field_styles
     - field.field.paragraph.blockherosecondary.field_video
@@ -57,14 +58,6 @@ content:
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
-  field_heading:
-    weight: 0
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_image:
     weight: 2
     settings:
@@ -75,6 +68,18 @@ content:
     region: content
   field_link:
     weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_new_heading:
+    weight: 0
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -121,5 +126,6 @@ content:
     region: content
 hidden:
   created: true
+  field_heading: true
   status: true
   uid: true

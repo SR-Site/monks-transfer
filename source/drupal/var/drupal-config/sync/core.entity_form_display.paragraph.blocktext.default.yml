@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blocktext.field_new_heading
     - field.field.paragraph.blocktext.field_paragraph
     - field.field.paragraph.blocktext.field_styles
     - paragraphs.paragraphs_type.blocktext
@@ -24,13 +25,38 @@ third_party_settings:
         open: false
         required_fields: true
       label: Styles
+    group_heading:
+      children:
+        - field_new_heading
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        label: Heading
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Heading
 id: paragraph.blocktext.default
 targetEntityType: paragraph
 bundle: blocktext
 mode: default
 content:
-  field_paragraph:
+  field_new_heading:
     weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_paragraph:
+    weight: 3
     settings:
       rows: 5
       placeholder: ''

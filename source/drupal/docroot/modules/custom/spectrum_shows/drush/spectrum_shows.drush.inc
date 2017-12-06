@@ -9,6 +9,7 @@ use Drupal\paragraphs\Entity\ParagraphsType;
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\image\Entity\ImageStyle;
+use Drupal\paragraphs\Entity\Paragraph;
 
 /**
  * Drush commands.
@@ -21,6 +22,11 @@ function spectrum_shows_drush_command() {
     'description' => dt('Create custom paragraph types.'),
     'drush dependencies' => [],
     'aliases' => ['ptc'],
+  ];
+  $items['paragraph-migrate-heading'] = [
+    'description' => dt('Migrate heading in paragraphs.'),
+    'drush dependencies' => [],
+    'aliases' => ['pmh'],
   ];
   $items['image-styles-create'] = [
     'description' => dt('Create image styles.'),
@@ -115,6 +121,41 @@ function drush_spectrum_shows_paragraph_types_create() {
           'type' => 'string_textfield',
         ])
         ->save();
+    }
+  }
+}
+
+/**
+ * Migrate paragraphs heading.
+ */
+function drush_spectrum_shows_paragraph_migrate_heading() {
+  $paragraph_types = [
+    'slideheromain',
+    'blockherosecondary',
+    'blocksmallheading',
+  ];
+
+  foreach ($paragraph_types as $paragraph_type) {
+    $query = \Drupal::entityQuery('paragraph')
+      ->condition('type', $paragraph_type);
+    $results = $query->execute();
+    $paragraphs = Paragraph::loadMultiple($results);
+    foreach ($paragraphs as $paragraph) {
+      /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+      $new_heading = $paragraph->get('field_new_heading')->getValue();
+      if ($paragraph->get('field_heading')->value && empty($new_heading)) {
+        $heading = $paragraph->get('field_heading')->value;
+        $heading = text_summary(strip_tags($heading, '<strong><a><br>'), NULL, 240);
+        $heading_paragraph = Paragraph::create(['type' => 'heading']);
+        $heading_paragraph->set('field_heading_text', $heading);
+        $heading_paragraph->save();
+        $current[] = [
+          'target_id' => $heading_paragraph->id(),
+          'target_revision_id' => $heading_paragraph->getRevisionId(),
+        ];
+        $paragraph->set('field_new_heading', $current);
+        $paragraph->save();
+      }
     }
   }
 }
