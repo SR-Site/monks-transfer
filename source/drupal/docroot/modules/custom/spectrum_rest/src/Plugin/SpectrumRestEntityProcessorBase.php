@@ -6,6 +6,9 @@ use Drupal\Core\Datetime\DateFormatter;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Language\Language;
+use Drupal\Core\Menu\MenuActiveTrailInterface;
+use Drupal\Core\Menu\MenuLinkManagerInterface;
 use Drupal\Core\Path\AliasManagerInterface;
 use Drupal\mm_rest\CacheableMetaDataCollectorInterface;
 use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
@@ -36,6 +39,20 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
   protected $dateFormatter;
 
   /**
+   * The active menu trail service.
+   *
+   * @var \Drupal\Core\Menu\MenuActiveTrailInterface
+   */
+  protected $menuActiveTrail;
+
+  /**
+   * The menu link manager.
+   *
+   * @var \Drupal\Core\Menu\MenuLinkManagerInterface
+   */
+  protected $menuLinkManager;
+
+  /**
    * Constructs a Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase object.
    *
    * @param array $configuration
@@ -56,11 +73,17 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
    *   Alias manager.
    * @param \Drupal\Core\Datetime\DateFormatter $date_formatter
    *   Date format.
+   * @param \Drupal\Core\Menu\MenuActiveTrailInterface $menu_active_trail
+   *   The active menu trail service.
+   * @param \Drupal\Core\Menu\MenuLinkManagerInterface $menu_link_manager
+   *   The menu link manager.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, RestEntityProcessorManager $entity_processor, RestFieldProcessorManager $field_processor, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, EntityRepositoryInterface $entity_repository, AliasManagerInterface $alias_manager, DateFormatter $date_formatter) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, RestEntityProcessorManager $entity_processor, RestFieldProcessorManager $field_processor, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, EntityRepositoryInterface $entity_repository, AliasManagerInterface $alias_manager, DateFormatter $date_formatter, MenuActiveTrailInterface $menu_active_trail, MenuLinkManagerInterface $menu_link_manager) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $entity_processor, $field_processor, $cacheable_metadata_collector, $entity_repository);
     $this->aliasManager = $alias_manager;
     $this->dateFormatter = $date_formatter;
+    $this->menuActiveTrail = $menu_active_trail;
+    $this->menuLinkManager = $menu_link_manager;
   }
 
   /**
@@ -76,7 +99,9 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
       $container->get('mm_rest.cacheable_metadata_collector'),
       $container->get('entity.repository'),
       $container->get('path.alias_manager'),
-      $container->get('date.formatter')
+      $container->get('date.formatter'),
+      $container->get('menu.active_trail'),
+      $container->get('plugin.manager.menu.link')
     );
   }
 
@@ -174,7 +199,8 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
     $data = [
       'normal' => $this->fieldProcessor->getFieldData($field, $options),
       'small' => $this->fieldProcessor->getFieldData($field, $options),
-      'alt' => isset($image[0]['alt']) && $image[0]['alt'] != NULL ? $image[0]['alt'] : $field->getEntity()->label(),
+      'alt' => isset($image[0]['alt']) && $image[0]['alt'] != NULL ? $image[0]['alt'] : $field->getEntity()
+        ->label(),
     ];
 
     return $data;
@@ -224,6 +250,67 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
     }
 
     return $rawName;
+  }
+
+  /**
+   * Display breadcrumbs of page.
+   *
+   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *   Entity.
+   *
+   * @return array
+   *   Breadcrumbs array.
+   *
+   * @throws \Drupal\Core\Entity\EntityMalformedException
+   * @throws \Exception
+   */
+  protected function displayBreadcrumbs(ContentEntityInterface $entity) {
+    $breadcrumbs = [];
+    // Create breadcrumbs.
+    if ($entity->toUrl()->toString() != '/home') {
+      $breadcrumbs = [
+        [
+          "label" => "Home",
+          "title" => "Home",
+          "target" => "/home",
+          "type" => 0,
+        ],
+      ];
+
+      // Get parent item from menu.
+      $menuLink = $this->menuLinkManager->loadLinksByRoute('entity.node.canonical', ['node' => $entity->id()]);
+      if (count($menuLink) == 1) {
+        $menuLink = reset($menuLink);
+        if ($menuLink->getParent()) {
+          $parents = $this->menuLinkManager->getParentIds($menuLink->getParent());
+          if (!empty($parents)) {
+            $parent = reset(array_reverse($parents));
+            $parentItem = $this->menuLinkManager->createInstance($parent);
+            $title = $parentItem->getTitle();
+            $url = $parentItem->getUrlObject(FALSE);
+            // Stop Language processor. URLs in the main menu shouldn't be translated.
+            $url->setOption('language', new Language());
+            $url = $url->toString(TRUE)->getGeneratedUrl();
+            $breadcrumbs[] = [
+              "label" => $title,
+              "title" => $title,
+              "target" => $url,
+              "type" => 0,
+            ];
+          }
+        }
+      }
+
+      // Get current item..
+      $breadcrumbs[] = [
+        "label" => $entity->label(),
+        "title" => $entity->label(),
+        "target" => $entity->toUrl()->toString(),
+        "type" => 0,
+      ];
+    }
+
+    return $breadcrumbs;
   }
 
 }

@@ -2,7 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\Node;
 
-use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
+use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 
 /**
  * Returns the structured data of an entity.
@@ -16,7 +16,7 @@ use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
  *   view_mode = "default"
  * )
  */
-class NodePageV1 extends RestEntityProcessorBase {
+class NodePageV1 extends SpectrumRestEntityProcessorBase {
 
   /**
    * {@inheritdoc}
@@ -42,9 +42,10 @@ class NodePageV1 extends RestEntityProcessorBase {
 
     $data = [
       'title' => $entity->label(),
-      'pageData' => [
+      'data' => [
         'headerTheme' => (int) $entity->get('field_header_theme')->value,
         'hideContactButton' => (int) $entity->get('field_hide_contact_button')->value,
+        'breadcrumbs' => $this->displayBreadcrumbs($entity),
       ],
       'blocks' => $blocks,
     ];

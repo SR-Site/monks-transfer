@@ -2,8 +2,8 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\v2\Node;
 
-use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
 use Drupal\node\Entity\Node;
+use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 use Drupal\spectrum_shows\Entity\Network;
 
 /**
@@ -18,7 +18,7 @@ use Drupal\spectrum_shows\Entity\Network;
  *   view_mode = "default"
  * )
  */
-class NodeNetworkV1 extends RestEntityProcessorBase {
+class NodeNetworkV1 extends SpectrumRestEntityProcessorBase {
 
   /**
    * {@inheritdoc}
@@ -74,6 +74,9 @@ class NodeNetworkV1 extends RestEntityProcessorBase {
 
     $data = [
       'title' => $entity->label(),
+      'data' => [
+        'breadcrumbs' => $this->displayBreadcrumbs($entity),
+      ],
       'blocks' => $blocks,
     ];
 
