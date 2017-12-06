@@ -75,13 +75,13 @@ class IOEventSubscriber implements EventSubscriberInterface {
   /**
    * Create Rest Api Response.
    *
-   * @param array $data
+   * @param mixed $data
    *   Array of data.
    *
    * @return \Drupal\mm_rest\Response\Response
    *   Response.
    */
-  protected function createRestApiResponse(array $data) {
+  protected function createRestApiResponse($data) {
     $data = $this->cleanArray($data);
     return new RestApiResponse(ResponseModelFactory::createFactory()
       ->createFromContent($data));
@@ -90,13 +90,13 @@ class IOEventSubscriber implements EventSubscriberInterface {
   /**
    * Clean all empty values from array.
    *
-   * @param array $array
+   * @param mixed $array
    *   Array.
    *
    * @return array
    *   Array.
    */
-  protected function cleanArray(array $array) {
+  protected function cleanArray($array) {
     if (is_array($array)) {
       foreach ($array as $key => $sub_array) {
         if ($key != 'blocks') {
