@@ -111,7 +111,7 @@
 	}
 }
 
-@include hover('.action-button') {
+@include hover('.hover-button') {
 	.label {
 		transform: translateX($sizeGridSecondary * 1.5);
 	}
