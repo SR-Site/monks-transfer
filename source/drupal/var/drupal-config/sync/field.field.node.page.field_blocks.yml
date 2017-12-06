@@ -16,6 +16,9 @@ dependencies:
     - paragraphs.paragraphs_type.block_double_image
     - paragraphs.paragraphs_type.block_download_file_a
     - paragraphs.paragraphs_type.block_download_file_b
+    - paragraphs.paragraphs_type.block_filter_network_content
+    - paragraphs.paragraphs_type.block_filter_show_content
+    - paragraphs.paragraphs_type.block_find_your_audience
     - paragraphs.paragraphs_type.block_glossary_a
     - paragraphs.paragraphs_type.block_glossary_b
     - paragraphs.paragraphs_type.block_hero_quaternary
@@ -30,6 +33,7 @@ dependencies:
     - paragraphs.paragraphs_type.block_multiple_images
     - paragraphs.paragraphs_type.block_persona_selector_banner
     - paragraphs.paragraphs_type.block_product_list
+    - paragraphs.paragraphs_type.block_show_detail
     - paragraphs.paragraphs_type.block_success_stories_a
     - paragraphs.paragraphs_type.block_success_stories_b
     - paragraphs.paragraphs_type.block_success_story_highlight
@@ -37,6 +41,7 @@ dependencies:
     - paragraphs.paragraphs_type.block_success_story_post
     - paragraphs.paragraphs_type.block_target_audience
     - paragraphs.paragraphs_type.block_triple_content
+    - paragraphs.paragraphs_type.block_twitter_feed
     - paragraphs.paragraphs_type.block_video_with_call_to_actions
     - paragraphs.paragraphs_type.block_video_with_content_b
     - paragraphs.paragraphs_type.block_video_with_content_c
@@ -89,8 +94,8 @@ settings:
       blockhowtoadvertise: blockhowtoadvertise
       blockimagecalltoactions: blockimagecalltoactions
       blockimagewithcontent: blockimagewithcontent
-      blockimagecarousel: blockimagecarousel
       blocklatest: blocklatest
+      blockimagecarousel: blockimagecarousel
       blockarticleteaser: blockarticleteaser
       blockaudiofragment: blockaudiofragment
       blockbutton: blockbutton
@@ -107,15 +112,15 @@ settings:
       blockpathtopurchase: blockpathtopurchase
       blockprogrammodule: blockprogrammodule
       blockquote: blockquote
-      blockquotesecondary: blockquotesecondary
       blockinfo: blockinfo
+      blockquotesecondary: blockquotesecondary
       blocksmallheading: blocksmallheading
       blocksmallimage: blocksmallimage
       blocksmallinfo: blocksmallinfo
       blockstoryinfoimages: blockstoryinfoimages
       blocktext: blocktext
-      blockfiltercontent: blockfiltercontent
       block_map_tertiary: block_map_tertiary
+      blockfiltercontent: blockfiltercontent
       block_video_with_call_to_actions: block_video_with_call_to_actions
       blockpersonaselector: blockpersonaselector
       block_audience_product_top: block_audience_product_top
@@ -129,6 +134,7 @@ settings:
       block_double_image: block_double_image
       block_download_file_a: block_download_file_a
       block_download_file_b: block_download_file_b
+      block_find_your_audience: block_find_your_audience
       block_glossary_a: block_glossary_a
       block_glossary_b: block_glossary_b
       block_hero_quaternary: block_hero_quaternary
@@ -139,15 +145,19 @@ settings:
       block_large_video: block_large_video
       block_main_product_nav: block_main_product_nav
       block_multiple_images: block_multiple_images
+      block_filter_show_content: block_filter_show_content
       block_image_list: block_image_list
+      block_filter_network_content: block_filter_network_content
       block_persona_selector_banner: block_persona_selector_banner
       block_product_list: block_product_list
+      block_show_detail: block_show_detail
       block_success_stories_a: block_success_stories_a
       block_success_stories_b: block_success_stories_b
       block_success_story_highlight: block_success_story_highlight
       block_success_story_impact: block_success_story_impact
       block_success_story_post: block_success_story_post
       block_target_audience: block_target_audience
+      block_twitter_feed: block_twitter_feed
       block_video_with_content_b: block_video_with_content_b
       block_triple_content: block_triple_content
       block_video_with_content_c: block_video_with_content_c
@@ -173,21 +183,21 @@ settings:
       blockimagewithcontent:
         enabled: true
         weight: 12
-      blockimagecarousel:
+      blocklatest:
         enabled: true
         weight: 13
       link:
         weight: 13
         enabled: false
-      blocklatest:
+      blockimagecarousel:
         enabled: true
         weight: 13
-      step:
-        weight: 15
-        enabled: false
       blockarticleteaser:
         enabled: true
         weight: 15
+      step:
+        weight: 15
+        enabled: false
       blockaudiofragment:
         enabled: true
         weight: 16
@@ -239,21 +249,21 @@ settings:
       blockquote:
         enabled: true
         weight: 35
-      blockquotesecondary:
+      blockinfo:
         enabled: true
         weight: 36
-      blockinfo:
+      blockquotesecondary:
         enabled: true
         weight: 36
       blocksmallheading:
         enabled: true
         weight: 37
-      blocksmallimage:
-        enabled: true
-        weight: 38
       slideheromain:
         weight: 38
         enabled: false
+      blocksmallimage:
+        enabled: true
+        weight: 38
       stat:
         weight: 39
         enabled: false
@@ -269,10 +279,10 @@ settings:
       blocktext:
         enabled: true
         weight: 42
-      blockfiltercontent:
+      block_map_tertiary:
         enabled: true
         weight: 48
-      block_map_tertiary:
+      blockfiltercontent:
         enabled: true
         weight: 48
       block_video_with_call_to_actions:
@@ -287,10 +297,10 @@ settings:
       networkoverviewitem:
         weight: 82
         enabled: false
-      program:
+      steppurchase:
         weight: 84
         enabled: false
-      steppurchase:
+      program:
         weight: 84
         enabled: false
       map_tertiary_data:
@@ -339,8 +349,8 @@ settings:
         enabled: true
         weight: 108
       block_find_your_audience:
+        enabled: true
         weight: 109
-        enabled: false
       block_glossary_a:
         enabled: true
         weight: 110
@@ -371,7 +381,13 @@ settings:
       block_multiple_images:
         enabled: true
         weight: 120
+      block_filter_show_content:
+        enabled: true
+        weight: 120
       block_image_list:
+        enabled: true
+        weight: 121
+      block_filter_network_content:
         enabled: true
         weight: 121
       block_pdf:
@@ -384,8 +400,8 @@ settings:
         enabled: true
         weight: 123
       block_show_detail:
+        enabled: true
         weight: 124
-        enabled: false
       block_success_stories_a:
         enabled: true
         weight: 125
@@ -405,8 +421,8 @@ settings:
         enabled: true
         weight: 130
       block_twitter_feed:
+        enabled: true
         weight: 131
-        enabled: false
       block_video_with_content_b:
         enabled: true
         weight: 133
@@ -422,10 +438,10 @@ settings:
       core_product_message_item:
         weight: 168
         enabled: false
-      device:
+      blog_post_item:
         weight: 169
         enabled: false
-      blog_post_item:
+      device:
         weight: 169
         enabled: false
       glossary_a_item:
@@ -449,6 +465,9 @@ settings:
       skills:
         weight: 189
         enabled: false
+      networks:
+        weight: 191
+        enabled: false
       slide_item:
         weight: 194
         enabled: false
@@ -460,5 +479,8 @@ settings:
         enabled: false
       success_story_statistic:
         weight: 204
+        enabled: false
+      top_picks:
+        weight: 209
         enabled: false
 field_type: entity_reference_revisions

@@ -1,0 +1,21 @@
+uuid: 58f146f2-77b0-4dd7-b2fe-14f15bc9cad9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_filter_label
+    - paragraphs.paragraphs_type.block_filter_show_content
+id: paragraph.block_filter_show_content.field_filter_label
+field_name: field_filter_label
+entity_type: paragraph
+bundle: block_filter_show_content
+label: 'Filter label'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: Filter
+default_value_callback: ''
+settings: {  }
+field_type: string

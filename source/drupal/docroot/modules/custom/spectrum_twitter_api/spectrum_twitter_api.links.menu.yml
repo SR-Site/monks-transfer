@@ -1,0 +1,7 @@
+spectrum_twitter_api.settings:
+  title: 'Spectrum Twitter API Settings'
+  description: 'Manage Spectrum Twitter API settings.'
+  route_name: spectrum_twitter_api.settings
+  menu_name: spectrum-twitter-settings
+  parent: system.admin_config
+  weight: 2

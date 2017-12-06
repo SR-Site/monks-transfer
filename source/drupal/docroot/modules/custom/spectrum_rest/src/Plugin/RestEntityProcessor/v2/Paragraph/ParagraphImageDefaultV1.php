@@ -2,7 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\v2\Paragraph;
 
-use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
+use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 
 /**
  * Returns the structured data of an entity.
@@ -16,7 +16,7 @@ use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
  *   view_mode = "default"
  * )
  */
-class ParagraphImageDefaultV1 extends RestEntityProcessorBase {
+class ParagraphImageDefaultV1 extends SpectrumRestEntityProcessorBase {
 
   /**
    * {@inheritdoc}

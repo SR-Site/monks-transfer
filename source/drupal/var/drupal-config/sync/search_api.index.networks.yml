@@ -1,0 +1,43 @@
+uuid: 27c2b167-a21e-4bb5-9bc7-493193f8030a
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.server.database
+  module:
+    - search_api
+    - node
+id: networks
+name: Networks
+description: ''
+read_only: false
+field_settings: {  }
+processor_settings:
+  add_url:
+    plugin_id: add_url
+    settings: {  }
+  rendered_item:
+    plugin_id: rendered_item
+    settings: {  }
+  aggregated_field:
+    plugin_id: aggregated_field
+    settings: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+datasource_settings:
+  'entity:node':
+    plugin_id: 'entity:node'
+    settings:
+      bundles:
+        default: false
+        selected:
+          - network
+      languages:
+        default: true
+        selected: {  }
+tracker_settings:
+  default:
+    plugin_id: default
+    settings: {  }
+server: database

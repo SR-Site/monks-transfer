@@ -3,6 +3,8 @@
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\Node;
 
 use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
+use Drupal\node\Entity\Node;
+use Drupal\spectrum_shows\GenreInterface;
 
 /**
  * Returns the structured data of an entity.
@@ -22,24 +24,87 @@ class NodeShowV1 extends RestEntityProcessorBase {
    * {@inheritdoc}
    */
   protected function getItemData($entity) {
+    $blocks = [];
+    // Get show detail.
+    $showDetail = $this->entityProcessor->getEntityData($entity, 'v1', ['view_mode' => 'detail']);
+    $showDetailBlock = [
+      'id' => 'ShowDetail',
+      'data' => $showDetail,
+    ];
 
-    $show_metric = $this->fieldProcessor->getFieldData($entity->field_show_metric);
+    if ($this->fieldProcessor->getFieldData($entity->get('field_hero_quaternary'))) {
+      $blocks[] = $this->fieldProcessor->getFieldData($entity->get('field_hero_quaternary'));
+    }
+    $blocks[] = $showDetailBlock;
 
-    // show_metric needs to be always an array.
-    if (count($entity->field_show_metric) == 1) {
-      $show_metric = [$show_metric];
+    if ($this->fieldProcessor->getFieldData($entity->get('field_audience_statistics'))) {
+      $blocks[] = $this->fieldProcessor->getFieldData($entity->get('field_audience_statistics'));
+    }
+
+    if ($this->fieldProcessor->getFieldData($entity->get('field_success_stories_a'))) {
+      $blocks[] = $this->fieldProcessor->getFieldData($entity->get('field_success_stories_a'));
+    }
+
+    // Create Program module, similar shows by genres.
+    $genresValues = $entity->get('field_show_genres');
+    $genres = [];
+    foreach ($genresValues as $genresValue) {
+      $genres[] = $genresValue->entity->id();
+    }
+    if (!empty($genres)) {
+      $similarShows = $this->getShowsByGenres($genres, 8, $entity->id());
+      $blocks[] = [
+        'id' => 'ProgramModule',
+        'data' => [
+          "overlap" => FALSE,
+          "windowed" => FALSE,
+          "marginTop" => 2,
+          'heading' => t('Find shows similar to :title', [':title' => $entity->label()]),
+          'items' => $similarShows,
+        ],
+      ];
     }
 
     $data = [
-      "title" => $entity->label(),
-      "image" => $this->fieldProcessor->getFieldData($entity->field_image),
-      "video" => $this->fieldProcessor->getFieldData($entity->field_video_external),
-      "broadcast_schedule" => $this->fieldProcessor->getFieldData($entity->field_broadcast_schedule),
-      "show_metric" => $show_metric,
-      "tags" => $this->fieldProcessor->getFieldData($entity->field_tags),
+      'title' => $entity->label(),
+      'blocks' => $blocks,
     ];
 
     return $data;
+  }
+
+  /**
+   * Get shows by genre.
+   *
+   * @param array $genres
+   *   Genre IDs array.
+   * @param int $sid
+   *   Show ID.
+   * @param int $range
+   *   Range.
+   *
+   * @return array|mixed
+   *   Array of shows.
+   *
+   * @throws \Exception
+   */
+  protected function getShowsByGenres(array $genres, $sid, $range = 8) {
+    $shows = [];
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'show')
+      ->condition('status', 1)
+      ->condition('nid', $sid, '!=')
+      ->condition('field_show_genres.entity.id', $genres, 'IN')
+      ->range(0, $range);
+    $results = $query->execute();
+    if (!empty($results)) {
+      $showEntities = Node::loadMultiple($results);
+      foreach ($showEntities as $showEntity) {
+        $shows[] = $this->entityProcessor->getEntityData($showEntity, 'v1', ['view_mode' => 'program_module']);
+      }
+    }
+
+    return $shows;
   }
 
 }

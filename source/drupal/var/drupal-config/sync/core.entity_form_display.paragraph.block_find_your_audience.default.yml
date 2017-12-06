@@ -3,8 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.block_find_your_audience.field_genres
+    - field.field.paragraph.block_find_your_audience.field_networks
     - field.field.paragraph.block_find_your_audience.field_scroll_id
     - field.field.paragraph.block_find_your_audience.field_styles
+    - field.field.paragraph.block_find_your_audience.field_top_picks
     - paragraphs.paragraphs_type.block_find_your_audience
   module:
     - paragraphs
@@ -13,6 +16,24 @@ targetEntityType: paragraph
 bundle: block_find_your_audience
 mode: default
 content:
+  field_genres:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_networks:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_scroll_id:
     type: string_textfield
     weight: 1
@@ -24,6 +45,18 @@ content:
   field_styles:
     type: entity_reference_paragraphs
     weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_top_picks:
+    type: entity_reference_paragraphs
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs

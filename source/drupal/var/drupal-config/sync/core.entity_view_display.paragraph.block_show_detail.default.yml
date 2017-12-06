@@ -1,0 +1,25 @@
+uuid: da5835cc-8391-4fc4-8218-f63d570808b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_show_detail.field_scroll_id
+    - field.field.paragraph.block_show_detail.field_show
+    - field.field.paragraph.block_show_detail.field_styles
+    - paragraphs.paragraphs_type.block_show_detail
+id: paragraph.block_show_detail.default
+targetEntityType: paragraph
+bundle: block_show_detail
+mode: default
+content:
+  field_show:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_scroll_id: true
+  field_styles: true

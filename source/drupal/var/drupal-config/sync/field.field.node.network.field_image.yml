@@ -13,7 +13,7 @@ entity_type: node
 bundle: network
 label: 'Logo Mono color'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

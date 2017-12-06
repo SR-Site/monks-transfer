@@ -1,0 +1,20 @@
+uuid: c7a6a9a8-03d1-4496-bf2c-0133f7fbb3e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - spectrum_shows
+id: paragraph.field_genres
+field_name: field_genres
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: genre
+module: core
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

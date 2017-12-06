@@ -1,0 +1,23 @@
+uuid: 4649d44d-0037-464a-b8e2-45b3c99b389e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: show
+label: Show
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  992c04ec-3125-4e90-a60b-562a0383061c:
+    id: node_type
+    bundles:
+      network: network
+      show: show
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 992c04ec-3125-4e90-a60b-562a0383061c
+selection_logic: and
+weight: -5
+relationships: {  }

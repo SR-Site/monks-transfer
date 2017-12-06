@@ -1,0 +1,14 @@
+uuid: 178e16b7-ef95-4df6-946b-ba1ea86e32c2
+langcode: en
+status: true
+dependencies: {  }
+name: image_750x1240
+label: 'Image 750x1240'
+effects:
+  1ce4b13e-73d1-4484-a7d9-d66ec774d80e:
+    uuid: 1ce4b13e-73d1-4484-a7d9-d66ec774d80e
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 750
+      height: 1240

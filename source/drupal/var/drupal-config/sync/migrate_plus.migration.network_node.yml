@@ -1,0 +1,67 @@
+uuid: c8e76e28-dd79-49c9-81a8-d3dd5f4d1e42
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: EzdAOXyaL1_15SXz1BULZKV-kUIAw9XUra0ZYNRXdsY
+id: network_node
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: migrate_shows_json
+label: 'JSON feed of network'
+source:
+  plugin: spectrum_url
+  data_fetcher_plugin: http
+  data_parser_plugin: json_nested
+  item_selector: /Result/
+  sub_selector: Network
+  fields:
+    -
+      name: Callsign
+      label: Callsign
+      selector: Callsign
+    -
+      name: Stationname
+      label: Stationname
+      selector: Stationname
+    -
+      name: Stationnum
+      label: Stationnum
+      selector: Stationnum
+    -
+      name: Image
+      label: Image
+      selector: Image
+    -
+      name: Description
+      label: Description
+      selector: Description
+  ids:
+    Stationnum:
+      type: integer
+process:
+  type:
+    plugin: default_value
+    default_value: network
+  title: Stationname
+  field_network/target_id:
+    plugin: migration_lookup
+    no_stub: true
+    migration: network
+    source: Stationnum
+  sticky:
+    plugin: default_value
+    default_value: 0
+  status:
+    plugin: default_value
+    default_value: 1
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  optional:
+    - network

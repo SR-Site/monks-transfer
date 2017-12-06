@@ -8,6 +8,7 @@
 use Drupal\paragraphs\Entity\ParagraphsType;
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\field\Entity\FieldConfig;
+use Drupal\image\Entity\ImageStyle;
 
 /**
  * Drush commands.
@@ -20,6 +21,11 @@ function spectrum_shows_drush_command() {
     'description' => dt('Create custom paragraph types.'),
     'drush dependencies' => [],
     'aliases' => ['ptc'],
+  ];
+  $items['image-styles-create'] = [
+    'description' => dt('Create image styles.'),
+    'drush dependencies' => [],
+    'aliases' => ['imsc'],
   ];
   return $items;
 }
@@ -111,4 +117,56 @@ function drush_spectrum_shows_paragraph_types_create() {
         ->save();
     }
   }
+}
+
+/**
+ * Create image styles.
+ */
+function drush_spectrum_shows_image_styles_create() {
+  $image_styles = [
+    '1920x1080',
+    '1920x960',
+    '1920x900',
+    '1440x720',
+    '1280x720',
+    '1280x560',
+    '1200x440',
+    '1040x580',
+    '750x1240',
+    '750x750',
+    '750x580',
+    '960x1424',
+    '640x1040',
+    '520x520',
+    '500x500',
+    '480x480',
+    '240x240',
+  ];
+
+  foreach ($image_styles as $image_style) {
+    // Create image style.
+    $style = ImageStyle::create([
+      'name' => 'image_' . $image_style,
+      'label' => 'Image ' . $image_style,
+    ]);
+    list($width, $height) = explode('x', $image_style);
+
+    // Create effect.
+    $configuration = [
+      'uuid' => NULL,
+      'id' => 'image_scale_and_crop',
+      'weight' => 0,
+      'data' => [
+        'width' => $width,
+        'height' => $height,
+      ],
+    ];
+    $effect = \Drupal::service('plugin.manager.image.effect')
+      ->createInstance($configuration['id'], $configuration);
+
+    // Add it to the image style and save.
+    $style->addImageEffect($effect->getConfiguration());
+    $style->save();
+  }
+
 }

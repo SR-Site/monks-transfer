@@ -1,0 +1,28 @@
+uuid: e0cb11e8-ff6f-40c8-be4d-16a152afa4cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_top_picks_shows
+    - node.type.show
+    - paragraphs.paragraphs_type.top_picks
+id: paragraph.top_picks.field_top_picks_shows
+field_name: field_top_picks_shows
+entity_type: paragraph
+bundle: top_picks
+label: 'Top picks shows'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      show: show
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
