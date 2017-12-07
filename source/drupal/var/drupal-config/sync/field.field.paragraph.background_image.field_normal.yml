@@ -11,8 +11,8 @@ id: paragraph.background_image.field_normal
 field_name: field_normal
 entity_type: paragraph
 bundle: background_image
-label: Normal
-description: ''
+label: Desktop
+description: 'This image will be display on desktop/big screens.'
 required: true
 translatable: true
 default_value: {  }

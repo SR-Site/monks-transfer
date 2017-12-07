@@ -10,7 +10,7 @@ field_name: field_heading_text
 entity_type: paragraph
 bundle: heading
 label: Text
-description: ''
+description: 'For bold text, you should put in this way "<strong>text</strong>"'
 required: true
 translatable: false
 default_value: {  }
