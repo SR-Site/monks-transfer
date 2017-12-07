@@ -2,6 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Datetime\DateFormatter;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityRepositoryInterface;
@@ -53,6 +54,13 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
   protected $menuLinkManager;
 
   /**
+   * Config Factory.
+   *
+   * @var \Drupal\Core\Config\ConfigFactory
+   */
+  protected $config;
+
+  /**
    * Constructs a Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase object.
    *
    * @param array $configuration
@@ -77,13 +85,16 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
    *   The active menu trail service.
    * @param \Drupal\Core\Menu\MenuLinkManagerInterface $menu_link_manager
    *   The menu link manager.
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
+   *   Config factory.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, RestEntityProcessorManager $entity_processor, RestFieldProcessorManager $field_processor, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, EntityRepositoryInterface $entity_repository, AliasManagerInterface $alias_manager, DateFormatter $date_formatter, MenuActiveTrailInterface $menu_active_trail, MenuLinkManagerInterface $menu_link_manager) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, RestEntityProcessorManager $entity_processor, RestFieldProcessorManager $field_processor, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, EntityRepositoryInterface $entity_repository, AliasManagerInterface $alias_manager, DateFormatter $date_formatter, MenuActiveTrailInterface $menu_active_trail, MenuLinkManagerInterface $menu_link_manager, ConfigFactoryInterface $configFactory) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $entity_processor, $field_processor, $cacheable_metadata_collector, $entity_repository);
     $this->aliasManager = $alias_manager;
     $this->dateFormatter = $date_formatter;
     $this->menuActiveTrail = $menu_active_trail;
     $this->menuLinkManager = $menu_link_manager;
+    $this->config = $configFactory;
   }
 
   /**
@@ -101,7 +112,8 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
       $container->get('path.alias_manager'),
       $container->get('date.formatter'),
       $container->get('menu.active_trail'),
-      $container->get('plugin.manager.menu.link')
+      $container->get('plugin.manager.menu.link'),
+      $container->get('config.factory')
     );
   }
 
@@ -266,8 +278,14 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
    */
   protected function displayBreadcrumbs(ContentEntityInterface $entity) {
     $breadcrumbs = [];
+
+    // Get front page.
+    $configPage = $this->config->get('system.site')->get('page');
+    $frontPage = $configPage['front'];
+    $currentUri = $entity->toUrl()->getInternalPath();
+
     // Create breadcrumbs.
-    if ($entity->toUrl()->toString() != '/home') {
+    if (ltrim($frontPage, '/') != $currentUri) {
       $breadcrumbs = [
         [
           "label" => "Home",
