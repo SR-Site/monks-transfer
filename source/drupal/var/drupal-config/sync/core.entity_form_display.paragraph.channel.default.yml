@@ -8,14 +8,29 @@ dependencies:
     - field.field.paragraph.channel.field_paragraph_image
     - paragraphs.paragraphs_type.channel
   module:
+    - field_group
     - paragraphs
+third_party_settings:
+  field_group:
+    group_image:
+      children:
+        - field_paragraph_image
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Image
 id: paragraph.channel.default
 targetEntityType: paragraph
 bundle: channel
 mode: default
 content:
   field_channel_statistics:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -31,7 +46,7 @@ content:
     type: string_textfield
     region: content
   field_paragraph_image:
-    weight: 1
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs

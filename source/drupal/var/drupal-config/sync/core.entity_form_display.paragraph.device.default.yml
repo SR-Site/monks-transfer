@@ -8,8 +8,23 @@ dependencies:
     - field.field.paragraph.device.field_paragraph_image
     - paragraphs.paragraphs_type.device
   module:
+    - field_group
     - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_image:
+      children:
+        - field_paragraph_image
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Image
 id: paragraph.device.default
 targetEntityType: paragraph
 bundle: device

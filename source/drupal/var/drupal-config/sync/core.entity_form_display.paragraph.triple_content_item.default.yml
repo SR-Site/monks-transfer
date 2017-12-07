@@ -8,15 +8,30 @@ dependencies:
     - field.field.paragraph.triple_content_item.field_paragraph_image
     - paragraphs.paragraphs_type.triple_content_item
   module:
+    - field_group
     - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_image:
+      children:
+        - field_paragraph_image
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Image
 id: paragraph.triple_content_item.default
 targetEntityType: paragraph
 bundle: triple_content_item
 mode: default
 content:
   field_main_heading:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -24,7 +39,7 @@ content:
     type: string_textfield
     region: content
   field_paragraph:
-    weight: 2
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
@@ -32,7 +47,7 @@ content:
     type: text_textarea
     region: content
   field_paragraph_image:
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs

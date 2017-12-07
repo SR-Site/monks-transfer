@@ -11,8 +11,24 @@ dependencies:
     - paragraphs.paragraphs_type.image_with_video_and_text
   module:
     - entity_browser
+    - field_group
     - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_image_and_video:
+      children:
+        - field_paragraph_image
+        - field_video
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Image and Video'
 id: paragraph.image_with_video_and_text.default
 targetEntityType: paragraph
 bundle: image_with_video_and_text

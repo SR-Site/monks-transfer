@@ -10,21 +10,72 @@ dependencies:
     - field.field.paragraph.block_find_your_audience.field_top_picks
     - paragraphs.paragraphs_type.block_find_your_audience
   module:
+    - field_group
     - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+    group_top_picks:
+      children:
+        - field_top_picks
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Top picks'
+    group_genres:
+      children:
+        - field_genres
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Genres
+    group_networks:
+      children:
+        - field_networks
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Networks
 id: paragraph.block_find_your_audience.default
 targetEntityType: paragraph
 bundle: block_find_your_audience
 mode: default
 content:
   field_genres:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_networks:
     type: entity_reference_paragraphs
-    weight: 4
+    weight: 5
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -44,7 +95,7 @@ content:
     region: content
   field_styles:
     type: entity_reference_paragraphs
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -56,7 +107,7 @@ content:
     region: content
   field_top_picks:
     type: entity_reference_paragraphs
-    weight: 2
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs

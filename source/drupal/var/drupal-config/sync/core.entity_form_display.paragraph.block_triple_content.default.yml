@@ -9,14 +9,53 @@ dependencies:
     - field.field.paragraph.block_triple_content.field_triple_content_items
     - paragraphs.paragraphs_type.block_triple_content
   module:
+    - field_group
     - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+    group_heading:
+      children:
+        - field_new_heading
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Heading
+    group_items:
+      children:
+        - field_triple_content_items
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Items
 id: paragraph.block_triple_content.default
 targetEntityType: paragraph
 bundle: block_triple_content
 mode: default
 content:
   field_new_heading:
-    weight: 2
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -36,7 +75,7 @@ content:
     type: string_textfield
     region: content
   field_styles:
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -49,7 +88,7 @@ content:
     region: content
   field_triple_content_items:
     type: entity_reference_paragraphs
-    weight: 3
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
