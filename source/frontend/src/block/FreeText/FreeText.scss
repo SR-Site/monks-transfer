@@ -21,6 +21,10 @@
 			@extend %heading-06;
 		}
 
+		h4 {
+			@extend %heading-06;
+		}
+
 		p {
 			display: block;
 			font: 400 1.6rem / 1.625 $fontOpenSans;

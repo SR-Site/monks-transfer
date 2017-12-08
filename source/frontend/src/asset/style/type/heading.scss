@@ -47,11 +47,7 @@ h5 {
 
 // Open sans semi-bold
 .heading-07 {
-	font: 600 1.8rem / 1.16 $fontOpenSans;
-
-	strong {
-		font-weight: 600;
-	}
+	@extend %heading-07;
 }
 
 // Open sans extra-bold
