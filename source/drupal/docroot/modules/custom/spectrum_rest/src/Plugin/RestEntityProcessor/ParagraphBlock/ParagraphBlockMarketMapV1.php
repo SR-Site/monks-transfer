@@ -30,7 +30,7 @@ class ParagraphBlockMarketMapV1 extends SpectrumRestEntityProcessorBase {
       "data" => $data + [
         "notFoundMessage" => $this->fieldProcessor->getFieldData($entity->get('field_description')),
         "searchPlaceholder" => $this->fieldProcessor->getFieldData($entity->get('field_filter_label')),
-        "searchLabel" => $this->fieldProcessor->getFieldData($entity->get('field_heading')),
+        "searchLabel" => strip_tags($this->fieldProcessor->getFieldData($entity->get('field_heading'))),
         "service" => [
           "name" => $this->fieldProcessor->getFieldData($entity->get('field_title')),
           "role" => $this->fieldProcessor->getFieldData($entity->get('field_label')),
