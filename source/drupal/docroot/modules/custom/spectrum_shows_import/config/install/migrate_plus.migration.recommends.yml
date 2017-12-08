@@ -33,7 +33,7 @@ process:
       source: Images
       default: ''
       index:
-        - 2
+        - 3
         - Url
     -
       plugin: file_json
