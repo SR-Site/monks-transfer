@@ -1,0 +1,23 @@
+uuid: 0de6fa8c-6413-47ed-81b3-4210a53a3776
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_theme
+    - node.type.product_page
+  module:
+    - options
+id: node.product_page.field_header_theme
+field_name: field_header_theme
+entity_type: node
+bundle: product_page
+label: 'Header theme'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

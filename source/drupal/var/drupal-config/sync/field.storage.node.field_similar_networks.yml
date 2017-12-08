@@ -1,0 +1,20 @@
+uuid: 3da8eb10-c65a-4bb2-9c26-cadaf685a1ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - spectrum_shows
+id: node.field_similar_networks
+field_name: field_similar_networks
+entity_type: node
+type: entity_reference
+settings:
+  target_type: network
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

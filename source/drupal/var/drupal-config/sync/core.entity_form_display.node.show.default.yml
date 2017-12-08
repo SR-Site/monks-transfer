@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.show.field_show_recommend
     - field.field.node.show.field_show_schedules
     - field.field.node.show.field_show_videos
+    - field.field.node.show.field_similar_networks
     - field.field.node.show.field_success_stories_a
     - image.style.thumbnail
     - node.type.show
@@ -203,6 +204,15 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_similar_networks:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_success_stories_a:
     type: entity_reference_paragraphs
     weight: 10

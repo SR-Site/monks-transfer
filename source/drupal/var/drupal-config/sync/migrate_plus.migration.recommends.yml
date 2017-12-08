@@ -1,9 +1,9 @@
-uuid: ad5442c4-36b9-41f4-abbc-c4fad5eb4eab
+uuid: 1650a4a0-d0cf-461b-8a28-1423167042b1
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: dxcaKIVYJQCRbCq-EtNReQvwVp3hijBeGV1FCTVt0YM
+  default_config_hash: FinTbW7ExCm9qEIQkPd7m3B-8Cw3vbgT1-h3vjwMqDM
 id: recommends
 class: null
 field_plugin_method: null
@@ -40,7 +40,7 @@ process:
       source: Images
       default: ''
       index:
-        - 2
+        - 3
         - Url
     -
       plugin: file_json
