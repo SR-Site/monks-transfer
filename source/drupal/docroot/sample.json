@@ -1,239 +1,100 @@
 {
 	"Header": {
-		"Requested": 8,
-		"Returned": 8,
-		"Rejected": []
+		"Requested": 16,
+		"Returned": 15,
+		"Rejected": [
+			{
+				"ShowId": "SH005544720000",
+				"Reason": "No Image Found"
+			}
+		]
 	},
 	"Result": [
 		{
-			"Title": "30 for 30",
-			"ShowId": "SH011809450000",
+			"Title": "CNN Heroes: An All-Star Tribute",
+			"ShowId": "SH028359140000",
 			"MediaType": "SHOW",
 			"Network": {
-				"Callsign": "ESPNCL",
-				"Stationname": "ESPN Classic",
-				"Stationnum": "15451",
-				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/15451.png",
+				"Callsign": "CNN",
+				"Stationname": "Cable News Network",
+				"Stationnum": "10142",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/10142.png",
 				"Description": ""
 			},
-			"Descriptions": [
-				{
-					"Lang": "en",
-					"Description": "As part of its 30th anniversary celebration, ESPN looks back at notable sports happenings that occurred from 1979 to 2009 with this documentary series featuring 30 films from some of Hollywood's finest directors and producers. Peter Berg, Barry Levinson, John Singleton, Spike Jonze, Dan Klores, Barbara Kopple, Ron Shelton and Albert Maysles are among the filmmakers involved, and the stories told include the shocking trade of Wayne Gretzky in 1988, the Baltimore Colts' nighttime move in 1984, Reggie Miller's rivalry with the New York Knicks, the death of Len Bias in 1986, a profile of George Steinbrenner and his family business, and a look at Michael Jordan's attempt at a baseball career. A new series of 30 films premiered in October 2012 with \"Broke,\" about the challenges athletes face in managing their money.",
-					"Size": "1000"
-				}
-			],
+			"Similar": [],
+			"Descriptions": [],
 			"Genres": [
 				{
 					"Lang": "en",
-					"Genre": "Documentary"
-				},
-				{
-					"Lang": "en",
-					"Genre": "Anthology"
-				},
-				{
-					"Lang": "en",
-					"Genre": "Basketball"
-				},
-				{
-					"Lang": "en",
-					"Genre": "Boxing"
-				},
-				{
-					"Lang": "en",
-					"Genre": "Football"
-				},
-				{
-					"Lang": "en",
-					"Genre": "Hockey"
-				},
-				{
-					"Lang": "en",
-					"Genre": "Soccer"
+					"Genre": "Special"
 				}
 			],
 			"Images": [
 				{
-					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/7817579/p7817579_b_h10_ad.jpg",
+					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14894072/p14894072_b_h10_aa.jpg",
 					"Width": 100,
 					"Orientation": "Landscape"
 				},
 				{
-					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/7817579/p7817579_b_h10_ad.jpg",
+					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14894072/p14894072_b_h10_aa.jpg",
 					"Width": 300,
 					"Orientation": "Landscape"
 				},
 				{
-					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/7817579/p7817579_b_h10_ad.jpg",
+					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14894072/p14894072_b_h10_aa.jpg",
 					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14894072/p14894072_b_h10_aa.jpg",
+					"Width": 1920,
 					"Orientation": "Landscape"
 				}
 			],
 			"Videos": [],
 			"Schedule": [
 				{
-					"Title": "30 for 30",
-					"Epititle": "Celtics/Lakers: Part 1",
-					"Stationnum": "15451",
+					"Title": "CNN Heroes: An All-Star Tribute",
+					"Epititle": "",
+					"Stationnum": "10142",
 					"Duration": "120.0",
-					"Descembed": "The Celtics and Lakers played three riveting NBA Finals in a four-year span during the mid-1980s that fueled the popularity of the league and set the stage for the tremendous growth and heightened profile the NBA has enjoyed since.",
-					"Starttime": "2017-11-08T15:00:00Z",
-					"Genre1": "sports non-event",
-					"Genre2": "documentary",
-					"Live": ""
-				},
-				{
-					"Title": "30 for 30",
-					"Epititle": "Celtics/Lakers: Part 2",
-					"Stationnum": "15451",
-					"Duration": "60.0",
-					"Descembed": "Boston's Larry Bird and LA's Magic Johnson headline rosters full of charisma and talent as their teams collide in the epic 1984 NBA Finals. The two had previously met in the 1979 NCAA Championship Game, and now welcomed a second title clash.",
-					"Starttime": "2017-11-08T17:00:00Z",
-					"Genre1": "sports non-event",
-					"Genre2": "documentary",
-					"Live": ""
-				},
-				{
-					"Title": "30 for 30",
-					"Epititle": "Celtics/Lakers: Part 3",
-					"Stationnum": "15451",
-					"Duration": "120.0",
-					"Descembed": "When the Celtics and Lakers meet again in the 1985 and 1987 NBA Finals, the teams' disdain and animosity for each other gradually turns to mutual respect -- led by superstars Magic Johnson and Larry Bird.",
-					"Starttime": "2017-11-08T18:00:00Z",
-					"Genre1": "sports non-event",
-					"Genre2": "documentary",
+					"Descembed": "Anderson Cooper and Kelly Ripa co-host the 11th annual celebration; honoring this year's top 10 CNN Heroes and the 2017 CNN Hero of the Year.",
+					"Starttime": "2017-12-17T20:00:00Z",
+					"Genre1": "special",
+					"Genre2": "",
 					"Live": ""
 				}
 			],
-			"Links": [
-				{
-					"Name": "TV.com",
-					"Value": "http://www.tv.com/shows/30-for-30/"
-				},
-				{
-					"Name": "Imdb",
-					"Value": "http://www.imdb.com/title/tt1408430/?ref_=fn_al_tt_1"
-				},
-				{
-					"Name": "Futon Critic",
-					"Value": "http://www.thefutoncritic.com/showatch/30-for-30/"
-				},
-				{
-					"Name": "The TV Database",
-					"Value": "http://thetvdb.com/?tab=series\u0026id=128051"
-				},
-				{
-					"Name": "Facebook",
-					"Value": "https://www.facebook.com/espn30for30"
-				},
-				{
-					"Name": "Wiki",
-					"Value": "https://en.wikipedia.org/wiki/30_for_30"
-				},
-				{
-					"Name": "Twitter",
-					"Value": "https://twitter.com/30for30?lang=en"
-				}
-			],
-			"Recommend": [
-				{
-					"Title": "Curiosity",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8733724/p8733724_b_h10_aa.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8733724/p8733724_b_h10_aa.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8733724/p8733724_b_h10_aa.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Years of Living Dangerously",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10327149/p10327149_b_h10_aj.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10327149/p10327149_b_h10_aj.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10327149/p10327149_b_h10_aj.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "The Vanilla Ice Project",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8284272/p8284272_b_h10_ag.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8284272/p8284272_b_h10_ag.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8284272/p8284272_b_h10_ag.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "The Real Housewives of Beverly Hills",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8295433/p8295433_b_h10_at.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8295433/p8295433_b_h10_at.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8295433/p8295433_b_h10_at.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				}
-			]
+			"Links": [],
+			"Recommend": []
 		},
 		{
-			"Title": "Alaska: The Last Frontier",
-			"ShowId": "SH015103710000",
+			"Title": "Expedition Unknown",
+			"ShowId": "SH020696210000",
 			"MediaType": "SHOW",
 			"Network": {
-				"Callsign": "DSCP",
-				"Stationname": "The Discovery Channel (Pacific)",
-				"Stationnum": "12500",
-				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/12500.png",
-				"Description": ""
+				"Callsign": "TRAV",
+				"Stationname": "The Travel Channel",
+				"Stationnum": "11180",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11180.png",
+				"Description": "​​Travel Channel is the only television network devoted exclusively to travel entertainment. The network offers a vast array of consumer touch points that directly engage veteran travelers ready to plot their next trip, novice travelers not quite sure where to go and armchair travelers who are just along for the ride.​​​​"
 			},
+			"Similar": [
+				{
+					"Network": "DSC",
+					"Id": "11150",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11150.png"
+				},
+				{
+					"Network": "NGC",
+					"Id": "24959",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/24959.png"
+				}
+			],
 			"Descriptions": [
 				{
 					"Lang": "en",
-					"Description": "The breathtaking beauty of Alaska sometimes hides the fact its winters can be incredibly harsh, especially for those who live in the state's outlying areas. \"Alaska: The Last Frontier\" perfectly illustrates this reality, as the series profiles life for the Kilcher family in the isolated community of Homer. For four generations the Kilchers have lived off what their 600-acre homestead has provided, but cultivating that living is never easy. Led by patriarch Atz Kilcher and his brother Otto, the family spends the short summer and fall gardening, hunting and fishing for food, gathering supplies from the land and preparing their animals for the winter. Viewers, who may or may not have a fancy phone by their side while watching on their big-screen high-def TV, also see the Kilchers living off the grid, where running water and electricity aren't daily staples, nor is contact with the outside world. Atz, by the way, is the father of music superstar Jewel.",
+					"Description": "Intrigued by legendary mysteries and driven by curiosity, Josh Gates is on a mission for answers. \"Exhibition Unknown\" chronicles his global adventures as he investigates iconic unsolved events, lost cities, buried treasures and other puzzling stories. Armed with a degree in archaeology, a quick wit and a thirst for action, Gates investigates recent developments before embarking on a detailed exploration. Whether he's trekking through Fiji in search of Amelia Earhart's remains or diving the deep seas of Panama to locate Captain Morgan's pirate ship, Gates' roughshod expeditions lead him one step closer to the truth.",
 					"Size": "1000"
 				}
 			],
@@ -244,11 +105,408 @@
 				},
 				{
 					"Lang": "en",
-					"Genre": "Documentary"
+					"Genre": "Travel"
+				}
+			],
+			"Images": [
+				{
+					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13289640/p13289640_b_h10_aa.jpg",
+					"Width": 100,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13289640/p13289640_b_h10_aa.jpg",
+					"Width": 300,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13289640/p13289640_b_h10_aa.jpg",
+					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13289640/p13289640_b_h10_aa.jpg",
+					"Width": 1920,
+					"Orientation": "Landscape"
+				}
+			],
+			"Videos": [
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/11308404/ExpeditionUnknownJoshGatesInvestigatesChristopherColumbus.mp4",
+					"Posted": "05/15/2016"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/94990d3f3bb62c236865ce89481bcb71/EXPEDITIONUNKNOWNSNEAKPEEKJoshGatesExplores100-year-oldGoldMine_04182017.mp4",
+					"Posted": "04/12/2017"
+				}
+			],
+			"Schedule": [
+				{
+					"Title": "Expedition Unknown",
+					"Epititle": "Josh's Favorite Things",
+					"Stationnum": "11180",
+					"Duration": "60.0",
+					"Descembed": "Josh shares a few of his favorite people, places, experiences, and eats from his many expeditions; he also shares never-before-aired footage and the most meaningful moments between him and his crew.",
+					"Starttime": "2017-12-06T21:00:00Z",
+					"Genre1": "travel",
+					"Genre2": "adventure",
+					"Live": ""
+				},
+				{
+					"Title": "Expedition Unknown",
+					"Epititle": "Fact or Fiction",
+					"Stationnum": "11180",
+					"Duration": "60.0",
+					"Descembed": "Josh Gates reveals new footage from his investigations into the world's most intriguing legends and re-examines the evidence behind their authenticity.",
+					"Starttime": "2017-12-13T21:00:00Z",
+					"Genre1": "travel",
+					"Genre2": "adventure",
+					"Live": ""
+				},
+				{
+					"Title": "Expedition Unknown",
+					"Epititle": "Win, Lose Or Wipeout!",
+					"Stationnum": "11180",
+					"Duration": "60.0",
+					"Descembed": "Josh Gates tries out a lot of new things while filming, including new techniques, skills and even foods; he shares his triumphs and biggest blunders, along with never-before-seen footage.",
+					"Starttime": "2017-12-20T21:00:00Z",
+					"Genre1": "travel",
+					"Genre2": "adventure",
+					"Live": ""
+				},
+				{
+					"Title": "Expedition Unknown",
+					"Epititle": "",
+					"Stationnum": "11180",
+					"Duration": "60.0",
+					"Descembed": "From Denmark and Iceland to the United States and Canada, Josh Gates treads into Viking territory in an effort to unlock answers to their most enduring secrets, including how they attained and sustained their power and how far they really traveled.",
+					"Starttime": "2017-12-27T21:00:00Z",
+					"Genre1": "travel",
+					"Genre2": "adventure",
+					"Live": ""
+				},
+				{
+					"Title": "Expedition Unknown",
+					"Epititle": "",
+					"Stationnum": "11180",
+					"Duration": "60.0",
+					"Descembed": "",
+					"Starttime": "2018-01-03T21:00:00Z",
+					"Genre1": "travel",
+					"Genre2": "adventure",
+					"Live": ""
+				},
+				{
+					"Title": "Expedition Unknown",
+					"Epititle": "",
+					"Stationnum": "11180",
+					"Duration": "60.0",
+					"Descembed": "",
+					"Starttime": "2018-01-10T21:00:00Z",
+					"Genre1": "travel",
+					"Genre2": "adventure",
+					"Live": ""
+				},
+				{
+					"Title": "Expedition Unknown",
+					"Epititle": "",
+					"Stationnum": "11180",
+					"Duration": "60.0",
+					"Descembed": "",
+					"Starttime": "2018-01-17T21:00:00Z",
+					"Genre1": "travel",
+					"Genre2": "adventure",
+					"Live": ""
+				},
+				{
+					"Title": "Expedition Unknown",
+					"Epititle": "Butch Cassidy",
+					"Stationnum": "11180",
+					"Duration": "60.0",
+					"Descembed": "",
+					"Starttime": "2018-01-24T21:00:00Z",
+					"Genre1": "travel",
+					"Genre2": "adventure",
+					"Live": ""
+				}
+			],
+			"Links": [
+				{
+					"Name": "Network Website",
+					"Value": "http://www.travelchannel.com/shows/expedition-unknown"
+				},
+				{
+					"Name": "TV.com",
+					"Value": "http://www.tv.com/shows/expedition-unknown/"
+				},
+				{
+					"Name": "Imdb",
+					"Value": "http://www.imdb.com/title/tt4305162/?ref_=fn_al_tt_1"
+				},
+				{
+					"Name": "Futon Critic",
+					"Value": "http://www.thefutoncritic.com/showatch/expedition-unknown/"
+				},
+				{
+					"Name": "The TV Database",
+					"Value": "http://thetvdb.com/?tab=series&id=280316"
+				},
+				{
+					"Name": "Wiki",
+					"Value": "http://en.wikipedia.org/wiki/Expedition_Unknown"
+				}
+			],
+			"Recommend": [
+				{
+					"Title": "Destination Truth",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185598/p185598_b_h10_ab.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185598/p185598_b_h10_ab.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185598/p185598_b_h10_ab.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185598/p185598_b_h10_ab.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Castle Secrets & Legends",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10384410/p10384410_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10384410/p10384410_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10384410/p10384410_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10384410/p10384410_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Mysteries at the Monument",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12185278/p12185278_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12185278/p12185278_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12185278/p12185278_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12185278/p12185278_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Mysteries at the Museum",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8237828/p8237828_b_h10_aj.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8237828/p8237828_b_h10_aj.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8237828/p8237828_b_h10_aj.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8237828/p8237828_b_h10_aj.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Monumental Mysteries",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9888819/p9888819_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9888819/p9888819_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9888819/p9888819_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9888819/p9888819_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Mysteries at the National Parks",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11651594/p11651594_b_h10_ab.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11651594/p11651594_b_h10_ab.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11651594/p11651594_b_h10_ab.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11651594/p11651594_b_h10_ab.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Grannies on Safari",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/395917/p395917_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/395917/p395917_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/395917/p395917_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/395917/p395917_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Bert the Conqueror",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12858622/p12858622_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12858622/p12858622_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12858622/p12858622_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12858622/p12858622_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Title": "Hollywood Medium With Tyler Henry",
+			"ShowId": "SH023056690000",
+			"MediaType": "SHOW",
+			"Network": {
+				"Callsign": "E",
+				"Stationname": "E! Entertainment Television",
+				"Stationnum": "10989",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/10989.png",
+				"Description": "E! is television's top global destination for all things Pop Culture. E!'s mission is to excite and entertain the Pop Culture fan in all of us. Popular programming includes \"E! News,\" \"Keeping Up with the Kardashians,\" and \"Total Divas.\" Additionally, E!'s \"Live from the Red Carpet\" signature events keep fans connected to their favorite stars on Pop Culture's biggest nights."
+			},
+			"Similar": [
+				{
+					"Network": "BRAVO",
+					"Id": "10057",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/10057.png"
+				},
+				{
+					"Network": "MTV",
+					"Id": "10986",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/10986.png"
+				},
+				{
+					"Network": "OXYGEN",
+					"Id": "21484",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/21484.png"
+				},
+				{
+					"Network": "VH1",
+					"Id": "11218",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11218.png"
+				}
+			],
+			"Descriptions": [
+				{
+					"Lang": "en",
+					"Description": "Dating back to when he was 10 and he received intuitive mental images foretelling his grandmother's death, Tyler Henry has had psychic abilities. Throughout his teenage years, he would \"read\" classmates and continue using his ability in various ways. News of his talent spread and demand for his services increased. He moved to Los Angeles to better serve his new clients, who include many well-known celebrities. This series shows the medium working with notable figures such as Jamie Pressly, Bella Thorne and Nicole \"Snooki\" Polizzi.",
+					"Size": "1000"
+				}
+			],
+			"Genres": [
+				{
+					"Lang": "en",
+					"Genre": "Entertainment"
 				},
 				{
 					"Lang": "en",
-					"Genre": "Outdoors"
+					"Genre": "Paranormal"
 				},
 				{
 					"Lang": "en",
@@ -257,298 +515,353 @@
 			],
 			"Images": [
 				{
-					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8989001/p8989001_b_h10_aq.jpg",
+					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12323226/p12323226_b_h10_ac.jpg",
 					"Width": 100,
 					"Orientation": "Landscape"
 				},
 				{
-					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8989001/p8989001_b_h10_aq.jpg",
+					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12323226/p12323226_b_h10_ac.jpg",
 					"Width": 300,
 					"Orientation": "Landscape"
 				},
 				{
-					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8989001/p8989001_b_h10_aq.jpg",
+					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12323226/p12323226_b_h10_ac.jpg",
 					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12323226/p12323226_b_h10_ac.jpg",
+					"Width": 1920,
 					"Orientation": "Landscape"
 				}
 			],
 			"Videos": [
 				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/1dcf8799b45e46d04b3c9e52f5823ad4/DidOttoPickTheRightMachineForThisSnowPlowingJobAlaskaTheLastFrontier_10092017.mp4",
-					"Posted": "10/08/2017"
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/e24810049412700950ccced49a6ccfb7/TylerHenryPredictsMajorMoveinLilKimsLifeHollywoodMediumwithTylerHenryE_08242017.mp4",
+					"Posted": "08/23/2017"
 				},
 				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/1dcf8799b45e46d04b3c9e52f5823ad4/WhatsTheLatestThingToStandBetweenTheKellysAndTheirGold_10092017.mp4",
-					"Posted": "10/08/2017"
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/e24810049412700950ccced49a6ccfb7/WhatsinLanceBassHusbandsFutureHollywoodMediumwithTylerHenryE_08242017.mp4",
+					"Posted": "08/23/2017"
 				},
 				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/1dcf8799b45e46d04b3c9e52f5823ad4/ThisBronxDetectiveDoesntWantBureaucracyGettingInTheWayOfHisPoliceWork_10092017.mp4",
-					"Posted": "10/07/2017"
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/e24810049412700950ccced49a6ccfb7/HollywoodMediumRecapSeason2Episode21HollywoodMediumwithTylerHenryE_08242017.mp4",
+					"Posted": "08/23/2017"
 				},
 				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/1dcf8799b45e46d04b3c9e52f5823ad4/CouldSingingTheInstructionsHelpWithYourNextMechanicProject_10092017.mp4",
-					"Posted": "10/06/2017"
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/e24810049412700950ccced49a6ccfb7/TylerHenryConnectstoJamie-LynnSiglersLateBrotherHollywoodMediumwithTylerHenryE_08232017.mp4",
+					"Posted": "08/22/2017"
 				},
 				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/1dcf8799b45e46d04b3c9e52f5823ad4/TaketheMattGrahamBushcraftChallengePrimitiveAtlatlBuild_10092017.mp4",
-					"Posted": "10/05/2017"
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/e24810049412700950ccced49a6ccfb7/TylerHenryMakesContactWithLilKimsLateSoulmateHollywoodMediumwithTylerHenryE_08222017.mp4",
+					"Posted": "08/21/2017"
 				}
 			],
 			"Schedule": [
 				{
-					"Title": "Alaska: The Last Frontier",
-					"Epititle": "The Day the Homestead Caught Fire",
-					"Stationnum": "12500",
-					"Duration": "61.0",
-					"Descembed": "Otto is forced to the edge after a chimney fire threatens to destroy his cabin; Eivin and Eve burn up dangerous brush piles threatening their family; Atz Lee and Jane embark on a dangerous ice fishing mission and end up on thin ice.",
-					"Starttime": "2017-10-16T00:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "documentary",
-					"Live": ""
-				},
-				{
-					"Title": "Alaska: The Last Frontier",
-					"Epititle": "The Day the Cattle Swam",
-					"Stationnum": "12500",
-					"Duration": "61.0",
-					"Descembed": "Otto and Eivin race to get the barge ready for its most ambitious mission yet- moving wild buffalo; Jane and Charlotte are put to the test as they lead the Kilchers' first ever all female cattle drive; Atz Sr. and Atz Lee protect a homestead relic.",
-					"Starttime": "2017-10-23T00:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "documentary",
-					"Live": ""
-				},
-				{
-					"Title": "Alaska: The Last Frontier",
-					"Epititle": "Episode 5",
-					"Stationnum": "12500",
-					"Duration": "61.0",
-					"Descembed": "",
-					"Starttime": "2017-10-30T00:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "documentary",
-					"Live": ""
-				},
-				{
-					"Title": "Alaska: The Last Frontier",
-					"Epititle": "Episode 6",
-					"Stationnum": "12500",
-					"Duration": "61.0",
-					"Descembed": "",
-					"Starttime": "2017-11-06T00:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "documentary",
-					"Live": ""
-				},
-				{
-					"Title": "Alaska: The Last Frontier",
-					"Epititle": "Episode 7",
-					"Stationnum": "12500",
-					"Duration": "61.0",
-					"Descembed": "",
-					"Starttime": "2017-11-13T00:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "documentary",
-					"Live": ""
-				},
-				{
-					"Title": "Alaska: The Last Frontier",
+					"Title": "Hollywood Medium With Tyler Henry",
 					"Epititle": "",
-					"Stationnum": "12500",
+					"Stationnum": "10989",
 					"Duration": "60.0",
-					"Descembed": "Profiling the life of the Kilcher family in the isolated community of Homer, led by patriarch Atz.",
-					"Starttime": "2017-11-20T00:00:00Z",
+					"Descembed": "A Los Angeles clairvoyant shares messages from beyond with celebrities.",
+					"Starttime": "2017-12-27T20:00:00Z",
 					"Genre1": "reality",
-					"Genre2": "documentary",
+					"Genre2": "paranormal",
+					"Live": ""
+				},
+				{
+					"Title": "Hollywood Medium With Tyler Henry",
+					"Epititle": "",
+					"Stationnum": "10989",
+					"Duration": "60.0",
+					"Descembed": "A Los Angeles clairvoyant shares messages from beyond with celebrities.",
+					"Starttime": "2018-01-03T20:00:00Z",
+					"Genre1": "reality",
+					"Genre2": "paranormal",
+					"Live": ""
+				},
+				{
+					"Title": "Hollywood Medium With Tyler Henry",
+					"Epititle": "",
+					"Stationnum": "10989",
+					"Duration": "60.0",
+					"Descembed": "A Los Angeles clairvoyant shares messages from beyond with celebrities.",
+					"Starttime": "2018-01-17T20:00:00Z",
+					"Genre1": "reality",
+					"Genre2": "paranormal",
+					"Live": ""
+				},
+				{
+					"Title": "Hollywood Medium With Tyler Henry",
+					"Epititle": "",
+					"Stationnum": "10989",
+					"Duration": "60.0",
+					"Descembed": "A Los Angeles clairvoyant shares messages from beyond with celebrities.",
+					"Starttime": "2018-01-24T20:00:00Z",
+					"Genre1": "reality",
+					"Genre2": "paranormal",
+					"Live": ""
+				},
+				{
+					"Title": "Hollywood Medium With Tyler Henry",
+					"Epititle": "",
+					"Stationnum": "10989",
+					"Duration": "60.0",
+					"Descembed": "A Los Angeles clairvoyant shares messages from beyond with celebrities.",
+					"Starttime": "2018-01-31T20:00:00Z",
+					"Genre1": "reality",
+					"Genre2": "paranormal",
 					"Live": ""
 				}
 			],
 			"Links": [
 				{
 					"Name": "Network Website",
-					"Value": "http://www.discovery.com/tv-shows/alaska-the-last-frontier"
-				},
-				{
-					"Name": "TV.com",
-					"Value": "http://www.tv.com/shows/alaska-the-last-frontier/"
+					"Value": "http://www.eonline.com/shows/hollywood_medium"
 				},
 				{
 					"Name": "Imdb",
-					"Value": "http://www.imdb.com/title/tt1877010/?ref_=fn_al_tt_1"
+					"Value": "http://www.imdb.com/title/tt5271054/?ref_=fn_al_tt_1"
 				},
 				{
 					"Name": "Futon Critic",
-					"Value": "http://www.thefutoncritic.com/search.aspx?q=Alaska%3A%20The%20Last%20Frontier\u0026type=titles"
+					"Value": "http://www.thefutoncritic.com/showatch/hollywood-medium/"
 				},
 				{
 					"Name": "The TV Database",
-					"Value": "http://thetvdb.com/?tab=series\u0026id=254738"
+					"Value": "http://thetvdb.com/?tab=series&id=305285"
 				},
 				{
 					"Name": "Facebook",
-					"Value": "https://www.facebook.com/AlaskaTLF"
+					"Value": "https://www.facebook.com/hollywoodmediumwithtylerhenry/"
 				},
 				{
-					"Name": "Wiki",
-					"Value": "http://en.wikipedia.org/wiki/Alaska:_The_Last_Frontier"
+					"Name": "Twitter",
+					"Value": "https://twitter.com/hmtylerhenry"
 				}
 			],
 			"Recommend": [
 				{
-					"Title": "Alaska State Troopers",
+					"Title": "Long Island Medium",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/7828643/p7828643_b_h10_ah.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14632150/p14632150_b_h10_ab.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/7828643/p7828643_b_h10_ah.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14632150/p14632150_b_h10_ab.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/7828643/p7828643_b_h10_ah.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14632150/p14632150_b_h10_ab.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14632150/p14632150_b_h10_ab.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Edge of Alaska",
+					"Title": "Keeping Up With the Kardashians",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14485141/p14485141_b_h10_ab.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14441601/p14441601_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14485141/p14485141_b_h10_ab.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14441601/p14441601_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14485141/p14485141_b_h10_ab.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14441601/p14441601_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14441601/p14441601_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Life Below Zero",
+					"Title": "Ghost Hunters",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9895118/p9895118_b_h10_at.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13024534/p13024534_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9895118/p9895118_b_h10_at.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13024534/p13024534_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9895118/p9895118_b_h10_at.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13024534/p13024534_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13024534/p13024534_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Deadliest Catch",
+					"Title": "WAGS",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13881893/p13881893_b_h10_ac.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11866516/p11866516_b_h10_ad.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13881893/p13881893_b_h10_ac.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11866516/p11866516_b_h10_ad.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13881893/p13881893_b_h10_ac.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11866516/p11866516_b_h10_ad.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11866516/p11866516_b_h10_ad.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Yukon River Run",
+					"Title": "Monica the Medium",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11847016/p11847016_b_h10_ae.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12691056/p12691056_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11847016/p11847016_b_h10_ae.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12691056/p12691056_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11847016/p11847016_b_h10_ae.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12691056/p12691056_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12691056/p12691056_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Bering Sea Gold",
+					"Title": "Stewarts & Hamiltons",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13611185/p13611185_b_h10_aa.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11774378/p11774378_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13611185/p13611185_b_h10_aa.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11774378/p11774378_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13611185/p13611185_b_h10_aa.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11774378/p11774378_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11774378/p11774378_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Gold Rush: Alaska",
+					"Title": "The Dead Files",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8378807/p8378807_b_h10_as.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13982849/p13982849_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8378807/p8378807_b_h10_as.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13982849/p13982849_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8378807/p8378807_b_h10_as.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13982849/p13982849_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13982849/p13982849_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Man, Woman, Wild",
+					"Title": "Just Jillian",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8142867/p8142867_b_h10_aa.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12501413/p12501413_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8142867/p8142867_b_h10_aa.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12501413/p12501413_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8142867/p8142867_b_h10_aa.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12501413/p12501413_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12501413/p12501413_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Famously Single",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13952839/p13952839_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13952839/p13952839_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13952839/p13952839_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13952839/p13952839_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
@@ -556,214 +869,1180 @@
 			]
 		},
 		{
-			"Title": "Anderson Cooper 360",
-			"ShowId": "SH006062990000",
-			"MediaType": "SHOW",
+			"Title": "NBA Basketball",
+			"ShowId": "SP003711770000",
+			"MediaType": "SPORT",
 			"Network": {
-				"Callsign": "CNN",
-				"Stationname": "Cable News Network",
-				"Stationnum": "10142",
-				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/10142.png",
-				"Description": ""
+				"Callsign": "TNT",
+				"Stationname": "Turner Network TV",
+				"Stationnum": "11164",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11164.png",
+				"Description": "TNT is one of cable’s top-rated networks and is home to one of cable’s most popular slate of original series including Animal Kingdom, Good Behavior, The Last Ship, Major Crimes, The Librarians. TNT also features blockbuster movies and championship sports coverage, including the NBA Regular Season, the NBA All-Star Game, the NBA Playoffs, the PGA Championship and the NCAA® Division I Men’s Basketball Championship® Tournament."
 			},
-			"Descriptions": [
+			"Similar": [
 				{
-					"Lang": "en",
-					"Description": "The anchorman brings his prickly but often witty perspective to current events and personalities in the news. Joining Cooper on the show are guests that frequently include political and legal analysts such as John King, Candy Crowley, David Gergen, Ali Velshi and Jeff Toobin.",
-					"Size": "1000"
+					"Network": "DSC",
+					"Id": "11150",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11150.png"
+				},
+				{
+					"Network": "FX",
+					"Id": "14321",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/14321.png"
+				},
+				{
+					"Network": "USA",
+					"Id": "11207",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11207.png"
 				}
 			],
+			"Descriptions": [],
 			"Genres": [
 				{
 					"Lang": "en",
-					"Genre": "News"
+					"Genre": "Sports Event"
 				},
 				{
 					"Lang": "en",
-					"Genre": "Newsmagazine"
-				},
-				{
-					"Lang": "en",
-					"Genre": "Talk"
+					"Genre": "Basketball"
 				}
 			],
 			"Images": [
 				{
-					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185440/p185440_b_h10_ac.jpg",
+					"Url": "https://img-showcards.showseeker.com/100x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
 					"Width": 100,
 					"Orientation": "Landscape"
 				},
 				{
-					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185440/p185440_b_h10_ac.jpg",
+					"Url": "https://img-showcards.showseeker.com/300x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
 					"Width": 300,
 					"Orientation": "Landscape"
 				},
 				{
-					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185440/p185440_b_h10_ac.jpg",
+					"Url": "https://img-showcards.showseeker.com/600x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
 					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 1920,
 					"Orientation": "Landscape"
 				}
 			],
 			"Videos": [],
 			"Schedule": [
 				{
-					"Title": "Anderson Cooper 360",
-					"Epititle": "",
-					"Stationnum": "10142",
+					"Title": "NBA Basketball",
+					"Epititle": "Houston Rockets at Boston Celtics",
+					"Stationnum": "11164",
+					"Duration": "150.0",
+					"Descembed": "",
+					"Starttime": "2017-12-28T20:00:00Z",
+					"Genre1": "sports event",
+					"Genre2": "basketball",
+					"Live": "Live"
+				}
+			],
+			"Links": [],
+			"Recommend": []
+		},
+		{
+			"Title": "NBA Basketball",
+			"ShowId": "SP003711300000",
+			"MediaType": "SPORT",
+			"Network": {
+				"Callsign": "TNT",
+				"Stationname": "Turner Network TV",
+				"Stationnum": "11164",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11164.png",
+				"Description": "TNT is one of cable’s top-rated networks and is home to one of cable’s most popular slate of original series including Animal Kingdom, Good Behavior, The Last Ship, Major Crimes, The Librarians. TNT also features blockbuster movies and championship sports coverage, including the NBA Regular Season, the NBA All-Star Game, the NBA Playoffs, the PGA Championship and the NCAA® Division I Men’s Basketball Championship® Tournament."
+			},
+			"Similar": [
+				{
+					"Network": "DSC",
+					"Id": "11150",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11150.png"
+				},
+				{
+					"Network": "FX",
+					"Id": "14321",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/14321.png"
+				},
+				{
+					"Network": "USA",
+					"Id": "11207",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11207.png"
+				}
+			],
+			"Descriptions": [],
+			"Genres": [
+				{
+					"Lang": "en",
+					"Genre": "Sports Event"
+				},
+				{
+					"Lang": "en",
+					"Genre": "Basketball"
+				}
+			],
+			"Images": [
+				{
+					"Url": "https://img-showcards.showseeker.com/100x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 100,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/300x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 300,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/600x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 1920,
+					"Orientation": "Landscape"
+				}
+			],
+			"Videos": [],
+			"Schedule": [
+				{
+					"Title": "NBA Basketball",
+					"Epititle": "San Antonio Spurs at Utah Jazz",
+					"Stationnum": "11164",
+					"Duration": "150.0",
+					"Descembed": "",
+					"Starttime": "2017-12-21T22:30:00Z",
+					"Genre1": "sports event",
+					"Genre2": "basketball",
+					"Live": "Live"
+				}
+			],
+			"Links": [],
+			"Recommend": []
+		},
+		{
+			"Title": "NBA Basketball",
+			"ShowId": "SP003711280000",
+			"MediaType": "SPORT",
+			"Network": {
+				"Callsign": "TNT",
+				"Stationname": "Turner Network TV",
+				"Stationnum": "11164",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11164.png",
+				"Description": "TNT is one of cable’s top-rated networks and is home to one of cable’s most popular slate of original series including Animal Kingdom, Good Behavior, The Last Ship, Major Crimes, The Librarians. TNT also features blockbuster movies and championship sports coverage, including the NBA Regular Season, the NBA All-Star Game, the NBA Playoffs, the PGA Championship and the NCAA® Division I Men’s Basketball Championship® Tournament."
+			},
+			"Similar": [
+				{
+					"Network": "DSC",
+					"Id": "11150",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11150.png"
+				},
+				{
+					"Network": "FX",
+					"Id": "14321",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/14321.png"
+				},
+				{
+					"Network": "USA",
+					"Id": "11207",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11207.png"
+				}
+			],
+			"Descriptions": [],
+			"Genres": [
+				{
+					"Lang": "en",
+					"Genre": "Sports Event"
+				},
+				{
+					"Lang": "en",
+					"Genre": "Basketball"
+				}
+			],
+			"Images": [
+				{
+					"Url": "https://img-showcards.showseeker.com/100x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 100,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/300x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 300,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/600x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 1920,
+					"Orientation": "Landscape"
+				}
+			],
+			"Videos": [],
+			"Schedule": [
+				{
+					"Title": "NBA Basketball",
+					"Epititle": "Boston Celtics at New York Knicks",
+					"Stationnum": "11164",
+					"Duration": "150.0",
+					"Descembed": "",
+					"Starttime": "2017-12-21T20:00:00Z",
+					"Genre1": "sports event",
+					"Genre2": "basketball",
+					"Live": "Live"
+				}
+			],
+			"Links": [],
+			"Recommend": []
+		},
+		{
+			"Title": "NBA Basketball",
+			"ShowId": "SP003710770000",
+			"MediaType": "SPORT",
+			"Network": {
+				"Callsign": "TNT",
+				"Stationname": "Turner Network TV",
+				"Stationnum": "11164",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11164.png",
+				"Description": "TNT is one of cable’s top-rated networks and is home to one of cable’s most popular slate of original series including Animal Kingdom, Good Behavior, The Last Ship, Major Crimes, The Librarians. TNT also features blockbuster movies and championship sports coverage, including the NBA Regular Season, the NBA All-Star Game, the NBA Playoffs, the PGA Championship and the NCAA® Division I Men’s Basketball Championship® Tournament."
+			},
+			"Similar": [
+				{
+					"Network": "DSC",
+					"Id": "11150",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11150.png"
+				},
+				{
+					"Network": "FX",
+					"Id": "14321",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/14321.png"
+				},
+				{
+					"Network": "USA",
+					"Id": "11207",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11207.png"
+				}
+			],
+			"Descriptions": [],
+			"Genres": [
+				{
+					"Lang": "en",
+					"Genre": "Sports Event"
+				},
+				{
+					"Lang": "en",
+					"Genre": "Basketball"
+				}
+			],
+			"Images": [
+				{
+					"Url": "https://img-showcards.showseeker.com/100x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 100,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/300x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 300,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/600x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 1920,
+					"Orientation": "Landscape"
+				}
+			],
+			"Videos": [],
+			"Schedule": [
+				{
+					"Title": "NBA Basketball",
+					"Epititle": "Dallas Mavericks at Golden State Warriors",
+					"Stationnum": "11164",
+					"Duration": "150.0",
+					"Descembed": "",
+					"Starttime": "2017-12-14T22:30:00Z",
+					"Genre1": "sports event",
+					"Genre2": "basketball",
+					"Live": "Live"
+				}
+			],
+			"Links": [],
+			"Recommend": []
+		},
+		{
+			"Title": "NBA Basketball",
+			"ShowId": "SP003710750000",
+			"MediaType": "SPORT",
+			"Network": {
+				"Callsign": "TNT",
+				"Stationname": "Turner Network TV",
+				"Stationnum": "11164",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11164.png",
+				"Description": "TNT is one of cable’s top-rated networks and is home to one of cable’s most popular slate of original series including Animal Kingdom, Good Behavior, The Last Ship, Major Crimes, The Librarians. TNT also features blockbuster movies and championship sports coverage, including the NBA Regular Season, the NBA All-Star Game, the NBA Playoffs, the PGA Championship and the NCAA® Division I Men’s Basketball Championship® Tournament."
+			},
+			"Similar": [
+				{
+					"Network": "DSC",
+					"Id": "11150",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11150.png"
+				},
+				{
+					"Network": "FX",
+					"Id": "14321",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/14321.png"
+				},
+				{
+					"Network": "USA",
+					"Id": "11207",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11207.png"
+				}
+			],
+			"Descriptions": [],
+			"Genres": [
+				{
+					"Lang": "en",
+					"Genre": "Sports Event"
+				},
+				{
+					"Lang": "en",
+					"Genre": "Basketball"
+				}
+			],
+			"Images": [
+				{
+					"Url": "https://img-showcards.showseeker.com/100x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 100,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/300x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 300,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/600x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 1920,
+					"Orientation": "Landscape"
+				}
+			],
+			"Videos": [],
+			"Schedule": [
+				{
+					"Title": "NBA Basketball",
+					"Epititle": "Los Angeles Lakers at Cleveland Cavaliers",
+					"Stationnum": "11164",
+					"Duration": "150.0",
+					"Descembed": "",
+					"Starttime": "2017-12-14T20:00:00Z",
+					"Genre1": "sports event",
+					"Genre2": "basketball",
+					"Live": "Live"
+				}
+			],
+			"Links": [],
+			"Recommend": []
+		},
+		{
+			"Title": "NBA Basketball",
+			"ShowId": "SP003711800000",
+			"MediaType": "SPORT",
+			"Network": {
+				"Callsign": "TNT",
+				"Stationname": "Turner Network TV",
+				"Stationnum": "11164",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11164.png",
+				"Description": "TNT is one of cable’s top-rated networks and is home to one of cable’s most popular slate of original series including Animal Kingdom, Good Behavior, The Last Ship, Major Crimes, The Librarians. TNT also features blockbuster movies and championship sports coverage, including the NBA Regular Season, the NBA All-Star Game, the NBA Playoffs, the PGA Championship and the NCAA® Division I Men’s Basketball Championship® Tournament."
+			},
+			"Similar": [
+				{
+					"Network": "DSC",
+					"Id": "11150",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11150.png"
+				},
+				{
+					"Network": "FX",
+					"Id": "14321",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/14321.png"
+				},
+				{
+					"Network": "USA",
+					"Id": "11207",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11207.png"
+				}
+			],
+			"Descriptions": [],
+			"Genres": [
+				{
+					"Lang": "en",
+					"Genre": "Sports Event"
+				},
+				{
+					"Lang": "en",
+					"Genre": "Basketball"
+				}
+			],
+			"Images": [
+				{
+					"Url": "https://img-showcards.showseeker.com/100x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 100,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/300x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 300,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/600x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://s3.amazonaws.com/image.us/lonestar/sports/default/basketball/pro.png",
+					"Width": 1920,
+					"Orientation": "Landscape"
+				}
+			],
+			"Videos": [],
+			"Schedule": [
+				{
+					"Title": "NBA Basketball",
+					"Epititle": "Philadelphia 76ers at Portland Trail Blazers",
+					"Stationnum": "11164",
+					"Duration": "150.0",
+					"Descembed": "",
+					"Starttime": "2017-12-28T22:30:00Z",
+					"Genre1": "sports event",
+					"Genre2": "basketball",
+					"Live": "Live"
+				}
+			],
+			"Links": [],
+			"Recommend": []
+		},
+		{
+			"Title": "NFL Football",
+			"ShowId": "SP003667130000",
+			"MediaType": "SPORT",
+			"Network": {
+				"Callsign": "NFLNET",
+				"Stationname": "NFL NETWORK",
+				"Stationnum": "34710",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/34710.png",
+				"Description": ""
+			},
+			"Similar": [],
+			"Descriptions": [
+				{
+					"Lang": "en",
+					"Description": "The Colts return home after a two-game road trip to welcome the Broncos to Lucas Oil Stadium.",
+					"Size": "100"
+				},
+				{
+					"Lang": "en",
+					"Description": "The Colts return home after a two-game road trip to welcome the Broncos to Lucas Oil Stadium. Indianapolis is 8-2 against Denver over the last 10 meetings, including two playoff victories. The Broncos, however, secured the win in last season's game.",
+					"Size": "255"
+				}
+			],
+			"Genres": [
+				{
+					"Lang": "en",
+					"Genre": "Sports Event"
+				},
+				{
+					"Lang": "en",
+					"Genre": "Football"
+				}
+			],
+			"Images": [
+				{
+					"Url": "https://img-showcards.showseeker.com/100x/https://s3.amazonaws.com/image.us/lonestar/sports/default/football/pro.png",
+					"Width": 100,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/300x/https://s3.amazonaws.com/image.us/lonestar/sports/default/football/pro.png",
+					"Width": 300,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/600x/https://s3.amazonaws.com/image.us/lonestar/sports/default/football/pro.png",
+					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://s3.amazonaws.com/image.us/lonestar/sports/default/football/pro.png",
+					"Width": 1920,
+					"Orientation": "Landscape"
+				}
+			],
+			"Videos": [],
+			"Schedule": [
+				{
+					"Title": "NFL Football",
+					"Epititle": "Denver Broncos at Indianapolis Colts",
+					"Stationnum": "34710",
+					"Duration": "185.0",
+					"Descembed": "The Colts return home after a two-game road trip to welcome the Broncos to Lucas Oil Stadium. Indianapolis is 8-2 against Denver over the last 10 meetings, including two playoff victories. The Broncos, however, secured the win in last season's game.",
+					"Starttime": "2017-12-14T20:25:00Z",
+					"Genre1": "sports event",
+					"Genre2": "football",
+					"Live": "Live"
+				}
+			],
+			"Links": [],
+			"Recommend": []
+		},
+		{
+			"Title": "NFL Football",
+			"ShowId": "SP003667430000",
+			"MediaType": "SPORT",
+			"Network": {
+				"Callsign": "NFLNET",
+				"Stationname": "NFL NETWORK",
+				"Stationnum": "34710",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/34710.png",
+				"Description": ""
+			},
+			"Similar": [],
+			"Descriptions": [],
+			"Genres": [
+				{
+					"Lang": "en",
+					"Genre": "Sports Event"
+				},
+				{
+					"Lang": "en",
+					"Genre": "Football"
+				}
+			],
+			"Images": [
+				{
+					"Url": "https://img-showcards.showseeker.com/100x/https://s3.amazonaws.com/image.us/lonestar/sports/default/football/pro.png",
+					"Width": 100,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/300x/https://s3.amazonaws.com/image.us/lonestar/sports/default/football/pro.png",
+					"Width": 300,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/600x/https://s3.amazonaws.com/image.us/lonestar/sports/default/football/pro.png",
+					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://s3.amazonaws.com/image.us/lonestar/sports/default/football/pro.png",
+					"Width": 1920,
+					"Orientation": "Landscape"
+				}
+			],
+			"Videos": [],
+			"Schedule": [
+				{
+					"Title": "NFL Football",
+					"Epititle": "Pittsburgh Steelers at Houston Texans",
+					"Stationnum": "34710",
+					"Duration": "180.0",
+					"Descembed": "",
+					"Starttime": "2017-12-25T16:30:00Z",
+					"Genre1": "sports event",
+					"Genre2": "football",
+					"Live": "Live"
+				}
+			],
+			"Links": [],
+			"Recommend": []
+		},
+		{
+			"Title": "The Librarians",
+			"ShowId": "SH019234000000",
+			"MediaType": "SHOW",
+			"Network": {
+				"Callsign": "TNT",
+				"Stationname": "Turner Network TV",
+				"Stationnum": "11164",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11164.png",
+				"Description": "TNT is one of cable’s top-rated networks and is home to one of cable’s most popular slate of original series including Animal Kingdom, Good Behavior, The Last Ship, Major Crimes, The Librarians. TNT also features blockbuster movies and championship sports coverage, including the NBA Regular Season, the NBA All-Star Game, the NBA Playoffs, the PGA Championship and the NCAA® Division I Men’s Basketball Championship® Tournament."
+			},
+			"Similar": [
+				{
+					"Network": "DSC",
+					"Id": "11150",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11150.png"
+				},
+				{
+					"Network": "FX",
+					"Id": "14321",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/14321.png"
+				},
+				{
+					"Network": "USA",
+					"Id": "11207",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11207.png"
+				}
+			],
+			"Descriptions": [
+				{
+					"Lang": "en",
+					"Description": "Cued by TNT's popular \"The Librarian\" trilogy, this series introduces new members of an ancient group protecting mystical artifacts. Hidden below the Metropolitan Public Library, the secret society's longtime leader is Flynn Carsen, whose job has become very complicated. To help, the Library recruits Eve, a counterterrorism agent responsible for organizational security; Jacob, who has encyclopedic knowledge of art, architecture and history; Cassandra, who links auditory/sensory hallucinations to memory; and Ezekiel, a skilled thief and master technician. Overseeing them is Jenkins, the reclusive caretaker of the Library's sleepy little annex in Oregon. Noah Wyle executive produces and recurs as Flynn, the role he played in the movie series.",
+					"Size": "1000"
+				}
+			],
+			"Genres": [
+				{
+					"Lang": "en",
+					"Genre": "Adventure"
+				},
+				{
+					"Lang": "en",
+					"Genre": "Drama"
+				}
+			],
+			"Images": [
+				{
+					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10783325/p10783325_b_h10_ah.jpg",
+					"Width": 100,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10783325/p10783325_b_h10_ah.jpg",
+					"Width": 300,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10783325/p10783325_b_h10_ah.jpg",
+					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10783325/p10783325_b_h10_ah.jpg",
+					"Width": 1920,
+					"Orientation": "Landscape"
+				}
+			],
+			"Videos": [
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/290250cd5795aff3cca11f540a009a88/TheLibrariansSeason4TrailerTNT_10092017.mp4",
+					"Posted": "10/06/2017"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/290250cd5795aff3cca11f540a009a88/TheLibrariansSeason4PROMOSeasonPremiereDecember20TNT_09292017.mp4",
+					"Posted": "09/28/2017"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/290250cd5795aff3cca11f540a009a88/TheLibrariansSeason4PremiereDecember13TRAILER1TNT_11072017.mp4",
+					"Posted": "03/11/2017"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/10016643/InsideSeason3WithDeanDevlinTheLibrariansTNT_11222016.mp4",
+					"Posted": "11/21/2016"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/10016643/InsideSeason3WithNoahWyleTheLibrariansTNT_11222016.mp4",
+					"Posted": "11/21/2016"
+				}
+			],
+			"Schedule": [
+				{
+					"Title": "The Librarians",
+					"Epititle": "And the Dark Secret",
+					"Stationnum": "11164",
 					"Duration": "60.0",
-					"Descembed": "Anchor Anderson Cooper reports in New York.",
-					"Starttime": "2017-10-10T20:00:00Z",
-					"Genre1": "talk",
-					"Genre2": "newsmagazine",
+					"Descembed": "A secret sect of the Vatican Church unearths a map detailing the locations of the four cornerstones of the Library of Alexandria; Flynn and the Librarians work with an unexpected ally to stop them before the stones can be used to destroy the Library.",
+					"Starttime": "2017-12-13T20:00:00Z",
+					"Genre1": "drama",
+					"Genre2": "adventure",
 					"Live": ""
 				},
 				{
-					"Title": "Anderson Cooper 360",
-					"Epititle": "",
-					"Stationnum": "10142",
+					"Title": "The Librarians",
+					"Epititle": "And the Christmas Thief",
+					"Stationnum": "11164",
 					"Duration": "60.0",
-					"Descembed": "Anchor Anderson Cooper reports in New York.",
-					"Starttime": "2017-10-10T21:00:00Z",
-					"Genre1": "talk",
-					"Genre2": "newsmagazine",
+					"Descembed": "Santa takes Flynn, Baird and Jenkins on his first vacation in centuries; the Librarians use Santa's sleigh to save Ezekiel's career-criminal mother, as well as Christmas itself, from Santa's grinch of a brother, the Patron Saint of Thieves.",
+					"Starttime": "2017-12-20T20:00:00Z",
+					"Genre1": "drama",
+					"Genre2": "adventure",
 					"Live": ""
 				},
 				{
-					"Title": "Anderson Cooper 360",
-					"Epititle": "",
-					"Stationnum": "10142",
+					"Title": "The Librarians",
+					"Epititle": "And the Silver Screen",
+					"Stationnum": "11164",
 					"Duration": "60.0",
-					"Descembed": "Anchor Anderson Cooper reports in New York.",
-					"Starttime": "2017-10-11T20:00:00Z",
-					"Genre1": "talk",
-					"Genre2": "newsmagazine",
+					"Descembed": "Drawn into the world of Baird's favorite film noir movie, the Librarians must perfect their skills in lassoing, sharpshooting and snappy dialogue to make it out alive.",
+					"Starttime": "2017-12-27T20:00:00Z",
+					"Genre1": "drama",
+					"Genre2": "adventure",
 					"Live": ""
 				},
 				{
-					"Title": "Anderson Cooper 360",
-					"Epititle": "",
-					"Stationnum": "10142",
+					"Title": "The Librarians",
+					"Epititle": "And the Steal of Fortune",
+					"Stationnum": "11164",
 					"Duration": "60.0",
-					"Descembed": "Anchor Anderson Cooper reports in New York.",
-					"Starttime": "2017-10-11T21:00:00Z",
-					"Genre1": "talk",
-					"Genre2": "newsmagazine",
+					"Descembed": "",
+					"Starttime": "2018-01-03T20:00:00Z",
+					"Genre1": "drama",
+					"Genre2": "adventure",
 					"Live": ""
 				},
 				{
-					"Title": "Anderson Cooper 360",
-					"Epititle": "",
-					"Stationnum": "10142",
+					"Title": "The Librarians",
+					"Epititle": "And the Bleeding Crown",
+					"Stationnum": "11164",
 					"Duration": "60.0",
-					"Descembed": "Anchor Anderson Cooper reports in New York.",
-					"Starttime": "2017-10-12T20:00:00Z",
-					"Genre1": "talk",
-					"Genre2": "newsmagazine",
+					"Descembed": "",
+					"Starttime": "2018-01-10T20:00:00Z",
+					"Genre1": "drama",
+					"Genre2": "adventure",
 					"Live": ""
 				},
 				{
-					"Title": "Anderson Cooper 360",
-					"Epititle": "",
-					"Stationnum": "10142",
+					"Title": "The Librarians",
+					"Epititle": "And the Grave of Time",
+					"Stationnum": "11164",
 					"Duration": "60.0",
-					"Descembed": "Anchor Anderson Cooper reports in New York.",
-					"Starttime": "2017-10-12T21:00:00Z",
-					"Genre1": "talk",
-					"Genre2": "newsmagazine",
+					"Descembed": "",
+					"Starttime": "2018-01-17T20:00:00Z",
+					"Genre1": "drama",
+					"Genre2": "adventure",
 					"Live": ""
 				},
 				{
-					"Title": "Anderson Cooper 360",
-					"Epititle": "",
-					"Stationnum": "10142",
+					"Title": "The Librarians",
+					"Epititle": "And the Disenchanted Forest",
+					"Stationnum": "11164",
 					"Duration": "60.0",
-					"Descembed": "Anchor Anderson Cooper reports in New York.",
-					"Starttime": "2017-10-13T20:00:00Z",
-					"Genre1": "talk",
-					"Genre2": "newsmagazine",
+					"Descembed": "",
+					"Starttime": "2018-01-24T20:00:00Z",
+					"Genre1": "drama",
+					"Genre2": "adventure",
 					"Live": ""
 				},
 				{
-					"Title": "Anderson Cooper 360",
-					"Epititle": "",
-					"Stationnum": "10142",
+					"Title": "The Librarians",
+					"Epititle": "And the Hidden Sanctuary",
+					"Stationnum": "11164",
 					"Duration": "60.0",
-					"Descembed": "Anchor Anderson Cooper reports in New York.",
-					"Starttime": "2017-10-13T21:00:00Z",
-					"Genre1": "talk",
-					"Genre2": "newsmagazine",
-					"Live": ""
-				},
-				{
-					"Title": "Anderson Cooper 360",
-					"Epititle": "",
-					"Stationnum": "10142",
-					"Duration": "60.0",
-					"Descembed": "Anchor Anderson Cooper reports in New York.",
-					"Starttime": "2017-10-16T20:00:00Z",
-					"Genre1": "talk",
-					"Genre2": "newsmagazine",
-					"Live": ""
-				},
-				{
-					"Title": "Anderson Cooper 360",
-					"Epititle": "",
-					"Stationnum": "10142",
-					"Duration": "60.0",
-					"Descembed": "Anchor Anderson Cooper reports in New York.",
-					"Starttime": "2017-10-16T21:00:00Z",
-					"Genre1": "talk",
-					"Genre2": "newsmagazine",
+					"Descembed": "",
+					"Starttime": "2018-01-31T20:00:00Z",
+					"Genre1": "drama",
+					"Genre2": "adventure",
 					"Live": ""
 				}
 			],
 			"Links": [
 				{
 					"Name": "Network Website",
-					"Value": "http://ac360.blogs.cnn.com/"
+					"Value": "http://www.tntdrama.com/shows/the-librarians.html"
 				},
 				{
 					"Name": "TV.com",
-					"Value": "http://www.tv.com/shows/anderson-cooper-360/"
+					"Value": "http://www.tv.com/shows/the-librarians-2015/"
 				},
 				{
 					"Name": "Imdb",
-					"Value": "http://www.imdb.com/title/tt0380086/?ref_=fn_al_tt_1"
+					"Value": "http://www.imdb.com/title/tt3663490/?ref_=fn_al_tt_1"
+				},
+				{
+					"Name": "Rotten Tomatoes",
+					"Value": "http://www.rottentomatoes.com/tv/the-librarians/s02/"
+				},
+				{
+					"Name": "Futon Critic",
+					"Value": "http://www.thefutoncritic.com/showatch/librarians/"
 				},
 				{
 					"Name": "The TV Database",
-					"Value": "http://thetvdb.com/?tab=series\u0026id=260139"
+					"Value": "http://thetvdb.com/?tab=series&id=281709"
 				},
 				{
 					"Name": "Facebook",
-					"Value": "https://www.facebook.com/AC360"
+					"Value": "https://www.facebook.com/TheLibrarians"
 				},
 				{
 					"Name": "Wiki",
-					"Value": "http://en.wikipedia.org/wiki/Anderson_Cooper_360%C2%B0"
+					"Value": "http://en.wikipedia.org/wiki/The_Librarians_%282014_TV_series%29"
 				},
 				{
 					"Name": "Twitter",
-					"Value": "https://twitter.com/AC360"
+					"Value": "https://twitter.com/librarianstnt"
 				}
 			],
-			"Recommend": []
+			"Recommend": [
+				{
+					"Title": "Falling Skies",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9072726/p9072726_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9072726/p9072726_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9072726/p9072726_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9072726/p9072726_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "The Last Ship",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14273984/p14273984_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14273984/p14273984_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14273984/p14273984_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14273984/p14273984_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "King & Maxwell",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9891928/p9891928_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9891928/p9891928_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9891928/p9891928_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9891928/p9891928_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Grimm",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13232610/p13232610_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13232610/p13232610_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13232610/p13232610_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13232610/p13232610_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "The Strain",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14156193/p14156193_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14156193/p14156193_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14156193/p14156193_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14156193/p14156193_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Z Nation",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10982694/p10982694_b_h10_ag.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10982694/p10982694_b_h10_ag.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10982694/p10982694_b_h10_ag.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10982694/p10982694_b_h10_ag.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Alphas",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9181818/p9181818_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9181818/p9181818_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9181818/p9181818_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9181818/p9181818_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Marvel's Agents of S.H.I.E.L.D.",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14660823/p14660823_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14660823/p14660823_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14660823/p14660823_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14660823/p14660823_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Black Sails",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9984311/p9984311_b_h10_ae.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9984311/p9984311_b_h10_ae.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9984311/p9984311_b_h10_ae.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9984311/p9984311_b_h10_ae.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "The Americans",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13714566/p13714566_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13714566/p13714566_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13714566/p13714566_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13714566/p13714566_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				}
+			]
 		},
 		{
-			"Title": "Beat Bobby Flay",
-			"ShowId": "SH017820660000",
+			"Title": "Top Chef",
+			"ShowId": "SH008127580000",
 			"MediaType": "SHOW",
 			"Network": {
-				"Callsign": "FOODP",
-				"Stationname": "Food Network (Pacific)",
-				"Stationnum": "33648",
-				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/33648.png",
-				"Description": ""
+				"Callsign": "BRAVO",
+				"Stationname": "Bravo",
+				"Stationnum": "10057",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/10057.png",
+				"Description": "Delivering breakout stars and ratings juggernauts to the most engaged, upscale and educated audience in cable, Bravo continues to translate buzz into reality with innovative competition and docu-series that tap into the network’s \"passion points\" of Food, Fashion, Beauty, Design, Digital and Pop Culture. "
 			},
+			"Similar": [
+				{
+					"Network": "E",
+					"Id": "10989",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/10989.png"
+				},
+				{
+					"Network": "LIFE",
+					"Id": "10918",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/10918.png"
+				},
+				{
+					"Network": "USA",
+					"Id": "11207",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11207.png"
+				},
+				{
+					"Network": "VH1",
+					"Id": "11218",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11218.png"
+				}
+			],
 			"Descriptions": [
 				{
 					"Lang": "en",
-					"Description": "Bobby Flay is no stranger to culinary competitions, whether he's hosting (\"Bobby's Dinner Battle\") or competing (\"Throwdown With Bobby Flay\"). In this program he does both. Each half-hour episode begins with two chefs competing to create a dish using an ingredient chosen by Flay. The winner of that challenge -- as determined by a special guest judge -- goes to the second round, in which he or she does battle against chef Flay. To make things a little more fair, the challenger has an advantage by being able to prepare a signature dish that is unknown to Bobby until the start of the round. Once he learns what the dish is, Flay must immediately come up with his own version. A panel determines the winner of the second round through a blind taste test. Food Network regulars Sunny Anderson, Anne Burrell and Giada De Laurentiis are among the judges appearing on the show.",
+					"Description": "Hosted by Katie Lee Joel, this reality series features 12 chefs competing for a monetary prize, a feature in Food & Wine magazine and the title of Top Chef. Competitors include Harold Dieterle, Tiffani Faison, Lee Anne Wong, Dave Martin and Stephen Asprinio.",
+					"Size": "1000"
+				},
+				{
+					"Lang": "en",
+					"Description": "A new batch of aspiring chefs and restaurateurs, ranging in age from 24 to 46, gets put through the competitive Cuisinart in hopes of winning $100,000, exposure in Food & Wine magazine, and bragging rights. This season features a new host: model-turned-cookbook author and television personality Padma Lakshmi. Ladies and gentlemen, start your stoves!",
+					"Size": "1000"
+				},
+				{
+					"Lang": "en",
+					"Description": "The setting for season three shifts to Miami Beach, Fla. Among the competing chefs are Hung Huynh, \"Tre\" Wilcox, Howie Kleinberg, Chris \"CJ\" Jacobson, Casey Thompson and Dale Levitski. Along with the title of Top Chef, the winner gets a culinary tour of the French Alps and $100,000 prize money.",
+					"Size": "1000"
+				},
+				{
+					"Lang": "en",
+					"Description": "Sixteen chefs gather to compete for the title of Top Chef, along with $100,000 in seed money to open a restaurant, a spread in Food & Wine magazine, a showcase at the Food & Wine Classic in Aspen, Colo., and a gourmet vacation in the French Alps. This season's competition in Chicago has a benign new wrinkle: Each chef is allowed to bring up to $200 in equipment and ingredients he feels he can't do without and may not find available in the \"Top Chef\" pantry. But there's another surprise behind the scenes: Two of this season's contestants also are life partners.",
+					"Size": "1000"
+				},
+				{
+					"Lang": "en",
+					"Description": "A Big Apple is on the menu as the hit cooking competition series serves up its fifth course in New York, with food critic and author Toby Young joining Tom Colicchio, Padma Lakshmi and Gail Simmons at the judges' table. Other food and entertainment figures taking part include Martha Stewart, Eric Ripert, Rocco DiSpirito, Wylie Dufresne, Natasha Richardson and the Foo Fighters. At stake for the 17 new \"cheftestants\": $100,000 in seed money to help open a restaurant, a feature in Food & Wine magazine and a showcase at the Annual Food & Wine Classic in Aspen, Colo., along with the title of Top Chef.",
+					"Size": "1000"
+				},
+				{
+					"Lang": "en",
+					"Description": "For the sixth season of this Emmy-winning series, what happens in Vegas will be tasty, as 17 new \"cheftestants\" gather in Sin City to compete for the title of Top Chef. In each episode, they'll need to complete two challenges: a rapid-fire test of their basic abilities, and a detailed elimination challenge designed to grade their versatility and inventiveness. Along with returning judges Padma Lakshmi, Tom Colicchio, Gail Simmons and Toby Young, this season also features appearances by Wolfgang Puck, Natalie Portman, Penn & Teller, Laurent Tourondel, Tyler Florence and Nigella Lawson.",
+					"Size": "1000"
+				},
+				{
+					"Lang": "en",
+					"Description": "The hit cooking competition returns, this time in Washington, D.C., with 17 new \"cheftestants\" competing for the top prize. Chef Eric Ripert joins Tom Colicchio, Padma Lakshmi and Gail Simmons at the judges' table. Other food, entertainment and government figures taking part include Buzz Aldrin, House Speaker Nancy Pelosi, White House chef Sam Kass, MSNBC host Joe Scarborough and CIA Director Leon Panetta. At stake: $125,000 in seed money to help open a restaurant, a feature in Food & Wine magazine and a showcase at the Annual Food & Wine Classic in Aspen, Colo., along with the title of Top Chef.",
+					"Size": "1000"
+				},
+				{
+					"Lang": "en",
+					"Description": "They're back to face the heat of the \"Top Chef\" kitchen once again, 18 former contestants of the popular, Emmy Award-winning Bravo reality show squaring off in season eight, which returns to New York. Also returning are judges Tom Colicchio and Gail Simmons, joined this season by author and chef Anthony Bourdain, and host Padma Lakshmi. Among the \"cheftestants\" competing for a lucrative prize package are season-five finalist Carla Hall, season-three finalist Casey Thompson, season-two finalist Marcel Vigneron, season four's Spike Mendelsohn, and fan favorite from season five, Fabio Viviani.",
+					"Size": "1000"
+				},
+				{
+					"Lang": "en",
+					"Description": "The ninth season of \"Top Chef\" takes place in Texas, where everything is said to be bigger, so it is fitting that its list of chefs is supersized -- 29 hopefuls begin the season, nearly double the number of competitors in past seasons. But that number is quickly reduced to 16, who compete in cities across the Lone Star State, including Austin, San Antonio and Dallas. The contestant who survives the weekly eliminations and is named the winner earns a prize package that includes $125,000 and a feature in Food & Wine magazine -- not to mention the coveted title of Top Chef. Joining the judges' panel this season -- alongside returning judges Padma Lakshmi, Tom Colicchio and Gail Simmons -- are Emeril Lagasse and Hugh Acheson.",
+					"Size": "1000"
+				},
+				{
+					"Lang": "en",
+					"Description": "\"Top Chef\" heads to Seattle for the show's 10th season and adds a world-renowned chef to its roster of judges. Wolfgang Puck joins Tom Colicchio, Hugh Acheson, Gail Simmons, Emeril Lagasse and Padma Lakshmi (who also hosts) in critiquing the cheftestants' dishes. Each episode features two challenges for the aspiring chefs, one that tests their basic culinary abilities and a second, an elimination challenge, that tests the contestants' versatility and inventiveness. The challenges also reveal if the contestants have the customer service, management and teamwork abilities needed to win the competition. After the chefs are pared down each week, the winner receives a prize package that includes $125,000, a feature in Food & Wine magazine and the title of Top Chef.",
+					"Size": "1000"
+				},
+				{
+					"Lang": "en",
+					"Description": "\"Top Chef\" heads to New Orleans for its 11th season. The competition features 20 \"cheftestants,\" 19 chosen before the season and the 20th earning a spot through an online series, \"Padma's Picks,\" featuring 10 New Orleans-based chefs competing in head-to-head battles with the ultimate winner, as chosen by judge Padma Lakshmi, rounding out the cast. Joining Lakshmi on the \"Top Chef\" judging panel are Tom Colicchio, Gail Simmons, Hugh Acheson and noted New Orleans chef Emeril Lagasse. As always, the contestant who survives the weekly eliminations to earn the title of Top Chef wins a cash prize.",
+					"Size": "1000"
+				},
+				{
+					"Lang": "en",
+					"Description": "\"Top Chef\" heads to New England for the first time as the 16 \"cheftestants\" take their culinary battles to Boston. The challenges bring the chefs to such iconic Beantown locations as Fenway Park and the tavern that inspired the classic sitcom \"Cheers.\" Tasks include preparing a meal using only ingredients that were available at the first Thanksgiving, and a fan-appreciation challenge that sees the contestants cooking for a selection of the show's fans. New additions this season include sudden-death challenges that occur without warning, and former \"Top Chef\" winner Richard Blais becoming a recurring judge, joining returnees Tom Colicchio, Gail Simmons, Hugh Acheson and host Padma Lakshmi. The grand prize package includes $125,000 cash, a feature in Food & Wine magazine and a showcase at the Food & Wine Classic in Aspen, Colo.",
+					"Size": "1000"
+				},
+				{
+					"Lang": "en",
+					"Description": "The \"cheftestants\" travel nearly 1,000 miles through California in this season of \"Top Chef.\" They face culinary challenges in six cities, including Los Angeles, San Diego and San Francisco, where the show began in Season 1. Tasks include cooking under the Hollywood sign for top food writers and serving rapper MC Hammer on the Oakland waterfront. The season's final challenge pays homage to Fleur de Lys, a former Hubert Keller-owned restaurant in San Francisco. The winning chef's prize package includes $125,000 and a showcase at the Food & Wine Classic in Aspen, Colo. The judging panel remains intact, with Tom Colicchio, Gail Simmons, Richard Blais, Emeril Lagasse and host Padma Lakshmi making the decisions regarding advancement and elimination.",
+					"Size": "1000"
+				},
+				{
+					"Lang": "en",
+					"Description": "Old versus new is the theme of the 14th season of \"Top Chef.\" Sixteen cheftestants begin the competition, eight of whom are playing for the first time, while the other eight are veterans from previous seasons. Charleston, S.C., is the setting for this season that features the return of the Sudden Death Quickfire challenges in which a chef could face immediate elimination. Challenges include preparing a holiday-themed Feast of Seven Fishes dinner, cooking for a room full of culinary luminaries, and a shrimp-and-grits cook-off. \"Top Chef Masters\" alum Graham Elliot joins the judging panel with head judge Tom Colicchio and Gail Simmons. The chef who makes it through the season and is named the winner earns a prize package highlighted by $125,000, a feature in Food & Wine magazine, and a showcase at the Food & Wine classic in Aspen, Colo. Emmy nominee Padma Lakshmi again serves as host.",
 					"Size": "1000"
 				}
 			],
@@ -779,120 +2058,100 @@
 			],
 			"Images": [
 				{
-					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14218282/p14218282_b_h10_ab.jpg",
+					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14715791/p14715791_b_h10_aa.jpg",
 					"Width": 100,
 					"Orientation": "Landscape"
 				},
 				{
-					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14218282/p14218282_b_h10_ab.jpg",
+					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14715791/p14715791_b_h10_aa.jpg",
 					"Width": 300,
 					"Orientation": "Landscape"
 				},
 				{
-					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14218282/p14218282_b_h10_ab.jpg",
+					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14715791/p14715791_b_h10_aa.jpg",
 					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14715791/p14715791_b_h10_aa.jpg",
+					"Width": 1920,
 					"Orientation": "Landscape"
 				}
 			],
 			"Videos": [
 				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/33a6ab12fc7a509d53c0609d2efed46f/BeatBobbyFlayThursdays109cFoodNetwork_07142017.mp4",
-					"Posted": "07/13/2017"
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/dd56922411bf8ea841e5a75e47d4e9c9/TopChefChefsEnterTheirFirstQuickfireChallengeSeason15Episode1Bravo_11272017.mp4",
+					"Posted": "11/22/2017"
 				},
 				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/33a6ab12fc7a509d53c0609d2efed46f/BeatBobbyFlayThursday109cFoodNetwork_04202017.mp4",
-					"Posted": "04/19/2017"
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/dd56922411bf8ea841e5a75e47d4e9c9/TopChefRunningoutofTimeLetAnotherChefHelpSeason15Episode1Bravo_11272017.mp4",
+					"Posted": "11/22/2017"
 				},
 				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/10148064/BeatBobbyFlayAllNewThursdays109cFoodNetwork_08232016.mp4",
-					"Posted": "02/15/2016"
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/dd56922411bf8ea841e5a75e47d4e9c9/TopChefSeason15OfficialFirstLook-PremieringDecember7at109cBravo_10162017.mp4",
+					"Posted": "10/13/2017"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/SH428569920000/TopChefMakingaDishUsingOneoftheWorldsHottestPeppersSeason14Episode13Bravo_02202017.mp4",
+					"Posted": "02/17/2017"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/SH008688370000/TopChefPadmaCooksaDeliciousMealfortheChefsSeason14Episode11Bravo_02062017.mp4",
+					"Posted": "02/02/2017"
 				}
 			],
 			"Schedule": [
 				{
-					"Title": "Beat Bobby Flay",
-					"Epititle": "We're All Family Here",
-					"Stationnum": "33648",
-					"Duration": "30.0",
-					"Descembed": "Sophie Flay loves to mess with her dad, so she enlists the help of Alton Brown to hand her father the biggest surprise yet; mentors Jonathan Waxman and Dean Fearing enter the arena to face their protege Bobby Flay one last time.",
-					"Starttime": "2017-10-13T01:00:00Z",
+					"Title": "Top Chef",
+					"Epititle": "It'll Take More Than Pot Luck",
+					"Stationnum": "10057",
+					"Duration": "75.0",
+					"Descembed": "A diverse group of chefs must make a potluck dish to introduce themselves to the judges; the chefs also prepare their take on a meat-and-potatoes dish for a block party with 200 diners and Denver's biggest culinary names.",
+					"Starttime": "2017-12-07T22:00:00Z",
 					"Genre1": "reality",
 					"Genre2": "cooking",
 					"Live": ""
 				},
 				{
-					"Title": "Beat Bobby Flay",
-					"Epititle": "Feeling Bleu",
-					"Stationnum": "33648",
-					"Duration": "30.0",
-					"Descembed": "Iron Chef Alex Guarnaschelli and comedian Bobby Moynihan team up to beat Bobby Flay; they bring in Boston chef Marcellus Coleman and Bobby's No. 1 fan, Lionel Haeberle, to slay the Flay.",
-					"Starttime": "2017-10-20T01:00:00Z",
+					"Title": "Top Chef",
+					"Epititle": "Smile and Say Mise",
+					"Stationnum": "10057",
+					"Duration": "75.0",
+					"Descembed": "The chefs battle each other in a fierce Mise En Place relay; chef Alex Seidel invites the group to his farm to learn about his take on farm-to-table cuisine; the chefs are tasked with creating a meal incorporating a mystery ingredient from the farm.",
+					"Starttime": "2017-12-14T22:00:00Z",
 					"Genre1": "reality",
 					"Genre2": "cooking",
 					"Live": ""
 				},
 				{
-					"Title": "Beat Bobby Flay",
-					"Epititle": "Take a Bao",
-					"Stationnum": "33648",
-					"Duration": "30.0",
-					"Descembed": "Feisty Brooklyn chef Suchanan Aksornnan battles innovative Miami restaurateur Richard Hales; actor David Alan Grier and chef Carla Hall must decide who can beat Bobby Flay.",
-					"Starttime": "2017-10-27T01:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "cooking",
-					"Live": ""
-				},
-				{
-					"Title": "Beat Bobby Flay",
-					"Epititle": "Ain't That Dandy",
-					"Stationnum": "33648",
-					"Duration": "30.0",
-					"Descembed": "Actor Ben Feldman and The Kitchen's Katie Lee are ready for some action; they're bringing in jack-of-all-trades Jason Dady and Italian master Mike DeCamp to compete for the opportunity to best Bobby Flay.",
-					"Starttime": "2017-11-03T01:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "cooking",
-					"Live": ""
-				},
-				{
-					"Title": "Beat Bobby Flay",
-					"Epititle": "The Iron Age",
-					"Stationnum": "33648",
-					"Duration": "30.0",
-					"Descembed": "Jose Garces takes on the newest Iron Chef, Stephanie Izard; Iron Chef Alex Guarnaschelli and tough judge Simon Majumdar will use their elevated palates to decide whose cuisine reigns supreme.",
-					"Starttime": "2017-11-10T01:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "cooking",
-					"Live": ""
-				},
-				{
-					"Title": "Beat Bobby Flay",
-					"Epititle": "Turkey's Done",
-					"Stationnum": "33648",
-					"Duration": "30.0",
-					"Descembed": "There's a lot to be thankful for when Food Network's Sunny Anderson and Bobby Flay's daughter Sophie are in the house; silent but deadly Clayton Chapman and Italian authority Tony Priolo battle it out for the chance to stuff Bobby like a turkey.",
-					"Starttime": "2017-11-17T01:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "cooking",
-					"Live": ""
-				},
-				{
-					"Title": "Beat Bobby Flay",
-					"Epititle": "Sea Shells By The Sea Shore",
-					"Stationnum": "33648",
-					"Duration": "30.0",
-					"Descembed": "Harlem's very own Marcus Samuelsson and Los Angeles' finest Michael Voltaggio arrive to conquer Mount Flay; they're counting on dim sum master Ed Harris or seafood connoisseur Jason McLeod to help get to the top.",
-					"Starttime": "2017-11-24T01:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "cooking",
-					"Live": ""
-				},
-				{
-					"Title": "Beat Bobby Flay",
+					"Title": "Top Chef",
 					"Epititle": "",
-					"Stationnum": "33648",
-					"Duration": "30.0",
-					"Descembed": "Two chefs first face each other to earn the chance to challenge the program host.",
-					"Starttime": "2017-12-01T01:00:00Z",
+					"Stationnum": "10057",
+					"Duration": "75.0",
+					"Descembed": "",
+					"Starttime": "2017-12-21T22:00:00Z",
+					"Genre1": "reality",
+					"Genre2": "cooking",
+					"Live": ""
+				},
+				{
+					"Title": "Top Chef",
+					"Epititle": "",
+					"Stationnum": "10057",
+					"Duration": "60.0",
+					"Descembed": "",
+					"Starttime": "2017-12-28T22:00:00Z",
+					"Genre1": "reality",
+					"Genre2": "cooking",
+					"Live": ""
+				},
+				{
+					"Title": "Top Chef",
+					"Epititle": "",
+					"Stationnum": "10057",
+					"Duration": "60.0",
+					"Descembed": "",
+					"Starttime": "2018-01-04T22:00:00Z",
 					"Genre1": "reality",
 					"Genre2": "cooking",
 					"Live": ""
@@ -901,22 +2160,200 @@
 			"Links": [
 				{
 					"Name": "Network Website",
-					"Value": "http://www.foodnetwork.com/shows/beat-bobby-flay.html"
+					"Value": "http://www.bravotv.com/top-chef"
+				},
+				{
+					"Name": "TV.com",
+					"Value": "http://www.tv.com/shows/top-chef/"
 				},
 				{
 					"Name": "Imdb",
-					"Value": "http://www.imdb.com/title/tt3205302/?ref_=fn_al_tt_1"
+					"Value": "http://www.imdb.com/title/tt0765425/?ref_=fn_al_tt_1"
+				},
+				{
+					"Name": "Instagram",
+					"Value": "https://www.instagram.com/bravotopchef/"
+				},
+				{
+					"Name": "Pinterest",
+					"Value": "https://www.pinterest.com/bravotopchef/"
+				},
+				{
+					"Name": "Rotten Tomatoes",
+					"Value": "https://www.rottentomatoes.com/tv/top_chef_"
 				},
 				{
 					"Name": "Futon Critic",
-					"Value": "http://www.thefutoncritic.com/showatch/beat-bobby-flay/"
+					"Value": "http://www.thefutoncritic.com/showatch/top-chef/"
 				},
 				{
 					"Name": "The TV Database",
-					"Value": "http://thetvdb.com/?tab=series\u0026id=279264"
+					"Value": "http://thetvdb.com/?tab=series&id=79313"
+				},
+				{
+					"Name": "Facebook",
+					"Value": "https://www.facebook.com/TOPCHEF/"
+				},
+				{
+					"Name": "Wiki",
+					"Value": "https://en.wikipedia.org/wiki/Top_Chef"
+				},
+				{
+					"Name": "Twitter",
+					"Value": "https://twitter.com/BravoTopChef?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
 				}
 			],
 			"Recommend": [
+				{
+					"Title": "Top Chef Canada 1",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9080050/p9080050_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9080050/p9080050_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9080050/p9080050_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9080050/p9080050_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Top Chef Duels 1",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10906268/p10906268_b_h10_ab.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10906268/p10906268_b_h10_ab.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10906268/p10906268_b_h10_ab.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10906268/p10906268_b_h10_ab.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Best New Restaurant 1",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11320036/p11320036_b_h10_ab.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11320036/p11320036_b_h10_ab.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11320036/p11320036_b_h10_ab.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11320036/p11320036_b_h10_ab.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Hell's Kitchen 1",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14287822/p14287822_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14287822/p14287822_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14287822/p14287822_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14287822/p14287822_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Knife Fight 1",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9903897/p9903897_b_h10_ar.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9903897/p9903897_b_h10_ar.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9903897/p9903897_b_h10_ar.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9903897/p9903897_b_h10_ar.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Iron Chef America",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/188179/p188179_b_h10_ac.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/188179/p188179_b_h10_ac.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/188179/p188179_b_h10_ac.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/188179/p188179_b_h10_ac.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
 				{
 					"Title": "Chopped",
 					"Images": [
@@ -934,125 +2371,10 @@
 							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13761742/p13761742_b_h10_aa.jpg",
 							"Width": 600,
 							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Iron Chef America",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/188179/p188179_b_h10_ac.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/188179/p188179_b_h10_ac.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/188179/p188179_b_h10_ac.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Bobby Flay's Barbecue Addiction",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8642873/p8642873_b_h10_ab.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8642873/p8642873_b_h10_ab.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8642873/p8642873_b_h10_ab.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Brunch at Bobby's",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8285134/p8285134_b_h10_ad.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8285134/p8285134_b_h10_ad.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8285134/p8285134_b_h10_ad.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Cutthroat Kitchen",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10052665/p10052665_b_h10_aj.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10052665/p10052665_b_h10_aj.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10052665/p10052665_b_h10_aj.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Kitchen Casino",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10606160/p10606160_b_h10_ab.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10606160/p10606160_b_h10_ab.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10606160/p10606160_b_h10_ab.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Kitchen Inferno",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11104624/p11104624_b_h10_ab.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11104624/p11104624_b_h10_ab.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11104624/p11104624_b_h10_ab.jpg",
-							"Width": 600,
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13761742/p13761742_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
@@ -1060,27 +2382,53 @@
 			]
 		},
 		{
-			"Title": "Chopped",
-			"ShowId": "SH011117850000",
+			"Title": "WAGS LA",
+			"ShowId": "SH022068620000",
 			"MediaType": "SHOW",
 			"Network": {
-				"Callsign": "FOODP",
-				"Stationname": "Food Network (Pacific)",
-				"Stationnum": "33648",
-				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/33648.png",
-				"Description": ""
+				"Callsign": "E",
+				"Stationname": "E! Entertainment Television",
+				"Stationnum": "10989",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/10989.png",
+				"Description": "E! is television's top global destination for all things Pop Culture. E!'s mission is to excite and entertain the Pop Culture fan in all of us. Popular programming includes \"E! News,\" \"Keeping Up with the Kardashians,\" and \"Total Divas.\" Additionally, E!'s \"Live from the Red Carpet\" signature events keep fans connected to their favorite stars on Pop Culture's biggest nights."
 			},
+			"Similar": [
+				{
+					"Network": "BRAVO",
+					"Id": "10057",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/10057.png"
+				},
+				{
+					"Network": "MTV",
+					"Id": "10986",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/10986.png"
+				},
+				{
+					"Network": "OXYGEN",
+					"Id": "21484",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/21484.png"
+				},
+				{
+					"Network": "VH1",
+					"Id": "11218",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11218.png"
+				}
+			],
 			"Descriptions": [
 				{
 					"Lang": "en",
-					"Description": "Four chefs call on their culinary skills as they face off against one another to prepare a spectacular three-course meal consisting of an appetizer, entree and dessert. The catch? In each round, they have to use all the ingredients the show provides them, however unlikely they might be (Gummi Bears, anyone?). At the end of each course, a panel of three guest judges \"chops\" one chef who fails to measure up in terms of taste, presentation and creativity. The last chef standing takes home bragging rights and a cool $10,000. Ted Allen hosts.",
+					"Description": "Wives and girlfriends (the titular WAGS) of professional athletes get perks that other woman usually don't get -- money and fame among them. Because it's a relatively small group of people, many WAGS are close friends with one another. But there is a hierarchy within the group, as the wives who have husbands with multimillion-dollar contracts have all the power. This reality series follows several WAGS who are married to or dating professional athletes. Sasha Gates, who is married to a veteran professional football player, is the head of the group and has her own children's clothing line with best friend and fellow WAG Autumn Ajirotutu, who is also married to a pro football player. Barbie Blank is involved with a professional hockey player, but she is an athlete herself -- she used to be a pro wrestler under the name Kelly Kelly.",
 					"Size": "1000"
 				}
 			],
 			"Genres": [
 				{
 					"Lang": "en",
-					"Genre": "Cooking"
+					"Genre": "Romance"
+				},
+				{
+					"Lang": "en",
+					"Genre": "Entertainment"
 				},
 				{
 					"Lang": "en",
@@ -1089,1094 +2437,332 @@
 			],
 			"Images": [
 				{
-					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13761742/p13761742_b_h10_aa.jpg",
+					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11866516/p11866516_b_h10_ad.jpg",
 					"Width": 100,
 					"Orientation": "Landscape"
 				},
 				{
-					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13761742/p13761742_b_h10_aa.jpg",
+					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11866516/p11866516_b_h10_ad.jpg",
 					"Width": 300,
 					"Orientation": "Landscape"
 				},
 				{
-					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13761742/p13761742_b_h10_aa.jpg",
+					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11866516/p11866516_b_h10_ad.jpg",
 					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11866516/p11866516_b_h10_ad.jpg",
+					"Width": 1920,
 					"Orientation": "Landscape"
 				}
 			],
 			"Videos": [
 				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/008a50f65d68294b77af22cc5f304df6/ChoppedAltonsChallengeTuesdayOctober10109cFoodNetwork_09182017.mp4",
-					"Posted": "09/15/2017"
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/e6b38d0196c53d124a63508ea9a713e7/WAGSLAThingsThatAreSoLAE_12072017.mp4",
+					"Posted": "12/05/2017"
 				},
 				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/008a50f65d68294b77af22cc5f304df6/ChoppedTuesdays109cFoodNetwork_06162017.mp4",
-					"Posted": "06/15/2017"
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/e6b38d0196c53d124a63508ea9a713e7/WAGSLANicolesExtraScaleE_12052017.mp4",
+					"Posted": "12/04/2017"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/e6b38d0196c53d124a63508ea9a713e7/WAGSLANicoleWilliamsBachelorettePartyGoesDownThisSundayE_12042017.mp4",
+					"Posted": "12/04/2017"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/e6b38d0196c53d124a63508ea9a713e7/WAGSLARecapSeason3Episode5E_12042017.mp4",
+					"Posted": "12/04/2017"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/e6b38d0196c53d124a63508ea9a713e7/WAGSLASashaGatesAutumnAjirotutuFightAboutTheirFriendshipE_12012017.mp4",
+					"Posted": "11/30/2017"
 				}
 			],
 			"Schedule": [
 				{
-					"Title": "Chopped",
-					"Epititle": "Alton's Challenge, Part 1",
-					"Stationnum": "33648",
+					"Title": "WAGS LA",
+					"Epititle": "Bachelorette Brawl",
+					"Stationnum": "10989",
 					"Duration": "60.0",
-					"Descembed": "For the first battle, Alton demonstrates the science behind smoking foods, and the chefs are encouraged to infuse every dish with smoky flavor; tiny radishes and a strangely savory cookie are in the mix for round one.",
-					"Starttime": "2017-10-11T01:00:00Z",
+					"Descembed": "Michelle and Brian deal with unexpected trade news; Nicole worries about Larry's bachelor party.",
+					"Starttime": "2017-12-10T22:00:00Z",
 					"Genre1": "reality",
-					"Genre2": "cooking",
+					"Genre2": "entertainment",
 					"Live": ""
 				},
 				{
-					"Title": "Chopped",
-					"Epititle": "Alton's Challenge, Part 2",
-					"Stationnum": "33648",
-					"Duration": "60.0",
-					"Descembed": "A dehydration theme for the baskets; the first round has the chefs making quick use of instant mashed potatoes; a diabolical dessert basket has the chefs scrambling to make dehydrated eggs work in their final plates.",
-					"Starttime": "2017-10-18T01:00:00Z",
+					"Title": "WAGS LA",
+					"Epititle": "Wag Wedding Bells",
+					"Stationnum": "10989",
+					"Duration": "120.0",
+					"Descembed": "Nicole has her dream wedding; Natalie looks for closure with her ex; Barbie deals with a shocking revelation about the future of her marriage.",
+					"Starttime": "2017-12-17T22:00:00Z",
 					"Genre1": "reality",
-					"Genre2": "cooking",
-					"Live": ""
-				},
-				{
-					"Title": "Chopped",
-					"Epititle": "Feel The Burn",
-					"Stationnum": "33648",
-					"Duration": "60.0",
-					"Descembed": "In round one, a dip made with hot sauce and a spicy piece of poultry; hot raw root in the entree basket serves as proof that peppers aren't the only way to spice up a dish; spicy candy and a baby fruit in the dessert round.",
-					"Starttime": "2017-10-20T00:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "cooking",
-					"Live": ""
-				},
-				{
-					"Title": "Chopped",
-					"Epititle": "Alton's Challenge, Part 3",
-					"Stationnum": "33648",
-					"Duration": "60.0",
-					"Descembed": "The wonders of molecular gastronomy; making a powder from a fat, the problem with transparent ravioli; lamb cooked with a modernist method and new age noodles; a cake that looks and tastes like a drop of water for dessert.",
-					"Starttime": "2017-10-25T01:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "cooking",
-					"Live": ""
-				},
-				{
-					"Title": "Chopped",
-					"Epititle": "Gimme Gator",
-					"Stationnum": "33648",
-					"Duration": "60.0",
-					"Descembed": "Black garlic and coconut vinegar challenge the chefs in the appetizer round; the judges go on the hunt for compelling flavor combinations in the chefs' alligator entrees; a Peruvian fruit is the most unusual find in the dessert basket.",
-					"Starttime": "2017-10-27T00:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "cooking",
-					"Live": ""
-				},
-				{
-					"Title": "Chopped",
-					"Epititle": "Alton's Challenge, Part 4",
-					"Stationnum": "33648",
-					"Duration": "60.0",
-					"Descembed": "To kick off round one, Alton demonstrates the mad science of champagne and the competitors embrace a fermentation theme; a Japanese specialty is the talk of entree round; an unusual cake inspires some unusual choices in the dessert round.",
-					"Starttime": "2017-11-01T01:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "cooking",
-					"Live": ""
-				},
-				{
-					"Title": "Chopped",
-					"Epititle": "Flavor Savor",
-					"Stationnum": "33648",
-					"Duration": "60.0",
-					"Descembed": "Fresh Mediterranean foods, including baby octopus in the first round; a prickly green and a meaty fish share the entree basket spotlight; the ice cream machine and the deep fryer come into play in a busy dessert round.",
-					"Starttime": "2017-11-03T00:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "cooking",
-					"Live": ""
-				},
-				{
-					"Title": "Chopped",
-					"Epititle": "Alton's Challenge, Grand Finale",
-					"Stationnum": "33648",
-					"Duration": "60.0",
-					"Descembed": "Four champions return to fight for $50,000; in the first round, a small fish and a strange condiment puzzle the champs; a stunningly-presented protein and a jar of something stinky are in the entree basket.",
-					"Starttime": "2017-11-08T01:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "cooking",
-					"Live": ""
-				},
-				{
-					"Title": "Chopped",
-					"Epititle": "Pie Jinks",
-					"Stationnum": "33648",
-					"Duration": "60.0",
-					"Descembed": "Sour gummies and sausage are part of the appetizer round pie; savory pies that must include baby kale; a dessert round with candied ginger in the basket.",
-					"Starttime": "2017-11-10T00:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "cooking",
-					"Live": ""
-				},
-				{
-					"Title": "Chopped",
-					"Epititle": "An Iron Chef Thanksgiving",
-					"Stationnum": "33648",
-					"Duration": "60.0",
-					"Descembed": "Three Iron Chefs judge a Thanksgiving feast; appetizers include turkey in more than one form; another bird gets some love in the entree round; an epic sandwich and a sweet casserole are two of the ingredients.",
-					"Starttime": "2017-11-15T01:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "cooking",
+					"Genre2": "entertainment",
 					"Live": ""
 				}
 			],
 			"Links": [
 				{
 					"Name": "Network Website",
-					"Value": "http://www.foodnetwork.com/shows/chopped.html"
+					"Value": "http://www.eonline.com/shows/wags"
 				},
 				{
 					"Name": "TV.com",
-					"Value": "http://www.tv.com/shows/chopped/"
+					"Value": "http://www.tv.com/shows/wags/"
 				},
 				{
 					"Name": "Imdb",
-					"Value": "http://www.imdb.com/title/tt1353281/?ref_=fn_al_tt_1"
+					"Value": "http://www.imdb.com/title/tt4986084/?ref_=fn_al_tt_1"
 				},
 				{
-					"Name": "Pinterest",
-					"Value": "https://www.pinterest.com/foodnetwork/lets-watch-chopped/"
-				},
-				{
-					"Name": "Futon Critic",
-					"Value": "http://www.thefutoncritic.com/search.aspx?q=Chopped\u0026type=titles"
-				},
-				{
-					"Name": "The TV Database",
-					"Value": "http://thetvdb.com/?tab=series\u0026id=85019"
-				},
-				{
-					"Name": "Facebook",
-					"Value": "https://www.facebook.com/chopped"
-				},
-				{
-					"Name": "Wiki",
-					"Value": "http://en.wikipedia.org/wiki/Chopped_%28TV_series%29"
-				}
-			],
-			"Recommend": [
-				{
-					"Title": "Chopped Junior",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13760917/p13760917_b_h10_aa.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13760917/p13760917_b_h10_aa.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13760917/p13760917_b_h10_aa.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Chopped Canada",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10384136/p10384136_b_h10_ab.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10384136/p10384136_b_h10_ab.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10384136/p10384136_b_h10_ab.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Iron Chef America",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/188179/p188179_b_h10_ac.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/188179/p188179_b_h10_ac.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/188179/p188179_b_h10_ac.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Beat Bobby Flay",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14218282/p14218282_b_h10_ab.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14218282/p14218282_b_h10_ab.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14218282/p14218282_b_h10_ab.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Sweet Genius",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8780616/p8780616_b_h10_aa.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8780616/p8780616_b_h10_aa.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8780616/p8780616_b_h10_aa.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Guy's Grocery Games",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14219931/p14219931_b_h10_aa.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14219931/p14219931_b_h10_aa.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14219931/p14219931_b_h10_aa.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Cutthroat Kitchen",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10052665/p10052665_b_h10_aj.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10052665/p10052665_b_h10_aj.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10052665/p10052665_b_h10_aj.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Cupcake Wars",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/7954198/p7954198_b_h10_ad.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/7954198/p7954198_b_h10_ad.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/7954198/p7954198_b_h10_ad.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Food Fighters",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11641866/p11641866_b1t_h10_aa.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11641866/p11641866_b1t_h10_aa.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11641866/p11641866_b1t_h10_aa.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Chopped After Hours",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12952140/p12952140_b_h10_aa.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12952140/p12952140_b_h10_aa.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12952140/p12952140_b_h10_aa.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				}
-			]
-		},
-		{
-			"Title": "Counting Cars",
-			"ShowId": "SH015899250000",
-			"MediaType": "SHOW",
-			"Network": {
-				"Callsign": "HISTP",
-				"Stationname": "History (Pacific)",
-				"Stationnum": "21762",
-				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/21762.png",
-				"Description": ""
-			},
-			"Descriptions": [
-				{
-					"Lang": "en",
-					"Description": "When Rick Harrison and the rest of the \"Pawn Stars\" gang need to restore a vehicle they're buying, they sometimes turn to Danny \"The Count\" Koker, who runs Las Vegas auto shop Count's Kustoms. The Count now gets his own half-hour show that showcases his ability to restore and customize classic rides. When he sees a vehicle he wants, whether it's at an auto auction or at a roadside diner, Koker does all he can to acquire it. When successful, he and his team then work to restore and modify the cars and motorcycles to quickly flip them for a profit. From classic cars like Thunderbirds and Corvettes to sidecar motorcycles and everything in between, if it has wheels, the Count's Kustoms team can make it look spectacular.",
-					"Size": "1000"
-				}
-			],
-			"Genres": [
-				{
-					"Lang": "en",
-					"Genre": "Documentary"
-				},
-				{
-					"Lang": "en",
-					"Genre": "Auto"
-				},
-				{
-					"Lang": "en",
-					"Genre": "Reality"
-				}
-			],
-			"Images": [
-				{
-					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9354925/p9354925_b_h10_ap.jpg",
-					"Width": 100,
-					"Orientation": "Landscape"
-				},
-				{
-					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9354925/p9354925_b_h10_ap.jpg",
-					"Width": 300,
-					"Orientation": "Landscape"
-				},
-				{
-					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9354925/p9354925_b_h10_ap.jpg",
-					"Width": 600,
-					"Orientation": "Landscape"
-				}
-			],
-			"Videos": [
-				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/9354925/CountingCarsMeetShannonMasterBikeBuilderHistory_07122016.mp4",
-					"Posted": "07/09/2016"
-				},
-				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/9354925/CountingCarsPlanBHistory_08272016.mp4",
-					"Posted": "03/24/2016"
-				},
-				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/9354925/CountingCarsRepurposedBikeHistory_08272016.mp4",
-					"Posted": "03/17/2016"
-				},
-				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/9354925/CountingCarsStitchedtoPerfectionHistory_08272016.mp4",
-					"Posted": "03/15/2016"
-				},
-				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/9354925/CountingCarsUnsuccessfulHuntHistory_08272016.mp4",
-					"Posted": "02/27/2016"
-				}
-			],
-			"Schedule": [
-				{
-					"Title": "Counting Cars",
-					"Epititle": "Oh My Nova",
-					"Stationnum": "21762",
-					"Duration": "30.0",
-					"Descembed": "Danny helps a customer surprise his brother on his 50th birthday with a restored 1968 Chevy Nova; Danny's friend, Mike, swings by with a classic Mercury; Ryan and Shannon hit the streets to find a guy who is a true Vegas original along with his car.",
-					"Starttime": "2017-10-11T01:03:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Counting Cars",
-					"Epititle": "Get Your Motor Running",
-					"Stationnum": "21762",
-					"Duration": "30.0",
-					"Descembed": "Danny and Shannon restore a rare 1957 Harley-Davidson Panhead prototype; while Shannon is busy returning this motorcycle to its former glory, Danny checks out some rare old cars, including a Model A Ford, a French Citroen and a 1967 Firebird.",
-					"Starttime": "2017-10-11T01:33:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Counting Cars",
-					"Epititle": "Drive: McQueen for a Day",
-					"Stationnum": "21762",
-					"Duration": "180.0",
-					"Descembed": "``Pawn Stars''' Rick Harrison wants the guys to transform a beat-up 1968 Mustang Fastback into Steve McQueen's ride from ``Bullitt;'' Danny hosts a car show at his club; Danny is asked to create a commemorative bike honoring music legend Les Paul.",
-					"Starttime": "2017-10-15T12:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Counting Cars",
-					"Epititle": "",
-					"Stationnum": "21762",
-					"Duration": "30.0",
-					"Descembed": "",
-					"Starttime": "2017-10-18T01:03:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Counting Cars",
-					"Epititle": "",
-					"Stationnum": "21762",
-					"Duration": "30.0",
-					"Descembed": "",
-					"Starttime": "2017-10-18T01:33:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Counting Cars",
-					"Epititle": "Drive: Ultimate Challenge",
-					"Stationnum": "21762",
-					"Duration": "180.0",
-					"Descembed": "Danny takes on an emotional project after spotting a 1970 Dodge Challenger; Danny returns to an old project, a 1967 Ford Bronco; musician Dee Snider drops by to get a ``Sugar Bear'' front end put on his Von Dutch chopper.",
-					"Starttime": "2017-10-22T12:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Counting Cars",
-					"Epititle": "",
-					"Stationnum": "21762",
-					"Duration": "30.0",
-					"Descembed": "",
-					"Starttime": "2017-10-25T01:03:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Counting Cars",
-					"Epititle": "",
-					"Stationnum": "21762",
-					"Duration": "30.0",
-					"Descembed": "",
-					"Starttime": "2017-10-25T01:33:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Counting Cars",
-					"Epititle": "Drive: Floodpocalypse Now",
-					"Stationnum": "21762",
-					"Duration": "180.0",
-					"Descembed": "Danny tries to score an ex-police motorcycle; a water-main break floods the shop; a car-loving couple pulls Danny over to check out his ride; the guys pose with their dream cars for the shop's calendar; Mike and Ryan find an unusual car collector.",
-					"Starttime": "2017-10-29T12:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Counting Cars",
-					"Epititle": "",
-					"Stationnum": "21762",
-					"Duration": "30.0",
-					"Descembed": "",
-					"Starttime": "2017-11-01T01:03:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				}
-			],
-			"Links": [
-				{
-					"Name": "TV.com",
-					"Value": "http://www.tv.com/shows/counting-cars/"
-				},
-				{
-					"Name": "Imdb",
-					"Value": "http://www.imdb.com/title/tt2338096/?ref_=fn_al_tt_1"
+					"Name": "Instagram",
+					"Value": "https://instagram.com/wags"
 				},
 				{
 					"Name": "Futon Critic",
-					"Value": "http://www.thefutoncritic.com/showatch/counting-cars/"
+					"Value": "http://www.thefutoncritic.com/showatch/wags/"
 				},
 				{
 					"Name": "The TV Database",
-					"Value": "http://thetvdb.com/?tab=series\u0026id=261181"
+					"Value": "http://thetvdb.com/?tab=series&id=299164"
 				},
 				{
 					"Name": "Facebook",
-					"Value": "https://www.facebook.com/HISTORYCountingCars"
+					"Value": "https://www.facebook.com/WivesAndGirlfriendsOfSportsStars"
 				},
 				{
 					"Name": "Wiki",
-					"Value": "http://en.wikipedia.org/wiki/Counting_Cars"
-				}
-			],
-			"Recommend": [
-				{
-					"Title": "Pawn Stars",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14001547/p14001547_b_h10_aa.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14001547/p14001547_b_h10_aa.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14001547/p14001547_b_h10_aa.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "American Restoration",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12402611/p12402611_b_h10_aa.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12402611/p12402611_b_h10_aa.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12402611/p12402611_b_h10_aa.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Lost in Transmission",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11671896/p11671896_b_h10_ac.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11671896/p11671896_b_h10_ac.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11671896/p11671896_b_h10_ac.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Cajun Pawn Stars",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8984592/p8984592_b_h10_af.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8984592/p8984592_b_h10_af.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/8984592/p8984592_b_h10_af.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Pawnography",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10753647/p10753647_b_h10_aa.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10753647/p10753647_b_h10_aa.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10753647/p10753647_b_h10_aa.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "King of Cars",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185433/p185433_b_h10_aa.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185433/p185433_b_h10_aa.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185433/p185433_b_h10_aa.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Pimp My Ride",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185305/p185305_b_h10_ac.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185305/p185305_b_h10_ac.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185305/p185305_b_h10_ac.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				},
-				{
-					"Title": "Overhaulin'",
-					"Images": [
-						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/186494/p186494_b_h10_ak.jpg",
-							"Width": 100,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/186494/p186494_b_h10_ak.jpg",
-							"Width": 300,
-							"Orientation": "Landscape"
-						},
-						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/186494/p186494_b_h10_ak.jpg",
-							"Width": 600,
-							"Orientation": "Landscape"
-						}
-					]
-				}
-			]
-		},
-		{
-			"Title": "Fast N' Loud",
-			"ShowId": "SH015676680000",
-			"MediaType": "SHOW",
-			"Network": {
-				"Callsign": "DSCP",
-				"Stationname": "The Discovery Channel (Pacific)",
-				"Stationnum": "12500",
-				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/12500.png",
-				"Description": ""
-			},
-			"Descriptions": [
-				{
-					"Lang": "en",
-					"Description": "Richard Rawlings and Aaron Kaufman deal in rusty gold. The proprietors of Gas Monkey Garage in Dallas buy, restore and resell forgotten, derelict American cars, everything from 1931 Model A's to '73 Trans Ams. As \"Fast N' Loud\" shows, Rawlings is the mastermind, a deal-maker with an eye for relics worth their efforts, and to find them the guys search barns, fields and auctions across the U.S. Kaufman manages most restorations. He's a fabricator and self-taught mechanic, whose techniques and design skills first endeared him to Rawlings and kick-started the partnership. At the end of Season 12, that partnership ended when Kaufman exited Gas Monkey, leaving Rawlings as the series' sole star.",
-					"Size": "1000"
-				}
-			],
-			"Genres": [
-				{
-					"Lang": "en",
-					"Genre": "Auto"
-				},
-				{
-					"Lang": "en",
-					"Genre": "Reality"
-				}
-			],
-			"Images": [
-				{
-					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14597608/p14597608_b_h10_ab.jpg",
-					"Width": 100,
-					"Orientation": "Landscape"
-				},
-				{
-					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14597608/p14597608_b_h10_ab.jpg",
-					"Width": 300,
-					"Orientation": "Landscape"
-				},
-				{
-					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14597608/p14597608_b_h10_ab.jpg",
-					"Width": 600,
-					"Orientation": "Landscape"
-				}
-			],
-			"Videos": [
-				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/SH015676680000/AProfessionalDriftCarRacerPaysAVisitToTheGasMonkeysFastNLoud_02202017.mp4",
-					"Posted": "02/19/2017"
-				},
-				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/SH015676680000/SometimesMechanicsNeedtobeElectriciansTooFastNLoud_02202017.mp4",
-					"Posted": "02/18/2017"
-				},
-				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/SH015676680000/RichardUncoversSomeCarDiamondsInTheRoughFastNLoud_02142017.mp4",
-					"Posted": "02/13/2017"
-				},
-				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/SH015676680000/WhatsTrendingInAutomotivePaintColorsFastNLoud_02072017.mp4",
-					"Posted": "02/06/2017"
-				},
-				{
-					"Url": "https://showseeker.s3.amazonaws.com/media/tv/SH015676680000/HowMuchWillThisSweet55ChevySellForAtAuctionFastNLoud_02062017.mp4",
-					"Posted": "02/05/2017"
-				}
-			],
-			"Schedule": [
-				{
-					"Title": "Fast N' Loud",
-					"Epititle": "Episode 1 (Part 1 of 502)",
-					"Stationnum": "12500",
-					"Duration": "61.0",
-					"Descembed": "Richard puts the Monkeys in charge of hot-rodding a '73 Chevy P30 Step Van for their first build on their own.",
-					"Starttime": "2017-10-17T00:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Fast N' Loud",
-					"Epititle": "Episode 2 (Part 2 of 501)",
-					"Stationnum": "12500",
-					"Duration": "60.0",
-					"Descembed": "The Monkeys race to finish their first big build without Aaron; Richard tries to unload his '65 Shelby Mustang GT with a frozen engine.",
-					"Starttime": "2017-10-24T00:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Fast N' Loud",
-					"Epititle": "Episode 3 (Part 1 of 504)",
-					"Stationnum": "12500",
-					"Duration": "60.0",
-					"Descembed": "Richard brings in Gas Monkey's first guest builder; Dallas hot-rodder Brian Bass teams up with the Monkeys to build a '60s style hot-rod out of a '34 Ford Coupe.",
-					"Starttime": "2017-10-31T00:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Fast N' Loud",
-					"Epititle": "Episode 4 (Part 2 of 503)",
-					"Stationnum": "12500",
-					"Duration": "60.0",
-					"Descembed": "Brian Bass and the Monkeys go over schedule on their '34 Ford Coupe; Richard strikes a deal to feature the Coupe in Hot Rod Magazine.",
-					"Starttime": "2017-11-07T00:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Fast N' Loud",
-					"Epititle": "",
-					"Stationnum": "12500",
-					"Duration": "60.0",
-					"Descembed": "Richard Rawlings and Aaron Kaufman search for forgotten and derelict classic cars to restore.",
-					"Starttime": "2017-11-14T01:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				},
-				{
-					"Title": "Fast N' Loud",
-					"Epititle": "",
-					"Stationnum": "12500",
-					"Duration": "60.0",
-					"Descembed": "Richard Rawlings and Aaron Kaufman search for forgotten and derelict classic cars to restore.",
-					"Starttime": "2017-11-21T01:00:00Z",
-					"Genre1": "reality",
-					"Genre2": "auto",
-					"Live": ""
-				}
-			],
-			"Links": [
-				{
-					"Name": "Network Website",
-					"Value": "http://www.discovery.com/tv-shows/fast-n-loud"
-				},
-				{
-					"Name": "Imdb",
-					"Value": "http://www.imdb.com/title/tt2346169/?ref_=fn_al_tt_1"
-				},
-				{
-					"Name": "Futon Critic",
-					"Value": "http://www.thefutoncritic.com/search.aspx?q=Fast%20N%27%20Loud\u0026type=titles"
-				},
-				{
-					"Name": "The TV Database",
-					"Value": "http://thetvdb.com/?tab=series\u0026id=259393"
-				},
-				{
-					"Name": "Facebook",
-					"Value": "https://www.facebook.com/FastNLoudTV"
-				},
-				{
-					"Name": "Wiki",
-					"Value": "http://en.wikipedia.org/wiki/Fast_N%27_Loud"
+					"Value": "https://en.wikipedia.org/wiki/WAGS_%28TV_series%29"
 				},
 				{
 					"Name": "Twitter",
-					"Value": "https://twitter.com/FastNLoudTV"
+					"Value": "https://twitter.com/wagsone"
 				}
 			],
 			"Recommend": [
 				{
-					"Title": "Misfit Garage",
+					"Title": "Famously Single",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11061523/p11061523_b_h10_ai.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13952839/p13952839_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11061523/p11061523_b_h10_ai.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13952839/p13952839_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11061523/p11061523_b_h10_ai.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13952839/p13952839_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13952839/p13952839_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Wheeler Dealers",
+					"Title": "E! News",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14541653/p14541653_b_h10_ab.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185508/p185508_b_h10_ah.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14541653/p14541653_b_h10_ab.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185508/p185508_b_h10_ah.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14541653/p14541653_b_h10_ab.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185508/p185508_b_h10_ah.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185508/p185508_b_h10_ah.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Chasing Classic Cars",
+					"Title": "L.A. Clippers Dance Squad",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13737906/p13737906_b_h10_ad.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12651194/p12651194_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13737906/p13737906_b_h10_ad.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12651194/p12651194_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13737906/p13737906_b_h10_ad.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12651194/p12651194_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12651194/p12651194_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Dallas Car Sharks",
+					"Title": "Keeping Up With the Kardashians",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9992277/p9992277_b_h10_ab.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14441601/p14441601_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9992277/p9992277_b_h10_ab.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14441601/p14441601_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9992277/p9992277_b_h10_ab.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14441601/p14441601_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14441601/p14441601_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Texas Car Wars",
+					"Title": "So Cosmo",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9337519/p9337519_b_h10_aa.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13681565/p13681565_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9337519/p9337519_b_h10_aa.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13681565/p13681565_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/9337519/p9337519_b_h10_aa.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13681565/p13681565_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/13681565/p13681565_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "American Hot Rod",
+					"Title": "Stewarts & Hamiltons",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185631/p185631_b_h10_ac.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11774378/p11774378_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185631/p185631_b_h10_ac.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11774378/p11774378_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/185631/p185631_b_h10_ac.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11774378/p11774378_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11774378/p11774378_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Overhaulin'",
+					"Title": "Botched",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/186494/p186494_b_h10_ak.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14136177/p14136177_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/186494/p186494_b_h10_ak.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14136177/p14136177_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/186494/p186494_b_h10_ak.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14136177/p14136177_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14136177/p14136177_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Lords of the Car Hoards",
+					"Title": "Rich Kids of Beverly Hills",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10551307/p10551307_b_h10_ad.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12693640/p12693640_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10551307/p10551307_b_h10_ad.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12693640/p12693640_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10551307/p10551307_b_h10_ad.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12693640/p12693640_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12693640/p12693640_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
 				},
 				{
-					"Title": "Lost in Transmission",
+					"Title": "Kocktails With KhloÃ©",
 					"Images": [
 						{
-							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11671896/p11671896_b_h10_ac.jpg",
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12426438/p12426438_b_h10_aa.jpg",
 							"Width": 100,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11671896/p11671896_b_h10_ac.jpg",
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12426438/p12426438_b_h10_aa.jpg",
 							"Width": 300,
 							"Orientation": "Landscape"
 						},
 						{
-							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11671896/p11671896_b_h10_ac.jpg",
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12426438/p12426438_b_h10_aa.jpg",
 							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12426438/p12426438_b_h10_aa.jpg",
+							"Width": 1920,
 							"Orientation": "Landscape"
 						}
 					]
@@ -2184,60 +2770,348 @@
 			]
 		},
 		{
-			"Title": "NHL Hockey",
-			"ShowId": "SP003689190000",
-			"MediaType": "SPORT",
+			"Title": "Z Nation",
+			"ShowId": "SH019754600000",
+			"MediaType": "SHOW",
 			"Network": {
-				"Callsign": "NBCSN",
-				"Stationname": "NBCSN",
-				"Stationnum": "15952",
-				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/15952.png",
-				"Description": ""
+				"Callsign": "SYFY",
+				"Stationname": "SYFY",
+				"Stationnum": "11097",
+				"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11097.png",
+				"Description": "Syfy is a media destination for imagination-based entertainment. With year round acclaimed original series, events, blockbuster movies, classic science fiction and fantasy programming, Syfy is a passport to limitless possibilities."
 			},
-			"Descriptions": [],
+			"Similar": [
+				{
+					"Network": "AMC",
+					"Id": "10021",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/10021.png"
+				},
+				{
+					"Network": "FX",
+					"Id": "14321",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/14321.png"
+				},
+				{
+					"Network": "TNT",
+					"Id": "11164",
+					"Image": "https://showseeker.s3.amazonaws.com/images/netwroklogo/75/11164.png"
+				}
+			],
+			"Descriptions": [
+				{
+					"Lang": "en",
+					"Description": "Several years since a zombie virus swept across America, there's only one person -- who goes by just Murphy -- known to have survived the infection -- the world's last hope at creating a vaccine. The last functioning viral lab needs blood from him for its antibodies, but the facility is in California and the man is in New York. A ragtag group of strangers works to transport him to the West Coast, but his dark secret remains hidden, which could threaten everyone. Hammond and his second in command, Garnett, initially lead the group of the living -- later replaced by Lt. Warren -- and computer hacker Citizen Z helps everyone navigate through the zombie-infested terrain. When the group meets a man in Colorado, he offers to take Murphy the rest of the way to California. When nuclear weapons are launched, people head into survival mode and become desperate to find a cure.",
+					"Size": "1000"
+				}
+			],
 			"Genres": [
 				{
 					"Lang": "en",
-					"Genre": "Sports Event"
+					"Genre": "Action"
 				},
 				{
 					"Lang": "en",
-					"Genre": "Hockey"
+					"Genre": "Drama"
+				},
+				{
+					"Lang": "en",
+					"Genre": "Horror"
 				}
 			],
 			"Images": [
 				{
-					"Url": "https://img-showcards.showseeker.com/100x/https://s3.amazonaws.com/image.us/lonestar/sports/default/nhl.png",
+					"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10982694/p10982694_b_h10_ag.jpg",
 					"Width": 100,
 					"Orientation": "Landscape"
 				},
 				{
-					"Url": "https://img-showcards.showseeker.com/300x/https://s3.amazonaws.com/image.us/lonestar/sports/default/nhl.png",
+					"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10982694/p10982694_b_h10_ag.jpg",
 					"Width": 300,
 					"Orientation": "Landscape"
 				},
 				{
-					"Url": "https://img-showcards.showseeker.com/600x/https://s3.amazonaws.com/image.us/lonestar/sports/default/nhl.png",
+					"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10982694/p10982694_b_h10_ag.jpg",
 					"Width": 600,
+					"Orientation": "Landscape"
+				},
+				{
+					"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10982694/p10982694_b_h10_ag.jpg",
+					"Width": 1920,
 					"Orientation": "Landscape"
 				}
 			],
-			"Videos": [],
-			"Schedule": [
+			"Videos": [
 				{
-					"Title": "NHL Hockey",
-					"Epititle": "Buffalo Sabres at Columbus Blue Jackets",
-					"Stationnum": "15952",
-					"Duration": "165.0",
-					"Descembed": "",
-					"Starttime": "2017-10-25T20:00:00Z",
-					"Genre1": "sports event",
-					"Genre2": "hockey",
-					"Live": "Live"
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/46970344dab39cfd8e504dc62e2a9843/ZNATIONSeason4Episode10QuickThinkingSYFY_12042017.mp4",
+					"Posted": "12/04/2017"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/46970344dab39cfd8e504dc62e2a9843/ZNATIONSeason4Episode10RRSYFY_12042017.mp4",
+					"Posted": "12/03/2017"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/46970344dab39cfd8e504dc62e2a9843/ZNATIONSeason4Episode10AllZombieKillsSYFY_12042017.mp4",
+					"Posted": "12/02/2017"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/46970344dab39cfd8e504dc62e2a9843/ZNATIONSeason4Episode9DisgruntledEmployeesSYFY_12042017.mp4",
+					"Posted": "12/01/2017"
+				},
+				{
+					"Url": "https://showseeker.s3.amazonaws.com/media/tv/46970344dab39cfd8e504dc62e2a9843/ZNATIONSeason4Episode9GroundControlSYFY_11302017.mp4",
+					"Posted": "11/29/2017"
 				}
 			],
-			"Links": [],
-			"Recommend": []
+			"Schedule": [
+				{
+					"Title": "Z Nation",
+					"Epititle": "Return to Mercy Labs",
+					"Stationnum": "11097",
+					"Duration": "60.0",
+					"Descembed": "Warren's dream leads the group back to Mercy Labs where she must perform a dangerous task without knowing why.",
+					"Starttime": "2017-12-08T21:00:00Z",
+					"Genre1": "drama",
+					"Genre2": "action",
+					"Live": ""
+				},
+				{
+					"Title": "Z Nation",
+					"Epititle": "Mt. Weather",
+					"Stationnum": "11097",
+					"Duration": "60.0",
+					"Descembed": "Warren and the group must stop Zona from launching operation Black Rainbow to cleanse the landscape of zombies- and humans.",
+					"Starttime": "2017-12-15T21:00:00Z",
+					"Genre1": "drama",
+					"Genre2": "action",
+					"Live": ""
+				},
+				{
+					"Title": "Z Nation",
+					"Epititle": "The Black Rainbow",
+					"Stationnum": "11097",
+					"Duration": "60.0",
+					"Descembed": "The secret of Warren's Black Rainbow dream is unlocked when they reach their final destination.",
+					"Starttime": "2017-12-15T22:00:00Z",
+					"Genre1": "drama",
+					"Genre2": "action",
+					"Live": ""
+				}
+			],
+			"Links": [
+				{
+					"Name": "Network Website",
+					"Value": "http://www.syfy.com/znation"
+				},
+				{
+					"Name": "TV.com",
+					"Value": "http://www.tv.com/shows/z-nation/"
+				},
+				{
+					"Name": "Imdb",
+					"Value": "http://www.imdb.com/title/tt3843168/?ref_=fn_al_tt_1"
+				},
+				{
+					"Name": "Rotten Tomatoes",
+					"Value": "http://www.rottentomatoes.com/tv/z-nation/s02/"
+				},
+				{
+					"Name": "Futon Critic",
+					"Value": "http://www.thefutoncritic.com/showatch/z-nation/"
+				},
+				{
+					"Name": "The TV Database",
+					"Value": "http://thetvdb.com/?tab=series&id=280494"
+				},
+				{
+					"Name": "Facebook",
+					"Value": "https://www.facebook.com/ZNationSyfy"
+				},
+				{
+					"Name": "Wiki",
+					"Value": "https://en.wikipedia.org/wiki/Z_Nation"
+				},
+				{
+					"Name": "Twitter",
+					"Value": "https://twitter.com/znation?lang=en"
+				}
+			],
+			"Recommend": [
+				{
+					"Title": "Fear the Walking Dead",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14072088/p14072088_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14072088/p14072088_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14072088/p14072088_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14072088/p14072088_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "The Last Ship",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14273984/p14273984_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14273984/p14273984_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14273984/p14273984_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14273984/p14273984_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Gotham",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10551643/p10551643_b_h10_af.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10551643/p10551643_b_h10_af.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10551643/p10551643_b_h10_af.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10551643/p10551643_b_h10_af.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "12 Monkeys",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11165351/p11165351_b_h10_ae.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11165351/p11165351_b_h10_ae.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11165351/p11165351_b_h10_ae.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/11165351/p11165351_b_h10_ae.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "The Strain",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14156193/p14156193_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14156193/p14156193_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14156193/p14156193_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/14156193/p14156193_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Helix",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10406927/p10406927_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10406927/p10406927_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10406927/p10406927_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/10406927/p10406927_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				},
+				{
+					"Title": "Hunters",
+					"Images": [
+						{
+							"Url": "https://img-showcards.showseeker.com/100x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12524344/p12524344_b_h10_aa.jpg",
+							"Width": 100,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/300x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12524344/p12524344_b_h10_aa.jpg",
+							"Width": 300,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/600x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12524344/p12524344_b_h10_aa.jpg",
+							"Width": 600,
+							"Orientation": "Landscape"
+						},
+						{
+							"Url": "https://img-showcards.showseeker.com/1920x/https://showseeker.s3.amazonaws.com/on/photos/tvbanners/h10/NowShowing/12524344/p12524344_b_h10_aa.jpg",
+							"Width": 1920,
+							"Orientation": "Landscape"
+						}
+					]
+				}
+			]
 		}
 	]
 }

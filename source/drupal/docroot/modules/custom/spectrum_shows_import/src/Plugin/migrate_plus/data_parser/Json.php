@@ -53,6 +53,8 @@ class Json extends MigrateJson {
     $source_data = parent::getSourceData($url);
     // Add uniqueId and merge genres in Schedule array.
     $this->modifySchedules($source_data);
+    // Modify source data. Add Stationnum in Similar array.
+    $this->modifySimilar($source_data);
 
     if (isset($this->configuration['sub_selector']) && !empty($this->configuration['sub_selector'])) {
       $selector = trim($this->configuration['sub_selector']);
@@ -106,6 +108,25 @@ class Json extends MigrateJson {
             $scheduleItem['Genres'][]['Genre'] = Unicode::ucfirst($scheduleItem[$genre]);
           }
         }
+      }
+    }
+
+    return $sourceData;
+  }
+
+  /**
+   * Modify source data. Add Stationnum in Similar array.
+   *
+   * @param array $sourceData
+   *   Source JSON data.
+   *
+   * @return array|mixed
+   *   Modified source JSON data.
+   */
+  protected function modifySimilar(array &$sourceData) {
+    foreach ($sourceData as $key => &$item) {
+      foreach ($item['Similar'] as $newKey => &$similarItem) {
+        $similarItem['Stationnum'] = $similarItem['Id'];
       }
     }
 
