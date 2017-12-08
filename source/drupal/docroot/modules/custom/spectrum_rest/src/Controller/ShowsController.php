@@ -22,7 +22,7 @@ class ShowsController extends ControllerBase {
    * @return \Drupal\mm_rest\Response\JsonResponse|\Exception
    *   JSON Response object.
    */
-  public function import(Request $request) {
+  public function fetch(Request $request) {
     $data = $request->getContent();
     try {
       if ($this->isValidJson($data)) {
