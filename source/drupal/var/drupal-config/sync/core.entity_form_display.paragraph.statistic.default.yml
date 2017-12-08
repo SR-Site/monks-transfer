@@ -7,8 +7,23 @@ dependencies:
     - field.field.paragraph.statistic.field_stats
     - paragraphs.paragraphs_type.statistic
   module:
+    - field_group
     - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_stats:
+      children:
+        - field_stats
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Stats
 id: paragraph.statistic.default
 targetEntityType: paragraph
 bundle: statistic

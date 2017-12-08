@@ -8,7 +8,34 @@ dependencies:
     - field.field.paragraph.block_success_story_impact.field_success_story_statistics
     - paragraphs.paragraphs_type.block_success_story_impact
   module:
+    - field_group
     - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+    group_statistics:
+      children:
+        - field_success_story_statistics
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Statistics
 id: paragraph.block_success_story_impact.default
 targetEntityType: paragraph
 bundle: block_success_story_impact
@@ -16,7 +43,7 @@ mode: default
 content:
   field_scroll_id:
     type: string_textfield
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -24,7 +51,7 @@ content:
     region: content
   field_styles:
     type: entity_reference_paragraphs
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -36,7 +63,7 @@ content:
     region: content
   field_success_story_statistics:
     type: entity_reference_paragraphs
-    weight: 2
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs

@@ -8,14 +8,29 @@ dependencies:
     - field.field.paragraph.block_filter_show_content.field_styles
     - paragraphs.paragraphs_type.block_filter_show_content
   module:
+    - field_group
     - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
 id: paragraph.block_filter_show_content.default
 targetEntityType: paragraph
 bundle: block_filter_show_content
 mode: default
 content:
   field_close_label:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -23,7 +38,7 @@ content:
     type: string_textfield
     region: content
   field_filter_label:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -31,7 +46,7 @@ content:
     type: string_textfield
     region: content
   field_styles:
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs

@@ -12,8 +12,59 @@ dependencies:
     - field.field.paragraph.block_image_with_content_c.field_styles
     - paragraphs.paragraphs_type.block_image_with_content_c
   module:
+    - field_group
     - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+    group_heading:
+      children:
+        - field_new_heading
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Heading
+    group_background_image:
+      children:
+        - field_background_image
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Background image'
+    group_link:
+      children:
+        - field_link
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Link
 id: paragraph.block_image_with_content_c.default
 targetEntityType: paragraph
 bundle: block_image_with_content_c
@@ -26,18 +77,6 @@ content:
     type: options_select
     region: content
   field_background_image:
-    weight: 5
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-    third_party_settings: {  }
-    type: entity_reference_paragraphs
-    region: content
-  field_link:
     weight: 6
     settings:
       title: Paragraph
@@ -49,8 +88,20 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
+  field_link:
+    weight: 7
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
   field_new_heading:
-    weight: 3
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -79,7 +130,7 @@ content:
     region: content
   field_styles:
     type: entity_reference_paragraphs
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs

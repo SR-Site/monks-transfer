@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.slideheromain.field_heading
     - field.field.paragraph.slideheromain.field_image
     - field.field.paragraph.slideheromain.field_link
+    - field.field.paragraph.slideheromain.field_new_heading
     - field.field.paragraph.slideheromain.field_paragraph
     - field.field.paragraph.slideheromain.field_statistics
     - field.field.paragraph.slideheromain.field_video
@@ -38,6 +39,15 @@ content:
     region: content
   field_link:
     weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_new_heading:
+    weight: 12
     label: above
     settings:
       view_mode: default

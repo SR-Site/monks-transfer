@@ -2,9 +2,8 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\Node;
 
-use Drupal\mm_rest\Plugin\RestEntityProcessorBase;
 use Drupal\node\Entity\Node;
-use Drupal\spectrum_shows\GenreInterface;
+use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 
 /**
  * Returns the structured data of an entity.
@@ -18,7 +17,7 @@ use Drupal\spectrum_shows\GenreInterface;
  *   view_mode = "default"
  * )
  */
-class NodeShowV1 extends RestEntityProcessorBase {
+class NodeShowV1 extends SpectrumRestEntityProcessorBase {
 
   /**
    * {@inheritdoc}
@@ -67,6 +66,9 @@ class NodeShowV1 extends RestEntityProcessorBase {
 
     $data = [
       'title' => $entity->label(),
+      'data' => [
+        'breadcrumbs' => $this->displayBreadcrumbs($entity),
+      ],
       'blocks' => $blocks,
     ];
 

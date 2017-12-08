@@ -10,14 +10,41 @@ dependencies:
     - field.field.paragraph.block_audience_quote.field_subheading
     - paragraphs.paragraphs_type.block_audience_quote
   module:
+    - field_group
     - paragraphs
+third_party_settings:
+  field_group:
+    group_heading:
+      children:
+        - field_new_heading
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Heading
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
 id: paragraph.block_audience_quote.default
 targetEntityType: paragraph
 bundle: block_audience_quote
 mode: default
 content:
   field_new_heading:
-    weight: 2
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -29,7 +56,7 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_paragraph_image:
-    weight: 4
+    weight: 5
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -41,7 +68,7 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_scroll_id:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
@@ -49,7 +76,7 @@ content:
     type: string_textfield
     region: content
   field_styles:
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -61,7 +88,7 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_subheading:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''

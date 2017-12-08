@@ -12,7 +12,38 @@ dependencies:
     - field.field.paragraph.block_multiple_images.field_tertiary_item
     - paragraphs.paragraphs_type.block_multiple_images
   module:
+    - field_group
     - paragraphs
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+    group_items:
+      children:
+        - field_primary_item
+        - field_secondary_item
+        - field_tertiary_item
+        - field_quaternary_item
+        - field_quinary_item
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Items
 id: paragraph.block_multiple_images.default
 targetEntityType: paragraph
 bundle: block_multiple_images
@@ -20,7 +51,7 @@ mode: default
 content:
   field_primary_item:
     type: paragraphs
-    weight: 2
+    weight: 3
     settings:
       title: 'Primary Item'
       title_plural: 'Primary Item'
@@ -32,7 +63,7 @@ content:
     region: content
   field_quaternary_item:
     type: entity_reference_paragraphs
-    weight: 5
+    weight: 6
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -44,7 +75,7 @@ content:
     region: content
   field_quinary_item:
     type: entity_reference_paragraphs
-    weight: 6
+    weight: 7
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -64,7 +95,7 @@ content:
     region: content
   field_secondary_item:
     type: entity_reference_paragraphs
-    weight: 3
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -76,7 +107,7 @@ content:
     region: content
   field_styles:
     type: entity_reference_paragraphs
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -88,7 +119,7 @@ content:
     region: content
   field_tertiary_item:
     type: entity_reference_paragraphs
-    weight: 4
+    weight: 5
     settings:
       title: Paragraph
       title_plural: Paragraphs

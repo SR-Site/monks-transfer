@@ -7,5 +7,7 @@ _core:
 id: front
 label: 'Front page'
 tags:
-  canonical_url: '[site:url]'
+  keywords: 'tv advertising, local advertising, marketing platform, charter media, building brand awareness, cost of tv advertising, automotive, local advertising rates, small business, audience intelligence'
   shortlink: '[site:url]'
+  description: 'Spectrum Reach, the advertising sales division of Spectrum, offers TV and digital advertising solutions that are accessible, affordable, and effective for local, regional and national businesses.'
+  canonical_url: '[site:url]'

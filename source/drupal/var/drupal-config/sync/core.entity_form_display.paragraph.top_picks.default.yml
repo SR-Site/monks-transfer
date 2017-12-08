@@ -8,7 +8,22 @@ dependencies:
     - field.field.paragraph.top_picks.field_top_picks_shows
     - paragraphs.paragraphs_type.top_picks
   module:
+    - field_group
     - text
+third_party_settings:
+  field_group:
+    group_top_picks_shows:
+      children:
+        - field_top_picks_shows
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Top picks shows'
 id: paragraph.top_picks.default
 targetEntityType: paragraph
 bundle: top_picks

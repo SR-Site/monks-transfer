@@ -14,15 +14,67 @@ dependencies:
     - paragraphs.paragraphs_type.block_video_with_content_c
   module:
     - entity_browser
+    - field_group
     - paragraphs
     - text
+third_party_settings:
+  field_group:
+    group_styles:
+      children:
+        - field_styles
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Styles
+    group_heading:
+      children:
+        - field_new_heading
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Heading
+    group_poster_and_video:
+      children:
+        - field_poster
+        - field_video
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Poster and Video'
+    group_link:
+      children:
+        - field_link
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Link
 id: paragraph.block_video_with_content_c.default
 targetEntityType: paragraph
 bundle: block_video_with_content_c
 mode: default
 content:
   field_link:
-    weight: 4
+    weight: 5
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -34,7 +86,7 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_new_heading:
-    weight: 2
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -54,7 +106,7 @@ content:
     type: text_textarea
     region: content
   field_poster:
-    weight: 5
+    weight: 6
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -75,7 +127,7 @@ content:
     region: content
   field_styles:
     type: entity_reference_paragraphs
-    weight: 0
+    weight: 1
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -86,7 +138,7 @@ content:
     third_party_settings: {  }
     region: content
   field_video:
-    weight: 6
+    weight: 7
     settings:
       entity_browser: video
       field_widget_display: label

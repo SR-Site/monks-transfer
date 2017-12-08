@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.slideheromain.field_heading
     - field.field.paragraph.slideheromain.field_image
     - field.field.paragraph.slideheromain.field_link
+    - field.field.paragraph.slideheromain.field_new_heading
     - field.field.paragraph.slideheromain.field_paragraph
     - field.field.paragraph.slideheromain.field_statistics
     - field.field.paragraph.slideheromain.field_video
@@ -24,7 +25,7 @@ third_party_settings:
       children:
         - field_link
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: details
       format_settings:
         label: Link
@@ -36,7 +37,7 @@ third_party_settings:
     group_link2:
       children: {  }
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: details
       format_settings:
         label: 'Secondary link'
@@ -49,7 +50,7 @@ third_party_settings:
       children:
         - field_statistics
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: details
       format_settings:
         label: Statistics
@@ -58,21 +59,25 @@ third_party_settings:
         classes: ''
         required_fields: false
       label: Statistics
+    group_heading:
+      children:
+        - field_new_heading
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Heading
 id: paragraph.slideheromain.default
 targetEntityType: paragraph
 bundle: slideheromain
 mode: default
 content:
-  field_heading:
-    weight: 0
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_image:
-    weight: 2
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -91,8 +96,20 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
-  field_paragraph:
+  field_new_heading:
     weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_paragraph:
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -112,7 +129,7 @@ content:
     third_party_settings: {  }
     region: content
   field_video:
-    weight: 3
+    weight: 4
     settings:
       entity_browser: video_internal
       field_widget_display: rendered_entity
@@ -127,5 +144,6 @@ content:
     region: content
 hidden:
   created: true
+  field_heading: true
   status: true
   uid: true

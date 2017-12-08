@@ -313,6 +313,10 @@ class InitResource extends ResourceBase {
         "target" => $url,
         "type" => UrlHelper::isExternal($url) ? self::MENU_LINK_EXTERNAL : self::MENU_LINK_INTERNAL,
       ];
+      if ($parsed_array['target'] == '/contact-us') {
+        unset($parsed_array['target']);
+        $parsed_array['type'] = 3;
+      }
 
       // Display child items.
       if (!empty($menu_item->subtree) && $menu == 'main') {

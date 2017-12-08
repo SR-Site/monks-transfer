@@ -2,38 +2,40 @@
 
 namespace Drupal\spectrum_rest\EventSubscriber;
 
-use Drupal\dynamic_page_cache\EventSubscriber\DynamicPageCacheSubscriber;
 use Drupal\mm_rest\Model\ResponseModelFactory;
 use Drupal\mm_rest\Request\RequestMatcherInterface;
-use Drupal\mm_rest\Request\RequestTransformerInterface;
 use Drupal\mm_rest\Response\Response as RestApiResponse;
-use Drupal\mm_rest\Response\ResponseTransformerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
-use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent;
-use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\Event\KernelEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
+/**
+ * Class IOEventSubscriber.
+ *
+ * @package Drupal\spectrum_rest\EventSubscriber
+ */
 class IOEventSubscriber implements EventSubscriberInterface {
 
   /**
-   * @var RequestMatcherInterface
+   * RequestMatcherInterface.
+   *
+   * @var \Drupal\mm_rest\Request\RequestMatcherInterface
    */
   protected $requestMatcher;
 
   /**
    * IOEventSubscriber constructor.
    *
-   * @param RequestMatcherInterface $requestMatcher
+   * @param \Drupal\mm_rest\Request\RequestMatcherInterface $requestMatcher
+   *   RequestMatcherInterface.
    */
   public function __construct(RequestMatcherInterface $requestMatcher) {
     $this->requestMatcher = $requestMatcher;
   }
 
   /**
-   * @return array
+   * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
     return [
@@ -44,9 +46,10 @@ class IOEventSubscriber implements EventSubscriberInterface {
   }
 
   /**
-   * convert response to rest api response
+   * Convert response to rest api response.
    *
-   * @param GetResponseForControllerResultEvent $event
+   * @param \Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent $event
+   *   GetResponseForControllerResultEvent.
    */
   public function onView(GetResponseForControllerResultEvent $event) {
     if (!$this->eventRequestMatches($event)) {
@@ -56,9 +59,13 @@ class IOEventSubscriber implements EventSubscriberInterface {
   }
 
   /**
-   * @param KernelEvent $event
+   * Event request matcher.
+   *
+   * @param \Symfony\Component\HttpKernel\Event\KernelEvent $event
+   *   Kernel event.
    *
    * @return bool
+   *   TRUE or FALSE.
    */
   protected function eventRequestMatches(KernelEvent $event) {
 
@@ -66,9 +73,13 @@ class IOEventSubscriber implements EventSubscriberInterface {
   }
 
   /**
-   * @param $data
+   * Create Rest Api Response.
    *
-   * @return RestApiResponse
+   * @param mixed $data
+   *   Array of data.
+   *
+   * @return \Drupal\mm_rest\Response\Response
+   *   Response.
    */
   protected function createRestApiResponse($data) {
     $data = $this->cleanArray($data);
@@ -77,20 +88,25 @@ class IOEventSubscriber implements EventSubscriberInterface {
   }
 
   /**
-   * Clean all empty values from array
-   * @param $array
+   * Clean all empty values from array.
+   *
+   * @param mixed $array
+   *   Array.
    *
    * @return array
+   *   Array.
    */
   protected function cleanArray($array) {
     if (is_array($array)) {
       foreach ($array as $key => $sub_array) {
-        $result = $this->cleanArray($sub_array);
-        if ($result === '' || (is_array($result) && empty($result))) {
-          unset($array[$key]);
-        }
-        else {
-          $array[$key] = $result;
+        if ($key != 'blocks') {
+          $result = $this->cleanArray($sub_array);
+          if ($result === '' || (is_array($result) && empty($result))) {
+            unset($array[$key]);
+          }
+          else {
+            $array[$key] = $result;
+          }
         }
       }
     }

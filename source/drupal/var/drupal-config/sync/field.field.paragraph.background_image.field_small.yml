@@ -11,8 +11,8 @@ id: paragraph.background_image.field_small
 field_name: field_small
 entity_type: paragraph
 bundle: background_image
-label: Small
-description: ''
+label: Mobile
+description: 'This image will be display on mobile/small screens. If is not set, then Desktop image will be shown.'
 required: false
 translatable: true
 default_value: {  }
