@@ -8,15 +8,15 @@ use Drupal\spectrum_rest\Plugin\RestEntityProcessor\Node\NodeArticleTeaserV1;
  * Returns the structured data of an entity.
  *
  * @RestEntityProcessor(
- *   id = "spectrum_rest_node_article_product_item_v1",
- *   label = @Translation("Node: Article - Product Item"),
+ *   id = "spectrum_rest_node_product_page_product_item_v1",
+ *   label = @Translation("Node: Product Page - Product Item"),
  *   version = "v1",
  *   entity_type = "node",
- *   bundle = "article",
+ *   bundle = "product_page",
  *   view_mode = "product_item"
  * )
  */
-class NodeArticleProductItemV1 extends NodeArticleTeaserV1 {
+class NodeProductPageProductItemV1 extends NodeArticleTeaserV1 {
 
   /**
    * {@inheritdoc}
@@ -26,7 +26,7 @@ class NodeArticleProductItemV1 extends NodeArticleTeaserV1 {
     $data = [
       "image" => $this->image($entity->get('field_image')),
       "target" => $this->aliasManager->getAliasByPath('/' . $entity->toUrl()->getInternalPath()),
-      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_excerpt')),
+      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('body')),
       "heading" => $entity->label(),
     ];
 

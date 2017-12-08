@@ -30,7 +30,7 @@ class ParagraphBlockProductListV1 extends SpectrumRestEntityProcessorBase {
       'id' => 'ProductList',
       'data' => $data + [
         'scrollId' => $this->fieldProcessor->getFieldData($entity->get('field_scroll_id')),
-        'products' => $this->getItems($entity->get('field_articles'), ['view_mode' => 'product_item']),
+        'products' => $this->getItems($entity->get('field_products'), ['view_mode' => 'product_item']),
       ],
     ];
 

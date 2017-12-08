@@ -1,26 +1,26 @@
-uuid: f8fde2df-66f9-42aa-93d1-bbe76e3aa4e7
+uuid: a0528280-0435-49d7-a8e7-6e2bb5a1798e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_articles
-    - node.type.article
+    - field.storage.paragraph.field_products
+    - node.type.product_page
     - paragraphs.paragraphs_type.block_product_list
-id: paragraph.block_product_list.field_articles
-field_name: field_articles
+id: paragraph.block_product_list.field_products
+field_name: field_products
 entity_type: paragraph
 bundle: block_product_list
 label: Products
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      article: article
+      product_page: product_page
     sort:
       field: _none
     auto_create: false

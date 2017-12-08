@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.block_product_list.field_articles
     - field.field.paragraph.block_product_list.field_new_heading
     - field.field.paragraph.block_product_list.field_paragraph
+    - field.field.paragraph.block_product_list.field_products
     - field.field.paragraph.block_product_list.field_scroll_id
     - field.field.paragraph.block_product_list.field_styles
     - paragraphs.paragraphs_type.block_product_list
@@ -41,7 +41,7 @@ third_party_settings:
       label: Heading
     group_products:
       children:
-        - field_articles
+        - field_products
       parent_name: ''
       weight: 4
       format_type: fieldset
@@ -56,15 +56,6 @@ targetEntityType: paragraph
 bundle: block_product_list
 mode: default
 content:
-  field_articles:
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_new_heading:
     weight: 3
     settings:
@@ -84,6 +75,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_products:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_scroll_id:
     type: string_textfield
