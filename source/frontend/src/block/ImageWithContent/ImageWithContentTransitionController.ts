@@ -1,5 +1,5 @@
 import { AbstractTransitionController } from 'vue-transition-component';
-import { Expo, Linear } from 'gsap';
+import { Expo } from 'gsap';
 
 class ImageWithContentTransitionController extends AbstractTransitionController {
 	/**
@@ -16,11 +16,11 @@ class ImageWithContentTransitionController extends AbstractTransitionController 
 			this.viewModel.$refs.content,
 			2,
 			{
-				xPercent: -100,
+				x: -50,
 				autoAlpha: 0,
 			},
 			{
-				xPercent: 0,
+				x: 0,
 				autoAlpha: 1,
 				clearProps: 'all',
 				ease: Expo.easeOut,
