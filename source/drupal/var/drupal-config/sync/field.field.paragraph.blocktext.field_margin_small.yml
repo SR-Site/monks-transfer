@@ -1,0 +1,23 @@
+uuid: cbdaa57f-a4af-4ccb-b525-8e20839cc18c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_margin_small
+    - paragraphs.paragraphs_type.blocktext
+id: paragraph.blocktext.field_margin_small
+field_name: field_margin_small
+entity_type: paragraph
+bundle: blocktext
+label: Small
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -30,6 +30,7 @@ class ParagraphBlockTextV1 extends SpectrumRestEntityProcessorBase {
       "data" => $data + [
         "heading" => $this->fieldProcessor->getFieldData($entity->get('field_new_heading')),
         "html" => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
+        'small' => $this->fieldProcessor->getFieldData($entity->get('field_margin_small')),
       ],
     ];
 

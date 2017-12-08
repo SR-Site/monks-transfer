@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blocktext.field_margin_small
     - field.field.paragraph.blocktext.field_new_heading
     - field.field.paragraph.blocktext.field_paragraph
     - field.field.paragraph.blocktext.field_styles
@@ -15,6 +16,16 @@ targetEntityType: paragraph
 bundle: blocktext
 mode: default
 content:
+  field_margin_small:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_new_heading:
     weight: 2
     label: above
