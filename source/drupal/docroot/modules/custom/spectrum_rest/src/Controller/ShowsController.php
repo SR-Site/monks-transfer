@@ -23,13 +23,11 @@ class ShowsController extends ControllerBase {
    *   JSON Response object.
    */
   public function import(Request $request) {
-    // Get file from url and check if is it valid JSON file.
-    $url = $request->getSchemeAndHttpHost() . '/sample.json';
+    $data = $request->getContent();
     try {
-      $showsFile = file_get_contents($url);
-      if ($showsFile && $this->isValidJson($showsFile)) {
+      if ($this->isValidJson($data)) {
         $filename = 'public://shows.json';
-        $file = system_retrieve_file($url, $filename, TRUE, FILE_EXISTS_REPLACE);
+        $file = file_save_data($data, $filename, FILE_EXISTS_REPLACE);
         if ($file instanceof FileInterface) {
           $file->save();
           return new JsonResponse(['response' => 200]);
