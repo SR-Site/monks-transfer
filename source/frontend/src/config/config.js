@@ -11,15 +11,20 @@ const config = {
 		},
 		[EnvironmentNames.STAGING]: {
 			extends: EnvironmentNames.PRODUCTION,
-			variables: {},
-			urls: {},
-		},
-		[EnvironmentNames.LOCAL_DRUPAL]: {
-			extends: EnvironmentNames.DEVELOPMENT,
-			variables: {},
+			variables: {
+				[VariableNames.DEBUG_LABEL_ENABLED]: true,
+			},
 			urls: {},
 		},
 		[EnvironmentNames.DEVELOPMENT]: {
+			extends: EnvironmentNames.PRODUCTION,
+			variables: {
+				[VariableNames.DEBUG_LABEL_ENABLED]: true,
+				[VariableNames.MOCK_ENABLED]: true,
+			},
+			urls: {},
+		},
+		[EnvironmentNames.LOCAL_DRUPAL]: {
 			extends: EnvironmentNames.PRODUCTION,
 			variables: {
 				[VariableNames.DEBUG_LABEL_ENABLED]: true,
@@ -82,8 +87,12 @@ switch (host.split(':').shift()) {
 		environment = EnvironmentNames.LOCAL_DRUPAL;
 		break;
 	}
-	case '107.189.68.170': {
+	case 'spectrumreach.eu.dev.monkapps.com': {
 		environment = EnvironmentNames.DEVELOPMENT;
+		break;
+	}
+	case '107.189.68.170': {
+		environment = EnvironmentNames.STAGING;
 		break;
 	}
 	default: {
