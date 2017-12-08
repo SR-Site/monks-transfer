@@ -26,7 +26,7 @@
 				</div>
 				<div ref="statistics" v-if="data.stats">
 					<div :class="$style.percentage">
-						<span :class="$style.value" v-html="data.stats.percentage"></span>
+						<span :class="$style.value" v-if="data.stats.percentage" v-html="data.stats.percentage"></span>
 						<span :class="$style.label" class="copy">{{ $t('global.show.percent') }}</span>
 					</div>
 					<p :class="$style.demographic" class="copy copy-06" v-html="data.stats.demographic"></p>

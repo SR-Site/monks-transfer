@@ -50,6 +50,7 @@
 			display: inline-block;
 			vertical-align: middle;
 			color: $colorPrimary;
+			margin-right: $sizeGrid / 4;
 		}
 
 		.label {
@@ -58,7 +59,6 @@
 			vertical-align: middle;
 			text-transform: uppercase;
 			color: $colorQuaternary;
-			margin-left: $sizeGrid / 4;
 		}
 	}
 

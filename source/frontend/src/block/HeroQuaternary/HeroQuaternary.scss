@@ -11,6 +11,7 @@
 		@include size(240px, 240px);
 		@include offset($sizeGrid, $sizeGrid);
 		position: absolute;
+
 	}
 
 	.content {
