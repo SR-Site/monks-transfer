@@ -18,7 +18,11 @@ use Drupal\facets\FacetManager\DefaultFacetManager;
 
 use Drupal\mm_rest\Response\OffsetPaginatedResponse;
 
-
+/**
+ * Class ResourceSearch.
+ *
+ * @package Drupal\mm_rest_search\Plugin
+ */
 abstract class ResourceSearch extends MMResourceBase {
 
   /**
@@ -41,8 +45,7 @@ abstract class ResourceSearch extends MMResourceBase {
   /**
    * Returns the search results.
    *
-   * @return \Drupal\mm_rest\Response\OffsetPaginatedResponse
-   * @throws \Drupal\facets\Exception\Exception
+   * @throws \Exception
    *
    * @TODO: refactor, separate into different protected functions.
    */
@@ -79,7 +82,7 @@ abstract class ResourceSearch extends MMResourceBase {
       $query->keys($keys);
     }
 
-    // Pagination
+    // Pagination.
     $offset = $request->get('offset');
     $limit = $request->get('limit');
 
@@ -87,6 +90,8 @@ abstract class ResourceSearch extends MMResourceBase {
     $limit = (int) $limit ?: self::LIMIT_DEFAULT;
 
     $query->range($offset, $limit);
+
+    $query->sort('created', 'DESC');
 
     // Get results.
     $result = $query->execute();
@@ -178,17 +183,22 @@ abstract class ResourceSearch extends MMResourceBase {
    * @param \Symfony\Component\HttpFoundation\Request $request
    *   The current request.
    * @param \Drupal\mm_rest\Plugin\RestEntityProcessorManager $entity_processor
+   *   RestEntityProcessorManager.
    * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
+   *   ConfigFactoryInterface.
    * @param \Drupal\mm_rest\CacheableMetaDataCollectorInterface $cacheable_metadata_collector
+   *   CacheableMetaDataCollectorInterface.
    * @param \Drupal\facets\FacetManager\DefaultFacetManager $facet_manager
+   *   DefaultFacetManager.
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, Request $request, RestEntityProcessorManager $entity_processor, ConfigFactoryInterface $configFactory, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, DefaultFacetManager $facet_manager) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger, $request, $entity_processor, $configFactory, $cacheable_metadata_collector);
-    $this->facetsManager= $facet_manager;
+    $this->facetsManager = $facet_manager;
   }
 
   /**
    * {@inheritdoc}
+   *
    * @TODO: check facets dependency.
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
