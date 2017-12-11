@@ -11,7 +11,12 @@ id: networks
 name: Networks
 description: ''
 read_only: false
-field_settings: {  }
+field_settings:
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
 processor_settings:
   add_url:
     plugin_id: add_url
