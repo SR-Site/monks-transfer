@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.blocktext.field_margin_small
-    - field.field.paragraph.blocktext.field_new_heading
     - field.field.paragraph.blocktext.field_paragraph
     - field.field.paragraph.blocktext.field_styles
     - paragraphs.paragraphs_type.blocktext
@@ -25,15 +24,6 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
-    region: content
-  field_new_heading:
-    weight: 2
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
     region: content
   field_paragraph:
     weight: 1
