@@ -16,12 +16,14 @@
 						@click="handleFilterClick(index)"
 						class="button"
 						:class="[$style.button, $style.filterButton, {[$style.isActive]: index === activeIndex }]">
-						<span :class="$style.label">{{filter.label}}</span>
-						<span :class="$style.details">
-							<span :class="$style.badge" v-if="chosenOptionCount(filter.type) > 0">
-								{{ chosenOptionCount(filter.type) }}
+						<span :class="$style.centerContent">
+							<span :class="$style.label">{{filter.label}}</span>
+							<span :class="$style.details">
+								<span :class="$style.badge" v-if="chosenOptionCount(filter.type) > 0">
+									{{ chosenOptionCount(filter.type) }}
+								</span>
+								<Icon name="circle-arrow-down" :class="$style.icon"/>
 							</span>
-							<Icon name="circle-arrow-down" :class="$style.icon"/>
 						</span>
 					</button>
 					<FilterContentMenuDropdown

@@ -49,7 +49,10 @@ export default {
 			this.loadPage(0);
 		},
 		getFilters() {
-			return JSON.parse(JSON.stringify(this.filters));
+			const filters = JSON.parse(JSON.stringify(this.filters));
+			return {
+				f: Object.keys(filters).map(key => `${key}:${filters[key]}`),
+			};
 		},
 		loadPage(index) {
 			this.$tracking.trackEvent({
