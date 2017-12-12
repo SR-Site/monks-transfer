@@ -61,7 +61,7 @@
 		  "marginTop": 0,
 		  "filters": [
 			{
-			  "type": 0,
+			  "type": "category",
 			  "label": "Category",
 			  "options": [
 				{
@@ -87,7 +87,7 @@
 			  ]
 			},
 			{
-			  "type": 1,
+			  "type": "thought_leadership",
 			  "label": "Thought Leadership",
 			  "options": [
 				{
@@ -109,7 +109,7 @@
 			  ]
 			},
 			{
-			  "type": 2,
+			  "type": "product",
 			  "label": "Product",
 			  "options": [
 				{
@@ -127,7 +127,7 @@
 			  ]
 			},
 			{
-			  "type": 3,
+			  "type": "document_type",
 			  "label": "Document Type",
 			  "options": [
 				{

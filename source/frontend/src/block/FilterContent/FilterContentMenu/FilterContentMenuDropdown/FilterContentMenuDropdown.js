@@ -7,7 +7,7 @@ export default {
 	extends: AbstractTransitionComponent,
 	props: {
 		chosenOptions: VueTypes.any.def({}),
-		filter: VueTypes.number,
+		filter: VueTypes.string,
 		disableTransitionIn: VueTypes.bool.def(false),
 		options: VueTypes.arrayOf(
 			VueTypes.shape({

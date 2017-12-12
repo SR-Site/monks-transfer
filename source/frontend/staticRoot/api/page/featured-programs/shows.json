@@ -50,7 +50,7 @@
 		  "marginTop": 0,
 		  "filters": [
 			{
-			  "type": 0,
+			  "type": "genre",
 			  "label": "Genre",
 			  "options": [
 				{
@@ -76,7 +76,7 @@
 			  ]
 			},
 			{
-			  "type": 1,
+			  "type": "networks",
 			  "label": "Networks",
 			  "options": [
 				{
@@ -98,7 +98,7 @@
 			  ]
 			},
 			{
-			  "type": 2,
+			  "type": "reaches",
 			  "label": "Reaches",
 			  "options": [
 				{
