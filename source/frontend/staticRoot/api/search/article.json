@@ -153,6 +153,82 @@
 		  "theme": 1,
 		  "target": "/resources/knowledge-center/dummy-article"
 		}
+	  },
+	  {
+		"id": "articleTeaser",
+		"data": {
+		  "marginTop": 0,
+		  "windowed": false,
+		  "overlap": false,
+		  "social": [
+			{
+			  "label": "Find Your True ROI - Download",
+			  "title": "Find Your True ROI - Download",
+			  "target": "http:\/\/go.spectrumreach.com\/ROI",
+			  "type": 1
+			}
+		  ],
+		  "author": {
+			"name": "Spectrum Reach",
+			"role": "Author",
+			"image": {
+			  "small": "https://via.placeholder.com/240x240",
+			  "normal": "https://via.placeholder.com/240x240",
+			  "alt": ""
+			}
+		  },
+		  "image": {
+			"normal": "https://via.placeholder.com/1280x720",
+			"small": "https://via.placeholder.com/1280x720",
+			"alt": "4 Tweetable Truths from NewFront 2017"
+		  },
+		  "views": 0,
+		  "time": 5,
+		  "date": "09\/10\/2017",
+		  "paragraph": "If you\u2019re still relying solely on your gross rating point (GRP) and your customer relationship management (CRM) to measure television and digital campaigns, you\u2019re not getting the full story.",
+		  "subHeading": "What\u2019s the REAL Return on Investment for Your Marketing Plan?",
+		  "heading": " How Do You Know if Your Advertising Campaign is Working?",
+		  "theme": 1,
+		  "target": "/resources/knowledge-center/dummy-article"
+		}
+	  },
+	  {
+		"id": "articleTeaser",
+		"data": {
+		  "marginTop": 0,
+		  "windowed": false,
+		  "overlap": false,
+		  "social": [
+			{
+			  "label": "Find Your True ROI - Download",
+			  "title": "Find Your True ROI - Download",
+			  "target": "http:\/\/go.spectrumreach.com\/ROI",
+			  "type": 1
+			}
+		  ],
+		  "author": {
+			"name": "Spectrum Reach",
+			"role": "Author",
+			"image": {
+			  "small": "https://via.placeholder.com/240x240",
+			  "normal": "https://via.placeholder.com/240x240",
+			  "alt": ""
+			}
+		  },
+		  "image": {
+			"normal": "https://via.placeholder.com/1280x720",
+			"small": "https://via.placeholder.com/1280x720",
+			"alt": "Audience-Focused Networks"
+		  },
+		  "views": 0,
+		  "time": 5,
+		  "date": "09\/10\/2017",
+		  "paragraph": "If you\u2019re still relying solely on your gross rating point (GRP) and your customer relationship management (CRM) to measure television and digital campaigns, you\u2019re not getting the full story.",
+		  "subHeading": "What\u2019s the REAL Return on Investment for Your Marketing Plan?",
+		  "heading": " How Do You Know if Your Advertising Campaign is Working?",
+		  "theme": 1,
+		  "target": "/resources/knowledge-center/dummy-article"
+		}
 	  }
 	]
   },
