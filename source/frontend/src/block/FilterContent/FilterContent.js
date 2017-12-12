@@ -17,7 +17,7 @@ export default {
 			blocks: {},
 			pageCache: {},
 			index: 0,
-			limit: 4,
+			limit: 6,
 			offset: 0,
 			totalPages: 0,
 			filters: {},

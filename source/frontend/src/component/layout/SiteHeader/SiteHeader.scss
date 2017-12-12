@@ -1,9 +1,8 @@
 :local {
 	.wrapper {
-		@include position(0, 0, auto, 50%);
+		@include position(0, 0, auto, 0);
 		@include size(100%, $sizeHeader);
 		position: fixed;
-		transform: translateX(-50%);
 		z-index: zindex($layout, header);
 		transition: background 0.2s $easeInOut;
 
@@ -32,7 +31,7 @@
 	}
 
 	.call-to-actions {
-		@include position(0, 0, auto, auto);
+		@include position(0, 0, 0, auto);
 		position: absolute;
 		font-size: 0;
 	}
