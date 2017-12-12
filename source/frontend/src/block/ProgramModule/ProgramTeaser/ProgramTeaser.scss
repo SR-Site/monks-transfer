@@ -64,6 +64,7 @@
 
 	.demographic {
 		color: $colorQuaternary;
+		font-size: 1.2rem;
 	}
 
 	@include respond-to(SMALL) {
@@ -75,6 +76,10 @@
 			.label {
 				font-size: mobile-size(2rem);
 			}
+		}
+
+		.demographic {
+			font-size: mobile-size(2.8rem);
 		}
 	}
 }
