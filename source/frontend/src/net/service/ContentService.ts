@@ -24,12 +24,10 @@ export default class UserService {
 	 * @param {number} limit
 	 * @param {{[p: string]: string}} filter
 	 */
-	public static loadPage(endpoint: string, offset: number, limit: number, filters: { f: Array<string>}) {
+	public static loadPage(endpoint: string, offset: number, limit: number, filters: { f: Array<string> }) {
 		if (endpoint.indexOf('/') === 0) {
 			endpoint = endpoint.substring(1);
 		}
-
-		console.log(filters);
 
 		return getValue(GATEWAY).get(endpoint, {
 			params: Object.assign(

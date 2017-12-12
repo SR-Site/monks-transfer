@@ -50,8 +50,18 @@ export default {
 		},
 		getFilters() {
 			const filters = JSON.parse(JSON.stringify(this.filters));
+			const result = {};
+
+			// Strip out the empty results
+			Object.keys(filters).forEach(key => {
+				if (filters[key].length > 0) {
+					result[key] = filters[key];
+				}
+			});
+
+			// Return the object
 			return {
-				f: Object.keys(filters).map(key => `${key}:${filters[key]}`),
+				f: Object.keys(result).map(key => `${key}:${result[key]}`),
 			};
 		},
 		loadPage(index) {
