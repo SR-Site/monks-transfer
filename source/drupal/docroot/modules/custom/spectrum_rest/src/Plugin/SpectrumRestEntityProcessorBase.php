@@ -302,7 +302,8 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
         if ($menuLink->getParent()) {
           $parents = $this->menuLinkManager->getParentIds($menuLink->getParent());
           if (!empty($parents)) {
-            $parent = reset(array_reverse($parents));
+            $parents = array_reverse($parents);
+            $parent = reset($parents);
             $parentItem = $this->menuLinkManager->createInstance($parent);
             $title = $parentItem->getTitle();
             $url = $parentItem->getUrlObject(FALSE);
