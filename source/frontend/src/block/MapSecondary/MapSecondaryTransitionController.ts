@@ -19,7 +19,7 @@ class MapSecondaryTransitionController extends AbstractTransitionController {
 				ease: Linear.easeNone,
 			},
 		);
-		if(this.viewModel.hasChild('ButtonPrimary')){
+		if (this.viewModel.hasChild('ButtonPrimary')) {
 			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'));
 		}
 	}

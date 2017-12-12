@@ -26,7 +26,7 @@ class FindYourAudienceTransitionController extends AbstractTransitionController 
 		if (this.viewModel.$refs.genre) {
 			(<any>this.viewModel.$refs.genre).forEach(genre => {
 				this.transitionInTimeline.add(this.getSubTimeline(genre), '-=0.7');
-			})
+			});
 		}
 
 		this.transitionInTimeline.add(this.getSubTimeline('Networks'), '-=0.7');

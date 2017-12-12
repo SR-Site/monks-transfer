@@ -44,7 +44,6 @@ class AudienceTeaserTransitionController extends AbstractTransitionController {
 		);
 
 		if (this.viewModel.$refs.subHeading) {
-
 			this.transitionInTimeline.fromTo(
 				this.viewModel.$refs.subHeading,
 				1,
