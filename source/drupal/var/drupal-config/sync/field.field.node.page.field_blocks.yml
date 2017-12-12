@@ -75,6 +75,7 @@ dependencies:
     - paragraphs.paragraphs_type.blocksmallinfo
     - paragraphs.paragraphs_type.blockstoryinfoimages
     - paragraphs.paragraphs_type.blocktext
+    - paragraphs.paragraphs_type.spacer
   module:
     - entity_reference_revisions
 id: node.page.field_blocks
@@ -107,8 +108,8 @@ settings:
       blockmapsecondary: blockmapsecondary
       blockmarketmap: blockmarketmap
       blocknetworkoverview: blocknetworkoverview
-      blockpagenotfound: blockpagenotfound
       blockherotertiary: blockherotertiary
+      blockpagenotfound: blockpagenotfound
       blockpathtopurchase: blockpathtopurchase
       blockprogrammodule: blockprogrammodule
       blockquote: blockquote
@@ -144,10 +145,10 @@ settings:
       block_infographic: block_infographic
       block_large_video: block_large_video
       block_main_product_nav: block_main_product_nav
-      block_multiple_images: block_multiple_images
       block_filter_show_content: block_filter_show_content
-      block_image_list: block_image_list
+      block_multiple_images: block_multiple_images
       block_filter_network_content: block_filter_network_content
+      block_image_list: block_image_list
       block_persona_selector_banner: block_persona_selector_banner
       block_product_list: block_product_list
       block_show_detail: block_show_detail
@@ -161,6 +162,7 @@ settings:
       block_video_with_content_b: block_video_with_content_b
       block_triple_content: block_triple_content
       block_video_with_content_c: block_video_with_content_c
+      spacer: spacer
     target_bundles_drag_drop:
       blockhowtoadvertise:
         enabled: true
@@ -231,10 +233,10 @@ settings:
       blocknetworkoverview:
         enabled: true
         weight: 29
-      blockpagenotfound:
+      blockherotertiary:
         enabled: true
         weight: 30
-      blockherotertiary:
+      blockpagenotfound:
         enabled: true
         weight: 30
       blockpathtopurchase:
@@ -378,21 +380,21 @@ settings:
       block_main_product_nav:
         enabled: true
         weight: 118
-      block_multiple_images:
-        enabled: true
-        weight: 120
       block_filter_show_content:
         enabled: true
         weight: 120
-      block_image_list:
+      block_multiple_images:
         enabled: true
-        weight: 121
-      block_filter_network_content:
-        enabled: true
-        weight: 121
+        weight: 120
       block_pdf:
         weight: 121
         enabled: false
+      block_filter_network_content:
+        enabled: true
+        weight: 121
+      block_image_list:
+        enabled: true
+        weight: 121
       block_persona_selector_banner:
         enabled: true
         weight: 122
@@ -480,6 +482,9 @@ settings:
       success_story_statistic:
         weight: 204
         enabled: false
+      spacer:
+        enabled: true
+        weight: 205
       top_picks:
         weight: 209
         enabled: false

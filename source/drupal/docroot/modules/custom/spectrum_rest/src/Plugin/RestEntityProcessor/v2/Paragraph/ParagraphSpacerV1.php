@@ -24,11 +24,7 @@ class ParagraphSpacerV1 extends SpectrumRestEntityProcessorBase {
   protected function getItemData($entity) {
     $data = [
       "id" => "spacer",
-      "data" => [
-        "overlap" => FALSE,
-        "windowed" => FALSE,
-        "marginTop" => 4,
-      ],
+      "data" => $this->getCommonData($entity),
     ];
 
     return $data;
