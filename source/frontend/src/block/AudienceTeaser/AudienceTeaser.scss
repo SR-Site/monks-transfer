@@ -46,6 +46,10 @@
 		margin-top: $sizeGrid / 2;
 	}
 
+	.gradient-overlay {
+		transition: opacity .2s $easeLinear;
+	}
+
 	.reach-heading {
 		margin-bottom: $sizeGrid / 2;
 	}
@@ -87,9 +91,12 @@
 	}
 }
 
-@include hover('.top') {
-	color: $colorSecondary;
+@include hover('.audience-teaser') {
+	.gradient-overlay {
+		opacity: 0;
+	}
 
+	.top,
 	.sub-heading {
 		color: $colorSecondary;
 	}
