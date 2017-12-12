@@ -33,11 +33,13 @@
 		justify-content: space-between;
 
 		.tags {
+			width: calc(100% - 0.5rem);
+			margin-left: -0.25rem;
 			margin-bottom: $sizeGrid;
+		}
 
-			.tag:not(:first-child) {
-				margin-left: 5px;
-			}
+		.tag {
+			margin: 0.25rem;
 		}
 
 		.heading {
