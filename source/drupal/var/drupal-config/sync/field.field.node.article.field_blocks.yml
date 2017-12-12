@@ -5,6 +5,45 @@ dependencies:
   config:
     - field.storage.node.field_blocks
     - node.type.article
+    - paragraphs.paragraphs_type.block_audience_product_top
+    - paragraphs.paragraphs_type.block_audience_quote
+    - paragraphs.paragraphs_type.block_audience_reach
+    - paragraphs.paragraphs_type.block_audience_statistics
+    - paragraphs.paragraphs_type.block_audience_statistics_b
+    - paragraphs.paragraphs_type.block_audience_top_programming
+    - paragraphs.paragraphs_type.block_blog_post_b
+    - paragraphs.paragraphs_type.block_core_product_message
+    - paragraphs.paragraphs_type.block_double_image
+    - paragraphs.paragraphs_type.block_download_file_a
+    - paragraphs.paragraphs_type.block_download_file_b
+    - paragraphs.paragraphs_type.block_find_your_audience
+    - paragraphs.paragraphs_type.block_glossary_a
+    - paragraphs.paragraphs_type.block_glossary_b
+    - paragraphs.paragraphs_type.block_hero_quaternary
+    - paragraphs.paragraphs_type.block_hero_quinary
+    - paragraphs.paragraphs_type.block_image_list
+    - paragraphs.paragraphs_type.block_image_with_content_b
+    - paragraphs.paragraphs_type.block_image_with_content_c
+    - paragraphs.paragraphs_type.block_infographic
+    - paragraphs.paragraphs_type.block_large_video
+    - paragraphs.paragraphs_type.block_main_product_nav
+    - paragraphs.paragraphs_type.block_map_tertiary
+    - paragraphs.paragraphs_type.block_multiple_images
+    - paragraphs.paragraphs_type.block_pdf
+    - paragraphs.paragraphs_type.block_persona_selector_banner
+    - paragraphs.paragraphs_type.block_product_list
+    - paragraphs.paragraphs_type.block_show_detail
+    - paragraphs.paragraphs_type.block_success_stories_a
+    - paragraphs.paragraphs_type.block_success_stories_b
+    - paragraphs.paragraphs_type.block_success_story_highlight
+    - paragraphs.paragraphs_type.block_success_story_impact
+    - paragraphs.paragraphs_type.block_success_story_post
+    - paragraphs.paragraphs_type.block_target_audience
+    - paragraphs.paragraphs_type.block_triple_content
+    - paragraphs.paragraphs_type.block_twitter_feed
+    - paragraphs.paragraphs_type.block_video_with_call_to_actions
+    - paragraphs.paragraphs_type.block_video_with_content_b
+    - paragraphs.paragraphs_type.block_video_with_content_c
     - paragraphs.paragraphs_type.blockarticleteaser
     - paragraphs.paragraphs_type.blockaudiofragment
     - paragraphs.paragraphs_type.blockblogpost
@@ -35,6 +74,7 @@ dependencies:
     - paragraphs.paragraphs_type.blocksmallinfo
     - paragraphs.paragraphs_type.blockstoryinfoimages
     - paragraphs.paragraphs_type.blocktext
+    - paragraphs.paragraphs_type.spacer
   module:
     - entity_reference_revisions
 id: node.article.field_blocks
@@ -81,6 +121,46 @@ settings:
       blocksmallinfo: blocksmallinfo
       blockstoryinfoimages: blockstoryinfoimages
       blocktext: blocktext
+      spacer: spacer
+      block_audience_product_top: block_audience_product_top
+      block_audience_quote: block_audience_quote
+      block_audience_reach: block_audience_reach
+      block_audience_statistics: block_audience_statistics
+      block_audience_statistics_b: block_audience_statistics_b
+      block_audience_top_programming: block_audience_top_programming
+      block_blog_post_b: block_blog_post_b
+      block_core_product_message: block_core_product_message
+      block_double_image: block_double_image
+      block_download_file_a: block_download_file_a
+      block_download_file_b: block_download_file_b
+      block_find_your_audience: block_find_your_audience
+      block_glossary_a: block_glossary_a
+      block_glossary_b: block_glossary_b
+      block_hero_quaternary: block_hero_quaternary
+      block_hero_quinary: block_hero_quinary
+      block_image_list: block_image_list
+      block_image_with_content_b: block_image_with_content_b
+      block_image_with_content_c: block_image_with_content_c
+      block_infographic: block_infographic
+      block_large_video: block_large_video
+      block_main_product_nav: block_main_product_nav
+      block_map_tertiary: block_map_tertiary
+      block_multiple_images: block_multiple_images
+      block_pdf: block_pdf
+      block_persona_selector_banner: block_persona_selector_banner
+      block_product_list: block_product_list
+      block_show_detail: block_show_detail
+      block_success_stories_a: block_success_stories_a
+      block_success_stories_b: block_success_stories_b
+      block_success_story_highlight: block_success_story_highlight
+      block_success_story_impact: block_success_story_impact
+      block_success_story_post: block_success_story_post
+      block_target_audience: block_target_audience
+      block_triple_content: block_triple_content
+      block_twitter_feed: block_twitter_feed
+      block_video_with_call_to_actions: block_video_with_call_to_actions
+      block_video_with_content_b: block_video_with_content_b
+      block_video_with_content_c: block_video_with_content_c
     target_bundles_drag_drop:
       blockarticleteaser:
         enabled: true
@@ -219,5 +299,191 @@ settings:
         enabled: false
       styles:
         weight: 92
+        enabled: false
+      spacer:
+        enabled: true
+        weight: 109
+      audience_statistics_item:
+        weight: 111
+        enabled: false
+      background_image:
+        weight: 112
+        enabled: false
+      block_audience_product_top:
+        enabled: true
+        weight: 113
+      block_audience_quote:
+        enabled: true
+        weight: 114
+      block_audience_reach:
+        enabled: true
+        weight: 115
+      block_audience_statistics:
+        enabled: true
+        weight: 116
+      block_audience_statistics_b:
+        enabled: true
+        weight: 117
+      block_audience_top_programming:
+        enabled: true
+        weight: 118
+      block_blog_post_b:
+        enabled: true
+        weight: 119
+      block_core_product_message:
+        enabled: true
+        weight: 120
+      block_double_image:
+        enabled: true
+        weight: 121
+      block_download_file_a:
+        enabled: true
+        weight: 122
+      block_download_file_b:
+        enabled: true
+        weight: 123
+      block_filter_network_content:
+        weight: 124
+        enabled: false
+      block_filter_show_content:
+        weight: 125
+        enabled: false
+      block_find_your_audience:
+        enabled: true
+        weight: 126
+      block_glossary_a:
+        enabled: true
+        weight: 127
+      block_glossary_b:
+        enabled: true
+        weight: 128
+      block_hero_quaternary:
+        enabled: true
+        weight: 129
+      block_hero_quinary:
+        enabled: true
+        weight: 130
+      block_image_list:
+        enabled: true
+        weight: 131
+      block_image_with_content_b:
+        enabled: true
+        weight: 132
+      block_image_with_content_c:
+        enabled: true
+        weight: 133
+      block_infographic:
+        enabled: true
+        weight: 134
+      block_large_video:
+        enabled: true
+        weight: 135
+      block_main_product_nav:
+        enabled: true
+        weight: 136
+      block_map_tertiary:
+        enabled: true
+        weight: 137
+      block_multiple_images:
+        enabled: true
+        weight: 138
+      block_pdf:
+        enabled: true
+        weight: 139
+      block_persona_selector_banner:
+        enabled: true
+        weight: 140
+      block_product_list:
+        enabled: true
+        weight: 141
+      block_show_detail:
+        enabled: true
+        weight: 142
+      block_success_stories_a:
+        enabled: true
+        weight: 143
+      block_success_stories_b:
+        enabled: true
+        weight: 144
+      block_success_story_highlight:
+        enabled: true
+        weight: 145
+      block_success_story_impact:
+        enabled: true
+        weight: 146
+      block_success_story_post:
+        enabled: true
+        weight: 147
+      block_target_audience:
+        enabled: true
+        weight: 148
+      block_triple_content:
+        enabled: true
+        weight: 149
+      block_twitter_feed:
+        enabled: true
+        weight: 150
+      block_video_with_call_to_actions:
+        enabled: true
+        weight: 151
+      block_video_with_content_b:
+        enabled: true
+        weight: 152
+      block_video_with_content_c:
+        enabled: true
+        weight: 153
+      blog_post_item:
+        weight: 184
+        enabled: false
+      channel:
+        weight: 187
+        enabled: false
+      core_product_message_item:
+        weight: 188
+        enabled: false
+      device:
+        weight: 189
+        enabled: false
+      glossary_a_item:
+        weight: 190
+        enabled: false
+      heading:
+        weight: 191
+        enabled: false
+      image:
+        weight: 192
+        enabled: false
+      image_with_video_and_text:
+        weight: 193
+        enabled: false
+      label_and_value:
+        weight: 194
+        enabled: false
+      map_tertiary_data:
+        weight: 196
+        enabled: false
+      networks:
+        weight: 198
+        enabled: false
+      poster:
+        weight: 200
+        enabled: false
+      skills:
+        weight: 203
+        enabled: false
+      slide_item:
+        weight: 205
+        enabled: false
+      success_story_statistic:
+        weight: 213
+        enabled: false
+      text_and_link:
+        weight: 214
+        enabled: false
+      top_picks:
+        weight: 215
+        enabled: false
+      triple_content_item:
+        weight: 216
         enabled: false
 field_type: entity_reference_revisions
