@@ -109,8 +109,8 @@ abstract class ResourceSearch extends MMResourceBase {
     $filters = [];
     foreach ($facets as $facet) {
       $filter = $this->facetsManager->build($facet);
-      $filter = is_array($filter) ? reset($filter) : $filter;
-      $filters = array_merge($filters, $filter);
+      $filter = is_array($filter) && !empty($filter) ? reset($filter) : $filter;
+      $filters = array_merge($filter, $filters);
     }
 
     $data = [

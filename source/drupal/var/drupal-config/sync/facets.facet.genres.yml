@@ -1,4 +1,4 @@
-uuid: e541cea7-590e-4f40-ba81-ab2342caad87
+uuid: 0b22fc3e-f714-4bbe-873b-bd07af723dd2
 langcode: en
 status: true
 dependencies:
@@ -6,12 +6,12 @@ dependencies:
     - mm_rest
     - node
 id: genres
-name: Genres
+name: 'Genres » Genre » Name'
 url_alias: genres
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: field_show_genres
+field_identifier: genres
 facet_source_id: 'mm_rest:spectrum_rest_searchshows_v1'
 widget:
   type: array
@@ -43,11 +43,6 @@ processor_configs:
       sort: -10
     settings:
       sort: ASC
-  translate_entity:
-    processor_id: translate_entity
-    weights:
-      build: 5
-    settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler
     weights:

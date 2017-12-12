@@ -68,7 +68,7 @@ class ParagraphBlockFilterShowContentV1 extends SpectrumRestEntityProcessorBase 
       ];
     }
     $filters[] = [
-      "type" => 0,
+      "type" => 'genres',
       "label" => "Genres",
       "options" => $genresOptions,
     ];
@@ -85,7 +85,7 @@ class ParagraphBlockFilterShowContentV1 extends SpectrumRestEntityProcessorBase 
       ];
     }
     $filters[] = [
-      "type" => 1,
+      "type" => 'networks',
       "label" => "Networks",
       "options" => $networkOptions,
     ];

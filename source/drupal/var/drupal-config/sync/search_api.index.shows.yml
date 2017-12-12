@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_show_network
     - search_api.server.database
   module:
+    - spectrum_shows
     - search_api
     - node
 id: shows
@@ -35,27 +36,31 @@ field_settings:
     type: integer
     indexed_locked: true
     type_locked: true
-  field_show_genres:
-    label: Genres
-    datasource_id: 'entity:node'
-    property_path: field_show_genres
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_show_genres
-  field_show_network:
-    label: Network
-    datasource_id: 'entity:node'
-    property_path: field_show_network
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_show_network
   created:
     label: 'Authored on'
     datasource_id: 'entity:node'
     property_path: created
     type: date
+  genres:
+    label: 'Genres » Genre » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_show_genres:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_show_genres
+      module:
+        - spectrum_shows
+  networks:
+    label: 'Network » Network » Station Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_show_network:entity:station_name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_show_network
+      module:
+        - spectrum_shows
 processor_settings:
   add_url:
     plugin_id: add_url
@@ -67,8 +72,8 @@ processor_settings:
     plugin_id: ignorecase
     settings:
       fields:
-        - genres
-        - network
+        - field_show_genres
+        - field_show_network
       weights:
         preprocess_index: -10
         preprocess_query: -10

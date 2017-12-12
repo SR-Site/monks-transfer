@@ -70,7 +70,7 @@ class ParagraphBlockFilterContentV1 extends SpectrumRestEntityProcessorBase {
         ->loadTree($vid);
 
       $filter = [
-        'type' => $index,
+        'type' => $vid,
         'label' => $vocabulary->label(),
         'options' => [],
       ];
