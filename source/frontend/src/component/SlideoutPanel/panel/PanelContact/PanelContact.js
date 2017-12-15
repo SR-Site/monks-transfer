@@ -36,7 +36,10 @@ export default {
 					name: 'phone',
 					localeKey: 'phone_number',
 					type: 'tel',
-					validationRules: 'required|numeric',
+					validationRules: {
+						required: true,
+						regex: /^([0-9-]+)$/,
+					},
 					value: '',
 				},
 				{
