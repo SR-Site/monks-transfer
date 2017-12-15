@@ -14,7 +14,9 @@
 		  "windowed": false,
 		  "marginTop": 2,
 		  "service": {
-			"heading": "Start advertising today"
+			"heading": "Who do you want to reach?",
+			"subHeading": "Grow your business today.",
+			"cta": "Get started"
 		  },
 		  "searchLabel": "Search",
 		  "searchPlaceholder": "Which region do you want to advertise in?",

@@ -8,6 +8,8 @@ import VueTypes from 'vue-types';
  * @param {placeholder} scrollId unique-block-id
  * @param {description} service the service data
  * @param {description} service.heading the heading label
+ * @param {description} service.subHeading the sub heading label
+ * @param {description} service.cta the cta label
  * @param {description} searchLabel The label for the search field
  * @param {description} searchPlaceholder The placeholder for the search field
  * @param {description} notFoundMessage The not found message when no results are found
@@ -19,6 +21,8 @@ export default {
 	scrollId: VueTypes.string,
 	service: VueTypes.shape({
 		heading: VueTypes.string.isRequired,
+		subHeading: VueTypes.string.isRequired,
+		cta: VueTypes.string.isRequired,
 	}),
 	searchLabel: VueTypes.string.isRequired,
 	searchPlaceholder: VueTypes.string.isRequired,

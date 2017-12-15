@@ -2,42 +2,31 @@
 	.service-button {
 		@include size(100%, $sizeGrid*4);
 		position: relative;
-		background-color: $colorLightGrey;
+		background-color: $colorSecondary;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		padding: 0 $sizeGrid*1.5 0 $sizeGrid;
+		justify-content: space-between;
+		padding: $sizeGrid * 0.75 $sizeGrid*1.5 $sizeGrid * 0.75 $sizeGrid;
 		text-decoration: none;
-		color: $colorPrimary;
+		color: $colorWhite;
 		text-align: left;
+	}
 
-		.contact-heading {
-			text-transform: uppercase;
-		}
+	.sub-heading {
+		font-weight: 400;
+		margin-left: $sizeGrid * 0.25;
+	}
 
-		.contact-option {
-			font: 400 1.2rem / 1 $fontOpenSans;
-			padding: 5px 0;
-		}
+	.cta {
+		color: $colorPrimary;
+		position: relative;
+		font-weight: 600;
 
-		.contact-icon {
-			@include size(16px);
-		}
-
-		.arrow-icon {
-			@include size(20px);
-			@include position(50%, $sizeGrid/2, auto, auto);
-			position: absolute;
+		&:after {
+			@include position(50%, -$sizeGrid * 0.5, auto, auto);
 			transform: translateY(-50%);
-			color: $colorTertiary;
-
-			circle {
-				stroke: currentColor;
-				fill: transparent;
-			}
-			path {
-				fill: currentColor;
-			}
+			content: '>';
+			position: absolute;
 		}
 	}
 

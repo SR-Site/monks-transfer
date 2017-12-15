@@ -3,12 +3,10 @@
 
 <template>
 	<button class="button" :class="$style.serviceButton" @click="handleClick">
-		<h3 class="heading heading-09" :class="$style.contactHeading" v-html="data.heading"></h3>
-		<p class="copy copy-02" :class="$style.contactOption" v-html="emailAddress"></p>
-		<p class="copy copy-02" :class="$style.contactOption">
-			<Icon :class="$style.contactIcon" name="contact"/>
-			<span v-html="phoneNumber"></span>
-		</p>
-		<Icon :class="$style.arrowIcon" name="circle-arrow-right"/>
+		<h3 class="heading heading-07" :class="$style.heading">
+			<span v-html="data.heading"></span>
+			<span :class="$style.subHeading" v-html="data.subHeading"></span>
+		</h3>
+		<a class="copy copy-01" :class="$style.cta" v-html="data.cta"></a>
 	</button>
 </template>
