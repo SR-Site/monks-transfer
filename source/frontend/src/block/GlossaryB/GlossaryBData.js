@@ -9,6 +9,7 @@ import GlossaryBItemData from './GlossaryBItemData';
  * @param {placeholder} scrollId unique-block-id
  * @param {description} showMoreLabel The call to action label for the show more button
  * @param {description} landingCategory The default active category of the tabs
+ * @param {description} allCategoryLabel The label used for the All items category
  * @param {description} noResult The message displayed when there are no results
  * @param {description} noResult.heading The heading for the no result message
  * @param {description} noResult.paragraph The paragraph for the no result message
@@ -26,6 +27,7 @@ export default {
 		paragraph: VueTypes.string.isRequired,
 	}).isRequired,
 	landingCategory: VueTypes.string.isRequired,
+	allCategoryLabel: VueTypes.string.isRequired,
 	searchPlaceholder: VueTypes.string.isRequired,
 	items: VueTypes.arrayOf(VueTypes.shape(GlossaryBItemData)),
 };

@@ -1121,6 +1121,7 @@
 		  "marginTop": 0,
 		  "showMoreLabel": "Show more",
 		  "landingCategory": "television",
+		  "allCategoryLabel": "View All",
 		  "searchPlaceholder": "I'm searching for...",
 		  "noResult": {
 			"heading": "Oops",

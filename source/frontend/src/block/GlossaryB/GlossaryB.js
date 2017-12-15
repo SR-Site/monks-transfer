@@ -1,5 +1,6 @@
 import VueTypes from 'vue-types';
 import keyCode from 'key-code';
+import replace from 'lodash/replace';
 import { AbstractBlockComponent } from 'vue-block-system';
 import GlossaryBTransitionController from './GlossaryBTransitionController';
 import GlossaryBData from './GlossaryBData';
@@ -22,8 +23,8 @@ export default {
 	},
 	computed: {
 		categories() {
+			const allItems = [];
 			const categories = {};
-
 			this.data.items.forEach(item => {
 				if (!categories[item.category]) {
 					categories[item.category] = {
@@ -32,20 +33,24 @@ export default {
 						items: [],
 					};
 				}
-
+				// Add it to the all category as well!
+				allItems.push(item);
+				// Add to the correct category
 				categories[item.category].items.push(item);
 			});
 
+			categories[this.allCategoriesCategory.value] = {
+				label: this.allCategoriesCategory.label,
+				value: this.allCategoriesCategory.value,
+				items: allItems,
+			};
 			return categories;
 		},
 		activeGlossaryItems() {
 			// Select the correct category
 			const category = this.categories[this.activeCategory] || {};
 			const items = category.items || [];
-
-			console.log(items.map(item => item.label));
-
-			// Apply the filter query
+			// If a search query is provided we search "All" the items instead of per category
 			return items.filter(item => {
 				const query = this.query.toLowerCase();
 				const label = item.label.toLowerCase();
@@ -60,6 +65,12 @@ export default {
 		showLoadMoreButton() {
 			return this.activeGlossaryItems.length > this.activePage * this.itemsPerPage;
 		},
+	},
+	created() {
+		this.allCategoriesCategory = {
+			label: this.data.allCategoryLabel,
+			value: replace(this.data.allCategoryLabel, / /g, '-'),
+		};
 	},
 	methods: {
 		handleAllComponentsReady() {
@@ -84,6 +95,7 @@ export default {
 			}
 		},
 		handleQueryChange(event) {
+			this.activeCategory = this.allCategoriesCategory.value;
 			this.query = event.currentTarget.value;
 			this.activePage = 1;
 			this.notifyAboutResize();
