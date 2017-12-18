@@ -14,7 +14,7 @@ entity_type: node
 bundle: show
 label: 'Hero Quaternary'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -165,8 +165,14 @@ settings:
       blockaudiofragment:
         weight: 152
         enabled: false
+      block_filter_network_content:
+        weight: 153
+        enabled: false
       blockblogpost:
         weight: 153
+        enabled: false
+      block_filter_show_content:
+        weight: 154
         enabled: false
       blockbutton:
         weight: 154
@@ -315,6 +321,9 @@ settings:
       statistic:
         weight: 202
         enabled: false
+      shows_by_genre:
+        weight: 202
+        enabled: false
       step:
         weight: 203
         enabled: false
@@ -328,6 +337,9 @@ settings:
         weight: 206
         enabled: false
       success_story_statistic:
+        weight: 207
+        enabled: false
+      spacer:
         weight: 207
         enabled: false
       text_and_link:
