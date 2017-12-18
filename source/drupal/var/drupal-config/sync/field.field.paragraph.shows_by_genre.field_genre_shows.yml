@@ -1,0 +1,28 @@
+uuid: ee9e1cff-272c-4ad5-9403-4076044b36ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_genre_shows
+    - node.type.show
+    - paragraphs.paragraphs_type.shows_by_genre
+id: paragraph.shows_by_genre.field_genre_shows
+field_name: field_genre_shows
+entity_type: paragraph
+bundle: shows_by_genre
+label: Shows
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      show: show
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

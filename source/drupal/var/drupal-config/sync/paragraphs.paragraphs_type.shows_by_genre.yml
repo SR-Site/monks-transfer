@@ -1,0 +1,7 @@
+uuid: 54b07303-1395-4271-927d-6f4f2cb1c237
+langcode: en
+status: true
+dependencies: {  }
+id: shows_by_genre
+label: 'Shows by genre'
+behavior_plugins: {  }

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.networks.field_main_heading
+    - field.field.paragraph.networks.field_network_items
     - field.field.paragraph.networks.field_paragraph
     - paragraphs.paragraphs_type.networks
   module:
@@ -20,6 +21,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_network_items:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_paragraph:
     weight: 1

@@ -1,0 +1,40 @@
+uuid: 9deca166-663a-4c87-b649-1df96e6352d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.shows_by_genre.field_genre_shows
+    - field.field.paragraph.shows_by_genre.field_main_heading
+    - field.field.paragraph.shows_by_genre.field_paragraph
+    - paragraphs.paragraphs_type.shows_by_genre
+  module:
+    - text
+id: paragraph.shows_by_genre.default
+targetEntityType: paragraph
+bundle: shows_by_genre
+mode: default
+content:
+  field_genre_shows:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_main_heading:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_paragraph:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

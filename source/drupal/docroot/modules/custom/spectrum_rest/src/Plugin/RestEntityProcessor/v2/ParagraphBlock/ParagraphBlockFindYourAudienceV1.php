@@ -42,49 +42,9 @@ class ParagraphBlockFindYourAudienceV1 extends SpectrumRestEntityProcessorBase {
     $data['data']['networks'] = $this->fieldProcessor->getFieldData($entity->get('field_networks'));
 
     // Get genres.
-    foreach ($entity->get('field_genres') as $genre) {
-      /** @var \Drupal\spectrum_shows\Entity\Genre $genreEntity */
-      $genreEntity = $genre->entity;
-      if (!empty($this->getShowsByGenre($genreEntity))) {
-        $data['data']['genres'][] = [
-          'heading' => $genreEntity->label(),
-          'items' => $this->getShowsByGenre($genreEntity)
-        ];
-      }
-    }
+    $data['data']['genres'] = $this->fieldProcessor->getFieldData($entity->get('field_genres'));
 
     return $data;
-  }
-
-  /**
-   * Get shows by genre.
-   *
-   * @param \Drupal\spectrum_shows\GenreInterface $genre
-   *   Genre entity.
-   * @param int $range
-   *   Range.
-   *
-   * @return array|mixed
-   *   Array of shows.
-   *
-   * @throws \Exception
-   */
-  protected function getShowsByGenre(GenreInterface $genre, $range = 4) {
-    $shows = [];
-    $query = \Drupal::entityQuery('node')
-      ->condition('type', 'show')
-      ->condition('status', 1)
-      ->condition('field_show_genres.entity.id', $genre->id())
-      ->range(0, $range);
-    $results = $query->execute();
-    if (!empty($results)) {
-      $showEntities = Node::loadMultiple($results);
-      foreach ($showEntities as $showEntity) {
-        $shows[] = $this->entityProcessor->getEntityData($showEntity, 'v1', ['view_mode' => 'teaser_mode']);
-      }
-    }
-
-    return $shows;
   }
 
 }

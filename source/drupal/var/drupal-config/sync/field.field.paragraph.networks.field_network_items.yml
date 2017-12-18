@@ -1,0 +1,28 @@
+uuid: b552490e-e6c1-4708-8173-ea4ae4176fff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_network_items
+    - node.type.network
+    - paragraphs.paragraphs_type.networks
+id: paragraph.networks.field_network_items
+field_name: field_network_items
+entity_type: paragraph
+bundle: networks
+label: Items
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      network: network
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

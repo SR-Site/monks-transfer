@@ -2,6 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\v2\Paragraph;
 
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\node\Entity\Node;
 use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 
@@ -19,6 +20,8 @@ use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
  */
 class ParagraphNetworksV1 extends SpectrumRestEntityProcessorBase {
 
+  use StringTranslationTrait;
+
   /**
    * {@inheritdoc}
    */
@@ -27,43 +30,16 @@ class ParagraphNetworksV1 extends SpectrumRestEntityProcessorBase {
     $data = $this->getNormalHeadingParagraphData($entity);
     // Get networks.
     $data = $data + [
-      'items' => $this->getNetworks(4),
+      'items' => $this->fieldProcessor->getFieldData($entity->get('field_network_items'), ['view_mode' => 'teaser']),
     ];
     $data['link'] = [
-      "label" => "All Networks",
-      "title" => "All Networks",
-      "target" => "featured-programs/networks",
+      "label" => $this->t('All Networks'),
+      "title" => $this->t('All Networks'),
+      "target" => "/networks",
       "type" => 0,
     ];
 
     return $data;
-  }
-
-  /**
-   * Get networks.
-   *
-   * @param int $range
-   *   Range in query.
-   *
-   * @return array|mixed
-   *   Array of networks.
-   *
-   * @throws \Exception
-   */
-  protected function getNetworks($range) {
-    $networks = [];
-    $query = \Drupal::entityQuery('node')
-      ->condition('type', 'network')
-      ->condition('status', 1)
-      ->range(0, $range);
-    $results = $query->execute();
-    if (!empty($results)) {
-      $networkEntities = Node::loadMultiple($results);
-      foreach ($networkEntities as $networkEntity) {
-        $networks[] = $this->entityProcessor->getEntityData($networkEntity, 'v1', ['view_mode' => 'teaser']);
-      }
-    }
-    return $networks;
   }
 
 }

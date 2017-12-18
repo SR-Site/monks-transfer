@@ -17,16 +17,17 @@ bundle: block_find_your_audience
 mode: default
 content:
   field_genres:
-    weight: 1
+    type: entity_reference_revisions_entity_view
+    weight: 2
     label: above
     settings:
-      link: true
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: entity_reference_label
     region: content
   field_networks:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 1
     label: above
     settings:
       view_mode: default

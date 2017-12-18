@@ -1,0 +1,60 @@
+uuid: 697d87f2-34ae-4ac8-b322-30489bd6b92e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.shows_by_genre.field_genre_shows
+    - field.field.paragraph.shows_by_genre.field_main_heading
+    - field.field.paragraph.shows_by_genre.field_paragraph
+    - paragraphs.paragraphs_type.shows_by_genre
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_shows:
+      children:
+        - field_genre_shows
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Shows
+id: paragraph.shows_by_genre.default
+targetEntityType: paragraph
+bundle: shows_by_genre
+mode: default
+content:
+  field_genre_shows:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_main_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraph:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

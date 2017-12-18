@@ -1,19 +1,19 @@
-uuid: c7a6a9a8-03d1-4496-bf2c-0133f7fbb3e4
+uuid: 760e301e-0fae-406e-8ab3-3808cbbc1069
 langcode: en
 status: true
 dependencies:
   module:
+    - entity_reference_revisions
     - paragraphs
-    - spectrum_shows
 id: paragraph.field_genres
 field_name: field_genres
 entity_type: paragraph
-type: entity_reference
+type: entity_reference_revisions
 settings:
-  target_type: genre
-module: core
+  target_type: paragraph
+module: entity_reference_revisions
 locked: false
-cardinality: 4
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -2,21 +2,25 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\v2\Paragraph;
 
+use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\node\Entity\Node;
 use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 
 /**
  * Returns the structured data of an entity.
  *
  * @RestEntityProcessor(
- *   id = "spectrum_rest_paragraph_top_picks_v1",
- *   label = @Translation("Paragraph: Top picks"),
+ *   id = "spectrum_rest_paragraph_shows_by_genre_v1",
+ *   label = @Translation("Paragraph: Shows By Genre"),
  *   version = "v1",
  *   entity_type = "paragraph",
- *   bundle = "top_picks",
+ *   bundle = "shows_by_genre",
  *   view_mode = "default"
  * )
  */
-class ParagraphTopPicksV1 extends SpectrumRestEntityProcessorBase {
+class ParagraphShowsByGenreV1 extends SpectrumRestEntityProcessorBase {
+
+  use StringTranslationTrait;
 
   /**
    * {@inheritdoc}
@@ -24,13 +28,11 @@ class ParagraphTopPicksV1 extends SpectrumRestEntityProcessorBase {
   protected function getItemData($entity) {
     // Get heading and paragraph.
     $data = $this->getNormalHeadingParagraphData($entity);
-    // Get image and video.
-    $data = $data + [
-      'items' => $this->fieldProcessor->getFieldData($entity->get('field_top_picks_shows'), ['view_mode' => 'teaser_mode']),
-    ];
+    // Get networks.
+    $data['items'] = $this->fieldProcessor->getFieldData($entity->get('field_genre_shows'), ['view_mode' => 'teaser_mode']);
     $data['link'] = [
-      "label" => "All Shows",
-      "title" => "All Shows",
+      "label" => $this->t('All Shows'),
+      "title" => $this->t('All Shows'),
       "target" => "/shows",
       "type" => 0,
     ];
