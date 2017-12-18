@@ -19,13 +19,12 @@ bundle: block_glossary_a
 mode: default
 content:
   field_glossary_a_items:
-    type: entity_reference_revisions_entity_view
     weight: 5
     label: above
     settings:
-      view_mode: default
-      link: ''
+      link: true
     third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_link:
     weight: 4

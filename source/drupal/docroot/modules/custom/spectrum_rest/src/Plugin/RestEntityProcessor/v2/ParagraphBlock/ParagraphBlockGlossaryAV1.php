@@ -31,7 +31,7 @@ class ParagraphBlockGlossaryAV1 extends SpectrumRestEntityProcessorBase {
       'data' => $data + [
         'scrollId' => $this->fieldProcessor->getFieldData($entity->get('field_scroll_id')),
         'link' => $this->fieldProcessor->getFieldData($entity->get('field_link')),
-        'items' => $this->fieldProcessor->getFieldData($entity->get('field_glossary_a_items')),
+        'items' => $this->fieldProcessor->getFieldData($entity->get('field_glossary_a_items'), ['view_mode' => 'glossary_a']),
       ],
     ];
 

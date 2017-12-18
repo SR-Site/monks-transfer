@@ -1,17 +1,17 @@
-uuid: d46a70d3-3af9-4b43-a7e7-423dc4ad7362
+uuid: bac3f0ab-8424-4c01-9ac5-138e27970284
 langcode: en
 status: true
 dependencies:
   module:
-    - entity_reference_revisions
     - paragraphs
+    - spectrum_shows
 id: paragraph.field_glossary_a_items
 field_name: field_glossary_a_items
 entity_type: paragraph
-type: entity_reference_revisions
+type: entity_reference
 settings:
-  target_type: paragraph
-module: entity_reference_revisions
+  target_type: advertising_item
+module: core
 locked: false
 cardinality: -1
 translatable: true

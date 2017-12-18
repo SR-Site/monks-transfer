@@ -70,16 +70,13 @@ bundle: block_glossary_a
 mode: default
 content:
   field_glossary_a_items:
-    type: entity_reference_paragraphs
     weight: 6
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_link:
     weight: 5
