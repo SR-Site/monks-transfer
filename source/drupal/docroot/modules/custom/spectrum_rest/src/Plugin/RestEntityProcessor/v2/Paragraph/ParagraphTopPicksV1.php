@@ -2,6 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\v2\Paragraph;
 
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 
 /**
@@ -18,6 +19,8 @@ use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
  */
 class ParagraphTopPicksV1 extends SpectrumRestEntityProcessorBase {
 
+  use StringTranslationTrait;
+
   /**
    * {@inheritdoc}
    */
@@ -29,8 +32,8 @@ class ParagraphTopPicksV1 extends SpectrumRestEntityProcessorBase {
       'items' => $this->fieldProcessor->getFieldData($entity->get('field_top_picks_shows'), ['view_mode' => 'teaser_mode']),
     ];
     $data['link'] = [
-      "label" => "All Shows",
-      "title" => "All Shows",
+      "label" => $this->t('See all shows'),
+      "title" => $this->t('See all shows'),
       "target" => "/shows",
       "type" => 0,
     ];

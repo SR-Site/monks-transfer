@@ -33,8 +33,8 @@ class ParagraphNetworksV1 extends SpectrumRestEntityProcessorBase {
       'items' => $this->fieldProcessor->getFieldData($entity->get('field_network_items'), ['view_mode' => 'teaser']),
     ];
     $data['link'] = [
-      "label" => $this->t('All Networks'),
-      "title" => $this->t('All Networks'),
+      "label" => $this->t('See all networks'),
+      "title" => $this->t('See all networks'),
       "target" => "/networks",
       "type" => 0,
     ];

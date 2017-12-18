@@ -31,8 +31,8 @@ class ParagraphShowsByGenreV1 extends SpectrumRestEntityProcessorBase {
     // Get networks.
     $data['items'] = $this->fieldProcessor->getFieldData($entity->get('field_genre_shows'), ['view_mode' => 'teaser_mode']);
     $data['link'] = [
-      "label" => $this->t('All Shows'),
-      "title" => $this->t('All Shows'),
+      "label" => $this->t('See all shows'),
+      "title" => $this->t('See all shows'),
       "target" => "/shows",
       "type" => 0,
     ];
