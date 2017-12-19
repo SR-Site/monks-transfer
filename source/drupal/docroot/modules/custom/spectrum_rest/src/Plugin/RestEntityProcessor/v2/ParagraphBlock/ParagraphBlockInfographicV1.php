@@ -33,10 +33,16 @@ class ParagraphBlockInfographicV1 extends SpectrumRestEntityProcessorBase {
         'alignment' => (int) $entity->get('field_alignment')->value,
         'backgroundImage' => $this->fieldProcessor->getFieldData($entity->get('field_background_image')),
         'image' => $this->fieldProcessor->getFieldData($entity->get('field_paragraph_image')),
-        'primaryLink' => $this->fieldProcessor->getFieldData($entity->get('field_primary_link')),
-        'secondaryLink' => $this->fieldProcessor->getFieldData($entity->get('field_secondary_link')),
       ],
     ];
+
+    // Add primary and secondary link.
+    if ($primaryLink = $this->fieldProcessor->getFieldData($entity->get('field_primary_link'))) {
+      $data['data']['primaryLink'] = $primaryLink;
+    }
+    if ($secondaryLink = $this->fieldProcessor->getFieldData($entity->get('field_secondary_link'))) {
+      $data['data']['secondaryLink'] = $secondaryLink;
+    }
 
     return $data;
   }
