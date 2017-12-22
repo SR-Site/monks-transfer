@@ -9,11 +9,13 @@ dependencies:
     - field.field.node.product_page.field_header_theme
     - field.field.node.product_page.field_hide_contact_button
     - field.field.node.product_page.field_image
+    - field.field.node.product_page.field_metatags
     - image.style.thumbnail
     - node.type.product_page
   module:
     - field_group
     - image
+    - metatag
     - paragraphs
     - path
     - text
@@ -122,6 +124,12 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_metatags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   path:
     type: path
