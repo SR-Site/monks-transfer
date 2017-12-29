@@ -1,0 +1,21 @@
+uuid: fc83528c-46d0-4203-9620-03d2882efaff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_all_categories_label
+    - paragraphs.paragraphs_type.block_glossary_b
+id: paragraph.block_glossary_b.field_all_categories_label
+field_name: field_all_categories_label
+entity_type: paragraph
+bundle: block_glossary_b
+label: 'All Categories Label'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'View All'
+default_value_callback: ''
+settings: {  }
+field_type: string
