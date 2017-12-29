@@ -31,7 +31,7 @@ class ParagraphBlockAudienceProductTopV1 extends SpectrumRestEntityProcessorBase
       'data' => $data + [
         'scrollId' => $this->fieldProcessor->getFieldData($entity->get('field_scroll_id')),
         'image' => $this->fieldProcessor->getFieldData($entity->get('field_paragraph_image')),
-        'card' => $this->fieldProcessor->getFieldData($entity->get('field_article'), ['view_mode' => 'audience_product_top']),
+        'card' => $this->fieldProcessor->getFieldData($entity->get('field_product'), ['view_mode' => 'audience_product_top']),
       ],
     ];
 

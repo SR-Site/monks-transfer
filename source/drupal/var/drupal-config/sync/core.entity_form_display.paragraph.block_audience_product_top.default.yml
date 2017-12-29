@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.block_audience_product_top.field_article
     - field.field.paragraph.block_audience_product_top.field_new_heading
     - field.field.paragraph.block_audience_product_top.field_paragraph
     - field.field.paragraph.block_audience_product_top.field_paragraph_image
+    - field.field.paragraph.block_audience_product_top.field_product
     - field.field.paragraph.block_audience_product_top.field_scroll_id
     - field.field.paragraph.block_audience_product_top.field_styles
     - paragraphs.paragraphs_type.block_audience_product_top
@@ -40,20 +40,35 @@ third_party_settings:
         open: false
         required_fields: true
       label: Styles
+    group_product:
+      children:
+        - field_product
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Product
+    group_image:
+      children:
+        - field_paragraph_image
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Image
 id: paragraph.block_audience_product_top.default
 targetEntityType: paragraph
 bundle: block_audience_product_top
 mode: default
 content:
-  field_article:
-    weight: 6
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_new_heading:
     weight: 3
     settings:
@@ -85,6 +100,15 @@ content:
       default_paragraph_type: ''
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
+  field_product:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_scroll_id:
     type: string_textfield
