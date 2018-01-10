@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockmarketmap.field_cta
     - field.field.paragraph.blockmarketmap.field_description
     - field.field.paragraph.blockmarketmap.field_filter_label
     - field.field.paragraph.blockmarketmap.field_heading
     - field.field.paragraph.blockmarketmap.field_image
     - field.field.paragraph.blockmarketmap.field_label
     - field.field.paragraph.blockmarketmap.field_styles
+    - field.field.paragraph.blockmarketmap.field_subheading
     - field.field.paragraph.blockmarketmap.field_title
     - image.style.preview_500xauto
     - paragraphs.paragraphs_type.blockmarketmap
@@ -21,6 +23,14 @@ targetEntityType: paragraph
 bundle: blockmarketmap
 mode: default
 content:
+  field_cta:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_description:
     weight: 5
     label: above
@@ -69,6 +79,14 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
+  field_subheading:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_title:
     weight: 2

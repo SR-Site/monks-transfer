@@ -3,18 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.blockmarketmap.field_cta
     - field.field.paragraph.blockmarketmap.field_description
     - field.field.paragraph.blockmarketmap.field_filter_label
     - field.field.paragraph.blockmarketmap.field_heading
     - field.field.paragraph.blockmarketmap.field_image
     - field.field.paragraph.blockmarketmap.field_label
     - field.field.paragraph.blockmarketmap.field_styles
+    - field.field.paragraph.blockmarketmap.field_subheading
     - field.field.paragraph.blockmarketmap.field_title
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.blockmarketmap
   module:
     - field_group
-    - image
     - paragraphs
     - text
 third_party_settings:
@@ -37,6 +37,14 @@ targetEntityType: paragraph
 bundle: blockmarketmap
 mode: default
 content:
+  field_cta:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_description:
     weight: 2
     settings:
@@ -61,22 +69,6 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_image:
-    weight: 6
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_label:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_styles:
     weight: 1
     settings:
@@ -89,6 +81,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
+  field_subheading:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_title:
     weight: 4
     settings:
@@ -99,5 +99,7 @@ content:
     region: content
 hidden:
   created: true
+  field_image: true
+  field_label: true
   status: true
   uid: true

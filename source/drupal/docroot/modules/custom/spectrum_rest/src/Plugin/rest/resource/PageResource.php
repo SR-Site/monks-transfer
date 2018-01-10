@@ -32,7 +32,7 @@ use Symfony\Component\HttpFoundation\Request;
 class PageResource extends ResourceBase {
 
   /**
-   * Slug Resolver service
+   * Slug Resolver service.
    *
    * @var \Drupal\mm_slug\SlugResolverInterface
    */
@@ -53,7 +53,7 @@ class PageResource extends ResourceBase {
   protected $entityRepository;
 
   /**
-   * State service
+   * State service.
    *
    * @var \Drupal\Core\State\StateInterface
    */
@@ -63,7 +63,12 @@ class PageResource extends ResourceBase {
    * Responds to entity GET requests with parameter.
    *
    * @param string $slug
+   *   Slug.
+   *
    * @return array
+   *   Response data.
+   *
+   * @throws \Exception
    */
   public function get($slug) {
 
@@ -84,7 +89,7 @@ class PageResource extends ResourceBase {
       }
     }
 
-    if (empty($entity)) {
+    if (empty($entity) || !$entity->access('view')) {
       // Throw our own NotFoundHttpException, which implements
       // ExceptionInterface to avoid cache.
       throw new NotFoundHttpException($this->t('Not found'));
@@ -101,7 +106,7 @@ class PageResource extends ResourceBase {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritdoc}
    */
   protected function responseData() {
     // Get the Default View of the Article Node using a Rest EntityProcessor
@@ -112,10 +117,9 @@ class PageResource extends ResourceBase {
   }
 
   /**
-   * mm_slug replace {slug} for 'slugfound' in the path,  so when the request
-   * get cached by dynamic_page_cache all pages return the same content.
-   * Adding the query param slugfound (which is created by mm_slug) solves
-   * the issue.
+   * Function mm_slug replace {slug} for 'slugfound' in the path,  so when the request get cached by dynamic_page_cache all pages return the same content.
+   *
+   * Adding the query param slugfound (which is created by mm_slug) solves the issue.
    *
    * @TODO: solve this issue in mm_slug.
    * @see \Drupal\mm_slug\PathProcessorSlug::processInbound()
@@ -126,6 +130,7 @@ class PageResource extends ResourceBase {
     /** @var \Drupal\Core\Cache\CacheableMetadata $meta_data */
     $metadata = new CacheableMetadata();
     $metadata->setCacheContexts(['url.query_args:slugfound']);
+    $metadata->setCacheContexts(['user']);
     $this->cacheabilityCollector->addCacheableDependency($metadata);
   }
 
@@ -140,7 +145,7 @@ class PageResource extends ResourceBase {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritdoc}
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, array $serializer_formats, LoggerInterface $logger, Request $request, RestEntityProcessorManager $entity_processor, ConfigFactoryInterface $configFactory, CacheableMetaDataCollectorInterface $cacheable_metadata_collector, SlugResolverInterface $slug_resolver, PathProcessorSlug $slug_path_processor, EntityRepositoryInterface $entity_repository, StateInterface $state) {
     parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger, $request, $entity_processor, $configFactory, $cacheable_metadata_collector);
@@ -151,7 +156,7 @@ class PageResource extends ResourceBase {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritdoc}
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static(

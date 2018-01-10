@@ -44,6 +44,10 @@ class ParagraphBlockFindYourAudienceV1 extends SpectrumRestEntityProcessorBase {
     // Get genres.
     $data['data']['genres'] = $this->fieldProcessor->getFieldData($entity->get('field_genres'));
 
+    if (!empty($data['data']['genres']) && !isset($data['data']['genres'][0])) {
+      $data['data']['genres'] = [$data['data']['genres']];
+    }
+
     return $data;
   }
 

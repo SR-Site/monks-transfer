@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.block_glossary_b.field_all_categories_label
     - field.field.paragraph.block_glossary_b.field_landing_category
     - field.field.paragraph.block_glossary_b.field_main_heading
     - field.field.paragraph.block_glossary_b.field_paragraph
@@ -29,13 +30,34 @@ third_party_settings:
         open: false
         required_fields: true
       label: Styles
+    group_no_result:
+      children:
+        - field_main_heading
+        - field_paragraph
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'No result'
 id: paragraph.block_glossary_b.default
 targetEntityType: paragraph
 bundle: block_glossary_b
 mode: default
 content:
+  field_all_categories_label:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_landing_category:
-    weight: 3
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -58,7 +80,7 @@ content:
     region: content
   field_scroll_id:
     type: string_textfield
-    weight: 2
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -73,7 +95,7 @@ content:
     type: string_textfield
     region: content
   field_show_more_label:
-    weight: 4
+    weight: 3
     settings:
       size: 60
       placeholder: ''

@@ -24,11 +24,14 @@ class FieldEntityReference extends RestFieldProcessorBase {
    */
   protected function getItemData($field, $options = []) {
 
-    /** @var ContentEntityInterface $entity */
+    /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
     $entity = $field->get('entity')->getValue();
+    if (!$entity->access('view')) {
+      return NULL;
+    }
     $data = $this->entityProcessor->getEntityData($entity, $this->requestVersion(), $options);
     $this->cacheabilityCollector->addCacheableDependency($entity);
     return $data;
-
   }
+
 }

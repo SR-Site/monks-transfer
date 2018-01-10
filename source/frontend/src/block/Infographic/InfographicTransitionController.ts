@@ -61,8 +61,14 @@ class InfographicTransitionController extends AbstractTransitionController {
 			'-=0.5',
 		);
 
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimaryLink'), '-=0.5');
-		this.transitionInTimeline.add(this.getSubTimeline('ButtonSecondaryLink'), '-=0.5');
+        if (this.viewModel.hasChild('ButtonPrimaryLink')) {
+            this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimaryLink'), '-=0.5');
+        }
+
+		if (this.viewModel.hasChild('ButtonSecondaryLink')) {
+            this.transitionInTimeline.add(this.getSubTimeline('ButtonSecondaryLink'), '-=0.5');
+		}
+
 	}
 
 	/**

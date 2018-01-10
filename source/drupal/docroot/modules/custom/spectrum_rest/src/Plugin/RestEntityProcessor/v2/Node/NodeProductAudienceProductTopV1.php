@@ -12,11 +12,11 @@ use Drupal\spectrum_rest\Plugin\RestEntityProcessor\Node\NodeArticleTeaserV1;
  *   label = @Translation("Node: Article - ​Audience Product Top"),
  *   version = "v1",
  *   entity_type = "node",
- *   bundle = "article",
+ *   bundle = "product_page",
  *   view_mode = "audience_product_top"
  * )
  */
-class NodeArticleAudienceProductTopV1 extends NodeArticleTeaserV1 {
+class NodeProductAudienceProductTopV1 extends NodeArticleTeaserV1 {
 
   /**
    * {@inheritdoc}
@@ -24,7 +24,7 @@ class NodeArticleAudienceProductTopV1 extends NodeArticleTeaserV1 {
   protected function getItemData($entity) {
 
     $data = [
-      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('field_excerpt')),
+      "paragraph" => $this->fieldProcessor->getFieldData($entity->get('body')),
       "heading" => $entity->label(),
     ];
 

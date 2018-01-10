@@ -41,6 +41,7 @@ class ParagraphBlockGlossaryBV1 extends SpectrumRestEntityProcessorBase {
         'scrollId' => $this->fieldProcessor->getFieldData($entity->get('field_scroll_id')),
         'showMoreLabel' => $this->fieldProcessor->getFieldData($entity->get('field_show_more_label')),
         'searchPlaceholder' => $this->fieldProcessor->getFieldData($entity->get('field_search_placeholder')),
+        'allCategoryLabel' => $this->fieldProcessor->getFieldData($entity->get('field_all_categories_label')),
         'landingCategory' => $landingCategoryName,
         'noResult' => [
           'heading' => $this->fieldProcessor->getFieldData($entity->get('field_main_heading')),

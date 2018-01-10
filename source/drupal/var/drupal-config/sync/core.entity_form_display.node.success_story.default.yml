@@ -1,17 +1,20 @@
-uuid: 85de91a1-a0c3-4847-9ba3-7b37eaab5b46
+uuid: f0f5c5ee-e9e8-4e01-990e-3f5d7622de2d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.product_page.body
-    - field.field.node.product_page.field_background_image
-    - field.field.node.product_page.field_blocks
-    - field.field.node.product_page.field_header_theme
-    - field.field.node.product_page.field_hide_contact_button
-    - field.field.node.product_page.field_image
-    - field.field.node.product_page.field_metatags
+    - field.field.node.success_story.field_background_image
+    - field.field.node.success_story.field_blocks
+    - field.field.node.success_story.field_content
+    - field.field.node.success_story.field_header_theme
+    - field.field.node.success_story.field_hide_contact_button
+    - field.field.node.success_story.field_image
+    - field.field.node.success_story.field_industry
+    - field.field.node.success_story.field_market
+    - field.field.node.success_story.field_metatags
+    - field.field.node.success_story.field_success_story_company
     - image.style.thumbnail
-    - node.type.product_page
+    - node.type.success_story
   module:
     - field_group
     - image
@@ -36,13 +39,16 @@ third_party_settings:
     group_fields:
       children:
         - title
-        - body
+        - field_content
         - field_background_image
         - field_image
+        - field_success_story_company
+        - field_industry
+        - field_market
         - field_header_theme
         - field_hide_contact_button
       parent_name: group_tabs
-      weight: 1
+      weight: 6
       format_type: tab
       format_settings:
         id: ''
@@ -55,7 +61,7 @@ third_party_settings:
       children:
         - field_blocks
       parent_name: group_tabs
-      weight: 2
+      weight: 7
       format_type: tab
       format_settings:
         id: ''
@@ -64,28 +70,19 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Blocks
-id: node.product_page.default
+id: node.success_story.default
 targetEntityType: node
-bundle: product_page
+bundle: success_story
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 3
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_background_image:
-    weight: 4
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -93,7 +90,7 @@ content:
     type: image_image
     region: content
   field_blocks:
-    weight: 9
+    weight: 16
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -104,36 +101,64 @@ content:
     third_party_settings: {  }
     type: entity_reference_paragraphs
     region: content
+  field_content:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_header_theme:
-    weight: 6
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_hide_contact_button:
-    weight: 7
+    weight: 9
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_image:
-    weight: 5
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
     region: content
+  field_industry:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_market:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_metatags:
-    weight: 26
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
+  field_success_story_company:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
-    weight: 5
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -141,12 +166,12 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 2
+    weight: 1
     region: content
     settings:
       size: 60
@@ -154,7 +179,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 1
     settings:
       match_operator: CONTAINS
       size: 60
