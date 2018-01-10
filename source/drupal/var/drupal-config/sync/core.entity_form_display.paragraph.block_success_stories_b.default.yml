@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.block_success_stories_b.field_alignment
-    - field.field.paragraph.block_success_stories_b.field_articles
     - field.field.paragraph.block_success_stories_b.field_new_heading
     - field.field.paragraph.block_success_stories_b.field_paragraph
     - field.field.paragraph.block_success_stories_b.field_scroll_id
     - field.field.paragraph.block_success_stories_b.field_styles
+    - field.field.paragraph.block_success_stories_b.field_success_stories
     - paragraphs.paragraphs_type.block_success_stories_b
   module:
     - field_group
@@ -42,7 +42,7 @@ third_party_settings:
       label: Heading
     group_stories:
       children:
-        - field_articles
+        - field_success_stories
       parent_name: ''
       weight: 7
       format_type: fieldset
@@ -62,15 +62,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_articles:
-    weight: 6
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   field_new_heading:
     weight: 4
@@ -111,6 +102,15 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
+  field_success_stories:
+    weight: 8
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
 hidden:
   created: true

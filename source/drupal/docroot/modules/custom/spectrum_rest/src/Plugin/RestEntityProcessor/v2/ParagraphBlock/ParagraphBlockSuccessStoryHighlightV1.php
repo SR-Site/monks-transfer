@@ -23,7 +23,7 @@ class ParagraphBlockSuccessStoryHighlightV1 extends SpectrumRestEntityProcessorB
    */
   protected function getItemData($entity) {
     // Get story highlight.
-    $successStory = $this->fieldProcessor->getFieldData($entity->get('field_article'), ['view_mode' => 'success_story_highlight']);
+    $successStory = $this->fieldProcessor->getFieldData($entity->get('field_success_story'), ['view_mode' => 'success_story_highlight']);
 
     // Get common and add success story.
     $data = $this->getCommonData($entity) + $successStory;

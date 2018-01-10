@@ -31,7 +31,7 @@ class ParagraphBlockSuccessStoriesBV1 extends SpectrumRestEntityProcessorBase {
       'data' => $data + [
         'scrollId' => $this->fieldProcessor->getFieldData($entity->get('field_scroll_id')),
         'alignment' => (int) $entity->get('field_alignment')->value,
-        'stories' => $this->getItems($entity->get('field_articles'), ['view_mode' => 'success_story_b']),
+        'stories' => $this->getItems($entity->get('field_success_stories'), ['view_mode' => 'success_story_b']),
       ],
     ];
 

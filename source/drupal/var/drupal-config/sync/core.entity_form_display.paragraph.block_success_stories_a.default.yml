@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.block_success_stories_a.field_article
     - field.field.paragraph.block_success_stories_a.field_scroll_id
     - field.field.paragraph.block_success_stories_a.field_styles
+    - field.field.paragraph.block_success_stories_a.field_success_story
     - paragraphs.paragraphs_type.block_success_stories_a
   module:
     - field_group
@@ -26,7 +26,7 @@ third_party_settings:
       label: Styles
     group_story:
       children:
-        - field_article
+        - field_success_story
       parent_name: ''
       weight: 3
       format_type: fieldset
@@ -41,15 +41,6 @@ targetEntityType: paragraph
 bundle: block_success_stories_a
 mode: default
 content:
-  field_article:
-    weight: 3
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_scroll_id:
     type: string_textfield
     weight: 2
@@ -69,6 +60,15 @@ content:
       form_display_mode: default
       default_paragraph_type: ''
     third_party_settings: {  }
+    region: content
+  field_success_story:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
 hidden:
   created: true

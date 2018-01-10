@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.success_story.field_industry
     - field.field.node.success_story.field_market
     - field.field.node.success_story.field_metatags
+    - field.field.node.success_story.field_subheading
     - field.field.node.success_story.field_success_story_company
     - node.type.success_story
   module:
@@ -99,6 +100,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
+    region: content
+  field_subheading:
+    weight: 111
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_success_story_company:
     weight: 104

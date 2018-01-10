@@ -1,26 +1,26 @@
-uuid: b2d3c6a1-df62-4ad2-b7e7-2ac387d0f03c
+uuid: 95ed0ba9-b2e1-4f63-afba-58d69c55075c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_article
-    - node.type.article
+    - field.storage.paragraph.field_success_story
+    - node.type.success_story
     - paragraphs.paragraphs_type.block_success_stories_a
-id: paragraph.block_success_stories_a.field_article
-field_name: field_article
+id: paragraph.block_success_stories_a.field_success_story
+field_name: field_success_story
 entity_type: paragraph
 bundle: block_success_stories_a
-label: Story
+label: 'Success Story'
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      article: article
+      success_story: success_story
     sort:
       field: _none
     auto_create: false

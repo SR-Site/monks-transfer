@@ -8,15 +8,15 @@ use Drupal\spectrum_rest\Plugin\RestEntityProcessor\Node\NodeArticleTeaserV1;
  * Returns the structured data of an entity.
  *
  * @RestEntityProcessor(
- *   id = "spectrum_rest_node_article_success_story_b_v1",
- *   label = @Translation("Node: Article - Success Story B"),
+ *   id = "spectrum_rest_node_success_story_b_v1",
+ *   label = @Translation("Node: Success Story B"),
  *   version = "v1",
  *   entity_type = "node",
- *   bundle = "article",
+ *   bundle = "success_story",
  *   view_mode = "success_story_b"
  * )
  */
-class NodeArticleSuccessStoryBV1 extends NodeArticleTeaserV1 {
+class NodeSuccessStoryBV1 extends NodeArticleTeaserV1 {
 
   /**
    * {@inheritdoc}

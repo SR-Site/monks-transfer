@@ -1,0 +1,28 @@
+uuid: e7cd9a88-022c-4776-9c24-0d33f22e64df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_success_story
+    - node.type.success_story
+    - paragraphs.paragraphs_type.block_success_story_post
+id: paragraph.block_success_story_post.field_success_story
+field_name: field_success_story
+entity_type: paragraph
+bundle: block_success_story_post
+label: 'Success Story'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      success_story: success_story
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

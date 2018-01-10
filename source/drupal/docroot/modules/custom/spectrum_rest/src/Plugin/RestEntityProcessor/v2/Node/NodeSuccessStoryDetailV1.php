@@ -35,15 +35,15 @@ class NodeSuccessStoryDetailV1 extends SpectrumRestEntityProcessorBase {
         'subHeading' => $this->t('Success Story'),
         'paragraph' => $this->fieldProcessor->getFieldData($entity->get('field_content')),
         'company' => [
-          'label' => 'Company',
+          'label' => $this->t('Company'),
           'value' => $this->fieldProcessor->getFieldData($entity->get('field_success_story_company')),
         ],
         'industry' => [
-          'label' => 'Industry',
+          'label' => $this->t('Industry'),
           'value' => ($entity->get('field_industry')->entity instanceof Term) ? $entity->get('field_industry')->entity->label() : NULL,
         ],
         'market' => [
-          'label' => 'Market',
+          'label' => $this->t('Market'),
           'value' => ($entity->get('field_market')->entity instanceof Term) ? $entity->get('field_market')->entity->label() : NULL,
         ],
       ],

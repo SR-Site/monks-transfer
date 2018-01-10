@@ -22,19 +22,18 @@ class ParagraphBlockSuccessStoryPostV1 extends SpectrumRestEntityProcessorBase {
    * {@inheritdoc}
    */
   protected function getItemData($entity) {
-    // Get story highlight.
-    $successStory = $this->fieldProcessor->getFieldData($entity->get('field_article'), ['view_mode' => 'success_story_post']);
+    // Get story post.
+    $data = $this->fieldProcessor->getFieldData($entity->get('field_success_story'), ['view_mode' => 'detail']);
 
-    // Get common and add success story.
-    $data = $this->getCommonData($entity) + $successStory;
-
-    // Get rest of the data.
-    $data = [
-      'id' => 'SuccessStoryPost',
-      'data' => $data + [
-        'scrollId' => $this->fieldProcessor->getFieldData($entity->get('field_scroll_id')),
-      ],
+    // Get scrollID.
+    $scrollId = [
+      'scrollId' => $this->fieldProcessor->getFieldData($entity->get('field_scroll_id')),
     ];
+
+    // Get common.
+    $commonData = $this->getCommonData($entity);
+    $data['data'] += $commonData + $scrollId;
+    $data['data']['marginTop'] = $commonData['marginTop'];
 
     return $data;
   }

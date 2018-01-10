@@ -3,16 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.block_success_story_highlight.field_article
     - field.field.paragraph.block_success_story_highlight.field_scroll_id
     - field.field.paragraph.block_success_story_highlight.field_styles
+    - field.field.paragraph.block_success_story_highlight.field_success_story
     - paragraphs.paragraphs_type.block_success_story_highlight
 id: paragraph.block_success_story_highlight.default
 targetEntityType: paragraph
 bundle: block_success_story_highlight
 mode: default
 content:
-  field_article:
+  field_success_story:
     weight: 0
     label: above
     settings:
