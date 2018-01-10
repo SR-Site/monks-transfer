@@ -210,9 +210,9 @@ class InitResource extends ResourceBase {
    */
   protected function getRouters() {
     $routers = [
-      'landing' => $this->urlHelper($this->state->get('site_frontpage')),
-      'notFound' => $this->urlHelper($this->state->get('site_404')),
-      'articleOverviewPage' => $this->urlHelper($this->state->get('article_overview_page')),
+      'landing' => $this->urlInternalHelper($this->state->get('site_frontpage')),
+      'notFound' => $this->urlInternalHelper($this->state->get('site_404')),
+      'articleOverviewPage' => $this->urlInternalHelper($this->state->get('article_overview_page')),
     ];
 
     return $routers;
@@ -239,6 +239,31 @@ class InitResource extends ResourceBase {
       $url = $url[0] == '/' ? $url : "/$url";
       $url = $this->pathAliasManager->getAliasByPath($url);
       $url = substr($url, 1);
+    }
+
+    return $url;
+  }
+
+  /**
+   * Helper function for transform internal links into URLs.
+   *
+   * @param string $url
+   *   Url.
+   *
+   * @return null|string
+   *   Url.
+   */
+  protected function urlInternalHelper($url) {
+    if (empty($url)) {
+      return NULL;
+    }
+
+    $url = UrlHelper::stripDangerousProtocols($url);
+    $external = UrlHelper::isExternal($url);
+
+    if (!$external) {
+      $url = $url[0] == '/' ? $url : "/$url";
+      $url = $this->pathAliasManager->getAliasByPath($url);
     }
 
     return $url;
