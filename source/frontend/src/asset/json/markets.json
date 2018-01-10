@@ -463,5 +463,10 @@
 		"marketId": "3154",
 		"statePostalCode": "OH",
 		"city": "Zanesville"
-	}
+	},
+   	{
+	 	"marketId": "9901",
+	 	"statePostalCode": "CO",
+	 	"city": "Denver"
+   	}
 ]
