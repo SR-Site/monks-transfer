@@ -1,0 +1,29 @@
+uuid: bf4f2d04-485d-4e88-839b-90b42df5d657
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market
+    - node.type.success_story
+    - taxonomy.vocabulary.market
+id: node.success_story.field_market
+field_name: field_market
+entity_type: node
+bundle: success_story
+label: Market
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      market: market
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

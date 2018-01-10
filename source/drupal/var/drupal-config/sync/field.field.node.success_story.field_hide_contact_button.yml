@@ -1,0 +1,23 @@
+uuid: 8d201d75-be71-4ce6-bd79-765686a57104
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hide_contact_button
+    - node.type.success_story
+id: node.success_story.field_hide_contact_button
+field_name: field_hide_contact_button
+entity_type: node
+bundle: success_story
+label: 'Hide contact button'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

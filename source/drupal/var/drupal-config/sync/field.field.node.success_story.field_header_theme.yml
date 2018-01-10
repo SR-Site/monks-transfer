@@ -1,0 +1,23 @@
+uuid: 3d8d1ca0-ccfa-4282-8188-942b21c51574
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_theme
+    - node.type.success_story
+  module:
+    - options
+id: node.success_story.field_header_theme
+field_name: field_header_theme
+entity_type: node
+bundle: success_story
+label: 'Header theme'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

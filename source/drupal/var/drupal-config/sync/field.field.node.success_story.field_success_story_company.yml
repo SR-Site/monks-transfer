@@ -1,0 +1,19 @@
+uuid: 639de13b-876a-4fa9-97cf-d4b937cce415
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_success_story_company
+    - node.type.success_story
+id: node.success_story.field_success_story_company
+field_name: field_success_story_company
+entity_type: node
+bundle: success_story
+label: Company
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
