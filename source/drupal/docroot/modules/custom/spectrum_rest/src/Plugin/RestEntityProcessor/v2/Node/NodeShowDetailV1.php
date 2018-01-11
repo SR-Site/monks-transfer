@@ -25,6 +25,7 @@ class NodeShowDetailV1 extends SpectrumRestEntityProcessorBase {
   protected function getItemData($entity) {
     $data = [
       'heading' => $entity->label(),
+      'marginTop' => 2,
       'paragraph' => $this->fieldProcessor->getFieldData($entity->get('field_show_description')),
     ];
 
