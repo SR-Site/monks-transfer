@@ -7,7 +7,7 @@
 			<figure :class="$style.image" ref="image">
 				<a :class="$style.top" v-link="{ path: data.target, type: 0 }">
 					<ResponsiveImage :image="data.image" class="abs-fill fit-cover"/>
-					<div class="primary-gradient-overlay" :class="$style.gradientOverlay"></div>
+					<div class="primary-gradient-overlay" :class="$style.gradientOverlay" v-if="data.target"></div>
 				</a>
 				<ButtonCirclePlay
 					v-if="data.video"
