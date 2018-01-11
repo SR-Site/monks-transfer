@@ -1,0 +1,23 @@
+uuid: 071af992-59cf-4b24-8e57-36873e12891f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_show_see_all_links
+    - paragraphs.paragraphs_type.block_find_your_audience
+id: paragraph.block_find_your_audience.field_show_see_all_links
+field_name: field_show_see_all_links
+entity_type: paragraph
+bundle: block_find_your_audience
+label: 'Show "See all" links'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
