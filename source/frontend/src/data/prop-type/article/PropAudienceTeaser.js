@@ -9,5 +9,5 @@ export default {
 	subHeading: VueTypes.string,
 	paragraph: VueTypes.string,
 	reaches: VueTypes.array,
-	target: VueTypes.string.isRequired,
+	target: VueTypes.string,
 };

@@ -91,7 +91,7 @@
 	}
 }
 
-@include hover('.audience-teaser') {
+@include hover('.audience-teaser.has-link') {
 	.gradient-overlay {
 		opacity: 0;
 	}

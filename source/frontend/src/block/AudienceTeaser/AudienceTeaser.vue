@@ -2,7 +2,7 @@
 <script src="./AudienceTeaser.js"></script>
 
 <template>
-	<article :class="$style.audienceTeaser">
+	<article :class="[$style.audienceTeaser, {[$style.hasLink]: data.target}]">
 		<div :class="$style.content">
 			<figure :class="$style.image" ref="image">
 				<a :class="$style.top" v-link="{ path: data.target, type: 0 }">
@@ -29,7 +29,7 @@
 					<p class="copy copy-01" v-if="data.paragraph" v-html="data.paragraph" :class="$style.copy"
 					   ref="copy"></p>
 				</a>
-				<div :class="$style.bottom" ref="bottom" v-if="data.reaches">
+				<div :class="$style.bottom" ref="bottom" v-if="data.reaches && data.reaches.length > 0">
 					<h3 class="heading heading-07" :class="$style.reachHeading">Reaches</h3>
 					<ul :class="$style.reaches">
 						<li
