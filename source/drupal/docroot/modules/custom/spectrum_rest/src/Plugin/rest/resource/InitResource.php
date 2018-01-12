@@ -343,7 +343,7 @@ class InitResource extends ResourceBase {
         $parsed_array['type'] = 3;
       }
 
-      if ($parsed_array['target'] == '/') {
+      if (isset($parsed_array['target']) && $parsed_array['target'] == '/') {
         $parsed_array['target'] = $this->urlInternalHelper($this->state->get('site_frontpage'));
       }
 
