@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\Node;
+namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\v2\Node;
 
 use Drupal\node\Entity\Node;
 use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
@@ -33,6 +33,14 @@ class NodeShowV1 extends SpectrumRestEntityProcessorBase {
 
     if ($this->fieldProcessor->getFieldData($entity->get('field_hero_quaternary'))) {
       $blocks[] = $this->fieldProcessor->getFieldData($entity->get('field_hero_quaternary'));
+    }
+    else {
+      $blocks[] = [
+        'id' => 'heroTertiary',
+        'data' => [
+          "background" => $this->image($entity->get('field_image')),
+        ],
+      ];
     }
     $blocks[] = $showDetailBlock;
 

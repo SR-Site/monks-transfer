@@ -31,12 +31,23 @@ class ParagraphTopPicksV1 extends SpectrumRestEntityProcessorBase {
     $data = $data + [
       'items' => $this->fieldProcessor->getFieldData($entity->get('field_top_picks_shows'), ['view_mode' => 'teaser_mode']),
     ];
-    $data['link'] = [
-      "label" => $this->t('See all shows'),
-      "title" => $this->t('See all shows'),
-      "target" => "/shows",
-      "type" => 0,
-    ];
+
+    /** @var \Drupal\paragraphs\Entity\Paragraph $entity */
+    $parent = $entity->getParentEntity();
+
+    // Get Show "See all" links.
+    $seeAll = FALSE;
+    if (isset($parent->get('field_show_see_all_links')->value) && $parent->get('field_show_see_all_links')->value) {
+      $seeAll = TRUE;
+    }
+    if ($seeAll) {
+      $data['link'] = [
+        "label" => $this->t('See all shows'),
+        "title" => $this->t('See all shows'),
+        "target" => "/shows",
+        "type" => 0,
+      ];
+    }
 
     return $data;
   }

@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.block_find_your_audience.field_genres
     - field.field.paragraph.block_find_your_audience.field_networks
     - field.field.paragraph.block_find_your_audience.field_scroll_id
+    - field.field.paragraph.block_find_your_audience.field_show_see_all_links
     - field.field.paragraph.block_find_your_audience.field_styles
     - field.field.paragraph.block_find_your_audience.field_top_picks
     - paragraphs.paragraphs_type.block_find_your_audience
@@ -33,6 +34,16 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_show_see_all_links:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_top_picks:
     type: entity_reference_revisions_entity_view

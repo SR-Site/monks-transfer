@@ -26,7 +26,7 @@ class NodeShowTeaserModeV1 extends SpectrumRestEntityProcessorBase {
     $data = [
       'heading' => $entity->label(),
       'paragraph' => text_summary($this->fieldProcessor->getFieldData($entity->get('field_show_description')), NULL, 200),
-      'target' => $entity->toUrl()->toString(),
+      // 'target' => $entity->toUrl()->toString(),
       'image' => $this->image($entity->get('field_image')),
     ];
 

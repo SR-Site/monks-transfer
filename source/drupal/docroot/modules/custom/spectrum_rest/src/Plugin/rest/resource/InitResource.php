@@ -343,6 +343,10 @@ class InitResource extends ResourceBase {
         $parsed_array['type'] = 3;
       }
 
+      if ($parsed_array['target'] == '/') {
+        $parsed_array['target'] = $this->urlInternalHelper($this->state->get('site_frontpage'));
+      }
+
       // Display child items.
       if (!empty($menu_item->subtree) && $menu == 'main') {
         $parsed_array = [

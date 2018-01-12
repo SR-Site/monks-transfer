@@ -32,12 +32,23 @@ class ParagraphNetworksV1 extends SpectrumRestEntityProcessorBase {
     $data = $data + [
       'items' => $this->fieldProcessor->getFieldData($entity->get('field_network_items'), ['view_mode' => 'teaser']),
     ];
-    $data['link'] = [
-      "label" => $this->t('See all networks'),
-      "title" => $this->t('See all networks'),
-      "target" => "/networks",
-      "type" => 0,
-    ];
+
+    /** @var \Drupal\paragraphs\Entity\Paragraph $entity */
+    $parent = $entity->getParentEntity();
+
+    // Get Show "See all" links.
+    $seeAll = FALSE;
+    if (isset($parent->get('field_show_see_all_links')->value) && $parent->get('field_show_see_all_links')->value) {
+      $seeAll = TRUE;
+    }
+    if ($seeAll) {
+      $data['link'] = [
+        "label" => $this->t('See all networks'),
+        "title" => $this->t('See all networks'),
+        "target" => "/networks",
+        "type" => 0,
+      ];
+    }
 
     return $data;
   }
