@@ -42,7 +42,7 @@ const setupInjects = () => {
 	const deviceStateTracker = new DeviceStateTracker({
 		mediaQueries,
 		deviceState: DeviceState,
-		showStateIndicator: true,
+		showStateIndicator: configManager.getVariable(VariableNames.DEBUG_LABEL_ENABLED),
 		reverseDeviceStateOrder: true,
 	});
 
