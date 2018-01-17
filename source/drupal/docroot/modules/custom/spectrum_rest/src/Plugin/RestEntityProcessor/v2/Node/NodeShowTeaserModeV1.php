@@ -70,7 +70,7 @@ class NodeShowTeaserModeV1 extends SpectrumRestEntityProcessorBase {
       $airTimeDateTime = new \DateTime($airTime);
       $airTimeDateTime->setTimezone(new \DateTimeZone('America/New_York'));
       $newDate = [
-        'date' => $airTimeDateTime->format('l m dS'),
+        'date' => $airTimeDateTime->format('l M dS'),
         'time' => $airTimeDateTime->format('gA'),
       ];
       break;
