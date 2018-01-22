@@ -15,7 +15,9 @@ export default {
 					// Add a short timeout to make sure the page actually scrolls to the top.
 					// When requesting the same page for the second time it might not scroll
 					// to top due to super fast load speeds!
-					setTimeout(() => ScrollUtil.scrollElement().scrollTop = 0, 200);
+					setTimeout(() => {
+						ScrollUtil.scrollElement().scrollTop = 0;
+					}, 200);
 				}
 				objectFitImages(); // Polyfill the object-fit to make sure it works on IE
 				this.$tracking.trackPageView({
