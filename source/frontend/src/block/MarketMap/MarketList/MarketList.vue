@@ -18,7 +18,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="scroll-bar" data-scroll-bar>
+			<div class="scroll-bar" data-scroll-bar :class="$style.scrollBar">
 				<div class="knob" data-scroll-knob></div>
 			</div>
 		</div>
