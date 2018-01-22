@@ -1,4 +1,5 @@
 import objectFitImages from 'object-fit-images';
+import ScrollUtil from 'util/ScrollUtil';
 import TrackingProvider from 'util/tracking/TrackingProvider';
 import { AbstractContentPageComponent } from 'vue-block-system';
 import ContentPageTransitionController from './ContentPageTransitionController';
@@ -10,6 +11,9 @@ export default {
 		handleRouteChangeComplete() {
 			this.pageLoader.transitionOut();
 			this.$nextTick(() => {
+				if (window.location.hash.slice(1).length === 0) {
+					ScrollUtil.scrollElement().scrollTop = 0;
+				}
 				objectFitImages(); // Polyfill the object-fit to make sure it works on IE
 				this.$tracking.trackPageView({
 					[TrackingProvider.GOOGLE_ANALYTICS]: {
