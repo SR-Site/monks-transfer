@@ -20,7 +20,7 @@
 			:global {
 				// Overrule backend styling because on mobile we never want margin on the first element
 				.block-component:first-child {
-					margin-top: 0!important;
+					margin-top: 0 !important;
 				}
 			}
 		}

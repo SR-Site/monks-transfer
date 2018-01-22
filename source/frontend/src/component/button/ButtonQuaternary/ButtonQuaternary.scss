@@ -35,7 +35,7 @@
 	.label {
 		display: inline-block;
 		vertical-align: middle;
-		transition: color .2s $easeInOutCubic;
+		transition: color 0.2s $easeInOutCubic;
 	}
 
 	@include respond-to(SMALL) {

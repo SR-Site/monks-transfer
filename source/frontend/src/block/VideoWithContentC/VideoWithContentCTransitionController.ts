@@ -62,7 +62,7 @@ class VideoWithContentCTransitionController extends AbstractTransitionController
 			},
 			'-=0.6',
 		);
-		if(this.viewModel.hasChild('ButtonPrimary')){
+		if (this.viewModel.hasChild('ButtonPrimary')) {
 			this.transitionInTimeline.add(this.getSubTimeline('ButtonPrimary'), '-=0.6');
 		}
 	}
