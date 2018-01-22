@@ -26,7 +26,8 @@ class NodeSuccessStoryBackgroundImageV1 extends SpectrumRestEntityProcessorBase 
     $data = [
       'id' => 'heroTertiary',
       'data' => [
-        "background" => $this->image($entity->get('field_background_image')),
+        'marginTop' => 2,
+        'background' => $this->image($entity->get('field_background_image')),
       ],
     ];
 
