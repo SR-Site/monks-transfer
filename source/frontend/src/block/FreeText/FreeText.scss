@@ -7,6 +7,10 @@
 			@extend %reset-bmp;
 			padding-bottom: $sizeGrid/2;
 			//font: 600 1.8rem / 1.16 $fontOpenSans;
+
+			a {
+				font-size: inherit;
+			}
 		}
 
 		h1 {
