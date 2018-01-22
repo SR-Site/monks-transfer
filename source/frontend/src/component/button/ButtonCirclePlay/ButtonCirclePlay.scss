@@ -12,7 +12,7 @@
 			circle {
 				fill: transparent;
 				stroke: currentColor;
-				stroke-width: 1px;
+				stroke-width: 3px;
 				transition: stroke 0.2s $easeInOut, stroke-width 0.2s $easeInOut, opacity 0.2s $easeInOut;
 				transform-origin: center center;
 			}
