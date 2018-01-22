@@ -139,7 +139,8 @@ export default class CrossFader extends Disposable {
 		return this.getImage(path)
 			.then((image: HTMLImageElement) => (this._newImage = image))
 			.then(() => this.calculateDimensions())
-			.then(() => this.open(duration, ease));
+			.then(() => this.open(duration, ease))
+			.catch(reason => console.error('Failed to load the image', path));
 	}
 
 	/**
