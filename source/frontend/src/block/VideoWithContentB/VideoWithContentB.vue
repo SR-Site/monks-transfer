@@ -3,7 +3,7 @@
 
 <template>
 	<div :class="[$style.videoWithContentB, $style[ClassNameHelper.parseAlignment(data.alignment)]]">
-		<div class="site-frame" :class="$style.sizeFrame">
+		<div class="site-frame" :class="$style.siteFrame">
 			<div class="overrule-overlap" :class="$style.overruleOverlap">
 				<div :class="$style.videoWrapper" ref="videoWrapper">
 					<div :class="$style.video">

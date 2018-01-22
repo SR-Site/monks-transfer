@@ -44,6 +44,11 @@
 		align-items: center;
 	}
 
+	.site-frame {
+		padding-left: $sizeGrid;
+		padding-right: $sizeGrid;
+	}
+
 	.video-description {
 		@include size(35%, auto);
 		order: 1;
@@ -93,12 +98,12 @@
 			margin-bottom: $sizeGrid;
 		}
 
-		.size-frame {
-			padding: 0;
-		}
-
 		.button {
 			margin-bottom: $sizeGrid;
+		}
+
+		.site-frame {
+			padding: 0;
 		}
 
 		.video-with-content-b {

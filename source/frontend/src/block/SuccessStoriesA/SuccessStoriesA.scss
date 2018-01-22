@@ -3,8 +3,7 @@
 		@include size(100%, auto);
 		position: relative;
 		background: $colorLightGrey;
-		padding-top: $sizeGrid * 3;
-		padding-bottom: $sizeGrid * 5;
+		padding: $sizeGrid * 3 $sizeGrid $sizeGrid * 5 $sizeGrid;
 
 		&:before {
 			@include triangle(left, bottom, $colorWhite, $sizeGrid * 5);
