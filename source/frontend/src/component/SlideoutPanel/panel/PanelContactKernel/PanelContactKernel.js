@@ -19,6 +19,13 @@ export default {
 					validationRules: 'required',
 				},
 				{
+					name: 'company',
+					localeKey: 'company',
+					type: 'text',
+					value: '',
+					validationRules: 'required',
+				},
+				{
 					name: 'city',
 					localeKey: 'city',
 					type: 'text',
