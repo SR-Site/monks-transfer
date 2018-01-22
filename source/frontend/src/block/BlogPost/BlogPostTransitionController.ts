@@ -23,21 +23,6 @@ class BlogPostTransitionController extends AbstractTransitionController {
 		);
 
 		this.transitionInTimeline.fromTo(
-			this.viewModel.$refs.footer,
-			0.8,
-			{
-				autoAlpha: 0,
-				y: 50,
-			},
-			{
-				autoAlpha: 1,
-				y: 0,
-				ease: Expo.easeOut,
-			},
-			'-=0.6',
-		);
-
-		this.transitionInTimeline.fromTo(
 			this.viewModel.$refs.content,
 			0.8,
 			{
