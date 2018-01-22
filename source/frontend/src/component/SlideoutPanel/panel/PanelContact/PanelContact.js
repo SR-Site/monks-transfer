@@ -26,6 +26,13 @@ export default {
 					value: '',
 				},
 				{
+					name: 'company',
+					localeKey: 'company',
+					type: 'text',
+					value: '',
+					validationRules: 'required',
+				},
+				{
 					name: 'email',
 					localeKey: 'email',
 					type: 'email',
