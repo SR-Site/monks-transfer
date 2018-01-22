@@ -66,6 +66,7 @@ const config = {
 		[PropertyNames.MAPBOX_MAP_STYLE]: 'mapbox://styles/mediasolutions/cj1a5z3td003e2rpauzcq162n',
 		[PropertyNames.GOOGLE_ANALYTICS]: '123456789',
 		[PropertyNames.FACEBOOK_PIXEL]: '1499374196803695',
+		[PropertyNames.FACEBOOK_PIXEL_2]: '163970710892419',
 		[PropertyNames.TWITTER_PIXEL]: 'nx7ko',
 		[PropertyNames.LINKEDIN_PIXEL]: '41619',
 		[PropertyNames.HOTJAR]: '481416',

@@ -35,6 +35,12 @@
 		}
 	}
 
+	// Client wants the scroll bar to be on the left because it's confusing when two scroll bars are right next to each other
+	.scroll-bar {
+		left: 0;
+		right: auto;
+	}
+
 	@include respond-to(SMALL) {
 		.market-list {
 			@include size(calc(100% - #{$sizeGrid}), 0);

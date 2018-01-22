@@ -17,6 +17,7 @@ export default {
 					},
 					[TrackingProvider.TWITTER_PIXEL]: {},
 					[TrackingProvider.FACEBOOK_PIXEL]: {},
+					[TrackingProvider.FACEBOOK_PIXEL_2]: {},
 				});
 			});
 		},

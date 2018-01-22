@@ -6,7 +6,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		padding: $sizeGrid * 0.75 $sizeGrid*1.5 $sizeGrid * 0.75 $sizeGrid;
+		padding: $sizeGrid * 0.75 $sizeGrid $sizeGrid * 0.75 $sizeGrid;
 		text-decoration: none;
 		color: $colorWhite;
 		text-align: left;
@@ -14,7 +14,6 @@
 
 	.sub-heading {
 		font-weight: 400;
-		margin-left: $sizeGrid * 0.25;
 	}
 
 	.cta {

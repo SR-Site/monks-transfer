@@ -3,10 +3,8 @@
 
 <template>
 	<button class="button" :class="$style.serviceButton" @click="handleClick">
-		<h3 class="heading heading-07" :class="$style.heading">
-			<span v-html="data.heading"></span>
-			<span :class="$style.subHeading" v-html="data.subHeading"></span>
-		</h3>
+		<h3 class="heading heading-07" :class="$style.heading">{{ data.heading }}</h3>
+		<p class="copy copy-02" :class="$style.subHeading">{{data.subHeading}}</p>
 		<a class="copy copy-01" :class="$style.cta" v-html="data.cta"></a>
 	</button>
 </template>
