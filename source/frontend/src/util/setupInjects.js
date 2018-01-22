@@ -56,6 +56,9 @@ const setupInjects = () => {
 			[TrackingProvider.FACEBOOK_PIXEL]: new FacebookTrackingPixelProvider({
 				trackingPixelId: configManager.getProperty(PropertyNames.FACEBOOK_PIXEL),
 			}),
+			[TrackingProvider.FACEBOOK_PIXEL_2]: new FacebookTrackingPixelProvider({
+				trackingPixelId: configManager.getProperty(PropertyNames.FACEBOOK_PIXEL_2),
+			}),
 			[TrackingProvider.TWITTER_PIXEL]: new TwitterTrackingPixelProvider({
 				trackingPixelId: configManager.getProperty(PropertyNames.TWITTER_PIXEL),
 			}),

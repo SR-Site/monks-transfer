@@ -28,6 +28,7 @@ export const PropertyNames = {
 	MAPBOX_MAP_STYLE: 'mapbox-map-style',
 	GOOGLE_ANALYTICS: 'google-analytics',
 	FACEBOOK_PIXEL: 'facebook-pixel',
+	FACEBOOK_PIXEL_2: 'facebook-pixel-2',
 	TWITTER_PIXEL: 'twitter-pixel',
 	LINKEDIN_PIXEL: 'linkedin-pixel',
 	HOTJAR: 'hotjar',
