@@ -14,7 +14,6 @@ class Endpoints {
 	 */
 	public static getEndpoint(endpoint: string): string {
 		const mockFlag = getValue(CONFIG_MANAGER).getVariable(VariableNames.MOCK_ENABLED);
-
 		return Endpoints._ENDPOINTS[endpoint][mockFlag ? Endpoints._MOCK : Endpoints._API];
 	}
 
@@ -27,16 +26,16 @@ class Endpoints {
 
 	private static _ENDPOINTS = {
 		[Endpoints.CONTACT]: {
-			[Endpoints._MOCK]: 'contact.json',
-			[Endpoints._API]: 'contact',
+			[Endpoints._MOCK]: '/contact.json',
+			[Endpoints._API]: '/v1/contact',
 		},
 		[Endpoints.CONTACT_KERNEL]: {
-			[Endpoints._MOCK]: 'contact.json',
-			[Endpoints._API]: 'contact',
+			[Endpoints._MOCK]: '/contact.json',
+			[Endpoints._API]: '/v1/contact',
 		},
 		[Endpoints.VIEW_COUNT]: {
-			[Endpoints._MOCK]: 'view-count.json',
-			[Endpoints._API]: 'counter/{page}',
+			[Endpoints._MOCK]: '/view-count.json',
+			[Endpoints._API]: '/v1/counter/{page}',
 		},
 	};
 }
