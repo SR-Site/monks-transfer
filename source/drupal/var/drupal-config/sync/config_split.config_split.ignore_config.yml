@@ -5,7 +5,10 @@ dependencies: {  }
 id: ignore_config
 label: 'Ignore Config'
 folder: ../var/drupal-config/dev
-module: {  }
+module:
+  purge: 0
+  varnish_purge_tags: 0
+  varnish_purger: 0
 theme: {  }
 blacklist:
   - prerender.settings
