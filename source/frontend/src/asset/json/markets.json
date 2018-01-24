@@ -1,472 +1,471 @@
- [
-	{
-		"marketId": "3105",
-		"statePostalCode": "NY",
-		"city": "Albany"
-	},
-	{
-		"marketId": "257",
-		"statePostalCode": "MI",
-		"city": "Alpena"
-	},
-	{
-		"marketId": "3107",
-		"statePostalCode": "TX",
-		"city": "Austin"
-	},
-	{
-		"marketId": "3407",
-		"statePostalCode": "CA",
-		"city": "Bakersfield"
-	},
-	{
-		"marketId": "3109",
-		"statePostalCode": "ME",
-		"city": "Bangor"
-	},
-	{
-		"marketId": "234",
-		"statePostalCode": "MT",
-		"city": "Billings"
-	},
-	{
-		"marketId": "3110",
-		"statePostalCode": "NY",
-		"city": "Binghamton"
-	},
-	{
-		"marketId": "271",
-		"statePostalCode": "AL",
-		"city": "Birmingham"
-	},
-	{
-		"marketId": "3112",
-		"statePostalCode": "NY",
-		"city": "Buffalo"
-	},
-	{
-		"marketId": "235",
-		"statePostalCode": "MT",
-		"city": "Butte"
-	},
-	{
-		"marketId": "236",
-		"statePostalCode": "WY",
-		"city": "Casper/Riverton"
-	},
-	{
-		"marketId": "3114",
-		"statePostalCode": "SC",
-		"city": "Charleston"
-	},
-	{
-		"marketId": "272",
-		"statePostalCode": "NC",
-		"city": "Charlotte"
-	},
-	{
-		"marketId": "237",
-		"statePostalCode": "WY",
-		"city": "Cheyenne/Scotts"
-	},
-	{
-		"marketId": "238",
-		"stateId": "51",
-		"statePostalCode": "CA",
-		"city": "Chico/Redding"
-	},
-	{
-		"marketId": "3111",
-		"statePostalCode": "OH",
-		"city": "Cincinnati"
-	},
-	{
-		"marketId": "3113",
-		"statePostalCode": "WV",
-		"city": "Clarksburg"
-	},
-	{
-		"marketId": "3115",
-		"statePostalCode": "OH",
-		"city": "Cleveland"
-	},
-	{
-		"marketId": "3106",
-		"statePostalCode": "SC",
-		"city": "Columbia"
-	},
-	{
-		"marketId": "3116",
-		"statePostalCode": "OH",
-		"city": "Columbus"
-	},
-	{
-		"marketId": "3117",
-		"statePostalCode": "TX",
-		"city": "Corpus Christi"
-	},
-	{
-		"marketId": "3118",
-		"statePostalCode": "TX",
-		"city": "Dallas/Ft Worth"
-	},
-	{
-		"marketId": "3119",
-		"statePostalCode": "OH",
-		"city": "Dayton"
-	},
-	{
-		"marketId": "258",
-		"statePostalCode": "MN",
-		"city": "Duluth/Superior"
-	},
-	{
-		"marketId": "3120",
-		"statePostalCode": "TX",
-		"city": "El Paso"
-	},
-	{
-		"marketId": "3121",
-		"statePostalCode": "NY",
-		"city": "Elmira"
-	},
-	{
-		"marketId": "3122",
-		"stateId": "3163",
-		"statePostalCode": "PA",
-		"city": "Erie"
-	},
-	{
-		"marketId": "259",
-		"stateId": "282",
-		"statePostalCode": "MI",
-		"city": "Flint/Saginaw"
-	},
-	{
-		"marketId": "240",
-		"statePostalCode": "CO",
-		"city": "Grand Junction"
-	},
-	{
-		"marketId": "1187",
-		"statePostalCode": "MI",
-		"city": "Grand Rapids"
-	},
-	{
-		"marketId": "241",
-		"statePostalCode": "MT",
-		"city": "Great Falls"
-	},
-	{
-		"marketId": "3124",
-		"statePostalCode": "WI",
-		"city": "Green Bay"
-	},
-	{
-		"marketId": "273",
-		"statePostalCode": "SC",
-		"city": "Green/Spart/Ash"
-	},
-	{
-		"marketId": "3125",
-		"statePostalCode": "NC",
-		"city": "Greenville"
-	},
-	{
-		"marketId": "3127",
-		"statePostalCode": "TX",
-		"city": "Harlingen"
-	},
-	{
-		"marketId": "242",
-		"statePostalCode": "MT",
-		"city": "Helena"
-	},
-	{
-		"marketId": "3128",
-		"statePostalCode": "HI",
-		"city": "Honolulu"
-	},
-	{
-		"marketId": "275",
-		"statePostalCode": "AL",
-		"city": "Huntsville/Decatur"
-	},
-	{
-		"marketId": "243",
-		"statePostalCode": "WY",
-		"city": "Idaho Falls/Poca"
-	},
-	{
-		"marketId": "276",
-		"statePostalCode": "TN",
-		"city": "Jackson"
-	},
-	{
-		"marketId": "3129",
-		"statePostalCode": "MO",
-		"city": "Kansas City"
-	},
-	{
-		"marketId": "261",
-		"statePostalCode": "WI",
-		"city": "La Crosse"
-	},
-	{
-		"marketId": "3130",
-		"statePostalCode": "TX",
-		"city": "Laredo"
-	},
-	{
-		"marketId": "3131",
-		"statePostalCode": "KY",
-		"city": "Lexington"
-	},
-	{
-		"marketId": "3132",
-		"statePostalCode": "OH",
-		"city": "Lima"
-	},
-	{
-		"marketId": "244",
-		"statePostalCode": "NE",
-		"city": "Linc/Hast/Kearn"
-	},
-	{
-		"marketId": "3134",
-		"statePostalCode": "CA",
-		"city": "Los Angeles"
-	},
-	{
-		"marketId": "3135",
-		"statePostalCode": "KY",
-		"city": "Louisville"
-	},
-	{
-		"marketId": "262",
-		"statePostalCode": "WI",
-		"city": "Madison"
-	},
-	{
-		"marketId": "263",
-		"statePostalCode": "MN",
-		"city": "Mankato"
-	},
-	{
-		"marketId": "264",
-		"statePostalCode": "MI",
-		"city": "Marquette"
-	},
-	{
-		"marketId": "245",
-		"statePostalCode": "OR",
-		"city": "Medford/Klamath"
-	},
-	{
-		"marketId": "265",
-		"statePostalCode": "WI",
-		"city": "Milwaukee"
-	},
-	{
-		"marketId": "266",
-		"stateId": "283|284",
-		"statePostalCode": "MN",
-		"city": "Minn/St. Paul"
-	},
-	{
-		"marketId": "246",
-		"statePostalCode": "MT",
-		"city": "Missoula"
-	},
-	{
-		"marketId": "277",
-		"statePostalCode": "AL",
-		"city": "Montgomery"
-	},
-	{
-		"marketId": "3123",
-		"statePostalCode": "SC",
-		"city": "Myrtle Beach-Florence"
-	},
-	{
-		"marketId": "3137",
-		"statePostalCode": "NY",
-		"city": "New York"
-	},
-	{
-		"marketId": "3312",
-		"statePostalCode": "NC",
-		"city": "Norfolk"
-	},
-	{
-		"marketId": "247",
-		"stateId": "54",
-		"statePostalCode": "NE",
-		"city": "North Platte"
-	},
-	{
-		"marketId": "248",
-		"statePostalCode": "NE",
-		"city": "Omaha"
-	},
-	{
-		"marketId": "3389",
-		"stateId": "3387",
-		"statePostalCode": "FL",
-		"city": "Orlando"
-	},
-	{
-		"marketId": "249",
-		"statePostalCode": "MO",
-		"city": "Pad/Cape Gir/Har"
-	},
-	{
-		"marketId": "3139",
-		"statePostalCode": "CA",
-		"city": "Palm Springs"
-	},
-	{
-		"marketId": "3140",
-		"statePostalCode": "ME",
-		"city": "Portland"
-	},
-	{
-		"marketId": "3141",
-		"statePostalCode": "ME",
-		"city": "Presque Isle"
-	},
-	{
-		"marketId": "250",
-		"statePostalCode": "MO",
-		"city": "Quincy/Hannibal"
-	},
-	{
-		"marketId": "3142",
-		"statePostalCode": "NC",
-		"city": "Raleigh-Durham"
-	},
-	{
-		"marketId": "252",
-		"statePostalCode": "NV",
-		"city": "Reno"
-	},
-	{
-		"marketId": "267",
-		"statePostalCode": "MN",
-		"city": "Roch/Mas Cty/Aus"
-	},
-	{
-		"marketId": "3143",
-		"statePostalCode": "NY",
-		"city": "Rochester"
-	},
-	{
-		"marketId": "254",
-		"statePostalCode": "CA",
-		"city": "Sacramento/Stktn"
-	},
-	{
-		"marketId": "3144",
-		"statePostalCode": "TX",
-		"city": "San Antonio"
-	},
-	{
-		"marketId": "253",
-		"statePostalCode": "CA",
-		"city": "Santa Barbara/Santa Maria"
-	},
-	{
-		"marketId": "3145",
-		"statePostalCode": "GA",
-		"city": "Savannah"
-	},
-	{
-		"marketId": "814",
-		"statePostalCode": "MO",
-		"city": "St. Louis"
-	},
-	{
-		"marketId": "3146",
-		"statePostalCode": "NY",
-		"city": "Syracuse"
-	},
-	{
-		"marketId": "3397",
-		"statePostalCode": "FL",
-		"city": "Tampa"
-	},
-	{
-		"marketId": "3147",
-		"statePostalCode": "OH",
-		"city": "Toledo"
-	},
-	{
-		"marketId": "269",
-		"statePostalCode": "MI",
-		"city": "Trav City/Cadillac"
-	},
-	{
-		"marketId": "280",
-		"statePostalCode": "TN",
-		"city": "Tri-Cities"
-	},
-	{
-		"marketId": "3148",
-		"statePostalCode": "NY",
-		"city": "Utica"
-	},
-	{
-		"marketId": "1936",
-		"city": "Viroqua",
-		"statePostalCode": "WI"
-	},
-	{
-		"marketId": "3149",
-		"statePostalCode": "TX",
-		"city": "Waco"
-	},
-	{
-		"marketId": "3150",
-		"statePostalCode": "NY",
-		"city": "Watertown"
-	},
-	{
-		"marketId": "270",
-		"statePostalCode": "WI",
-		"city": "Wausau/Rhineland"
-	},
-	{
-		"marketId": "3151",
-		"statePostalCode": "NC",
-		"city": "Wilmington"
-	}, {
-		"marketId": "3126",
-		"statePostalCode": "NC",
-		"city": "Winston Salem"
-	},
-	{
-		"marketId": "256",
-		"statePostalCode": "WA",
-		"city": "Yakima"
-	},
-	{
-		"marketId": "3152",
-		"statePostalCode": "OH",
-		"city": "Youngstown"
-	},
-	{
-		"marketId": "3156",
-		"statePostalCode": "AZ",
-		"city": "Yuma"
-	},
-	{
-		"marketId": "3154",
-		"statePostalCode": "OH",
-		"city": "Zanesville"
-	},
-   	{
-	 	"marketId": "9901",
-	 	"statePostalCode": "CO",
-	 	"city": "Denver"
-   	}
+[
+  {
+	"marketId": "3105",
+	"statePostalCode": "NY",
+	"city": "Albany"
+  },
+  {
+	"marketId": "257",
+	"statePostalCode": "MI",
+	"city": "Alpena"
+  },
+  {
+	"marketId": "3107",
+	"statePostalCode": "TX",
+	"city": "Austin"
+  },
+  {
+	"marketId": "3407",
+	"statePostalCode": "CA",
+	"city": "Bakersfield"
+  },
+  {
+	"marketId": "3109",
+	"statePostalCode": "ME",
+	"city": "Bangor"
+  },
+  {
+	"marketId": "234",
+	"statePostalCode": "MT",
+	"city": "Billings"
+  },
+  {
+	"marketId": "3110",
+	"statePostalCode": "NY",
+	"city": "Binghamton"
+  },
+  {
+	"marketId": "271",
+	"statePostalCode": "AL",
+	"city": "Birmingham"
+  },
+  {
+	"marketId": "3112",
+	"statePostalCode": "NY",
+	"city": "Buffalo"
+  },
+  {
+	"marketId": "235",
+	"statePostalCode": "MT",
+	"city": "Butte"
+  },
+  {
+	"marketId": "236",
+	"statePostalCode": "WY",
+	"city": "Casper/Riverton"
+  },
+  {
+	"marketId": "3114",
+	"statePostalCode": "SC",
+	"city": "Charleston"
+  },
+  {
+	"marketId": "272",
+	"statePostalCode": "NC",
+	"city": "Charlotte"
+  },
+  {
+	"marketId": "237",
+	"statePostalCode": "WY",
+	"city": "Cheyenne/Scotts"
+  },
+  {
+	"marketId": "238",
+	"statePostalCode": "CA",
+	"city": "Chico/Redding"
+  },
+  {
+	"marketId": "3111",
+	"statePostalCode": "OH",
+	"city": "Cincinnati"
+  },
+  {
+	"marketId": "3113",
+	"statePostalCode": "WV",
+	"city": "Clarksburg"
+  },
+  {
+	"marketId": "3115",
+	"statePostalCode": "OH",
+	"city": "Cleveland"
+  },
+  {
+	"marketId": "3106",
+	"statePostalCode": "SC",
+	"city": "Columbia"
+  },
+  {
+	"marketId": "3116",
+	"statePostalCode": "OH",
+	"city": "Columbus"
+  },
+  {
+	"marketId": "3117",
+	"statePostalCode": "TX",
+	"city": "Corpus Christi"
+  },
+  {
+	"marketId": "3118",
+	"statePostalCode": "TX",
+	"city": "Dallas/Ft Worth"
+  },
+  {
+	"marketId": "3119",
+	"statePostalCode": "OH",
+	"city": "Dayton"
+  },
+  {
+	"marketId": "751",
+	"statePostalCode": "CO",
+	"city": "Denver"
+  },
+  {
+	"marketId": "258",
+	"statePostalCode": "MN",
+	"city": "Duluth/Superior"
+  },
+  {
+	"marketId": "3120",
+	"statePostalCode": "TX",
+	"city": "El Paso"
+  },
+  {
+	"marketId": "3121",
+	"statePostalCode": "NY",
+	"city": "Elmira"
+  },
+  {
+	"marketId": "3122",
+	"statePostalCode": "PA",
+	"city": "Erie"
+  },
+  {
+	"marketId": "259",
+	"statePostalCode": "MI",
+	"city": "Flint/Saginaw"
+  },
+  {
+	"marketId": "240",
+	"statePostalCode": "CO",
+	"city": "Grand Junction"
+  },
+  {
+	"marketId": "1187",
+	"statePostalCode": "MI",
+	"city": "Grand Rapids"
+  },
+  {
+	"marketId": "241",
+	"statePostalCode": "MT",
+	"city": "Great Falls"
+  },
+  {
+	"marketId": "3124",
+	"statePostalCode": "WI",
+	"city": "Green Bay"
+  },
+  {
+	"marketId": "273",
+	"statePostalCode": "SC",
+	"city": "Green/Spart/Ash"
+  },
+  {
+	"marketId": "3125",
+	"statePostalCode": "NC",
+	"city": "Greenville"
+  },
+  {
+	"marketId": "3127",
+	"statePostalCode": "TX",
+	"city": "Harlingen"
+  },
+  {
+	"marketId": "242",
+	"statePostalCode": "MT",
+	"city": "Helena"
+  },
+  {
+	"marketId": "3128",
+	"statePostalCode": "HI",
+	"city": "Honolulu"
+  },
+  {
+	"marketId": "275",
+	"statePostalCode": "AL",
+	"city": "Huntsville/Decatur"
+  },
+  {
+	"marketId": "243",
+	"statePostalCode": "WY",
+	"city": "Idaho Falls/Poca"
+  },
+  {
+	"marketId": "276",
+	"statePostalCode": "TN",
+	"city": "Jackson"
+  },
+  {
+	"marketId": "3129",
+	"statePostalCode": "MO",
+	"city": "Kansas City"
+  },
+  {
+	"marketId": "261",
+	"statePostalCode": "WI",
+	"city": "La Crosse"
+  },
+  {
+	"marketId": "3130",
+	"statePostalCode": "TX",
+	"city": "Laredo"
+  },
+  {
+	"marketId": "3131",
+	"statePostalCode": "KY",
+	"city": "Lexington"
+  },
+  {
+	"marketId": "3132",
+	"statePostalCode": "OH",
+	"city": "Lima"
+  },
+  {
+	"marketId": "244",
+	"statePostalCode": "NE",
+	"city": "Linc/Hast/Kearn"
+  },
+  {
+	"marketId": "3134",
+	"statePostalCode": "CA",
+	"city": "Los Angeles"
+  },
+  {
+	"marketId": "3135",
+	"statePostalCode": "KY",
+	"city": "Louisville"
+  },
+  {
+	"marketId": "262",
+	"statePostalCode": "WI",
+	"city": "Madison"
+  },
+  {
+	"marketId": "263",
+	"statePostalCode": "MN",
+	"city": "Mankato"
+  },
+  {
+	"marketId": "264",
+	"statePostalCode": "MI",
+	"city": "Marquette"
+  },
+  {
+	"marketId": "245",
+	"statePostalCode": "OR",
+	"city": "Medford/Klamath"
+  },
+  {
+	"marketId": "265",
+	"statePostalCode": "WI",
+	"city": "Milwaukee"
+  },
+  {
+	"marketId": "266",
+	"statePostalCode": "MN",
+	"city": "Minn/St. Paul"
+  },
+  {
+	"marketId": "246",
+	"statePostalCode": "MT",
+	"city": "Missoula"
+  },
+  {
+	"marketId": "277",
+	"statePostalCode": "AL",
+	"city": "Montgomery"
+  },
+  {
+	"marketId": "3123",
+	"statePostalCode": "SC",
+	"city": "Myrtle Beach-Florence"
+  },
+  {
+	"marketId": "3137",
+	"statePostalCode": "NY",
+	"city": "New York"
+  },
+  {
+	"marketId": "3312",
+	"statePostalCode": "NC",
+	"city": "Norfolk"
+  },
+  {
+	"marketId": "247",
+	"statePostalCode": "NE",
+	"city": "North Platte"
+  },
+  {
+	"marketId": "248",
+	"statePostalCode": "NE",
+	"city": "Omaha"
+  },
+  {
+	"marketId": "3389",
+	"statePostalCode": "FL",
+	"city": "Orlando"
+  },
+  {
+	"marketId": "249",
+	"statePostalCode": "MO",
+	"city": "Pad/Cape Gir/Har"
+  },
+  {
+	"marketId": "3139",
+	"statePostalCode": "CA",
+	"city": "Palm Springs"
+  },
+  {
+	"marketId": "3140",
+	"statePostalCode": "ME",
+	"city": "Portland"
+  },
+  {
+	"marketId": "3141",
+	"statePostalCode": "ME",
+	"city": "Presque Isle"
+  },
+  {
+	"marketId": "250",
+	"statePostalCode": "MO",
+	"city": "Quincy/Hannibal"
+  },
+  {
+	"marketId": "3142",
+	"statePostalCode": "NC",
+	"city": "Raleigh-Durham"
+  },
+  {
+	"marketId": "764",
+	"statePostalCode": "WY",
+	"city": "Rapid City"
+  },
+  {
+	"marketId": "252",
+	"statePostalCode": "NV",
+	"city": "Reno"
+  },
+  {
+	"marketId": "267",
+	"statePostalCode": "MN",
+	"city": "Roch/Mas Cty/Aus"
+  },
+  {
+	"marketId": "3143",
+	"statePostalCode": "NY",
+	"city": "Rochester"
+  },
+  {
+	"marketId": "610",
+	"statePostalCode": "IL",
+	"city": "Rockford"
+  },
+  {
+	"marketId": "254",
+	"statePostalCode": "CA",
+	"city": "Sacramento/Stktn"
+  },
+  {
+	"marketId": "3144",
+	"statePostalCode": "TX",
+	"city": "San Antonio"
+  },
+  {
+	"marketId": "253",
+	"statePostalCode": "CA",
+	"city": "Santa Barbara/Santa Maria"
+  },
+  {
+	"marketId": "3145",
+	"statePostalCode": "GA",
+	"city": "Savannah"
+  },
+  {
+	"marketId": "814",
+	"statePostalCode": "MO",
+	"city": "St. Louis"
+  },
+  {
+	"marketId": "3146",
+	"statePostalCode": "NY",
+	"city": "Syracuse"
+  },
+  {
+	"marketId": "3397",
+	"statePostalCode": "FL",
+	"city": "Tampa"
+  },
+  {
+	"marketId": "3147",
+	"statePostalCode": "OH",
+	"city": "Toledo"
+  },
+  {
+	"marketId": "269",
+	"statePostalCode": "MI",
+	"city": "Trav City/Cadillac"
+  },
+  {
+	"marketId": "280",
+	"statePostalCode": "TN",
+	"city": "Tri-Cities"
+  },
+  {
+	"marketId": "3148",
+	"statePostalCode": "NY",
+	"city": "Utica"
+  },
+  {
+	"marketId": "3149",
+	"statePostalCode": "TX",
+	"city": "Waco"
+  },
+  {
+	"marketId": "3150",
+	"statePostalCode": "NY",
+	"city": "Watertown"
+  },
+  {
+	"marketId": "270",
+	"statePostalCode": "WI",
+	"city": "Wausau/Rhineland"
+  },
+  {
+	"marketId": "3151",
+	"statePostalCode": "NC",
+	"city": "Wilmington"
+  }, {
+  "marketId": "3126",
+  "statePostalCode": "NC",
+  "city": "Winston Salem"
+},
+  {
+	"marketId": "256",
+	"statePostalCode": "WA",
+	"city": "Yakima"
+  },
+  {
+	"marketId": "3152",
+	"statePostalCode": "OH",
+	"city": "Youngstown"
+  },
+  {
+	"marketId": "3156",
+	"statePostalCode": "AZ",
+	"city": "Yuma"
+  },
+  {
+	"marketId": "3154",
+	"statePostalCode": "OH",
+	"city": "Zanesville"
+  }
 ]

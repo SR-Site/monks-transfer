@@ -150,7 +150,7 @@ export default {
 				this.handleContactUs();
 			} else {
 				const marketId = features[0].properties.id;
-				const market = this.markets.find(data => data.marketId === marketId);
+				const market = this.markets.find(data => data.marketId === marketId.toString());
 
 				if (market) {
 					this.handleSelectMarket(market);
