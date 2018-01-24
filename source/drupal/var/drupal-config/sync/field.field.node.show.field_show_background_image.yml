@@ -14,7 +14,7 @@ entity_type: node
 bundle: show
 label: 'Background image'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -171,8 +171,14 @@ settings:
       block_image_list:
         weight: 152
         enabled: false
+      block_filter_network_content:
+        weight: 153
+        enabled: false
       block_image_with_content_b:
         weight: 153
+        enabled: false
+      block_filter_show_content:
+        weight: 154
         enabled: false
       block_image_with_content_c:
         weight: 154
@@ -303,6 +309,9 @@ settings:
       slide_item:
         weight: 196
         enabled: false
+      networks:
+        weight: 197
+        enabled: false
       stat:
         weight: 197
         enabled: false
@@ -318,6 +327,9 @@ settings:
       steppurchase:
         weight: 201
         enabled: false
+      shows_by_genre:
+        weight: 202
+        enabled: false
       stories:
         weight: 202
         enabled: false
@@ -332,5 +344,11 @@ settings:
         enabled: false
       triple_content_item:
         weight: 206
+        enabled: false
+      spacer:
+        weight: 207
+        enabled: false
+      top_picks:
+        weight: 217
         enabled: false
 field_type: entity_reference_revisions
