@@ -80,6 +80,7 @@ class Contact extends ControllerBase {
         'Referer' => $referer,
       ],
       'form_params' => $contact->getProperties(),
+      'verify' => FALSE,
     ]);
 
     $content = $request->getBody()->getContents();
