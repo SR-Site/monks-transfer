@@ -75,6 +75,7 @@ module:
   toolbar_menu: 0
   update: 0
   user: 0
+  wincachedrupal: 0
   varnish_purge_tags: 0
   varnish_purger: 0
   video_embed_field: 0
