@@ -12,7 +12,6 @@ import TaskLoader from './preloading/TaskLoader';
 import FacebookTrackingPixelProvider from './tracking/tracking-provider/facebook-tracking-pixel/FacebookTrackingPixelProvider';
 import ForensicsProvider from './tracking/tracking-provider/forensics/ForensicsProvider';
 import GoogleAnalyticsProvider from './tracking/tracking-provider/google-analytics/GoogleAnalyticsProvider';
-import HotjarProvider from './tracking/tracking-provider/hotjar/HotjarProvider';
 // eslint-disable-next-line
 import LinkedInTrackingPixelProvider from './tracking/tracking-provider/linkedin-tracking-pixel/LinkedInTrackingPixelProvider';
 // eslint-disable-next-line
@@ -64,9 +63,6 @@ const setupInjects = () => {
 			}),
 			[TrackingProvider.LINKEDIN_PIXEL]: new LinkedInTrackingPixelProvider({
 				trackingPixelId: configManager.getProperty(PropertyNames.LINKEDIN_PIXEL),
-			}),
-			[TrackingProvider.HOTJAR]: new HotjarProvider({
-				trackingId: configManager.getProperty(PropertyNames.HOTJAR),
 			}),
 			[TrackingProvider.FORENSICS]: new ForensicsProvider({
 				trackingId: configManager.getProperty(PropertyNames.FORENSICS),
