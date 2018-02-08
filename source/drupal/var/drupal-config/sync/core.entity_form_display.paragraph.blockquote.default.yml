@@ -8,69 +8,14 @@ dependencies:
     - field.field.paragraph.blockquote.field_label
     - field.field.paragraph.blockquote.field_styles
     - field.field.paragraph.blockquote.field_title
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.blockquote
-  module:
-    - field_group
-    - image
-    - paragraphs
-third_party_settings:
-  field_group:
-    group_styles:
-      children:
-        - field_styles
-      parent_name: ''
-      weight: 0
-      format_type: details
-      format_settings:
-        id: ''
-        classes: ''
-        open: false
-        required_fields: true
-      label: Styles
 id: paragraph.blockquote.default
 targetEntityType: paragraph
 bundle: blockquote
 mode: default
 content:
-  field_description:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_image:
-    weight: 4
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_label:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_styles:
-    weight: 5
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: styles
-    third_party_settings: {  }
-    type: entity_reference_paragraphs
-    region: content
-  field_title:
-    weight: 2
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -79,5 +24,9 @@ content:
     region: content
 hidden:
   created: true
+  field_description: true
+  field_image: true
+  field_styles: true
+  field_title: true
   status: true
   uid: true
