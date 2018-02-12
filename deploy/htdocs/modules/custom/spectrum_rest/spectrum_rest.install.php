@@ -10,7 +10,7 @@ function spectrum_rest_install(){
 /**
  * Implements hook_update.
  */
-function sprectrum_rest_8001_update(){
+function spectrum_rest_8001_update(){
 
   $connection = \Drupal\Core\Database\Database::getConnection();
 
