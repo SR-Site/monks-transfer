@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.blockherosecondary.field_link
     - field.field.paragraph.blockherosecondary.field_new_heading
     - field.field.paragraph.blockherosecondary.field_paragraph
+    - field.field.paragraph.blockherosecondary.field_primary_heading
     - field.field.paragraph.blockherosecondary.field_styles
     - field.field.paragraph.blockherosecondary.field_video
     - image.style.preview_500xauto
@@ -72,6 +73,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_primary_heading:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_styles:
     weight: 0
