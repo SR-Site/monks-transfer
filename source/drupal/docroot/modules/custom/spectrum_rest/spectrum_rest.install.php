@@ -7,7 +7,7 @@ function spectrum_rest_install(){
 /**
  * Implements hook_update.
  */
-function spectrum_rest_8001_update(){
+function spectrum_rest_update_8001(){
   $connection = \Drupal\Core\Database\Database::getConnection();
   $items = $connection->select('paragraphs_item', 'p')
     ->fields('id', ['id'])
