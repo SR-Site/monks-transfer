@@ -153,7 +153,7 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
    */
   public function getHeadingParagraphData(ContentEntityInterface $entity) {
 
-    $heading['paragraph'] = $this->fieldProcessor->getFieldData($entity->get('field_paragraph'));
+    $heading['paragraph'] = $this->fieldProcessor->getFieldData($entity->get('field_paragraph')->getValue());
 
     if($entity->hasField('field_primary_heading')){
       $heading['data']['heading'] = $this->fieldProcessor->getFieldData($entity->get('field_primary_heading')->getValue());
