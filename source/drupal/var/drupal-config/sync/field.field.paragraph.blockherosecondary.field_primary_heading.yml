@@ -1,0 +1,19 @@
+uuid: 8c8ab208-1e8f-40a4-b699-3bebe77a3f9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_primary_heading
+    - paragraphs.paragraphs_type.blockherosecondary
+id: paragraph.blockherosecondary.field_primary_heading
+field_name: field_primary_heading
+entity_type: paragraph
+bundle: blockherosecondary
+label: 'Primary heading'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -15,4 +15,15 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_background_image: true
+  field_blocks: true
+  field_content: true
+  field_header_theme: true
+  field_hide_contact_button: true
+  field_image: true
+  field_industry: true
+  field_market: true
+  field_metatags: true
+  field_subheading: true
+  field_success_story_company: true

@@ -10,6 +10,7 @@ dependencies:
     - field.field.paragraph.blockherosecondary.field_link
     - field.field.paragraph.blockherosecondary.field_new_heading
     - field.field.paragraph.blockherosecondary.field_paragraph
+    - field.field.paragraph.blockherosecondary.field_primary_heading
     - field.field.paragraph.blockherosecondary.field_styles
     - field.field.paragraph.blockherosecondary.field_video
     - image.style.thumbnail
@@ -27,7 +28,7 @@ third_party_settings:
       children:
         - field_styles
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: details
       format_settings:
         id: ''
@@ -39,7 +40,7 @@ third_party_settings:
       children:
         - field_link
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: details
       format_settings:
         id: ''
@@ -53,13 +54,13 @@ bundle: blockherosecondary
 mode: default
 content:
   field_background_color:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: color_field_widget_html5
     region: content
   field_image:
-    weight: 2
+    weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -91,12 +92,20 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_paragraph:
-    weight: 5
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_primary_heading:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_styles:
     weight: 1
@@ -111,7 +120,7 @@ content:
     type: entity_reference_paragraphs
     region: content
   field_video:
-    weight: 3
+    weight: 4
     settings:
       entity_browser: video_internal
       field_widget_display: rendered_entity

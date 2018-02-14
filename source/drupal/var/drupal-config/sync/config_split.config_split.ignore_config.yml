@@ -15,6 +15,7 @@ blacklist:
   - spectrum_twitter_api.settings
   - system.file
   - xmlsitemap.xmlsitemap.NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM
+  - purge_queuer_coretags.settings
 graylist:
   - system.performance
 graylist_dependents: true
