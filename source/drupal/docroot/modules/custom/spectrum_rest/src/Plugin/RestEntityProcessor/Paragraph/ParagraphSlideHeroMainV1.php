@@ -2,7 +2,6 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\Paragraph;
 
-use Drupal\Core\Render\Markup;
 use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 
 /**
