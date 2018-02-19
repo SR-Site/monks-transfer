@@ -19,8 +19,8 @@ default_value: {  }
 default_value_callback: ''
 settings:
   allowed_formats:
-    bold_html: bold_html
-    basic_html: '0'
+    basic_html: basic_html
+    bold_html: '0'
     restricted_html: '0'
     full_html: '0'
     plain_text: '0'
