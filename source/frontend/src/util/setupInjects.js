@@ -16,6 +16,7 @@ import GoogleAnalyticsProvider from './tracking/tracking-provider/google-analyti
 import LinkedInTrackingPixelProvider from './tracking/tracking-provider/linkedin-tracking-pixel/LinkedInTrackingPixelProvider';
 // eslint-disable-next-line
 import TwitterTrackingPixelProvider from './tracking/tracking-provider/twitter-tracking-pixel/TwitterTrackingPixelProvider';
+import PardotProvider from './tracking/tracking-provider/pardot/PardotProvider';
 import TrackingManager from './tracking/TrackingManager';
 import TrackingProvider from './tracking/TrackingProvider';
 
@@ -67,6 +68,11 @@ const setupInjects = () => {
 			[TrackingProvider.FORENSICS]: new ForensicsProvider({
 				trackingId: configManager.getProperty(PropertyNames.FORENSICS),
 			}),
+      [TrackingProvider.PARDOT]: new PardotProvider({
+        clientId: configManager.getProperty(PropertyNames.PARDOT_CLIENT),
+				applicationId: configManager.getProperty(PropertyNames.PARDOT_APP),
+				hostname: 'pi.pardot.com',
+      }),
 		},
 	});
 

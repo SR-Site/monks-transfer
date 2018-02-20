@@ -69,8 +69,8 @@ const config = {
 		[PropertyNames.FACEBOOK_PIXEL_2]: '163970710892419',
 		[PropertyNames.TWITTER_PIXEL]: 'nx7ko',
 		[PropertyNames.LINKEDIN_PIXEL]: '41619',
-		[PropertyNames.PARDOT_APP]: '85712',
-		[PropertyNames.PARDOT_CLIENT]: '13314',
+		[PropertyNames.PARDOT_APP]: '212312',
+		[PropertyNames.PARDOT_CLIENT]: '172238',
 		[PropertyNames.FORENSICS]: '103509',
 	},
 };

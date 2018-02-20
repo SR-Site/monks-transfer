@@ -23,16 +23,16 @@ class NodeShowAudienceTopProgrammingV1 extends SpectrumRestEntityProcessorBase {
    */
   protected function getItemData($entity) {
     $video = $this->fieldProcessor->getFieldData($entity->get('field_show_videos'));
-    $defaultBackground = [
-      'normal' => '/' . drupal_get_path('module', 'spectrum_rest') . '/images/1040x580.png',
-      'small' => '/' . drupal_get_path('module', 'spectrum_rest') . '/images/750x750.png',
+    $background = [
+      'normal' => $entity->get('field_image')->count() == 0 ? '/' . drupal_get_path('module', 'spectrum_rest') . '/images/1040x580.png' : $this->fieldProcessor->getFieldData($entity->get('field_image')),
+      'small' => $entity->get('field_image')->count() == 0 ? '/' . drupal_get_path('module', 'spectrum_rest') . '/images/750x750.png' : $this->fieldProcessor->getFieldData($entity->get('field_image')),
       'alt' => $entity->label(),
     ];
 
     $data = [
       'heading' => $entity->label(),
       'paragraph' => $this->fieldProcessor->getFieldData($entity->get('field_show_description')),
-      'background' => $entity->get('field_show_background_image')->count() == 0 ? $defaultBackground : $this->fieldProcessor->getFieldData($entity->get('field_show_background_image')),
+      'background' => $background,
       'network' => $entity->get('field_show_network')->entity ? $entity->get('field_show_network')->entity->label() : NULL,
       'playVideoLabel' => "Watch trailer",
       'video' => !empty($video) ? $video[0] : [],
