@@ -31,12 +31,12 @@ class NodeShowDetailV1 extends SpectrumRestEntityProcessorBase {
 
     // @TODO: Add age restrictions in backend..
     $data['ageRestriction'] = [
-      'label' => 'Age Restriction',
-      'image' => [
-        'small' => 'https://via.placeholder.com/240x240',
-        'normal' => 'https://via.placeholder.com/240x240',
-        'alt' => 'Background image alt text',
-      ],
+      // 'label' => 'Age Restriction',
+      // 'image' => [
+      //   'small' => 'https://via.placeholder.com/240x240',
+      //   'normal' => 'https://via.placeholder.com/240x240',
+      //   'alt' => 'Background image alt text',
+      // ],
     ];
 
     // Get next episode..
