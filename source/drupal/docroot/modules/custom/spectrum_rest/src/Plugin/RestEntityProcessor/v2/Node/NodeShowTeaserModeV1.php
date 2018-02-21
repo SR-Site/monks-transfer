@@ -32,7 +32,7 @@ class NodeShowTeaserModeV1 extends SpectrumRestEntityProcessorBase {
 
     // Get video.
     $video = $this->fieldProcessor->getFieldData($entity->get('field_show_videos'));
-    if (!empty($video)) {
+    if (!empty($video) && isset($video[0])) {
       $data['video'] = $video[0];
     }
 
