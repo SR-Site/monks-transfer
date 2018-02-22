@@ -25,13 +25,18 @@ class ParagraphBlockAudienceStatisticsV1 extends SpectrumRestEntityProcessorBase
     // Get common and heading and paragraph.
     $data = $this->getCommonData($entity) + $this->getHeadingParagraphData($entity);
 
+    $audienceStatisticsItems = $this->fieldProcessor->getFieldData($entity->get('field_audience_statistics_items'));
+    if (!isset($audienceStatisticsItems[0])) {
+      $audienceStatisticsItems = [$audienceStatisticsItems];
+    }
+
     // Get rest of the data.
     $data = [
       'id' => 'AudienceStatistics',
       'data' => $data + [
         'scrollId' => $this->fieldProcessor->getFieldData($entity->get('field_scroll_id')),
         'background' => $this->fieldProcessor->getFieldData($entity->get('field_background_image')),
-        'items' => $this->fieldProcessor->getFieldData($entity->get('field_audience_statistics_items')),
+        'items' => $audienceStatisticsItems,
       ],
     ];
 
