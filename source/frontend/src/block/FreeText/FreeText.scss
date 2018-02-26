@@ -71,23 +71,28 @@
 		font-size: mobile-size(2.8rem);
 	  }
 	}
+
+	:global {
+	  .alignment-left,
+	  .text-align-left {
+		text-align: left;
+	  }
+
+	  .alignment-right,
+	  .text-align-right {
+		text-align: right;
+	  }
+
+	  .alignment-center,
+	  .text-align-center  {
+		text-align: center;
+	  }
+	}
   }
 
   .html-content {
 	background: $colorWhite;
 	padding: $sizeGrid;
-  }
-
-  .alignment-left {
-	text-align: left;
-  }
-
-  .alignment-right {
-	text-align: right;
-  }
-
-  .alignment-center {
-	text-align: center;
   }
 
   // Breakpoints
