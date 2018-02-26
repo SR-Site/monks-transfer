@@ -3,79 +3,55 @@ h2,
 h3,
 h4,
 h5 {
-	@extend %reset-bmp;
+  @extend %reset-bmp;
 }
 
 // Default Heading Styles.
 .heading {
-	@extend %heading;
+  @extend %heading;
 }
 
 // Open sans extra bold
 .heading-01 {
-	@extend %heading-01;
+  @extend %heading-01;
 }
 
 // Open sans extra bold
 .heading-02 {
-	@extend %heading-02;
+  @extend %heading-02;
 }
 
 // Open sans bold
 .heading-03 {
-	@extend %heading-03;
+  @extend %heading-03;
 }
 
 // Open sans bold
 .heading-04 {
-	@extend %heading-04;
+  @extend %heading-04;
 }
 
 // Open sans regular
 .heading-05 {
-	font: 400 3.6rem / 1.25 $fontOpenSans;
-
-	strong {
-		font-weight: 400;
-	}
+  @extend %heading-05;
 }
 
 // Open sans regular
 .heading-06 {
-	@extend %heading-06;
+  @extend %heading-06;
 }
 
 // Open sans semi-bold
 .heading-07 {
-	@extend %heading-07;
+  @extend %heading-07;
 }
 
 // Open sans extra-bold
 .heading-08 {
-	font: 400 1.4rem / 1.21 $fontOpenSans;
-
-	strong {
-		font-weight: 800;
-	}
+  @extend %heading-08;
 }
 
 // Open sans extra-bold
 .heading-09 {
-	font: 800 1.2rem / 1.75 $fontOpenSans;
-
-	strong {
-		font-weight: 800;
-	}
-}
-
-@include respond-to(SMALL) {
-	.heading-05 {
-		font-size: mobile-size(4.5rem);
-	}
-	.heading-07 {
-		font-size: mobile-size(3.5rem);
-	}
-	.heading-08 {
-		font-size: mobile-size(3.6rem);
-	}
+  @extend %heading-09;
 }

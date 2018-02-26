@@ -1,105 +1,115 @@
 :local {
+  .free-text {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+	  @extend %reset-bmp;
+	  padding-bottom: $sizeGrid/2;
+	  //font: 600 1.8rem / 1.16 $fontOpenSans;
+
+	  a {
+		font-size: inherit;
+	  }
+	}
+
+	h1 {
+	  @extend %heading-02;
+	}
+
+	h2 {
+	  @extend %heading-03;
+	}
+
+	h3 {
+	  @extend %heading-04;
+	}
+
+	h4 {
+	  @extend %heading-05;
+	}
+
+	h5 {
+	  @extend %heading-06;
+	}
+
+	h6 {
+	  @extend %heading-07;
+	}
+
+	p {
+	  display: block;
+	  font: 400 1.6rem / 1.625 $fontOpenSans;
+	  margin-bottom: $sizeGrid;
+
+	  img {
+		display: inline-block;
+		vertical-align: middle;
+	  }
+	}
+
+	a {
+	  font: 400 1.8rem / 1.625 $fontOpenSans;
+	  display: inline-block;
+	  position: relative;
+	  text-decoration: none;
+	  color: $colorSecondary;
+
+	  &:before {
+		@include position(auto, 0, -1px, 0%);
+		@include size(0%, 1px);
+		position: absolute;
+		content: '';
+		background-color: currentColor;
+		transition: width 150ms $easeInOutExpo;
+	  }
+
+	  @include respond-to(SMALL) {
+		font-size: mobile-size(2.8rem);
+	  }
+	}
+  }
+
+  .html-content {
+	background: $colorWhite;
+	padding: $sizeGrid;
+  }
+
+  .alignment-left {
+	text-align: left;
+  }
+
+  .alignment-right {
+	text-align: right;
+  }
+
+  .alignment-center {
+	text-align: center;
+  }
+
+  // Breakpoints
+  @include respond-to(SMALL) {
 	.free-text {
-		h1,
-		h2,
-		h3,
-		h4 {
-			@extend %reset-bmp;
-			padding-bottom: $sizeGrid/2;
-			//font: 600 1.8rem / 1.16 $fontOpenSans;
+	  h1,
+	  h2,
+	  h3,
+	  h4 {
+		font-size: mobile-size(3.5rem);
+		padding-bottom: $sizeGrid;
+	  }
 
-			a {
-				font-size: inherit;
-			}
-		}
-
-		h1 {
-			@extend %heading-02;
-		}
-
-		h2 {
-			@extend %heading-03;
-		}
-
-		h3 {
-			@extend %heading-06;
-		}
-
-		h4 {
-			@extend %heading-06;
-		}
-
-		p {
-			display: block;
-			font: 400 1.6rem / 1.625 $fontOpenSans;
-			margin-bottom: $sizeGrid;
-
-			img {
-				display: inline-block;
-				vertical-align: middle;
-			}
-		}
-
-		a {
-			font: 400 1.8rem / 1.625 $fontOpenSans;
-			display: inline-block;
-			position: relative;
-			text-decoration: none;
-			color: $colorSecondary;
-
-			&:before {
-				@include position(auto, 0, -1px, 0%);
-				@include size(0%, 1px);
-				position: absolute;
-				content: '';
-				background-color: currentColor;
-				transition: width 150ms $easeInOutExpo;
-			}
-
-			@include respond-to(SMALL) {
-				font-size: mobile-size(2.8rem);
-			}
-		}
+	  p {
+		font-size: mobile-size(2.8rem);
+	  }
 	}
-
-	.html-content {
-		background: $colorWhite;
-		padding: $sizeGrid;
-	}
-
-	.alignment-left {
-		text-align: left;
-	}
-
-	.alignment-right {
-		text-align: right;
-	}
-
-	.alignment-center {
-		text-align: center;
-	}
-
-	// Breakpoints
-	@include respond-to(SMALL) {
-		.free-text {
-			h1,
-			h2,
-			h3,
-			h4 {
-				font-size: mobile-size(3.5rem);
-				padding-bottom: $sizeGrid;
-			}
-
-			p {
-				font-size: mobile-size(2.8rem);
-			}
-		}
-	}
+  }
 }
 
 // Hover State
 @include hover('.free-text a') {
-	&:before {
-		width: 100%;
-	}
+  &:before {
+	width: 100%;
+  }
 }
