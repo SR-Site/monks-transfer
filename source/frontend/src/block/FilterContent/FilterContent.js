@@ -54,13 +54,17 @@ export default {
 			// Strip out the empty results
 			Object.keys(filters).forEach(key => {
 				if (filters[key].length > 0) {
-					result[key] = filters[key];
+					filters[key].split(',').forEach((filter, index) => {
+						// Backend wants all filters to be in a new array otherwise it will
+						// do an AND sort instead of an OR sort
+						result[`${key}_${index}`] = filter;
+					});
 				}
 			});
 
 			// Return the object
 			return {
-				f: Object.keys(result).map(key => `${key}:${result[key]}`),
+				f: Object.keys(result).map(key => `${key.split('_')[0]}:${result[key]}`),
 			};
 		},
 		loadPage(index) {
@@ -88,7 +92,6 @@ export default {
 						this.totalPages = Math.ceil(result.pagination.total / this.limit);
 						// Store the parsed blocks
 						this.blocks = BlockHelper.parseBlocks({}, result.data.blocks);
-						console.log(this.blocks);
 						// Trigger a resize on the parent block so they scroll tracker points get updated
 						this.$nextTick(() => this.getParentPage().handleResize());
 					});
