@@ -11,7 +11,7 @@
 					<li :class="$style.detail" ref="network">
 						<h3 class="heading heading-07" v-html="data.network.label" :class="$style.detailHeading"></h3>
 						<figure :class="$style.detailImage">
-							<ResponsiveImage :image="data.network.image" class="abs-fill fit-cover"/>
+							<ResponsiveImage :image="data.network.image" class="abs-fill fit-contain"/>
 						</figure>
 					</li>
 					<li :class="$style.detail" ref="airTime">
