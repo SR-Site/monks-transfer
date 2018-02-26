@@ -12,13 +12,13 @@
 					{{ option.label }}
 				</button>
 			</div>
-			<ButtonCircleClose
-				componentId="ButtonCircleClose"
-				title="Close"
-				:size="Size.SMALL"
-				:type="ButtonType.ACTION"
-				:class="$style.close"
-				@click="handleClose"/>
 		</div>
+		<ButtonCircleClose
+			componentId="ButtonCircleClose"
+			title="Close"
+			:size="Size.SMALL"
+			:type="ButtonType.ACTION"
+			:class="$style.close"
+			@click="handleClose"/>
 	</div>
 </template>
