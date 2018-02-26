@@ -2,8 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\v2\Node;
 
-use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
+use Drupal\spectrum_rest\Plugin\ShowsRestEntityProcessorBase;
 
 /**
  * Returns the structured data of an entity.
@@ -17,7 +16,7 @@ use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
  *   view_mode = "detail"
  * )
  */
-class NodeShowDetailV1 extends SpectrumRestEntityProcessorBase {
+class NodeShowDetailV1 extends ShowsRestEntityProcessorBase {
 
   /**
    * {@inheritdoc}
@@ -40,7 +39,8 @@ class NodeShowDetailV1 extends SpectrumRestEntityProcessorBase {
     ];
 
     // Get next episode..
-    $airTime = $this->getNextEpisodeTime($entity->get('field_show_schedules'));
+    $airTime = $this->showsUtility->getNextEpisodeTime($entity->get('field_show_schedules'), 'week');
+    $data['airTime'] = [];
     if (!empty($airTime)) {
       $data['airTime'] = [
         'label' => t('Air time'),
@@ -59,33 +59,6 @@ class NodeShowDetailV1 extends SpectrumRestEntityProcessorBase {
     }
 
     return $data;
-  }
-
-  /**
-   * Get time of next episode.
-   *
-   * @param \Drupal\Core\Field\FieldItemListInterface $schedules
-   *   Schedule field item list.
-   *
-   * @return array
-   *   Week and time of episode.
-   */
-  protected function getNextEpisodeTime(FieldItemListInterface $schedules) {
-    $newDate = [];
-    foreach ($schedules as $schedule) {
-      // @TODO: Check the first next episode. Waiting for real data.
-      /** @var \Drupal\spectrum_shows\Entity\Schedule $scheduleEntity */
-      $scheduleEntity = $schedule->entity;
-      $airTime = $scheduleEntity->get('start_time')->value;
-      $airTimeDateTime = new \DateTime($airTime);
-      $airTimeDateTime->setTimezone(new \DateTimeZone('America/New_York'));
-      $newDate = [
-        'week' => $airTimeDateTime->format('l'),
-        'time' => $airTimeDateTime->format('gA'),
-      ];
-      break;
-    }
-    return $newDate;
   }
 
 }

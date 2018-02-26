@@ -8,3 +8,6 @@ services:
     arguments: [ '@mm_rest.request_matcher' ]
     tags:
       - { name: event_subscriber }
+  spectrum_rest.shows.utility:
+    class: Drupal\spectrum_rest\Utility\SpectrumShowsUtility
+    arguments: [ '@plugin.manager.mm_rest_entity_processor']

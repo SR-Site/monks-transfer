@@ -2,8 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\v2\Node;
 
-use Drupal\node\Entity\Node;
-use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
+use Drupal\spectrum_rest\Plugin\ShowsRestEntityProcessorBase;
 
 /**
  * Returns the structured data of an entity.
@@ -17,7 +16,7 @@ use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
  *   view_mode = "default"
  * )
  */
-class NodeShowV1 extends SpectrumRestEntityProcessorBase {
+class NodeShowV1 extends ShowsRestEntityProcessorBase {
 
   /**
    * {@inheritdoc}
@@ -59,7 +58,7 @@ class NodeShowV1 extends SpectrumRestEntityProcessorBase {
       $genres[] = $genresValue->entity->id();
     }
     if (!empty($genres)) {
-      $similarShows = $this->getShowsByGenres($genres, 8, $entity->id());
+      $similarShows = $this->showsUtility->getShowsByGenres($genres, 8, $entity->id());
       $blocks[] = [
         'id' => 'ProgramModule',
         'data' => [
@@ -81,40 +80,6 @@ class NodeShowV1 extends SpectrumRestEntityProcessorBase {
     ];
 
     return $data;
-  }
-
-  /**
-   * Get shows by genre.
-   *
-   * @param array $genres
-   *   Genre IDs array.
-   * @param int $sid
-   *   Show ID.
-   * @param int $range
-   *   Range.
-   *
-   * @return array|mixed
-   *   Array of shows.
-   *
-   * @throws \Exception
-   */
-  protected function getShowsByGenres(array $genres, $sid, $range = 8) {
-    $shows = [];
-    $query = \Drupal::entityQuery('node')
-      ->condition('type', 'show')
-      ->condition('status', 1)
-      ->condition('nid', $sid, '!=')
-      ->condition('field_show_genres.entity.id', $genres, 'IN')
-      ->range(0, $range);
-    $results = $query->execute();
-    if (!empty($results)) {
-      $showEntities = Node::loadMultiple($results);
-      foreach ($showEntities as $showEntity) {
-        $shows[] = $this->entityProcessor->getEntityData($showEntity, 'v1', ['view_mode' => 'program_module']);
-      }
-    }
-
-    return $shows;
   }
 
 }
