@@ -1,4 +1,3 @@
-import shuffle from 'lodash/shuffle';
 import ContentService from 'net/service/ContentService';
 import { AbstractBlockComponent, BlockHelper } from 'vue-block-system';
 import VueTypes from 'vue-types';
@@ -88,7 +87,8 @@ export default {
 						// Set the total page count
 						this.totalPages = Math.ceil(result.pagination.total / this.limit);
 						// Store the parsed blocks
-						this.blocks = BlockHelper.parseBlocks({}, shuffle(result.data.blocks));
+						this.blocks = BlockHelper.parseBlocks({}, result.data.blocks);
+						console.log(this.blocks);
 						// Trigger a resize on the parent block so they scroll tracker points get updated
 						this.$nextTick(() => this.getParentPage().handleResize());
 					});
