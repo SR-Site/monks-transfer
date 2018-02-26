@@ -96,7 +96,7 @@
 
 			circle {
 				fill: transparent;
-				stroke-width: 1px;
+				stroke-width: 2px;
 				opacity: 0.5;
 				transition: stroke 0.2s $easeInOut, stroke-width 0.2s $easeInOut, opacity 0.2s $easeInOut;
 			}
@@ -142,7 +142,7 @@
 	.icon {
 		svg {
 			circle {
-				stroke-width: 0.5rem;
+				stroke-width: 6px;
 				stroke: $colorSecondary;
 				opacity: 1;
 			}
