@@ -5,8 +5,10 @@
 	<article :class="$style.programTeaser">
 		<div :class="$style.content">
 			<figure :class="$style.image" ref="image">
-				<ResponsiveImage componentId="ResponsiveImage" :image="data.image" class="abs-fill fit-cover"/>
-				<div class="primary-gradient-overlay" :class="$style.gradientOverlay"></div>
+				<a :class="$style.description" v-link="{path: data.target, type: 0}">
+					<ResponsiveImage componentId="ResponsiveImage" :image="data.image" class="abs-fill fit-cover"/>
+					<div class="primary-gradient-overlay" :class="$style.gradientOverlay"></div>
+				</a>
 				<ButtonCirclePlay
 					v-if="data.video"
 					componentId="ButtonCirclePlay"
