@@ -28,10 +28,10 @@ class NodeShowProgramModuleV1 extends SpectrumRestEntityProcessorBase {
       'paragraph' => text_summary($this->fieldProcessor->getFieldData($entity->get('field_show_description')), NULL, 200),
       'target' => $entity->toUrl()->toString(),
       'image' => $this->image($entity->get('field_image')),
-      "stats" => [
-        "percentage" => 1,
-        "demographic" => "Lorem ipsum dolor sit amet",
-      ],
+      // "stats" => [
+      //   "percentage" => 1,
+      //   "demographic" => "Lorem ipsum dolor sit amet",
+      // ],
     ];
 
     // Get video.
