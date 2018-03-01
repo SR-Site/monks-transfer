@@ -15,7 +15,7 @@
 
 	.content {
 		@include size(33%, auto);
-		@include position(25%, auto, $sizeGrid, $sizeGrid * 12);
+		@include position(auto, auto, $sizeGrid, $sizeGrid * 12);
 		position: absolute;
 		color: $colorWhite;
 		padding: $sizeGrid 0 0 0;
@@ -23,14 +23,32 @@
 
 	.sub-heading {
 		margin-bottom: $sizeGrid / 2;
+
+	  	h1,
+		h2,
+		h3 {
+		  @extend %heading;
+		  @extend %heading-07;
+		}
 	}
 
 	.heading {
 		margin-bottom: $sizeGrid / 2;
+
+		h1,
+		h2,
+		h3 {
+		  @extend %heading;
+		  @extend %heading-03;
+		}
 	}
 
 	.copy {
 		margin-bottom: $sizeGrid / 2;
+
+	  p {
+		@extend %copy-01;
+	  }
 	}
 
 	@include respond-to(X_LARGE) {

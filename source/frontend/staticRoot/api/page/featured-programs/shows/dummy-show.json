@@ -37,6 +37,8 @@
 		"id": "heroQuaternary",
 		"data": {
 		  "overlap": false,
+		  "overlay": true,
+		  "triangle": true,
 		  "windowed": false,
 		  "marginTop": 2,
 		  "background": {
@@ -49,9 +51,9 @@
 			"small": "https://via.placeholder.com/480x480",
 			"alt": "Background image alt text"
 		  },
-		  "heading": "NBA Playoffs",
-		  "subHeading": "Shows",
-		  "paragraph": "Nearly 90% of the NBA Playoffs leading up to the NBA Finals are on Cable, not including ESPN Deportes, which airs the Finals in Spanish. The Finals begin 6/1 and run through 6/18.",
+		  "heading": "<h3>NBA Playoffs</h3>",
+		  "subHeading": "<h1>Shows</h1>",
+		  "paragraph": "<p>Nearly 90% of the NBA Playoffs leading up to the NBA Finals are on Cable, not including ESPN Deportes, which airs the Finals in Spanish. The Finals begin 6/1 and run through 6/18.</p>",
 		  "link": {
 			"label": "Watch the trailer",
 			"title": "Watch the trailer",

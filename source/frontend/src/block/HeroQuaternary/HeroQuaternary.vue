@@ -7,15 +7,14 @@
 			componentId="MediaCrossFader"
 			class="fit-cover"
 			:class="$style.mediaCrossFader"/>
-		<PrimaryTriangle componentId="PrimaryTriangle" :class="$style.primaryBackgroundTriangle"/>
+		<PrimaryTriangle componentId="PrimaryTriangle" :class="$style.primaryBackgroundTriangle" v-if="data.triangle"/>
 		<figure v-if="data.image" :class="$style.image" ref="image">
 			<ResponsiveImage :image="data.image" class="abs-fill fit-contain"/>
 		</figure>
 		<div :class="$style.content">
-			<h3 class="heading heading-07" :class="$style.subHeading" v-html="data.subHeading" ref="subHeading"
-			    v-show="data.subHeading"></h3>
-			<h3 class="heading heading-03" :class="$style.heading" v-html="data.heading" ref="heading"></h3>
-			<p class="copy copy-01" :class="$style.copy" v-html="data.paragraph" ref="copy"></p>
+			<div :class="$style.subHeading" v-html="data.subHeading" ref="subHeading" v-if="data.subHeading"></div>
+			<div :class="$style.heading" v-if="data.heading" v-html="data.heading" ref="heading"></div>
+			<div class="copy" :class="$style.copy" v-if="data.paragraph" v-html="data.paragraph" ref="copy"></div>
 			<ButtonCircleIcon
 				v-if="data.link"
 				componentId="ButtonCircleArrowLink"
