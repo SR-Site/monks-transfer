@@ -6,11 +6,13 @@ dependencies:
     - field.field.paragraph.block_hero_quaternary.field_background_image
     - field.field.paragraph.block_hero_quaternary.field_link
     - field.field.paragraph.block_hero_quaternary.field_new_heading
+    - field.field.paragraph.block_hero_quaternary.field_overlay
     - field.field.paragraph.block_hero_quaternary.field_paragraph
     - field.field.paragraph.block_hero_quaternary.field_paragraph_image
     - field.field.paragraph.block_hero_quaternary.field_scroll_id
     - field.field.paragraph.block_hero_quaternary.field_styles
     - field.field.paragraph.block_hero_quaternary.field_subheading
+    - field.field.paragraph.block_hero_quaternary.field_triangle
     - field.field.paragraph.block_hero_quaternary.field_video
     - paragraphs.paragraphs_type.block_hero_quaternary
   module:
@@ -47,6 +49,16 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_overlay:
+    weight: 11
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_paragraph:
     weight: 4
@@ -88,6 +100,16 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_triangle:
+    weight: 12
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_video:
     weight: 5

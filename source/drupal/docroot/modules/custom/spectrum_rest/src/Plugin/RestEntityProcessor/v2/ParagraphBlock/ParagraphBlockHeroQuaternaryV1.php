@@ -35,8 +35,16 @@ class ParagraphBlockHeroQuaternaryV1 extends SpectrumRestEntityProcessorBase {
         'image' => $this->fieldProcessor->getFieldData($entity->get('field_paragraph_image')),
         'subHeading' => $this->fieldProcessor->getFieldData($entity->get('field_subheading')),
         'link' => $this->fieldProcessor->getFieldData($entity->get('field_link')),
+        'overlay' => $this->fieldProcessor->getFieldData($entity->get('field_overlay')) ? $this->fieldProcessor->getFieldData($entity->get('field_overlay')) : FALSE,
+        'triangle' => $this->fieldProcessor->getFieldData($entity->get('field_triangle')) ? $this->fieldProcessor->getFieldData($entity->get('field_triangle')) : FALSE,
       ],
     ];
+
+    foreach ($data['data'] as $key => $item) {
+      if ($item === '' || $item === NULL) {
+        unset($data['data'][$key]);
+      }
+    }
 
     return $data;
   }

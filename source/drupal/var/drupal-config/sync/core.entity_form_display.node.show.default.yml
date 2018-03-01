@@ -53,7 +53,6 @@ third_party_settings:
       label: Fields
     group_blocks:
       children:
-        - field_blocks
         - field_hero_quaternary
         - field_audience_statistics
         - field_success_stories_a
@@ -96,10 +95,10 @@ content:
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: open
+      edit_mode: preview
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: block_audience_statistics
     third_party_settings: {  }
     region: content
   field_hero_quaternary:
@@ -108,10 +107,10 @@ content:
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: open
+      edit_mode: preview
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: block_hero_quaternary
     third_party_settings: {  }
     region: content
   field_image:
@@ -219,10 +218,10 @@ content:
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: open
+      edit_mode: preview
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: block_success_stories_a
     third_party_settings: {  }
     region: content
   path:

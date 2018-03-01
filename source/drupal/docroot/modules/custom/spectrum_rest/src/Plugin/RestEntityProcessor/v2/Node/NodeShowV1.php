@@ -35,8 +35,13 @@ class NodeShowV1 extends ShowsRestEntityProcessorBase {
     }
     else {
       $blocks[] = [
-        'id' => 'heroTertiary',
+        'id' => 'HeroQuaternary',
         'data' => [
+          'overlay' => FALSE,
+          'triangle' => FALSE,
+          "overlap" => FALSE,
+          "windowed" => FALSE,
+          "marginTop" => 2,
           "background" => $this->image($entity->get('field_image')),
         ],
       ];
