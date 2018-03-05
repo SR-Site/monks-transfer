@@ -1,0 +1,23 @@
+uuid: 81185bd8-2f8b-4d83-8b04-3574bca35e1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlay
+    - paragraphs.paragraphs_type.block_hero_quaternary
+id: paragraph.block_hero_quaternary.field_overlay
+field_name: field_overlay
+entity_type: paragraph
+bundle: block_hero_quaternary
+label: 'Show Blue Overlay'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

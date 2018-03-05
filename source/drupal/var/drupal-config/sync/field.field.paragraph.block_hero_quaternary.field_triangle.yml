@@ -1,0 +1,23 @@
+uuid: 39519c29-0b68-4a46-b003-ec7aa2778e13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_triangle
+    - paragraphs.paragraphs_type.block_hero_quaternary
+id: paragraph.block_hero_quaternary.field_triangle
+field_name: field_triangle
+entity_type: paragraph
+bundle: block_hero_quaternary
+label: 'Show Triangle'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
