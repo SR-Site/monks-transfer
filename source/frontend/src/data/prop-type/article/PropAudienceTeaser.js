@@ -10,4 +10,5 @@ export default {
 	paragraph: VueTypes.string,
 	reaches: VueTypes.array,
 	target: VueTypes.string,
+	imageStyle: VueTypes.string.isRequired,
 };

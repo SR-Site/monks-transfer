@@ -27,6 +27,7 @@ class NodeShowTeaserModeV1 extends ShowsRestEntityProcessorBase {
       'paragraph' => text_summary($this->fieldProcessor->getFieldData($entity->get('field_show_description')), NULL, 200),
       'target' => $entity->toUrl()->toString(),
       'image' => $this->image($entity->get('field_image')),
+      'imageStyle' => 'cover',
     ];
 
     // Get video.

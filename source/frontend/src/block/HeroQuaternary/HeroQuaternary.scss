@@ -23,13 +23,6 @@
 
 	.sub-heading {
 		margin-bottom: $sizeGrid / 2;
-
-	  	h1,
-		h2,
-		h3 {
-		  @extend %heading;
-		  @extend %heading-07;
-		}
 	}
 
 	.heading {

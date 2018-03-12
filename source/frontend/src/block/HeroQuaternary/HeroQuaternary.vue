@@ -12,7 +12,7 @@
 			<ResponsiveImage :image="data.image" class="abs-fill fit-contain"/>
 		</figure>
 		<div :class="$style.content">
-			<div :class="$style.subHeading" v-html="data.subHeading" ref="subHeading" v-if="data.subHeading"></div>
+			<h3 class="heading heading-07" :class="$style.subHeading" v-text="data.subHeading" ref="subHeading" v-if="data.subHeading"></h3>
 			<div :class="$style.heading" v-if="data.heading" v-html="data.heading" ref="heading"></div>
 			<div class="copy" :class="$style.copy" v-if="data.paragraph" v-html="data.paragraph" ref="copy"></div>
 			<ButtonCircleIcon

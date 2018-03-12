@@ -32,6 +32,7 @@ class NodeNetworkTeaserV1 extends SpectrumRestEntityProcessorBase {
         'image' => $this->image($networkEntity->get('image')),
         'paragraph' => $this->fieldProcessor->getFieldData($networkEntity->get('description')),
         'target' => $entity->toUrl()->toString(),
+        'imageStyle' => 'contain',
       ];
     }
     $data['heading'] = $entity->label();
