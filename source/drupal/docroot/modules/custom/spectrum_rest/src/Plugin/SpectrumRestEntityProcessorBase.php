@@ -152,10 +152,24 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
    *   Array of heading and paragraph..
    */
   public function getHeadingParagraphData(ContentEntityInterface $entity) {
-    return [
+    $data = [
       'heading' => $this->fieldProcessor->getFieldData($entity->get('field_new_heading')),
       'paragraph' => $this->fieldProcessor->getFieldData($entity->get('field_paragraph')),
     ];
+
+    // Add logger.
+    if (!$data['heading']) {
+      \Drupal::logger('spectrum_rest')
+        ->warning('Debug paragraph new heading with value %entityTitle', [
+          '%entityTitle' => json_encode($entity->get('field_new_heading')->entity->toArray(), JSON_FORCE_OBJECT),
+        ]);
+      \Drupal::logger('spectrum_rest')
+        ->warning('Debug paragraph entity with value %entityTitle', [
+          '%entityTitle' => json_encode($entity->toArray(), JSON_FORCE_OBJECT),
+        ]);
+    }
+
+    return $data;
   }
 
   /**
