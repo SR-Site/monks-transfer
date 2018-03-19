@@ -23,7 +23,7 @@ export default class TwitterTrackingPixelProvider extends AbstractTrackingProvid
 
 		!(function(e, t, n, s, u, a) {
 			e[TwitterTrackingPixelProvider._NAMESPACE] ||
-				((s = e[TwitterTrackingPixelProvider._NAMESPACE] = () => {
+				((s = e[TwitterTrackingPixelProvider._NAMESPACE] = function() {
 					s.exe ? s.exe.apply(s, arguments) : s.queue.push(arguments);
 				}),
 				(s.version = '1.1'),
