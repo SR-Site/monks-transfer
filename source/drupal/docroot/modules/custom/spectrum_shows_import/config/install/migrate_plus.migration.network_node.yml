@@ -3,7 +3,7 @@ label: JSON feed of network
 migration_group: migrate_shows_json
 source:
   plugin: spectrum_url
-  data_fetcher_plugin: http
+  data_fetcher_plugin: spectrum_http
   data_parser_plugin: json_nested
   item_selector: '/Result/'
   sub_selector: 'Network'
