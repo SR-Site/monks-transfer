@@ -28,7 +28,7 @@
 
 	.description {
 		height: 100%;
-		padding: $sizeGrid 0 0;
+		padding: $sizeGrid * 0.5 0 0;
 		color: $colorPrimary;
 		transition: color 0.2s $easeInOut;
 		text-decoration: none;
@@ -37,9 +37,19 @@
 		justify-content: space-between;
 	}
 
-	.heading {
-		margin-bottom: $sizeGrid / 2;
+  	.title-wrapper {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  margin-bottom: $sizeGrid / 2;
 	}
+
+	.logo {
+	  @include size(20%, auto);
+	  @include aspect-ratio(100px, 80px);
+	  flex-shrink: 0;
+	}
+
 
 	.percentage {
 		display: block;

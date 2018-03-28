@@ -23,7 +23,12 @@
 			</figure>
 			<a :class="$style.description" v-link="{path: data.target, type: 0}">
 				<div>
-					<h2 :class="$style.heading" class="heading-07" v-html="data.heading" ref="header"></h2>
+					<div :class="$style.titleWrapper">
+						<h2 :class="$style.heading" class="heading-07" v-html="data.heading" ref="header"></h2>
+						<div :class="$style.logo" v-if="data.logo" ref="logo">
+							<ResponsiveImage :image="data.logo" class="abs-fill fit-contain" />
+						</div>
+					</div>
 					<p :class="$style.copy" class="copy copy-03" v-html="truncatedParagraph" ref="paragraph"></p>
 				</div>
 				<div ref="statistics" v-if="data.stats">
