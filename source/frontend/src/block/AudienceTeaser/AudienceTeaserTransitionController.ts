@@ -61,6 +61,24 @@ class AudienceTeaserTransitionController extends AbstractTransitionController {
 			);
 		}
 
+		if(this.viewModel.$refs.logo) {
+			this.transitionInTimeline.fromTo(
+				this.viewModel.$refs.logo,
+				1,
+				{
+					autoAlpha: 0,
+					y: 50,
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					ease: Cubic.easeOut,
+					clearProps: 'all',
+				},
+				'-=0.8',
+			);
+		}
+
 		if (this.viewModel.$refs.copy) {
 			this.transitionInTimeline.fromTo(
 				this.viewModel.$refs.copy,

@@ -34,7 +34,7 @@
 							   :class="$style.subHeading"
 							   ref="subHeading"></p>
 						</div>
-						<div :class="$style.logo" v-if="data.logo">
+						<div :class="$style.logo" v-if="data.logo" ref="logo">
 							<ResponsiveImage :image="data.logo" class="abs-fill fit-contain" />
 						</div>
 					</div>

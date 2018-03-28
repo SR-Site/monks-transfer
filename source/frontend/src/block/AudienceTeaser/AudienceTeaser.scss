@@ -48,6 +48,7 @@
 	  @include size(20%, auto);
 	  @include aspect-ratio(100px, 80px);
 	  flex-shrink: 0;
+	  margin-left: $sizeGrid;
 	}
 
 	.sub-heading {
