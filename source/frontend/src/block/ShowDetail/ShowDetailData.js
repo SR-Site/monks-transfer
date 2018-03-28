@@ -28,15 +28,15 @@ export default {
 	heading: VueTypes.string.isRequired,
 	paragraph: VueTypes.string.isRequired,
 	network: VueTypes.shape({
-		label: VueTypes.string.isRequired,
+		label: VueTypes.string,
 		image: VueTypes.shape(PropImage).isRequired,
 	}).isRequired,
 	airTime: VueTypes.shape({
-		label: VueTypes.string.isRequired,
+		label: VueTypes.string,
 		value: VueTypes.string.isRequired,
 	}).isRequired,
 	ageRestriction: VueTypes.shape({
-		label: VueTypes.string.isRequired,
+		label: VueTypes.string,
 		image: VueTypes.shape(PropImage).isRequired,
 	}),
 };
