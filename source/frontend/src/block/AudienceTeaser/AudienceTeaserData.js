@@ -15,6 +15,7 @@ import PropVideo from '../../data/prop-type/media/PropVideo';
  * @param {description} paragraph The paragraph of the teaser
  * @param {description} reaches The list of reaches, should be strings
  * @param {description} target The path to the detail page
+ * @param {description} imageStyle The style of the image cover or contain
  */
 export default {
 	marginTop: VueTypes.number.isRequired,
@@ -27,5 +28,6 @@ export default {
 	subHeading: VueTypes.string,
 	paragraph: VueTypes.string,
 	reaches: VueTypes.array,
-	target: VueTypes.string.isRequired,
+	target: VueTypes.string,
+	imageStyle: VueTypes.string.isRequired,
 };

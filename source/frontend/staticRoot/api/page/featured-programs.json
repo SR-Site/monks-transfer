@@ -70,7 +70,8 @@
 				"heading": "Wahlburgers",
 				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
 				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
-				"reaches": []
+				"reaches": [],
+				"imageStyle": "cover"
 			  },
 			  {
 				"target": "/featured-programs/shows/dummy-show",
@@ -90,7 +91,8 @@
 				  "Millenials",
 				  "Adults 25-54",
 				  "teens"
-				]
+				],
+				"imageStyle": "cover"
 			  },
 			  {
 				"target": "/featured-programs/shows/dummy-show",
@@ -110,7 +112,8 @@
 				  "Millenials",
 				  "Adults 25-54",
 				  "teens"
-				]
+				],
+				"imageStyle": "cover"
 			  }
 			]
 		  },
@@ -137,7 +140,8 @@
 					"Millenials",
 					"Adults 25-54",
 					"teens"
-				  ]
+				  ],
+				  "imageStyle": "cover"
 				},
 				{
 				  "target": "/featured-programs/shows/dummy-show",
@@ -157,7 +161,8 @@
 					"Millenials",
 					"Adults 25-54",
 					"teens"
-				  ]
+				  ],
+				  "imageStyle": "cover"
 				},
 				{
 				  "target": "/featured-programs/shows/dummy-show",
@@ -177,7 +182,8 @@
 					"Millenials",
 					"Adults 25-54",
 					"teens"
-				  ]
+				  ],
+				  "imageStyle": "cover"
 				}
 			  ]
 			},
@@ -209,7 +215,8 @@
 					"Millenials",
 					"Adults 25-54",
 					"teens"
-				  ]
+				  ],
+				  "imageStyle": "cover"
 				},
 				{
 				  "target": "/featured-programs/shows/dummy-show",
@@ -229,7 +236,8 @@
 					"Millenials",
 					"Adults 25-54",
 					"teens"
-				  ]
+				  ],
+				  "imageStyle": "cover"
 				},
 				{
 				  "target": "/featured-programs/shows/dummy-show",
@@ -249,7 +257,8 @@
 					"Millenials",
 					"Adults 25-54",
 					"teens"
-				  ]
+				  ],
+				  "imageStyle": "cover"
 				}
 			  ]
 			},
@@ -281,7 +290,8 @@
 					"Millenials",
 					"Adults 25-54",
 					"teens"
-				  ]
+				  ],
+				  "imageStyle": "cover"
 				},
 				{
 				  "target": "/featured-programs/shows/dummy-show",
@@ -301,7 +311,8 @@
 					"Millenials",
 					"Adults 25-54",
 					"teens"
-				  ]
+				  ],
+				  "imageStyle": "cover"
 				},
 				{
 				  "target": "/featured-programs/shows/dummy-show",
@@ -321,7 +332,8 @@
 					"Millenials",
 					"Adults 25-54",
 					"teens"
-				  ]
+				  ],
+				  "imageStyle": "cover"
 				}
 			  ]
 			}
@@ -352,7 +364,8 @@
 				  "Millenials",
 				  "Adults 25-54",
 				  "teens"
-				]
+				],
+				"imageStyle": "cover"
 			  },
 			  {
 				"target": "/featured-programs/networks/dummy-network",
@@ -371,7 +384,8 @@
 				  "Millenials",
 				  "Adults 25-54",
 				  "teens"
-				]
+				],
+				"imageStyle": "cover"
 			  },
 			  {
 				"target": "/featured-programs/networks/dummy-network",
@@ -386,7 +400,8 @@
 				},
 				"heading": "Wahlburgers",
 				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
-				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family."
+				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",
+				"imageStyle": "cover"
 			  }
 			]
 		  }
