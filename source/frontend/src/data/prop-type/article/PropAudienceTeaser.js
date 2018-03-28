@@ -11,4 +11,5 @@ export default {
 	target: VueTypes.string,
 	image: VueTypes.shape(PropImage).isRequired,
 	imageStyle: VueTypes.string.isRequired,
+	logo: VueTypes.shape(PropImage),
 };

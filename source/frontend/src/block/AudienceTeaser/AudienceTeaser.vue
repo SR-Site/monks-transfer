@@ -13,22 +13,31 @@
 					<div class="primary-gradient-overlay" :class="$style.gradientOverlay" v-if="data.target"></div>
 				</a>
 				<ButtonCirclePlay
-					v-if="data.video"
-					componentId="ButtonCirclePlay"
-					title="play"
-					:type="ButtonType.ACTION"
-					:theme="Theme.LIGHT"
-					:isPlaying="false"
-					:class="$style.button"
-					:size="Size.SMALL"
-					ref="playButton"
-					@click="handleVideoClick"/>
+						v-if="data.video"
+						componentId="ButtonCirclePlay"
+						title="play"
+						:type="ButtonType.ACTION"
+						:theme="Theme.LIGHT"
+						:isPlaying="false"
+						:class="$style.button"
+						:size="Size.SMALL"
+						ref="playButton"
+						@click="handleVideoClick"/>
 			</figure>
 			<div :class="$style.description">
 				<a :class="$style.top" v-link="{ path: data.target, type: 0 }">
-					<h2 class="heading heading-07" v-html="data.heading" :class="$style.heading" ref="heading"></h2>
-					<p class="copy copy-01" v-if="data.subHeading" v-html="data.subHeading" :class="$style.subHeading"
-					   ref="subHeading"></p>
+					<div :class="$style.titleWrapper">
+						<div :class="$style.title">
+							<h2 class="heading heading-07" v-html="data.heading" :class="$style.heading"
+								ref="heading"></h2>
+							<p class="copy copy-01" v-if="data.subHeading" v-html="data.subHeading"
+							   :class="$style.subHeading"
+							   ref="subHeading"></p>
+						</div>
+						<div :class="$style.logo" v-if="data.logo">
+							<ResponsiveImage :image="data.logo" class="abs-fill fit-contain" />
+						</div>
+					</div>
 					<p class="copy copy-01" v-if="data.paragraph" v-html="data.paragraph" :class="$style.copy"
 					   ref="copy"></p>
 				</a>
@@ -36,11 +45,11 @@
 					<h3 class="heading heading-07" :class="$style.reachHeading">Reaches</h3>
 					<ul :class="$style.reaches">
 						<li
-							v-for="(reach, index) in data.reaches"
-							v-html="reach"
-							class="copy copy-03"
-							:key="index"
-							:class="$style.reach"></li>
+								v-for="(reach, index) in data.reaches"
+								v-html="reach"
+								class="copy copy-03"
+								:key="index"
+								:class="$style.reach"></li>
 					</ul>
 				</div>
 			</div>

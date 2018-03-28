@@ -37,6 +37,19 @@
 	  	margin-bottom: $sizeGrid;
 	}
 
+	.title-wrapper {
+	  @include size(100%, auto);
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	}
+
+	.logo {
+	  @include size(20%, auto);
+	  @include aspect-ratio(100px, 80px);
+	  flex-shrink: 0;
+	}
+
 	.sub-heading {
 		color: $colorTertiary;
 		transition: color 0.2s $easeInOutCubic;
