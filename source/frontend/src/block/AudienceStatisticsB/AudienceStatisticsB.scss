@@ -11,13 +11,17 @@
 	}
 
 	.content {
-		@include size(30%, auto);
+		@include size(50%, auto);
 		color: $colorWhite;
 		text-align: center;
 	}
 
 	.heading {
 		margin-bottom: $sizeGrid;
+
+		* {
+		  margin: 0;
+		}
 	}
 
 	.copy {
