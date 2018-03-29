@@ -1,0 +1,57 @@
+:local {
+	.heading {
+		margin-bottom: $sizeGrid * 0.5;
+		color: $colorPrimary;
+	}
+
+	.percentages {
+		@include size(100%, $sizeGrid * 4);
+		display: flex;
+	}
+
+	.percentage {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		text-align: center;
+		position: relative;
+
+		&:nth-child(odd) {
+			color: $colorSecondary;
+		}
+
+		&:nth-child(event) {
+			color: $colorPrimary;
+		}
+	}
+
+	.percentage-bar {
+		@include size(100%, auto);
+		flex-grow: 1;
+		display: block;
+
+		&:after {
+			@include pseudo;
+			@include size(100%, 1px);
+			background: $colorBorder;
+			bottom: 0;
+			left: 0;
+		}
+
+		.bar {
+			@include size(50%, auto);
+			background: currentColor;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	.label {
+		@include size(100%, auto);
+		display: inline-block;
+		margin-top: 1rem;
+		font: 1.6rem / 1 $fontOpenSans;
+	}
+}
