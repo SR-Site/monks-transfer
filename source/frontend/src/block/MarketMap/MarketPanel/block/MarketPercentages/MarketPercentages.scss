@@ -18,28 +18,17 @@
 
 		&:nth-child(even) {
 			color: $colorSecondary;
-
-			.value {
-				background: $colorSecondary;
-				color: $colorWhite;
-			}
 		}
 
 		&:nth-child(odd) {
 			color: $colorPrimary;
-
-			.value {
-				background: $colorPrimary;
-				color: $colorWhite;
-			}
 		}
-	}
 
-	.value {
-		@include size(15rem);
-		border-radius: 50%;
-		display: inline-block;
-		font: 2.4rem / 15rem $fontOpenSans;
+		.value {
+			@include size(15rem);
+			display: inline-block;
+			color: currentColor;
+		}
 	}
 
 	.label {

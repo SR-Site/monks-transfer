@@ -2,6 +2,7 @@
 	.percentage-loader {
 		text-align: center;
 		display: inline-block;
+		color: white;
 	}
 
 	.svg-holder {
@@ -22,11 +23,12 @@
 	}
 
 	.animated-line-track {
-		stroke: rgba($colorWhite, 0.5);
+		stroke: currentColor;
+		opacity: 0.5;
 	}
 
 	.animated-line {
-		stroke: $colorWhite;
+		stroke: currentColor;
 	}
 
 	.amount-info {
@@ -38,6 +40,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		color: $colorPrimary;
 
 		&.large {
 			.value {

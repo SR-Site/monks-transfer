@@ -5,6 +5,7 @@ import MarketImage from './block/MarketImage';
 import MarketImages from './block/MarketImages';
 import MarketMediaKit from './block/MarketMediaKit';
 import MarketNumbers from './block/MarketNumbers';
+import MarketPercentages from './block/MarketPercentages';
 import MarketVideo from './block/MarketVideo';
 import MarketPanelTransitionController from './MarketPanelTransitionController';
 
@@ -17,6 +18,7 @@ export default {
 		MarketImages,
 		MarketMediaKit,
 		MarketImage,
+		MarketPercentages,
 	},
 	data() {
 		return {

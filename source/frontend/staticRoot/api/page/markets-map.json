@@ -132,6 +132,26 @@
 						  "small": "http://placehold.it/1280x720"
 						}
 					  }
+					},
+					{
+					  "name": "MarketPercentages",
+					  "data": {
+						"heading": "Devices owned",
+						"statistics": [
+						  {
+							"label": "Desktop",
+							"value": 97
+						  },
+						  {
+							"label": "Smartphone",
+							"value": 87
+						  },
+						  {
+							"label": "Tablet",
+							"value": 71
+						  }
+						]
+					  }
 					}
 				  ]
 				},
