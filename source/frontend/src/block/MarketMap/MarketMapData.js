@@ -6,9 +6,10 @@ import VueTypes from 'vue-types';
  * @param {description} windowed This defines if a block has extra padding left and right
  * @param {description} scrollId This unique id is used for scrolling to blocks
  * @param {placeholder} scrollId unique-block-id
- * @param {description} service the service data
- * @param {description} service.heading the heading label
- * @param {description} service.subHeading the sub heading label
+ * @param {description} inf the info box
+ * @param {description} info.heading The heading for the info box
+ * @param {description} info.copy The copy for the info box
+ * @param {description} contactButton the label for the contact button
  * @param {description} service.cta the cta label
  * @param {description} searchLabel The label for the search field
  * @param {description} searchPlaceholder The placeholder for the search field
@@ -19,11 +20,11 @@ export default {
 	overlap: VueTypes.bool.isRequired,
 	windowed: VueTypes.bool.isRequired,
 	scrollId: VueTypes.string,
-	service: VueTypes.shape({
+	info: VueTypes.shape({
 		heading: VueTypes.string.isRequired,
-		subHeading: VueTypes.string.isRequired,
-		cta: VueTypes.string.isRequired,
+		copy: VueTypes.string.isRequired,
 	}),
+	contactButton: VueTypes.string.isRequired,
 	searchLabel: VueTypes.string.isRequired,
 	searchPlaceholder: VueTypes.string.isRequired,
 	notFoundMessage: VueTypes.string.isRequired,

@@ -1,0 +1,39 @@
+:local {
+	.button {
+		padding: 3rem $sizeGrid;
+		background: $colorSecondary;
+		color: $colorWhite;
+		display: inline-block;
+		transition: background 0.2s $easeInOutCubic;
+	}
+
+	.label {
+		display: inline-block;
+		font: 1.4rem / 1 $fontOpenSans;
+		padding-right: $sizeGrid * 2;
+		position: relative;
+
+		&:after {
+			@include pseudo;
+			@include size(100%, 1px);
+			bottom: -1rem;
+			background: currentColor;
+			opacity: 0.5;
+		}
+	}
+
+	.icon {
+		@include size(0.8rem);
+		@include position(50%, 0, auto, auto);
+		transform: translateY(-50%);
+		position: absolute;
+
+		path {
+			fill: currentColor;
+		}
+	}
+}
+
+@include hover('.button') {
+	background: darken($colorSecondary, 5%);
+}

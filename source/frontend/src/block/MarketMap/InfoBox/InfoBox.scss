@@ -1,0 +1,53 @@
+:local {
+	.wrapper {
+		@include offset($sizeGrid, $sizeGrid);
+		position: absolute;
+	}
+
+	.toggle {
+		@include size(3.4rem);
+		background: $colorSecondary;
+		color: white;
+		font: 1.6rem / 1 $fontOpenSans;
+		text-align: center;
+		border-radius: 50%;
+		transition: background 0.2s $easeInOut;
+	}
+
+	.box {
+		@include offset(0, 0);
+		padding: 3.4rem 6.8rem 6.8rem 3.4rem;
+		background: $colorWhite;
+		width: 440px;
+		position: absolute;
+		display: none;
+
+		.close {
+			@include position(3.4rem, 3.4rem, auto, auto);
+			position: absolute;
+		}
+
+		.heading {
+			color: $colorSecondary;
+			margin-bottom: $sizeGrid * 0.5;
+		}
+
+		.copy {
+			color: $colorPrimary;
+		}
+	}
+
+  .is-active {
+	.toggle {
+	  display: none;
+	}
+
+	.box {
+	  display: block;
+	}
+  }
+}
+
+@include hover('.toggle') {
+	background: darken($colorSecondary, 5%);
+}

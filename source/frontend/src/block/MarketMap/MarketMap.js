@@ -6,6 +6,8 @@ import mapboxgl from 'mapbox-gl';
 import { AbstractBlockComponent, CustomButtonEvent, customButtonEventDispatcher } from 'vue-block-system';
 import VueTypes from 'vue-types';
 import LoadJsonTask from '../../util/preloading/task/LoadJsonTask';
+import ContactButton from './ContactButton';
+import InfoBox from './InfoBox';
 import MarketMapData from './MarketMapData';
 import MarketMapTransitionController from './MarketMapTransitionController';
 import ZoomActions from './ZoomActions/ZoomActions';
@@ -15,6 +17,8 @@ export default {
 	extends: AbstractBlockComponent,
 	components: {
 		ZoomActions,
+		InfoBox,
+		ContactButton,
 	},
 	props: {
 		data: VueTypes.shape(MarketMapData).isRequired,
