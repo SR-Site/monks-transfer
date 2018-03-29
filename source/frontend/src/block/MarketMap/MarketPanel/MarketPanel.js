@@ -1,6 +1,7 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import VueTypes from 'vue-types';
 import Scrollbar from '../../../util/ScrollBar';
+import MarketComparePercentages from './block/MarketComparePercentages';
 import MarketImage from './block/MarketImage';
 import MarketImages from './block/MarketImages';
 import MarketMediaKit from './block/MarketMediaKit';
@@ -19,6 +20,7 @@ export default {
 		MarketMediaKit,
 		MarketImage,
 		MarketPercentages,
+		MarketComparePercentages,
 	},
 	data() {
 		return {

@@ -152,6 +152,90 @@
 						  }
 						]
 					  }
+					},
+					{
+					  "name": "MarketComparePercentages",
+					  "data": {
+						"percentages": [
+						  {
+							"label": "Gender",
+							"values": [
+							  {
+								"label": "Male",
+								"value": 49
+							  },
+							  {
+								"label": "Female",
+								"value": 51
+							  }
+							]
+						  },
+						  {
+							"label": "Education",
+							"values": [
+							  {
+								"label": "No college",
+								"value": 49
+							  },
+							  {
+								"label": "FUndergrad",
+								"value": 31
+							  },
+							  {
+								"label": "Grad+",
+								"value": 20
+							  }
+							]
+						  },
+						  {
+							"label": "Income",
+							"values": [
+							  {
+								"label": "0-50k",
+								"value": 49
+							  },
+							  {
+								"label": "50-100k",
+								"value": 21
+							  },
+							  {
+								"label": "100-150k",
+								"value": 22
+							  },
+							  {
+								"label": "+150k",
+								"value": 8
+							  }
+							]
+						  },
+						  {
+							"label": "Home",
+							"values": [
+							  {
+								"label": "Own",
+								"value": 49
+							  },
+							  {
+								"label": "Rent",
+								"value": 51
+							  }
+							]
+						  },
+						  {
+							"label": "Parenting",
+							"values": [
+							  {
+								"label": "Have kids",
+								"value": 49
+							  },
+							  {
+								"label": "Don't have kids",
+								"value": 51
+							  }
+							]
+						  }
+						]
+					  }
 					}
 				  ]
 				},

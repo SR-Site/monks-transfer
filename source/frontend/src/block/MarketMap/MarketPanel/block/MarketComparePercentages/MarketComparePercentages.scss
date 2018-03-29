@@ -1,0 +1,91 @@
+:local {
+	.heading {
+		margin-bottom: $sizeGrid * 0.5;
+		color: $colorSecondary;
+	}
+
+	.percentages {
+		@include size(100%, auto);
+	}
+
+	.percentage {
+		display: block;
+		font-size: 0;
+		margin-bottom: $sizeGrid * 1.5;
+	}
+
+	.label {
+		@include size(20%, auto);
+		font: 1.8rem / 1 $fontOpenSans;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.item {
+		&:nth-child(1) {
+			color: $colorSecondary;
+		}
+		&:nth-child(2) {
+			color: $colorPrimary;
+		}
+		&:nth-child(3) {
+			color: #1075bb;
+		}
+		&:nth-child(4) {
+			color: #50abe9;
+		}
+	}
+
+	.value {
+		@include size(80%, auto);
+		display: inline-block;
+		vertical-align: top;
+
+		.progress-bar {
+			@include size(100%, 1rem);
+			display: block;
+			background: red;
+			font-size: 0;
+		}
+
+		.progress-piece {
+			height: 100%;
+			display: inline-block;
+			background: currentColor;
+
+			&:after {
+				content: attr(data-value);
+				position: absolute;
+				top: 0;
+				right: 0;
+				font: 1.6rem / 1 $fontOpenSans;
+				color: currentColor;
+				transform: translateY(calc(-100% - 1rem));
+			}
+		}
+	}
+	.legend {
+		margin: 1rem 0 0 0;
+		padding: 0;
+	}
+
+	.legend-item {
+		display: inline-block;
+		font: 1.4rem / 1$fontOpenSans;
+		padding-left: 2rem;
+		position: relative;
+
+		&:before {
+			@include pseudo;
+			@include size(1rem);
+			@include offset(0, 50%);
+			transform: translateY(-50%);
+			border-radius: 50%;
+			background: currentColor;
+		}
+
+		&:not(:first-child) {
+			margin-left: $sizeGrid;
+		}
+	}
+}
