@@ -1,6 +1,7 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import VueTypes from 'vue-types';
 import Scrollbar from '../../../util/ScrollBar';
+import MarketImage from './block/MarketImage';
 import MarketImages from './block/MarketImages';
 import MarketMediaKit from './block/MarketMediaKit';
 import MarketNumbers from './block/MarketNumbers';
@@ -15,6 +16,7 @@ export default {
 		MarketNumbers,
 		MarketImages,
 		MarketMediaKit,
+		MarketImage,
 	},
 	data() {
 		return {
@@ -40,8 +42,9 @@ export default {
 		),
 	},
 	watch: {
-		marketData() {
-			this.$nextTick(() => this.scrollbar.update());
+		marketBlocks() {
+			// Maybe add the update asynccomponents callback instead of this
+			setTimeout(() => this.scrollbar.update(), 100);
 		},
 	},
 	computed: {
@@ -49,9 +52,7 @@ export default {
 			return this.market ? `${this.market.city}, ${this.market.statePostalCode}` : '';
 		},
 		marketBlocks() {
-			return this.marketData && this.marketData[this.activeTab]
-				? this.marketData[this.activeTab].blocks
-				: [];
+			return this.marketData && this.marketData[this.activeTab] ? this.marketData[this.activeTab].blocks : [];
 		},
 	},
 	methods: {

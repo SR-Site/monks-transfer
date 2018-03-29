@@ -121,11 +121,106 @@
 				},
 				{
 				  "label": "Audience Profile",
-				  "blocks": []
+				  "blocks": [
+					{
+					  "name": "MarketImage",
+					  "data": {
+						"heading": "Demographic Composition",
+						"image": {
+						  "alt": "Demographic composition",
+						  "normal": "http://placehold.it/1280x720",
+						  "small": "http://placehold.it/1280x720"
+						}
+					  }
+					}
+				  ]
 				},
 				{
 				  "label": "Top Networks",
-				  "blocks": []
+				  "blocks": [
+					{
+					  "name": "MarketImages",
+					  "data": {
+						"heading": "Network Logos",
+						"subHeading": "Informative",
+						"images": [
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  },
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  },
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  },
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  }
+						]
+					  }
+					},
+					{
+					  "name": "MarketImages",
+					  "data": {
+						"heading": "Top performing cable networks in the market",
+						"images": [
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  },
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  },
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  },
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  },
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  },
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  },
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  },
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  },
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  }
+						]
+					  }
+					}
+				  ]
 				}
 			  ]
 			}

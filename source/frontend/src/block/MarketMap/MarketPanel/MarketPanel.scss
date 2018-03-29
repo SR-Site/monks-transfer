@@ -14,7 +14,7 @@
 		@include size(100%, 100%);
 		@include position(0, 0, auto, auto);
 		position: absolute;
-		background-color: $colorLightGrey;
+		background-color: $colorWhite;
 		max-width: $sizeGrid * 18;
 
 		&.is-ipad {
@@ -45,7 +45,7 @@
 
 	.panel-content {
 		@include size(100%);
-		background-color: $colorLightGrey;
+		background-color: $colorWhite;
 	}
 
 	.tab-wrapper {
@@ -70,15 +70,15 @@
 	}
 
 	.panel-body {
-		@include size(100%, calc(100% - 8rem));
-
+		@include size(100%, calc(100% - 16rem));
+		border-bottom: 1px solid $colorBorder;
 	}
 
 	.blocks {
 		padding: $sizeGrid $sizeGrid * 2;
 	}
 
-	.block {
+	.block:not(:last-child) {
 		margin-bottom: $sizeGrid * 2;
 	}
 }
