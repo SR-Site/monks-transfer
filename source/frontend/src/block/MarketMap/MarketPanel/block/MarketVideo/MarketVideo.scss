@@ -1,0 +1,11 @@
+:local {
+	.heading {
+		margin-bottom: $sizeGrid * 0.5;
+		color: $colorSecondary;
+	}
+
+	.video-player {
+		@include aspect-ratio(16px, 9px);
+		border: 1px solid $colorBorder;
+	}
+}

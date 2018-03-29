@@ -1,0 +1,93 @@
+:local {
+	.wrapper {
+		@include size(100%);
+		padding-bottom: 8rem;
+	}
+
+	.mask {
+		@include size(100%);
+		@include offset(0, 0);
+		position: absolute;
+	}
+
+	.panel {
+		@include size(100%, 100%);
+		@include position(0, 0, auto, auto);
+		position: absolute;
+		background-color: $colorLightGrey;
+		max-width: $sizeGrid * 18;
+
+		&.is-ipad {
+			.input-focussed & {
+				position: absolute;
+			}
+		}
+	}
+
+	.market-label {
+		@include size(auto, 8rem);
+		@include offset(0, 0);
+		background: $colorPrimary;
+		color: $colorWhite;
+		font: 2.4rem / 8rem $fontOpenSans;
+		position: absolute;
+		padding: 0 $sizeGrid;
+	}
+
+	.panel-header {
+		@include size(100%, 8rem);
+		border-bottom: 1px solid $colorBorder;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 $sizeGrid * 0.5;
+	}
+
+	.panel-content {
+		@include size(100%);
+		background-color: $colorLightGrey;
+	}
+
+	.tab-wrapper {
+		height: 100%;
+		display: block;
+		font-size: 0;
+	}
+
+	.tab {
+		height: 100%;
+		font: 800 1.2rem / 1 $fontOpenSans;
+		text-transform: uppercase;
+		padding: 0 $sizeGrid * 0.5;
+		border-bottom: 5px solid transparent;
+		transition: border-color 0.2s $easeInOutCubic;
+		display: inline-block;
+
+		&.is-active {
+			color: $colorSecondary;
+			border-color: $colorPrimary;
+		}
+	}
+
+	.panel-body {
+		@include size(100%, calc(100% - 8rem));
+	}
+
+	.blocks {
+		padding: 8rem;
+	}
+
+	.block {
+		&:not(:last-child) {
+			margin-bottom: $sizeGrid;
+		}
+	}
+}
+
+@include hover('.tab') {
+	border-color: $colorBorder;
+
+	&.is-active {
+		border-color: $colorPrimary;
+	}
+}

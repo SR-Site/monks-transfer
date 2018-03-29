@@ -30,6 +30,7 @@
     "detect-port": "^1.2.1",
     "favicons-webpack-plugin": "^0.0.7",
     "fetch-polyfill": "^0.8.2",
+    "fuse.js": "^3.2.0",
     "gsap": "^1.19.1",
     "hammerjs": "^2.0.8",
     "key-code": "^0.0.1",

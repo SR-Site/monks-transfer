@@ -4,7 +4,21 @@
 	"title": "Spectrum Reach Advertising - Markets Map",
 	"data": {
 	  "headerTheme": 1,
-	  "hideContactButton": true
+	  "hideContactButton": true,
+	  "breadcrumbs": [
+		{
+		  "label": "Home",
+		  "title": "Home",
+		  "target": "/home",
+		  "type": 0
+		},
+		{
+		  "label": "Market map",
+		  "title": "Market map",
+		  "target": "/markets-map",
+		  "type": 0
+		}
+	  ]
 	},
 	"blocks": [
 	  {
@@ -20,7 +34,56 @@
 		  "contactButton": "Contact your local partner today",
 		  "searchLabel": "Search",
 		  "searchPlaceholder": "Which region do you want to advertise in?",
-		  "notFoundMessage": "Sorry, this is not currently in our coverage area, contact us to for more information."
+		  "notFoundMessage": "Sorry, this is not currently in our coverage area, contact us to for more information.",
+		  "markets": [
+			{
+			  "marketId": "3105",
+			  "categories": [
+				{
+				  "label": "Market",
+				  "blocks": [
+					{
+					  "name": "MarketVideo",
+					  "data": {
+						"heading": "DMA Rank #167",
+						"video": {
+						  "url": "232468279",
+						  "type": 1
+						}
+					  }
+					},
+					{
+					  "name": "MarketNumbers",
+					  "data": {
+						"statistics": [
+						  {
+							"label": "Households",
+							"value": 105470
+						  },
+						  {
+							"label": "Markets",
+							"value": 100
+						  },
+						  {
+							"label": "States",
+							"value": 41
+						  }
+						]
+					  }
+					}
+				  ]
+				},
+				{
+				  "label": "Audience Profile",
+				  "blocks": []
+				},
+				{
+				  "label": "Top Networks",
+				  "blocks": []
+				}
+			  ]
+			}
+		  ]
 		}
 	  }
 	],

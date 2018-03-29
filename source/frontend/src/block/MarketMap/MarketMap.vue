@@ -1,5 +1,7 @@
-<style src="./MarketMap.scss" module lang="scss"></style>
-<script src="./MarketMap.js"></script>
+<style src="./MarketMap.scss" module lang="scss">
+</style>
+<script src="./MarketMap.js">
+</script>
 
 <template>
 	<div :class="$style.marketMap">
@@ -7,7 +9,24 @@
 			<div class="map-box abs-fill" id="js-map"></div>
 			<ZoomActions :class="$style.zoomActions" componentId="MarketZoomActions" @zoomIn="handleZoomIn" @zoomOut="handleZoomOut"/>
 			<InfoBox :data="data.info" componentId="InfoBox"/>
-			<ContactButton :label="data.contactButton" componentId="ContactButton" :class="$style.contactButton"/>
+			<Search
+					@selectMarket="handleSelectMarket"
+					componentId="Search"
+					:markets="markets"
+					:class="$style.search"
+			/>
+			<MarketPanel
+					@closePanel="resetMarket"
+					:class="$style.marketPanel"
+					:market="selectedMarket"
+					:marketData="selectedMarketData"
+					componentId="MarketPanel"
+			/>
+			<ContactButton
+					:label="data.contactButton"
+					componentId="ContactButton"
+					:class="$style.contactButton"
+			/>
 		</div>
 		<Spinner componentId="Spinner"/>
 	</div>

@@ -1,0 +1,62 @@
+:local {
+	.wrapper {
+		@include size($sizeGrid * 10, auto);
+	}
+
+	.search-form {
+		@include size(100%, auto);
+		background: $colorWhite;
+		padding: $sizeGrid * 0.5;
+
+		.input {
+			@include size(100%, $sizeGrid);
+			font: 1.5rem / #{$sizeGrid} $fontOpenSans;
+			border: 0;
+			outline: 0;
+			-webkit-appearance: none;
+		}
+	}
+
+	.search-results {
+		background: #f8f8f8;
+	}
+
+	.scroll-content,
+	.search-results {
+		max-height: calc(100vh - #{$sizeHeader} - #{16rem});
+	}
+
+	.markets {
+		margin: 0;
+		padding: 0;
+	}
+
+	.market {
+		list-style: none;
+	}
+
+	.market-link {
+		display: block;
+		cursor: pointer;
+		text-decoration: none;
+		font: 1.5rem / #{$sizeGrid} $fontOpenSans;
+		color: currentColor;
+		background: transparent;
+		position: relative;
+		padding: $sizeGrid * 0.5 $sizeGrid;
+		transition: color 0.2s $easeInOutCubic, background 0.2s $easeInOutCubic;
+
+		&:after {
+			@include pseudo;
+			@include position(auto, $sizeGrid, 0, $sizeGrid);
+			@include size(auto, 1px);
+			background: $colorBorder;
+			opacity: 0.5;
+		}
+	}
+}
+
+@include hover('.market-link') {
+	background: $colorSecondary;
+	color: $colorWhite;
+}

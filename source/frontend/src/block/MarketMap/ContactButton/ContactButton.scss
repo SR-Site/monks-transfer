@@ -1,6 +1,7 @@
 :local {
 	.button {
-		padding: 3rem $sizeGrid;
+	  @include size($sizeGrid * 10, auto);
+		padding: 3.3rem $sizeGrid;
 		background: $colorSecondary;
 		color: $colorWhite;
 		display: inline-block;

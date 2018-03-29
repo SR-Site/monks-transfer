@@ -69,7 +69,7 @@ export default {
 		},
 	},
 	beforeDestroy() {
-		this.draggableInstance.destroy();
-		this.draggableInstance = null;
+		// this.draggableInstance.destroy();
+		// this.draggableInstance = null;
 	},
 };

@@ -28,4 +28,20 @@ export default {
 	searchLabel: VueTypes.string.isRequired,
 	searchPlaceholder: VueTypes.string.isRequired,
 	notFoundMessage: VueTypes.string.isRequired,
+	markets: VueTypes.arrayOf(
+		VueTypes.shape({
+			marketId: VueTypes.string.isRequired,
+			categories: VueTypes.arrayOf(
+				VueTypes.shape({
+					label: VueTypes.string.isRequired,
+					blocks: VueTypes.arrayOf(
+						VueTypes.shape({
+							name: VueTypes.string.isRequired,
+							data: VueTypes.object.isRequired,
+						}),
+					).isRequired,
+				}),
+			).isRequired,
+		}),
+	).isRequired,
 };

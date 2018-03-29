@@ -3,13 +3,19 @@ import states from 'asset/json/states.json';
 import bows from 'bows';
 import isString from 'lodash/isString';
 import mapboxgl from 'mapbox-gl';
-import { AbstractBlockComponent, CustomButtonEvent, customButtonEventDispatcher } from 'vue-block-system';
+import {
+	AbstractBlockComponent,
+	CustomButtonEvent,
+	customButtonEventDispatcher,
+} from 'vue-block-system';
 import VueTypes from 'vue-types';
 import LoadJsonTask from '../../util/preloading/task/LoadJsonTask';
 import ContactButton from './ContactButton';
 import InfoBox from './InfoBox';
 import MarketMapData from './MarketMapData';
 import MarketMapTransitionController from './MarketMapTransitionController';
+import MarketPanel from './MarketPanel';
+import Search from './Search';
 import ZoomActions from './ZoomActions/ZoomActions';
 
 export default {
@@ -19,6 +25,8 @@ export default {
 		ZoomActions,
 		InfoBox,
 		ContactButton,
+		Search,
+		MarketPanel,
 	},
 	props: {
 		data: VueTypes.shape(MarketMapData).isRequired,
@@ -40,9 +48,20 @@ export default {
 		this.marketsFillLayer = null;
 	},
 	computed: {
-		selectValueLabel() {
-			const market = this.selectedMarket;
-			return market ? `${market.city}, ${market.statePostalCode}` : this.$t('global.form.select.city');
+		selectedMarketData() {
+			if (this.selectedMarket) {
+				const marketData = this.data.markets.find(market => market.marketId === this.selectedMarket.marketId);
+				if (marketData) {
+					return marketData.categories;
+				}
+			}
+
+			return [];
+		},
+	},
+	watch: {
+		selectedMarketData(value) {
+			console.log(value);
 		},
 	},
 	data() {
@@ -50,7 +69,6 @@ export default {
 			states,
 			markets,
 			selectedMarket: null,
-			mobileSidePanelOpen: false,
 			allowMarketSelecting: true,
 		};
 	},
@@ -176,7 +194,9 @@ export default {
 			// Check if a market is selected
 			if (this.selectedMarket !== null) {
 				// Check if the selected market state exists
-				const state = this.states.find(stateData => stateData.id === this.selectedMarket.statePostalCode);
+				const state = this.states.find(
+					stateData => stateData.id === this.selectedMarket.statePostalCode,
+				);
 
 				if (state) {
 					// Get the feature collection for the selected market
@@ -223,7 +243,7 @@ export default {
 			if (this.allowMarketSelecting) {
 				this.selectedMarket = market;
 				this.updateDataLayer();
-				this.mobileSidePanelOpen = false;
+				this.getChild('MarketPanel').transitionIn();
 				this.allowMarketSelecting = false;
 			}
 		},
@@ -239,6 +259,7 @@ export default {
 					this.map.on('mousemove', this.handleMapMouseMove.bind(this));
 				})
 				.then(() => this.getChild('Spinner').transitionOut())
+				.then(() => this.handleSelectMarket(this.markets[0])) // TODO: remove this
 				.catch(reason => console.error('failed', reason));
 		},
 		handleZoomIn() {
@@ -255,9 +276,6 @@ export default {
 					event: this.BackendLinkType.CONTACT_US,
 				}),
 			);
-		},
-		handleToggleMobileSidePanel() {
-			this.mobileSidePanelOpen = !this.mobileSidePanelOpen;
 		},
 	},
 };

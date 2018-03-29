@@ -1,0 +1,52 @@
+:local {
+	.heading {
+		margin-bottom: $sizeGrid * 0.5;
+		color: $colorSecondary;
+	}
+
+	.statistics {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	.statistic {
+		list-style: none;
+
+		&:nth-child(even) {
+			color: $colorSecondary;
+
+			.value {
+				background: $colorSecondary;
+				color: $colorWhite;
+			}
+		}
+
+		&:nth-child(odd) {
+			color: $colorPrimary;
+
+			.value {
+				background: $colorPrimary;
+				color: $colorWhite;
+			}
+		}
+	}
+
+	.value {
+		@include size(15rem);
+		border-radius: 50%;
+		display: inline-block;
+		font: 2.4rem / 15rem $fontOpenSans;
+	}
+
+	.label {
+		@include size(100%, auto);
+		display: inline-block;
+		margin-top: $sizeGrid * 0.5;
+		text-transform: uppercase;
+		font: 2rem / 1 $fontOpenSans;
+	}
+}
