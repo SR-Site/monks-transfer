@@ -4,80 +4,8 @@
 		min-height: 768px;
 	}
 
-	.market-search {
-		@include position(auto, $sizeGrid * 9, $sizeGrid * 2, $sizeGrid * 2);
+	.zoom-actions {
 		position: absolute;
-	}
-
-	.side-panel {
-		@include size($sizeGrid * 7, auto);
-		@include position(0, 0, 0, auto);
-		position: absolute;
-		background-color: white;
-	}
-
-	.selected-value {
-		display: none;
-	}
-
-	@include respond-to(MEDIUM) {
-		.market-map {
-			margin-top: 0 !important; // It's important we get rid of the provided padding since on mobile we do not want it!
-		}
-	}
-
-	@include respond-to(SMALL) {
-		.market-map {
-			height: calc(100vh - #{$sizeHeaderMobile * 2});
-			min-height: 480px;
-		}
-
-		.side-panel {
-			@include size(100%, 0);
-			@include offset(0, 0);
-			//@include offset($sizeGrid/2, ($sizeGrid/2) + $sizeGrid*4);
-			//transition: height 250ms $easeOutExpo;
-		}
-
-		.selected-value {
-			@include offset($sizeGrid/2, $sizeGrid/2);
-			@include size(calc(100% - #{$sizeGrid}), $sizeGrid*4);
-			position: absolute;
-			display: block;
-			background-color: white;
-			line-height: $sizeGrid*4;
-			padding: 0 $sizeGrid;
-			border-bottom: 1px solid rgba(#dadada, 0.6);
-
-			&:after {
-				@include position(50%, $sizeGrid*2, auto, auto);
-				@include arrow(down, $colorSecondary, 2rem);
-				content: '';
-				position: absolute;
-			}
-
-			// Has Value State
-			&.has-value {
-				background-color: $colorSecondary;
-				color: white;
-
-				&:after {
-					border-top-color: white;
-				}
-			}
-
-			// Open State
-			&.is-open {
-				&:after {
-					@include arrow(up, $colorSecondary, $sizeGrid/2);
-				}
-
-				&.has-value {
-					&:after {
-						border-bottom-color: white;
-					}
-				}
-			}
-		}
+		@include position(auto, auto, $sizeGrid, $sizeGrid);
 	}
 }

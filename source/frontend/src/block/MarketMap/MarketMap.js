@@ -6,21 +6,15 @@ import mapboxgl from 'mapbox-gl';
 import { AbstractBlockComponent, CustomButtonEvent, customButtonEventDispatcher } from 'vue-block-system';
 import VueTypes from 'vue-types';
 import LoadJsonTask from '../../util/preloading/task/LoadJsonTask';
-import MarketList from './MarketList/MarketList';
 import MarketMapData from './MarketMapData';
 import MarketMapTransitionController from './MarketMapTransitionController';
-import MarketSearch from './MarketSearch/MarketSearch';
-import ServiceButton from './ServiceButton/ServiceButton';
 import ZoomActions from './ZoomActions/ZoomActions';
 
 export default {
 	name: 'MarketMap',
 	extends: AbstractBlockComponent,
 	components: {
-		MarketList,
-		MarketSearch,
 		ZoomActions,
-		ServiceButton,
 	},
 	props: {
 		data: VueTypes.shape(MarketMapData).isRequired,
