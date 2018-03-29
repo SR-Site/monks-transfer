@@ -25,6 +25,11 @@
 			background: $colorTertiary;
 			color: $colorWhite;
 		}
+
+		&.theme-secondary {
+			background: $colorSecondary;
+			color: $colorWhite;
+		}
 	}
 
 	.label {
@@ -49,5 +54,9 @@
 
 	&.theme-dark {
 		background: darken($colorTertiary, 5%);
+	}
+
+	&.theme-dark {
+		background: darken($colorSecondary, 5%);
 	}
 }

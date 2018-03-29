@@ -1,0 +1,25 @@
+:local {
+	.heading {
+		margin-bottom: $sizeGrid;
+		color: $colorSecondary;
+	}
+
+	.sub-heading {
+		color: $colorPrimary;
+		margin-bottom: $sizeGrid * 0.5;
+	}
+
+	.images {
+		@include size(100%, auto);
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.image {
+		@include size(100% / 3, auto);
+		@include aspect-ratio(1px, 1px);
+		flex-shrink: 0;
+		border: 1px solid $colorBorder;
+		//border-right: 1px solid $colorBorder;
+	}
+}

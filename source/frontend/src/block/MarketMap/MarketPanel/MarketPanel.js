@@ -1,6 +1,8 @@
 import { AbstractTransitionComponent } from 'vue-transition-component';
 import VueTypes from 'vue-types';
 import Scrollbar from '../../../util/ScrollBar';
+import MarketImages from './block/MarketImages';
+import MarketMediaKit from './block/MarketMediaKit';
 import MarketNumbers from './block/MarketNumbers';
 import MarketVideo from './block/MarketVideo';
 import MarketPanelTransitionController from './MarketPanelTransitionController';
@@ -11,6 +13,8 @@ export default {
 	components: {
 		MarketVideo,
 		MarketNumbers,
+		MarketImages,
+		MarketMediaKit,
 	},
 	data() {
 		return {
@@ -35,12 +39,19 @@ export default {
 			}),
 		),
 	},
+	watch: {
+		marketData() {
+			this.$nextTick(() => this.scrollbar.update());
+		},
+	},
 	computed: {
 		marketLabel() {
 			return this.market ? `${this.market.city}, ${this.market.statePostalCode}` : '';
 		},
 		marketBlocks() {
-			return this.marketData && this.marketData[this.activeTab] ? this.marketData[this.activeTab].blocks : [];
+			return this.marketData && this.marketData[this.activeTab]
+				? this.marketData[this.activeTab].blocks
+				: [];
 		},
 	},
 	methods: {
