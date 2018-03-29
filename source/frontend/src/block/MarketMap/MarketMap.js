@@ -259,7 +259,6 @@ export default {
 					this.map.on('mousemove', this.handleMapMouseMove.bind(this));
 				})
 				.then(() => this.getChild('Spinner').transitionOut())
-				.then(() => this.handleSelectMarket(this.markets[0])) // TODO: remove this
 				.catch(reason => console.error('failed', reason));
 		},
 		handleZoomIn() {
