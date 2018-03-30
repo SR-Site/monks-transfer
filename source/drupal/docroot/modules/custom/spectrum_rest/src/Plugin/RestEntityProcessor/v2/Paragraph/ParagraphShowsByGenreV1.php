@@ -30,6 +30,9 @@ class ParagraphShowsByGenreV1 extends SpectrumRestEntityProcessorBase {
     $data = $this->getNormalHeadingParagraphData($entity);
     // Get networks.
     $data['items'] = $this->fieldProcessor->getFieldData($entity->get('field_genre_shows'), ['view_mode' => 'teaser_mode']);
+    if (array_values($data['items']) !== $data['items']) {
+      $data['items'] = [$data['items']];
+    }
 
     /** @var \Drupal\paragraphs\Entity\Paragraph $entity */
     $parent = $entity->getParentEntity();
