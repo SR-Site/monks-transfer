@@ -13,7 +13,7 @@ migration_group: migrate_shows_json
 label: 'JSON feed of shows'
 source:
   plugin: spectrum_url
-  data_fetcher_plugin: http
+  data_fetcher_plugin: spectrum_http
   data_parser_plugin: json_nested
   item_selector: /Result/
   fields:
@@ -154,7 +154,7 @@ process:
     plugin: default_value
     default_value: 1
 destination:
-  plugin: 'entity:node'
+  plugin: node_shows
 migration_dependencies:
   optional:
     - genres
