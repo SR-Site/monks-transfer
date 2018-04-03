@@ -21,13 +21,51 @@ export default {
 		noLabel() {
 			return this.no !== undefined ? this.no : this.$t('global.notification.cta.noLabel');
 		},
-		...mapState('notification', ['isActive', 'type', 'icon', 'heading', 'paragraph', 'yes', 'no', 'ok', 'resolve']),
+		sendLabel() {
+			return this.send !== undefined ? this.send : this.$t('global.notification.cta.sendLabel');
+		},
+		...mapState('notification', [
+			'isActive',
+			'type',
+			'icon',
+			'heading',
+			'paragraph',
+			'yes',
+			'no',
+			'ok',
+			'send',
+			'resolve',
+		]),
+	},
+	data() {
+		return {
+			downloadFields: [
+				{
+					name: 'name',
+					localeKey: 'name',
+					type: 'text',
+					value: '',
+					validationRules: 'required',
+				},
+				{
+					name: 'email',
+					localeKey: 'email',
+					type: 'email',
+					validationRules: 'required|email',
+					value: '',
+				},
+			],
+		};
 	},
 	watch: {
 		isActive(value) {
 			if (value) {
 				// Crete a listener for closing the popup with the escape key
-				this.keyDownEventListener = new NativeEventListener(document, 'keyup', this.handleKeyUp.bind(this));
+				this.keyDownEventListener = new NativeEventListener(
+					document,
+					'keyup',
+					this.handleKeyUp.bind(this),
+				);
 				this.transitionIn();
 			}
 		},
@@ -51,10 +89,36 @@ export default {
 				}),
 			);
 		},
+		submit() {
+			console.log('submit');
+			this.$validator.validateAll().then(valid => {
+				if (valid) {
+					return this.transitionOut()
+						.then(this.resolve.bind(this, { accept: true, data: this.getFormData() }))
+						.then(() => this.resetForm());
+				}
+				return null;
+			});
+		},
 		handleKeyUp(event) {
 			if (this.isActive && event.keyCode === keyCode.ESC) {
 				this.decline();
 			}
+		},
+		getFormData() {
+			const data = {};
+			this.downloadFields.forEach(field => {
+				data[field.name] = field.value;
+			});
+			return data;
+		},
+		handleInputChange(event, field) {
+			field.value = event.target.value;
+		},
+		resetForm() {
+			this.downloadFields.forEach(field => {
+				field.value = '';
+			});
 		},
 	},
 	beforeDestroy() {

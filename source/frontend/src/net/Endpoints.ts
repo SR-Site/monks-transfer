@@ -22,6 +22,7 @@ class Endpoints {
 
 	public static CONTACT: string = 'contact';
 	public static CONTACT_KERNEL: string = 'contactKernel';
+	public static DOWNLOAD_MEDIA_KIT: string = 'downloadMediaKit';
 	public static VIEW_COUNT: string = 'viewCount';
 
 	private static _ENDPOINTS = {
@@ -36,6 +37,10 @@ class Endpoints {
 		[Endpoints.VIEW_COUNT]: {
 			[Endpoints._MOCK]: '/view-count.json',
 			[Endpoints._API]: '/v1/counter/{page}',
+		},
+		[Endpoints.DOWNLOAD_MEDIA_KIT]: {
+			[Endpoints._MOCK]: '/download-media-kit.json',
+			[Endpoints._API]: '/v1/download-media-kit',
 		},
 	};
 }

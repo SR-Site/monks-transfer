@@ -32,7 +32,8 @@
 		"yesLabel": "Ok",
 		"noLabel": "Cancel",
 		"okLabel": "Ok",
-		"copyLabel": "Copy"
+		"copyLabel": "Copy",
+		"sendLabel": "Send"
 	  }
 	},
 	"title": {
@@ -70,7 +71,17 @@
 		"heading": "Thank you!",
 		"paragraph": "We’re excited to have a chance to meet you. Your request is being directed to your personal media consultant. Expect to hear from us soon!"
 	  },
+	  "download_media_kit": {
+		"heading": "Thank you",
+		"paragraph": "The Spectrum Reach Media Kit will be in your inbox shortly."
+	  },
 	  "server_message": {
+	  }
+	},
+	"action": {
+	  "download_media_kit": {
+		"heading": "Explore Spectrum Reach",
+		"paragraph": "Let us know where we should send our Media Kit."
 	  }
 	},
 	"confirmation": {

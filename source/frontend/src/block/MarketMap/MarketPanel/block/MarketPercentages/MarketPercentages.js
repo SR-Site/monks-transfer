@@ -14,6 +14,7 @@ export default {
 		this.BorderType = BorderType;
 	},
 	props: {
+		marketId: VueTypes.string.isRequired,
 		data: VueTypes.shape({
 			heading: VueTypes.string,
 			statistics: VueTypes.arrayOf(

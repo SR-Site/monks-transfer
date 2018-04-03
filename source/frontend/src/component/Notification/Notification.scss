@@ -17,13 +17,17 @@
 		position: absolute;
 	}
 
+	.close-button {
+	  position: absolute;
+	  top: $sizeGrid;
+	  right: $sizeGrid;
+	}
+
 	.content {
 		background: white;
 		color: black;
-		text-align: center;
-		border-radius: 5px;
-		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
-		padding: 25px;
+		text-align: left;
+		padding: $sizeGrid;
 	}
 
 	.icon {
@@ -34,15 +38,29 @@
 
 	.heading {
 		margin-bottom: $sizeGrid / 2;
-	}
-
-	.copy {
-		margin-bottom: $sizeGrid;
+		color: $colorSecondary;
+		text-transform: uppercase;
 	}
 
 	.confirmationActions {
 		@include size(100%, auto);
+		margin-top: $sizeGrid;
 		text-align: center;
 		font-size: 0;
+
+		.button:not(:first-child) {
+			margin-left: $sizeGrid * 0.5;
+		}
+	}
+
+	.download-form {
+		.input {
+			background: $colorWhite;
+		}
+
+		.button:not(:first-child) {
+			margin-left: 0;
+			margin-top: $sizeGrid * 0.5;
+		}
 	}
 }

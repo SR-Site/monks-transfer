@@ -1,9 +1,8 @@
 import VueTypes from 'vue-types';
-import { AbstractTransitionComponent, TransitionEvent } from 'vue-transition-component';
+import { AbstractTransitionComponent } from 'vue-transition-component';
 import VideoPlayer from '../../../../../component/VideoPlayer';
 import VideoType from '../../../../../data/enum/VideoType';
 import PropVideo from '../../../../../data/prop-type/media/PropVideo';
-import NativeEventListener from '../../../../../util/event/NativeEventListener';
 import MarketVideoTransitionController from './MarketVideoTransitionController';
 
 export default {
@@ -13,6 +12,7 @@ export default {
 		VideoPlayer,
 	},
 	props: {
+		marketId: VueTypes.string.isRequired,
 		data: VueTypes.shape({
 			heading: VueTypes.string,
 			video: VueTypes.shape(PropVideo).isRequired,

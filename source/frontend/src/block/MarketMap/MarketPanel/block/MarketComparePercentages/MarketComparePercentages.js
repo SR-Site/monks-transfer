@@ -6,6 +6,7 @@ export default {
 	name: 'MarketComparePercentages',
 	extends: AbstractTransitionComponent,
 	props: {
+		marketId: VueTypes.string.isRequired,
 		data: VueTypes.shape({
 			heading: VueTypes.string,
 			percentages: VueTypes.arrayOf(

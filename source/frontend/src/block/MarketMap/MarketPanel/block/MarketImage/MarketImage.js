@@ -7,6 +7,7 @@ export default {
 	name: 'MarketImage',
 	extends: AbstractTransitionComponent,
 	props: {
+		marketId: VueTypes.string.isRequired,
 		data: VueTypes.shape({
 			heading: VueTypes.string,
 			image: VueTypes.shape(PropImage).isRequired,

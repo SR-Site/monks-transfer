@@ -35,6 +35,7 @@
 								:class="$style.block"
 								:is="block.name"
 								:key="index"
+								:marketId="marketId"
 								:data="block.data"
 								componentId="`PanelBlock.${index}`"
 							/>

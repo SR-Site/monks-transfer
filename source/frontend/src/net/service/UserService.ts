@@ -4,6 +4,7 @@ import Endpoints from 'net/Endpoints';
 import IContactData from 'data/interface/contact/IContactData';
 import getStore from 'store';
 import IContactKernelData from 'data/interface/contact/IContactKernelData';
+import IDownloadMediaKit from "../../data/interface/contact/IDownloadMediaKit";
 
 export default class UserService {
 	/**
@@ -29,6 +30,21 @@ export default class UserService {
 	 */
 	public static contactKernel(data: IContactKernelData) {
 		return getValue(GATEWAY).post(Endpoints.getEndpoint(Endpoints.CONTACT_KERNEL), data, {
+			headers: {
+				'Content-Type': 'application/json',
+				'X-CSRF-Token': getStore().getters['initData/csrfToken'],
+			},
+		});
+	}
+
+	/**
+	 * @public
+	 * @description Submit the contact form
+	 * @param data
+	 * @returns {AxiosPromise}
+	 */
+	public static downloadMediaKit(data: IDownloadMediaKit) {
+		return getValue(GATEWAY).post(Endpoints.getEndpoint(Endpoints.DOWNLOAD_MEDIA_KIT), data, {
 			headers: {
 				'Content-Type': 'application/json',
 				'X-CSRF-Token': getStore().getters['initData/csrfToken'],

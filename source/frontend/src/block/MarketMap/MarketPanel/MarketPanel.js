@@ -60,6 +60,9 @@ export default {
 		marketBlocks() {
 			return this.marketData && this.marketData[this.activeTab] ? this.marketData[this.activeTab].blocks : [];
 		},
+		marketId() {
+			return this.market ? this.market.marketId : null;
+		},
 	},
 	methods: {
 		handleAllComponentsReady() {

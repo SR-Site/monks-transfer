@@ -14,6 +14,7 @@ const defaultState = {
 	yes: null,
 	no: null,
 	ok: null,
+	send: null,
 	resolve: null,
 };
 
