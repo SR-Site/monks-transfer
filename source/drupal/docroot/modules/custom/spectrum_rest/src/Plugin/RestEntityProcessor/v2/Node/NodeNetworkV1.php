@@ -47,16 +47,18 @@ class NodeNetworkV1 extends SpectrumRestEntityProcessorBase {
       }
 
       // Shows.
-      $blocks[] = [
-        'id' => 'ProgramModule',
-        'data' => [
-          "overlap" => FALSE,
-          "windowed" => FALSE,
-          "marginTop" => 2,
-          'heading' => t('Shows in network :title', [':title' => $entity->label()]),
-          'items' => $this->getShowsByNetwork($network->id()),
-        ],
-      ];
+      if (!empty($this->getShowsByNetwork($network->id()))) {
+        $blocks[] = [
+          'id' => 'ProgramModule',
+          'data' => [
+            "overlap" => FALSE,
+            "windowed" => FALSE,
+            "marginTop" => 2,
+            'heading' => t('Featured On :title', [':title' => $entity->label()]),
+            'items' => $this->getShowsByNetwork($network->id()),
+          ],
+        ];
+      }
 
       // Other networks.
       $blocks[] = [

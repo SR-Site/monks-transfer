@@ -2,6 +2,8 @@ uuid: 54ed0d76-583e-4ce8-9742-4d6b1c328f8a
 langcode: en
 status: true
 dependencies:
+  module:
+    - spectrum_shows_import
   enforced:
     module:
       - spectrum_shows_import

@@ -5,7 +5,7 @@ dependencies: {  }
 id: NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM
 label: 'http://stage.example.com/'
 chunks: 1
-links: 47
-max_filesize: 5838
+links: 102
+max_filesize: 12458
 context: {  }
-updated: 1516613143
+updated: 1521635614

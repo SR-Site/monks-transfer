@@ -53,7 +53,6 @@ class NodeShowDetailV1 extends ShowsRestEntityProcessorBase {
 
     if ($entity->get('field_show_network')->entity) {
       $data['network'] = [
-        'label' => $entity->get('field_show_network')->entity->label(),
         'image' => $this->image($entity->get('field_show_network')->entity->get('image')),
       ];
     }
