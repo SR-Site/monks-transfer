@@ -37,14 +37,24 @@
 			bottom: 0;
 			left: 0;
 		}
+	}
 
-		.bar {
-			@include size(50%, auto);
-			background: currentColor;
+	.bar {
+		@include size(50%, auto);
+		background: currentColor;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+
+		&:after {
+			content: attr(data-value);
 			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
+			top: 0;
+			right: 0;
+			font: 1.6rem / 1 $fontOpenSans;
+			color: currentColor;
+			transform: translateY(calc(-100% - 1rem));
 		}
 	}
 
@@ -53,5 +63,17 @@
 		display: inline-block;
 		margin-top: 1rem;
 		font: 1.6rem / 1 $fontOpenSans;
+	}
+
+	@include respond-to(SMALL) {
+		.label {
+			font-size: mobile-size(2.4rem);
+		}
+
+		.bar {
+			&:after {
+				font-size: mobile-size(2.4rem);
+			}
+		}
 	}
 }

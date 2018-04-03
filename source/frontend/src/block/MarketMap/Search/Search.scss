@@ -54,6 +54,35 @@
 			opacity: 0.5;
 		}
 	}
+
+	@include respond-to(SMALL) {
+		$searchHeight: mobile-size(12rem);
+
+		.wrapper {
+			width: auto;
+		}
+
+		.scroll-content,
+		.search-results {
+			max-height: calc(90vh - #{$sizeHeaderMobile} - #{mobile-size(12rem)});
+		}
+
+		.search-form {
+			padding: mobile-size($sizeGrid);
+
+			.input {
+				@include size(100%, mobile-size($sizeGrid));
+				font-size: mobile-size(2.7rem);
+				line-height: mobile-size($sizeGrid);
+			}
+		}
+
+		.market-link {
+			font-size: mobile-size(2.7rem);
+			line-height: mobile-size($sizeGrid);
+			padding: mobile-size($sizeGrid);
+		}
+	}
 }
 
 @include hover('.market-link') {

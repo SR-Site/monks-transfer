@@ -73,7 +73,7 @@ export default {
 			// Short delay otherwise you won't be able to click on the market
 			setTimeout(() => {
 				this.hasFocus = false;
-			}, 100);
+			}, 300);
 		},
 		handleMarketClick(market) {
 			this.$emit('selectMarket', market);

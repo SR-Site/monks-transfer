@@ -69,6 +69,11 @@ export default {
 			});
 			this.isReady();
 		},
+		openPanel() {
+			// Re-initialize the panel because the state might have changed
+			this.transitionController.setupTransitionInTimeline();
+			this.transitionIn();
+		},
 		handleClose() {
 			this.transitionOut().then(() => this.$emit('closePanel'));
 		},

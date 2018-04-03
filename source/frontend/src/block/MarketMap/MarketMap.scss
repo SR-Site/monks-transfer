@@ -27,4 +27,25 @@
 		@include position(0, 0, auto, auto);
 		position: absolute;
 	}
+
+	@include respond-to(SMALL) {
+		.market-map {
+			@include size(100%, calc(100vh - #{$sizeHeaderMobile}));
+			min-height: 480px;
+		}
+
+		.search {
+			@include position(
+				mobile-size($sizeGrid * 0.5),
+				mobile-size($sizeGrid * 0.5),
+				auto,
+				mobile-size($sizeGrid * 0.5)
+			);
+		}
+
+		.zoom-actions {
+			bottom: mobile-size(17rem);
+			left: mobile-size($sizeGrid * 0.5);
+		}
+	}
 }

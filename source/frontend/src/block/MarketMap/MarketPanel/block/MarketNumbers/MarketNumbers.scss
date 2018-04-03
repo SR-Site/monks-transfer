@@ -49,4 +49,16 @@
 		text-transform: uppercase;
 		font: 2rem / 1 $fontOpenSans;
 	}
+
+	@include respond-to(SMALL) {
+	  .value {
+		@include size(mobile-size(15rem));
+		line-height: mobile-size(15rem);
+		font-size: mobile-size(2.4rem);
+	  }
+
+	  .label {
+		font-size: mobile-size(2rem);
+	  }
+	}
 }

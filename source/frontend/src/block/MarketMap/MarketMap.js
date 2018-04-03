@@ -9,6 +9,10 @@ import {
 	customButtonEventDispatcher,
 } from 'vue-block-system';
 import VueTypes from 'vue-types';
+import { DeviceState } from '../../config/deviceStateConfig';
+import BackendLinkType from '../../data/enum/link/BackendLinkType';
+import { DEVICE_STATE_TRACKER } from '../../data/Injectables';
+import { getValue } from '../../util/injector';
 import LoadJsonTask from '../../util/preloading/task/LoadJsonTask';
 import ContactButton from './ContactButton';
 import InfoBox from './InfoBox';
@@ -50,18 +54,15 @@ export default {
 	computed: {
 		selectedMarketData() {
 			if (this.selectedMarket) {
-				const marketData = this.data.markets.find(market => market.marketId === this.selectedMarket.marketId);
+				const marketData = this.data.markets.find(
+					market => market.marketId === this.selectedMarket.marketId,
+				);
 				if (marketData) {
 					return marketData.categories;
 				}
 			}
 
 			return [];
-		},
-	},
-	watch: {
-		selectedMarketData(value) {
-			console.log(value);
 		},
 	},
 	data() {
@@ -136,8 +137,10 @@ export default {
 		moveToCoordinates(lat, lng, zoom, duration) {
 			return new Promise(resolve => {
 				this.map.once('moveend', resolve);
+				const offset = getValue(DEVICE_STATE_TRACKER).currentState <= DeviceState.SMALL ? 0 : 5;
 				this.map.flyTo({
-					center: new mapboxgl.LngLat(lat, lng),
+					// Add default offset to the lat coordinate
+					center: new mapboxgl.LngLat(parseFloat(lat) + offset, lng),
 					zoom,
 					duration,
 				});
@@ -150,27 +153,11 @@ export default {
 				return;
 			}
 
-			// Check if we have zoomed in enough to open the contact panel
-			if (this.map.getZoom() >= this.config.detailZoomLevel) {
-				let { id } = features[0].properties;
-				id = !isString(id) ? id.toString() : id;
+			const marketId = features[0].properties.id;
+			const market = this.markets.find(data => data.marketId === marketId.toString());
 
-				this.$tracking.trackEvent({
-					[this.TrackingProvider.GOOGLE_ANALYTICS]: {
-						category: 'startAdvertising',
-						action: 'click',
-						label: id,
-					},
-				});
-
-				this.handleContactUs();
-			} else {
-				const marketId = features[0].properties.id;
-				const market = this.markets.find(data => data.marketId === marketId.toString());
-
-				if (market) {
-					this.handleSelectMarket(market);
-				}
+			if (market) {
+				this.handleSelectMarket(market);
 			}
 
 			// Phase 2 needs something like a popup
@@ -242,9 +229,19 @@ export default {
 		handleSelectMarket(market) {
 			if (this.allowMarketSelecting) {
 				this.selectedMarket = market;
-				this.updateDataLayer();
-				this.getChild('MarketPanel').transitionIn();
-				this.allowMarketSelecting = false;
+				if (this.selectedMarketData.length) {
+					this.getChild('MarketPanel').openPanel();
+					this.updateDataLayer();
+					this.allowMarketSelecting = false;
+				} else {
+					console.warn(
+						`The selected market (${
+							market.marketId
+						}) does not have any details, dispatching the contact event instead`,
+					);
+					this.selectedMarket = null;
+					this.handleContactUs();
+				}
 			}
 		},
 		handleMapMouseMove(event) {

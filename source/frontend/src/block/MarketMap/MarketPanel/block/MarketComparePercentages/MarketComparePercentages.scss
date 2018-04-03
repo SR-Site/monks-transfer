@@ -40,30 +40,31 @@
 		@include size(80%, auto);
 		display: inline-block;
 		vertical-align: top;
+	}
 
-		.progress-bar {
-			@include size(100%, 1rem);
-			display: block;
-			background: red;
-			font-size: 0;
-		}
+	.progress-bar {
+		@include size(100%, 1rem);
+		display: block;
+		background: red;
+		font-size: 0;
+	}
 
-		.progress-piece {
-			height: 100%;
-			display: inline-block;
-			background: currentColor;
+	.progress-piece {
+		height: 100%;
+		display: inline-block;
+		background: currentColor;
 
-			&:after {
-				content: attr(data-value);
-				position: absolute;
-				top: 0;
-				right: 0;
-				font: 1.6rem / 1 $fontOpenSans;
-				color: currentColor;
-				transform: translateY(calc(-100% - 1rem));
-			}
+		&:after {
+			content: attr(data-value);
+			position: absolute;
+			top: 0;
+			right: 0;
+			font: 1.6rem / 1 $fontOpenSans;
+			color: currentColor;
+			transform: translateY(calc(-100% - 1rem));
 		}
 	}
+
 	.legend {
 		margin: 1rem 0 0 0;
 		padding: 0;
@@ -86,6 +87,32 @@
 
 		&:not(:first-child) {
 			margin-left: $sizeGrid;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.label,
+		.value {
+			width: 100%;
+		}
+
+		.label {
+			margin-bottom: mobile-size($sizeGrid);
+			font-size: mobile-size(2.6rem);
+		}
+
+		.legend {
+			margin-top: mobile-size($sizeGrid * 0.5);
+		}
+
+		.progress-piece {
+			&:after {
+				font-size: mobile-size(2.4rem);
+			}
+		}
+
+		.legend-item {
+			font-size: mobile-size(2.4rem);
 		}
 	}
 }

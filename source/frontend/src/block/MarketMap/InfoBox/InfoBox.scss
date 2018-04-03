@@ -37,15 +37,37 @@
 		}
 	}
 
-  .is-active {
-	.toggle {
-	  display: none;
+	.is-active {
+		.toggle {
+			display: none;
+		}
+
+		.box {
+			display: block;
+		}
 	}
 
-	.box {
-	  display: block;
+	@include respond-to(SMALL) {
+		.wrapper {
+		  top: mobile-size(17rem);
+		  left: mobile-size($sizeGrid * 0.5);
+		}
+
+		.toggle {
+			@include size(mobile-size(6rem));
+			font-size: mobile-size(2.7rem);
+		}
+
+		.box {
+			@include size(100%, auto);
+			top: auto;
+			bottom: 0;
+		}
+
+		.is-active {
+			@include position(auto, 0, mobile-size(12rem), 0);
+		}
 	}
-  }
 }
 
 @include hover('.toggle') {

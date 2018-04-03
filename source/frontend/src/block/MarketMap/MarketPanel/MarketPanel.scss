@@ -32,6 +32,7 @@
 		font: 2.4rem / 8rem $fontOpenSans;
 		position: absolute;
 		padding: 0 $sizeGrid;
+		//transform: translateX(-100%);
 	}
 
 	.panel-header {
@@ -80,6 +81,49 @@
 
 	.block:not(:last-child) {
 		margin-bottom: $sizeGrid * 2;
+	}
+
+	@include respond-to(SMALL) {
+		.wrapper {
+			padding-bottom: 0;
+		}
+
+		.panel {
+			@include size(100%, 50vh);
+			@include position(auto, 0, mobile-size(12rem), 0);
+			max-width: 100%;
+		}
+
+		.market-label {
+			$marketLabelHeight: mobile-size(8rem);
+			height: $marketLabelHeight;
+			top: -$marketLabelHeight;
+			line-height: $marketLabelHeight;
+			transform: none;
+		}
+
+		.panel-header {
+			height: mobile-size(8rem);
+		}
+
+		.panel-body {
+			border-bottom: 0;
+			height: calc(100% - #{mobile-size(8rem)});
+			overflow: hidden;
+		}
+
+		.blocks {
+			padding: $sizeGrid $sizeGrid * 0.5;
+		}
+
+		.tab-wrapper {
+			overflow: hidden;
+		}
+
+		.tab {
+			padding: 0 mobile-size($sizeGrid * 0.5);
+			font-size: mobile-size(2rem);
+		}
 	}
 }
 

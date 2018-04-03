@@ -1,6 +1,6 @@
 :local {
 	.button {
-	  @include size($sizeGrid * 10, auto);
+		@include size($sizeGrid * 10, auto);
 		padding: 3.3rem $sizeGrid;
 		background: $colorSecondary;
 		color: $colorWhite;
@@ -31,6 +31,26 @@
 
 		path {
 			fill: currentColor;
+		}
+	}
+
+	@include respond-to(SMALL) {
+		.button {
+			@include size(100%, mobile-size(12rem));
+		}
+
+		.label {
+			font-size: mobile-size(2.6rem);
+			font-weight: 700;
+			text-transform: uppercase;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		.icon {
+			@include size(mobile-size(1.7rem), mobile-size(2.4rem));
 		}
 	}
 }
