@@ -76,11 +76,18 @@
 						"The National Basketball Association (NBA) playoffs are a best-of-seven elimination tournament among 16 teams in the Eastern Conference and Western Conference (called divisions, pre-1970), ultimately deciding the league's season champion in the NBA Finals.",
 					"network": {
 						"label": "Network",
-						"image": {
-							"small": "https://via.placeholder.com/240x240",
-							"normal": "https://via.placeholder.com/240x240",
-							"alt": "Background image alt text"
-						}
+						"logo": [
+							{
+								"small": "https://via.placeholder.com/240x240",
+								"normal": "https://via.placeholder.com/240x240",
+								"alt": "Background image alt text"
+							},
+							{
+								"small": "https://via.placeholder.com/240x240",
+								"normal": "https://via.placeholder.com/240x240",
+								"alt": "Background image alt text"
+							}
+						]
 					},
 					"airTime": {
 						"label": "Air time",
@@ -238,11 +245,13 @@
 								"small": "https://via.placeholder.com/1280x720",
 								"alt": "Bravo  Flipping Out"
 							},
-							"logo": {
-								"normal": "https://via.placeholder.com/100x80",
-								"small": "https://via.placeholder.com/100x80",
-								"alt": "Bravo  Flipping Out"
-							},
+							"logo": [
+								{
+									"normal": "https://via.placeholder.com/100x80",
+									"small": "https://via.placeholder.com/100x80",
+									"alt": "Bravo  Flipping Out"
+								}
+							],
 							"heading": "Bravo<br />Flipping Out<br />",
 							"paragraph":
 								"<p>Just when America\u2019s favorite house flipper thinks his life could not be any more chaotic, Jeff Lewis embarks on the most unpredictable challenge yet \u2013 fatherhood. With no shortage of design work, tight deadlines and outrageous clients, tempers flare and antics commence as his two very different worlds collide.</p>\n\n<p>\u00a0</p>\n\n<p><strong>Airs: Thursdays, 9-10pm ET/PT, 8/17-10/19/17</strong></p>\n\n<p>\u00a0</p>\n\n<h6><strong>\u00a0</strong></h6>",
@@ -263,6 +272,18 @@
 								"small": "https://via.placeholder.com/1280x720",
 								"alt": "ESPN/ESPN2 \u200b\u200b\u200b\u200b\u200b\u200b\u200bMonday Night Football"
 							},
+							"logo": [
+								{
+									"normal": "https://via.placeholder.com/100x80",
+									"small": "https://via.placeholder.com/100x80",
+									"alt": "Bravo  Flipping Out"
+								},
+								{
+									"normal": "https://via.placeholder.com/100x80",
+									"small": "https://via.placeholder.com/100x80",
+									"alt": "Bravo  Flipping Out"
+								}
+							],
 							"heading": "ESPN<br />Monday Night Football<br />",
 							"paragraph":
 								"<p>Monday returns as football\u2019s favorite day of the week capping off each Fantasy Football round. Monday Night Football was the #1 telecast of the night 15 of 16 weeks among all key adult and male demographics last season.*</p>\n\n<p>\u00a0</p>\n\n<p><strong>Airs: Now through 12/25</strong></p>\n\n<p>\u00a0</p>\n\n<h6><strong>Source: Scarborough USA+ 201</strong><strong>7</strong><strong>\u00a0Release\u00a0</strong><strong>1</strong><strong>\u00a0(</strong><strong>De</strong><strong>15-</strong><strong>Ap</strong><strong>16) Adults 18+ who watch Monday Night Football. *ESPN MediaZone, 12/29/16.</strong></h6>",

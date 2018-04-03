@@ -11,7 +11,7 @@ import PropVideo from '../../../data/prop-type/media/PropVideo';
  * @param {description} stats.percentage The percentage level
  * @param {description} stats.demographic The demographic label
  * @param {description} image normal: 1280x720, small: 1280x720
- * @param {description} logo normal: 100x80, small: 100x80
+ * @param {description} logo The array of logos linked to the program: 100x80, small: 100x80
  * @param {description} video The video linked to the program
  * @param {description} tags The array of tags linked to the program
  */
@@ -24,7 +24,7 @@ export default {
 		demographic: VueTypes.string.isRequired,
 	}),
 	image: VueTypes.shape(PropImage).isRequired,
-	logo: VueTypes.shape(PropImage),
+	logo: VueTypes.arrayOf(VueTypes.shape(PropImage)),
 	video: VueTypes.shape(PropVideo),
 	tags: VueTypes.arrayOf(VueTypes.shape(PropLink)),
 };

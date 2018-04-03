@@ -26,7 +26,10 @@
 					<div :class="$style.titleWrapper">
 						<h2 :class="$style.heading" class="heading-07" v-html="data.heading" ref="header"></h2>
 						<div :class="$style.logo" v-if="data.logo" ref="logo">
-							<ResponsiveImage :image="data.logo" class="abs-fill fit-contain" />
+							<ResponsiveImage :image="data.logo[0]" class="abs-fill fit-contain" v-if="data.logo.length === 1"/>
+							<div :class="['abs-fill', $style.multipleImages]"  v-if="data.logo.length > 1">
+								<span class="abs-center">Multiple networks</span>
+							</div>
 						</div>
 					</div>
 					<p :class="$style.copy" class="copy copy-03" v-html="truncatedParagraph" ref="paragraph"></p>

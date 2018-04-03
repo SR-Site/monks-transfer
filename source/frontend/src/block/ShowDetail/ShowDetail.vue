@@ -12,9 +12,11 @@
 				<ul :class="$style.details">
 					<li :class="$style.detail" ref="network">
 						<h3 class="heading heading-07" v-if="data.network.label" v-html="data.network.label" :class="$style.detailHeading"></h3>
-						<figure :class="$style.detailImage">
-							<ResponsiveImage :image="data.network.image" class="abs-fill fit-contain"/>
-						</figure>
+						<div :class="$style.detailImages">
+							<figure :class="$style.detailImage" v-for="(image, index) in data.network.logo" :key="index">
+								<ResponsiveImage :image="image" class="abs-fill fit-contain" />
+							</figure>
+						</div>
 					</li>
 					<li :class="$style.detail" ref="airTime">
 						<h3 class="heading heading-07" v-if="data.airTime.label" v-html="data.airTime.label" :class="$style.detailHeading"></h3>
@@ -22,9 +24,11 @@
 					</li>
 					<li :class="$style.detail" ref="ageRestriction" v-if="data.ageRestriction">
 						<h3 class="heading heading-07" v-if="data.ageRestriction.label"  v-html="data.ageRestriction.label" :class="$style.detailHeading"></h3>
-						<figure :class="$style.detailImage">
-							<ResponsiveImage :image="data.ageRestriction.image" class="abs-fill fit-cover" />
-						</figure>
+						<div :class="$style.detailImages">
+							<figure :class="$style.detailImage">
+								<ResponsiveImage :image="data.ageRestriction.image" class="abs-fill fit-cover" />
+							</figure>
+						</div>
 					</li>
 				</ul>
 			</div>

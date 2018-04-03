@@ -37,18 +37,26 @@
 		justify-content: space-between;
 	}
 
-  	.title-wrapper {
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
-	  margin-bottom: $sizeGrid / 2;
+	.title-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: $sizeGrid / 2;
 	}
 
 	.logo {
-	  @include size(20%, auto);
-	  @include aspect-ratio(100px, 80px);
-	  flex-shrink: 0;
-	  margin-left: $sizeGrid;
+		@include size(20%, auto);
+		@include aspect-ratio(100px, 80px);
+		flex-shrink: 0;
+		margin-left: $sizeGrid;
+	}
+
+	.multiple-images {
+		background: $colorPrimary;
+		color: $colorWhite;
+		text-align: center;
+		font: 700 1.1rem / 1 $fontOpenSans;
+		text-transform: uppercase;
 	}
 
 	.percentage {

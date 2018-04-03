@@ -34,21 +34,29 @@
 		color: $colorPrimary;
 		text-decoration: none;
 		transition: color 0.2s $easeInOutCubic;
-	  	margin-bottom: $sizeGrid;
+		margin-bottom: $sizeGrid;
 	}
 
 	.title-wrapper {
-	  @include size(100%, auto);
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
+		@include size(100%, auto);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	.logo {
-	  @include size(20%, auto);
-	  @include aspect-ratio(100px, 80px);
-	  flex-shrink: 0;
-	  margin-left: $sizeGrid;
+		@include size(20%, auto);
+		@include aspect-ratio(100px, 80px);
+		flex-shrink: 0;
+		margin-left: $sizeGrid;
+	}
+
+	.multiple-images {
+		background: $colorPrimary;
+		color: $colorWhite;
+		text-align: center;
+		font: 700 1.1rem / 1 $fontOpenSans;
+		text-transform: uppercase;
 	}
 
 	.sub-heading {

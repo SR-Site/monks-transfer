@@ -63,11 +63,13 @@
 				  "small": "https://via.placeholder.com/1280x720",
 				  "alt": "Background image alt text"
 				},
-				"logo": {
-				  "normal": "https://via.placeholder.com/100x80",
-				  "small": "https://via.placeholder.com/100x80",
-				  "alt": "Background image alt text"
-				},
+				"logo": [
+				  {
+					"normal": "https://via.placeholder.com/100x80",
+					"small": "https://via.placeholder.com/100x80",
+					"alt": "Background image alt text"
+				  }
+				],
 				"video": {
 				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
 				  "type": 0
@@ -89,6 +91,18 @@
 				  "url": "https://player.vimeo.com/external/205968496.hd.mp4?s=2c4cdfe51f60d74e2235efb6faeb3c7196b30fbc&profile_id=174",
 				  "type": 0
 				},
+				"logo": [
+				  {
+					"normal": "https://via.placeholder.com/100x80",
+					"small": "https://via.placeholder.com/100x80",
+					"alt": "Background image alt text"
+				  },
+				  {
+					"normal": "https://via.placeholder.com/100x80",
+					"small": "https://via.placeholder.com/100x80",
+					"alt": "Background image alt text"
+				  }
+				],
 				"heading": "Wahlburgers",
 				"subHeading": "Finale, Saturday May 13th @ 9-10PM ET/PT* (Series Finale)",
 				"paragraph": "Mark and his kids are in town, so Alma celebrates the holidays early. Donnie is unable to attend, but sends special presents to his family.",

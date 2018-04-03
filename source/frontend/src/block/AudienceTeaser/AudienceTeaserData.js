@@ -16,7 +16,7 @@ import PropVideo from '../../data/prop-type/media/PropVideo';
  * @param {description} reaches The list of reaches, should be strings
  * @param {description} target The path to the detail page
  * @param {description} imageStyle The style of the image cover or contain
- * @param {description} logo The logo fo the teaser
+ * @param {description} logo the array of logo's attached to the audience teaser
  */
 export default {
 	marginTop: VueTypes.number.isRequired,
@@ -31,5 +31,5 @@ export default {
 	reaches: VueTypes.array,
 	target: VueTypes.string,
 	imageStyle: VueTypes.string.isRequired,
-	logo: VueTypes.shape(PropImage),
+	logo: VueTypes.arrayOf(VueTypes.shape(PropImage)),
 };
