@@ -54,7 +54,7 @@ class NodeNetworkV1 extends SpectrumRestEntityProcessorBase {
             "overlap" => FALSE,
             "windowed" => FALSE,
             "marginTop" => 2,
-            'heading' => t('Shows in network :title', [':title' => $entity->label()]),
+            'heading' => t('Featured On :title', [':title' => $entity->label()]),
             'items' => $this->getShowsByNetwork($network->id()),
           ],
         ];
