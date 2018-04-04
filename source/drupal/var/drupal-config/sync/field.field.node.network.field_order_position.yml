@@ -1,0 +1,21 @@
+uuid: 95dfbb32-acee-4fa5-ae17-79637c1a7bfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order_position
+    - node.type.network
+  module:
+    - options
+id: node.network.field_order_position
+field_name: field_order_position
+entity_type: node
+bundle: network
+label: 'Order position'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,0 +1,37 @@
+<?php
+/**
+ * @file
+ * Module file for spectrum_shows.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function spectrum_shows_form_node_show_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['#validate'][] = 'spectrum_shows_order_validate';
+}
+
+/**
+ * Check if there is more nodes with same order position value.
+ */
+function spectrum_shows_order_validate($form, FormStateInterface $form_state) {
+  if ($order_position = $form_state->getValue('field_order_position')) {
+    $node = $form_state->getFormObject()->getEntity();
+    if ($node instanceof NodeInterface) {
+      $query = \Drupal::entityQuery('node')
+        ->condition('type', 'show')
+        ->condition('status', 1)
+        ->condition('nid', $node->id(), '!=')
+        ->condition('field_order_position', $order_position[0]['value']);
+      $nids = $query->execute();
+      if (!empty($nids)) {
+        $form_state->setErrorByName('field_order_position', t('You already have other show on position @position. Please choose another one.', [
+          '@position' => $order_position[0]['value']
+        ]));
+      }
+    }
+  }
+}
