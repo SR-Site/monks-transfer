@@ -1,16 +1,15 @@
-uuid: 48ae9501-01c4-4984-807f-1572ca7affc8
+uuid: ea55ac03-aed2-4c3a-a178-2b68bd9dde55
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - spectrum_shows
-id: node.field_show_network
-field_name: field_show_network
+id: node.field_network_similar_networks
+field_name: field_network_similar_networks
 entity_type: node
 type: entity_reference
 settings:
-  target_type: network
+  target_type: node
 module: core
 locked: false
 cardinality: -1

@@ -41,9 +41,9 @@ class NodeShowProgramModuleV1 extends SpectrumRestEntityProcessorBase {
       $data['video'] = $video[0];
     }
 
-    // Add Network logo.
-    if ($entity->get('field_show_network')->entity) {
-      $data['logo'] = $this->image($entity->get('field_show_network')->entity->get('image'));
+    // Get networks logos.
+    foreach ($entity->get('field_show_network') as $item) {
+      $data['logo'][] = $this->image($item->entity->get('image'));
     }
 
     return $data;

@@ -45,8 +45,9 @@ class NodeShowTeaserModeV1 extends ShowsRestEntityProcessorBase {
       ]);
     }
 
-    if ($entity->get('field_show_network')->entity) {
-      $data['logo'] = $this->image($entity->get('field_show_network')->entity->get('image'));
+    // Get networks logos.
+    foreach ($entity->get('field_show_network') as $item) {
+      $data['logo'][] = $this->image($item->entity->get('image'));
     }
 
     // @TODO: Reaches.
