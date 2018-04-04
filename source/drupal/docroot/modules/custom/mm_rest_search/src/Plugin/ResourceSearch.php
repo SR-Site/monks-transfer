@@ -6,6 +6,7 @@ use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\facets\Exception\Exception;
 use Drupal\mm_rest\Plugin\ResourceBase as MMResourceBase;
 use Drupal\search_api\Entity\Index;
+use Drupal\search_api\Query\QueryInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
@@ -91,7 +92,7 @@ abstract class ResourceSearch extends MMResourceBase {
 
     $query->range($offset, $limit);
 
-    $query->sort('created', 'DESC');
+    $this->sortItems($query);
 
     // Get results.
     $result = $query->execute();
@@ -145,6 +146,13 @@ abstract class ResourceSearch extends MMResourceBase {
   public function getLimit() {
     $definition = $this->getPluginDefinition();
     return isset($definition['search_limit']) ? $definition['search_limit'] : 10;
+  }
+
+  /**
+   * @param \Drupal\search_api\Query\QueryInterface $query
+   */
+  public function sortItems(QueryInterface $query) {
+    $query->sort('created', 'DESC');
   }
 
   /**

@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_order_position
     - search_api.server.database
   module:
     - search_api
+    - mm_rest_search
     - node
 id: networks
 name: Networks
@@ -17,6 +19,14 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: created
     type: date
+  field_order_position:
+    label: 'Order position'
+    datasource_id: 'entity:node'
+    property_path: field_order_position
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_order_position
 processor_settings:
   add_url:
     plugin_id: add_url
@@ -26,6 +36,9 @@ processor_settings:
     settings: {  }
   aggregated_field:
     plugin_id: aggregated_field
+    settings: {  }
+  order_position:
+    plugin_id: order_position
     settings: {  }
 options:
   index_directly: true
