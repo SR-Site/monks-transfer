@@ -60,7 +60,7 @@ class SearchShows extends ResourceSearch {
    */
   public function sortItems(QueryInterface $query) {
     $query->sort('field_order_position', 'ASC');
-    parent::sortItems($query);
+    $query->sort('title', 'ASC');
   }
 
 }

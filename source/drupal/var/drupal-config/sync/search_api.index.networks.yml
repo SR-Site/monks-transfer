@@ -27,7 +27,15 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_order_position
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
 processor_settings:
+  order_position:
+    plugin_id: order_position
+    settings: {  }
   add_url:
     plugin_id: add_url
     settings: {  }
@@ -36,9 +44,6 @@ processor_settings:
     settings: {  }
   aggregated_field:
     plugin_id: aggregated_field
-    settings: {  }
-  order_position:
-    plugin_id: order_position
     settings: {  }
 options:
   index_directly: true
