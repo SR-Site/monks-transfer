@@ -2,6 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\v2\Node;
 
+use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\node\Entity\Node;
 use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 use Drupal\spectrum_shows\Entity\Network;
@@ -60,18 +61,10 @@ class NodeNetworkV1 extends SpectrumRestEntityProcessorBase {
         ];
       }
 
-      // Other networks.
-      $blocks[] = [
-        "id" => "networkOverview",
-        "data" => [
-          "overlap" => FALSE,
-          "windowed" => FALSE,
-          "marginTop" => 2,
-          "alignment" => 0,
-          "heading" => t('Networks with similar content to :title', [':title' => $entity->label()]),
-          "items" => $this->getOtherNetworks($entity->id()),
-        ],
-      ];
+      // Similar networks.
+      if ($entity->get('field_network_similar_networks')->count() > 0) {
+        $blocks[] = $this->getSimilarNetworks($entity);
+      }
     }
 
     $data = [
@@ -157,28 +150,26 @@ class NodeNetworkV1 extends SpectrumRestEntityProcessorBase {
   /**
    * Get other networks.
    *
-   * @param int $nid
-   *   Current network ID.
+   * @param ContentEntityBase $entity
+   *   Network node.
    *
    * @return array
    *   Array of networks.
    *
    * @throws \Exception
    */
-  protected function getOtherNetworks($nid) {
-    $networks = [];
-    $query = \Drupal::entityQuery('node')
-      ->condition('type', 'network')
-      ->condition('nid', $nid, '!=');
-    $results = $query->execute();
-    if (!empty($results)) {
-      $networkEntities = Node::loadMultiple($results);
-      foreach ($networkEntities as $networkEntity) {
-        $networks[] = $this->entityProcessor->getEntityData($networkEntity, 'v1', ['view_mode' => 'network_overview']);
-      }
-    }
-
-    return $networks;
+  protected function getSimilarNetworks(ContentEntityBase $entity) {
+    return [
+      "id" => "networkOverview",
+      "data" => [
+        "overlap" => FALSE,
+        "windowed" => FALSE,
+        "marginTop" => 2,
+        "alignment" => 0,
+        "heading" => t('Networks with similar content to :title', [':title' => $entity->label()]),
+        "items" => $this->getItems($entity->get('field_network_similar_networks'), ['view_mode' => 'network_overview']),
+      ],
+    ];
   }
 
 }

@@ -87,7 +87,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -211,15 +211,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_similar_networks:
-    weight: 26
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_success_stories_a:
     type: entity_reference_paragraphs
     weight: 10
@@ -234,7 +225,7 @@ content:
     region: content
   path:
     type: path
-    weight: 5
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -242,7 +233,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 4
     third_party_settings: {  }
     region: content
   title:
@@ -255,7 +246,7 @@ content:
     region: content
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 1
     settings:
       match_operator: CONTAINS
       size: 60
@@ -264,5 +255,6 @@ content:
     region: content
 hidden:
   field_show_id: true
+  field_similar_networks: true
   promote: true
   sticky: true

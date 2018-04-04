@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.network.field_image
     - field.field.node.network.field_image2
     - field.field.node.network.field_network
+    - field.field.node.network.field_network_similar_networks
     - field.field.node.network.field_order_position
     - image.style.thumbnail
     - node.type.network
@@ -115,6 +116,15 @@ content:
     region: content
   field_network:
     weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_network_similar_networks:
+    weight: 26
     settings:
       match_operator: CONTAINS
       size: 60
