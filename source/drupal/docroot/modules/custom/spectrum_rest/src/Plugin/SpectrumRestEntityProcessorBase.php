@@ -158,7 +158,7 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
     ];
 
     // Add logger.
-    if (!$data['heading']) {
+    if ($entity->get('field_new_heading')->entity && !$data['heading']) {
       \Drupal::logger('spectrum_rest')
         ->warning('Debug paragraph new heading with value %entityTitle', [
           '%entityTitle' => json_encode($entity->get('field_new_heading')->entity->toArray(), JSON_FORCE_OBJECT),
