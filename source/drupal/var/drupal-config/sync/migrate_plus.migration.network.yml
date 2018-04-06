@@ -13,7 +13,7 @@ migration_group: migrate_shows_json
 label: 'JSON feed of network'
 source:
   plugin: spectrum_url
-  data_fetcher_plugin: http
+  data_fetcher_plugin: spectrum_http
   data_parser_plugin: json_nested
   item_selector: /Result/
   sub_selector: Network
@@ -55,5 +55,5 @@ process:
     destination: 'public://shows/[date:custom:Y]-[date:custom:m]'
   image/alt: Stationname
 destination:
-  plugin: 'entity:network'
+  plugin: entity_networks
 migration_dependencies: null

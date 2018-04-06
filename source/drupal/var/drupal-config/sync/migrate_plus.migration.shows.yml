@@ -13,7 +13,7 @@ migration_group: migrate_shows_json
 label: 'JSON feed of shows'
 source:
   plugin: spectrum_url
-  data_fetcher_plugin: http
+  data_fetcher_plugin: spectrum_http
   data_parser_plugin: json_nested
   item_selector: /Result/
   fields:
@@ -73,16 +73,15 @@ process:
   field_show_media_type:
     plugin: entity_generate
     source: MediaType
-  field_show_network/target_id:
-    -
-      plugin: extract
-      source: network
-      index:
-        - Stationnum
-    -
-      plugin: migration_lookup
-      no_stub: true
-      migration: network
+  field_show_network:
+    plugin: sub_process
+    source: network
+    process:
+      target_id:
+        plugin: migration_lookup
+        no_stub: true
+        migration: network
+        source: Stationnum
   field_show_description:
     plugin: extract
     source: Descriptions
@@ -154,7 +153,7 @@ process:
     plugin: default_value
     default_value: 1
 destination:
-  plugin: 'entity:node'
+  plugin: node_shows
 migration_dependencies:
   optional:
     - genres

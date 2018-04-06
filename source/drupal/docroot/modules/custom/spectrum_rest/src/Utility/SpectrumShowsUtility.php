@@ -35,22 +35,24 @@ class SpectrumShowsUtility implements SpectrumShowsUtilityInterface {
     foreach ($schedules as $schedule) {
       // @TODO: Check the first next episode. Waiting for real data.
       /** @var \Drupal\spectrum_shows\Entity\Schedule $scheduleEntity */
-      $scheduleEntity = $schedule->entity;
-      $airTime = $scheduleEntity->get('start_time')->value;
-      if (strtotime($scheduleEntity->get('start_time')->value) > time()) {
-        $airTimeDateTime = new \DateTime($airTime);
-        $airTimeDateTime->setTimezone(new \DateTimeZone('America/New_York'));
+      if ($scheduleEntity = $schedule->entity) {
+        $airTime = $scheduleEntity->get('start_time')->value;
+        if (strtotime($scheduleEntity->get('start_time')->value) > time()) {
+          $airTimeDateTime = new \DateTime($airTime);
+          $airTimeDateTime->setTimezone(new \DateTimeZone('America/New_York'));
 
-        $date = $airTimeDateTime->format('l F dS');
-        if ($type == 'week') {
-          $date = $airTimeDateTime->format('l');
+          $date = $airTimeDateTime->format('l F dS');
+          if ($type == 'week') {
+            $date = $airTimeDateTime->format('l');
+          }
+          $newDate = [
+            $type => $date,
+            'time' => $airTimeDateTime->format('gA'),
+          ];
+          break;
         }
-        $newDate = [
-          $type => $date,
-          'time' => $airTimeDateTime->format('gA'),
-        ];
-        break;
       }
+
     }
     return $newDate;
   }

@@ -26,7 +26,7 @@ class FieldEntityReference extends RestFieldProcessorBase {
 
     /** @var \Drupal\Core\Entity\ContentEntityInterface $entity */
     $entity = $field->get('entity')->getValue();
-    if (!$entity->access('view')) {
+    if (!$entity || !$entity->access('view')) {
       return NULL;
     }
     $data = $this->entityProcessor->getEntityData($entity, $this->requestVersion(), $options);

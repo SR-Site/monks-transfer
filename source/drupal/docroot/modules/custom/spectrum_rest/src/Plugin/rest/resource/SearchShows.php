@@ -3,6 +3,7 @@
 namespace Drupal\spectrum_rest\Plugin\rest\resource;
 
 use Drupal\mm_rest_search\Plugin\ResourceSearch;
+use Drupal\search_api\Query\QueryInterface;
 
 /**
  * Provides a resource to search page nodes.
@@ -52,6 +53,14 @@ class SearchShows extends ResourceSearch {
     ]);
 
     return $this->offsetResponse;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function sortItems(QueryInterface $query) {
+    $query->sort('field_order_position', 'ASC');
+    $query->sort('title', 'ASC');
   }
 
 }

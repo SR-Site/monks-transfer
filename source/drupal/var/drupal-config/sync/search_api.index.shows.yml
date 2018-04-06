@@ -5,10 +5,12 @@ dependencies:
   config:
     - field.storage.node.field_show_genres
     - field.storage.node.field_show_network
+    - field.storage.node.field_order_position
     - search_api.server.database
   module:
     - spectrum_shows
     - search_api
+    - mm_rest_search
     - node
 id: shows
 name: Shows
@@ -61,7 +63,23 @@ field_settings:
         - field.storage.node.field_show_network
       module:
         - spectrum_shows
+  field_order_position:
+    label: 'Order position'
+    datasource_id: 'entity:node'
+    property_path: field_order_position
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_order_position
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
 processor_settings:
+  order_position:
+    plugin_id: order_position
+    settings: {  }
   add_url:
     plugin_id: add_url
     settings: {  }
@@ -71,9 +89,7 @@ processor_settings:
   ignorecase:
     plugin_id: ignorecase
     settings:
-      fields:
-        - field_show_genres
-        - field_show_network
+      fields: {  }
       weights:
         preprocess_index: -10
         preprocess_query: -10

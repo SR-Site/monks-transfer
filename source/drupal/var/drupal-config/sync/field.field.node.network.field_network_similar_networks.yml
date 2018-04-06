@@ -1,0 +1,27 @@
+uuid: 14413327-d1f5-4e36-a0ce-559f28b524fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_network_similar_networks
+    - node.type.network
+id: node.network.field_network_similar_networks
+field_name: field_network_similar_networks
+entity_type: node
+bundle: network
+label: 'Similar networks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      network: network
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

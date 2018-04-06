@@ -54,5 +54,5 @@ process:
   image/alt: Stationname
 
 destination:
-  plugin: 'entity:network'
+  plugin: 'entity_networks'
 migration_dependencies: null

@@ -23,7 +23,7 @@
 	}
 
 	.detail {
-		max-width: $sizeGrid * 5;
+		//max-width: $sizeGrid * 5;
 
 		&:not(:first-child) {
 			margin-left: $sizeGrid * 2;
@@ -38,9 +38,17 @@
 		color: #808285;
 	}
 
+	.detail-images {
+		font-size: 0;
+		margin-left: -$sizeGrid * 0.5;
+	}
+
 	.detail-image {
 		@include size($sizeGrid * 4);
 		position: relative;
+		display: inline-block;
+		margin-left: $sizeGrid * 0.5;
+		margin-bottom: $sizeGrid * 0.5;
 	}
 
 	@include respond-to(SMALL) {

@@ -32,6 +32,9 @@ class ParagraphNetworksV1 extends SpectrumRestEntityProcessorBase {
     $data = $data + [
       'items' => $this->fieldProcessor->getFieldData($entity->get('field_network_items'), ['view_mode' => 'teaser']),
     ];
+    if (array_values($data['items']) !== $data['items']) {
+      $data['items'] = [$data['items']];
+    }
 
     /** @var \Drupal\paragraphs\Entity\Paragraph $entity */
     $parent = $entity->getParentEntity();

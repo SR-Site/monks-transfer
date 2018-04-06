@@ -9,7 +9,7 @@ id: node.show.field_show_network
 field_name: field_show_network
 entity_type: node
 bundle: show
-label: Network
+label: Networks
 description: ''
 required: false
 translatable: false
