@@ -1,0 +1,20 @@
+uuid: a8e69e83-f0b1-45ff-a991-e210b3ffc1bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_market_ages_18_24
+field_name: field_market_ages_18_24
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

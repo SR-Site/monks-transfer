@@ -1,0 +1,20 @@
+uuid: 57cc8ca2-c37e-49d2-a676-f173285e5298
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_market_edu_no_college
+field_name: field_market_edu_no_college
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

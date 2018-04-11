@@ -1,0 +1,23 @@
+uuid: 978c1e6c-926c-43c0-abc7-c344d0f5c526
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_income_50_100k
+    - node.type.market
+id: node.market.field_market_income_50_100k
+field_name: field_market_income_50_100k
+entity_type: node
+bundle: market
+label: 50-100k
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

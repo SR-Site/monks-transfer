@@ -1,0 +1,19 @@
+uuid: 5722f4f1-f30a-453e-a7a6-7da585d3bf48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_media_kit
+    - node.type.market
+id: node.market.field_market_media_kit
+field_name: field_market_media_kit
+entity_type: node
+bundle: market
+label: 'Media Kit'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 49b581a1-03a8-45c4-ad2e-d3a549410ff8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_dma_name
+    - node.type.market
+id: node.market.field_market_dma_name
+field_name: field_market_dma_name
+entity_type: node
+bundle: market
+label: 'DMA Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

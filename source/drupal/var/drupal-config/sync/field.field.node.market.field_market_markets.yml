@@ -1,0 +1,23 @@
+uuid: 9f842599-ff1e-4d12-aa35-4dec4685554e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_markets
+    - node.type.market
+id: node.market.field_market_markets
+field_name: field_market_markets
+entity_type: node
+bundle: market
+label: Markets
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

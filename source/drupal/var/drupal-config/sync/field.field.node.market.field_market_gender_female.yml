@@ -1,0 +1,23 @@
+uuid: 99c38d2a-6c27-4f54-9a0b-3b41478811c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_gender_female
+    - node.type.market
+id: node.market.field_market_gender_female
+field_name: field_market_gender_female
+entity_type: node
+bundle: market
+label: Female
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

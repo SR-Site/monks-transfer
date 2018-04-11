@@ -1,0 +1,23 @@
+uuid: cd0a6ab7-2476-47bd-b20b-9180f0851e15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_dma_code
+    - node.type.market
+id: node.market.field_market_dma_code
+field_name: field_market_dma_code
+entity_type: node
+bundle: market
+label: 'DMA Code'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

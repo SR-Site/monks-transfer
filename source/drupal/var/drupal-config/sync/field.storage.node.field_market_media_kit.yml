@@ -1,0 +1,21 @@
+uuid: 62c7ec02-6156-43af-98fe-034f2a8fbe00
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_market_media_kit
+field_name: field_market_media_kit
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

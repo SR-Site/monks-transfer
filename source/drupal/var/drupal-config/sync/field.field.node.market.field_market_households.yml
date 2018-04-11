@@ -1,0 +1,23 @@
+uuid: d2deb770-60cd-49a5-8845-c0ceb4b81885
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_households
+    - node.type.market
+id: node.market.field_market_households
+field_name: field_market_households
+entity_type: node
+bundle: market
+label: Households
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

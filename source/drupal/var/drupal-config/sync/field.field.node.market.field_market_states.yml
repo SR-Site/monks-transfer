@@ -1,0 +1,23 @@
+uuid: a32f5cc3-93d3-46bb-8ff6-922773ef4e4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_states
+    - node.type.market
+id: node.market.field_market_states
+field_name: field_market_states
+entity_type: node
+bundle: market
+label: States
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

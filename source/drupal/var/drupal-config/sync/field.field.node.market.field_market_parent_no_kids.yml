@@ -1,0 +1,23 @@
+uuid: 3f7fc8d2-e6ea-48a7-bffa-a7e6532cb859
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_parent_no_kids
+    - node.type.market
+id: node.market.field_market_parent_no_kids
+field_name: field_market_parent_no_kids
+entity_type: node
+bundle: market
+label: 'Don''t have kids'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

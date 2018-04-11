@@ -1,0 +1,20 @@
+uuid: 6a4c8c1d-b44b-4662-b194-e3bf5ba6c69c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_market_devices_tablet
+field_name: field_market_devices_tablet
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

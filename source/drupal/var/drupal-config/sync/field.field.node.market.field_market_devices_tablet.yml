@@ -1,0 +1,23 @@
+uuid: cc0e52ef-b062-4ac7-9377-14e211bcf8fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_devices_tablet
+    - node.type.market
+id: node.market.field_market_devices_tablet
+field_name: field_market_devices_tablet
+entity_type: node
+bundle: market
+label: Tablet
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,23 @@
+uuid: e25d6050-38ce-4d7b-a128-01c738096275
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_ages_18_24
+    - node.type.market
+id: node.market.field_market_ages_18_24
+field_name: field_market_ages_18_24
+entity_type: node
+bundle: market
+label: 18-24
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

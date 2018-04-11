@@ -1,0 +1,20 @@
+uuid: 2fe72657-ed88-4061-bfdf-8952e3689155
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_market_dma_code
+field_name: field_market_dma_code
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

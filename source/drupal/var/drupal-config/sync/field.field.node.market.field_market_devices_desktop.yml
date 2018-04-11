@@ -1,0 +1,23 @@
+uuid: a49bac93-5365-4932-b28d-6d3a64423c3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_devices_desktop
+    - node.type.market
+id: node.market.field_market_devices_desktop
+field_name: field_market_devices_desktop
+entity_type: node
+bundle: market
+label: Desktop
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,20 @@
+uuid: 5679a6a2-a563-4aec-aef4-e8b805c25ae9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_market_gender_male
+field_name: field_market_gender_male
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

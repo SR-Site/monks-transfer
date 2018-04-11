@@ -1,0 +1,23 @@
+uuid: 3ab740bc-386a-437f-8a87-29a872a4869e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_devices_smartphone
+    - node.type.market
+id: node.market.field_market_devices_smartphone
+field_name: field_market_devices_smartphone
+entity_type: node
+bundle: market
+label: Smartphone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

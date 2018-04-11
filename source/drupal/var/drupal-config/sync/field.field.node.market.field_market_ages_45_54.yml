@@ -1,0 +1,23 @@
+uuid: 6d2fcf00-fa84-4d26-8f24-1dc0eab41d94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_ages_45_54
+    - node.type.market
+id: node.market.field_market_ages_45_54
+field_name: field_market_ages_45_54
+entity_type: node
+bundle: market
+label: 45-54
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

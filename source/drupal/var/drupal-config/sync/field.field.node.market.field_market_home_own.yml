@@ -1,0 +1,23 @@
+uuid: 00b70170-d94a-4a70-a821-3aafc498c44f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_home_own
+    - node.type.market
+id: node.market.field_market_home_own
+field_name: field_market_home_own
+entity_type: node
+bundle: market
+label: Own
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

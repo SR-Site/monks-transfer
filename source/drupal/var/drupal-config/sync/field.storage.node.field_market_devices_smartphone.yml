@@ -1,0 +1,20 @@
+uuid: 9406cbd7-203e-472e-a786-209be2cd57c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_market_devices_smartphone
+field_name: field_market_devices_smartphone
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

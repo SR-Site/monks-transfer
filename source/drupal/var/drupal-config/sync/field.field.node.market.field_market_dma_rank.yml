@@ -1,0 +1,23 @@
+uuid: dbb35842-6522-4c38-b312-523598c5a36f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_dma_rank
+    - node.type.market
+id: node.market.field_market_dma_rank
+field_name: field_market_dma_rank
+entity_type: node
+bundle: market
+label: 'DMA Rank'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

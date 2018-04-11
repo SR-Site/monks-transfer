@@ -1,0 +1,575 @@
+uuid: 842b52d3-1bdb-42b3-ad8e-4685478bbe5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.market.field_market_ages_18_24
+    - field.field.node.market.field_market_ages_25_34
+    - field.field.node.market.field_market_ages_35_44
+    - field.field.node.market.field_market_ages_45_54
+    - field.field.node.market.field_market_ages_55_64
+    - field.field.node.market.field_market_ages_65_plus
+    - field.field.node.market.field_market_ages_lower_18
+    - field.field.node.market.field_market_demog_composition
+    - field.field.node.market.field_market_devices_desktop
+    - field.field.node.market.field_market_devices_smartphone
+    - field.field.node.market.field_market_devices_tablet
+    - field.field.node.market.field_market_dma_code
+    - field.field.node.market.field_market_dma_name
+    - field.field.node.market.field_market_dma_rank
+    - field.field.node.market.field_market_dma_video
+    - field.field.node.market.field_market_edu_grad_plus
+    - field.field.node.market.field_market_edu_no_college
+    - field.field.node.market.field_market_edu_undergrad
+    - field.field.node.market.field_market_gender_female
+    - field.field.node.market.field_market_gender_male
+    - field.field.node.market.field_market_home_own
+    - field.field.node.market.field_market_home_rent
+    - field.field.node.market.field_market_households
+    - field.field.node.market.field_market_income_0_50k
+    - field.field.node.market.field_market_income_100_150k
+    - field.field.node.market.field_market_income_50_100k
+    - field.field.node.market.field_market_income_plus_150k
+    - field.field.node.market.field_market_markets
+    - field.field.node.market.field_market_media_kit
+    - field.field.node.market.field_market_network_logos
+    - field.field.node.market.field_market_parent_have_kids
+    - field.field.node.market.field_market_parent_no_kids
+    - field.field.node.market.field_market_partners_logos
+    - field.field.node.market.field_market_states
+    - field.field.node.market.field_market_top_networks
+    - image.style.thumbnail
+    - node.type.market
+  module:
+    - field_group
+    - image
+    - path
+    - video_embed_field
+third_party_settings:
+  field_group:
+    group_markets_tabs:
+      children:
+        - group_market
+        - group_audience_profile
+        - group_top_networks
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: 'Markets Tabs'
+    group_market:
+      children:
+        - title
+        - group_dma
+        - group_statistic
+        - group_partners_logos
+        - group_media_kit
+      parent_name: group_markets_tabs
+      weight: 6
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: Market
+    group_audience_profile:
+      children:
+        - field_market_demog_composition
+        - group_devices
+        - group_gender
+        - group_education
+        - group_income
+        - group_home
+        - group_parenting
+        - group_ages
+      parent_name: group_markets_tabs
+      weight: 7
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Audience Profile'
+    group_top_networks:
+      children:
+        - field_market_network_logos
+        - field_market_top_networks
+      parent_name: group_markets_tabs
+      weight: 8
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Top Networks'
+    group_dma:
+      children:
+        - field_market_dma_code
+        - field_market_dma_rank
+        - field_market_dma_name
+        - field_market_dma_video
+      parent_name: group_market
+      weight: 2
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: DMA
+    group_statistic:
+      children:
+        - field_market_households
+        - field_market_markets
+        - field_market_states
+      parent_name: group_market
+      weight: 3
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Statistic
+    group_partners_logos:
+      children:
+        - field_market_partners_logos
+      parent_name: group_market
+      weight: 4
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Partners Logos'
+    group_media_kit:
+      children:
+        - field_market_media_kit
+      parent_name: group_market
+      weight: 5
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Media Kit'
+    group_devices:
+      children:
+        - field_market_devices_desktop
+        - field_market_devices_smartphone
+        - field_market_devices_tablet
+      parent_name: group_audience_profile
+      weight: 19
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Devices
+    group_gender:
+      children:
+        - field_market_gender_male
+        - field_market_gender_female
+      parent_name: group_audience_profile
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Gender
+    group_education:
+      children:
+        - field_market_edu_no_college
+        - field_market_edu_undergrad
+        - field_market_edu_grad_plus
+      parent_name: group_audience_profile
+      weight: 21
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Education
+    group_income:
+      children:
+        - field_market_income_0_50k
+        - field_market_income_50_100k
+        - field_market_income_100_150k
+        - field_market_income_plus_150k
+      parent_name: group_audience_profile
+      weight: 22
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Income
+    group_home:
+      children:
+        - field_market_home_own
+        - field_market_home_rent
+      parent_name: group_audience_profile
+      weight: 23
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Home
+    group_parenting:
+      children:
+        - field_market_parent_have_kids
+        - field_market_parent_no_kids
+      parent_name: group_audience_profile
+      weight: 24
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Parenting
+    group_ages:
+      children:
+        - field_market_ages_lower_18
+        - field_market_ages_18_24
+        - field_market_ages_25_34
+        - field_market_ages_35_44
+        - field_market_ages_45_54
+        - field_market_ages_55_64
+        - field_market_ages_65_plus
+      parent_name: group_audience_profile
+      weight: 25
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Ages
+id: node.market.default
+targetEntityType: node
+bundle: market
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_market_ages_18_24:
+    weight: 45
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_ages_25_34:
+    weight: 46
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_ages_35_44:
+    weight: 47
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_ages_45_54:
+    weight: 48
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_ages_55_64:
+    weight: 49
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_ages_65_plus:
+    weight: 50
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_ages_lower_18:
+    weight: 44
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_demog_composition:
+    weight: 18
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_market_devices_desktop:
+    weight: 19
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_devices_smartphone:
+    weight: 20
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_devices_tablet:
+    weight: 21
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_dma_code:
+    weight: 9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_dma_name:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_market_dma_rank:
+    weight: 10
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_dma_video:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+  field_market_edu_grad_plus:
+    weight: 26
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_edu_no_college:
+    weight: 24
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_edu_undergrad:
+    weight: 25
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_gender_female:
+    weight: 23
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_gender_male:
+    weight: 22
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_home_own:
+    weight: 31
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_home_rent:
+    weight: 32
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_households:
+    weight: 13
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_income_0_50k:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_income_100_150k:
+    weight: 29
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_income_50_100k:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_income_plus_150k:
+    weight: 30
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_markets:
+    weight: 14
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_media_kit:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_market_network_logos:
+    weight: 42
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_market_parent_have_kids:
+    weight: 33
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_parent_no_kids:
+    weight: 34
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_partners_logos:
+    weight: 16
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_market_states:
+    weight: 15
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_top_networks:
+    weight: 43
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

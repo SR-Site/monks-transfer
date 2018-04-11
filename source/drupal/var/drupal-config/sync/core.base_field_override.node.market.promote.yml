@@ -1,0 +1,22 @@
+uuid: efa25dfc-e049-46fc-a1a2-e1b860b33e54
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.market
+id: node.market.promote
+field_name: promote
+entity_type: node
+bundle: market
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

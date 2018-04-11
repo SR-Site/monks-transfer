@@ -1,0 +1,17 @@
+uuid: 0f339b92-1860-43f7-89c7-be7189c9598f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Market
+type: market
+description: 'Market for markets map'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

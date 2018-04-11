@@ -1,0 +1,18 @@
+uuid: dd3e8024-90a0-4762-9f1e-3803c6514c9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.market
+  module:
+    - user
+id: node.market.teaser
+targetEntityType: node
+bundle: market
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

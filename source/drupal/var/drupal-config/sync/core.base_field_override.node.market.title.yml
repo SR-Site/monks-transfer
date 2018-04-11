@@ -1,0 +1,18 @@
+uuid: beef0e7a-536c-4ff3-b9f7-65a5b0a79722
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.market
+id: node.market.title
+field_name: title
+entity_type: node
+bundle: market
+label: State
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

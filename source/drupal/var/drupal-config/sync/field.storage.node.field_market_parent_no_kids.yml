@@ -1,0 +1,20 @@
+uuid: 920f63c8-b0f0-4941-a862-d5416d1edd4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_market_parent_no_kids
+field_name: field_market_parent_no_kids
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
