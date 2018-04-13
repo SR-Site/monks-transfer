@@ -1,15 +1,16 @@
-uuid: a2a5bf29-9db5-470c-8e80-a9aa76ff2ce2
+uuid: a0c319f8-ca28-4f2e-95b8-2c4496e161f6
 langcode: en
 status: true
 dependencies:
   module:
     - node
+    - spectrum_shows
 id: node.field_market_network_logos
 field_name: field_market_network_logos
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: network
 module: core
 locked: false
 cardinality: -1

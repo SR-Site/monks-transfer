@@ -1,11 +1,10 @@
-uuid: 0dae8d06-60c9-400e-9834-7808d7cfa4e9
+uuid: 9eaf8c59-e82b-4e29-b536-ff63e7f84503
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_market_partners_logos
     - node.type.market
-    - node.type.network
 id: node.market.field_market_partners_logos
 field_name: field_market_partners_logos
 entity_type: node
@@ -17,12 +16,10 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: 'default:network'
   handler_settings:
-    target_bundles:
-      network: network
+    target_bundles: null
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: ''
 field_type: entity_reference

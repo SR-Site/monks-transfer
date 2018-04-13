@@ -481,7 +481,7 @@ content:
     type: string_textfield
     region: content
   field_market_network_logos:
-    weight: 42
+    weight: 54
     settings:
       match_operator: CONTAINS
       size: 60
@@ -504,7 +504,7 @@ content:
     type: number
     region: content
   field_market_partners_logos:
-    weight: 16
+    weight: 51
     settings:
       match_operator: CONTAINS
       size: 60
@@ -520,7 +520,7 @@ content:
     type: number
     region: content
   field_market_top_networks:
-    weight: 43
+    weight: 55
     settings:
       match_operator: CONTAINS
       size: 60

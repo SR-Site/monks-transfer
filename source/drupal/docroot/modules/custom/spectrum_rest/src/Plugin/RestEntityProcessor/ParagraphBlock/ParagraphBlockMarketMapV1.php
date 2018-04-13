@@ -2,6 +2,7 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\ParagraphBlock;
 
+use Drupal\node\Entity\Node;
 use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 
 /**
@@ -28,16 +29,31 @@ class ParagraphBlockMarketMapV1 extends SpectrumRestEntityProcessorBase {
     $data = [
       "id" => 'marketMap',
       "data" => $data + [
+        'info' => [
+          'heading' => $this->fieldProcessor->getFieldData($entity->get('field_title')),
+          'copy' => $this->fieldProcessor->getFieldData($entity->get('field_subheading'))
+        ],
         "notFoundMessage" => $this->fieldProcessor->getFieldData($entity->get('field_description')),
         "searchPlaceholder" => $this->fieldProcessor->getFieldData($entity->get('field_filter_label')),
         "searchLabel" => strip_tags($this->fieldProcessor->getFieldData($entity->get('field_heading'))),
-        "service" => [
-          "heading" => $this->fieldProcessor->getFieldData($entity->get('field_title')),
-          "subHeading" => $this->fieldProcessor->getFieldData($entity->get('field_subheading')),
-          "cta" => $this->fieldProcessor->getFieldData($entity->get('field_cta')),
-        ],
+        "contactButton" => $this->fieldProcessor->getFieldData($entity->get('field_cta')),
       ],
     ];
+
+    // Get markets.
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'market')
+      ->condition('status', 1);
+    $results = $query->execute();
+
+    $data['data']['markets'] = [];
+    if (!empty($results)) {
+      $markets = Node::loadMultiple($results);
+      foreach ($markets as $market) {
+        $data['data']['markets'][] = $this->entityProcessor->getEntityData($market, 'v1', ['view_mode' => 'teaser']);
+      }
+    }
+
 
     return $data;
   }

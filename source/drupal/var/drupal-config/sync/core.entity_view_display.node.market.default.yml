@@ -310,7 +310,7 @@ content:
     type: string
     region: content
   field_market_network_logos:
-    weight: 135
+    weight: 147
     label: above
     settings:
       link: true
@@ -336,7 +336,7 @@ content:
     type: number_integer
     region: content
   field_market_partners_logos:
-    weight: 109
+    weight: 144
     label: above
     settings:
       link: true
@@ -353,7 +353,7 @@ content:
     type: number_integer
     region: content
   field_market_top_networks:
-    weight: 136
+    weight: 146
     label: above
     settings:
       link: true

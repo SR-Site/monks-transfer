@@ -1,15 +1,16 @@
-uuid: 64242281-f7c7-4c11-8dd3-c766a3ceb4e7
+uuid: 29e5b278-44ae-4d40-be37-ef04db740022
 langcode: en
 status: true
 dependencies:
   module:
     - node
+    - spectrum_shows
 id: node.field_market_top_networks
 field_name: field_market_top_networks
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: network
 module: core
 locked: false
 cardinality: -1

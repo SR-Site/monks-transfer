@@ -58,6 +58,7 @@ module:
   search_api: 0
   search_api_db: 0
   serialization: 0
+  spectrum_markets_map: 0
   spectrum_rest: 0
   spectrum_settings: 0
   spectrum_shows: 0
