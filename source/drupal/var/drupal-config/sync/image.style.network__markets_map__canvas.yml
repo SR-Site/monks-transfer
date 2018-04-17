@@ -1,0 +1,34 @@
+uuid: 8fecaf0c-9c5f-44df-ba3c-99383a9f468d
+langcode: en
+status: true
+dependencies:
+  module:
+    - imagick
+name: network__markets_map__canvas
+label: 'Network Markets Map Canvas'
+effects:
+  2584830c-eeef-4de2-b561-c7d1f2b36de5:
+    uuid: 2584830c-eeef-4de2-b561-c7d1f2b36de5
+    id: image_define_canvas
+    weight: -9
+    data:
+      HEX: '#FFFFFF'
+      under: 1
+      exact_measurements: 1
+      exact:
+        width: '180'
+        height: '180'
+        anchor: center-center
+      relative:
+        leftdiff: '20'
+        rightdiff: '20'
+        topdiff: '20'
+        bottomdiff: '20'
+  0849bf31-2330-49b7-9a4d-976e43b79bb3:
+    uuid: 0849bf31-2330-49b7-9a4d-976e43b79bb3
+    id: image_scale
+    weight: -10
+    data:
+      width: 160
+      height: null
+      upscale: false

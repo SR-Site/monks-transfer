@@ -61,7 +61,8 @@
         "drupal/console": "~1.0",
         "drupal/migrate_plus": "^4.0",
         "drupal/migrate_tools": "4.x-dev",
-        "drupal/migrate_source_csv": "^2.1"
+        "drupal/migrate_source_csv": "^2.1",
+        "drupal/image_effects": "^2.0"
     },
     "repositories": {
         "mediamonks-drupal-decoupled": {
