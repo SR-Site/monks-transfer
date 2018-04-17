@@ -36,6 +36,7 @@ dependencies:
     - field.field.node.market.field_market_parent_have_kids
     - field.field.node.market.field_market_parent_no_kids
     - field.field.node.market.field_market_partners_logos
+    - field.field.node.market.field_market_state_code
     - field.field.node.market.field_market_states
     - field.field.node.market.field_market_top_networks
     - image.style.thumbnail
@@ -63,6 +64,7 @@ third_party_settings:
     group_market:
       children:
         - title
+        - field_market_state_code
         - group_dma
         - group_statistic
         - group_partners_logos
@@ -118,7 +120,7 @@ third_party_settings:
         - field_market_dma_name
         - field_market_dma_video
       parent_name: group_market
-      weight: 2
+      weight: 3
       format_type: details
       format_settings:
         id: ''
@@ -132,7 +134,7 @@ third_party_settings:
         - field_market_markets
         - field_market_states
       parent_name: group_market
-      weight: 3
+      weight: 4
       format_type: details
       format_settings:
         id: ''
@@ -144,7 +146,7 @@ third_party_settings:
       children:
         - field_market_partners_logos
       parent_name: group_market
-      weight: 4
+      weight: 5
       format_type: details
       format_settings:
         id: ''
@@ -156,7 +158,7 @@ third_party_settings:
       children:
         - field_market_media_kit
       parent_name: group_market
-      weight: 5
+      weight: 6
       format_type: details
       format_settings:
         id: ''
@@ -511,6 +513,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_market_state_code:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_market_states:
     weight: 15

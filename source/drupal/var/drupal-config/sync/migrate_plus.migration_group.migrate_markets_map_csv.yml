@@ -1,0 +1,17 @@
+uuid: 6974442f-fd0e-427c-9936-acf3554455c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - spectrum_markets_map
+  enforced:
+    module:
+      - spectrum_markets_map
+id: migrate_markets_map_csv
+label: 'Migration markets from a CSV resource.'
+description: 'Migration markets from a CSV resource.'
+source_type: 'CSV resource'
+module: null
+shared_configuration:
+  source:
+    key: default

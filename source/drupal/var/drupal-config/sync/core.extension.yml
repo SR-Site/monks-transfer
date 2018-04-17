@@ -37,6 +37,7 @@ module:
   metatag_twitter_cards: 0
   migrate: 0
   migrate_plus: 0
+  migrate_source_csv: 0
   migrate_tools: 0
   mm_decoupled: 0
   mm_release_tracker: 0

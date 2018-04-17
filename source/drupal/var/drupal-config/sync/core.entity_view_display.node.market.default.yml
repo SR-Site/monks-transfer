@@ -36,6 +36,7 @@ dependencies:
     - field.field.node.market.field_market_parent_have_kids
     - field.field.node.market.field_market_parent_no_kids
     - field.field.node.market.field_market_partners_logos
+    - field.field.node.market.field_market_state_code
     - field.field.node.market.field_market_states
     - field.field.node.market.field_market_top_networks
     - node.type.market
@@ -342,6 +343,14 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_market_state_code:
+    weight: 148
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_market_states:
     weight: 108
