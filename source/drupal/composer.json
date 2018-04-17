@@ -60,7 +60,8 @@
         "drupal/config_split": "^1.2",
         "drupal/console": "~1.0",
         "drupal/migrate_plus": "^4.0",
-        "drupal/migrate_tools": "4.x-dev"
+        "drupal/migrate_tools": "4.x-dev",
+        "drupal/migrate_source_csv": "^2.1"
     },
     "repositories": {
         "mediamonks-drupal-decoupled": {

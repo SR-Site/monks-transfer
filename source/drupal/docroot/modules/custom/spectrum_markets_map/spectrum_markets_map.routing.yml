@@ -1,0 +1,9 @@
+spectrum_markets_map.markets_import_form:
+  path: '/admin/config/spectrum/import-markets'
+  defaults:
+    _form: '\Drupal\spectrum_markets_map\Form\ImportMarkets'
+    _title: 'Import Markets'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

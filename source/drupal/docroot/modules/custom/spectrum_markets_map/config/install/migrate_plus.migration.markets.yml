@@ -1,0 +1,282 @@
+id: markets
+label: CSV feed of markets
+migration_group: migrate_markets_map_csv
+source:
+  plugin: csv
+  path: '/var/www/html/docroot/markets.csv'
+  # Column delimiter. Comma (,) by default.
+  delimiter: ','
+  # Field enclosure. Double quotation marks (") by default.
+  header_row_count: 1
+  keys:
+    - DMAcode
+  column_names:
+    # So, here we're saying that the first field (index 0) on each line will
+    # be stored in the start_date field in the Row object during migration, and
+    # that name can be used to map the value below. "Date of game" will appear
+    # in the UI to describe this field.
+    0:
+      State: 'State'
+    1:
+      DMAcode: 'DMA Code'
+    2:
+      DMArank: 'DMA Rank'
+    3:
+      DMAname: 'DMA Name'
+    4:
+      DMAvideo: 'DMA Video'
+    5:
+      Households: 'Households'
+    7:
+      States: 'States'
+    8:
+      partners_logo1: 'Partners logos'
+    11:
+      Mediakit: 'Media Kit'
+    12:
+      Democomp: 'Demographic Composition'
+    13:
+      Devices_desk: 'Devices Desktop'
+    14:
+      Devices_smart: 'Devices Smartphone'
+    15:
+      Devices_tab: 'Devices Tablet'
+    16:
+      Gender_male: 'Gender Male'
+    17:
+      Gender_female: 'Gender Female'
+    18:
+      Education_no: 'Education No college'
+    19:
+      Education_undergrad: 'Education Undergrad'
+    20:
+      Education_grad: 'Education Grad+'
+    21:
+      Home_own: 'Home Own'
+    22:
+      Home_rent: 'Home Rent'
+    23:
+      Parenting_kids: 'Parenting Have Kids'
+    24:
+      Parenting_nokids: 'Parenting No Kids'
+    25:
+      Age_18: 'Age <18'
+    26:
+      Age_1824: 'Age 18-24'
+    27:
+      Age_2534: 'Age 25-34'
+    28:
+      Age_3544: 'Age 35-44'
+    29:
+      Age_4554: 'Age 45-54'
+    30:
+      Age_5564: 'Age 55-64'
+    31:
+      Age_65: 'Age 65+'
+    32:
+      Network_logo1: 'Network Logos'
+    35:
+      TopNetwork_logo1: 'Top Network Logos'
+
+process:
+  title: DMAname
+  field_market_state_code: State
+  field_market_dma_code:
+    plugin: skip_on_empty_null
+    method: process
+    source: DMAcode
+    message: 'Field field_name is missing'
+  field_market_dma_rank:
+    plugin: skip_on_empty_null
+    method: process
+    source: DMArank
+    message: 'Field field_name is missing'
+  field_market_dma_name:
+    plugin: skip_on_empty_null
+    method: process
+    source: DMAname
+    message: 'Field field_name is missing'
+  field_market_dma_video:
+    plugin: skip_on_empty_null
+    method: process
+    source: DMAvideo
+    message: 'Field field_name is missing'
+
+  field_market_partners_logos:
+    -
+      plugin: skip_on_empty_null
+      method: process
+      source: partners_logo1
+      message: 'Field field_name is missing'
+    -
+      plugin: explode
+      source: partners_logo1
+      delimiter: ','
+    -
+      plugin: migration_lookup
+      no_stub: true
+      migration: network
+
+  field_market_households:
+    -
+      plugin: skip_on_empty_null
+      method: process
+      source: Households
+      message: 'Field field_name is missing'
+    -
+      plugin: remove_comma_from_thousands
+  field_market_states:
+    plugin: skip_on_empty_null
+    method: process
+    source: States
+    message: 'Field field_name is missing'
+  field_market_media_kit:
+    plugin: skip_on_empty_null
+    method: process
+    source: Mediakit
+    message: 'Field field_name is missing'
+
+  field_market_demog_composition:
+    plugin: skip_on_empty_null
+    method: process
+    source: Democomp
+    message: 'Field field_name is missing'
+
+  field_market_devices_desktop:
+    plugin: skip_on_empty_null
+    method: process
+    source: Devices_desk
+    message: 'Field field_name is missing'
+  field_market_devices_smartphone:
+    plugin: skip_on_empty_null
+    method: process
+    source: Devices_smart
+    message: 'Field field_name is missing'
+  field_market_devices_tablet:
+    plugin: skip_on_empty_null
+    method: process
+    source: Devices_tab
+    message: 'Field field_name is missing'
+
+  field_market_gender_male:
+    plugin: skip_on_empty_null
+    method: process
+    source: Gender_male
+    message: 'Field field_name is missing'
+  field_market_gender_female:
+    plugin: skip_on_empty_null
+    method: process
+    source: Gender_female
+    message: 'Field field_name is missing'
+
+  field_market_edu_no_college:
+    plugin: skip_on_empty_null
+    method: process
+    source: Education_no
+    message: 'Field field_name is missing'
+  field_market_edu_undergrad:
+    plugin: skip_on_empty_null
+    method: process
+    source: Education_undergrad
+    message: 'Field field_name is missing'
+  field_market_edu_grad_plus:
+    plugin: skip_on_empty_null
+    method: process
+    source: Education_grad
+    message: 'Field field_name is missing'
+
+  field_market_home_own:
+    plugin: skip_on_empty_null
+    method: process
+    source: Home_own
+    message: 'Field field_name is missing'
+  field_market_home_rent:
+    plugin: skip_on_empty_null
+    method: process
+    source: Home_rent
+    message: 'Field field_name is missing'
+
+  field_market_parent_have_kids:
+    plugin: skip_on_empty_null
+    method: process
+    source: Parenting_kids
+    message: 'Field field_name is missing'
+  field_market_parent_no_kids:
+    plugin: skip_on_empty_null
+    method: process
+    source: Parenting_nokids
+    message: 'Field field_name is missing'
+
+  field_market_ages_lower_18:
+    plugin: skip_on_empty_null
+    method: process
+    source: Age_18
+    message: 'Field field_name is missing'
+  field_market_ages_18_24:
+    plugin: skip_on_empty_null
+    method: process
+    source: Age_1824
+    message: 'Field field_name is missing'
+  field_market_ages_25_34:
+    plugin: skip_on_empty_null
+    method: process
+    source: Age_2534
+    message: 'Field field_name is missing'
+  field_market_ages_35_44:
+    plugin: skip_on_empty_null
+    method: process
+    source: Age_3544
+    message: 'Field field_name is missing'
+  field_market_ages_45_54:
+    plugin: skip_on_empty_null
+    method: process
+    source: Age_4554
+    message: 'Field field_name is missing'
+  field_market_ages_55_64:
+    plugin: skip_on_empty_null
+    method: process
+    source: Age_5564
+    message: 'Field field_name is missing'
+  field_market_ages_65_plus:
+    plugin: skip_on_empty_null
+    method: process
+    source: Age_65
+    message: 'Field field_name is missing'
+
+  field_market_network_logos:
+    -
+      plugin: skip_on_empty_null
+      method: process
+      source: Network_logo1
+      message: 'Field field_name is missing'
+    -
+      plugin: explode
+      source: Network_logo1
+      delimiter: ','
+    -
+      plugin: migration_lookup
+      no_stub: true
+      migration: network
+
+  field_market_top_networks:
+    -
+      plugin: skip_on_empty_null
+      method: process
+      source: TopNetwork_logo1
+      message: 'Field field_name is missing'
+    -
+      plugin: explode
+      source: TopNetwork_logo1
+      delimiter: ','
+    -
+      plugin: migration_lookup
+      no_stub: true
+      migration: network
+
+  type:
+    plugin: default_value
+    default_value: market
+
+destination:
+  plugin: 'entity:node'
+migration_dependencies: null

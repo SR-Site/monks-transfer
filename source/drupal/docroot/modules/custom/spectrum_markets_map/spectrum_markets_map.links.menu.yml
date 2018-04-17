@@ -1,0 +1,7 @@
+spectrum_markets_map.markets_import_form:
+  title: 'Import Markets'
+  description: 'Import Markets.'
+  route_name: spectrum_markets_map.markets_import_form
+  menu_name: spectrum
+  parent: spectrum_settings.admin_settings_form
+  weight: 0
