@@ -5,7 +5,7 @@
 
 	.market-map {
 		@include size(100%, calc(100vh - #{$sizeHeader}));
-		min-height: 768px;
+		min-height: 480px;
 	}
 
 	.zoom-actions {

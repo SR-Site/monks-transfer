@@ -9,7 +9,9 @@
 			<div :class="$style.content" ref="content">
 				<ButtonCircleClose
 					@click="decline"
+					title="Close"
 					componentId="ButtonCircleClose"
+					:type="ButtonType.ACTION"
 					:class="$style.closeButton"
 				/>
 				<Icon v-if="icon" :name="icon" :class="$style.icon" />

@@ -20,10 +20,11 @@
 			@include offset(50%, 50%);
 			transform: translate(-50%, -50%);
 			position: absolute;
+			width: 100%;
 		}
 
 		.icon {
-			@include size(13px, auto);
+			@include size(15px, 15px);
 			@include offset(50%, 50%);
 			min-height: 1px;
 			transform: translate(-50%, -50%);
@@ -44,5 +45,5 @@
 }
 
 @include hover('.zoom-button') {
-  background: lighten($colorPrimary, 5%);
+	background: lighten($colorPrimary, 5%);
 }

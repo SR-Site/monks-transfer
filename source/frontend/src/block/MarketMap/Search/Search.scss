@@ -64,7 +64,7 @@
 
 		.scroll-content,
 		.search-results {
-			max-height: calc(90vh - #{$sizeHeaderMobile} - #{mobile-size(12rem)});
+			max-height: calc(85vh - #{$sizeHeaderMobile} - #{mobile-size(12rem)});
 		}
 
 		.search-form {
