@@ -96,7 +96,6 @@ class HeroQuaternaryTransitionController extends AbstractTransitionController {
 			);
 		}
 
-
 		if (this.viewModel.hasChild('ButtonCircleArrowLink')) {
 			this.transitionInTimeline.fromTo(
 				(<any>this.viewModel.$refs.button).$el,
@@ -121,8 +120,7 @@ class HeroQuaternaryTransitionController extends AbstractTransitionController {
 	 * @method setupTransitionOutTimeline
 	 * @description Use this method to setup your transition out timeline
 	 * */
-	protected setupTransitionOutTimeline(): void {
-	}
+	protected setupTransitionOutTimeline(): void {}
 }
 
 export default HeroQuaternaryTransitionController;

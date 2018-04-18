@@ -49,8 +49,8 @@
 
 	@include respond-to(SMALL) {
 		.wrapper {
-		  top: mobile-size(17rem);
-		  left: mobile-size($sizeGrid * 0.5);
+			top: mobile-size(17rem);
+			left: mobile-size($sizeGrid * 0.5);
 		}
 
 		.toggle {

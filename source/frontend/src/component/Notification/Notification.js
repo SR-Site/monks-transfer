@@ -61,11 +61,7 @@ export default {
 		isActive(value) {
 			if (value) {
 				// Crete a listener for closing the popup with the escape key
-				this.keyDownEventListener = new NativeEventListener(
-					document,
-					'keyup',
-					this.handleKeyUp.bind(this),
-				);
+				this.keyDownEventListener = new NativeEventListener(document, 'keyup', this.handleKeyUp.bind(this));
 				this.transitionIn();
 			}
 		},

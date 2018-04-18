@@ -1,8 +1,11 @@
 import objectFitImages from 'object-fit-images';
+import find from 'lodash/find';
 import ScrollUtil from 'util/ScrollUtil';
 import TrackingProvider from 'util/tracking/TrackingProvider';
 import { AbstractContentPageComponent } from 'vue-block-system';
 import ContentPageTransitionController from './ContentPageTransitionController';
+
+const marketsMapClass = 'markets-map';
 
 export default {
 	name: 'ContentPage',
@@ -20,6 +23,9 @@ export default {
 					}, 200);
 				}
 				objectFitImages(); // Polyfill the object-fit to make sure it works on IE
+				const marketBlock = find(this.blocks, block => block.id === 'MarketMap');
+				// Add a class to the body if the current page contains the market map block
+				document.body.classList[marketBlock ? 'add' : 'remove'](marketsMapClass);
 				this.$tracking.trackPageView({
 					[TrackingProvider.GOOGLE_ANALYTICS]: {
 						page: this.$router.currentRoute.path,

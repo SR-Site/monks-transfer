@@ -68,11 +68,11 @@ const setupInjects = () => {
 			[TrackingProvider.FORENSICS]: new ForensicsProvider({
 				trackingId: configManager.getProperty(PropertyNames.FORENSICS),
 			}),
-      [TrackingProvider.PARDOT]: new PardotProvider({
-        clientId: configManager.getProperty(PropertyNames.PARDOT_CLIENT),
+			[TrackingProvider.PARDOT]: new PardotProvider({
+				clientId: configManager.getProperty(PropertyNames.PARDOT_CLIENT),
 				applicationId: configManager.getProperty(PropertyNames.PARDOT_APP),
 				hostname: 'pi.pardot.com',
-      }),
+			}),
 		},
 	});
 

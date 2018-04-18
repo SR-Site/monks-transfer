@@ -1,15 +1,15 @@
 %copy-01 {
-  font: 400 1.8rem / 1.625 $fontOpenSans;
+	font: 400 1.8rem / 1.625 $fontOpenSans;
 
-  @include respond-to(XX_LARGE) {
-	font-size: 1.6rem;
-  }
+	@include respond-to(XX_LARGE) {
+		font-size: 1.6rem;
+	}
 
-  @include respond-to(X_LARGE) {
-	font-size: 1.5rem;
-  }
+	@include respond-to(X_LARGE) {
+		font-size: 1.5rem;
+	}
 
-  @include respond-to(SMALL) {
-	font-size: mobile-size(2.8rem);
-  }
+	@include respond-to(SMALL) {
+		font-size: mobile-size(2.8rem);
+	}
 }

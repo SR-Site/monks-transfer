@@ -30,11 +30,7 @@ export default {
 	methods: {
 		handleAllComponentsReady() {
 			this.transitionController = new VideoPlayerTransitionController(this);
-			this.resizeListener = new NativeEventListener(
-				window,
-				'resize',
-				debounce(this.handleResize, 250),
-			);
+			this.resizeListener = new NativeEventListener(window, 'resize', debounce(this.handleResize, 250));
 
 			this.videoControls = this.getChild('VideoPlayerControls');
 			this.isReady();
@@ -200,9 +196,7 @@ export default {
 			this.isPlaying = false;
 			return this.videoPlayer
 				.pause()
-				.then(() =>
-					Promise.all([this.videoPlayer.getCurrentTime(), this.videoPlayer.getDuration()]),
-				)
+				.then(() => Promise.all([this.videoPlayer.getCurrentTime(), this.videoPlayer.getDuration()]))
 				.then(result => {
 					this.$tracking.trackEvent({
 						[this.TrackingProvider.GOOGLE_ANALYTICS]: {

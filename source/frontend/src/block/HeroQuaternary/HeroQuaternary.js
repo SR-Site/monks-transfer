@@ -42,8 +42,8 @@ export default {
 
 			if (crossFader) {
 				// Enable the blue overlay
-				if(this.data.overlay) {
-          crossFader.setOverlay('rgba(2,87,142,0.75)');
+				if (this.data.overlay) {
+					crossFader.setOverlay('rgba(2,87,142,0.75)');
 				}
 
 				if (this.canPlayVideo && this.hasVideo) {

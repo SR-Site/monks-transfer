@@ -21,8 +21,8 @@ export default class PardotProvider extends AbstractTrackingProvider<IPardotProv
 
 		// Set window vars for pardot
 		window['piAId'] = this.providerOptions.applicationId;
-        window['piCId'] = this.providerOptions.clientId;
-        window['piHostname'] = this.providerOptions.hostname;
+		window['piCId'] = this.providerOptions.clientId;
+		window['piHostname'] = this.providerOptions.hostname;
 
 		const loadScriptTask = new LoadScriptTask({
 			assets: `https://pi.pardot.com/pd.js`,

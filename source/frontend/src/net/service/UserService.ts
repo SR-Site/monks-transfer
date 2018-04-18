@@ -4,7 +4,7 @@ import Endpoints from 'net/Endpoints';
 import IContactData from 'data/interface/contact/IContactData';
 import getStore from 'store';
 import IContactKernelData from 'data/interface/contact/IContactKernelData';
-import IDownloadMediaKit from "../../data/interface/contact/IDownloadMediaKit";
+import IDownloadMediaKit from '../../data/interface/contact/IDownloadMediaKit';
 
 export default class UserService {
 	/**

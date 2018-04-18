@@ -69,15 +69,15 @@
 }
 
 %heading-05 {
-  font: 400 3.6rem / 1.25 $fontOpenSans;
+	font: 400 3.6rem / 1.25 $fontOpenSans;
 
-  strong {
-	font-weight: 400;
-  }
+	strong {
+		font-weight: 400;
+	}
 
-  @include respond-to(SMALL) {
-	font-size: 4.5rem;
-  }
+	@include respond-to(SMALL) {
+		font-size: 4.5rem;
+	}
 }
 
 %heading-06 {
@@ -99,27 +99,27 @@
 		font-weight: 600;
 	}
 
-  @include respond-to(SMALL) {
-	font-size: mobile-size(3.5rem);
-  }
+	@include respond-to(SMALL) {
+		font-size: mobile-size(3.5rem);
+	}
 }
 
 %heading-08 {
-  font: 400 1.4rem / 1.21 $fontOpenSans;
+	font: 400 1.4rem / 1.21 $fontOpenSans;
 
-  strong {
-	font-weight: 800;
-  }
+	strong {
+		font-weight: 800;
+	}
 
-  @include respond-to(SMALL) {
-	font-size: mobile-size(2.4rem);
-  }
+	@include respond-to(SMALL) {
+		font-size: mobile-size(2.4rem);
+	}
 }
 
 %heading-09 {
-  font: 800 1.2rem / 1.75 $fontOpenSans;
+	font: 800 1.2rem / 1.75 $fontOpenSans;
 
-  strong {
-	font-weight: 800;
-  }
+	strong {
+		font-weight: 800;
+	}
 }

@@ -31,17 +31,17 @@
 		h1,
 		h2,
 		h3 {
-		  @extend %heading;
-		  @extend %heading-03;
+			@extend %heading;
+			@extend %heading-03;
 		}
 	}
 
 	.copy {
 		margin-bottom: $sizeGrid / 2;
 
-	  p {
-		@extend %copy-01;
-	  }
+		p {
+			@extend %copy-01;
+		}
 	}
 
 	@include respond-to(X_LARGE) {

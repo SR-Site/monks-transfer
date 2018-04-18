@@ -3,11 +3,7 @@ import states from 'asset/json/states.json';
 import bows from 'bows';
 import isString from 'lodash/isString';
 import mapboxgl from 'mapbox-gl';
-import {
-	AbstractBlockComponent,
-	CustomButtonEvent,
-	customButtonEventDispatcher,
-} from 'vue-block-system';
+import { AbstractBlockComponent, CustomButtonEvent, customButtonEventDispatcher } from 'vue-block-system';
 import VueTypes from 'vue-types';
 import { DeviceState } from '../../config/deviceStateConfig';
 import BackendLinkType from '../../data/enum/link/BackendLinkType';
@@ -54,9 +50,7 @@ export default {
 	computed: {
 		selectedMarketData() {
 			if (this.selectedMarket) {
-				const marketData = this.data.markets.find(
-					market => market.marketId === this.selectedMarket.marketId,
-				);
+				const marketData = this.data.markets.find(market => market.marketId === this.selectedMarket.marketId);
 				if (marketData) {
 					return marketData.categories;
 				}
@@ -181,9 +175,7 @@ export default {
 			// Check if a market is selected
 			if (this.selectedMarket !== null) {
 				// Check if the selected market state exists
-				const state = this.states.find(
-					stateData => stateData.id === this.selectedMarket.statePostalCode,
-				);
+				const state = this.states.find(stateData => stateData.id === this.selectedMarket.statePostalCode);
 
 				if (state) {
 					// Get the feature collection for the selected market
@@ -235,9 +227,7 @@ export default {
 					this.allowMarketSelecting = false;
 				} else {
 					console.warn(
-						`The selected market (${
-							market.marketId
-						}) does not have any details, dispatching the contact event instead`,
+						`The selected market (${market.marketId}) does not have any details, dispatching the contact event instead`,
 					);
 					this.selectedMarket = null;
 					this.handleContactUs();

@@ -61,7 +61,7 @@ class AudienceTeaserTransitionController extends AbstractTransitionController {
 			);
 		}
 
-		if(this.viewModel.$refs.logo) {
+		if (this.viewModel.$refs.logo) {
 			this.transitionInTimeline.fromTo(
 				this.viewModel.$refs.logo,
 				1,

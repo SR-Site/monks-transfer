@@ -6,8 +6,7 @@
  * @class NumberUtils
  * @author Thijs Broerse, Arjan van Wijk, Bart van der Schoor
  */
-class NumberUtils
-{
+class NumberUtils {
 	/**
 	 * Creates a random number within a given range.
 	 *
@@ -22,9 +21,8 @@ class NumberUtils
 	 * var scale:number = NumberUtils.randomInRange(10, 20);
 	 * ```
 	 */
-	public static randomInRange(start:number, end:number):number
-	{
-		var d:number = end - start;
+	public static randomInRange(start: number, end: number): number {
+		var d: number = end - start;
 		return start + (d - Math.random() * d);
 	}
 
@@ -43,14 +41,12 @@ class NumberUtils
 	 * NumberUtils.normalizedValue(0, -1, 1); // 0.5
 	 * ```
 	 */
-	public static normalizedValue(value:number, min:number, max:number):number
-	{
-		var diff:number = max - min;
-		if(diff == 0)
-		{
+	public static normalizedValue(value: number, min: number, max: number): number {
+		var diff: number = max - min;
+		if (diff == 0) {
 			return min;
 		}
-		var f:number = 1 / diff;
+		var f: number = 1 / diff;
 		return f * (value - min);
 	}
 
@@ -63,8 +59,7 @@ class NumberUtils
 	 * @param {number} dy The y component of the vector.
 	 * @return {number} The the angle of the passed vector in degrees.
 	 */
-	public static angle(dx:number, dy:number):number
-	{
+	public static angle(dx: number, dy: number): number {
 		return Math.atan2(dy, dx) * 180 / Math.PI;
 	}
 
@@ -81,8 +76,7 @@ class NumberUtils
 	 * NumberUtil.interpolate(0.5, 0, 10); //5
 	 * ```
 	 */
-	public static interpolate(factor:number, minimum:number, maximum:number):number
-	{
+	public static interpolate(factor: number, minimum: number, maximum: number): number {
 		return minimum + (maximum - minimum) * factor;
 	}
 
@@ -98,62 +92,56 @@ class NumberUtils
 	 * @param {number} [fillLength=NaN]  The minimal length of the part *before* the decimals delimiter, if the length is less, it will be filled up.
 	 * @param {string} [fillChar='0'] The character to use to fill with.
 	 */
-	public static format(value:number = 0, decimalDelimiter:string = ',', thousandDelimiter:string = '.', precision:number = NaN, fillLength:number = NaN, fillChar:string = '0'):string
-	{
-		if(!isNaN(precision))
-		{
+	public static format(
+		value: number = 0,
+		decimalDelimiter: string = ',',
+		thousandDelimiter: string = '.',
+		precision: number = NaN,
+		fillLength: number = NaN,
+		fillChar: string = '0',
+	): string {
+		if (!isNaN(precision)) {
 			value = NumberUtils.roundToPrecision(value, precision);
 		}
 
-		var str:string = value.toString();
-		var p:number = str.indexOf('.');
-		if(value < 0)
-		{
+		var str: string = value.toString();
+		var p: number = str.indexOf('.');
+		if (value < 0) {
 			str = str.substr(1);
 		}
 
-		var decimals:string = p != -1 ? str.substr(p + 1) : '';
-		while(decimals.length < precision)
-		{
+		var decimals: string = p != -1 ? str.substr(p + 1) : '';
+		while (decimals.length < precision) {
 			decimals = decimals + '0';
 		}
 
-		var floored:string = Math.floor(Math.abs(value)).toString();
-		var formatted:string = '';
+		var floored: string = Math.floor(Math.abs(value)).toString();
+		var formatted: string = '';
 
-		if(thousandDelimiter)
-		{
-			var len:number = Math.ceil(floored.length / 3) - 1;
-			for(var i:number = 0; i < len; ++i)
-			{
-				formatted = thousandDelimiter + floored.substr(floored.length - (3 * (i + 1)), 3) + formatted;
+		if (thousandDelimiter) {
+			var len: number = Math.ceil(floored.length / 3) - 1;
+			for (var i: number = 0; i < len; ++i) {
+				formatted = thousandDelimiter + floored.substr(floored.length - 3 * (i + 1), 3) + formatted;
 			}
-			formatted = floored.substr(0, floored.length - (3 * i)) + formatted;
-		}
-		else
-		{
+			formatted = floored.substr(0, floored.length - 3 * i) + formatted;
+		} else {
 			formatted = floored;
 		}
 
-		if(fillLength && fillChar && fillChar != '')
-		{
-			if(value < 0)
-			{
+		if (fillLength && fillChar && fillChar != '') {
+			if (value < 0) {
 				fillLength--;
 			}
-			while(formatted.length < fillLength)
-			{
+			while (formatted.length < fillLength) {
 				formatted = fillChar + formatted;
 			}
 		}
 
-		if(isNaN(precision) || precision > 0)
-		{
+		if (isNaN(precision) || precision > 0) {
 			formatted = formatted + (decimals ? decimalDelimiter + decimals : '');
 		}
 
-		if(value < 0)
-		{
+		if (value < 0) {
 			formatted = '-' + formatted;
 		}
 
@@ -169,9 +157,8 @@ class NumberUtils
 	 * @param {number} [precision=0] The number of decimal digits to keep.
 	 * @return {number} The rounded number, or the original input if no rounding is needed.
 	 */
-	public static roundToPrecision(value:number, precision:number = 0):number
-	{
-		var n:number = Math.pow(10, precision);
+	public static roundToPrecision(value: number, precision: number = 0): number {
+		var n: number = Math.pow(10, precision);
 		return Math.round(value * n) / n;
 	}
 
@@ -185,9 +172,8 @@ class NumberUtils
 	 * @param {number} [precision=0] The number of decimal digits to keep.
 	 * @return {number} The floored number, or the original input if no flooring is needed.
 	 */
-	public static floorToPrecision(value:number, precision:number = 0):number
-	{
-		var n:number = Math.pow(10, precision);
+	public static floorToPrecision(value: number, precision: number = 0): number {
+		var n: number = Math.pow(10, precision);
 		return Math.floor(value * n) / n;
 	}
 
@@ -201,9 +187,8 @@ class NumberUtils
 	 * @param {number} precision The number of decimal digits to keep.
 	 * @return {number} The ceiled number, or the original input if no ceiling is needed.
 	 */
-	public static ceilToPrecision(value:number, precision:number = 0):number
-	{
-		var n:number = Math.pow(10, precision);
+	public static ceilToPrecision(value: number, precision: number = 0): number {
+		var n: number = Math.pow(10, precision);
 		return Math.ceil(value * n) / n;
 	}
 
@@ -217,13 +202,11 @@ class NumberUtils
 	 * @param {number} [nearest=1] the number whose multiple must be found.
 	 * @return {number} The rounded number.
 	 */
-	public static roundToNearest(value:number, nearest:number = 1):number
-	{
-		if(nearest == 0)
-		{
+	public static roundToNearest(value: number, nearest: number = 1): number {
+		if (nearest == 0) {
 			return value;
 		}
-		var roundedNumber:number = Math.round(NumberUtils.roundToPrecision(value / nearest, 10)) * nearest;
+		var roundedNumber: number = Math.round(NumberUtils.roundToPrecision(value / nearest, 10)) * nearest;
 		return NumberUtils.roundToPrecision(roundedNumber, 10);
 	}
 
@@ -237,10 +220,8 @@ class NumberUtils
 	 * @param {number} [nearest=1] the number whose multiple must be found.
 	 * @return {number} The rounded number.
 	 */
-	public static floorToNearest(value:number, nearest:number = 1):number
-	{
-		if(nearest == 0)
-		{
+	public static floorToNearest(value: number, nearest: number = 1): number {
+		if (nearest == 0) {
 			return value;
 		}
 		return Math.floor(NumberUtils.roundToPrecision(value / nearest, 10)) * nearest;
@@ -256,10 +237,8 @@ class NumberUtils
 	 * @param {number} [nearest=1] the number whose multiple must be found.
 	 * @return {number} The rounded number.
 	 */
-	public static ceilToNearest(value:number, nearest:number = 1):number
-	{
-		if(nearest == 0)
-		{
+	public static ceilToNearest(value: number, nearest: number = 1): number {
+		if (nearest == 0) {
 			return value;
 		}
 		return Math.ceil(NumberUtils.roundToPrecision(value / nearest, 10)) * nearest;
@@ -282,10 +261,9 @@ class NumberUtils
 	 * @param {number} [precision=5] The number of digits in the fractional portion to keep.
 	 * @return {boolean} Whether the numbers are close enough to be considered equal.
 	 */
-	public static fuzzyEquals(value1:number, value2:number, precision:number = 5):boolean
-	{
-		var difference:number = value1 - value2;
-		var range:number = Math.pow(10, -precision);
+	public static fuzzyEquals(value1: number, value2: number, precision: number = 5): boolean {
+		var difference: number = value1 - value2;
+		var range: number = Math.pow(10, -precision);
 
 		//default precision checks the following:
 		//0.00001 < difference > -0.00001
@@ -303,18 +281,14 @@ class NumberUtils
 	 * @param {number} [base=0] The base value.
 	 * @return {boolean} The clamped value.
 	 */
-	public static clampPosNeg(input:number, range:number, base:number = 0):number
-	{
+	public static clampPosNeg(input: number, range: number, base: number = 0): number {
 		range = Math.abs(range);
 
 		input -= base;
 
-		if(input < 0 && input < -range)
-		{
+		if (input < 0 && input < -range) {
 			return base - range;
-		}
-		else if(input > 0 && input > range)
-		{
+		} else if (input > 0 && input > range) {
 			return base + range;
 		}
 		return base + input;
@@ -329,14 +303,12 @@ class NumberUtils
 	 * @param {string} value The input value.
 	 * @return {number} The number from the string.
 	 */
-	public static getNumberFromString(value:string):number
-	{
+	public static getNumberFromString(value: string): number {
 		value = value.match(/[0-9]+[.,]?[0-9]*/)[0];
 		// replace , fo .
 		value = value.replace(',', '.');
 		return parseFloat(value);
 	}
-
 
 	/**
 	 * Get English suffix for an ordinal number: 1 -> 'st' ('1st'), 2 -> 'nd' ('2nd'), 3 -> 'rd' ('3rd'), 4 -> 'th' ('4th').
@@ -346,16 +318,13 @@ class NumberUtils
 	 * @param {number} position The input value.
 	 * @return {string} The input value with the ordinal suffix.
 	 */
-	public static ordinalSuffix(position:number):string
-	{
-		if(position < 0)
-		{
+	public static ordinalSuffix(position: number): string {
+		if (position < 0) {
 			throw 'ordinal number less then zero';
 		}
 
 		//exceptions
-		switch(position)
-		{
+		switch (position) {
 			case 0:
 				return '';
 			case 11:
@@ -364,9 +333,8 @@ class NumberUtils
 				return 'th';
 		}
 		//rule
-		var rest:number = position % 10;
-		switch(rest)
-		{
+		var rest: number = position % 10;
+		switch (rest) {
 			case 1:
 				return 'st';
 			case 2:
@@ -387,39 +355,27 @@ class NumberUtils
 	 * @param {number} [total=360] The range to do 'modulo'.
 	 * @return {number}
 	 */
-	public static getNearestRotationIndex(index:number, newIndex:number, total:number = 360):number
-	{
-		var curIndex:number = index;
-		while(curIndex < 0)
-		{
+	public static getNearestRotationIndex(index: number, newIndex: number, total: number = 360): number {
+		var curIndex: number = index;
+		while (curIndex < 0) {
 			curIndex += total;
 		}
-		while(newIndex < 0)
-		{
+		while (newIndex < 0) {
 			newIndex += total;
 		}
 
-		var diff:number = Math.abs(curIndex - newIndex);
+		var diff: number = Math.abs(curIndex - newIndex);
 
-		if(diff > total / 2)
-		{
-			if(curIndex > newIndex)
-			{
+		if (diff > total / 2) {
+			if (curIndex > newIndex) {
 				return index + (total - diff);
-			}
-			else
-			{
+			} else {
 				return index - (total - diff);
 			}
-		}
-		else
-		{
-			if(curIndex < newIndex)
-			{
+		} else {
+			if (curIndex < newIndex) {
 				return index + diff;
-			}
-			else
-			{
+			} else {
 				return index - diff;
 			}
 		}
