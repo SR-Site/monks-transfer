@@ -39,7 +39,7 @@ class NodeShowTeaserModeV1 extends ShowsRestEntityProcessorBase {
     // Get time of next episode.
     $airTime = $this->showsUtility->getNextEpisodeTime($entity->get('field_show_schedules'), 'date');
     if (!empty($airTime)) {
-      $data['subHeading'] = t(':date @ :time ET/PT*', [
+      $data['subHeading'] = t(':date @ :time ET/PT', [
         ':date' => $airTime['date'],
         ':time' => $airTime['time'],
       ]);
