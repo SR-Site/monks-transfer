@@ -45,8 +45,9 @@
 	.progress-bar {
 		@include size(100%, 1rem);
 		display: block;
-		background: red;
+		background: transparent;
 		font-size: 0;
+	  	white-space: nowrap;
 	}
 
 	.progress-piece {

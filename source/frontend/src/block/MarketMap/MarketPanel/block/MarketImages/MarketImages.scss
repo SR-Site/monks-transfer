@@ -13,7 +13,6 @@
 		@include size(100%, auto);
 		display: flex;
 		flex-wrap: wrap;
-		border-top: 1px solid $colorBorder;
 		border-left: 1px solid $colorBorder;
 	}
 
@@ -23,5 +22,9 @@
 		flex-shrink: 0;
 		border-right: 1px solid $colorBorder;
 		border-bottom: 1px solid $colorBorder;
+
+	  	&:nth-child(-n+3){
+		  border-top: 1px solid $colorBorder;
+		}
 	}
 }

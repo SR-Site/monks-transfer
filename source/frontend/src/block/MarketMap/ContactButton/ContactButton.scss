@@ -6,12 +6,15 @@
 		color: $colorWhite;
 		display: inline-block;
 		transition: background 0.2s $easeInOutCubic;
+		text-align: left;
 	}
 
 	.label {
-		display: inline-block;
+		display: block;
 		font: 1.4rem / 1 $fontOpenSans;
 		padding-right: $sizeGrid * 2;
+	  	width: 100%;
+		box-sizing: border-box;
 		position: relative;
 
 		&:after {
