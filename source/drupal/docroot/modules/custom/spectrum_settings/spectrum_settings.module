@@ -7,6 +7,7 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
+use Drupal\Core\Database\Query\AlterableInterface;
 
 /**
  * Implements hook_help().
@@ -97,4 +98,13 @@ function spectrum_settings_node_update(\Drupal\node\NodeInterface $node) {
     $prerenderedData->save();
     $prerenderService->queueData($prerenderedData, TRUE);
   }
+}
+
+/**
+ * Implements hook_query_TAG_alter() for entity reference selection handlers.
+ *
+ * We like tho show always 30 results instead of the 10 definied in EntityAutocompleteMatcher::getMatches()
+ */
+function spectrum_settings_query_entity_reference_alter(AlterableInterface $query) {
+  $query->range(0, 30);
 }
