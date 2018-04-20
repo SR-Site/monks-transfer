@@ -31,52 +31,60 @@ source:
       States: 'States'
     8:
       partners_logo1: 'Partners logos'
-    11:
+    9:
       Mediakit: 'Media Kit'
-    12:
+    10:
       Democomp: 'Demographic Composition'
-    13:
+    11:
       Devices_desk: 'Devices Desktop'
-    14:
+    12:
       Devices_smart: 'Devices Smartphone'
-    15:
+    13:
       Devices_tab: 'Devices Tablet'
-    16:
+    14:
       Gender_male: 'Gender Male'
-    17:
+    15:
       Gender_female: 'Gender Female'
-    18:
+    16:
       Education_no: 'Education No college'
-    19:
+    17:
       Education_undergrad: 'Education Undergrad'
-    20:
+    18:
       Education_grad: 'Education Grad+'
-    21:
+    19:
       Home_own: 'Home Own'
-    22:
+    20:
       Home_rent: 'Home Rent'
-    23:
+    21:
       Parenting_kids: 'Parenting Have Kids'
-    24:
+    22:
       Parenting_nokids: 'Parenting No Kids'
-    25:
+    23:
       Age_18: 'Age <18'
-    26:
+    24:
       Age_1824: 'Age 18-24'
-    27:
+    25:
       Age_2534: 'Age 25-34'
-    28:
+    26:
       Age_3544: 'Age 35-44'
-    29:
+    27:
       Age_4554: 'Age 45-54'
-    30:
+    28:
       Age_5564: 'Age 55-64'
-    31:
+    29:
       Age_65: 'Age 65+'
+    30:
+      Income_0_50: 'Income 0-50'
+    31:
+      Income_50_100: 'Income 50-100'
     32:
-      Network_logo1: 'Network Logos'
+      Income_100_150: 'Income 100-150'
+    33:
+      Income_150: 'Income 150+'
+    34:
+      Network_logos: 'Network Logos'
     35:
-      TopNetwork_logo1: 'Top Network Logos'
+      TopNetwork_logos: 'Top Network Logos'
 
 process:
   title: DMAname
@@ -106,11 +114,11 @@ process:
     -
       plugin: skip_on_empty_null
       method: process
-      source: partners_logo1
+      source: partners_logos
       message: 'Field field_name is missing'
     -
       plugin: explode
-      source: partners_logo1
+      source: partners_logos
       delimiter: ','
     -
       plugin: migration_lookup
@@ -243,15 +251,37 @@ process:
     source: Age_65
     message: 'Field field_name is missing'
 
+  # Income
+  field_market_income_0_50k:
+    plugin: skip_on_empty_null
+    method: process
+    source: Income_0_50
+    message: 'Field field_name is missing'
+  field_market_income_50_100k:
+    plugin: skip_on_empty_null
+    method: process
+    source: Income_50_100
+    message: 'Field field_name is missing'
+  field_market_income_100_150k:
+    plugin: skip_on_empty_null
+    method: process
+    source: Income_100_150
+    message: 'Field field_name is missing'
+  field_market_income_plus_150k:
+    plugin: skip_on_empty_null
+    method: process
+    source: Income_150
+    message: 'Field field_name is missing'
+
   field_market_network_logos:
     -
       plugin: skip_on_empty_null
       method: process
-      source: Network_logo1
+      source: Network_logos
       message: 'Field field_name is missing'
     -
       plugin: explode
-      source: Network_logo1
+      source: Network_logos
       delimiter: ','
     -
       plugin: migration_lookup
@@ -262,11 +292,11 @@ process:
     -
       plugin: skip_on_empty_null
       method: process
-      source: TopNetwork_logo1
+      source: TopNetwork_logos
       message: 'Field field_name is missing'
     -
       plugin: explode
-      source: TopNetwork_logo1
+      source: TopNetwork_logos
       delimiter: ','
     -
       plugin: migration_lookup
