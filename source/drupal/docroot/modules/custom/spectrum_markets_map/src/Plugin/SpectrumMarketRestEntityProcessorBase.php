@@ -423,22 +423,6 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
   private function getNetworksImages(ContentEntityInterface $entity, $fieldName) {
     $data = [];
     foreach ($entity->get($fieldName) as $item) {
-
-//      if ($item->entity->get('image')->entity instanceof FileInterface) {
-//        $image = \Drupal::service('image.factory')->get($item->entity->get('image')->entity->getFileUri());
-//        /** @var \Drupal\Core\Image\Image $image */
-//        if ($image->isValid()) {
-//          $styles = ImageStyle::loadMultiple();
-//          $image_uri = $item->entity->get('image')->entity->getFileUri();
-//          /** @var \Drupal\image\Entity\ImageStyle $style */
-//          foreach ($styles as $style) {
-//            $destination = $style->buildUri($image_uri);
-//            $style->createDerivative($image_uri, $destination);
-//          }
-//        }
-//      }
-
-
       $data[] = $this->image($item->entity->get('image'), ['style' => 'network__markets_map__canvas']);
     }
 
