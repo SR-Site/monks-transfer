@@ -122,6 +122,24 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
    * @return array
    * @throws \Exception
    */
+  protected function getMarketMediaKit(ContentEntityInterface $entity) {
+    $data = [
+      'name' => 'MarketMediaKit',
+      'data' => [
+        'heading' => $this->t('Media Kit'),
+        'label' => $this->t('Market Media Kit'),
+      ],
+    ];
+
+    return $data;
+  }
+
+  /**
+   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *
+   * @return array
+   * @throws \Exception
+   */
   protected function getMarketImage(ContentEntityInterface $entity) {
     $data = [
       'name' => 'MarketImage',

@@ -27,6 +27,8 @@ source:
       DMAvideo: 'DMA Video'
     5:
       Households: 'Households'
+    6:
+      Markets: 'Markets'
     7:
       States: 'States'
     8:
@@ -137,6 +139,11 @@ process:
     plugin: skip_on_empty_null
     method: process
     source: States
+    message: 'Field field_name is missing'
+  field_market_markets:
+    plugin: skip_on_empty_null
+    method: process
+    source: Markets
     message: 'Field field_name is missing'
   field_market_media_kit:
     plugin: skip_on_empty_null
