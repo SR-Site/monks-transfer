@@ -102,12 +102,12 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
     $data = [
       'name' => 'MarketImages',
       'data' => [
-        'heading' => $this->t('Network Logos'),
+        'heading' => $this->t('Partners Logos'),
         'subHeading' => $this->t('Informative'),
       ],
     ];
     // Get networks logos.
-    $data['data']['images'] = $this->fieldProcessor->getFieldData($entity->get('field_market_partners_logos'));
+    $data['data']['images'] = $this->fieldProcessor->getFieldData($entity->get('field_market_partners_logos'), ['style' => 'network__markets_map__canvas']);
 
     if (empty($data['data']['images'])) {
       return [];

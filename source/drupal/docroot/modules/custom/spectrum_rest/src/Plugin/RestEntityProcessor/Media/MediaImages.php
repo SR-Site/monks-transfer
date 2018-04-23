@@ -24,7 +24,7 @@ class MediaImages extends SpectrumRestEntityProcessorBase {
    * {@inheritdoc}
    */
   protected function getItemData($entity) {
-    $data = $this->images($entity->get('field_images'));
+    $data = $this->images($entity->get('field_images'), ['style' => 'network__markets_map__canvas']);
 
     return $data;
   }

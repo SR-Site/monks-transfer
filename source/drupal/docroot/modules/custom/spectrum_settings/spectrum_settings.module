@@ -123,6 +123,12 @@ function spectrum_settings_form_alter(&$form, FormStateInterface $form_state, $f
   }
 }
 
+/**
+ * Redirect to the media admin page after save media entity.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
 function spectrum_settings_media_form_submit($form, FormStateInterface $form_state) {
   $media = $form_state->getFormObject()->getEntity();
   if ($media->id()) {
