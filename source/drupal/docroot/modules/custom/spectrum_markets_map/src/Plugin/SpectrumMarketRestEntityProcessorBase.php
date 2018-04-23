@@ -107,7 +107,7 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
       ],
     ];
     // Get networks logos.
-    $data['data']['images'] = $this->getNetworksImages($entity, 'field_market_partners_logos');
+    $data['data']['images'] = $this->fieldProcessor->getFieldData($entity->get('field_market_partners_logos'));
 
     if (empty($data['data']['images'])) {
       return [];

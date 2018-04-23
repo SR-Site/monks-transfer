@@ -34,7 +34,7 @@ source:
     -
       States: States
     -
-      partners_logo1: 'Partners logos'
+      partners_logos: 'Partners logos'
     -
       Mediakit: 'Media Kit'
     -
@@ -112,20 +112,11 @@ process:
     method: process
     source: DMAvideo
     message: 'Field field_name is missing'
-  field_market_partners_logos:
-    -
-      plugin: skip_on_empty_null
-      method: process
-      source: partners_logos
-      message: 'Field field_name is missing'
-    -
-      plugin: explode
-      source: partners_logos
-      delimiter: ','
-    -
-      plugin: migration_lookup
-      no_stub: true
-      migration: network
+  field_market_partners_logos/target_id:
+    plugin: skip_on_empty_null
+    method: process
+    source: partners_logos
+    message: 'Field field_name is missing'
   field_market_households:
     -
       plugin: skip_on_empty_null

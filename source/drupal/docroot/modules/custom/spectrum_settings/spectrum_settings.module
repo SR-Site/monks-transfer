@@ -8,6 +8,7 @@
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
 use Drupal\Core\Database\Query\AlterableInterface;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_help().
@@ -107,4 +108,30 @@ function spectrum_settings_node_update(\Drupal\node\NodeInterface $node) {
  */
 function spectrum_settings_query_entity_reference_alter(AlterableInterface $query) {
   $query->range(0, 30);
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function spectrum_settings_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (isset($form['#entity_type']) && $form['#entity_type'] == 'media') {
+    foreach (array_keys($form['actions']) as $action) {
+      if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+        $form['actions'][$action]['#submit'][] = 'spectrum_settings_media_form_submit';
+      }
+    }
+  }
+}
+
+function spectrum_settings_media_form_submit($form, FormStateInterface $form_state) {
+  $media = $form_state->getFormObject()->getEntity();
+  if ($media->id()) {
+    if ($media->access('edit')) {
+      $url = Url::fromRoute('view.media.media_page_list');
+      $form_state->setRedirectUrl($url);
+    }
+    else {
+      $form_state->setRedirect('<front>');
+    }
+  }
 }

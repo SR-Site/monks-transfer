@@ -225,7 +225,7 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
    *   Options.
    *
    * @return array|string
-   *   Image data..
+   *   Image data.
    */
   public function image(FieldItemListInterface $field, array $options = []) {
     $image = $field->getValue();
@@ -240,6 +240,38 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
       'alt' => isset($image[0]['alt']) && $image[0]['alt'] != NULL ? $image[0]['alt'] : $field->getEntity()
         ->label(),
     ];
+
+    return $data;
+  }
+
+  /**
+   * Returns an image formatted.
+   *
+   * @param \Drupal\Core\Field\FieldItemListInterface $field
+   *   Field item list.
+   * @param array $options
+   *   Options.
+   *
+   * @return array|string
+   *   Image data.
+   */
+  public function images(FieldItemListInterface $field, array $options = []) {
+    $data = [];
+    $images = $this->fieldProcessor->getFieldData($field, $options);
+
+    if (empty($images)) {
+      return NULL;
+    }
+
+    foreach ($images as $image) {
+      $data[] = [
+        'normal' => $image,
+        'small' => $image,
+        'alt' => $field->getEntity()
+          ->label(),
+      ];
+    }
+
 
     return $data;
   }
