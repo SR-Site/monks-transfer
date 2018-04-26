@@ -90,7 +90,7 @@
 		}
 
 		.panel {
-			@include size(100%, calc(100vh - #{$sizeHeaderMobile + mobile-size(20rem)}));
+			@include size(100%, calc(100vh - #{($sizeHeaderMobile * 2) + mobile-size(20rem)}));
 			@include position(auto, 0, mobile-size(12rem), 0);
 			max-width: 100%;
 		}

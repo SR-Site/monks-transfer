@@ -30,7 +30,7 @@
 
 	@include respond-to(SMALL) {
 		.market-map {
-			@include size(100%, calc(100vh - #{$sizeHeaderMobile}));
+			@include size(100%, calc(100vh - #{$sizeHeaderMobile * 2}));
 			min-height: 480px;
 		}
 
