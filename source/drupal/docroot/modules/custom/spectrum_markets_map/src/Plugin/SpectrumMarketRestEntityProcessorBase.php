@@ -102,16 +102,34 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
     $data = [
       'name' => 'MarketImages',
       'data' => [
-        'heading' => $this->t('Network Logos'),
+        'heading' => $this->t('Partners Logos'),
         'subHeading' => $this->t('Informative'),
       ],
     ];
     // Get networks logos.
-    $data['data']['images'] = $this->getNetworksImages($entity, 'field_market_partners_logos');
+    $data['data']['images'] = $this->fieldProcessor->getFieldData($entity->get('field_market_partners_logos'), ['style' => 'network__markets_map__canvas']);
 
     if (empty($data['data']['images'])) {
       return [];
     }
+
+    return $data;
+  }
+
+  /**
+   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *
+   * @return array
+   * @throws \Exception
+   */
+  protected function getMarketMediaKit(ContentEntityInterface $entity) {
+    $data = [
+      'name' => 'MarketMediaKit',
+      'data' => [
+        'heading' => $this->t('Media Kit'),
+        'label' => $this->t('Market Media Kit'),
+      ],
+    ];
 
     return $data;
   }

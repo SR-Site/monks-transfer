@@ -24,7 +24,7 @@ class NodeMarketTeaserV1 extends SpectrumMarketRestEntityProcessorBase {
    */
   protected function getItemData($entity) {
     $data = [
-      'marketId' => $this->fieldProcessor->getFieldData($entity->get('field_market_dma_code')),
+      'marketId' => (string) $this->fieldProcessor->getFieldData($entity->get('field_market_dma_code')),
       'categories' => [
         [
           'label' => $this->t('Market'),
@@ -32,6 +32,7 @@ class NodeMarketTeaserV1 extends SpectrumMarketRestEntityProcessorBase {
             $this->getMarketVideo($entity),
             $this->getMarketNumbers($entity),
             $this->getMarketImagesInformative($entity),
+            $this->getMarketMediaKit($entity)
           ],
         ],
         [

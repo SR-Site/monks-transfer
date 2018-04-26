@@ -337,7 +337,7 @@ content:
     type: number_integer
     region: content
   field_market_partners_logos:
-    weight: 144
+    weight: 149
     label: above
     settings:
       link: true

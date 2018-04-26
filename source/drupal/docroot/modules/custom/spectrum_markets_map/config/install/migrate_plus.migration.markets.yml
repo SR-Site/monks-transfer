@@ -27,10 +27,12 @@ source:
       DMAvideo: 'DMA Video'
     5:
       Households: 'Households'
+    6:
+      Markets: 'Markets'
     7:
       States: 'States'
     8:
-      partners_logo1: 'Partners logos'
+      partners_logos: 'Partners logos'
     9:
       Mediakit: 'Media Kit'
     10:
@@ -110,20 +112,11 @@ process:
     source: DMAvideo
     message: 'Field field_name is missing'
 
-  field_market_partners_logos:
-    -
-      plugin: skip_on_empty_null
-      method: process
-      source: partners_logos
-      message: 'Field field_name is missing'
-    -
-      plugin: explode
-      source: partners_logos
-      delimiter: ','
-    -
-      plugin: migration_lookup
-      no_stub: true
-      migration: network
+  field_market_partners_logos/target_id:
+    plugin: skip_on_empty_null
+    method: process
+    source: partners_logos
+    message: 'Field field_name is missing'
 
   field_market_households:
     -
@@ -137,6 +130,11 @@ process:
     plugin: skip_on_empty_null
     method: process
     source: States
+    message: 'Field field_name is missing'
+  field_market_markets:
+    plugin: skip_on_empty_null
+    method: process
+    source: Markets
     message: 'Field field_name is missing'
   field_market_media_kit:
     plugin: skip_on_empty_null
