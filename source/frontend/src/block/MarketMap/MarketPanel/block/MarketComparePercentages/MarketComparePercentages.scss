@@ -62,7 +62,7 @@
 			right: 0;
 			font: 1.6rem / 1 $fontOpenSans;
 			color: currentColor;
-			transform: translateY(calc(-100% - 1rem));
+			transform: translateY(-100%) translateY(-1rem);
 		}
 	}
 
