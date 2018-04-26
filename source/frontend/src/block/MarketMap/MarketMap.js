@@ -1,12 +1,10 @@
 import markets from 'asset/json/markets.json';
 import states from 'asset/json/states.json';
 import bows from 'bows';
-import isString from 'lodash/isString';
 import mapboxgl from 'mapbox-gl';
 import { AbstractBlockComponent, CustomButtonEvent, customButtonEventDispatcher } from 'vue-block-system';
 import VueTypes from 'vue-types';
 import { DeviceState } from '../../config/deviceStateConfig';
-import BackendLinkType from '../../data/enum/link/BackendLinkType';
 import { DEVICE_STATE_TRACKER } from '../../data/Injectables';
 import { getValue } from '../../util/injector';
 import LoadJsonTask from '../../util/preloading/task/LoadJsonTask';
