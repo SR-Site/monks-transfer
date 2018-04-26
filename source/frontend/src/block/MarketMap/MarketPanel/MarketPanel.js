@@ -50,7 +50,7 @@ export default {
 	watch: {
 		marketBlocks() {
 			// Maybe add the update asynccomponents callback instead of this
-			setTimeout(() => this.scrollbar.update(), 100);
+			setTimeout(() => this.scrollbar.update(), 1000);
 		},
 	},
 	computed: {
