@@ -80,6 +80,7 @@ const { host } = document.location;
 
 switch (host.split(':').shift()) {
 	case '10.0.2.2':
+	case '172.17.60.12':
 	case 'localhost': {
 		environment = EnvironmentNames.LOCAL;
 		break;

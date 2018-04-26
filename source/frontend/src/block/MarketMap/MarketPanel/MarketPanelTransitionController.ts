@@ -44,10 +44,10 @@ class MarketPanelTransitionController extends AbstractTransitionController {
 				this.viewModel.$refs.label,
 				0.2,
 				{
-					yPercent: 100,
+					autoAlpha: 0,
 				},
 				{
-					yPercent: 0,
+					autoAlpha: 1,
 					ease: Expo.easeInOut,
 				},
 			);
