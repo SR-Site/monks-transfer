@@ -78,7 +78,7 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
             'value' => $this->fieldProcessor->getFieldData($entity->get('field_market_households')),
           ],
           [
-            'label' => $this->t('Markets'),
+            'label' => $this->t('Advertising Zones'),
             'value' => $this->fieldProcessor->getFieldData($entity->get('field_market_markets')),
           ],
           [
@@ -102,7 +102,7 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
     $data = [
       'name' => 'MarketImages',
       'data' => [
-        'heading' => $this->t('Partners Logos'),
+        'heading' => $this->t('Advertising Partners'),
       ],
     ];
     // Get networks logos.
@@ -276,7 +276,7 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
    */
   protected function getMarketHome(ContentEntityInterface $entity) {
     $data = [
-      'label' => $this->t('Home'),
+      'label' => $this->t('Home Ownership'),
       'values' => [
         [
           'label' => $this->t('Own'),
@@ -300,7 +300,7 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
    */
   protected function getMarketParenting(ContentEntityInterface $entity) {
     $data = [
-      'label' => $this->t('Parenting'),
+      'label' => $this->t('HH with Children'),
       'values' => [
         [
           'label' => $this->t('Have kids'),
