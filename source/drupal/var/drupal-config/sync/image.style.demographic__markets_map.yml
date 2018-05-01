@@ -1,7 +1,9 @@
 uuid: b2d4f269-17c5-4ccf-af27-44db11c2fcc3
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - imagick
 name: demographic__markets_map
 label: 'Demographic markets map'
 effects:
@@ -13,3 +15,20 @@ effects:
       width: null
       height: 226
       upscale: false
+  dbd6503d-d126-4fcb-b436-842226953e79:
+    uuid: dbd6503d-d126-4fcb-b436-842226953e79
+    id: image_define_canvas
+    weight: 2
+    data:
+      HEX: '#FFFFFF'
+      under: 1
+      exact_measurements: 1
+      exact:
+        width: '543'
+        height: '305'
+        anchor: center-center
+      relative:
+        leftdiff: '20'
+        rightdiff: '20'
+        topdiff: '20'
+        bottomdiff: '20'
