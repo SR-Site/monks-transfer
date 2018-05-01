@@ -93,7 +93,7 @@ class ImportMarkets extends ConfigFormBase {
 
     $newForm['actions']['rollback'] = [
       '#type' => 'submit',
-      '#value' => $this->t('Rollback imported markers'),
+      '#value' => $this->t('Rollback imported markets'),
       '#button_type' => 'secondary',
       '#submit' => ['::rollbackSubmit']
     ];
@@ -166,7 +166,7 @@ class ImportMarkets extends ConfigFormBase {
   }
 
   /**
-   * {@inheritdoc}
+   * Rollback Imported markets.
    *
    * @throws \Drupal\migrate\MigrateException
    * @throws \Drupal\Component\Plugin\Exception\PluginException
