@@ -118,7 +118,6 @@ class ImportMarkets extends ConfigFormBase {
 
 
       if ($file instanceof File) {
-//        $realPath = $this->fileSystem->realpath($file->getFileUri());
         try {
           /** @var Migration $migration */
           $migration = $this->migrationPluginManager->createInstance('markets');
@@ -152,7 +151,7 @@ class ImportMarkets extends ConfigFormBase {
 
         }
         catch (MigrateException $exception) {
-          throw new MigrateException('Something\'s wrong! Markets are not imprted properly.');
+          throw new MigrateException('Something\'s wrong! Markets are not imported properly.');
         }
       }
     }
