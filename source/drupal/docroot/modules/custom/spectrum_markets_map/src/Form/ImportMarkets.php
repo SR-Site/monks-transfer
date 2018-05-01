@@ -114,9 +114,7 @@ class ImportMarkets extends ConfigFormBase {
     $fid = $form_state->getValue(['markets_csv', 0]);
     if (!empty($fid)) {
       // Get data of file.
-
       $file = File::load($fid);
-
       $data = file_get_contents($file->getFileUri());
       $destination = file_default_scheme() . '://csv-markets/markets_map.csv';
       if ($file = file_save_data($data, $destination, FILE_EXISTS_REPLACE)) {
