@@ -1,4 +1,4 @@
-uuid: 6974442f-fd0e-427c-9936-acf3554455c9
+uuid: ccc11308-f2b0-4e45-b0a3-2fe1e039f73c
 langcode: en
 status: true
 dependencies:
@@ -7,6 +7,8 @@ dependencies:
   enforced:
     module:
       - spectrum_markets_map
+_core:
+  default_config_hash: gkC38kUrcX_mxdA3CbY66KjZ_q7Z6-AmeXhcN9BCCZA
 id: migrate_markets_map_csv
 label: 'Migration markets from a CSV resource.'
 description: 'Migration markets from a CSV resource.'

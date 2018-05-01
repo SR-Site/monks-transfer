@@ -105,19 +105,23 @@ class ImportMarkets extends ConfigFormBase {
 
     $fid = $form_state->getValue(['markets_csv', 0]);
     if (!empty($fid)) {
+      // Get data of file.
+
       $file = File::load($fid);
-      $file->setPermanent();
-      $file->save();
+
+      $data = file_get_contents($file->getFileUri());
+      $destination = file_default_scheme() . '://csv-markets/markets_map.csv';
+      if ($file = file_save_data($data, $destination, FILE_EXISTS_REPLACE)) {
+        $file->setPermanent();
+        $file->save();
+      }
+
 
       if ($file instanceof File) {
-        $realPath = $this->fileSystem->realpath($file->getFileUri());
+//        $realPath = $this->fileSystem->realpath($file->getFileUri());
         try {
           /** @var Migration $migration */
-          $migration = $this->migrationPluginManager->createInstance('markets', [
-            'source' => [
-              'path' => $realPath,
-            ],
-          ]);
+          $migration = $this->migrationPluginManager->createInstance('markets');
           $migration->getIdMap()->prepareUpdate();
           $executable = new MigrateExecutable($migration, new MigrateMessage());
           $executable->import();

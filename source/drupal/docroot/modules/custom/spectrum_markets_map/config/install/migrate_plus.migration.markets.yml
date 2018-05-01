@@ -2,8 +2,8 @@ id: markets
 label: CSV feed of markets
 migration_group: migrate_markets_map_csv
 source:
-  plugin: csv
-  path: '/var/www/html/docroot/markets.csv'
+  plugin: spectrum_csv
+  path: 'markets_map.csv'
   # Column delimiter. Comma (,) by default.
   delimiter: ','
   # Field enclosure. Double quotation marks (") by default.

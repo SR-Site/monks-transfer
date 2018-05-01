@@ -1,7 +1,9 @@
-uuid: cf3de55a-79d9-4f94-bd7f-3b00f8ef598c
+uuid: 13314aed-f313-49db-8ddf-5ae69ddd1ea5
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: fpgYp5IFuMsMRuenuNQgy2NAkb_PqqwiCrEQXM0eyBQ
 id: markets
 class: null
 field_plugin_method: null
@@ -10,8 +12,8 @@ migration_tags: null
 migration_group: migrate_markets_map_csv
 label: 'CSV feed of markets'
 source:
-  plugin: csv
-  path: /var/www/html/docroot/markets.csv
+  plugin: spectrum_csv
+  path: markets_map.csv
   delimiter: ','
   header_row_count: 1
   keys:
