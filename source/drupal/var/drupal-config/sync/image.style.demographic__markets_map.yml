@@ -1,0 +1,15 @@
+uuid: b2d4f269-17c5-4ccf-af27-44db11c2fcc3
+langcode: en
+status: true
+dependencies: {  }
+name: demographic__markets_map
+label: 'Demographic markets map'
+effects:
+  46c0c8f9-251b-484c-b6da-fdcc786f2856:
+    uuid: 46c0c8f9-251b-484c-b6da-fdcc786f2856
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 226
+      upscale: false
