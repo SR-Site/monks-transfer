@@ -263,17 +263,27 @@ abstract class SpectrumRestEntityProcessorBase extends RestEntityProcessorBase {
       return NULL;
     }
 
-    foreach ($images as $image) {
-      $data[] = [
-        'normal' => $image,
-        'small' => $image,
-        'alt' => $field->getEntity()
-          ->label(),
-      ];
-    }
+    if (count($images) > 1) {
+      foreach ($images as $image) {
+        $data[] = [
+          'normal' => $image,
+          'small' => $image,
+          'alt' => $field->getEntity()
+            ->label(),
+        ];
+      }
 
+      return $data;
+    }
+    $data[] = [
+      'normal' => $images,
+      'small' => $images,
+      'alt' => $field->getEntity()
+        ->label(),
+    ];
 
     return $data;
+
   }
 
   /**
