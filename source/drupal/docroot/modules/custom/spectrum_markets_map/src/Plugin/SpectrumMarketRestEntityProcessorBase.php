@@ -146,7 +146,7 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
       'data' =>
         [
           'heading' => $this->t('Demographic Composition'),
-          'image' => $this->image($entity->get('field_market_demog_composition')),
+          'image' => $this->image($entity->get('field_market_demog_composition'), ['style' => 'demographic__markets_map']),
         ],
     ];
 

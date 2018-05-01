@@ -34,58 +34,56 @@ source:
     8:
       partners_logos: 'Partners logos'
     9:
-      Mediakit: 'Media Kit'
-    10:
       Democomp: 'Demographic Composition'
-    11:
+    10:
       Devices_desk: 'Devices Desktop'
-    12:
+    11:
       Devices_smart: 'Devices Smartphone'
-    13:
+    12:
       Devices_tab: 'Devices Tablet'
-    14:
+    13:
       Gender_male: 'Gender Male'
-    15:
+    14:
       Gender_female: 'Gender Female'
-    16:
+    15:
       Education_no: 'Education No college'
-    17:
+    16:
       Education_undergrad: 'Education Undergrad'
-    18:
+    17:
       Education_grad: 'Education Grad+'
-    19:
+    18:
       Home_own: 'Home Own'
-    20:
+    19:
       Home_rent: 'Home Rent'
-    21:
+    20:
       Parenting_kids: 'Parenting Have Kids'
-    22:
+    21:
       Parenting_nokids: 'Parenting No Kids'
-    23:
+    22:
       Age_18: 'Age <18'
-    24:
+    23:
       Age_1824: 'Age 18-24'
-    25:
+    24:
       Age_2534: 'Age 25-34'
-    26:
+    25:
       Age_3544: 'Age 35-44'
-    27:
+    26:
       Age_4554: 'Age 45-54'
-    28:
+    27:
       Age_5564: 'Age 55-64'
-    29:
+    28:
       Age_65: 'Age 65+'
-    30:
+    29:
       Income_0_50: 'Income 0-50'
-    31:
+    30:
       Income_50_100: 'Income 50-100'
-    32:
+    31:
       Income_100_150: 'Income 100-150'
-    33:
+    32:
       Income_150: 'Income 150+'
-    34:
+    33:
       Network_logos: 'Network Logos'
-    35:
+    34:
       TopNetwork_logos: 'Top Network Logos'
 
 process:
@@ -142,11 +140,15 @@ process:
     source: Mediakit
     message: 'Field field_name is missing'
 
-  field_market_demog_composition:
-    plugin: skip_on_empty_null
-    method: process
-    source: Democomp
-    message: 'Field field_name is missing'
+  field_market_demog_composition/target_id:
+    -
+      plugin: skip_on_empty_null
+      method: process
+      source: Democomp
+      message: 'Field field_name is missing'
+    -
+      plugin: file_json
+      destination: 'public://markets/[date:custom:Y]-[date:custom:m]'
 
   field_market_devices_desktop:
     plugin: skip_on_empty_null

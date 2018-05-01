@@ -38,8 +38,6 @@ source:
     -
       partners_logos: 'Partners logos'
     -
-      Mediakit: 'Media Kit'
-    -
       Democomp: 'Demographic Composition'
     -
       Devices_desk: 'Devices Desktop'
@@ -142,11 +140,15 @@ process:
     method: process
     source: Mediakit
     message: 'Field field_name is missing'
-  field_market_demog_composition:
-    plugin: skip_on_empty_null
-    method: process
-    source: Democomp
-    message: 'Field field_name is missing'
+  field_market_demog_composition/target_id:
+    -
+      plugin: skip_on_empty_null
+      method: process
+      source: Democomp
+      message: 'Field field_name is missing'
+    -
+      plugin: file_json
+      destination: 'public://markets/[date:custom:Y]-[date:custom:m]'
   field_market_devices_desktop:
     plugin: skip_on_empty_null
     method: process

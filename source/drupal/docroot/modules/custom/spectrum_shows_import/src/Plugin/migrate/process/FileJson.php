@@ -27,6 +27,11 @@ class FileJson extends ProcessPluginBase {
       throw new MigrateSkipProcessException();
     }
 
+    $destination = 'public://';
+    if (isset($this->configuration['destination'])) {
+      $destination = $this->configuration['destination'];
+    }
+
     // Save the file, return its ID.
     $file = $this->downloadFile($value, 'public://', TRUE, FILE_EXISTS_REPLACE);
     if ($file instanceof File) {
