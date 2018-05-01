@@ -82,7 +82,7 @@ class ImportMarkets extends ConfigFormBase {
       '#type' => 'managed_file',
       '#name' => 'markets_csv',
       '#title' => t('Markets CSV File'),
-      '#required' => TRUE,
+      '#required' => FALSE,
       '#size' => 20,
       '#description' => t('CSV format only'),
       '#upload_validators' => $validators,
@@ -90,6 +90,14 @@ class ImportMarkets extends ConfigFormBase {
     ];
 
     $newForm['actions']['submit']['#value'] = $this->t('Import markets');
+
+    $newForm['actions']['rollback'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Rollback imported markers'),
+      '#button_type' => 'secondary',
+      '#submit' => ['::rollbackSubmit']
+    ];
+
     return $newForm;
 
   }
@@ -115,7 +123,6 @@ class ImportMarkets extends ConfigFormBase {
         $file->setPermanent();
         $file->save();
       }
-
 
       if ($file instanceof File) {
         try {
@@ -155,6 +162,26 @@ class ImportMarkets extends ConfigFormBase {
         }
       }
     }
+    else {
+      drupal_set_message($this->t('File hasn\'t been uploaded.'), 'error');
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   *
+   * @throws \Drupal\migrate\MigrateException
+   * @throws \Drupal\Component\Plugin\Exception\PluginException
+   */
+  public function rollbackSubmit(array &$form, FormStateInterface $form_state) {
+    $migration = $this->migrationPluginManager->createInstance('markets');
+    $migration->getIdMap()->prepareUpdate();
+    $executable = new MigrateExecutable($migration, new MigrateMessage());
+    $executable->rollback();
+
+    drupal_set_message($this->t('@markets rolled back successfully.', [
+      '@markets' => $this->formatPlural($executable->getRollbackCount(), '1 Market is', '@count Markets are')
+    ]));
   }
 
 }
