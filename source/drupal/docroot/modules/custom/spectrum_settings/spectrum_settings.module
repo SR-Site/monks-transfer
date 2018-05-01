@@ -9,6 +9,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
 use Drupal\Core\Database\Query\AlterableInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Database\Query\Select;
 
 /**
  * Implements hook_help().
@@ -107,7 +108,9 @@ function spectrum_settings_node_update(\Drupal\node\NodeInterface $node) {
  * We like tho show always 30 results instead of the 10 definied in EntityAutocompleteMatcher::getMatches()
  */
 function spectrum_settings_query_entity_reference_alter(AlterableInterface $query) {
-  $query->range(0, 30);
+  if ($query instanceof Select && $query->getMetaData('entity_type') == 'schedule') {
+    $query->range();
+  }
 }
 
 /**
