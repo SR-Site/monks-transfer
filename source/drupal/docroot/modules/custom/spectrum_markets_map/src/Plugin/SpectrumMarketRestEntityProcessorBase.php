@@ -127,7 +127,7 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
       'name' => 'MarketMediaKit',
       'data' => [
         'heading' => $this->t('Media Kit'),
-        'label' => $this->t('Market Media Kit'),
+        'label' => $this->t('Get Market Media kit'),
       ],
     ];
 
