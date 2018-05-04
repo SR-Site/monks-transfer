@@ -77,49 +77,31 @@ field_settings:
     property_path: title
     type: string
 processor_settings:
-  order_position:
-    plugin_id: order_position
-    settings: {  }
-  add_url:
-    plugin_id: add_url
-    settings: {  }
-  rendered_item:
-    plugin_id: rendered_item
-    settings: {  }
+  order_position: {  }
+  add_url: {  }
+  rendered_item: {  }
   ignorecase:
-    plugin_id: ignorecase
-    settings:
-      fields: {  }
-      weights:
-        preprocess_index: -10
-        preprocess_query: -10
-  aggregated_field:
-    plugin_id: aggregated_field
-    settings: {  }
-  node_status:
-    plugin_id: node_status
-    settings: {  }
+    fields: {  }
+    weights:
+      preprocess_index: -10
+      preprocess_query: -10
+  aggregated_field: {  }
   content_access:
-    plugin_id: content_access
-    settings:
-      weights:
-        preprocess_query: -10
+    weights:
+      preprocess_query: -10
+  entity_status: {  }
 options:
   index_directly: true
   cron_limit: 50
 datasource_settings:
   'entity:node':
-    plugin_id: 'entity:node'
-    settings:
-      bundles:
-        default: false
-        selected:
-          - show
-      languages:
-        default: true
-        selected: {  }
+    bundles:
+      default: false
+      selected:
+        - show
+    languages:
+      default: true
+      selected: {  }
 tracker_settings:
-  default:
-    plugin_id: default
-    settings: {  }
+  default: {  }
 server: database

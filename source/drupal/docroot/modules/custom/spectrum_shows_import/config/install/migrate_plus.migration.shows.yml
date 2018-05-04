@@ -16,6 +16,10 @@ source:
       label: 'Show Id'
       selector: ShowId
     -
+      name: tms_id
+      label: 'Tms Id'
+      selector: TmsId
+    -
       name: MediaType
       label: 'MediaType'
       selector: MediaType
@@ -53,7 +57,7 @@ source:
       selector: Recommend
 
   ids:
-    show_id:
+    tms_id:
       type: string
 
 process:
@@ -63,7 +67,7 @@ process:
 
   title: title
 
-  field_show_id: show_id
+  field_show_id: tms_id
 
   field_show_media_type:
     plugin: entity_generate

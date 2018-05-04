@@ -64,6 +64,7 @@ class SearchApiRestDeriver extends FacetSourceDeriverBase {
             'description' => $this->t('Provides a facet source.'),
             'index_name' => $plugin['index_name'],
             'resource_id' => $machine_name,
+            'display_id' => 'search_' . $plugin['index_name'],
             'path' => $plugin['uri_paths']['canonical'],
           ] + $base_plugin_definition;
       }

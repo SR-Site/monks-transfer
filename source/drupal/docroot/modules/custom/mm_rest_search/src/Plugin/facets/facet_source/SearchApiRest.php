@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   deriver = "Drupal\mm_rest_search\Plugin\facets\facet_source\SearchApiRestDeriver"
  * )
  */
-class SearchApiRest extends SearchApiBaseFacetSource implements SearchApiFacetSourceInterface {
+class SearchApiRest extends SearchApiBaseFacetSource {
 
   /**
    * The entity manager.
@@ -186,4 +186,11 @@ class SearchApiRest extends SearchApiBaseFacetSource implements SearchApiFacetSo
     return ['module' => ['node', 'mm_rest']];
   }
 
+  public function getDataDefinition($field_name) {
+    $field = $this->getIndex()->getField($field_name);
+    if ($field) {
+      return $field->getDataDefinition();
+    }
+    throw new \Exception("Field with name {$field_name} does not have a definition");
+  }
 }

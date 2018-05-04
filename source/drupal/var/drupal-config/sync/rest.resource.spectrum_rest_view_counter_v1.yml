@@ -8,15 +8,12 @@ dependencies:
     - user
 id: spectrum_rest_view_counter_v1
 plugin_id: spectrum_rest_view_counter_v1
-granularity: method
+granularity: resource
 configuration:
-  GET:
-    supported_formats:
-      - json
-    supported_auth:
-      - cookie
-  POST:
-    supported_formats:
-      - json
-    supported_auth:
-      - cookie
+  methods:
+    - GET
+    - POST
+  formats:
+    - json
+  authentication:
+    - cookie

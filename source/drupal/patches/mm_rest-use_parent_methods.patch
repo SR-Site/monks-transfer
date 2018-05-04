@@ -1,74 +1,17 @@
-diff --git a/src/Plugin/ResourceBase.php b/src/Plugin/ResourceBase.php
-index c0b41cd..85c330c 100644
---- a/src/Plugin/ResourceBase.php
-+++ b/src/Plugin/ResourceBase.php
-@@ -100,53 +100,6 @@ abstract class ResourceBase extends RestResourceBase implements ContainerFactory
-     );
-   }
- 
--  public function routes() {
--    $collection = new RouteCollection();
--
--    $definition = $this->getPluginDefinition();
--    $canonical_path = isset($definition['uri_paths']['canonical']) ? $definition['uri_paths']['canonical'] : '/' . strtr($this->pluginId, ':', '/') . '/{id}';
--
--    $route_name = strtr($this->pluginId, ':', '.');
--
--    $methods = $this->availableMethods();
--    foreach ($methods as $method) {
--      $route = $this->getBaseRoute($canonical_path, $method);
--
--      switch ($method) {
--        case 'POST':
--        case 'PATCH':
--          // Restrict the incoming HTTP Content-type header to the known
--          // serialization formats.
--          $route->addRequirements(array('_content_type_format' => implode('|', $this->serializerFormats)));
--          $collection->add("$route_name.$method", $route);
--          break;
--
--        case 'GET':
--        case 'HEAD':
--          // Restrict GET and HEAD requests to the media type specified in the
--          // HTTP Accept headers.
--          if (!empty($definition['format']['_format_key'])) {
--            foreach ($this->serializerFormats as $format_name) {
--              // Expose one route per available format.
--              $format_route = clone $route;
--              $format_route->addRequirements(array('_format' => $format_name));
--              $collection->add("$route_name.$method.$format_name", $format_route);
--            }
--          }
--          else {
--            $collection->add("$route_name.$method", $route);
--          }
--          break;
--
--        default:
--          $collection->add("$route_name.$method", $route);
--          break;
--      }
--    }
--
--    return $collection;
--  }
--
-   /**
-    * Setups the base route for all HTTP methods.
-    *
 diff --git a/src/RequestHandler.php b/src/RequestHandler.php
-index 73bc2c4..0e36f7c 100644
+index 73bc2c4..5f0b903 100644
 --- a/src/RequestHandler.php
 +++ b/src/RequestHandler.php
-@@ -5,6 +5,7 @@ namespace Drupal\mm_rest;
+@@ -5,6 +5,8 @@ namespace Drupal\mm_rest;
  use Drupal\Core\Render\RenderContext;
  use Drupal\Core\Routing\RouteMatchInterface;
  use Drupal\rest\ResourceResponse;
 +use Drupal\rest\RequestHandler as CoreRequestHandler;
++use Drupal\rest\RestResourceConfigInterface;
  use Symfony\Component\DependencyInjection\ContainerAwareInterface;
  use Symfony\Component\DependencyInjection\ContainerAwareTrait;
  use Symfony\Component\HttpFoundation\Request;
-@@ -16,83 +17,20 @@ use Symfony\Component\Serializer\Exception\UnexpectedValueException;
+@@ -16,83 +18,20 @@ use Symfony\Component\Serializer\Exception\UnexpectedValueException;
  /**
   * Acts as intermediate request forwarder for resource plugins.
   */
@@ -76,7 +19,7 @@ index 73bc2c4..0e36f7c 100644
 -
 -  use ContainerAwareTrait;
 +class RequestHandler extends CoreRequestHandler {
- 
+
    /**
 -   * Handles a web API request.
 -   *
@@ -89,7 +32,7 @@ index 73bc2c4..0e36f7c 100644
 -   *   The response object.
 +   * @inheritdoc
     */
-   public function handle(RouteMatchInterface $route_match, Request $request) {
+-  public function handle(RouteMatchInterface $route_match, Request $request) {
 -
 -    $plugin = $route_match->getRouteObject()->getDefault('_plugin');
 -    $method = strtolower($request->getMethod());
@@ -144,15 +87,17 @@ index 73bc2c4..0e36f7c 100644
 -
 -   // Invoke the operation on the resource plugin.
 -    $result = call_user_func_array(array($resource, $method), array_merge($parameters, array($unserialized, $request)));
-+    $response = parent::handle($route_match, $request);
- 
++  public function handle(RouteMatchInterface $route_match, Request $request, RestResourceConfigInterface $_rest_resource_config) {
++    $response = parent::handle($route_match, $request, $_rest_resource_config);
+
      // Add rest settings config's cache tags.
      // @todo Add mm_rest config cache tag.
      // @todo Use DI
-     \Drupal::service('mm_rest.cacheable_metadata_collector')->addCacheableDependency($this->container->get('config.factory')->get('rest.settings'));
- 
+-    \Drupal::service('mm_rest.cacheable_metadata_collector')->addCacheableDependency($this->container->get('config.factory')->get('rest.settings'));
++    \Drupal::service('mm_rest.cacheable_metadata_collector')->addCacheableDependency($this->configFactory->get('rest.settings'));
+
 -    return $result;
 +    return $response;
    }
- 
+
  }

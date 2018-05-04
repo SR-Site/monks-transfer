@@ -33,34 +33,22 @@ field_settings:
     property_path: title
     type: string
 processor_settings:
-  order_position:
-    plugin_id: order_position
-    settings: {  }
-  add_url:
-    plugin_id: add_url
-    settings: {  }
-  rendered_item:
-    plugin_id: rendered_item
-    settings: {  }
-  aggregated_field:
-    plugin_id: aggregated_field
-    settings: {  }
+  order_position: {  }
+  add_url: {  }
+  rendered_item: {  }
+  aggregated_field: {  }
 options:
   index_directly: true
   cron_limit: 50
 datasource_settings:
   'entity:node':
-    plugin_id: 'entity:node'
-    settings:
-      bundles:
-        default: false
-        selected:
-          - network
-      languages:
-        default: true
-        selected: {  }
+    bundles:
+      default: false
+      selected:
+        - network
+    languages:
+      default: true
+      selected: {  }
 tracker_settings:
-  default:
-    plugin_id: default
-    settings: {  }
+  default: {  }
 server: database

@@ -8,10 +8,11 @@ dependencies:
     - user
 id: spectrum_rest_searchshows_v1
 plugin_id: spectrum_rest_searchshows_v1
-granularity: method
+granularity: resource
 configuration:
-  GET:
-    supported_formats:
-      - json
-    supported_auth:
-      - cookie
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

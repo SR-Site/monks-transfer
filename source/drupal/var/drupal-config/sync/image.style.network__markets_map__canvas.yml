@@ -12,7 +12,7 @@ effects:
     id: image_define_canvas
     weight: -9
     data:
-      HEX: '#FFFFFF'
+      HEX: '#FFF'
       under: 1
       exact_measurements: 1
       exact:

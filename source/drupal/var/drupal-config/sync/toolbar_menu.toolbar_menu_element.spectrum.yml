@@ -1,0 +1,9 @@
+uuid: dc8aded9-e8b5-417b-90e1-64165a661858
+langcode: en
+status: true
+dependencies: {  }
+id: spectrum
+label: spectrum
+weight: 4
+menu: spectrum
+rewrite_label: true
