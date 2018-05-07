@@ -397,7 +397,6 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
       'name' => 'MarketImages',
       'data' => [
         'heading' => $this->t('Network Logos'),
-        'subHeading' => $this->t('Informative'),
       ],
     ];
     // Get networks logos.
