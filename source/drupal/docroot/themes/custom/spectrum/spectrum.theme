@@ -30,7 +30,7 @@ function spectrum_page_attachments_alter(array &$page) {
     '#tag' => 'meta',
     '#attributes' => array(
       'name' => 'google-site-verification',
-      'content' => '4TsMyjp-08sQ6e1p7Rowuo3gIz91GVf3CMD263F5dLs',
+      'content' => '6yg1cNVXU3GbKVuaxhrR_RnL_W9AH--1P9v2xgIXfOM',
     ),
   );
   $page['#attached']['html_head'][] = [$google_verification_tag, 'google_verification_tag'];
