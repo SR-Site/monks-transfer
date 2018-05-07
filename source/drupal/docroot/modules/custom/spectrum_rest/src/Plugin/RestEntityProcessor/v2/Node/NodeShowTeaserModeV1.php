@@ -37,13 +37,13 @@ class NodeShowTeaserModeV1 extends ShowsRestEntityProcessorBase {
     }
 
     // Get time of next episode.
-    $airTime = $this->showsUtility->getNextEpisodeTime($entity->get('field_show_schedules'), 'date');
-    if (!empty($airTime)) {
-      $data['subHeading'] = t(':date @ :time ET/PT', [
-        ':date' => $airTime['date'],
-        ':time' => $airTime['time'],
-      ]);
-    }
+//    $airTime = $this->showsUtility->getNextEpisodeTime($entity->get('field_show_schedules'), 'date');
+//    if (!empty($airTime)) {
+//      $data['subHeading'] = t(':date @ :time ET/PT', [
+//        ':date' => $airTime['date'],
+//        ':time' => $airTime['time'],
+//      ]);
+//    }
 
     // Get networks logos.
     foreach ($entity->get('field_show_network') as $item) {
