@@ -123,14 +123,45 @@
 				  "label": "Audience Profile",
 				  "blocks": [
 					{
-					  "name": "MarketImage",
+					  "name": "MarketPercentages",
 					  "data": {
-						"heading": "Demographic Composition",
-						"image": {
-						  "alt": "Demographic composition",
-						  "normal": "http://placehold.it/1280x720",
-						  "small": "http://placehold.it/1280x720"
-						}
+						"heading": "Demographic composition"
+					  }
+					},
+					{
+					  "name": "MarketBlockPercentages",
+					  "data": {
+						"heading": "Race",
+						"percentages": [
+						  {
+							"label": "<18",
+							"value": 10
+						  },
+						  {
+							"label": "18-24",
+							"value": 99
+						  },
+						  {
+							"label": "25-34",
+							"value": 20
+						  },
+						  {
+							"label": "35-44",
+							"value": 40
+						  },
+						  {
+							"label": "45-54",
+							"value": 20
+						  },
+						  {
+							"label": "55-64",
+							"value": 10
+						  },
+						  {
+							"label": "65+",
+							"value": 30
+						  }
+						]
 					  }
 					},
 					{
