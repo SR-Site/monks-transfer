@@ -142,7 +142,7 @@
 					{
 					  "name": "MarketBlockPercentages",
 					  "data": {
-						"heading": "Race",
+						"heading": "Age",
 						"percentages": [
 						  {
 							"label": "<18",
@@ -282,7 +282,7 @@
 					{
 					  "name": "MarketBlockPercentages",
 					  "data": {
-						"heading": "Age",
+						"heading": "Race",
 						"percentages": [
 						  {
 							"label": "<18",
