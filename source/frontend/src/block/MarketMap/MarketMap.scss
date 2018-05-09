@@ -10,7 +10,7 @@
 
 	.zoom-actions {
 		position: absolute;
-		@include position(auto, auto, $sizeGrid, $sizeGrid);
+		@include position(auto, auto, $sizeGrid * 3, $sizeGrid);
 	}
 
 	.contact-button {
