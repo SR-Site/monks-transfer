@@ -8,7 +8,16 @@ $mediaQueries: (
 	XXX_LARGE: (min-width: 1660px),
 	MEDIUM_ISOLATE: (min-width: 768px) and (max-width: 1023px),
 	ARTICLE_TEASER_MEDIUM: (max-width: 1010px),
-	ARTICLE_TEASER_LARGE: (max-width: 1225px)
+	ARTICLE_TEASER_LARGE: (max-width: 1225px),
 );
 
-$DeviceState: (X_SMALL: 0, SMALL: 1, MEDIUM: 2, LARGE: 3, X_LARGE: 4, XX_LARGE: 5, XXX_LARGE: 6, MEDIUM_ISOLATE: 7);
+$DeviceState: (
+	X_SMALL: 0,
+	SMALL: 1,
+	MEDIUM: 2,
+	LARGE: 3,
+	X_LARGE: 4,
+	XX_LARGE: 5,
+	XXX_LARGE: 6,
+	MEDIUM_ISOLATE: 7,
+);
