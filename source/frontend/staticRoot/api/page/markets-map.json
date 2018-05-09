@@ -74,62 +74,9 @@
 					{
 					  "name": "MarketImages",
 					  "data": {
-						"heading": "Network Logos",
+						"heading": "Top Networks",
 						"subHeading": "Informative",
 						"images": [
-						  {
-							"normal": "http://placehold.it/300/ffffff/000000",
-							"small": "http://placehold.it/300/ffffff/000000",
-							"alt": "Lorem ipsum dolor sit amet"
-						  },
-						  {
-							"normal": "http://placehold.it/300/ffffff/000000",
-							"small": "http://placehold.it/300/ffffff/000000",
-							"alt": "Lorem ipsum dolor sit amet"
-						  },
-						  {
-							"normal": "http://placehold.it/300/ffffff/000000",
-							"small": "http://placehold.it/300/ffffff/000000",
-							"alt": "Lorem ipsum dolor sit amet"
-						  },
-						  {
-							"normal": "http://placehold.it/300/ffffff/000000",
-							"small": "http://placehold.it/300/ffffff/000000",
-							"alt": "Lorem ipsum dolor sit amet"
-						  },
-						  {
-							"normal": "http://placehold.it/300/ffffff/000000",
-							"small": "http://placehold.it/300/ffffff/000000",
-							"alt": "Lorem ipsum dolor sit amet"
-						  },
-						  {
-							"normal": "http://placehold.it/300/ffffff/000000",
-							"small": "http://placehold.it/300/ffffff/000000",
-							"alt": "Lorem ipsum dolor sit amet"
-						  }
-						]
-					  }
-					},
-					{
-					  "name": "MarketImages",
-					  "data": {
-						"heading": "Top performing cable networks in the market",
-						"images": [
-						  {
-							"normal": "http://placehold.it/300/ffffff/000000",
-							"small": "http://placehold.it/300/ffffff/000000",
-							"alt": "Lorem ipsum dolor sit amet"
-						  },
-						  {
-							"normal": "http://placehold.it/300/ffffff/000000",
-							"small": "http://placehold.it/300/ffffff/000000",
-							"alt": "Lorem ipsum dolor sit amet"
-						  },
-						  {
-							"normal": "http://placehold.it/300/ffffff/000000",
-							"small": "http://placehold.it/300/ffffff/000000",
-							"alt": "Lorem ipsum dolor sit amet"
-						  },
 						  {
 							"normal": "http://placehold.it/300/ffffff/000000",
 							"small": "http://placehold.it/300/ffffff/000000",
