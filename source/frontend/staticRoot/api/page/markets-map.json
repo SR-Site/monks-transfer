@@ -113,8 +113,19 @@
 					{
 					  "name": "MarketMediaKit",
 					  "data": {
-						"heading": "Media Kit",
-						"label": "Get Market Media kit"
+							"heading": "Media Kit",
+							"label": "Get Market Media kit",
+							"credits": [
+								{
+									"source": "something"
+								},
+								{
+									"source": "something else"
+								},
+								{
+									"source": "etc.."
+								}
+							]
 					  }
 					}
 				  ]

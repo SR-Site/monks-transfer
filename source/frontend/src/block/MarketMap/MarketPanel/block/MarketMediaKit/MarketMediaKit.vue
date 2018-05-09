@@ -16,5 +16,10 @@
 			:type="ButtonType.ACTION"
 			:solid="true"
 		/>
+		<ul :class="['credits', $style.credits]" v-if="data.credits">
+			<li v-for="(credit, index) in data.credits">
+				{{index + 1}}. <i>{{credit.source}}</i>
+			</li>
+		</ul>
 	</div>
 </template>
