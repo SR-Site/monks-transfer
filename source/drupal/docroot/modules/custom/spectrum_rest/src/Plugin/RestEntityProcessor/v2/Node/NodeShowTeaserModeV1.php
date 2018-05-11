@@ -2,7 +2,9 @@
 
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\v2\Node;
 
+use Drupal\Console\Bootstrap\Drupal;
 use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\node\Entity\Node;
 use Drupal\spectrum_rest\Plugin\ShowsRestEntityProcessorBase;
 
 /**
@@ -49,7 +51,9 @@ class NodeShowTeaserModeV1 extends ShowsRestEntityProcessorBase {
     // Get networks logos.
     foreach ($entity->get('field_show_network') as $item) {
       if ($item->entity instanceof ContentEntityInterface) {
-        $data['logo'][] = $this->image($item->entity->get('image'));
+        if ($this->getNetworkNode($item->entity->id())) {
+          $data['logo'][] = $this->image($item->entity->get('image'));
+        }
       }
     }
 

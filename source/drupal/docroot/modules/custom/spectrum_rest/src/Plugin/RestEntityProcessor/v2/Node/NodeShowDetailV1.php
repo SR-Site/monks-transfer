@@ -54,7 +54,9 @@ class NodeShowDetailV1 extends ShowsRestEntityProcessorBase {
     // Get networks logos.
     $data['network'] = [];
     foreach ($entity->get('field_show_network') as $item) {
-      $data['network']['logo'][] = $this->image($item->entity->get('image'));
+      if ($this->getNetworkNode($item->entity->id())) {
+        $data['network']['logo'][] = $this->image($item->entity->get('image'));
+      }
     }
 
     return $data;

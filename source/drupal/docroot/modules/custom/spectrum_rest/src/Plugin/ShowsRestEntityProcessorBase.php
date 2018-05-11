@@ -58,4 +58,23 @@ abstract class ShowsRestEntityProcessorBase extends SpectrumRestEntityProcessorB
     );
   }
 
+  /**
+   * @param $networkId
+   *
+   * @return bool
+   */
+  protected function getNetworkNode($networkId) {
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'network')
+      ->condition('status', 1)
+      ->condition('field_network.entity.id', $networkId);
+    $results = $query->execute();
+
+    if (!empty($results)) {
+      return TRUE;
+    }
+
+    return FALSE;
+  }
+
 }

@@ -3,6 +3,7 @@
 namespace Drupal\spectrum_rest\Plugin\RestEntityProcessor\v2\Node;
 
 use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\spectrum_rest\Plugin\ShowsRestEntityProcessorBase;
 use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
 
 /**
@@ -17,7 +18,7 @@ use Drupal\spectrum_rest\Plugin\SpectrumRestEntityProcessorBase;
  *   view_mode = "program_module"
  * )
  */
-class NodeShowProgramModuleV1 extends SpectrumRestEntityProcessorBase {
+class NodeShowProgramModuleV1 extends ShowsRestEntityProcessorBase {
 
   /**
    * {@inheritdoc}
@@ -43,7 +44,9 @@ class NodeShowProgramModuleV1 extends SpectrumRestEntityProcessorBase {
 
     // Get networks logos.
     foreach ($entity->get('field_show_network') as $item) {
-      $data['logo'][] = $this->image($item->entity->get('image'));
+      if ($this->getNetworkNode($item->entity->id())) {
+        $data['logo'][] = $this->image($item->entity->get('image'));
+      }
     }
 
     return $data;
