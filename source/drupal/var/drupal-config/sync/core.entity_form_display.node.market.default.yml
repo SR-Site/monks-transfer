@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.market.field_market_ages_55_64
     - field.field.node.market.field_market_ages_65_plus
     - field.field.node.market.field_market_ages_lower_18
+    - field.field.node.market.field_market_credits
     - field.field.node.market.field_market_demog_composition
     - field.field.node.market.field_market_devices_desktop
     - field.field.node.market.field_market_devices_smartphone
@@ -71,6 +72,7 @@ third_party_settings:
         - group_statistic
         - field_market_partners_logos
         - group_media_kit
+        - group_credits
       parent_name: group_markets_tabs
       weight: 6
       format_type: tab
@@ -256,6 +258,18 @@ third_party_settings:
         open: false
         required_fields: true
       label: Ages
+    group_credits:
+      children:
+        - field_market_credits
+      parent_name: group_market
+      weight: 7
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Credits
 id: node.market.default
 targetEntityType: node
 bundle: market
@@ -315,6 +329,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_market_credits:
+    weight: 56
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_market_demog_composition:
     weight: 18

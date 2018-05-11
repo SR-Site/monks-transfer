@@ -1,0 +1,19 @@
+uuid: a3fc209c-0a78-4090-b297-d72cf500bea6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_credits
+    - node.type.market
+id: node.market.field_market_credits
+field_name: field_market_credits
+entity_type: node
+bundle: market
+label: Credits
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

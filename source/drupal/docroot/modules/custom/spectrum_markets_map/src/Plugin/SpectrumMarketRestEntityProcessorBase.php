@@ -130,6 +130,16 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
       ],
     ];
 
+
+    if ($credits = $this->fieldProcessor->getFieldData($entity->get('field_market_credits'))) {
+      foreach ($credits as $credit) {
+        $data['data']['credits'][] = [
+          'source' => $credit
+        ];
+      }
+
+    }
+
     return $data;
   }
 
