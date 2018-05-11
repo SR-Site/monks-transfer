@@ -31,6 +31,7 @@ class NodeMarketTeaserV1 extends SpectrumMarketRestEntityProcessorBase {
           'blocks' => [
             $this->getMarketVideo($entity),
             $this->getMarketNumbers($entity),
+            $this->getMarketTopNetworksInformative($entity),
             $this->getMarketImagesInformative($entity),
             $this->getMarketMediaKit($entity)
           ],
@@ -44,13 +45,12 @@ class NodeMarketTeaserV1 extends SpectrumMarketRestEntityProcessorBase {
             $this->getMarketBlockPercentages($entity),
           ],
         ],
-        [
-          'label' => $this->t('Top Networks'),
-          'blocks' => [
-            $this->getMarketTopNetworksInformative($entity),
-            $this->getMarketTopPerformingNetworks($entity),
-          ],
-        ],
+//        [
+//          'label' => $this->t('Top Networks'),
+//          'blocks' => [
+//            $this->getMarketTopPerformingNetworks($entity),
+//          ],
+//        ],
       ],
     ];
 
