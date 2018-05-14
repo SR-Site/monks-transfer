@@ -126,7 +126,12 @@
 					  "name": "MarketMediaKit",
 					  "data": {
 							"heading": "Media Kit",
-							"label": "Get Market Media kit",
+							"label": "Get Market Media kit"
+					  }
+					},
+					{
+					  "name": "MarketSources",
+					  "data": {
 							"credits": [
 								{
 									"source": "something"
