@@ -14,9 +14,8 @@ export default {
 	props: {
 		marketId: VueTypes.string.isRequired,
 		data: VueTypes.shape({
-			heading: VueTypes.string,
 			video: VueTypes.shape(PropVideo).isRequired,
-		}),
+		})
 	},
 	methods: {
 		handleAllComponentsReady() {
