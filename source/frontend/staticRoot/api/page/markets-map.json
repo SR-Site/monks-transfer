@@ -73,6 +73,19 @@
 					{
 					  "name": "MarketImages",
 					  "data": {
+						"heading": "Advertising Partners",
+						"images": [
+						  {
+							"normal": "http://placehold.it/300/ffffff/000000",
+							"small": "http://placehold.it/300/ffffff/000000",
+							"alt": "Lorem ipsum dolor sit amet"
+						  }
+						]
+					  }
+					},
+					{
+					  "name": "MarketImages",
+					  "data": {
 						"heading": "Top Networks",
 						"subHeading": "Informative",
 						"images": [
