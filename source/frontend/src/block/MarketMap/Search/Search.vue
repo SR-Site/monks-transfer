@@ -9,6 +9,7 @@
 			<input
 					@focus="handleFocus"
 					@blur="handleBlur"
+					@keydown="handleBlockEnter"
 					v-model="query"
 					type="text"
 					:class="$style.input" placeholder="Where do you want to advertise"

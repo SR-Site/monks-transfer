@@ -79,5 +79,8 @@ export default {
 			this.$emit('selectMarket', market);
 			this.query = '';
 		},
+		handleBlockEnter(e) {
+			e.keyCode === 13 ? e.preventDefault() : false;
+		}
 	},
 };
