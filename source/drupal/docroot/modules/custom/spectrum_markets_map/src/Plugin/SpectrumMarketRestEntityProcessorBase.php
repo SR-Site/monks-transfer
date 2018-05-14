@@ -94,11 +94,29 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
    * @return array
    * @throws \Exception
    */
+  protected function getMarketText(ContentEntityInterface $entity) {
+    $data = [
+      'name' => 'MarketText',
+      'data' => [
+        'text' => $this->fieldProcessor->getFieldData($entity->get('field_market_free_text')),
+      ],
+    ];
+
+    return $data;
+  }
+
+  /**
+   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *
+   * @return array
+   * @throws \Exception
+   */
   protected function getMarketImagesInformative(ContentEntityInterface $entity) {
     $data = [
       'name' => 'MarketImages',
       'data' => [
         'heading' => $this->t('Advertising Partners'),
+        'subHeading' => $this->fieldProcessor->getFieldData($entity->get('field_market_ap_text')),
       ],
     ];
     // Get networks logos.
@@ -125,15 +143,6 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
         'label' => $this->t('Get Market Media kit'),
       ],
     ];
-
-    if ($credits = $this->fieldProcessor->getFieldData($entity->get('field_market_credits'))) {
-      foreach ($credits as $credit) {
-        $data['data']['credits'][] = [
-          'source' => $credit,
-        ];
-      }
-
-    }
 
     return $data;
   }

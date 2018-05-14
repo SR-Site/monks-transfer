@@ -32,6 +32,7 @@ class NodeMarketTeaserV1 extends SpectrumMarketRestEntityProcessorBase {
             $this->getMarketVideo($entity),
             $this->getMarketNumbers($entity),
             $this->getMarketTopNetworksInformative($entity),
+            $this->getMarketText($entity),
             $this->getMarketImagesInformative($entity),
             $this->getMarketMediaKit($entity),
             $this->getMarketSources($entity)
