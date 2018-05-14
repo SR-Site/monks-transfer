@@ -10,6 +10,7 @@ import MarketNumbers from './block/MarketNumbers';
 import MarketPercentages from './block/MarketPercentages';
 import MarketVideo from './block/MarketVideo';
 import MarketSources from './block/MarketSources';
+import MarketText from './block/MarketText';
 import MarketPanelTransitionController from './MarketPanelTransitionController';
 
 export default {
@@ -24,7 +25,8 @@ export default {
 		MarketPercentages,
 		MarketComparePercentages,
 		MarketBlockPercentages,
-		MarketSources
+		MarketSources,
+		MarketText
 	},
 	data() {
 		return {

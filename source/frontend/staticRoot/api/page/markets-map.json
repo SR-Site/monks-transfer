@@ -71,9 +71,16 @@
 					  }
 					},
 					{
+					  "name": "MarketText",
+					  "data": {
+						"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum risus eu fringilla feugiat. Pellentesque varius, dolor sed sagittis convallis, neque diam condimentum orci, id egestas mauris risus vel ex. Donec in blandit orci. Praesent et eleifend ante, ut dictum sem. Nunc tortor urna, sollicitudin nec metus hendrerit, fermentum convallis nunc. Nullam tempor pulvinar nulla et congue. Cras elementum semper quam ut maximus. Integer efficitur eleifend tincidunt."
+					  }
+					},
+					{
 					  "name": "MarketImages",
 					  "data": {
 						"heading": "Advertising Partners",
+						"subHeading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse condimentum risus eu fringilla feugiat. Pellentesque varius, dolor sed sagittis convallis, neque diam condimentum orci, id egestas mauris risus vel ex. Donec in blandit orci. Praesent et eleifend ante, ut dictum sem. Nunc tortor urna, sollicitudin nec metus hendrerit, fermentum convallis nunc. Nullam tempor pulvinar nulla et congue. Cras elementum semper quam ut maximus. Integer efficitur eleifend tincidunt.",
 						"images": [
 						  {
 							"normal": "http://placehold.it/300/ffffff/000000",
