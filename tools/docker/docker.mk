@@ -25,7 +25,7 @@ ps:
 	@docker ps --filter name='$(PROJECT_NAME)*'
 
 shell:
-	docker exec -ti $(shell docker ps --filter name='$(PROJECT_NAME)_php' --format "{{ .ID }}") sh
+	docker exec -e COLUMNS=$(COLUMNS) -e LINES=$(LINES) -ti $(shell docker ps --filter name='$(PROJECT_NAME)_php' --format "{{ .ID }}") sh
 
 drush:
 	docker exec $(shell docker ps --filter name='$(PROJECT_NAME)_php' --format "{{ .ID }}") drush -r $(DRUPAL_ROOT) $(filter-out $@,$(MAKECMDGOALS))
