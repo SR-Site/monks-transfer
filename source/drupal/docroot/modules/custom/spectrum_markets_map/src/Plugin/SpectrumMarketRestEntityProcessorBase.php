@@ -134,7 +134,7 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
     if ($credits = $this->fieldProcessor->getFieldData($entity->get('field_market_credits'))) {
       foreach ($credits as $credit) {
         $data['data']['credits'][] = [
-          'source' => $credit
+          'source' => $credit,
         ];
       }
 
@@ -449,7 +449,9 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
   private function getNetworksImages(ContentEntityInterface $entity, $fieldName) {
     $data = [];
     foreach ($entity->get($fieldName) as $item) {
-      $data[] = $this->image($item->entity->get('image'), ['style' => 'network__markets_map__canvas']);
+      if ($item->entity instanceof ContentEntityInterface && $item->entity->hasField('image')) {
+        $data[] = $this->image($item->entity->get('image'), ['style' => 'network__markets_map__canvas']);
+      }
     }
 
     return $data;
