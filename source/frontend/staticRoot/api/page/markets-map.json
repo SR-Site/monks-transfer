@@ -45,7 +45,6 @@
 					{
 					  "name": "MarketVideo",
 					  "data": {
-						"heading": "DMA Rank #167",
 						"video": {
 						  "url": "232468279",
 						  "type": 1
@@ -57,7 +56,7 @@
 					  "data": {
 						"statistics": [
 						  {
-							"label": "Households",
+							"label": "DMA Rank",
 							"value": 105470
 						  },
 						  {
@@ -65,7 +64,7 @@
 							"value": 100
 						  },
 						  {
-							"label": "States",
+							"label": "Insertable networks",
 							"value": 41
 						  }
 						]
