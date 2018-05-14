@@ -52,10 +52,6 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
     $data = [
       'name' => 'MarketVideo',
       'data' => [
-        'heading' => $this->t('DMA Rank #@rank', [
-            '@rank' => $this->fieldProcessor->getFieldData($entity->get('field_market_dma_rank')),
-          ]
-        ),
         'video' => $this->getVideo($entity, 'field_market_dma_video'),
       ],
     ];
@@ -74,7 +70,7 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
       'data' => [
         'statistics' => [
           [
-            'label' => $this->t('Households'),
+            'label' => $this->t('DMA Rank'),
             'value' => $this->fieldProcessor->getFieldData($entity->get('field_market_households')),
           ],
           [
@@ -82,7 +78,7 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
             'value' => $this->fieldProcessor->getFieldData($entity->get('field_market_markets')),
           ],
           [
-            'label' => $this->t('States'),
+            'label' => $this->t('Insertable networks'),
             'value' => $this->fieldProcessor->getFieldData($entity->get('field_market_states')),
           ],
         ],
@@ -130,7 +126,6 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
       ],
     ];
 
-
     if ($credits = $this->fieldProcessor->getFieldData($entity->get('field_market_credits'))) {
       foreach ($credits as $credit) {
         $data['data']['credits'][] = [
@@ -138,6 +133,27 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
         ];
       }
 
+    }
+
+    return $data;
+  }
+
+  /**
+   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *
+   * @return array
+   * @throws \Exception
+   */
+  protected function getMarketSources(ContentEntityInterface $entity) {
+    $data = [
+      'name' => 'MarketSources',
+    ];
+    if ($credits = $this->fieldProcessor->getFieldData($entity->get('field_market_credits'))) {
+      foreach ($credits as $credit) {
+        $data['data']['credits'][] = [
+          'source' => $credit,
+        ];
+      }
     }
 
     return $data;
