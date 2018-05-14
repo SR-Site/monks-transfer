@@ -1,0 +1,13 @@
+:local {
+	.heading {
+		margin-bottom: $sizeGrid * 0.5;
+		color: $colorSecondary;
+	}
+
+	.credits {
+		font-size: 2rem;
+		list-style: none;
+		margin-top: $sizeGrid;
+		padding-left: 0;
+	}
+}
