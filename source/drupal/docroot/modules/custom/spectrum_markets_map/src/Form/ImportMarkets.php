@@ -91,12 +91,12 @@ class ImportMarkets extends ConfigFormBase {
 
     $newForm['actions']['submit']['#value'] = $this->t('Import markets');
 
-    $newForm['actions']['rollback'] = [
-      '#type' => 'submit',
-      '#value' => $this->t('Rollback imported markets'),
-      '#button_type' => 'secondary',
-      '#submit' => ['::rollbackSubmit']
-    ];
+//    $newForm['actions']['rollback'] = [
+//      '#type' => 'submit',
+//      '#value' => $this->t('Rollback imported markets'),
+//      '#button_type' => 'secondary',
+//      '#submit' => ['::rollbackSubmit']
+//    ];
 
     return $newForm;
 
@@ -110,6 +110,8 @@ class ImportMarkets extends ConfigFormBase {
    * @throws \Drupal\Component\Plugin\Exception\PluginException
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+
+    ini_set('max_execution_time', 300);
 
     $fid = $form_state->getValue(['markets_csv', 0]);
     if (!empty($fid)) {
