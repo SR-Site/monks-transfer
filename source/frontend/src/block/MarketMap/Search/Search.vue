@@ -5,11 +5,10 @@
 
 <template>
 	<div :class="$style.wrapper">
-		<form action="#" :class="$style.searchForm">
+		<form action="#" :class="$style.searchForm" @submit.prevent="handleFormSubmit">
 			<input
 					@focus="handleFocus"
 					@blur="handleBlur"
-					@keydown="handleBlockEnter"
 					v-model="query"
 					type="text"
 					:class="$style.input" placeholder="Where do you want to advertise"
