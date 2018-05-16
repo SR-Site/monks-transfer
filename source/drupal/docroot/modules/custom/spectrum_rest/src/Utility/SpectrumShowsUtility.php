@@ -39,8 +39,6 @@ class SpectrumShowsUtility implements SpectrumShowsUtilityInterface {
         $airTime = $scheduleEntity->get('start_time')->value;
         if (strtotime($scheduleEntity->get('start_time')->value) > time()) {
           $airTimeDateTime = new \DateTime($airTime);
-          $airTimeDateTime->setTimezone(new \DateTimeZone('America/New_York'));
-
           $date = $airTimeDateTime->format('l F dS');
           if ($type == 'week') {
             $date = $airTimeDateTime->format('l');
