@@ -18,6 +18,10 @@
 		flex-shrink: 0;
 		flex-basis: #{100% /3};
 
+		&:first-child {
+			margin-bottom: 15px;
+		}
+
 		&:nth-child(even) {
 			color: $colorSecondary;
 
