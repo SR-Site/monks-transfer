@@ -121,12 +121,18 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
     ];
     // Get networks logos.
     $images = $this->fieldProcessor->getFieldData($entity->get('field_market_partners_logos'), ['style' => 'network__markets_map__canvas']);
-    $partnersLogos = [];
-    foreach ($images as $image) {
-      $partnersLogos[] = array_shift($image);
-    }
-    if (empty($partnersLogos)) {
+    if (empty($images)) {
       return [];
+    }
+
+    $partnersLogos = [];
+    if (count($images) > 1) {
+      foreach ($images as $image) {
+        $partnersLogos[] = array_shift($image);
+      }
+    }
+    else {
+      $partnersLogos = $images;
     }
 
     $data['data']['images'] = $partnersLogos;
