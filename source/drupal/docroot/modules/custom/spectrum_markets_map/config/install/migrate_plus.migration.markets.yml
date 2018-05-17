@@ -110,11 +110,16 @@ process:
     source: DMAvideo
     message: 'Field field_name is missing'
 
-  field_market_partners_logos/target_id:
-    plugin: skip_on_empty_null
-    method: process
-    source: partners_logos
-    message: 'Field field_name is missing'
+  field_market_partners_logos:
+    -
+      plugin: skip_on_empty_null
+      method: process
+      source: partners_logos
+      message: 'Field field_name is missing'
+    -
+      plugin: explode
+      delimiter: ','
+      source: partners_logos
 
   field_market_households:
     -
