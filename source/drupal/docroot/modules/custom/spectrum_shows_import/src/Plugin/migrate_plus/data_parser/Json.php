@@ -54,7 +54,7 @@ class Json extends MigrateJson {
     // Add uniqueId and merge genres in Schedule array.
     $this->modifySchedules($source_data);
     // Modify source data. Add Stationnum in Similar array.
-    $this->modifySimilar($source_data);
+//    $this->modifySimilar($source_data);
 
     if (isset($this->configuration['sub_selector']) && !empty($this->configuration['sub_selector'])) {
       $selector = trim($this->configuration['sub_selector']);

@@ -38,6 +38,10 @@ source:
       name: Description
       label: Description
       selector: Description
+    -
+      name: Similar
+      label: Similar
+      selector: Similar
   ids:
     Stationnum:
       type: integer
@@ -60,6 +64,15 @@ process:
   uid:
     plugin: default_value
     default_value: 1
+  field_network_similar_networks:
+    plugin: sub_process
+    source: Similar
+    process:
+      target_id:
+        plugin: migration_lookup
+        no_stub: true
+        migration: network_node
+        source: Id
 destination:
   plugin: 'entity:node'
 migration_dependencies:
