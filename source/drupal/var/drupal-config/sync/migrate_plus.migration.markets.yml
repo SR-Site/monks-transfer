@@ -89,6 +89,10 @@ source:
       Network_logos: 'Network Logos'
     -
       TopNetwork_logos: 'Top Network Logos'
+    -
+      Free_text: 'Free text'
+    -
+      Partners_logos_text: 'Partners logos text'
 process:
   title: DMAname
   field_market_state_code: State
@@ -297,6 +301,16 @@ process:
       plugin: migration_lookup
       no_stub: true
       migration: network
+  field_market_free_text:
+    plugin: skip_on_empty_null
+    method: process
+    source: Free_text
+    message: 'Field field_name is missing'
+  field_market_ap_text:
+    plugin: skip_on_empty_null
+    method: process
+    source: Partners_logos_text
+    message: 'Field field_name is missing'
   type:
     plugin: default_value
     default_value: market
