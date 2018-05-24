@@ -1,0 +1,7 @@
+services:
+  spectrum_alter_autocomplete.autocomplete_matcher:
+    class: Drupal\spectrum_alter_autocomplete\SpectrumAutocompleteMatcher
+    public: true
+    decorates: entity.autocomplete_matcher
+    decoration_priority: 1
+    arguments: ['@plugin.manager.entity_reference_selection']

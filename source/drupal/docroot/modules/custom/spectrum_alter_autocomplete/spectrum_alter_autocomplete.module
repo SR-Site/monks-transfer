@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains spectrum_alter_autocomplete.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function spectrum_alter_autocomplete_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the spectrum_alter_autocomplete module.
+    case 'help.page.spectrum_alter_autocomplete':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Spectrum alter autocomplete') . '</p>';
+      return $output;
+
+    default:
+  }
+}

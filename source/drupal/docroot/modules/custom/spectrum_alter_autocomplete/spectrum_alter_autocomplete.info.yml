@@ -1,0 +1,5 @@
+name: Spectrum alter autocomplete
+type: module
+description: Spectrum alter autocomplete
+core: 8.x
+package: Spectrum
