@@ -168,7 +168,7 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
     $data = [
       'name' => 'MarketSources',
     ];
-    if ($credits = $this->fieldProcessor->getFieldData($entity->get('field_market_credits'))) {
+    if ($credits = $this->state->get('credits')) {
       foreach ($credits as $credit) {
         $data['data']['credits'][] = [
           'source' => $credit,

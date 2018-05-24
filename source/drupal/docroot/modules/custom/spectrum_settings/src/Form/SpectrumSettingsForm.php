@@ -314,6 +314,64 @@ class SpectrumSettingsForm extends ConfigFormBase {
       ];
     }
 
+
+    // Credits.
+    // Gather the number of names in the form already.
+    $num_credits = $form_state->get('num_credits');
+    $credits = $this->state->get('credits');
+    // We have to ensure that there is at least one name field.
+    if ($num_credits === NULL) {
+      $name_field = $form_state->set('num_credits', 1);
+      $num_credits = 1;
+      if (count($credits) > 0) {
+        $name_field = $form_state->set('num_credits', count($credits));
+        $num_credits = count($credits);
+      }
+
+    }
+
+    $form['credits_fieldset'] = [
+      '#type' => 'fieldset',
+      '#title' => $this->t('Credits'),
+      '#prefix' => '<div id="credits-fieldset-wrapper">',
+      '#suffix' => '</div>',
+      '#tree' => TRUE,
+    ];
+
+    for ($i = 0; $i < $num_credits; $i++) {
+      $form['credits_fieldset']['source'][$i] = [
+        '#type' => 'textfield',
+        '#title' => t('Source'),
+        '#default_value' => isset($credits[$i]) ? $credits[$i] : NULL
+      ];
+    }
+
+    $form['credits_fieldset']['actions'] = [
+      '#type' => 'actions',
+    ];
+    $form['credits_fieldset']['actions']['add_name'] = [
+      '#type' => 'submit',
+      '#value' => t('Add one more'),
+      '#submit' => ['::addOne'],
+      '#ajax' => [
+        'callback' => '::addmoreCallback',
+        'wrapper' => 'credits-fieldset-wrapper',
+      ],
+    ];
+    // If there is more than one name, add the remove button.
+    if ($num_credits > 1) {
+      $form['credits_fieldset']['actions']['remove_name'] = [
+        '#type' => 'submit',
+        '#value' => t('Remove one'),
+        '#submit' => ['::removeCallback'],
+        '#ajax' => [
+          'callback' => '::addmoreCallback',
+          'wrapper' => 'credits-fieldset-wrapper',
+        ],
+      ];
+    }
+
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -351,6 +409,11 @@ class SpectrumSettingsForm extends ConfigFormBase {
     }
 
     $this->state->set('socialNetworks', $social);
+
+    $this->state->set('credits', $form_state->getValue([
+      'credits_fieldset',
+      'source',
+    ]));
 
     // Invalidate spectrum settings.
     Cache::invalidateTags(['spectrum:settings']);
@@ -425,7 +488,9 @@ class SpectrumSettingsForm extends ConfigFormBase {
       // Show the 'entity:' URI as the entity autocomplete would.
       $entity_manager = \Drupal::entityManager();
       if ($entity_manager->getDefinition($entity_type, FALSE)
-        && $entity = \Drupal::entityManager()->getStorage($entity_type)->load($entity_id)) {
+        && $entity = \Drupal::entityManager()
+          ->getStorage($entity_type)
+          ->load($entity_id)) {
         $displayable_string = EntityAutocomplete::getEntityLabels([$entity]);
       }
     }
@@ -471,6 +536,42 @@ class SpectrumSettingsForm extends ConfigFormBase {
     }
 
     return $uri;
+  }
+
+  /**
+   * Callback for both ajax-enabled buttons.
+   *
+   * Selects and returns the fieldset with the names in it.
+   */
+  public function addmoreCallback(array &$form, FormStateInterface $form_state) {
+    $name_field = $form_state->get('num_credits');
+    return $form['credits_fieldset'];
+  }
+
+  /**
+   * Submit handler for the "add-one-more" button.
+   *
+   * Increments the max counter and causes a rebuild.
+   */
+  public function addOne(array &$form, FormStateInterface $form_state) {
+    $name_field = $form_state->get('num_credits');
+    $add_button = $name_field + 1;
+    $form_state->set('num_credits', $add_button);
+    $form_state->setRebuild();
+  }
+
+  /**
+   * Submit handler for the "remove one" button.
+   *
+   * Decrements the max counter and causes a form rebuild.
+   */
+  public function removeCallback(array &$form, FormStateInterface $form_state) {
+    $name_field = $form_state->get('num_credits');
+    if ($name_field > 1) {
+      $remove_button = $name_field - 1;
+      $form_state->set('num_credits', $remove_button);
+    }
+    $form_state->setRebuild();
   }
 
 }
