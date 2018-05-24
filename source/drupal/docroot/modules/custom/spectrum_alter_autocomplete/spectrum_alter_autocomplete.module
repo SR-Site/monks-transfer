@@ -22,3 +22,13 @@ function spectrum_alter_autocomplete_help($route_name, RouteMatchInterface $rout
     default:
   }
 }
+
+/**
+ * Implements hook_preprocess_input().
+ * Applied for entity_autocomplete field.
+ */
+function spectrum_alter_autocomplete_preprocess_input(&$variables) {
+  if ($variables["element"]["#type"] == 'entity_autocomplete') {
+    $variables["#attached"]["library"][] = 'spectrum_alter_autocomplete/spectrum_alter_autocomplete.autocomplete_box';
+  }
+}

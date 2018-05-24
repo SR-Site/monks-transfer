@@ -1,0 +1,4 @@
+spectrum_alter_autocomplete.autocomplete_box:
+  css:
+    component:
+      assets/css/autocomplete_box.css: {}
