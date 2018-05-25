@@ -438,6 +438,45 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
    * @return array
    * @throws \Exception
    */
+  protected function getMarketBlockRace(ContentEntityInterface $entity) {
+    $data = [
+      'name' => 'MarketBlockPercentages',
+      'data' => [
+        'heading' => $this->t('Race'),
+        'percentages' => [
+          [
+            'label' => $this->t('White'),
+            'value' => $this->fieldProcessor->getFieldData($entity->get('field_market_race_white')),
+          ],
+          [
+            'label' => $this->t('Asian'),
+            'value' => $this->fieldProcessor->getFieldData($entity->get('field_market_race_asian')),
+          ],
+          [
+            'label' => $this->t('African-American'),
+            'value' => $this->fieldProcessor->getFieldData($entity->get('field_market_race_african_am')),
+          ],
+          [
+            'label' => $this->t('Hispanic origin'),
+            'value' => $this->fieldProcessor->getFieldData($entity->get('field_market_race_hispanic_orig')),
+          ],
+          [
+            'label' => $this->t('Other'),
+            'value' => $this->fieldProcessor->getFieldData($entity->get('field_market_race_other')),
+          ],
+        ],
+      ],
+    ];
+
+    return $data;
+  }
+
+  /**
+   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *
+   * @return array
+   * @throws \Exception
+   */
   protected function getMarketTopNetworksInformative(ContentEntityInterface $entity) {
     $data = [
       'name' => 'MarketImages',

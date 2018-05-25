@@ -45,6 +45,7 @@ class NodeMarketTeaserV1 extends SpectrumMarketRestEntityProcessorBase {
             $this->getMarketPercentages($entity),
             $this->getMarketComparePercentages($entity),
             $this->getMarketBlockPercentages($entity),
+            $this->getMarketBlockRace($entity),
           ],
         ],
 //        [
