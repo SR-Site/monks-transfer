@@ -1,0 +1,23 @@
+uuid: a4b17f94-4fcd-472c-b9f5-c4d6b5810fa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_race_african_am
+    - node.type.market
+id: node.market.field_market_race_african_am
+field_name: field_market_race_african_am
+entity_type: node
+bundle: market
+label: African-American
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,23 @@
+uuid: 521ebd9b-e15d-4272-8d02-1d1cc18371e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_race_other
+    - node.type.market
+id: node.market.field_market_race_other
+field_name: field_market_race_other
+entity_type: node
+bundle: market
+label: Other
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

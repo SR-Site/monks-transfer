@@ -39,6 +39,11 @@ dependencies:
     - field.field.node.market.field_market_parent_have_kids
     - field.field.node.market.field_market_parent_no_kids
     - field.field.node.market.field_market_partners_logos
+    - field.field.node.market.field_market_race_african_am
+    - field.field.node.market.field_market_race_asian
+    - field.field.node.market.field_market_race_hispanic_orig
+    - field.field.node.market.field_market_race_other
+    - field.field.node.market.field_market_race_white
     - field.field.node.market.field_market_state_code
     - field.field.node.market.field_market_states
     - field.field.node.market.field_market_top_networks
@@ -368,6 +373,51 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_market_race_african_am:
+    weight: 155
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_market_race_asian:
+    weight: 154
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_market_race_hispanic_orig:
+    weight: 156
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_market_race_other:
+    weight: 157
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_market_race_white:
+    weight: 153
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   field_market_state_code:
     weight: 148

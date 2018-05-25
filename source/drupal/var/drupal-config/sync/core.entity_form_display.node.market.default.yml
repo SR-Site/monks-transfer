@@ -40,6 +40,11 @@ dependencies:
     - field.field.node.market.field_market_parent_have_kids
     - field.field.node.market.field_market_parent_no_kids
     - field.field.node.market.field_market_partners_logos
+    - field.field.node.market.field_market_race_african_am
+    - field.field.node.market.field_market_race_asian
+    - field.field.node.market.field_market_race_hispanic_orig
+    - field.field.node.market.field_market_race_other
+    - field.field.node.market.field_market_race_white
     - field.field.node.market.field_market_state_code
     - field.field.node.market.field_market_states
     - field.field.node.market.field_market_top_networks
@@ -96,6 +101,7 @@ third_party_settings:
         - group_home
         - group_parenting
         - group_ages
+        - group_race
       parent_name: group_markets_tabs
       weight: 7
       format_type: tab
@@ -298,6 +304,22 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Advertising Partners'
+    group_race:
+      children:
+        - field_market_race_white
+        - field_market_race_asian
+        - field_market_race_african_am
+        - field_market_race_hispanic_orig
+        - field_market_race_other
+      parent_name: group_audience_profile
+      weight: 26
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: Race
 id: node.market.default
 targetEntityType: node
 bundle: market
@@ -573,6 +595,41 @@ content:
       field_widget_display_settings: {  }
     third_party_settings: {  }
     type: entity_browser_entity_reference
+    region: content
+  field_market_race_african_am:
+    weight: 62
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_race_asian:
+    weight: 61
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_race_hispanic_orig:
+    weight: 63
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_race_other:
+    weight: 64
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_market_race_white:
+    weight: 60
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_market_state_code:
     weight: 2

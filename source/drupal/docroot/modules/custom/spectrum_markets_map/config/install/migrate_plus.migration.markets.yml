@@ -89,6 +89,16 @@ source:
       Free_text: 'Free text'
     36:
       Partners_logos_text: 'Partners logos text'
+    37:
+      Race_white: 'Race white'
+    38:
+      Race_asian: 'Race Asian'
+    39:
+      Race_african_american: 'Race african-american'
+    40:
+      Race_hispanic_origin: 'Hispanic origin'
+    41:
+      Race_other: 'Other'
 
 process:
   title: DMAname
@@ -280,6 +290,33 @@ process:
     plugin: skip_on_empty_null
     method: process
     source: Income_150
+    message: 'Field field_name is missing'
+
+  # Race
+  field_market_race_white:
+    plugin: skip_on_empty_null
+    method: process
+    source: Race_white
+    message: 'Field field_name is missing'
+  field_market_race_asian:
+    plugin: skip_on_empty_null
+    method: process
+    source: Race_asian
+    message: 'Field field_name is missing'
+  field_market_race_african_am:
+    plugin: skip_on_empty_null
+    method: process
+    source: Race_african_american
+    message: 'Field field_name is missing'
+  field_market_race_hispanic_orig:
+    plugin: skip_on_empty_null
+    method: process
+    source: Race_hispanic_origin
+    message: 'Field field_name is missing'
+  field_market_race_other:
+    plugin: skip_on_empty_null
+    method: process
+    source: Race_other
     message: 'Field field_name is missing'
 
   field_market_network_logos:

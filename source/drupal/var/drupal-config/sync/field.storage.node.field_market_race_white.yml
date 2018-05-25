@@ -1,0 +1,20 @@
+uuid: 28f2d0e6-ab76-4ddd-b2a5-7bdbadfc4e04
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_market_race_white
+field_name: field_market_race_white
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
