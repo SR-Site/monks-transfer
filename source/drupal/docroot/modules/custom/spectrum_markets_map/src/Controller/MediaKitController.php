@@ -65,7 +65,7 @@ class MediaKitController extends ControllerBase {
         $mediaKitEntity->save();
         return new JsonResponse([
           'response' => 200,
-          'message' => t('Request for MediaKit has been successfully created')
+          'success' => TRUE
         ]);
       }
     }
