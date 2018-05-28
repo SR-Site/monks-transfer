@@ -1,0 +1,5 @@
+entity.media_kit_request.add_form:
+  route_name: 'entity.media_kit_request.add_form'
+  title: 'Add MediaKit Request'
+  appears_on:
+    - entity.media_kit_request.collection

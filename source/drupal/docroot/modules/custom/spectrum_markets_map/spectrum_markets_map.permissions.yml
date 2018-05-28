@@ -1,0 +1,17 @@
+
+administer media kit request entities:
+  title: 'Administer MediaKit Request entities'
+  description: 'Allow to access the administration form to configure MediaKit Request entities.'
+  restrict access: true
+
+add media kit request entities:
+  title: 'Create new MediaKit Request entities'
+
+delete media kit request entities:
+  title: 'Delete MediaKit Request entities'
+
+edit media kit request entities:
+  title: 'Edit MediaKit Request entities'
+
+view media kit request entities:
+  title: 'View MediaKit Request entities'

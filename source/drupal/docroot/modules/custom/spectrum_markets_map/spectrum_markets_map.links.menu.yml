@@ -1,7 +1,14 @@
-spectrum_markets_map.markets_import_form:
-  title: 'Import Markets'
-  description: 'Import Markets.'
-  route_name: spectrum_markets_map.markets_import_form
-  menu_name: spectrum
-  parent: spectrum_settings.admin_settings_form
-  weight: 0
+# Genre menu items definition
+system.admin.mediakitrequest:
+  title: 'MediaKit Requests'
+  route_name: entity.media_kit_request.collection
+  description: 'List MediaKit Requests entities'
+  parent: system.admin
+
+# Media Types menu items definition
+entity.media_kit_request.collection:
+  title: 'MediaKit Requests list'
+  route_name: entity.media_kit_request.collection
+  description: 'List MediaKit Requests entities'
+  parent: system.admin.mediakitrequest
+  weight: 100

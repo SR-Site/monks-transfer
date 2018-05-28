@@ -7,3 +7,10 @@ spectrum_markets_map.markets_import_form:
     _permission: 'access administration pages'
   options:
     _admin_route: TRUE
+
+spectrum_markets_map.download_media_kit:
+  path: 'api/v1/download-media-kit'
+  defaults: { _controller: '\Drupal\spectrum_markets_map\Controller\MediaKitController::createRequest' }
+  methods:  [POST]
+  requirements:
+    _access: 'TRUE'
