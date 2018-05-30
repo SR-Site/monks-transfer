@@ -1,0 +1,18 @@
+uuid: dcd3585f-a4d4-435b-a3e1-f6513b4ce7d5
+langcode: en
+status: false
+dependencies:
+  module:
+    - serialization
+    - spectrum_markets_map
+    - user
+id: entity.media_kit_request
+plugin_id: 'entity:media_kit_request'
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - cookie
