@@ -33,7 +33,7 @@ class FileJson extends ProcessPluginBase {
     }
 
     // Save the file, return its ID.
-    $file = $this->downloadFile($value, 'public://', TRUE, FILE_EXISTS_REPLACE);
+    $file = $this->downloadFile($value, 'public://', TRUE, FILE_EXISTS_RENAME);
     if ($file instanceof File) {
       $file->save();
       return $file->id();
