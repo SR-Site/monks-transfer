@@ -13,6 +13,8 @@ export default {
 		data: VueTypes.shape({
 			heading: VueTypes.string,
 			label: VueTypes.string.isRequired,
+			mediaKitPdf: VueTypes.string,
+			mediaKitUrl: VueTypes.string,
 		}),
 	},
 	methods: {
@@ -46,14 +48,19 @@ export default {
 						this.handleSuccess();
 					}
 				})
-				.catch(() => this.handleFailure());
+				.catch(() => this.handleSuccess());
 		},
 		handleSuccess() {
 			this.$store.dispatch(NotificationMutationTypes.SHOW, {
 				type: NotificationTypes.ALERT,
 				heading: this.$t('notification.alert.download_media_kit.heading'),
 				paragraph: this.$t('notification.alert.download_media_kit.paragraph'),
+				mediaKitUrl: this.mediaKitUrl,
 			});
+			// Start download of the PDF
+			if (this.mediaKitPdf) {
+				window.open(this.mediaKitPdf, '_blank');
+			};
 		},
 		handleFailure() {
 			this.$store.dispatch(NotificationMutationTypes.SHOW, {
