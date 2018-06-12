@@ -34,9 +34,10 @@ export default {
 					}
 				});
 		},
-		handleSubmit({ name, email }) {
+		handleSubmit({ firstName, lastName, email }) {
 			UserService.downloadMediaKit({
-				name,
+				firstName,
+				lastName,
 				email,
 				marketId: this.marketId,
 			})
