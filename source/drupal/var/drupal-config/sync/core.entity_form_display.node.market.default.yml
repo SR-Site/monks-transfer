@@ -36,6 +36,7 @@ dependencies:
     - field.field.node.market.field_market_income_plus_150k
     - field.field.node.market.field_market_markets
     - field.field.node.market.field_market_media_kit
+    - field.field.node.market.field_market_mediakit_pdf
     - field.field.node.market.field_market_network_logos
     - field.field.node.market.field_market_parent_have_kids
     - field.field.node.market.field_market_parent_no_kids
@@ -53,6 +54,7 @@ dependencies:
   module:
     - entity_browser
     - field_group
+    - file
     - image
     - path
     - video_embed_field
@@ -158,6 +160,7 @@ third_party_settings:
     group_media_kit:
       children:
         - field_market_media_kit
+        - field_market_mediakit_pdf
       parent_name: group_market
       weight: 8
       format_type: details
@@ -559,6 +562,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_market_mediakit_pdf:
+    weight: 18
+    settings:
+      progress_indicator: bar
+    third_party_settings: {  }
+    type: file_generic
     region: content
   field_market_network_logos:
     weight: 54

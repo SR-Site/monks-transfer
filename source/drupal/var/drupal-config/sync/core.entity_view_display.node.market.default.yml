@@ -35,6 +35,7 @@ dependencies:
     - field.field.node.market.field_market_income_plus_150k
     - field.field.node.market.field_market_markets
     - field.field.node.market.field_market_media_kit
+    - field.field.node.market.field_market_mediakit_pdf
     - field.field.node.market.field_market_network_logos
     - field.field.node.market.field_market_parent_have_kids
     - field.field.node.market.field_market_parent_no_kids
@@ -49,6 +50,7 @@ dependencies:
     - field.field.node.market.field_market_top_networks
     - node.type.market
   module:
+    - file
     - image
     - user
     - video_embed_field
@@ -339,6 +341,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_market_mediakit_pdf:
+    weight: 158
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
     region: content
   field_market_network_logos:
     weight: 147

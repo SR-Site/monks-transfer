@@ -1,0 +1,27 @@
+uuid: b1fd727b-0a2e-44ed-8170-334985d775f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_market_mediakit_pdf
+    - node.type.market
+  module:
+    - file
+id: node.market.field_market_mediakit_pdf
+field_name: field_market_mediakit_pdf
+entity_type: node
+bundle: market
+label: 'MediaKit PDF'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
