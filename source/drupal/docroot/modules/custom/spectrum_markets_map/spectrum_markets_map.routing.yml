@@ -14,3 +14,10 @@ spectrum_markets_map.download_media_kit:
   methods:  [POST]
   requirements:
     _access: 'TRUE'
+
+spectrum_markets_map.download_media_kit.process_response:
+  path: 'api/v1/download-media-kit/process'
+  defaults: { _controller: '\Drupal\spectrum_markets_map\Controller\MediaKitController::processRequest' }
+  methods:  [POST, GET]
+  requirements:
+    _access: 'TRUE'

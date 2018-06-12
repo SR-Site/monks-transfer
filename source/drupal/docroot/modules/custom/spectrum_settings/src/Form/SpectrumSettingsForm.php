@@ -194,6 +194,13 @@ class SpectrumSettingsForm extends ConfigFormBase {
       '#size' => 32,
     ];
 
+    $form['group_pardot']['pardot_mediakit_action'] = [
+      '#type' => 'url',
+      '#title' => $this->t('Destination URL to the Pardot MediaKit form'),
+      '#default_value' => $this->state->get('pardot_mediakit_action') ? $this->state->get('pardot_mediakit_action') : 'http://go2.spectrumreach.com/l/211312/2018-06-01/6wy4dk',
+      '#size' => 32,
+    ];
+
     $form['group_pardot']['pardot_referer'] = [
       '#type' => 'url',
       '#title' => $this->t('Referer URL to the Pardot contact form'),
@@ -387,6 +394,7 @@ class SpectrumSettingsForm extends ConfigFormBase {
     $this->state->set('contact_to', $form_state->getValue('contact_to'));
     $this->state->set('pardot_referer', $form_state->getValue('pardot_referer'));
     $this->state->set('pardot_action', $form_state->getValue('pardot_action'));
+    $this->state->set('pardot_mediakit_action', $form_state->getValue('pardot_mediakit_action'));
 
     $this->state->set('slideout_panel_subheading', $form_state->getValue('slideout_panel_subheading'));
     $this->state->set('slideout_panel_heading', $form_state->getValue('slideout_panel_heading'));

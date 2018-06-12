@@ -1,0 +1,5 @@
+services:
+  spectrum_markets_map.denormalizer.mediakit:
+    class: Drupal\spectrum_markets_map\Normalizer\SpectrumMediaKitDenormalizer
+    tags:
+      - { name: normalizer }

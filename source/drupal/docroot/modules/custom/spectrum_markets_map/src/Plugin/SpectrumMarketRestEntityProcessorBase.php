@@ -147,6 +147,7 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
    * @throws \Exception
    */
   protected function getMarketMediaKit(ContentEntityInterface $entity) {
+    $pdf = $this->fieldProcessor->getFieldData($entity->get('field_market_mediakit_pdf'));
     $data = [
       'name' => 'MarketMediaKit',
       'data' => [
@@ -154,6 +155,9 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
         'label' => $this->t('Get Market Media kit'),
       ],
     ];
+    if (isset($pdf['url'])) {
+      $data['data']['mediaKitUrl'] = $pdf['url'];
+    }
 
     return $data;
   }
