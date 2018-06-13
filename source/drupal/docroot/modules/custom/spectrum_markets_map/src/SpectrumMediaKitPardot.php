@@ -21,8 +21,8 @@ class SpectrumMediaKitPardot implements SpectrumMediaKitPardotInterface {
       'firstname' => NULL,
       'lastname' => NULL,
       'email' => NULL,
-      'zipcode' => NULL,
-      'websiteMediaKitDownloaded' => NULL,
+      'marketId' => NULL,
+//      'websiteMediaKitDownloaded' => NULL,
     ];
 
     foreach ($data as $key => $value) {
@@ -66,6 +66,13 @@ class SpectrumMediaKitPardot implements SpectrumMediaKitPardotInterface {
    */
   public function getProperties() {
     return $this->properties;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setProperty($key, $value) {
+    return $this->properties[$key] = $value;
   }
 
 }

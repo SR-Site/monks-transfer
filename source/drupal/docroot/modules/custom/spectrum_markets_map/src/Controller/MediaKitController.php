@@ -67,6 +67,8 @@ class MediaKitController extends ControllerBase {
 
     /** @var \Drupal\spectrum_markets_map\SpectrumMediaKitPardotInterface $contact */
     $contact = $this->serializer->deserialize($content, 'Drupal\spectrum_markets_map\SpectrumMediaKitPardotInterface', 'json');
+    $contact->setProperty('zipcode', $contact->marketId);
+    $contact->setProperty('Website Media Kit Downloaded', 'Albany');
 
     /** @var \GuzzleHttp\Client $client */
     $client = \Drupal::httpClient();
@@ -95,7 +97,6 @@ class MediaKitController extends ControllerBase {
 
     // Get PDF.
     $marketId = $contact->zipcode;
-    $data = [];
     if ($pdf = $this->getMarketPdf($marketId)) {
       $data['mediaKitPdf'] = $pdf;
     }

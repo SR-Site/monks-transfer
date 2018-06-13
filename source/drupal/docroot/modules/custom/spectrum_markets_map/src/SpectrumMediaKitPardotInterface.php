@@ -28,4 +28,12 @@ interface SpectrumMediaKitPardotInterface {
    */
   public function getProperties();
 
+  /**
+   * @param $key
+   * @param $value
+   *
+   * @return mixed
+   */
+  public function setProperty($key, $value);
+
 }
