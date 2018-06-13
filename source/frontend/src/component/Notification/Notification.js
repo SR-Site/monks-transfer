@@ -41,15 +41,15 @@ export default {
 		return {
 			downloadFields: [
 				{
-					name: 'firstName',
-					localeKey: 'firstName',
+					name: 'firstname',
+					localeKey: 'firstname',
 					type: 'text',
 					value: '',
 					validationRules: 'required',
 				},
 				{
-					name: 'lastName',
-					localeKey: 'lastName',
+					name: 'lastname',
+					localeKey: 'lastname',
 					type: 'text',
 					value: '',
 					validationRules: 'required',

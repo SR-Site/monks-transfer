@@ -44,8 +44,8 @@
 	  "placeholder": {
 		"email": "Email Address",
 		"name": "Name",
-		"firstName": "First Name",
-		"lastName": "Last Name",
+		"firstname": "First name",
+		"lastname": "Last name",
 		"phone_number": "Phone Number (e.g. 555-555-5555)",
 		"state": "State",
 		"city": "City",
