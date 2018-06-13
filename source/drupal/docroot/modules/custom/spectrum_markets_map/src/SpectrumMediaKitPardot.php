@@ -22,7 +22,7 @@ class SpectrumMediaKitPardot implements SpectrumMediaKitPardotInterface {
       'lastname' => NULL,
       'email' => NULL,
       'zipcode' => NULL,
-      'Website Media Kit Downloaded' => NULL,
+      'websiteMediaKitDownloaded' => NULL,
     ];
 
     foreach ($data as $key => $value) {
