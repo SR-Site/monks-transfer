@@ -43,6 +43,7 @@ export default {
 				lastName,
 				email,
 				marketId: this.marketId,
+				websiteMediaKitDownloaded: this.websiteMediaKitDownloaded,
 			})
 				.then(({ data }) => {
 					if (data.success) {
