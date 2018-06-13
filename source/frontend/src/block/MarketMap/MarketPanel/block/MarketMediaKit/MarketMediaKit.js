@@ -48,7 +48,7 @@ export default {
 						this.handleSuccess();
 					}
 				})
-				.catch(() => this.handleSuccess());
+				.catch(() => this.handleFailure());
 		},
 		handleSuccess() {
 			this.$store.dispatch(NotificationMutationTypes.SHOW, {
