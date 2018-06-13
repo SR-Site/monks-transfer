@@ -15,6 +15,7 @@ export default {
 			label: VueTypes.string.isRequired,
 			mediaKitPdf: VueTypes.string,
 			mediaKitUrl: VueTypes.string,
+			websiteMediaKitDownloaded: VueTypes.string, 
 		}),
 	},
 	methods: {
@@ -56,6 +57,7 @@ export default {
 				heading: this.$t('notification.alert.download_media_kit.heading'),
 				paragraph: this.$t('notification.alert.download_media_kit.paragraph'),
 				mediaKitUrl: this.mediaKitUrl,
+				websiteMediaKitDownloaded: this.websiteMediaKitDownloaded,
 			});
 			// Start download of the PDF
 			if (this.mediaKitPdf) {
