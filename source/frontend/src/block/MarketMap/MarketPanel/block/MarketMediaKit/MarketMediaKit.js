@@ -37,10 +37,10 @@ export default {
 					}
 				});
 		},
-		handleSubmit({ firstName, lastName, email }) {
+		handleSubmit({ firstname, lastname, email }) {
 			UserService.downloadMediaKit({
-				firstName,
-				lastName,
+				firstname,
+				lastname,
 				email,
 				marketId: this.marketId,
 				websiteMediaKitDownloaded: this.websiteMediaKitDownloaded,
