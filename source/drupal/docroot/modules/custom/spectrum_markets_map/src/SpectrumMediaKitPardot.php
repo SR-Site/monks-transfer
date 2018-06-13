@@ -22,6 +22,7 @@ class SpectrumMediaKitPardot implements SpectrumMediaKitPardotInterface {
       'lastname' => NULL,
       'email' => NULL,
       'zipcode' => NULL,
+      'Website Media Kit Downloaded' => NULL,
     ];
 
     foreach ($data as $key => $value) {
@@ -31,6 +32,7 @@ class SpectrumMediaKitPardot implements SpectrumMediaKitPardotInterface {
 
   /**
    * @param $key
+   *
    * @return mixed
    * @throws \UnexpectedValueException
    */
@@ -45,6 +47,7 @@ class SpectrumMediaKitPardot implements SpectrumMediaKitPardotInterface {
   /**
    * @param $key
    * @param $value
+   *
    * @return mixed
    * @throws \UnexpectedValueException
    */

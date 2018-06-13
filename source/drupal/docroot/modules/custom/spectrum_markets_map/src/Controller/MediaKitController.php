@@ -54,34 +54,6 @@ class MediaKitController extends ControllerBase {
     $this->state = $state;
   }
 
-//  /**
-//   * @param \Symfony\Component\HttpFoundation\Request $request
-//   *
-//   * @return \Drupal\mm_rest\Response\JsonResponse
-//   *
-//   * @throws \Drupal\Core\Entity\EntityStorageException
-//   */
-//  public function createRequest(Request $request) {
-//    $data = $request->getContent();
-//    $dataMediaKit = Json::decode($data);
-//    if (isset($dataMediaKit['marketId'])) {
-//      $query = \Drupal::entityQuery('node')
-//        ->condition('type', 'market')
-//        ->condition('field_market_dma_code', $dataMediaKit['marketId']);
-//      $results = $query->execute();
-//      if (!empty($results)) {
-//        $dataMediaKit['market'] = reset($results);
-//        $mediaKitEntity = MediaKitRequest::create($dataMediaKit);
-//        $mediaKitEntity->save();
-//        return new JsonResponse([
-//          'response' => 200,
-//          'success' => TRUE
-//        ]);
-//      }
-//    }
-//    return new JsonResponse(['response' => 500]);
-//  }
-
   /**
    * Resend parameters to Paradat as a www-form-urlencoded and process the
    * response.
@@ -121,13 +93,21 @@ class MediaKitController extends ControllerBase {
     $content = $request->getBody()->getContents();
     $response = json_decode($content, TRUE);
 
+    // Get PDF.
+    $marketId = $contact->zipcode;
+    $data = [];
+    if ($pdf = $this->getMarketPdf($marketId)) {
+      $data['mediaKitPdf'] = $pdf;
+    }
+
     if(isset($response['data']['errors'])){
       header("Content-Type: application/json");
       print '{error:{"code": "send.failed", "message": "send failed."}}';
       die();
     }
 
-    return ['status' => !isset($response['data']['errors'])];
+    $data['status'] = !isset($response['data']['errors']);
+    return $data;
   }
 
   /**
@@ -139,6 +119,28 @@ class MediaKitController extends ControllerBase {
    */
   public function processRequest() {
     return $_REQUEST;
+  }
+
+  /**
+   * @param $marketId
+   *
+   * @return bool|mixed
+   */
+  protected function getMarketPdf($marketId) {
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'market')
+      ->condition('status', 1)
+      ->condition('field_market_dma_code', $marketId);
+    $results = $query->execute();
+    if (!empty($results)) {
+      $markets = Node::loadMultiple($results);
+      $market = reset($markets);
+      if ($pdf = $market->get('field_market_mediakit_pdf')->value) {
+        return $pdf;
+      }
+    }
+
+    return FALSE;
   }
 
 }

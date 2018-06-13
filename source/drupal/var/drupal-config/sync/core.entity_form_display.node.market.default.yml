@@ -54,7 +54,6 @@ dependencies:
   module:
     - entity_browser
     - field_group
-    - file
     - image
     - path
     - video_embed_field
@@ -564,11 +563,12 @@ content:
     type: string_textfield
     region: content
   field_market_mediakit_pdf:
-    weight: 18
+    weight: 65
     settings:
-      progress_indicator: bar
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: file_generic
+    type: string_textfield
     region: content
   field_market_network_logos:
     weight: 54

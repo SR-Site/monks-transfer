@@ -50,7 +50,6 @@ dependencies:
     - field.field.node.market.field_market_top_networks
     - node.type.market
   module:
-    - file
     - image
     - user
     - video_embed_field
@@ -346,9 +345,9 @@ content:
     weight: 158
     label: above
     settings:
-      use_description_as_link_text: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: file_default
+    type: string
     region: content
   field_market_network_logos:
     weight: 147
