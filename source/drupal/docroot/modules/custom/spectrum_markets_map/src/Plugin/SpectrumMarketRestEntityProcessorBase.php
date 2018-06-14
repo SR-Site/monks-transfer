@@ -147,13 +147,16 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
    * @throws \Exception
    */
   protected function getMarketMediaKit(ContentEntityInterface $entity) {
-    $data = [
-      'name' => 'MarketMediaKit',
-      'data' => [
-        'heading' => $this->t('Media Kit'),
-        'label' => $this->t('Get Market Media kit'),
-      ],
-    ];
+    $data = [];
+    if ($pdf = $entity->get('field_market_mediakit_pdf')->value) {
+      $data = [
+        'name' => 'MarketMediaKit',
+        'data' => [
+          'heading' => $this->t('Media Kit'),
+          'label' => $this->t('Get Market Media kit'),
+        ],
+      ];
+    }
 
     return $data;
   }
