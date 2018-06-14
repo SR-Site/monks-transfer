@@ -107,7 +107,7 @@ class MediaKitController extends ControllerBase {
       die();
     }
 
-    $data['status'] = !isset($response['data']['errors']);
+    $data['success'] = !isset($response['data']['errors']);
     return $data;
   }
 

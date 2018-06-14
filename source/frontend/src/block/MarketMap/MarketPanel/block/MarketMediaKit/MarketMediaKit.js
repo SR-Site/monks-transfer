@@ -47,12 +47,12 @@ export default {
 			})
 				.then(({ data }) => {
 					if (data.success) {
-						this.handleSuccess();
+						this.handleSuccess(data);
 					}
 				})
 				.catch(() => this.handleFailure());
 		},
-		handleSuccess() {
+		handleSuccess(data) {
 			this.$store.dispatch(NotificationMutationTypes.SHOW, {
 				type: NotificationTypes.ALERT,
 				heading: this.$t('notification.alert.download_media_kit.heading'),
@@ -61,8 +61,8 @@ export default {
 				websiteMediaKitDownloaded: this.websiteMediaKitDownloaded,
 			});
 			// Start download of the PDF
-			if (this.mediaKitPdf) {
-				window.open(this.mediaKitPdf, '_blank');
+			if (data.mediaKitPdf) {
+				window.open(data.mediaKitPdf, '_blank');
 			};
 		},
 		handleFailure() {
