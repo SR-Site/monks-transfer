@@ -16,6 +16,7 @@ const defaultState = {
 	ok: null,
 	send: null,
 	resolve: null,
+	link: null,
 };
 
 /**

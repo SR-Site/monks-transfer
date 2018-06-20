@@ -35,6 +35,7 @@ export default {
 			'ok',
 			'send',
 			'resolve',
+			'link',
 		]),
 	},
 	data() {
@@ -83,6 +84,9 @@ export default {
 			this.isReady();
 		},
 		accept() {
+			// If a link is provided we open it right away because it will get blocked otherwise
+			if (this.link) window.open(this.link, '_blank');
+			// Close the popup
 			return this.transitionOut().then(this.resolve.bind(this, { accept: true }));
 		},
 		decline() {
@@ -93,7 +97,6 @@ export default {
 			);
 		},
 		submit() {
-			console.log('submit');
 			this.$validator.validateAll().then(valid => {
 				if (valid) {
 					return this.transitionOut()

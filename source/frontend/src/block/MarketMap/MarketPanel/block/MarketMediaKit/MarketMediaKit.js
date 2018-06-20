@@ -15,7 +15,7 @@ export default {
 			label: VueTypes.string.isRequired,
 			mediaKitPdf: VueTypes.string,
 			mediaKitUrl: VueTypes.string,
-			websiteMediaKitDownloaded: VueTypes.string, 
+			websiteMediaKitDownloaded: VueTypes.string,
 		}),
 	},
 	methods: {
@@ -57,13 +57,9 @@ export default {
 				type: NotificationTypes.ALERT,
 				heading: this.$t('notification.alert.download_media_kit.heading'),
 				paragraph: this.$t('notification.alert.download_media_kit.paragraph'),
-				mediaKitUrl: this.mediaKitUrl,
-				websiteMediaKitDownloaded: this.websiteMediaKitDownloaded,
+				ok: this.$t('notification.alert.download_media_kit.ok_label'),
+				link: data.mediaKitPdf,
 			});
-			// Start download of the PDF
-			if (data.mediaKitPdf) {
-				window.open(data.mediaKitPdf, '_blank');
-			};
 		},
 		handleFailure() {
 			this.$store.dispatch(NotificationMutationTypes.SHOW, {

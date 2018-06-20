@@ -73,7 +73,8 @@
 	  },
 	  "download_media_kit": {
 		"heading": "Thank you",
-		"paragraph": "The Spectrum Reach Media Kit will be in your inbox shortly."
+		"paragraph": "Thank you for downloading our media kit. <br/>Call 1-844-TO-REACH to get started advertising.",
+		"ok_label": "Download now"
 	  },
 	  "server_message": {
 	  }
