@@ -13,14 +13,14 @@ export default {
 			fieldData: [
 				{
 					name: 'firstname',
-					localeKey: 'firstName',
+					localeKey: 'firstname',
 					type: 'text',
 					value: '',
 					validationRules: 'required',
 				},
 				{
 					name: 'lastname',
-					localeKey: 'lastName',
+					localeKey: 'lastname',
 					type: 'text',
 					validationRules: 'required',
 					value: '',
