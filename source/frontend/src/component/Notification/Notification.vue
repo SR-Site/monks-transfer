@@ -15,7 +15,7 @@
 					:class="$style.closeButton"
 				/>
 				<Icon v-if="icon" :name="icon" :class="$style.icon" />
-				<h3 v-if="heading" class="heading-06" :class="$style.heading">{{ heading }}</h3>
+				<h3 v-if="heading" class="heading-06" :class="$style.heading" v-html="heading"></h3>
 				<p class="copy-03" :class="$style.copy" v-html="paragraph"></p>
 				<div v-if="type === notificationTypes.CONFIRMATION" :class="$style.confirmationActions">
 					<ButtonSecondary
