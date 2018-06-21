@@ -128,7 +128,9 @@ abstract class SpectrumMarketRestEntityProcessorBase extends SpectrumRestEntityP
     $partnersLogos = [];
     if (count($images) > 1) {
       foreach ($images as $image) {
-        $partnersLogos[] = array_shift($image);
+        if (is_array($image) && !empty($image)) {
+          $partnersLogos[] = array_shift($image);
+        }
       }
     }
     else {
