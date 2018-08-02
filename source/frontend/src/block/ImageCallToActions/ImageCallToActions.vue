@@ -28,7 +28,7 @@
 			<div :class="$style.callToActionsContent" class="abs-fill">
 				<a
 					v-for="(callToAction, index) in data.callToActions"
-					v-link="{ path: callToAction.link.target, type: 0 }"
+					v-link="{ path: callToAction.link.target, type: callToAction.link.type }"
 					v-track="{
 						[TrackingProvider.GOOGLE_ANALYTICS]: {
 							category: 'imageCallToActions',
