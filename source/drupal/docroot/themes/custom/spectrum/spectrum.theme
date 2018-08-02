@@ -91,5 +91,16 @@ function spectrum_page_attachments_alter(array &$page) {
  * @see hook_preprocess_html().
  */
 function spectrum_preprocess_html(&$vars) {
+  // Front-end version.
   $vars['frontend_version_int'] = Settings::get('mm_deployment_version', 'src');
+
+  $currentPath = \Drupal::service('path.current')->getPath();
+  $currentPathAlias = \Drupal::service('path.alias_manager')->getAliasByPath($currentPath);
+
+  // Tracking tag.
+  $vars['adv_marketing'] = FALSE;
+  if ($currentPathAlias == '/articles/advertising-marketing-101') {
+    $vars['adv_marketing'] = TRUE;
+  }
+
 }
