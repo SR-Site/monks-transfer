@@ -3,6 +3,8 @@
 namespace Drupal\spectrum_shows_import\Plugin\migrate\destination;
 
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\NodeInterface;
+use Drupal\views\Plugin\views\area\Entity;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\migrate\Plugin\migrate\destination\EntityContentBase;
 use Drupal\migrate\Plugin\MigrationInterface;
@@ -68,6 +70,9 @@ class NodeShows  extends EntityContentBase {
 
     $source = $row->getSource();
 
+    // Remove unnecessary schedules.
+    $this->removeSchedules($entity);
+
     // Update fields.
     $this->updateFields($entity, $row);
 
@@ -75,6 +80,24 @@ class NodeShows  extends EntityContentBase {
 
     // We might have a different (translated) entity, so return it.
     return $entity;
+  }
+
+  /**
+   * @param \Drupal\Core\Entity\EntityInterface $entity
+   */
+  protected function removeSchedules(EntityInterface $entity) {
+    if ($entity instanceof NodeInterface && $entity->hasField('field_show_schedules')) {
+      $schedules = $entity->get('field_show_schedules')->getValue();
+      $numberSchedules = count($schedules);
+      if ($numberSchedules > 5) {
+        foreach ($schedules as $key => $scheduleItem) {
+          if ($key < ($numberSchedules - 5)) {
+            $entityId = array_search(current($scheduleItem), array_column($schedules, key($scheduleItem)));
+            $entity->get('field_show_schedules')->removeItem($entityId);
+          }
+        }
+      }
+    }
   }
 
   /**

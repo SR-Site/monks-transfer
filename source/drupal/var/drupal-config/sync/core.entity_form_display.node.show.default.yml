@@ -38,7 +38,6 @@ third_party_settings:
         - field_show_background_image
         - field_show_genres
         - field_show_recommend
-        - field_show_schedules
         - field_show_network
         - field_show_videos
         - field_show_media_type
@@ -193,15 +192,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_show_schedules:
-    type: entity_reference_autocomplete
-    weight: 7
-    region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_show_videos:
     type: entity_reference_autocomplete
     weight: 9
@@ -255,6 +245,7 @@ content:
     region: content
 hidden:
   field_show_id: true
+  field_show_schedules: true
   field_similar_networks: true
   promote: true
   sticky: true
