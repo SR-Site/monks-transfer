@@ -92,8 +92,9 @@ class NodeShows  extends EntityContentBase {
       if ($numberSchedules > 5) {
         foreach ($schedules as $key => $scheduleItem) {
           if ($key < ($numberSchedules - 5)) {
-            $entityId = array_search(current($scheduleItem), array_column($schedules, key($scheduleItem)));
-            $entity->get('field_show_schedules')->removeItem($entityId);
+            if (isset($entity->get('field_show_schedules')->list) && array_key_exists($key, $entity->get('field_show_schedules')->list)) {
+              $entity->get('field_show_schedules')->removeItem($key);
+            }
           }
         }
       }
