@@ -77,11 +77,29 @@ abstract class ResourceSearch extends MMResourceBase {
 
     $query->setSearchId($search_id);
 
-    // Search for keys.
-    $keys = $request->get('query');
+    $keys = $request->get('f');
     if (!empty($keys)) {
       $query->keys($keys);
     }
+
+    // Get filters.
+    if (!empty($keys)) {
+      $conditionGroups = [];
+      foreach ($keys as $key) {
+        list($field, $value) = explode(':', $key);
+        $conditionGroups[$field][] = $value;
+      }
+      foreach ($conditionGroups as $field => $values) {
+        $conditionGroup = $query->createConditionGroup('OR');
+        foreach ($values as $value) {
+          $conditionGroup->addCondition($field, $value);
+        }
+
+        $query->addConditionGroup($conditionGroup);
+      }
+
+    }
+
 
     // Pagination.
     $offset = $request->get('offset');
@@ -103,20 +121,20 @@ abstract class ResourceSearch extends MMResourceBase {
       $results[] = $this->entityProcessor->getEntityData($entity, $this->getVersion(), ['view_mode' => $this->getViewMode()]);
     }
 
-    // Processing facets.
-    $facets = $this->facetsManager->getFacetsByFacetSourceId($search_id);
-    $this->facetsManager->updateResults($search_id);
-
-    $filters = [];
-    foreach ($facets as $facet) {
-      $filter = $this->facetsManager->build($facet);
-      $filter = is_array($filter) && !empty($filter) ? reset($filter) : $filter;
-      $filters = array_merge($filter, $filters);
-    }
+//    // Processing facets.
+//    $facets = $this->facetsManager->getFacetsByFacetSourceId($search_id);
+//    $this->facetsManager->updateResults($search_id);
+//
+//    $filters = [];
+//    foreach ($facets as $facet) {
+//      $filter = $this->facetsManager->build($facet);
+//      $filter = is_array($filter) && !empty($filter) ? reset($filter) : $filter;
+//      $filters = array_merge($filter, $filters);
+//    }
 
     $data = [
       'results' => $results,
-      'filters' => $filters,
+      'filters' => [],
     ];
 
     $this->addCacheableDependency();
